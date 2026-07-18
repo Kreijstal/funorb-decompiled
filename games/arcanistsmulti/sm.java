@@ -198,8 +198,7 @@ final class sm {
                       break L1;
                     }
                   }
-                  int discarded$1 = 269;
-                  ei.a("document.cookie=\"" + var7 + "\"", param2);
+                  ei.a("document.cookie=\"" + var7 + "\"", param2, 269);
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -302,11 +301,11 @@ final class sm {
         field_d = null;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         int var2 = 0;
     }
 
-    final static void a(int param0, boolean param1, int param2, gh param3, java.awt.Component param4, int param5, dl param6) {
+    final static void a(int param0, boolean param1, int param2, gh param3, java.awt.Component param4, int param5, dl param6, int param7) {
         try {
             lb.a(22050, true, 10);
             oh.field_k = lb.a(param6, param4, 0, 22050);

@@ -6,7 +6,7 @@ final class an {
     static kp field_b;
     private wf field_a;
 
-    final static sn[] a() {
+    final static sn[] a(boolean param0) {
         if (vs.field_c == null) {
           vs.field_c = mq.a((byte) 122, new int[2]);
           return null;
@@ -147,7 +147,7 @@ final class an {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
     }
 

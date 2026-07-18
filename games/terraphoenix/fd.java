@@ -978,7 +978,7 @@ class fd implements cj, w {
         return stackIn_9_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_q = null;
         field_i = null;
         field_p = null;

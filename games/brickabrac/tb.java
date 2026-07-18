@@ -81,8 +81,7 @@ final class tb extends bj {
         try {
           L0: {
             if (ln.a(-104, param4, param2, param1)) {
-              int discarded$2 = -14;
-              stackOut_3_0 = jm.a(param3.a(param4, param1, 4));
+              stackOut_3_0 = jm.a(param3.a(param4, param1, 4), (byte) -14);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -504,7 +503,7 @@ final class tb extends bj {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_cb = null;
         field_db = null;
         field_eb = null;

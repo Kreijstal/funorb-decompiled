@@ -11,7 +11,7 @@ final class sb {
     static int[][] field_e;
     static int field_d;
 
-    final static void a() {
+    final static void a(int param0) {
         wj.c(-6399);
         ca.field_k = true;
         dl.field_g = true;
@@ -19,7 +19,7 @@ final class sb {
         m.a(eh.field_c, -121, false);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_e = null;
         field_b = null;
@@ -117,8 +117,7 @@ final class sb {
                     break L3;
                   }
                 }
-                int discarded$1 = -85;
-                sb.b();
+                sb.b(-85);
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

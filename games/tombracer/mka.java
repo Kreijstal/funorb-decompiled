@@ -96,7 +96,7 @@ final class mka {
         return ((mka) this).field_a;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return uu.field_a.field_Ab == rb.field_r;
     }
 
@@ -120,7 +120,7 @@ final class mka {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         int var1 = 36;
     }

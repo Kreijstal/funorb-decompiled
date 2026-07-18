@@ -33,7 +33,7 @@ final class th {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         int var1 = -62;
         field_f = null;
@@ -42,7 +42,7 @@ final class th {
         field_a = null;
     }
 
-    final static bn a(boolean param0, int[] param1) {
+    final static bn a(boolean param0, int[] param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;

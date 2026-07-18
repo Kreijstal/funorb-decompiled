@@ -57,15 +57,13 @@ final class dg {
               break L1;
             }
           }
-          int discarded$3 = 0;
-          ud.a(s.field_a);
+          ud.a(s.field_a, false);
           cj.c();
           var6 = 0;
           ed.d();
           gf.k(-120);
           if (var5 >= 256) {
-            int discarded$4 = 4;
-            bb.b();
+            bb.b(4);
             if (jd.field_f < 150) {
               s.field_a.a(var3, var4);
               var7 = jd.field_f + -125;
@@ -300,8 +298,7 @@ final class dg {
           } else {
             L22: {
               ed.d(0, 0, ed.field_h, ed.field_d, 0, 256 + -var5);
-              int discarded$5 = 4;
-              bb.b();
+              bb.b(4);
               if (jd.field_f < 150) {
                 s.field_a.a(var3, var4);
                 break L22;
@@ -427,7 +424,7 @@ final class dg {
         }
     }
 
-    final static String a() {
+    final static String a(int param0) {
         if (fi.field_y == pl.field_E) {
           return we.field_a;
         } else {
@@ -528,8 +525,7 @@ final class dg {
                           var11 = var13;
                           var6 = var11;
                           if (1 == var3) {
-                            int discarded$2 = 9;
-                            int discarded$3 = li.a(var6, var5, param0, var4);
+                            int discarded$1 = li.a(var17, var5, param0, var4, 9);
                             break L5;
                           } else {
                             var7 = (Object) (Object) re.field_I;

@@ -14,7 +14,7 @@ final class en extends km {
     static boolean field_Fb;
     static int field_Kb;
 
-    public static void g() {
+    public static void g(int param0) {
         field_Hb = null;
         field_Eb = null;
     }
@@ -25,7 +25,7 @@ final class en extends km {
         this.b(param1, 106);
     }
 
-    final static void a(String param0, Throwable param1) {
+    final static void a(String param0, Throwable param1, int param2) {
         try {
             Exception var3 = null;
             String var3_ref = null;
@@ -98,8 +98,7 @@ final class en extends km {
                     break L2;
                   }
                 }
-                int discarded$2 = 0;
-                kb.a(var3_ref);
+                kb.a(var3_ref, 0);
                 var7 = kn.a(var3_ref, (byte) -33, "%3a", ":");
                 var8 = kn.a(var7, (byte) -33, "%40", "@");
                 var9 = kn.a(var8, (byte) -33, "%26", "&");
@@ -161,7 +160,7 @@ final class en extends km {
                           break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_f;
-                          int discarded$3 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L6;
                         }

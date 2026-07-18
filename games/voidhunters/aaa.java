@@ -5,12 +5,12 @@ final class aaa {
     static String field_a;
     static vka field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static void a(byte param0, mm param1, String param2) {
+    final static void a(byte param0, mm param1, String param2, boolean param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;

@@ -726,8 +726,7 @@ final class ei {
         try {
           L0: {
             L1: {
-              int discarded$2 = -104;
-              this.b(param0, param1);
+              this.b(param0, param1, (byte) -104);
               if (!param2) {
                 break L1;
               } else {
@@ -775,8 +774,7 @@ final class ei {
             if (param0 != 2509) {
                 ((ei) this).field_m = -104;
             }
-            int discarded$0 = 57;
-            this.a(param3, param1);
+            this.a(param3, param1, (byte) 57);
         } catch (RuntimeException runtimeException) {
             throw oi.a((Throwable) (Object) runtimeException, "ei.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -905,12 +903,10 @@ final class ei {
                         }
                       } else {
                         if (!((ei) this).field_b) {
-                          int discarded$5 = 0;
-                          vf.a(true, 9);
+                          vf.a(true, 9, false);
                           break L1;
                         } else {
-                          int discarded$6 = 0;
-                          vf.a(true, 12);
+                          vf.a(true, 12, false);
                           break L1;
                         }
                       }
@@ -973,7 +969,7 @@ final class ei {
                                 if (param7 == 1) {
                                   var12 = ((ei) this).field_a.a(var11, (byte) 101);
                                   if (!((ei) this).field_a.b(var12, var11, -123)) {
-                                    bf discarded$7 = lb.a(io.field_c, param4 + 573509876);
+                                    bf discarded$2 = lb.a(io.field_c, param4 + 573509876);
                                     break L7;
                                   } else {
                                     if (!((ei) this).field_b) {
@@ -984,8 +980,7 @@ final class ei {
                                       if (((ei) this).field_i != ((ei) this).field_a.field_b) {
                                         break L7;
                                       } else {
-                                        int discarded$8 = 1;
-                                        this.a(var11, var12);
+                                        this.a(var11, var12, true);
                                         ((ei) this).field_n = false;
                                         break L7;
                                       }
@@ -1011,7 +1006,7 @@ final class ei {
                                     if (((ei) this).field_g.field_l == -1) {
                                       break L7;
                                     } else {
-                                      bf discarded$9 = lb.a(bo.field_A, 573509761);
+                                      bf discarded$3 = lb.a(bo.field_A, 573509761);
                                       break L7;
                                     }
                                   }
@@ -1103,7 +1098,7 @@ final class ei {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         String var2_ref_String = null;
         int var2 = 0;
         String var3_ref_String = null;
@@ -1819,7 +1814,7 @@ final class ei {
         }
     }
 
-    private final void b(boolean param0, oh param1) {
+    private final void b(boolean param0, oh param1, byte param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -2527,7 +2522,7 @@ final class ei {
               break L5;
             } else {
               if (((ei) this).field_d % 50 == 0) {
-                bf discarded$3 = lb.a(sk.field_a, 573509761);
+                bf discarded$2 = lb.a(sk.field_a, 573509761);
                 break L5;
               } else {
                 break L5;
@@ -2577,7 +2572,7 @@ final class ei {
               stackIn_43_0 = stackOut_41_0;
               break L10;
             }
-            bf discarded$4 = lb.a(stackIn_43_0, 573509761);
+            bf discarded$3 = lb.a(stackIn_43_0, 573509761);
             break L7;
           } else {
             break L7;
@@ -2626,15 +2621,14 @@ final class ei {
               }
             }
           }
-          int discarded$5 = -27;
-          this.b();
+          this.b(-27);
           return;
         } else {
           return;
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void a(int param0, int param1, boolean param2) {
         nd.field_Lb.f(58, (byte) -92);
         nd.field_Lb.a(((ei) this).field_a.field_k, false);
         nd.field_Lb.a(param1 << 3 | param0, false);
@@ -2765,7 +2759,7 @@ final class ei {
         }
     }
 
-    private final void a(boolean param0, oh param1) {
+    private final void a(boolean param0, oh param1, byte param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

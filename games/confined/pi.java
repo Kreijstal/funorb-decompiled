@@ -103,7 +103,7 @@ final class pi extends ga implements ge, el {
         return param3;
     }
 
-    private final String k() {
+    private final String k(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -422,7 +422,6 @@ final class pi extends ga implements ge, el {
             ((pi) this).field_O = param0;
             ((pi) this).field_Q = new rg(gi.field_fb, (uk) null);
             ((pi) this).field_Q.field_n = (fe) (Object) new je();
-            int discarded$1 = -99;
             var7 = b.a(new String[2], ja.field_g, 1177);
             var3 = 20;
             var4 = new vf(gm.field_cb, 0, 0, 0, 0, 16777215, -1, 3, 0, gm.field_cb.field_C, -1, 2147483647, true);
@@ -475,13 +474,11 @@ final class pi extends ga implements ge, el {
         }
     }
 
-    final static void j() {
+    final static void j(int param0) {
         int var1 = hn.d(24860);
-        int discarded$0 = 1;
-        int var2 = gh.a();
+        int var2 = gh.a(true);
         kn.field_d.a(-ll.field_a + uh.field_c, ef.field_sb + -g.field_n, (byte) 103, (ll.field_a << 1) + var2, var1 + (g.field_n << 1));
-        int discarded$1 = 0;
-        na.f();
+        na.f(0);
     }
 
     private final String l(int param0) {

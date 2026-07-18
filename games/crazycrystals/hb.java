@@ -219,7 +219,7 @@ final class hb extends jb {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_h = null;
         field_l = null;
         field_k = null;

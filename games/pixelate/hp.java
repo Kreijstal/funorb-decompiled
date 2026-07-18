@@ -11,8 +11,7 @@ final class hp extends ak {
         if (param0 != 0) {
             hp.a(41, 47, -28, (byte) -84, 63);
         }
-        int discarded$0 = 16;
-        return kc.e();
+        return kc.e(16);
     }
 
     final boolean b(int param0, boolean param1) {
@@ -185,8 +184,7 @@ final class hp extends ak {
                 ((hp) this).field_Eb.a(5, 15, -20 + var17.field_K, 256, 15);
                 var8.a(var17.field_nb, ((hp) this).field_nb + -var17.field_nb, 0, 256, ((hp) this).field_K);
                 var9.a(20, 15, 0, 256, ((hp) this).field_K);
-                int discarded$1 = 3;
-                var8.field_zb = op.a(8421504, 16, 11579568, var8.field_nb, 2105376);
+                var8.field_zb = op.a(8421504, 16, 11579568, var8.field_nb, 2105376, 3);
                 var17.a(((hp) this).field_Eb, (byte) 26);
                 var8.a(var9, (byte) 26);
                 ((hp) this).a(var17, (byte) 26);
@@ -373,7 +371,7 @@ final class hp extends ak {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_Fb = null;
         field_Gb = null;
         field_Hb = null;

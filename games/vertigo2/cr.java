@@ -971,8 +971,8 @@ class cr extends fh {
               if (var24_ref == null) {
                 break L30;
               } else {
-                var24_ref.a(param0, var24_ref.field_Fb, param2, var20 + var24_ref.field_C, var19 + var24_ref.field_ob, param5, -102, param7, var24_ref.field_nb, var24_ref.field_db, param10);
-                var24_ref = (cr) (Object) var24_ref.field_M.b(83);
+                var24_ref.a(param0, ((cr) this).field_Fb, param2, var20 + ((cr) this).field_C, var19 + ((cr) this).field_ob, param5, -102, param7, ((cr) this).field_nb, ((cr) this).field_db, param10);
+                var24_ref = (cr) (Object) ((cr) this).field_M.b(83);
                 continue L31;
               }
             }
@@ -1023,7 +1023,7 @@ class cr extends fh {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_eb = null;
         field_E = null;
         field_Z = null;
@@ -1188,7 +1188,7 @@ class cr extends fh {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
+        cr var13 = null;
         int var14 = 0;
         Object stackIn_29_0 = null;
         Object stackIn_30_0 = null;
@@ -1221,7 +1221,6 @@ class cr extends fh {
         Object stackOut_39_0 = null;
         int stackOut_39_1 = 0;
         L0: {
-          var13 = null;
           var14 = Vertigo2.field_L ? 1 : 0;
           if (((cr) this).field_zb <= 0) {
             var7 = ((cr) this).field_zb >> 2;
@@ -1426,13 +1425,13 @@ class cr extends fh {
           if (((cr) this).field_M == null) {
             break L12;
           } else {
-            var13 = (Object) (Object) (cr) (Object) ((cr) this).field_M.c((byte) -12);
+            var13 = (cr) (Object) ((cr) this).field_M.c((byte) -12);
             L13: while (true) {
               if (var13 == null) {
                 break L12;
               } else {
-                ((cr) var13).a(1074455266, ((cr) var13).field_C, ((cr) var13).field_ob, ((cr) var13).field_db, param4, ((cr) var13).field_Fb);
-                var13 = (Object) (Object) (cr) (Object) ((cr) var13).field_M.b(false);
+                var13.a(1074455266, ((cr) this).field_C, ((cr) this).field_ob, ((cr) this).field_db, param4, ((cr) this).field_Fb);
+                var13 = (cr) (Object) ((cr) this).field_M.b(false);
                 continue L13;
               }
             }
@@ -1447,7 +1446,7 @@ class cr extends fh {
           }
         }
         L15: {
-          if (((cr) var13).field_G) {
+          if (((cr) this).field_G) {
             gi.field_o = true;
             break L15;
           } else {
@@ -1456,14 +1455,14 @@ class cr extends fh {
         }
         L16: {
           bi.g(var8, var9, var10, var11);
-          if (((cr) var13).field_xb == 0) {
+          if (((cr) this).field_xb == 0) {
             break L16;
           } else {
-            if (((cr) var13).field_X) {
+            if (((cr) this).field_X) {
               L17: {
-                ((cr) this).field_N = gb.field_d - ((cr) var13).field_fb + -param1;
-                ((cr) this).field_wb = -((cr) var13).field_ub + (ed.field_n - param2);
-                if (((cr) var13).field_wb < 0) {
+                ((cr) this).field_N = gb.field_d - ((cr) this).field_fb + -param1;
+                ((cr) this).field_wb = -((cr) this).field_ub + (ed.field_n - param2);
+                if (((cr) this).field_wb < 0) {
                   ((cr) this).field_wb = 0;
                   break L17;
                 } else {
@@ -1471,15 +1470,15 @@ class cr extends fh {
                 }
               }
               L18: {
-                if (((cr) var13).field_wb <= param5 + -((cr) var13).field_Fb) {
+                if (((cr) this).field_wb <= param5 + -((cr) this).field_Fb) {
                   break L18;
                 } else {
-                  ((cr) this).field_wb = param5 + -((cr) var13).field_Fb;
+                  ((cr) this).field_wb = param5 + -((cr) this).field_Fb;
                   break L18;
                 }
               }
               L19: {
-                if (0 > ((cr) var13).field_N) {
+                if (0 > ((cr) this).field_N) {
                   ((cr) this).field_N = 0;
                   break L19;
                 } else {
@@ -1487,17 +1486,17 @@ class cr extends fh {
                 }
               }
               L20: {
-                if (param3 + -((cr) var13).field_db >= ((cr) var13).field_N) {
+                if (param3 + -((cr) this).field_db >= ((cr) this).field_N) {
                   break L20;
                 } else {
-                  ((cr) this).field_N = -((cr) var13).field_db + param3;
+                  ((cr) this).field_N = -((cr) this).field_db + param3;
                   break L20;
                 }
               }
               ((cr) this).field_L = 0;
               ((cr) this).field_zb = 0;
-              ((cr) this).field_ob = param2 + ((cr) var13).field_wb;
-              ((cr) this).field_C = ((cr) var13).field_N + param1;
+              ((cr) this).field_ob = param2 + ((cr) this).field_wb;
+              ((cr) this).field_C = ((cr) this).field_N + param1;
               break L16;
             } else {
               break L16;
@@ -1514,7 +1513,7 @@ class cr extends fh {
             while (var4 != null) {
                 var4.field_ib = true;
                 var4.i(-2147483648);
-                var4 = (cr) (Object) var4.field_M.b(false);
+                var4 = (cr) (Object) ((cr) this).field_M.b(false);
             }
         }
         if (param0 != -2147483648) {
@@ -1552,13 +1551,12 @@ class cr extends fh {
                 break L1;
               } else {
                 var5 = null;
-                er discarded$4 = cr.a(0, (r) null, (byte) 109, 59);
+                er discarded$2 = cr.a(0, (r) null, (byte) 109, 59);
                 break L1;
               }
             }
             if (hq.a(124, param3, param0, param1)) {
-              int discarded$5 = 89;
-              stackOut_5_0 = ej.a();
+              stackOut_5_0 = ej.a((byte) 89);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

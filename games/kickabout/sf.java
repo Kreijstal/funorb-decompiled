@@ -16,7 +16,7 @@ final class sf extends qt {
         }
     }
 
-    final static void a(int param0, int param1, nu param2) {
+    final static void a(int param0, int param1, nu param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -415,7 +415,7 @@ final class sf extends qt {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_F = null;
         field_C = null;
         field_G = null;

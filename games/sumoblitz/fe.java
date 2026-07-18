@@ -33,9 +33,7 @@ final class fe extends ah {
         try {
           L0: {
             var2_int = -12 % ((-31 - param0) / 63);
-            int discarded$4 = 96;
-            int discarded$5 = 100;
-            stackOut_0_0 = qq.a(18416, mf.a(param1));
+            stackOut_0_0 = qq.a(18416, mf.a(param1, 100, 96));
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -72,7 +70,7 @@ final class fe extends ah {
         return stackIn_1_0;
     }
 
-    public static void n() {
+    public static void n(byte param0) {
         field_S = null;
     }
 

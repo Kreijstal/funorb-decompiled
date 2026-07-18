@@ -251,8 +251,7 @@ final class pe {
                   }
                 }
               } else {
-                int discarded$2 = 1;
-                var3_int = mg.a(sj.field_G, sd.a(qg.field_a, new String[1]), an.field_c, (byte) -59, p.field_j);
+                var3_int = mg.a(sj.field_G, sd.a(qg.field_a, new String[1], true), an.field_c, (byte) -59, p.field_j);
                 var4 = -1;
                 var5 = 0;
                 L8: while (true) {
@@ -274,8 +273,7 @@ final class pe {
                     bc.a((Object[]) (Object) an.field_c, 0, (Object[]) (Object) qg.field_b, 0, var4);
                     aa.field_j = new String[-1 + (var3_int + -var4)];
                     bc.a((Object[]) (Object) an.field_c, var4 + 1, (Object[]) (Object) aa.field_j, 0, -var4 + var3_int - 1);
-                    int discarded$3 = 1;
-                    var3_int = mg.a(sj.field_G, sd.a(b.field_b, new String[1]), an.field_c, (byte) 118, p.field_j);
+                    var3_int = mg.a(sj.field_G, sd.a(b.field_b, new String[1], true), an.field_c, (byte) 118, p.field_j);
                     var4 = -1;
                     var5 = 0;
                     L10: while (true) {

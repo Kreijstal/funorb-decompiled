@@ -100,7 +100,7 @@ final class ida extends mc {
         }
     }
 
-    final static void a(boolean param0, String param1) {
+    final static void a(boolean param0, String param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -209,7 +209,7 @@ final class ida extends mc {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_x = null;
         int var1 = 0;
         field_w = null;
@@ -239,7 +239,7 @@ final class ida extends mc {
         ((ida) this).field_v = new ij();
     }
 
-    final static void a(faa param0) {
+    final static void a(faa param0, byte param1) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;

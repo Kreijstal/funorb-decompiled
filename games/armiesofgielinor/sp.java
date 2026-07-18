@@ -58,8 +58,7 @@ final class sp implements Iterator {
         try {
           L0: {
             if (kp.a(false, param3, param0, param1)) {
-              int discarded$2 = 126;
-              stackOut_3_0 = gm.a(param4.a((byte) 58, param1, param3));
+              stackOut_3_0 = gm.a(param4.a((byte) 58, param1, param3), 126);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -144,7 +143,7 @@ final class sp implements Iterator {
         return ((sp) this).field_f != ((sp) this).field_c.field_f;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_g = null;
     }

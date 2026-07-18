@@ -109,7 +109,7 @@ final class ro extends pp {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         int var1 = 14;
     }

@@ -108,7 +108,7 @@ final class sc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_a = null;
@@ -122,7 +122,7 @@ final class sc {
         var2.a(0, -54);
     }
 
-    final static void a(int param0, int[] param1) {
+    final static void a(int param0, int[] param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -143,10 +143,7 @@ final class sc {
         try {
           L0: {
             kh.a(param1, 120, 0, ki.field_a, 0, 0, 0, 3, 160, 1920, -93, 0);
-            int discarded$6 = 160;
-            int discarded$7 = 120;
-            int discarded$8 = 3;
-            nb.a(0, 0, 0, ki.field_a, 0, 16384, 0);
+            nb.a(0, 0, 0, ki.field_a, 0, 16384, 0, 3, 120, 160);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -181,7 +178,7 @@ final class sc {
         }
     }
 
-    final static boolean a(java.applet.Applet param0) {
+    final static boolean a(java.applet.Applet param0, boolean param1) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -258,8 +255,7 @@ final class sc {
                     case 4: {
                         try {
                             var2 = "tuhstatbut";
-                            int discarded$2 = 1;
-                            var3 = (String) mb.a(param0, "getcookies");
+                            var3 = (String) mb.a(param0, "getcookies", true);
                             var4 = uj.a(-57, ';', var3);
                             var5 = 0;
                             statePc = 5;

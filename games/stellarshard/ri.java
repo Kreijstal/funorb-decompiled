@@ -564,7 +564,7 @@ final class ri {
         }
     }
 
-    final static void a(byte[] param0, int param1, int param2) {
+    final static void a(byte[] param0, int param1, int param2, byte param3) {
         param2 = param1 + param2 - 7;
         while (param1 < param2) {
             int incrementValue$0 = param1;

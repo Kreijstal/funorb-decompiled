@@ -8,11 +8,11 @@ final class tg extends ol {
     static String[] field_nb;
     int field_pb;
 
-    public static void h() {
+    public static void h(int param0) {
         field_nb = null;
     }
 
-    final static jh b() {
+    final static jh b(int param0, int param1) {
         jh var2 = new jh();
         bc.field_b.a(-12328, (hg) (Object) var2);
         km.a(4, -22);
@@ -51,12 +51,11 @@ final class tg extends ol {
                 break L1;
               } else {
                 var3 = null;
-                boolean discarded$4 = tg.a(-9, (CharSequence) null);
+                boolean discarded$2 = tg.a(-9, (CharSequence) null);
                 break L1;
               }
             }
-            int discarded$5 = 113;
-            stackOut_2_0 = n.a(false, param1);
+            stackOut_2_0 = n.a(false, param1, 113);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -93,7 +92,7 @@ final class tg extends ol {
         return stackIn_3_0;
     }
 
-    final static String i() {
+    final static String i(int param0) {
         if (!(null != ck.field_r)) {
             return "";
         }

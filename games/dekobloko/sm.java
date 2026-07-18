@@ -9,7 +9,7 @@ final class sm {
     static a field_c;
     static int field_e;
 
-    final static int a(jg param0, jg param1) {
+    final static int a(jg param0, jg param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Object var4 = null;
@@ -143,7 +143,7 @@ final class sm {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
     }
 
@@ -227,7 +227,7 @@ final class sm {
         return jk.field_e;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return cf.field_i;
     }
 

@@ -228,24 +228,22 @@ final class nb extends am {
         bp.field_e = param3;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         ug.a(-105);
         if (k.field_d != null) {
             tf.a(-93, k.field_d);
         }
         ee.a(true);
         qd.b(1);
-        int discarded$12 = 0;
-        ci.a();
+        ci.a(0);
         if (!(!pf.a((byte) -34))) {
             wa.field_d.f(121, 1);
             jd.a((byte) -81, 0);
         }
-        int discarded$13 = 1;
-        ih.b();
+        ih.b(true);
     }
 
-    final static String a(String param0, java.applet.Applet param1) {
+    final static String a(String param0, java.applet.Applet param1, byte param2) {
         try {
             String var3 = null;
             Throwable var3_ref = null;

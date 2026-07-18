@@ -14,8 +14,7 @@ abstract class tf {
         var4 = ((tf) this).a(false);
         var6 = -1 % ((param1 - -69) / 33);
         if (0L < var4) {
-          int discarded$2 = 0;
-          wf.a(var4);
+          wf.a(var4, false);
           return ((tf) this).a(param0, 0);
         } else {
           return ((tf) this).a(param0, 0);

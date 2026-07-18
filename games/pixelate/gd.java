@@ -15,7 +15,7 @@ final class gd {
     static int field_g;
     static tf[] field_f;
 
-    final static void a() {
+    final static void a(byte param0) {
         vd.field_c = new ak(0L, (ak) null);
         if (f.field_n) {
             vd.field_c.a(gk.field_lb, (byte) 26);

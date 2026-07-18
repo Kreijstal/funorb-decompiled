@@ -12,7 +12,7 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    final static String a(String param0, ci param1, int param2, String param3) {
+    final static String a(String param0, ci param1, int param2, String param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -233,7 +233,7 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         if (!(ge.field_x)) {
             throw new IllegalStateException();
         }
@@ -242,7 +242,7 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
         gl.field_y = 0;
     }
 
-    private final synchronized void c() {
+    private final synchronized void c(byte param0) {
         if (!(((fg) this).field_k != null)) {
             return;
         }
@@ -252,13 +252,12 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
         try {
-            int discarded$0 = 28;
-            this.c();
+            this.c((byte) 28);
             if (param0 != -32299) {
                 Object var6 = null;
                 ((fg) this).a(8, -89, (java.awt.Component) null, (byte) 114);
             }
-            boolean discarded$1 = param2.drawImage(((fg) this).field_f, param1, param3, (java.awt.image.ImageObserver) this);
+            boolean discarded$0 = param2.drawImage(((fg) this).field_f, param1, param3, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "fg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -825,15 +824,12 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
             int var5_int = 101 / ((-90 - param3) / 34);
             ((fg) this).field_h = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
             ((fg) this).field_f = param2.createImage((java.awt.image.ImageProducer) this);
-            int discarded$0 = 28;
-            this.c();
+            this.c((byte) 28);
+            boolean discarded$0 = param2.prepareImage(((fg) this).field_f, (java.awt.image.ImageObserver) this);
+            this.c((byte) 28);
             boolean discarded$1 = param2.prepareImage(((fg) this).field_f, (java.awt.image.ImageObserver) this);
-            int discarded$2 = 28;
-            this.c();
-            boolean discarded$3 = param2.prepareImage(((fg) this).field_f, (java.awt.image.ImageObserver) this);
-            int discarded$4 = 28;
-            this.c();
-            boolean discarded$5 = param2.prepareImage(((fg) this).field_f, (java.awt.image.ImageObserver) this);
+            this.c((byte) 28);
+            boolean discarded$2 = param2.prepareImage(((fg) this).field_f, (java.awt.image.ImageObserver) this);
             ((fg) this).a(103);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "fg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -884,7 +880,7 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_i = null;
     }
 

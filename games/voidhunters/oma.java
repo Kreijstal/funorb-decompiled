@@ -174,7 +174,7 @@ final class oma implements ntb, mfa {
             }
             L2: {
               var3 = (oma) (Object) param1;
-              if (null == var3.field_l) {
+              if (null == ((oma) this).field_l) {
                 var3.field_l = null;
                 break L2;
               } else {
@@ -186,7 +186,7 @@ final class oma implements ntb, mfa {
                     break L3;
                   }
                 }
-                var3.field_l.b((byte) 91, (tv) (Object) var3.field_l);
+                ((oma) this).field_l.b((byte) 91, (tv) (Object) var3.field_l);
                 break L2;
               }
             }
@@ -275,22 +275,34 @@ final class oma implements ntb, mfa {
         RuntimeException var3 = null;
         int var4 = 0;
         oma var5 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        int stackIn_8_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_11_1 = 0;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_10_1 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_9_1 = 0;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         try {
           L0: {
             L1: {
@@ -303,71 +315,106 @@ final class oma implements ntb, mfa {
             }
             L2: {
               var5 = (oma) (Object) param0;
-              if (null == var5.field_l) {
+              if (null == ((oma) this).field_l) {
                 break L2;
               } else {
                 if (null == var5.field_l) {
                   break L2;
                 } else {
-                  var5.field_l.a((tv) (Object) var5.field_l, -91);
+                  ((oma) this).field_l.a((tv) (Object) var5.field_l, -91);
                   break L2;
                 }
               }
             }
-            var4 = 0;
-            mib discarded$2 = var5.field_l;
             L3: {
-              if (var5.field_l == null) {
+              var4 = 0;
+              if (((oma) this).field_l != null) {
+                stackOut_7_0 = 0;
+                stackIn_8_0 = stackOut_7_0;
                 break L3;
               } else {
-                if (!var5.field_l.a((byte) 106, (tv) (Object) var5.field_l)) {
-                  break L3;
-                } else {
-                  var4 = 1;
-                  System.out.println("Carousel_commongame_Info carousel_info has changed. before=" + (Object) (Object) var5.field_l + ", now=" + (Object) (Object) var5.field_l);
-                  break L3;
-                }
+                stackOut_6_0 = 1;
+                stackIn_8_0 = stackOut_6_0;
+                break L3;
               }
             }
             L4: {
-              if (var4 == 0) {
+              stackOut_8_0 = stackIn_8_0;
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_9_0 = stackOut_8_0;
+              if (null != var5.field_l) {
+                stackOut_10_0 = stackIn_10_0;
+                stackOut_10_1 = 0;
+                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_1 = stackOut_10_1;
                 break L4;
               } else {
-                System.out.println("This instance of commongame has changed");
+                stackOut_9_0 = stackIn_9_0;
+                stackOut_9_1 = 1;
+                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_1 = stackOut_9_1;
                 break L4;
+              }
+            }
+            L5: {
+              L6: {
+                if ((stackIn_11_0 ^ stackIn_11_1) != 0) {
+                  break L6;
+                } else {
+                  if (((oma) this).field_l == null) {
+                    break L5;
+                  } else {
+                    if (!((oma) this).field_l.a((byte) 106, (tv) (Object) var5.field_l)) {
+                      break L5;
+                    } else {
+                      break L6;
+                    }
+                  }
+                }
+              }
+              var4 = 1;
+              System.out.println("Carousel_commongame_Info carousel_info has changed. before=" + (Object) (Object) var5.field_l + ", now=" + (Object) (Object) ((oma) this).field_l);
+              break L5;
+            }
+            L7: {
+              if (var4 == 0) {
+                break L7;
+              } else {
+                System.out.println("This instance of commongame has changed");
+                break L7;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L8: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("oma.F(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_19_0 = (RuntimeException) var3;
+            stackOut_19_1 = new StringBuilder().append("oma.F(");
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L5;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L8;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L5;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ')');
         }
     }
 
@@ -862,13 +909,11 @@ final class oma implements ntb, mfa {
                 }
               }
               if (!unb.field_o) {
-                int discarded$2 = 0;
-                var13 = bkb.a();
+                var13 = bkb.a(0);
                 var13.a(false, var12, -48);
                 break L1;
               } else {
-                int discarded$3 = 0;
-                var11 = pba.b().a(3, false);
+                var11 = pba.b(false).a(3, false);
                 var11.a(false, var12, 126);
                 break L1;
               }

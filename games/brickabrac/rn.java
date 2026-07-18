@@ -103,7 +103,7 @@ final class rn {
         return stackIn_6_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         tf.field_a[59] = 57;
         tf.field_a[93] = 43;
         tf.field_a[91] = 42;
@@ -143,7 +143,7 @@ final class rn {
         return ((rn) this).field_f.length();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_e = null;
         field_b = null;

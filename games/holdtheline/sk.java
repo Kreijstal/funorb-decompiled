@@ -212,7 +212,7 @@ final class sk {
         field_a = null;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -260,8 +260,7 @@ final class sk {
                             }
                           }
                         }
-                        int discarded$2 = 0;
-                        ah.b();
+                        ah.b(false);
                         break L3;
                       }
                     }
@@ -272,8 +271,7 @@ final class sk {
                     if (2 == pa.field_h) {
                       break L3;
                     } else {
-                      int discarded$3 = 0;
-                      ah.b();
+                      ah.b(false);
                       break L3;
                     }
                   }

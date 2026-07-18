@@ -312,7 +312,7 @@ final class ed extends en {
         return var7;
     }
 
-    final static int h() {
+    final static int h(int param0) {
         return hk.field_a;
     }
 
@@ -348,7 +348,7 @@ final class ed extends en {
         }
     }
 
-    final static se e() {
+    final static se e(byte param0) {
         try {
             Throwable var1 = null;
             se stackIn_1_0 = null;
@@ -624,7 +624,7 @@ final class ed extends en {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_U = null;
         field_V = null;
         field_P = null;

@@ -13,7 +13,7 @@ final class ji implements Iterable {
     static mf field_a;
     static mh field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_g = null;
         field_b = null;
@@ -85,7 +85,7 @@ final class ji implements Iterable {
         return (Iterator) (Object) new ik((ji) this);
     }
 
-    final static void a(int param0, boolean param1, vm param2) {
+    final static void a(int param0, boolean param1, vm param2, int param3, int param4, boolean param5) {
         Object var6 = null;
         Object var6_ref = null;
         RuntimeException var6_ref2 = null;
@@ -182,7 +182,7 @@ final class ji implements Iterable {
         }
     }
 
-    final static lo a(String param0) {
+    final static lo a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;

@@ -58,13 +58,11 @@ final class sg {
                     param0.dispose();
                     break L0;
                   } else {
-                    int discarded$16 = 0;
-                    wl.a(100L);
+                    wl.a(100L, false);
                     continue L1;
                   }
                 } else {
-                  int discarded$17 = 0;
-                  wl.a(10L);
+                  wl.a(10L, false);
                   continue L2;
                 }
               }
@@ -127,7 +125,7 @@ final class sg {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         ti.field_j[oe.field_c] = param1;
         lf.field_Y[oe.field_c] = oe.field_c;
         g.field_u[oe.field_c] = param4;

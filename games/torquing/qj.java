@@ -12,26 +12,16 @@ final class qj {
     final static void a(int param0, int param1) {
         int var2 = 0;
         int var3 = 0;
-        int stackIn_208_0 = 0;
-        int stackOut_207_0 = 0;
-        int stackOut_206_0 = 0;
-        L0: {
-          var3 = Torquing.field_u;
-          q.field_d = q.field_d + 1;
-          if (param1 == il.field_l) {
-            il.field_l = param1;
-            if (!wa.field_f) {
-              if (q.field_d < dg.field_h) {
-                L1: {
-                  if (!he.field_a) {
-                    break L1;
-                  } else {
-                    ro.field_w = n.field_t;
-                    ue.field_h = k.field_e;
-                    q.field_d = 0;
-                    break L1;
-                  }
-                }
+        int stackIn_90_0 = 0;
+        int stackOut_89_0 = 0;
+        int stackOut_88_0 = 0;
+        var3 = Torquing.field_u;
+        q.field_d = q.field_d + 1;
+        if (param1 == il.field_l) {
+          il.field_l = param1;
+          if (!wa.field_f) {
+            if (q.field_d >= dg.field_h) {
+              L0: {
                 if (!wa.field_f) {
                   break L0;
                 } else {
@@ -43,254 +33,102 @@ final class qj {
                     break L0;
                   }
                 }
-              } else {
-                L2: {
-                  if (!wa.field_f) {
-                    break L2;
-                  } else {
-                    if (q.field_d != p.field_u) {
-                      break L2;
-                    } else {
-                      wa.field_f = false;
-                      q.field_d = 0;
-                      if (!wa.field_f) {
-                        break L0;
-                      } else {
-                        if (q.field_d != p.field_u) {
-                          break L0;
-                        } else {
-                          wa.field_f = false;
-                          q.field_d = 0;
-                          break L0;
-                        }
-                      }
-                    }
-                  }
-                }
-                return;
               }
+              return;
             } else {
-              L3: {
+              L1: {
+                if (!he.field_a) {
+                  break L1;
+                } else {
+                  ro.field_w = n.field_t;
+                  ue.field_h = k.field_e;
+                  q.field_d = 0;
+                  break L1;
+                }
+              }
+              L2: {
                 if (!wa.field_f) {
-                  break L3;
+                  break L2;
                 } else {
                   if (q.field_d != p.field_u) {
-                    break L3;
+                    break L2;
                   } else {
                     wa.field_f = false;
                     q.field_d = 0;
-                    break L3;
+                    break L2;
                   }
                 }
               }
               return;
             }
           } else {
-            if (!wa.field_f) {
-              if (q.field_d >= dg.field_h) {
-                L4: {
-                  if (cf.field_e + dg.field_h <= q.field_d) {
-                    stackOut_207_0 = 0;
-                    stackIn_208_0 = stackOut_207_0;
-                    break L4;
-                  } else {
-                    stackOut_206_0 = 1;
-                    stackIn_208_0 = stackOut_206_0;
-                    break L4;
-                  }
-                }
-                L5: {
-                  var2 = stackIn_208_0;
-                  if (param1 == -1) {
-                    q.field_d = 0;
-                    break L5;
-                  } else {
-                    if (!wa.field_f) {
-                      if (var2 == 0) {
-                        q.field_d = 0;
-                        break L5;
-                      } else {
-                        q.field_d = dg.field_h;
-                        break L5;
-                      }
-                    } else {
-                      q.field_d = dg.field_h;
-                      break L5;
-                    }
-                  }
-                }
-                ue.field_h = k.field_e;
-                ro.field_w = n.field_t;
-                if (-1 == param1) {
-                  if (var2 != 0) {
-                    wa.field_f = true;
-                    L6: {
-                      il.field_l = param1;
-                      if (wa.field_f) {
-                        break L6;
-                      } else {
-                        if (q.field_d >= dg.field_h) {
-                          break L6;
-                        } else {
-                          if (!he.field_a) {
-                            break L6;
-                          } else {
-                            ro.field_w = n.field_t;
-                            ue.field_h = k.field_e;
-                            q.field_d = 0;
-                            if (wa.field_f) {
-                              if (q.field_d != p.field_u) {
-                                return;
-                              } else {
-                                wa.field_f = false;
-                                q.field_d = 0;
-                                return;
-                              }
-                            } else {
-                              return;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    if (wa.field_f) {
-                      if (q.field_d == p.field_u) {
-                        wa.field_f = false;
-                        q.field_d = 0;
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  } else {
-                    L7: {
-                      il.field_l = param1;
-                      if (wa.field_f) {
-                        break L7;
-                      } else {
-                        if (q.field_d >= dg.field_h) {
-                          break L7;
-                        } else {
-                          if (!he.field_a) {
-                            break L7;
-                          } else {
-                            ro.field_w = n.field_t;
-                            ue.field_h = k.field_e;
-                            q.field_d = 0;
-                            if (wa.field_f) {
-                              if (q.field_d != p.field_u) {
-                                return;
-                              } else {
-                                wa.field_f = false;
-                                q.field_d = 0;
-                                return;
-                              }
-                            } else {
-                              return;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    if (wa.field_f) {
-                      if (q.field_d != p.field_u) {
-                        return;
-                      } else {
-                        wa.field_f = false;
-                        q.field_d = 0;
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  }
+            L3: {
+              if (!wa.field_f) {
+                break L3;
+              } else {
+                if (q.field_d != p.field_u) {
+                  break L3;
                 } else {
                   wa.field_f = false;
-                  if (wa.field_f) {
-                    if (q.field_d == p.field_u) {
-                      wa.field_f = false;
-                      q.field_d = 0;
-                      break L0;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
+                  q.field_d = 0;
+                  break L3;
                 }
-              } else {
-                L8: {
-                  var2 = 0;
-                  if (param1 != -1) {
-                    if (!wa.field_f) {
+              }
+            }
+            return;
+          }
+        } else {
+          if (!wa.field_f) {
+            if (q.field_d >= dg.field_h) {
+              L4: {
+                if (cf.field_e + dg.field_h <= q.field_d) {
+                  stackOut_89_0 = 0;
+                  stackIn_90_0 = stackOut_89_0;
+                  break L4;
+                } else {
+                  stackOut_88_0 = 1;
+                  stackIn_90_0 = stackOut_88_0;
+                  break L4;
+                }
+              }
+              L5: {
+                var2 = stackIn_90_0;
+                if (param1 == -1) {
+                  q.field_d = 0;
+                  break L5;
+                } else {
+                  L6: {
+                    if (wa.field_f) {
+                      break L6;
+                    } else {
                       if (var2 != 0) {
-                        q.field_d = dg.field_h;
-                        break L8;
+                        break L6;
                       } else {
                         q.field_d = 0;
-                        break L8;
+                        break L5;
                       }
-                    } else {
-                      q.field_d = dg.field_h;
-                      break L8;
                     }
-                  } else {
-                    q.field_d = 0;
-                    break L8;
                   }
+                  q.field_d = dg.field_h;
+                  break L5;
                 }
-                ue.field_h = k.field_e;
-                ro.field_w = n.field_t;
-                if (-1 == param1) {
-                  if (var2 != 0) {
-                    wa.field_f = true;
-                    L9: {
-                      il.field_l = param1;
-                      if (!wa.field_f) {
-                        if (!wa.field_f) {
-                          break L9;
-                        } else {
-                          L10: {
-                            if (q.field_d == p.field_u) {
-                              break L10;
-                            } else {
-                              if (!wa.field_f) {
-                                break L9;
-                              } else {
-                                if (q.field_d != p.field_u) {
-                                  break L9;
-                                } else {
-                                  break L10;
-                                }
-                              }
-                            }
-                          }
-                          wa.field_f = false;
-                          q.field_d = 0;
-                          break L9;
-                        }
-                      } else {
-                        if (!wa.field_f) {
-                          break L9;
-                        } else {
-                          if (q.field_d != p.field_u) {
-                            break L9;
-                          } else {
-                            wa.field_f = false;
-                            q.field_d = 0;
-                            break L9;
-                          }
-                        }
-                      }
-                    }
-                    return;
-                  } else {
+              }
+              ue.field_h = k.field_e;
+              ro.field_w = n.field_t;
+              if (-1 == param1) {
+                if (var2 != 0) {
+                  wa.field_f = true;
+                  L7: {
                     il.field_l = param1;
-                    if (!wa.field_f) {
-                      if (q.field_d < dg.field_h) {
-                        if (he.field_a) {
+                    if (wa.field_f) {
+                      break L7;
+                    } else {
+                      if (q.field_d >= dg.field_h) {
+                        break L7;
+                      } else {
+                        if (!he.field_a) {
+                          break L7;
+                        } else {
                           ro.field_w = n.field_t;
                           ue.field_h = k.field_e;
                           q.field_d = 0;
@@ -305,191 +143,198 @@ final class qj {
                           } else {
                             return;
                           }
-                        } else {
-                          L11: {
-                            if (!wa.field_f) {
-                              break L11;
-                            } else {
-                              if (q.field_d != p.field_u) {
-                                break L11;
-                              } else {
-                                wa.field_f = false;
-                                q.field_d = 0;
-                                break L11;
-                              }
-                            }
-                          }
-                          return;
                         }
+                      }
+                    }
+                  }
+                  if (wa.field_f) {
+                    if (q.field_d != p.field_u) {
+                      return;
+                    } else {
+                      wa.field_f = false;
+                      q.field_d = 0;
+                      return;
+                    }
+                  } else {
+                    return;
+                  }
+                } else {
+                  L8: {
+                    il.field_l = param1;
+                    if (wa.field_f) {
+                      break L8;
+                    } else {
+                      if (q.field_d >= dg.field_h) {
+                        break L8;
                       } else {
-                        L12: {
+                        if (!he.field_a) {
+                          break L8;
+                        } else {
+                          ro.field_w = n.field_t;
+                          ue.field_h = k.field_e;
+                          q.field_d = 0;
+                          if (wa.field_f) {
+                            if (q.field_d == p.field_u) {
+                              wa.field_f = false;
+                              q.field_d = 0;
+                              return;
+                            } else {
+                              return;
+                            }
+                          } else {
+                            return;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  if (wa.field_f) {
+                    if (q.field_d == p.field_u) {
+                      wa.field_f = false;
+                      q.field_d = 0;
+                      return;
+                    } else {
+                      return;
+                    }
+                  } else {
+                    return;
+                  }
+                }
+              } else {
+                wa.field_f = false;
+                L9: {
+                  il.field_l = param1;
+                  if (wa.field_f) {
+                    break L9;
+                  } else {
+                    if (q.field_d >= dg.field_h) {
+                      break L9;
+                    } else {
+                      if (!he.field_a) {
+                        break L9;
+                      } else {
+                        L10: {
+                          ro.field_w = n.field_t;
+                          ue.field_h = k.field_e;
+                          q.field_d = 0;
                           if (!wa.field_f) {
-                            break L12;
+                            break L10;
                           } else {
                             if (q.field_d != p.field_u) {
-                              break L12;
+                              break L10;
                             } else {
                               wa.field_f = false;
                               q.field_d = 0;
-                              break L12;
+                              break L10;
                             }
                           }
                         }
                         return;
                       }
-                    } else {
-                      L13: {
-                        if (!wa.field_f) {
-                          break L13;
-                        } else {
-                          if (q.field_d != p.field_u) {
-                            break L13;
-                          } else {
-                            wa.field_f = false;
-                            q.field_d = 0;
-                            break L13;
-                          }
-                        }
-                      }
-                      return;
                     }
+                  }
+                }
+                if (wa.field_f) {
+                  if (q.field_d != p.field_u) {
+                    return;
+                  } else {
+                    wa.field_f = false;
+                    q.field_d = 0;
+                    return;
                   }
                 } else {
-                  wa.field_f = false;
-                  L14: {
-                    il.field_l = param1;
-                    if (!wa.field_f) {
-                      if (!wa.field_f) {
-                        break L14;
-                      } else {
-                        L15: {
-                          if (q.field_d == p.field_u) {
-                            break L15;
-                          } else {
-                            if (!wa.field_f) {
-                              break L14;
-                            } else {
-                              if (q.field_d != p.field_u) {
-                                break L14;
-                              } else {
-                                break L15;
-                              }
-                            }
-                          }
-                        }
-                        wa.field_f = false;
-                        q.field_d = 0;
-                        break L14;
-                      }
-                    } else {
-                      if (!wa.field_f) {
-                        break L14;
-                      } else {
-                        if (q.field_d != p.field_u) {
-                          break L14;
-                        } else {
-                          wa.field_f = false;
-                          q.field_d = 0;
-                          break L14;
-                        }
-                      }
-                    }
-                  }
                   return;
                 }
               }
             } else {
-              L16: {
+              L11: {
                 var2 = 0;
-                if (param1 != -1) {
-                  break L16;
+                if (param1 == -1) {
+                  q.field_d = 0;
+                  break L11;
                 } else {
-                  break L16;
+                  if (!wa.field_f) {
+                    if (var2 == 0) {
+                      q.field_d = 0;
+                      break L11;
+                    } else {
+                      q.field_d = dg.field_h;
+                      break L11;
+                    }
+                  } else {
+                    q.field_d = dg.field_h;
+                    break L11;
+                  }
                 }
               }
-              q.field_d = 0;
               ue.field_h = k.field_e;
               ro.field_w = n.field_t;
               if (-1 == param1) {
                 if (var2 != 0) {
                   wa.field_f = true;
-                  L17: {
+                  L12: {
                     il.field_l = param1;
-                    if (!wa.field_f) {
-                      if (!wa.field_f) {
-                        break L17;
+                    if (wa.field_f) {
+                      break L12;
+                    } else {
+                      if (q.field_d >= dg.field_h) {
+                        break L12;
                       } else {
-                        L18: {
-                          if (q.field_d == p.field_u) {
-                            break L18;
-                          } else {
-                            if (!wa.field_f) {
-                              break L17;
-                            } else {
-                              if (q.field_d != p.field_u) {
-                                break L17;
-                              } else {
-                                break L18;
-                              }
-                            }
-                          }
+                        if (!he.field_a) {
+                          break L12;
+                        } else {
+                          ro.field_w = n.field_t;
+                          ue.field_h = k.field_e;
+                          q.field_d = 0;
+                          break L12;
                         }
+                      }
+                    }
+                  }
+                  L13: {
+                    if (!wa.field_f) {
+                      break L13;
+                    } else {
+                      if (q.field_d != p.field_u) {
+                        break L13;
+                      } else {
                         wa.field_f = false;
                         q.field_d = 0;
-                        break L17;
-                      }
-                    } else {
-                      if (!wa.field_f) {
-                        break L17;
-                      } else {
-                        if (q.field_d != p.field_u) {
-                          break L17;
-                        } else {
-                          wa.field_f = false;
-                          q.field_d = 0;
-                          break L17;
-                        }
+                        break L13;
                       }
                     }
                   }
                   return;
                 } else {
-                  L19: {
+                  L14: {
                     il.field_l = param1;
-                    if (!wa.field_f) {
-                      if (!wa.field_f) {
-                        break L19;
+                    if (wa.field_f) {
+                      break L14;
+                    } else {
+                      if (q.field_d >= dg.field_h) {
+                        break L14;
                       } else {
-                        L20: {
-                          if (q.field_d == p.field_u) {
-                            break L20;
-                          } else {
-                            if (!wa.field_f) {
-                              break L19;
-                            } else {
-                              if (q.field_d != p.field_u) {
-                                break L19;
-                              } else {
-                                break L20;
-                              }
-                            }
-                          }
+                        if (!he.field_a) {
+                          break L14;
+                        } else {
+                          ro.field_w = n.field_t;
+                          ue.field_h = k.field_e;
+                          q.field_d = 0;
+                          break L14;
                         }
+                      }
+                    }
+                  }
+                  L15: {
+                    if (!wa.field_f) {
+                      break L15;
+                    } else {
+                      if (q.field_d != p.field_u) {
+                        break L15;
+                      } else {
                         wa.field_f = false;
                         q.field_d = 0;
-                        break L19;
-                      }
-                    } else {
-                      if (!wa.field_f) {
-                        break L19;
-                      } else {
-                        if (q.field_d != p.field_u) {
-                          break L19;
-                        } else {
-                          wa.field_f = false;
-                          q.field_d = 0;
-                          break L19;
-                        }
+                        break L15;
                       }
                     }
                   }
@@ -497,47 +342,193 @@ final class qj {
                 }
               } else {
                 wa.field_f = false;
-                L21: {
+                L16: {
+                  il.field_l = param1;
+                  if (wa.field_f) {
+                    break L16;
+                  } else {
+                    if (q.field_d >= dg.field_h) {
+                      break L16;
+                    } else {
+                      if (!he.field_a) {
+                        break L16;
+                      } else {
+                        ro.field_w = n.field_t;
+                        ue.field_h = k.field_e;
+                        q.field_d = 0;
+                        break L16;
+                      }
+                    }
+                  }
+                }
+                L17: {
+                  if (!wa.field_f) {
+                    break L17;
+                  } else {
+                    if (q.field_d != p.field_u) {
+                      break L17;
+                    } else {
+                      wa.field_f = false;
+                      q.field_d = 0;
+                      break L17;
+                    }
+                  }
+                }
+                return;
+              }
+            }
+          } else {
+            L18: {
+              L19: {
+                var2 = 0;
+                if (param1 == -1) {
+                  break L19;
+                } else {
+                  if (!wa.field_f) {
+                    if (var2 == 0) {
+                      break L19;
+                    } else {
+                      q.field_d = dg.field_h;
+                      break L18;
+                    }
+                  } else {
+                    q.field_d = dg.field_h;
+                    break L18;
+                  }
+                }
+              }
+              q.field_d = 0;
+              break L18;
+            }
+            ue.field_h = k.field_e;
+            ro.field_w = n.field_t;
+            if (-1 == param1) {
+              if (var2 != 0) {
+                wa.field_f = true;
+                L20: {
                   il.field_l = param1;
                   if (!wa.field_f) {
                     if (!wa.field_f) {
-                      break L21;
+                      break L20;
                     } else {
-                      L22: {
+                      L21: {
                         if (q.field_d == p.field_u) {
-                          break L22;
+                          break L21;
                         } else {
                           if (!wa.field_f) {
-                            break L21;
+                            break L20;
                           } else {
                             if (q.field_d != p.field_u) {
-                              break L21;
+                              break L20;
                             } else {
-                              break L22;
+                              break L21;
                             }
                           }
                         }
                       }
                       wa.field_f = false;
                       q.field_d = 0;
-                      break L21;
+                      break L20;
                     }
                   } else {
                     if (!wa.field_f) {
-                      break L21;
+                      break L20;
                     } else {
                       if (q.field_d != p.field_u) {
-                        break L21;
+                        break L20;
                       } else {
                         wa.field_f = false;
                         q.field_d = 0;
-                        break L21;
+                        break L20;
+                      }
+                    }
+                  }
+                }
+                return;
+              } else {
+                L22: {
+                  il.field_l = param1;
+                  if (!wa.field_f) {
+                    if (!wa.field_f) {
+                      break L22;
+                    } else {
+                      L23: {
+                        if (q.field_d == p.field_u) {
+                          break L23;
+                        } else {
+                          if (!wa.field_f) {
+                            break L22;
+                          } else {
+                            if (q.field_d != p.field_u) {
+                              break L22;
+                            } else {
+                              break L23;
+                            }
+                          }
+                        }
+                      }
+                      wa.field_f = false;
+                      q.field_d = 0;
+                      break L22;
+                    }
+                  } else {
+                    if (!wa.field_f) {
+                      break L22;
+                    } else {
+                      if (q.field_d != p.field_u) {
+                        break L22;
+                      } else {
+                        wa.field_f = false;
+                        q.field_d = 0;
+                        break L22;
                       }
                     }
                   }
                 }
                 return;
               }
+            } else {
+              wa.field_f = false;
+              L24: {
+                il.field_l = param1;
+                if (!wa.field_f) {
+                  if (!wa.field_f) {
+                    break L24;
+                  } else {
+                    L25: {
+                      if (q.field_d == p.field_u) {
+                        break L25;
+                      } else {
+                        if (!wa.field_f) {
+                          break L24;
+                        } else {
+                          if (q.field_d != p.field_u) {
+                            break L24;
+                          } else {
+                            break L25;
+                          }
+                        }
+                      }
+                    }
+                    wa.field_f = false;
+                    q.field_d = 0;
+                    break L24;
+                  }
+                } else {
+                  if (!wa.field_f) {
+                    break L24;
+                  } else {
+                    if (q.field_d != p.field_u) {
+                      break L24;
+                    } else {
+                      wa.field_f = false;
+                      q.field_d = 0;
+                      break L24;
+                    }
+                  }
+                }
+              }
+              return;
             }
           }
         }
@@ -598,7 +589,7 @@ final class qj {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
     }

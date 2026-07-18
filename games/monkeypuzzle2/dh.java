@@ -7,7 +7,7 @@ final class dh {
     static int field_c;
     static String field_a;
 
-    final static am a(String param0) {
+    final static am a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

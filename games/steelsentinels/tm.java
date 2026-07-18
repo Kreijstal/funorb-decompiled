@@ -12,7 +12,7 @@ final class tm {
     static String field_a;
     static String field_f;
 
-    final static void a(int param0, boolean param1, boolean param2) {
+    final static void a(int param0, boolean param1, boolean param2, int param3) {
         gh stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         gh stackIn_5_0 = null;
@@ -327,9 +327,7 @@ final class tm {
                 }
               }
             }
-            int discarded$6 = 0;
-            int discarded$7 = 11;
-            ui.a();
+            ui.a(11, 0);
             break L8;
           }
         }
@@ -349,11 +347,7 @@ final class tm {
                 }
               }
             }
-            int discarded$8 = 81;
-            int discarded$9 = 11;
-            int discarded$10 = 0;
-            int discarded$11 = 1;
-            nl.a(ok.field_a, eh.field_e);
+            nl.a(ok.field_a, eh.field_e, true, 0, 11, (byte) 81);
             break L10;
           }
         }
@@ -369,11 +363,10 @@ final class tm {
 
     final static gh a(byte param0) {
         int var1 = -54 % ((-38 - param0) / 57);
-        int discarded$0 = 1;
-        return pl.d();
+        return pl.d(true);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_e = null;
         field_b = null;

@@ -257,7 +257,7 @@ final class ej extends ec {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_F = null;
         field_O = null;
         field_H = null;

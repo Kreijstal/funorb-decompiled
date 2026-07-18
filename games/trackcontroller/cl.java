@@ -4,7 +4,7 @@
 final class cl {
     static int field_a;
 
-    final static void a(kk param0) {
+    final static void a(kk param0, byte param1) {
         qj var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -12,8 +12,7 @@ final class cl {
             var2 = new qj(param0.a("final_frame.jpg", -1, ""), (java.awt.Component) (Object) ki.field_f);
             var3 = var2.field_t;
             var4 = var2.field_q;
-            int discarded$0 = 0;
-            nk.b();
+            nk.b(false);
             ej.field_d = new qj(var3, var4 * 3 / 4);
             ej.field_d.a();
             var2.h(0, 0);
@@ -365,7 +364,7 @@ final class cl {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         jf var4 = null;
@@ -378,9 +377,7 @@ final class cl {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$8 = 7;
-                int discarded$9 = 4;
-                rd.a(var4);
+                rd.a(var4, 4, 7);
                 var4 = (jf) (Object) ei.field_m.a(10);
                 continue L1;
               }

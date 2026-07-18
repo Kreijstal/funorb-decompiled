@@ -157,8 +157,7 @@ final class ef extends lk {
                   }
                 }
                 ((ef) this).field_w = (k) param2;
-                int discarded$1 = 113;
-                this.d();
+                this.d((byte) 113);
                 this.a(-101, param0);
                 ((ef) this).field_n = null;
                 ((ef) this).field_e.field_g = 0;
@@ -730,7 +729,7 @@ final class ef extends lk {
     public ef() {
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         try {
             int var2_int = 0;
             Exception var3 = null;

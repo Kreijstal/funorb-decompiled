@@ -7,7 +7,7 @@ final class qcb extends rqa {
     static String field_r;
     static llb field_p;
 
-    final static byte[] a(int param0, byte[] param1, int param2) {
+    final static byte[] a(int param0, byte[] param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -75,7 +75,7 @@ final class qcb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_r = null;
         field_p = null;
         field_q = null;

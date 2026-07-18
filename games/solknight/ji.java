@@ -85,7 +85,7 @@ final class ji {
         return k.field_b;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
     }

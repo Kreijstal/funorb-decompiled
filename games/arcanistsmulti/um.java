@@ -16,7 +16,7 @@ final class um {
         field_c = null;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return sb.field_a;
     }
 
@@ -39,8 +39,7 @@ final class um {
                 } else {
                     var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                 }
-                int discarded$10 = 269;
-                ei.a("document.cookie=\"" + var5 + "\"", param1);
+                ei.a("document.cookie=\"" + var5 + "\"", param1, 269);
                 if (param2 != 13680) {
                     Object var6 = null;
                     um.a((String) null, (java.applet.Applet) null, -110);

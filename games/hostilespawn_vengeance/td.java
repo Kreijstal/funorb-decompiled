@@ -264,7 +264,7 @@ final class td implements Runnable {
         return stackIn_13_0 != 0;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

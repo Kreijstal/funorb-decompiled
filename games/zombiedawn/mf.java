@@ -7,7 +7,7 @@ final class mf {
     static String field_a;
     private vn[] field_b;
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -52,7 +52,7 @@ final class mf {
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, int param2) {
         int stackIn_12_0 = 0;
         int stackOut_10_0 = 0;
         int stackOut_11_0 = 0;

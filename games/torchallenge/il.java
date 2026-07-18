@@ -45,8 +45,7 @@ final class il extends ma {
         try {
           L0: {
             L1: {
-              int discarded$12 = 1;
-              if (null != aj.a(param1)) {
+              if (null != aj.a(param1, true)) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -61,7 +60,7 @@ final class il extends ma {
               if (param0 == 24) {
                 break L2;
               } else {
-                String discarded$13 = il.f(-25);
+                String discarded$2 = il.f(-25);
                 break L2;
               }
             }
@@ -200,16 +199,10 @@ final class il extends ma {
         if (!(null != ji.field_p)) {
             si.e((byte) 125);
         }
-        int discarded$0 = 240;
-        int discarded$1 = 320;
-        int discarded$2 = 18;
-        int discarded$3 = 8;
-        int discarded$4 = 24;
-        int discarded$5 = 24;
-        gb.a(2, -66, (eg) (Object) ag.field_e, 32, ji.field_p, ji.field_p, param0, ag.field_e.field_x, tf.field_x);
+        gb.a(2, -66, (eg) (Object) ag.field_e, 32, ji.field_p, ji.field_p, param0, ag.field_e.field_x, tf.field_x, 24, 24, 8, 18, 320, 240);
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -284,12 +277,11 @@ final class il extends ma {
                         L5: {
                           var7 = param0.charAt(var6);
                           if (ie.a((byte) 82, (char) var7)) {
-                            int discarded$2 = -111;
-                            var8 = uk.a((char) var7);
+                            var8 = uk.a((char) var7, (byte) -111);
                             if (0 == var8) {
                               break L5;
                             } else {
-                              StringBuilder discarded$3 = var5.append((char) var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               break L5;
                             }
                           } else {
@@ -347,19 +339,17 @@ final class il extends ma {
 
     final static void a(int param0, java.awt.Canvas param1) {
         if (!(11 != gj.field_c)) {
-            int discarded$0 = -122;
-            mf.c();
+            mf.c(-122);
         }
         try {
             c.a(sa.field_b, 127, hk.field_d, bg.field_G);
-            int discarded$1 = 0;
-            nj.a(0, 0, param1);
+            nj.a(0, 0, param1, 0);
         } catch (RuntimeException runtimeException) {
             throw oj.a((Throwable) (Object) runtimeException, "il.G(" + -20895 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_q = null;
         field_s = null;
         field_o = null;

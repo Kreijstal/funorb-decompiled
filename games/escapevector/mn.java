@@ -15,7 +15,7 @@ final class mn extends hg {
     static int field_k;
     int[] field_j;
 
-    final static String a(int param0, char param1) {
+    final static String a(int param0, char param1, int param2) {
         int var4 = 0;
         int var6 = EscapeVector.field_A;
         char[] var7 = new char[20];
@@ -27,7 +27,7 @@ final class mn extends hg {
         return new String(var7);
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         int var3 = 0;
         int var1 = lh.b((byte) 71) ? 1 : 0;
         if (!(rc.field_a != null)) {
@@ -101,7 +101,7 @@ final class mn extends hg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_q = null;
     }

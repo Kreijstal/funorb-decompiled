@@ -32,24 +32,22 @@ final class de {
 
     final static void c(int param0) {
         if (fk.field_ab == 10) {
-          int discarded$10 = 0;
-          ga.b();
+          ga.b(false);
           fk.field_ab = 11;
           if (param0 == 11) {
             uh.field_o = true;
             return;
           } else {
-            float discarded$11 = de.a(48, 16, -49);
+            float discarded$6 = de.a(48, 16, -49);
             uh.field_o = true;
             return;
           }
         } else {
           if (!uc.a(-114)) {
-            int discarded$12 = 0;
-            ga.b();
+            ga.b(false);
             fk.field_ab = 11;
             if (param0 != 11) {
-              float discarded$13 = de.a(48, 16, -49);
+              float discarded$7 = de.a(48, 16, -49);
               uh.field_o = true;
               return;
             } else {
@@ -61,7 +59,7 @@ final class de {
               uh.field_o = true;
               return;
             } else {
-              float discarded$14 = de.a(48, 16, -49);
+              float discarded$8 = de.a(48, 16, -49);
               uh.field_o = true;
               return;
             }

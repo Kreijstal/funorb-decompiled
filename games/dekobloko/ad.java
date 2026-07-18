@@ -31,7 +31,7 @@ final class ad {
     static String field_x;
     static String field_z;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_j = null;
@@ -198,7 +198,7 @@ final class ad {
         return stackIn_4_0;
     }
 
-    final static void a(byte[] param0, int param1, boolean param2, int param3) {
+    final static void a(byte[] param0, int param1, boolean param2, int param3, int param4, boolean param5) {
         uf var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -219,7 +219,7 @@ final class ad {
         }
     }
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -651,8 +651,7 @@ final class ad {
                     }
                 }
             }
-            int discarded$0 = 0;
-            this.a(param0);
+            this.a(param0, 0);
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

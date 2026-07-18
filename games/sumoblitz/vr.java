@@ -17,7 +17,7 @@ final class vr extends wp {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) wd.field_e);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) wd.field_e);
@@ -299,7 +299,7 @@ final class vr extends wp {
         return stackIn_3_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_G = null;
         field_F = null;
     }

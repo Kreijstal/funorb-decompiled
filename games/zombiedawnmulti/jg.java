@@ -5,7 +5,7 @@ final class jg {
     static String field_b;
     static boolean field_a;
 
-    final static String a(k param0) {
+    final static String a(k param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -310,7 +310,7 @@ final class jg {
         return stackIn_14_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!og.field_N) {
             throw new IllegalStateException();
         }
@@ -319,7 +319,7 @@ final class jg {
         a.field_b = 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
     }
 

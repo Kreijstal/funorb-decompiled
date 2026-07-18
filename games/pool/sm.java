@@ -272,10 +272,8 @@ final class sm extends om {
               if (param1.field_f != param1.field_a) {
                 if (param1.field_l != param1.field_j) {
                   var9 = (long)(aj.a(param3.field_I, false, var4_int) + aj.a(param3.field_t, false, var5));
-                  int discarded$3 = 0;
-                  param3.field_I = (int)((long)param3.field_I - (od.a((long)var4_int, var9) * (long)(256 + dj.field_g) >> 8));
-                  int discarded$4 = 0;
-                  param3.field_t = (int)((long)param3.field_t - (od.a((long)var5, var9) * (long)(256 + dj.field_g) >> 8));
+                  param3.field_I = (int)((long)param3.field_I - (od.a((long)var4_int, var9, false) * (long)(256 + dj.field_g) >> 8));
+                  param3.field_t = (int)((long)param3.field_t - (od.a((long)var5, var9, false) * (long)(256 + dj.field_g) >> 8));
                   param3.field_b = 0;
                   param3.field_n = 0;
                   if (td.field_b >= nn.field_e.length) {
@@ -375,9 +373,9 @@ final class sm extends om {
               param3.field_v = 1;
               var9 = param3.e(-14770);
               if (td.field_b < cf.field_g.length) {
-                int fieldTemp$5 = td.field_b;
+                int fieldTemp$1 = td.field_b;
                 td.field_b = td.field_b + 1;
-                cf.field_g[fieldTemp$5] = (int)(var7 + -var9);
+                cf.field_g[fieldTemp$1] = (int)(var7 + -var9);
                 break L4;
               } else {
                 break L4;

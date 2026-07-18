@@ -121,7 +121,7 @@ final class co implements Runnable {
         return stackIn_18_0;
     }
 
-    private final void a(lb param0) {
+    private final void a(lb param0, int param1) {
         synchronized (((co) this).field_e) {
             ((co) this).field_e.a((byte) 118, (ta) (Object) param0);
             ((co) this).field_a = ((co) this).field_a + 1;
@@ -175,8 +175,7 @@ final class co implements Runnable {
             var5.field_A = param0;
             var5.field_B = 2;
             var5.field_l = (long)param1;
-            int discarded$2 = 32;
-            this.a(var5);
+            this.a(var5, 32);
             stackOut_0_0 = (lb) var5;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -394,8 +393,7 @@ final class co implements Runnable {
             var4.field_l = (long)param0;
             var4.field_w = false;
             var4.field_B = param1;
-            int discarded$2 = 32;
-            this.a(var4);
+            this.a(var4, 32);
             stackOut_0_0 = (lb) var4;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -436,8 +434,7 @@ final class co implements Runnable {
     final static boolean a(int param0, char param1) {
         int var2 = 0;
         if (!Character.isISOControl(param1)) {
-          int discarded$6 = 34;
-          if (!wa.a(param1)) {
+          if (!wa.a(param1, (byte) 34)) {
             var2 = 70 % ((param0 - -46) / 59);
             if (param1 != 45) {
               if (param1 != 160) {

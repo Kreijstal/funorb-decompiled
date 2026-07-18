@@ -219,7 +219,7 @@ class mi extends ea {
         return stackIn_7_0 != 0;
     }
 
-    final static boolean a(int param0, CharSequence param1) {
+    final static boolean a(int param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -248,8 +248,7 @@ class mi extends ea {
         var4 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
-            int discarded$6 = 0;
-            if (ou.a(19069, param1)) {
+            if (ou.a(19069, param1, false)) {
               var3_int = 0;
               L1: while (true) {
                 if (var3_int >= param1.length()) {
@@ -522,7 +521,7 @@ class mi extends ea {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_r = null;
     }
 

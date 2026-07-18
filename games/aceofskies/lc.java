@@ -177,11 +177,9 @@ final class lc implements Iterable {
         var6 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
-            int discarded$4 = -18;
-            var2 = bg.a(param1, "jagex-last-login-method");
+            var2 = bg.a(param1, "jagex-last-login-method", (byte) -18);
             if (var2 != null) {
-              int discarded$5 = 106;
-              var3 = ci.d();
+              var3 = ci.d((byte) 106);
               var4 = 0;
               L1: while (true) {
                 if (var4 >= var3.length) {

@@ -324,7 +324,7 @@ final class ci {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void a(int param0, int param1, int param2, int param3) {
         ((ci) this).field_o = param0;
         ((ci) this).field_b = param1;
         ((ci) this).field_n = param2;
@@ -391,7 +391,7 @@ final class ci {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_s = null;
         field_p = null;
@@ -402,10 +402,7 @@ final class ci {
     }
 
     ci(float param0, float param1, int param2) {
-        int discarded$0 = -4;
-        int discarded$1 = -4;
-        int discarded$2 = -6;
-        this.a(em.a(param1), em.a(param0), param2);
+        this.a(em.a(param1, -4), em.a(param0, -4), param2, -6);
     }
 
     private final void a(int param0, boolean param1) {

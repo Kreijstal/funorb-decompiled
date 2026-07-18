@@ -338,8 +338,7 @@ class ll extends ne {
         try {
           L0: {
             var4_int = uj.a(param1, 37, param3.length);
-            int discarded$2 = -74;
-            stackOut_2_0 = mo.a(param2, param3[var4_int], param1);
+            stackOut_2_0 = mo.a(param2, param3[var4_int], param1, (byte) -74);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

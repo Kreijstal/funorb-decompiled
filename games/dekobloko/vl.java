@@ -43,7 +43,7 @@ final class vl {
         return (param2 + var3) / param1 + -var3;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_A = null;
         field_G = null;
     }

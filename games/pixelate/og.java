@@ -7,22 +7,13 @@ final class og extends fa {
     byte[] field_k;
     static String field_n;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         int var1 = 0;
         return ck.a(true, ao.a(13867));
     }
 
     final static tf[] a(int param0, boolean param1, int param2, int param3, int param4) {
-        int discarded$0 = 1;
-        int discarded$1 = 65793;
-        int discarded$2 = 0;
-        int discarded$3 = 126;
-        int discarded$4 = 3;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 1;
-        int discarded$8 = 1;
-        return ra.a();
+        return ra.a(1, 1, 0, 0, 3, (byte) 126, 0, 65793, 1);
     }
 
     public static void a(int param0) {

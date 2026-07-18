@@ -373,8 +373,7 @@ final class gna extends sna {
         String stackOut_13_2 = null;
         try {
           L0: {
-            int discarded$2 = 3685;
-            k.c();
+            k.c(3685);
             var14 = dg.field_e;
             var13 = var14;
             var12 = var13;

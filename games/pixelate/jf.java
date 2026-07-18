@@ -8,7 +8,7 @@ final class jf {
     static String field_b;
     static mj field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -118,8 +118,7 @@ final class jf {
                     }
                   }
                 }
-                int discarded$1 = -18481;
-                if (in.e()) {
+                if (in.e(-18481)) {
                   if (0 == ij.field_s) {
                     oj.field_G = gb.field_d;
                     gb.field_d = tm.field_U;
@@ -250,8 +249,7 @@ final class jf {
             } else {
               if (gk.field_db == 2) {
                 if (!sm.a(param0, -1)) {
-                  int discarded$1 = 37;
-                  if (ha.a(param0)) {
+                  if (ha.a(param0, (byte) 37)) {
                     stackOut_12_0 = sd.a(mo.field_b, 34, new String[1]);
                     stackIn_13_0 = stackOut_12_0;
                     return stackIn_13_0;
@@ -345,7 +343,7 @@ final class jf {
         return (String) (Object) stackIn_29_0;
     }
 
-    final static el a(String param0) {
+    final static el a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -401,8 +399,7 @@ final class jf {
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      int discarded$2 = 120;
-                      var7 = sl.a(var6);
+                      var7 = sl.a(var6, (byte) 120);
                       if (var7 != null) {
                         stackOut_17_0 = (el) var7;
                         stackIn_18_0 = stackOut_17_0;
@@ -458,7 +455,7 @@ final class jf {
         return stackIn_21_0;
     }
 
-    final static ob a(fm param0, int param1, fm param2, int param3) {
+    final static ob a(fm param0, int param1, fm param2, int param3, byte param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         ob stackIn_4_0 = null;
@@ -498,8 +495,7 @@ final class jf {
         try {
           L0: {
             if (rk.a(param3, false, param2, param1)) {
-              int discarded$2 = -28628;
-              stackOut_3_0 = ed.a(param0.a(param1, param3, true));
+              stackOut_3_0 = ed.a(param0.a(param1, param3, true), -28628);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

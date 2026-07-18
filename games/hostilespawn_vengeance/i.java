@@ -12,7 +12,7 @@ final class i {
     static char[] field_g;
     static boolean field_d;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_b = null;
         field_g = null;

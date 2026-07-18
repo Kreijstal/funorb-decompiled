@@ -81,7 +81,7 @@ final class ln extends nm {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         int var1 = 0;
     }
@@ -408,8 +408,7 @@ final class ln extends nm {
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0 != 0;
             } else {
-              int discarded$2 = 0;
-              eh.a(var5);
+              eh.a(var5, false);
               stackOut_6_0 = 1;
               stackIn_7_0 = stackOut_6_0;
               break L0;

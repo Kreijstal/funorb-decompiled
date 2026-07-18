@@ -252,8 +252,7 @@ final class nd extends ao {
                         var11 = var13;
                         var6 = var11;
                         if (var3 == 1) {
-                          int discarded$2 = 9;
-                          int discarded$3 = w.a(var6, var5, param1, var4);
+                          int discarded$1 = w.a(var17, var5, param1, var4, 9);
                           break L5;
                         } else {
                           var7 = (Object) (Object) sb.field_b;
@@ -386,7 +385,7 @@ final class nd extends ao {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_B = null;
         field_G = null;
     }
@@ -604,8 +603,7 @@ final class nd extends ao {
                 var5[var6] = var7 + var5[var6];
                 var6++;
             }
-            int discarded$0 = 0;
-            this.e(var4, var3_int);
+            this.e(var4, var3_int, 0);
             this.a((byte) 87, var4, var3_int);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) (Object) runtimeException, "nd.N(" + -7170 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -681,7 +679,7 @@ final class nd extends ao {
         return stackIn_3_0;
     }
 
-    private final void e(int param0, int param1) {
+    private final void e(int param0, int param1, int param2) {
         int var4 = ((nd) this).field_A == null ? 0 : ((nd) this).field_A.length;
         pk[] var5 = new pk[param0 * var4];
         if (((nd) this).field_x != null) {

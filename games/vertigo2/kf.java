@@ -828,8 +828,7 @@ final class kf {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              int discarded$2 = 7554;
-              var3 = gm.a();
+              var3 = gm.a(7554);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -883,7 +882,7 @@ final class kf {
         return stackIn_13_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
     }

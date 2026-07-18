@@ -12,7 +12,7 @@ final class vu extends pv {
     static sna field_p;
     static String field_l;
 
-    private final int c() {
+    private final int c(boolean param0) {
         return 100;
     }
 
@@ -24,16 +24,14 @@ final class vu extends pv {
           if (param0) {
             break L0;
           } else {
-            boolean discarded$8 = ((vu) this).b(false);
+            boolean discarded$4 = ((vu) this).b(false);
             break L0;
           }
         }
-        int fieldTemp$9 = ((vu) this).field_g + 1;
+        int fieldTemp$5 = ((vu) this).field_g + 1;
         ((vu) this).field_g = ((vu) this).field_g + 1;
-        int discarded$10 = 0;
-        if (fieldTemp$9 > this.c()) {
-          int discarded$11 = -125;
-          this.d();
+        if (fieldTemp$5 > this.c(false)) {
+          this.d((byte) -125);
           return true;
         } else {
           L1: {
@@ -136,7 +134,7 @@ final class vu extends pv {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         ((vu) this).field_f.field_n = ((vu) this).field_f.c((byte) -115);
         ((vu) this).field_f.field_k = ((vu) this).field_f.b(true);
     }

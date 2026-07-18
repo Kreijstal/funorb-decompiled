@@ -689,7 +689,7 @@ final class ui extends me {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_k = null;
         field_q = null;
     }
@@ -956,9 +956,9 @@ final class ui extends me {
                         if (!ka.field_a) {
                           break L15;
                         } else {
-                          int discarded$8 = sa.field_a.j(-66);
-                          int discarded$9 = sa.field_a.j(-102);
-                          int discarded$10 = sa.field_a.a(16711680);
+                          int discarded$6 = sa.field_a.j(-66);
+                          int discarded$7 = sa.field_a.j(-102);
+                          int discarded$8 = sa.field_a.a(16711680);
                           ir.field_E = sa.field_a.f(-20976);
                           k.field_c = new byte[ir.field_E];
                           var8 = 0;
@@ -976,8 +976,7 @@ final class ui extends me {
                       L17: {
                         ln.field_o = sa.field_a.e(-1);
                         var11 = (CharSequence) (Object) ln.field_o;
-                        int discarded$11 = 1;
-                        ci.field_d = ji.a(var11);
+                        ci.field_d = ji.a(var11, true);
                         tf.field_n = sa.field_a.j(-112);
                         cs.field_j = ih.field_f;
                         if (mq.field_c.a((byte) 115) != hg.field_u) {
@@ -1011,7 +1010,7 @@ final class ui extends me {
                             } else {
                               try {
                                 L21: {
-                                  Object discarded$12 = ll.a("unzap", kq.f((byte) 127), (byte) 121);
+                                  Object discarded$9 = ll.a("unzap", kq.f((byte) 127), (byte) 121);
                                   break L21;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -1027,7 +1026,7 @@ final class ui extends me {
                         }
                         try {
                           L23: {
-                            Object discarded$13 = ll.a(kq.f((byte) 125), "zap", new Object[1], -116);
+                            Object discarded$10 = ll.a(kq.f((byte) 125), "zap", new Object[1], -116);
                             break L23;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -1110,7 +1109,7 @@ final class ui extends me {
                   if (param1 <= -48) {
                     break L30;
                   } else {
-                    int discarded$14 = ui.a(-26, -48, -112, -53);
+                    int discarded$11 = ui.a(-26, -48, -112, -53);
                     break L30;
                   }
                 }
@@ -1120,8 +1119,7 @@ final class ui extends me {
                   } else {
                     if (ke.field_j) {
                       L32: {
-                        int discarded$15 = 18;
-                        if (wh.a() <= 30000L) {
+                        if (wh.a(18) <= 30000L) {
                           nl.field_c = wb.field_d;
                           break L32;
                         } else {

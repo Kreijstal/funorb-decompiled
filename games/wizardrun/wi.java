@@ -131,7 +131,7 @@ final class wi extends mi {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_H = null;
         field_G = null;
         field_L = null;

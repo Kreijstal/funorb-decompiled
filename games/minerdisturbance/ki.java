@@ -6,7 +6,7 @@ final class ki extends pi {
     int[] field_p;
     boolean field_o;
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -28,8 +28,7 @@ final class ki extends pi {
             var13 = kj.field_a;
             var2 = var13.d((byte) -54);
             if (0 == var2) {
-              int discarded$2 = 0;
-              var10 = hk.b();
+              var10 = hk.b(0);
               var3 = var10;
               var9 = var10;
               var4 = var9;
@@ -62,8 +61,7 @@ final class ki extends pi {
                     si.a(-79);
                     return;
                   } else {
-                    int discarded$3 = 0;
-                    var14.field_p = hk.b();
+                    var14.field_p = hk.b(0);
                     var14.field_o = true;
                     var14.b(34);
                     return;

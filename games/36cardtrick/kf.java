@@ -9,7 +9,7 @@ final class kf extends qb {
     byte[] field_i;
     static String field_j;
 
-    final static int a() {
+    final static int a(int param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -129,7 +129,7 @@ final class kf extends qb {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -189,8 +189,7 @@ final class kf extends qb {
         try {
           L0: {
             if (tc.a(param2, param3, 25479, param0)) {
-              int discarded$2 = -1;
-              stackOut_5_0 = pa.a(param4.a(param2, (byte) -115, param3));
+              stackOut_5_0 = pa.a(param4.a(param2, (byte) -115, param3), -1);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -257,7 +256,7 @@ final class kf extends qb {
         return stackIn_6_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_j = null;
     }
 

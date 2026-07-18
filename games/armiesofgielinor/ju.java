@@ -216,8 +216,7 @@ abstract class ju {
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_2_0 = ob.a(param1, true, param2);
+            stackOut_2_0 = ob.a(param1, true, param2, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

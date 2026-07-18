@@ -44,7 +44,7 @@ final class bf {
         }
     }
 
-    final static void a(String param0, tg param1, int param2, se param3) {
+    final static void a(String param0, tg param1, int param2, se param3, int param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -227,7 +227,7 @@ final class bf {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -266,8 +266,7 @@ final class bf {
             vf.a(432, true, 599, 113, 48);
             vf.a(32, true, 164, -113, 8);
             vf.a(32, true, 468, 108, 8);
-            int discarded$1 = 1;
-            un.a(41, (byte) 77, 558, 416);
+            un.a(41, (byte) 77, 558, 416, true);
             ad.field_e.h(41, 48);
             ad.field_e.j(-ad.field_e.field_d + 599, 48);
             ad.field_e.f(164 + -ad.field_e.field_d, 40 + -ad.field_e.field_b);
@@ -332,7 +331,7 @@ final class bf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         field_f = null;
         field_m = null;
@@ -341,7 +340,7 @@ final class bf {
         field_h = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         pm var3 = null;

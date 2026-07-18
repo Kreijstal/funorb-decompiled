@@ -46,7 +46,7 @@ final class wb {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -56,8 +56,7 @@ final class wb {
         ah.field_d = param3;
         ga.field_d = param2;
         try {
-            int discarded$0 = -1;
-            af.a(param0, lo.field_o);
+            af.a(param0, lo.field_o, -1);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "wb.A(" + param0 + ',' + 32 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

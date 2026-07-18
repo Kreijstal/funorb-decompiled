@@ -76,8 +76,7 @@ final class jj extends kj {
                 var5 = new hj(((jj) this).field_y.field_m, ((jj) this).field_y.field_r);
                 de.a(-128, var5);
                 ((jj) this).field_y.a(0, param1, param2, 0);
-                int discarded$1 = -105;
-                oc.g();
+                oc.g((byte) -105);
                 var5.a(((jj) this).field_s + param3, param0 - -((jj) this).field_n, ((jj) this).field_A);
                 return;
               }
@@ -106,7 +105,7 @@ final class jj extends kj {
         ((jj) this).field_A = 256;
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_B = null;
     }
 
@@ -225,7 +224,7 @@ final class jj extends kj {
         }
     }
 
-    final static String l() {
+    final static String l(int param0) {
         if (!(null != gb.field_h)) {
             return "";
         }

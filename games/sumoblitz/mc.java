@@ -28,17 +28,15 @@ final class mc extends ao {
     final void a(int param0, int param1, pk param2, int param3) {
         try {
             super.a(param0, 65, param2, param3);
-            int discarded$0 = 1;
-            this.g();
+            this.g(1);
             int var5_int = -92 % ((-25 - param1) / 45);
-            int discarded$1 = 1;
-            this.f();
+            this.f(1);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) (Object) runtimeException, "mc.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         if (null == ((mc) this).field_G) {
           if (((mc) this).field_B != null) {
             ((mc) this).field_D.field_y.field_v = -(int)((long)(((mc) this).field_D.field_y.field_p + -((mc) this).field_D.field_p) * (long)((mc) this).field_B.field_D >> 16);
@@ -191,8 +189,7 @@ final class mc extends ao {
               }
             }
             if (super.a(param0, param1, (byte) 74, param3)) {
-              int discarded$2 = 1;
-              this.f();
+              this.f(1);
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
               break L0;
@@ -365,8 +362,7 @@ final class mc extends ao {
             var4_int = param1.a(0, param3);
             var5 = -28;
             var6 = param1.a(var4_int, param2, (byte) 127);
-            int discarded$2 = -21834;
-            stackOut_0_0 = iw.a(var6, var4_int, param1);
+            stackOut_0_0 = iw.a(var6, var4_int, param1, -21834);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -465,7 +461,7 @@ final class mc extends ao {
         field_F = null;
     }
 
-    private final void g() {
+    private final void g(int param0) {
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (null == ((mc) this).field_B) {
@@ -1223,8 +1219,7 @@ final class mc extends ao {
                       break L4;
                     }
                   }
-                  int discarded$14 = 1;
-                  this.g();
+                  this.g(1);
                   return;
                 } else {
                   L6: {
@@ -1326,8 +1321,7 @@ final class mc extends ao {
                       break L10;
                     }
                   }
-                  int discarded$15 = 1;
-                  this.g();
+                  this.g(1);
                   return;
                 }
               } else {
@@ -1432,8 +1426,7 @@ final class mc extends ao {
                     break L16;
                   }
                 }
-                int discarded$16 = 1;
-                this.g();
+                this.g(1);
                 return;
               }
             } else {
@@ -1539,8 +1532,7 @@ final class mc extends ao {
                       break L22;
                     }
                   }
-                  int discarded$17 = 1;
-                  this.g();
+                  this.g(1);
                   return;
                 } else {
                   L24: {
@@ -1642,8 +1634,7 @@ final class mc extends ao {
                       break L28;
                     }
                   }
-                  int discarded$18 = 1;
-                  this.g();
+                  this.g(1);
                   return;
                 }
               } else {
@@ -1748,8 +1739,7 @@ final class mc extends ao {
                     break L34;
                   }
                 }
-                int discarded$19 = 1;
-                this.g();
+                this.g(1);
                 return;
               }
             }
@@ -1856,8 +1846,7 @@ final class mc extends ao {
                     break L40;
                   }
                 }
-                int discarded$20 = 1;
-                this.g();
+                this.g(1);
                 return;
               } else {
                 L42: {
@@ -1959,8 +1948,7 @@ final class mc extends ao {
                     break L46;
                   }
                 }
-                int discarded$21 = 1;
-                this.g();
+                this.g(1);
                 return;
               }
             } else {
@@ -2065,8 +2053,7 @@ final class mc extends ao {
                   break L52;
                 }
               }
-              int discarded$22 = 1;
-              this.g();
+              this.g(1);
               return;
             }
           }
@@ -2176,8 +2163,7 @@ final class mc extends ao {
                       break L58;
                     }
                   }
-                  int discarded$23 = 1;
-                  this.g();
+                  this.g(1);
                   return;
                 } else {
                   L60: {
@@ -2279,8 +2265,7 @@ final class mc extends ao {
                       break L64;
                     }
                   }
-                  int discarded$24 = 1;
-                  this.g();
+                  this.g(1);
                   return;
                 }
               } else {
@@ -2385,8 +2370,7 @@ final class mc extends ao {
                     break L70;
                   }
                 }
-                int discarded$25 = 1;
-                this.g();
+                this.g(1);
                 return;
               }
             } else {
@@ -2508,8 +2492,7 @@ final class mc extends ao {
                   break L78;
                 }
               }
-              int discarded$26 = 1;
-              this.g();
+              this.g(1);
               return;
             }
           } else {
@@ -2631,8 +2614,7 @@ final class mc extends ao {
                 break L86;
               }
             }
-            int discarded$27 = 1;
-            this.g();
+            this.g(1);
             return;
           }
         }

@@ -662,7 +662,7 @@ public abstract class kf extends java.applet.Applet implements Runnable, java.aw
                         } else {
                           try {
                             L16: {
-                              Object discarded$2 = var2_ref.invoke(var1, new Object[1]);
+                              Object discarded$1 = var2_ref.invoke(var1, new Object[1]);
                               break L16;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -712,8 +712,7 @@ public abstract class kf extends java.applet.Applet implements Runnable, java.aw
                               if (hp.field_p <= var3) {
                                 break L23;
                               } else {
-                                int discarded$3 = -23;
-                                this.a();
+                                this.a((byte) -23);
                                 var3++;
                                 if (var5 != 0) {
                                   break L22;
@@ -1776,8 +1775,7 @@ public abstract class kf extends java.applet.Applet implements Runnable, java.aw
                 var4.field_k = param1;
                 var4.field_j = param3;
                 qa.field_r.a((byte) -113, (oh) (Object) var4);
-                int discarded$2 = 0;
-                uf.a(var4, param2);
+                uf.a(var4, param2, false);
                 stackOut_11_0 = param0;
                 stackOut_11_1 = 29;
                 stackIn_12_0 = stackOut_11_0;
@@ -1788,7 +1786,7 @@ public abstract class kf extends java.applet.Applet implements Runnable, java.aw
                 if (stackIn_12_0 >= stackIn_12_1) {
                   break L4;
                 } else {
-                  nk discarded$3 = kf.a((String) null, -57, (bc) null, (String) null);
+                  nk discarded$1 = kf.a((String) null, -57, (bc) null, (String) null);
                   break L4;
                 }
               }
@@ -1805,9 +1803,9 @@ public abstract class kf extends java.applet.Applet implements Runnable, java.aw
         return stackIn_16_0;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
+        RuntimeException runtimeException = null;
         long var2_long = 0L;
-        RuntimeException var2 = null;
         long var4 = 0L;
         Object var6 = null;
         Throwable var7 = null;
@@ -1832,7 +1830,15 @@ public abstract class kf extends java.applet.Applet implements Runnable, java.aw
             var6 = this;
             synchronized (var6) {
               L2: {
-                br.field_i = lq.field_q;
+                L3: {
+                  br.field_i = lq.field_q;
+                  if (param0 < -20) {
+                    break L3;
+                  } else {
+                    field_i = -95;
+                    break L3;
+                  }
+                }
                 break L2;
               }
             }
@@ -1841,8 +1847,8 @@ public abstract class kf extends java.applet.Applet implements Runnable, java.aw
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw r.a((Throwable) (Object) var2, "kf.WA(" + -23 + ')');
+          runtimeException = (RuntimeException) (Object) decompiledCaughtException;
+          throw r.a((Throwable) (Object) runtimeException, "kf.WA(" + param0 + ')');
         }
     }
 

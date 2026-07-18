@@ -22,9 +22,7 @@ final class eg {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$8 = 2;
-                    int discarded$9 = 5;
-                    de.a(var5);
+                    de.a(var5, 5, 2);
                     var5 = (oi) (Object) qd.field_d.a(true);
                     continue L2;
                   }
@@ -53,15 +51,13 @@ final class eg {
         field_a = null;
     }
 
-    final static void a() {
-        int discarded$0 = -122;
-        vi.field_e = wh.a();
+    final static void a(int param0) {
+        vi.field_e = wh.a((byte) -122);
         ci.field_f = new da();
-        int discarded$1 = 170;
-        wl.a(true, true);
+        wl.a(true, true, 170);
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

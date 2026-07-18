@@ -6,7 +6,7 @@ final class wb {
     static he[] field_b;
     static java.security.SecureRandom field_c;
 
-    final static void a(java.applet.Applet param0, int param1, int param2, int param3, String[] param4) {
+    final static void a(java.applet.Applet param0, int param1, int param2, int param3, String[] param4, int param5) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -153,12 +153,12 @@ final class wb {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         hl.field_d = false;
         r.field_d = 8;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -167,8 +167,7 @@ final class wb {
     final static void a(boolean param0, int param1, je param2) {
         aa.field_e.a((gi) (Object) param2, 255);
         try {
-            int discarded$0 = 4;
-            hl.a(param2, 126);
+            hl.a(param2, 126, 4);
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) (Object) runtimeException, "wb.D(" + true + ',' + 4 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

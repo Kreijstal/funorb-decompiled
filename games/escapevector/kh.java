@@ -13,11 +13,10 @@ final class kh {
         rc.field_a = new ak(param2, var3);
         int var4 = rc.field_a.h(117);
         di.field_d = new wc(var4);
-        int discarded$0 = 0;
-        di.field_d.a(100, param0, rc.field_a.c(dh.field_d, -1, bj.field_y), id.a());
+        di.field_d.a(100, param0, rc.field_a.c(dh.field_d, -1, bj.field_y), id.a(0));
     }
 
-    final static int a(String param0, int param1, String param2, String param3, boolean param4, int param5) {
+    final static int a(String param0, int param1, String param2, String param3, boolean param4, int param5, int param6) {
         sn var7 = null;
         RuntimeException var7_ref = null;
         sn var8 = null;
@@ -160,7 +159,7 @@ final class kh {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
     }
@@ -223,8 +222,7 @@ final class kh {
             var6 = 21 / ((param1 - 62) / 60);
             var4_int = param0.b(-1, param2);
             var5 = param0.a(var4_int, param3, true);
-            int discarded$2 = 75;
-            stackOut_0_0 = cc.a(var4_int, param0, var5);
+            stackOut_0_0 = cc.a(var4_int, param0, var5, (byte) 75);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -311,7 +309,7 @@ final class kh {
         return stackIn_1_0;
     }
 
-    final static String a(int param0) {
+    final static String a(int param0, char param1, byte param2) {
         int var4 = 0;
         int var5 = EscapeVector.field_A;
         char[] var6 = new char[param0];

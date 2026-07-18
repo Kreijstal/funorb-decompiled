@@ -8,7 +8,7 @@ final class ra {
     static cc field_b;
     static int field_c;
 
-    final static void a(int param0, vg param1) {
+    final static void a(int param0, vg param1, byte param2, int param3) {
         try {
             dh.field_k = 0;
             ij.field_f = param1;
@@ -18,7 +18,7 @@ final class ra {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;

@@ -119,7 +119,7 @@ class w extends km {
         return ((w) this).a((byte) 84, 2147483647);
     }
 
-    private final void a(boolean param0, int param1, boolean param2, boolean param3, int param4, int param5, boolean param6, int param7, boolean param8, boolean param9) {
+    private final void a(boolean param0, int param1, boolean param2, boolean param3, int param4, int param5, boolean param6, int param7, boolean param8, boolean param9, int param10) {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -442,7 +442,7 @@ class w extends km {
                           ((w) this).field_J.a(var27, -(((w) this).field_ub * 2) + (((w) this).field_mb + ((w) this).field_E - -((w) this).field_ub) - -var21, ((w) this).field_pb + (var22 - -((w) this).field_J.field_R), var18, -1, ((w) this).field_wb);
                           break L26;
                         } else {
-                          int discarded$3 = ((w) this).field_J.a(var27, var21 + ((w) this).field_ub + ((w) this).field_E, var22 + ((w) this).field_pb, -(2 * ((w) this).field_ub) + ((w) this).field_mb, ((w) this).field_N, var18, -1, ((w) this).field_wb, ((w) this).field_X, ((w) this).field_W, ((w) this).field_Db);
+                          int discarded$2 = ((w) this).field_J.a(var27, var21 + ((w) this).field_ub + ((w) this).field_E, var22 + ((w) this).field_pb, -(2 * ((w) this).field_ub) + ((w) this).field_mb, ((w) this).field_N, var18, -1, ((w) this).field_wb, ((w) this).field_X, ((w) this).field_W, ((w) this).field_Db);
                           break L26;
                         }
                       }
@@ -455,7 +455,7 @@ class w extends km {
                   }
                 }
               }
-              int discarded$4 = ((w) this).field_J.a(var27, var21 + ((w) this).field_ub + ((w) this).field_E, ((w) this).field_pb - -var22, -(((w) this).field_ub * 2) + ((w) this).field_mb, ((w) this).field_N, var18, -1, ((w) this).field_wb, ((w) this).field_X, ((w) this).field_W, ((w) this).field_Db);
+              int discarded$3 = ((w) this).field_J.a(var27, var21 + ((w) this).field_ub + ((w) this).field_E, ((w) this).field_pb - -var22, -(((w) this).field_ub * 2) + ((w) this).field_mb, ((w) this).field_N, var18, -1, ((w) this).field_wb, ((w) this).field_X, ((w) this).field_W, ((w) this).field_Db);
               break L26;
             } else {
               break L26;
@@ -469,9 +469,8 @@ class w extends km {
               if (var23_ref == null) {
                 break L30;
               } else {
-                int discarded$5 = -29696;
-                var23_ref.a(param0, var23_ref.field_mb, param2, param3, var19 + var23_ref.field_E, var23_ref.field_N, param6, var23_ref.field_pb - -var20, var23_ref.field_O, param9);
-                var23_ref = (w) (Object) var23_ref.field_M.d(true);
+                var23_ref.a(param0, ((w) this).field_mb, param2, param3, var19 + ((w) this).field_E, ((w) this).field_N, param6, ((w) this).field_pb - -var20, ((w) this).field_O, param9, -29696);
+                var23_ref = (w) (Object) ((w) this).field_M.d(true);
                 continue L31;
               }
             }
@@ -639,7 +638,7 @@ class w extends km {
             while (var4 != null) {
                 var4.field_L = true;
                 var4.d(-92);
-                var4 = (w) (Object) var4.field_M.c(true);
+                var4 = (w) (Object) ((w) this).field_M.c(true);
             }
         }
         if (param0 >= -16) {
@@ -654,7 +653,7 @@ class w extends km {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
+        w var13 = null;
         int var14 = 0;
         Object stackIn_25_0 = null;
         Object stackIn_26_0 = null;
@@ -687,7 +686,6 @@ class w extends km {
         Object stackOut_37_0 = null;
         int stackOut_37_1 = 0;
         L0: {
-          var13 = null;
           var14 = client.field_A ? 1 : 0;
           if (((w) this).field_yb <= 0) {
             var7 = ((w) this).field_yb >> 2;
@@ -882,13 +880,13 @@ class w extends km {
         L11: {
           ((w) this).field_jb = stackIn_38_1 != 0;
           if (null != ((w) this).field_M) {
-            var13 = (Object) (Object) (w) (Object) ((w) this).field_M.b(true);
+            var13 = (w) (Object) ((w) this).field_M.b(true);
             L12: while (true) {
               if (var13 == null) {
                 break L11;
               } else {
-                ((w) var13).a(((w) var13).field_E, (byte) 126, param2, ((w) var13).field_N, ((w) var13).field_mb, ((w) var13).field_pb);
-                var13 = (Object) (Object) (w) (Object) ((w) var13).field_M.c(true);
+                var13.a(((w) this).field_E, (byte) 126, param2, ((w) this).field_N, ((w) this).field_mb, ((w) this).field_pb);
+                var13 = (w) (Object) ((w) this).field_M.c(true);
                 continue L12;
               }
             }
@@ -897,7 +895,7 @@ class w extends km {
           }
         }
         L13: {
-          if (!((w) var13).field_Kb) {
+          if (!((w) this).field_Kb) {
             break L13;
           } else {
             sl.field_c = true;
@@ -914,16 +912,16 @@ class w extends km {
         }
         L15: {
           hk.b(var8, var9, var10, var11);
-          if (((w) var13).field_gb == 0) {
+          if (((w) this).field_gb == 0) {
             break L15;
           } else {
-            if (!((w) var13).field_U) {
+            if (!((w) this).field_U) {
               break L15;
             } else {
               L16: {
-                ((w) this).field_vb = -param0 + bh.field_g - ((w) var13).field_xb;
-                ((w) this).field_Ib = -((w) var13).field_Jb + pm.field_f - param5;
-                if (((w) var13).field_vb < 0) {
+                ((w) this).field_vb = -param0 + bh.field_g - ((w) this).field_xb;
+                ((w) this).field_Ib = -((w) this).field_Jb + pm.field_f - param5;
+                if (((w) this).field_vb < 0) {
                   ((w) this).field_vb = 0;
                   break L16;
                 } else {
@@ -931,7 +929,7 @@ class w extends km {
                 }
               }
               L17: {
-                if (0 <= ((w) var13).field_Ib) {
+                if (0 <= ((w) this).field_Ib) {
                   break L17;
                 } else {
                   ((w) this).field_Ib = 0;
@@ -939,8 +937,8 @@ class w extends km {
                 }
               }
               L18: {
-                if (-((w) var13).field_mb + param4 < ((w) var13).field_vb) {
-                  ((w) this).field_vb = param4 + -((w) var13).field_mb;
+                if (-((w) this).field_mb + param4 < ((w) this).field_vb) {
+                  ((w) this).field_vb = param4 + -((w) this).field_mb;
                   break L18;
                 } else {
                   break L18;
@@ -949,15 +947,15 @@ class w extends km {
               L19: {
                 ((w) this).field_yb = 0;
                 ((w) this).field_Mb = 0;
-                if (param3 + -((w) var13).field_N < ((w) var13).field_Ib) {
-                  ((w) this).field_Ib = param3 - ((w) var13).field_N;
+                if (param3 + -((w) this).field_N < ((w) this).field_Ib) {
+                  ((w) this).field_Ib = param3 - ((w) this).field_N;
                   break L19;
                 } else {
                   break L19;
                 }
               }
-              ((w) this).field_E = param0 - -((w) var13).field_vb;
-              ((w) this).field_pb = ((w) var13).field_Ib + param5;
+              ((w) this).field_E = param0 - -((w) this).field_vb;
+              ((w) this).field_pb = ((w) this).field_Ib + param5;
               break L15;
             }
           }
@@ -973,8 +971,7 @@ class w extends km {
     }
 
     final void a(int param0, boolean param1) {
-        int discarded$0 = -29696;
-        this.a(param1, hk.field_j, false, true, 0, hk.field_i, false, 0, false, false);
+        this.a(param1, hk.field_j, false, true, 0, hk.field_i, false, 0, false, false, -29696);
         if (param0 != 1141039778) {
             ((w) this).field_sb = null;
         }

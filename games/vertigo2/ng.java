@@ -6,11 +6,11 @@ final class ng {
     static String field_b;
     static boolean field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         mi.k(-32460, 2);
     }
 
@@ -56,16 +56,15 @@ final class ng {
                   break L0;
                 } else {
                   L2: {
-                    int discarded$20 = -31980;
-                    if (id.a(param1)) {
+                    if (id.a(param1, -31980)) {
                       var6 = new uq();
-                      int discarded$21 = param1.c((byte) -124, 24);
-                      int discarded$22 = param1.c((byte) -121, 24);
+                      int discarded$12 = param1.c((byte) -124, 24);
+                      int discarded$13 = param1.c((byte) -121, 24);
                       var6.field_e = param1.c((byte) -120, 24);
-                      int discarded$23 = param1.c((byte) -115, 9);
-                      int discarded$24 = param1.c((byte) -105, 12);
-                      int discarded$25 = param1.c((byte) -119, 12);
-                      int discarded$26 = param1.c((byte) -106, 12);
+                      int discarded$14 = param1.c((byte) -115, 9);
+                      int discarded$15 = param1.c((byte) -105, 12);
+                      int discarded$16 = param1.c((byte) -119, 12);
+                      int discarded$17 = param1.c((byte) -106, 12);
                       var4[var5] = var6;
                       break L2;
                     } else {
@@ -149,8 +148,7 @@ final class ng {
             dm.a(0, param1, param6, param3, param0, param2);
             break L0;
           } else {
-            int discarded$12 = 0;
-            bs.a(param4, param3, param0, param2, param1, param6);
+            bs.a(param4, param3, param0, param2, param1, param6, 0);
             break L0;
           }
         }

@@ -257,13 +257,11 @@ final class nr extends ch implements tb {
             L1: {
               if (param3 != ((nr) this).field_U) {
                 if (param3 == ((nr) this).field_W) {
-                  int discarded$18 = 35;
-                  br.f();
+                  br.f(35);
                   break L1;
                 } else {
                   if (((nr) this).field_Z == param3) {
-                    int discarded$19 = 4;
-                    al.m();
+                    al.m(4);
                     break L1;
                   } else {
                     break L1;
@@ -421,7 +419,7 @@ final class nr extends ch implements tb {
         return stackIn_9_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_N = null;
         field_X = null;
         field_P = null;

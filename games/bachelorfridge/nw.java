@@ -94,7 +94,7 @@ final class nw extends td {
         return (ii) (Object) stackIn_3_0;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_t = null;
         field_s = null;
         field_p = null;
@@ -108,7 +108,7 @@ final class nw extends td {
         int var3 = -72 / ((-21 - param2) / 58);
     }
 
-    final static void a(vr param0) {
+    final static void a(vr param0, byte param1) {
         byte[] var2 = null;
         RuntimeException var2_ref = null;
         lu var3 = null;
@@ -125,6 +125,14 @@ final class nw extends td {
         byte[] var14 = null;
         byte[] var15 = null;
         byte[] var16 = null;
+        byte[] var17 = null;
+        byte[] var18 = null;
+        byte[] var19 = null;
+        byte[] var20 = null;
+        byte[] var21 = null;
+        byte[] var22 = null;
+        byte[] var23 = null;
+        byte[] var24 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
@@ -143,54 +151,51 @@ final class nw extends td {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var15 = param0.a((byte) 123, "MoveTable.csv", "");
-            var13 = var15;
-            var11 = var13;
-            var8 = var11;
+            var21 = param0.a((byte) 123, "MoveTable.csv", "");
+            var17 = var21;
+            var13 = var17;
+            var8 = var13;
             var4 = var8;
             var2 = var4;
-            var9 = new lu(var15);
+            var9 = new lu(var21);
             wca.a((byte) -121);
             vi.b(16);
-            int discarded$11 = -93;
-            ln.f();
-            int discarded$12 = 7;
-            hba.c();
+            ln.f(-93);
+            hba.c(7);
             kma.d(-107);
-            int discarded$13 = 8;
-            lg.c();
-            int discarded$14 = -117;
-            li.e();
-            int discarded$15 = -43;
-            mk.a();
-            int discarded$16 = -22021;
-            ut.c();
-            int discarded$17 = 80;
-            ev.a();
+            lg.c(8);
+            li.e(-117);
+            mk.a((byte) -43);
+            ut.c(-22021);
+            ev.a((byte) 80);
             lka.field_E = qs.a(false, var9);
-            hga.a(true, var15);
-            var5 = param0.a((byte) 123, "UnlockTable.csv", "");
+            hga.a(true, var21);
+            var22 = param0.a((byte) 123, "UnlockTable.csv", "");
+            var18 = var22;
+            var14 = var18;
+            var10 = var14;
+            var5 = var10;
             var2 = var5;
-            int discarded$18 = -104;
-            qh.a();
-            int discarded$19 = 22;
-            bj.a(var5);
+            qh.a((byte) -104);
+            bj.a(var22, (byte) 22);
             lg.a(-92);
-            var6 = param0.a((byte) 123, "UnlockerTable.csv", "");
+            var23 = param0.a((byte) 123, "UnlockerTable.csv", "");
+            var19 = var23;
+            var15 = var19;
+            var11 = var15;
+            var6 = var11;
             var2 = var6;
-            int discarded$20 = -7;
-            sp.a(var6);
-            var16 = param0.a((byte) 123, "CreatureTable.csv", "");
-            var14 = var16;
-            var12 = var14;
-            var10 = var12;
-            var7 = var10;
+            sp.a(var23, -7);
+            var24 = param0.a((byte) 123, "CreatureTable.csv", "");
+            var20 = var24;
+            var16 = var20;
+            var12 = var16;
+            var7 = var12;
             var2 = var7;
-            var3 = new lu(var16);
+            var3 = new lu(var24);
             qs.b(false);
-            int discarded$21 = -49;
-            an.a(var7);
-            wv.a((byte) -73, var16);
+            an.a(var24, -49);
+            wv.a((byte) -73, var24);
             fi.field_m = null;
             me.field_t = null;
             du.field_a = null;

@@ -8,7 +8,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
     static vn[] field_c;
     static uh field_d;
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_b = null;
         field_d = null;
@@ -119,7 +119,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return ae.field_a;
     }
 
@@ -285,7 +285,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
         return stackIn_5_0;
     }
 
-    final static vk a(String param0) {
+    final static vk a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;

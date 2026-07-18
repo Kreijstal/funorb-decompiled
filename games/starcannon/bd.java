@@ -107,7 +107,7 @@ abstract class bd {
               if (param0 == 31380) {
                 break L1;
               } else {
-                int discarded$3 = bd.b(121);
+                int discarded$1 = bd.b(121);
                 break L1;
               }
             }
@@ -144,8 +144,7 @@ abstract class bd {
                             }
                           }
                         }
-                        int discarded$4 = 104;
-                        od.c();
+                        od.c((byte) 104);
                         break L4;
                       }
                     }
@@ -156,8 +155,7 @@ abstract class bd {
                     if (bh.field_a == 2) {
                       break L4;
                     } else {
-                      int discarded$5 = 104;
-                      od.c();
+                      od.c((byte) 104);
                       break L4;
                     }
                   }

@@ -39,7 +39,7 @@ final class vja extends ib {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
@@ -52,7 +52,7 @@ final class vja extends ib {
         }
     }
 
-    final static kia b() {
+    final static kia b(int param0) {
         return la.field_k;
     }
 

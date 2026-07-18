@@ -11,7 +11,7 @@ abstract class ik {
 
     abstract int a(int param0);
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         try {
             if (null != rd.field_j) {
                 rd.field_j.field_pc.b(87);

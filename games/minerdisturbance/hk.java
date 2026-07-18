@@ -80,7 +80,7 @@ final class hk {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_c = null;
         int var1 = -41;
         field_d = null;
@@ -88,7 +88,7 @@ final class hk {
         field_i = null;
     }
 
-    final static int[] b() {
+    final static int[] b(int param0) {
         return new int[8];
     }
 
@@ -108,7 +108,7 @@ final class hk {
               L1: {
                 var4 = (tm) (Object) ok.field_b.b(120);
                 if (var4.a(8)) {
-                  pi discarded$6 = ok.field_b.e(63854);
+                  pi discarded$2 = ok.field_b.e(63854);
                   var2 = 1;
                   vc.a(109, cm.field_o, var4.field_s);
                   break L1;
@@ -128,8 +128,7 @@ final class hk {
                 ((tm) var1).a(false);
                 break L2;
               } else {
-                int discarded$7 = 95;
-                if (fm.a()) {
+                if (fm.a((byte) 95)) {
                   fn.a(27, 228, 3);
                   return ak.a(-92);
                 } else {
@@ -138,8 +137,7 @@ final class hk {
               }
             }
           }
-          int discarded$8 = 95;
-          if (fm.a()) {
+          if (fm.a((byte) 95)) {
             fn.a(27, 228, 3);
             return ak.a(-92);
           } else {
@@ -149,7 +147,7 @@ final class hk {
           L3: {
             var3 = (tm) (Object) ec.field_c.b(81);
             if (var3.a(8)) {
-              pi discarded$9 = ec.field_c.e(63854);
+              pi discarded$3 = ec.field_c.e(63854);
               vc.a(-8, cm.field_o, var3.field_s);
               var2 = 1;
               break L3;
@@ -167,16 +165,14 @@ final class hk {
                 break L4;
               }
             }
-            int discarded$10 = 95;
-            if (!fm.a()) {
+            if (!fm.a((byte) 95)) {
               return ak.a(-92);
             } else {
               fn.a(27, 228, 3);
               return ak.a(-92);
             }
           } else {
-            int discarded$11 = 95;
-            if (fm.a()) {
+            if (fm.a((byte) 95)) {
               fn.a(27, 228, 3);
               return ak.a(-92);
             } else {
@@ -186,7 +182,7 @@ final class hk {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         nb.field_i[oj.field_J].c(-1, mc.field_w);
     }
 

@@ -10,7 +10,7 @@ final class mk {
     static int field_a;
     static int[] field_d;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return null != ji.field_V && ji.field_V.k(-120) != null;
     }
 
@@ -20,7 +20,7 @@ final class mk {
         return var1;
     }
 
-    final static void a(int param0, int param1, boolean param2, byte param3, int param4, int param5) {
+    final static void a(int param0, int param1, boolean param2, byte param3, int param4, int param5, boolean param6) {
         int var7_int = 0;
         jc var8 = null;
         long var9 = 0L;
@@ -746,8 +746,8 @@ final class mk {
                       if (var12.field_ec != null) {
                         var31 += 2;
                         var37 = new StringBuilder(64);
-                        StringBuilder discarded$6 = var37.append(ae.field_i);
-                        StringBuilder discarded$7 = var37.append(var12.field_ec[0]);
+                        StringBuilder discarded$4 = var37.append(ae.field_i);
+                        StringBuilder discarded$5 = var37.append(var12.field_ec[0]);
                         var38_int = 1;
                         L37: while (true) {
                           if (var12.field_Xb <= var38_int) {
@@ -758,8 +758,8 @@ final class mk {
                             var31 = var31 + fe.field_g * var39;
                             break L36;
                           } else {
-                            StringBuilder discarded$8 = var37.append(", ");
-                            StringBuilder discarded$9 = var37.append(var12.field_ec[var38_int]);
+                            StringBuilder discarded$6 = var37.append(", ");
+                            StringBuilder discarded$7 = var37.append(var12.field_ec[var38_int]);
                             var38_int++;
                             continue L37;
                           }
@@ -941,9 +941,7 @@ final class mk {
                             fj.a(11, 3, var12.g((byte) -125));
                             break L52;
                           } else {
-                            int discarded$10 = 1;
-                            int discarded$11 = 94;
-                            ml.a(var32, var12);
+                            ml.a(var32, var12, (byte) 94, true);
                             break L52;
                           }
                         } else {
@@ -999,7 +997,7 @@ final class mk {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_e = null;
     }

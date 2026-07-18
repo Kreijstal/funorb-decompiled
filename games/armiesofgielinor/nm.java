@@ -325,7 +325,7 @@ final class nm extends hn {
         }
     }
 
-    final static void a(um param0) {
+    final static void a(um param0, boolean param1, int param2, byte param3) {
         Object var4 = null;
         RuntimeException var4_ref = null;
         Throwable var5 = null;
@@ -982,7 +982,7 @@ final class nm extends hn {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_u = null;
         field_s = null;
     }
@@ -1221,8 +1221,7 @@ final class nm extends hn {
         try {
           var3 = new li(param2);
           s.field_e.a((byte) -119, (tc) (Object) var3);
-          int discarded$2 = 25522;
-          hp.a(var3, 6);
+          hp.a(var3, 6, 25522);
           return var3;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

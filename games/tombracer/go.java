@@ -15,11 +15,11 @@ final class go extends ci {
         ((go) this).field_n = 4096;
     }
 
-    final static boolean d(int param0, int param1) {
+    final static boolean d(int param0, int param1, int param2) {
         return (param1 & 256) != 0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_m = null;
     }
 

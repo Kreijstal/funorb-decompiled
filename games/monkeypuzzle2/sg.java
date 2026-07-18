@@ -15,8 +15,8 @@ final class sg {
     final static void a(String param0, byte param1) {
         try {
             if (param1 != -120) {
-                int discarded$0 = 0;
-                boolean discarded$1 = sg.a((String) null);
+                Object var3 = null;
+                boolean discarded$0 = sg.a((String) null, false);
             }
             ld.a(param0, (byte) -13);
             vi.a(k.field_k, 12345, false);
@@ -270,7 +270,7 @@ final class sg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
     }
 
@@ -311,7 +311,7 @@ final class sg {
         return stackIn_8_0 != 0;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

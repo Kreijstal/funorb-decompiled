@@ -12,7 +12,7 @@ final class ina {
     float field_i;
     static jpa[] field_c;
 
-    final static void a(ha param0) {
+    final static void a(ha param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -197,12 +197,11 @@ final class ina {
         try {
           L0: {
             L1: {
-              int discarded$4 = -108;
-              this.a(param0, -1, param4, param2, param3);
+              this.a(param0, -1, param4, param2, param3, (byte) -108);
               if (param1 == -36) {
                 break L1;
               } else {
-                boolean discarded$5 = ((ina) this).a((byte) 90);
+                boolean discarded$2 = ((ina) this).a((byte) 90);
                 break L1;
               }
             }
@@ -315,7 +314,7 @@ final class ina {
         }
     }
 
-    private final void a(String param0, int param1, String param2, String param3, cn param4) {
+    private final void a(String param0, int param1, String param2, String param3, cn param4, byte param5) {
         lt[] var9 = null;
         if (((ina) this).field_h.length <= ((ina) this).field_e) {
             var9 = new lt[((ina) this).field_e * 2];
@@ -340,7 +339,7 @@ final class ina {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
     }
@@ -367,9 +366,7 @@ final class ina {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = -91;
-            stackOut_0_0 = on.a(param1);
+            stackOut_0_0 = on.a(param1, (byte) -91, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -522,8 +519,7 @@ final class ina {
         try {
           L0: {
             L1: {
-              int discarded$2 = -108;
-              this.a(param3, -1, param2, (String) null, param1);
+              this.a(param3, -1, param2, (String) null, param1, (byte) -108);
               if (param0 == 256) {
                 break L1;
               } else {

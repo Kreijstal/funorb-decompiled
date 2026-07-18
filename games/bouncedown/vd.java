@@ -7,7 +7,7 @@ final class vd {
     static int field_a;
     static pb field_b;
 
-    final static jd a() {
+    final static jd a(int param0) {
         int var1 = 0;
         var1 = -63;
         if (ml.field_e == null) {
@@ -18,11 +18,11 @@ final class vd {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
     }
 
-    final static String a(byte param0, CharSequence param1) {
+    final static String a(byte param0, CharSequence param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -50,8 +50,7 @@ final class vd {
         String stackOut_13_2 = null;
         var6 = Bounce.field_N;
         try {
-          int discarded$2 = 0;
-          var3 = ih.a(false, param1);
+          var3 = ih.a(false, param1, false);
           var4 = -68;
           if (var3 == null) {
             var5 = 0;

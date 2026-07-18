@@ -59,13 +59,11 @@ abstract class mg extends w implements dh {
             if (var6 == 80) {
               L2: {
                 if (wa.field_j[81]) {
-                  int discarded$5 = 20638;
-                  stackOut_9_0 = this.a(param2);
+                  stackOut_9_0 = this.a(param2, 20638);
                   stackIn_10_0 = stackOut_9_0;
                   break L2;
                 } else {
-                  int discarded$6 = 32;
-                  stackOut_8_0 = this.b(param2);
+                  stackOut_8_0 = this.b(param2, 32);
                   stackIn_10_0 = stackOut_8_0;
                   break L2;
                 }
@@ -493,7 +491,7 @@ abstract class mg extends w implements dh {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_z = null;
         field_x = null;
     }
@@ -651,7 +649,7 @@ abstract class mg extends w implements dh {
         }
     }
 
-    private final boolean b(w param0) {
+    private final boolean b(w param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -971,7 +969,7 @@ abstract class mg extends w implements dh {
         return stackIn_8_0 != 0;
     }
 
-    private final boolean a(w param0) {
+    private final boolean a(w param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;

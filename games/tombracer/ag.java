@@ -32,8 +32,7 @@ final class ag implements iq {
 
     final static void a(boolean param0, boolean param1, boolean param2, String param3) {
         try {
-            int discarded$0 = 0;
-            oga.a();
+            oga.a(false);
             ej.field_a.e(true);
             vn.field_b = new jw(jo.field_E, (String) null, jf.field_r, param1, param0);
             um.field_l = new mpa(ej.field_a, (ae) (Object) vn.field_b);
@@ -116,8 +115,7 @@ final class ag implements iq {
         int var8 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
         if (((ag) this).field_g == null) {
-          int discarded$4 = 12052;
-          this.b();
+          this.b(12052);
           return;
         } else {
           L0: {
@@ -137,20 +135,14 @@ final class ag implements iq {
               if (50.0f < (float)((ag) this).field_a) {
                 if (4.0f >= var4) {
                   ((ag) this).field_a = 0;
-                  int discarded$5 = 12052;
-                  this.b();
                   break L1;
                 } else {
                   var5 = 2.0f / (float)Math.sqrt((double)(var3 * var3 + var2 * var2));
                   ((ag) this).field_h = ((ag) this).field_h + (int)(var5 * var3);
                   ((ag) this).field_d = ((ag) this).field_d + (int)(var5 * var2);
-                  int discarded$6 = 12052;
-                  this.b();
                   break L1;
                 }
               } else {
-                int discarded$7 = 12052;
-                this.b();
                 break L1;
               }
             } else {
@@ -163,6 +155,7 @@ final class ag implements iq {
               break L1;
             }
           }
+          this.b(12052);
           return;
         }
     }
@@ -171,8 +164,7 @@ final class ag implements iq {
         if (param0) {
             ((ag) this).field_m = 75;
         }
-        int discarded$0 = 12052;
-        this.b();
+        this.b(12052);
     }
 
     public final void a(int param0, byte param1, int param2, int param3, int param4) {
@@ -326,7 +318,7 @@ final class ag implements iq {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = ((ag) this).field_b + -((ag) this).field_c;
         int var3 = ((ag) this).field_j + -((ag) this).field_k;
         ((ag) this).field_d = this.b(((ag) this).field_i, ((ag) this).field_f, var2, ((ag) this).field_d, 0);

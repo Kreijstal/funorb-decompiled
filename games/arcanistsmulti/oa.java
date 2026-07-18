@@ -8,7 +8,7 @@ final class oa {
     static String field_b;
     static sn field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_c = null;

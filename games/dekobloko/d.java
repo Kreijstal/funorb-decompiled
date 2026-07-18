@@ -11,7 +11,7 @@ final class d {
     static pi field_e;
     static int field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_g = null;
         field_a = null;

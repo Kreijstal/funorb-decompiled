@@ -12,7 +12,7 @@ final class aj {
     static int field_g;
     static i field_h;
 
-    final static mi a(nf param0) {
+    final static mi a(nf param0, int param1) {
         mi var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -92,7 +92,7 @@ final class aj {
         return param1 >= 2;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_f = null;
         field_i = null;

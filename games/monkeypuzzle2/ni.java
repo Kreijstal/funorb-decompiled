@@ -135,7 +135,7 @@ final class ni implements Iterable {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) wj.field_k);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) wj.field_k);
@@ -162,7 +162,7 @@ final class ni implements Iterable {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_e = null;
         field_d = null;

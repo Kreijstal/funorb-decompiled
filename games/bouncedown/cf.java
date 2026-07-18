@@ -11,7 +11,7 @@ final class cf {
     static int field_e;
     private static String field_z;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_c = null;
         field_g = null;

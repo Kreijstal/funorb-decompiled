@@ -29,7 +29,7 @@ final class cb {
         field_h = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

@@ -97,14 +97,13 @@ final class ga {
                 break L1;
               } else {
                 var7 = null;
-                k discarded$4 = ga.a((String) null, (String) null, (gn) null, (byte) -97, (gn) null);
+                k discarded$2 = ga.a((String) null, (String) null, (gn) null, (byte) -97, (gn) null);
                 break L1;
               }
             }
             var5_int = param4.c(param0, 3);
             var6 = param4.a(var5_int, param1, false);
-            int discarded$5 = 0;
-            stackOut_2_0 = um.a(var6, param4, param2, var5_int);
+            stackOut_2_0 = um.a(var6, param4, param2, var5_int, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -449,7 +448,7 @@ final class ga {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_a = null;
         field_h = null;

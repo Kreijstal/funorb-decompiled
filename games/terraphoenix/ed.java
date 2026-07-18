@@ -7,7 +7,7 @@ final class ed {
     static char[] field_a;
     static float field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;

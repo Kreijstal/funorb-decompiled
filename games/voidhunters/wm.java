@@ -350,7 +350,7 @@ class wm implements ntb {
             L1: {
               var3_int = 115 % ((param0 - 22) / 59);
               var4 = (wm) (Object) param1;
-              if (var4.field_a) {
+              if (((wm) this).field_a) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -602,7 +602,7 @@ class wm implements ntb {
             return;
         }
         try {
-            var4.field_a = var4.field_a;
+            var4.field_a = ((wm) this).field_a;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "wm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

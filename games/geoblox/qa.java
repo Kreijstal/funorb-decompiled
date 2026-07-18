@@ -9,7 +9,7 @@ final class qa {
     static int field_a;
     static ch field_d;
 
-    final static String a(qc param0) {
+    final static String a(qc param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -91,7 +91,7 @@ final class qa {
         }
     }
 
-    final static qd a(byte[] param0) {
+    final static qd a(byte[] param0, boolean param1) {
         qd var2 = null;
         RuntimeException var2_ref = null;
         qd stackIn_4_0 = null;
@@ -480,12 +480,12 @@ final class qa {
         return stackIn_66_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_f = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1_int = 0;
         float var1 = 0.0f;
         int var2 = 0;

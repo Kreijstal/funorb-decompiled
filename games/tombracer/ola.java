@@ -108,8 +108,7 @@ final class ola extends jea {
 
     final static void e(byte param0) {
         bta.field_q = 0;
-        int discarded$2 = -21844;
-        bb.a();
+        bb.a(-21844);
         if (param0 <= 95) {
             field_Eb = -113;
         }
@@ -137,7 +136,7 @@ final class ola extends jea {
         return ((ola) this).field_xb;
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;
@@ -159,7 +158,7 @@ final class ola extends jea {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_yb = null;
         field_Ib = null;
         field_Bb = null;

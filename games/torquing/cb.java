@@ -12,7 +12,7 @@ final class cb extends q {
         int var2 = -19 / ((28 - param1) / 43);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         int var1 = 1;
     }

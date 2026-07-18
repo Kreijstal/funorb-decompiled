@@ -46,9 +46,7 @@ class be extends bh {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$4 = 10;
-            int discarded$5 = 1;
-            stackOut_2_0 = sk.a(true, param1);
+            stackOut_2_0 = sk.a(true, param1, true, 10);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -96,7 +94,7 @@ class be extends bh {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             oa.a(param0, -1, "");
             wb.a(param0, 30307);

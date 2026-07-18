@@ -22,9 +22,8 @@ final class nj extends aa {
         }
     }
 
-    final static void d() {
-        int discarded$0 = 116;
-        ag.field_n = ka.b();
+    final static void d(int param0) {
+        ag.field_n = ka.b((byte) 116);
         vn.field_f = new lt();
         hg.a(true, true, true);
     }

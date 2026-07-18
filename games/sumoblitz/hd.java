@@ -12,7 +12,7 @@ final class hd extends ac {
     int field_N;
     int field_L;
 
-    public static void f() {
+    public static void f(int param0) {
         field_I = null;
         field_H = null;
         int var1 = -84;

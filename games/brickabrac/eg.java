@@ -14,12 +14,11 @@ final class eg extends nm {
     int field_p;
 
     final static void a(boolean param0, int param1) {
-        int discarded$0 = 0;
-        uo.a(param0);
+        uo.a(param0, false);
         cq.a(param0, (byte) -125);
     }
 
-    final static Object a(int param0, byte[] param1) {
+    final static Object a(int param0, byte[] param1, boolean param2) {
         eo var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -105,7 +104,7 @@ final class eg extends nm {
         return (Object) (Object) stackIn_11_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
     }
 

@@ -154,7 +154,7 @@ final class lf {
         return stackIn_3_0;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -234,7 +234,7 @@ final class lf {
         }
     }
 
-    final static bg a(int[] param0, bg param1) {
+    final static bg a(int[] param0, bg param1, int param2) {
         bg var3 = null;
         RuntimeException var3_ref = null;
         bg stackIn_1_0 = null;
@@ -343,7 +343,7 @@ final class lf {
         return stackIn_1_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_b = null;
         field_e = null;
         field_d = null;

@@ -131,8 +131,7 @@ final class mh implements Runnable {
                     var3 = var4.getOutputStream();
                     var3.write(17);
                     var5 = (CharSequence) (Object) ("JAGGRAB " + ((mh) this).field_a.getFile() + "\n\n");
-                    int discarded$1 = -116;
-                    var3.write(qo.a(var5));
+                    var3.write(qo.a(var5, (byte) -116));
                     ((mh) this).field_f = new DataInputStream(var4.getInputStream());
                     break L7;
                   } else {
@@ -276,7 +275,7 @@ final class mh implements Runnable {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         vl var1 = (vl) (Object) lf.field_e.c(69);
         if (!(var1 != null)) {
             ak.a((byte) -112);
@@ -307,7 +306,7 @@ final class mh implements Runnable {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_c = null;
         field_i = null;

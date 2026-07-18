@@ -4,7 +4,7 @@
 final class wh {
     static lb field_a;
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         return null != jf.a(0, param0);
     }
 
@@ -173,7 +173,7 @@ final class wh {
         return stackIn_21_0;
     }
 
-    final static void a(String[] args) {
+    final static void a(String[] args, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -243,7 +243,7 @@ final class wh {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -285,8 +285,7 @@ final class wh {
                       }
                     }
                     var5 = new java.net.URL(param0.getCodeBase(), var4);
-                    int discarded$2 = -1;
-                    param0.getAppletContext().showDocument(fh.a(param0, var5), "_self");
+                    param0.getAppletContext().showDocument(fh.a(param0, var5, -1), "_self");
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -336,7 +335,7 @@ final class wh {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         mi.field_c[91] = 42;
         mi.field_c[45] = 26;
         mi.field_c[47] = 73;
@@ -351,7 +350,7 @@ final class wh {
         mi.field_c[222] = 58;
     }
 
-    final static void a(byte[] param0, int param1, int param2, int[] param3) {
+    final static void a(byte[] param0, int param1, int param2, int[] param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -472,7 +471,7 @@ final class wh {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 

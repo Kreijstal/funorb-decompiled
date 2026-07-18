@@ -13,7 +13,7 @@ final class iw extends tc {
     int field_t;
     int field_q;
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_p = null;
         field_l = null;

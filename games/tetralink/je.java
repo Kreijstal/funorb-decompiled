@@ -197,7 +197,7 @@ final class je {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
         field_b = null;
         field_e = null;
@@ -316,7 +316,7 @@ final class je {
         return var2;
     }
 
-    final static void a(boolean param0, int param1, String param2, boolean param3) {
+    final static void a(boolean param0, int param1, String param2, boolean param3, int param4) {
         RuntimeException var5 = null;
         String var6 = null;
         int var7 = 0;

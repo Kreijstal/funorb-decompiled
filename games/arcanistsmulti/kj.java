@@ -9,7 +9,7 @@ final class kj {
     static Boolean field_e;
     static String field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         ee.a(4, (byte) 30);
     }
 

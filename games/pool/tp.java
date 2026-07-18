@@ -12,7 +12,7 @@ final class tp {
     static String field_f;
     static String field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_d = null;
         field_h = null;
@@ -36,8 +36,7 @@ final class tp {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$2 = -51;
-                un.a(2, var4);
+                un.a(2, var4, (byte) -51);
                 var4 = (bj) (Object) tm.field_i.f((byte) -5);
                 continue L1;
               }

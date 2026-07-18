@@ -830,7 +830,7 @@ class al implements kg, jh {
         }
     }
 
-    private final int a(int param0, na param1, byte param2) {
+    private final int a(int param0, na param1, byte param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
@@ -919,12 +919,11 @@ class al implements kg, jh {
                 break L1;
               } else {
                 var5 = null;
-                int discarded$4 = ((al) this).b((na) null, -6);
+                int discarded$2 = ((al) this).b((na) null, -6);
                 break L1;
               }
             }
-            int discarded$5 = 0;
-            stackOut_2_0 = this.a(param1, param0, (byte) 120);
+            stackOut_2_0 = this.a(param1, param0, (byte) 120, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -961,7 +960,7 @@ class al implements kg, jh {
         return stackIn_3_0;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         try {
             rb.field_Nb = param0;
             t.a(12, 0);
@@ -1001,8 +1000,7 @@ class al implements kg, jh {
               var9_int = ((al) this).b(param0, 75);
               var10 = this.d(param0, -19);
               if (((al) this).field_p) {
-                int discarded$5 = 0;
-                int discarded$6 = ((al) this).field_b.a(((al) this).c(param0, 4373), this.a(0, param0, param1, 0), this.a(param7, param0, (byte) -24), var9_int, var10, param5, param4, ((al) this).field_k, ((al) this).field_d, ((al) this).field_c);
+                int discarded$1 = ((al) this).field_b.a(((al) this).c(param0, 4373), this.a(0, param0, param1, 0), this.a(param7, param0, (byte) -24, 0), var9_int, var10, param5, param4, ((al) this).field_k, ((al) this).field_d, ((al) this).field_c);
                 break L1;
               } else {
                 L2: {
@@ -1041,13 +1039,11 @@ class al implements kg, jh {
                         if (var12 != 2) {
                           break L1;
                         } else {
-                          int discarded$7 = 0;
-                          ((al) this).field_b.c(((al) this).c(param0, 4373), var9_int + this.a(0, param0, param1, 0), this.a(param7, param0, (byte) 122) + var11, param5, param4);
+                          ((al) this).field_b.c(((al) this).c(param0, 4373), var9_int + this.a(0, param0, param1, 0), this.a(param7, param0, (byte) 122, 0) + var11, param5, param4);
                           break L1;
                         }
                       } else {
-                        int discarded$8 = 0;
-                        ((al) this).field_b.a(((al) this).c(param0, 4373), this.a(0, param0, param1, 0) + (var9_int >> 1), var11 + this.a(param7, param0, (byte) 120), param5, param4);
+                        ((al) this).field_b.a(((al) this).c(param0, 4373), this.a(0, param0, param1, 0) + (var9_int >> 1), var11 + this.a(param7, param0, (byte) 120, 0), param5, param4);
                         break L1;
                       }
                     }
@@ -1055,8 +1051,7 @@ class al implements kg, jh {
                     break L4;
                   }
                 }
-                int discarded$9 = 0;
-                ((al) this).field_b.b(((al) this).c(param0, 4373), this.a(0, param0, param1, 0), var11 + this.a(param7, param0, (byte) -79), param5, param4);
+                ((al) this).field_b.b(((al) this).c(param0, 4373), this.a(0, param0, param1, 0), var11 + this.a(param7, param0, (byte) -79, 0), param5, param4);
                 break L1;
               }
             }
@@ -1381,7 +1376,7 @@ class al implements kg, jh {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_l = null;
         field_i = null;

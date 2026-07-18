@@ -58,7 +58,7 @@ final class fn extends vh {
         return stackIn_10_0 != 0;
     }
 
-    final static im b(long param0) {
+    final static im b(long param0, int param1) {
         return (im) (Object) im.field_Qb.a(param0, false);
     }
 
@@ -292,7 +292,7 @@ final class fn extends vh {
         ff.a(-24, qh.field_f - 120 + var3 * 120 / var2);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_Nb = null;
         field_Mb = null;
         field_Qb = null;

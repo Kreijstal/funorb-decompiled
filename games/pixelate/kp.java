@@ -219,8 +219,7 @@ final class kp extends lm {
         } else {
             var2 = bo.a(param0 ^ 181);
             byte[] var1 = var2;
-            int discarded$0 = 6;
-            og discarded$1 = hm.a(param0 + 41, var2);
+            og discarded$0 = hm.a(param0 + 41, var2, 6);
         }
     }
 
@@ -248,7 +247,7 @@ final class kp extends lm {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         int var1 = 37;
         if (!(to.field_t == null)) {
             to.field_t.f();

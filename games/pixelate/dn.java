@@ -6,7 +6,7 @@ final class dn implements hj {
     static ak field_c;
     static String[][] field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;

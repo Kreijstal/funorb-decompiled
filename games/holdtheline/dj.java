@@ -59,8 +59,7 @@ final class dj extends ub {
             L1: {
               o.field_d = param1;
               ec.field_v = param3;
-              int discarded$2 = 22676;
-              da.a(param0, qd.field_g);
+              da.a(param0, qd.field_g, 22676);
               if (param2 < -5) {
                 break L1;
               } else {
@@ -334,7 +333,7 @@ final class dj extends ub {
         field_N = null;
     }
 
-    final static void a(int param0, vk param1) {
+    final static void a(int param0, vk param1, boolean param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         wd var4 = null;

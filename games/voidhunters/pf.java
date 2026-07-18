@@ -140,10 +140,9 @@ abstract class pf extends ha {
     abstract void y(int param0);
 
     void n(int param0) {
-        int discarded$0 = 92;
-        this.C();
+        this.C((byte) 92);
         if (param0 < 106) {
-            boolean discarded$1 = ((pf) this).q();
+            boolean discarded$0 = ((pf) this).q();
         }
     }
 
@@ -275,7 +274,7 @@ abstract class pf extends ha {
 
     abstract float f(byte param0);
 
-    private final void C() {
+    private final void C(byte param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         ((pf) this).h(true);
@@ -758,7 +757,7 @@ abstract class pf extends ha {
         ((pf) this).field_fc = to.field_o;
         ((pf) this).field_n = 128;
         ((pf) this).field_kb = new jaclib.memory.Stream();
-        oj discarded$3 = new oj();
+        oj discarded$1 = new oj();
         try {
           L0: {
             try {
@@ -771,9 +770,7 @@ abstract class pf extends ha {
                   ((pf) this).field_e = param5;
                   ((pf) this).field_i = var11.height;
                   ((pf) this).field_db = var11.width;
-                  int discarded$4 = 1;
-                  int discarded$5 = 33;
-                  ocb.a(false);
+                  ocb.a(false, (byte) 33, true);
                   if (((pf) this).field_a == null) {
                     ((pf) this).field_Zb = new jagex3.graphics2.hw.NativeInterface(0, ((pf) this).field_e);
                     ((pf) this).field_I = null;
@@ -1070,7 +1067,7 @@ abstract class pf extends ha {
 
     abstract void A(byte param0);
 
-    private final void g() {
+    private final void g(boolean param0) {
         ((pf) this).field_c[10] = ((pf) this).field_xb;
         ((pf) this).field_c[14] = ((pf) this).field_Z;
     }
@@ -2492,7 +2489,7 @@ abstract class pf extends ha {
         }
     }
 
-    private final void H() {
+    private final void H(int param0) {
         int var2 = 0;
         jaclib.memory.Buffer var3 = null;
         jaclib.memory.Stream var4 = null;
@@ -3031,8 +3028,7 @@ abstract class pf extends ha {
                   var8[13] = 0.0f;
                   var8[11] = -1.0f;
                   var8[15] = 0.0f;
-                  int discarded$2 = 1;
-                  this.g();
+                  this.g(true);
                   ((pf) this).field_N = true;
                   break L0;
                 }
@@ -3054,8 +3050,7 @@ abstract class pf extends ha {
             var8[8] = 0.0f;
             var8[0] = 1.0f;
             var8[7] = 0.0f;
-            int discarded$3 = 1;
-            this.g();
+            this.g(true);
             ((pf) this).field_N = true;
             break L0;
           }
@@ -3343,8 +3338,7 @@ abstract class pf extends ha {
             ((pf) this).field_Xb = false;
         }
         this.q(param0 ^ 27191);
-        int discarded$1 = 3096;
-        this.H();
+        this.H(3096);
         ((pf) this).field_Ib.a(24, (pf) this);
     }
 

@@ -12,11 +12,11 @@ final class om extends bn implements fq {
         return 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
     }
 
-    final static String a(int param0, int param1) {
+    final static String a(int param0, int param1, byte param2) {
         return param1 + "/" + param0;
     }
 

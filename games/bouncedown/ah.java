@@ -68,8 +68,7 @@ abstract class ah {
                     }
                     case 3: {
                         try {
-                            int discarded$2 = -31185;
-                            var3 = (String) ac.a(param1, "getcookies");
+                            var3 = (String) ac.a(param1, "getcookies", -31185);
                             var4 = di.a(-122, ';', var3);
                             var5 = 0;
                             statePc = 4;
@@ -259,7 +258,7 @@ abstract class ah {
 
     abstract byte[] a(int param0);
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, byte param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_7_0 = 0;

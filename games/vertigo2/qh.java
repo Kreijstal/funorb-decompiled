@@ -309,7 +309,7 @@ final class qh {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (ce.field_b != ro.field_g.field_d) {
             tc.field_b = tc.field_b + (ro.field_g.field_d - ce.field_b);
             ce.field_b = ro.field_g.field_d;
@@ -322,17 +322,16 @@ final class qh {
         }
     }
 
-    final static int b() {
+    final static int b(int param0) {
         int var1 = -15;
         pd.field_c.d(115);
         if (!kb.field_e.d(-3599)) {
-            int discarded$0 = 0;
-            return f.g();
+            return f.g(0);
         }
         return 0;
     }
 
-    final static String d() {
+    final static String d(int param0) {
         return lr.field_S;
     }
 

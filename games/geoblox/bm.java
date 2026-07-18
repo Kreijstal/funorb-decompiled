@@ -83,8 +83,7 @@ final class bm {
         try {
           L0: {
             L1: {
-              int discarded$5 = -1;
-              var18 = new qc(v.a(param1));
+              var18 = new qc(v.a(param1, -1));
               var4 = var18.c((byte) 34);
               if (5 > var4) {
                 break L1;
@@ -144,9 +143,9 @@ final class bm {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$6 = var8 + var18.d((byte) -27);
-                            var8 = dupTemp$6;
-                            ((bm) this).field_i[var10] = dupTemp$6;
+                            int dupTemp$4 = var8 + var18.d((byte) -27);
+                            var8 = dupTemp$4;
+                            ((bm) this).field_i[var10] = dupTemp$4;
                             if (((bm) this).field_i[var10] > var9) {
                               var9 = ((bm) this).field_i[var10];
                               break L8;
@@ -165,9 +164,9 @@ final class bm {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$7 = var8 + var18.b(true);
-                            var8 = dupTemp$7;
-                            ((bm) this).field_i[var10] = dupTemp$7;
+                            int dupTemp$5 = var8 + var18.b(true);
+                            var8 = dupTemp$5;
+                            ((bm) this).field_i[var10] = dupTemp$5;
                             if (var9 < ((bm) this).field_i[var10]) {
                               var9 = ((bm) this).field_i[var10];
                               break L10;
@@ -286,10 +285,10 @@ final class bm {
                                           continue L22;
                                         } else {
                                           L25: {
-                                            int dupTemp$8 = var8 + var18.d((byte) -27);
-                                            var8 = dupTemp$8;
-                                            ((bm) this).field_o[var11][var14] = dupTemp$8;
-                                            var15 = dupTemp$8;
+                                            int dupTemp$6 = var8 + var18.d((byte) -27);
+                                            var8 = dupTemp$6;
+                                            ((bm) this).field_o[var11][var14] = dupTemp$6;
+                                            var15 = dupTemp$6;
                                             if (~var13 > ~var15) {
                                               var13 = var15;
                                               break L25;
@@ -339,10 +338,10 @@ final class bm {
                                           continue L27;
                                         } else {
                                           L30: {
-                                            int dupTemp$9 = var8 + var18.b(true);
-                                            var8 = dupTemp$9;
-                                            ((bm) this).field_o[var11][var14] = dupTemp$9;
-                                            var15 = dupTemp$9;
+                                            int dupTemp$7 = var8 + var18.b(true);
+                                            var8 = dupTemp$7;
+                                            ((bm) this).field_o[var11][var14] = dupTemp$7;
+                                            var15 = dupTemp$7;
                                             if (~var13 <= ~var15) {
                                               break L30;
                                             } else {
@@ -464,7 +463,7 @@ final class bm {
         }
     }
 
-    final static void a(ai param0) {
+    final static void a(ai param0, int param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -549,7 +548,7 @@ final class bm {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_p = null;
         int var1 = -4;
@@ -566,8 +565,7 @@ final class bm {
                 if (param2.length != 64) {
                     throw new RuntimeException();
                 }
-                int discarded$0 = 8;
-                ((bm) this).field_c = wh.a(param0.length, 0, param0);
+                ((bm) this).field_c = wh.a(param0.length, 0, param0, 8);
                 for (var4_int = 0; 64 > var4_int; var4_int++) {
                     if (((bm) this).field_c[var4_int] != param2[var4_int]) {
                         throw new RuntimeException();

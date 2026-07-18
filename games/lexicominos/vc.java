@@ -275,7 +275,7 @@ final class vc extends nb implements jk {
         ((vc) this).field_B = var4;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_G = null;
         field_D = null;
         field_K = null;

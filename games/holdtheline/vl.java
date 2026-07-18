@@ -33,7 +33,7 @@ final class vl implements Iterator {
         ((vl) this).field_f = null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_a = null;
         field_d = null;

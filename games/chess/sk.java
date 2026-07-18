@@ -18,7 +18,7 @@ final class sk extends ph {
         super(param0, param1);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_u = null;
         field_v = null;
         field_n = null;

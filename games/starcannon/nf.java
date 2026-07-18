@@ -19,7 +19,7 @@ final class nf {
     private long[] field_a;
     static int[] field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         field_b = null;
     }
@@ -117,14 +117,13 @@ final class nf {
               if (((nf) this).field_g > 32) {
                 L3: while (true) {
                   if (64 <= ((nf) this).field_g) {
-                    int discarded$4 = 1;
-                    this.a();
+                    this.a(true);
                     ((nf) this).field_g = 0;
                     break L2;
                   } else {
-                    int fieldTemp$5 = ((nf) this).field_g;
+                    int fieldTemp$2 = ((nf) this).field_g;
                     ((nf) this).field_g = ((nf) this).field_g + 1;
-                    ((nf) this).field_f[fieldTemp$5] = (byte) 0;
+                    ((nf) this).field_f[fieldTemp$2] = (byte) 0;
                     continue L3;
                   }
                 }
@@ -135,8 +134,7 @@ final class nf {
             L4: while (true) {
               if (((nf) this).field_g >= 32) {
                 ug.a(((nf) this).field_h, 0, ((nf) this).field_f, 32, 32);
-                int discarded$6 = 1;
-                this.a();
+                this.a(true);
                 var4_int = 0;
                 var5 = param0;
                 L5: while (true) {
@@ -158,9 +156,9 @@ final class nf {
                   }
                 }
               } else {
-                int fieldTemp$7 = ((nf) this).field_g;
+                int fieldTemp$3 = ((nf) this).field_g;
                 ((nf) this).field_g = ((nf) this).field_g + 1;
-                ((nf) this).field_f[fieldTemp$7] = (byte) 0;
+                ((nf) this).field_f[fieldTemp$3] = (byte) 0;
                 continue L4;
               }
             }
@@ -214,7 +212,7 @@ final class nf {
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -395,8 +393,7 @@ final class nf {
         try {
           L0: {
             if (uh.field_k == cl.field_k) {
-              int discarded$2 = 124;
-              nf.b();
+              nf.b(124);
               var8 = new ok(ti.field_b, param6);
               ti.field_b.a((byte) 72, (uj) (Object) var8);
               if (dd.a((byte) 77)) {
@@ -594,8 +591,7 @@ final class nf {
                           ((nf) this).field_j = ((nf) this).field_j + (-var7 + 8);
                           param0 = param0 - (long)(8 + -var7);
                           if (((nf) this).field_j == 512) {
-                            int discarded$2 = 1;
-                            this.a();
+                            this.a(true);
                             ((nf) this).field_j = 0;
                             ((nf) this).field_g = 0;
                             break L5;
@@ -633,8 +629,7 @@ final class nf {
                             ((nf) this).field_g = ((nf) this).field_g + 1;
                             ((nf) this).field_j = ((nf) this).field_j + (8 + -var7);
                             if (((nf) this).field_j == 512) {
-                              int discarded$3 = 1;
-                              this.a();
+                              this.a(true);
                               ((nf) this).field_g = 0;
                               ((nf) this).field_j = 0;
                               break L8;

@@ -29,6 +29,10 @@ public class NativeInterface {
     public final native void setSunColour(float param0, float param1, float param2, float param3, float param4);
 
     public NativeInterface(int param0, int param1) {
-        this.init(param0, param1);
+        try {
+            this.init(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 }

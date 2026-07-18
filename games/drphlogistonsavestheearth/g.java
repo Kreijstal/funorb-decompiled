@@ -484,7 +484,7 @@ final class g extends ei {
         return stackIn_9_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_p = null;
         field_q = null;
         field_s = null;

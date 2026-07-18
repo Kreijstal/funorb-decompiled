@@ -11,7 +11,7 @@ final class qc {
     private int field_b;
     static int field_a;
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -264,10 +264,9 @@ final class qc {
         ((qc) this).field_d = param0;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, boolean param1, boolean param2) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
-        int discarded$4 = 9;
-        if (!vs.b()) {
+        if (!vs.b((byte) 9)) {
             ph.field_b.e(-113);
             mr.field_f = null;
         } else {

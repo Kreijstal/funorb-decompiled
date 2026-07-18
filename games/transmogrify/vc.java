@@ -65,8 +65,7 @@ final class vc extends rg implements ie {
               return false;
             } else {
               L0: {
-                int discarded$6 = 1;
-                if (i.b()) {
+                if (i.b(true)) {
                   stackOut_7_0 = 0;
                   stackIn_8_0 = stackOut_7_0;
                   break L0;

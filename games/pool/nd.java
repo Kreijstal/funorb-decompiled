@@ -123,7 +123,7 @@ final class nd implements fp {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         int var1 = 0;
         field_g = null;
@@ -239,14 +239,13 @@ final class nd implements fp {
         }
     }
 
-    final static void b() {
-        int discarded$0 = 14;
-        db.field_Sb = lo.b();
+    final static void b(byte param0) {
+        db.field_Sb = lo.b(14);
         wd.field_Ub = new lq();
         t.a(110, true, true);
     }
 
-    final static void a(eg param0) {
+    final static void a(eg param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

@@ -9,11 +9,11 @@ final class ln extends ana {
     private boolean field_z;
     private boolean field_y;
 
-    private final void h() {
+    private final void h(int param0) {
         ((ln) this).field_n.field_p = 0;
     }
 
-    final static byte[] a(int param0, byte[] param1, int param2) {
+    final static byte[] a(int param0, byte[] param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;
@@ -179,8 +179,7 @@ final class ln extends ana {
         if (!(((ln) this).field_n.field_p >= 256)) {
             return false;
         }
-        int discarded$0 = -11007;
-        this.h();
+        this.h(-11007);
         return true;
     }
 
@@ -194,7 +193,7 @@ final class ln extends ana {
         }
     }
 
-    final static void f() {
+    final static void f(int param0) {
         int var1_int = 0;
         int var3 = BachelorFridge.field_y;
         try {

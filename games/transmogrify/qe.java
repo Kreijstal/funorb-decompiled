@@ -23,7 +23,7 @@ final class qe extends qg {
     static String field_v;
     static String field_A;
 
-    private final ti h() {
+    private final ti h(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -31,8 +31,7 @@ final class qe extends qg {
         int var9 = Transmogrify.field_A ? 1 : 0;
         int var2 = ((qe) this).field_h >> 1;
         ti var3 = new ti(var2, ((qe) this).field_h);
-        int discarded$0 = 256;
-        oj.a(var3);
+        oj.a(var3, 256);
         for (var4 = 0; var4 < ((qe) this).field_h; var4++) {
             for (var5 = 0; var2 > var5; var5++) {
                 var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + ((qe) this).field_h));
@@ -53,8 +52,7 @@ final class qe extends qg {
         ((qe) this).field_L = 8355711 & param2 >> 1;
         ((qe) this).field_B = param1;
         ((qe) this).field_M = param2;
-        int discarded$0 = 0;
-        this.c();
+        this.c(false);
         if (!param0) {
             ((qe) this).a(false, 76, -81);
         }
@@ -63,12 +61,10 @@ final class qe extends qg {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(-109, param1, param2, param3, param4);
         int var6 = 118 / ((param0 - -29) / 53);
-        int discarded$0 = 0;
-        this.c();
+        this.c(false);
     }
 
     private final ti a(byte param0, int param1, int param2) {
-        ti var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -78,6 +74,7 @@ final class qe extends qg {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        ti var14 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_4_0 = 0;
@@ -85,15 +82,14 @@ final class qe extends qg {
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
         var13 = Transmogrify.field_A ? 1 : 0;
-        var4 = new ti(((qe) this).field_t * 2, ((qe) this).field_h);
-        int discarded$1 = 256;
-        oj.a(var4);
+        var14 = new ti(((qe) this).field_t * 2, ((qe) this).field_h);
+        oj.a(var14, 256);
         var5 = ((qe) this).field_h >> 1;
         var6 = 0;
         L0: while (true) {
           if (var6 >= ((qe) this).field_h) {
             fi.c(true);
-            return var4;
+            return var14;
           } else {
             L1: {
               var7 = (var6 >> 1) * (-1 + ((qe) this).field_t * 2) % (((qe) this).field_t * 2);
@@ -211,10 +207,9 @@ final class qe extends qg {
         }
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         ((qe) this).field_D = new ti[]{this.a((byte) 90, ((qe) this).field_B, ((qe) this).field_M), this.a((byte) 90, ((qe) this).field_u, ((qe) this).field_L)};
-        int discarded$0 = -29239;
-        ((qe) this).field_y = this.h();
+        ((qe) this).field_y = this.h(-29239);
         ((qe) this).field_C = ((qe) this).field_y.c();
         ((qe) this).field_K = new ti(((qe) this).field_h >> 1, ((qe) this).field_h);
     }
@@ -254,8 +249,7 @@ final class qe extends qg {
                   if (param3 - -((qe) this).field_y.field_n < sb.field_d) {
                     break L2;
                   } else {
-                    int discarded$2 = 256;
-                    oj.a(((qe) this).field_K);
+                    oj.a(((qe) this).field_K, 256);
                     param1.c(-((qe) this).field_G, 0);
                     param1.c(((qe) this).field_t * 2 - ((qe) this).field_G, 0);
                     ((qe) this).field_C.b(0, 0);
@@ -266,8 +260,7 @@ final class qe extends qg {
                 }
                 L3: {
                   if (var5_int + -((qe) this).field_y.field_n <= sb.field_b) {
-                    int discarded$3 = 256;
-                    oj.a(((qe) this).field_K);
+                    oj.a(((qe) this).field_K, 256);
                     var7 = ((qe) this).field_G + ((qe) this).field_l - ((qe) this).field_y.field_n;
                     L4: while (true) {
                       if (2 * ((qe) this).field_t >= var7) {

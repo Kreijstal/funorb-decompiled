@@ -9,7 +9,7 @@ final class oh {
     static k field_d;
     static int field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_f = null;
         field_b = null;
@@ -17,7 +17,7 @@ final class oh {
         field_d = null;
     }
 
-    final static void a(long param0, String param1, java.applet.Applet param2, String param3) {
+    final static void a(long param0, String param1, java.applet.Applet param2, String param3, int param4) {
         try {
             Throwable var6 = null;
             RuntimeException var6_ref = null;
@@ -82,16 +82,14 @@ final class oh {
                       var7 = var9;
                       var7 = var9;
                       if (param0 >= 0L) {
-                        int discarded$2 = -8;
-                        var7 = var9 + "; Expires=" + td.a(param0 * 1000L + ol.a(256)) + "; Max-Age=" + param0;
+                        var7 = var9 + "; Expires=" + td.a(param0 * 1000L + ol.a(256), (byte) -8) + "; Max-Age=" + param0;
                         break L2;
                       } else {
                         var7 = var9 + "; Discard;";
                         break L2;
                       }
                     }
-                    int discarded$3 = 1;
-                    ff.a(param2, "document.cookie=\"" + var7 + "\"");
+                    ff.a(param2, "document.cookie=\"" + var7 + "\"", (byte) 1);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {

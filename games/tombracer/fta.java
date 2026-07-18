@@ -207,7 +207,7 @@ final class fta {
         throw new IllegalStateException();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;

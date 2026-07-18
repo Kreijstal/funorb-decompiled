@@ -16,8 +16,7 @@ final class pf {
         var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            int discarded$19 = 9501;
-            if (!cd.c()) {
+            if (!cd.c(9501)) {
               L1: {
                 if (wq.field_a == null) {
                   break L1;
@@ -33,7 +32,7 @@ final class pf {
               }
               return;
             } else {
-              boolean discarded$20 = ee.field_v.a(true, -6226, en.field_F, cl.field_s);
+              boolean discarded$12 = ee.field_v.a(true, -6226, en.field_F, cl.field_s);
               ee.field_v.d((byte) -117);
               L2: while (true) {
                 if (!jd.i((byte) 107)) {
@@ -44,7 +43,7 @@ final class pf {
                     return;
                   }
                 } else {
-                  boolean discarded$21 = ee.field_v.a(rs.field_q, ui.field_i, 80);
+                  boolean discarded$13 = ee.field_v.a(rs.field_q, ui.field_i, 80);
                   continue L2;
                 }
               }
@@ -124,7 +123,7 @@ final class pf {
         return stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_f = null;
         field_a = null;
@@ -161,8 +160,7 @@ final class pf {
             var3_int = 0;
             if (param0 != 0) {
               var4 = new om();
-              int discarded$2 = -24721;
-              no.a(param2, (uo) (Object) var4, param0);
+              no.a(param2, (uo) (Object) var4, param0, -24721);
               var4.a(true);
               stackOut_3_0 = (om) var4;
               stackIn_4_0 = stackOut_3_0;

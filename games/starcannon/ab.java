@@ -38,17 +38,8 @@ class ab extends dk {
         }
     }
 
-    final static hl[] b() {
-        int discarded$0 = 0;
-        int discarded$1 = 1;
-        int discarded$2 = 3;
-        int discarded$3 = 0;
-        int discarded$4 = 3;
-        int discarded$5 = 0;
-        int discarded$6 = 1;
-        int discarded$7 = 65793;
-        int discarded$8 = 1;
-        return cc.a();
+    final static hl[] b(int param0, int param1, int param2, int param3, int param4) {
+        return cc.a(1, 65793, 1, 0, 3, 0, 3, 1, 0);
     }
 
     final static void g(byte param0) {
@@ -78,9 +69,11 @@ class ab extends dk {
             if (og.field_d != null) {
               L1: {
                 var7 = og.field_d[ag.field_o];
+                var8 = var7;
+                var8 = var7;
                 if (var7 == null) {
                   if (ah.field_d != null) {
-                    int discarded$5 = ah.field_d.a(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                    int discarded$3 = ah.field_d.a(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                     break L1;
                   } else {
                     break L1;
@@ -99,12 +92,10 @@ class ab extends dk {
                     var3_int = (var8.field_x + 60) * rk.field_a / kk.field_a;
                     var4 = var3_int + -30;
                     if (cc.field_j) {
-                      int discarded$6 = -2;
-                      n.a(var4 * -256 / 30, 199, 245, 256 * (var8.field_x - var4) / 30, var8);
+                      n.a(var4 * -256 / 30, 199, 245, 256 * (var8.field_x - var4) / 30, var8, (byte) -2);
                       break L2;
                     } else {
-                      int discarded$7 = -2;
-                      n.a(256 * (var8.field_x + -var4) / 30, 199, 245, -256 * var4 / 30, var8);
+                      n.a(256 * (var8.field_x + -var4) / 30, 199, 245, -256 * var4 / 30, var8, (byte) -2);
                       break L2;
                     }
                   }
@@ -122,7 +113,7 @@ class ab extends dk {
                   L4: while (true) {
                     if (og.field_d.length <= var6) {
                       if (var3 != null) {
-                        int discarded$8 = ah.field_d.a("Screenshot(s) " + (String) var3 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$4 = ah.field_d.a("Screenshot(s) " + (String) var3 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L3;
                       } else {
                         break L3;
@@ -163,7 +154,7 @@ class ab extends dk {
             } else {
               L7: {
                 if (ah.field_d != null) {
-                  int discarded$9 = ah.field_d.a(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                  int discarded$5 = ah.field_d.a(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                   break L7;
                 } else {
                   break L7;
@@ -599,7 +590,7 @@ class ab extends dk {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_G = null;
         field_F = null;
         field_A = null;

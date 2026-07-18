@@ -125,7 +125,6 @@ final class ia extends rh {
 
     private final void d() {
         int var1 = 0;
-        int var2 = 0;
         ((ia) this).field_R = 0;
         ((ia) this).field_pb = 0;
         ((ia) this).field_X = 0;
@@ -146,16 +145,15 @@ final class ia extends rh {
             ((ia) this).field_u = 0;
             ((ia) this).field_N = -1;
             ((ia) this).field_Z = 0;
-            var2 = 0;
-            var1 = var2;
+            var1 = 0;
             L1: while (true) {
-              if (var2 >= ((ia) this).field_I.field_H) {
+              if (var1 >= ((ia) this).field_I.field_H) {
                 ((ia) this).field_pb = 1;
                 return;
               } else {
-                ((ia) this).field_fb[var2] = null;
-                ((ia) this).field_O[var2] = false;
-                var2++;
+                ((ia) this).field_fb[var1] = null;
+                ((ia) this).field_O[var1] = false;
+                var1++;
                 continue L1;
               }
             }
@@ -1935,7 +1933,8 @@ final class ia extends rh {
     }
 
     final int a(mi param0) {
-        if (this.c()) {
+        int var2 = this.c() ? 1 : 0;
+        if (var2 != 0) {
             if (!((ia) this).field_w) {
                 return -1;
             }

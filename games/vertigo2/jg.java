@@ -696,20 +696,16 @@ class jg extends bg {
         }
     }
 
-    public static void b() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void b(boolean param0) {
         try {
-          L0: {
             field_j = null;
             field_m = null;
             field_q = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "jg.V(" + false + ')');
+            if (param0) {
+                field_j = null;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "jg.V(" + param0 + ')');
         }
     }
 

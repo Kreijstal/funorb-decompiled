@@ -164,7 +164,7 @@ final class bf extends mc {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
         field_s = null;
         field_o = null;
@@ -280,8 +280,7 @@ final class bf extends mc {
                   }
                 }
               }
-              int discarded$1 = -93;
-              hj.a();
+              hj.a((byte) -93);
               break L1;
             }
             var66 = new int[param2.field_O];

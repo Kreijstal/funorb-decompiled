@@ -471,7 +471,7 @@ abstract class bg extends kd {
         ((bg) this).field_z = param0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_A = null;
         field_D = null;
         field_E = null;

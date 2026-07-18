@@ -10,11 +10,11 @@ final class m {
     static int field_b;
     static String field_c;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return null != lj.field_a && tb.field_f.a((byte) -121);
     }
 
-    final static String a(java.applet.Applet param0) {
+    final static String a(java.applet.Applet param0, byte param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
@@ -277,8 +277,7 @@ final class m {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$4 = 5;
-                    ri.a(-1281, var5);
+                    ri.a(-1281, var5, 5);
                     var5 = (pa) (Object) ve.field_Nb.a((byte) -111);
                     continue L2;
                   }

@@ -11,7 +11,7 @@ abstract class ml extends rk {
 
     abstract byte[] d(int param0);
 
-    final static ll a() {
+    final static ll a(byte param0) {
         int var1 = 19;
         if (!(we.field_d != null)) {
             we.field_d = new ll(e.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, e.field_b.field_M, -1, 2147483647, true);
@@ -19,7 +19,7 @@ abstract class ml extends rk {
         return we.field_d;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_p = null;
         int var1 = 27;
         field_u = null;
@@ -88,7 +88,7 @@ abstract class ml extends rk {
         di.a(false, param1, 117);
     }
 
-    final static void a(dc param0) {
+    final static void a(dc param0, int param1, int param2) {
         v.field_d.a((wl) (Object) param0, false);
         try {
             de.a(-14149, 5, param0);

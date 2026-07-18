@@ -25,7 +25,7 @@ final class dl extends dg {
         return 255 & param1;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_A = null;
         field_B = null;
         field_C = null;
@@ -42,7 +42,7 @@ final class dl extends dg {
         }
     }
 
-    final static pb[] d() {
+    final static pb[] d(byte param0) {
         pb[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -255,7 +255,7 @@ final class dl extends dg {
         }
     }
 
-    final static a[] a(ej param0) {
+    final static a[] a(ej param0, boolean param1) {
         RuntimeException var2 = null;
         re var2_ref = null;
         int var7 = 0;

@@ -6,7 +6,7 @@ final class pk {
     static String field_c;
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;
@@ -67,7 +67,7 @@ final class pk {
         }
     }
 
-    final static ad a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
+    final static ad a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6, byte param7, int param8) {
         ad var9 = null;
         RuntimeException var9_ref = null;
         Object stackIn_2_0 = null;

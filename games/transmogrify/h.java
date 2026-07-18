@@ -240,9 +240,8 @@ class h implements ui, m {
                     var9 = var14.c(0, param1);
                     var10 = this.a(239, param3, param0, var9);
                     var11 = ((h) this).a(param3, -83, param2) + Math.max(0, var8.field_a);
-                    int discarded$1 = 15065;
                     stackOut_3_0 = ((h) this).a(param3, -102, param2);
-                    stackOut_3_1 = this.d(param3);
+                    stackOut_3_1 = this.d(param3, 15065);
                     stackOut_3_2 = var8.field_f;
                     stackIn_5_0 = stackOut_3_0;
                     stackIn_5_1 = stackOut_3_1;
@@ -490,14 +489,12 @@ class h implements ui, m {
             L1: {
               if (null != param1.field_i) {
                 var3_int = ((h) this).b(0, param1);
-                int discarded$2 = 15065;
-                var4 = this.d(param1);
+                var4 = this.d(param1, 15065);
                 break L1;
               } else {
                 param1.field_i = (ue) (Object) new jh();
                 var3_int = ((h) this).b(0, param1);
-                int discarded$3 = 15065;
-                var4 = this.d(param1);
+                var4 = this.d(param1, 15065);
                 break L1;
               }
             }
@@ -692,7 +689,7 @@ class h implements ui, m {
         return stackIn_4_0;
     }
 
-    private final int d(qg param0) {
+    private final int d(qg param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -907,7 +904,7 @@ class h implements ui, m {
                 break L1;
               } else {
                 var4 = null;
-                int discarded$4 = ((h) this).a(-104, (qg) null);
+                int discarded$2 = ((h) this).a(-104, (qg) null);
                 break L1;
               }
             }
@@ -921,8 +918,7 @@ class h implements ui, m {
             }
             L3: {
               if (((h) this).field_j) {
-                int discarded$5 = 15065;
-                ((jh) (Object) param0.field_i).a(45, ((h) this).field_b, ((h) this).field_e, ((h) this).b(0, param0), ((h) this).c(param0, 127), ((h) this).field_i, this.d(param0), ((h) this).field_a);
+                ((jh) (Object) param0.field_i).a(45, ((h) this).field_b, ((h) this).field_e, ((h) this).b(0, param0), ((h) this).c(param0, 127), ((h) this).field_i, this.d(param0, 15065), ((h) this).field_a);
                 break L3;
               } else {
                 this.a((byte) 98, param0);
@@ -1246,8 +1242,7 @@ class h implements ui, m {
             L1: {
               c.a(param2.field_l + param1 - -param2.field_p, param1 - -param2.field_p, (byte) -50, param2.field_h + param0 + param2.field_n, param0 - -param2.field_n);
               var9_int = ((h) this).b(0, param2);
-              int discarded$2 = 15065;
-              var10 = this.d(param2);
+              var10 = this.d(param2, 15065);
               if (!((h) this).field_j) {
                 L2: {
                   var12 = ((h) this).field_a;
@@ -1300,7 +1295,7 @@ class h implements ui, m {
                 ((h) this).field_i.b(((h) this).c(param2, 92), this.a(239, param2, param1, 0), var11 + this.a(param2, (byte) 121, 0, param0), param4, param7);
                 break L1;
               } else {
-                int discarded$3 = ((h) this).field_i.a(((h) this).c(param2, 108), this.a(239, param2, param1, 0), this.a(param2, (byte) 123, 0, param0), var9_int, var10, param4, param7, ((h) this).field_b, ((h) this).field_a, ((h) this).field_e);
+                int discarded$1 = ((h) this).field_i.a(((h) this).c(param2, 108), this.a(239, param2, param1, 0), this.a(param2, (byte) 123, 0, param0), var9_int, var10, param4, param7, ((h) this).field_b, ((h) this).field_a, ((h) this).field_e);
                 break L1;
               }
             }
@@ -1406,7 +1401,7 @@ class h implements ui, m {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
     }
 

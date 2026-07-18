@@ -159,7 +159,7 @@ final class af {
         throw new IllegalStateException();
     }
 
-    final static v a() {
+    final static v a(int param0, byte param1, int param2, int param3) {
         v var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -185,7 +185,7 @@ final class af {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         oh var1 = null;
         oh var2 = null;
         int var3 = 0;
@@ -196,8 +196,7 @@ final class af {
             vn.b();
             ra.a();
             en.field_K = 0;
-            int discarded$0 = 71;
-            ni.a();
+            ni.a((byte) 71);
             var2 = var1.d();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.c(-2, -2, 16777215);

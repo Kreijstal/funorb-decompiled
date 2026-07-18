@@ -129,14 +129,14 @@ final class v {
         }
     }
 
-    final static Boolean d() {
+    final static Boolean d(int param0) {
         int var2 = 0;
         Boolean var1 = ep.field_f;
         ep.field_f = null;
         return var1;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         field_b = null;
     }

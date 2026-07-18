@@ -14,7 +14,7 @@ final class hob extends ksa {
     int field_k;
     int field_g;
 
-    final static tv[] a(ij param0) {
+    final static tv[] a(ij param0, int param1) {
         ksa[] var2 = null;
         RuntimeException var2_ref = null;
         tv[] var3 = null;
@@ -116,7 +116,7 @@ final class hob extends ksa {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_e = null;
         field_l = null;
         int var1 = 2;
@@ -182,8 +182,7 @@ final class hob extends ksa {
         try {
           L0: {
             if (0 < param1) {
-              int discarded$10 = -95;
-              if (bd.a(param1)) {
+              if (bd.a(param1, (byte) -95)) {
                 stackOut_4_0 = (int)((long)param1 * ((long)param0.nextInt() & 4294967295L) >> 32);
                 stackIn_5_0 = stackOut_4_0;
                 return stackIn_5_0;
@@ -200,8 +199,7 @@ final class hob extends ksa {
                 L2: while (true) {
                   var4 = param0.nextInt();
                   if (var3_int > var4) {
-                    int discarded$11 = -103;
-                    stackOut_11_0 = lva.b(var4, param1);
+                    stackOut_11_0 = lva.b(var4, param1, -103);
                     stackIn_12_0 = stackOut_11_0;
                     break L0;
                   } else {

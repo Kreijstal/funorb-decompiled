@@ -122,7 +122,7 @@ abstract class l {
         return var2;
     }
 
-    final static fa a(ni param0) {
+    final static fa a(ni param0, int param1) {
         fa var2 = null;
         RuntimeException var2_ref = null;
         fa stackIn_1_0 = null;
@@ -329,7 +329,7 @@ abstract class l {
         return ((l) this).field_e.length;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         try {
             if (!(bk.field_b == null)) {
                 try {
@@ -346,7 +346,7 @@ abstract class l {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_f = null;
         field_d = null;
@@ -367,16 +367,14 @@ abstract class l {
             if (kh.field_n == 10) {
               break L2;
             } else {
-              int discarded$4 = 0;
-              if (dh.a()) {
+              if (dh.a(false)) {
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          int discarded$5 = -86;
-          tk.a();
+          tk.a((byte) -86);
           kh.field_n = 11;
           break L1;
         }
@@ -497,7 +495,7 @@ abstract class l {
         return (hl) (Object) stackIn_6_0;
     }
 
-    final static int d() {
+    final static int d(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -510,8 +508,7 @@ abstract class l {
           L0: {
             var1_int = 0;
             L1: while (true) {
-              int discarded$8 = 47;
-              if (!ha.b()) {
+              if (!ha.b((byte) 47)) {
                 L2: {
                   h.field_h.a(-7734, wi.c(hm.field_k, 2113632, lc.field_c), wi.c(eh.field_h, 2113632, hj.field_S));
                   if (!h.field_h.c(-119)) {
@@ -529,8 +526,7 @@ abstract class l {
                     if (0 <= h.field_h.field_b) {
                       var2 = op.field_c[h.field_h.field_b];
                       if (var2 == 2) {
-                        int discarded$9 = -31;
-                        vk.a();
+                        vk.a((byte) -31);
                         break L3;
                       } else {
                         break L3;

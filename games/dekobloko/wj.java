@@ -23,8 +23,7 @@ final class wj extends gk implements vn {
             if (!((wj) this).field_Pb) {
                 var2 = je.a(13);
                 if (var2 != null) {
-                    int discarded$0 = 0;
-                    this.a(false, var2);
+                    this.a(false, var2, false);
                 }
             }
         }
@@ -62,8 +61,7 @@ final class wj extends gk implements vn {
           L0: {
             if (!((wj) this).field_Rb) {
               L1: {
-                int discarded$5 = -51;
-                in.c();
+                in.c((byte) -51);
                 ((wj) this).n(-128);
                 if (param0 == 67) {
                   break L1;
@@ -74,8 +72,7 @@ final class wj extends gk implements vn {
               }
               break L0;
             } else {
-              int discarded$6 = 66;
-              dd.a(false, true);
+              dd.a(false, true, (byte) 66);
               return;
             }
           }
@@ -371,7 +368,7 @@ final class wj extends gk implements vn {
         }
     }
 
-    private final void a(boolean param0, cd param1) {
+    private final void a(boolean param0, cd param1, boolean param2) {
         RuntimeException var4 = null;
         String var4_ref = null;
         dj var5 = null;
@@ -416,8 +413,7 @@ final class wj extends gk implements vn {
                       if (param0) {
                         break L2;
                       } else {
-                        int discarded$3 = -36;
-                        k.a();
+                        k.a((byte) -36);
                         break L2;
                       }
                     }
@@ -444,7 +440,7 @@ final class wj extends gk implements vn {
                       break L4;
                     }
                   } else {
-                    ek discarded$4 = var5.a(115, fa.field_o, (kg) this);
+                    ek discarded$2 = var5.a(115, fa.field_o, (kg) this);
                     break L4;
                   }
                 }
@@ -464,7 +460,7 @@ final class wj extends gk implements vn {
                 }
               } else {
                 if (!param1.field_e) {
-                  ek discarded$5 = var5.a(119, fa.field_o, (kg) this);
+                  ek discarded$3 = var5.a(119, fa.field_o, (kg) this);
                   ((wj) this).c((ce) (Object) var5, (byte) 68);
                   break L3;
                 } else {
@@ -508,11 +504,10 @@ final class wj extends gk implements vn {
     }
 
     final void b(boolean param0) {
-        int discarded$0 = 0;
-        this.a(param0, un.a(248, ab.field_d, -12));
+        this.a(param0, un.a(248, ab.field_d, -12), false);
     }
 
-    public static void s() {
+    public static void s(int param0) {
         field_Ob = null;
         field_Qb = null;
         field_Mb = null;
@@ -520,7 +515,7 @@ final class wj extends gk implements vn {
         field_Jb = null;
     }
 
-    final static boolean r() {
+    final static boolean r(int param0) {
         return li.field_b != null && li.field_b.b(0);
     }
 
@@ -647,8 +642,7 @@ final class wj extends gk implements vn {
                       if (var8_ref_hl.field_j) {
                         break L8;
                       } else {
-                        int discarded$1 = -118;
-                        if (!ik.a(var8_ref_hl.field_o)) {
+                        if (!ik.a(var8_ref_hl.field_o, (byte) -118)) {
                           break L8;
                         } else {
                           break L7;

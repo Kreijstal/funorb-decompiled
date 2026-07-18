@@ -18,7 +18,7 @@ final class ah {
     private long[] field_m;
     static String field_f;
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -477,8 +477,7 @@ final class ah {
                           if (((ah) this).field_i != 512) {
                             break L6;
                           } else {
-                            int discarded$2 = 18236;
-                            this.a();
+                            this.a(18236);
                             ((ah) this).field_j = 0;
                             ((ah) this).field_i = 0;
                             break L6;
@@ -504,8 +503,7 @@ final class ah {
                             ((ah) this).field_i = ((ah) this).field_i + (8 + -var7);
                             ((ah) this).field_j = ((ah) this).field_j + 1;
                             if (((ah) this).field_i == 512) {
-                              int discarded$3 = 18236;
-                              this.a();
+                              this.a(18236);
                               ((ah) this).field_i = 0;
                               ((ah) this).field_j = 0;
                               break L8;
@@ -943,14 +941,13 @@ final class ah {
               if (((ah) this).field_j > 32) {
                 L3: while (true) {
                   if (64 <= ((ah) this).field_j) {
-                    int discarded$4 = 18236;
-                    this.a();
+                    this.a(18236);
                     ((ah) this).field_j = 0;
                     break L2;
                   } else {
-                    int fieldTemp$5 = ((ah) this).field_j;
+                    int fieldTemp$2 = ((ah) this).field_j;
                     ((ah) this).field_j = ((ah) this).field_j + 1;
-                    ((ah) this).field_c[fieldTemp$5] = (byte) 0;
+                    ((ah) this).field_c[fieldTemp$2] = (byte) 0;
                     continue L3;
                   }
                 }
@@ -961,8 +958,7 @@ final class ah {
             L4: while (true) {
               if (((ah) this).field_j >= 32) {
                 eg.a(((ah) this).field_l, 0, ((ah) this).field_c, 32, 32);
-                int discarded$6 = 18236;
-                this.a();
+                this.a(18236);
                 var4_int = 0;
                 var5 = param2;
                 L5: while (true) {
@@ -984,9 +980,9 @@ final class ah {
                   }
                 }
               } else {
-                int fieldTemp$7 = ((ah) this).field_j;
+                int fieldTemp$3 = ((ah) this).field_j;
                 ((ah) this).field_j = ((ah) this).field_j + 1;
-                ((ah) this).field_c[fieldTemp$7] = (byte) 0;
+                ((ah) this).field_c[fieldTemp$3] = (byte) 0;
                 continue L4;
               }
             }

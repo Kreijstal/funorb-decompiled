@@ -7,13 +7,13 @@ final class ch {
     static String field_d;
     static int[] field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         w stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         w stackIn_4_0 = null;

@@ -83,15 +83,14 @@ final class cf {
           L0: {
             qm.field_Kb = ke.a(32, param0, "commonui", "frame_top");
             qg.field_j = ke.a(32, param0, "commonui", "frame_bottom");
-            int discarded$3 = 0;
-            ed.field_d = sn.a(param0, "jagex_logo_grey", "commonui");
+            ed.field_d = sn.a(param0, "jagex_logo_grey", "commonui", false);
             td.field_g = ke.a(32, param0, "commonui", "button");
             bf.field_p = jj.a("commonui", param0, false, "validation");
             dk.field_j = (e) (Object) pc.a(param0, -1, "commonui", "arezzo12", param3);
             dj.field_h = (e) (Object) pc.a(param0, -1, "commonui", "arezzo14", param3);
             on.field_b = (e) (Object) pc.a(param0, -1, "commonui", "arezzo14bold", param3);
             var17 = new mg(param1.a("button.gif", 100, ""), (java.awt.Component) (Object) fi.field_v);
-            rm discarded$4 = vc.a(param0, "dropdown", "commonui", (byte) 39);
+            rm discarded$1 = vc.a(param0, "dropdown", "commonui", (byte) 39);
             var5 = ke.a("screen_options", "commonui", param0, 32370);
             dk.field_q = new rm[4];
             hj.field_g = new rm[4];
@@ -139,8 +138,7 @@ final class cf {
                         var9++;
                         continue L2;
                       } else {
-                        int discarded$5 = -107;
-                        var14[var11_int] = fe.a(var5[var9], var21[var11_int]);
+                        var14[var11_int] = fe.a(var5[var9], var21[var11_int], (byte) -107);
                         var11_int++;
                         continue L3;
                       }
@@ -243,7 +241,7 @@ final class cf {
         }
     }
 
-    final static ck a() {
+    final static ck a(byte param0) {
         if (!(pa.field_l != kh.field_e)) {
             throw new IllegalStateException();
         }
@@ -261,7 +259,7 @@ final class cf {
         return new int[8];
     }
 
-    final static void a(cj param0) {
+    final static void a(cj param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         cj var3 = null;

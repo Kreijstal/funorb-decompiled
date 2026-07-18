@@ -13,7 +13,7 @@ final class kr extends bg {
     static int field_h;
     static long field_g;
 
-    public static void c() {
+    public static void c(int param0) {
         field_e = null;
     }
 
@@ -607,7 +607,7 @@ final class kr extends bg {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         String var1 = null;
         if (!ro.field_e) {
           throw new IllegalStateException();
@@ -620,8 +620,7 @@ final class kr extends bg {
               break L0;
             }
           }
-          int discarded$2 = 120;
-          var1 = ve.d();
+          var1 = ve.d(120);
           vj.field_j = new ui(var1, (String) null, true, false, false);
           wd.field_Ub.b((ei) (Object) tn.field_n, 30000);
           tn.field_n.d((ei) (Object) vj.field_j, 30);

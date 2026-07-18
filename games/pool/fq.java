@@ -98,8 +98,7 @@ final class fq extends qq implements tb {
                       if (param2) {
                         break L3;
                       } else {
-                        int discarded$3 = -80;
-                        uf.r();
+                        uf.r((byte) -80);
                         break L3;
                       }
                     }
@@ -127,7 +126,7 @@ final class fq extends qq implements tb {
               var5 = new wk((qq) this, bi.field_e, var4_ref);
               if (param0.field_f) {
                 if (!param0.field_e) {
-                  fe discarded$4 = var5.a(fg.field_c, param1 + -88, (cc) this);
+                  fe discarded$2 = var5.a(fg.field_c, param1 + -88, (cc) this);
                   break L4;
                 } else {
                   ((fq) this).d((ei) (Object) new sd((fq) this), 30);
@@ -136,7 +135,7 @@ final class fq extends qq implements tb {
               } else {
                 L5: {
                   if (((fq) this).field_Eb) {
-                    fe discarded$5 = var5.a(fg.field_c, -123, (cc) this);
+                    fe discarded$3 = var5.a(fg.field_c, -123, (cc) this);
                     break L5;
                   } else {
                     if (param0.field_g == 5) {

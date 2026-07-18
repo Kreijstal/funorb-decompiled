@@ -12,7 +12,7 @@ final class ooa extends wka {
         var1 = "";
         if (param0 >= -46) {
           L0: {
-            String discarded$12 = ooa.a((byte) -83);
+            String discarded$8 = ooa.a((byte) -83);
             if (null != vn.field_b) {
               var1 = vn.field_b.a(39);
               break L0;
@@ -24,8 +24,7 @@ final class ooa extends wka {
             if (var1.length() != 0) {
               break L1;
             } else {
-              int discarded$13 = 69;
-              var1 = ra.r();
+              var1 = ra.r((byte) 69);
               break L1;
             }
           }
@@ -51,8 +50,7 @@ final class ooa extends wka {
             if (var1.length() != 0) {
               break L4;
             } else {
-              int discarded$14 = 69;
-              var1 = ra.r();
+              var1 = ra.r((byte) 69);
               break L4;
             }
           }
@@ -68,7 +66,7 @@ final class ooa extends wka {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_f = null;
         field_h = null;
         field_e = null;
@@ -93,8 +91,7 @@ final class ooa extends wka {
               break L0;
             }
           }
-          int discarded$2 = 8000;
-          return (stackIn_4_0 != 0 | cra.a(param0, -57, param1) | wq.b(param0, param1)) & kb.a(param0, param1, (byte) 17);
+          return (stackIn_4_0 != 0 | cra.a(param0, -57, param1) | wq.b(param0, param1, 8000)) & kb.a(param0, param1, (byte) 17);
         }
     }
 

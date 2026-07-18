@@ -11,8 +11,7 @@ final class bm {
     static nn field_b;
 
     final static void a(int param0) {
-        int discarded$0 = 32;
-        cg.d();
+        cg.d(32);
         lj.a(4, 30);
     }
 
@@ -87,7 +86,7 @@ final class bm {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
         field_f = null;
@@ -96,7 +95,7 @@ final class bm {
         field_e = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
     }
 
     static {

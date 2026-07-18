@@ -11,7 +11,7 @@ final class te extends si {
     static String field_J;
     static int field_M;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_L = null;
         field_N = null;
         field_K = null;
@@ -45,7 +45,7 @@ final class te extends si {
         return (param2 - -(param2 >>> 31)) % param1 - -var3;
     }
 
-    final static String d() {
+    final static String d(byte param0) {
         return vc.field_c;
     }
 

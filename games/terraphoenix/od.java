@@ -11,11 +11,11 @@ final class od {
     static o field_g;
     static String field_d;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return ig.field_e != null && mh.field_a.a(true);
     }
 
-    final static void a(dc param0) {
+    final static void a(dc param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         dc var3 = null;
@@ -87,8 +87,7 @@ final class od {
                   break L5;
                 }
               }
-              int discarded$2 = -119;
-              jd.a(param0);
+              jd.a(param0, (byte) -119);
               break L0;
             }
           }
@@ -124,7 +123,7 @@ final class od {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_b = null;
         field_f = null;

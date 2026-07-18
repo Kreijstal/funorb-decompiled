@@ -8,7 +8,7 @@ final class wi {
     static rc field_b;
     static String field_d;
 
-    final static void a(String param0, java.applet.Applet param1, boolean param2) {
+    final static void a(String param0, java.applet.Applet param1, boolean param2, int param3) {
         try {
             java.net.MalformedURLException var4 = null;
             RuntimeException var4_ref = null;
@@ -46,8 +46,7 @@ final class wi {
             try {
               L0: {
                 if (ec.field_n.startsWith("win")) {
-                  int discarded$8 = 27994;
-                  if (kj.a(param0)) {
+                  if (kj.a(param0, 27994)) {
                     return;
                   } else {
                     break L0;
@@ -125,7 +124,7 @@ final class wi {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
     }

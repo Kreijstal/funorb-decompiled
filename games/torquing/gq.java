@@ -5,7 +5,7 @@ final class gq {
     int field_a;
     static int field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         km.a(117);
         ff.field_a = true;
         cf.field_f = true;

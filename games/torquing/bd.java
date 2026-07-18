@@ -377,7 +377,7 @@ final class bd extends am {
         qd.field_d = 0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 0;
         if (of.field_m > 20) {
           ea.b(-60, of.field_m + -20);

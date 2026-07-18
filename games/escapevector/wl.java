@@ -957,8 +957,7 @@ abstract class wl extends fl {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          int discarded$6 = 56;
-          StringBuilder discarded$7 = ri.a(0, ' ', field_H);
+          StringBuilder discarded$5 = ri.a(0, ' ', field_H, (byte) 56);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -994,9 +993,9 @@ abstract class wl extends fl {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$8 = field_H.append('<');
-                        StringBuilder discarded$9 = field_H.append(var15);
-                        StringBuilder discarded$10 = field_H.append('>');
+                        StringBuilder discarded$6 = field_H.append('<');
+                        StringBuilder discarded$7 = field_H.append(var15);
+                        StringBuilder discarded$8 = field_H.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1183,7 +1182,7 @@ abstract class wl extends fl {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$11 = field_H.append((char) var14);
+                        StringBuilder discarded$9 = field_H.append((char) var14);
                         var14 = (char)(hf.a(99, (char) var14) & 255);
                         var4 = var4 + ((wl) this).field_t[var14];
                         if (((wl) this).field_v == null) {

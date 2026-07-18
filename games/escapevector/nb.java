@@ -7,14 +7,14 @@ final class nb {
     static wl field_a;
     static hj field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_d = null;
         field_b = null;
     }
 
-    final static void a(java.applet.Applet param0, int param1, byte param2, int param3, String[] param4) {
+    final static void a(java.applet.Applet param0, int param1, byte param2, int param3, String[] param4, int param5) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;

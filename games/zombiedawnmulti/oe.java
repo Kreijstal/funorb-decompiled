@@ -9,7 +9,7 @@ final class oe {
     static String field_e;
     static String field_b;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         int var1 = 0;
         return gi.field_i != null ? true : false;
     }
@@ -140,7 +140,7 @@ final class oe {
         return stackIn_15_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_d = null;
         field_b = null;
@@ -149,7 +149,7 @@ final class oe {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, ja[] param2) {
+    final static void a(int param0, int param1, ja[] param2, byte param3) {
         try {
             qf.field_c = new pd(param2);
             ic.field_g = param1;

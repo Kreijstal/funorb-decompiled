@@ -941,7 +941,7 @@ final class kl extends qd {
         }
     }
 
-    final static kl a(oe param0) {
+    final static kl a(oe param0, int param1, int param2) {
         if (param0.field_m != null) {
           if (param0.field_m.length == 0) {
             return null;

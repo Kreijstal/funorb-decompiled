@@ -179,7 +179,7 @@ final class dq {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
     }
@@ -375,8 +375,7 @@ final class dq {
                             break L9;
                           }
                         }
-                        int discarded$2 = 16;
-                        kj.a(stackIn_24_0, param0[2]);
+                        kj.a(stackIn_24_0, param0[2], 16);
                         var9 = 0;
                         L10: while (true) {
                           if (param0.length <= var9) {
@@ -422,7 +421,7 @@ final class dq {
                     }
                     L14: {
                       if (var6_int > 4) {
-                        String discarded$3 = param2.a((byte) 24);
+                        String discarded$1 = param2.a((byte) 24);
                         break L14;
                       } else {
                         break L14;

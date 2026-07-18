@@ -509,7 +509,7 @@ final class vb implements Runnable {
         }
     }
 
-    final static ai b() {
+    final static ai b(int param0) {
         int var1 = 52;
         return qf.field_d;
     }

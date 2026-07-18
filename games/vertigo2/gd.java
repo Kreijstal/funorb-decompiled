@@ -23,7 +23,7 @@ final class gd extends jq {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_j = null;
         field_l = null;
         field_s = null;

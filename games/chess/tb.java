@@ -68,7 +68,7 @@ final class tb {
         return stackIn_1_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_f = null;
         field_c = null;
         field_a = null;
@@ -81,7 +81,7 @@ final class tb {
         return true;
     }
 
-    final static void a(int param0, boolean param1, boolean param2) {
+    final static void a(int param0, boolean param1, boolean param2, byte param3) {
         int var4 = 0;
         ci stackIn_2_0 = null;
         ci stackIn_3_0 = null;
@@ -178,8 +178,7 @@ final class tb {
         ci stackOut_19_0 = null;
         int stackOut_19_1 = 0;
         var4 = 0;
-        int discarded$4 = 90;
-        tf.a();
+        tf.a(90);
         if (0 <= fm.field_W) {
           L0: {
             L1: {
@@ -364,8 +363,7 @@ final class tb {
                   } else {
                     L10: {
                       mk.field_c = wn.field_d[0];
-                      int discarded$5 = 121;
-                      cd.a(0, mc.field_a, true, 11, mk.field_c);
+                      cd.a(0, mc.field_a, true, 11, mk.field_c, 121);
                       if (-1 == of.field_i.field_L) {
                         break L10;
                       } else {
@@ -377,8 +375,7 @@ final class tb {
                   }
                 }
               }
-              int discarded$6 = 121;
-              cd.a(0, mc.field_a, true, 11, mk.field_c);
+              cd.a(0, mc.field_a, true, 11, mk.field_c, 121);
               break L8;
             } else {
               break L8;
@@ -578,8 +575,7 @@ final class tb {
                   }
                 }
               }
-              int discarded$7 = 121;
-              cd.a(0, mc.field_a, true, 11, mk.field_c);
+              cd.a(0, mc.field_a, true, 11, mk.field_c, 121);
               break L20;
             } else {
               break L20;
@@ -597,7 +593,7 @@ final class tb {
         }
     }
 
-    final static void a(int param0, lh param1, int param2, km[] param3, lh param4, int param5, km[] param6, int param7, int param8, int param9, int param10, km[] param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18) {
+    final static void a(int param0, lh param1, int param2, km[] param3, lh param4, int param5, km[] param6, int param7, int param8, int param9, int param10, km[] param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -677,9 +673,7 @@ final class tb {
         String stackOut_17_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            int discarded$3 = 8;
-            wj.a(new le(param11), 0, param17, new le(param6), param18, param8, 240, param15, 2, param10, param5, param4, 320, new le(param3), -95, 8, param0, 480, param1);
+            wj.a(new le(param11), 0, param17, new le(param6), param18, param8, 240, param15, 2, param10, param5, param4, 320, new le(param3), -95, 8, param0, 480, param1, 8, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

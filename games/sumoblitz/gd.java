@@ -202,7 +202,7 @@ abstract class gd {
 
     abstract void b(int param0);
 
-    final static void a(int param0, int param1, jn param2, int param3, int param4) {
+    final static void a(int param0, int param1, jn param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -284,19 +284,17 @@ abstract class gd {
                   if (stackIn_16_0 <= var7) {
                     break L0;
                   } else {
-                    int discarded$3 = -96;
-                    var8 = new float[]{0.0f, (float)(-(1 + fi.a(10, he.field_o)))};
-                    float[] dupTemp$4 = kt.a((byte) -20, var8, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7) + 0.0));
-                    var11 = dupTemp$4;
-                    var8 = dupTemp$4;
+                    var8 = new float[]{0.0f, (float)(-(1 + fi.a(10, he.field_o, (byte) -96)))};
+                    float[] dupTemp$1 = kt.a((byte) -20, var8, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7) + 0.0));
+                    var11 = dupTemp$1;
+                    var8 = dupTemp$1;
                     param2.a((ms) (Object) new as(64, param4 - -((int)var11[0] << 11), ((int)var11[1] << 11) + param1, 16711680, -(int)var11[0] << 8, -(int)var11[1] << 8, 1), (byte) 39);
                     var7++;
                     continue L4;
                   }
                 }
               } else {
-                int discarded$5 = -96;
-                var8 = new float[]{0.0f, (float)(-(fi.a(10, he.field_o) + 1))};
+                var8 = new float[]{0.0f, (float)(-(fi.a(10, he.field_o, (byte) -96) + 1))};
                 var15 = kt.a((byte) -81, var8, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7) + 0.0));
                 var14 = var15;
                 var13 = var14;
@@ -348,7 +346,7 @@ abstract class gd {
 
     abstract void a(boolean param0, byte param1, Object param2);
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         rd var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

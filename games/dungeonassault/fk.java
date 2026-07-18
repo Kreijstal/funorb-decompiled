@@ -125,7 +125,7 @@ final class fk extends kl {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -192,8 +192,7 @@ final class fk extends kl {
               var4 = -51 / ((41 - param0) / 63);
               gf.b(37 + ((fk) this).field_k, 57 + ((fk) this).field_j, 155, 158, 65793, 64);
               super.b(-64);
-              int discarded$2 = -64;
-              this.e();
+              this.e(-64);
               var5 = null;
               if (-1 == ((fk) this).field_q) {
                 break L1;
@@ -207,7 +206,7 @@ final class fk extends kl {
               if (var5 == null) {
                 break L2;
               } else {
-                int discarded$3 = db.field_v.a(((hb) var5).field_n.field_F.toUpperCase(), 45 + ((fk) this).field_k, ((fk) this).field_j + 62, 139, 58, 16777215, -1, 1, 1, db.field_v.field_H);
+                int discarded$1 = db.field_v.a(((hb) var5).field_n.field_F.toUpperCase(), 45 + ((fk) this).field_k, ((fk) this).field_j + 62, 139, 58, 16777215, -1, 1, 1, db.field_v.field_H);
                 break L2;
               }
             }
@@ -628,7 +627,7 @@ final class fk extends kl {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -766,8 +765,7 @@ final class fk extends kl {
             return;
         }
         da.a(pi.field_i, cm.field_M, ((fk) this).field_a >> 1, 1917623617, (ne.field_c.field_H + 36 >> 1) + 7, (se) (Object) ne.field_c);
-        int discarded$0 = -123;
-        this.d();
+        this.d((byte) -123);
         gf.b(44, 64, 141, 53, 65793);
         rp.a(4, 133, (byte) 108, 48, 45, kc.field_S, 68);
         jh.b();

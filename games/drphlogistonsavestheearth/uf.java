@@ -15,7 +15,7 @@ final class uf {
     static ia field_a;
     static he[] field_j;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_j = null;
         field_c = null;

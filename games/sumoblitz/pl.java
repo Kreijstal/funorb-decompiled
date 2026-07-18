@@ -166,7 +166,7 @@ final class pl extends fs {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_s = null;
         field_q = null;
         field_x = null;

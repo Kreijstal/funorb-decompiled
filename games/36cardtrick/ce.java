@@ -73,14 +73,13 @@ final class ce extends java.awt.Canvas {
                 break L1;
               } else {
                 var6 = null;
-                byte[] discarded$4 = ce.a(true, 19, (Object) null);
+                byte[] discarded$2 = ce.a(true, 19, (Object) null);
                 break L1;
               }
             }
             var4_int = param3.a(18659, param2);
             var5 = param3.a(var4_int, param1, (byte) 7);
-            int discarded$5 = -30851;
-            stackOut_2_0 = rh.a(var4_int, param3, var5);
+            stackOut_2_0 = rh.a(var4_int, param3, var5, -30851);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -167,7 +166,7 @@ final class ce extends java.awt.Canvas {
         return stackIn_3_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         cb var1 = null;
         w var2 = null;
         var1 = (cb) (Object) ha.field_d.a((byte) 74);

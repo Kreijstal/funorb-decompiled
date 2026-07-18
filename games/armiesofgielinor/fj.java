@@ -250,7 +250,7 @@ final class fj {
         ((fj) this).field_j = -64;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) va.field_w);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) va.field_w);

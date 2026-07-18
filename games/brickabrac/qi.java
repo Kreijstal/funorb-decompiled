@@ -9,7 +9,7 @@ final class qi extends d {
     static jp[] field_K;
     int field_L;
 
-    final static me a(java.applet.Applet param0) {
+    final static me a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         me[] var3 = null;
@@ -109,12 +109,12 @@ final class qi extends d {
         return ((qi) this).field_O.b(true);
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_K = null;
         field_N = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -436,7 +436,7 @@ final class qi extends d {
         return stackIn_23_0 != 0;
     }
 
-    final static int i() {
+    final static int i(int param0) {
         return ul.field_p;
     }
 

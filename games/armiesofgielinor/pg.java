@@ -75,11 +75,9 @@ final class pg {
     final static void a(boolean param0) {
         ck.b(-111);
         if (si.field_b != null) {
-            int discarded$0 = 23678;
-            dt.a(si.field_b);
+            dt.a(si.field_b, 23678);
         }
-        int discarded$5 = 41;
-        hi.a();
+        hi.a((byte) 41);
         pf.a(-15291);
         tj.j(-118);
         if (!(!fh.b((byte) -88))) {
@@ -294,7 +292,7 @@ final class pg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_d = null;

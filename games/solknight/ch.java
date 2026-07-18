@@ -5,7 +5,7 @@ final class ch {
     static da field_a;
     static int field_b;
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.addMouseListener((java.awt.event.MouseListener) (Object) ee.field_j);
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ee.field_j);
@@ -16,7 +16,7 @@ final class ch {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         int var1 = -34;
     }

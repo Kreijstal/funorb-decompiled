@@ -9,7 +9,7 @@ final class vb extends fb {
     private int field_E;
     private int field_F;
 
-    final static boolean a(int param0, CharSequence param1) {
+    final static boolean a(int param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;

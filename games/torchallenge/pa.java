@@ -110,8 +110,7 @@ final class pa extends uf {
                 if (!(param0.length() != 0)) {
                     var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                 }
-                int discarded$0 = 1;
-                ff.a(param2, "document.cookie=\"" + var5 + "\"");
+                ff.a(param2, "document.cookie=\"" + var5 + "\"", (byte) 1);
             } catch (Throwable throwable) {
             }
             ok.a(param2, -1);
@@ -258,7 +257,7 @@ final class pa extends uf {
         }
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;

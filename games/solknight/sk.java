@@ -49,8 +49,7 @@ abstract class sk extends ec {
           L0: {
             if (l.a(103, param2, param3, param1)) {
               var5_int = -25;
-              int discarded$2 = 32223;
-              stackOut_3_0 = sb.a(param4.b(param3, 12257, param2));
+              stackOut_3_0 = sb.a(param4.b(param3, 12257, param2), 32223);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -133,7 +132,7 @@ abstract class sk extends ec {
         }
     }
 
-    final static int g() {
+    final static int g(int param0) {
         return 1;
     }
 

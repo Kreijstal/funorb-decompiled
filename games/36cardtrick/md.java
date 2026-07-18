@@ -9,9 +9,8 @@ final class md {
     int field_d;
     int field_a;
 
-    final static boolean a() {
-        int discarded$0 = -98;
-        return qe.a(mk.g(-122));
+    final static boolean a(byte param0) {
+        return qe.a(mk.g(-122), (byte) -98);
     }
 
     final static boolean a(int param0, boolean param1) {

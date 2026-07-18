@@ -233,11 +233,11 @@ final class mf {
         }
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return sg.field_o;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         int var1 = -16;
     }
@@ -318,8 +318,7 @@ final class mf {
                       } else {
                         L5: {
                           var7 = param1.charAt(var6);
-                          int discarded$2 = 1;
-                          if (!sg.a((char) var7)) {
+                          if (!sg.a((char) var7, true)) {
                             var6++;
                             break L5;
                           } else {
@@ -327,7 +326,7 @@ final class mf {
                             if (var8 == 0) {
                               break L5;
                             } else {
-                              StringBuilder discarded$3 = var5.append((char) var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               break L5;
                             }
                           }

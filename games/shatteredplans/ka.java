@@ -317,7 +317,7 @@ class ka implements uj {
         return stackIn_18_0;
     }
 
-    private final void a(sd param0, int[] param1) {
+    private final void a(sd param0, int[] param1, int param2) {
         ln[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -525,8 +525,7 @@ class ka implements uj {
                             var14 = var13[var8];
                             if (var14.field_R == mj.field_yb) {
                               this.a((byte) -67, var6, var14);
-                              int discarded$4 = -1;
-                              this.a(param3, var14, var6);
+                              this.a(param3, var14, var6, -1);
                               break L2;
                             } else {
                               var8++;
@@ -550,8 +549,7 @@ class ka implements uj {
                       if (ja.field_i[var9] == 0) {
                         break L5;
                       } else {
-                        int discarded$5 = -1;
-                        this.a(param3, var8_ref_ln, ja.field_i[var9]);
+                        this.a(param3, var8_ref_ln, ja.field_i[var9], -1);
                         var5_int = var5_int - ja.field_i[var9];
                         ja.field_i[var9] = 0;
                         break L5;
@@ -592,8 +590,7 @@ class ka implements uj {
                                 var14 = var12;
                                 if (var12.field_R == mj.field_yb) {
                                   this.a((byte) -67, var6, var12);
-                                  int discarded$6 = -1;
-                                  this.a(param3, var12, var6);
+                                  this.a(param3, var12, var6, -1);
                                   break L2;
                                 } else {
                                   var8++;
@@ -608,8 +605,7 @@ class ka implements uj {
                       }
                     }
                   } else {
-                    int discarded$7 = -1;
-                    this.a(param3, var8_ref_ln, var5_int);
+                    this.a(param3, var8_ref_ln, var5_int, -1);
                     ja.field_i[var9] = ja.field_i[var9] - var5_int;
                     stackOut_4_0 = param2;
                     stackIn_5_0 = stackOut_4_0;
@@ -1078,7 +1074,7 @@ class ka implements uj {
             if (param0 < -3) {
               break L0;
             } else {
-              int discarded$2 = this.a(-67, 25, -122);
+              int discarded$1 = this.a(-67, 25, -122);
               break L0;
             }
           }
@@ -1094,8 +1090,7 @@ class ka implements uj {
                     if (((ka) this).field_n.field_u[0] < 5) {
                       break L3;
                     } else {
-                      int discarded$3 = 99;
-                      this.h();
+                      this.h(99);
                       break L3;
                     }
                   }
@@ -1420,7 +1415,7 @@ class ka implements uj {
         return stackIn_7_0;
     }
 
-    private final void h() {
+    private final void h(int param0) {
         Object var2 = null;
         int var3 = 0;
         int var4_int = 0;
@@ -1727,6 +1722,14 @@ class ka implements uj {
         int var11 = 0;
         ln var12 = null;
         int[] var13 = null;
+        int[] var14 = null;
+        int[] var15 = null;
+        int[] var16 = null;
+        int[] var17 = null;
+        int[] var18 = null;
+        int[] var19 = null;
+        int[] var20 = null;
+        int[] var21 = null;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         RuntimeException stackIn_42_0 = null;
@@ -1758,10 +1761,13 @@ class ka implements uj {
                 break L1;
               }
             }
-            var13 = this.b(127, param1);
+            var20 = this.b(127, param1);
+            var18 = var20;
+            var16 = var18;
+            var14 = var16;
+            var13 = var14;
             var4_array = var13;
-            int discarded$3 = 0;
-            this.a(param1, var13);
+            this.a(param1, var20, 0);
             this.c(param0, cq.field_E, -1);
             param0 = param0 - ((ka) this).a((byte) -106, param0);
             if (param0 < 0) {
@@ -1847,8 +1853,11 @@ class ka implements uj {
                   } else {
                     L9: {
                       var9 = ((ka) this).a(param0, (byte) -58);
-                      int discarded$4 = 49;
-                      var7 = (Object) (Object) ik.a(u.field_d, ((ka) this).field_o);
+                      var21 = ik.a(u.field_d, ((ka) this).field_o, (byte) 49);
+                      var19 = var21;
+                      var17 = var19;
+                      var15 = var17;
+                      var7 = (Object) (Object) var15;
                       if (var9 <= var6) {
                         break L9;
                       } else {
@@ -1858,8 +1867,7 @@ class ka implements uj {
                     }
                     this.c(param0, cq.field_E, -1);
                     param0 = param0 - var9;
-                    int discarded$5 = -1;
-                    var8 = this.a(var9, param0, var13, (int[]) var7);
+                    var8 = this.a(var9, param0, var20, var21, -1);
                     param0 = param0 - var8;
                     param0 = param0 + var9;
                     this.c(param0, cq.field_E, -1);
@@ -1925,7 +1933,7 @@ class ka implements uj {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
     }
 
     private final void c(int param0) {
@@ -2050,7 +2058,7 @@ class ka implements uj {
         return new int[]{14, 15};
     }
 
-    private final void a(ln param0, ln param1, int param2) {
+    private final void a(ln param0, ln param1, int param2, int param3) {
         RuntimeException var5 = null;
         mg var5_ref = null;
         int var6 = 0;
@@ -2519,7 +2527,7 @@ class ka implements uj {
         }
     }
 
-    private final int a(int param0, int param1, int[] param2, int[] param3) {
+    private final int a(int param0, int param1, int[] param2, int[] param3, int param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -3382,7 +3390,7 @@ class ka implements uj {
         return stackIn_19_0;
     }
 
-    private final int a(ln param0) {
+    private final int a(ln param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         ln[] var4 = null;
@@ -3461,11 +3469,11 @@ class ka implements uj {
 
     private final void a(int param0, int param1, ln param2) {
         RuntimeException var4 = null;
-        int[] var4_array = null;
         int var5 = 0;
         int var7 = 0;
         int var11 = 0;
-        int[] var15 = null;
+        int[] var12 = null;
+        int[] var16 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
@@ -3491,10 +3499,9 @@ class ka implements uj {
               if (param0 == 0) {
                 return;
               } else {
-                var4_array = ((ka) this).field_g.field_g.field_c[param2.field_p];
+                var12 = ((ka) this).field_g.field_g.field_c[param2.field_p];
                 var5 = 27 / ((param1 - -41) / 58);
-                int discarded$1 = 3718;
-                var15 = nf.a(var4_array);
+                var16 = nf.a(var12, 3718);
                 var7 = 0;
                 L1: while (true) {
                   if (((ka) this).field_o <= var7) {
@@ -3513,7 +3520,7 @@ class ka implements uj {
                     break L0;
                   } else {
                     L3: {
-                      if (var15[var7] == -1) {
+                      if (var16[var7] == -1) {
                         break L3;
                       } else {
                         break L3;
@@ -3629,7 +3636,7 @@ class ka implements uj {
         return stackIn_4_0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_f = null;
         int var1 = 25;
         field_e = null;
@@ -3672,8 +3679,7 @@ class ka implements uj {
               }
             }
             L2: {
-              int discarded$2 = -5942;
-              if (this.a(param0) >= ei.field_d[var4_int]) {
+              if (this.a(param0, -5942) >= ei.field_d[var4_int]) {
                 ol.field_a[var4_int] = var5;
                 var6 = this.a(0, false, var5, param0);
                 if (var5 < var6) {
@@ -4052,8 +4058,7 @@ class ka implements uj {
         int var11 = 0;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         var4 = 0;
-        int discarded$1 = 49;
-        var5 = ik.a(u.field_c, ((ka) this).field_o);
+        var5 = ik.a(u.field_c, ((ka) this).field_o, (byte) 49);
         var6 = 0;
         L0: while (true) {
           L1: {

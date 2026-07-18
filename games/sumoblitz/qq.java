@@ -8,7 +8,7 @@ final class qq extends dh implements op {
     static String field_Q;
     static vn field_R;
 
-    public static void l() {
+    public static void l(int param0) {
         field_R = null;
         field_Q = null;
     }
@@ -23,8 +23,7 @@ final class qq extends dh implements op {
     }
 
     final static boolean b(int param0, int param1, int param2) {
-        int discarded$0 = -107;
-        return wn.a(param0, param1) & tf.a(param1, -2626, param0);
+        return wn.a(param0, param1, -107) & tf.a(param1, -2626, param0);
     }
 
     public final v a(int param0) {
@@ -124,12 +123,10 @@ final class qq extends dh implements op {
           if (((qq) this).field_t != null) {
             if (param0 != -6696) {
               ((qq) this).field_S = null;
-              int discarded$4 = -95;
-              gi.a(pi.field_e, ((qq) this).field_q - (((qq) this).field_T - ko.field_p));
+              gi.a(pi.field_e, ((qq) this).field_q - (((qq) this).field_T - ko.field_p), -95);
               return ((qq) this).field_t;
             } else {
-              int discarded$5 = -95;
-              gi.a(pi.field_e, ((qq) this).field_q - (((qq) this).field_T - ko.field_p));
+              gi.a(pi.field_e, ((qq) this).field_q - (((qq) this).field_T - ko.field_p), -95);
               return ((qq) this).field_t;
             }
           } else {

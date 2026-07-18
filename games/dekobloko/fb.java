@@ -10,7 +10,7 @@ final class fb {
     static ck[][] field_c;
     static int field_e;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_g = null;

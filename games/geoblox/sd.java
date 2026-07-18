@@ -12,7 +12,7 @@ final class sd extends pb {
     static dm field_y;
     static String field_z;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_y = null;
         field_z = null;
         field_B = null;
@@ -59,8 +59,7 @@ final class sd extends pb {
         String stackOut_7_2 = null;
         try {
           if (mf.a(param2, param3, 104, param1)) {
-            int discarded$2 = 0;
-            return ji.c();
+            return ji.c(0);
           } else {
             return null;
           }
@@ -442,8 +441,6 @@ final class sd extends pb {
 
     private static void $cfr$clinit() {
         field_C = new byte[50][];
-        int discarded$0 = 50;
-        int discarded$1 = 116;
-        uf.a();
+        uf.a(116, 50);
     }
 }

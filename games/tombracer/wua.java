@@ -10,7 +10,7 @@ final class wua extends od {
     int[] field_m;
     static String field_p;
 
-    final static boolean c() {
+    final static boolean c(byte param0) {
         return gda.field_c >= 10 && cga.field_f >= 13;
     }
 
@@ -57,8 +57,7 @@ final class wua extends od {
               if (var4 == 0) {
                 break L0;
               } else {
-                int discarded$7 = 46;
-                this.a(param0, var4);
+                this.a(param0, var4, (byte) 46);
                 continue L1;
               }
             }
@@ -95,7 +94,7 @@ final class wua extends od {
         }
     }
 
-    private final void a(uia param0, int param1) {
+    private final void a(uia param0, int param1, byte param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

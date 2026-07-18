@@ -15,7 +15,7 @@ final class n {
     private int field_c;
     private boolean field_i;
 
-    final static void a(int param0, int param1, int param2, int param3, hl param4) {
+    final static void a(int param0, int param1, int param2, int param3, hl param4, byte param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

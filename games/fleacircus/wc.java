@@ -547,9 +547,9 @@ final class wc extends lh {
                                             var13_int = var15_int;
                                             break L8;
                                           } else {
-                                            int incrementValue$11 = var12;
+                                            int incrementValue$9 = var12;
                                             var12++;
-                                            var13_int = incrementValue$11;
+                                            var13_int = incrementValue$9;
                                             break L8;
                                           }
                                         }
@@ -728,8 +728,7 @@ final class wc extends lh {
                                                                                                         var29 += 2;
                                                                                                         continue L32;
                                                                                                       } else {
-                                                                                                        int discarded$12 = 0;
-                                                                                                        var34 = re.a(var32, -var27 + var30);
+                                                                                                        var34 = re.a(var32, -var27 + var30, false);
                                                                                                         ((wc) this).field_o[var33] = (byte)(var34 * ((wc) this).field_o[var33] - -32 >> 6);
                                                                                                         var32 = var32 + (-var28 + var31);
                                                                                                         var33++;
@@ -812,8 +811,7 @@ final class wc extends lh {
                                                                                                         continue L38;
                                                                                                       } else {
                                                                                                         L43: {
-                                                                                                          int discarded$13 = 0;
-                                                                                                          var34 = re.a(var32, -var27 + var30);
+                                                                                                          var34 = re.a(var32, -var27 + var30, false);
                                                                                                           var35 = var34 + (((wc) this).field_r[var37] & 255);
                                                                                                           if (var35 >= 0) {
                                                                                                             break L43;
@@ -1052,9 +1050,9 @@ final class wc extends lh {
                                                                                 var20 = -1;
                                                                                 break L66;
                                                                               } else {
-                                                                                int incrementValue$14 = var21;
+                                                                                int incrementValue$10 = var21;
                                                                                 var21++;
-                                                                                var20 = var18[incrementValue$14];
+                                                                                var20 = var18[incrementValue$10];
                                                                                 break L66;
                                                                               }
                                                                             }
@@ -1083,9 +1081,9 @@ final class wc extends lh {
                                                                           } else {
                                                                             var25 = (Object) (Object) var13[var63[var21]];
                                                                             if (~var67.length < ~var21) {
-                                                                              int incrementValue$15 = var21;
+                                                                              int incrementValue$11 = var21;
                                                                               var21++;
-                                                                              var20 = var10[incrementValue$15];
+                                                                              var20 = var10[incrementValue$11];
                                                                               break L68;
                                                                             } else {
                                                                               var20 = -1;
@@ -1111,13 +1109,13 @@ final class wc extends lh {
                                                                       if (var20 != 0) {
                                                                         break L70;
                                                                       } else {
-                                                                        int incrementValue$16 = var8;
+                                                                        int incrementValue$12 = var8;
                                                                         var8++;
-                                                                        var24 = 16 + var38.field_k[incrementValue$16] << 2;
+                                                                        var24 = 16 + var38.field_k[incrementValue$12] << 2;
                                                                         if (~var66.length < ~var21) {
-                                                                          int incrementValue$17 = var21;
+                                                                          int incrementValue$13 = var21;
                                                                           var21++;
-                                                                          var20 = var7[incrementValue$17];
+                                                                          var20 = var7[incrementValue$13];
                                                                           break L70;
                                                                         } else {
                                                                           var20 = -1;
@@ -1148,15 +1146,15 @@ final class wc extends lh {
                                                                         var20 = -1;
                                                                         break L73;
                                                                       } else {
-                                                                        int incrementValue$18 = var21;
+                                                                        int incrementValue$14 = var21;
                                                                         var21++;
-                                                                        var20 = var4[incrementValue$18];
+                                                                        var20 = var4[incrementValue$14];
                                                                         break L73;
                                                                       }
                                                                     }
-                                                                    int incrementValue$19 = var5;
+                                                                    int incrementValue$15 = var5;
                                                                     var5++;
-                                                                    var23 = -1 + var38.field_k[incrementValue$19];
+                                                                    var23 = -1 + var38.field_k[incrementValue$15];
                                                                     break L72;
                                                                   }
                                                                 }
@@ -1176,9 +1174,9 @@ final class wc extends lh {
                                                           } else {
                                                             L75: {
                                                               if (~var21 > ~var64.length) {
-                                                                int incrementValue$20 = var21;
+                                                                int incrementValue$16 = var21;
                                                                 var21++;
-                                                                var20 = var18[incrementValue$20];
+                                                                var20 = var18[incrementValue$16];
                                                                 break L75;
                                                               } else {
                                                                 var20 = -1;
@@ -1223,9 +1221,9 @@ final class wc extends lh {
                                     }
                                   } else {
                                     L76: {
-                                      de dupTemp$21 = new de();
-                                      var13[var14] = dupTemp$21;
-                                      var40 = dupTemp$21;
+                                      de dupTemp$17 = new de();
+                                      var13[var14] = dupTemp$17;
+                                      var40 = dupTemp$17;
                                       var15 = var40;
                                       var16_int = var38.e(false);
                                       if (var16_int <= 0) {
@@ -1284,7 +1282,7 @@ final class wc extends lh {
         }
     }
 
-    final static ke a() {
+    final static ke a(byte param0) {
         return qg.field_f;
     }
 

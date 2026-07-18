@@ -9,7 +9,7 @@ final class b {
     static String field_f;
     private sn field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_d = null;
     }
@@ -250,8 +250,7 @@ final class b {
               var13 = ig.field_a;
               var2 = var13.e(-31302);
               if (var2 == 0) {
-                int discarded$2 = -14808;
-                var11 = lr.a();
+                var11 = lr.a(-14808);
                 var19 = var11;
                 var18 = var19;
                 var17 = var18;
@@ -289,8 +288,7 @@ final class b {
                       kk.a((byte) -122);
                       return;
                     } else {
-                      int discarded$3 = -14808;
-                      var14.field_m = lr.a();
+                      var14.field_m = lr.a(-14808);
                       var14.field_o = true;
                       var14.field_k = var14.field_m[0];
                       var14.b(false);

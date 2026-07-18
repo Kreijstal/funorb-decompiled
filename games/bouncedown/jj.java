@@ -71,7 +71,7 @@ final class jj {
         }
     }
 
-    final static sg a() {
+    final static sg a(int param0) {
         return (sg) (Object) new el();
     }
 

@@ -39,8 +39,7 @@ final class vj extends kc implements ga {
             }
             L2: {
               if (param0 == ((vj) this).field_Z) {
-                int discarded$2 = -14064;
-                this.l();
+                this.l(-14064);
                 break L2;
               } else {
                 break L2;
@@ -335,14 +334,14 @@ final class vj extends kc implements ga {
         }
     }
 
-    private final void l() {
+    private final void l(int param0) {
         if (!(((vj) this).field_G)) {
             return;
         }
         ((vj) this).field_G = false;
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_W = null;
     }
 
@@ -417,8 +416,7 @@ final class vj extends kc implements ga {
             var4.field_i = ((vj) this).field_i;
             var4.field_o = (de) (Object) new hd(nb.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((vj) this).a(true, var4);
-            int discarded$1 = 1;
-            ((vj) this).field_Z = this.a(mc.field_e, (qg) this);
+            ((vj) this).field_Z = this.a(mc.field_e, (qg) this, true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -478,7 +476,7 @@ final class vj extends kc implements ga {
         }
     }
 
-    private final dk a(String param0, qg param1) {
+    private final dk a(String param0, qg param1, boolean param2) {
         dk var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

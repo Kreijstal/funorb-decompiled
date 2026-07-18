@@ -8,7 +8,7 @@ final class re extends mh {
     static int field_l;
     static String field_p;
 
-    public static void b() {
+    public static void b(int param0) {
         field_p = null;
         field_o = null;
         int var1 = 0;
@@ -188,7 +188,7 @@ final class re extends mh {
         return stackIn_31_0;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         oi.field_h.setLength(0);
         sd.field_e = 0;
     }

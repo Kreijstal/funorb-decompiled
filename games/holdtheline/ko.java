@@ -6,7 +6,7 @@ final class ko {
     static int field_b;
     static String field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_a = null;
     }
@@ -154,7 +154,7 @@ final class ko {
         return stackIn_22_0;
     }
 
-    final static mf[] a() {
+    final static mf[] a(int param0) {
         int var1 = 0;
         return new mf[]{ja.field_Wb, gj.field_s, ho.field_n};
     }
@@ -215,20 +215,13 @@ final class ko {
                     break L2;
                   }
                 }
-                int discarded$154 = 118;
-                jd.a(q.b(), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
+                jd.a(q.b((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
                 break L1;
               } else {
                 if (!ge.a(true)) {
                   tc.c();
-                  int discarded$155 = 320;
-                  int discarded$156 = 240;
-                  int discarded$157 = -76;
-                  vb.a();
-                  int discarded$158 = 0;
-                  int discarded$159 = 1;
-                  int discarded$160 = 0;
-                  hi.a(param1);
+                  vb.a(-76, 240, 320);
+                  hi.a(param1, 0, true, 0);
                   break L1;
                 } else {
                   if (bk.field_w != 0) {
@@ -236,10 +229,7 @@ final class ko {
                     break L1;
                   } else {
                     vk.a(param2, false, 86);
-                    int discarded$161 = 0;
-                    int discarded$162 = 1;
-                    int discarded$163 = 0;
-                    hi.a(param1);
+                    hi.a(param1, 0, true, 0);
                     break L1;
                   }
                 }

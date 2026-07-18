@@ -9,7 +9,7 @@ final class wa {
     String field_c;
     int field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
     }
 

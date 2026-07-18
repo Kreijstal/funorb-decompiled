@@ -58,7 +58,7 @@ class eo extends bw {
         }
     }
 
-    final static pp a(lu param0) {
+    final static pp a(lu param0, int param1) {
         nq var2 = null;
         RuntimeException var2_ref = null;
         fda stackIn_1_0 = null;

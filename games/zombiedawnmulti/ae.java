@@ -8,7 +8,7 @@ abstract class ae extends br {
 
     abstract void a(int param0, qd param1);
 
-    final static int a(k param0, String param1) {
+    final static int a(k param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -50,8 +50,7 @@ abstract class ae extends br {
           L0: {
             var3_int = param0.field_j;
             var5 = (CharSequence) (Object) param1;
-            int discarded$2 = -116;
-            var4 = qo.a(var5);
+            var4 = qo.a(var5, (byte) -116);
             param0.c(var4.length, (byte) 78);
             param0.field_j = param0.field_j + r.field_a.a(var4.length, (byte) -62, 0, param0.field_m, param0.field_j, var4);
             stackOut_2_0 = -var3_int + param0.field_j;
@@ -128,7 +127,7 @@ abstract class ae extends br {
     ae() {
     }
 
-    final static ja[] a(ja param0) {
+    final static ja[] a(ja param0, int param1) {
         ja[] var2 = null;
         RuntimeException var2_ref = null;
         ja[] var3 = null;
@@ -192,7 +191,7 @@ abstract class ae extends br {
         return stackIn_1_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_g = null;
         field_h = null;
     }

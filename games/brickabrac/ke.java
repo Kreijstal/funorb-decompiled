@@ -68,35 +68,43 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         return stackIn_10_0;
     }
 
-    private final void c() {
+    private final void c(int param0) {
+        RuntimeException runtimeException = null;
         long var2_long = 0L;
-        RuntimeException var2 = null;
         long var4 = 0L;
         Object var6 = null;
         Throwable var7 = null;
         Throwable decompiledCaughtException = null;
         try {
           L0: {
-            var2_long = ue.a(false);
             L1: {
+              var2_long = ue.a(false);
+              if (param0 == 26573) {
+                break L1;
+              } else {
+                field_f = null;
+                break L1;
+              }
+            }
+            L2: {
               var4 = sm.field_c[cq.field_t];
               sm.field_c[cq.field_t] = var2_long;
               cq.field_t = 31 & 1 + cq.field_t;
               if (0L == var4) {
-                break L1;
+                break L2;
               } else {
                 if (~var4 > ~var2_long) {
-                  break L1;
+                  break L2;
                 } else {
-                  break L1;
+                  break L2;
                 }
               }
             }
             var6 = this;
             synchronized (var6) {
-              L2: {
+              L3: {
                 qa.field_r = no.field_r;
-                break L2;
+                break L3;
               }
             }
             ((ke) this).f(-107);
@@ -104,8 +112,8 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var2, "ke.S(" + 26573 + ')');
+          runtimeException = (RuntimeException) (Object) decompiledCaughtException;
+          throw qb.a((Throwable) (Object) runtimeException, "ke.S(" + param0 + ')');
         }
     }
 
@@ -687,8 +695,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                                   if (!dc.a((CharSequence) (Object) var4, -102)) {
                                     break L5;
                                   } else {
-                                    int discarded$6 = -28734;
-                                    if (fl.a((CharSequence) (Object) var4) < 10) {
+                                    if (fl.a((CharSequence) (Object) var4, -28734) < 10) {
                                       ((ke) this).a("wrongjava", 4000);
                                       if (var5 == 0) {
                                         break L2;
@@ -783,7 +790,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                         } else {
                           try {
                             L16: {
-                              Object discarded$7 = var2_ref.invoke(var1, new Object[1]);
+                              Object discarded$1 = var2_ref.invoke(var1, new Object[1]);
                               break L16;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -796,13 +803,11 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                           break L15;
                         }
                       }
-                      int discarded$8 = 1;
-                      sh.b();
+                      sh.b(1);
                       ((ke) this).c(false);
                       kc.field_q = jm.a((java.awt.Component) (Object) kj.field_D, to.field_b, -2414, be.field_g);
                       ((ke) this).b(false);
-                      int discarded$9 = 123;
-                      re.field_b = ja.a();
+                      re.field_b = ja.a((byte) 123);
                       L18: while (true) {
                         L19: {
                           L20: {
@@ -835,8 +840,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                               if (c.field_a <= var3) {
                                 break L23;
                               } else {
-                                int discarded$10 = 26573;
-                                this.c();
+                                this.c(26573);
                                 var3++;
                                 if (var5 != 0) {
                                   break L22;
@@ -849,8 +853,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                                 }
                               }
                             }
-                            int discarded$11 = 0;
-                            this.h();
+                            this.h(0);
                             kq.a(-4317, lp.field_ub, (Object) (Object) kj.field_D);
                             break L22;
                           }
@@ -888,7 +891,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         RuntimeException runtimeException = null;
         long var2_long = 0L;
         long var4 = 0L;
@@ -902,7 +905,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
               var4 = ig.field_M[de.field_w];
               ig.field_M[de.field_w] = var2_long;
               de.field_w = 31 & 1 + de.field_w;
-              if (0L == var4) {
+              if ((long)param0 == var4) {
                 break L1;
               } else {
                 if (var2_long <= var4) {
@@ -945,13 +948,13 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                 break L2;
               }
             }
-            ((ke) this).g(102);
+            ((ke) this).g(param0 + 102);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) runtimeException, "ke.W(" + 0 + ')');
+          throw qb.a((Throwable) (Object) runtimeException, "ke.W(" + param0 + ')');
         }
     }
 

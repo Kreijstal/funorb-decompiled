@@ -118,8 +118,7 @@ final class tp extends sp {
                         break L2;
                       } else {
                         ((tp) this).field_t.a((byte) -22, param5, false);
-                        int discarded$6 = -1;
-                        this.a(param2, param3, ((tp) this).field_t);
+                        this.a(param2, param3, ((tp) this).field_t, -1);
                         break L2;
                       }
                     } else {
@@ -136,8 +135,7 @@ final class tp extends sp {
                         break L2;
                       } else {
                         ((tp) this).field_v.a((byte) -22, param5, false);
-                        int discarded$7 = -1;
-                        this.a(param2, param3, ((tp) this).field_v);
+                        this.a(param2, param3, ((tp) this).field_v, -1);
                         break L2;
                       }
                     }
@@ -241,8 +239,7 @@ final class tp extends sp {
                             }
                           }
                           ((rj) (Object) stackIn_50_0).a((byte) stackIn_50_1, stackIn_50_2, stackIn_50_3 != 0);
-                          int discarded$8 = -1;
-                          this.a(param2, param3, ((tp) this).field_v);
+                          this.a(param2, param3, ((tp) this).field_v, -1);
                           break L10;
                         }
                       }
@@ -293,8 +290,7 @@ final class tp extends sp {
                             }
                           }
                           ((rj) (Object) stackIn_41_0).a((byte) stackIn_41_1, stackIn_41_2, stackIn_41_3 != 0);
-                          int discarded$9 = -1;
-                          this.a(param2, param3, ((tp) this).field_t);
+                          this.a(param2, param3, ((tp) this).field_t, -1);
                           break L13;
                         } else {
                           break L13;
@@ -310,14 +306,12 @@ final class tp extends sp {
                 }
               } else {
                 ((tp) this).field_A = -param0;
-                int discarded$10 = -1;
-                this.a(param2, param3, ((tp) this).field_t);
+                this.a(param2, param3, ((tp) this).field_t, -1);
                 return;
               }
             } else {
               ((tp) this).field_A = param0;
-              int discarded$11 = -1;
-              this.a(param2, param3, ((tp) this).field_v);
+              this.a(param2, param3, ((tp) this).field_v, -1);
               return;
             }
           }
@@ -669,8 +663,7 @@ final class tp extends sp {
     }
 
     final static ji c(byte param0) {
-        int discarded$0 = 1;
-        return new ji(ra.e((byte) -16), df.a());
+        return new ji(ra.e((byte) -16), df.a(1));
     }
 
     final static fn b(byte param0, int param1) {
@@ -685,7 +678,7 @@ final class tp extends sp {
         return var2.field_j;
     }
 
-    private final void a(int param0, int param1, rj param2) {
+    private final void a(int param0, int param1, rj param2, int param3) {
         try {
             param2.a(param0, true, -1);
             param2.a(param1, false);
@@ -719,7 +712,7 @@ final class tp extends sp {
         return 2;
     }
 
-    final static void a(vn[] param0) {
+    final static void a(vn[] param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -816,19 +809,23 @@ final class tp extends sp {
         L0: {
           var3 = ZombieDawn.field_J;
           if (0 < ((tp) this).field_u) {
-            if (((tp) this).field_l != null) {
-              ((tp) this).field_v.a(param0);
-              if (1048576 > ((tp) this).field_u) {
-                if (((tp) this).field_r != null) {
-                  ((tp) this).field_t.a(param0);
-                  if (0 >= ((tp) this).field_o) {
-                    break L0;
+            L1: {
+              if (((tp) this).field_l != null) {
+                ((tp) this).field_v.a(param0);
+                if (1048576 > ((tp) this).field_u) {
+                  if (((tp) this).field_r != null) {
+                    ((tp) this).field_t.a(param0);
+                    break L1;
                   } else {
-                    if (null == ((tp) this).field_n) {
+                    if (0 >= ((tp) this).field_o) {
                       break L0;
                     } else {
-                      ((tp) this).field_s.a(param0);
-                      break L0;
+                      if (null == ((tp) this).field_n) {
+                        break L0;
+                      } else {
+                        ((tp) this).field_s.a(param0);
+                        break L0;
+                      }
                     }
                   }
                 } else {
@@ -844,54 +841,44 @@ final class tp extends sp {
                   }
                 }
               } else {
-                if (0 >= ((tp) this).field_o) {
-                  break L0;
+                if (1048576 > ((tp) this).field_u) {
+                  if (((tp) this).field_r != null) {
+                    ((tp) this).field_t.a(param0);
+                    break L1;
+                  } else {
+                    if (0 >= ((tp) this).field_o) {
+                      break L0;
+                    } else {
+                      if (null == ((tp) this).field_n) {
+                        break L0;
+                      } else {
+                        ((tp) this).field_s.a(param0);
+                        break L0;
+                      }
+                    }
+                  }
                 } else {
-                  if (null == ((tp) this).field_n) {
+                  if (0 >= ((tp) this).field_o) {
                     break L0;
                   } else {
-                    ((tp) this).field_s.a(param0);
-                    break L0;
+                    if (null == ((tp) this).field_n) {
+                      break L0;
+                    } else {
+                      ((tp) this).field_s.a(param0);
+                      break L0;
+                    }
                   }
                 }
               }
+            }
+            if (0 >= ((tp) this).field_o) {
+              break L0;
             } else {
-              if (1048576 > ((tp) this).field_u) {
-                if (((tp) this).field_r != null) {
-                  ((tp) this).field_t.a(param0);
-                  if (0 >= ((tp) this).field_o) {
-                    break L0;
-                  } else {
-                    if (null == ((tp) this).field_n) {
-                      break L0;
-                    } else {
-                      ((tp) this).field_s.a(param0);
-                      break L0;
-                    }
-                  }
-                } else {
-                  if (0 >= ((tp) this).field_o) {
-                    break L0;
-                  } else {
-                    if (null == ((tp) this).field_n) {
-                      break L0;
-                    } else {
-                      ((tp) this).field_s.a(param0);
-                      break L0;
-                    }
-                  }
-                }
+              if (null == ((tp) this).field_n) {
+                break L0;
               } else {
-                if (0 >= ((tp) this).field_o) {
-                  break L0;
-                } else {
-                  if (null == ((tp) this).field_n) {
-                    break L0;
-                  } else {
-                    ((tp) this).field_s.a(param0);
-                    break L0;
-                  }
-                }
+                ((tp) this).field_s.a(param0);
+                break L0;
               }
             }
           } else {
@@ -929,39 +916,39 @@ final class tp extends sp {
             }
           }
         }
-        L1: {
+        L2: {
           if (!((tp) this).field_x) {
-            break L1;
+            break L2;
           } else {
-            L2: {
+            L3: {
               if (0 >= ((tp) this).field_A) {
-                break L2;
+                break L3;
               } else {
                 if (((tp) this).field_v.c((byte) -34)) {
-                  break L2;
+                  break L3;
                 } else {
                   ((tp) this).field_l = null;
                   ((tp) this).field_x = false;
                   ((tp) this).field_A = -((tp) this).field_A;
-                  break L1;
+                  break L2;
                 }
               }
             }
             if (((tp) this).field_A >= 0) {
-              break L1;
+              break L2;
             } else {
               if (!((tp) this).field_t.c((byte) -34)) {
                 ((tp) this).field_x = false;
                 ((tp) this).field_A = -((tp) this).field_A;
                 ((tp) this).field_r = null;
-                break L1;
+                break L2;
               } else {
-                break L1;
+                break L2;
               }
             }
           }
         }
-        L3: {
+        L4: {
           if (((tp) this).field_A != 0) {
             ((tp) this).field_u = ((tp) this).field_u + ((tp) this).field_A * param0;
             if (1048576 <= ((tp) this).field_u) {
@@ -969,50 +956,50 @@ final class tp extends sp {
               if (!((tp) this).field_x) {
                 ((tp) this).field_A = 0;
                 if (!((tp) this).field_w) {
-                  L4: {
+                  L5: {
                     if (null == ((tp) this).field_r) {
-                      break L4;
+                      break L5;
                     } else {
                       ((tp) this).field_t.c(28013);
-                      break L4;
+                      break L5;
                     }
                   }
                   ((tp) this).field_r = null;
-                  break L3;
+                  break L4;
                 } else {
-                  break L3;
+                  break L4;
                 }
               } else {
-                break L3;
+                break L4;
               }
             } else {
               if (((tp) this).field_u > 0) {
-                break L3;
+                break L4;
               } else {
                 ((tp) this).field_u = 0;
                 if (((tp) this).field_x) {
-                  break L3;
+                  break L4;
                 } else {
                   ((tp) this).field_A = 0;
                   if (!((tp) this).field_w) {
-                    L5: {
+                    L6: {
                       if (((tp) this).field_l == null) {
-                        break L5;
+                        break L6;
                       } else {
                         ((tp) this).field_v.c(28013);
-                        break L5;
+                        break L6;
                       }
                     }
                     ((tp) this).field_l = null;
-                    break L3;
+                    break L4;
                   } else {
-                    break L3;
+                    break L4;
                   }
                 }
               }
             }
           } else {
-            break L3;
+            break L4;
           }
         }
     }

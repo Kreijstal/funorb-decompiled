@@ -21,11 +21,11 @@ final class ui extends q {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
     }
 
-    final static byte[] a(boolean param0, Object param1) {
+    final static byte[] a(boolean param0, Object param1, byte param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         dp var4 = null;
@@ -65,8 +65,7 @@ final class ui extends q {
             } else {
               var3 = (byte[]) param1;
               if (param0) {
-                int discarded$2 = 115;
-                stackOut_7_0 = ch.a(var3);
+                stackOut_7_0 = ch.a(var3, (byte) 115);
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
               } else {

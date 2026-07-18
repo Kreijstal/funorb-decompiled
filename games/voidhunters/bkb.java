@@ -5,13 +5,13 @@ abstract class bkb {
     static java.applet.Applet field_b;
     static String field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
         int var1 = -115;
     }
 
-    final static hkb a() {
+    final static hkb a(int param0) {
         pe var10 = new pe(1);
         var10.a(var10.g((byte) -122) / 2, (byte) -66);
         var10.e(var10.m(1) / 2, 0);

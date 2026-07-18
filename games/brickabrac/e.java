@@ -353,14 +353,14 @@ final class e extends nm {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_j = null;
         int var1 = 0;
         field_q = null;
     }
 
-    final static void a(mf param0) {
+    final static void a(mf param0, int param1) {
         jp var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -369,8 +369,7 @@ final class e extends nm {
             var3 = var2.field_D;
             int var5 = -1;
             var4 = var2.field_C;
-            int discarded$0 = -99;
-            jf.d();
+            jf.d(-99);
             vq.field_I = new jp(var3, var4 * 3 / 4);
             vq.field_I.g();
             var2.d(0, 0);

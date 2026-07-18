@@ -238,7 +238,7 @@ final class iia extends jm {
         }
     }
 
-    final static void a(pia param0) {
+    final static void a(pia param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         try {
@@ -273,7 +273,7 @@ final class iia extends jm {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_n = null;
         field_q = null;

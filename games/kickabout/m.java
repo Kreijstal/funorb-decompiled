@@ -19,7 +19,7 @@ final class m {
     static boolean field_h;
     private long[] field_n;
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -420,8 +420,7 @@ final class m {
                     break L3;
                   }
                 }
-                int discarded$8 = 0;
-                c.a(-1);
+                c.a(-1, false);
                 un.field_c = pf.field_e;
                 break L2;
               }
@@ -447,18 +446,15 @@ final class m {
                   if (var9 == 248) {
                     wc.a((byte) -50, so.a(-71));
                     gd.field_b = ld.field_i;
-                    int discarded$9 = -116;
-                    lr.b();
+                    lr.b((byte) -116);
                     vu.field_Db = false;
                     stackOut_34_0 = var9;
                     stackIn_35_0 = stackOut_34_0;
                     return stackIn_35_0;
                   } else {
                     if (var9 == 99) {
-                      int discarded$10 = 40;
-                      boolean discarded$11 = uj.a((byte) 51, lt.a());
-                      int discarded$12 = 93;
-                      ep.field_f = new Boolean(ki.a((iw) (Object) un.field_e));
+                      boolean discarded$1 = uj.a((byte) 51, lt.a((byte) 40));
+                      ep.field_f = new Boolean(ki.a((iw) (Object) un.field_e, (byte) 93));
                       un.field_e.field_n = 0;
                       break L8;
                     } else {
@@ -490,8 +486,7 @@ final class m {
                     var12 = 0;
                     L11: while (true) {
                       if (var12 >= var11) {
-                        int discarded$13 = -116;
-                        lr.b();
+                        lr.b((byte) -116);
                         vu.field_Db = false;
                         stackOut_44_0 = var11 + 100;
                         stackIn_45_0 = stackOut_44_0;
@@ -512,8 +507,7 @@ final class m {
               if (lm.field_N != un.field_c) {
                 break L12;
               } else {
-                int discarded$14 = 180;
-                if (!ps.a()) {
+                if (!ps.a(180)) {
                   break L12;
                 } else {
                   L13: {
@@ -530,8 +524,7 @@ final class m {
                       }
                     }
                   }
-                  int discarded$15 = -116;
-                  lr.b();
+                  lr.b((byte) -116);
                   vu.field_Db = false;
                   stackOut_52_0 = so.field_b;
                   stackIn_53_0 = stackOut_52_0;
@@ -693,14 +686,13 @@ final class m {
               } else {
                 L2: while (true) {
                   if (-65 <= ((m) this).field_l) {
-                    int discarded$5 = 18;
-                    this.a();
+                    this.a((byte) 18);
                     ((m) this).field_l = 0;
                     break L1;
                   } else {
-                    int fieldTemp$6 = ((m) this).field_l;
+                    int fieldTemp$3 = ((m) this).field_l;
                     ((m) this).field_l = ((m) this).field_l + 1;
-                    ((m) this).field_e[fieldTemp$6] = (byte) 0;
+                    ((m) this).field_e[fieldTemp$3] = (byte) 0;
                     continue L2;
                   }
                 }
@@ -713,13 +705,12 @@ final class m {
                     break L4;
                   } else {
                     var9 = null;
-                    int discarded$7 = m.a(64, (ec) null, (ec) null, -29, false, (String) null, true);
+                    int discarded$4 = m.a(64, (ec) null, (ec) null, -29, false, (String) null, true);
                     break L4;
                   }
                 }
                 dv.a(((m) this).field_j, 0, ((m) this).field_e, 32, 32);
-                int discarded$8 = 18;
-                this.a();
+                this.a((byte) 18);
                 var4_int = 0;
                 var5 = param2;
                 L5: while (true) {
@@ -741,9 +732,9 @@ final class m {
                   }
                 }
               } else {
-                int fieldTemp$9 = ((m) this).field_l;
+                int fieldTemp$5 = ((m) this).field_l;
                 ((m) this).field_l = ((m) this).field_l + 1;
-                ((m) this).field_e[fieldTemp$9] = (byte) 0;
+                ((m) this).field_e[fieldTemp$5] = (byte) 0;
                 continue L3;
               }
             }
@@ -780,7 +771,7 @@ final class m {
         }
     }
 
-    final static void a(sj param0, sj param1) {
+    final static void a(sj param0, sj param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -943,8 +934,7 @@ final class m {
                           if (512 != ((m) this).field_o) {
                             break L6;
                           } else {
-                            int discarded$2 = 18;
-                            this.a();
+                            this.a((byte) 18);
                             ((m) this).field_o = 0;
                             ((m) this).field_l = 0;
                             break L6;
@@ -972,8 +962,7 @@ final class m {
                             if (512 != ((m) this).field_o) {
                               break L8;
                             } else {
-                              int discarded$3 = 18;
-                              this.a();
+                              this.a((byte) 18);
                               ((m) this).field_l = 0;
                               ((m) this).field_o = 0;
                               break L8;

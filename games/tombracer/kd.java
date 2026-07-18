@@ -185,7 +185,7 @@ final class kd extends rj {
         return ((kd) this).field_A;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_z = null;
     }
 

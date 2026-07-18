@@ -260,7 +260,8 @@ final class ni implements Runnable {
             Exception var2_ref = null;
             Throwable var4 = null;
             int var5 = 0;
-            mf var6 = null;
+            Object var6 = null;
+            mf var7 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
@@ -272,8 +273,8 @@ final class ni implements Runnable {
                 var2 = (Object) (Object) ((ni) this).field_e;
                 synchronized (var2) {
                   L1: {
-                    var6 = (mf) (Object) ((ni) this).field_e.d(-4425);
-                    if (var6 == null) {
+                    var7 = (mf) (Object) ((ni) this).field_e.d(-4425);
+                    if (var7 == null) {
                       {
                         L2: {
                           ((Object) (Object) ((ni) this).field_e).wait();
@@ -295,17 +296,17 @@ final class ni implements Runnable {
                   try {
                     L4: {
                       L5: {
-                        if (2 == var6.field_v) {
-                          boolean discarded$2 = var6.field_t.a(var6.field_s.length, var6.field_s, (byte) 101, (int)var6.field_k);
-                          var6.field_n = false;
+                        if (2 == var7.field_v) {
+                          boolean discarded$1 = var7.field_t.a(var7.field_s.length, var7.field_s, (byte) 101, (int)var7.field_k);
+                          var7.field_n = false;
                           break L5;
                         } else {
-                          if (var6.field_v != 3) {
+                          if (var7.field_v != 3) {
                             decompiledRegionSelector1 = 0;
                             break L4;
                           } else {
-                            var6.field_s = var6.field_t.a(false, (int)var6.field_k);
-                            var6.field_n = false;
+                            var7.field_s = var7.field_t.a(false, (int)var7.field_k);
+                            var7.field_n = false;
                             break L5;
                           }
                         }
@@ -317,14 +318,14 @@ final class ni implements Runnable {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     L6: {
                       var2_ref = (Exception) (Object) decompiledCaughtException;
-                      int discarded$3 = 21862;
-                      wp.a((Throwable) (Object) var2_ref, (String) null);
+                      var6 = null;
+                      wp.a((Throwable) (Object) var2_ref, (String) null, 21862);
                       decompiledRegionSelector1 = 0;
                       break L6;
                     }
                   }
                   if (decompiledRegionSelector1 == 0) {
-                    var6.field_n = false;
+                    var7.field_n = false;
                     continue L0;
                   } else {
                     continue L0;

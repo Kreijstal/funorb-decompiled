@@ -52,8 +52,7 @@ final class dl {
         try {
           L0: {
             if (nb.a(param0, param4, (byte) -4, param1)) {
-              int discarded$2 = 107;
-              stackOut_3_0 = vi.a(param3.a(param0, -27493, param4));
+              stackOut_3_0 = vi.a(param3.a(param0, -27493, param4), (byte) 107);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

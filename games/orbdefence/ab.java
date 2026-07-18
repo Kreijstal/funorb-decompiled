@@ -144,7 +144,7 @@ final class ab implements td {
         field_h = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         Object var2 = null;

@@ -226,8 +226,7 @@ final class ei extends am {
               }
             }
             L8: {
-              int discarded$10 = -62;
-              if (!lm.a((p) (Object) var17, (p) (Object) param9)) {
+              if (!lm.a((p) (Object) var17, (p) (Object) param9, -62)) {
                 stackOut_28_0 = 0;
                 stackIn_29_0 = stackOut_28_0;
                 break L8;
@@ -280,9 +279,9 @@ final class ei extends am {
           }
         }
         L11: {
-          int fieldTemp$11 = param9.field_p + 1;
+          int fieldTemp$5 = param9.field_p + 1;
           param9.field_p = param9.field_p + 1;
-          if (param9.field_C > fieldTemp$11) {
+          if (param9.field_C > fieldTemp$5) {
             break L11;
           } else {
             param9.field_z = param9.field_z + 1;
@@ -355,8 +354,7 @@ final class ei extends am {
                             } else {
                               L17: {
                                 param9.field_e = 50;
-                                int discarded$12 = 1;
-                                tk.a(3, jc.field_c, 62);
+                                tk.a(3, jc.field_c, 62, true);
                                 jn.field_F[ib.field_c].field_c = param9.field_c;
                                 jn.field_F[ib.field_c].field_j.a((byte) 46, param2);
                                 jn.field_F[ib.field_c].field_l.a(param4, -28860);
@@ -386,12 +384,12 @@ final class ei extends am {
                               ib.field_c = ib.field_c + 1;
                               if (Math.random() < 0.5) {
                                 param9.field_c = param9.field_c + 64.0;
-                                boolean[] discarded$13 = param9.b(-27757, (int)(Math.random() * 10.0), ln.field_a);
+                                boolean[] discarded$6 = param9.b(-27757, (int)(Math.random() * 10.0), ln.field_a);
                                 param9.field_c = param9.field_c - 64.0;
                                 break L16;
                               } else {
                                 param9.field_c = param9.field_c - 64.0;
-                                boolean[] discarded$14 = param9.b(-27757, (int)(Math.random() * 10.0), ln.field_a);
+                                boolean[] discarded$7 = param9.b(-27757, (int)(Math.random() * 10.0), ln.field_a);
                                 param9.field_c = param9.field_c + 64.0;
                                 break L16;
                               }
@@ -446,8 +444,7 @@ final class ei extends am {
                                                         if (var22 != 23) {
                                                           if (var22 == 8) {
                                                             param9.field_e = 60;
-                                                            int discarded$15 = 1;
-                                                            tk.a(5, jc.field_c, 35);
+                                                            tk.a(5, jc.field_c, 35, true);
                                                             break L19;
                                                           } else {
                                                             break L19;
@@ -464,15 +461,13 @@ final class ei extends am {
                                                   break L20;
                                                 }
                                               } else {
-                                                int discarded$16 = 1;
-                                                tk.a(1, jc.field_c, 0);
+                                                tk.a(1, jc.field_c, 0, true);
                                                 break L19;
                                               }
                                             }
                                           }
                                         }
-                                        int discarded$17 = 1;
-                                        tk.a(1, jc.field_c, 0);
+                                        tk.a(1, jc.field_c, 0, true);
                                         break L19;
                                       }
                                     }
@@ -551,7 +546,7 @@ final class ei extends am {
                   } else {
                     if (var22 == 5) {
                       L24: {
-                        boolean[] discarded$18 = param9.field_l.a(25302, true, param9.field_K, param9.field_t, ln.field_a, 1, param9.field_j);
+                        boolean[] discarded$8 = param9.field_l.a(25302, true, param9.field_K, param9.field_t, ln.field_a, 1, param9.field_j);
                         param9.b((byte) 117);
                         var22_ref_bd____ = param9.e(127);
                         var23 = 3;
@@ -1670,9 +1665,9 @@ final class ei extends am {
                 break L13;
               }
             } else {
-              int fieldTemp$19 = param9.field_D - 1;
+              int fieldTemp$9 = param9.field_D - 1;
               param9.field_D = param9.field_D - 1;
-              if (fieldTemp$19 < 0) {
+              if (fieldTemp$9 < 0) {
                 var22 = (int)(Math.random() * 3.0);
                 if (var22 != 0) {
                   if (var22 != 1) {
@@ -1818,7 +1813,7 @@ final class ei extends am {
         }
     }
 
-    final static bd[] a(int param0, int param1, int param2, int param3) {
+    final static bd[] a(int param0, int param1, int param2, int param3, int param4) {
         bd[] var6 = new bd[9];
         bd[] var5 = var6;
         bd dupTemp$0 = el.a(-7, 1, param3);
@@ -2274,7 +2269,7 @@ final class ei extends am {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_p = null;
         field_m = null;
         field_k = null;

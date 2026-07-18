@@ -21,7 +21,6 @@ final class lk extends qa {
     boolean field_H;
 
     private final dd b(int param0, int param1, int param2) {
-        dd var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -31,6 +30,7 @@ final class lk extends qa {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        dd var14 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_4_0 = 0;
@@ -38,16 +38,15 @@ final class lk extends qa {
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
         var13 = fleas.field_A ? 1 : 0;
-        var4 = new dd(((lk) this).field_N * 2, ((lk) this).field_j);
-        int discarded$1 = 45;
-        r.a(var4);
+        var14 = new dd(((lk) this).field_N * 2, ((lk) this).field_j);
+        r.a(var14, 45);
         var5 = ((lk) this).field_j >> 1;
         var6 = 0;
         L0: while (true) {
           if (((lk) this).field_j <= var6) {
             ia.a(-121);
             var6 = 83 % ((9 - param2) / 48);
-            return var4;
+            return var14;
           } else {
             L1: {
               var7 = (((lk) this).field_N * 2 - 1) * (var6 >> 1) % (2 * ((lk) this).field_N);
@@ -301,7 +300,7 @@ final class lk extends qa {
         }
     }
 
-    final static int k() {
+    final static int k(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -355,7 +354,7 @@ final class lk extends qa {
         return stackIn_11_0;
     }
 
-    private final dd d() {
+    private final dd d(byte param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -363,8 +362,7 @@ final class lk extends qa {
         int var9 = fleas.field_A ? 1 : 0;
         int var2 = ((lk) this).field_j >> 1;
         dd var3 = new dd(var2, ((lk) this).field_j);
-        int discarded$0 = 45;
-        r.a(var3);
+        r.a(var3, 45);
         for (var4 = 0; ((lk) this).field_j > var4; var4++) {
             for (var5 = 0; var5 < var2; var5++) {
                 var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + ((lk) this).field_j));
@@ -424,8 +422,7 @@ final class lk extends qa {
                   if (gb.field_l > ((lk) this).field_P.field_w + param3) {
                     break L2;
                   } else {
-                    int discarded$2 = 45;
-                    r.a(((lk) this).field_M);
+                    r.a(((lk) this).field_M, 45);
                     param0.d(-((lk) this).field_B, 0);
                     param0.d(((lk) this).field_N * 2 - ((lk) this).field_B, 0);
                     ((lk) this).field_F.a(0, 0);
@@ -438,8 +435,7 @@ final class lk extends qa {
                   if (var5_int - ((lk) this).field_P.field_w > gb.field_h) {
                     break L3;
                   } else {
-                    int discarded$3 = 45;
-                    r.a(((lk) this).field_M);
+                    r.a(((lk) this).field_M, 45);
                     var7 = ((lk) this).field_B + (-((lk) this).field_P.field_w + ((lk) this).field_u);
                     L4: while (true) {
                       if (var7 <= ((lk) this).field_N * 2) {
@@ -511,7 +507,7 @@ final class lk extends qa {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (vg.field_z != -wf.field_c) {
             if (vg.field_z != -wf.field_c + 250) {
             }
@@ -524,8 +520,7 @@ final class lk extends qa {
             return;
         }
         ((lk) this).field_E = new dd[]{this.b(((lk) this).field_G, ((lk) this).field_C, -117), this.b(((lk) this).field_L, ((lk) this).field_K, 118)};
-        int discarded$0 = -15;
-        ((lk) this).field_P = this.d();
+        ((lk) this).field_P = this.d((byte) -15);
         ((lk) this).field_F = ((lk) this).field_P.b();
         ((lk) this).field_M = new dd(((lk) this).field_j >> 1, ((lk) this).field_j);
     }
@@ -538,8 +533,7 @@ final class lk extends qa {
           if (param0 == 10) {
             break L0;
           } else {
-            int discarded$6 = 67;
-            int discarded$7 = lk.k();
+            int discarded$2 = lk.k(67);
             break L0;
           }
         }
@@ -551,8 +545,7 @@ final class lk extends qa {
               if (ci.field_f) {
                 break L2;
               } else {
-                int discarded$8 = 32391;
-                if (qh.j()) {
+                if (qh.j(32391)) {
                   break L2;
                 } else {
                   stackOut_5_0 = 1;

@@ -66,8 +66,7 @@ final class sg {
           L0: {
             if (param3 > 122) {
               var8 = (CharSequence) (Object) param0;
-              int discarded$5 = -70;
-              if (dc.a(var8)) {
+              if (dc.a(var8, (byte) -70)) {
                 if (jj.field_b != 2) {
                   stackOut_8_0 = be.field_s;
                   stackIn_9_0 = stackOut_8_0;
@@ -163,7 +162,7 @@ final class sg {
         return (String) (Object) stackIn_15_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_b = null;
         field_j = null;
@@ -257,7 +256,7 @@ final class sg {
         return stackIn_6_0;
     }
 
-    final static void a(String[][] param0, boolean param1, byte[] param2, ji param3, int[] param4, byte param5, String[][] param6, String[] param7, int param8, byte[] param9, pi[] param10, int[] param11, int param12, ji param13, String[] param14, ji param15, ck[][] param16, ck[][] param17) {
+    final static void a(String[][] param0, boolean param1, byte[] param2, ji param3, int[] param4, byte param5, String[][] param6, String[] param7, int param8, byte[] param9, pi[] param10, int[] param11, int param12, ji param13, String[] param14, ji param15, ck[][] param16, ck[][] param17, int param18) {
         RuntimeException var19 = null;
         Object var20 = null;
         RuntimeException stackIn_3_0 = null;

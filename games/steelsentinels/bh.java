@@ -21,7 +21,7 @@ final class bh {
     private int field_p;
     static boolean field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         field_i = null;
     }
@@ -55,7 +55,7 @@ final class bh {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, byte param2) {
         int var3 = 0;
         String var4 = null;
         String var5 = null;
@@ -96,8 +96,7 @@ final class bh {
                       }
                       L4: {
                         if (ol.field_bc == 1) {
-                          int discarded$2 = 1;
-                          var5 = nl.a(var4, param0);
+                          var5 = nl.a(var4, param0, true);
                           break L4;
                         } else {
                           break L4;
@@ -115,8 +114,7 @@ final class bh {
                         if (3 != ol.field_bc) {
                           break L6;
                         } else {
-                          int discarded$3 = 1;
-                          var5 = rn.a(var4, param0, var4);
+                          var5 = rn.a(var4, param0, var4, true);
                           break L6;
                         }
                       }

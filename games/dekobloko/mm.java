@@ -318,8 +318,7 @@ abstract class mm extends be {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          int discarded$7 = 32;
-          StringBuilder discarded$8 = vf.a(field_J, -23510, 0);
+          StringBuilder discarded$5 = vf.a(field_J, -23510, 0, ' ');
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -355,9 +354,9 @@ abstract class mm extends be {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$9 = field_J.append('<');
-                        StringBuilder discarded$10 = field_J.append(var15);
-                        StringBuilder discarded$11 = field_J.append('>');
+                        StringBuilder discarded$6 = field_J.append('<');
+                        StringBuilder discarded$7 = field_J.append(var15);
+                        StringBuilder discarded$8 = field_J.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -544,9 +543,8 @@ abstract class mm extends be {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$12 = field_J.append((char) var14);
-                        int discarded$13 = 28;
-                        var14 = (char)(j.a((char) var14) & 255);
+                        StringBuilder discarded$9 = field_J.append((char) var14);
+                        var14 = (char)(j.a((char) var14, (byte) 28) & 255);
                         var4 = var4 + ((mm) this).field_L[var14];
                         if (((mm) this).field_y == null) {
                           break L15;
@@ -774,8 +772,7 @@ abstract class mm extends be {
               }
               if (var4 == -1) {
                 L6: {
-                  int discarded$1 = 28;
-                  var8 = (char)(j.a((char) var8) & 255);
+                  var8 = (char)(j.a((char) var8, (byte) 28) & 255);
                   if (((mm) this).field_y == null) {
                     break L6;
                   } else {
@@ -860,8 +857,7 @@ abstract class mm extends be {
     }
 
     final int a(char param0) {
-        int discarded$0 = 28;
-        return ((mm) this).field_L[j.a(param0) & 255];
+        return ((mm) this).field_L[j.a(param0, (byte) 28) & 255];
     }
 
     final int a(String param0) {
@@ -965,8 +961,7 @@ abstract class mm extends be {
                 }
                 if (var2 == -1) {
                   L4: {
-                    int discarded$1 = 28;
-                    var7 = (char)(j.a((char) var7) & 255);
+                    var7 = (char)(j.a((char) var7, (byte) 28) & 255);
                     var4 = var4 + ((mm) this).field_L[var7];
                     if (((mm) this).field_y == null) {
                       break L4;

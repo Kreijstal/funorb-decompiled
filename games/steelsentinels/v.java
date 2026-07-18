@@ -10,7 +10,7 @@ abstract class v implements tl {
     static String field_c;
     private long field_a;
 
-    final static void a(int param0, boolean param1, int param2, ic param3, pn param4, java.awt.Component param5) {
+    final static void a(int param0, boolean param1, int param2, ic param3, pn param4, java.awt.Component param5, int param6, int param7) {
         try {
             tb.a(22050, true, 10);
             fc.field_a = tb.a(param4, param5, 0, 22050);

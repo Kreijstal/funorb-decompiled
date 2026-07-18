@@ -5,6 +5,7 @@ final class tg implements ci {
     final static String a(byte param0, String param1, String param2, qk param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_4_0 = null;
+        Object stackIn_7_0 = null;
         String stackIn_9_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -37,6 +38,7 @@ final class tg implements ci {
         RuntimeException decompiledCaughtException = null;
         String stackOut_3_0 = null;
         String stackOut_8_0 = null;
+        Object stackOut_6_0 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_13_0 = null;
@@ -76,9 +78,15 @@ final class tg implements ci {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              stackOut_8_0 = param4 + " - " + param3.a(param1, 0) + "%";
-              stackIn_9_0 = stackOut_8_0;
-              break L0;
+              if (param0 == 87) {
+                stackOut_8_0 = param4 + " - " + param3.a(param1, 0) + "%";
+                stackIn_9_0 = stackOut_8_0;
+                break L0;
+              } else {
+                stackOut_6_0 = null;
+                stackIn_7_0 = stackOut_6_0;
+                return (String) (Object) stackIn_7_0;
+              }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -86,7 +94,7 @@ final class tg implements ci {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5;
-            stackOut_10_1 = new StringBuilder().append("tg.B(").append(87).append(',');
+            stackOut_10_1 = new StringBuilder().append("tg.B(").append(param0).append(',');
             stackIn_13_0 = stackOut_10_0;
             stackIn_13_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -267,36 +275,55 @@ final class tg implements ci {
     }
 
     final static boolean a(byte param0, char param1) {
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_7_0 = 0;
-        L0: {
-          L1: {
-            if (param1 == 160) {
-              break L1;
-            } else {
-              if (param1 == 32) {
+        RuntimeException var2 = null;
+        int stackIn_16_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_15_0 = 0;
+        int stackOut_13_0 = 0;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -63) {
                 break L1;
               } else {
-                if (param1 == 95) {
-                  break L1;
+                String discarded$2 = tg.a((byte) 33, (String) null, (String) null, (qk) null, (String) null);
+                break L1;
+              }
+            }
+            L2: {
+              L3: {
+                if (param1 == 160) {
+                  break L3;
                 } else {
-                  if (param1 != 45) {
-                    stackOut_9_0 = 0;
-                    stackIn_10_0 = stackOut_9_0;
-                    break L0;
+                  if (param1 == 32) {
+                    break L3;
                   } else {
-                    break L1;
+                    if (param1 == 95) {
+                      break L3;
+                    } else {
+                      if (param1 != 45) {
+                        stackOut_15_0 = 0;
+                        stackIn_16_0 = stackOut_15_0;
+                        break L2;
+                      } else {
+                        break L3;
+                      }
+                    }
                   }
                 }
               }
+              stackOut_13_0 = 1;
+              stackIn_16_0 = stackOut_13_0;
+              break L2;
             }
+            break L0;
           }
-          stackOut_7_0 = 1;
-          stackIn_10_0 = stackOut_7_0;
-          break L0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var2, "tg.A(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_10_0 != 0;
+        return stackIn_16_0 != 0;
     }
 
     public final void a(int param0, lk param1, int param2, int param3, boolean param4) {
@@ -304,23 +331,22 @@ final class tg implements ci {
         RuntimeException var6 = null;
         int var7 = 0;
         kc var8 = null;
-        Object var9 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
@@ -331,7 +357,6 @@ final class tg implements ci {
               if (param2 == 11447) {
                 break L1;
               } else {
-                var9 = null;
                 boolean discarded$1 = tg.a(65, (pb) null);
                 break L1;
               }
@@ -341,7 +366,7 @@ final class tg implements ci {
                 break L2;
               } else {
                 if (((hl) (Object) param1).field_D) {
-                  var8.b(1 + (var6_int - -(-var8.field_l + param1.field_h >> 1)), (-var8.field_k + param1.field_q >> 1) + 1 + var7, 256);
+                  var8.b(1 + (var6_int - -(-var8.field_l + param1.field_h >> 1005956513)), (-var8.field_k + param1.field_q >> 343228385) + 1 + var7, 256);
                   break L2;
                 } else {
                   break L2;
@@ -362,31 +387,31 @@ final class tg implements ci {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var6;
-            stackOut_11_1 = new StringBuilder().append("tg.C(").append(param0).append(',');
-            stackIn_14_0 = stackOut_11_0;
-            stackIn_14_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_14_0 = (RuntimeException) var6;
+            stackOut_14_1 = new StringBuilder().append("tg.C(").append(param0).append(',');
+            stackIn_17_0 = stackOut_14_0;
+            stackIn_17_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_15_0 = stackOut_12_0;
-              stackIn_15_1 = stackOut_12_1;
-              stackIn_15_2 = stackOut_12_2;
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_18_0 = stackOut_15_0;
+              stackIn_18_1 = stackOut_15_1;
+              stackIn_18_2 = stackOut_15_2;
               break L4;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ma.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

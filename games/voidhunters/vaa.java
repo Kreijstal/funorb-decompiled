@@ -75,7 +75,7 @@ final class vaa extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
         int var1 = 42;
     }

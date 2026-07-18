@@ -207,7 +207,7 @@ final class ij extends pa {
         }
     }
 
-    final static eo h() {
+    final static eo h(int param0) {
         if (!(ic.field_S != fk.field_F)) {
             throw new IllegalStateException();
         }
@@ -218,7 +218,7 @@ final class ij extends pa {
         return mp.field_f;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_M = null;
         field_J = null;
         field_L = null;

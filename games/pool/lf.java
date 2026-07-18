@@ -114,7 +114,7 @@ final class lf {
         }
     }
 
-    final static void a(java.math.BigInteger param0, byte[] param1, java.math.BigInteger param2, ge param3, int param4) {
+    final static void a(java.math.BigInteger param0, byte[] param1, java.math.BigInteger param2, ge param3, int param4, int param5, int param6) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int[] var8 = null;
@@ -369,7 +369,7 @@ final class lf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_a = null;
         field_d = null;

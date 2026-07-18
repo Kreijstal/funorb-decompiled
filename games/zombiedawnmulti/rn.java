@@ -10,7 +10,7 @@ final class rn {
     static String field_b;
     static String field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_g = null;
@@ -53,7 +53,7 @@ final class rn {
         }
     }
 
-    final static cj b() {
+    final static cj b(int param0) {
         return gl.field_L.field_Ib;
     }
 

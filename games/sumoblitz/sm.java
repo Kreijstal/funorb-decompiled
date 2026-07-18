@@ -120,7 +120,7 @@ final class sm {
         return (sm) this;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         aa.field_a[0] = (ah) (Object) new fe(81920, 61440);
         aa.field_a[0].field_I = !rf.a(false) ? 5 : 10;
         aa.field_a[0].field_y = !rf.a(false) ? 5 : 10;
@@ -153,7 +153,7 @@ final class sm {
         return (sm) this;
     }
 
-    final static short[] a(short[] param0, pl param1, int param2) {
+    final static short[] a(short[] param0, pl param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

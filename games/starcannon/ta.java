@@ -11,7 +11,7 @@ final class ta {
     private ue field_h;
     static String field_g;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_g = null;
         field_d = null;

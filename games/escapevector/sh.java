@@ -12,7 +12,7 @@ abstract class sh extends fl {
 
     abstract Object e(byte param0);
 
-    public static void f() {
+    public static void f(int param0) {
         field_s = null;
         field_r = null;
     }
@@ -51,8 +51,7 @@ abstract class sh extends fl {
           L0: {
             var2 = dc.a((byte) 90, "jagex-last-login-method", param1);
             if (var2 != null) {
-              int discarded$2 = 0;
-              var3 = ma.a();
+              var3 = ma.a(false);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -165,6 +164,8 @@ abstract class sh extends fl {
                     break L1;
                   } else {
                     var3 = (Object) (Object) oh.field_p;
+                    var4 = var3;
+                    var4 = var3;
                     break L1;
                   }
                 }
@@ -181,8 +182,7 @@ abstract class sh extends fl {
                   }
                 }
               }
-              int discarded$2 = 1;
-              stackOut_9_0 = vn.a((String) var4, -1, (String) var3, param2);
+              stackOut_9_0 = vn.a((String) var4, -1, (String) var3, param2, 1);
               stackIn_10_0 = stackOut_9_0;
               break L0;
             } else {

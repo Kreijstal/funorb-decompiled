@@ -5,7 +5,7 @@ final class wpa extends ge {
     static String field_K;
     static String field_J;
 
-    final static void a(ha param0) {
+    final static void a(ha param0, int param1) {
         try {
             kn.field_p = param0.a(kv.field_a, rc.field_b, true);
             eda.field_f = param0.a(ds.field_n, ff.field_j, true);
@@ -203,7 +203,7 @@ final class wpa extends ge {
         return stackIn_6_0;
     }
 
-    public static void D() {
+    public static void D(int param0) {
         field_K = null;
         field_J = null;
     }

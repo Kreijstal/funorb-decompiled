@@ -6,7 +6,7 @@ final class ol {
     static String field_b;
     static bc field_a;
 
-    final static StringBuilder a(StringBuilder param0) {
+    final static StringBuilder a(StringBuilder param0, int param1, int param2, char param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -88,7 +88,7 @@ final class ol {
         pn.field_a.a(Integer.toString(param2), param0 + 39, 38 + param4, 16777215, -1);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = -89;
         if (!(fd.field_j)) {
             throw new IllegalStateException();

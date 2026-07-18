@@ -13,7 +13,7 @@ final class rs {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         if (!lca.a(false)) {
             return -1;
         }

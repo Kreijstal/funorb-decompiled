@@ -291,7 +291,7 @@ final class j extends nm {
         }
     }
 
-    private final lj g() {
+    private final lj g(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -805,7 +805,7 @@ final class j extends nm {
         return stackIn_97_0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_jb = null;
     }
 
@@ -830,8 +830,7 @@ final class j extends nm {
         try {
           L0: {
             L1: {
-              int discarded$2 = 1;
-              ((j) this).field_lb = param0[aa.a(param0.length, ((j) this).field_B)];
+              ((j) this).field_lb = param0[aa.a(param0.length, ((j) this).field_B, true)];
               if (param1 == 75) {
                 break L1;
               } else {
@@ -998,8 +997,7 @@ final class j extends nm {
                                               break L8;
                                             }
                                           }
-                                          int discarded$2 = 16;
-                                          kj.a(stackIn_30_0, ((j) this).field_z[2]);
+                                          kj.a(stackIn_30_0, ((j) this).field_z[2], 16);
                                           break L0;
                                         } else {
                                           ((j) this).field_o[var10] = (byte)param1.l(255);
@@ -1062,7 +1060,7 @@ final class j extends nm {
                   }
                 }
               } else {
-                int discarded$3 = ((j) this).e(118);
+                int discarded$1 = ((j) this).e(118);
                 var4_int++;
                 continue L1;
               }
@@ -1279,9 +1277,9 @@ final class j extends nm {
               if (((j) this).field_w == null) {
                 break L1;
               } else {
-                int fieldTemp$5 = ((j) this).field_w.field_m + 1;
+                int fieldTemp$3 = ((j) this).field_w.field_m + 1;
                 ((j) this).field_w.field_m = ((j) this).field_w.field_m + 1;
-                if (fieldTemp$5 >= 100) {
+                if (fieldTemp$3 >= 100) {
                   break L1;
                 } else {
                   break L0;
@@ -1294,8 +1292,7 @@ final class j extends nm {
           }
           L2: {
             if (((j) this).field_D == null) {
-              int discarded$6 = -99;
-              ((j) this).field_D = this.g();
+              ((j) this).field_D = this.g(-99);
               break L2;
             } else {
               ((j) this).field_D.field_m = ((j) this).field_D.field_m + 1;

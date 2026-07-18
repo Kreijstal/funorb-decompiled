@@ -92,8 +92,7 @@ final class fma {
                     if (var31.length != 65) {
                       throw new RuntimeException();
                     } else {
-                      int discarded$4 = 8;
-                      var32 = fja.a(-5 + (var10.field_h - var30.length), var10.field_g, 5);
+                      var32 = fja.a(-5 + (var10.field_h - var30.length), var10.field_g, 5, 8);
                       var7 = 0;
                       L2: while (true) {
                         if (var7 < 64) {
@@ -116,8 +115,7 @@ final class fma {
               if (var5.length != 65) {
                 throw new RuntimeException();
               } else {
-                int discarded$5 = 8;
-                var33 = fja.a(-5 + (var10.field_h - var30.length), var10.field_g, 5);
+                var33 = fja.a(-5 + (var10.field_h - var30.length), var10.field_g, 5, 8);
                 var7 = 0;
                 L3: while (true) {
                   if (var7 < 64) {
@@ -160,8 +158,7 @@ final class fma {
                 if (var5.length != 65) {
                   throw new RuntimeException();
                 } else {
-                  int discarded$6 = 8;
-                  var29 = fja.a(-5 + (var10.field_h - var26.length), var10.field_g, 5);
+                  var29 = fja.a(-5 + (var10.field_h - var26.length), var10.field_g, 5, 8);
                   var7 = 0;
                   L5: while (true) {
                     if (var7 < 64) {
@@ -185,8 +182,7 @@ final class fma {
                 if (var27.length != 65) {
                   throw new RuntimeException();
                 } else {
-                  int discarded$7 = 8;
-                  var28 = fja.a(-5 + (var10.field_h - var26.length), var10.field_g, 5);
+                  var28 = fja.a(-5 + (var10.field_h - var26.length), var10.field_g, 5, 8);
                   var16 = var28;
                   var9 = var16;
                   var7 = 0;

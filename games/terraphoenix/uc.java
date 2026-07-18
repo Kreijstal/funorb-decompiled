@@ -9,7 +9,7 @@ final class uc extends dh {
     private qe field_m;
     static String field_q;
 
-    public static void m() {
+    public static void m(int param0) {
         field_p = null;
         field_q = null;
         field_n = null;
@@ -43,7 +43,7 @@ final class uc extends dh {
         int discarded$0 = m.a(1);
     }
 
-    final static bg[] o() {
+    final static bg[] o(int param0) {
         int var2 = 0;
         int var3 = Terraphoenix.field_V;
         bg[] var1 = new bg[kf.field_b];
@@ -54,7 +54,7 @@ final class uc extends dh {
         return var1;
     }
 
-    final static int j() {
+    final static int j(byte param0) {
         return (int)(1000000000L / dm.field_f);
     }
 
@@ -65,7 +65,7 @@ final class uc extends dh {
         ((uc) this).field_o = ((uc) this).field_k * 8;
     }
 
-    final static ci[] l() {
+    final static ci[] l(int param0) {
         ci[] var1 = null;
         int var2 = 0;
         int var3 = 0;

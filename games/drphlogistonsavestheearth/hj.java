@@ -14,7 +14,7 @@ abstract class hj {
     static gk field_i;
     static String field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_a = null;
         field_g = null;
@@ -92,7 +92,7 @@ abstract class hj {
         return stackIn_4_0;
     }
 
-    final static String a(String param0, vj param1, String param2) {
+    final static String a(String param0, vj param1, String param2, int param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;

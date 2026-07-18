@@ -143,7 +143,7 @@ final class ga {
         }
     }
 
-    final static rk a(int param0) {
+    final static rk a(int param0, int param1) {
         double var2 = 1.0;
         var2 = var2 + (((double)param0 - (double)10) / 16.0 + ((double)ok.a(tg.field_f, -99, 7) - 3.0) / 10.0);
         return new rk(1 + ok.a(tg.field_f, -112, 14), 10, of.a(var2, 65536));

@@ -10,7 +10,7 @@ final class dn extends hb {
     static qr field_f;
     static String field_j;
 
-    final static String a(String param0) {
+    final static String a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -85,7 +85,7 @@ final class dn extends hb {
         return stackIn_5_0;
     }
 
-    final static void a(int param0, fk param1) {
+    final static void a(int param0, fk param1, byte param2) {
         sl var5 = null;
         int var4 = 0;
         try {
@@ -110,11 +110,11 @@ final class dn extends hb {
         }
     }
 
-    final static gq[] a() {
+    final static gq[] a(int param0) {
         return new gq[]{on.field_g, nd.field_c, td.field_O, ss.field_c, cl.field_p, kf.field_c, tf.field_j, na.field_I, ld.field_h, lc.field_b, m.field_A, mc.field_r, ks.field_a, ro.field_c};
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_f = null;
         field_k = null;
         field_j = null;

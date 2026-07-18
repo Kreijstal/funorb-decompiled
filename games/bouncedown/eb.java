@@ -78,7 +78,7 @@ final class eb extends lc implements ki, rc {
         }
     }
 
-    private final String c() {
+    private final String c(boolean param0) {
         return "</col></u>";
     }
 
@@ -211,27 +211,24 @@ final class eb extends lc implements ki, rc {
               if (param1 == 125) {
                 break L1;
               } else {
-                String discarded$8 = this.a(false);
+                String discarded$2 = this.a(false);
                 break L1;
               }
             }
             if (0 != param3) {
               if (1 == param3) {
-                int discarded$9 = 21;
-                eh.a("privacy.ws");
+                eh.a("privacy.ws", (byte) 21);
                 return;
               } else {
                 if (param3 != 2) {
                   break L0;
                 } else {
-                  int discarded$10 = 21;
-                  eh.a("conduct.ws");
+                  eh.a("conduct.ws", (byte) 21);
                   return;
                 }
               }
             } else {
-              int discarded$11 = 21;
-              eh.a("terms.ws");
+              eh.a("terms.ws", (byte) 21);
               return;
             }
           }
@@ -267,7 +264,7 @@ final class eb extends lc implements ki, rc {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         try {
             param0.setFocusTraversalKeysEnabled(false);
             param0.addKeyListener((java.awt.event.KeyListener) (Object) qj.field_c);
@@ -306,7 +303,6 @@ final class eb extends lc implements ki, rc {
             ((eb) this).field_A = param0;
             ((eb) this).field_H = new wd(pc.field_i, (sk) null);
             ((eb) this).field_H.field_j = (fc) (Object) new jh();
-            int discarded$1 = 0;
             var7 = jf.a(pa.field_b, new String[2], (byte) -126);
             var3 = 20;
             var4 = new jd(sg.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, sg.field_a.field_s, -1, 2147483647, true);

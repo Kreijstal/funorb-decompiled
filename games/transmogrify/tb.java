@@ -42,8 +42,7 @@ final class tb {
               d.field_d.a(-124, mf.field_c[1]);
               d.field_d.a(-105, mf.field_c[2]);
               d.field_d.a(-103, mf.field_c[3]);
-              int discarded$2 = 1;
-              gb.a(d.field_d);
+              gb.a(d.field_d, true);
               d.field_d.c(param1, -159688920);
               param0.a((byte) -115, d.field_d);
               ff.field_D.field_h = 0;
@@ -103,8 +102,7 @@ final class tb {
             }
             L7: {
               ff.field_D.f(6389, var6);
-              int discarded$3 = -45;
-              var7 = wk.a(ha.b(99));
+              var7 = wk.a(ha.b(99), (byte) -45);
               if (var7 == null) {
                 var7 = "";
                 break L7;
@@ -158,14 +156,14 @@ final class tb {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_d = null;
         field_c = null;
         field_b = null;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;

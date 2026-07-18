@@ -6,7 +6,7 @@ final class g {
     static String field_c;
     static wb field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;

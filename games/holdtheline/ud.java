@@ -766,7 +766,7 @@ final class ud {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         field_h = null;
         field_q = null;

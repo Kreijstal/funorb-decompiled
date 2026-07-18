@@ -174,7 +174,7 @@ final class cg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
     }
@@ -186,7 +186,7 @@ final class cg {
         bf.field_o = 8;
     }
 
-    final static void b(boolean param0) {
+    final static void b(boolean param0, int param1) {
         L0: {
           if (lg.field_W > 0) {
             if (ve.field_Qb) {

@@ -161,8 +161,7 @@ final class ec {
             if (param2 != 50) {
                 ec.a(true, 108);
             }
-            int discarded$0 = 1;
-            this.a(param2 ^ 50, param0, param1);
+            this.a(param2 ^ 50, param0, param1, 1);
         } catch (RuntimeException runtimeException) {
             throw oi.a((Throwable) (Object) runtimeException, "ec.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -221,7 +220,7 @@ final class ec {
         this(param0, param0);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_n = null;
         field_d = null;
@@ -234,7 +233,7 @@ final class ec {
         field_e = null;
     }
 
-    private final void a(int param0, Object param1, long param2) {
+    private final void a(int param0, Object param1, long param2, int param3) {
         mb var6 = null;
         wc var6_ref = null;
         int var7 = TetraLink.field_J;

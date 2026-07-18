@@ -7,7 +7,7 @@ final class bj {
     static int[] field_a;
     static int[] field_c;
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_5_0 = 0;
@@ -49,8 +49,7 @@ final class bj {
             L1: {
               L2: {
                 param1 = s.a(param1, '_', "", (byte) -10);
-                int discarded$2 = 0;
-                var3 = vh.a(param1);
+                var3 = vh.a(param1, 0);
                 if (param0.indexOf(param1) != -1) {
                   break L2;
                 } else {
@@ -127,7 +126,7 @@ final class bj {
         return stackIn_5_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;

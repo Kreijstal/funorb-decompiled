@@ -154,7 +154,7 @@ final class aab extends rqa {
         return stackIn_4_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_o = null;
     }
 

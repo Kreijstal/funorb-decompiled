@@ -13,7 +13,7 @@ final class uj {
     int field_g;
     static qj field_c;
 
-    final static ti[] a() {
+    final static ti[] a(int param0) {
         ti[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -48,7 +48,7 @@ final class uj {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_c = null;
         field_e = null;

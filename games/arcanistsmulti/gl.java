@@ -514,8 +514,7 @@ final class gl {
                         if (ce.field_h != 0) {
                           break L3;
                         } else {
-                          int discarded$1 = -85;
-                          ik.a();
+                          ik.a((byte) -85);
                           break L3;
                         }
                       }

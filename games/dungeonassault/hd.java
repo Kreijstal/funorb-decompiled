@@ -128,7 +128,7 @@ final class hd {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_h = null;
         int var1 = 0;
         field_e = null;
@@ -327,8 +327,7 @@ final class hd {
     }
 
     final static void a(int param0, boolean param1, String param2, boolean param3) {
-        int discarded$0 = -1;
-        tn.a();
+        tn.a(-1);
         lg.field_w.h(1);
         wo.field_e = new dn(co.field_C, (String) null, qc.field_t, param3, param1);
         if (param0 != 8192) {
@@ -464,7 +463,7 @@ final class hd {
         ((hd) this).field_k = param0;
     }
 
-    private final void a() throws IOException {
+    private final void a(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -610,8 +609,7 @@ final class hd {
                 } else {
                   if (param3 > 0) {
                     L6: {
-                      int discarded$2 = -57;
-                      this.a();
+                      this.a(-57);
                       var9_int = param3;
                       if (var9_int > ((hd) this).field_l) {
                         var9_int = ((hd) this).field_l;
@@ -655,9 +653,9 @@ final class hd {
                             break L8;
                           } else {
                             param3--;
-                            int incrementValue$3 = param0;
+                            int incrementValue$1 = param0;
                             param0++;
-                            param2[incrementValue$3] = (byte) 0;
+                            param2[incrementValue$1] = (byte) 0;
                             ((hd) this).field_k = ((hd) this).field_k + 1L;
                             continue L10;
                           }

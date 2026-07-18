@@ -42,7 +42,7 @@ final class jn {
         }
     }
 
-    final static void a(String param0, boolean param1) {
+    final static void a(String param0, boolean param1, int param2) {
         u.field_k = true;
         di.field_h = param1 ? true : false;
         vf.field_k = new ed(p.field_b, go.field_k, param0, hk.field_s, di.field_h);
@@ -290,7 +290,7 @@ final class jn {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;

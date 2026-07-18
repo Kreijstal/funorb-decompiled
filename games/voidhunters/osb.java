@@ -12,7 +12,7 @@ final class osb implements dja {
         return (tv[]) (Object) new cc[param1];
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

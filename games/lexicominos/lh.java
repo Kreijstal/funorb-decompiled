@@ -183,7 +183,7 @@ final class lh extends ik {
         var1.a(109);
     }
 
-    private final void a(boolean param0, lh param1) {
+    private final void a(boolean param0, lh param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         n var5 = null;
@@ -387,8 +387,7 @@ final class lh extends ik {
     lh(lh param0, boolean param1) {
         this();
         try {
-            int discarded$0 = 6;
-            param0.a(param1, (lh) this);
+            param0.a(param1, (lh) this, 6);
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "lh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

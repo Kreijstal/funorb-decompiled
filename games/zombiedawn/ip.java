@@ -321,7 +321,7 @@ final class ip extends sp {
         return var4;
     }
 
-    private final void a(lf param0, int param1) {
+    private final void a(lf param0, int param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -756,13 +756,11 @@ final class ip extends sp {
                 var2 = param0;
                 L2: while (true) {
                   if (var3.field_r >= var2) {
-                    int discarded$26 = -26206;
-                    this.a(var3, var2);
+                    this.a(var3, var2, -26206);
                     var3.field_r = var3.field_r - var2;
                     break L1;
                   } else {
-                    int discarded$27 = -26206;
-                    this.a(var3, var3.field_r);
+                    this.a(var3, var3.field_r, -26206);
                     var2 = var2 - var3.field_r;
                     if (!((ip) this).field_n.a(-32464, 0, var3, (int[]) null, var2)) {
                       continue L2;

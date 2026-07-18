@@ -6,7 +6,7 @@ final class pia extends oda implements oo {
     private htb field_w;
     static mma field_x;
 
-    public static void e() {
+    public static void e(int param0) {
         int var1 = -60;
         field_x = null;
     }

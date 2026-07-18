@@ -44,7 +44,7 @@ final class nk extends pe implements ng, qd, ha {
         }
     }
 
-    private final boolean h() {
+    private final boolean h(byte param0) {
         if (!this.g(-50)) {
             return false;
         }
@@ -88,7 +88,7 @@ final class nk extends pe implements ng, qd, ha {
         }
     }
 
-    private final String d() {
+    private final String d(boolean param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -360,15 +360,13 @@ final class nk extends pe implements ng, qd, ha {
             L1: {
               if (param1 != ((nk) this).field_I) {
                 if (param1 == ((nk) this).field_V) {
-                  int discarded$7 = 107;
-                  boolean discarded$8 = this.h();
+                  boolean discarded$2 = this.h((byte) 107);
                   break L1;
                 } else {
                   break L1;
                 }
               } else {
-                int discarded$9 = -97;
-                pg.a();
+                pg.a((byte) -97);
                 break L1;
               }
             }
@@ -705,8 +703,6 @@ final class nk extends pe implements ng, qd, ha {
         ke dupTemp$1 = new ke(10000536);
         ((nk) this).field_O.field_w = (bf) (Object) dupTemp$1;
         ((nk) this).field_S.field_w = (bf) (Object) dupTemp$1;
-        int discarded$2 = 0;
-        int discarded$3 = 2;
         String var2 = di.a(new String[2], (byte) 76, qj.field_b);
         int var3 = 20;
         var3 = var3 + this.a(var3, true, 170, (ub) (Object) ((nk) this).field_F, ii.field_d);
@@ -868,21 +864,18 @@ final class nk extends pe implements ng, qd, ha {
             L1: {
               if (param0 != 0) {
                 if (1 == param0) {
-                  int discarded$7 = 12;
-                  fa.a("privacy.ws");
+                  fa.a("privacy.ws", 12);
                   break L1;
                 } else {
                   if (param0 != 2) {
                     break L1;
                   } else {
-                    int discarded$8 = 12;
-                    fa.a("conduct.ws");
+                    fa.a("conduct.ws", 12);
                     break L1;
                   }
                 }
               } else {
-                int discarded$9 = 12;
-                fa.a("terms.ws");
+                fa.a("terms.ws", 12);
                 break L1;
               }
             }
@@ -921,7 +914,7 @@ final class nk extends pe implements ng, qd, ha {
         }
     }
 
-    private final String g() {
+    private final String g(byte param0) {
         return "</col></u>";
     }
 

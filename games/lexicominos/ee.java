@@ -81,8 +81,7 @@ abstract class ee {
           L0: {
             var5_int = param4.c(param0, (byte) -89);
             var6 = param4.a(param1, -27964, var5_int);
-            int discarded$2 = 96;
-            stackOut_2_0 = eg.a(var6, var5_int, param4, param3);
+            stackOut_2_0 = eg.a(var6, var5_int, param4, param3, 96);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -196,7 +195,7 @@ abstract class ee {
 
     abstract int c(int param0);
 
-    final static void b() {
+    final static void b(int param0) {
     }
 
     final static void a(String param0, int param1, java.applet.Applet param2) {
@@ -218,8 +217,7 @@ abstract class ee {
                     var5 = var7;
                     var5 = var7;
                     if (param0.length() != 0) {
-                        int discarded$1 = 28;
-                        var5 = var7 + "; Expires=" + q.a(rf.c(0) - -94608000000L) + "; Max-Age=" + 94608000L;
+                        var5 = var7 + "; Expires=" + q.a(rf.c(0) - -94608000000L, (byte) 28) + "; Max-Age=" + 94608000L;
                     } else {
                         var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }

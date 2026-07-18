@@ -17,7 +17,7 @@ final class nh {
         uh.field_n.a((byte) 76, param1, aa.field_i[uf.field_n], (param3 ? 30 : 60) * b.field_r / 22050);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;
@@ -166,7 +166,7 @@ final class nh {
         return stackIn_3_0;
     }
 
-    final static String a(char param0, int param1) {
+    final static String a(char param0, int param1, byte param2) {
         int var4 = 0;
         int var5 = Lexicominos.field_L ? 1 : 0;
         char[] var6 = new char[param1];

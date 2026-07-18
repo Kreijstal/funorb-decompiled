@@ -71,7 +71,7 @@ final class spa extends wda {
         return 6;
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_o = null;
     }
 

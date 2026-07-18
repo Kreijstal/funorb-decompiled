@@ -759,11 +759,9 @@ final class sb extends aa {
                   if (var2_int != -1) {
                     var3 = param1.substring(0, var2_int);
                     var4 = param1.substring(1 + var2_int);
-                    int discarded$4 = 0;
-                    var5 = dd.a(var3);
+                    var5 = dd.a(var3, false);
                     if (var5 == null) {
-                      int discarded$5 = -98;
-                      stackOut_11_0 = ne.a(var4);
+                      stackOut_11_0 = ne.a(var4, (byte) -98);
                       stackIn_12_0 = stackOut_11_0;
                       break L0;
                     } else {
@@ -818,7 +816,7 @@ final class sb extends aa {
         return stackIn_12_0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_q = null;
         field_r = null;
         field_l = null;

@@ -354,7 +354,7 @@ class kg extends vg {
         }
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         if (!(null == cb.field_h)) {
             cb.field_h.a(0);
         }
@@ -366,8 +366,7 @@ class kg extends vg {
             gi.field_a = param2;
             em.field_h = 2;
             var5 = (CharSequence) (Object) param2;
-            int discarded$0 = 1;
-            nd.field_k = ji.a(var5);
+            nd.field_k = ji.a(var5, true);
             hd.field_k = param1;
             sr.field_h = true;
         } catch (RuntimeException runtimeException) {
@@ -573,7 +572,7 @@ class kg extends vg {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_C = null;
     }
 

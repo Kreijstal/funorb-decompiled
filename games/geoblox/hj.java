@@ -74,7 +74,7 @@ final class hj {
         }
     }
 
-    final static dm[] a() {
+    final static dm[] a(int param0) {
         dm[] var1 = null;
         int var2 = 0;
         int var3 = 0;

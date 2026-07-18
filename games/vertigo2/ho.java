@@ -13,7 +13,7 @@ final class ho {
     byte field_g;
     int[][] field_f;
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(sq.field_c)) {
             throw new IllegalStateException();
         }
@@ -192,8 +192,7 @@ final class ho {
                 lr.field_P.field_Bb = vl.a(lr.field_P.field_db, 3, 0, 1, 11579568, 8421504);
                 im.field_j.a(99, lr.field_P.field_Fb + -10, -2 + (lr.field_P.field_db - 34), 5, 5);
                 Vertigo2.field_M.a(74, 80, 24, -5 + (lr.field_P.field_db - 24), (-80 + lr.field_P.field_Fb) / 2);
-                int discarded$1 = -52;
-                po.b();
+                po.b((byte) -52);
                 break L0;
               } else {
                 L8: {
@@ -406,7 +405,7 @@ final class ho {
         ((ho) this).field_g = (byte) 0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_i = null;
         field_a = null;
         field_e = null;

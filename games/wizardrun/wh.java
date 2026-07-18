@@ -29,7 +29,7 @@ final class wh implements Iterator {
         field_j = null;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((wh) this).field_f = 1;
         ((wh) this).field_h = null;
         ((wh) this).field_a = ((wh) this).field_i.field_c[0].field_b;
@@ -284,7 +284,7 @@ final class wh implements Iterator {
         return stackIn_69_0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -354,8 +354,7 @@ final class wh implements Iterator {
         ((wh) this).field_h = null;
         try {
             ((wh) this).field_i = param0;
-            int discarded$0 = -67;
-            this.a();
+            this.a((byte) -67);
         } catch (RuntimeException runtimeException) {
             throw bd.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

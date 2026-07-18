@@ -85,12 +85,12 @@ final class sd {
         return new byte[param0];
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
     }
 
-    final static void a(double param0, int param1, oha param2, byte param3, int param4) {
+    final static void a(double param0, int param1, oha param2, byte param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

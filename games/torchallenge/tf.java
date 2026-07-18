@@ -30,7 +30,7 @@ final class tf {
     private byte[] field_q;
     static eg field_x;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_u = null;
         field_j = null;
         field_w = null;
@@ -469,8 +469,7 @@ final class tf {
     tf(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-            int discarded$0 = 0;
-            ((tf) this).field_k = k.a(param0, param0.length);
+            ((tf) this).field_k = k.a(param0, param0.length, 0);
             if (((tf) this).field_k != param1) {
                 throw new RuntimeException();
             }

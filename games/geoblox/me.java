@@ -12,7 +12,7 @@ final class me extends hf {
     int field_f;
     static sl field_g;
 
-    final static void b() {
+    final static void b(int param0) {
         if (fj.field_p != null) {
             fj.field_p.c();
             if (!(null == oh.field_a)) {
@@ -25,12 +25,12 @@ final class me extends hf {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_g = null;
         field_j = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         jk.field_d = 1;
     }
 

@@ -57,8 +57,7 @@ final class t extends gd {
                   }
                 }
                 ((t) this).field_r = (dt) param2;
-                int discarded$1 = 0;
-                this.e();
+                this.e(0);
                 this.a(71, param0);
                 ((t) this).field_i = null;
                 ((t) this).field_b.field_p = 0;
@@ -615,7 +614,7 @@ final class t extends gd {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;

@@ -24,8 +24,7 @@ final class ca extends ek {
         if (param0 != 0) {
             return 38L;
         }
-        int discarded$0 = 0;
-        ((ca) this).field_h = ((ca) this).field_h + this.b();
+        ((ca) this).field_h = ((ca) this).field_h + this.b(false);
         if (((ca) this).field_e > ((ca) this).field_h) {
             return (((ca) this).field_e - ((ca) this).field_h) / 1000000L;
         }
@@ -50,7 +49,7 @@ final class ca extends ek {
         ((ca) this).field_i = 0L;
     }
 
-    private final long b() {
+    private final long b(boolean param0) {
         int var8 = 0;
         int var9 = MinerDisturbance.field_ab;
         long var2 = System.nanoTime();
@@ -77,7 +76,7 @@ final class ca extends ek {
         return kj.field_a.a(false);
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return rj.field_f == 12 || rj.field_f == 13;
     }
 

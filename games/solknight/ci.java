@@ -206,7 +206,7 @@ class ci extends gf implements ka {
         ((ci) this).c(-3399, (rc) (Object) var2);
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_qb = null;
         field_pb = null;
         field_gb = null;
@@ -220,8 +220,7 @@ class ci extends gf implements ka {
           L0: {
             ((ci) this).field_J = false;
             if (((ci) this).field_ob) {
-              int discarded$2 = 85;
-              fj.a();
+              fj.a((byte) 85);
               break L0;
             } else {
               if (!((ci) this).field_rb) {
@@ -670,7 +669,7 @@ class ci extends gf implements ka {
             ua.field_G = (mg) (Object) si.a(param0, "commonui", true, "arezzo14", param3);
             uc.field_g = (mg) (Object) si.a(param0, "commonui", true, "arezzo14bold", param3);
             var18 = new o(param2.a(4, "button.gif", ""), (java.awt.Component) (Object) dc.field_q);
-            od discarded$2 = ve.a(param3, -97, "dropdown", "commonui");
+            od discarded$1 = ve.a(param3, -97, "dropdown", "commonui");
             var5 = dj.a(8108, "screen_options", param3, "commonui");
             md.field_s = new od[4];
             r.field_i = new od[4];
@@ -693,8 +692,7 @@ class ci extends gf implements ka {
                 L2: while (true) {
                   if (3 <= var9) {
                     var9 = var18.field_t;
-                    int discarded$3 = 91;
-                    fl.b();
+                    fl.b((byte) 91);
                     var18.a();
                     mi.c(0, 0, mi.field_a, mi.field_d);
                     var16 = new o(var9, var9);
@@ -885,7 +883,7 @@ class ci extends gf implements ka {
         return stackIn_4_0;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         gg var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -902,16 +900,13 @@ class ci extends gf implements ka {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    int discarded$10 = 6;
-                    int discarded$11 = 1;
-                    wi.c();
+                    wi.c(1, 6);
                     var2 = bc.field_J.b(-104);
                     continue L2;
                   }
                 }
               } else {
-                int discarded$12 = 118;
-                vg.a(6, var4);
+                vg.a(6, var4, 118);
                 var4 = (ob) (Object) he.field_d.b(-84);
                 continue L1;
               }
@@ -924,7 +919,7 @@ class ci extends gf implements ka {
         }
     }
 
-    final static String a(CharSequence[] param0) {
+    final static String a(CharSequence[] param0, byte param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -1016,8 +1011,7 @@ class ci extends gf implements ka {
               ic.field_z.b(ed.field_a[1], false);
               ic.field_z.b(ed.field_a[2], false);
               ic.field_z.b(ed.field_a[3], false);
-              int discarded$1 = 107;
-              vh.a(ic.field_z);
+              vh.a(ic.field_z, 107);
               ic.field_z.a(true, param2);
               param3.a(-12518, ic.field_z);
               id.field_c.field_m = 0;

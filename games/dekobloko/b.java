@@ -10,7 +10,7 @@ final class b extends ek {
     int field_L;
     static int[] field_P;
 
-    public static void a() {
+    public static void a(int param0) {
         field_Q = null;
         field_P = null;
         field_M = null;

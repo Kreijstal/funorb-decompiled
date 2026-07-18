@@ -20,8 +20,7 @@ final class hm extends tfa implements gf {
             ((hm) this).field_k = param3;
             ((hm) this).field_l = param4;
             ((hm) this).field_j.a(true, (iva) this);
-            int discarded$0 = 5126;
-            jaggl.OpenGL.glTexImage2Dub(((hm) this).field_i, 0, ((hm) this).d(108), param3, param4, 0, waa.a(((hm) this).field_f, 1383), lr.a(((hm) this).field_a), (byte[]) null, 0);
+            jaggl.OpenGL.glTexImage2Dub(((hm) this).field_i, 0, ((hm) this).d(108), param3, param4, 0, waa.a(((hm) this).field_f, 1383), lr.a(((hm) this).field_a, 5126), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "hm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -233,7 +232,7 @@ final class hm extends tfa implements gf {
         return true;
     }
 
-    final static void h() {
+    final static void h(byte param0) {
         gg.field_f = null;
         uda.field_r = null;
         uua.field_a = null;

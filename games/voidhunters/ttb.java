@@ -171,7 +171,7 @@ final class ttb extends shb {
         }
     }
 
-    private final phb b() {
+    private final phb b(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -224,8 +224,7 @@ final class ttb extends shb {
             return;
         }
         ((ttb) this).field_C = new phb[]{this.a(true, ((ttb) this).field_H, ((ttb) this).field_t), this.a(true, ((ttb) this).field_G, ((ttb) this).field_A)};
-        int discarded$0 = 0;
-        ((ttb) this).field_y = this.b();
+        ((ttb) this).field_y = this.b(false);
         ((ttb) this).field_u = ((ttb) this).field_y.a();
         ((ttb) this).field_F = new phb(((ttb) this).field_f >> 1, ((ttb) this).field_f);
     }

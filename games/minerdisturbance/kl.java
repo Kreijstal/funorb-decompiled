@@ -4,7 +4,7 @@
 final class kl {
     static ec field_a;
 
-    final static String a(CharSequence[] param0, int param1) {
+    final static String a(CharSequence[] param0, int param1, int param2, boolean param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -42,8 +42,7 @@ final class kl {
         try {
           L0: {
             if (param1 != 0) {
-              int discarded$9 = 0;
-              kl.a();
+              kl.a(false);
               if (1 != param1) {
                 var4_int = param1;
                 var5 = 0;
@@ -61,10 +60,10 @@ final class kl {
                         L3: {
                           var8 = param0[var7];
                           if (var8 != null) {
-                            StringBuilder discarded$10 = var6.append(var8);
+                            StringBuilder discarded$5 = var6.append(var8);
                             break L3;
                           } else {
-                            StringBuilder discarded$11 = var6.append("null");
+                            StringBuilder discarded$6 = var6.append("null");
                             break L3;
                           }
                         }
@@ -137,7 +136,7 @@ final class kl {
         return stackIn_22_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 

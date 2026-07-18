@@ -168,7 +168,7 @@ final class h {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 106;
         field_f = null;
     }

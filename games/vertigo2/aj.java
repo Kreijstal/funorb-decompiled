@@ -264,7 +264,7 @@ final class aj extends ig {
         }
     }
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, byte param2) {
         try {
             if (df.field_l != null) {
                 df.field_l.h((byte) 64);
@@ -712,7 +712,7 @@ final class aj extends ig {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_i = null;
     }

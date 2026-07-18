@@ -18,7 +18,7 @@ final class ti extends nb implements nf, jk {
     private kf field_N;
     static String field_C;
 
-    private final void g() {
+    private final void g(int param0) {
         L0: {
           L1: {
             if (sg.a(false)) {
@@ -35,8 +35,7 @@ final class ti extends nb implements nf, jk {
               }
             }
           }
-          int discarded$2 = -111;
-          ha.a(((ti) this).field_G.field_u, ((ti) this).field_B.field_u);
+          ha.a(((ti) this).field_G.field_u, ((ti) this).field_B.field_u, -111);
           break L0;
         }
     }
@@ -226,7 +225,7 @@ final class ti extends nb implements nf, jk {
           L0: {
             L1: {
               if (((ti) this).field_G == param0) {
-                boolean discarded$4 = ((ti) this).field_B.a((byte) 44, (w) this);
+                boolean discarded$2 = ((ti) this).field_B.a((byte) 44, (w) this);
                 break L1;
               } else {
                 break L1;
@@ -237,8 +236,7 @@ final class ti extends nb implements nf, jk {
                 if (((ti) this).field_B != param0) {
                   break L2;
                 } else {
-                  int discarded$5 = 0;
-                  this.g();
+                  this.g(0);
                   break L2;
                 }
               }
@@ -279,7 +277,7 @@ final class ti extends nb implements nf, jk {
         }
     }
 
-    final static int a(int param0, CharSequence param1, int param2) {
+    final static int a(int param0, CharSequence param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -454,7 +452,7 @@ final class ti extends nb implements nf, jk {
         return stackIn_36_0;
     }
 
-    final static jb[] a() {
+    final static jb[] a(byte param0) {
         int var2 = 0;
         int var3 = Lexicominos.field_L ? 1 : 0;
         jb[] var1 = new jb[th.field_t];
@@ -489,8 +487,7 @@ final class ti extends nb implements nf, jk {
           L0: {
             L1: {
               if (param4 == ((ti) this).field_N) {
-                int discarded$67 = 0;
-                this.g();
+                this.g(0);
                 break L1;
               } else {
                 if (param4 == ((ti) this).field_H) {
@@ -500,16 +497,14 @@ final class ti extends nb implements nf, jk {
                   if (((ti) this).field_E == param4) {
                     if (!((ti) this).field_J) {
                       if (((ti) this).field_D) {
-                        int discarded$68 = 0;
-                        ga.b();
+                        ga.b(0);
                         break L1;
                       } else {
                         ld.i(param2 ^ -215531225);
                         break L1;
                       }
                     } else {
-                      int discarded$69 = 115;
-                      vi.a();
+                      vi.a((byte) 115);
                       break L1;
                     }
                   } else {
@@ -1002,8 +997,8 @@ final class ti extends nb implements nf, jk {
         ((ti) this).field_G.j(0);
         ((ti) this).field_B.j(0);
         if (param0 > -59) {
-            int discarded$0 = 1;
-            int discarded$1 = ti.a(-96, (CharSequence) null, 81);
+            Object var3 = null;
+            int discarded$0 = ti.a(-96, (CharSequence) null, 81, true);
         }
     }
 
@@ -1017,7 +1012,7 @@ final class ti extends nb implements nf, jk {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_I = null;
         field_C = null;
         field_L = null;

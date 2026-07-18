@@ -837,7 +837,7 @@ final class lja implements ntb {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = 0;
         field_c = null;
     }
@@ -975,35 +975,35 @@ final class lja implements ntb {
             if (param1 <= -19) {
               L1: {
                 var4 = 0;
-                if (var5.field_e == var5.field_e) {
+                if (var5.field_e == ((lja) this).field_e) {
                   break L1;
                 } else {
                   var4 = 1;
-                  System.out.println("int hook_id has changed. before=" + var5.field_e + ", now=" + var5.field_e);
+                  System.out.println("int hook_id has changed. before=" + var5.field_e + ", now=" + ((lja) this).field_e);
                   break L1;
                 }
               }
               L2: {
-                if (var5.field_h == var5.field_h) {
+                if (var5.field_h == ((lja) this).field_h) {
                   break L2;
                 } else {
-                  System.out.println("int target_rope_length has changed. before=" + var5.field_h + ", now=" + var5.field_h);
+                  System.out.println("int target_rope_length has changed. before=" + var5.field_h + ", now=" + ((lja) this).field_h);
                   var4 = 1;
                   break L2;
                 }
               }
               L3: {
-                if (var5.field_a == var5.field_a) {
+                if (var5.field_a == ((lja) this).field_a) {
                   break L3;
                 } else {
-                  System.out.println("int rope_length has changed. before=" + var5.field_a + ", now=" + var5.field_a);
+                  System.out.println("int rope_length has changed. before=" + var5.field_a + ", now=" + ((lja) this).field_a);
                   var4 = 1;
                   break L3;
                 }
               }
               L4: {
-                if (var5.field_g != var5.field_g) {
-                  System.out.println("int reload has changed. before=" + var5.field_g + ", now=" + var5.field_g);
+                if (var5.field_g != ((lja) this).field_g) {
+                  System.out.println("int reload has changed. before=" + var5.field_g + ", now=" + ((lja) this).field_g);
                   var4 = 1;
                   break L4;
                 } else {
@@ -1150,16 +1150,16 @@ final class lja implements ntb {
               L2: {
                 var3_int = -37 % ((param0 - 22) / 59);
                 var4 = (lja) (Object) param1;
-                if (var4.field_e != var4.field_e) {
+                if (((lja) this).field_e != var4.field_e) {
                   break L2;
                 } else {
-                  if (var4.field_h != var4.field_h) {
+                  if (var4.field_h != ((lja) this).field_h) {
                     break L2;
                   } else {
-                    if (var4.field_a != var4.field_a) {
+                    if (((lja) this).field_a != var4.field_a) {
                       break L2;
                     } else {
-                      if (var4.field_g == var4.field_g) {
+                      if (((lja) this).field_g == var4.field_g) {
                         stackOut_6_0 = 0;
                         stackIn_7_0 = stackOut_6_0;
                         break L1;
@@ -1215,14 +1215,14 @@ final class lja implements ntb {
         try {
             var6 = (lja) (Object) param1;
             var7 = var6;
-            var7.field_h = var6.field_h;
+            var7.field_h = ((lja) this).field_h;
             if (param0 <= 54) {
                 Object var4 = null;
                 ((lja) this).a(-126, -1, (int[]) null, -127, 86, -67, -61, (byte) 75, (pe) null, -84, (anb) null);
             }
-            var7.field_e = var6.field_e;
-            var7.field_g = var6.field_g;
-            var7.field_a = var6.field_a;
+            var7.field_e = ((lja) this).field_e;
+            var7.field_g = ((lja) this).field_g;
+            var7.field_a = ((lja) this).field_a;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "lja.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

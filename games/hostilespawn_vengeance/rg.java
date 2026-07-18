@@ -10,8 +10,7 @@ final class rg {
 
     final static boolean a(byte param0) {
         int var1 = -58 % ((param0 - 55) / 62);
-        int discarded$0 = 0;
-        return uk.a(bm.field_b);
+        return uk.a(bm.field_b, 0);
     }
 
     final static boolean a(byte param0, char param1) {
@@ -47,19 +46,19 @@ final class rg {
         return stackIn_7_0 != 0;
     }
 
-    final static pg b() {
+    final static pg b(int param0) {
         pg var1 = new pg(ra.field_a, vc.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], ja.field_e[0], bf.field_d);
         uj.d(-43);
         return var1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         qj var3 = null;
@@ -104,8 +103,7 @@ final class rg {
                     var6_int = 1;
                     L4: while (true) {
                       if (var4 <= var6_int) {
-                        int discarded$1 = 96;
-                        qh.a(var4, var5);
+                        qh.a(var4, var5, 96);
                         var6_int = 0;
                         L5: while (true) {
                           if (var4 <= var6_int) {

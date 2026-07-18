@@ -7,7 +7,7 @@ abstract class am extends fj implements hi {
     fj field_H;
     static int[] field_I;
 
-    private final boolean a(fj param0) {
+    private final boolean a(fj param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -777,8 +777,7 @@ abstract class am extends fj implements hi {
             } else {
               L2: {
                 if (!mc.field_e[81]) {
-                  int discarded$3 = -42;
-                  stackOut_9_0 = this.a(param0);
+                  stackOut_9_0 = this.a(param0, (byte) -42);
                   stackIn_10_0 = stackOut_9_0;
                   break L2;
                 } else {
@@ -823,7 +822,7 @@ abstract class am extends fj implements hi {
         return stackIn_12_0 != 0;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         int var1_int = 0;
         int var2 = Confined.field_J ? 1 : 0;
         try {
@@ -840,7 +839,7 @@ abstract class am extends fj implements hi {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_I = null;
     }
 
@@ -1022,13 +1021,12 @@ abstract class am extends fj implements hi {
 
     final int c(int param0) {
         if (param0 <= 65) {
-            int discarded$0 = 1;
-            am.b();
+            am.b(true);
         }
         return ((am) this).field_H != null ? ((am) this).field_H.c(94) : 0;
     }
 
-    final static void a() {
+    final static void a(int param0, byte param1, int param2, int param3) {
         sd.field_b = 4243584;
         cg.field_a = 16777215;
         ln.field_c = 9805732;

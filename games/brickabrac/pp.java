@@ -203,7 +203,7 @@ final class pp {
         int var1 = -90 % ((-32 - param0) / 62);
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, byte param2) {
         wi.field_k = param0;
         w.field_k = param1;
     }
@@ -327,12 +327,12 @@ final class pp {
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;

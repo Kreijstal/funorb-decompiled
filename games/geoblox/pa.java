@@ -122,39 +122,39 @@ final class pa {
         field_a = null;
     }
 
-    final static boolean a(CharSequence param0) {
-        int var4_int = 0;
+    final static boolean a(CharSequence param0, boolean param1, int param2, int param3) {
         RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_34_0 = 0;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
+        int stackIn_20_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_32_0 = 0;
+        int stackIn_36_0 = 0;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
-        String stackIn_38_2 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_40_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_33_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_29_0 = 0;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
+        int stackOut_35_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_24_0 = 0;
+        int stackOut_31_0 = 0;
         RuntimeException stackOut_37_0 = null;
         StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        String stackOut_39_2 = null;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
+        String stackOut_38_2 = null;
         try {
           L0: {
             var4_int = 0;
@@ -164,8 +164,8 @@ final class pa {
             var8 = 0;
             L1: while (true) {
               if (var8 >= var7) {
-                stackOut_33_0 = var5;
-                stackIn_34_0 = stackOut_33_0;
+                stackOut_35_0 = var5;
+                stackIn_36_0 = stackOut_35_0;
                 break L0;
               } else {
                 L2: {
@@ -223,14 +223,14 @@ final class pa {
                         }
                       }
                     }
-                    stackOut_17_0 = 0;
-                    stackIn_18_0 = stackOut_17_0;
-                    return stackIn_18_0 != 0;
+                    stackOut_19_0 = 0;
+                    stackIn_20_0 = stackOut_19_0;
+                    return stackIn_20_0 != 0;
                   }
                   if (var9 >= 10) {
-                    stackOut_22_0 = 0;
-                    stackIn_23_0 = stackOut_22_0;
-                    return stackIn_23_0 != 0;
+                    stackOut_24_0 = 0;
+                    stackIn_25_0 = stackOut_24_0;
+                    return stackIn_25_0 != 0;
                   } else {
                     L8: {
                       if (var4_int != 0) {
@@ -242,9 +242,9 @@ final class pa {
                     }
                     var10 = var6 * 10 - -var9;
                     if (var6 != var10 / 10) {
-                      stackOut_29_0 = 0;
-                      stackIn_30_0 = stackOut_29_0;
-                      return stackIn_30_0 != 0;
+                      stackOut_31_0 = 0;
+                      stackIn_32_0 = stackOut_31_0;
+                      return stackIn_32_0 != 0;
                     } else {
                       var6 = var10;
                       var5 = 1;
@@ -261,33 +261,33 @@ final class pa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var4 = decompiledCaughtException;
-            stackOut_35_0 = (RuntimeException) var4;
-            stackOut_35_1 = new StringBuilder().append("pa.B(");
-            stackIn_37_0 = stackOut_35_0;
-            stackIn_37_1 = stackOut_35_1;
-            stackIn_36_0 = stackOut_35_0;
-            stackIn_36_1 = stackOut_35_1;
+            stackOut_37_0 = (RuntimeException) var4;
+            stackOut_37_1 = new StringBuilder().append("pa.B(");
+            stackIn_39_0 = stackOut_37_0;
+            stackIn_39_1 = stackOut_37_1;
+            stackIn_38_0 = stackOut_37_0;
+            stackIn_38_1 = stackOut_37_1;
             if (param0 == null) {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
-              stackOut_37_2 = "null";
-              stackIn_38_0 = stackOut_37_0;
-              stackIn_38_1 = stackOut_37_1;
-              stackIn_38_2 = stackOut_37_2;
+              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
+              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_2 = "null";
+              stackIn_40_0 = stackOut_39_0;
+              stackIn_40_1 = stackOut_39_1;
+              stackIn_40_2 = stackOut_39_2;
               break L9;
             } else {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
-              stackOut_36_2 = "{...}";
-              stackIn_38_0 = stackOut_36_0;
-              stackIn_38_1 = stackOut_36_1;
-              stackIn_38_2 = stackOut_36_2;
+              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
+              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_2 = "{...}";
+              stackIn_40_0 = stackOut_38_0;
+              stackIn_40_1 = stackOut_38_1;
+              stackIn_40_2 = stackOut_38_2;
               break L9;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ',' + true + ',' + 10 + ',' + 87 + ')');
+          throw t.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + true + ',' + 10 + ',' + 87 + ')');
         }
-        return stackIn_34_0 != 0;
+        return stackIn_36_0 != 0;
     }
 
     protected final void finalize() throws Throwable {
@@ -337,8 +337,7 @@ final class pa {
               L0: {
                 L1: {
                   if (d.field_b.startsWith("win")) {
-                    int discarded$7 = 0;
-                    if (!gh.a(param0)) {
+                    if (!gh.a(param0, false)) {
                       break L1;
                     } else {
                       return;

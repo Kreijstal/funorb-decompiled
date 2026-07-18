@@ -15,8 +15,7 @@ final class kqb {
             var4 = nbb.field_y.field_eb.b(param0, 272, nbb.field_y.field_D);
             var5 = -(var4 / 2) - 103 + var3 / 2;
             dd.field_o.a((-320 + var2_int) / 2, 125, 320, var5, -(var5 * 2) + var3 + -120);
-            int discarded$0 = 3;
-            dd.field_o.field_gb = uwa.a(11579568, dd.field_o.field_G, 2105376, 8421504, param1 ^ 77);
+            dd.field_o.field_gb = uwa.a(11579568, dd.field_o.field_G, 2105376, 8421504, param1 ^ 77, 3);
             nbb.field_y.a(24, -54, -24 + (dd.field_o.field_hb - 24), param1, -24 + (-20 + dd.field_o.field_G));
             ss.field_o.a(120, -72, 80, -24 + (-20 + dd.field_o.field_G), 24);
         } catch (RuntimeException runtimeException) {

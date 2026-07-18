@@ -6,7 +6,7 @@ final class ma implements t {
     static int field_c;
     static String field_a;
 
-    final static de a(int param0, byte param1, int param2, ng[] param3, byte[] param4) {
+    final static de a(int param0, byte param1, int param2, ng[] param3, byte[] param4, int param5) {
         RuntimeException var6 = null;
         int[] var6_array = null;
         int[] var7 = null;
@@ -278,7 +278,7 @@ final class ma implements t {
         return stackIn_31_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -393,8 +393,7 @@ final class ma implements t {
                 try {
                   L1: {
                     var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-                    int discarded$2 = 0;
-                    param1.getAppletContext().showDocument(of.a(param1, var2), "_top");
+                    param1.getAppletContext().showDocument(of.a(param1, var2, false), "_top");
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {

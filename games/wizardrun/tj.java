@@ -196,48 +196,40 @@ abstract class tj extends pe {
             if (ei.field_n != null) {
               if (((tj) this).field_r <= ei.field_n.field_z) {
                 if (((tj) this).field_n <= ei.field_n.field_p) {
-                  int discarded$8 = 0;
-                  ud.a(ei.field_n);
+                  ud.a(ei.field_n, false);
                   ed.d();
                   ((tj) this).b(param1, -1, 0);
                   super.a(-((tj) this).field_o + -param0, 0, param2, -((tj) this).field_l + -param3);
-                  int discarded$9 = 4;
-                  bb.b();
+                  bb.b(4);
                   ei.field_n.c(((tj) this).field_o + param0, param3 + ((tj) this).field_l, ((tj) this).field_K);
                   return;
                 } else {
                   ei.field_n = new o(((tj) this).field_r, ((tj) this).field_n);
-                  int discarded$10 = 0;
-                  ud.a(ei.field_n);
+                  ud.a(ei.field_n, false);
                   ed.d();
                   ((tj) this).b(param1, -1, 0);
                   super.a(-((tj) this).field_o + -param0, 0, param2, -((tj) this).field_l + -param3);
-                  int discarded$11 = 4;
-                  bb.b();
+                  bb.b(4);
                   ei.field_n.c(((tj) this).field_o + param0, param3 + ((tj) this).field_l, ((tj) this).field_K);
                   return;
                 }
               } else {
                 ei.field_n = new o(((tj) this).field_r, ((tj) this).field_n);
-                int discarded$12 = 0;
-                ud.a(ei.field_n);
+                ud.a(ei.field_n, false);
                 ed.d();
                 ((tj) this).b(param1, -1, 0);
                 super.a(-((tj) this).field_o + -param0, 0, param2, -((tj) this).field_l + -param3);
-                int discarded$13 = 4;
-                bb.b();
+                bb.b(4);
                 ei.field_n.c(((tj) this).field_o + param0, param3 + ((tj) this).field_l, ((tj) this).field_K);
                 return;
               }
             } else {
               ei.field_n = new o(((tj) this).field_r, ((tj) this).field_n);
-              int discarded$14 = 0;
-              ud.a(ei.field_n);
+              ud.a(ei.field_n, false);
               ed.d();
               ((tj) this).b(param1, -1, 0);
               super.a(-((tj) this).field_o + -param0, 0, param2, -((tj) this).field_l + -param3);
-              int discarded$15 = 4;
-              bb.b();
+              bb.b(4);
               ei.field_n.c(((tj) this).field_o + param0, param3 + ((tj) this).field_l, ((tj) this).field_K);
               return;
             }
@@ -262,7 +254,7 @@ abstract class tj extends pe {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_G = null;
     }
 
@@ -298,8 +290,7 @@ abstract class tj extends pe {
         try {
           L0: {
             var10 = (CharSequence) (Object) param0;
-            int discarded$4 = 75;
-            var3_int = ok.a(param2, var10);
+            var3_int = ok.a(param2, var10, (byte) 75);
             var4 = new String[var3_int + 1];
             var5 = 0;
             var6 = 0;
@@ -314,9 +305,9 @@ abstract class tj extends pe {
                 var8 = var6;
                 L2: while (true) {
                   if (param2 == param0.charAt(var8)) {
-                    int incrementValue$5 = var5;
+                    int incrementValue$2 = var5;
                     var5++;
-                    var4[incrementValue$5] = param0.substring(var6, var8);
+                    var4[incrementValue$2] = param0.substring(var6, var8);
                     var6 = var8 - -1;
                     var7++;
                     continue L1;

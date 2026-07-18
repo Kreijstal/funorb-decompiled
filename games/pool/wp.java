@@ -83,8 +83,7 @@ final class wp implements si {
                       L5: {
                         var6 = new byte[var5];
                         if (1 == var3) {
-                          int discarded$4 = 9;
-                          int discarded$5 = rh.a(var6, var5, param1, var4);
+                          int discarded$2 = rh.a(var6, var5, param1, var4, 9);
                           break L5;
                         } else {
                           var7 = (Object) (Object) db.field_Qb;
@@ -147,7 +146,7 @@ final class wp implements si {
         return stackIn_32_0;
     }
 
-    final static eo a(boolean param0, int param1) {
+    final static eo a(boolean param0, int param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         ko var4 = null;
@@ -248,8 +247,7 @@ final class wp implements si {
                     break L3;
                   }
                 }
-                int discarded$2 = 109;
-                mq.a(aj.field_Mb.field_Mb);
+                mq.a(aj.field_Mb.field_Mb, (byte) 109);
                 break L2;
               } else {
                 ud.field_J.field_pb = true;
@@ -334,9 +332,9 @@ final class wp implements si {
                     L10: {
                       var7.field_Nb.field_Bb = var11;
                       var7.field_Pb.field_Bb = var11;
-                      vh fieldTemp$3 = var7.field_Pb;
+                      vh fieldTemp$1 = var7.field_Pb;
                       var7.field_Nb.field_P = var11;
-                      fieldTemp$3.field_P = var11;
+                      fieldTemp$1.field_P = var11;
                       var7.field_Nb.field_N = var10;
                       var7.field_Pb.field_N = var10;
                       var7.field_Nb.field_K = var11;
@@ -483,7 +481,7 @@ final class wp implements si {
                 }
               }
             }
-            var6 = -31;
+            var6 = -31 / ((param2 - 31) / 62);
             stackOut_87_0 = var5;
             stackIn_88_0 = stackOut_87_0;
             break L0;
@@ -491,7 +489,7 @@ final class wp implements si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var3, "wp.C(" + param0 + ',' + param1 + ',' + 100 + ')');
+          throw wm.a((Throwable) (Object) var3, "wp.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return (eo) (Object) stackIn_88_0;
     }
@@ -508,38 +506,45 @@ final class wp implements si {
         var5 = Pool.field_O;
         try {
           L0: {
-            var4 = (ea) (Object) rc.field_c.c((byte) -82);
-            L1: while (true) {
-              L2: {
-                L3: {
+            L1: {
+              var4 = (ea) (Object) rc.field_c.c((byte) -82);
+              if (param2 > 27) {
+                break L1;
+              } else {
+                field_g = null;
+                break L1;
+              }
+            }
+            L2: while (true) {
+              L3: {
+                L4: {
                   if (null == var4) {
-                    break L3;
+                    break L4;
                   } else {
                     if (var5 != 0) {
-                      break L2;
+                      break L3;
                     } else {
-                      if (0 == var4.field_s) {
+                      if (param0 == var4.field_s) {
                         stackOut_11_0 = (ea) var4;
                         stackIn_12_0 = stackOut_11_0;
                         return stackIn_12_0;
                       } else {
                         var4 = (ea) (Object) rc.field_c.f((byte) -5);
                         if (var5 == 0) {
-                          continue L1;
+                          continue L2;
                         } else {
-                          break L3;
+                          break L4;
                         }
                       }
                     }
                   }
                 }
                 var4 = new ea();
-                var4.field_o = 10;
-                var4.field_s = 0;
+                var4.field_o = param1;
+                var4.field_s = param0;
                 rc.field_c.b((byte) -114, (ma) (Object) var4);
-                int discarded$1 = -96;
-                wb.a(var4, 7);
-                break L2;
+                wb.a(var4, param3, (byte) -96);
+                break L3;
               }
               stackOut_15_0 = (ea) var4;
               stackIn_16_0 = stackOut_15_0;
@@ -549,12 +554,12 @@ final class wp implements si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var4_ref, "wp.B(" + 0 + ',' + 10 + ',' + 68 + ',' + 7 + ')');
+          throw wm.a((Throwable) (Object) var4_ref, "wp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_16_0;
     }
 
-    final static od a(int param0, sj param1, byte param2, int param3) {
+    final static od a(int param0, sj param1, byte param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         od var7 = null;
@@ -580,13 +585,21 @@ final class wp implements si {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var6 = nj.a(param3, param1, param0, false, 0, 0);
+            var6 = nj.a(param3, param1, param0, false, param4, param5);
             if (null != var6) {
-              var7 = new od();
-              var7.field_b = var6;
-              java.awt.Component discarded$3 = var7.field_b.add((java.awt.Component) (Object) var7);
-              var7.setBounds(0, 0, param0, param3);
-              var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
+              L1: {
+                var7 = new od();
+                var7.field_b = var6;
+                java.awt.Component discarded$3 = var7.field_b.add((java.awt.Component) (Object) var7);
+                var7.setBounds(0, 0, param0, param3);
+                var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
+                if (param2 == 0) {
+                  break L1;
+                } else {
+                  field_f = null;
+                  break L1;
+                }
+              }
               var7.requestFocus();
               stackOut_6_0 = (od) var7;
               stackIn_7_0 = stackOut_6_0;
@@ -599,7 +612,7 @@ final class wp implements si {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var6_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var6_ref;
             stackOut_8_1 = new StringBuilder().append("wp.E(").append(param0).append(',');
@@ -614,7 +627,7 @@ final class wp implements si {
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
-              break L1;
+              break L2;
             } else {
               stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
               stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
@@ -622,23 +635,31 @@ final class wp implements si {
               stackIn_12_0 = stackOut_9_0;
               stackIn_12_1 = stackOut_9_1;
               stackIn_12_2 = stackOut_9_2;
-              break L1;
+              break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + 0 + ',' + param3 + ',' + 0 + ',' + 0 + ')');
+          throw wm.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            field_h = null;
-            field_e = null;
-            field_g = null;
-            field_b = null;
+            L1: {
+              field_h = null;
+              field_e = null;
+              field_g = null;
+              field_b = null;
+              if (param0 == 0) {
+                break L1;
+              } else {
+                field_a = null;
+                break L1;
+              }
+            }
             field_f = null;
             field_a = null;
             break L0;
@@ -646,7 +667,7 @@ final class wp implements si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var1, "wp.D(" + 0 + ')');
+          throw wm.a((Throwable) (Object) var1, "wp.D(" + param0 + ')');
         }
     }
 

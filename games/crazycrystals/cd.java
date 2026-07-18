@@ -28,7 +28,7 @@ final class cd extends ea implements Cloneable {
         return ln.field_d;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_u = null;
         field_v = null;
         field_A = null;
@@ -734,12 +734,11 @@ final class cd extends ea implements Cloneable {
                 break L1;
               } else {
                 var3 = null;
-                boolean discarded$4 = cd.a((CharSequence) null, (byte) 47);
+                boolean discarded$2 = cd.a((CharSequence) null, (byte) 47);
                 break L1;
               }
             }
-            int discarded$5 = 1;
-            stackOut_2_0 = wi.a(48, 10, param0);
+            stackOut_2_0 = wi.a(48, 10, param0, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

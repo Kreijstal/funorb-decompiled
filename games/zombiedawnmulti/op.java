@@ -35,8 +35,7 @@ final class op extends ae {
                 break L1;
               }
             }
-            int discarded$22 = 120;
-            if (!op.a()) {
+            if (!op.a(120)) {
               L2: {
                 if (rn.field_f == null) {
                   break L2;
@@ -52,13 +51,13 @@ final class op extends ae {
               }
               return;
             } else {
-              boolean discarded$23 = me.field_k.a(jk.field_g, (byte) -27, fg.field_j, true);
+              boolean discarded$15 = me.field_k.a(jk.field_g, (byte) -27, fg.field_j, true);
               me.field_k.h((byte) -109);
               L3: while (true) {
                 if (!ba.c(-1)) {
                   break L0;
                 } else {
-                  boolean discarded$24 = me.field_k.a(param0 + -2, pn.field_d, sj.field_p);
+                  boolean discarded$16 = me.field_k.a(param0 + -2, pn.field_d, sj.field_p);
                   continue L3;
                 }
               }
@@ -71,7 +70,7 @@ final class op extends ae {
         }
     }
 
-    final static String a(boolean param0, boolean param1) {
+    final static String a(boolean param0, boolean param1, int param2, boolean param3) {
         int var4 = 0;
         if (!(!param1)) {
             var4 += 4;
@@ -104,7 +103,7 @@ final class op extends ae {
         }
     }
 
-    private final static boolean a() {
+    private final static boolean a(int param0) {
         int var1 = 19;
         if (me.field_k == null) {
             return false;
@@ -178,7 +177,7 @@ final class op extends ae {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_o = null;
         field_l = null;
         field_m = null;

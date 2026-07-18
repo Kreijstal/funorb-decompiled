@@ -47,7 +47,7 @@ final class ln extends ci {
     static boolean field_Kb;
     ci field_Eb;
 
-    final static hg[] l() {
+    final static hg[] l(int param0) {
         return new hg[]{ej.field_c, ig.field_d, ah.field_g, ka.field_j, an.field_b, ql.field_g, wg.field_r, me.field_b, ob.field_v, mf.field_m, ag.field_g, nj.field_v, ua.field_a, dm.field_c};
     }
 
@@ -58,7 +58,7 @@ final class ln extends ci {
         return (int)((ln) this).a(0);
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_cc = null;
         field_vc = null;
         field_qc = null;
@@ -383,9 +383,8 @@ final class ln extends ci {
         return stackIn_68_0 != 0;
     }
 
-    final static void f() {
-        int discarded$0 = -12;
-        bo.a(bh.i(81));
+    final static void f(byte param0) {
+        bo.a(bh.i(81), (byte) -12);
     }
 
     final boolean m(int param0) {

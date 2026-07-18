@@ -90,16 +90,14 @@ final class fc {
             w.a(31);
         }
         try {
-            int discarded$0 = -40;
-            qc.a(pb.field_s, oi.field_e, lb.field_a);
-            int discarded$1 = 0;
-            i.a(0, (byte) 117, param1);
+            qc.a(pb.field_s, oi.field_e, lb.field_a, (byte) -40);
+            i.a(0, (byte) 117, param1, 0);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "fc.A(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_g = null;
         field_d = null;

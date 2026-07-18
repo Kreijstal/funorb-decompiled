@@ -11,13 +11,13 @@ final class qn extends ksa {
     static ida field_h;
     int field_g;
 
-    final static void c() {
+    final static void c(byte param0) {
         ms.field_y = new ij();
         gtb.field_d = new ij();
         jp.field_Jc = new Random();
     }
 
-    final static boolean a(int param0) {
+    final static boolean a(int param0, byte param1) {
         int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -131,7 +131,7 @@ final class qn extends ksa {
         return stackIn_13_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_h = null;
         field_d = null;
     }

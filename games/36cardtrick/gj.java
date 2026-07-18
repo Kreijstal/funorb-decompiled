@@ -77,8 +77,7 @@ final class gj implements Runnable {
                   }
                 }
               } else {
-                int discarded$2 = 92;
-                k.a((Throwable) null, (byte) 41, "A1: " + aj.a());
+                k.a((Throwable) null, (byte) 41, "A1: " + aj.a((byte) 92));
                 mc.a((byte) -126);
                 return;
               }
@@ -513,7 +512,7 @@ final class gj implements Runnable {
         return stackIn_15_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

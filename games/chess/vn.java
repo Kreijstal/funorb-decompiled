@@ -20,7 +20,7 @@ class vn extends bj implements mj {
     static int field_Db;
     private boolean field_tb;
 
-    final static void l() {
+    final static void l(int param0) {
         mi.field_t = new String[re.field_j];
         mi.field_t[5] = sa.field_f;
         mi.field_t[11] = ii.field_N;
@@ -63,8 +63,7 @@ class vn extends bj implements mj {
               var2 = -90 % ((param0 - -67) / 41);
               return;
             } else {
-              int discarded$2 = -73;
-              ci.j();
+              ci.j(-73);
               var2 = -90 % ((param0 - -67) / 41);
               return;
             }
@@ -368,16 +367,14 @@ class vn extends bj implements mj {
           if (param0 == 10) {
             if (null != ua.field_d) {
               ua.field_d.k((byte) -113);
-              int discarded$4 = -64;
-              var4 = ec.e();
+              var4 = ec.e((byte) -64);
               um.field_b = new wf(var4, (String) null, true, false, false);
               jh.field_e.b((mf) (Object) nj.field_w, (byte) -46);
               nj.field_w.c((mf) (Object) um.field_b, 88);
               nj.field_w.i((byte) -126);
               return;
             } else {
-              int discarded$5 = -64;
-              var5 = ec.e();
+              var5 = ec.e((byte) -64);
               um.field_b = new wf(var5, (String) null, true, false, false);
               jh.field_e.b((mf) (Object) nj.field_w, (byte) -46);
               nj.field_w.c((mf) (Object) um.field_b, 88);
@@ -387,8 +384,7 @@ class vn extends bj implements mj {
           } else {
             vn.m(-26);
             if (null == ua.field_d) {
-              int discarded$6 = -64;
-              var2 = ec.e();
+              var2 = ec.e((byte) -64);
               um.field_b = new wf(var2, (String) null, true, false, false);
               jh.field_e.b((mf) (Object) nj.field_w, (byte) -46);
               nj.field_w.c((mf) (Object) um.field_b, 88);
@@ -396,8 +392,7 @@ class vn extends bj implements mj {
               return;
             } else {
               ua.field_d.k((byte) -113);
-              int discarded$7 = -64;
-              var3 = ec.e();
+              var3 = ec.e((byte) -64);
               um.field_b = new wf(var3, (String) null, true, false, false);
               jh.field_e.b((mf) (Object) nj.field_w, (byte) -46);
               nj.field_w.c((mf) (Object) um.field_b, 88);

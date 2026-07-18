@@ -8,7 +8,7 @@ final class hd extends java.awt.Canvas {
     static int[] field_d;
     static int field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 26;
         field_a = null;
         field_e = null;

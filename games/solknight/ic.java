@@ -38,7 +38,7 @@ final class ic extends sk {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_u = null;
         field_x = null;
         field_z = null;

@@ -252,7 +252,7 @@ final class jd extends w {
         ((jd) this).a(param6, param3, -91, param5);
     }
 
-    final static void g() {
+    final static void g(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         tj var3 = null;
@@ -342,7 +342,7 @@ final class jd extends w {
         return true;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_Zb = null;
         field_Ub = null;
         field_Ob = null;

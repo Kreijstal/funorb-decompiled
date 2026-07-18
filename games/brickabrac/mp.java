@@ -248,8 +248,7 @@ final class mp extends mh {
                             var32 = 65280 & var30;
                             var33 = (var28 * var31 & -16711791) >>> 8 | (var32 * var28 & 16711898) >>> 8;
                             var33 = var33 + var29 * 65793;
-                            int discarded$1 = 116;
-                            ki.a(var33 >> 1 & 8355711, var23, var26, var22, var25, var27, var24);
+                            ki.a(var33 >> 1 & 8355711, var23, var26, var22, var25, var27, var24, 116);
                             break L10;
                           } else {
                             break L11;
@@ -377,7 +376,7 @@ final class mp extends mh {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Tb = null;
         field_Pb = null;
         field_Zb = null;
@@ -389,7 +388,7 @@ final class mp extends mh {
         super(0L, (mh) null);
     }
 
-    final static void a(int param0, ff param1, boolean param2, boolean param3) {
+    final static void a(int param0, ff param1, boolean param2, boolean param3, boolean param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;

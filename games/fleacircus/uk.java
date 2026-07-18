@@ -81,13 +81,12 @@ final class uk {
                       } else {
                         L5: {
                           var8 = param1.charAt(var7);
-                          int discarded$2 = -95;
-                          if (sg.a((char) var8)) {
+                          if (sg.a((char) var8, (byte) -95)) {
                             var9 = kl.a((byte) -78, (char) var8);
                             if (0 == var9) {
                               break L5;
                             } else {
-                              StringBuilder discarded$3 = var6.append((char) var9);
+                              StringBuilder discarded$1 = var6.append((char) var9);
                               break L5;
                             }
                           } else {
@@ -143,7 +142,7 @@ final class uk {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         lj.field_e = true;
         ua.field_sb = 15000L + lj.a((byte) -68);
         return bh.field_t == 11 ? true : false;
@@ -320,7 +319,7 @@ final class uk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

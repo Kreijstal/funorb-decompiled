@@ -29,7 +29,7 @@ final class oi extends fe {
         this.a(-1262785631);
     }
 
-    private final ea a(int param0, int param1) {
+    private final ea a(int param0, int param1, boolean param2) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -113,16 +113,13 @@ final class oi extends fe {
         if (param0 != -1262785631) {
             return;
         }
-        int discarded$0 = 0;
-        int discarded$1 = 0;
-        ((oi) this).field_E = new ea[]{this.a(((oi) this).field_P, ((oi) this).field_H), this.a(((oi) this).field_L, ((oi) this).field_Q)};
-        int discarded$2 = -125;
-        ((oi) this).field_F = this.c();
+        ((oi) this).field_E = new ea[]{this.a(((oi) this).field_P, ((oi) this).field_H, false), this.a(((oi) this).field_L, ((oi) this).field_Q, false)};
+        ((oi) this).field_F = this.c((byte) -125);
         ((oi) this).field_I = ((oi) this).field_F.e();
         ((oi) this).field_M = new ea(((oi) this).field_q >> 1, ((oi) this).field_q);
     }
 
-    private final ea c() {
+    private final ea c(byte param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;

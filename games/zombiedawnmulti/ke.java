@@ -58,7 +58,7 @@ final class ke {
         return ud.field_O[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + hm.field_q[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_i = null;
         field_c = null;
         field_h = null;

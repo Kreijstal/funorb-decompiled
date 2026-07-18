@@ -23,7 +23,7 @@ final class ji {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -128,7 +128,7 @@ final class ji {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_a = null;
         field_e = null;

@@ -47,7 +47,7 @@ class ii extends vb {
     static int field_T;
     static o field_D;
 
-    final static void a(md param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(md param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
             rk.field_g = param0;
             fa.field_q = param5;
@@ -65,7 +65,7 @@ class ii extends vb {
         }
     }
 
-    final static java.applet.Applet a() {
+    final static java.applet.Applet a(boolean param0) {
         if (!(ll.field_b == null)) {
             return ll.field_b;
         }
@@ -77,14 +77,14 @@ class ii extends vb {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_U = null;
         field_D = null;
         field_r = null;
         field_m = null;
     }
 
-    private final void a(ii param0) {
+    private final void a(ii param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_95_0 = null;
         StringBuilder stackIn_95_1 = null;
@@ -491,8 +491,7 @@ class ii extends vb {
           L0: {
             L1: {
               ((ii) this).field_a = param0;
-              int discarded$2 = 1;
-              this.a(param1);
+              this.a(param1, true);
               if (param6 == null) {
                 break L1;
               } else {

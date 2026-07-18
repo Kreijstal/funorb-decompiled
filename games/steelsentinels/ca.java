@@ -228,7 +228,7 @@ final class ca extends ck {
         return stackIn_20_0 != 0;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         t.field_l = -1;
         eh.field_a = -1;
         rc.field_b = null;
@@ -236,7 +236,7 @@ final class ca extends ck {
         si.field_m = 0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_w = null;
         field_r = null;
     }
@@ -248,7 +248,7 @@ final class ca extends ck {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void a(int param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6) {
         int var7_int = 0;
         ul var8 = null;
         long var9 = 0L;

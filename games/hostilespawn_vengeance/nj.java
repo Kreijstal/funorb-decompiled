@@ -10,7 +10,7 @@ abstract class nj {
     static int field_a;
     static pg[][] field_d;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -25,7 +25,7 @@ abstract class nj {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -193,15 +193,15 @@ abstract class nj {
                                                         if (var12 != 5) {
                                                           if (var12 == 7) {
                                                             if (var7 < var17.length) {
-                                                              int incrementValue$8 = var7;
+                                                              int incrementValue$3 = var7;
                                                               var7++;
-                                                              var6[incrementValue$8] = var2;
-                                                              int incrementValue$9 = var7;
+                                                              var6[incrementValue$3] = var2;
+                                                              int incrementValue$4 = var7;
                                                               var7++;
-                                                              var6[incrementValue$9] = var3;
-                                                              int incrementValue$10 = var7;
+                                                              var6[incrementValue$4] = var3;
+                                                              int incrementValue$5 = var7;
                                                               var7++;
-                                                              var6[incrementValue$10] = (int)var8_ref_p.field_c;
+                                                              var6[incrementValue$5] = (int)var8_ref_p.field_c;
                                                               break L3;
                                                             } else {
                                                               break L3;
@@ -227,8 +227,7 @@ abstract class nj {
                                                                           break L3;
                                                                         } else {
                                                                           if (var12 == 34) {
-                                                                            int discarded$11 = 2;
-                                                                            f.a(var2, var3, var8_ref_p);
+                                                                            f.a(var2, var3, var8_ref_p, 2);
                                                                             break L3;
                                                                           } else {
                                                                             if (33 == var12) {
@@ -237,8 +236,7 @@ abstract class nj {
                                                                             } else {
                                                                               if (var12 != 12) {
                                                                                 if (var12 == 13) {
-                                                                                  int discarded$12 = 128;
-                                                                                  ka.a(var2, var8_ref_p, var3);
+                                                                                  ka.a(var2, var8_ref_p, var3, 128);
                                                                                   break L3;
                                                                                 } else {
                                                                                   if (var12 != 14) {
@@ -256,8 +254,7 @@ abstract class nj {
                                                                                     bi.a(var8_ref_p, var3, var2, -49);
                                                                                     break L3;
                                                                                   } else {
-                                                                                    int discarded$13 = 2;
-                                                                                    mg.a(var8_ref_p, var2, var3);
+                                                                                    mg.a(var8_ref_p, var2, var3, 2);
                                                                                     break L3;
                                                                                   }
                                                                                 }
@@ -322,13 +319,11 @@ abstract class nj {
                                         pf.a(var3, true, var8_ref_p, var2);
                                         break L3;
                                       } else {
-                                        int discarded$14 = 107;
-                                        ic.a(var2, var3, var8_ref_p);
+                                        ic.a(var2, var3, var8_ref_p, (byte) 107);
                                         break L3;
                                       }
                                     } else {
-                                      int discarded$15 = 25;
-                                      nm.a(var2, var8_ref_p, var3);
+                                      nm.a(var2, var8_ref_p, var3, 25);
                                       break L3;
                                     }
                                   }
@@ -493,14 +488,14 @@ abstract class nj {
         return stackIn_9_0;
     }
 
-    final static gb a(int param0, int param1) {
+    final static gb a(int param0, int param1, boolean param2, boolean param3, int param4) {
         if (param0 <= 66) {
             return null;
         }
         return bf.a(false, true, param1, 1, false, -31);
     }
 
-    final static int a(oc param0, oc param1) {
+    final static int a(oc param0, oc param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

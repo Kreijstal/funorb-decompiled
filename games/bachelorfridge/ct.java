@@ -84,7 +84,7 @@ final class ct extends bca {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_s = null;
         field_r = null;
     }

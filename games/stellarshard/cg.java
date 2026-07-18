@@ -112,14 +112,12 @@ final class cg {
         String stackOut_17_2 = null;
         try {
           L0: {
-            int discarded$2 = -128;
-            th.a(param8, param19, param17);
+            th.a(param8, param19, param17, -128);
             if (param9 == 45) {
               qe.a(param4, -29770, param10, param12, param5);
               ki.a(param0, param3, -126);
               ph.a(14835, param13, param20, param11, param2, param7);
-              int discarded$3 = -100;
-              jb.a(param16, param6, param1);
+              jb.a(param16, param6, param1, -100);
               uh.a(11130, param18, param14, param15);
               break L0;
             } else {

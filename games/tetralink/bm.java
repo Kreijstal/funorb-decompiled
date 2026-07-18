@@ -12,7 +12,7 @@ final class bm extends mc {
     static int field_p;
     static String field_o;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_s = null;
         field_o = null;
     }
@@ -95,7 +95,7 @@ final class bm extends mc {
         throw new Error();
     }
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;

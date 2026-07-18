@@ -19,13 +19,13 @@ abstract class fq {
 
     abstract void a(int param0, int param1, int param2);
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_f = null;
         field_b = null;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -49,8 +49,7 @@ abstract class fq {
             try {
               try {
                 var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-                int discarded$2 = 0;
-                param0.getAppletContext().showDocument(ar.a(param0, var2), "_top");
+                param0.getAppletContext().showDocument(ar.a(param0, var2, 0), "_top");
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

@@ -18,7 +18,7 @@ final class qo {
         return var2;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_b = null;
         field_c = null;

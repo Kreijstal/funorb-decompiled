@@ -25,7 +25,7 @@ final class wqb extends mfb {
         return bma.field_n;
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_d = null;
         field_e = null;
         field_b = null;

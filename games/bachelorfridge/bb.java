@@ -148,8 +148,7 @@ final class bb extends hf {
     }
 
     final static void h(int param0) {
-        int discarded$4 = 1;
-        lga.a(sc.field_m);
+        lga.a(sc.field_m, true);
         if (param0 != 0) {
             bb.h(-125);
         }

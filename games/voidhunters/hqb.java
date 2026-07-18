@@ -16,7 +16,7 @@ final class hqb {
     String field_a;
     static String field_j;
 
-    private final boolean a(int param0, int param1) {
+    private final boolean a(int param0, int param1, int param2) {
         Object var4 = null;
         String var4_ref = null;
         L0: {
@@ -28,8 +28,7 @@ final class hqb {
             } else {
               if (6 != param1) {
                 if (7 == param1) {
-                  int discarded$11 = -76;
-                  var4_ref = iab.a(param0, ((hqb) this).field_g, ((hqb) this).field_a);
+                  var4_ref = iab.a(param0, ((hqb) this).field_g, ((hqb) this).field_a, (byte) -76);
                   break L0;
                 } else {
                   return false;
@@ -48,8 +47,7 @@ final class hqb {
           if (var4_ref == null) {
             break L1;
           } else {
-            int discarded$12 = 2;
-            lh.a((byte) -112, 0, (String) null, ((hqb) this).field_a, var4_ref);
+            lh.a((byte) -112, 0, (String) null, ((hqb) this).field_a, var4_ref, 2);
             break L1;
           }
         }
@@ -550,7 +548,7 @@ final class hqb {
         return stackIn_34_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_j = null;
     }
@@ -562,14 +560,13 @@ final class hqb {
         }
     }
 
-    private final boolean b(int param0, int param1) {
+    private final boolean b(int param0, int param1, int param2) {
         int var5 = 0;
         L0: {
           var5 = VoidHunters.field_G;
           if (param1 != 8) {
             if (18 == param1) {
-              int discarded$7015 = 63;
-              bab.a(((hqb) this).field_a, ((hqb) this).field_d);
+              bab.a(((hqb) this).field_a, ((hqb) this).field_d, 63);
               break L0;
             } else {
               if (param1 == 11) {
@@ -589,17 +586,15 @@ final class hqb {
                         if (19 != param1) {
                           return false;
                         } else {
-                          boolean discarded$7016 = fia.a(((hqb) this).field_e, ((hqb) this).field_c, (byte) 105, ((hqb) this).field_d, ((hqb) this).field_a);
+                          boolean discarded$28 = fia.a(((hqb) this).field_e, ((hqb) this).field_c, (byte) 105, ((hqb) this).field_d, ((hqb) this).field_a);
                           return true;
                         }
                       } else {
-                        int discarded$7017 = 0;
-                        or.a();
+                        or.a(0);
                         break L0;
                       }
                     } else {
-                      int discarded$7018 = 1;
-                      km.e();
+                      km.e(1);
                       break L0;
                     }
                   }
@@ -642,8 +637,7 @@ final class hqb {
                   break L1;
                 } else {
                   var7 = pdb.a((byte) 80, ((hqb) this).field_d);
-                  int discarded$1 = 1;
-                  var4 = pjb.a(((hqb) this).field_d);
+                  var4 = pjb.a(((hqb) this).field_d, true);
                   var5 = this.b((byte) -128);
                   if (var4 == null) {
                     if (var7 == null) {
@@ -897,11 +891,9 @@ final class hqb {
         if (param1 != -11) {
             ((hqb) this).b(26);
         }
-        int discarded$2 = -111;
-        boolean discarded$3 = this.a(param3, var6);
-        int discarded$4 = -17791;
-        boolean discarded$5 = this.b(param3, var6);
-        boolean discarded$6 = this.a((byte) 16, var6, param4);
+        boolean discarded$2 = this.a(param3, var6, -111);
+        boolean discarded$3 = this.b(param3, var6, -17791);
+        boolean discarded$4 = this.a((byte) 16, var6, param4);
         return true;
     }
 

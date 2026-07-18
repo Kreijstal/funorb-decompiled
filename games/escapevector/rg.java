@@ -369,7 +369,7 @@ final class rg {
         return ((rg) this).field_e;
     }
 
-    private final void a() throws IOException {
+    private final void a(boolean param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = EscapeVector.field_A;
@@ -501,8 +501,7 @@ final class rg {
                       break L4;
                     } else {
                       L6: {
-                        int discarded$2 = 1;
-                        this.a();
+                        this.a(true);
                         var9_int = param1;
                         if (var9_int > ((rg) this).field_j) {
                           var9_int = ((rg) this).field_j;
@@ -544,9 +543,9 @@ final class rg {
                               if (~param0 <= ~var9_int) {
                                 break L9;
                               } else {
-                                int incrementValue$3 = param0;
+                                int incrementValue$1 = param0;
                                 param0++;
-                                param3[incrementValue$3] = (byte) 0;
+                                param3[incrementValue$1] = (byte) 0;
                                 param1--;
                                 ((rg) this).field_d = ((rg) this).field_d + 1L;
                                 continue L11;
@@ -673,7 +672,7 @@ final class rg {
         }
     }
 
-    final static short[] a(c param0, int param1, short[] param2) {
+    final static short[] a(c param0, int param1, short[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -825,7 +824,7 @@ final class rg {
         return stackIn_16_0;
     }
 
-    final static boolean a(int[] param0) {
+    final static boolean a(int[] param0, int param1) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         dm var4_ref_dm = null;

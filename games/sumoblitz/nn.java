@@ -4,7 +4,7 @@
 abstract class nn {
     static ri[] field_a;
 
-    final static void a(br param0) {
+    final static void a(br param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         br var3 = null;
@@ -76,8 +76,7 @@ abstract class nn {
                   break L5;
                 }
               }
-              int discarded$2 = 76;
-              dl.a(param0);
+              dl.a(param0, (byte) 76);
               break L0;
             }
           }
@@ -307,7 +306,7 @@ abstract class nn {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 65;
         field_a = null;
     }

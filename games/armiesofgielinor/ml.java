@@ -9,7 +9,7 @@ final class ml extends je {
     int field_Kb;
     private je[] field_Jb;
 
-    final static void a(p param0) {
+    final static void a(p param0, byte param1) {
         int var2_int = 0;
         sn var3 = null;
         int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
@@ -40,7 +40,7 @@ final class ml extends je {
         this.a(param3, param5, param4 + -20199);
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_Nb = null;
         field_Lb = null;
     }
@@ -246,11 +246,13 @@ final class ml extends je {
     final void l(int param0) {
         int var2 = 0;
         int var3 = 0;
+        Object var4 = null;
         L0: {
           var3 = ArmiesOfGielinor.field_M ? 1 : 0;
           if (param0 == 10000) {
             break L0;
           } else {
+            var4 = null;
             ml.a(10, (au) null, false, (String) null);
             break L0;
           }
@@ -448,8 +450,7 @@ final class ml extends je {
                 break L1;
               } else {
                 var7 = (CharSequence) (Object) param1;
-                int discarded$2 = 0;
-                var4_long = wc.a(var7);
+                var4_long = wc.a(var7, 0);
                 break L1;
               }
             }

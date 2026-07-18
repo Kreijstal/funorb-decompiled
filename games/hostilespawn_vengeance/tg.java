@@ -104,7 +104,7 @@ final class tg {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         cl var1 = (cl) (Object) ne.field_q.g(-64);
         if (!(var1 != null)) {
             le.c((byte) 113);
@@ -169,14 +169,13 @@ final class tg {
         int var1 = -104 % ((36 - param0) / 62);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         tb.f((byte) -85);
         if (null != se.field_h) {
             v.a(67, se.field_h);
         }
         qc.c((byte) -118);
-        int discarded$6 = 114;
-        lj.d();
+        lj.d((byte) 114);
         md.b(51);
         if (bj.c((byte) -29)) {
             s.field_b.i(19319, 1);
@@ -209,8 +208,7 @@ final class tg {
             var7 = 0;
             L1: while (true) {
               if (var7 != 0) {
-                int discarded$1 = 2;
-                pc.a();
+                pc.a(2);
                 break L0;
               } else {
                 var7 = 1;

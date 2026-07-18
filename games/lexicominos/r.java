@@ -76,7 +76,7 @@ final class r extends nb implements ag, jk {
         }
     }
 
-    private final int a(String param0, String param1, w param2) {
+    private final int a(String param0, String param1, w param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -247,15 +247,13 @@ final class r extends nb implements ag, jk {
             }
             L2: {
               if (((r) this).field_B == param4) {
-                int discarded$4 = 255;
-                dc.c();
+                dc.c(255);
                 break L2;
               } else {
                 if (((r) this).field_G != param4) {
                   break L2;
                 } else {
-                  int discarded$5 = 126;
-                  this.g();
+                  this.g(126);
                   break L2;
                 }
               }
@@ -465,7 +463,7 @@ final class r extends nb implements ag, jk {
         return stackIn_1_0;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -603,7 +601,7 @@ final class r extends nb implements ag, jk {
         return stackIn_9_0 != 0;
     }
 
-    final static void a(df param0) {
+    final static void a(df param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -741,9 +739,7 @@ final class r extends nb implements ag, jk {
         var2.a(50, 270, true, var3, 20);
         var3 += 50;
         ((r) this).b((byte) 106, var2);
-        int discarded$0 = 170;
-        int discarded$1 = 11271;
-        var3 = var3 + (5 + this.a(nk.field_C, hc.field_kb, (w) (Object) ((r) this).field_E));
+        var3 = var3 + (5 + this.a(nk.field_C, hc.field_kb, (w) (Object) ((r) this).field_E, 11271, 170, var3));
         ((r) this).field_G.a(40, var5, true, var3, 496 - var5 >> 1);
         ((r) this).field_B.a(40, 60, true, 15 + var3, var4 + 3);
         ((r) this).field_B.field_r = (vd) this;
@@ -845,7 +841,7 @@ final class r extends nb implements ag, jk {
         return stackIn_10_0;
     }
 
-    private final void g() {
+    private final void g(int param0) {
         if (!(this.d((byte) 114))) {
             return;
         }

@@ -13,7 +13,7 @@ final class ss {
     static String field_e;
     static String field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_i = null;
         field_f = null;
@@ -123,8 +123,7 @@ final class ss {
           if (!wi.field_v.a((byte) -52)) {
             if (null != ck.field_b) {
               if (!ck.field_b.h((byte) 37)) {
-                int discarded$4 = 102;
-                if (!br.a()) {
+                if (!br.a(102)) {
                   if (ni.a(13, 15, 12, -20859)) {
                     return true;
                   } else {
@@ -139,8 +138,7 @@ final class ss {
                 return true;
               }
             } else {
-              int discarded$5 = 102;
-              if (!br.a()) {
+              if (!br.a(102)) {
                 if (ni.a(13, 15, 12, -20859)) {
                   return true;
                 } else {
@@ -157,8 +155,7 @@ final class ss {
         } else {
           if (null != ck.field_b) {
             if (!ck.field_b.h((byte) 37)) {
-              int discarded$6 = 102;
-              if (!br.a()) {
+              if (!br.a(102)) {
                 if (ni.a(13, 15, 12, -20859)) {
                   return true;
                 } else {
@@ -173,8 +170,7 @@ final class ss {
               return true;
             }
           } else {
-            int discarded$7 = 102;
-            if (!br.a()) {
+            if (!br.a(102)) {
               if (ni.a(13, 15, 12, -20859)) {
                 return true;
               } else {

@@ -7,7 +7,7 @@ final class jj {
     static String field_c;
     static String[] field_d;
 
-    final static void a(int param0, int param1, oh[] param2) {
+    final static void a(int param0, int param1, oh[] param2, byte param3) {
         try {
             qm.field_b = new ve(param2);
             nc.field_d = 12;
@@ -26,7 +26,7 @@ final class jj {
         }
     }
 
-    final static void a(int param0, jb param1, jb param2) {
+    final static void a(int param0, jb param1, jb param2, int param3) {
         try {
             uf.field_f = 480;
             dk.field_d = param1;

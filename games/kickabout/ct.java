@@ -975,7 +975,7 @@ abstract class ct extends fd implements jp {
         }
     }
 
-    final static void i() {
+    final static void i(int param0) {
         try {
             java.lang.reflect.Method var1_ref_java_lang_reflect_Method = null;
             Exception var1_ref_Exception = null;

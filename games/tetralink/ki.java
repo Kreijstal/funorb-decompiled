@@ -6,12 +6,12 @@ final class ki {
     static java.math.BigInteger field_c;
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
     }
 
-    final static void a(int param0, String param1, String[] param2) {
+    final static void a(int param0, String param1, String[] param2, int param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int stackIn_11_0 = 0;
@@ -79,8 +79,7 @@ final class ki {
                   }
                 }
               }
-              int discarded$2 = 0;
-              va.field_n = hj.a(param1, param0);
+              va.field_n = hj.a(param1, param0, false);
               return;
             }
           }

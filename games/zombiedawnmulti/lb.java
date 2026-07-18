@@ -8,7 +8,7 @@ final class lb {
     static int field_a;
     static String field_b;
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
@@ -57,8 +57,7 @@ final class lb {
         String stackOut_31_2 = null;
         try {
           L0: {
-            int discarded$9 = 0;
-            if (ol.a(param1)) {
+            if (ol.a(param1, false)) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
@@ -229,7 +228,7 @@ final class lb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_d = null;
         field_b = null;

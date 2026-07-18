@@ -22,7 +22,7 @@ final class nn {
     private int field_p;
     static boolean field_i;
 
-    final static void a() {
+    final static void a(boolean param0) {
         ma.field_o = new bb();
     }
 
@@ -92,8 +92,7 @@ final class nn {
                         var10.c(((nn) this).field_s[var7], -var5 + 640, -var4 + 420, 0, -1);
                         break L1;
                       } else {
-                        int discarded$2 = 3;
-                        var9.b(sb.a(((nn) this).field_r[var5]), ((nn) this).field_j[var5], -var4 + (((nn) this).field_q[var5] - -155), 0, -1);
+                        var9.b(sb.a(((nn) this).field_r[var5], 3), ((nn) this).field_j[var5], -var4 + (((nn) this).field_q[var5] - -155), 0, -1);
                         var5++;
                         continue L3;
                       }
@@ -155,8 +154,7 @@ final class nn {
           } else {
             if (0 < ((nn) this).field_p) {
               fi.a((jl) (Object) var10, po.field_j, Integer.toString(((nn) this).field_g.field_r), rf.field_n, 30, 50, 0, -1, ((nn) this).field_p);
-              int discarded$3 = 3;
-              var9.b(sb.a(((nn) this).field_r[0]), 30, 415, 0, -1, ((nn) this).field_p);
+              var9.b(sb.a(((nn) this).field_r[0], 3), 30, 415, 0, -1, ((nn) this).field_p);
               if (null != ((nn) this).field_f) {
                 fi.a((jl) (Object) var10, bb.field_e, ((nn) this).field_f, jg.field_J, 30, 390, 0, -1, ((nn) this).field_p);
                 break L0;
@@ -514,7 +512,7 @@ final class nn {
             he.field_d = (jl) (Object) kk.a(param2, "commonui", 0, "arezzo14", param3);
             ba.field_d = (jl) (Object) kk.a(param2, "commonui", 0, "arezzo14bold", param3);
             var17 = new tf(param1.a((byte) 24, "", "button.gif"), (java.awt.Component) (Object) ec.field_u);
-            hh discarded$2 = dq.a((byte) 31, "dropdown", "commonui", param2);
+            hh discarded$1 = dq.a((byte) 31, "dropdown", "commonui", param2);
             var5 = lb.a(param2, param0 ^ 4767934, "commonui", "screen_options");
             ng.field_A = new hh[4];
             ng.field_o = new hh[4];
@@ -550,8 +548,7 @@ final class nn {
                     var12 = new tf(-(2 * var9) + var17.field_F, var9);
                     var12.c();
                     var17.f(-var9, 0);
-                    int discarded$3 = 92;
-                    ia.a();
+                    ia.a((byte) 92);
                     fc.field_d = new tf[]{var15, var12, var11};
                     break L0;
                   } else {

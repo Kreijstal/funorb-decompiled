@@ -29,8 +29,7 @@ final class ab {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = pg.a(param1.length, 0, param1);
+            stackOut_0_0 = pg.a(param1.length, 0, param1, 0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

@@ -14,14 +14,12 @@ final class tj extends od {
               param0 = param0.field_b;
               continue L0;
             } else {
-              int discarded$4 = 47;
-              rf.a(param0, (jb) (Object) param1);
+              rf.a(param0, (jb) (Object) param1, 47);
               ((tj) this).field_j = ((rj) (Object) ((tj) this).field_m.field_a.field_b).field_f;
               return;
             }
           } else {
-            int discarded$5 = 47;
-            rf.a(param0, (jb) (Object) param1);
+            rf.a(param0, (jb) (Object) param1, 47);
             ((tj) this).field_j = ((rj) (Object) ((tj) this).field_m.field_a.field_b).field_f;
             return;
           }

@@ -404,11 +404,11 @@ final class ld {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, boolean param1) {
         sa.field_Q.a(param0, true);
     }
 

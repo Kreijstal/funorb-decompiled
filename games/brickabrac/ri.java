@@ -215,8 +215,7 @@ final class ri extends ib implements en {
         if (param0 > -41) {
             return;
         }
-        int discarded$0 = 96;
-        aa.a();
+        aa.a((byte) 96);
         ko.a(-32120);
     }
 
@@ -299,7 +298,7 @@ final class ri extends ib implements en {
         return stackIn_11_0;
     }
 
-    final static byte[] a(byte[] param0, int param1, pi param2) {
+    final static byte[] a(byte[] param0, int param1, pi param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -451,14 +450,14 @@ final class ri extends ib implements en {
         return stackIn_18_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_I = null;
         field_O = null;
         field_L = null;
         field_N = null;
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         int var1 = 0;
         if (ki.field_d < 224) {
             var1 = ki.field_d % 32;

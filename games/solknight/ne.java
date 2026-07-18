@@ -446,7 +446,7 @@ final class ne {
         return stackIn_14_0 != 0;
     }
 
-    final static pc a(String param0) {
+    final static pc a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -493,8 +493,7 @@ final class ne {
                 return stackIn_7_0;
               } else {
                 var3 = 0;
-                int discarded$2 = 1;
-                var4 = b.a(param0, '.');
+                var4 = b.a(param0, '.', true);
                 if (var4.length >= 2) {
                   var5 = var4;
                   var6 = 0;

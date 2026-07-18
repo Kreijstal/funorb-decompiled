@@ -8,7 +8,7 @@ final class og {
     static hh field_a;
     static String[] field_c;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -186,8 +186,7 @@ final class og {
         var1 = jk.l(-889);
         var2 = ba.a((byte) 101);
         kf.field_i.a(var1 - -(tj.field_y << 1), qa.field_u - dg.field_b, -tj.field_y + ic.field_b, (byte) 110, (dg.field_b << 1) + var2);
-        int discarded$25 = 8;
-        hd.a();
+        hd.a((byte) 8);
         if (param0) {
           field_e = 33;
           return;

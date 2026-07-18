@@ -305,7 +305,7 @@ final class sj extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
     }
 

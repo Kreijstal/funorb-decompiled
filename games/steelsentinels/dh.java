@@ -158,8 +158,7 @@ class dh extends kd {
         try {
           L0: {
             L1: {
-              int discarded$2 = -126;
-              var2_int = qe.a(di.field_h, ul.field_d);
+              var2_int = qe.a(di.field_h, ul.field_d, -126);
               if (1 != var2_int) {
                 break L1;
               } else {
@@ -281,7 +280,7 @@ class dh extends kd {
         return rf.a(true, 1, (byte) -127, false, false, param1);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_E = null;
         field_z = null;
         field_A = null;
@@ -333,8 +332,7 @@ class dh extends kd {
           L0: {
             if (wa.a((byte) 30, param1, param0, param2)) {
               var5_int = 0;
-              int discarded$2 = 103;
-              stackOut_3_0 = sn.a(param4.a(param0, (byte) 79, param1));
+              stackOut_3_0 = sn.a(param4.a(param0, (byte) 79, param1), 103);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

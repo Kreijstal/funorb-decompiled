@@ -183,7 +183,7 @@ class p {
         return false;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_a = null;
         field_g = null;
         field_m = null;

@@ -22,7 +22,7 @@ final class gk {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.addMouseListener((java.awt.event.MouseListener) (Object) ic.field_d);
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ic.field_d);

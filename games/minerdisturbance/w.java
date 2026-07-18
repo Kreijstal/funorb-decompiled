@@ -15,7 +15,7 @@ final class w extends tn {
     static int[] field_R;
     static int field_S;
 
-    final static String a(Throwable param0) throws IOException {
+    final static String a(Throwable param0, byte param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;
@@ -467,8 +467,7 @@ final class w extends tn {
     }
 
     w(jm param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (ad) (Object) oa.a());
-        int discarded$0 = 0;
+        super(param1, (ad) (Object) oa.a(0));
         try {
             ((w) this).field_U = param1;
             ((w) this).field_V = param0;
@@ -562,7 +561,7 @@ final class w extends tn {
         return stackIn_3_0 != 0;
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_P = null;
         field_T = null;
         field_X = null;

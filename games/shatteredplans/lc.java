@@ -165,7 +165,7 @@ abstract class lc {
         return stackIn_41_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (js.field_j != -aj.field_c) {
           if (250 + -aj.field_c == js.field_j) {
             js.field_j = js.field_j + 1;
@@ -180,7 +180,7 @@ abstract class lc {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_d = null;
         field_a = null;

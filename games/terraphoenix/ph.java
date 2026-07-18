@@ -386,8 +386,7 @@ final class ph extends di {
             if (param0.b(2)) {
               L1: {
                 if (0 == param5) {
-                  int discarded$1 = 5;
-                  var10 = of.a(param0);
+                  var10 = of.a(param0, 5);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;
@@ -522,8 +521,7 @@ final class ph extends di {
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
               } else {
-                int discarded$2 = -1;
-                if (!this.c(param0)) {
+                if (!this.c(param0, -1)) {
                   stackOut_11_0 = dg.field_c;
                   stackIn_12_0 = stackOut_11_0;
                   break L0;
@@ -568,7 +566,7 @@ final class ph extends di {
         return stackIn_12_0;
     }
 
-    final static void a(int param0, bm param1) {
+    final static void a(int param0, bm param1, int param2, int param3) {
         try {
             ck.field_a = param1;
             nb.field_e = 12;
@@ -625,8 +623,7 @@ final class ph extends di {
             if (var4.length() != 0) {
               var5 = var4;
               if (!f.a(var5, -51)) {
-                int discarded$20 = 1;
-                if (am.a(var5)) {
+                if (am.a(var5, true)) {
                   stackOut_8_0 = a.field_a;
                   stackIn_9_0 = stackOut_8_0;
                   return stackIn_9_0;
@@ -637,15 +634,13 @@ final class ph extends di {
                     return stackIn_13_0;
                   } else {
                     var6 = -107 / ((param1 - 26) / 56);
-                    int discarded$21 = -1;
-                    if (!this.c(param0)) {
+                    if (!this.c(param0, -1)) {
                       if (var7.length() <= 0) {
                         stackOut_30_0 = nb.field_a;
                         stackIn_31_0 = stackOut_30_0;
                         break L0;
                       } else {
-                        int discarded$22 = 0;
-                        if (ak.a(var5, var7)) {
+                        if (ak.a(var5, var7, false)) {
                           stackOut_20_0 = jd.field_i;
                           stackIn_21_0 = stackOut_20_0;
                           return stackIn_21_0;
@@ -716,7 +711,7 @@ final class ph extends di {
         return stackIn_31_0;
     }
 
-    private final boolean c(String param0) {
+    private final boolean c(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -826,7 +821,7 @@ final class ph extends di {
         return stackIn_14_0 != 0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_t = null;
         field_u = null;
         field_n = null;

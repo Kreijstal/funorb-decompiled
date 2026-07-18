@@ -10,7 +10,7 @@ final class jg {
     private int field_e;
     private rg field_d;
 
-    final static void a() {
+    final static void a(byte param0) {
         t var1 = null;
         L0: {
           var1 = pl.field_q;
@@ -722,7 +722,7 @@ final class jg {
         }
     }
 
-    final static String a(Throwable param0) throws IOException {
+    final static String a(Throwable param0, int param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;

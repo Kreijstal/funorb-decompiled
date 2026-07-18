@@ -11,7 +11,7 @@ final class d {
     static vh field_c;
     static vh field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 51;
         field_f = null;
         field_b = null;
@@ -280,8 +280,7 @@ final class d {
                   } else {
                     cp.field_c.field_pb = false;
                     cp.field_c.field_Sb.field_Sb.field_nb = o.field_A;
-                    int discarded$1 = 109;
-                    mq.a(cp.field_c.field_Mb);
+                    mq.a(cp.field_c.field_Mb, (byte) 109);
                     break L2;
                   }
                 }

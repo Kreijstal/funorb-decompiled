@@ -7,7 +7,7 @@ final class km {
     private gq field_a;
     private gk field_d;
 
-    final static int a() {
+    final static int a(int param0) {
         return 1;
     }
 

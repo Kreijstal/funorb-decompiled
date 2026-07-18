@@ -12,7 +12,7 @@ final class hf {
     static je field_f;
     static String[] field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_i = null;
         field_b = null;
@@ -39,7 +39,7 @@ final class hf {
         ef.field_d[5] = sa.field_f;
     }
 
-    final static void a(ha param0) {
+    final static void a(ha param0, byte param1, boolean param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -105,7 +105,7 @@ final class hf {
         }
     }
 
-    final static void a(int param0, wk[] param1) {
+    final static void a(int param0, wk[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

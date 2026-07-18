@@ -178,6 +178,8 @@ abstract class lk extends ic implements ec {
               } else {
                 if (!l.field_g.equals((Object) (Object) param0.getParameter("settings"))) {
                   var3 = (Object) (Object) l.field_g;
+                  var5 = var3;
+                  var5 = var3;
                   break L1;
                 } else {
                   break L1;
@@ -196,8 +198,7 @@ abstract class lk extends ic implements ec {
                 }
               }
             }
-            int discarded$2 = 30403;
-            stackOut_7_0 = tg.a(param1, -1, (String) var3, (String) var5);
+            stackOut_7_0 = tg.a(param1, -1, (String) var3, (String) var5, 30403);
             stackIn_8_0 = stackOut_7_0;
             break L0;
           }

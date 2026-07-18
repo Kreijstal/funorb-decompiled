@@ -8,7 +8,7 @@ abstract class ke {
     static String field_a;
     static int[] field_b;
 
-    final static e a(String param0) {
+    final static e a(String param0, int param1) {
         RuntimeException var2 = null;
         e stackIn_5_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -35,8 +35,7 @@ abstract class ke {
                 break L1;
               } else {
                 if (!param0.equals((Object) (Object) gk.field_e.a(125))) {
-                  int discarded$2 = 51;
-                  gk.field_e = lc.a(param0);
+                  gk.field_e = lc.a(param0, (byte) 51);
                   break L1;
                 } else {
                   break L1;
@@ -82,7 +81,7 @@ abstract class ke {
 
     abstract int a(long param0, int param1);
 
-    final static void a(String param0, boolean param1) {
+    final static void a(String param0, boolean param1, int param2) {
         try {
             ud.field_U = param1;
             dj.field_t = true;
@@ -95,7 +94,7 @@ abstract class ke {
 
     abstract long a(boolean param0);
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;
@@ -112,7 +111,7 @@ abstract class ke {
         return ((ke) this).a(param0, param1 ^ 18);
     }
 
-    final static void a(md param0) {
+    final static void a(md param0, int param1) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;

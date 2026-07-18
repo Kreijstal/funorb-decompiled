@@ -9,7 +9,7 @@ final class gl extends se implements in {
     static cd field_L;
     private jn field_J;
 
-    final static void b() {
+    final static void b(boolean param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         hp var4 = null;
@@ -26,9 +26,7 @@ final class gl extends se implements in {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$8 = -85;
-                    int discarded$9 = 5;
-                    o.a(var5);
+                    o.a(var5, 5, -85);
                     var5 = (u) (Object) cp.field_T.b(6);
                     continue L2;
                   }
@@ -181,7 +179,7 @@ final class gl extends se implements in {
         }
     }
 
-    final static ja a() {
+    final static ja a(int param0) {
         int var4_int = 0;
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         int var1 = oq.field_w[0] * vj.field_p[0];
@@ -195,7 +193,7 @@ final class gl extends se implements in {
         return var4;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_H = null;
         field_L = null;
         field_K = null;

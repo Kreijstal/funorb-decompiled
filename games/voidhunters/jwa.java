@@ -194,10 +194,9 @@ final class jwa extends le {
                           L5: {
                             var7 = param1.charAt(var6);
                             if (qnb.a((byte) -128, (char) var7)) {
-                              int discarded$2 = 102;
-                              var8 = rr.a((char) var7);
+                              var8 = rr.a((char) var7, 102);
                               if (var8 != 0) {
-                                StringBuilder discarded$3 = var5.append((char) var8);
+                                StringBuilder discarded$1 = var5.append((char) var8);
                                 break L5;
                               } else {
                                 break L5;

@@ -78,23 +78,20 @@ final class raa extends rqa {
         super(param0, param1, param2);
     }
 
-    final static dj e() {
+    final static dj e(int param0) {
         String var1 = null;
         int var2 = 0;
         var2 = -1;
         var1 = wnb.a(87);
         if (var1 != null) {
           if (var1.indexOf('@') < 0) {
-            int discarded$6 = -3840;
-            return new dj(wnb.a(94), rta.e());
+            return new dj(wnb.a(94), rta.e(-3840));
           } else {
             var1 = "";
-            int discarded$7 = -3840;
-            return new dj(wnb.a(94), rta.e());
+            return new dj(wnb.a(94), rta.e(-3840));
           }
         } else {
-          int discarded$8 = -3840;
-          return new dj(wnb.a(94), rta.e());
+          return new dj(wnb.a(94), rta.e(-3840));
         }
     }
 
@@ -168,7 +165,7 @@ final class raa extends rqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_q = null;
         field_p = null;

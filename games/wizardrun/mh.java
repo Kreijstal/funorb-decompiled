@@ -162,7 +162,7 @@ class mh extends gf implements qd {
               }
               L2: {
                 if (var4 != 0) {
-                  int discarded$3 = param1.g(16, -11719);
+                  int discarded$1 = param1.g(16, -11719);
                   var5.field_G = sa.a(16, (byte) -48, param1, var5.field_G);
                   var5.field_H = sa.a(16, (byte) -48, param1, var5.field_H);
                   var5.field_m = sa.a(16, (byte) -48, param1, var5.field_m);
@@ -185,9 +185,7 @@ class mh extends gf implements qd {
                 if (!oe.a((byte) -55, param1)) {
                   break L4;
                 } else {
-                  int discarded$4 = 11;
-                  int discarded$5 = 16;
-                  var5.field_x = sd.a(param1, var5.field_x);
+                  var5.field_x = sd.a(param1, var5.field_x, 16, (byte) 11);
                   var6 = 0;
                   var7 = 0;
                   L5: while (true) {
@@ -261,7 +259,7 @@ class mh extends gf implements qd {
         return new int[8];
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_lb = null;
         field_ob = null;
         field_jb = null;

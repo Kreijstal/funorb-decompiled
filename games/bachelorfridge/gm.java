@@ -364,7 +364,7 @@ final class gm extends sfa {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_j = null;
     }
 

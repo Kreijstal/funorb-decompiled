@@ -92,7 +92,7 @@ final class je {
         var2.c(1, (byte) -93);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_f = null;
         field_a = null;

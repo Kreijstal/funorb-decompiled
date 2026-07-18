@@ -14,11 +14,9 @@ final class in {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, boolean param3) {
+    final static boolean a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         if (eq.a(false)) {
-            int discarded$10 = 15;
-            int discarded$12 = 14686;
-            jd.a(13, param3);
+            jd.a(13, param3, 14686, 15);
             if (wi.field_v != null) {
                 if (wi.field_v.a(param3, -2, 0, 11, 13)) {
                     param3 = false;
@@ -32,23 +30,11 @@ final class in {
         return param3;
     }
 
-    final static void a() {
-        int discarded$0 = 128;
-        int discarded$1 = 11;
-        int discarded$2 = 0;
-        hl.field_e = kd.a(25, 0, true);
-        int discarded$3 = 128;
-        int discarded$4 = 11;
-        int discarded$5 = 0;
-        am.field_h = kd.a(50, 25, true);
-        int discarded$6 = 128;
-        int discarded$7 = 11;
-        int discarded$8 = 0;
-        hq.field_e = kd.a(75, 50, false);
-        int discarded$9 = 128;
-        int discarded$10 = 11;
-        int discarded$11 = 0;
-        ub.field_G = kd.a(100, 75, false);
+    final static void a(boolean param0, int param1) {
+        hl.field_e = kd.a(25, 0, true, false, 11, 128);
+        am.field_h = kd.a(50, 25, true, false, 11, 128);
+        hq.field_e = kd.a(75, 50, false, false, 11, 128);
+        ub.field_G = kd.a(100, 75, false, false, 11, 128);
     }
 
     final static boolean a(byte param0) {

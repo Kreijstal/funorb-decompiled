@@ -13,7 +13,7 @@ final class gda extends ksa {
     int field_f;
     int field_l;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_k = null;
     }
 

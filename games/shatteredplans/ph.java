@@ -25,8 +25,7 @@ final class ph implements jk {
         if (!(!ae.field_b)) {
             return false;
         }
-        int discarded$0 = 0;
-        return le.a(param1, param2);
+        return le.a(param1, param2, false);
     }
 
     final static void a(int param0) {
@@ -66,7 +65,7 @@ final class ph implements jk {
         }
     }
 
-    final static void a(bc param0) {
+    final static void a(bc param0, int param1) {
         try {
             tc.a((byte) 23, param0.a(true, "tutorial.txt", ""));
             int var2_int = 45;
@@ -75,7 +74,7 @@ final class ph implements jk {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_a = null;
         field_c = null;

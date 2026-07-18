@@ -13,7 +13,7 @@ final class wf extends ana {
         field_v = null;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         aga var2 = null;
         iv var3 = null;
         int var5 = 0;
@@ -69,21 +69,19 @@ final class wf extends ana {
     }
 
     final static void a(int param0, byte param1) {
-        int discarded$0 = 1;
-        cq discarded$1 = ol.a(rt.field_a[param0]);
+        cq discarded$0 = ol.a(rt.field_a[param0], true);
         int var2 = 49 / ((83 - param1) / 43);
     }
 
     final boolean c(byte param0) {
         int var2 = 0;
         var2 = -56 % ((71 - param0) / 47);
-        int fieldTemp$4 = ((wf) this).field_l - 1;
+        int fieldTemp$2 = ((wf) this).field_l - 1;
         ((wf) this).field_l = ((wf) this).field_l - 1;
-        if (fieldTemp$4 >= 0) {
+        if (fieldTemp$2 >= 0) {
           if (((wf) this).field_l == 25) {
             wf.a(34, (byte) -101);
-            int discarded$5 = 120;
-            this.e();
+            this.e((byte) 120);
             return false;
           } else {
             return false;

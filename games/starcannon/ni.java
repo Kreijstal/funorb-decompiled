@@ -133,7 +133,7 @@ final class ni implements de {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
     }
 
@@ -221,13 +221,12 @@ final class ni implements de {
                           } else {
                             L6: {
                               var7 = param1.charAt(var6);
-                              int discarded$2 = 90;
-                              if (dk.a((char) var7)) {
+                              if (dk.a((char) var7, (byte) 90)) {
                                 var8 = pa.a((char) var7, -80);
                                 if (var8 == 0) {
                                   break L6;
                                 } else {
-                                  StringBuilder discarded$3 = var5.append((char) var8);
+                                  StringBuilder discarded$1 = var5.append((char) var8);
                                   break L6;
                                 }
                               } else {

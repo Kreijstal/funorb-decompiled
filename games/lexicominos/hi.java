@@ -171,7 +171,7 @@ final class hi {
         return stackIn_19_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -354,8 +354,7 @@ final class hi {
                   }
                 }
                 L12: {
-                  int discarded$1 = 0;
-                  var7 = ii.a(stackIn_38_0, stackIn_38_1 != 0);
+                  var7 = ii.a(stackIn_38_0, stackIn_38_1 != 0, 0);
                   var8 = -(var7 >> 1) + uh.field_D;
                   if (var4 >= 0) {
                     L13: {
@@ -408,7 +407,7 @@ final class hi {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_a = null;

@@ -183,15 +183,14 @@ final class si extends da {
         return stackIn_13_0;
     }
 
-    final static ik b() {
+    final static ik b(int param0) {
         String var1 = jj.a(true);
         if (var1 != null) {
             if (!(var1.indexOf('@') < 0)) {
                 var1 = "";
             }
         }
-        int discarded$0 = 16777215;
-        return new ik(jj.a(true), wl.j());
+        return new ik(jj.a(true), wl.j(16777215));
     }
 
     public static void a(int param0) {

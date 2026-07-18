@@ -17,7 +17,7 @@ final class q {
     static String[] field_m;
     static int field_n;
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException runtimeException = null;
         qb var1 = null;
         int var2 = 0;
@@ -93,7 +93,7 @@ final class q {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_f = null;
         field_g = null;
@@ -106,7 +106,7 @@ final class q {
         field_b = null;
     }
 
-    final static String c() {
+    final static String c(int param0) {
         if (od.field_I == ti.field_b) {
             return qi.field_G;
         }
@@ -118,9 +118,7 @@ final class q {
     }
 
     private static void $cfr$clinit() {
-        int discarded$0 = 50;
-        int discarded$1 = 256;
-        jn.a();
+        jn.a(256, 50);
         field_l = "You destroyed the main reactor for this level. Activate another reactor to restore power to the lift.";
         field_i = null;
         field_a = "Find a way back to the lift.";

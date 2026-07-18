@@ -117,7 +117,7 @@ final class kh {
         return stackIn_4_0;
     }
 
-    final static void a(tg param0) {
+    final static void a(tg param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -137,8 +137,7 @@ final class kh {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            wa.a();
+            wa.a(true);
             na.a(param0.field_v, param0.field_t, param0.field_o);
             break L0;
           }

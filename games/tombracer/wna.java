@@ -449,15 +449,13 @@ final class wna extends ci {
             if (cga.field_f < 20) {
                 return true;
             }
-            int discarded$2 = 49;
-            if (!wua.c()) {
+            if (!wua.c((byte) 49)) {
                 return true;
             }
             if (lsa.field_a <= 0) {
                 return false;
             }
-            int discarded$6 = -1;
-            if (dg.b()) {
+            if (dg.b(-1)) {
                 return false;
             }
             return true;
@@ -465,15 +463,13 @@ final class wna extends ci {
         if (cga.field_f < 20) {
             return true;
         }
-        int discarded$9 = 49;
-        if (!wua.c()) {
+        if (!wua.c((byte) 49)) {
             return true;
         }
         if (lsa.field_a <= 0) {
             return false;
         }
-        int discarded$13 = -1;
-        if (dg.b()) {
+        if (dg.b(-1)) {
             return false;
         }
         return true;

@@ -463,14 +463,14 @@ final class ha {
         return '_';
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_a = null;
         field_f = null;
     }
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

@@ -8,9 +8,8 @@ final class a extends ch {
     private jd field_m;
     static sg field_n;
 
-    final static jk e() {
-        int discarded$0 = -7705;
-        return new jk(ja.a(), oj.a(104));
+    final static jk e(int param0) {
+        return new jk(ja.a(-7705), oj.a(104));
     }
 
     public static void d(int param0) {
@@ -491,8 +490,7 @@ final class a extends ch {
                   }
                 }
                 ((a) this).field_m = (jd) param0;
-                int discarded$1 = 29034;
-                this.f();
+                this.f(29034);
                 this.a((byte) 85, param1);
                 ((a) this).field_i.field_i = 0;
                 ((a) this).field_j = null;
@@ -570,7 +568,7 @@ final class a extends ch {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int[] param3) {
+    final static void a(int param0, int param1, int param2, int[] param3, int param4) {
         int[] var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -732,7 +730,7 @@ final class a extends ch {
         }
     }
 
-    final static wb a(wb param0, int[] param1) {
+    final static wb a(wb param0, int[] param1, int param2) {
         wb var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -843,7 +841,7 @@ final class a extends ch {
         return stackIn_1_0;
     }
 
-    private final void f() {
+    private final void f(int param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;

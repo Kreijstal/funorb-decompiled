@@ -61,7 +61,7 @@ final class pb {
         oh.field_F = true;
     }
 
-    final static int b() {
+    final static int b(boolean param0) {
         if (!fh.field_d) {
             if (ld.field_w <= hk.field_e) {
                 if (qn.field_K + ld.field_w > hk.field_e) {
@@ -73,7 +73,7 @@ final class pb {
         return -1;
     }
 
-    final static ln a(String param0, bj param1, String param2) {
+    final static ln a(String param0, bj param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -342,7 +342,7 @@ final class pb {
         mb.field_b.b(1, (fe) (Object) bd.field_e);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_R = null;
         field_r = null;
         field_A = null;

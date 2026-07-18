@@ -7,7 +7,7 @@ final class pe extends tfa implements gf {
     private int field_l;
     private int field_n;
 
-    final static String[] a(uia param0) {
+    final static String[] a(uia param0, byte param1) {
         vna var2 = null;
         RuntimeException var2_ref = null;
         String[] var3 = null;
@@ -47,8 +47,7 @@ final class pe extends tfa implements gf {
                   break L2;
                 } else {
                   var3_int = w.a(param0, -58, var2);
-                  int discarded$1 = 1;
-                  if (!qqa.a(param0, mga.field_j, var3_int)) {
+                  if (!qqa.a(param0, mga.field_j, var3_int, true)) {
                     stackOut_4_0 = (uia) param0;
                     stackIn_5_0 = stackOut_4_0;
                     continue L1;
@@ -112,14 +111,13 @@ final class pe extends tfa implements gf {
             ((pe) this).field_l = param3;
             ((pe) this).field_n = param4;
             ((pe) this).field_j.a(true, (iva) this);
-            int discarded$0 = 5126;
-            jaggl.OpenGL.glTexImage2Dub(((pe) this).field_i, 0, ((pe) this).d(78), param3, param4, 0, waa.a(((pe) this).field_f, 1383), lr.a(((pe) this).field_a), (byte[]) null, 0);
+            jaggl.OpenGL.glTexImage2Dub(((pe) this).field_i, 0, ((pe) this).d(78), param3, param4, 0, waa.a(((pe) this).field_f, 1383), lr.a(((pe) this).field_a, 5126), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static int a(boolean param0, int param1, String param2, int param3, String param4, String param5) {
+    final static int a(boolean param0, int param1, String param2, int param3, String param4, String param5, byte param6) {
         goa var7 = null;
         RuntimeException var7_ref = null;
         goa var8 = null;
@@ -338,7 +336,7 @@ final class pe extends tfa implements gf {
         boolean discarded$0 = ((pe) this).a(96);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_m = null;
         field_k = null;
     }

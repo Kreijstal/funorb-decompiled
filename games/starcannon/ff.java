@@ -406,7 +406,7 @@ final class ff extends uh {
         return var7.toString();
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_q = null;
         field_p = null;
     }

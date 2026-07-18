@@ -7,7 +7,7 @@ final class ja extends td {
     static eaa field_s;
     static boolean field_p;
 
-    public static void b() {
+    public static void b(int param0) {
         field_s = null;
         field_q = null;
         field_r = null;

@@ -34,7 +34,7 @@ final class ua extends kl {
         ((ua) this).field_z = var5;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         pm.field_b = new sa(mf.field_d, be.field_l, wj.field_b, pg.field_c, (kc) (Object) ec.field_g, nj.field_d);
     }
 
@@ -154,7 +154,7 @@ final class ua extends kl {
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void c(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
         int var4 = null == ((ua) this).field_O ? 0 : ((ua) this).field_O.length;
@@ -173,7 +173,7 @@ final class ua extends kl {
         ((ua) this).field_I = var5;
     }
 
-    private final void a(int[] param0) {
+    private final void a(int[] param0, int param1) {
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -191,8 +191,7 @@ final class ua extends kl {
                 var6++;
             }
             this.a(0, var3_int, var4);
-            int discarded$0 = 103;
-            this.c(var4, var3_int);
+            this.c(var4, var3_int, 103);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ua.L(" + (param0 != null ? "{...}" : "null") + ',' + 9443 + ')');
         }
@@ -517,7 +516,7 @@ final class ua extends kl {
         return stackIn_23_0 != 0;
     }
 
-    final static String a(CharSequence[] param0) {
+    final static String a(CharSequence[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
@@ -541,8 +540,7 @@ final class ua extends kl {
         try {
           L0: {
             var2_int = 27;
-            int discarded$2 = 1;
-            stackOut_0_0 = vh.a(param0.length, 0, param0);
+            stackOut_0_0 = vh.a(param0.length, 0, param0, true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -591,8 +589,7 @@ final class ua extends kl {
             sf.a(var10, 0, param5, 1);
             var9 = new int[param6];
             sf.a(var9, 0, param6, 1);
-            int discarded$0 = 9443;
-            this.a(var10);
+            this.a(var10, 9443);
             this.a(0, var9);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ua.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');

@@ -550,16 +550,15 @@ final class cn implements Iterable {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_e = null;
         field_a = null;
         field_b = null;
     }
 
-    final static ci a() {
-        int discarded$0 = 110;
-        return jg.k();
+    final static ci a(int param0) {
+        return jg.k(110);
     }
 
     final static void a(int param0, boolean param1) {

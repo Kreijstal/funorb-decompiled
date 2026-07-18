@@ -16,7 +16,7 @@ final class cg {
     static int field_j;
     static boolean[] field_m;
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
@@ -129,8 +129,7 @@ final class cg {
             var2 = 0;
             L1: while (true) {
               if (var2 >= ((cg) this).field_h) {
-                int discarded$1 = 0;
-                this.a();
+                this.a(0);
                 return;
               } else {
                 var3 = 0;

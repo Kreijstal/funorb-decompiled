@@ -94,8 +94,7 @@ final class uj {
                     case 3: {
                         try {
                             var3 = var9 + "settings";
-                            int discarded$2 = -31185;
-                            var4 = (String) ac.a(param1, "getcookies");
+                            var4 = (String) ac.a(param1, "getcookies", -31185);
                             var5 = di.a(-116, ';', var4);
                             var6 = 0;
                             statePc = 4;
@@ -278,7 +277,7 @@ final class uj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_v = null;
     }
 

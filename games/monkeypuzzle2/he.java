@@ -7,7 +7,7 @@ final class he extends ug {
     static te field_e;
     static int[] field_g;
 
-    final static void e() {
+    final static void e(int param0) {
         int var1_int = 0;
         ki var2 = null;
         int var3 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -43,7 +43,7 @@ final class he extends ug {
         ne.a(true);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_f = null;
         field_g = null;

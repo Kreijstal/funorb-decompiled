@@ -18,7 +18,7 @@ final class wja extends pu {
         field_l = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, boolean param2) {
         if (null != ug.field_o) {
           if (qs.field_o <= param1) {
             if (ug.field_o.field_q + qs.field_o > param1) {

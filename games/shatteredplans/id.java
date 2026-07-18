@@ -8,14 +8,14 @@ final class id {
     static byte[] field_c;
     static ln field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_a = null;
         field_c = null;
         field_e = null;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -161,8 +161,7 @@ final class id {
             }
             var4_int = param1.a(125, param2);
             var5 = param1.a(var4_int, (byte) 106, param3);
-            int discarded$2 = -20487;
-            stackOut_2_0 = ga.a(param1, var5, var4_int);
+            stackOut_2_0 = ga.a(param1, var5, var4_int, -20487);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

@@ -225,7 +225,7 @@ final class pm extends ana {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_v = null;
         field_z = null;
     }
@@ -379,7 +379,7 @@ final class pm extends ana {
         }
     }
 
-    final static void f() {
+    final static void f(int param0) {
         int var1 = (kg.field_b - 640) / 2;
         int var2 = saa.field_b * saa.field_b;
         int var3 = var2 + -(lfa.field_q * lfa.field_q);

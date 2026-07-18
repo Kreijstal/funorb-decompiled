@@ -83,12 +83,12 @@ final class ua {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1, int param2, int param3) {
         if (!(!aj.b(-127))) {
             return;
         }
@@ -103,7 +103,7 @@ final class ua {
         var4.e(-96, var4.field_m + -var5);
     }
 
-    final static String a(int param0, int param1, CharSequence[] param2) {
+    final static String a(int param0, int param1, CharSequence[] param2, int param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;

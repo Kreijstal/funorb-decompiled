@@ -39,8 +39,7 @@ final class gq extends mh {
             }
           } else {
             L1: while (true) {
-              int discarded$7 = 5;
-              if (!jl.a()) {
+              if (!jl.a((byte) 5)) {
                 ((gq) this).field_Qb.field_Mb = ((gq) this).field_Vb.toString();
                 if (param0) {
                   if (ki.field_e != 0) {
@@ -62,7 +61,7 @@ final class gq extends mh {
                     break L2;
                   } else {
                     if (((gq) this).field_Vb.length() > 0) {
-                      StringBuilder discarded$8 = uk.a(' ', ((gq) this).field_Vb, -1 + ((gq) this).field_Vb.length(), false);
+                      StringBuilder discarded$5 = uk.a(' ', ((gq) this).field_Vb, -1 + ((gq) this).field_Vb.length(), false);
                       break L2;
                     } else {
                       break L2;
@@ -70,9 +69,8 @@ final class gq extends mh {
                   }
                 }
                 L3: {
-                  int discarded$9 = 0;
-                  if (nk.a(go.field_b, (CharSequence) (Object) ((gq) this).field_Vb)) {
-                    StringBuilder discarded$10 = ((gq) this).field_Vb.append(go.field_b);
+                  if (nk.a(go.field_b, (CharSequence) (Object) ((gq) this).field_Vb, false)) {
+                    StringBuilder discarded$6 = ((gq) this).field_Vb.append(go.field_b);
                     break L3;
                   } else {
                     L4: {
@@ -80,7 +78,7 @@ final class gq extends mh {
                         break L4;
                       } else {
                         if (go.field_b == 91) {
-                          StringBuilder discarded$11 = ((gq) this).field_Vb.append(go.field_b);
+                          StringBuilder discarded$7 = ((gq) this).field_Vb.append(go.field_b);
                           break L3;
                         } else {
                           break L4;
@@ -92,7 +90,7 @@ final class gq extends mh {
                         break L5;
                       } else {
                         if (go.field_b == 35) {
-                          StringBuilder discarded$12 = ((gq) this).field_Vb.append(go.field_b);
+                          StringBuilder discarded$8 = ((gq) this).field_Vb.append(go.field_b);
                           break L3;
                         } else {
                           break L5;
@@ -102,7 +100,7 @@ final class gq extends mh {
                     if (go.field_b != 93) {
                       break L3;
                     } else {
-                      StringBuilder discarded$13 = ((gq) this).field_Vb.append(go.field_b);
+                      StringBuilder discarded$9 = ((gq) this).field_Vb.append(go.field_b);
                       break L3;
                     }
                   }
@@ -553,7 +551,7 @@ final class gq extends mh {
         field_Ub = null;
     }
 
-    final static boolean d() {
+    final static boolean d(byte param0) {
         int[] var1 = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;

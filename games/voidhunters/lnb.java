@@ -298,7 +298,7 @@ final class lnb extends le {
         return (1024 & param0) != 0;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         if (null != cka.field_o) {
             if (cka.field_o.field_b != null) {
                 cka.field_o.field_b.field_J = false;
@@ -308,7 +308,7 @@ final class lnb extends le {
         cka.field_o = null;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_i = null;
     }
 

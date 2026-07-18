@@ -9,7 +9,7 @@ abstract class ns {
 
     abstract void a(java.awt.Component param0, byte param1);
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;

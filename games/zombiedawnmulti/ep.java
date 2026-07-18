@@ -191,7 +191,7 @@ final class ep {
         ep.a(oo.field_f, oo.field_e, oo.field_g, oo.field_d);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;

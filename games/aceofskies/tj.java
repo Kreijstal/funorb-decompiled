@@ -39,7 +39,7 @@ final class tj extends ao {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_n = null;
     }
 
@@ -152,7 +152,7 @@ final class tj extends ao {
         }
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         ((tj) this).field_p = 0.0f;
         ((tj) this).field_h = 0.0f;
         ((tj) this).field_j = 1.0f;
@@ -489,8 +489,7 @@ final class tj extends ao {
     }
 
     tj() {
-        int discarded$0 = 75;
-        this.c();
+        this.c((byte) 75);
     }
 
     static {

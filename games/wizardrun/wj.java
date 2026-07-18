@@ -344,11 +344,11 @@ final class wj extends pe implements qd {
         return ei.a(param2, param0, param1, 1, 20230);
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_G = null;
     }
 
-    final static boolean g() {
+    final static boolean g(byte param0) {
         return !we.field_c.a(true);
     }
 

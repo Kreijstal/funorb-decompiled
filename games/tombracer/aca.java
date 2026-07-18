@@ -8,13 +8,13 @@ final class aca extends vg {
     static String field_g;
     int field_f;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_i = null;
         field_g = null;
         field_h = null;
     }
 
-    final static void a(sia param0) {
+    final static void a(sia param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -109,8 +109,7 @@ final class aca extends vg {
         try {
           L0: {
             if (jna.a(false, param4, param1, param2)) {
-              int discarded$2 = 103;
-              stackOut_5_0 = fq.a(param0.a(false, param1, param4));
+              stackOut_5_0 = fq.a(param0.a(false, param1, param4), (byte) 103);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

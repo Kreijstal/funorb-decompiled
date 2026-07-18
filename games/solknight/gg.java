@@ -57,8 +57,7 @@ class gg {
     }
 
     final static boolean b(byte param0) {
-        int discarded$0 = -94;
-        return lb.g();
+        return lb.g((byte) -94);
     }
 
     static {

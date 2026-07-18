@@ -65,20 +65,19 @@ abstract class m {
                   break L0;
                 } else {
                   L2: {
-                    int discarded$21 = 0;
-                    if (!ti.a(param1)) {
+                    if (!ti.a(param1, false)) {
                       var6 = param1.e(jl.a(109, var5 - 1), (byte) 53);
                       var4[var5] = var4[var6];
                       break L2;
                     } else {
                       var6_ref_ej = new ej();
-                      int discarded$22 = param1.e(24, (byte) 40);
-                      int discarded$23 = param1.e(24, (byte) 95);
+                      int discarded$12 = param1.e(24, (byte) 40);
+                      int discarded$13 = param1.e(24, (byte) 95);
                       var6_ref_ej.field_d = param1.e(24, (byte) 114);
-                      int discarded$24 = param1.e(9, (byte) 62);
-                      int discarded$25 = param1.e(12, (byte) 42);
-                      int discarded$26 = param1.e(12, (byte) 75);
-                      int discarded$27 = param1.e(12, (byte) -115);
+                      int discarded$14 = param1.e(9, (byte) 62);
+                      int discarded$15 = param1.e(12, (byte) 42);
+                      int discarded$16 = param1.e(12, (byte) 75);
+                      int discarded$17 = param1.e(12, (byte) -115);
                       var4[var5] = var6_ref_ej;
                       break L2;
                     }

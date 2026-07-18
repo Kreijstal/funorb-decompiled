@@ -10,11 +10,11 @@ final class aia extends bw {
     int field_h;
     aia field_i;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_l = null;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         kv var1 = null;
         int var1_int = 0;
         int var2 = 0;

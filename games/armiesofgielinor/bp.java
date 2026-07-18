@@ -60,7 +60,7 @@ abstract class bp {
         return ((bp) this).a(88) >= 20 ? true : false;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_d = null;
         field_m = null;
         field_k = null;

@@ -37,12 +37,11 @@ final class ti extends rd {
                 break L1;
               } else {
                 var3 = null;
-                int discarded$4 = ti.a(92, (CharSequence) null);
+                int discarded$2 = ti.a(92, (CharSequence) null);
                 break L1;
               }
             }
-            int discarded$5 = 1;
-            stackOut_2_0 = ud.a(param1, 10, (byte) -76);
+            stackOut_2_0 = ud.a(param1, 10, (byte) -76, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -170,7 +169,7 @@ final class ti extends rd {
         return (pb) (Object) new qh();
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_l = null;
         field_m = null;
         field_j = null;

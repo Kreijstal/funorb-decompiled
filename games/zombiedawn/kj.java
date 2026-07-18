@@ -31,14 +31,14 @@ final class kj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_d = null;
         field_e = null;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;

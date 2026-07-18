@@ -39,13 +39,13 @@ final class rgb extends dmb implements ntb {
                 if (super.a((byte) -50, param1)) {
                   break L2;
                 } else {
-                  if (var3.field_g != var3.field_g) {
+                  if (((rgb) this).field_g != var3.field_g) {
                     break L2;
                   } else {
-                    if (var3.field_d != var3.field_d) {
+                    if (var3.field_d != ((rgb) this).field_d) {
                       break L2;
                     } else {
-                      if (var3.field_e == var3.field_e) {
+                      if (var3.field_e == ((rgb) this).field_e) {
                         stackOut_6_0 = 0;
                         stackIn_7_0 = stackOut_6_0;
                         break L1;
@@ -105,15 +105,15 @@ final class rgb extends dmb implements ntb {
             super.b((byte) 98, param1);
             var5 = (rgb) (Object) param1;
             var6 = var5;
-            var6.field_d = var5.field_d;
-            var6.field_e = var5.field_e;
-            var6.field_g = var5.field_g;
+            var6.field_d = ((rgb) this).field_d;
+            var6.field_e = ((rgb) this).field_e;
+            var6.field_g = ((rgb) this).field_g;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "rgb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
     }
 
@@ -174,29 +174,29 @@ final class rgb extends dmb implements ntb {
               var5 = (rgb) (Object) param0;
               super.a(param0, -59);
               var4 = 0;
-              if (var5.field_g == var5.field_g) {
+              if (((rgb) this).field_g == var5.field_g) {
                 break L2;
               } else {
                 var4 = 1;
-                System.out.println("int x has changed. before=" + var5.field_g + ", now=" + var5.field_g);
+                System.out.println("int x has changed. before=" + var5.field_g + ", now=" + ((rgb) this).field_g);
                 break L2;
               }
             }
             L3: {
-              if (var5.field_d == var5.field_d) {
+              if (var5.field_d == ((rgb) this).field_d) {
                 break L3;
               } else {
-                System.out.println("int y has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+                System.out.println("int y has changed. before=" + var5.field_d + ", now=" + ((rgb) this).field_d);
                 var4 = 1;
                 break L3;
               }
             }
             L4: {
-              if (var5.field_e == var5.field_e) {
+              if (((rgb) this).field_e == var5.field_e) {
                 break L4;
               } else {
                 var4 = 1;
-                System.out.println("int radius has changed. before=" + var5.field_e + ", now=" + var5.field_e);
+                System.out.println("int radius has changed. before=" + var5.field_e + ", now=" + ((rgb) this).field_e);
                 break L4;
               }
             }

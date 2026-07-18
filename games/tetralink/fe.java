@@ -5,7 +5,7 @@ final class fe {
     static String field_a;
     static int[] field_b;
 
-    final static void a(ri param0) {
+    final static void a(ri param0, int param1, boolean param2, int param3) {
         Object var4 = null;
         RuntimeException var4_ref = null;
         Throwable var5 = null;
@@ -29,8 +29,7 @@ final class fe {
           L0: {
             L1: {
               if (null != bn.field_c) {
-                int discarded$3 = 256;
-                qh.a(true, (byte) -56, 1048576, param0);
+                qh.a(true, (byte) -56, 1048576, param0, 256);
                 break L1;
               } else {
                 break L1;
@@ -96,7 +95,7 @@ final class fe {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

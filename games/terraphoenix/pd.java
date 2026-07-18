@@ -12,7 +12,7 @@ final class pd {
     static String field_e;
     boolean field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_e = null;
         field_g = null;
@@ -243,13 +243,11 @@ final class pd {
                       } else {
                         var3 = pj.field_l[ai.field_i.field_h];
                         if (var3 == 2) {
-                          int discarded$3 = 25501;
-                          wf.c();
+                          wf.c(25501);
                           break L3;
                         } else {
                           if (var3 == 5) {
-                            int discarded$4 = 25501;
-                            wf.c();
+                            wf.c(25501);
                             break L3;
                           } else {
                             L5: {
@@ -281,8 +279,7 @@ final class pd {
                     break L3;
                   } else {
                     if (pe.field_e != 2) {
-                      int discarded$5 = 25501;
-                      wf.c();
+                      wf.c(25501);
                       break L3;
                     } else {
                       break L3;

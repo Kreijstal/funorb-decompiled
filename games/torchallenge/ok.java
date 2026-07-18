@@ -19,7 +19,7 @@ final class ok {
         dg.field_ab = param0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_c = null;
@@ -54,12 +54,9 @@ final class ok {
                   L1: {
                     var5 = param0.getCodeBase();
                     var3 = mc.a(var5, param1, param0).getFile();
-                    int discarded$12 = -29585;
-                    Object discarded$13 = ff.a("updatelinks", new Object[2], param0);
-                    int discarded$14 = -29585;
-                    Object discarded$15 = ff.a("updatelinks", new Object[2], param0);
-                    int discarded$16 = -29585;
-                    Object discarded$17 = ff.a("updatelinks", new Object[2], param0);
+                    Object discarded$6 = ff.a("updatelinks", new Object[2], param0, -29585);
+                    Object discarded$7 = ff.a("updatelinks", new Object[2], param0, -29585);
+                    Object discarded$8 = ff.a("updatelinks", new Object[2], param0, -29585);
                     if (param1 == -1) {
                       break L1;
                     } else {
@@ -68,12 +65,9 @@ final class ok {
                       break L1;
                     }
                   }
-                  int discarded$18 = -29585;
-                  Object discarded$19 = ff.a("updatelinks", new Object[2], param0);
-                  int discarded$20 = -29585;
-                  Object discarded$21 = ff.a("updatelinks", new Object[2], param0);
-                  int discarded$22 = -29585;
-                  Object discarded$23 = ff.a("updatelinks", new Object[2], param0);
+                  Object discarded$9 = ff.a("updatelinks", new Object[2], param0, -29585);
+                  Object discarded$10 = ff.a("updatelinks", new Object[2], param0, -29585);
+                  Object discarded$11 = ff.a("updatelinks", new Object[2], param0, -29585);
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {

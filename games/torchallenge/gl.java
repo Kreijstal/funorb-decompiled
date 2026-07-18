@@ -17,7 +17,7 @@ abstract class gl {
     static int[] field_g;
     static ka field_h;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -128,13 +128,12 @@ abstract class gl {
             if (param0 != null) {
               L1: {
                 var2 = new nf(param0, ug.field_e, dd.field_t, pg.field_r, lg.field_e, h.field_a);
-                int discarded$6 = 0;
-                p.a();
+                p.a(0);
                 if (param1 > 107) {
                   break L1;
                 } else {
                   var3 = null;
-                  nf discarded$7 = gl.a((byte[]) null, (byte) -57);
+                  nf discarded$2 = gl.a((byte[]) null, (byte) -57);
                   break L1;
                 }
               }

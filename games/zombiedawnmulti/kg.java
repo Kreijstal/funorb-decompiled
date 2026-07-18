@@ -11,7 +11,7 @@ final class kg extends br {
     static int field_g;
     static String field_k;
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_f = null;
         field_l = null;

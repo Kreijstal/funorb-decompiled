@@ -10,7 +10,7 @@ final class sg extends jl {
     cm[] field_t;
     private byte[][] field_v;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_s = null;
         field_u = null;
     }
@@ -394,11 +394,8 @@ final class sg extends jl {
                 } else {
                     lc.field_J = new bj(1, 65534, bd.field_h - -qn.field_v.field_B.field_yb, we.field_g - -qn.field_v.field_J.field_o, -qn.field_v.field_h + d.field_a, rc.field_i, new int[1]);
                 }
-                int discarded$2 = 1;
-                if (!tj.a()) {
-                    int discarded$3 = 3;
-                    int discarded$4 = -1;
-                    r.a(lc.field_J);
+                if (!tj.a(true)) {
+                    r.a(lc.field_J, -1, 3);
                 }
                 rg.field_K = true;
             }

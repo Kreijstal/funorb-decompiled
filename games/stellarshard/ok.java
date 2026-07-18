@@ -80,8 +80,7 @@ final class ok {
                   break L5;
                 }
               }
-              int discarded$2 = -128;
-              vd.a(param1);
+              vd.a(param1, -128);
               break L0;
             }
           }
@@ -117,7 +116,7 @@ final class ok {
         }
     }
 
-    final static wb a(String param0) {
+    final static wb a(String param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -298,7 +297,7 @@ final class ok {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;

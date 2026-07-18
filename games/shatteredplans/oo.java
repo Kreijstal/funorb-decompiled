@@ -22,7 +22,7 @@ final class oo {
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         try {
             fr.field_H = param0;
             int var2_int = 0;
@@ -69,7 +69,7 @@ final class oo {
         return var6 > var5 ? true : false;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_f = null;

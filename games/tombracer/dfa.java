@@ -238,25 +238,19 @@ abstract class dfa {
         }
     }
 
-    final static void c() {
-        int discarded$4 = 0;
-        og.b();
+    final static void c(byte param0) {
+        og.b(0);
         if (!(null == nma.field_l)) {
-            int discarded$5 = 0;
-            pq.a(nma.field_l);
+            pq.a(nma.field_l, false);
         }
-        int discarded$18 = 101;
-        ola.f();
+        ola.f((byte) 101);
         pc.a(5);
-        int discarded$39 = 0;
-        rda.e();
-        int discarded$46 = 0;
-        if (!(!bl.b())) {
+        rda.e(0);
+        if (!(!bl.b(0))) {
             ql.field_k.k(1, -2988);
             bl.a(0, -1);
         }
-        int discarded$47 = 60;
-        dea.a();
+        dea.a(60);
     }
 
     abstract boolean b(int param0);
@@ -265,7 +259,7 @@ abstract class dfa {
 
     abstract void a(boolean param0, boolean param1, int param2);
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_e = null;
         field_a = null;

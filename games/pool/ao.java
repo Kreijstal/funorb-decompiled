@@ -225,7 +225,7 @@ final class ao extends vh {
         }
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         cb.field_d = 0;
     }
 
@@ -260,7 +260,7 @@ final class ao extends vh {
         ((ao) this).field_Qb.field_eb = var6;
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_Pb = null;
         field_Nb = null;
         field_Lb = null;

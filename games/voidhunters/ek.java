@@ -764,7 +764,7 @@ final class ek extends rqa {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         wia.field_a = false;
     }
 

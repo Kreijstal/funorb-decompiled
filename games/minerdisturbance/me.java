@@ -380,7 +380,7 @@ final class me {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 1;
         field_l = null;
         field_k = null;
@@ -530,8 +530,7 @@ final class me {
                     break L4;
                   } else {
                     L5: {
-                      int discarded$2 = 20;
-                      this.c();
+                      this.c(20);
                       var9_int = param2;
                       if (var9_int > ((me) this).field_m) {
                         var9_int = ((me) this).field_m;
@@ -589,9 +588,9 @@ final class me {
                           if (param1 >= var9_int) {
                             break L8;
                           } else {
-                            int incrementValue$3 = param1;
+                            int incrementValue$1 = param1;
                             param1++;
-                            param0[incrementValue$3] = (byte) 0;
+                            param0[incrementValue$1] = (byte) 0;
                             param2--;
                             ((me) this).field_g = ((me) this).field_g + 1L;
                             continue L10;
@@ -824,7 +823,7 @@ final class me {
         }
     }
 
-    private final void c() throws IOException {
+    private final void c(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -880,14 +879,10 @@ final class me {
 
     final static void a(int param0, boolean param1) {
         if (param0 == 0) {
-            int discarded$0 = 2;
-            int discarded$1 = 1;
-            mm.a(false, df.field_b, 2, 1);
+            mm.a(false, df.field_b, 2, 1, true, 2);
         }
         if (!(1 != param0)) {
-            int discarded$2 = 2;
-            int discarded$3 = 1;
-            mm.a(false, hl.field_a, 2, 1);
+            mm.a(false, hl.field_a, 2, 1, true, 2);
         }
         if (param1) {
             me.a(7, false);

@@ -30,7 +30,7 @@ final class fu {
         ((fu) this).field_d[param2] = param1;
     }
 
-    private final int b(int param0) {
+    private final int b(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = Kickabout.field_G;
@@ -56,8 +56,7 @@ final class fu {
     }
 
     private final void a(int param0, boolean param1) {
-        int discarded$0 = 20151;
-        int[] var4 = new int[this.b(param0)];
+        int[] var4 = new int[this.b(param0, 20151)];
         int[] var3 = var4;
         dv.a(((fu) this).field_d, 0, var4, 0, ((fu) this).field_d.length);
         ((fu) this).field_d = var4;
@@ -68,7 +67,7 @@ final class fu {
         return new ki(7, param0, param2, (byte) 0, (byte) 0);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_f = null;
         field_b = null;

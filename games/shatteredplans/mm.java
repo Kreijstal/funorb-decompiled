@@ -99,7 +99,7 @@ final class mm extends ml {
         super(param0);
     }
 
-    final static void f() {
+    final static void f(int param0) {
         if (!(ji.field_G == null)) {
             ji.field_G.i((byte) -104);
         }
@@ -107,7 +107,7 @@ final class mm extends ml {
         ae.field_f.b((vg) (Object) sj.field_b, -54);
     }
 
-    final static void d() {
+    final static void d(int param0) {
         bq.field_h = new dg(ho.field_j, un.field_g, po.field_d, ii.field_u, (qr) (Object) fk.field_i, gn.field_w);
     }
 

@@ -10,7 +10,7 @@ abstract class wca extends od {
     int field_n;
     int field_m;
 
-    public static void f() {
+    public static void f(int param0) {
         field_l = null;
     }
 

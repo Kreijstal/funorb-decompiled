@@ -10,7 +10,7 @@ final class ua {
     static String field_d;
     static String field_g;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_f = null;
         field_c = null;
@@ -99,8 +99,7 @@ final class ua {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$1 = 240;
-            mq.a(0, new mp(param1), 0, param9, 12, param18, 16777215, 16777215, 320, new mp(param7), (byte) 88, 480, 10, param3, param11, param20, 16777215, 12, param15, new mp(param16));
+            mq.a(0, new mp(param1), 0, param9, 12, param18, 16777215, 16777215, 320, new mp(param7), (byte) 88, 480, 10, param3, param11, param20, 16777215, 12, param15, new mp(param16), 240);
             var21_int = 0;
             break L0;
           }

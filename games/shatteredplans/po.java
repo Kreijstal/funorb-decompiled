@@ -16,7 +16,7 @@ final class po {
         return ql.field_q;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         int var1 = 43;

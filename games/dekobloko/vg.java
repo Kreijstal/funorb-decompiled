@@ -168,7 +168,7 @@ final class vg {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2) {
+    final static void a(int param0, boolean param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         w var5 = null;
         w var6 = null;
@@ -488,8 +488,7 @@ final class vg {
                       var9_int = var13;
                       L17: while (true) {
                         if (var13 >= j.field_b) {
-                          int discarded$3 = 0;
-                          uc.a(-1, true, -1, 0, -1, j.field_b, g.field_N);
+                          uc.a(-1, true, -1, 0, -1, j.field_b, g.field_N, false);
                           if (2 > te.field_p) {
                             break L15;
                           } else {
@@ -704,8 +703,7 @@ final class vg {
               } else {
                 L28: {
                   if (ma.field_G.field_ob != 0) {
-                    int discarded$4 = 4;
-                    ul.a(param0);
+                    ul.a(param0, 4);
                     break L28;
                   } else {
                     break L28;
@@ -716,8 +714,7 @@ final class vg {
                     break L29;
                   } else {
                     if (fj.field_h) {
-                      int discarded$5 = 1;
-                      ji.c(param0);
+                      ji.c(param0, 1);
                       break L29;
                     } else {
                       th.a(param0, true);
@@ -746,10 +743,7 @@ final class vg {
         if (param1 <= 20) {
             field_G = null;
         }
-        int discarded$0 = 0;
-        int discarded$1 = 0;
-        int discarded$2 = 0;
-        return kc.a(true, 1, param0);
+        return kc.a(true, 1, param0, false, false, false);
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
@@ -778,7 +772,7 @@ final class vg {
         this.a(false);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_I = null;
         int var1 = 0;
         field_s = null;

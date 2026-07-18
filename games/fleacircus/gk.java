@@ -60,7 +60,7 @@ final class gk {
         }
     }
 
-    final static String a() {
+    final static String a(int param0) {
         if (ib.field_k < 2) {
             return cl.field_a;
         }

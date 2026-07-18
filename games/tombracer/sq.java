@@ -630,7 +630,7 @@ final class sq extends cg {
         }
     }
 
-    private final void a(l param0, l param1) {
+    private final void a(l param0, l param1, int param2) {
         try {
             ((sq) this).field_l = param0;
             ((sq) this).field_y = param1;
@@ -1503,8 +1503,7 @@ final class sq extends cg {
         ((sq) this).field_p = false;
         ((sq) this).field_j = 0;
         try {
-            int discarded$0 = 1048576;
-            this.a(param1, param0);
+            this.a(param1, param0, 1048576);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "sq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -10,7 +10,7 @@ final class pc {
     static int field_b;
     static String field_c;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_f = null;
         field_g = null;

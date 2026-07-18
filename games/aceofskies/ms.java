@@ -26,7 +26,7 @@ final class ms {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         int var1 = -34;
         field_a = null;

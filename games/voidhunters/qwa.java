@@ -4,7 +4,7 @@
 final class qwa extends rqa {
     static String field_o;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = -126;
         field_o = null;
     }

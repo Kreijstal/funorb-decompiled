@@ -150,7 +150,7 @@ final class in {
         return (java.awt.Frame) (Object) stackIn_28_0;
     }
 
-    final static int[] a() {
+    final static int[] a(byte param0) {
         return new int[8];
     }
 
@@ -162,7 +162,7 @@ final class in {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_g = null;
         field_f = null;

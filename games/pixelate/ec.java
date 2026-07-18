@@ -44,8 +44,7 @@ final class ec extends mg {
         try {
           L0: {
             var5 = (CharSequence) (Object) param1;
-            int discarded$4 = 0;
-            var3 = sn.a(var5);
+            var3 = sn.a(var5, 0);
             if (var3 != null) {
               stackOut_2_0 = (String) var3;
               stackIn_3_0 = stackOut_2_0;
@@ -55,7 +54,7 @@ final class ec extends mg {
                 if (param0 <= -76) {
                   break L1;
                 } else {
-                  int discarded$5 = ec.a(true, 49, -104);
+                  int discarded$2 = ec.a(true, 49, -104);
                   break L1;
                 }
               }
@@ -211,14 +210,13 @@ final class ec extends mg {
             in.field_s.c();
             var2.f(0, -th.field_b.field_E);
             in.field_s.field_y = th.field_b.field_E;
-            int discarded$0 = 92;
-            ia.a();
+            ia.a((byte) 92);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ec.A(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_q = null;
         field_n = null;
         field_u = null;

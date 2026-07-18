@@ -324,8 +324,7 @@ final class np extends hd {
 
     final static boolean h(byte param0) {
         int var1 = -35 % ((-48 - param0) / 50);
-        int discarded$0 = 1;
-        return mc.a(wq.field_d);
+        return mc.a(wq.field_d, true);
     }
 
     private final void a(int param0, byte param1, int param2) {
@@ -351,12 +350,12 @@ final class np extends hd {
         return dd.field_c == uv.field_i.field_Nb ? true : false;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         gt.field_t.field_o = 0;
         gt.field_t.field_l = 0;
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_Eb = null;
         field_Hb = null;
         field_Jb = null;
@@ -422,17 +421,15 @@ final class np extends hd {
         var2 = Kickabout.field_G;
         if (param0 == -1) {
           if (we.field_c == eq.field_a) {
-            int fieldTemp$70 = vo.field_bb;
+            int fieldTemp$6 = vo.field_bb;
             vo.field_bb = vo.field_bb + 1;
-            if (fieldTemp$70 >= 16) {
+            if (fieldTemp$6 >= 16) {
               if (!sq.field_G) {
-                int discarded$71 = 66;
-                pq.g();
+                pq.g((byte) 66);
                 eq.field_a = vu.field_Hb;
                 return;
               } else {
-                int discarded$72 = 0;
-                kw.b();
+                kw.b(0);
                 eq.field_a = vu.field_Hb;
                 return;
               }
@@ -444,8 +441,7 @@ final class np extends hd {
               if (!la.a(100)) {
                 if (vs.field_g != null) {
                   pd.a((byte) 70, 3, vs.field_g);
-                  int discarded$73 = -77;
-                  dh.c();
+                  dh.c((byte) -77);
                   if (dq.field_e) {
                     dq.field_e = false;
                     dw.a(false, 0);
@@ -456,8 +452,7 @@ final class np extends hd {
                     return;
                   }
                 } else {
-                  int discarded$74 = -77;
-                  dh.c();
+                  dh.c((byte) -77);
                   if (dq.field_e) {
                     dq.field_e = false;
                     dw.a(false, 0);
@@ -474,9 +469,9 @@ final class np extends hd {
               }
             } else {
               if (bn.field_A == eq.field_a) {
-                int fieldTemp$75 = vo.field_bb;
+                int fieldTemp$7 = vo.field_bb;
                 vo.field_bb = vo.field_bb - 1;
-                if (fieldTemp$75 > 0) {
+                if (fieldTemp$7 > 0) {
                   return;
                 } else {
                   eq.field_a = eq.field_j;
@@ -504,8 +499,7 @@ final class np extends hd {
     }
 
     final static void a(int param0, int param1, int param2) {
-        int discarded$0 = -55;
-        lo.a(0, param2, param0, true);
+        lo.a(0, param2, param0, true, (byte) -55);
         int var3 = -114 / ((param1 - 16) / 57);
     }
 

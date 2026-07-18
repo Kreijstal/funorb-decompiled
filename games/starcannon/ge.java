@@ -8,7 +8,7 @@ final class ge {
     static hl field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -54,8 +54,7 @@ final class ge {
         try {
           L0: {
             if (qb.a((byte) -111, param1, param3, param2)) {
-              int discarded$2 = 255;
-              stackOut_4_0 = pf.a();
+              stackOut_4_0 = pf.a(255);
               stackIn_5_0 = stackOut_4_0;
               break L0;
             } else {
@@ -140,7 +139,7 @@ final class ge {
         }
     }
 
-    final static mj[] b() {
+    final static mj[] b(byte param0) {
         return new mj[]{p.field_a, bh.field_b, ih.field_c};
     }
 

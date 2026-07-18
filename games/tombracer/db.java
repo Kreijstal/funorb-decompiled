@@ -138,8 +138,7 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
           L0: {
             L1: {
               var3_int = -41 % ((param1 - 62) / 37);
-              int discarded$2 = 24269;
-              if (!this.r()) {
+              if (!this.r(24269)) {
                 break L1;
               } else {
                 param0.a(9, (fo) this, (byte) -33);
@@ -585,8 +584,7 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
                 break L1;
               }
             }
-            int discarded$2 = 2;
-            var5_int = eha.a(((db) this).field_g, 12, ((db) this).field_r, ((db) this).field_q, param3, ((db) this).field_p);
+            var5_int = eha.a(((db) this).field_g, 12, ((db) this).field_r, ((db) this).field_q, param3, ((db) this).field_p, 2);
             if (var5_int != -1) {
               var6 = wm.a(4096, var5_int, param0 + -59);
               param3.a(var6, (byte) 47);
@@ -886,7 +884,7 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
         return 0;
     }
 
-    private final void n() {
+    private final void n(int param0) {
         this.t(0);
         this.a(rm.field_a.a((gr) null, (gma) this, -116), true);
     }
@@ -1069,14 +1067,14 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
         ((db) this).field_m.field_u.b((ffa) this, 7073);
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_h = null;
         field_j = null;
         field_s = null;
         field_f = null;
     }
 
-    private final boolean r() {
+    private final boolean r(int param0) {
         return ((db) this).field_m.o((byte) -82);
     }
 
@@ -1162,8 +1160,7 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
         try {
           L0: {
             L1: {
-              int discarded$2 = 24269;
-              if (this.r()) {
+              if (this.r(24269)) {
                 param1.a((byte) -106, 9, (fo) this);
                 break L1;
               } else {
@@ -1400,8 +1397,7 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
             }
             L2: {
               if (8 >= param0.field_E) {
-                int discarded$2 = -8195;
-                this.n();
+                this.n(-8195);
                 break L2;
               } else {
                 var3_int = param1.b((byte) 44, 2);
@@ -1419,9 +1415,9 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
               }
             }
             ((db) this).field_o = new bca(param0.field_E, param1);
-            int fieldTemp$3 = fi.field_c;
+            int fieldTemp$1 = fi.field_c;
             fi.field_c = fi.field_c + 1;
-            ((db) this).field_n = fieldTemp$3;
+            ((db) this).field_n = fieldTemp$1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

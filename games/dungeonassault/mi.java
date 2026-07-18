@@ -104,8 +104,7 @@ final class mi {
                 var12 = dd.a((byte) -112, 4, var8);
                 var13 = param4.d();
                 var13.e();
-                int discarded$1 = 99;
-                bp.a(var11, var12, var10);
+                bp.a(var11, var12, var10, (byte) 99);
                 var8.h(var10, var11);
                 var13.h();
                 var14 = var13.d();
@@ -250,7 +249,7 @@ final class mi {
         li.field_g = param3;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         lf.field_w = dk.a(120, 1, "da_title3");
         jd.field_o = dk.a(170, 1, "da_intro");
         wj.field_u = dk.a(150, 1, "da_highscores");
@@ -264,7 +263,7 @@ final class mi {
         ha.field_k = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 0;
         if (ql.field_d >= 224) {
             um.a(256, false);
@@ -274,7 +273,7 @@ final class mi {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_e = null;
         field_a = null;
         field_c = null;

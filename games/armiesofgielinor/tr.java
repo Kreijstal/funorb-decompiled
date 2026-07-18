@@ -14,7 +14,7 @@ final class tr extends oj {
     static int[][] field_C;
     static int field_A;
 
-    public static void g() {
+    public static void g(int param0) {
         field_z = null;
         field_C = null;
         field_G = null;
@@ -22,7 +22,7 @@ final class tr extends oj {
         field_y = null;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         al.field_f = new je(0L, (je) null);
         if (fh.field_c) {
             al.field_f.a(t.field_g, 84);
@@ -32,8 +32,7 @@ final class tr extends oj {
         no.field_T = new je(0L, (je) null);
         no.field_T.a((je) (Object) pj.field_E.field_a, 127);
         no.field_T.a(cp.field_d, 39);
-        int discarded$0 = 0;
-        ak.b();
+        ak.b(false);
     }
 
     final String a(byte param0, boolean param1) {

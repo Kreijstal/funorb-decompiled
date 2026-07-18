@@ -8,7 +8,7 @@ final class gaa extends lg {
     boolean field_j;
     private jfa field_h;
 
-    final static void a(po param0, vr param1) {
+    final static void a(po param0, vr param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         jc var4 = null;
@@ -77,8 +77,7 @@ final class gaa extends lg {
                 L1: while (true) {
                   if (7 <= var8) {
                     dg.a(var16, var5, var6);
-                    int discarded$1 = 0;
-                    sc.field_m = ad.a(mj.field_k, var4, tga.field_p, jv.field_i);
+                    sc.field_m = ad.a(mj.field_k, var4, tga.field_p, jv.field_i, false);
                     fo.field_a.field_z = new eaa();
                     break L0;
                   } else {
@@ -397,8 +396,7 @@ final class gaa extends lg {
         try {
           L0: {
             L1: {
-              int discarded$2 = 92;
-              gja.a(param0);
+              gja.a(param0, (byte) 92);
               uv.a(false, oc.field_m, false);
               if (param1 <= -81) {
                 break L1;
@@ -442,14 +440,14 @@ final class gaa extends lg {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         ((gaa) this).field_a.field_z = null;
         ((gaa) this).a(qga.field_s, 40, -4586, 72, 334, 260);
         ((gaa) this).a(hea.field_s, 40, -4586, 72, 334, 366);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_l = null;
         field_i = null;
     }
@@ -459,8 +457,7 @@ final class gaa extends lg {
         try {
             ((gaa) this).field_j = param4 ? true : false;
             ((gaa) this).field_h = param5;
-            int discarded$0 = 82;
-            this.a();
+            this.a((byte) 82);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "gaa.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -515,8 +512,7 @@ final class gaa extends lg {
         if (!((gaa) this).field_j) {
           L0: {
             wq.a(1, 14, 300, 16777215, ((gaa) this).field_f + 16, 300, 65793, true, tba.field_r, 0, ((gaa) this).field_g + 54);
-            int discarded$6 = 65793;
-            laa.a(284, (byte) -95, 310, 16777215, us.field_a);
+            laa.a(284, (byte) -95, 310, 16777215, us.field_a, 65793);
             ana.field_r.e(244, 330);
             stackOut_5_0 = 356;
             stackOut_5_1 = -111;
@@ -549,17 +545,14 @@ final class gaa extends lg {
               break L0;
             }
           }
-          int discarded$7 = 65793;
-          laa.a(stackIn_8_0, (byte) stackIn_8_1, stackIn_8_2, stackIn_8_3, qga.field_s);
+          laa.a(stackIn_8_0, (byte) stackIn_8_1, stackIn_8_2, stackIn_8_3, qga.field_s, 65793);
           ana.field_r.e(350, 330);
-          int discarded$8 = 65793;
-          laa.a(356, (byte) -65, 402, 16777215, hea.field_s);
+          laa.a(356, (byte) -65, 402, 16777215, hea.field_s, 65793);
           return;
         } else {
           L1: {
             wq.a(1, 14, 300, 16777215, ((gaa) this).field_f + 10, 300, 65793, true, qi.field_a, 0, ((gaa) this).field_g + 54);
-            int discarded$9 = 65793;
-            laa.a(284, (byte) -56, 310, 16777215, lga.a(true, new String[1], he.field_o));
+            laa.a(284, (byte) -56, 310, 16777215, lga.a(true, new String[1], he.field_o), 65793);
             ana.field_r.e(244, 330);
             stackOut_1_0 = 356;
             stackOut_1_1 = -111;
@@ -592,11 +585,9 @@ final class gaa extends lg {
               break L1;
             }
           }
-          int discarded$10 = 65793;
-          laa.a(stackIn_4_0, (byte) stackIn_4_1, stackIn_4_2, stackIn_4_3, qga.field_s);
+          laa.a(stackIn_4_0, (byte) stackIn_4_1, stackIn_4_2, stackIn_4_3, qga.field_s, 65793);
           ana.field_r.e(350, 330);
-          int discarded$11 = 65793;
-          laa.a(356, (byte) -65, 402, 16777215, hea.field_s);
+          laa.a(356, (byte) -65, 402, 16777215, hea.field_s, 65793);
           return;
         }
     }

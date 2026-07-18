@@ -16,7 +16,7 @@ final class un {
     byte[] field_b;
     int field_i;
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         if (!(-1 == ii.field_q)) {
             var1 = -gk.field_bb + 50;
@@ -28,7 +28,7 @@ final class un {
         }
     }
 
-    final static int a(int param0) {
+    final static int a(int param0, int param1) {
         int var2 = 0;
         int var3 = -1;
         if (!((param0 & 7) == 0)) {
@@ -38,7 +38,7 @@ final class un {
         return var4;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_k = null;
         field_j = null;
         field_c = null;

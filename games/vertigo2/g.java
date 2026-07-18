@@ -62,13 +62,12 @@ final class g {
         var1.c(2);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ui.field_g = 0;
-        int discarded$0 = -14829;
-        nb.h();
+        nb.h(-14829);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -139,8 +138,7 @@ final class g {
                         } else {
                           if (lc.field_b != 18) {
                             L1: {
-                              int discarded$31 = 12;
-                              db.a(false, 12, (byte) -128, op.field_d, true);
+                              db.a(false, 12, (byte) -128, op.field_d, true, 12);
                               if (an.field_c) {
                                 ln.field_d = null;
                                 an.field_c = false;
@@ -156,8 +154,7 @@ final class g {
                               } else {
                                 ki.a((byte) -107);
                                 k.a(false);
-                                int discarded$32 = -22;
-                                lh.a();
+                                lh.a((byte) -22);
                                 sk.field_g = false;
                                 return;
                               }
@@ -177,8 +174,7 @@ final class g {
                                 } else {
                                   ki.a((byte) -107);
                                   k.a(false);
-                                  int discarded$33 = -22;
-                                  lh.a();
+                                  lh.a((byte) -22);
                                   sk.field_g = false;
                                   break L2;
                                 }
@@ -229,8 +225,7 @@ final class g {
                               if (var2 == 0) {
                                 break L6;
                               } else {
-                                int discarded$34 = 12;
-                                db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false);
+                                db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
                                 break L6;
                               }
                             }
@@ -265,8 +260,7 @@ final class g {
                             } else {
                               ki.a((byte) -107);
                               k.a(false);
-                              int discarded$35 = -22;
-                              lh.a();
+                              lh.a((byte) -22);
                               sk.field_g = false;
                               return;
                             }
@@ -315,8 +309,7 @@ final class g {
                         if (var2 == 0) {
                           break L12;
                         } else {
-                          int discarded$36 = 12;
-                          db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false);
+                          db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
                           break L12;
                         }
                       }
@@ -352,8 +345,7 @@ final class g {
                         } else {
                           ki.a((byte) -107);
                           k.a(false);
-                          int discarded$37 = -22;
-                          lh.a();
+                          lh.a((byte) -22);
                           sk.field_g = false;
                           break L15;
                         }
@@ -379,8 +371,7 @@ final class g {
                     } else {
                       ki.a((byte) -107);
                       k.a(false);
-                      int discarded$38 = -22;
-                      lh.a();
+                      lh.a((byte) -22);
                       sk.field_g = false;
                       return;
                     }
@@ -399,16 +390,14 @@ final class g {
                     } else {
                       ki.a((byte) -107);
                       k.a(false);
-                      int discarded$39 = -22;
-                      lh.a();
+                      lh.a((byte) -22);
                       sk.field_g = false;
                       return;
                     }
                   }
                 } else {
                   L17: {
-                    int discarded$40 = 12;
-                    db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false);
+                    db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
                     if (an.field_c) {
                       ln.field_d = null;
                       an.field_c = false;
@@ -424,8 +413,7 @@ final class g {
                     } else {
                       ki.a((byte) -107);
                       k.a(false);
-                      int discarded$41 = -22;
-                      lh.a();
+                      lh.a((byte) -22);
                       sk.field_g = false;
                       return;
                     }
@@ -445,8 +433,7 @@ final class g {
                       } else {
                         ki.a((byte) -107);
                         k.a(false);
-                        int discarded$42 = -22;
-                        lh.a();
+                        lh.a((byte) -22);
                         sk.field_g = false;
                         break L18;
                       }
@@ -494,8 +481,7 @@ final class g {
                         if (var2 == 0) {
                           break L22;
                         } else {
-                          int discarded$43 = 12;
-                          db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false);
+                          db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
                           break L22;
                         }
                       }
@@ -531,8 +517,7 @@ final class g {
                         } else {
                           ki.a((byte) -107);
                           k.a(false);
-                          int discarded$44 = -22;
-                          lh.a();
+                          lh.a((byte) -22);
                           sk.field_g = false;
                           break L25;
                         }
@@ -558,8 +543,7 @@ final class g {
                     } else {
                       ki.a((byte) -107);
                       k.a(false);
-                      int discarded$45 = -22;
-                      lh.a();
+                      lh.a((byte) -22);
                       sk.field_g = false;
                       return;
                     }
@@ -579,8 +563,7 @@ final class g {
                       } else {
                         ki.a((byte) -107);
                         k.a(false);
-                        int discarded$46 = -22;
-                        lh.a();
+                        lh.a((byte) -22);
                         sk.field_g = false;
                         break L27;
                       }
@@ -589,8 +572,7 @@ final class g {
                   }
                 } else {
                   L28: {
-                    int discarded$47 = 12;
-                    db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false);
+                    db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
                     if (an.field_c) {
                       ln.field_d = null;
                       an.field_c = false;
@@ -622,8 +604,7 @@ final class g {
                     } else {
                       ki.a((byte) -107);
                       k.a(false);
-                      int discarded$48 = -22;
-                      lh.a();
+                      lh.a((byte) -22);
                       sk.field_g = false;
                       break L30;
                     }
@@ -671,8 +652,7 @@ final class g {
                       if (var2 == 0) {
                         break L34;
                       } else {
-                        int discarded$49 = 12;
-                        db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false);
+                        db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
                         break L34;
                       }
                     }
@@ -708,8 +688,7 @@ final class g {
                       } else {
                         ki.a((byte) -107);
                         k.a(false);
-                        int discarded$50 = -22;
-                        lh.a();
+                        lh.a((byte) -22);
                         sk.field_g = false;
                         break L37;
                       }
@@ -735,8 +714,7 @@ final class g {
                   } else {
                     ki.a((byte) -107);
                     k.a(false);
-                    int discarded$51 = -22;
-                    lh.a();
+                    lh.a((byte) -22);
                     sk.field_g = false;
                     return;
                   }
@@ -756,8 +734,7 @@ final class g {
                     } else {
                       ki.a((byte) -107);
                       k.a(false);
-                      int discarded$52 = -22;
-                      lh.a();
+                      lh.a((byte) -22);
                       sk.field_g = false;
                       break L39;
                     }
@@ -766,8 +743,7 @@ final class g {
                 }
               } else {
                 L40: {
-                  int discarded$53 = 12;
-                  db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false);
+                  db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
                   if (an.field_c) {
                     ln.field_d = null;
                     an.field_c = false;
@@ -799,8 +775,7 @@ final class g {
                   } else {
                     ki.a((byte) -107);
                     k.a(false);
-                    int discarded$54 = -22;
-                    lh.a();
+                    lh.a((byte) -22);
                     sk.field_g = false;
                     break L42;
                   }
@@ -830,8 +805,7 @@ final class g {
                             break L44;
                           } else {
                             if (lc.field_b != 18) {
-                              int discarded$55 = 12;
-                              db.a(false, 12, (byte) -128, op.field_d, true);
+                              db.a(false, 12, (byte) -128, op.field_d, true, 12);
                               break L43;
                             } else {
                               break L44;
@@ -883,8 +857,7 @@ final class g {
                   if (var2 == 0) {
                     break L43;
                   } else {
-                    int discarded$56 = 12;
-                    db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false);
+                    db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
                     break L43;
                   }
                 }
@@ -920,8 +893,7 @@ final class g {
                   } else {
                     ki.a((byte) -107);
                     k.a(false);
-                    int discarded$57 = -22;
-                    lh.a();
+                    lh.a((byte) -22);
                     sk.field_g = false;
                     break L50;
                   }
@@ -971,8 +943,7 @@ final class g {
                   if (var2 == 0) {
                     break L54;
                   } else {
-                    int discarded$58 = 12;
-                    db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false);
+                    db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
                     break L54;
                   }
                 }
@@ -1008,8 +979,7 @@ final class g {
                   } else {
                     ki.a((byte) -107);
                     k.a(false);
-                    int discarded$59 = -22;
-                    lh.a();
+                    lh.a((byte) -22);
                     sk.field_g = false;
                     break L57;
                   }
@@ -1060,8 +1030,7 @@ final class g {
                 if (var2 == 0) {
                   break L61;
                 } else {
-                  int discarded$60 = 12;
-                  db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false);
+                  db.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);
                   break L61;
                 }
               }
@@ -1097,8 +1066,7 @@ final class g {
                 } else {
                   ki.a((byte) -107);
                   k.a(false);
-                  int discarded$61 = -22;
-                  lh.a();
+                  lh.a((byte) -22);
                   sk.field_g = false;
                   break L64;
                 }

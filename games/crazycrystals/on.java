@@ -6,7 +6,7 @@ final class on {
     static String field_c;
     static int field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         dl var1 = null;
         dl var2 = null;
         int var3 = 0;
@@ -17,8 +17,7 @@ final class on {
             nb.b();
             kh.a();
             sn.field_c = 0;
-            int discarded$0 = -67;
-            ja.d();
+            ja.d((byte) -67);
             var2 = var1.d();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.g(-2, -2, 16777215);
@@ -68,8 +67,7 @@ final class on {
                   L1: {
                     var2_int = 0;
                     var3 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-                    int discarded$2 = 67;
-                    param1.getAppletContext().showDocument(gh.a(param1, var3), "_top");
+                    param1.getAppletContext().showDocument(gh.a(param1, var3, (byte) 67), "_top");
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {

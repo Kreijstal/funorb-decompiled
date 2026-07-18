@@ -14,7 +14,7 @@ final class lk extends vg implements qn, fo, noa {
     private int field_k;
     static jea field_l;
 
-    private final boolean a() {
+    private final boolean a(int param0) {
         return false;
     }
 
@@ -118,7 +118,7 @@ final class lk extends vg implements qn, fo, noa {
         }
     }
 
-    private final boolean f() {
+    private final boolean f(byte param0) {
         return ((lk) this).field_i.o((byte) -82) && !((lk) this).a(((lk) this).field_i.i(6029), false);
     }
 
@@ -150,8 +150,7 @@ final class lk extends vg implements qn, fo, noa {
         try {
           L0: {
             L1: {
-              int discarded$2 = -1;
-              if (!this.f()) {
+              if (!this.f((byte) -1)) {
                 dea.field_a.a(param1, 15, (lk) this);
                 break L1;
               } else {
@@ -233,8 +232,7 @@ final class lk extends vg implements qn, fo, noa {
         if (param0 != 48) {
             return false;
         }
-        int discarded$0 = 72;
-        return this.a();
+        return this.a(72);
     }
 
     public final int c(byte param0) {

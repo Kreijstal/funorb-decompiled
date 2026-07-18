@@ -14,7 +14,7 @@ final class ee {
         oh.field_e = 20000000L;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }
@@ -119,11 +119,11 @@ final class ee {
         }
     }
 
-    final static int b() {
+    final static int b(byte param0) {
         return -fk.field_Z + ah.field_i;
     }
 
-    final static void a(pn param0) {
+    final static void a(pn param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         pn var3 = null;
@@ -356,9 +356,7 @@ final class ee {
             }
             break L5;
           } else {
-            int discarded$2 = 1;
-            int discarded$3 = 80;
-            np.field_a = s.a((ge) (Object) var8);
+            np.field_a = s.a((ge) (Object) var8, 80, true);
             ci.field_p = null;
             break L5;
           }

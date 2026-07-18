@@ -11,7 +11,7 @@ final class sj {
     static java.util.zip.CRC32 field_b;
     static int field_f;
 
-    final static tl a(int param0, String param1) {
+    final static tl a(int param0, String param1, byte param2) {
         wf var3 = null;
         RuntimeException var3_ref = null;
         wf stackIn_1_0 = null;
@@ -74,7 +74,7 @@ final class sj {
         return (tl) (Object) stackIn_1_0;
     }
 
-    final static void a(dl param0) {
+    final static void a(dl param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
         try {
             wn.field_c = 107;
             a.field_c = param0;
@@ -89,7 +89,7 @@ final class sj {
         }
     }
 
-    final static dl a(int param0, int param1, db param2) {
+    final static dl a(int param0, int param1, db param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
@@ -116,8 +116,7 @@ final class sj {
           L0: {
             var4_int = 0;
             if (gm.a(param2, param0, true, param1)) {
-              int discarded$2 = 1;
-              stackOut_3_0 = tn.b();
+              stackOut_3_0 = tn.b(true);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -168,7 +167,7 @@ final class sj {
         ((sj) this).field_e = param0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
     }

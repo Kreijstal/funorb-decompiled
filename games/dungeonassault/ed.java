@@ -156,12 +156,12 @@ final class ed extends np {
         super.a(false, param1, param2);
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         ((ed) this).field_T = new pd(-8 + ((ed) this).field_t - -((ed) this).field_q, ((ed) this).field_i - -8, 5, ((ed) this).field_x + -16, 65536, 0);
         ((ed) this).field_S = 0;
     }
 
-    private final int d() {
+    private final int d(boolean param0) {
         int var5 = 0;
         int var6 = 0;
         int var7 = DungeonAssault.field_K;
@@ -195,8 +195,7 @@ final class ed extends np {
         L0: {
           L1: {
             var6 = DungeonAssault.field_K;
-            int discarded$1 = 1;
-            var2 = this.d() - -15;
+            var2 = this.d(true) - -15;
             if (((ed) this).field_S != ((ed) this).field_T.field_z) {
               break L1;
             } else {
@@ -378,7 +377,7 @@ final class ed extends np {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_W = null;
         int var1 = -100;
         field_R = null;
@@ -404,8 +403,7 @@ final class ed extends np {
         if (!(((ed) this).field_T.field_w)) {
             return;
         }
-        int discarded$0 = 1;
-        int var3 = this.d() + 20;
+        int var3 = this.d(true) + 20;
         int var4 = var3 + -((ed) this).field_x;
         if (param0 <= 23) {
             ((ed) this).field_B = null;
@@ -758,8 +756,7 @@ final class ed extends np {
     ed(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3);
         ((ed) this).field_B = new int[4];
-        int discarded$0 = -40;
-        this.e();
+        this.e((byte) -40);
     }
 
     final void b(byte param0) {

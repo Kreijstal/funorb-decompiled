@@ -65,7 +65,7 @@ final class lf extends ka {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         mf[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -97,7 +97,7 @@ final class lf extends ka {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_c = null;
         field_d = null;

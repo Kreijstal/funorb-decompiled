@@ -27,7 +27,7 @@ final class bd {
         field_i = null;
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0, int param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = MinerDisturbance.field_ab;

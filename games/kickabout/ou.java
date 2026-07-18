@@ -74,8 +74,7 @@ final class ou extends fd {
             var10 = var8;
             var3 = var10.h((byte) -109);
             var10.p(-111);
-            int discarded$1 = -4;
-            sq.field_H = ds.a(var10);
+            sq.field_H = ds.a(var10, (byte) -4);
             sm.field_l = new int[var3][];
             ba.field_n = new kk[var3];
             var4 = 0;
@@ -270,14 +269,12 @@ final class ou extends fd {
         }
         ((ou) this).field_E = param2;
         ((ou) this).field_x = (16711422 & param1) >> 1;
-        int discarded$0 = 121;
-        this.a();
+        this.a((byte) 121);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        int discarded$0 = 121;
-        this.a();
+        this.a((byte) 121);
     }
 
     private final ut a(int param0, int param1, int param2) {
@@ -457,7 +454,7 @@ final class ou extends fd {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((ou) this).field_z = new ut[]{this.a(-257, ((ou) this).field_A, ((ou) this).field_E), this.a(-257, ((ou) this).field_x, ((ou) this).field_F)};
         ((ou) this).field_v = this.a(false);
         ((ou) this).field_D = ((ou) this).field_v.f();

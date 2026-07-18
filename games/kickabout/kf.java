@@ -10,7 +10,7 @@ final class kf extends hd {
     private hd field_Cb;
     static String field_zb;
 
-    final static void a(int param0) {
+    final static void a(int param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -350,7 +350,7 @@ final class kf extends hd {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_yb = null;
         field_zb = null;
     }

@@ -11,31 +11,22 @@ final class qh implements cj {
 
     final static gd a(boolean param0) {
         String var1 = null;
-        int discarded$12 = -47;
-        var1 = pb.a();
+        var1 = pb.a((byte) -47);
         if (param0) {
           if (var1 != null) {
             if (var1.indexOf('@') < 0) {
-              int discarded$13 = -47;
-              int discarded$14 = 105;
-              return new gd(pb.a(), dd.f());
+              return new gd(pb.a((byte) -47), dd.f((byte) 105));
             } else {
               var1 = "";
-              int discarded$15 = -47;
-              int discarded$16 = 105;
-              return new gd(pb.a(), dd.f());
+              return new gd(pb.a((byte) -47), dd.f((byte) 105));
             }
           } else {
-            int discarded$17 = -47;
-            int discarded$18 = 105;
-            return new gd(pb.a(), dd.f());
+            return new gd(pb.a((byte) -47), dd.f((byte) 105));
           }
         } else {
-          gd discarded$19 = qh.a(false);
+          gd discarded$1 = qh.a(false);
           if (var1 == null) {
-            int discarded$20 = -47;
-            int discarded$21 = 105;
-            return new gd(pb.a(), dd.f());
+            return new gd(pb.a((byte) -47), dd.f((byte) 105));
           } else {
             L0: {
               if (var1.indexOf('@') >= 0) {
@@ -45,9 +36,7 @@ final class qh implements cj {
                 break L0;
               }
             }
-            int discarded$22 = -47;
-            int discarded$23 = 105;
-            return new gd(pb.a(), dd.f());
+            return new gd(pb.a((byte) -47), dd.f((byte) 105));
           }
         }
     }
@@ -185,7 +174,7 @@ final class qh implements cj {
         ((qh) this).field_f = 1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
     }

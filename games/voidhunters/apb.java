@@ -11,7 +11,7 @@ final class apb {
         int var1 = -97 % ((62 - param0) / 54);
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         mv var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

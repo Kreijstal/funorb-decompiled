@@ -169,7 +169,7 @@ final class tl extends hf {
         return stackIn_24_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_O = null;
         field_I = null;
         field_Q = null;
@@ -192,7 +192,7 @@ final class tl extends hf {
         return ((tl) this).field_N;
     }
 
-    final static ja a(lh param0) {
+    final static ja a(lh param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -225,10 +225,8 @@ final class tl extends hf {
             var2_int = param0.e(8, (byte) -110);
             if (var2_int <= 0) {
               L1: {
-                int discarded$5 = 0;
-                var3 = ti.a(param0) ? 1 : 0;
-                int discarded$6 = 0;
-                var4 = ti.a(param0) ? 1 : 0;
+                var3 = ti.a(param0, false) ? 1 : 0;
+                var4 = ti.a(param0, false) ? 1 : 0;
                 var5 = new ja();
                 var5.field_q = (short)param0.e(16, (byte) -99);
                 var5.field_J = uj.a(param0, (byte) 45, 16, var5.field_J);
@@ -255,7 +253,7 @@ final class tl extends hf {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$7 = param0.e(16, (byte) 82);
+                  int discarded$1 = param0.e(16, (byte) 82);
                   var5.field_z = uj.a(param0, (byte) 44, 16, var5.field_z);
                   var5.field_v = uj.a(param0, (byte) -116, 16, var5.field_v);
                   var5.field_R = uj.a(param0, (byte) 63, 16, var5.field_R);
@@ -265,8 +263,7 @@ final class tl extends hf {
                 }
               }
               L3: {
-                int discarded$8 = 0;
-                if (ti.a(param0)) {
+                if (ti.a(param0, false)) {
                   var5.field_M = uj.a(param0, (byte) 13, 16, var5.field_M);
                   break L3;
                 } else {
@@ -274,8 +271,7 @@ final class tl extends hf {
                 }
               }
               L4: {
-                int discarded$9 = 0;
-                if (ti.a(param0)) {
+                if (ti.a(param0, false)) {
                   var5.field_O = nl.a((byte) 65, 16, param0, var5.field_O);
                   var6 = 0;
                   var7 = 0;

@@ -11,7 +11,7 @@ final class rg implements dja {
         return (tv) (Object) new oca();
     }
 
-    final static int b() {
+    final static int b(byte param0) {
         int var1 = 0;
         L0: {
           var1 = 0;
@@ -35,7 +35,7 @@ final class rg implements dja {
         return (tv[]) (Object) new oca[param1];
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -90,7 +90,7 @@ final class rg implements dja {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }

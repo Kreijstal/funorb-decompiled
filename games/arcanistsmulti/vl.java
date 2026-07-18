@@ -12,7 +12,7 @@ final class vl extends pg {
     int field_n;
     static ll[] field_i;
 
-    final static void d() {
+    final static void d(byte param0) {
         RuntimeException var1 = null;
         byte[] var1_array = null;
         int var2 = 0;
@@ -37,9 +37,9 @@ final class vl extends pg {
             var9 = var10;
             var1_array = var9;
             var2 = 0;
-            int incrementValue$7 = var2;
+            int incrementValue$6 = var2;
             var2++;
-            var8[incrementValue$7] = (byte) 0;
+            var8[incrementValue$6] = (byte) 0;
             var3 = 0;
             L1: while (true) {
               if (4 <= var3) {
@@ -50,27 +50,26 @@ final class vl extends pg {
                     L3: while (true) {
                       if (16 <= var3) {
                         L4: {
-                          int discarded$8 = 112;
-                          if (lc.a()) {
+                          if (lc.a((byte) 112)) {
                             break L4;
                           } else {
-                            f discarded$9 = tf.a(6, -25866, var12);
+                            f discarded$7 = tf.a(6, -25866, var12);
                             break L4;
                           }
                         }
                         break L0;
                       } else {
-                        int incrementValue$10 = var2;
+                        int incrementValue$8 = var2;
                         var2++;
-                        var1_array[incrementValue$10] = (byte)b.field_f[var3];
+                        var1_array[incrementValue$8] = (byte)b.field_f[var3];
                         var3++;
                         continue L3;
                       }
                     }
                   } else {
-                    int incrementValue$11 = var2;
+                    int incrementValue$9 = var2;
                     var2++;
-                    var1_array[incrementValue$11] = (byte)so.field_c[var3];
+                    var1_array[incrementValue$9] = (byte)so.field_c[var3];
                     var3++;
                     continue L2;
                   }
@@ -115,14 +114,14 @@ final class vl extends pg {
                   if (~var6 <= ~var4.length) {
                     L10: {
                       if (var5 != -1) {
-                        int incrementValue$12 = var2;
+                        int incrementValue$10 = var2;
                         var2++;
-                        var1_array[incrementValue$12] = (byte)var5;
+                        var1_array[incrementValue$10] = (byte)var5;
                         break L10;
                       } else {
-                        int incrementValue$13 = var2;
+                        int incrementValue$11 = var2;
                         var2++;
-                        var1_array[incrementValue$13] = (byte) 0;
+                        var1_array[incrementValue$11] = (byte) 0;
                         break L10;
                       }
                     }
@@ -168,7 +167,7 @@ final class vl extends pg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_l = null;
         field_i = null;

@@ -24,7 +24,7 @@ final class ks extends ff {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_w = null;
         field_t = null;
         field_u = null;

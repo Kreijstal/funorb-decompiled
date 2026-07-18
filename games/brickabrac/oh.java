@@ -11,7 +11,7 @@ final class oh {
     static int field_f;
     int field_d;
 
-    final static String b() {
+    final static String b(byte param0) {
         return g.field_m;
     }
 

@@ -11,11 +11,11 @@ final class qn extends ob implements vb {
     static String field_nb;
     static String field_jb;
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         fd.field_d = 20000000L;
     }
 
-    final static int k() {
+    final static int k(byte param0) {
         return hd.field_b + ((on.field_h << 4) - -(ra.field_m << 2));
     }
 
@@ -48,8 +48,7 @@ final class qn extends ob implements vb {
               }
             }
             if (((qn) this).field_V == param4) {
-              int discarded$2 = 109;
-              this.g();
+              this.g(109);
               break L0;
             } else {
               return;
@@ -87,7 +86,7 @@ final class qn extends ob implements vb {
         }
     }
 
-    private final ag a(wc param0, String param1) {
+    private final ag a(wc param0, String param1, byte param2) {
         ag var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -327,7 +326,7 @@ final class qn extends ob implements vb {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         if (!((qn) this).field_G) {
             return;
         }
@@ -393,7 +392,7 @@ final class qn extends ob implements vb {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_nb = null;
         field_lb = null;
         field_jb = null;
@@ -457,8 +456,7 @@ final class qn extends ob implements vb {
                 } else {
                   ((qn) this).field_k = ((qn) this).field_k + 10;
                   var3 = (Object) (Object) ki.field_w;
-                  int discarded$70 = -22768;
-                  if (!ne.b()) {
+                  if (!ne.b(-22768)) {
                     break L1;
                   } else {
                     ((qn) this).field_k = ((qn) this).field_k + 20;
@@ -475,8 +473,7 @@ final class qn extends ob implements vb {
             var4.field_n = 0;
             var4.field_r = (pf) (Object) new jm(vc.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((qn) this).c(-86, var4);
-            int discarded$71 = 113;
-            ((qn) this).field_V = this.a((wc) this, dd.field_e);
+            ((qn) this).field_V = this.a((wc) this, dd.field_e, (byte) 113);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

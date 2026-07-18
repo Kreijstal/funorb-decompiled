@@ -28,7 +28,7 @@ final class vk extends jc {
         field_y = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         ab.field_h = new im();
     }
 

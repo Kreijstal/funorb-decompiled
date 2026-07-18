@@ -250,8 +250,7 @@ final class kl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                     break L4;
                   }
                 }
-                int discarded$1 = 1;
-                la.a(param0);
+                la.a(param0, true);
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

@@ -979,8 +979,7 @@ final class mi extends nm {
         int stackOut_9_10 = 0;
         int stackOut_9_11 = 0;
         L0: {
-          int discarded$1 = 20579;
-          nc.i();
+          nc.i(20579);
           if (param0 == -78) {
             break L0;
           } else {

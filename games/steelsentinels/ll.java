@@ -391,9 +391,9 @@ final class ll {
             ((ll) this).field_a = 3;
             ((ll) this).field_g = 3;
             var4.field_c = 11711154;
-            ke discarded$15 = var4.a(-25088, 0).a((byte) -107, 15658734).a(1, al.a(8947848, (byte) 112, 7829367, 10066329));
-            ke discarded$16 = var4.a(-25088, 1).a(1, al.a(11184810, (byte) 123, 13421772, 10066329));
-            ke discarded$17 = var4.a(-25088, 3).a(1, al.a(8947848, (byte) 116, 10066329, 7829367)).a(true, 1).a(1, 120);
+            ke discarded$10 = var4.a(-25088, 0).a((byte) -107, 15658734).a(1, al.a(8947848, (byte) 112, 7829367, 10066329));
+            ke discarded$11 = var4.a(-25088, 1).a(1, al.a(11184810, (byte) 123, 13421772, 10066329));
+            ke discarded$12 = var4.a(-25088, 3).a(1, al.a(8947848, (byte) 116, 10066329, 7829367)).a(true, 1).a(1, 120);
             var5 = new wk[9];
             var16 = new ek(32, 32);
             var18 = var16;
@@ -401,27 +401,22 @@ final class ll {
             L1: while (true) {
               if (var18.field_E.length <= var7_int) {
                 var5[4] = (wk) (Object) var18;
-                ke discarded$18 = var4.a(-25088, 4).a(true, (byte) 125).a(1, var5);
-                int discarded$19 = 1;
-                int discarded$20 = 0;
-                int discarded$21 = 0;
-                int discarded$22 = 65793;
-                int discarded$23 = 0;
-                ke discarded$24 = var4.a(-25088, 5).a(1, hf.a()).a(true, (byte) 126).a((byte) -118, -1);
+                ke discarded$13 = var4.a(-25088, 4).a(true, (byte) 125).a(1, var5);
+                ke discarded$14 = var4.a(-25088, 5).a(1, hf.a(0, 65793, 0, 0, true)).a(true, (byte) 126).a((byte) -118, -1);
                 ((ll) this).field_f = (qk) (Object) var4;
                 var6 = new wa(var4, true);
                 var6.field_a = 0;
                 var7 = new wa(var4, true);
                 var7.field_a = 0;
                 var7.a(false, sl.a(8947848, 2));
-                ke discarded$25 = var7.a(-25088, 1).a(1, sl.a(11184810, 2)).a((byte) -120, 2236962);
+                ke discarded$15 = var7.a(-25088, 1).a(1, sl.a(11184810, 2)).a((byte) -120, 2236962);
                 ((ll) this).field_x = (qk) (Object) new pf(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                b discarded$26 = new b(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                qg discarded$27 = new qg(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                b discarded$16 = new b(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                qg discarded$17 = new qg(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new wa();
                 var17.a((cn) (Object) var8, -3);
-                ke discarded$28 = var8.a(-25088, 0).a(1, al.a(15658734, (byte) 118, 10066329, 7829367)).a((byte) -96, 1118481).b(1, -1);
-                ke discarded$29 = var8.a(-25088, 4).a(true, (byte) 125).a(1, var5);
+                ke discarded$18 = var8.a(-25088, 0).a(1, al.a(15658734, (byte) 118, 10066329, 7829367)).a((byte) -96, 1118481).b(1, -1);
+                ke discarded$19 = var8.a(-25088, 4).a(true, (byte) 125).a(1, var5);
                 ((ll) this).field_c = (qk) (Object) var8;
                 var9 = new wk[9];
                 var10 = new wk[9];
@@ -490,7 +485,7 @@ final class ll {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_e = null;
         field_j = null;

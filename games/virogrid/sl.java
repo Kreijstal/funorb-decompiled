@@ -80,7 +80,7 @@ final class sl {
         }
     }
 
-    private final void a(long param0) {
+    private final void a(long param0, int param1) {
         int var5 = -83;
         dm var4 = (dm) (Object) ((sl) this).field_d.a(param0, -18348);
         this.a(106, var4);
@@ -161,7 +161,7 @@ final class sl {
         }
     }
 
-    private final void a(int param0, Object param1, long param2) {
+    private final void a(int param0, Object param1, long param2, int param3) {
         dm var6 = null;
         mj var6_ref = null;
         int var8 = Virogrid.field_F ? 1 : 0;
@@ -169,8 +169,7 @@ final class sl {
             if (!(((sl) this).field_f >= 1)) {
                 throw new IllegalStateException();
             }
-            int discarded$0 = -48;
-            this.a(param2);
+            this.a(param2, -48);
             ((sl) this).field_e = ((sl) this).field_e - 1;
             while (((sl) this).field_e < 0) {
                 var6 = (dm) (Object) ((sl) this).field_b.a(-32314);
@@ -228,8 +227,7 @@ final class sl {
             if (param2 != -14696) {
                 ((sl) this).field_f = -85;
             }
-            int discarded$0 = -106;
-            this.a(1, param0, param1);
+            this.a(1, param0, param1, -106);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "sl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

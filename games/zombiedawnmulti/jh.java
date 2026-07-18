@@ -436,7 +436,7 @@ final class jh extends cj {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Hb = null;
         int var1 = 9;
     }

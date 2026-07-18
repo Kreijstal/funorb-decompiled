@@ -161,7 +161,7 @@ final class gk {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, byte param2) {
         int var3 = -1 + param1 & param0 >> 31;
         return ((param0 >>> 31) + param0) % param1 + var3;
     }

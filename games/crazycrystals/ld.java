@@ -11,7 +11,7 @@ final class ld extends wl {
     static String field_w;
     static int field_y;
 
-    public static void f() {
+    public static void f(int param0) {
         field_r = null;
         field_v = null;
         field_x = null;
@@ -64,7 +64,7 @@ final class ld extends wl {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         je.field_g = kd.field_n.i(111);
         CharSequence var2 = (CharSequence) (Object) je.field_g;
         lk.field_b = fe.a(60136, var2);

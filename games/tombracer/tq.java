@@ -35,13 +35,13 @@ final class tq {
         this.a(((tq) this).field_d + 1, param0, -1);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
         field_g = null;
     }
 
-    private final void c(int param0) {
+    private final void c(int param0, int param1) {
         int[] var4 = new int[this.a((byte) 24, param0)];
         int[] var3 = var4;
         lua.a(((tq) this).field_c, 0, var4, 0, ((tq) this).field_c.length);

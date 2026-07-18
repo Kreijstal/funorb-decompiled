@@ -29,8 +29,7 @@ final class kl {
         String stackOut_4_2 = null;
         try {
           L0: {
-            int discarded$2 = 121;
-            rib.a((java.awt.Component) (Object) param0);
+            rib.a((java.awt.Component) (Object) param0, (byte) 121);
             uab.a((byte) 1, (java.awt.Component) (Object) param0);
             var2_int = 105 / ((41 - param1) / 39);
             if (kkb.field_o == null) {
@@ -103,13 +102,13 @@ final class kl {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_e = null;
         field_c = null;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String var3 = null;

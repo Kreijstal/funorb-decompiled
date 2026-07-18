@@ -7,7 +7,7 @@ final class klb extends rqa {
     static ida field_r;
     static int field_p;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_r = null;
         field_o = null;
         field_q = null;
@@ -47,8 +47,7 @@ final class klb extends rqa {
                 break L1;
               }
             }
-            int discarded$2 = -97;
-            stackOut_2_0 = new nc(mra.e());
+            stackOut_2_0 = new nc(mra.e((byte) -97));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

@@ -12,7 +12,7 @@ final class we {
         }
     }
 
-    final static nc a(String param0) {
+    final static nc a(String param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -201,11 +201,11 @@ final class we {
         }
     }
 
-    final static long a() {
+    final static long a(byte param0) {
         return id.a(85) - uk.field_a;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (!vg.field_d) {
             throw new IllegalStateException();
         }
@@ -215,8 +215,7 @@ final class we {
     }
 
     final static void a(int param0) {
-        int discarded$0 = 1;
-        pj.field_a = cg.b();
+        pj.field_a = cg.b(true);
         sd.field_c = new j();
         nf.a(true, (byte) -2, true);
     }

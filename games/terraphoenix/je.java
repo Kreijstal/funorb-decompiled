@@ -5,7 +5,7 @@ final class je {
     static String field_b;
     static int[] field_a;
 
-    final static String a(int param0, String param1, String param2) {
+    final static String a(int param0, String param1, String param2, char param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -304,7 +304,7 @@ final class je {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }

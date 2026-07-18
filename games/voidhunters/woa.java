@@ -66,7 +66,7 @@ final class woa implements wib {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
     }
 

@@ -123,7 +123,7 @@ final class db extends rqa {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         int stackIn_6_0 = 0;
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
@@ -799,7 +799,7 @@ final class db extends rqa {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_p = null;
         field_r = null;
         field_o = null;

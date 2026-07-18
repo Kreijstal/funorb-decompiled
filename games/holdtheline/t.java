@@ -46,8 +46,7 @@ final class t extends hl {
               } else {
                 L2: {
                   var3 = param1.charAt(var2_int);
-                  int discarded$5 = -125;
-                  if (oe.a((char) var3)) {
+                  if (oe.a((char) var3, -125)) {
                     break L2;
                   } else {
                     if (ii.a(48, (char) var3)) {

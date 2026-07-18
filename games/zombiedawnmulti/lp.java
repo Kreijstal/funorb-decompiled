@@ -24,7 +24,7 @@ final class lp extends br {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_f = null;
         field_s = null;
@@ -45,8 +45,7 @@ final class lp extends br {
                 break L0;
               } else {
                 param2 = false;
-                int discarded$1 = 33423425;
-                ub.n();
+                ub.n(33423425);
                 break L0;
               }
             }
@@ -173,9 +172,7 @@ final class lp extends br {
           } else {
             if (ng.field_g != null) {
               rn.field_f = ng.field_g.f(0);
-              int discarded$4 = 2;
-              int discarded$5 = 1;
-              al.b();
+              al.b(true, 2);
               if (null != rn.field_f) {
                 L2: {
                   var2 = 2;
@@ -265,9 +262,7 @@ final class lp extends br {
           } else {
             if (ng.field_g != null) {
               rn.field_f = ng.field_g.f(0);
-              int discarded$6 = 2;
-              int discarded$7 = 1;
-              al.b();
+              al.b(true, 2);
               if (null == rn.field_f) {
                 L3: {
                   var2 = 3;

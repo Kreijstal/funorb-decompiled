@@ -267,7 +267,7 @@ final class k extends ug {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_l = null;
         field_f = null;

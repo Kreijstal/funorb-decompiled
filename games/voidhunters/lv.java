@@ -283,7 +283,7 @@ final class lv extends rqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         int var1 = 0;
     }

@@ -87,8 +87,7 @@ final class e {
             } else {
               var8 = new qc(bo.field_F, param0);
               bo.field_F.b((hm) (Object) var8, 48);
-              int discarded$16 = 1000;
-              if (!ei.d()) {
+              if (!ei.d(1000)) {
                 L1: {
                   gf.field_a = param3;
                   if (!param5) {
@@ -224,11 +223,11 @@ final class e {
         return stackIn_11_0 != 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
     }
 
-    final static lm a() {
+    final static lm a(int param0) {
         if (dn.field_q == vn.field_g) {
             throw new IllegalStateException();
         }

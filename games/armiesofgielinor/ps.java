@@ -14,7 +14,7 @@ final class ps extends lk {
     static String field_z;
     static int[] field_C;
 
-    final static va b() {
+    final static va b(byte param0) {
         int var1 = 0;
         int var2_int = 0;
         IllegalArgumentException var2 = null;
@@ -45,7 +45,7 @@ final class ps extends lk {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_y = null;
         field_w = null;
         field_A = null;
@@ -209,7 +209,7 @@ final class ps extends lk {
         }
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
         sh.field_l = param0;
@@ -219,8 +219,7 @@ final class ps extends lk {
             param0 = param0 + var3 * (gb.field_y - param0) / var2;
         }
         ag.field_I.a(120, -20500, 640, param0, va.field_u);
-        int discarded$0 = 640;
-        hm.a(-1, mi.field_l, 0, io.field_n, 5, gb.field_y - 24);
+        hm.a(-1, mi.field_l, 0, io.field_n, 5, gb.field_y - 24, 640);
     }
 
     final static void a(int param0, kl param1, kl param2) {

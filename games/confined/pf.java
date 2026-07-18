@@ -454,8 +454,7 @@ final class pf {
                         break L6;
                       } else {
                         L8: {
-                          int discarded$2 = -55;
-                          this.a();
+                          this.a((byte) -55);
                           var9_int = param3;
                           if (var9_int <= ((pf) this).field_j) {
                             break L8;
@@ -492,9 +491,9 @@ final class pf {
                               if (param0 >= var9_int) {
                                 break L10;
                               } else {
-                                int incrementValue$3 = param0;
+                                int incrementValue$1 = param0;
                                 param0++;
-                                param1[incrementValue$3] = (byte) 0;
+                                param1[incrementValue$1] = (byte) 0;
                                 param3--;
                                 ((pf) this).field_c = ((pf) this).field_c + 1L;
                                 continue L12;
@@ -636,7 +635,7 @@ final class pf {
         }
     }
 
-    private final void a() throws IOException {
+    private final void a(byte param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = Confined.field_J ? 1 : 0;

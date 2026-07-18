@@ -518,7 +518,7 @@ final class ol extends wh {
         field_n = null;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         int var1 = 0;
         if (qd.field_d >= 224) {
             da.a(256, (byte) -74);

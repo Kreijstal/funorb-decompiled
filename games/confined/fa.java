@@ -27,7 +27,7 @@ final class fa extends rg {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         if (0 - mg.field_g != tg.field_H) {
             if (tg.field_H != 250 + -mg.field_g) {
             }
@@ -203,8 +203,7 @@ final class fa extends rg {
           L0: {
             L1: {
               var2_int = -20 / ((-7 - param1) / 57);
-              int discarded$12 = -112;
-              dl.a((java.awt.Component) (Object) param0);
+              dl.a((java.awt.Component) (Object) param0, (byte) -112);
               ak.a(0, (java.awt.Component) (Object) param0);
               if (null != jc.field_c) {
                 jc.field_c.a((java.awt.Component) (Object) param0, (byte) -30);
@@ -247,7 +246,7 @@ final class fa extends rg {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return !fb.field_a.c(17237);
     }
 

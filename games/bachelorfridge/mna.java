@@ -17,7 +17,7 @@ final class mna extends bca {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_r = null;
         int var1 = 0;
     }

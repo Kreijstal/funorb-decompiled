@@ -9,7 +9,7 @@ abstract class pj {
     int field_c;
     java.awt.Image field_d;
 
-    final static tp c() {
+    final static tp c(byte param0) {
         return qn.field_b;
     }
 
@@ -22,7 +22,7 @@ abstract class pj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_f = null;
         field_a = null;

@@ -8,7 +8,7 @@ class wc extends qk {
     static int[] field_Nb;
     static int field_Rb;
 
-    private final void x() {
+    private final void x(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -217,7 +217,7 @@ class wc extends qk {
         }
     }
 
-    final static void a(re[] param0) {
+    final static void a(re[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -501,8 +501,7 @@ class wc extends qk {
               }
             } else {
               if (((wc) this).field_Qb <= 0) {
-                int discarded$4 = -44;
-                this.x();
+                this.x(-44);
                 break L3;
               } else {
                 ((wc) this).field_Qb = ((wc) this).field_Qb - 1;
@@ -571,7 +570,7 @@ class wc extends qk {
         }
     }
 
-    final static void f() {
+    final static void f(int param0, int param1) {
         RuntimeException var2 = null;
         le var2_ref = null;
         int var3 = 0;
@@ -588,16 +587,13 @@ class wc extends qk {
                   if (var2_ref == null) {
                     break L0;
                   } else {
-                    int discarded$3 = 6;
-                    int discarded$4 = 0;
-                    p.a();
+                    p.a(0, 6);
                     var2_ref = jj.field_D.a(false);
                     continue L2;
                   }
                 }
               } else {
-                int discarded$5 = 0;
-                sn.a(6, var4);
+                sn.a(6, var4, 0);
                 var4 = (ep) (Object) uk.field_a.a(false);
                 continue L1;
               }

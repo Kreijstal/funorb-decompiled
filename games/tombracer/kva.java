@@ -420,7 +420,7 @@ final class kva extends dg {
         super(param0, param1, param2);
     }
 
-    private final void n() {
+    private final void n(byte param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1402,7 +1402,7 @@ final class kva extends dg {
         }
     }
 
-    private final void j() {
+    private final void j(int param0) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1577,12 +1577,10 @@ final class kva extends dg {
         sva var5 = null;
         try {
             if (!(null != ((kva) this).field_m)) {
-                int discarded$0 = -110;
-                this.n();
+                this.n((byte) -110);
             }
             if (((kva) this).field_q == null) {
-                int discarded$1 = 9859;
-                this.j();
+                this.j(9859);
             }
             if (!(((kva) this).field_v != 1)) {
                 var6 = new aga(tga.field_a, 0, 0, 0, 0, 16720418, 200, 8);

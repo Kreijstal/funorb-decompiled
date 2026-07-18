@@ -109,8 +109,7 @@ final class gm {
               L2: {
                 var3_int = 114 / ((param0 - 55) / 42);
                 param1 = cn.a((byte) -103, "", '_', param1);
-                int discarded$2 = 0;
-                var4 = mq.a(param1);
+                var4 = mq.a(param1, false);
                 if (param2.indexOf(param1) != -1) {
                   break L2;
                 } else {
@@ -194,12 +193,10 @@ final class gm {
           var3 = on.field_b[param0];
           var2 = var3;
           if (1 != var3.length) {
-            int discarded$16 = 0;
-            gg discarded$17 = e.a(var3[be.a(var3.length, (byte) 83)]);
+            gg discarded$8 = e.a(var3[be.a(var3.length, (byte) 83)], false);
             return;
           } else {
-            int discarded$18 = 0;
-            gg discarded$19 = e.a(on.field_b[param0][0]);
+            gg discarded$9 = e.a(on.field_b[param0][0], false);
             return;
           }
         } else {
@@ -207,18 +204,16 @@ final class gm {
           var3 = on.field_b[param0];
           var2 = var3;
           if (1 != var3.length) {
-            int discarded$20 = 0;
-            gg discarded$21 = e.a(var3[be.a(var3.length, (byte) 83)]);
+            gg discarded$10 = e.a(var3[be.a(var3.length, (byte) 83)], false);
             return;
           } else {
-            int discarded$22 = 0;
-            gg discarded$23 = e.a(on.field_b[param0][0]);
+            gg discarded$11 = e.a(on.field_b[param0][0], false);
             return;
           }
         }
     }
 
-    final static ej[] a() {
+    final static ej[] a(int param0) {
         return new ej[]{li.field_j, la.field_i, ne.field_N};
     }
 
@@ -249,8 +244,7 @@ final class gm {
                 try {
                   L1: {
                     var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-                    int discarded$2 = 0;
-                    param0.getAppletContext().showDocument(ar.a(param0, var2), "_top");
+                    param0.getAppletContext().showDocument(ar.a(param0, var2, 0), "_top");
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -306,7 +300,7 @@ final class gm {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;

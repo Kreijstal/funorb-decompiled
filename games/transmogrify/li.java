@@ -235,8 +235,7 @@ final class li extends me {
         try {
           L0: {
             var4 = (CharSequence) (Object) param1;
-            int discarded$9 = -114;
-            if (!ck.a(var4)) {
+            if (!ck.a(var4, (byte) -114)) {
               stackOut_2_0 = ec.field_d;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -319,7 +318,7 @@ final class li extends me {
         return stackIn_16_0;
     }
 
-    final static int a(int param0, Random param1) {
+    final static int a(int param0, Random param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

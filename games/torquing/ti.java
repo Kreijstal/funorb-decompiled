@@ -288,7 +288,7 @@ final class ti {
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         Object var2 = null;
         ud var2_ref = null;
         int var3 = 0;
@@ -386,7 +386,7 @@ final class ti {
         }
     }
 
-    final static void a(la param0) {
+    final static void a(la param0, int param1) {
         ho var2 = null;
         try {
             ho.a(param0.a(-125, "", "headers.packvorbis"));
@@ -397,7 +397,7 @@ final class ti {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         re.field_e = kj.field_d.h((byte) 113);
         CharSequence var2 = (CharSequence) (Object) re.field_e;
         tj.field_j = hf.a(var2, 112);
@@ -462,7 +462,7 @@ final class ti {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_l = null;
         field_e = null;
@@ -575,8 +575,7 @@ final class ti {
             if (null != ((ti) this).field_n) {
               break L0;
             } else {
-              int discarded$2 = 4803;
-              this.c();
+              this.c(4803);
               break L0;
             }
           }
@@ -591,7 +590,7 @@ final class ti {
                 if (param0 > 82) {
                   return ((ti) this).field_j;
                 } else {
-                  int discarded$3 = ((ti) this).a((byte) 76);
+                  int discarded$1 = ((ti) this).a((byte) 76);
                   return ((ti) this).field_j;
                 }
               } else {

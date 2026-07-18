@@ -14,7 +14,7 @@ abstract class lb extends uh {
     static nh field_x;
     static int field_v;
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         if (param0 < 48) {
             return false;
         }
@@ -28,7 +28,7 @@ abstract class lb extends uh {
 
     abstract byte[] i(int param0);
 
-    public static void h() {
+    public static void h(int param0) {
         field_x = null;
         field_w = null;
         field_B = null;

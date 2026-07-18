@@ -11,7 +11,7 @@ final class no extends cj {
     static String field_Kb;
     static ri field_Jb;
 
-    final static void c() {
+    final static void c(byte param0) {
         int var1 = 0;
         if (null != sb.field_k) {
             String var2 = sb.field_k;
@@ -71,8 +71,7 @@ final class no extends cj {
                 } else {
                   if (var3_int <= 12) {
                     L2: {
-                      int discarded$2 = 0;
-                      var4 = tg.a(param2);
+                      var4 = tg.a(param2, false);
                       if (var4 == null) {
                         break L2;
                       } else {
@@ -353,7 +352,7 @@ final class no extends cj {
         return stackIn_14_0;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Fb = null;
         field_Jb = null;
         field_Hb = null;

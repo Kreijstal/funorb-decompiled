@@ -221,8 +221,7 @@ final class oo extends id {
                     break L2;
                   }
                   ki.a((byte) -114, hn.field_p);
-                  int discarded$2 = 47;
-                  this.a(param1);
+                  this.a(param1, 47);
                   pa.a(-21189);
                   break L1;
                 } else {
@@ -607,7 +606,7 @@ final class oo extends id {
         field_U = null;
     }
 
-    private final void a(wk param0) {
+    private final void a(wk param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

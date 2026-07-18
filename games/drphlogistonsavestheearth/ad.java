@@ -265,8 +265,7 @@ final class ad extends ei {
             var4 = param1.toLowerCase();
             if (var4.length() != 0) {
               var5 = var4;
-              int discarded$13 = 59;
-              if (!kj.a(var5)) {
+              if (!kj.a(var5, (byte) 59)) {
                 if (oi.a(8975, var5)) {
                   stackOut_10_0 = (String) field_p;
                   stackIn_11_0 = stackOut_10_0;
@@ -283,8 +282,7 @@ final class ad extends ei {
                         stackIn_33_0 = stackOut_32_0;
                         break L0;
                       } else {
-                        int discarded$14 = -1;
-                        if (!rb.a(var6, var5)) {
+                        if (!rb.a(var6, var5, -1)) {
                           if (gk.a(-1, var6, var5)) {
                             stackOut_25_0 = vg.field_x;
                             stackIn_26_0 = stackOut_25_0;
@@ -356,7 +354,8 @@ final class ad extends ei {
     }
 
     final static hg a(String param0, int param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         hg var3 = null;
         String var4_ref_String = null;
         int var4 = 0;
@@ -365,22 +364,22 @@ final class ad extends ei {
         CharSequence var7 = null;
         hg stackIn_12_0 = null;
         Object stackIn_15_0 = null;
-        Object stackIn_17_0 = null;
+        RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        Object stackIn_18_0 = null;
+        RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        Object stackIn_19_0 = null;
+        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_14_0 = null;
         hg stackOut_11_0 = null;
-        Object stackOut_16_0 = null;
+        RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
-        Object stackOut_18_0 = null;
+        RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
         String stackOut_18_2 = null;
-        Object stackOut_17_0 = null;
+        RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
         String stackOut_17_2 = null;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -389,15 +388,15 @@ final class ad extends ei {
             if (null != vg.field_j) {
               L1: {
                 var6 = (CharSequence) (Object) param0;
-                var2 = (Object) (Object) rh.a(-115, var6);
+                var2 = rh.a(-115, var6);
                 if (var2 != null) {
                   break L1;
                 } else {
-                  var2 = (Object) (Object) var6;
+                  var2 = param0;
                   break L1;
                 }
               }
-              var3 = (hg) (Object) vg.field_j.a((long)((String) var2).hashCode(), -122);
+              var3 = (hg) (Object) vg.field_j.a((long)var2.hashCode(), -122);
               L2: while (true) {
                 if (var3 == null) {
                   var4 = -26 / ((25 - param1) / 55);
@@ -415,7 +414,7 @@ final class ad extends ei {
                       break L3;
                     }
                   }
-                  if (!var4_ref_String.equals(var2)) {
+                  if (!var4_ref_String.equals((Object) (Object) var2)) {
                     var3 = (hg) (Object) vg.field_j.b(-1);
                     continue L2;
                   } else {
@@ -432,15 +431,15 @@ final class ad extends ei {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_16_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var2_ref;
             stackOut_16_1 = new StringBuilder().append("ad.E(");
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              stackOut_18_0 = stackIn_18_0;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
               stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
@@ -448,7 +447,7 @@ final class ad extends ei {
               stackIn_19_2 = stackOut_18_2;
               break L4;
             } else {
-              stackOut_17_0 = stackIn_17_0;
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
               stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
@@ -661,7 +660,7 @@ final class ad extends ei {
         return stackIn_13_0 != 0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_t = null;
         field_r = null;
         field_q = null;

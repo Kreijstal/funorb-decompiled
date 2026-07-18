@@ -154,7 +154,7 @@ class mj extends l {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return !ib.field_f.a(false);
     }
 

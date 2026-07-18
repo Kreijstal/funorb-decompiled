@@ -431,17 +431,14 @@ final class no implements Runnable {
                     if (var2_int <= 0) {
                       L2: {
                         if (var2_int < 0) {
-                          int discarded$26 = 1;
-                          ih.b();
+                          ih.b(true);
                           break L2;
                         } else {
-                          int discarded$27 = -76;
-                          if (lc.h() <= 30000L) {
+                          if (lc.h((byte) -76) <= 30000L) {
                             decompiledRegionSelector0 = 0;
                             break L0;
                           } else {
-                            int discarded$28 = 1;
-                            ih.b();
+                            ih.b(true);
                             break L2;
                           }
                         }
@@ -476,8 +473,7 @@ final class no implements Runnable {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   L4: {
                     var2 = (IOException) (Object) decompiledCaughtException;
-                    int discarded$29 = 1;
-                    ih.b();
+                    ih.b(true);
                     decompiledRegionSelector0 = 1;
                     break L4;
                   }

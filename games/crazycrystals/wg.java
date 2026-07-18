@@ -689,7 +689,7 @@ final class wg extends od {
         }
     }
 
-    private final int b(pl param0) {
+    private final int b(pl param0, boolean param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -1269,14 +1269,11 @@ final class wg extends od {
               var7.field_f = 0;
               var7.field_r = 0;
               if (((wg) this).field_v[param3] == 0) {
-                int discarded$3 = 0;
-                int discarded$4 = 255;
-                var7.field_v = kg.b(var6, this.a(var7, false), this.b(var7), this.a(var7));
+                var7.field_v = kg.b(var6, this.a(var7, false), this.b(var7, false), this.a(var7, 255));
                 break L3;
               } else {
                 L4: {
-                  int discarded$5 = 255;
-                  var7.field_v = kg.b(var6, this.a(var7, false), 0, this.a(var7));
+                  var7.field_v = kg.b(var6, this.a(var7, false), 0, this.a(var7, 255));
                   stackOut_15_0 = this;
                   stackOut_15_1 = 2;
                   stackOut_15_2 = (pl) var7;
@@ -1844,9 +1841,7 @@ final class wg extends od {
               }
             }
             if (var9 == 0) {
-              int discarded$2 = 0;
-              int discarded$3 = 255;
-              param3.field_v.a(param3.field_k, this.b(param3), this.a(param3));
+              param3.field_v.a(param3.field_k, this.b(param3, false), this.a(param3, 255));
               stackOut_66_0 = 0;
               stackIn_67_0 = stackOut_66_0;
               break L0;
@@ -1950,7 +1945,7 @@ final class wg extends od {
         return stackIn_67_0 != 0;
     }
 
-    private final int a(pl param0) {
+    private final int a(pl param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;

@@ -42,7 +42,7 @@ final class ue {
         }
     }
 
-    final static hj a() {
+    final static hj a(boolean param0) {
         int var4_int = 0;
         int var5 = HoldTheLine.field_D;
         int var1 = ad.field_d[0] * nk.field_K[0];

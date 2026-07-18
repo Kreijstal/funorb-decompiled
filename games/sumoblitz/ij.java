@@ -10,8 +10,7 @@ final class ij {
         int var4 = 0;
         ts[] var5 = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        int discarded$2 = 96;
-        var5 = pb.a();
+        var5 = pb.a(96);
         var2 = var5;
         var3 = 0;
         L0: while (true) {

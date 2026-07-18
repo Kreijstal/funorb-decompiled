@@ -22,7 +22,7 @@ final class e {
         field_h = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -210,8 +210,7 @@ final class e {
                   }
                 }
                 L12: {
-                  int discarded$1 = 0;
-                  var7 = ch.a(stackIn_40_0, stackIn_40_1 != 0);
+                  var7 = ch.a(stackIn_40_0, stackIn_40_1 != 0, false);
                   var8 = -(var7 >> 1) + nn.field_c;
                   if (var4 >= 0) {
                     L13: {
@@ -303,8 +302,7 @@ final class e {
                   } else {
                     var2.a(me.field_n, true);
                     oh.field_h = false;
-                    int discarded$4 = -16813;
-                    tn.a(param1);
+                    tn.a(param1, -16813);
                     stackOut_5_0 = 1;
                     stackIn_6_0 = stackOut_5_0;
                     return stackIn_6_0 != 0;
@@ -312,8 +310,7 @@ final class e {
                 } else {
                   var2.a(ag.field_a, true);
                   oh.field_h = false;
-                  int discarded$5 = -16813;
-                  tn.a(param1);
+                  tn.a(param1, -16813);
                   stackOut_2_0 = 1;
                   stackIn_3_0 = stackOut_2_0;
                   return stackIn_3_0 != 0;

@@ -13,7 +13,7 @@ final class ld extends ca {
         super(0L, (ca) null);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_jb = null;
     }
 

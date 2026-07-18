@@ -600,7 +600,7 @@ final class t {
         }
     }
 
-    final static void h(int param0, int param1, int param2, int param3) {
+    final static void h(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;

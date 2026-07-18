@@ -11,7 +11,7 @@ final class hk {
     static sna field_c;
     static String field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_h = null;
         field_f = null;
         field_a = null;

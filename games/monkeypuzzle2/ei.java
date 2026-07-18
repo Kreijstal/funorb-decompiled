@@ -5,7 +5,7 @@ final class ei {
     static java.awt.Image field_b;
     static int field_a;
 
-    final static cd a(java.applet.Applet param0) {
+    final static cd a(java.applet.Applet param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -99,7 +99,7 @@ final class ei {
         return stackIn_13_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
@@ -122,14 +122,13 @@ final class ei {
             }
             var1 = gf.field_c;
             L2: while (true) {
-              int discarded$9 = 0;
-              if (!kj.m()) {
+              if (!kj.m(0)) {
                 break L0;
               } else {
                 var1.b(true, 8);
-                int fieldTemp$10 = var1.field_h + 1;
+                int fieldTemp$5 = var1.field_h + 1;
                 var1.field_h = var1.field_h + 1;
-                var2 = fieldTemp$10;
+                var2 = fieldTemp$5;
                 nf.a(param0 ^ -93, var1);
                 gf.field_c.a(var1.field_h + -var2, (byte) 31);
                 continue L2;

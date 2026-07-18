@@ -19,7 +19,7 @@ final class pc extends hl {
         }
     }
 
-    public static void q() {
+    public static void q(int param0) {
         field_W = null;
         field_ab = null;
         field_bb = null;
@@ -503,7 +503,7 @@ final class pc extends hl {
         }
     }
 
-    final static void f() {
+    final static void f(boolean param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -588,7 +588,7 @@ final class pc extends hl {
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

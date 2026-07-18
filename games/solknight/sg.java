@@ -10,7 +10,7 @@ final class sg {
     static int[] field_b;
     static int field_d;
 
-    final static String b() {
+    final static String b(int param0) {
         if (!(ma.field_o != gf.field_Z)) {
             return ug.field_d;
         }

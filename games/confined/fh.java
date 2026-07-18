@@ -8,7 +8,7 @@ final class fh {
     static String field_c;
     static bi field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_c = null;
         field_e = null;
@@ -405,8 +405,7 @@ final class fh {
                     if (param0 != 10) {
                       break L4;
                     } else {
-                      int discarded$2 = 0;
-                      ib.c();
+                      ib.c(false);
                       var3_int = 0;
                       break L4;
                     }

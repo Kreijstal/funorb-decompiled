@@ -20,7 +20,7 @@ final class lt {
         return param0 ^ param1;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         if (null == dma.field_b) {
             return false;
         }

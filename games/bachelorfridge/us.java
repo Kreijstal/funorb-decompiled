@@ -16,7 +16,7 @@ final class us {
         return (tn) (Object) new ru();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_e = null;
         field_c = null;
@@ -24,7 +24,7 @@ final class us {
         field_b = null;
     }
 
-    final static boolean a(vr param0, vr param1, vr param2) {
+    final static boolean a(vr param0, vr param1, vr param2, int param3) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;

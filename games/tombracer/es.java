@@ -63,10 +63,9 @@ final class es extends ip {
     }
 
     final long a(byte param0) {
-        int discarded$0 = -97;
-        ((es) this).field_d = ((es) this).field_d + this.d();
+        ((es) this).field_d = ((es) this).field_d + this.d(-97);
         if (param0 < 27) {
-            boolean discarded$1 = es.a(false);
+            boolean discarded$0 = es.a(false);
         }
         if (~((es) this).field_f < ~((es) this).field_d) {
             return (-((es) this).field_d + ((es) this).field_f) / 1000000L;
@@ -110,7 +109,7 @@ final class es extends ip {
         return stackIn_8_0 != 0;
     }
 
-    private final long d() {
+    private final long d(int param0) {
         int var8 = 0;
         int var9 = TombRacer.field_G ? 1 : 0;
         long var2 = System.nanoTime();

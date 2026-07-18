@@ -30,8 +30,7 @@ final class ud extends qt {
                   jm.a(-1, false, -2);
                   return;
                 } else {
-                  int discarded$4 = 13459;
-                  nt.j();
+                  nt.j(13459);
                   gg.h((byte) -125);
                   System.gc();
                   dd.a((byte) 98);
@@ -53,8 +52,7 @@ final class ud extends qt {
                     jm.a(-1, false, -2);
                     return;
                   } else {
-                    int discarded$5 = 13459;
-                    nt.j();
+                    nt.j(13459);
                     gg.h((byte) -125);
                     System.gc();
                     dd.a((byte) 98);
@@ -87,8 +85,7 @@ final class ud extends qt {
                       jm.a(-1, false, -2);
                       return;
                     } else {
-                      int discarded$6 = 13459;
-                      nt.j();
+                      nt.j(13459);
                       gg.h((byte) -125);
                       System.gc();
                       dd.a((byte) 98);
@@ -111,8 +108,7 @@ final class ud extends qt {
                         jm.a(-1, false, -2);
                         break L1;
                       } else {
-                        int discarded$7 = 13459;
-                        nt.j();
+                        nt.j(13459);
                         gg.h((byte) -125);
                         System.gc();
                         dd.a((byte) 98);
@@ -719,7 +715,7 @@ final class ud extends qt {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_A = null;
         field_B = null;
     }
@@ -742,8 +738,7 @@ final class ud extends qt {
                     if (null == uv.field_i) {
                       if (ow.field_b == null) {
                         L1: {
-                          int discarded$16 = 0;
-                          ml.c();
+                          ml.c(false);
                           if (param4) {
                             df.field_H = ub.field_B;
                             break L1;
@@ -755,9 +750,7 @@ final class ud extends qt {
                         L2: {
                           gt.a(param4, 1);
                           if (ns.field_a > 0) {
-                            int discarded$17 = 11;
-                            int discarded$18 = -119;
-                            we.a(param7, param4);
+                            we.a(param7, param4, (byte) -119, 11);
                             break L2;
                           } else {
                             break L2;
@@ -822,9 +815,7 @@ final class ud extends qt {
                 df.field_H = ub.field_B;
                 gt.a(param4, 1);
                 if (ns.field_a > 0) {
-                  int discarded$19 = 11;
-                  int discarded$20 = -119;
-                  we.a(param7, param4);
+                  we.a(param7, param4, (byte) -119, 11);
                   break L7;
                 } else {
                   break L7;
@@ -908,9 +899,7 @@ final class ud extends qt {
                 df.field_H = (ea.field_a - 640) / 2;
                 gt.a(param4, 1);
                 if (ns.field_a > 0) {
-                  int discarded$21 = 11;
-                  int discarded$22 = -119;
-                  we.a(param7, param4);
+                  we.a(param7, param4, (byte) -119, 11);
                   break L12;
                 } else {
                   break L12;
@@ -970,8 +959,7 @@ final class ud extends qt {
                   if (null == uv.field_i) {
                     if (ow.field_b == null) {
                       L17: {
-                        int discarded$23 = 0;
-                        ml.c();
+                        ml.c(false);
                         if (param4) {
                           df.field_H = ub.field_B;
                           break L17;
@@ -983,9 +971,7 @@ final class ud extends qt {
                       L18: {
                         gt.a(param4, 1);
                         if (ns.field_a > 0) {
-                          int discarded$24 = 11;
-                          int discarded$25 = -119;
-                          we.a(param7, param4);
+                          we.a(param7, param4, (byte) -119, 11);
                           break L18;
                         } else {
                           break L18;
@@ -1049,9 +1035,7 @@ final class ud extends qt {
                 df.field_H = (ea.field_a - 640) / 2;
                 gt.a(param4, 1);
                 if (ns.field_a > 0) {
-                  int discarded$26 = 11;
-                  int discarded$27 = -119;
-                  we.a(param7, param4);
+                  we.a(param7, param4, (byte) -119, 11);
                   break L23;
                 } else {
                   break L23;
@@ -1104,9 +1088,7 @@ final class ud extends qt {
                 df.field_H = ub.field_B;
                 gt.a(param4, 1);
                 if (ns.field_a > 0) {
-                  int discarded$28 = 11;
-                  int discarded$29 = -119;
-                  we.a(param7, param4);
+                  we.a(param7, param4, (byte) -119, 11);
                   break L28;
                 } else {
                   break L28;
@@ -1161,9 +1143,7 @@ final class ud extends qt {
             df.field_H = ub.field_B;
             gt.a(param4, 1);
             if (ns.field_a > 0) {
-              int discarded$30 = 11;
-              int discarded$31 = -119;
-              we.a(param7, param4);
+              we.a(param7, param4, (byte) -119, 11);
               break L33;
             } else {
               break L33;
@@ -1225,7 +1205,7 @@ final class ud extends qt {
         um.field_e.c((byte) 80);
     }
 
-    final static boolean a() {
+    final static boolean a(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int stackIn_9_0 = 0;
         int stackIn_42_0 = 0;

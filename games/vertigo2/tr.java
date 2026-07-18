@@ -102,7 +102,7 @@ final class tr {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_l = null;
         field_O = null;
         field_d = null;
@@ -403,8 +403,7 @@ final class tr {
             if (((tr) this).field_D.field_r.field_n >= 100) {
               break L6;
             } else {
-              int discarded$5 = 4;
-              bm.a(rf.field_o, false);
+              bm.a(rf.field_o, false, 4);
               break L6;
             }
           }
@@ -415,8 +414,7 @@ final class tr {
             break L7;
           } else {
             if (((tr) this).field_D.field_r.h(9979) == 1) {
-              int discarded$6 = 4;
-              bm.a(up.field_B[var3 % up.field_B.length], false);
+              bm.a(up.field_B[var3 % up.field_B.length], false, 4);
               break L7;
             } else {
               break L7;
@@ -447,8 +445,7 @@ final class tr {
                   break L11;
                 } else {
                   if (var4 >= 10) {
-                    int discarded$7 = 11;
-                    this.a((pp) (Object) ((tr) this).field_z.b((byte) -43));
+                    this.a((pp) (Object) ((tr) this).field_z.b((byte) -43), (byte) 11);
                     break L10;
                   } else {
                     break L11;
@@ -462,8 +459,7 @@ final class tr {
                   if (((tr) this).field_z.c(true) <= 3) {
                     break L10;
                   } else {
-                    int discarded$8 = 11;
-                    this.a((pp) (Object) ((tr) this).field_z.b((byte) -43));
+                    this.a((pp) (Object) ((tr) this).field_z.b((byte) -43), (byte) 11);
                     continue L12;
                   }
                 }
@@ -1009,8 +1005,7 @@ final class tr {
               } else {
                 if (var3 < 10) {
                   ((tr) this).field_w = true;
-                  int discarded$9 = -84;
-                  kh.a(var3);
+                  kh.a(var3, (byte) -84);
                   break L44;
                 } else {
                   break L44;
@@ -1264,7 +1259,7 @@ final class tr {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         if (uh.field_Xb == null) {
             if (((tr) this).field_D.field_l[((tr) this).field_B].field_W > 0) {
                 if (!((tr) this).field_c) {
@@ -1298,8 +1293,7 @@ final class tr {
                 if (((tr) this).field_D.field_j != 0) {
                   break L1;
                 } else {
-                  int discarded$5 = 0;
-                  this.d();
+                  this.d(0);
                   break L1;
                 }
               }
@@ -1359,7 +1353,7 @@ final class tr {
         }
     }
 
-    private final void a(pp param0) {
+    private final void a(pp param0, byte param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -1519,7 +1513,7 @@ final class tr {
         }
     }
 
-    final static void a(int param0, int param1, mp param2) {
+    final static void a(int param0, int param1, mp param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -2201,8 +2195,7 @@ final class tr {
                   mc.field_e = 0;
                   lj.field_k = 0;
                   sl.field_l = 0;
-                  int discarded$2 = 1;
-                  dh.a(((tr) this).field_D.field_e, ((tr) this).field_D.field_l[0].field_H);
+                  dh.a(((tr) this).field_D.field_e, ((tr) this).field_D.field_l[0].field_H, true);
                   gj.a((byte) -66, false, am.field_n, 20);
                   break L38;
                 }
@@ -2252,8 +2245,7 @@ final class tr {
                           break L39;
                         }
                       } else {
-                        int discarded$3 = -68;
-                        mr.a();
+                        mr.a((byte) -68);
                         break L39;
                       }
                     } else {
@@ -2326,8 +2318,7 @@ final class tr {
                 if (!((tr) this).field_z.a(false)) {
                   break L1;
                 } else {
-                  int discarded$2 = 11;
-                  this.a(param1);
+                  this.a(param1, (byte) 11);
                   break L0;
                 }
               }
@@ -3127,8 +3118,7 @@ final class tr {
                       break L7;
                     } else {
                       ((tr) this).field_w = true;
-                      int discarded$1 = -84;
-                      kh.a(param6);
+                      kh.a(param6, (byte) -84);
                       break L7;
                     }
                   }

@@ -4,7 +4,7 @@
 final class ll {
     static String field_a;
 
-    final static boolean a(int[] param0) {
+    final static boolean a(int[] param0, byte param1) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         q var4_ref_q = null;
@@ -259,8 +259,7 @@ final class ll {
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_3_0 = ik.a(param3, -66, var4_long, (String) var6);
+            stackOut_3_0 = ik.a(param3, -66, var4_long, (String) var6, false);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
@@ -322,7 +321,7 @@ final class ll {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

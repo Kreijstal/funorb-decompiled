@@ -9,7 +9,7 @@ final class dk {
     static boolean field_c;
     static String field_f;
 
-    final static tf a(int param0, fm param1, int param2) {
+    final static tf a(int param0, fm param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         tf stackIn_5_0 = null;
@@ -78,6 +78,7 @@ final class dk {
 
     final static String a(String param0, int param1, String param2, fm param3) {
         RuntimeException var4 = null;
+        Object var5 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -131,8 +132,8 @@ final class dk {
         try {
           L0: {
             if (param3.b(-3)) {
-              int discarded$4 = 117;
-              tf discarded$5 = dk.a(-69, (fm) null, 92);
+              var5 = null;
+              tf discarded$2 = dk.a(-69, (fm) null, 92, 117);
               stackOut_3_0 = param0 + " - " + param3.c(0) + "%";
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -225,7 +226,7 @@ final class dk {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_e = null;
         field_a = null;
@@ -265,8 +266,7 @@ final class dk {
             var11 = var9;
             var3 = var11.f(255);
             var11.n(-110);
-            int discarded$2 = 77;
-            qn.field_q = pf.a(var11);
+            qn.field_q = pf.a(var11, (byte) 77);
             ck.field_b = new rl[var3];
             wc.field_p = new int[var3][];
             var4 = 0;
@@ -292,8 +292,7 @@ final class dk {
                   }
                 }
               } else {
-                int discarded$3 = -1;
-                ck.field_b[var4] = pk.a(var9);
+                ck.field_b[var4] = pk.a(var9, -1);
                 var4++;
                 continue L1;
               }

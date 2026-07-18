@@ -83,8 +83,7 @@ final class sea extends nv {
                   var11 = ((sea) this).field_n[var10];
                   var12 = var4_int + var11.a((byte) 110);
                   var13 = var5 + var11.f(0);
-                  int discarded$1 = 2;
-                  var14 = eha.a(var11.g(0), 12, var13, var11.g(0), param2, var12);
+                  var14 = eha.a(var11.g(0), 12, var13, var11.g(0), param2, var12, 2);
                   if (var14 > 0) {
                     var15 = wm.a(4096, var14, 15);
                     this.a(var8 + gqa.a(-var8 + var9, (byte) 24, var15), var6 - -gqa.a(var7 - var6, (byte) 24, var15), var11, (byte) -102, param1);

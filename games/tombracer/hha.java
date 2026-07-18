@@ -6,7 +6,7 @@ abstract class hha extends od {
     boolean field_l;
     boolean field_k;
 
-    final static String a() {
+    final static String a(boolean param0) {
         if (kl.field_a != gsa.field_y) {
           if (gva.field_b.b(88)) {
             if (gsa.field_y == wt.field_d) {

@@ -5,7 +5,7 @@ final class sdb extends rqa {
     static String field_o;
     static llb field_p;
 
-    final static String a() {
+    final static String a(int param0) {
         Object var1 = null;
         Object var2 = null;
         String var3 = null;
@@ -26,76 +26,83 @@ final class sdb extends rqa {
         try {
           L0: {
             L1: {
-              var1 = null;
-              var2 = null;
-              if (ow.field_b != 0) {
+              if (param0 == -8037) {
                 break L1;
               } else {
-                if (null == ohb.field_o) {
-                  break L1;
-                } else {
-                  var2 = (Object) (Object) ldb.field_p;
-                  break L1;
-                }
+                sdb.e((byte) -1);
+                break L1;
               }
             }
             L2: {
-              if (ow.field_b != 2) {
+              var1 = null;
+              var2 = null;
+              if (ow.field_b != 0) {
                 break L2;
               } else {
-                if (ws.a(0)) {
+                if (null == ohb.field_o) {
                   break L2;
                 } else {
-                  L3: {
-                    L4: {
+                  var2 = (Object) (Object) ldb.field_p;
+                  break L2;
+                }
+              }
+            }
+            L3: {
+              if (ow.field_b != 2) {
+                break L3;
+              } else {
+                if (ws.a(0)) {
+                  break L3;
+                } else {
+                  L4: {
+                    L5: {
                       if (!uaa.a(nkb.field_o, (byte) -47)) {
-                        break L4;
+                        break L5;
                       } else {
                         var2 = (Object) (Object) isa.a(cc.field_d, new String[1], 78);
                         if (var10 == 0) {
-                          break L3;
-                        } else {
                           break L4;
+                        } else {
+                          break L5;
                         }
                       }
                     }
                     var2 = (Object) (Object) isa.a(fab.field_b, new String[1], 114);
-                    break L3;
+                    break L4;
                   }
                   if (uga.field_d) {
-                    int discarded$4 = 2;
-                    lh.a((byte) -112, 0, (String) null, (String) null, (String) var2);
-                    fj.b(18444);
-                    break L2;
+                    lh.a((byte) -112, 0, (String) null, (String) null, (String) var2, 2);
+                    fj.b(param0 ^ -22377);
+                    break L3;
                   } else {
-                    break L2;
-                  }
-                }
-              }
-            }
-            L5: {
-              if (null != var2) {
-                break L5;
-              } else {
-                if (lf.field_o) {
-                  break L5;
-                } else {
-                  if (qw.field_l != null) {
-                    break L5;
-                  } else {
-                    var2 = (Object) (Object) tta.field_o;
-                    break L5;
+                    break L3;
                   }
                 }
               }
             }
             L6: {
-              if (var2 != null) {
-                flb.a(19204, (String) var2, 0, (String) null, kmb.field_a);
+              if (null != var2) {
                 break L6;
               } else {
-                L7: {
-                  L8: {
+                if (lf.field_o) {
+                  break L6;
+                } else {
+                  if (qw.field_l != null) {
+                    break L6;
+                  } else {
+                    var2 = (Object) (Object) tta.field_o;
+                    break L6;
+                  }
+                }
+              }
+            }
+            L7: {
+              if (var2 != null) {
+                flb.a(19204, (String) var2, 0, (String) null, kmb.field_a);
+                break L7;
+              } else {
+                L8: {
+                  L9: {
                     var3 = kca.field_a;
                     var3 = gfb.a(1, var3);
                     var4 = "";
@@ -103,160 +110,157 @@ final class sdb extends rqa {
                     var6 = ow.field_b;
                     var7 = 0;
                     if (var6 != 2) {
-                      break L8;
+                      break L9;
                     } else {
-                      L9: {
+                      L10: {
                         var4 = isa.a(tia.field_G, new String[1], 91);
                         var8 = isa.a(ejb.field_o, new String[1], 79);
                         var7 = fgb.field_l.field_hb + (bpa.field_c.field_hb - 485 + ej.field_c.b(var8)) + -ej.field_c.b(var4);
                         if (0 <= var7) {
-                          break L9;
+                          break L10;
                         } else {
                           var7 = 0;
-                          break L9;
+                          break L10;
                         }
                       }
                       if (var10 == 0) {
-                        break L7;
-                      } else {
                         break L8;
+                      } else {
+                        break L9;
                       }
                     }
                   }
-                  L10: {
+                  L11: {
                     if (0 != var6) {
-                      break L10;
+                      break L11;
                     } else {
-                      L11: {
+                      L12: {
                         if (null != lqa.field_o) {
-                          break L11;
+                          break L12;
                         } else {
                           if (!cqb.field_e) {
-                            break L11;
+                            break L12;
                           } else {
                             var4 = "[" + bib.field_e + "] ";
-                            break L11;
+                            break L12;
                           }
                         }
                       }
                       if (null == lqa.field_o) {
-                        break L10;
+                        break L11;
                       } else {
-                        L12: {
+                        L13: {
                           var6 = 1;
                           if (!nv.field_n) {
-                            break L12;
+                            break L13;
                           } else {
                             if (vla.field_E == null) {
-                              break L12;
+                              break L13;
                             } else {
                               var4 = "[" + vla.field_E + "] ";
                               if (var10 == 0) {
-                                break L10;
+                                break L11;
                               } else {
-                                break L12;
+                                break L13;
                               }
                             }
                           }
                         }
-                        var4 = "[" + isa.a(wt.field_b, new String[1], 110) + "] ";
-                        break L10;
+                        var4 = "[" + isa.a(wt.field_b, new String[1], param0 + 8147) + "] ";
+                        break L11;
                       }
                     }
                   }
-                  L13: {
-                    int discarded$5 = 0;
-                    if (tob.g()) {
+                  L14: {
+                    if (tob.g(0)) {
                       stackOut_55_0 = ": ";
                       stackIn_56_0 = stackOut_55_0;
-                      break L13;
+                      break L14;
                     } else {
                       stackOut_53_0 = "<img=3>: ";
                       stackIn_56_0 = stackOut_53_0;
-                      break L13;
+                      break L14;
                     }
                   }
-                  L14: {
-                    L15: {
+                  L15: {
+                    L16: {
                       var8 = stackIn_56_0;
                       var4 = var4 + var3 + var8;
                       if (erb.field_p) {
-                        break L15;
+                        break L16;
                       } else {
                         if (hb.field_c) {
                           var5 = "";
                           var4 = "<col=999999>" + var4 + vq.field_y + "</col>";
                           if (var10 == 0) {
-                            break L14;
-                          } else {
                             break L15;
+                          } else {
+                            break L16;
                           }
                         } else {
-                          break L14;
+                          break L15;
                         }
                       }
                     }
                     var4 = "<col=999999>" + var4 + ocb.field_g + "</col>";
                     var5 = "";
-                    break L14;
+                    break L15;
                   }
                   var9 = ej.field_c.b(var4);
-                  int discarded$6 = 0;
-                  if (tob.g()) {
-                    break L7;
+                  if (tob.g(0)) {
+                    break L8;
                   } else {
-                    L16: {
+                    L17: {
                       if (!bpa.field_c.field_O) {
-                        break L16;
+                        break L17;
                       } else {
                         if (-bpa.field_c.field_M + kc.field_b >= var9) {
-                          break L16;
+                          break L17;
                         } else {
                           if (!erb.field_p) {
                             var1 = (Object) (Object) vq.field_y;
-                            break L16;
+                            break L17;
                           } else {
                             var1 = (Object) (Object) "Broken!";
-                            break L16;
+                            break L17;
                           }
                         }
                       }
                     }
                     if (bpa.field_c.field_o == 0) {
-                      break L7;
+                      break L8;
                     } else {
                       if (var9 > bpa.field_c.field_r) {
                         if (!erb.field_p) {
-                          int discarded$7 = 0;
-                          or.a();
-                          break L7;
+                          or.a(param0 + 8037);
+                          break L8;
                         } else {
-                          break L7;
+                          break L8;
                         }
                       } else {
-                        break L7;
+                        break L8;
                       }
                     }
                   }
                 }
-                L17: {
+                L18: {
                   flb.a(19204, var4 + no.c(awa.field_p.toString()), var7, var5, rqa.field_m[var6]);
                   if (fva.field_p) {
-                    break L17;
+                    break L18;
                   } else {
                     fgb.field_l.field_O = false;
-                    break L17;
+                    break L18;
                   }
                 }
-                L18: {
+                L19: {
                   if (!fgb.field_l.field_O) {
-                    break L18;
+                    break L19;
                   } else {
                     var1 = (Object) (Object) isa.a(rc.field_a, new String[2], 100);
-                    break L18;
+                    break L19;
                   }
                 }
-                break L6;
+                break L7;
               }
             }
             stackOut_93_0 = var1;
@@ -266,7 +270,7 @@ final class sdb extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (Object) (Object) decompiledCaughtException;
-          throw rta.a((Throwable) var1, "sdb.B(" + -8037 + ')');
+          throw rta.a((Throwable) var1, "sdb.B(" + param0 + ')');
         }
         return (String) (Object) stackIn_94_0;
     }
@@ -342,13 +346,13 @@ final class sdb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         try {
             field_o = null;
             field_p = null;
-            int var1_int = 0;
+            int var1_int = -99 % ((-65 - param0) / 39);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sdb.C(" + 87 + ')');
+            throw rta.a((Throwable) (Object) runtimeException, "sdb.C(" + param0 + ')');
         }
     }
 

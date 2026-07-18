@@ -20,7 +20,7 @@ abstract class be implements hc {
     private String field_p;
     private int field_e;
 
-    private final void a(int param0, String param1) {
+    private final void a(int param0, String param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String[] var5 = null;
@@ -286,7 +286,7 @@ abstract class be implements hc {
 
     abstract boolean a(String param0, boolean param1);
 
-    private final hd a() {
+    private final hd a(int param0, int param1) {
         hd var3 = new hd(0L, (hd) null);
         var3.field_R = sp.a((byte) 26, 2263074);
         return var3;
@@ -339,8 +339,7 @@ abstract class be implements hc {
         gn stackOut_22_1 = null;
         var6 = Kickabout.field_G;
         if (param2 == 96) {
-          int discarded$4 = -23;
-          this.c();
+          this.c((byte) -23);
           return true;
         } else {
           if (!((be) this).field_h) {
@@ -388,7 +387,7 @@ abstract class be implements hc {
                 } else {
                   if (param1 != 99) {
                     if (param1 != 80) {
-                      boolean discarded$5 = ((be) this).field_k.a(param1, param2, 875);
+                      boolean discarded$1 = ((be) this).field_k.a(param1, param2, 875);
                       break L0;
                     } else {
                       ((be) this).b(72);
@@ -412,8 +411,7 @@ abstract class be implements hc {
                 var7 = ((be) this).field_k.j((byte) -16);
                 if (var7.length() > 0) {
                   L3: {
-                    int discarded$6 = -122;
-                    this.a(5635925, ((be) this).field_a + var7);
+                    this.a(5635925, ((be) this).field_a + var7, (byte) -122);
                     var5 = (hd) (Object) ((be) this).field_g.field_Ab.field_jb.d(-9033);
                     if (!((be) this).a(var7, true)) {
                       var5.field_y = 16733525;
@@ -423,8 +421,7 @@ abstract class be implements hc {
                     }
                   }
                   ((be) this).field_k.k(-19174);
-                  int discarded$7 = 30;
-                  this.a(var7);
+                  this.a(var7, 30);
                   ((be) this).field_o = null;
                   break L0;
                 } else {
@@ -437,7 +434,7 @@ abstract class be implements hc {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, int param1) {
         lj var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_9_0 = null;
@@ -601,8 +598,7 @@ abstract class be implements hc {
         try {
           L0: {
             L1: {
-              int discarded$2 = -122;
-              this.a(13421772, param0);
+              this.a(13421772, param0, (byte) -122);
               if (param1 == 94) {
                 break L1;
               } else {
@@ -644,7 +640,7 @@ abstract class be implements hc {
         }
     }
 
-    private final hd b() {
+    private final hd b(int param0, int param1) {
         hd var3 = new hd();
         var3.field_R = ih.a(65793, 0, 0);
         return var3;
@@ -661,7 +657,7 @@ abstract class be implements hc {
 
     abstract void b(int param0);
 
-    public static void d() {
+    public static void d(byte param0) {
         field_i = null;
         field_q = null;
     }
@@ -685,8 +681,7 @@ abstract class be implements hc {
         int stackOut_8_0 = 0;
         L0: {
           var1 = bk.a(2);
-          int discarded$2 = 0;
-          var2 = qi.a();
+          var2 = qi.a(false);
           if (param0 >= 45) {
             break L0;
           } else {
@@ -729,7 +724,7 @@ abstract class be implements hc {
         return stackIn_10_0 != 0;
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
@@ -931,18 +926,14 @@ abstract class be implements hc {
             ((be) this).field_d = param0;
             ((be) this).field_f = ((be) this).field_d.field_G + ((be) this).field_d.field_p;
             var3_int = ((be) this).field_f + 4;
-            int discarded$4 = 186;
-            int discarded$5 = 65793;
-            var4 = this.b();
+            var4 = this.b(65793, 186);
             var5 = var4;
             var6 = var4;
             var7 = var4;
             var8 = this.a(2236962, 200, 7829367);
             var9 = this.a(65793, 200, 65793);
             var10 = this.a(65793, 200, 3355443);
-            int discarded$6 = 2263074;
-            int discarded$7 = 4;
-            var11 = this.a();
+            var11 = this.a(4, 2263074);
             var12 = this.a(65793, 200, 2236962);
             ((be) this).field_l = new hd(0L, var5);
             ((be) this).field_l.a(true, f.field_d, 0, -200, 200);

@@ -146,14 +146,13 @@ final class ua extends rg {
         var1 = -104 % ((59 - param0) / 49);
         tj.field_a.b(0);
         if (!i.field_a.b((byte) 99)) {
-          int discarded$2 = 19352;
-          return ch.b();
+          return ch.b(19352);
         } else {
           return 0;
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_E = null;
         field_I = null;
         field_K = null;
@@ -401,7 +400,7 @@ final class ua extends rg {
         return stackIn_10_0 != 0;
     }
 
-    final static void i() {
+    final static void i(int param0) {
         if (!(h.field_L == null)) {
             h.field_L.m(-7435);
         }
@@ -431,7 +430,7 @@ final class ua extends rg {
         }
     }
 
-    final static void a(ul param0, ul param1) {
+    final static void a(ul param0, ul param1, byte param2) {
         try {
             lb.field_d = param0;
             pl.field_C = param1;

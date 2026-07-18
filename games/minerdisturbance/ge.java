@@ -79,7 +79,7 @@ final class ge {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_d = null;
         field_a = null;
@@ -88,7 +88,7 @@ final class ge {
         field_h = null;
     }
 
-    final static ih a(byte[] param0) {
+    final static ih a(byte[] param0, int param1) {
         ih var2 = null;
         RuntimeException var2_ref = null;
         ih stackIn_4_0 = null;

@@ -12,7 +12,7 @@ final class jj extends ug {
     static int[] field_lb;
     private ib field_kb;
 
-    public static void h() {
+    public static void h(byte param0) {
         field_lb = null;
         field_hb = null;
     }

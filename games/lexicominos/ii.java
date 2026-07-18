@@ -50,8 +50,7 @@ final class ii extends ql implements jk {
                 if (qg.field_a == param1) {
                   ((ii) this).field_v = ((ii) this).field_v + 10;
                   var3 = (Object) (Object) pj.field_B;
-                  int discarded$25 = -2147483648;
-                  if (!n.c()) {
+                  if (!n.c(-2147483648)) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) ge.field_e;
@@ -146,7 +145,7 @@ final class ii extends ql implements jk {
         }
     }
 
-    final static int a(String param0, boolean param1) {
+    final static int a(String param0, boolean param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;

@@ -303,7 +303,7 @@ final class ce {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;
@@ -402,8 +402,7 @@ final class ce {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = gh.a(var6, var5, param1, var4);
+                          int discarded$1 = gh.a(var17, var5, param1, var4, 9);
                           break L5;
                         }
                       }

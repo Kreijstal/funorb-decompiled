@@ -17,7 +17,7 @@ final class ea {
         field_d = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -38,8 +38,7 @@ final class ea {
               if (var2 == 0) {
                 var8 = (pg) (Object) ab.field_H.c(-3905);
                 if (var8 == null) {
-                  int discarded$4 = 27;
-                  ec.a();
+                  ec.a((byte) 27);
                   return;
                 } else {
                   L2: {
@@ -55,8 +54,7 @@ final class ea {
                   }
                   var9.field_g = var9.field_g + 4;
                   if (!var9.f(0)) {
-                    int discarded$5 = 27;
-                    ec.a();
+                    ec.a((byte) 27);
                     return;
                   } else {
                     var8.b(4);
@@ -84,15 +82,13 @@ final class ea {
                       var4_ref_of.b(4);
                       break L1;
                     } else {
-                      int discarded$6 = 27;
-                      ec.a();
+                      ec.a((byte) 27);
                       return;
                     }
                   }
                 } else {
                   hc.a((Throwable) null, "A1: " + oe.a(-121), (byte) 74);
-                  int discarded$7 = 27;
-                  ec.a();
+                  ec.a((byte) 27);
                   break L1;
                 }
               }
@@ -117,7 +113,7 @@ final class ea {
         }
     }
 
-    final static void a(byte param0, vc param1) {
+    final static void a(byte param0, vc param1, int param2) {
         ia var3 = null;
         try {
             if (param0 < 39) {

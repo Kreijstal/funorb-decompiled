@@ -11,7 +11,7 @@ final class hb extends wl {
     byte[] field_l;
     int field_j;
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_i = null;
         field_o = null;

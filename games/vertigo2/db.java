@@ -39,7 +39,7 @@ final class db extends sn {
     private final void a(int param0, int param1, int param2, int param3) {
     }
 
-    private final void d(boolean param0) {
+    private final void d(boolean param0, int param1) {
         int var3 = 0;
         int var4 = Vertigo2.field_L ? 1 : 0;
         if (param0) {
@@ -67,8 +67,7 @@ final class db extends sn {
         int var6 = 0;
         int var7 = Vertigo2.field_L ? 1 : 0;
         try {
-            int discarded$0 = 8192;
-            this.b(param0);
+            this.b(param0, 8192);
             ((db) this).field_I.a(param1.field_n);
             ((db) this).field_V = param2 ? true : false;
             ((db) this).field_r = 0L;
@@ -101,7 +100,7 @@ final class db extends sn {
         var4 = 38 / ((param0 - 39) / 58);
     }
 
-    private final int a(pe param0) {
+    private final int a(pe param0, byte param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -301,7 +300,7 @@ final class db extends sn {
         var5.e(0, 0);
     }
 
-    final static void a(boolean param0, int param1, byte param2, si param3, boolean param4) {
+    final static void a(boolean param0, int param1, byte param2, si param3, boolean param4, int param5) {
         Object var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -708,8 +707,7 @@ final class db extends sn {
             }
             if (var8 == 0) {
               L17: {
-                int discarded$1 = 93;
-                param1.field_J.a(param1.field_H, this.a(param1), this.a(param1, 32));
+                param1.field_J.a(param1.field_H, this.a(param1, (byte) 93), this.a(param1, 32));
                 if (param4 >= 104) {
                   break L17;
                 } else {
@@ -860,7 +858,7 @@ final class db extends sn {
         }
     }
 
-    final static String h() {
+    final static String h(int param0) {
         if (!(qc.field_A >= 2)) {
             return ap.field_g;
         }
@@ -1073,8 +1071,7 @@ final class db extends sn {
                         if (var3 != 255) {
                           return;
                         } else {
-                          int discarded$1 = -128;
-                          this.d(true);
+                          this.d(true, -128);
                           return;
                         }
                       }
@@ -1358,11 +1355,10 @@ final class db extends sn {
         }
     }
 
-    private final synchronized void b(boolean param0) {
+    private final synchronized void b(boolean param0, int param1) {
         ((db) this).field_I.b();
         ((db) this).field_x = null;
-        int discarded$0 = -128;
-        this.d(param0);
+        this.d(param0, -128);
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
@@ -1490,8 +1486,7 @@ final class db extends sn {
                 ((db) this).a(stackIn_18_1, (byte) stackIn_18_2, stackIn_18_3 != 0);
                 break L3;
               } else {
-                int discarded$1 = 93;
-                var7.field_J = ra.a(var6, this.a((byte) -127, var7), this.a(var7), this.a(var7, 32));
+                var7.field_J = ra.a(var6, this.a((byte) -127, var7), this.a(var7, (byte) 93), this.a(var7, 32));
                 break L3;
               }
             }
@@ -2048,8 +2043,7 @@ final class db extends sn {
     }
 
     final synchronized void a(boolean param0) {
-        int discarded$0 = 8192;
-        this.b(param0);
+        this.b(param0, 8192);
     }
 
     final synchronized boolean a(int param0, id param1, si param2, r param3, byte param4) {
@@ -2145,8 +2139,7 @@ final class db extends sn {
                     var10 = (int)var9.field_k;
                     var13 = (al) (Object) ((db) this).field_G.a((long)var10, (byte) 64);
                     if (var13 == null) {
-                      int discarded$1 = -125;
-                      var14 = ap.a(var10, param3);
+                      var14 = ap.a(var10, param3, -125);
                       if (var14 != null) {
                         ((db) this).field_G.a((li) (Object) var14, (long)var10, false);
                         if (!var14.a(0, var9.field_n, param1, (int[]) var7)) {
@@ -2328,8 +2321,7 @@ final class db extends sn {
                               }
                             }
                           }
-                          int discarded$1 = -128;
-                          this.d(true);
+                          this.d(true, -128);
                           ((db) this).field_I.b();
                           return;
                         } else {
@@ -2390,8 +2382,7 @@ final class db extends sn {
         ((db) this).field_P = new rq((db) this);
         ((db) this).field_G = new jl(128);
         ((db) this).a(256, -1, (byte) -61);
-        int discarded$0 = -128;
-        this.d(true);
+        this.d(true, -128);
     }
 
     static {

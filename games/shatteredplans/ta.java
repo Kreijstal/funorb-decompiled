@@ -202,7 +202,7 @@ final class ta {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         L0: {
           if (!ol.a(-104)) {
             break L0;
@@ -223,13 +223,13 @@ final class ta {
         }
     }
 
-    final static nk c() {
+    final static nk c(byte param0) {
         nk var1 = new nk(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], hd.field_q[0], eo.field_fb);
         pd.a(0);
         return var1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_d = null;
@@ -242,11 +242,10 @@ final class ta {
         return fj.field_s == ue.field_a ? true : false;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         byte[] var1 = null;
         byte[] var2 = null;
-        int discarded$12 = 1;
-        if (w.d()) {
+        if (w.d(true)) {
           return;
         } else {
           if (de.field_j != -1) {
@@ -257,9 +256,7 @@ final class ta {
               var1 = var2;
               var2[0] = (byte) 0;
               var2[1] = (byte)de.field_j;
-              int discarded$13 = 6;
-              int discarded$14 = -78;
-              fk discarded$15 = r.a(var2);
+              fk discarded$2 = r.a(var2, (byte) -78, 6);
               uc.field_A = de.field_j;
               return;
             }

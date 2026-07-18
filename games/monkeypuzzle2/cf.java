@@ -6,7 +6,7 @@ final class cf {
     static int[] field_a;
     static boolean field_c;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_a = null;
     }
@@ -24,8 +24,7 @@ final class cf {
               }
             }
           }
-          int discarded$2 = -117;
-          rh.d();
+          rh.d((byte) -117);
           k.field_g = 11;
           break L0;
         }
@@ -40,7 +39,7 @@ final class cf {
         }
     }
 
-    final static le[] c() {
+    final static le[] c(byte param0) {
         le[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -127,8 +126,7 @@ final class cf {
                   if (param0 == 255) {
                     break L1;
                   } else {
-                    int discarded$4 = 16;
-                    le[] discarded$5 = cf.c();
+                    le[] discarded$2 = cf.c((byte) 16);
                     break L1;
                   }
                 }

@@ -32,7 +32,7 @@ final class hg {
         }
     }
 
-    final static be a(String param0, int param1) {
+    final static be a(String param0, int param1, boolean param2) {
         qb var3 = null;
         RuntimeException var3_ref = null;
         qb stackIn_1_0 = null;

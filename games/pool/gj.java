@@ -191,7 +191,7 @@ final class gj extends ei {
         this.f((byte) 33);
     }
 
-    private final dd a() {
+    private final dd a(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -434,8 +434,7 @@ final class gj extends ei {
             Object var3 = null;
             boolean discarded$0 = gj.a((byte[]) null, -61, 57);
         }
-        int discarded$1 = 16711422;
-        ((gj) this).field_U = this.a();
+        ((gj) this).field_U = this.a(16711422);
         ((gj) this).field_F = ((gj) this).field_U.a();
         ((gj) this).field_H = new dd(((gj) this).field_y >> 1, ((gj) this).field_y);
     }

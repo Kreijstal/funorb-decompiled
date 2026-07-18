@@ -57,10 +57,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
               }
             } else {
               vj.d();
-              int discarded$8 = 240;
-              int discarded$9 = 207;
-              int discarded$10 = 320;
-              mg.a();
+              mg.a(320, 207, 240);
               ll.a(0, (byte) 115, param0, 0);
               return;
             }
@@ -75,8 +72,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
                 break L0;
               }
             }
-            int discarded$11 = -6545;
-            uk.a(ej.r(), var3_int != 0, (byte) -96, aj.field_p, mj.a(-1));
+            uk.a(ej.r(-6545), var3_int != 0, (byte) -96, aj.field_p, mj.a(-1));
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

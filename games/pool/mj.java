@@ -16,7 +16,7 @@ final class mj {
         return param0 & param1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         int var1 = 0;
@@ -25,13 +25,11 @@ final class mj {
     }
 
     final static void a(boolean param0) {
-        int discarded$0 = -120;
-        ld.a();
-        int discarded$1 = -13953;
-        ia.h();
+        ld.a((byte) -120);
+        ia.h(-13953);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         im var3 = null;

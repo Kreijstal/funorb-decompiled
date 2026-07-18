@@ -17,7 +17,7 @@ abstract class rg {
         return new java.net.Socket(((rg) this).field_a, ((rg) this).field_b);
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String a(boolean param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -74,12 +74,10 @@ abstract class rg {
                       } else {
                         if (var4.length() >= 1) {
                           L3: {
-                            int discarded$18 = -46;
-                            if (sk.a(var4.charAt(0))) {
+                            if (sk.a(var4.charAt(0), -46)) {
                               break L3;
                             } else {
-                              int discarded$19 = -46;
-                              if (!sk.a(var4.charAt(-1 + var4.length()))) {
+                              if (!sk.a(var4.charAt(-1 + var4.length()), -46)) {
                                 var5 = 0;
                                 var6 = 0;
                                 L4: while (true) {
@@ -94,8 +92,7 @@ abstract class rg {
                                   } else {
                                     L5: {
                                       var7 = param1.charAt(var6);
-                                      int discarded$20 = -46;
-                                      if (sk.a((char) var7)) {
+                                      if (sk.a((char) var7, -46)) {
                                         var5++;
                                         break L5;
                                       } else {

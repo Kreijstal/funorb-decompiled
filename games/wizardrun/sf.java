@@ -363,7 +363,7 @@ final class sf {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         jc.a((byte) 43, 4);
     }
 

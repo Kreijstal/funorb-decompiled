@@ -12,7 +12,7 @@ final class qh extends gh {
     private gh field_Sb;
     static String field_Ub;
 
-    final static int d() {
+    final static int d(byte param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -153,15 +153,14 @@ final class qh extends gh {
         try {
           L0: {
             if (!Character.isISOControl(param1)) {
-              int discarded$8 = -91;
-              if (!dn.a(param1)) {
+              if (!dn.a(param1, -91)) {
                 L1: {
                   var2 = cd.field_b;
                   var3 = 0;
                   if (param0 == -30) {
                     break L1;
                   } else {
-                    boolean discarded$9 = qh.a((byte) -42, 'A');
+                    boolean discarded$2 = qh.a((byte) -42, 'A');
                     break L1;
                   }
                 }
@@ -741,11 +740,11 @@ final class qh extends gh {
         }
     }
 
-    final static String k() {
+    final static String k(int param0) {
         return rf.field_d.h(1);
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_Ub = null;
         field_Vb = null;
         field_Xb = null;

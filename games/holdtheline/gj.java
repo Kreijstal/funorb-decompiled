@@ -101,7 +101,7 @@ final class gj extends vj {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_v = null;
         field_s = null;
     }
@@ -250,8 +250,7 @@ final class gj extends vj {
 
     final float f(int param0) {
         if (param0 != 50) {
-          int discarded$2 = 0;
-          gj.d();
+          gj.d(false);
           return Math.abs(((gj) this).field_w - ((gj) this).field_r) * (float)((gj) this).field_u;
         } else {
           return Math.abs(((gj) this).field_w - ((gj) this).field_r) * (float)((gj) this).field_u;

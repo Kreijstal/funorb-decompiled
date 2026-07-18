@@ -350,8 +350,7 @@ class k implements db, ao {
     }
 
     final static ed a(int param0, byte param1, int param2) {
-        int discarded$0 = 0;
-        rk[] var5 = w.c();
+        rk[] var5 = w.c(false);
         var5 = var5;
         if (var5 == null) {
             return null;
@@ -874,7 +873,7 @@ class k implements db, ao {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_p = null;
         field_j = null;
@@ -1211,8 +1210,7 @@ class k implements db, ao {
                 ((wh) (Object) param0.field_p).a(this.b(param1 + -14162, param0), ((k) this).b((byte) 39, param0), ((k) this).field_l, ((k) this).a(param0, param1 + -25123), ((k) this).field_m, ((k) this).field_c, ((k) this).field_k, (byte) -13);
                 break L2;
               } else {
-                int discarded$5 = -86;
-                this.c(param0);
+                this.c(param0, -86);
                 break L2;
               }
             }
@@ -1221,7 +1219,7 @@ class k implements db, ao {
                 break L3;
               } else {
                 var4 = null;
-                int discarded$6 = ((k) this).a((byte) 117, (hm) null, -58);
+                int discarded$2 = ((k) this).a((byte) 117, (hm) null, -58);
                 break L3;
               }
             }
@@ -1262,7 +1260,7 @@ class k implements db, ao {
         return stackIn_9_0;
     }
 
-    private final void c(hm param0) {
+    private final void c(hm param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

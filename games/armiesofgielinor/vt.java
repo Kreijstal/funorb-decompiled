@@ -10,10 +10,7 @@ abstract class vt extends tc {
     final static boolean a(int param0, int param1, int param2, byte param3) {
         if (!bb.field_a) {
           if (!iu.field_h) {
-            int discarded$26 = 13;
-            int discarded$27 = 6150;
-            int discarded$28 = 15;
-            if (!po.a()) {
+            if (!po.a(15, 6150, 13)) {
               if (vi.field_d) {
                 return false;
               } else {
@@ -23,8 +20,7 @@ abstract class vt extends tc {
               return true;
             }
           } else {
-            int discarded$29 = 0;
-            return cd.a(13, 15);
+            return cd.a(13, 15, false);
           }
         } else {
           return aw.field_i.a(rs.field_q, ui.field_i, 80);
@@ -39,7 +35,7 @@ abstract class vt extends tc {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         kr.field_G = new rk();
         kr.field_G.n(111);
         ft var1 = kr.field_G.e((byte) 126);

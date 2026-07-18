@@ -118,7 +118,7 @@ final class ik {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_d = null;
         field_e = null;

@@ -51,7 +51,7 @@ final class pr {
         return null;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
     }
 

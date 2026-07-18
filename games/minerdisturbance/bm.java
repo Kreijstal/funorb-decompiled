@@ -514,7 +514,7 @@ final class bm extends nf {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_r = null;
         field_q = null;
         field_k = null;

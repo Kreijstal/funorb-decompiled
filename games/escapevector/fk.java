@@ -9,7 +9,7 @@ final class fk {
     static String field_e;
     static mf field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_e = null;
         int var1 = 2;
@@ -286,7 +286,7 @@ final class fk {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (!(bk.field_r == null)) {
             bk.field_r.a((byte) -127);
         }

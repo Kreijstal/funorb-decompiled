@@ -70,7 +70,7 @@ abstract class ic extends ee implements gk {
         }
     }
 
-    private final boolean b(ee param0) {
+    private final boolean b(ee param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -906,8 +906,7 @@ abstract class ic extends ee implements gk {
                   stackIn_10_0 = stackOut_9_0;
                   break L2;
                 } else {
-                  int discarded$3 = -54;
-                  stackOut_8_0 = this.b(param3);
+                  stackOut_8_0 = this.b(param3, -54);
                   stackIn_10_0 = stackOut_8_0;
                   break L2;
                 }
@@ -1234,7 +1233,7 @@ abstract class ic extends ee implements gk {
         }
     }
 
-    final static int a(qa param0, qa param1) {
+    final static int a(qa param0, qa param1, byte param2) {
         RuntimeException var3 = null;
         Object var4 = null;
         int stackIn_1_0 = 0;

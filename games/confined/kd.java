@@ -10,7 +10,7 @@ final class kd extends jf {
     static String field_s;
     static double field_r;
 
-    private final void e() {
+    private final void e(int param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -110,8 +110,7 @@ final class kd extends jf {
                     break L4;
                   }
                 }
-                int discarded$1 = 22112;
-                this.e();
+                this.e(22112);
                 this.a(param2 + 67, param0);
                 ((kd) this).field_m.field_n = 0;
                 ((kd) this).field_f = null;

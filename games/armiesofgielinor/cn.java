@@ -12,7 +12,7 @@ final class cn extends vf {
     static String field_s;
     static int field_o;
 
-    final static String e() {
+    final static String e(int param0) {
         if (!(du.field_d != oh.field_L)) {
             return cd.field_e;
         }
@@ -93,7 +93,7 @@ final class cn extends vf {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_q = null;
         field_s = null;
     }

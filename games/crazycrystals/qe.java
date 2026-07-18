@@ -7,7 +7,7 @@ final class qe extends ln {
     static String field_h;
     static ol field_g;
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_g = null;
     }
@@ -214,8 +214,7 @@ final class qe extends ln {
                     }
                   }
                   var5 = new java.net.URL(param1.getCodeBase(), var4);
-                  int discarded$2 = 67;
-                  param1.getAppletContext().showDocument(gh.a(param1, var5), "_self");
+                  param1.getAppletContext().showDocument(gh.a(param1, var5, (byte) 67), "_self");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {

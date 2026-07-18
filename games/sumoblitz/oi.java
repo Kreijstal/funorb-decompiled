@@ -7,7 +7,7 @@ final class oi {
     static String field_c;
     static ri field_d;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return pg.field_a;
     }
 

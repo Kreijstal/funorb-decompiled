@@ -68,7 +68,7 @@ abstract class eq implements sk {
         }
     }
 
-    final static void a(t param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(t param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;

@@ -120,7 +120,7 @@ final class oe extends kca {
         return stackIn_15_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_l = null;
         field_j = null;
     }

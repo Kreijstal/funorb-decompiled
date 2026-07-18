@@ -7,7 +7,7 @@ final class t {
     static String field_b;
     static String field_c;
 
-    final static void a(int param0, wh param1, boolean param2) {
+    final static void a(int param0, wh param1, boolean param2, boolean param3) {
         RuntimeException var4 = null;
         Object var5 = null;
         RuntimeException stackIn_7_0 = null;
@@ -87,7 +87,7 @@ final class t {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_b = null;

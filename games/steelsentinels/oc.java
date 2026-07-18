@@ -467,11 +467,11 @@ final class oc {
         return stackIn_50_0;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return dl.field_J != null && null != dl.field_J.i(-1850);
     }
 
-    final static void a(int param0, int param1, String param2, boolean param3) {
+    final static void a(int param0, int param1, String param2, boolean param3, boolean param4) {
         RuntimeException var5 = null;
         String var6 = null;
         int var7 = 0;

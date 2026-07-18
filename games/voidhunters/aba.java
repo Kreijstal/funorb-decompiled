@@ -321,12 +321,12 @@ final class aba {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] a(byte[] param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

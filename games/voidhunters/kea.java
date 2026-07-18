@@ -114,7 +114,7 @@ final class kea {
         return stackIn_5_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         int var1 = 35;
     }

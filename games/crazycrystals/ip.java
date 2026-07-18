@@ -11,7 +11,7 @@ final class ip implements wo {
     private int field_g;
     private int field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 
@@ -132,8 +132,7 @@ final class ip implements wo {
 
     final static void a(int param0, dl[] param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            int discarded$0 = 2;
-            qc.a(param0, param6, param3, param1, 480, param2);
+            qc.a(param0, param6, param3, param1, 480, param2, 2);
         } catch (RuntimeException runtimeException) {
             throw dn.a((Throwable) (Object) runtimeException, "ip.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + 2 + ',' + 480 + ',' + param6 + ')');
         }

@@ -28,7 +28,7 @@ final class fe extends se implements co, in, jn {
         ((fe) this).field_I = null;
     }
 
-    private final boolean a(kh param0) {
+    private final boolean a(kh param0, int param1) {
         j var3 = null;
         RuntimeException var3_ref = null;
         re var4 = null;
@@ -146,9 +146,7 @@ final class fe extends se implements co, in, jn {
                   }
                 }
               } else {
-                int discarded$4 = 6;
-                int discarded$5 = 1;
-                ih.a(var4);
+                ih.a(var4, 1, 6);
                 var4 = (n) (Object) nq.field_s.b(6);
                 continue L1;
               }
@@ -186,8 +184,7 @@ final class fe extends se implements co, in, jn {
                 if (param2 != ((fe) this).field_S) {
                   break L0;
                 } else {
-                  int discarded$4 = -79;
-                  boolean discarded$5 = this.a();
+                  boolean discarded$2 = this.a((byte) -79);
                   return;
                 }
               } else {
@@ -406,16 +403,16 @@ final class fe extends se implements co, in, jn {
         }
     }
 
-    private final String g() {
+    private final String g(byte param0) {
         return "</col></u>";
     }
 
-    private final String h() {
+    private final String h(byte param0) {
         int var2 = 0;
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(String param0, String param1, int param2, int param3, cf param4) {
+    private final int a(String param0, String param1, int param2, int param3, cf param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -467,8 +464,7 @@ final class fe extends se implements co, in, jn {
         String stackOut_11_2 = null;
         try {
           L0: {
-            int discarded$2 = 170;
-            stackOut_2_0 = this.a(35, true, param4, param1, param0, param2);
+            stackOut_2_0 = this.a(35, true, param4, param1, param0, param2, 170);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -572,7 +568,7 @@ final class fe extends se implements co, in, jn {
         }
     }
 
-    private final boolean a() {
+    private final boolean a(byte param0) {
         if (!(this.h(-122))) {
             return false;
         }
@@ -694,21 +690,15 @@ final class fe extends se implements co, in, jn {
 
     private final boolean h(int param0) {
         Object var3 = null;
-        int discarded$14 = 60;
-        if (this.a((kh) (Object) ((fe) this).field_V)) {
-          int discarded$15 = 60;
-          if (this.a((kh) (Object) ((fe) this).field_M)) {
-            int discarded$16 = 60;
-            if (this.a((kh) (Object) ((fe) this).field_T)) {
-              int discarded$17 = 60;
-              if (this.a((kh) (Object) ((fe) this).field_P)) {
-                int discarded$18 = 60;
-                if (this.a((kh) (Object) ((fe) this).field_I)) {
-                  int discarded$19 = 60;
-                  if (this.a((kh) (Object) ((fe) this).field_N)) {
+        if (this.a((kh) (Object) ((fe) this).field_V, 60)) {
+          if (this.a((kh) (Object) ((fe) this).field_M, 60)) {
+            if (this.a((kh) (Object) ((fe) this).field_T, 60)) {
+              if (this.a((kh) (Object) ((fe) this).field_P, 60)) {
+                if (this.a((kh) (Object) ((fe) this).field_I, 60)) {
+                  if (this.a((kh) (Object) ((fe) this).field_N, 60)) {
                     if (param0 >= -20) {
                       var3 = null;
-                      int discarded$20 = this.a((cf) null, -84, -24, (String) null, -8);
+                      int discarded$2 = this.a((cf) null, -84, -24, (String) null, -8);
                       return true;
                     } else {
                       return true;
@@ -748,7 +738,7 @@ final class fe extends se implements co, in, jn {
         }
     }
 
-    private final int a(int param0, boolean param1, cf param2, String param3, String param4, int param5) {
+    private final int a(int param0, boolean param1, cf param2, String param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         km var9 = null;
         el var10 = null;
@@ -1041,18 +1031,13 @@ final class fe extends se implements co, in, jn {
         m dupTemp$1 = new m(10000536);
         ((fe) this).field_I.field_h = (nl) (Object) dupTemp$1;
         ((fe) this).field_P.field_h = (nl) (Object) dupTemp$1;
-        int discarded$2 = 3;
-        int discarded$3 = -109;
         String var2 = vl.a(wa.field_d, new String[2], 2);
         int var3 = 20;
         var3 = var3 + this.a(170, (cf) (Object) ((fe) this).field_M, var3, 73, da.field_i);
-        int discarded$4 = 170;
-        var3 = var3 + (5 + this.a(20, true, (cf) (Object) ((fe) this).field_T, cq.field_d, "", var3));
+        var3 = var3 + (5 + this.a(20, true, (cf) (Object) ((fe) this).field_T, cq.field_d, "", var3, 170));
         var3 = var3 + this.a(170, (cf) (Object) ((fe) this).field_P, var3, 47, gn.field_D);
-        int discarded$5 = 35;
-        var3 = var3 + (5 + this.a(oi.field_f, bd.field_b, var3, 170, (cf) (Object) ((fe) this).field_I));
-        int discarded$6 = 35;
-        var3 = var3 + (this.a(r.field_e, ia.field_w, var3, 170, (cf) (Object) ((fe) this).field_V) + 5);
+        var3 = var3 + (5 + this.a(oi.field_f, bd.field_b, var3, 170, (cf) (Object) ((fe) this).field_I, 35));
+        var3 = var3 + (this.a(r.field_e, ia.field_w, var3, 170, (cf) (Object) ((fe) this).field_V, 35) + 5);
         var3 = var3 + this.a((cf) (Object) ((fe) this).field_N, -99, 170, gj.field_a, var3);
         el var4 = new el(46, var3, -90 + ((fe) this).field_n, 25, (cf) (Object) ((fe) this).field_H, true, -120 + ((fe) this).field_n, 5, cp.field_H, 11579568, uq.field_e);
         ((fe) this).b((byte) 115, (cf) (Object) var4);

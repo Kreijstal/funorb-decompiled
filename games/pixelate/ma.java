@@ -18,7 +18,7 @@ final class ma extends bg {
     private int field_u;
     private int field_p;
 
-    final static void d() {
+    final static void d(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -107,10 +107,7 @@ final class ma extends bg {
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
-                            int discarded$3 = 0;
-                            int discarded$4 = 1;
-                            int discarded$5 = 98;
-                            qm.a(var17, bg.field_a, false, oe.field_Hb);
+                            qm.a(var17, bg.field_a, false, oe.field_Hb, (byte) 98, true, false);
                             uk.a(var14, var17, var12, var9, var8, var13, 20126, var7);
                             var15++;
                             continue L3;
@@ -233,7 +230,7 @@ final class ma extends bg {
         }
     }
 
-    final static boolean e() {
+    final static boolean e(byte param0) {
         return to.field_s;
     }
 

@@ -15,7 +15,7 @@ abstract class jq {
         field_c = null;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         int stackIn_7_0 = 0;
         int stackOut_5_0 = 0;
         if (param0 != 160) {

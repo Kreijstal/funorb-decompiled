@@ -115,8 +115,7 @@ final class psa extends l {
 
     final synchronized void a(boolean param0, qua param1, byte param2, boolean param3) {
         try {
-            int discarded$0 = -377538388;
-            this.f();
+            this.f(-377538388);
             super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "psa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -129,8 +128,7 @@ final class psa extends l {
         ((psa) this).field_T = new int[16];
         ((psa) this).field_S = 256;
         try {
-            int discarded$0 = -377538388;
-            this.f();
+            this.f(-377538388);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "psa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -169,7 +167,7 @@ final class psa extends l {
         ((psa) this).field_T[param2] = param1 << 12;
     }
 
-    private final void f() {
+    private final void f(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         for (var2 = 0; 16 > var2; var2++) {
@@ -182,8 +180,7 @@ final class psa extends l {
         ((psa) this).field_Q = new int[16];
         ((psa) this).field_T = new int[16];
         ((psa) this).field_S = 256;
-        int discarded$0 = -377538388;
-        this.f();
+        this.f(-377538388);
     }
 
     static {

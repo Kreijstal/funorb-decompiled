@@ -240,7 +240,7 @@ final class wd extends ji {
         }
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_L = null;
         field_K = null;
         field_Q = null;

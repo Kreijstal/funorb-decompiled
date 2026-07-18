@@ -15,7 +15,7 @@ final class m {
     static ie field_f;
     static String field_e;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (wo.field_b == null) {
             return false;
         }

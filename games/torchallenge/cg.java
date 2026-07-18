@@ -12,7 +12,7 @@ final class cg {
     static ka[][][] field_b;
     static int[][] field_f;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -24,7 +24,7 @@ final class cg {
         field_f = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

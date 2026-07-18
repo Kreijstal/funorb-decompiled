@@ -10,8 +10,7 @@ final class ia extends mg {
 
     final static void a(byte param0) {
         if (ta.field_g == 10) {
-          int discarded$4 = -128;
-          sb.a();
+          sb.a(-128);
           ta.field_g = 11;
           fh.field_i = true;
           if (param0 > 33) {
@@ -22,8 +21,7 @@ final class ia extends mg {
           }
         } else {
           if (!ca.d(true)) {
-            int discarded$5 = -128;
-            sb.a();
+            sb.a(-128);
             ta.field_g = 11;
             fh.field_i = true;
             if (param0 <= 33) {

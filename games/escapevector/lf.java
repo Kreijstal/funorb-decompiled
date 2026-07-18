@@ -13,8 +13,7 @@ final class lf extends ue {
     static byte[] field_K;
 
     lf(el param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (db) (Object) gl.c());
-        int discarded$0 = 1;
+        super(param1, (db) (Object) gl.c(true));
         try {
             ((lf) this).field_L = param1;
             ((lf) this).field_N = param0;
@@ -339,8 +338,7 @@ final class lf extends ue {
             L1: {
               L2: {
                 param2 = ca.a(-1, '_', param2, "");
-                int discarded$2 = 0;
-                var3 = na.a(param0);
+                var3 = na.a(param0, false);
                 if (param2.indexOf(param0) != -1) {
                   break L2;
                 } else {
@@ -417,7 +415,7 @@ final class lf extends ue {
         return stackIn_5_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_J = null;
         field_K = null;
         int var1 = 0;

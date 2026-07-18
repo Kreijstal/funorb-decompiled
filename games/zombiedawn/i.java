@@ -12,14 +12,14 @@ final class i extends pn implements hh {
     private an field_Z;
     static boolean field_Y;
 
-    private final void b() {
+    private final void b(boolean param0) {
         if (!((i) this).field_H) {
             return;
         }
         ((i) this).field_H = false;
     }
 
-    final static void a(bo param0) {
+    final static void a(bo param0, byte param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -203,8 +203,7 @@ final class i extends pn implements hh {
           L0: {
             L1: {
               if (((i) this).field_Z == param2) {
-                int discarded$2 = 1;
-                this.b();
+                this.b(true);
                 break L1;
               } else {
                 break L1;

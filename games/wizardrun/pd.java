@@ -50,8 +50,7 @@ final class pd extends mi {
         try {
           L0: {
             if (param1 < -86) {
-              int discarded$2 = 1;
-              var3 = ag.a(param0);
+              var3 = ag.a(param0, 1);
               if (-1 != param2.indexOf(param0)) {
                 stackOut_6_0 = 1;
                 stackIn_7_0 = stackOut_6_0;
@@ -189,19 +188,15 @@ final class pd extends mi {
         }
         L2: {
           if (null != oa.field_c) {
-            int discarded$4 = -89;
-            pd.f();
+            pd.f(-89);
             break L2;
           } else {
             if (!dg.field_b) {
-              int discarded$5 = -89;
-              pd.f();
+              pd.f(-89);
               break L2;
             } else {
-              int discarded$6 = 15991;
-              le.a(param0, var2);
-              int discarded$7 = -89;
-              pd.f();
+              le.a(param0, var2, 15991);
+              pd.f(-89);
               break L2;
             }
           }
@@ -258,8 +253,7 @@ final class pd extends mi {
                       return;
                     }
                   } else {
-                    int discarded$1 = 6;
-                    rg.a((Throwable) null, "A1: " + ni.c(), -562);
+                    rg.a((Throwable) null, "A1: " + ni.c(6), -562);
                     ql.a(-109);
                     break L1;
                   }
@@ -395,7 +389,7 @@ final class pd extends mi {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_I = null;
         field_G = null;
         field_H = null;

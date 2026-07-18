@@ -12,7 +12,7 @@ final class ae {
         return qba.field_m.field_vb;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

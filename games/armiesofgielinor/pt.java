@@ -277,7 +277,7 @@ abstract class pt extends sf {
         return super.k(92);
     }
 
-    final static void a(int param0, int param1, java.awt.Canvas param2) {
+    final static void a(int param0, int param1, java.awt.Canvas param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;

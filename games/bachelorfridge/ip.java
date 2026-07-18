@@ -148,7 +148,7 @@ final class ip extends kj {
         return (String) (Object) stackIn_20_0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_f = null;
     }
 

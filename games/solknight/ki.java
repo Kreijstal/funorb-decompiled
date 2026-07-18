@@ -8,7 +8,7 @@ class ki extends rc implements oh {
     static String field_A;
     nc field_B;
 
-    private final void c() {
+    private final void c(boolean param0) {
         int var4 = SolKnight.field_L ? 1 : 0;
         ck var2 = new ck(((ki) this).field_B);
         rc var3 = (rc) (Object) var2.a((byte) 114);
@@ -52,7 +52,7 @@ class ki extends rc implements oh {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             try {
@@ -88,8 +88,7 @@ class ki extends rc implements oh {
         String stackOut_5_2 = null;
         try {
           if (l.a(87, param2, param3, param1)) {
-            int discarded$2 = 0;
-            return bl.b();
+            return bl.b(false);
           } else {
             return null;
           }
@@ -363,7 +362,7 @@ class ki extends rc implements oh {
         return null != ((ki) this).d((byte) -48) ? true : false;
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_A = null;
     }
 
@@ -1107,8 +1106,7 @@ class ki extends rc implements oh {
     final static void a(int param0) {
         ne.field_g = te.field_N.h(92);
         CharSequence var2 = (CharSequence) (Object) ne.field_g;
-        int discarded$0 = -2;
-        kf.field_D = jg.a(var2);
+        kf.field_D = jg.a(var2, -2);
     }
 
     void a(int param0, int param1, int param2, rc param3) {
@@ -1304,8 +1302,7 @@ class ki extends rc implements oh {
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         super.b(param0, param1, param2, param3, param4);
-        int discarded$0 = 1;
-        this.c();
+        this.c(true);
     }
 
     rc d(byte param0) {

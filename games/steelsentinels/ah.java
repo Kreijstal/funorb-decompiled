@@ -17,7 +17,7 @@ final class ah extends gh {
     static String field_fc;
     gh field_ec;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_Yb = null;
         field_Zb = null;
         field_Xb = null;
@@ -51,7 +51,7 @@ final class ah extends gh {
         super(0L, (gh) null);
     }
 
-    final static Object a(boolean param0, byte[] param1) {
+    final static Object a(boolean param0, byte[] param1, int param2) {
         ge var3 = null;
         RuntimeException var3_ref = null;
         ge stackIn_5_0 = null;

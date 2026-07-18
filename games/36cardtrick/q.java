@@ -18,6 +18,7 @@ final class q extends tl {
         RuntimeException var4 = null;
         String[] var4_array = null;
         int var5 = 0;
+        Object var6 = null;
         int stackIn_8_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_10_0 = 0;
@@ -83,8 +84,8 @@ final class q extends tl {
                   }
                 }
                 tf.field_s = il.a(stackIn_10_0, stackIn_10_1 != 0);
-                int discarded$2 = 61;
-                wh.a((String[]) null);
+                var6 = null;
+                wh.a((String[]) null, 61);
                 break L1;
               } else {
                 L3: {
@@ -93,8 +94,7 @@ final class q extends tl {
                   } else {
                     if (param1 <= 105) {
                       var4_array = args;
-                      int discarded$3 = 61;
-                      wh.a(var4_array);
+                      wh.a(var4_array, 61);
                       tf.field_s = pf.a(-118, args);
                       break L1;
                     } else {
@@ -443,7 +443,7 @@ final class q extends tl {
         L0: {
           var13 = Main.field_T;
           if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
-            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           } else {
             break L0;
@@ -550,7 +550,7 @@ final class q extends tl {
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
           return ((q) this).a(true);
         }
-        boolean discarded$4 = var3.addAll((Collection) (Object) var4);
+        boolean discarded$3 = var3.addAll((Collection) (Object) var4);
         var6_array = var3.toArray();
         if (param0 == -26042) {
           var7 = null;
@@ -568,8 +568,7 @@ final class q extends tl {
               var11 = (java.net.Proxy) var10;
               try {
                 L6: {
-                  int discarded$5 = -72;
-                  var12_ref2 = this.a(var11);
+                  var12_ref2 = this.a(var11, -72);
                   if (var12_ref2 != null) {
                     stackOut_23_0 = (java.net.Socket) var12_ref2;
                     stackIn_24_0 = stackOut_23_0;
@@ -615,13 +614,13 @@ final class q extends tl {
         ((q) this).field_e = java.net.ProxySelector.getDefault();
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_h = null;
         field_g = null;
         field_f = null;
     }
 
-    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0, int param1) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;

@@ -14,7 +14,7 @@ final class fn extends ne {
     int field_i;
     int field_l;
 
-    final static cn a() {
+    final static cn a(int param0) {
         int var2 = 0;
         int var3 = DungeonAssault.field_K;
         cn var1 = new cn(11, 11);

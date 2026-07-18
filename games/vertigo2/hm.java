@@ -114,8 +114,7 @@ final class hm extends ji {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = rj.a(var6, var5_int, param1, var4);
+                          int discarded$1 = rj.a(var16, var5_int, param1, var4, 9);
                           break L5;
                         }
                       }
@@ -550,8 +549,7 @@ final class hm extends ji {
     }
 
     final void a(int param0) {
-        int discarded$0 = 4096;
-        this.h();
+        this.h(4096);
         if (param0 >= -98) {
             hm.g(40);
         }
@@ -650,8 +648,7 @@ final class hm extends ji {
         if (null != nr.field_q) {
             var3 = nr.field_q;
             String var1 = var3;
-            int discarded$0 = -19615;
-            fh.a(Vertigo2.a(new String[1], ua.field_b, 92));
+            fh.a(Vertigo2.a(new String[1], ua.field_b, 92), -19615);
             nr.field_q = null;
         }
     }
@@ -767,7 +764,7 @@ final class hm extends ji {
         field_A = null;
     }
 
-    final static hq a() {
+    final static hq a(int param0, boolean param1) {
         hq var2 = new hq();
         mo.field_h.a((li) (Object) var2, false);
         hm.d(0, 4);
@@ -868,7 +865,7 @@ final class hm extends ji {
         return var18;
     }
 
-    private final void h() {
+    private final void h(int param0) {
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;

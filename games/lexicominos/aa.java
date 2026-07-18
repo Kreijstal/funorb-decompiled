@@ -82,7 +82,7 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
         return stackIn_1_0 != 0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
         field_i = null;
     }
@@ -166,7 +166,7 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
         return stackIn_3_0;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -388,7 +388,7 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         if (wf.field_i < 2) {
           return 0;
         } else {

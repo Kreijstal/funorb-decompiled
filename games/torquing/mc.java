@@ -7,7 +7,7 @@ final class mc extends q {
     nj field_j;
     static double field_m;
 
-    final static void c() {
+    final static void c(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -61,7 +61,7 @@ final class mc extends q {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return mc.a(2126, ip.a(9));
     }
 

@@ -66,8 +66,7 @@ final class fk extends dl {
                   break L1;
                 }
               }
-              int discarded$4 = 42;
-              kh.field_a = ld.a(stackIn_12_0 != 0);
+              kh.field_a = ld.a(stackIn_12_0 != 0, (byte) 42);
               var6 = null;
               m.a(-44, (String[]) null);
               break L0;
@@ -82,8 +81,7 @@ final class fk extends dl {
                 } else {
                   var4 = param3;
                   m.a(-100, var4);
-                  int discarded$5 = -21916;
-                  kh.field_a = ha.a(param3);
+                  kh.field_a = ha.a(param3, -21916);
                   return;
                 }
               }
@@ -146,7 +144,7 @@ final class fk extends dl {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_B = null;
         field_z = null;
         field_x = null;

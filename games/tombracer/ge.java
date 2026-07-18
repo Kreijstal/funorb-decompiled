@@ -336,7 +336,7 @@ abstract class ge extends kna {
         }
     }
 
-    public static void r() {
+    public static void r(byte param0) {
         field_G = null;
     }
 

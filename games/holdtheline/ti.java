@@ -141,16 +141,14 @@ final class ti extends pc {
                       if (((ti) this).field_o != 9) {
                         if (((ti) this).field_o != 7) {
                           if (8 == ((ti) this).field_o) {
-                            int discarded$5 = -18;
-                            this.c();
+                            this.c((byte) -18);
                             break L6;
                           } else {
                             if (((ti) this).field_o != 10) {
                               if (((ti) this).field_o != 11) {
                                 break L6;
                               } else {
-                                int discarded$6 = 12;
-                                this.h();
+                                this.h(12);
                                 break L6;
                               }
                             } else {
@@ -158,8 +156,7 @@ final class ti extends pc {
                                 if (480.0f == ((ti) this).field_t) {
                                   break L7;
                                 } else {
-                                  int discarded$7 = 12;
-                                  this.h();
+                                  this.h(12);
                                   break L7;
                                 }
                               }
@@ -172,13 +169,11 @@ final class ti extends pc {
                             }
                           }
                         } else {
-                          int discarded$8 = -18;
-                          this.c();
+                          this.c((byte) -18);
                           break L6;
                         }
                       } else {
-                        int discarded$9 = 29280;
-                        this.l();
+                        this.l(29280);
                         break L6;
                       }
                     } else {
@@ -581,12 +576,12 @@ final class ti extends pc {
         return ((ti) this).field_y == 4 ? true : false;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         ((ti) this).field_y = 1;
         ((ti) this).field_s = 50 + 5 * ((ti) this).field_a;
     }
 
-    private final void l() {
+    private final void l(int param0) {
         int var2 = 0;
         if (((ti) this).field_y > 2) {
             return;
@@ -598,7 +593,7 @@ final class ti extends pc {
         wb.a(20, ko.field_a, 0, 0, 560, -20 + var3, 40 + -var2, -var3 + 414, -1, 1, HoldTheLine.field_F);
     }
 
-    private final void j() {
+    private final void j(int param0) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -680,7 +675,7 @@ final class ti extends pc {
         sf.field_m = 0;
     }
 
-    private final void m() {
+    private final void m(int param0) {
         int var3 = 0;
         L0: {
           var3 = HoldTheLine.field_D;
@@ -1145,7 +1140,7 @@ final class ti extends pc {
         }
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1417,10 +1412,10 @@ final class ti extends pc {
           var4 = HoldTheLine.field_D;
           if (!hn.field_T) {
             L1: {
-              hj[] discarded$7 = kc.field_a.a(180);
-              hj discarded$8 = rm.field_A.a(8192);
-              hj discarded$9 = jf.field_a.a(8192);
-              hj discarded$10 = bo.field_d.a(8192);
+              hj[] discarded$4 = kc.field_a.a(180);
+              hj discarded$5 = rm.field_A.a(8192);
+              hj discarded$6 = jf.field_a.a(8192);
+              hj discarded$7 = bo.field_d.a(8192);
               if (!kc.field_a.a((byte) 127)) {
                 break L1;
               } else {
@@ -1431,13 +1426,10 @@ final class ti extends pc {
                     break L1;
                   } else {
                     if (bo.field_d.b((byte) 10)) {
-                      int discarded$11 = 0;
-                      gd.a(di.field_w, rm.field_A.field_b);
-                      int discarded$12 = 80;
-                      wj.a(0, 19189, 80, 20, 50, 0, -1500, jf.field_a.field_b);
+                      gd.a(di.field_w, rm.field_A.field_b, 0);
+                      wj.a(0, 19189, 80, 20, 50, 0, -1500, jf.field_a.field_b, 80);
                       te.a(-4, kc.field_a.field_i);
-                      int discarded$13 = 22210;
-                      nm.a(bo.field_d.field_b);
+                      nm.a(bo.field_d.field_b, 22210);
                       oh.a(true, true);
                       hn.field_T = true;
                       break L1;
@@ -1630,7 +1622,7 @@ final class ti extends pc {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         L0: {
           v.field_E = this.b(-21, nc.field_g, rf.field_X);
           if (gg.field_J == 1) {
@@ -1953,7 +1945,7 @@ final class ti extends pc {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         ((ti) this).field_y = 4;
         ((ti) this).field_w = 40;
     }
@@ -2268,9 +2260,9 @@ final class ti extends pc {
                                             if (qd.field_h == 0) {
                                               if (0 < ih.field_p) {
                                                 L7: {
-                                                  int fieldTemp$4 = ih.field_p - 1;
+                                                  int fieldTemp$2 = ih.field_p - 1;
                                                   ih.field_p = ih.field_p - 1;
-                                                  if (0 != fieldTemp$4) {
+                                                  if (0 != fieldTemp$2) {
                                                     break L7;
                                                   } else {
                                                     qd.field_h = 2;
@@ -2293,9 +2285,9 @@ final class ti extends pc {
                                               } else {
                                                 if (ih.field_p < 6) {
                                                   L8: {
-                                                    int fieldTemp$5 = ih.field_p + 1;
+                                                    int fieldTemp$3 = ih.field_p + 1;
                                                     ih.field_p = ih.field_p + 1;
-                                                    if (fieldTemp$5 != 6) {
+                                                    if (fieldTemp$3 != 6) {
                                                       break L8;
                                                     } else {
                                                       qd.field_h = 1;
@@ -2312,8 +2304,7 @@ final class ti extends pc {
                                           } else {
                                             if (var6 == 12) {
                                               if (nd.field_e) {
-                                                int discarded$6 = 0;
-                                                hf.c();
+                                                hf.c(0);
                                                 break L0;
                                               } else {
                                                 wm.a(param1, false, 13);
@@ -2407,8 +2398,7 @@ final class ti extends pc {
                                                 }
                                               } else {
                                                 if (var6 == 26) {
-                                                  int discarded$7 = 0;
-                                                  hf.c();
+                                                  hf.c(0);
                                                   break L0;
                                                 } else {
                                                   if (var6 != 1) {
@@ -2937,8 +2927,7 @@ final class ti extends pc {
             L1: {
               if (0 == ((ti) this).field_y) {
                 gg.field_J = 0;
-                int discarded$9 = -116;
-                this.e();
+                this.e((byte) -116);
                 break L1;
               } else {
                 break L1;
@@ -2956,8 +2945,7 @@ final class ti extends pc {
               }
             }
             gg.field_J = 0;
-            int discarded$10 = -100;
-            this.b();
+            this.b((byte) -100);
             break L0;
           }
         }
@@ -2984,8 +2972,7 @@ final class ti extends pc {
                           }
                         }
                       }
-                      int discarded$11 = -5302;
-                      this.j();
+                      this.j(-5302);
                       break L5;
                     }
                     L7: {
@@ -3000,8 +2987,7 @@ final class ti extends pc {
                           }
                         }
                       }
-                      int discarded$12 = -88;
-                      this.d();
+                      this.d((byte) -88);
                       break L7;
                     }
                     L9: {
@@ -3023,8 +3009,7 @@ final class ti extends pc {
                         }
                       }
                     }
-                    int discarded$13 = 98;
-                    this.f();
+                    this.f((byte) 98);
                     break L3;
                   }
                 } else {
@@ -3179,14 +3164,12 @@ final class ti extends pc {
                             }
                           }
                         }
-                        int discarded$14 = -1;
-                        this.m();
+                        this.m(-1);
                         continue L4;
                       }
                     }
                   }
-                  int discarded$15 = -1;
-                  this.o();
+                  this.o(-1);
                   continue L4;
                 }
               }
@@ -3228,8 +3211,8 @@ final class ti extends pc {
                   if (((ti) this).field_s != 0) {
                     break L23;
                   } else {
-                    ui discarded$16 = bd.a(17405, 64, 0, j.field_c.field_f);
-                    ui discarded$17 = bd.a(17405, 64, 256, j.field_c.field_h);
+                    ui discarded$2 = bd.a(17405, 64, 0, j.field_c.field_f);
+                    ui discarded$3 = bd.a(17405, 64, 256, j.field_c.field_h);
                     break L23;
                   }
                 }
@@ -3695,9 +3678,7 @@ final class ti extends pc {
             if (-1 == var5) {
               break L1;
             } else {
-              int discarded$4 = -66;
-              int discarded$5 = 10;
-              mg.field_g[param2] = il.a(5, 3, var5);
+              mg.field_g[param2] = il.a(5, 3, var5, 10, (byte) -66);
               break L1;
             }
           }
@@ -3838,8 +3819,7 @@ final class ti extends pc {
                           if (eb.field_o == null) {
                             break L13;
                           } else {
-                            int discarded$6 = 0;
-                            if (!ra.a(var22[var15])) {
+                            if (!ra.a(var22[var15], false)) {
                               break L13;
                             } else {
                               if (eb.field_o.field_m == var26[var15]) {
@@ -3933,7 +3913,7 @@ final class ti extends pc {
           } else {
             L19: {
               var21 = tk.field_c[param2][var8];
-              boolean discarded$7 = var21.b(3);
+              boolean discarded$1 = var21.b(3);
               var10_ref_hj = var21.a(9392, 0, 60);
               if (var10_ref_hj == null) {
                 break L19;
@@ -4040,7 +4020,7 @@ final class ti extends pc {
         }
     }
 
-    private final void o() {
+    private final void o(int param0) {
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
@@ -5832,7 +5812,7 @@ final class ti extends pc {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -6051,8 +6031,7 @@ final class ti extends pc {
                         break L10;
                       } else {
                         L11: {
-                          int discarded$2 = 1;
-                          var9 = sd.a(kj.field_n, new String[1]);
+                          var9 = sd.a(kj.field_n, new String[1], true);
                           if (!of.a(-969)) {
                             var9 = ub.field_E;
                             break L11;
@@ -6068,8 +6047,7 @@ final class ti extends pc {
                   if (ek.field_x == 1) {
                     L12: {
                       if (kk.field_l != 1) {
-                        int discarded$3 = 1;
-                        stackOut_76_0 = sd.a(sh.field_c, new String[1]);
+                        stackOut_76_0 = sd.a(sh.field_c, new String[1], true);
                         stackIn_77_0 = stackOut_76_0;
                         break L12;
                       } else {
@@ -6305,7 +6283,7 @@ final class ti extends pc {
         return -1;
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

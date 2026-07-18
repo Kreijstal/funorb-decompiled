@@ -139,7 +139,7 @@ final class w {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_a = null;
         field_d = null;
@@ -330,7 +330,7 @@ final class w {
         return stackIn_1_0;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean a(boolean param0, int param1) {
         try {
             pk var4 = null;
             pk var5 = null;

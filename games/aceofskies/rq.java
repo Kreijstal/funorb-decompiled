@@ -4,13 +4,13 @@
 final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static String field_a;
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         te var3_ref_te = null;
         int var3 = 0;
-        ds var4 = null;
         int var4_int = 0;
+        ds var4 = null;
         Object var5 = null;
         int var6 = 0;
         dl var9 = null;
@@ -25,8 +25,7 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               if (var2 != 0) {
                 if (var2 != 1) {
                   v.a("A1: " + dl.k((byte) 65), (byte) -52, (Throwable) null);
-                  int discarded$4 = 1;
-                  te.b();
+                  te.b(true);
                   break L1;
                 } else {
                   var3 = var9.a((byte) 117);
@@ -45,8 +44,7 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                       }
                     }
                     if (var4 == null) {
-                      int discarded$5 = 1;
-                      te.b();
+                      te.b(true);
                       return;
                     } else {
                       var4.c(-127);
@@ -57,8 +55,7 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               } else {
                 var3_ref_te = (te) (Object) ep.field_z.d(268435455);
                 if (var3_ref_te == null) {
-                  int discarded$6 = 1;
-                  te.b();
+                  te.b(true);
                   return;
                 } else {
                   L4: {
@@ -77,8 +74,7 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                     var3_ref_te.c(-124);
                     break L1;
                   } else {
-                    int discarded$7 = 1;
-                    te.b();
+                    te.b(true);
                     return;
                   }
                 }
@@ -158,7 +154,7 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a(float[] param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(float[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;

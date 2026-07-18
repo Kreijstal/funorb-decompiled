@@ -12,7 +12,7 @@ final class qa extends df {
     static String[] field_o;
     static bi[] field_p;
 
-    public static void e() {
+    public static void e(int param0) {
         field_o = null;
         field_q = null;
         field_w = null;

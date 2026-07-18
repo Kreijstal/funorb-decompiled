@@ -10,8 +10,7 @@ final class pqa extends rqa {
           if (param1 == 3) {
             return 11;
           } else {
-            int discarded$2 = 300;
-            return de.a(param1).field_a;
+            return de.a(param1, 300).field_a;
           }
         } else {
           return ita.a(param1, 7988).field_H;
@@ -211,7 +210,7 @@ final class pqa extends rqa {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
         field_o = null;
     }

@@ -131,7 +131,7 @@ final class bb extends hd {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_Db = null;
         field_Nb = null;
         field_Mb = null;
@@ -589,20 +589,17 @@ final class bb extends hd {
                     }
                     Object var8 = null;
                     gp.a(var5, -128, ov.field_b, param3, at.field_Kb, (String) null);
-                    int discarded$0 = -51;
-                    gk.a(at.field_Kb, var5, ik.field_A, ov.field_b);
+                    gk.a(at.field_Kb, var5, ik.field_A, ov.field_b, (byte) -51);
                     fa.b(125);
-                    int discarded$1 = 68;
-                    jm.b();
+                    jm.b(68);
                 } else {
-                    int discarded$2 = 8;
-                    gw.a();
+                    gw.a(8);
                     fa.b(-123);
                 }
             }
         }
         if (param1 > -20) {
-            boolean discarded$3 = ((bb) this).h(-11);
+            boolean discarded$0 = ((bb) this).h(-11);
         }
     }
 

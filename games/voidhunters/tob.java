@@ -8,23 +8,22 @@ final class tob extends fh {
     int field_m;
     private qfa field_k;
 
-    final static boolean g() {
+    final static boolean g(int param0) {
         return lsa.field_e != null;
     }
 
     protected final void finalize() throws Throwable {
-        int discarded$0 = 0;
-        this.e();
+        this.e(0);
         super.finalize();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_l = null;
         int var1 = 112;
     }
 
-    private final void e() {
+    private final void e(int param0) {
         if (!(((tob) this).field_n <= 0L)) {
             ((tob) this).field_k.field_c.releasePbuffer(((tob) this).field_n);
             ((tob) this).field_n = 0L;

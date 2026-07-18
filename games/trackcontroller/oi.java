@@ -12,7 +12,7 @@ final class oi {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, qj[] param1, int param2, oh param3, oh param4, int param5, int param6, int param7, int param8, qj[] param9, int param10, boolean param11) {
+    final static void a(int param0, qj[] param1, int param2, oh param3, oh param4, int param5, int param6, int param7, int param8, qj[] param9, int param10, boolean param11, int param12, int param13, int param14) {
         try {
             Object var16 = null;
             pi.a(18, 320, 10, 480, (qj[]) null, 20, 0, sl.field_n, param9, 0, db.field_db, 26, param1, 26, param4, 0, 240, 0, 0, param3, j.field_a);
@@ -22,7 +22,7 @@ final class oi {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_e = null;
         field_d = null;

@@ -50,11 +50,11 @@ final class ng extends sh {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         sl.field_k = new tf();
     }
 
-    final static void h() {
+    final static void h(int param0) {
         fj.field_p.b();
         oh.field_a.b();
     }

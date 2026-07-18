@@ -11,7 +11,7 @@ final class e implements Iterable {
     static String field_b;
     static fm field_c;
 
-    final static void a(ul param0, byte[] param1, int param2, String[] param3, int[] param4, int param5, ja[][] param6, String[] param7, boolean param8, String[][] param9, int param10, String[][] param11, ul param12, byte[] param13, int[] param14, ri[] param15, ja[][] param16, ul param17) {
+    final static void a(ul param0, byte[] param1, int param2, String[] param3, int[] param4, int param5, ja[][] param6, String[] param7, boolean param8, String[][] param9, int param10, String[][] param11, ul param12, byte[] param13, int[] param14, ri[] param15, ja[][] param16, ul param17, boolean param18) {
         RuntimeException var19 = null;
         Object var20 = null;
         RuntimeException stackIn_3_0 = null;
@@ -718,7 +718,7 @@ final class e implements Iterable {
         return var2;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 114;
         field_e = null;
         field_c = null;

@@ -13,11 +13,10 @@ final class aa extends hl {
     byte[] field_i;
 
     final static int a(boolean param0, int param1, int param2, int param3) {
-        int discarded$0 = 1;
-        return em.a();
+        return em.a(true);
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -146,8 +145,7 @@ final class aa extends hl {
           kh.field_l.f();
           var2.b(0, -w.field_c.field_y);
           kh.field_l.field_x = w.field_c.field_y;
-          int discarded$2 = -10;
-          dm.b();
+          dm.b((byte) -10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

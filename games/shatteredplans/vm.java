@@ -273,11 +273,9 @@ final class vm extends qr {
                     ih.a(gi.field_a, 2, var5, em.field_h, (String) null, param3);
                     un.a(gi.field_a, (byte) 123, hd.field_k, em.field_h, var5);
                     jp.g((byte) 119);
-                    int discarded$0 = -5883;
-                    dc.a();
+                    dc.a(-5883);
                 } else {
-                    int discarded$1 = -16705;
-                    mm.d();
+                    mm.d(-16705);
                     jp.g((byte) 119);
                 }
             }
@@ -504,8 +502,7 @@ final class vm extends qr {
                   if (0 >= ((vm) this).field_zb[var13]) {
                     break L2;
                   } else {
-                    int discarded$1 = -86;
-                    param6[var13] = var11 + sn.a(((vm) this).field_zb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+                    param6[var13] = var11 + sn.a(((vm) this).field_zb[var13], (byte) -86).toUpperCase() + ": " + var12 + param6[var13];
                     break L2;
                   }
                 }

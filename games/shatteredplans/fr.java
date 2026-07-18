@@ -573,7 +573,7 @@ final class fr extends qs {
         return stackIn_6_0;
     }
 
-    final static Boolean j() {
+    final static Boolean j(int param0) {
         Boolean var1 = sa.field_d;
         sa.field_d = null;
         return var1;
@@ -682,7 +682,7 @@ final class fr extends qs {
         return stackIn_15_0 != 0;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_H = null;
         field_D = null;
         field_F = null;

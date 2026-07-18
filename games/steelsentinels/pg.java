@@ -41,7 +41,7 @@ final class pg extends fb {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_v = null;
         field_t = null;
         field_s = null;

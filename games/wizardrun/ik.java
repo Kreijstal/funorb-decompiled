@@ -12,7 +12,7 @@ final class ik extends mi {
     private boolean field_O;
     static int field_K;
 
-    final static void g() {
+    final static void g(int param0) {
         ki.h((byte) 91);
         wi.field_J = true;
         lc.field_d = true;

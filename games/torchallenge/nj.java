@@ -11,7 +11,7 @@ final class nj {
     static int[][] field_b;
     static boolean field_a;
 
-    final static void a(ka param0) {
+    final static void a(ka param0, int param1) {
         try {
             fc.field_m = param0;
         } catch (RuntimeException runtimeException) {
@@ -53,12 +53,10 @@ final class nj {
         }
         if (oa.field_k != null) {
           oa.field_k.l(100);
-          int discarded$4 = 19630;
-          rf.n();
+          rf.n(19630);
           return;
         } else {
-          int discarded$5 = 19630;
-          rf.n();
+          rf.n(19630);
           return;
         }
     }
@@ -238,7 +236,7 @@ final class nj {
         return var2;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_b = null;
         field_h = null;
@@ -283,7 +281,7 @@ final class nj {
         }
     }
 
-    final static void a(int param0, int param1, java.awt.Canvas param2) {
+    final static void a(int param0, int param1, java.awt.Canvas param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -372,7 +370,7 @@ final class nj {
         return var2;
     }
 
-    final static t a(String param0, boolean param1, String param2) {
+    final static t a(String param0, boolean param1, String param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -424,8 +422,7 @@ final class nj {
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_5_0 = ac.a(var4_long, (String) var6, -12, param0);
+            stackOut_5_0 = ac.a(var4_long, (String) var6, -12, param0, false);
             stackIn_6_0 = stackOut_5_0;
             break L0;
           }

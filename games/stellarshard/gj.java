@@ -9,7 +9,7 @@ abstract class gj extends ah {
     static String field_s;
     static int field_t;
 
-    public static void d() {
+    public static void d(byte param0) {
         int var1 = -41;
         field_r = null;
         field_w = null;

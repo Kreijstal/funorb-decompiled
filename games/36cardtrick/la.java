@@ -12,7 +12,7 @@ abstract class la extends he {
 
     abstract int a(boolean param0);
 
-    public static void b() {
+    public static void b(byte param0) {
         field_m = null;
         field_k = null;
     }

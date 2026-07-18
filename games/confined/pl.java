@@ -10,7 +10,7 @@ abstract class pl extends jl {
     int field_s;
     static bi field_y;
 
-    final static void a(mi param0) {
+    final static void a(mi param0, boolean param1) {
         ph var2 = null;
         RuntimeException var2_ref = null;
         RuntimeException stackIn_3_0 = null;

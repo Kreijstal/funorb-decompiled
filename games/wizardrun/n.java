@@ -6,21 +6,18 @@ final class n {
     static boolean field_a;
     static mg field_b;
 
-    final static ne a() {
+    final static ne a(byte param0) {
         String var1 = null;
         var1 = nf.a((byte) 123);
         if (var1 != null) {
           if (var1.indexOf('@') < 0) {
-            int discarded$6 = -106;
-            return new ne(nf.a((byte) 122), pa.a());
+            return new ne(nf.a((byte) 122), pa.a((byte) -106));
           } else {
             var1 = "";
-            int discarded$7 = -106;
-            return new ne(nf.a((byte) 122), pa.a());
+            return new ne(nf.a((byte) 122), pa.a((byte) -106));
           }
         } else {
-          int discarded$8 = -106;
-          return new ne(nf.a((byte) 122), pa.a());
+          return new ne(nf.a((byte) 122), pa.a((byte) -106));
         }
     }
 

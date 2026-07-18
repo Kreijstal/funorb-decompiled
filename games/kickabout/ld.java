@@ -63,7 +63,7 @@ final class ld {
         throw new IllegalStateException();
     }
 
-    final static void a(int[][][] param0, int[][][] param1, double[][][] param2, int[][][] param3, int[][][] param4) {
+    final static void a(int[][][] param0, int[][][] param1, double[][][] param2, int[][][] param3, int[][][] param4, boolean param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -410,7 +410,7 @@ final class ld {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_b = null;
         field_e = null;

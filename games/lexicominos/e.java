@@ -36,7 +36,7 @@ final class e {
         field_u = null;
     }
 
-    final static tf a(String param0) {
+    final static tf a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -81,8 +81,7 @@ final class e {
               return stackIn_4_0;
             } else {
               if (var2_int <= 255) {
-                int discarded$4 = -125;
-                var3 = dc.a(param0, '.');
+                var3 = dc.a(param0, '.', (byte) -125);
                 if (2 > var3.length) {
                   stackOut_11_0 = w.field_k;
                   stackIn_12_0 = stackOut_11_0;
@@ -92,8 +91,7 @@ final class e {
                   var5 = 0;
                   L1: while (true) {
                     if (var4.length <= var5) {
-                      int discarded$5 = -21637;
-                      stackOut_20_0 = bg.a(var3[var3.length - 1]);
+                      stackOut_20_0 = bg.a(var3[var3.length - 1], -21637);
                       stackIn_21_0 = stackOut_20_0;
                       break L0;
                     } else {

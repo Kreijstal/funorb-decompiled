@@ -40,8 +40,7 @@ final class an extends pj implements hf, ph {
             if (param0 == 4) {
               var3 = ((an) this).field_l.i((byte) -117);
               var4 = ((an) this).field_l.i(5390);
-              int discarded$2 = 1;
-              var5 = un.a();
+              var5 = un.a(1);
               if (1890 > var4) {
                 stackOut_5_0 = lp.field_xb;
                 stackIn_6_0 = stackOut_5_0;
@@ -227,8 +226,7 @@ final class an extends pj implements hf, ph {
             var4 = ((an) this).field_l.i(5390);
             if (param0 == 28600) {
               L1: {
-                int discarded$2 = 1;
-                var5 = un.a();
+                var5 = un.a(1);
                 if (var4 < 1890) {
                   break L1;
                 } else {
@@ -271,7 +269,7 @@ final class an extends pj implements hf, ph {
         }
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         int var1_int = 0;
         int var2 = BrickABrac.field_J ? 1 : 0;
         try {

@@ -49,7 +49,7 @@ abstract class ps {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (!(ms.field_b != -1)) {
             if (!(uj.a((byte) 52, 1))) {
                 return false;

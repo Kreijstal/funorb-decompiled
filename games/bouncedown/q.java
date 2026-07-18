@@ -199,7 +199,7 @@ final class q extends lc implements rf, rc {
         return stackIn_1_0;
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_J = null;
         field_N = null;
         field_G = null;
@@ -413,9 +413,8 @@ final class q extends lc implements rf, rc {
         }
     }
 
-    private final void e() {
-        int discarded$0 = 7714;
-        if (!this.k()) {
+    private final void e(byte param0) {
+        if (!this.k(7714)) {
             return;
         }
         int var2 = -37;
@@ -454,7 +453,7 @@ final class q extends lc implements rf, rc {
         ((q) this).b(var4 + var3 - -55, 80, 496, 0, 0);
     }
 
-    private final boolean a(wc param0) {
+    private final boolean a(wc param0, boolean param1) {
         uh var3 = null;
         RuntimeException var3_ref = null;
         vf var4 = null;
@@ -681,7 +680,7 @@ final class q extends lc implements rf, rc {
         return stackIn_3_0;
     }
 
-    final static boolean g() {
+    final static boolean g(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         int stackIn_4_0 = 0;
@@ -732,15 +731,13 @@ final class q extends lc implements rf, rc {
             L1: {
               if (((q) this).field_D != param4) {
                 if (param4 == ((q) this).field_z) {
-                  int discarded$5 = -118;
-                  this.e();
+                  this.e((byte) -118);
                   break L1;
                 } else {
                   break L1;
                 }
               } else {
-                int discarded$6 = 0;
-                hc.a();
+                hc.a(0);
                 break L1;
               }
             }
@@ -783,9 +780,8 @@ final class q extends lc implements rf, rc {
         }
     }
 
-    private final boolean k() {
-        int discarded$0 = 0;
-        if (this.a((wc) (Object) ((q) this).field_E)) {
+    private final boolean k(int param0) {
+        if (this.a((wc) (Object) ((q) this).field_E, false)) {
             return true;
         }
         return false;
@@ -813,8 +809,7 @@ final class q extends lc implements rf, rc {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              int discarded$2 = 7714;
-              ((q) this).field_z.field_y = this.k();
+              ((q) this).field_z.field_y = this.k(7714);
               if (param0 == -1) {
                 break L1;
               } else {

@@ -5,14 +5,14 @@ final class wva implements dja {
     static String field_a;
     static int field_b;
 
-    final static void b() {
+    final static void b(byte param0) {
         if (di.field_l != null) {
             di.field_l.a(-32339, dpa.field_p);
         }
         int var1 = 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_a = null;
     }
@@ -140,7 +140,7 @@ final class wva implements dja {
                 if (param3.indexOf("<br>") != -1) {
                   break L1;
                 } else {
-                  param1[0] = (String) (Object) param1;
+                  param1[0] = param3;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;

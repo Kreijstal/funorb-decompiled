@@ -410,7 +410,7 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         return stackIn_21_0;
     }
 
-    final static ue a(int param0, byte param1, fd param2, int param3, int param4) {
+    final static ue a(int param0, byte param1, fd param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         ue var7 = null;
@@ -497,7 +497,7 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         qh.field_s = param2;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_f = null;
         field_b = null;

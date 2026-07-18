@@ -11,7 +11,7 @@ final class ke {
         field_a = null;
     }
 
-    final synchronized static byte[] b(int param0) {
+    final synchronized static byte[] b(int param0, int param1) {
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;
@@ -238,7 +238,7 @@ final class ke {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         vk var4 = null;
@@ -251,9 +251,7 @@ final class ke {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$8 = 10;
-                int discarded$9 = 2;
-                ef.a(var4);
+                ef.a(var4, 2, 10);
                 var4 = (vk) (Object) ea.field_t.a(10);
                 continue L1;
               }

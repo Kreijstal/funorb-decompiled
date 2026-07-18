@@ -10,7 +10,7 @@ final class cb {
     static String field_a;
     static ka field_f;
 
-    final static void a() {
+    final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -32,7 +32,7 @@ final class cb {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_b = null;
         field_e = null;
@@ -85,8 +85,7 @@ final class cb {
               if (var4 == null) {
                 break L4;
               } else {
-                int discarded$4 = 79;
-                var5 = ue.a(((qe) var4).field_o, param3, ((qe) var4).field_H, param1);
+                var5 = ue.a(((qe) var4).field_o, param3, ((qe) var4).field_H, param1, (byte) 79);
                 break L4;
               }
             }
@@ -136,9 +135,7 @@ final class cb {
                           break L8;
                         } else {
                           if (var11.field_F == 4) {
-                            int discarded$5 = 25;
-                            int discarded$6 = 1;
-                            uc.a(var11.field_y, var11.field_o, var11.field_H, param1, 1, var11.field_V, param3, dg.field_T[var9.field_F]);
+                            uc.a(var11.field_y, var11.field_o, var11.field_H, param1, 1, var11.field_V, param3, dg.field_T[var9.field_F], true, 25);
                             return;
                           } else {
                             break L8;
@@ -164,8 +161,7 @@ final class cb {
                   } else {
                     var10 = ea.field_g[var7];
                     if (4 == var10.field_F) {
-                      int discarded$7 = 79;
-                      var6 = ue.a(var10.field_o, param3, var10.field_H, param1);
+                      var6 = ue.a(var10.field_o, param3, var10.field_H, param1, (byte) 79);
                       if (var6 < 0) {
                         break L9;
                       } else {

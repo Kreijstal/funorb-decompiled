@@ -724,9 +724,7 @@ final class da {
         if (((da) this).field_h) {
             ((da) this).field_c[param0] = (Object) (Object) ((da) this).field_j.a(param0, 0);
         } else {
-            int discarded$0 = 0;
-            int discarded$1 = 7;
-            ((da) this).field_c[param0] = w.a(((da) this).field_j.a(param0, 0));
+            ((da) this).field_c[param0] = w.a(((da) this).field_j.a(param0, 0), (byte) 7, false);
         }
     }
 
@@ -1079,22 +1077,16 @@ final class da {
         int[] var6 = null;
         Object[] var7 = null;
         int var8 = 0;
-        Object var9 = null;
-        int var9_int = 0;
-        byte[] var9_array = null;
-        int var10_int = 0;
-        byte[] var10 = null;
-        gb var10_ref = null;
+        int var9 = 0;
+        int var10 = 0;
         RuntimeException var11_ref_RuntimeException = null;
         int var11 = 0;
         int var12 = 0;
-        gb var13 = null;
         int var14 = 0;
         int[] var14_ref_int__ = null;
         int var15 = 0;
         byte[][] var15_ref_byte____ = null;
-        int var16_int = 0;
-        byte[] var16 = null;
+        int var16 = 0;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
@@ -1102,6 +1094,30 @@ final class da {
         int var21 = 0;
         int var22 = 0;
         byte[] var23 = null;
+        int[] var24 = null;
+        gb var26 = null;
+        byte[] var27 = null;
+        int[] var29 = null;
+        gb var30 = null;
+        byte[][] var31 = null;
+        gb var32 = null;
+        int[] var34 = null;
+        byte[] var37 = null;
+        int[] var39 = null;
+        byte[][] var40 = null;
+        int[] var42 = null;
+        byte[] var45 = null;
+        int[] var47 = null;
+        byte[][] var48 = null;
+        int[] var50 = null;
+        byte[] var51 = null;
+        Object var52 = null;
+        byte[] var52_array = null;
+        byte[] var53 = null;
+        byte[] var54 = null;
+        int[] var55 = null;
+        byte[][] var56 = null;
+        byte[] var57 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_22_0 = 0;
@@ -1184,7 +1200,11 @@ final class da {
               } else {
                 L1: {
                   var5_int = ((da) this).field_g.field_r[param2];
-                  var6 = ((da) this).field_g.field_a[param2];
+                  var50 = ((da) this).field_g.field_a[param2];
+                  var42 = var50;
+                  var34 = var42;
+                  var24 = var34;
+                  var6 = var24;
                   if (((da) this).field_b[param2] == null) {
                     ((da) this).field_b[param2] = new Object[((da) this).field_g.field_o[param2]];
                     break L1;
@@ -1194,26 +1214,26 @@ final class da {
                 }
                 var7 = ((da) this).field_b[param2];
                 var8 = 1;
-                var9_int = 0;
+                var9 = 0;
                 L2: while (true) {
                   L3: {
-                    if (var5_int <= var9_int) {
+                    if (var5_int <= var9) {
                       break L3;
                     } else {
                       L4: {
                         if (var6 != null) {
-                          var10_int = var6[var9_int];
+                          var10 = var50[var9];
                           break L4;
                         } else {
-                          var10_int = var9_int;
+                          var10 = var9;
                           break L4;
                         }
                       }
-                      if (var7[var10_int] == null) {
+                      if (var7[var10] == null) {
                         var8 = 0;
                         break L3;
                       } else {
-                        var9_int++;
+                        var9++;
                         continue L2;
                       }
                     }
@@ -1251,20 +1271,24 @@ final class da {
                               }
                             }
                           }
-                          var9_array = tk.a((byte) -76, true, ((da) this).field_c[param2]);
-                          var10_ref = new gb(var9_array);
-                          var10_ref.a(param1, 5, 5838, var10_ref.field_l.length);
+                          var51 = tk.a((byte) -76, true, ((da) this).field_c[param2]);
+                          var26 = new gb(var51);
+                          var26.a(param1, 5, 5838, var26.field_l.length);
+                          var52_array = var51;
                           break L6;
                         }
                       }
-                      var9_array = tk.a((byte) -110, false, ((da) this).field_c[param2]);
+                      var52_array = tk.a((byte) -110, false, ((da) this).field_c[param2]);
                       break L6;
                     }
                     try {
                       L9: {
-                        int discarded$5 = 6;
-                        var23 = jh.a(var9_array);
-                        var10 = var23;
+                        var53 = jh.a(var52_array, 6);
+                        var45 = var53;
+                        var37 = var45;
+                        var27 = var37;
+                        var23 = var27;
+                        var54 = var23;
                         break L9;
                       }
                     } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1295,7 +1319,7 @@ final class da {
                           break L10;
                         }
                       }
-                      throw fc.a((Throwable) (Object) stackIn_38_0, (stackIn_38_2 != 0) + " " + param2 + " " + param1.length + " " + gl.a(param1.length, var9_array, 125) + " " + gl.a(param1.length + -2, var9_array, 125) + " " + ((da) this).field_g.field_b[param2] + " " + ((da) this).field_g.field_d);
+                      throw fc.a((Throwable) (Object) stackIn_38_0, (stackIn_38_2 != 0) + " " + param2 + " " + param1.length + " " + gl.a(param1.length, var52_array, 125) + " " + gl.a(param1.length + -2, var52_array, 125) + " " + ((da) this).field_g.field_b[param2] + " " + ((da) this).field_g.field_d);
                     }
                     L11: {
                       if (((da) this).field_h) {
@@ -1308,30 +1332,30 @@ final class da {
                     L12: {
                       if (var5_int > 1) {
                         if (((da) this).field_e == 2) {
-                          var11 = var23.length;
+                          var11 = var53.length;
                           var11--;
                           var12 = var23[var11] & 255;
                           var11 = var11 - 4 * var12 * var5_int;
-                          var13 = new gb(var10);
+                          var32 = new gb(var54);
                           var14 = 0;
-                          var13.field_m = var11;
+                          var32.field_m = var11;
                           var15 = 0;
-                          var16_int = 0;
+                          var16 = 0;
                           L13: while (true) {
-                            if (var12 <= var16_int) {
+                            if (var12 <= var16) {
                               if (var14 == 0) {
                                 stackOut_91_0 = 1;
                                 stackIn_92_0 = stackOut_91_0;
                                 return stackIn_92_0 != 0;
                               } else {
-                                var16 = new byte[var14];
+                                var57 = new byte[var14];
                                 var14 = 0;
-                                var13.field_m = var11;
+                                var32.field_m = var11;
                                 var17 = 0;
                                 var18 = 0;
                                 L14: while (true) {
                                   if (var18 >= var12) {
-                                    var7[var15] = (Object) (Object) var16;
+                                    var7[var15] = (Object) (Object) var57;
                                     break L12;
                                   } else {
                                     var19 = 0;
@@ -1343,7 +1367,7 @@ final class da {
                                       } else {
                                         L16: {
                                           stackOut_97_0 = var19;
-                                          stackOut_97_1 = (gb) var13;
+                                          stackOut_97_1 = (gb) var32;
                                           stackIn_99_0 = stackOut_97_0;
                                           stackIn_99_1 = stackOut_97_1;
                                           stackIn_98_0 = stackOut_97_0;
@@ -1369,7 +1393,7 @@ final class da {
                                         L17: {
                                           var19 = stackIn_100_0 + ((gb) (Object) stackIn_100_1).e(stackIn_100_2 != 0);
                                           if (var6 != null) {
-                                            var21 = var6[var20];
+                                            var21 = var50[var20];
                                             break L17;
                                           } else {
                                             var21 = var20;
@@ -1380,7 +1404,7 @@ final class da {
                                           if (param0 != var21) {
                                             break L18;
                                           } else {
-                                            fk.a(var10, var17, var16, var14, var19);
+                                            fk.a(var54, var17, var57, var14, var19);
                                             var14 = var14 + var19;
                                             break L18;
                                           }
@@ -1398,13 +1422,13 @@ final class da {
                               var18 = 0;
                               L19: while (true) {
                                 if (var18 >= var5_int) {
-                                  var16_int++;
+                                  var16++;
                                   continue L13;
                                 } else {
                                   L20: {
-                                    var17 = var17 + var13.e(true);
+                                    var17 = var17 + var32.e(true);
                                     if (var6 != null) {
-                                      var19 = var6[var18];
+                                      var19 = var50[var18];
                                       break L20;
                                     } else {
                                       var19 = var18;
@@ -1427,22 +1451,30 @@ final class da {
                             }
                           }
                         } else {
-                          var11 = var23.length;
+                          var11 = var53.length;
                           var11--;
                           var12 = 255 & var23[var11];
                           var11 = var11 - 4 * (var12 * var5_int);
-                          var13 = new gb(var10);
-                          var13.field_m = var11;
-                          var14_ref_int__ = new int[var5_int];
+                          var30 = new gb(var54);
+                          var30.field_m = var11;
+                          var55 = new int[var5_int];
+                          var47 = var55;
+                          var39 = var47;
+                          var29 = var39;
+                          var14_ref_int__ = var29;
                           var15 = 0;
                           L22: while (true) {
                             if (var12 <= var15) {
-                              var15_ref_byte____ = new byte[var5_int][];
-                              var16_int = 0;
+                              var56 = new byte[var5_int][];
+                              var48 = var56;
+                              var40 = var48;
+                              var31 = var40;
+                              var15_ref_byte____ = var31;
+                              var16 = 0;
                               L23: while (true) {
-                                if (var5_int <= var16_int) {
-                                  var13.field_m = var11;
-                                  var16_int = 0;
+                                if (var5_int <= var16) {
+                                  var30.field_m = var11;
+                                  var16 = 0;
                                   var17 = 0;
                                   L24: while (true) {
                                     if (var12 <= var17) {
@@ -1456,18 +1488,16 @@ final class da {
                                               var18 = var17;
                                               break L26;
                                             } else {
-                                              var18 = var6[var17];
+                                              var18 = var50[var17];
                                               break L26;
                                             }
                                           }
                                           L27: {
                                             if (((da) this).field_e == 0) {
-                                              int discarded$6 = 0;
-                                              int discarded$7 = 7;
-                                              var7[var18] = w.a(var15_ref_byte____[var17]);
+                                              var7[var18] = w.a(var56[var17], (byte) 7, false);
                                               break L27;
                                             } else {
-                                              var7[var18] = (Object) (Object) var15_ref_byte____[var17];
+                                              var7[var18] = (Object) (Object) var56[var17];
                                               break L27;
                                             }
                                           }
@@ -1483,9 +1513,9 @@ final class da {
                                           var17++;
                                           continue L24;
                                         } else {
-                                          var18 = var18 + var13.e(true);
-                                          fk.a(var10, var16_int, var15_ref_byte____[var19], var14_ref_int__[var19], var18);
-                                          var16_int = var16_int + var18;
+                                          var18 = var18 + var30.e(true);
+                                          fk.a(var54, var16, var56[var19], var55[var19], var18);
+                                          var16 = var16 + var18;
                                           var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                                           var19++;
                                           continue L28;
@@ -1494,14 +1524,14 @@ final class da {
                                     }
                                   }
                                 } else {
-                                  var15_ref_byte____[var16_int] = new byte[var14_ref_int__[var16_int]];
-                                  var14_ref_int__[var16_int] = 0;
-                                  var16_int++;
+                                  var15_ref_byte____[var16] = new byte[var55[var16]];
+                                  var55[var16] = 0;
+                                  var16++;
                                   continue L23;
                                 }
                               }
                             } else {
-                              var16_int = 0;
+                              var16 = 0;
                               var17 = 0;
                               L29: while (true) {
                                 if (var17 >= var5_int) {
@@ -1509,8 +1539,8 @@ final class da {
                                   continue L22;
                                 } else {
                                   L30: {
-                                    stackOut_54_0 = var16_int;
-                                    stackOut_54_1 = (gb) var13;
+                                    stackOut_54_0 = var16;
+                                    stackOut_54_1 = (gb) var30;
                                     stackIn_56_0 = stackOut_54_0;
                                     stackIn_56_1 = stackOut_54_1;
                                     stackIn_55_0 = stackOut_54_0;
@@ -1533,8 +1563,8 @@ final class da {
                                       break L30;
                                     }
                                   }
-                                  var16_int = stackIn_57_0 + ((gb) (Object) stackIn_57_1).e(stackIn_57_2 != 0);
-                                  var14_ref_int__[var17] = var14_ref_int__[var17] + var16_int;
+                                  var16 = stackIn_57_0 + ((gb) (Object) stackIn_57_1).e(stackIn_57_2 != 0);
+                                  var14_ref_int__[var17] = var14_ref_int__[var17] + var16;
                                   var17++;
                                   continue L29;
                                 }
@@ -1548,17 +1578,15 @@ final class da {
                             var11 = 0;
                             break L31;
                           } else {
-                            var11 = var6[0];
+                            var11 = var50[0];
                             break L31;
                           }
                         }
                         if (((da) this).field_e != 0) {
-                          var7[var11] = (Object) (Object) var10;
+                          var7[var11] = (Object) (Object) var54;
                           break L12;
                         } else {
-                          int discarded$8 = 0;
-                          int discarded$9 = 7;
-                          var7[var11] = w.a(var23);
+                          var7[var11] = w.a(var53, (byte) 7, false);
                           return true;
                         }
                       }
@@ -1634,8 +1662,7 @@ final class da {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 160;
-            stackOut_2_0 = vd.a(param1, 0, param1.length);
+            stackOut_2_0 = vd.a(param1, 0, param1.length, 160);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

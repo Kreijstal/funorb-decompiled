@@ -7,19 +7,18 @@ final class ui {
     static vj field_a;
 
     final static void a(int param0, int param1) {
-        int discarded$6 = -1;
-        int discarded$10 = wi.b();
+        int discarded$4 = wi.b(-1);
         if (param1 != 1) {
             Object var3 = null;
             ui.a((ec) null, (byte) 78, 8, (vj) null);
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String a(boolean param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -176,12 +175,10 @@ final class ui {
             wk.field_i = pk.d((byte) 9) * param2 / 1000;
             c.a(false, param3);
             int var4_int = 17 / ((28 - param1) / 32);
-            int discarded$0 = 0;
-            vg.a(param3);
+            vg.a(param3, false);
             ea.a(0, param3);
             cf.a(false);
-            int discarded$1 = 104;
-            s.b();
+            s.b((byte) 104);
             vb.field_n = -wk.field_i;
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) (Object) runtimeException, "ui.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

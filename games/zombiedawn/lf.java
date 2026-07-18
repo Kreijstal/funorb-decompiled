@@ -185,7 +185,7 @@ final class lf extends le {
         field_h = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         cn.field_f = null;
         kj.field_c = param0;
         id.field_D = param0;
@@ -198,8 +198,7 @@ final class lf extends le {
         cn.field_f.b(-127);
         ba.a(18002, param0 / 2, param1 / 2);
         pl.a(param1, param0, (byte) 50);
-        int discarded$0 = -21141;
-        ep.a(param0, param1);
+        ep.a(param0, param1, -21141);
         hn.a(param1 / 2, (byte) -91, param0 / 2);
     }
 

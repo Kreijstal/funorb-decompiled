@@ -31,8 +31,7 @@ abstract class ok extends jl {
         int var6 = 0;
         if (param0 != 32) {
             param2 = param2 - ((ok) this).field_v;
-            int discarded$0 = -8483;
-            var6 = f.a(param0) & 255;
+            var6 = f.a(param0, -8483) & 255;
             ((ok) this).a(var6, param1 + ((ok) this).field_w[var6], param2 + ((ok) this).field_z[var6], ((ok) this).field_H[var6], ((ok) this).field_K[var6], param3, param4, false);
         }
     }
@@ -280,8 +279,7 @@ abstract class ok extends jl {
               }
               if (var4 == -1) {
                 L6: {
-                  int discarded$1 = -8483;
-                  var8 = (char)(f.a((char) var8) & 255);
+                  var8 = (char)(f.a((char) var8, -8483) & 255);
                   if (((ok) this).field_x == null) {
                     break L6;
                   } else {
@@ -466,8 +464,7 @@ abstract class ok extends jl {
                 }
                 if (var2 == -1) {
                   L4: {
-                    int discarded$1 = -8483;
-                    var7 = (char)(f.a((char) var7) & 255);
+                    var7 = (char)(f.a((char) var7, -8483) & 255);
                     var4 = var4 + ((ok) this).field_Q[var7];
                     if (((ok) this).field_x == null) {
                       break L4;
@@ -504,8 +501,7 @@ abstract class ok extends jl {
     }
 
     final int a(char param0) {
-        int discarded$0 = -8483;
-        return ((ok) this).field_Q[f.a(param0) & 255];
+        return ((ok) this).field_Q[f.a(param0, -8483) & 255];
     }
 
     final int b(String param0, int param1, int param2) {
@@ -1010,10 +1006,7 @@ abstract class ok extends jl {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          int discarded$9 = 32;
-          int discarded$10 = -1046;
-          int discarded$11 = 0;
-          StringBuilder discarded$12 = ol.a(field_s);
+          StringBuilder discarded$5 = ol.a(field_s, 0, -1046, ' ');
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -1049,9 +1042,9 @@ abstract class ok extends jl {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$13 = field_s.append('<');
-                        StringBuilder discarded$14 = field_s.append(var15);
-                        StringBuilder discarded$15 = field_s.append('>');
+                        StringBuilder discarded$6 = field_s.append('<');
+                        StringBuilder discarded$7 = field_s.append(var15);
+                        StringBuilder discarded$8 = field_s.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1238,9 +1231,8 @@ abstract class ok extends jl {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$16 = field_s.append((char) var14);
-                        int discarded$17 = -8483;
-                        var14 = (char)(f.a((char) var14) & 255);
+                        StringBuilder discarded$9 = field_s.append((char) var14);
+                        var14 = (char)(f.a((char) var14, -8483) & 255);
                         var4 = var4 + ((ok) this).field_Q[var14];
                         if (((ok) this).field_x == null) {
                           break L15;

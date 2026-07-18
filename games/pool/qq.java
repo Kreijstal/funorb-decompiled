@@ -119,15 +119,13 @@ class qq extends ok implements tb {
             ((qq) this).field_R = false;
             if (!((qq) this).field_sb) {
               if (((qq) this).field_tb) {
-                int discarded$4 = 0;
-                bh.b();
+                bh.b(false);
                 return;
               } else {
                 return;
               }
             } else {
-              int discarded$5 = 0;
-              kr.a();
+              kr.a(false);
               return;
             }
           }
@@ -153,7 +151,7 @@ class qq extends ok implements tb {
         }
     }
 
-    public static void n() {
+    public static void n(byte param0) {
         field_yb = null;
         field_zb = null;
     }

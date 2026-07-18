@@ -139,7 +139,7 @@ final class oh {
         return stackIn_26_0;
     }
 
-    final static boolean a(sh param0) {
+    final static boolean a(sh param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;

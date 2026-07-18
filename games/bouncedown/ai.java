@@ -36,8 +36,7 @@ class ai {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int discarded$0 = 1;
-        wa.a();
+        wa.a(true);
         na.c(param3, param2, param0, param1);
     }
 

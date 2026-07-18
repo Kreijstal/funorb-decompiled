@@ -13,7 +13,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
     static String field_y;
     private java.awt.Canvas field_w;
 
-    final static Boolean c() {
+    final static Boolean c(int param0) {
         Boolean var1 = aw.field_j;
         aw.field_j = null;
         int var2 = -1;
@@ -103,7 +103,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_v = null;
         field_y = null;
     }

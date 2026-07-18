@@ -13,7 +13,7 @@ final class lk extends kg {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         rd.field_g = null;
         ui.field_p = nm.field_a;
     }
@@ -41,7 +41,7 @@ final class lk extends kg {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_D = null;
     }
 

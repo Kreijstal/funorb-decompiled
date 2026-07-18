@@ -12,7 +12,7 @@ final class sb {
     static int field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_a = null;
         field_c = null;
@@ -138,7 +138,6 @@ final class sb {
 
     private static void $cfr$clinit() {
         field_i = new byte[65536];
-        int discarded$0 = -128;
-        ri.a(field_i, 0, 65536);
+        ri.a(field_i, 0, 65536, (byte) -128);
     }
 }

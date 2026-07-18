@@ -73,7 +73,7 @@ final class nia extends rqa {
         return stackIn_4_0;
     }
 
-    final static uca a(int param0, kda param1, faa param2) {
+    final static uca a(int param0, kda param1, faa param2, byte param3) {
         RuntimeException var4 = null;
         byte[] var4_array = null;
         faa var5 = null;
@@ -286,7 +286,7 @@ final class nia extends rqa {
         }
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;

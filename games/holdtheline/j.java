@@ -295,12 +295,12 @@ final class j {
     }
 
     final static void a(byte param0, String[] param1) {
-        RuntimeException var2 = null;
+        ei var2 = null;
+        RuntimeException var2_ref = null;
         ji var3 = null;
         int var4 = 0;
         int var5 = 0;
         Object var6 = null;
-        ei var7 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -332,28 +332,25 @@ final class j {
             }
             if (rc.field_c.length != 0) {
               kn.field_a = 0;
-              int discarded$6 = 4;
-              jf.a();
-              var7 = new ei();
-              int discarded$7 = -117;
-              var3 = gd.f();
+              jf.a(4);
+              var2 = new ei();
+              var3 = gd.f(-117);
               L2: while (true) {
                 if (var3 == null) {
-                  mm.field_a = new ji[var7.field_e];
+                  mm.field_a = new ji[var2.field_e];
                   var4 = 0;
                   L3: while (true) {
-                    if (var4 >= var7.field_e) {
+                    if (var4 >= var2.field_e) {
                       break L0;
                     } else {
-                      mm.field_a[var4] = (ji) var7.field_b[var4];
+                      mm.field_a[var4] = (ji) var2.field_b[var4];
                       var4++;
                       continue L3;
                     }
                   }
                 } else {
-                  var7.a((Object) (Object) var3, (byte) 6);
-                  int discarded$8 = -117;
-                  var3 = gd.f();
+                  var2.a((Object) (Object) var3, (byte) 6);
+                  var3 = gd.f(-117);
                   continue L2;
                 }
               }
@@ -365,8 +362,8 @@ final class j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var2 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var2_ref;
             stackOut_13_1 = new StringBuilder().append("j.A(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
@@ -399,7 +396,7 @@ final class j {
         field_a = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         Object var2 = null;
         ag.a((String) null, false, ij.field_k);
     }
@@ -733,7 +730,7 @@ final class j {
         throw new Error();
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         try {
             int var1 = 1;
             if (null != ao.field_c) {

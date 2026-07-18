@@ -49,8 +49,7 @@ final class dk {
 
     final l a(boolean param0) {
         if (param0) {
-          int discarded$4 = 0;
-          boolean discarded$5 = dk.c();
+          boolean discarded$2 = dk.c(false);
           ((dk) this).field_d = 0;
           return ((dk) this).a(0);
         } else {
@@ -189,7 +188,7 @@ final class dk {
         }
     }
 
-    final static boolean c() {
+    final static boolean c(boolean param0) {
         long var1 = 0L;
         long var3 = 0L;
         int var5 = 0;

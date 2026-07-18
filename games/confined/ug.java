@@ -37,7 +37,7 @@ abstract class ug extends oe {
         return super.l(-6);
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -339,8 +339,7 @@ abstract class ug extends oe {
                 return (Object) (Object) stackIn_6_0;
               } else {
                 if (param0 >= 124) {
-                  int discarded$2 = 194;
-                  stackOut_10_0 = ug.a(param2);
+                  stackOut_10_0 = ug.a(param2, 194);
                   stackIn_11_0 = stackOut_10_0;
                   break L0;
                 } else {

@@ -22,7 +22,7 @@ final class rtb extends pib {
         return tl.b(param0, param3, -85);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_h = null;
     }
 

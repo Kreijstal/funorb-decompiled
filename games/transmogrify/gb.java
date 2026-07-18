@@ -114,7 +114,7 @@ final class gb {
         return stackIn_5_0;
     }
 
-    final static nb[] a(fe param0) {
+    final static nb[] a(fe param0, byte param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         nb[] var4 = null;
@@ -296,8 +296,7 @@ final class gb {
                         break L5;
                       } else {
                         var4 = 0;
-                        int discarded$18 = -2147483648;
-                        bj.d();
+                        bj.d(-2147483648);
                         break L5;
                       }
                     }
@@ -378,11 +377,11 @@ final class gb {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ba.a(109, 17);
     }
 
-    final static void a(oa param0) {
+    final static void a(oa param0, boolean param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;

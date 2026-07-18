@@ -512,7 +512,7 @@ final class jd extends ag {
         return stackIn_7_0 != 0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_h = null;
     }
 
@@ -798,8 +798,7 @@ final class jd extends ag {
                       sd.field_e.b(var15, (byte) -108);
                       sd.field_e.b(var8, (byte) -121);
                       var17 = (CharSequence) (Object) param6;
-                      int discarded$6 = 1457;
-                      sd.field_e.b(kh.a(var17), (byte) -107);
+                      sd.field_e.b(kh.a(var17, 1457), (byte) -107);
                       sd.field_e.b(-69, param3);
                       sd.field_e.b((byte) 50, param1);
                       sd.field_e.b((byte) 50, var9);
@@ -906,10 +905,8 @@ final class jd extends ag {
                       kw.field_c = fm.field_b;
                       break L9;
                     } else {
-                      int discarded$7 = -105;
-                      boolean discarded$8 = ju.b(-1, br.b());
-                      int discarded$9 = 115;
-                      aw.field_j = new Boolean(of.a((fs) (Object) ig.field_a));
+                      boolean discarded$1 = ju.b(-1, br.b(-105));
+                      aw.field_j = new Boolean(of.a((fs) (Object) ig.field_a, 115));
                       ig.field_a.field_p = 0;
                       break L9;
                     }
@@ -957,8 +954,7 @@ final class jd extends ag {
               if (fm.field_b != kw.field_c) {
                 break L13;
               } else {
-                int discarded$10 = 119;
-                if (!lt.a()) {
+                if (!lt.a((byte) 119)) {
                   break L13;
                 } else {
                   L14: {
@@ -989,8 +985,7 @@ final class jd extends ag {
               } else {
                 if (sr.field_g) {
                   L16: {
-                    int discarded$11 = 26560;
-                    if (30000L < uc.b()) {
+                    if (30000L < uc.b(26560)) {
                       ns.field_c = ar.field_F;
                       break L16;
                     } else {

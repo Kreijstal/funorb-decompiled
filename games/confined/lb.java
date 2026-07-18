@@ -278,7 +278,7 @@ final class lb extends jl {
         }
     }
 
-    final static int c() {
+    final static int c(int param0) {
         return 1;
     }
 

@@ -39,14 +39,12 @@ final class tb implements pa {
         return ((tb) this).field_l;
     }
 
-    final static void d() {
-        int discarded$0 = 1;
-        ou.a();
+    final static void d(int param0) {
+        ou.a(true);
         pl.field_A = true;
         fh.field_i = true;
         rl.field_C.j(-102);
-        int discarded$1 = -1;
-        af.a(false, bm.field_z);
+        af.a(false, bm.field_z, -1);
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3, byte param4, int param5) {
@@ -368,7 +366,7 @@ final class tb implements pa {
         field_e = null;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean a(boolean param0, int param1) {
         L0: {
           if (kd.field_J != null) {
             break L0;

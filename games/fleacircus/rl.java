@@ -21,7 +21,7 @@ final class rl {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         return !uc.field_c.a(-19);
     }
 

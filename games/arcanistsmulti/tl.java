@@ -10,7 +10,7 @@ abstract class tl {
     static lc[] field_f;
     static String field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -278,7 +278,7 @@ abstract class tl {
         }
     }
 
-    final static String b() {
+    final static String b(byte param0) {
         return vi.field_F;
     }
 

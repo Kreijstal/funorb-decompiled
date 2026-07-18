@@ -256,7 +256,7 @@ final class hc {
         return (hc) this;
     }
 
-    final static void a(long param0) {
+    final static void a(long param0, byte param1) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;

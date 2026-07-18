@@ -141,7 +141,7 @@ final class ui extends vv {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_w = null;
     }
 
@@ -152,9 +152,8 @@ final class ui extends vv {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        int discarded$0 = 1;
-        mu.a(bw.field_a[param1], true, param0, ad.field_d[param1], param2);
+    final static void a(int param0, int param1, int param2, int param3) {
+        mu.a(bw.field_a[param1], true, param0, ad.field_d[param1], param2, true);
     }
 
     final int a(int param0) {

@@ -10,7 +10,7 @@ final class ab {
         field_c = null;
     }
 
-    final static int a(int param0, String param1, String[] param2, rf param3) {
+    final static int a(int param0, String param1, String[] param2, rf param3, int param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -80,7 +80,7 @@ final class ab {
                 break L1;
               } else {
                 if (param1.indexOf("<br>") == -1) {
-                  param2[0] = (String) (Object) param2;
+                  param2[0] = param1;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;
@@ -231,7 +231,7 @@ final class ab {
         return stackIn_21_0;
     }
 
-    final static int a() {
+    final static int a(int param0) {
         int var1 = -1;
         return 1;
     }

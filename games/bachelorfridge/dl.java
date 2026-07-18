@@ -235,7 +235,7 @@ final class dl extends jla {
         return true;
     }
 
-    private final void o() {
+    private final void o(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -337,17 +337,14 @@ final class dl extends jla {
                 var2 = kw.field_n;
             }
         }
-        int discarded$1 = 0;
-        j.a(var2, 40, 16760896, true, 320);
+        j.a(var2, 40, 16760896, true, 320, false);
         this.p(1);
         if (!(null == rga.field_a)) {
-            int discarded$2 = 0;
-            this.o();
+            this.o(0);
         }
         ((dl) this).c(true);
         if (!um.a(true)) {
-            int discarded$3 = 1;
-            kla.b();
+            kla.b(true);
         }
     }
 

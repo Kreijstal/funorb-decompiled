@@ -376,8 +376,7 @@ final class i extends in {
         var4.field_i = 0;
         var4.field_g = 10;
         bl.field_D.a((l) (Object) var4, (byte) -108);
-        int discarded$0 = 7;
-        gl.a(var4, (byte) 89);
+        gl.a(var4, (byte) 89, 7);
         return var4;
     }
 

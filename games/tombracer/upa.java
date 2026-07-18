@@ -20,7 +20,7 @@ final class upa extends vg {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         jea stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         jea stackIn_5_0 = null;

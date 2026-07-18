@@ -6,7 +6,7 @@ final class ac {
     static volatile boolean field_a;
     static int field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 
@@ -43,8 +43,7 @@ final class ac {
         String stackOut_7_2 = null;
         try {
           L0: {
-            int discarded$5 = 30;
-            ii.a((java.awt.Component) (Object) param0);
+            ii.a((java.awt.Component) (Object) param0, 30);
             if (param1 < -72) {
               fa.a(false, (java.awt.Component) (Object) param0);
               if (null != jc.field_c) {

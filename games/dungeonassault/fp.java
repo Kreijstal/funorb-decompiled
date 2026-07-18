@@ -8,7 +8,7 @@ final class fp {
     static String field_a;
     static tf field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_e = null;
@@ -20,16 +20,14 @@ final class fp {
         bl.field_r.a((byte) 62);
         if (param0 > 51) {
           if (!hb.field_a.b((byte) 60)) {
-            int discarded$10 = 0;
-            return bk.a();
+            return bk.a(0);
           } else {
             return 0;
           }
         } else {
-          int discarded$11 = fp.a((byte) 113);
+          int discarded$6 = fp.a((byte) 113);
           if (!hb.field_a.b((byte) 60)) {
-            int discarded$12 = 0;
-            return bk.a();
+            return bk.a(0);
           } else {
             return 0;
           }

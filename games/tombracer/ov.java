@@ -269,8 +269,7 @@ final class ov extends nv implements mra {
         try {
           L0: {
             if (!Character.isISOControl(param1)) {
-              int discarded$6 = 11955;
-              if (!q.a(param1)) {
+              if (!q.a(param1, 11955)) {
                 var6 = aba.field_c;
                 var2 = var6;
                 var3 = 0;
@@ -740,7 +739,7 @@ final class ov extends nv implements mra {
         return uk.a(param2, (byte) 2, param1) || pr.a(param1, -23611, param2);
     }
 
-    final static boolean b() {
+    final static boolean b(int param0, int param1) {
         int var2 = 0;
         int stackIn_4_0 = 0;
         int stackOut_2_0 = 0;

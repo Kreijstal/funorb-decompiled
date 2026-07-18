@@ -94,8 +94,7 @@ final class vg extends wi {
             ((vg) this).field_c = false;
             ((vg) this).field_g = false;
         } else {
-            int discarded$0 = -25579;
-            this.d();
+            this.d(-25579);
             if (((vg) this).field_g) {
                 if (kc.field_f != 0) {
                     if (0 != (!((vg) this).field_s ? 1 : 0)) {
@@ -108,11 +107,11 @@ final class vg extends wi {
             ((vg) this).field_c = kc.field_f == 1 ? true : false;
         }
         if (!param0) {
-            int discarded$1 = vg.c(114);
+            int discarded$0 = vg.c(114);
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var3 = 0;
         Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;

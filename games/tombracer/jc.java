@@ -182,8 +182,7 @@ final class jc extends ra {
         int stackOut_19_1 = 0;
         int stackOut_19_2 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
-        int discarded$1 = 16;
-        ji.a();
+        ji.a(16);
         if (qb.field_f < 0) {
           L0: {
             L1: {

@@ -12,7 +12,7 @@ final class jga implements dja {
         return (tv[]) (Object) new pe[param1];
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

@@ -8,7 +8,7 @@ final class ma extends hl {
     static int field_k;
     int field_m;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
     }
 
@@ -190,8 +190,7 @@ final class ma extends hl {
     }
 
     final static boolean a(int param0) {
-        int discarded$0 = 0;
-        return ao.a(en.a(97));
+        return ao.a(en.a(97), false);
     }
 
     final static void a(int param0, boolean param1) {
@@ -222,8 +221,7 @@ final class ma extends hl {
               L2: {
                 bn.a(1, -125);
                 nm.field_b = kn.b((byte) -49);
-                int discarded$1 = 1;
-                if (pd.a(nm.field_b)) {
+                if (pd.a(nm.field_b, true)) {
                   bl.field_r = new sg(nm.field_b, mi.field_d, wb.field_c, em.field_o, t.field_l, ah.field_b);
                   break L2;
                 } else {

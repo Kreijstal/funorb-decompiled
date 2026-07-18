@@ -12,7 +12,7 @@ final class pk {
     static int field_c;
     private ob field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         int var1 = 69;
         field_f = null;
     }
@@ -197,7 +197,7 @@ final class pk {
         return stackIn_11_0;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return ch.field_d.b(true);
     }
 
@@ -205,7 +205,7 @@ final class pk {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final static void a(int param0, pp param1) {
+    final static void a(int param0, pp param1, byte param2) {
         md var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -335,9 +335,7 @@ final class pk {
                     }
                   }
                 } else {
-                  int discarded$2 = -1815;
-                  int discarded$3 = 21862;
-                  wp.a((Throwable) null, "A1: " + ug.a());
+                  wp.a((Throwable) null, "A1: " + ug.a(-1815), 21862);
                   jj.a(4);
                   break L1;
                 }
@@ -412,8 +410,7 @@ final class pk {
               break L1;
             }
             if (var5.length == 65) {
-              int discarded$1 = -127;
-              var17 = ac.a(var10.field_h, 5, -5 + (-var16.length + var10.field_f));
+              var17 = ac.a(var10.field_h, 5, -5 + (-var16.length + var10.field_f), (byte) -127);
               var7 = 0;
               L3: while (true) {
                 if (var7 >= 64) {

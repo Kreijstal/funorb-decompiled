@@ -70,7 +70,7 @@ final class sn {
         }
     }
 
-    final static fh a(byte[] param0) {
+    final static fh a(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         fh var3 = null;
@@ -99,8 +99,7 @@ final class sn {
             var2_int = 28;
             if (param0 != null) {
               var3 = new fh(param0, rl.field_a, oa.field_M, le.field_L, ca.field_r, dl.field_L);
-              int discarded$2 = 9324;
-              uh.a();
+              uh.a(9324);
               stackOut_3_0 = (fh) var3;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -229,7 +228,7 @@ final class sn {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_f = null;
         field_a = null;
@@ -353,15 +352,14 @@ final class sn {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = SteelSentinels.field_G;
         try {
           L0: {
-            int discarded$14 = 84;
-            if (!oc.a()) {
+            if (!oc.a((byte) 84)) {
               L1: {
                 if (wb.field_c == null) {
                   break L1;
@@ -377,13 +375,13 @@ final class sn {
               }
               return;
             } else {
-              boolean discarded$15 = dl.field_J.a((byte) 40, true, km.field_l, ml.field_e);
+              boolean discarded$7 = dl.field_J.a((byte) 40, true, km.field_l, ml.field_e);
               dl.field_J.h((byte) -4);
               L2: while (true) {
                 if (!dl.f(22759)) {
                   break L0;
                 } else {
-                  boolean discarded$16 = dl.field_J.a(true, ei.field_q, de.field_c);
+                  boolean discarded$8 = dl.field_J.a(true, ei.field_q, de.field_c);
                   continue L2;
                 }
               }

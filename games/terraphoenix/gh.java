@@ -121,7 +121,7 @@ final class gh extends eb {
         return stackIn_16_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_O = null;
         field_L = null;
     }

@@ -26,7 +26,7 @@ final class ufa {
     static String[] field_q;
     static nh[] field_r;
 
-    final static void a() {
+    final static void a(boolean param0) {
         vc.field_n.setLength(0);
         bta.field_q = 0;
     }
@@ -372,8 +372,7 @@ final class ufa {
     final void a(int param0, taa param1) {
         try {
             if (param0 != 8) {
-                int discarded$0 = 1;
-                ufa.a();
+                ufa.a(true);
             }
             ((ufa) this).field_i.b((byte) -48, (vg) (Object) param1);
         } catch (RuntimeException runtimeException) {

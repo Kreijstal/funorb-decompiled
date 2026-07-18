@@ -5,9 +5,9 @@ final class wb {
     static nf field_a;
     static int field_b;
 
-    final static void a() {
+    final static void a(int param0) {
+        RuntimeException runtimeException = null;
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -38,15 +38,20 @@ final class wb {
                     }
                   }
                 }
-                break L2;
+                if (param0 < -47) {
+                  break L2;
+                } else {
+                  wb.b(-38);
+                  break L2;
+                }
               }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "wb.D(" + -60 + ')');
+          runtimeException = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) runtimeException, "wb.D(" + param0 + ')');
         }
     }
 
@@ -81,11 +86,10 @@ final class wb {
                 qf.field_c.field_n = 0;
                 ha.field_c[3] = (int)uh.field_b;
                 qf.field_c.d(-87, ha.field_c[0]);
-                qf.field_c.d(-112, ha.field_c[1]);
-                qf.field_c.d(-95, ha.field_c[2]);
-                qf.field_c.d(-121, ha.field_c[3]);
-                int discarded$2 = 24;
-                jg.a(qf.field_c);
+                qf.field_c.d(param3 + -25556, ha.field_c[1]);
+                qf.field_c.d(param3 ^ -25403, ha.field_c[2]);
+                qf.field_c.d(param3 ^ -25373, ha.field_c[3]);
+                jg.a(qf.field_c, param3 + -25420);
                 qf.field_c.c(param0, 8);
                 param1.a(qf.field_c, (byte) 108);
                 vh.field_a.field_n = 0;
@@ -106,7 +110,7 @@ final class wb {
             L3: {
               vh.field_a.field_n = vh.field_a.field_n + 2;
               var5_int = vh.field_a.field_n;
-              vh.field_a.d(-127, wm.field_db);
+              vh.field_a.d(param3 + -25571, wm.field_db);
               vh.field_a.a(mc.field_a, (byte) 104);
               var6 = 0;
               if (d.field_d) {
@@ -142,8 +146,7 @@ final class wb {
             }
             L7: {
               vh.field_a.f(124, var6);
-              int discarded$3 = 59;
-              var7 = pa.a(ii.b(false));
+              var7 = pa.a(ii.b(false), 59);
               if (null == var7) {
                 var7 = "";
                 break L7;
@@ -160,7 +163,7 @@ final class wb {
                 break L8;
               }
             }
-            jf.a(qf.field_c, hk.field_a, (kg) (Object) vh.field_a, 0, an.field_r);
+            jf.a(qf.field_c, hk.field_a, (kg) (Object) vh.field_a, param3 ^ param3, an.field_r);
             vh.field_a.b(vh.field_a.field_n + -var5_int, -20);
             tb.a(-1, 105);
             break L0;
@@ -193,22 +196,18 @@ final class wb {
               break L9;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + param2 + ',' + 25444 + ',' + param4 + ')');
+          throw sd.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void b() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void b(int param0) {
         try {
-          L0: {
             field_a = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "wb.C(" + -8854 + ')');
+            if (param0 != -8854) {
+                wb.a(117, (mi) null);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "wb.C(" + param0 + ')');
         }
     }
 
@@ -6932,7 +6931,7 @@ final class wb {
         }
     }
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -6954,16 +6953,14 @@ final class wb {
           L0: {
             L1: {
               if (rk.field_e == 11) {
-                int discarded$3 = -61;
-                dc.e();
+                dc.e((byte) -61);
                 break L1;
               } else {
                 break L1;
               }
             }
-            int discarded$4 = -117;
-            mk.a(ui.field_b, mk.field_o, og.field_h);
-            ll.a(0, 0, param0, -51);
+            mk.a(ui.field_b, mk.field_o, og.field_h, -117);
+            ll.a(0, param1, param0, -51);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -6994,7 +6991,7 @@ final class wb {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + 0 + ')');
+          throw sd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
     }
 

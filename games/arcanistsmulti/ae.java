@@ -7,14 +7,14 @@ final class ae {
     static String field_b;
     static byte[] field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_a = null;
         field_b = null;
         field_c = null;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         int stackIn_6_0 = 0;
@@ -224,8 +224,7 @@ final class ae {
         int stackOut_19_3 = 0;
         int stackOut_19_4 = 0;
         int stackOut_19_5 = 0;
-        int discarded$1 = -1;
-        no.h();
+        no.h(-1);
         if (null != wi.field_f) {
           if (aj.a(28139, wi.field_f.field_Rb)) {
             L0: {

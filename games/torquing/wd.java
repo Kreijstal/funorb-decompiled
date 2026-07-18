@@ -8,12 +8,12 @@ final class wd extends ta {
     static String field_r;
     private am field_u;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         int var1 = 0;
         return bn.field_i;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_r = null;
     }
 

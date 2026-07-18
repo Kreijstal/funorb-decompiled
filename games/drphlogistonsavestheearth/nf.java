@@ -125,7 +125,7 @@ final class nf extends ei {
         return dk.field_c;
     }
 
-    final static String e() {
+    final static String e(byte param0) {
         if (hg.field_ub == fk.field_q) {
           return bg.field_q;
         } else {
@@ -253,7 +253,7 @@ final class nf extends ei {
         field_q = null;
     }
 
-    final static java.awt.Container b() {
+    final static java.awt.Container b(boolean param0) {
         if (null != bb.field_a) {
             return (java.awt.Container) (Object) bb.field_a;
         }

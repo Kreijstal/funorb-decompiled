@@ -19,7 +19,7 @@ final class cg extends gb implements n {
         super.a(param0, -125, param2, param3);
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -61,7 +61,7 @@ final class cg extends gb implements n {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_H = null;
         field_K = null;
         field_I = null;

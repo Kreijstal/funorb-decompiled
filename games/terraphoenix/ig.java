@@ -52,21 +52,20 @@ final class ig {
                   break L0;
                 } else {
                   L2: {
-                    int discarded$111 = 98;
-                    if (!ma.a(param1)) {
+                    if (!ma.a(param1, (byte) 98)) {
                       var6 = param1.a(false, fb.b(2, var5 - 1));
                       var4[var5] = var4[var6];
                       var5++;
                       break L2;
                     } else {
                       var6_ref_dj = new dj();
-                      int discarded$112 = param1.a(false, 24);
-                      int discarded$113 = param1.a(false, 24);
+                      int discarded$126 = param1.a(false, 24);
+                      int discarded$127 = param1.a(false, 24);
                       var6_ref_dj.field_b = param1.a(false, 24);
-                      int discarded$114 = param1.a(false, 9);
-                      int discarded$115 = param1.a(false, 12);
-                      int discarded$116 = param1.a(false, 12);
-                      int discarded$117 = param1.a(false, 12);
+                      int discarded$128 = param1.a(false, 9);
+                      int discarded$129 = param1.a(false, 12);
+                      int discarded$130 = param1.a(false, 12);
+                      int discarded$131 = param1.a(false, 12);
                       var4[var5] = var6_ref_dj;
                       var5++;
                       break L2;
@@ -277,8 +276,7 @@ final class ig {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                int discarded$2 = 10056;
-                Object discarded$3 = cd.a(dg.a(false), "resizing", new Object[1]);
+                Object discarded$1 = cd.a(dg.a(false), "resizing", new Object[1], 10056);
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -438,7 +436,7 @@ final class ig {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_d = null;

@@ -428,7 +428,7 @@ final class vf {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_g = null;
         field_c = null;
         field_h = null;

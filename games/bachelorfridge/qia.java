@@ -29,7 +29,7 @@ final class qia {
         throw new IllegalStateException();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
         int var1 = 23;

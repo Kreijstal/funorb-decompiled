@@ -167,8 +167,6 @@ final class b extends vd {
     }
 
     private static void $cfr$clinit() {
-        int discarded$0 = 50;
-        int discarded$1 = 7321;
-        ka.a();
+        ka.a(7321, 50);
     }
 }

@@ -22,7 +22,7 @@ final class vu extends hd {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -435,8 +435,7 @@ final class vu extends hd {
         if (!(wi.field_v == null)) {
             wi.field_v.a(param1, false);
         }
-        int discarded$6 = -128;
-        nj.a(param1);
+        nj.a(param1, -128);
         if (!(null == ck.field_b)) {
             ck.field_b.a(104, param1);
         }

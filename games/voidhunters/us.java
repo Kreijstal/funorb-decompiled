@@ -7,7 +7,7 @@ class us extends oib {
     static pfb field_d;
     private String field_e;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
     }
 

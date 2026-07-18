@@ -9,7 +9,7 @@ final class dp extends jb {
     static String field_i;
     int[] field_g;
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         int var1 = 0;
         field_i = null;

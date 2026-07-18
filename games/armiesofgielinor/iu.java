@@ -29,7 +29,7 @@ class iu {
     static int field_x;
     static String field_u;
 
-    private final boolean c() {
+    private final boolean c(byte param0) {
         if (((iu) this).field_q.field_xb.field_t[1].b(false) == 0) {
           if (((iu) this).field_q.field_xb.field_Eb[pl.field_s[0]].field_a != 0) {
             return false;
@@ -140,8 +140,7 @@ class iu {
             }
           }
           L1: {
-            int discarded$2 = -62;
-            if (!this.c()) {
+            if (!this.c((byte) -62)) {
               break L1;
             } else {
               if (((iu) this).field_v) {
@@ -433,8 +432,7 @@ class iu {
                                                                                     }
                                                                                   }
                                                                                 }
-                                                                                int discarded$3 = -62;
-                                                                                if (!this.c()) {
+                                                                                if (!this.c((byte) -62)) {
                                                                                   break L2;
                                                                                 } else {
                                                                                   this.b(28, param1 + -30656);
@@ -853,7 +851,7 @@ class iu {
         uh.a(sb.field_g, 125);
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         int var2 = 0;
         ((iu) this).field_q.field_Ab = true;
     }
@@ -941,8 +939,7 @@ class iu {
                                                       if (var3 == 32) {
                                                         ((iu) this).field_e = ci.field_f[27];
                                                         ((iu) this).field_w = 0;
-                                                        int discarded$5 = -120;
-                                                        this.k();
+                                                        this.k((byte) -120);
                                                         break L2;
                                                       } else {
                                                         if (var3 == 19) {
@@ -972,15 +969,13 @@ class iu {
                                                                     if (var3 == 25) {
                                                                       ((iu) this).field_e = ci.field_f[20];
                                                                       ((iu) this).field_w = 0;
-                                                                      int discarded$6 = 59;
-                                                                      this.g();
+                                                                      this.g((byte) 59);
                                                                       break L2;
                                                                     } else {
                                                                       if (26 == var3) {
                                                                         ((iu) this).field_w = 0;
                                                                         ((iu) this).field_e = ci.field_f[21];
-                                                                        int discarded$7 = 115;
-                                                                        this.e();
+                                                                        this.e((byte) 115);
                                                                         break L2;
                                                                       } else {
                                                                         if (var3 != 27) {
@@ -1040,8 +1035,7 @@ class iu {
                                               } else {
                                                 ((iu) this).field_e = ci.field_f[13];
                                                 ((iu) this).field_w = 1;
-                                                int discarded$8 = 5;
-                                                this.a();
+                                                this.a(5);
                                                 break L2;
                                               }
                                             }
@@ -1092,8 +1086,7 @@ class iu {
                       }
                     }
                   } else {
-                    int discarded$9 = -4;
-                    this.d();
+                    this.d(-4);
                     ((iu) this).field_e = ci.field_f[2];
                     ((iu) this).field_w = 0;
                     break L2;
@@ -1121,7 +1114,7 @@ class iu {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         uh.a(m.field_a, 124);
     }
 
@@ -1301,23 +1294,20 @@ class iu {
               fe.a(stackIn_13_0, stackIn_13_1, stackIn_13_2, stackIn_13_3, stackIn_13_4, stackIn_13_5, 0, 192, true);
               if (((iu) this).field_w != 0) {
                 if (-2 != ((iu) this).field_w) {
-                  if (((iu) this).field_w != 2) {
-                    if (((iu) this).field_w != 3) {
+                  if (-3 != ((iu) this).field_w) {
+                    if (-4 != ((iu) this).field_w) {
                       if (((iu) this).field_w == 5) {
-                        int discarded$7 = 1;
-                        fe.c(al.field_m, -120 + var2 + -10, var3 - 16, 0);
+                        fe.c(al.field_m, -120 + var2 + -10, var3 - 16, 0, true);
                         break L2;
                       } else {
                         break L2;
                       }
                     } else {
-                      int discarded$8 = 1;
-                      fe.c(ac.field_u, -10 + var2 - 120, -16 + var3, 0);
+                      fe.c(ac.field_u, -10 + var2 - 120, -16 + var3, 0, true);
                       break L2;
                     }
                   } else {
-                    int discarded$9 = 1;
-                    fe.c(bc.field_f, -120 + var2 + -10, -16 + var3, 0);
+                    fe.c(bc.field_f, -120 + var2 + -10, -16 + var3, 0, true);
                     break L2;
                   }
                 } else {
@@ -1345,8 +1335,7 @@ class iu {
                         break L6;
                       }
                     }
-                    int discarded$10 = 1;
-                    fe.c(stackIn_27_0, -10 + (var2 - ((iu) this).field_g / 2), var3 - 16, 0);
+                    fe.c(stackIn_27_0, -10 + (var2 - ((iu) this).field_g / 2), var3 - 16, 0, true);
                     break L2;
                   } else {
                     L7: {
@@ -1360,14 +1349,12 @@ class iu {
                         break L7;
                       }
                     }
-                    int discarded$11 = 1;
-                    fe.c(stackIn_23_0, var2 + -(((iu) this).field_g / 2) - 10, var3 + -16, 0);
+                    fe.c(stackIn_23_0, var2 + -(((iu) this).field_g / 2) - 10, var3 + -16, 0, true);
                     break L2;
                   }
                 }
               } else {
-                int discarded$12 = 1;
-                fe.c(qf.field_c, -10 + (-120 + var2), -16 + var3, 0);
+                fe.c(qf.field_c, -10 + (-120 + var2), -16 + var3, 0, true);
                 break L2;
               }
             }
@@ -1375,7 +1362,7 @@ class iu {
           L8: {
             if (((iu) this).field_e != null) {
               qn.f(var2 - ((iu) this).field_g, -((iu) this).field_j + var3, var2 - 10, var3 - 45);
-              int discarded$13 = rs.field_n.a(((iu) this).field_e, -((iu) this).field_g + var2, -((iu) this).field_j + var3, 220, 400, 16777215, -1, 0, 0, 0);
+              int discarded$1 = rs.field_n.a(((iu) this).field_e, -((iu) this).field_g + var2, -((iu) this).field_j + var3, 220, 400, 16777215, -1, 0, 0, 0);
               break L8;
             } else {
               break L8;
@@ -1408,7 +1395,7 @@ class iu {
         this.b(34, -30659);
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         uh.a(pl.field_s, -91);
     }
 
@@ -1527,7 +1514,7 @@ class iu {
         ((iu) this).field_q.field_fc = true;
     }
 
-    private final void d() {
+    private final void d(int param0) {
         ((iu) this).field_q.field_xb.field_l.a((byte) -119, (tc) (Object) new mb(0, 3, 4, 5, 0, true));
         int var2 = 0;
     }
@@ -1552,13 +1539,12 @@ class iu {
         }
     }
 
-    private final void k() {
+    private final void k(byte param0) {
         ((iu) this).field_q.field_Mb = true;
     }
 
     private final void f(byte param0) {
-        int discarded$3 = 13829;
-        si.b();
+        si.b(13829);
         if (param0 != -34) {
             ((iu) this).field_s = false;
         }
@@ -1636,7 +1622,7 @@ class iu {
                 if (param1.indexOf("<br>") != -1) {
                   break L1;
                 } else {
-                  param4[0] = (String) (Object) param4;
+                  param4[0] = param1;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;
@@ -1789,7 +1775,7 @@ class iu {
         ((iu) this).field_q.field_ac = true;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         field_u = null;
         field_l = null;

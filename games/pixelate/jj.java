@@ -87,7 +87,7 @@ class jj {
         ul.field_q = param2;
     }
 
-    final static bo[] a(cb param0) {
+    final static bo[] a(cb param0, int param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         bo[] var4 = null;
@@ -162,8 +162,7 @@ class jj {
                     return stackIn_12_0;
                   }
                 } else {
-                  int discarded$1 = 23;
-                  vg.a(10L);
+                  vg.a(10L, (byte) 23);
                   continue L1;
                 }
               }
@@ -209,7 +208,7 @@ class jj {
         jd.field_r = jd.field_r + 1;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_j = null;
         field_c = null;
@@ -231,7 +230,7 @@ class jj {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         r.b(-93);
         eh.a(3, v.field_c, fq.field_q, r.field_c, h.field_V[0].field_A, hk.field_b);
     }

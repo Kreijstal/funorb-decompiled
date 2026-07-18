@@ -123,7 +123,7 @@ final class jc {
         return var2;
     }
 
-    final static String b() {
+    final static String b(byte param0) {
         if (!pg.field_A) {
           if (si.field_m >= ik.field_c) {
             if (ik.field_c + ni.field_c <= si.field_m) {
@@ -212,7 +212,7 @@ final class jc {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         nm.field_n = null;
         dj.field_j = null;
         vl.field_r = false;
@@ -349,7 +349,7 @@ final class jc {
         return stackIn_10_0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_i = null;
         field_j = null;
         field_b = null;

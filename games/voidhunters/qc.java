@@ -308,7 +308,7 @@ abstract class qc implements kd {
         return stackIn_18_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_q = null;
         field_g = null;
     }
@@ -449,7 +449,7 @@ abstract class qc implements kd {
 
     abstract void a(int param0);
 
-    final static asb b() {
+    final static asb b(int param0) {
         return pj.a((byte) 52, qw.field_e.field_a);
     }
 

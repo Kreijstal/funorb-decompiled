@@ -34,7 +34,7 @@ final class va {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -320,15 +320,14 @@ final class va {
             }
           }
           if (((va) this).field_r) {
-            int fieldTemp$2 = ((va) this).field_n - 1;
+            int fieldTemp$1 = ((va) this).field_n - 1;
             ((va) this).field_n = ((va) this).field_n - 1;
-            if (fieldTemp$2 > 0) {
+            if (fieldTemp$1 > 0) {
               return;
             } else {
               ((va) this).field_n = ((va) this).field_d;
               if (~((va) this).field_j >= ~kf.field_k) {
-                int discarded$3 = -61;
-                this.d();
+                this.d((byte) -61);
                 var2 = -56 / ((param0 - 24) / 47);
                 return;
               } else {
@@ -471,7 +470,7 @@ final class va {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_t = null;
         field_k = null;
         field_g = null;

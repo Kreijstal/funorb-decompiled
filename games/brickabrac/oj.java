@@ -1548,7 +1548,7 @@ final class oj extends ep {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_q = null;
         field_r = null;
         field_s = null;
@@ -1698,7 +1698,7 @@ final class oj extends ep {
         }
     }
 
-    final static int b() {
+    final static int b(boolean param0) {
         if (qg.field_A < 2) {
           return 0;
         } else {

@@ -46,14 +46,12 @@ abstract class ig extends fa {
                           break L1;
                         } else {
                           if (var2 == 4) {
-                            int discarded$12 = 1;
-                            jl.d();
+                            jl.d(1);
                             break L1;
                           } else {
                             if (var2 != 5) {
                               if (var2 == 6) {
-                                int discarded$13 = 116;
-                                wc.a();
+                                wc.a((byte) 116);
                                 break L1;
                               } else {
                                 if (var2 != 7) {
@@ -65,24 +63,20 @@ abstract class ig extends fa {
                                         } else {
                                           if (var2 != 12) {
                                             if (var2 == 13) {
-                                              int discarded$14 = -7;
-                                              nl.a();
+                                              nl.a((byte) -7);
                                               break L1;
                                             } else {
                                               if (var2 != 17) {
                                                 if (var2 != 18) {
-                                                  int discarded$15 = 48;
-                                                  d.a((Throwable) null, -110, "MGS1: " + ik.q());
-                                                  int discarded$16 = 1;
-                                                  pc.a();
+                                                  d.a((Throwable) null, -110, "MGS1: " + ik.q(48));
+                                                  pc.a(1);
                                                   break L1;
                                                 } else {
                                                   rg.n(82);
                                                   break L1;
                                                 }
                                               } else {
-                                                int discarded$17 = 98;
-                                                this.h();
+                                                this.h((byte) 98);
                                                 break L1;
                                               }
                                             }
@@ -106,8 +100,7 @@ abstract class ig extends fa {
                                       jh.a(var3, 16);
                                       break L1;
                                     } else {
-                                      int discarded$18 = 98;
-                                      uc.a();
+                                      uc.a((byte) 98);
                                       break L1;
                                     }
                                   } else {
@@ -115,22 +108,19 @@ abstract class ig extends fa {
                                     break L1;
                                   }
                                 } else {
-                                  int discarded$19 = -125;
-                                  this.e();
+                                  this.e((byte) -125);
                                   break L1;
                                 }
                               }
                             } else {
-                              int discarded$20 = 4;
-                              wg.b();
+                              wg.b(4);
                               break L1;
                             }
                           }
                         }
                       }
                     } else {
-                      int discarded$21 = 0;
-                      gh.d();
+                      gh.d(0);
                       break L1;
                     }
                   }
@@ -143,10 +133,8 @@ abstract class ig extends fa {
               }
             }
           }
-          int discarded$22 = 48;
-          d.a((Throwable) null, 73, "MGS2: " + ik.q());
-          int discarded$23 = 1;
-          pc.a();
+          d.a((Throwable) null, 73, "MGS2: " + ik.q(48));
+          pc.a(1);
           return;
         } else {
           return;
@@ -164,8 +152,7 @@ abstract class ig extends fa {
             if (wi.field_p) {
               return -1;
             } else {
-              int discarded$2 = 102;
-              var2 = wc.a(((ig) this).field_n, 56, mc.a(), ((ig) this).field_x, true, cd.b(param0 ^ -73));
+              var2 = wc.a(((ig) this).field_n, 56, mc.a((byte) 102), ((ig) this).field_x, true, cd.b(param0 ^ -73));
               if (var2 == -1) {
                 return -1;
               } else {
@@ -252,14 +239,12 @@ abstract class ig extends fa {
             if (bi.field_L < 10) {
               break L1;
             } else {
-              int discarded$155 = 1;
-              if (!ki.b()) {
-                int discarded$156 = 94;
-                ga.a();
+              if (!ki.b(true)) {
+                ga.a((byte) 94);
                 break L1;
               } else {
                 if (gl.field_y == 0) {
-                  int discarded$157 = this.a(2625, false, false);
+                  int discarded$45 = this.a(2625, false, false);
                   break L1;
                 } else {
                   gj.a(true, f.field_a);
@@ -293,7 +278,7 @@ abstract class ig extends fa {
                 break L2;
               }
             }
-            int discarded$158 = this.a(stackIn_6_1, stackIn_6_2 != 0, false);
+            int discarded$46 = this.a(stackIn_6_1, stackIn_6_2 != 0, false);
             break L1;
           }
         }
@@ -308,18 +293,15 @@ abstract class ig extends fa {
         cf.a(1856642, w.field_f);
         ol.a(((ig) this).field_p, 5000, ((ig) this).field_u, ((ig) this).field_v, lk.field_b, ((ig) this).field_w, 5000, ((ig) this).field_r, param2, ((ig) this).field_q, param6, 64, w.field_f, ((ig) this).field_s);
         me.a(((ig) this).field_s, ((ig) this).field_u, 50, ((ig) this).field_q, param2, ((ig) this).field_w, ((ig) this).field_p, w.field_f, lk.field_b);
-        int discarded$0 = -42;
-        wh.e();
-        int discarded$1 = 1;
-        ga.field_a = nh.b();
+        wh.e((byte) -42);
+        ga.field_a = nh.b(1);
         cj.a(gd.field_k, 13861);
         rd.field_a = param4;
         ic.field_a = param5;
         uh.field_q = param3;
         q.field_d = param0;
         di.field_d = param7;
-        int discarded$2 = 1;
-        this.c();
+        this.c(true);
         rf.q(param1 ^ param1);
     }
 
@@ -328,14 +310,13 @@ abstract class ig extends fa {
             if (param1) {
                 ((ig) this).field_x = true;
             }
-            int discarded$0 = -19492;
-            this.a(480, param2, 640, param0);
+            this.a(480, param2, 640, param0, -19492);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "ig.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private final void b() {
+    private final void b(int param0, boolean param1) {
         c.field_e[17] = true;
         c.field_e[8] = false;
         c.field_e[16] = true;
@@ -515,7 +496,7 @@ abstract class ig extends fa {
         return stackIn_30_0 != 0;
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         c.field_e[2] = true;
     }
 
@@ -525,7 +506,7 @@ abstract class ig extends fa {
           if (param0 == 102) {
             break L0;
           } else {
-            int discarded$12 = this.j((byte) -124);
+            int discarded$2 = this.j((byte) -124);
             break L0;
           }
         }
@@ -546,9 +527,7 @@ abstract class ig extends fa {
             if (!c.field_e[1]) {
               break L3;
             } else {
-              int discarded$13 = 2;
-              int discarded$14 = 0;
-              bl.a();
+              bl.a(false, 2);
               break L3;
             }
           }
@@ -556,9 +535,7 @@ abstract class ig extends fa {
             if (!c.field_e[2]) {
               break L4;
             } else {
-              int discarded$15 = 0;
-              int discarded$16 = 3;
-              tf.a();
+              tf.a(3, false);
               break L4;
             }
           }
@@ -597,15 +574,14 @@ abstract class ig extends fa {
           if (!c.field_e[8]) {
             break L1;
           } else {
-            int discarded$17 = -74;
-            ob.l();
+            ob.l(-74);
             break L1;
           }
         }
         return var2;
     }
 
-    private final void a(int param0, int param1, int param2, String param3) {
+    private final void a(int param0, int param1, int param2, String param3, int param4) {
         Exception var6 = null;
         RuntimeException var6_ref = null;
         String var6_ref2 = null;
@@ -833,10 +809,8 @@ abstract class ig extends fa {
           }
         }
         L2: {
-          int discarded$14 = 1;
-          fd.a();
-          int discarded$15 = 126;
-          vi.a();
+          fd.a(true);
+          vi.a((byte) 126);
           if (param0 == 10017) {
             break L2;
           } else {
@@ -865,8 +839,7 @@ abstract class ig extends fa {
           }
         }
         L5: {
-          int discarded$16 = 1;
-          if (!i.b()) {
+          if (!i.b(true)) {
             break L5;
           } else {
             L6: {
@@ -886,12 +859,10 @@ abstract class ig extends fa {
               }
             }
             ((ig) this).field_t = false;
-            int discarded$17 = 1;
-            pc.a();
+            pc.a(1);
             je.a(-11);
             gb.a(2, 88, k.field_a);
-            int discarded$18 = 1;
-            k.b();
+            k.b(true);
             wi.field_p = true;
             qf.field_b = 15000L + lk.a(param0 + -10017);
             break L5;
@@ -922,8 +893,7 @@ abstract class ig extends fa {
           }
           L10: {
             var3 = stackIn_24_0;
-            int discarded$19 = -6;
-            tb.field_a = rl.b();
+            tb.field_a = rl.b((byte) -6);
             if (var3 == 0) {
               break L10;
             } else {
@@ -1048,8 +1018,7 @@ abstract class ig extends fa {
                 break L13;
               } else {
                 tb.field_a = -1;
-                int discarded$20 = 0;
-                aj.k();
+                aj.k(0);
                 break L13;
               }
             }
@@ -1071,8 +1040,7 @@ abstract class ig extends fa {
         }
         L17: {
           if (0 == bi.field_L) {
-            int discarded$21 = 31;
-            if (!sj.e()) {
+            if (!sj.e(31)) {
               break L17;
             } else {
               bi.field_L = 1;
@@ -1146,14 +1114,11 @@ abstract class ig extends fa {
               if (qd.a(nd.field_n, (byte) -109)) {
                 L23: {
                   L24: {
-                    int discarded$22 = 0;
-                    gj.e();
-                    int discarded$23 = 121;
-                    wl.p();
+                    gj.e(0);
+                    wl.p(121);
                     bg.field_n = false;
                     ea.field_n = j.field_a;
-                    int discarded$24 = 122;
-                    cf.a(nd.field_n, wi.field_e, cj.field_c, wd.field_g);
+                    cf.a(nd.field_n, wi.field_e, cj.field_c, wd.field_g, (byte) 122);
                     if (di.field_b) {
                       break L24;
                     } else {
@@ -1219,8 +1184,7 @@ abstract class ig extends fa {
                 }
                 L27: {
                   if (nl.field_h) {
-                    int discarded$25 = 4;
-                    gg.b();
+                    gg.b(4);
                     break L27;
                   } else {
                     break L27;
@@ -1239,8 +1203,7 @@ abstract class ig extends fa {
                 wi.field_e = null;
                 cj.field_c = null;
                 nd.field_n = null;
-                int discarded$26 = -112;
-                gh.a((java.applet.Applet) this);
+                gh.a((java.applet.Applet) this, (byte) -112);
                 el.b(-6491);
                 bi.field_L = 10;
                 break L22;
@@ -1285,8 +1248,7 @@ abstract class ig extends fa {
                     }
                   }
                 }
-                int discarded$27 = 1;
-                vf.a((byte) -122, 0.0f, u.a(dj.field_c, od.field_h, nk.field_d));
+                vf.a((byte) -122, 0.0f, u.a(dj.field_c, od.field_h, nk.field_d, true));
                 break L31;
               }
             }
@@ -1366,7 +1328,7 @@ abstract class ig extends fa {
         }
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_y = null;
         field_m = null;
         int var1 = 0;
@@ -1396,8 +1358,7 @@ abstract class ig extends fa {
             oa var12 = null;
             Throwable decompiledCaughtException = null;
             var8 = Transmogrify.field_A ? 1 : 0;
-            int discarded$9 = 1;
-            var4 = mg.a(w.field_f, param1, f.field_a);
+            var4 = mg.a(w.field_f, param1, f.field_a, true);
             if (var4 == 0) {
               throw new IllegalStateException();
             } else {
@@ -1406,9 +1367,7 @@ abstract class ig extends fa {
                   break L0;
                 } else {
                   L1: {
-                    int discarded$10 = -45;
-                    int discarded$11 = -113;
-                    var5_int = va.a(be.c(70), ba.e());
+                    var5_int = va.a(be.c(70), ba.e(-45), (byte) -113);
                     if (var5_int == -1) {
                       break L1;
                     } else {
@@ -1418,11 +1377,9 @@ abstract class ig extends fa {
                       break L1;
                     }
                   }
-                  int discarded$12 = 1;
-                  var11 = le.d();
+                  var11 = le.d(true);
                   if (var11 != null) {
-                    int discarded$13 = -24522;
-                    sc.a(var11.booleanValue());
+                    sc.a(var11.booleanValue(), -24522);
                     break L0;
                   } else {
                     break L0;
@@ -1433,9 +1390,7 @@ abstract class ig extends fa {
                 if (var4 != 2) {
                   break L2;
                 } else {
-                  int discarded$14 = 102;
-                  int discarded$15 = -124;
-                  var5_int = nl.a(((ig) this).field_n, le.h(44), mc.a(), 2, wk.a(), el.a(121), cd.b(76));
+                  var5_int = nl.a(((ig) this).field_n, le.h(44), mc.a((byte) 102), 2, wk.a((byte) -124), el.a(121), cd.b(76));
                   if (var5_int != -1) {
                     el.a(var5_int, (byte) 33, Transmogrify.field_B, wh.field_F);
                     Transmogrify.field_B = null;
@@ -1456,8 +1411,7 @@ abstract class ig extends fa {
                         break L4;
                       } else {
                         tb.field_a = -1;
-                        int discarded$16 = 0;
-                        aj.k();
+                        aj.k(0);
                         break L4;
                       }
                     }
@@ -1466,8 +1420,7 @@ abstract class ig extends fa {
                     wi.field_p = false;
                     break L3;
                   } else {
-                    int discarded$17 = 102;
-                    var5_int = wc.a(((ig) this).field_n, -122, mc.a(), ((ig) this).field_x, false, cd.b(-85));
+                    var5_int = wc.a(((ig) this).field_n, -122, mc.a((byte) 102), ((ig) this).field_x, false, cd.b(-85));
                     if (var5_int != -1) {
                       if (var5_int != 0) {
                         gb.a(var5_int, -122, Transmogrify.field_B);
@@ -1649,7 +1602,7 @@ abstract class ig extends fa {
         c.field_e[4] = true;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         String var2 = Transmogrify.k(72);
         gb.a(ha.b(109), (byte) -119, var2);
     }
@@ -1657,7 +1610,7 @@ abstract class ig extends fa {
     protected ig() {
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         int var2 = nf.field_l.d((byte) 110);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = tg.field_a - 1;
@@ -1667,15 +1620,12 @@ abstract class ig extends fa {
     }
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, byte param4) {
-        int discarded$0 = 0;
-        int discarded$1 = 84;
-        this.b();
+        this.b(84, false);
         if (!(!param3)) {
             this.h(-21646);
         }
         if (param0) {
-            int discarded$2 = 59;
-            this.g();
+            this.g((byte) 59);
         }
         if (param4 != 9) {
             return;
@@ -1688,7 +1638,7 @@ abstract class ig extends fa {
         }
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         ek.field_c[9] = -1;
         ek.field_c[17] = -1;
         ek.field_c[5] = -1;

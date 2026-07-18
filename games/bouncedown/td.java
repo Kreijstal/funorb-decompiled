@@ -12,8 +12,7 @@ abstract class td {
             pb.field_k = kg.a(2, "");
             pb.field_k.a(false, (byte) -48);
             uc.a(param2, 118, param3, param1);
-            int discarded$0 = 126;
-            tk.a();
+            tk.a(126);
             vc.field_F = wj.field_a;
             fh.field_B = wj.field_a;
         } catch (RuntimeException runtimeException) {
@@ -27,7 +26,7 @@ abstract class td {
 
     abstract int a(int param0, int param1);
 
-    final static void a() {
+    final static void a(byte param0) {
         L0: {
           eh.a(true);
           if (ch.field_h != null) {
@@ -39,17 +38,14 @@ abstract class td {
         }
         q.l(8927);
         mc.a(-660);
-        int discarded$12 = 48;
-        hh.b();
+        hh.b((byte) 48);
         if (wg.b(true)) {
           hh.field_p.a(true, 1);
           jj.a(0, true);
-          int discarded$13 = 18;
-          kc.a();
+          kc.a((byte) 18);
           return;
         } else {
-          int discarded$14 = 18;
-          kc.a();
+          kc.a((byte) 18);
           return;
         }
     }

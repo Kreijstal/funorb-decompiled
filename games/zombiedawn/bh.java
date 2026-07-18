@@ -7,7 +7,7 @@ final class bh extends le {
     byte[] field_k;
     static String field_h;
 
-    final static void a() {
+    final static void a(int param0) {
         al[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -44,7 +44,7 @@ final class bh extends le {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_h = null;
         field_j = null;
         field_i = null;
@@ -58,7 +58,7 @@ final class bh extends le {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -80,8 +80,7 @@ final class bh extends le {
         try {
           L0: {
             if (!Character.isISOControl(param0)) {
-              int discarded$8 = 441;
-              if (c.a(param0)) {
+              if (c.a(param0, 441)) {
                 stackOut_6_0 = 1;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0 != 0;

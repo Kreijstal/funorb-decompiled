@@ -243,8 +243,7 @@ abstract class el {
                           }
                           break L6;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = pb.a(var6, var5_int, param1, var4);
+                          int discarded$1 = pb.a(var16, var5_int, param1, var4, 9);
                           break L6;
                         }
                       }
@@ -294,7 +293,7 @@ abstract class el {
 
     abstract void a(int param0, java.awt.Component param1);
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_b = null;
         field_a = null;

@@ -131,16 +131,14 @@ final class ihb extends ksa {
                               }
                               var13 = Math.min(var3_int, var5);
                               var14 = Math.min(var7, var9);
-                              int discarded$4 = -1;
-                              var15 = fva.a(var12, var13, param2, var14, param0, var11);
+                              var15 = fva.a(var12, var13, param2, var14, param0, var11, -1);
                               if (var15 == 2147483647) {
                                 stackOut_43_0 = -1;
                                 stackIn_44_0 = stackOut_43_0;
                                 return stackIn_44_0;
                               } else {
                                 L7: {
-                                  int discarded$5 = -1;
-                                  var16 = fva.a(var15, var13, param0, var14, param2, var11);
+                                  var16 = fva.a(var15, var13, param0, var14, param2, var11, -1);
                                   if (Math.abs(var16) < Math.min(Math.abs(var15), Math.abs(var12))) {
                                     break L7;
                                   } else {
@@ -201,9 +199,9 @@ final class ihb extends ksa {
                 }
               } else {
                 L10: {
-                  int incrementValue$6 = var11;
+                  int incrementValue$2 = var11;
                   var11++;
-                  var12 = param0[incrementValue$6];
+                  var12 = param0[incrementValue$2];
                   if (var12 >= var3_int) {
                     if (var4 >= var12) {
                       break L10;
@@ -216,9 +214,9 @@ final class ihb extends ksa {
                     break L10;
                   }
                 }
-                int incrementValue$7 = var11;
+                int incrementValue$3 = var11;
                 var11++;
-                var12 = param0[incrementValue$7];
+                var12 = param0[incrementValue$3];
                 if (var12 < var7) {
                   var7 = var12;
                   continue L1;

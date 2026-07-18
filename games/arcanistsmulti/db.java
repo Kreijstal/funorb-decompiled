@@ -110,7 +110,7 @@ final class db {
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_a = null;

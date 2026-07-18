@@ -111,8 +111,7 @@ final class ef {
                                   break L6;
                                 } else {
                                   L7: {
-                                    int discarded$11 = 22987;
-                                    if (vq.a(var4.charAt(var12 + -1))) {
+                                    if (vq.a(var4.charAt(var12 + -1), 22987)) {
                                       break L7;
                                     } else {
                                       if (var4.charAt(var12 - 1) == 35) {
@@ -124,11 +123,11 @@ final class ef {
                                   }
                                   L8: {
                                     if (var4.charAt(var12 - 1) != 35) {
-                                      StringBuilder discarded$12 = ((StringBuilder) var5).append(param1.substring(var11, 1 + var12));
+                                      StringBuilder discarded$9 = ((StringBuilder) var5).append(param1.substring(var11, 1 + var12));
                                       break L8;
                                     } else {
-                                      StringBuilder discarded$13 = ((StringBuilder) var5).append(param1.substring(var11, -1 + var12));
-                                      StringBuilder discarded$14 = ((StringBuilder) var5).append(param1.charAt(var12));
+                                      StringBuilder discarded$10 = ((StringBuilder) var5).append(param1.substring(var11, -1 + var12));
+                                      StringBuilder discarded$11 = ((StringBuilder) var5).append(param1.charAt(var12));
                                       break L8;
                                     }
                                   }
@@ -140,9 +139,8 @@ final class ef {
                                 if (var4.length() <= var12 + var10) {
                                   break L9;
                                 } else {
-                                  int discarded$15 = 22987;
-                                  if (vq.a(var4.charAt(var12 - -var10))) {
-                                    StringBuilder discarded$16 = ((StringBuilder) var5).append(param1.substring(var11, var12 - -1));
+                                  if (vq.a(var4.charAt(var12 - -var10), 22987)) {
+                                    StringBuilder discarded$12 = ((StringBuilder) var5).append(param1.substring(var11, var12 - -1));
                                     var11 = 1 + var12;
                                     continue L5;
                                   } else {
@@ -151,26 +149,26 @@ final class ef {
                                 }
                               }
                               L10: {
-                                StringBuilder discarded$17 = ((StringBuilder) var5).append(param1.substring(var11, var12));
+                                StringBuilder discarded$13 = ((StringBuilder) var5).append(param1.substring(var11, var12));
                                 if (param3 != null) {
-                                  StringBuilder discarded$18 = var13.append(param3);
+                                  StringBuilder discarded$14 = var13.append(param3);
                                   break L10;
                                 } else {
                                   break L10;
                                 }
                               }
-                              StringBuilder discarded$19 = ((StringBuilder) var5).append(param1.substring(var12, var12 + var10));
+                              StringBuilder discarded$15 = ((StringBuilder) var5).append(param1.substring(var12, var12 + var10));
                               var11 = var10 + var12;
                               if (param0 == null) {
                                 continue L5;
                               } else {
-                                StringBuilder discarded$20 = var13.append(param0);
+                                StringBuilder discarded$16 = var13.append(param0);
                                 continue L5;
                               }
                             } else {
                               L11: {
                                 if (var11 != 0) {
-                                  StringBuilder discarded$21 = ((StringBuilder) var5).append(param1.substring(var11, param1.length()));
+                                  StringBuilder discarded$17 = ((StringBuilder) var5).append(param1.substring(var11, param1.length()));
                                   break L11;
                                 } else {
                                   var5 = (Object) (Object) new StringBuilder(param1);
@@ -279,7 +277,7 @@ final class ef {
         return stackIn_36_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         cm.field_L = new String[cd.field_a];
         cm.field_L[11] = wc.field_d;
         cm.field_L[18] = vq.field_bc;
@@ -314,7 +312,7 @@ final class ef {
         var3.a((byte) -81, param0);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_e = null;
     }

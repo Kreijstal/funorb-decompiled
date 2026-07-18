@@ -31,8 +31,7 @@ final class bh extends wf implements sh {
           L0: {
             if (param1 == 6) {
               if (((bh) this).field_eb == param2) {
-                int discarded$2 = 2738;
-                this.r();
+                this.r(2738);
                 break L0;
               } else {
                 return;
@@ -73,7 +72,7 @@ final class bh extends wf implements sh {
         }
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_Z = null;
         field_db = null;
         field_bb = null;
@@ -258,13 +257,13 @@ final class bh extends wf implements sh {
         return stackIn_6_0;
     }
 
-    final static void h() {
+    final static void h(byte param0) {
         int var1 = 0;
         kh.field_a = null;
         pk.field_a = null;
     }
 
-    private final void r() {
+    private final void r(int param0) {
         if (!(((bh) this).field_K)) {
             return;
         }
@@ -332,7 +331,7 @@ final class bh extends wf implements sh {
         return stackIn_1_0;
     }
 
-    final static void a(uj param0) {
+    final static void a(uj param0, byte param1) {
         int var4 = 0;
         int var2_int = ii.field_b.c((byte) 66);
         int var3 = var2_int / 12;
@@ -347,7 +346,7 @@ final class bh extends wf implements sh {
         }
     }
 
-    final static boolean a(sb param0) {
+    final static boolean a(sb param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -478,8 +477,7 @@ final class bh extends wf implements sh {
                 } else {
                   var3 = (Object) (Object) ri.field_f;
                   ((bh) this).field_q = ((bh) this).field_q + 10;
-                  int discarded$69 = 0;
-                  if (!an.c()) {
+                  if (!an.c(0)) {
                     break L1;
                   } else {
                     ((bh) this).field_q = ((bh) this).field_q + 20;

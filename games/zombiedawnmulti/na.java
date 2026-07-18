@@ -21,7 +21,7 @@ final class na extends rg {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_K = null;
         field_H = null;
         field_F = null;
@@ -50,8 +50,7 @@ final class na extends rg {
             field_G = null;
         }
         ((na) this).field_B.a(param0, 0, param2, 0);
-        int discarded$0 = 1;
-        ql.a();
+        ql.a(true);
         var6.c(param3 - -((na) this).field_y, param1 + ((na) this).field_i, ((na) this).field_E);
     }
 
@@ -270,7 +269,7 @@ final class na extends rg {
               if (param1 <= -35) {
                 break L1;
               } else {
-                boolean discarded$4 = na.b(-55, -5, 10);
+                boolean discarded$2 = na.b(-55, -5, 10);
                 break L1;
               }
             }
@@ -286,8 +285,7 @@ final class na extends rg {
               qf.field_g = param2;
               va.field_a = param4;
               var7 = (CharSequence) (Object) param2;
-              int discarded$5 = 0;
-              ql.field_a = tg.a(var7);
+              ql.field_a = tg.a(var7, false);
               jj.field_M = param3;
               var6 = id.a(kb.field_x, bb.field_k, (byte) -65, param0, tg.field_d);
               wi.a((byte) 4, var6);

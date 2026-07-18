@@ -9,7 +9,7 @@ final class oo {
     static int field_b;
     static int[][] field_e;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_c = null;
         field_e = null;

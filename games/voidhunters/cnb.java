@@ -6,7 +6,7 @@ final class cnb extends rqa {
     static int field_p;
     static int field_o;
 
-    final static void f() {
+    final static void f(byte param0) {
         kma.a(mqb.field_x, true, -17833, bfa.field_p);
         kmb.field_c = true;
     }
@@ -193,8 +193,7 @@ final class cnb extends rqa {
               var11_ref_String = var8;
               var11_ref_String = var8;
               if (null == ov.field_o) {
-                int discarded$7 = -11;
-                if (!ne.a(false)) {
+                if (!ne.a(false, (byte) -11)) {
                   stackOut_5_0 = -1;
                   stackIn_6_0 = stackOut_5_0;
                   return stackIn_6_0;
@@ -338,8 +337,7 @@ final class cnb extends rqa {
                     }
                   }
                   if (var9 == 248) {
-                    int discarded$8 = 0;
-                    kl.a(vpa.b((byte) -124));
+                    kl.a(vpa.b((byte) -124), 0);
                     dgb.field_b = owa.field_j;
                     ifb.l(-125);
                     hha.field_o = false;
@@ -353,8 +351,7 @@ final class cnb extends rqa {
                       ow.field_a = var9;
                       break L8;
                     } else {
-                      int discarded$9 = 24655;
-                      boolean discarded$10 = boa.a(wmb.a(), 30000);
+                      boolean discarded$1 = boa.a(wmb.a(24655), 30000);
                       ehb.field_f = new Boolean(cb.a(-2, (ds) (Object) qga.field_b));
                       qga.field_b.field_e = 0;
                       break L8;
@@ -398,8 +395,7 @@ final class cnb extends rqa {
               }
             }
             L12: {
-              int discarded$11 = 86;
-              cnb.f();
+              cnb.f((byte) 86);
               if (tc.field_c != qva.field_k) {
                 break L12;
               } else {
@@ -408,8 +404,7 @@ final class cnb extends rqa {
                     if (ow.field_a == 255) {
                       var9_ref_String = qga.field_b.m(0);
                       if (var9_ref_String != null) {
-                        int discarded$12 = -1;
-                        pcb.a(vpa.b((byte) -123), var9_ref_String);
+                        pcb.a(vpa.b((byte) -123), var9_ref_String, -1);
                         break L13;
                       } else {
                         break L13;
@@ -435,8 +430,7 @@ final class cnb extends rqa {
               } else {
                 if (hha.field_o) {
                   L15: {
-                    int discarded$13 = 0;
-                    if (30000L < mw.e()) {
+                    if (30000L < mw.e(0)) {
                       dgb.field_b = fd.field_o;
                       break L15;
                     } else {
@@ -544,7 +538,7 @@ final class cnb extends rqa {
         return stackIn_63_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         int var1 = 0;
         field_q = null;
     }

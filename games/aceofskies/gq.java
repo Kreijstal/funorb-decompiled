@@ -11,7 +11,7 @@ final class gq {
     static int field_e;
     private int field_c;
 
-    final static String a(int param0, CharSequence[] param1) {
+    final static String a(int param0, CharSequence[] param1, int param2, int param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -394,7 +394,7 @@ final class gq {
         this(param0, param0);
     }
 
-    final static int a(hd param0) {
+    final static int a(hd param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;

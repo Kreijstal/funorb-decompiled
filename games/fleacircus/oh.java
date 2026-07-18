@@ -151,7 +151,7 @@ abstract class oh extends jj {
         return var3;
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_jb = null;
     }
 
@@ -230,7 +230,7 @@ abstract class oh extends jj {
         }
     }
 
-    final static void d() {
+    final static void d(boolean param0) {
         ol.field_d = new ca();
         ak.field_a.d((qa) (Object) ol.field_d, 26034);
     }

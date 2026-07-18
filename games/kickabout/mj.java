@@ -5,7 +5,7 @@ final class mj {
     static vd field_a;
     static int field_b;
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         double[] var2_array = null;
@@ -37,10 +37,8 @@ final class mj {
           L0: {
             hl.field_e = ng.a(0, 128, -46, 11, true, 30);
             hq.field_e = ng.a(30, 128, -74, 11, false, 60);
-            int discarded$3 = 11;
-            am.field_h = sr.a(60, 128, true, (byte) -67, 80);
-            int discarded$4 = 11;
-            ub.field_G = sr.a(80, 128, false, (byte) -120, 95);
+            am.field_h = sr.a(60, 128, true, (byte) -67, 80, 11);
+            ub.field_G = sr.a(80, 128, false, (byte) -120, 95, 11);
             c.field_f = (ut[]) (Object) new ot[4];
             var2_int = 0;
             L1: while (true) {
@@ -97,8 +95,7 @@ final class mj {
                   }
                 }
                 stackIn_8_0[stackIn_8_1] = (ut) (Object) stackIn_8_2;
-                int discarded$5 = 20684;
-                pd.a(c.field_f[var2_int]);
+                pd.a(c.field_f[var2_int], 20684);
                 jm.a(100, 9863, var2_int + 96);
                 var2_int++;
                 continue L1;

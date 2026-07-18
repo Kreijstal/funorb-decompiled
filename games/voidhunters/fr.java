@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fr implements dja {
-    final static void a(lta param0, wfb param1) {
+    final static void a(lta param0, wfb param1, boolean param2) {
         RuntimeException var3 = null;
         String var3_ref = null;
         Exception var4 = null;
@@ -251,9 +251,8 @@ final class fr implements dja {
         }
     }
 
-    final static void a(boolean param0) {
-        int discarded$0 = -24055;
-        lga.a(param0);
+    final static void a(boolean param0, boolean param1) {
+        lga.a(param0, -24055);
         sj.a(param0, (byte) -93);
     }
 

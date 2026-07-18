@@ -28,8 +28,7 @@ final class c {
                   sj.field_d = i.a(-111, i.field_c, sj.field_d);
                   di.field_x = me.a(8, di.field_x, i.field_c);
                   hc.field_D = true;
-                  int discarded$23 = 4;
-                  ed.b();
+                  ed.b(4);
                   break L1;
                 } else {
                   break L1;
@@ -41,17 +40,17 @@ final class c {
                 if (null == ce.field_a.b(108)) {
                   break L2;
                 } else {
-                  int fieldTemp$24 = tf.field_a + 1;
+                  int fieldTemp$21 = tf.field_a + 1;
                   tf.field_a = tf.field_a + 1;
-                  if (fieldTemp$24 != 370) {
+                  if (fieldTemp$21 != 370) {
                     break L2;
                   } else {
                     L3: {
                       tf.field_a = 0;
-                      pi discarded$25 = ce.field_a.e(63854);
-                      int fieldTemp$26 = ph.field_c;
+                      pi discarded$22 = ce.field_a.e(63854);
+                      int fieldTemp$23 = ph.field_c;
                       ph.field_c = ph.field_c + 1;
-                      if (0 != (fieldTemp$26 & 3)) {
+                      if (0 != (fieldTemp$23 & 3)) {
                         break L3;
                       } else {
                         L4: {
@@ -92,9 +91,9 @@ final class c {
                 }
               }
               L5: {
-                int fieldTemp$27 = ph.field_c;
+                int fieldTemp$24 = ph.field_c;
                 ph.field_c = ph.field_c + 1;
-                if (0 != (fieldTemp$27 & 3)) {
+                if (0 != (fieldTemp$24 & 3)) {
                   break L5;
                 } else {
                   if (0 > ah.field_e) {
@@ -156,21 +155,21 @@ final class c {
                 if (null == ce.field_a.b(108)) {
                   break L7;
                 } else {
-                  int fieldTemp$28 = tf.field_a + 1;
+                  int fieldTemp$25 = tf.field_a + 1;
                   tf.field_a = tf.field_a + 1;
-                  if (fieldTemp$28 != 370) {
+                  if (fieldTemp$25 != 370) {
                     break L7;
                   } else {
                     tf.field_a = 0;
-                    pi discarded$29 = ce.field_a.e(63854);
+                    pi discarded$26 = ce.field_a.e(63854);
                     break L7;
                   }
                 }
               }
               L8: {
-                int fieldTemp$30 = ph.field_c;
+                int fieldTemp$27 = ph.field_c;
                 ph.field_c = ph.field_c + 1;
-                if (0 != (fieldTemp$30 & 3)) {
+                if (0 != (fieldTemp$27 & 3)) {
                   break L8;
                 } else {
                   L9: {
@@ -214,17 +213,17 @@ final class c {
                 if (null == ce.field_a.b(108)) {
                   break L10;
                 } else {
-                  int fieldTemp$31 = tf.field_a + 1;
+                  int fieldTemp$28 = tf.field_a + 1;
                   tf.field_a = tf.field_a + 1;
-                  if (fieldTemp$31 != 370) {
+                  if (fieldTemp$28 != 370) {
                     break L10;
                   } else {
                     L11: {
                       tf.field_a = 0;
-                      pi discarded$32 = ce.field_a.e(63854);
-                      int fieldTemp$33 = ph.field_c;
+                      pi discarded$29 = ce.field_a.e(63854);
+                      int fieldTemp$30 = ph.field_c;
                       ph.field_c = ph.field_c + 1;
-                      if (0 != (fieldTemp$33 & 3)) {
+                      if (0 != (fieldTemp$30 & 3)) {
                         break L11;
                       } else {
                         L12: {
@@ -264,9 +263,9 @@ final class c {
                   }
                 }
               }
-              int fieldTemp$34 = ph.field_c;
+              int fieldTemp$31 = ph.field_c;
               ph.field_c = ph.field_c + 1;
-              if (0 == (fieldTemp$34 & 3)) {
+              if (0 == (fieldTemp$31 & 3)) {
                 if (0 > ah.field_e) {
                   qh.field_c = qh.field_c + 1;
                   if (ah.field_e < 0) {
@@ -329,21 +328,21 @@ final class c {
                 if (null == ce.field_a.b(108)) {
                   break L15;
                 } else {
-                  int fieldTemp$35 = tf.field_a + 1;
+                  int fieldTemp$32 = tf.field_a + 1;
                   tf.field_a = tf.field_a + 1;
-                  if (fieldTemp$35 != 370) {
+                  if (fieldTemp$32 != 370) {
                     break L15;
                   } else {
                     tf.field_a = 0;
-                    pi discarded$36 = ce.field_a.e(63854);
+                    pi discarded$33 = ce.field_a.e(63854);
                     break L15;
                   }
                 }
               }
               L16: {
-                int fieldTemp$37 = ph.field_c;
+                int fieldTemp$34 = ph.field_c;
                 ph.field_c = ph.field_c + 1;
-                if (0 != (fieldTemp$37 & 3)) {
+                if (0 != (fieldTemp$34 & 3)) {
                   break L16;
                 } else {
                   L17: {
@@ -397,8 +396,7 @@ final class c {
                   sj.field_d = i.a(-111, i.field_c, sj.field_d);
                   di.field_x = me.a(8, di.field_x, i.field_c);
                   hc.field_D = true;
-                  int discarded$38 = 4;
-                  ed.b();
+                  ed.b(4);
                   break L18;
                 } else {
                   break L18;
@@ -411,17 +409,17 @@ final class c {
               if (null == ce.field_a.b(108)) {
                 break L19;
               } else {
-                int fieldTemp$39 = tf.field_a + 1;
+                int fieldTemp$35 = tf.field_a + 1;
                 tf.field_a = tf.field_a + 1;
-                if (fieldTemp$39 != 370) {
+                if (fieldTemp$35 != 370) {
                   break L19;
                 } else {
                   L20: {
                     tf.field_a = 0;
-                    pi discarded$40 = ce.field_a.e(63854);
-                    int fieldTemp$41 = ph.field_c;
+                    pi discarded$36 = ce.field_a.e(63854);
+                    int fieldTemp$37 = ph.field_c;
                     ph.field_c = ph.field_c + 1;
-                    if (0 != (fieldTemp$41 & 3)) {
+                    if (0 != (fieldTemp$37 & 3)) {
                       break L20;
                     } else {
                       L21: {
@@ -462,9 +460,9 @@ final class c {
               }
             }
             L22: {
-              int fieldTemp$42 = ph.field_c;
+              int fieldTemp$38 = ph.field_c;
               ph.field_c = ph.field_c + 1;
-              if (0 != (fieldTemp$42 & 3)) {
+              if (0 != (fieldTemp$38 & 3)) {
                 break L22;
               } else {
                 if (0 > ah.field_e) {
@@ -526,21 +524,21 @@ final class c {
               if (null == ce.field_a.b(108)) {
                 break L24;
               } else {
-                int fieldTemp$43 = tf.field_a + 1;
+                int fieldTemp$39 = tf.field_a + 1;
                 tf.field_a = tf.field_a + 1;
-                if (fieldTemp$43 != 370) {
+                if (fieldTemp$39 != 370) {
                   break L24;
                 } else {
                   tf.field_a = 0;
-                  pi discarded$44 = ce.field_a.e(63854);
+                  pi discarded$40 = ce.field_a.e(63854);
                   break L24;
                 }
               }
             }
             L25: {
-              int fieldTemp$45 = ph.field_c;
+              int fieldTemp$41 = ph.field_c;
               ph.field_c = ph.field_c + 1;
-              if (0 != (fieldTemp$45 & 3)) {
+              if (0 != (fieldTemp$41 & 3)) {
                 break L25;
               } else {
                 L26: {
@@ -581,7 +579,7 @@ final class c {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;

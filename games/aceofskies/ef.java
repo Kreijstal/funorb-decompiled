@@ -25,7 +25,7 @@ final class ef {
     private int field_e;
     static int field_m;
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_g = null;
         field_i = null;

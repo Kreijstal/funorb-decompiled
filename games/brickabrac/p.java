@@ -51,14 +51,13 @@ final class p extends nm {
         }
     }
 
-    final static String a() {
+    final static String a(int param0) {
         String var1 = "";
         if (null != eo.field_k) {
             var1 = eo.field_k.j((byte) -76);
         }
         if (0 == var1.length()) {
-            int discarded$0 = 100;
-            var1 = dg.b();
+            var1 = dg.b(100);
         }
         if (!(var1.length() != 0)) {
             var1 = ud.field_t;

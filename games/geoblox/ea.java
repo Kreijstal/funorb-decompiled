@@ -10,7 +10,7 @@ final class ea extends hf {
         throw new Error();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
     }
 
@@ -223,8 +223,7 @@ final class ea extends hf {
           L0: {
             if (mf.a(param3, param4, 117, param0)) {
               var5_int = 0;
-              int discarded$2 = 0;
-              stackOut_3_0 = qa.a(param2.a(param4, -28153, param3));
+              stackOut_3_0 = qa.a(param2.a(param4, -28153, param3), false);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

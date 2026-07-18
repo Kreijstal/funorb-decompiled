@@ -21,7 +21,7 @@ abstract class hfa extends wj implements e {
         int var5 = 9;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_y = null;
         field_B = null;
         field_z = null;

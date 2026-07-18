@@ -174,7 +174,7 @@ final class wi extends eb {
         return stackIn_20_0 != 0;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

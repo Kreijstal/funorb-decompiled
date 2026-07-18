@@ -19,7 +19,7 @@ abstract class cj {
         ec.a(true, param0, 106);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_c = null;
         field_e = null;
@@ -67,8 +67,7 @@ abstract class cj {
               }
             }
             hj.a((java.awt.Component) (Object) param0, param1 + -13863);
-            int discarded$11 = 0;
-            jl.a((java.awt.Component) (Object) param0);
+            jl.a((java.awt.Component) (Object) param0, 0);
             if (null == ga.field_a) {
               break L0;
             } else {

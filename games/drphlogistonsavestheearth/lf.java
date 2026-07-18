@@ -9,7 +9,7 @@ final class lf {
     static int field_a;
     static int field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_f = null;

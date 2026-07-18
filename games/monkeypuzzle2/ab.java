@@ -36,8 +36,7 @@ final class ab extends ka {
         int var5 = 0;
         te[] var6 = null;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
-        int discarded$2 = 44;
-        var6 = ee.j();
+        var6 = ee.j(44);
         var2 = var6;
         var3 = 0;
         var4 = 105;
@@ -55,7 +54,7 @@ final class ab extends ka {
         }
     }
 
-    final static void a(int param0, int param1, le[] param2, int param3, int param4) {
+    final static void a(int param0, int param1, le[] param2, int param3, int param4, byte param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

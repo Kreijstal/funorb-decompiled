@@ -11,7 +11,7 @@ final class ag {
         hk.field_e = 20000000L;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
     }
@@ -22,7 +22,6 @@ final class ag {
 
     private static void $cfr$clinit() {
         field_b = "Orbs of Mastery";
-        int discarded$0 = 64;
-        field_c = rb.b(16760896, 12615712);
+        field_c = rb.b(16760896, 12615712, 64);
     }
 }

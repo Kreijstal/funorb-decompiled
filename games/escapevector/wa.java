@@ -8,7 +8,7 @@ final class wa {
     static ed field_e;
     static String field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_a = null;
         field_d = null;
@@ -16,7 +16,7 @@ final class wa {
         field_b = null;
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, int param1) {
         if (null == ni.field_N) {
             return;
         }

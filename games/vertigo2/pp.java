@@ -16,7 +16,7 @@ final class pp extends li {
     private boolean[][] field_p;
     private int[][] field_u;
 
-    public static void e() {
+    public static void e(int param0) {
         field_v = null;
         field_x = null;
         field_s = null;
@@ -25,7 +25,7 @@ final class pp extends li {
         field_w = null;
     }
 
-    final static cr f() {
+    final static cr f(int param0) {
         int var1 = 0;
         return h.field_D.field_Mb;
     }
@@ -211,12 +211,11 @@ final class pp extends li {
         return ((pp) this).field_q[param0];
     }
 
-    final static cr a() {
-        int discarded$0 = 117;
-        return hi.b();
+    final static cr a(int param0) {
+        return hi.b(117);
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         er var8 = new er(param3, param6);
         int[] var9 = bi.field_l;
         int var10 = bi.field_e;
@@ -229,7 +228,7 @@ final class pp extends li {
         var8.d(0, 0, 40);
     }
 
-    final static boolean a(java.applet.Applet param0) {
+    final static boolean a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -643,7 +642,7 @@ final class pp extends li {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         if (up.field_z != null) {

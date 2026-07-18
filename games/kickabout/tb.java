@@ -398,7 +398,7 @@ final class tb extends bi {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -473,8 +473,7 @@ final class tb extends bi {
                 }
                 L4: {
                   ((tb) this).field_x = (bh) param0;
-                  int discarded$1 = 0;
-                  this.g();
+                  this.g(0);
                   if (param1 == 20) {
                     break L4;
                   } else {
@@ -756,7 +755,7 @@ final class tb extends bi {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_t = null;
         field_r = null;
         field_w = null;
@@ -764,7 +763,7 @@ final class tb extends bi {
         field_u = null;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;

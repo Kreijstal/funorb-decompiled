@@ -149,7 +149,7 @@ final class pa implements ui {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_a = null;
         field_h = null;

@@ -27,8 +27,7 @@ final class ge {
         if (param0 > -46) {
             return;
         }
-        int discarded$0 = 0;
-        this.b();
+        this.b(0);
         ((ge) this).field_b.c(104);
     }
 
@@ -82,8 +81,7 @@ final class ge {
                     }
                   }
                 }
-                int discarded$2 = 0;
-                this.b();
+                this.b(0);
                 break L2;
               }
             }
@@ -98,8 +96,7 @@ final class ge {
                   param1 = param1 + var5_int;
                   param0 = param0 - var5_int;
                   ((ge) this).field_j = ((ge) this).field_l.length;
-                  int discarded$3 = 0;
-                  this.b();
+                  this.b(0);
                   break L4;
                 } else {
                   break L4;
@@ -357,8 +354,7 @@ final class ge {
         String stackOut_16_2 = null;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          int discarded$4 = -3;
-          var3 = ui.a(false, param2);
+          var3 = ui.a(false, param2, -3);
           if (var3 != null) {
             stackOut_3_0 = (String) var3;
             stackIn_4_0 = stackOut_3_0;
@@ -369,7 +365,7 @@ final class ge {
                 break L0;
               } else {
                 var6 = null;
-                String discarded$5 = ge.a((byte) -112, false, (CharSequence) null);
+                String discarded$2 = ge.a((byte) -112, false, (CharSequence) null);
                 break L0;
               }
             }
@@ -717,7 +713,7 @@ final class ge {
         return ((ge) this).field_h;
     }
 
-    private final void a() throws IOException {
+    private final void a(byte param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -751,7 +747,7 @@ final class ge {
         ((ge) this).field_a = param0;
     }
 
-    private final void b() throws IOException {
+    private final void b(int param0) throws IOException {
         long var2 = 0L;
         long var4 = 0L;
         int var6 = 0;
@@ -966,8 +962,7 @@ final class ge {
                     break L5;
                   } else {
                     L6: {
-                      int discarded$2 = -102;
-                      this.a();
+                      this.a((byte) -102);
                       var9_int = param2;
                       if (var9_int <= ((ge) this).field_q) {
                         break L6;
@@ -1023,9 +1018,9 @@ final class ge {
                           if (param0 >= var9_int) {
                             break L9;
                           } else {
-                            int incrementValue$3 = param0;
+                            int incrementValue$1 = param0;
                             param0++;
-                            param1[incrementValue$3] = (byte) 0;
+                            param1[incrementValue$1] = (byte) 0;
                             param2--;
                             ((ge) this).field_a = ((ge) this).field_a + 1L;
                             continue L11;

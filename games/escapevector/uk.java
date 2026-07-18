@@ -14,15 +14,14 @@ final class uk {
     ga field_f;
     static boolean field_h;
 
-    final static void b() {
+    final static void b(int param0) {
         if (!(bo.field_F == null)) {
             bo.field_F.p(0);
         }
         if (!(jb.field_r == null)) {
             jb.field_r.d(true);
         }
-        int discarded$0 = 0;
-        dl.a();
+        dl.a(false);
     }
 
     final static void a(int param0, int[] param1, int[] param2) {
@@ -33,7 +32,7 @@ final class uk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_a = null;
         field_b = null;
@@ -148,8 +147,7 @@ final class uk {
                   }
                 }
               }
-              int discarded$1 = 46;
-              od.f();
+              od.f(46);
               break L1;
             }
             var66 = new int[param5.field_M];

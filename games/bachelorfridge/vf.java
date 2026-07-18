@@ -164,7 +164,7 @@ abstract class vf extends vd {
         }
     }
 
-    final static void a(String param0, int param1, int param2, String param3, String param4) {
+    final static void a(String param0, int param1, int param2, String param3, String param4, int param5) {
         gs var6 = null;
         try {
             var6 = new gs(2, param0, 0, param3, param4);
@@ -175,7 +175,7 @@ abstract class vf extends vd {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_D = null;
         int var1 = -123;
         field_F = null;

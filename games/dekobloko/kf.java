@@ -315,7 +315,7 @@ class kf extends ce implements ra {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -358,8 +358,7 @@ class kf extends ce implements ra {
                   if (var3 <= var2_int) {
                     break L2;
                   } else {
-                    int discarded$35 = 32;
-                    if (!ug.a(param0.charAt(var2_int))) {
+                    if (!ug.a(param0.charAt(var2_int), 32)) {
                       break L2;
                     } else {
                       var2_int++;
@@ -372,8 +371,7 @@ class kf extends ce implements ra {
                     if (var2_int >= var3) {
                       break L4;
                     } else {
-                      int discarded$36 = 32;
-                      if (!ug.a(param0.charAt(var3 + -1))) {
+                      if (!ug.a(param0.charAt(var3 + -1), 32)) {
                         break L4;
                       } else {
                         var3--;
@@ -407,7 +405,7 @@ class kf extends ce implements ra {
                               if (var8 == 0) {
                                 break L6;
                               } else {
-                                StringBuilder discarded$37 = var5.append((char) var8);
+                                StringBuilder discarded$1 = var5.append((char) var8);
                                 break L6;
                               }
                             }

@@ -88,7 +88,7 @@ final class ff extends ma {
         return stackIn_4_0 != 0;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -122,8 +122,7 @@ final class ff extends ma {
             q.a(ai.field_o, (byte) -106);
             lf.a();
             pb.b();
-            int discarded$1 = 1;
-            pm.a();
+            pm.a(true);
             if (var5 >= 256) {
               break L2;
             } else {
@@ -188,7 +187,7 @@ final class ff extends ma {
         }
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -3197,21 +3196,25 @@ final class ff extends ma {
         int var26 = 0;
         int[] var27 = null;
         int[] var28 = null;
-        wk var29 = null;
-        gh var31 = null;
-        int[] var33 = null;
-        gh var34 = null;
-        int[] var35 = null;
+        int[] var29 = null;
+        wk var30 = null;
+        gh var32 = null;
+        int[] var34 = null;
+        gh var35 = null;
         int[] var36 = null;
-        int[] var39 = null;
-        int[] var40 = null;
+        int[] var37 = null;
+        int[] var38 = null;
         int[] var41 = null;
+        int[] var42 = null;
+        int[] var43 = null;
         int[] var44 = null;
-        int[] var45 = null;
-        int[] var46 = null;
         int[] var47 = null;
         int[] var48 = null;
         int[] var49 = null;
+        int[] var50 = null;
+        int[] var51 = null;
+        int[] var52 = null;
+        int[] var53 = null;
         gh stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         gh stackIn_36_0 = null;
@@ -3279,16 +3282,19 @@ final class ff extends ma {
             var8.field_Pb = ue.field_g[param1 + -1];
             var7.a(var8, 119);
             var9 = new gh((long)var4, kh.field_s);
-            var10 = new int[param2.length + -8];
+            var49 = new int[param2.length + -8];
+            var43 = var49;
+            var37 = var43;
+            var28 = var37;
+            var10 = var28;
             ii.a(param2, 0, var10, 0, param2.length - 8);
-            var45 = new int[8];
-            var40 = var45;
-            var35 = var40;
-            var27 = var35;
+            var48 = new int[8];
+            var42 = var48;
+            var36 = var42;
+            var27 = var36;
             var11 = var27;
-            ii.a(param2, param2.length - 8, var45, 0, 8);
-            int discarded$1 = 2;
-            var9.field_S = kc.a(var10, var11);
+            ii.a(param2, param2.length - 8, var48, 0, 8);
+            var9.field_S = kc.a(var49, var48, 2);
             var9.field_nb = 1021128;
             var9.a(0, 2, -4 + var5 + -15, -2 + var6, -var6 + var3_int);
             var9.field_Ib = 10;
@@ -3305,37 +3311,37 @@ final class ff extends ma {
             var12.field_I = null;
             var7.a(var12, 124);
             var15 = 0;
-            var46 = var11;
-            var41 = var46;
-            var36 = var41;
-            var28 = var36;
-            var24 = var28;
+            var50 = var11;
+            var44 = var50;
+            var38 = var44;
+            var29 = var38;
+            var24 = var29;
             var16_ref_int__ = var24;
             var17 = 0;
             L2: while (true) {
-              if (var46.length <= var17) {
+              if (var50.length <= var17) {
                 L3: {
                   if (var15 <= 0) {
                     break L3;
                   } else {
-                    var29 = new wk(20 * Math.min(var15, 4), 20 * (1 + var15 / 4));
+                    var30 = new wk(20 * Math.min(var15, 4), 20 * (1 + var15 / 4));
                     var15 = 0;
-                    var29.d();
+                    var30.d();
                     var17 = 0;
                     var18_int = 0;
-                    var47 = var11;
+                    var51 = var11;
                     var20 = 0;
                     L4: while (true) {
-                      if (var20 >= var47.length) {
+                      if (var20 >= var51.length) {
                         sb.field_bb.b((byte) 125);
-                        var31 = new gh((long)var4, (gh) null);
-                        var31.field_Pb = var29;
-                        var31.a(0, 20, var29.field_B, var6, var29.field_z);
-                        var7.a(var31, 120);
+                        var32 = new gh((long)var4, (gh) null);
+                        var32.field_Pb = var30;
+                        var32.a(0, 20, var30.field_B, var6, var30.field_z);
+                        var7.a(var32, 120);
                         break L3;
                       } else {
                         L5: {
-                          var21 = var47[var20];
+                          var21 = var51[var20];
                           if (var21 >= 0) {
                             var15++;
                             ie.field_d[var21].c(var17, var18_int);
@@ -3358,25 +3364,25 @@ final class ff extends ma {
                   }
                 }
                 var16 = 0;
-                var48 = var10;
+                var52 = var10;
                 var18_int = 0;
                 L6: while (true) {
-                  if (var48.length <= var18_int) {
+                  if (var52.length <= var18_int) {
                     var17 = 0;
-                    var49 = var11;
-                    var44 = var49;
-                    var39 = var44;
-                    var33 = var39;
-                    var25 = var33;
+                    var53 = var11;
+                    var47 = var53;
+                    var41 = var47;
+                    var34 = var41;
+                    var25 = var34;
                     var18 = var25;
                     var26 = 0;
                     var19 = var26;
                     L7: while (true) {
                       L8: {
-                        if (var26 >= var49.length) {
+                        if (var26 >= var53.length) {
                           break L8;
                         } else {
-                          var20 = var49[var26];
+                          var20 = var53[var26];
                           if (var20 == 34) {
                             var16 = 6100;
                             var17 = 1;
@@ -3396,11 +3402,11 @@ final class ff extends ma {
                         }
                       }
                       L10: {
-                        var34 = new gh((long)var4, kh.field_s);
-                        var34.a(0, 60, -4 + (var5 + -15), var6 + -6, 6 + -var6 + var12.field_Y);
-                        var34.field_nb = 749462;
-                        var34.field_Ib = 10;
-                        stackOut_34_0 = (gh) var34;
+                        var35 = new gh((long)var4, kh.field_s);
+                        var35.a(0, 60, -4 + (var5 + -15), var6 + -6, 6 + -var6 + var12.field_Y);
+                        var35.field_nb = 749462;
+                        var35.field_Ib = 10;
+                        stackOut_34_0 = (gh) var35;
                         stackOut_34_1 = new StringBuilder().append("<img=1>");
                         stackIn_38_0 = stackOut_34_0;
                         stackIn_38_1 = stackOut_34_1;
@@ -3441,14 +3447,14 @@ final class ff extends ma {
                         }
                       }
                       stackIn_39_0.field_S = stackIn_39_2;
-                      var7.a(var34, 123);
+                      var7.a(var35, 123);
                       stackOut_39_0 = (gh) var7;
                       stackIn_40_0 = stackOut_39_0;
                       break L0;
                     }
                   } else {
                     L11: {
-                      var19 = var48[var18_int];
+                      var19 = var52[var18_int];
                       if (var19 >= 0) {
                         var16 = var16 + tc.field_B[var19];
                         break L11;
@@ -3462,7 +3468,7 @@ final class ff extends ma {
                 }
               } else {
                 L12: {
-                  var18_int = var46[var17];
+                  var18_int = var50[var17];
                   if (0 <= var18_int) {
                     var15++;
                     break L12;

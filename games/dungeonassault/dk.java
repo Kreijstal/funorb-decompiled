@@ -8,7 +8,7 @@ final class dk implements ca {
     static String field_a;
     static int field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_b = null;

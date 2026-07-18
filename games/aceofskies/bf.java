@@ -149,12 +149,11 @@ abstract class bf extends ha {
                 ((bf) this).r(0);
             }
             ((bf) this).I(80);
-            int discarded$0 = -7;
-            this.K();
+            this.K(-7);
         }
     }
 
-    private final void n() {
+    private final void n(int param0) {
         int var2 = 0;
         int var3 = AceOfSkies.field_G ? 1 : 0;
         ((bf) this).m(-109);
@@ -453,7 +452,7 @@ abstract class bf extends ha {
         ((bf) this).a((byte) 125, 0, dl.field_p);
     }
 
-    private final void P() {
+    private final void P(int param0) {
         ((bf) this).field_ac = ((bf) this).a(true, (byte) 91);
         boolean discarded$0 = ((bf) this).field_ac.a(12, -120, 24);
         ((bf) this).field_xb = ((bf) this).a(new pl[1], -128);
@@ -660,7 +659,7 @@ abstract class bf extends ha {
         this.a(qp.field_j, (byte) 123, param0);
     }
 
-    private final void K() {
+    private final void K(int param0) {
     }
 
     private final void a(byte param0, boolean param1, int param2, boolean param3, int param4, int param5) {
@@ -771,10 +770,9 @@ abstract class bf extends ha {
         }
     }
 
-    private final void k() {
+    private final void k(int param0) {
         ((bf) this).field_e = false;
-        int discarded$0 = 12221;
-        this.u();
+        this.u(12221);
         if (!(((bf) this).field_bb != aj.field_v)) {
             this.g(false);
         }
@@ -782,7 +780,7 @@ abstract class bf extends ha {
 
     abstract void V(int param0);
 
-    private final void g() {
+    private final void g(byte param0) {
         float[] var2 = null;
         float[] var3 = null;
         L0: {
@@ -896,7 +894,7 @@ abstract class bf extends ha {
         ((bf) this).v(5);
     }
 
-    private final void u() {
+    private final void u(int param0) {
         float[] var2 = null;
         float var3 = 0.0f;
         float var4 = 0.0f;
@@ -971,7 +969,7 @@ abstract class bf extends ha {
 
     abstract void j(int param0);
 
-    private final void A() {
+    private final void A(int param0) {
         int var2 = 0;
         jaclib.memory.Buffer var3 = null;
         jaclib.memory.Stream var4 = null;
@@ -1115,8 +1113,8 @@ abstract class bf extends ha {
         ((bf) this).field_nc = new kp();
         ((bf) this).field_Lb = true;
         ((bf) this).field_ec = new ec();
-        ec discarded$5 = new ec();
-        ec discarded$6 = new ec();
+        ec discarded$3 = new ec();
+        ec discarded$4 = new ec();
         ((bf) this).field_t = new ec();
         ((bf) this).field_A = new ec();
         ((bf) this).field_tb = new ec();
@@ -1178,7 +1176,7 @@ abstract class bf extends ha {
         ((bf) this).field_gc = 0;
         ((bf) this).field_Vb = true;
         ((bf) this).field_l = new jaclib.memory.Stream();
-        ec discarded$7 = new ec();
+        ec discarded$5 = new ec();
         try {
           L0: {
             try {
@@ -1191,9 +1189,7 @@ abstract class bf extends ha {
                   ((bf) this).field_Z = var11.width;
                   ((bf) this).field_jb = var11.height;
                   ((bf) this).field_m = param5;
-                  int discarded$8 = 1;
-                  int discarded$9 = 0;
-                  fr.a(false);
+                  fr.a(false, 0, true);
                   if (null == ((bf) this).field_a) {
                     ((bf) this).field_i = new jagex3.graphics2.hw.NativeInterface(0, ((bf) this).field_m);
                     ((bf) this).field_z = null;
@@ -1431,10 +1427,8 @@ abstract class bf extends ha {
         }
         ((bf) this).field_gb = var2;
         this.h(26339);
-        int discarded$1 = 24;
-        this.P();
-        int discarded$2 = -32;
-        this.A();
+        this.P(24);
+        this.A(-32);
         ((bf) this).field_wb.a((bf) this, 0);
     }
 
@@ -2123,8 +2117,7 @@ abstract class bf extends ha {
           }
           ((bf) this).field_Mb = param0;
           ((bf) this).field_x = param1;
-          int discarded$2 = -23858;
-          this.k();
+          this.k(-23858);
           this.E(-68);
           this.R(-26661);
           break L0;
@@ -2900,11 +2893,9 @@ abstract class bf extends ha {
         ((bf) this).field_Ub = param0;
         ((bf) this).field_M = param3;
         this.E(-68);
-        int discarded$0 = -23858;
-        this.k();
+        this.k(-23858);
         ((bf) this).S(-32);
-        int discarded$1 = -7;
-        this.K();
+        this.K(-7);
     }
 
     private final void R(int param0) {
@@ -2917,7 +2908,7 @@ abstract class bf extends ha {
         ((bf) this).h((byte) -121);
     }
 
-    private final void z() {
+    private final void z(int param0) {
     }
 
     final void c(boolean param0) {
@@ -2931,8 +2922,7 @@ abstract class bf extends ha {
             if (!(!var2.b((byte) -92))) {
                 this.e(true);
             }
-            int discarded$0 = -122;
-            this.g();
+            this.g((byte) -122);
             ((bf) this).field_N = ((bf) this).field_yb;
             this.g(false);
             ((bf) this).field_Yb = ((bf) this).field_Yb & -25;
@@ -2958,8 +2948,7 @@ abstract class bf extends ha {
             ((bf) this).field_Cb = false;
             ((bf) this).r(0);
         }
-        int discarded$0 = -7;
-        this.K();
+        this.K(-7);
     }
 
     final jaclib.memory.Stream a(int param0, jaclib.memory.Buffer param1) {
@@ -3090,8 +3079,7 @@ abstract class bf extends ha {
         if (mq.field_g != ((bf) this).field_f[((bf) this).field_F]) {
             ((bf) this).field_f[((bf) this).field_F] = mq.field_g;
             ((bf) this).field_L[((bf) this).field_F].a((byte) -59);
-            int discarded$0 = 15;
-            this.B();
+            this.B(15);
         }
     }
 
@@ -3160,8 +3148,7 @@ abstract class bf extends ha {
               var2[6] = 0.0f;
               break L1;
             }
-            int discarded$1 = 27304;
-            this.z();
+            this.z(27304);
             ((bf) this).field_hb = true;
             break L0;
           } else {
@@ -3218,13 +3205,11 @@ abstract class bf extends ha {
             ((bf) this).r(0);
         }
         ((bf) this).I(97);
-        int discarded$0 = -7;
-        this.K();
+        this.K(-7);
     }
 
     void G(int param0) {
-        int discarded$0 = 0;
-        this.n();
+        this.n(0);
         int var2 = 23 % ((param0 - -65) / 51);
     }
 
@@ -3233,8 +3218,7 @@ abstract class bf extends ha {
     final void a(st param0, byte param1) {
         try {
             ((bf) this).field_f[((bf) this).field_F] = param0;
-            int discarded$0 = 15;
-            this.B();
+            this.B(15);
             int var3_int = 19 / ((-7 - param1) / 55);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "bf.LD(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -3262,7 +3246,7 @@ abstract class bf extends ha {
 
     abstract void w(byte param0);
 
-    private final void B() {
+    private final void B(int param0) {
         ((bf) this).p(-118);
         if (!(null == ((bf) this).field_nb)) {
             ((bf) this).field_nb.d(18580);

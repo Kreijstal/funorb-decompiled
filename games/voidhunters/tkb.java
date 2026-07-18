@@ -5,7 +5,7 @@ final class tkb extends rqa {
     static int field_p;
     static String field_o;
 
-    final static void a(ml param0) {
+    final static void a(ml param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ml var3 = null;
@@ -84,7 +84,7 @@ final class tkb extends rqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

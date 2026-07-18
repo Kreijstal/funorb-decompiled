@@ -15,7 +15,7 @@ final class po extends ka {
     static int field_j;
     private ms field_i;
 
-    final static void a(fp param0) {
+    final static void a(fp param0, byte param1, int param2) {
         dl var3 = null;
         try {
             var3 = q.field_p;
@@ -178,7 +178,7 @@ final class po extends ka {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             int var2_int = 0;
             RuntimeException var2 = null;

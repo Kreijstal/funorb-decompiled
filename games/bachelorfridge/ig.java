@@ -20,7 +20,7 @@ final class ig extends k {
     private int[] field_u;
     private int field_n;
 
-    private final void b() {
+    private final void b(boolean param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -139,7 +139,7 @@ final class ig extends k {
         ((ig) this).field_x = 4;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_m = null;
     }
 
@@ -307,7 +307,7 @@ final class ig extends k {
         }
     }
 
-    final static cj a(lu param0) {
+    final static cj a(lu param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ce stackIn_5_0 = null;
@@ -341,8 +341,7 @@ final class ig extends k {
               return (cj) (Object) stackIn_5_0;
             } else {
               if (((t) (Object) al.a(118, var2_int)).field_p == 2) {
-                int discarded$2 = -116;
-                stackOut_8_0 = nh.a(param0, var2_int);
+                stackOut_8_0 = nh.a(param0, var2_int, (byte) -116);
                 stackIn_9_0 = stackOut_8_0;
                 return (cj) (Object) stackIn_9_0;
               } else {
@@ -565,8 +564,7 @@ final class ig extends k {
         if (param0 != -68) {
             return;
         }
-        int discarded$0 = 1;
-        this.b();
+        this.b(true);
     }
 
     final static String a(int param0, String param1, String param2, String param3) {

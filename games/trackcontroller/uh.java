@@ -15,13 +15,13 @@ final class uh {
     byte[] field_c;
     int field_j;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         int var1 = 0;
         field_d = null;
     }
 
-    final static String a(int param0) {
+    final static String a(int param0, char param1, byte param2) {
         int var4 = 0;
         int var5 = TrackController.field_F ? 1 : 0;
         char[] var6 = new char[param0];

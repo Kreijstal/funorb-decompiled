@@ -212,7 +212,7 @@ abstract class ah {
         }
     }
 
-    final static byte[] a(int param0, byte[] param1, hg param2) {
+    final static byte[] a(int param0, byte[] param1, hg param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

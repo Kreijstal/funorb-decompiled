@@ -9,7 +9,7 @@ final class ir extends f implements dl, bp {
     bj field_F;
     private kg field_I;
 
-    private final int a(int param0, int param1, int param2, vg param3, String param4, String param5) {
+    private final int a(int param0, int param1, int param2, vg param3, String param4, String param5, boolean param6) {
         RuntimeException var8 = null;
         ah var9 = null;
         pg var10 = null;
@@ -158,17 +158,17 @@ final class ir extends f implements dl, bp {
     final void a(int param0, int param1, vg param2, byte param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = -60;
-            ((ir) this).field_I.field_y = this.k();
+            ((ir) this).field_I.field_y = this.k(-60);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "ir.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     public final void a(int param0) {
+        Object var3 = null;
         if (param0 != 2147483647) {
-          int discarded$4 = 1;
-          int discarded$5 = this.a(-61, -100, -33, (vg) null, (String) null, (String) null);
+          var3 = null;
+          int discarded$2 = this.a(-61, -100, -33, (vg) null, (String) null, (String) null, true);
           ((ec) (Object) ((ir) this).field_H.a((byte) 63)).d(0);
           return;
         } else {
@@ -192,9 +192,8 @@ final class ir extends f implements dl, bp {
         }
     }
 
-    private final void a() {
-        int discarded$0 = -60;
-        if (!(this.k())) {
+    private final void a(byte param0) {
+        if (!(this.k(-60))) {
             return;
         }
         he.a(8192, ((ir) this).field_H.field_s);
@@ -253,15 +252,13 @@ final class ir extends f implements dl, bp {
             L1: {
               if (((ir) this).field_G != param0) {
                 if (((ir) this).field_I == param0) {
-                  int discarded$5 = -1;
-                  this.a();
+                  this.a((byte) -1);
                   break L1;
                 } else {
                   break L1;
                 }
               } else {
-                int discarded$6 = 0;
-                la.a();
+                la.a(false);
                 break L1;
               }
             }
@@ -356,8 +353,7 @@ final class ir extends f implements dl, bp {
         String stackOut_11_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            stackOut_2_0 = this.a(35, 70, 170, param3, param4, param5);
+            stackOut_2_0 = this.a(35, 70, 170, param3, param4, param5, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -444,9 +440,8 @@ final class ir extends f implements dl, bp {
         return stackIn_3_0;
     }
 
-    private final boolean k() {
-        int discarded$0 = 13;
-        if (!this.a((ki) (Object) ((ir) this).field_H)) {
+    private final boolean k(int param0) {
+        if (!this.a((ki) (Object) ((ir) this).field_H, (byte) 13)) {
             return false;
         }
         return true;
@@ -545,7 +540,7 @@ final class ir extends f implements dl, bp {
         return stackIn_12_0 != 0;
     }
 
-    private final boolean a(ki param0) {
+    private final boolean a(ki param0, byte param1) {
         gk var3 = null;
         RuntimeException var3_ref = null;
         u var4 = null;

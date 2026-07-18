@@ -14,7 +14,7 @@ final class wa {
     static long field_b;
     static String field_d;
 
-    final static tf[] c() {
+    final static tf[] c(int param0) {
         tf[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -35,8 +35,7 @@ final class wa {
         var2 = 0;
         L0: while (true) {
           if (im.field_Qb <= var2) {
-            int discarded$1 = 140;
-            re.b();
+            re.b(140);
             return var1;
           } else {
             var3 = ge.field_c[var2] * gf.field_g[var2];
@@ -116,7 +115,7 @@ final class wa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_g = null;
         field_f = null;

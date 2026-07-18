@@ -247,21 +247,19 @@ final class ne extends ka {
 
     final int G() {
         if (!(((ne) this).field_p)) {
-            int discarded$0 = -10;
-            this.a();
+            this.a((byte) -10);
         }
         return ((ne) this).field_j;
     }
 
     final int V() {
         if (!(((ne) this).field_p)) {
-            int discarded$0 = -10;
-            this.a();
+            this.a((byte) -10);
         }
         return ((ne) this).field_C;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -654,16 +652,14 @@ final class ne extends ka {
 
     final int HA() {
         if (!(((ne) this).field_p)) {
-            int discarded$0 = -10;
-            this.a();
+            this.a((byte) -10);
         }
         return ((ne) this).field_t;
     }
 
     final int RA() {
         if (!(((ne) this).field_p)) {
-            int discarded$0 = -10;
-            this.a();
+            this.a((byte) -10);
         }
         return ((ne) this).field_e;
     }
@@ -672,7 +668,7 @@ final class ne extends ka {
         field_m = null;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean a(boolean param0, byte param1) {
         L0: {
           if (null != pqa.field_o) {
             break L0;
@@ -884,7 +880,7 @@ final class ne extends ka {
           if (!mq.a(param5, param2, false)) {
             break L1;
           } else {
-            od discarded$13 = new od((uq) null, 5126, 2, 0);
+            od discarded$9 = new od((uq) null, 5126, 2, 0);
             break L1;
           }
         }
@@ -892,7 +888,7 @@ final class ne extends ka {
           if (!toa.a(-8636, param2, param5)) {
             break L2;
           } else {
-            od discarded$14 = new od((uq) null, 5126, 3, 0);
+            od discarded$10 = new od((uq) null, 5126, 3, 0);
             break L2;
           }
         }
@@ -900,7 +896,7 @@ final class ne extends ka {
           if (!rb.a(-6070, param5, param2)) {
             break L3;
           } else {
-            od discarded$15 = new od((uq) null, 5121, 4, 0);
+            od discarded$11 = new od((uq) null, 5121, 4, 0);
             break L3;
           }
         }
@@ -908,7 +904,7 @@ final class ne extends ka {
           if (!dwa.a(param2, param5, false)) {
             break L4;
           } else {
-            dgb discarded$16 = new dgb();
+            dgb discarded$12 = new dgb();
             break L4;
           }
         }
@@ -962,8 +958,7 @@ final class ne extends ka {
                         break L8;
                       } else {
                         var69 = param1.field_g[var12];
-                        int discarded$17 = 0;
-                        var70 = jm.a(var69.field_e);
+                        var70 = jm.a(var69.field_e, 0);
                         var15_int = -1;
                         var16 = 0;
                         L10: while (true) {
@@ -1041,8 +1036,7 @@ final class ne extends ka {
                 L14: while (true) {
                   if (param1.field_D <= var14) {
                     ((ne) this).field_H[param1.field_D] = var13;
-                    int discarded$18 = -3;
-                    var75 = ao.a(param1, var8, ((ne) this).field_B);
+                    var75 = ao.a(param1, var89, ((ne) this).field_B, -3);
                     var15 = new dea[param1.field_j];
                     var16 = 0;
                     L15: while (true) {
@@ -1067,8 +1061,7 @@ final class ne extends ka {
                                       ((ne) this).field_I = ioa.a(((ne) this).field_I, 125, ((ne) this).field_x);
                                       ((ne) this).field_h = ioa.a(((ne) this).field_h, 99, ((ne) this).field_x);
                                       ((ne) this).field_A = ioa.a(((ne) this).field_A, 73, ((ne) this).field_x);
-                                      int discarded$19 = 5666;
-                                      ((ne) this).field_z = sna.a(((ne) this).field_z, ((ne) this).field_x);
+                                      ((ne) this).field_z = sna.a(((ne) this).field_z, ((ne) this).field_x, 5666);
                                       ((ne) this).field_J = ht.a(((ne) this).field_x, 0, ((ne) this).field_J);
                                       ((ne) this).field_k = ht.a(((ne) this).field_x, 0, ((ne) this).field_k);
                                       if (param1.field_p == null) {
@@ -1077,7 +1070,7 @@ final class ne extends ka {
                                         if (!bwa.a(param2, (byte) 121, ((ne) this).field_u)) {
                                           break L19;
                                         } else {
-                                          int[][] discarded$20 = param1.a((byte) -37, false);
+                                          int[][] discarded$13 = param1.a((byte) -37, false);
                                           break L19;
                                         }
                                       }
@@ -1089,7 +1082,7 @@ final class ne extends ka {
                                         if (!ifb.a(-54, param2, ((ne) this).field_u)) {
                                           break L20;
                                         } else {
-                                          int[][] discarded$21 = param1.a(-96);
+                                          int[][] discarded$14 = param1.a(-96);
                                           break L20;
                                         }
                                       }
@@ -1172,9 +1165,9 @@ final class ne extends ka {
                                       if (var17 == var19_int) {
                                         break L28;
                                       } else {
-                                        int incrementValue$22 = var16;
+                                        int incrementValue$15 = var16;
                                         var16++;
-                                        ((ne) this).field_F[incrementValue$22] = var18;
+                                        ((ne) this).field_F[incrementValue$15] = var18;
                                         var17 = var19_int;
                                         break L28;
                                       }
@@ -1649,9 +1642,9 @@ final class ne extends ka {
                                             if (var30 != 1) {
                                               break L48;
                                             } else {
-                                              dea dupTemp$23 = new dea();
-                                              var15[var16] = dupTemp$23;
-                                              var31_ref_dea = dupTemp$23;
+                                              dea dupTemp$16 = new dea();
+                                              var15[var16] = dupTemp$16;
+                                              var31_ref_dea = dupTemp$16;
                                               var31_ref_dea.field_a = var28;
                                               var31_ref_dea.field_c = var27_int;
                                               var31_ref_dea.field_b = var26_int;
@@ -1733,8 +1726,7 @@ final class ne extends ka {
                               break L52;
                             } else {
                               L53: {
-                                int discarded$24 = 0;
-                                var21_ref_sr = jm.a(var20_ref_bqa.field_e);
+                                var21_ref_sr = jm.a(var20_ref_bqa.field_e, 0);
                                 if (!var21_ref_sr.field_a) {
                                   break L53;
                                 } else {
@@ -1909,9 +1901,9 @@ final class ne extends ka {
                   }
                 }
               }
-              int fieldTemp$25 = ((ne) this).field_B;
+              int fieldTemp$17 = ((ne) this).field_B;
               ((ne) this).field_B = ((ne) this).field_B + 1;
-              var8[fieldTemp$25] = var9_int;
+              var8[fieldTemp$17] = var9_int;
               ((ne) this).field_H[param1.field_k[var9_int]] = ((ne) this).field_H[param1.field_k[var9_int]] + 1;
               ((ne) this).field_H[param1.field_o[var9_int]] = ((ne) this).field_H[param1.field_o[var9_int]] + 1;
               ((ne) this).field_H[param1.field_K[var9_int]] = ((ne) this).field_H[param1.field_K[var9_int]] + 1;

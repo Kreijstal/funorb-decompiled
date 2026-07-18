@@ -7,7 +7,7 @@ final class wm {
     static String field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_d = null;
@@ -97,9 +97,7 @@ final class wm {
             br.a(param14, 480, 333, param17);
             uc.a(param11, param19, param5, false, param4);
             pt.c(320, 240, 56);
-            int discarded$2 = -125;
-            int discarded$3 = 2;
-            qf.a(param6, 8, 8, param12);
+            qf.a(param6, 8, 8, param12, 2, -125);
             dr.a(param16, (byte) 96, param13, param20);
             ek.a(128, 16777215, -118, 255);
             break L0;
@@ -509,8 +507,7 @@ final class wm {
                       if (var8_ref_mo.field_f) {
                         break L16;
                       } else {
-                        int discarded$3 = -3404;
-                        if (si.a(var8_ref_mo.field_m)) {
+                        if (si.a(var8_ref_mo.field_m, -3404)) {
                           break L15;
                         } else {
                           break L16;
@@ -547,11 +544,9 @@ final class wm {
                   break L18;
                 }
               }
-              int discarded$4 = 103;
-              var10 = af.a(var8_ref_mo);
+              var10 = af.a(var8_ref_mo, (byte) 103);
               var11 = var10 + ka.c(var8_ref_mo.field_h);
-              int discarded$5 = -5;
-              var12 = hm.a(var8_ref_mo);
+              var12 = hm.a(var8_ref_mo, -5);
               var8_ref_mo.field_u = new je(0L, uf.field_i, var11);
               var8_ref_mo.field_u.field_T = (uf.field_i.field_T >> 1 & 8355711) + (var12 + -((var12 & 16711423) >> 1));
               var8_ref_mo.field_u.field_Z = tc.field_e;
@@ -588,8 +583,7 @@ final class wm {
               }
             }
             ik.field_b = null;
-            int discarded$2 = 76;
-            ot.g();
+            ot.g(76);
             return;
           }
         } else {

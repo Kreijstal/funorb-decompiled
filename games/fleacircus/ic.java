@@ -115,7 +115,7 @@ final class ic extends jj implements da {
         return stackIn_1_0;
     }
 
-    private final void p() {
+    private final void p(int param0) {
         if (!(((ic) this).field_G)) {
             return;
         }
@@ -160,8 +160,7 @@ final class ic extends jj implements da {
           L0: {
             L1: {
               if (param4 == ((ic) this).field_cb) {
-                int discarded$2 = 108;
-                this.p();
+                this.p(108);
                 break L1;
               } else {
                 break L1;
@@ -249,8 +248,7 @@ final class ic extends jj implements da {
                 if (param1 == fb.field_g) {
                   ((ic) this).field_j = ((ic) this).field_j + 10;
                   var3 = (Object) (Object) oc.field_c;
-                  int discarded$5 = -83;
-                  if (!al.a()) {
+                  if (!al.a(-83)) {
                     break L1;
                   } else {
                     ((ic) this).field_j = ((ic) this).field_j + 20;
@@ -338,7 +336,7 @@ final class ic extends jj implements da {
         }
     }
 
-    public static void o() {
+    public static void o(int param0) {
         field_db = null;
         field_ab = null;
         field_bb = null;

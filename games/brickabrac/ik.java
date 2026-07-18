@@ -20,7 +20,7 @@ final class ik implements Iterator {
         return param0 & param1;
     }
 
-    private final void b() {
+    private final void b(int param0) {
         ((ik) this).field_d = 1;
         ((ik) this).field_h = ((ik) this).field_e.field_d[0].field_e;
         ((ik) this).field_k = null;
@@ -185,7 +185,7 @@ final class ik implements Iterator {
         ((ik) this).field_k = null;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         bg var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -259,7 +259,7 @@ final class ik implements Iterator {
         return stackIn_17_0 != 0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_g = null;
         field_f = null;
         field_i = null;
@@ -313,8 +313,7 @@ final class ik implements Iterator {
         ((ik) this).field_k = null;
         try {
             ((ik) this).field_e = param0;
-            int discarded$0 = -101;
-            this.b();
+            this.b(-101);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

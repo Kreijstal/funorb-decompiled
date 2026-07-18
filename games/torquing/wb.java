@@ -72,8 +72,7 @@ final class wb extends am {
                     }
                   }
                 }
-                int discarded$2 = -1;
-                qi.field_d = pg.a(param0, param3);
+                qi.field_d = pg.a(param0, param3, -1);
                 break L1;
               } else {
                 L3: {
@@ -230,12 +229,12 @@ final class wb extends am {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_t = null;
         field_u = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         t var1 = null;
         int var1_int = 0;
         int var2 = 0;

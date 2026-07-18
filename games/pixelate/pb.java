@@ -87,13 +87,11 @@ final class pb {
 
     final void a(int param0) {
         if (param0 != -18577) {
-          boolean discarded$6 = ((pb) this).a((byte) -44);
-          int discarded$7 = -37;
-          ((pb) this).field_e = this.b();
+          boolean discarded$2 = ((pb) this).a((byte) -44);
+          ((pb) this).field_e = this.b((byte) -37);
           return;
         } else {
-          int discarded$8 = -37;
-          ((pb) this).field_e = this.b();
+          ((pb) this).field_e = this.b((byte) -37);
           return;
         }
     }
@@ -195,7 +193,7 @@ final class pb {
         return 0 == ((pb) this).field_c ? true : false;
     }
 
-    private final int b() {
+    private final int b(byte param0) {
         int var2 = ((pb) this).field_m.field_d;
         if (!(((pb) this).field_m.field_d < ((pb) this).field_m.field_l.length)) {
             return ((pb) this).field_o - (100 * var2 + 100);
@@ -463,8 +461,7 @@ final class pb {
     final void d(int param0) {
         int var2 = 0;
         if (param0 == -16888) {
-          int discarded$2 = -37;
-          var2 = this.b();
+          var2 = this.b((byte) -37);
           if (((pb) this).field_c <= 0) {
             L0: {
               if (((pb) this).field_e > var2) {
@@ -490,8 +487,7 @@ final class pb {
           }
         } else {
           pb.c(-121);
-          int discarded$3 = -37;
-          var2 = this.b();
+          var2 = this.b((byte) -37);
           if (((pb) this).field_c <= 0) {
             L1: {
               if (((pb) this).field_e > var2) {

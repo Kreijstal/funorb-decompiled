@@ -31,32 +31,56 @@ final class lbb implements ntb {
         RuntimeException var3 = null;
         int var4 = 0;
         lbb var5 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
+        int stackIn_26_0 = 0;
+        int stackIn_27_0 = 0;
+        int stackIn_28_0 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_29_1 = 0;
+        int stackIn_39_0 = 0;
+        int stackIn_40_0 = 0;
+        int stackIn_41_0 = 0;
+        int stackIn_42_0 = 0;
+        int stackIn_42_1 = 0;
+        RuntimeException stackIn_52_0 = null;
+        StringBuilder stackIn_52_1 = null;
+        RuntimeException stackIn_53_0 = null;
+        StringBuilder stackIn_53_1 = null;
+        RuntimeException stackIn_54_0 = null;
+        StringBuilder stackIn_54_1 = null;
+        String stackIn_54_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
+        int stackOut_25_0 = 0;
+        int stackOut_24_0 = 0;
+        int stackOut_26_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_28_1 = 0;
+        int stackOut_27_0 = 0;
+        int stackOut_27_1 = 0;
+        int stackOut_38_0 = 0;
+        int stackOut_37_0 = 0;
+        int stackOut_39_0 = 0;
+        int stackOut_41_0 = 0;
+        int stackOut_41_1 = 0;
+        int stackOut_40_0 = 0;
+        int stackOut_40_1 = 0;
+        RuntimeException stackOut_51_0 = null;
+        StringBuilder stackOut_51_1 = null;
+        RuntimeException stackOut_53_0 = null;
+        StringBuilder stackOut_53_1 = null;
+        String stackOut_53_2 = null;
+        RuntimeException stackOut_52_0 = null;
+        StringBuilder stackOut_52_1 = null;
+        String stackOut_52_2 = null;
         try {
           L0: {
             L1: {
               var5 = (lbb) (Object) param0;
-              boolean discarded$4 = tja.a((ntb[]) (Object) var5.field_g, 1, (ntb[]) (Object) var5.field_g, false, 5547);
-              if (null == var5.field_i) {
+              boolean discarded$1 = tja.a((ntb[]) (Object) var5.field_g, 1, (ntb[]) (Object) ((lbb) this).field_g, false, 5547);
+              if (null == ((lbb) this).field_i) {
                 break L1;
               } else {
                 if (var5.field_i != null) {
-                  var5.field_i.a((tv) (Object) var5.field_i, -123);
+                  ((lbb) this).field_i.a((tv) (Object) var5.field_i, -123);
                   break L1;
                 } else {
                   break L1;
@@ -64,11 +88,11 @@ final class lbb implements ntb {
               }
             }
             L2: {
-              if (null == var5.field_f) {
+              if (null == ((lbb) this).field_f) {
                 break L2;
               } else {
                 if (null != var5.field_f) {
-                  var5.field_f.a((tv) (Object) var5.field_f, -102);
+                  ((lbb) this).field_f.a((tv) (Object) var5.field_f, -102);
                   break L2;
                 } else {
                   break L2;
@@ -77,26 +101,26 @@ final class lbb implements ntb {
             }
             L3: {
               var4 = 0;
-              if (var5.field_d == var5.field_d) {
+              if (var5.field_d == ((lbb) this).field_d) {
                 break L3;
               } else {
                 var4 = 1;
-                System.out.println("int mission_phase has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+                System.out.println("int mission_phase has changed. before=" + var5.field_d + ", now=" + ((lbb) this).field_d);
                 break L3;
               }
             }
             L4: {
-              if (var5.field_e == var5.field_e) {
+              if (var5.field_e == ((lbb) this).field_e) {
                 break L4;
               } else {
                 var4 = 1;
-                System.out.println("int phase_change_countdown has changed. before=" + var5.field_e + ", now=" + var5.field_e);
+                System.out.println("int phase_change_countdown has changed. before=" + var5.field_e + ", now=" + ((lbb) this).field_e);
                 break L4;
               }
             }
             L5: {
-              if (var5.field_a != var5.field_a) {
-                System.out.println("int phase_timer has changed. before=" + var5.field_a + ", now=" + var5.field_a);
+              if (((lbb) this).field_a != var5.field_a) {
+                System.out.println("int phase_timer has changed. before=" + var5.field_a + ", now=" + ((lbb) this).field_a);
                 var4 = 1;
                 break L5;
               } else {
@@ -104,16 +128,16 @@ final class lbb implements ntb {
               }
             }
             L6: {
-              if (var5.field_b != var5.field_b) {
+              if (((lbb) this).field_b != var5.field_b) {
                 var4 = 1;
-                System.out.println("int winner has changed. before=" + var5.field_b + ", now=" + var5.field_b);
+                System.out.println("int winner has changed. before=" + var5.field_b + ", now=" + ((lbb) this).field_b);
                 break L6;
               } else {
                 break L6;
               }
             }
             L7: {
-              if (dn.a((tv[]) (Object) var5.field_g, false, 1, (tv[]) (Object) var5.field_g, -77)) {
+              if (dn.a((tv[]) (Object) var5.field_g, false, 1, (tv[]) (Object) ((lbb) this).field_g, -77)) {
                 System.out.println("MissionVariable[] custom_variables has changed. ");
                 var4 = 1;
                 break L7;
@@ -122,50 +146,119 @@ final class lbb implements ntb {
               }
             }
             if (param1 < -19) {
-              qdb discarded$5 = var5.field_i;
               L8: {
-                if (var5.field_i == null) {
+                if (((lbb) this).field_i != null) {
+                  stackOut_25_0 = 0;
+                  stackIn_26_0 = stackOut_25_0;
                   break L8;
                 } else {
-                  if (!var5.field_i.a((byte) 84, (tv) (Object) var5.field_i)) {
-                    break L8;
-                  } else {
-                    System.out.println("MissionGenerationData nextround has changed. before=" + (Object) (Object) var5.field_i + ", now=" + (Object) (Object) var5.field_i);
-                    var4 = 1;
-                    break L8;
-                  }
+                  stackOut_24_0 = 1;
+                  stackIn_26_0 = stackOut_24_0;
+                  break L8;
                 }
               }
               L9: {
-                int discarded$6 = 0;
-                if (!ikb.a(var5.field_j, var5.field_j)) {
+                stackOut_26_0 = stackIn_26_0;
+                stackIn_28_0 = stackOut_26_0;
+                stackIn_27_0 = stackOut_26_0;
+                if (var5.field_i != null) {
+                  stackOut_28_0 = stackIn_28_0;
+                  stackOut_28_1 = 0;
+                  stackIn_29_0 = stackOut_28_0;
+                  stackIn_29_1 = stackOut_28_1;
                   break L9;
+                } else {
+                  stackOut_27_0 = stackIn_27_0;
+                  stackOut_27_1 = 1;
+                  stackIn_29_0 = stackOut_27_0;
+                  stackIn_29_1 = stackOut_27_1;
+                  break L9;
+                }
+              }
+              L10: {
+                L11: {
+                  if ((stackIn_29_0 ^ stackIn_29_1) != 0) {
+                    break L11;
+                  } else {
+                    if (((lbb) this).field_i == null) {
+                      break L10;
+                    } else {
+                      if (!((lbb) this).field_i.a((byte) 84, (tv) (Object) var5.field_i)) {
+                        break L10;
+                      } else {
+                        break L11;
+                      }
+                    }
+                  }
+                }
+                System.out.println("MissionGenerationData nextround has changed. before=" + (Object) (Object) var5.field_i + ", now=" + (Object) (Object) ((lbb) this).field_i);
+                var4 = 1;
+                break L10;
+              }
+              L12: {
+                if (!ikb.a(((lbb) this).field_j, var5.field_j, false)) {
+                  break L12;
                 } else {
                   System.out.println("int[] teamscores has changed. ");
                   var4 = 1;
-                  break L9;
+                  break L12;
                 }
               }
-              qqb discarded$7 = var5.field_f;
-              L10: {
-                if (null == var5.field_f) {
-                  break L10;
+              L13: {
+                if (var5.field_f != null) {
+                  stackOut_38_0 = 0;
+                  stackIn_39_0 = stackOut_38_0;
+                  break L13;
                 } else {
-                  if (!var5.field_f.a((byte) 126, (tv) (Object) var5.field_f)) {
-                    break L10;
+                  stackOut_37_0 = 1;
+                  stackIn_39_0 = stackOut_37_0;
+                  break L13;
+                }
+              }
+              L14: {
+                stackOut_39_0 = stackIn_39_0;
+                stackIn_41_0 = stackOut_39_0;
+                stackIn_40_0 = stackOut_39_0;
+                if (null != ((lbb) this).field_f) {
+                  stackOut_41_0 = stackIn_41_0;
+                  stackOut_41_1 = 0;
+                  stackIn_42_0 = stackOut_41_0;
+                  stackIn_42_1 = stackOut_41_1;
+                  break L14;
+                } else {
+                  stackOut_40_0 = stackIn_40_0;
+                  stackOut_40_1 = 1;
+                  stackIn_42_0 = stackOut_40_0;
+                  stackIn_42_1 = stackOut_40_1;
+                  break L14;
+                }
+              }
+              L15: {
+                L16: {
+                  if ((stackIn_42_0 ^ stackIn_42_1) != 0) {
+                    break L16;
                   } else {
-                    System.out.println("MatchResults current_match has changed. before=" + (Object) (Object) var5.field_f + ", now=" + (Object) (Object) var5.field_f);
-                    var4 = 1;
-                    break L10;
+                    if (null == ((lbb) this).field_f) {
+                      break L15;
+                    } else {
+                      if (!((lbb) this).field_f.a((byte) 126, (tv) (Object) var5.field_f)) {
+                        break L15;
+                      } else {
+                        break L16;
+                      }
+                    }
                   }
                 }
+                System.out.println("MatchResults current_match has changed. before=" + (Object) (Object) var5.field_f + ", now=" + (Object) (Object) ((lbb) this).field_f);
+                var4 = 1;
+                break L15;
               }
-              L11: {
+              L17: {
                 if (var4 != 0) {
                   System.out.println("This instance of MissionState has changed");
-                  break L11;
+                  break L17;
                 } else {
-                  break L11;
+                  break L17;
                 }
               }
               break L0;
@@ -175,33 +268,33 @@ final class lbb implements ntb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L12: {
+          L18: {
             var3 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) var3;
-            stackOut_41_1 = new StringBuilder().append("lbb.F(");
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackOut_51_0 = (RuntimeException) var3;
+            stackOut_51_1 = new StringBuilder().append("lbb.F(");
+            stackIn_53_0 = stackOut_51_0;
+            stackIn_53_1 = stackOut_51_1;
+            stackIn_52_0 = stackOut_51_0;
+            stackIn_52_1 = stackOut_51_1;
             if (param0 == null) {
-              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
-              break L12;
+              stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
+              stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
+              stackOut_53_2 = "null";
+              stackIn_54_0 = stackOut_53_0;
+              stackIn_54_1 = stackOut_53_1;
+              stackIn_54_2 = stackOut_53_2;
+              break L18;
             } else {
-              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
-              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
-              break L12;
+              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
+              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_2 = "{...}";
+              stackIn_54_0 = stackOut_52_0;
+              stackIn_54_1 = stackOut_52_1;
+              stackIn_54_2 = stackOut_52_2;
+              break L18;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + ',' + param1 + ')');
         }
     }
 
@@ -238,8 +331,7 @@ final class lbb implements ntb {
             L1: {
               var8 = new bea();
               var9 = var8;
-              int discarded$2 = 120;
-              var9.field_d = this.a();
+              var9.field_d = this.a((byte) 120);
               if (!qab.a(92, ((lbb) this).d(6472))) {
                 break L1;
               } else {
@@ -278,8 +370,7 @@ final class lbb implements ntb {
                 break L2;
               }
             }
-            int discarded$3 = -1;
-            this.b();
+            this.b(-1);
             ((lbb) this).c(5, -7, 0);
             ((lbb) this).field_b = -1;
             ((lbb) this).field_e = 0;
@@ -557,9 +648,7 @@ final class lbb implements ntb {
                           if (var14 < 0) {
                             L6: {
                               if (var11 == var10) {
-                                int discarded$2 = 0;
-                                int discarded$3 = -21;
-                                var15 = ccb.a(param0, var4_array);
+                                var15 = ccb.a(param0, var20, (byte) -21, false);
                                 var13.field_h = var15;
                                 var4_array[var15] = var4_array[var15] + 1;
                                 break L6;
@@ -990,77 +1079,164 @@ final class lbb implements ntb {
         RuntimeException var3 = null;
         int var4 = 0;
         lbb var5 = null;
-        int stackIn_18_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        int stackIn_8_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_11_1 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_22_1 = 0;
+        int stackIn_28_0 = 0;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_10_1 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_9_1 = 0;
+        int stackOut_18_0 = 0;
         int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        int stackOut_19_0 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_21_1 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_20_1 = 0;
+        int stackOut_27_0 = 0;
+        int stackOut_26_0 = 0;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
         try {
           L0: {
             L1: {
               L2: {
                 var5 = (lbb) (Object) param1;
                 var4 = 97 / ((param0 - 22) / 59);
-                if (var5.field_d != var5.field_d) {
+                if (((lbb) this).field_d != var5.field_d) {
                   break L2;
                 } else {
-                  if (var5.field_e != var5.field_e) {
+                  if (((lbb) this).field_e != var5.field_e) {
                     break L2;
                   } else {
-                    if (var5.field_a != var5.field_a) {
+                    if (((lbb) this).field_a != var5.field_a) {
                       break L2;
                     } else {
-                      if (var5.field_b != var5.field_b) {
+                      if (((lbb) this).field_b != var5.field_b) {
                         break L2;
                       } else {
-                        if (dn.a((tv[]) (Object) var5.field_g, false, 1, (tv[]) (Object) var5.field_g, -22)) {
+                        if (dn.a((tv[]) (Object) var5.field_g, false, 1, (tv[]) (Object) ((lbb) this).field_g, -22)) {
                           break L2;
                         } else {
-                          qdb discarded$3 = var5.field_i;
                           L3: {
-                            if (var5.field_i == null) {
+                            if (var5.field_i != null) {
+                              stackOut_7_0 = 0;
+                              stackIn_8_0 = stackOut_7_0;
                               break L3;
                             } else {
-                              if (var5.field_i.a((byte) -74, (tv) (Object) var5.field_i)) {
-                                break L2;
-                              } else {
-                                break L3;
-                              }
+                              stackOut_6_0 = 1;
+                              stackIn_8_0 = stackOut_6_0;
+                              break L3;
                             }
                           }
-                          int discarded$4 = 28;
-                          if (wpb.a(var5.field_j, var5.field_j)) {
+                          L4: {
+                            stackOut_8_0 = stackIn_8_0;
+                            stackIn_10_0 = stackOut_8_0;
+                            stackIn_9_0 = stackOut_8_0;
+                            if (((lbb) this).field_i != null) {
+                              stackOut_10_0 = stackIn_10_0;
+                              stackOut_10_1 = 0;
+                              stackIn_11_0 = stackOut_10_0;
+                              stackIn_11_1 = stackOut_10_1;
+                              break L4;
+                            } else {
+                              stackOut_9_0 = stackIn_9_0;
+                              stackOut_9_1 = 1;
+                              stackIn_11_0 = stackOut_9_0;
+                              stackIn_11_1 = stackOut_9_1;
+                              break L4;
+                            }
+                          }
+                          if ((stackIn_11_0 ^ stackIn_11_1) != 0) {
                             break L2;
                           } else {
-                            qqb discarded$5 = var5.field_f;
-                            L4: {
-                              if (var5.field_f == null) {
-                                break L4;
+                            L5: {
+                              if (((lbb) this).field_i == null) {
+                                break L5;
                               } else {
-                                if (!var5.field_f.a((byte) -57, (tv) (Object) var5.field_f)) {
-                                  break L4;
-                                } else {
+                                if (((lbb) this).field_i.a((byte) -74, (tv) (Object) var5.field_i)) {
                                   break L2;
+                                } else {
+                                  break L5;
                                 }
                               }
                             }
-                            stackOut_17_0 = 0;
-                            stackIn_18_0 = stackOut_17_0;
-                            break L1;
+                            if (wpb.a(var5.field_j, ((lbb) this).field_j, (byte) 28)) {
+                              break L2;
+                            } else {
+                              L6: {
+                                if (null != ((lbb) this).field_f) {
+                                  stackOut_18_0 = 0;
+                                  stackIn_19_0 = stackOut_18_0;
+                                  break L6;
+                                } else {
+                                  stackOut_17_0 = 1;
+                                  stackIn_19_0 = stackOut_17_0;
+                                  break L6;
+                                }
+                              }
+                              L7: {
+                                stackOut_19_0 = stackIn_19_0;
+                                stackIn_21_0 = stackOut_19_0;
+                                stackIn_20_0 = stackOut_19_0;
+                                if (var5.field_f != null) {
+                                  stackOut_21_0 = stackIn_21_0;
+                                  stackOut_21_1 = 0;
+                                  stackIn_22_0 = stackOut_21_0;
+                                  stackIn_22_1 = stackOut_21_1;
+                                  break L7;
+                                } else {
+                                  stackOut_20_0 = stackIn_20_0;
+                                  stackOut_20_1 = 1;
+                                  stackIn_22_0 = stackOut_20_0;
+                                  stackIn_22_1 = stackOut_20_1;
+                                  break L7;
+                                }
+                              }
+                              if ((stackIn_22_0 ^ stackIn_22_1) != 0) {
+                                break L2;
+                              } else {
+                                L8: {
+                                  if (((lbb) this).field_f == null) {
+                                    break L8;
+                                  } else {
+                                    if (!((lbb) this).field_f.a((byte) -57, (tv) (Object) var5.field_f)) {
+                                      break L8;
+                                    } else {
+                                      break L2;
+                                    }
+                                  }
+                                }
+                                stackOut_27_0 = 0;
+                                stackIn_28_0 = stackOut_27_0;
+                                break L1;
+                              }
+                            }
                           }
                         }
                       }
@@ -1068,43 +1244,43 @@ final class lbb implements ntb {
                   }
                 }
               }
-              stackOut_16_0 = 1;
-              stackIn_18_0 = stackOut_16_0;
+              stackOut_26_0 = 1;
+              stackIn_28_0 = stackOut_26_0;
               break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L9: {
             var3 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var3;
-            stackOut_19_1 = new StringBuilder().append("lbb.C(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackOut_29_0 = (RuntimeException) var3;
+            stackOut_29_1 = new StringBuilder().append("lbb.C(").append(param0).append(',');
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L5;
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L9;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
-              break L5;
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L9;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw rta.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ')');
         }
-        return stackIn_18_0 != 0;
+        return stackIn_28_0 != 0;
     }
 
     final int d(int param0) {
@@ -1371,10 +1547,10 @@ final class lbb implements ntb {
           L0: {
             L1: {
               var5 = (lbb) (Object) param1;
-              var5.field_b = var5.field_b;
-              var5.field_a = var5.field_a;
-              var5.field_d = var5.field_d;
-              var5.field_e = var5.field_e;
+              var5.field_b = ((lbb) this).field_b;
+              var5.field_a = ((lbb) this).field_a;
+              var5.field_d = ((lbb) this).field_d;
+              var5.field_e = ((lbb) this).field_e;
               if (param0 > 54) {
                 break L1;
               } else {
@@ -1383,9 +1559,8 @@ final class lbb implements ntb {
               }
             }
             L2: {
-              int discarded$3 = 0;
-              var5.field_g = (et[]) (Object) sqb.a((tv[]) (Object) var5.field_g, (tv[]) (Object) var5.field_g, 1, mja.field_p);
-              if (var5.field_i == null) {
+              var5.field_g = (et[]) (Object) sqb.a((tv[]) (Object) var5.field_g, (tv[]) (Object) ((lbb) this).field_g, 1, mja.field_p, false);
+              if (((lbb) this).field_i == null) {
                 var5.field_i = null;
                 break L2;
               } else {
@@ -1397,13 +1572,13 @@ final class lbb implements ntb {
                     break L3;
                   }
                 }
-                var5.field_i.b((byte) 98, (tv) (Object) var5.field_i);
+                ((lbb) this).field_i.b((byte) 98, (tv) (Object) var5.field_i);
                 break L2;
               }
             }
             L4: {
-              var5.field_j = dob.a(var5.field_j, (byte) -57, var5.field_j);
-              if (null != var5.field_f) {
+              var5.field_j = dob.a(var5.field_j, (byte) -57, ((lbb) this).field_j);
+              if (null != ((lbb) this).field_f) {
                 L5: {
                   if (var5.field_f != null) {
                     break L5;
@@ -1412,7 +1587,7 @@ final class lbb implements ntb {
                     break L5;
                   }
                 }
-                var5.field_f.b((byte) 64, (tv) (Object) var5.field_f);
+                ((lbb) this).field_f.b((byte) 64, (tv) (Object) var5.field_f);
                 break L4;
               } else {
                 var5.field_f = null;
@@ -1461,7 +1636,7 @@ final class lbb implements ntb {
         field_h = null;
     }
 
-    private final int a() {
+    private final int a(byte param0) {
         return ((lbb) this).field_i.field_d;
     }
 
@@ -1665,7 +1840,7 @@ final class lbb implements ntb {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         if (!(((lbb) this).field_i != null)) {
             return;
         }
@@ -2292,13 +2467,11 @@ final class lbb implements ntb {
                               }
                               L12: {
                                 if (unb.field_o) {
-                                  int discarded$2 = 0;
-                                  var16 = pba.b().a(3, false);
+                                  var16 = pba.b(false).a(3, false);
                                   var16.a(true, param0, param2 ^ -112);
                                   break L12;
                                 } else {
-                                  int discarded$3 = 0;
-                                  var15 = bkb.a();
+                                  var15 = bkb.a(0);
                                   var15.a(true, param0, param2 ^ 104);
                                   break L12;
                                 }

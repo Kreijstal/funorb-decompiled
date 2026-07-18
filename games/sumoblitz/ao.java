@@ -1239,7 +1239,7 @@ abstract class ao extends pk implements ug {
         return stackIn_4_0;
     }
 
-    private final pk d() {
+    private final pk d(boolean param0) {
         pk[] var2 = null;
         int var3 = 0;
         pk var4 = null;
@@ -1398,8 +1398,7 @@ abstract class ao extends pk implements ug {
         if (param0 != -1) {
             field_z = null;
         }
-        int discarded$0 = 1;
-        return this.d() != null ? true : false;
+        return this.d(true) != null ? true : false;
     }
 
     void a(int param0, int param1, int param2, int param3, int param4) {

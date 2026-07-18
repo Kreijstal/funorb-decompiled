@@ -8,7 +8,7 @@ final class we {
     static o field_b;
     static String field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_b = null;
@@ -95,10 +95,7 @@ final class we {
         StringBuilder stackOut_15_1 = null;
         String stackOut_15_2 = null;
         try {
-          int discarded$3 = 240;
-          int discarded$4 = 12;
-          int discarded$5 = 320;
-          w.a(16777088, 16776960, param10, 12, param2, param5, param20, 480, 12, 12, param8, new qj(param4), param15, (byte) -118, new qj(param19), 12, 16777215, new qj(param17));
+          w.a(16777088, 16776960, param10, 12, param2, param5, param20, 480, 12, 12, param8, new qj(param4), param15, (byte) -118, new qj(param19), 12, 16777215, new qj(param17), 320, 12, 240);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

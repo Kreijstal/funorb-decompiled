@@ -260,10 +260,8 @@ final class vf extends vc {
               }
             }
             L2: {
-              int discarded$2 = 1;
-              oh.field_d[0] = var64[0] - sb.a(288.0f) >> 2;
-              int discarded$3 = 1;
-              oh.field_d[1] = var64[1] - sb.a(144.0f) >> 2;
+              oh.field_d[0] = var64[0] - sb.a(288.0f, true) >> 2;
+              oh.field_d[1] = var64[1] - sb.a(144.0f, true) >> 2;
               oh.field_d[2] = var64[2] >> 2;
               if (var6_ref_int__ != oh.field_d) {
                 oh.field_d[6] = var64[6];
@@ -614,7 +612,7 @@ final class vf extends vc {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_Q = null;
         int var1 = 52;
         field_gb = null;
@@ -1777,9 +1775,7 @@ final class vf extends vc {
             for (var4 = 0; var4 < 256; var4++) {
                 int incrementValue$0 = var3;
                 var3++;
-                int discarded$1 = 6;
-                int discarded$2 = 128;
-                vb.field_p[incrementValue$0] = pi.a(var4 << 6, var2_int << 6, qa.field_r << 7, oo.field_w);
+                vb.field_p[incrementValue$0] = pi.a(var4 << 6, var2_int << 6, qa.field_r << 7, oo.field_w, 128, 6);
             }
         }
         if (var1 >= 256) {

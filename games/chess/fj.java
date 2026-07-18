@@ -43,7 +43,7 @@ final class fj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_f = null;
         field_h = null;
@@ -75,11 +75,9 @@ final class fj {
 
     final static void a(int param0) {
         fi.a(-393711775);
-        int discarded$0 = 16777215;
-        bk.a();
+        bk.a(16777215);
         pj.field_h = null;
-        int discarded$1 = 0;
-        rc.b();
+        rc.b(0);
     }
 
     final int a(boolean param0) {
@@ -250,8 +248,7 @@ final class fj {
                       if (var8_ref_ld.field_d) {
                         break L9;
                       } else {
-                        int discarded$1 = -19554;
-                        if (va.a(var8_ref_ld.field_i)) {
+                        if (va.a(var8_ref_ld.field_i, -19554)) {
                           break L8;
                         } else {
                           break L9;

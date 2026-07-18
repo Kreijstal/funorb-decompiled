@@ -10,7 +10,7 @@ final class qr {
     private String field_c;
     private boolean field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -34,7 +34,7 @@ final class qr {
         return ((qr) this).field_c;
     }
 
-    final static void c() {
+    final static void c(int param0) {
     }
 
     final void a(boolean param0, byte param1) {
@@ -62,9 +62,7 @@ final class qr {
         if (mp.field_V > 0) {
           if (fk.field_gb == null) {
             L0: {
-              int discarded$4 = 0;
-              int discarded$5 = 0;
-              ne.field_u = wp.a(640, lg.field_s, (byte) 0, 480);
+              ne.field_u = wp.a(640, lg.field_s, (byte) 0, 480, 0, 0);
               if (null != ne.field_u) {
                 var2 = 2;
                 kc.a((java.awt.Canvas) (Object) ne.field_u, 2);
@@ -90,9 +88,7 @@ final class qr {
           } else {
             L2: {
               ne.field_u = fk.field_gb.b(-71);
-              int discarded$6 = 2;
-              int discarded$7 = 25692;
-              ab.a();
+              ab.a(25692, 2);
               if (null != ne.field_u) {
                 var2 = 2;
                 kc.a((java.awt.Canvas) (Object) ne.field_u, 2);

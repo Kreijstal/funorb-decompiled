@@ -97,7 +97,7 @@ abstract class fa {
         return stackIn_11_0 != 0;
     }
 
-    final static String a(char param0) {
+    final static String a(char param0, int param1) {
         return String.valueOf(param0);
     }
 
@@ -107,7 +107,7 @@ abstract class fa {
         return !uc.field_g;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         qj.field_a[44] = 71;
         qj.field_a[93] = 43;
         qj.field_a[59] = 57;
@@ -146,7 +146,7 @@ abstract class fa {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_e = null;
         field_d = null;

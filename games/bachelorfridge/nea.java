@@ -22,7 +22,7 @@ final class nea extends sna {
         field_yb = null;
     }
 
-    final static eq f() {
+    final static eq f(byte param0) {
         if (tn.field_a == ola.field_p) {
             throw new IllegalStateException();
         }

@@ -16,14 +16,14 @@ final class fb extends hl {
     static gn field_i;
     int field_k;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_i = null;
         field_l = null;
         field_n = null;
         field_s = null;
     }
 
-    final static float a(ei param0) {
+    final static float a(ei param0, byte param1) {
         float var2_float = 0.0f;
         RuntimeException var2 = null;
         int var3 = 0;

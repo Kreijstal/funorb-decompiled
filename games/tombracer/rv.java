@@ -6,7 +6,7 @@ final class rv extends Exception {
     static int field_a;
     static jea field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
     }
 

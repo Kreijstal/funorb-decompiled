@@ -84,7 +84,7 @@ final class qj {
         return stackIn_12_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         cea.a(-88, 17);
     }
 

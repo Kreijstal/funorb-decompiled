@@ -15,7 +15,7 @@ abstract class ii extends df {
     int field_o;
     int field_p;
 
-    final static void a(bc param0, bc param1) {
+    final static void a(bc param0, bc param1, int param2) {
         sf.field_d = gh.a(param0, "", "shattered_plans_intro");
         wp.field_a = gh.a(param0, "", "shattered_plans_ingame_two");
         js.field_i = gh.a(param0, "", "shattered_plans_ingame");

@@ -27,14 +27,12 @@ class vp extends df {
         try {
           L0: {
             var2_int = 16711935 & param1;
-            int discarded$5 = -15365;
-            lk.a();
+            lk.a(-15365);
             var3 = param1 & 65280;
             L1: while (true) {
-              int discarded$6 = -92;
-              wa dupTemp$7 = tf.a();
-              var4 = dupTemp$7;
-              if (dupTemp$7 == null) {
+              wa dupTemp$3 = tf.a((byte) -92);
+              var4 = dupTemp$3;
+              if (dupTemp$3 == null) {
                 L2: {
                   if (bd.field_A) {
                     System.out.println(ms.field_a);
@@ -72,9 +70,9 @@ class vp extends df {
                     } else {
                       var10 = gf.field_h[var5];
                       var10 = ((var7 * (16711935 & var10) & -16711936) + (-16711936 & var2_int * var6) | (var7 * (var10 & 65280) & 16711680) - -(16711680 & var3 * var6)) >>> 8;
-                      int incrementValue$8 = var5;
+                      int incrementValue$4 = var5;
                       var5++;
-                      gf.field_h[incrementValue$8] = var10;
+                      gf.field_h[incrementValue$4] = var10;
                       break L4;
                     }
                   }
@@ -111,9 +109,9 @@ class vp extends df {
                       var10 = gf.field_h[var5];
                       var7 = -var6 + 256;
                       var10 = ((16711680 & var6 * var3) + (var7 * (65280 & var10) & 16711680) | (var2_int * var6 & -16711936) + (-16711936 & (16711935 & var10) * var7)) >>> 8;
-                      int incrementValue$9 = var5;
+                      int incrementValue$5 = var5;
                       var5++;
-                      gf.field_h[incrementValue$9] = var10;
+                      gf.field_h[incrementValue$5] = var10;
                       var9 = var9 + var4.field_a;
                       continue L7;
                     }
@@ -252,7 +250,7 @@ class vp extends df {
         field_t = null;
     }
 
-    final static byte[] a(String param0) {
+    final static byte[] a(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;

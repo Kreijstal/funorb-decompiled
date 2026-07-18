@@ -196,7 +196,7 @@ abstract class pb extends rc {
 
     abstract byte[] e(int param0);
 
-    public static void f() {
+    public static void f(int param0) {
         field_o = null;
         field_t = null;
         field_p = null;

@@ -148,7 +148,7 @@ final class qc extends dl implements oj, ae {
         }
     }
 
-    private final void i() {
+    private final void i(int param0) {
         if (!this.h((byte) -100)) {
             return;
         }
@@ -555,7 +555,7 @@ final class qc extends dl implements oj, ae {
         return stackIn_1_0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_S = null;
         field_V = null;
     }
@@ -630,8 +630,7 @@ final class qc extends dl implements oj, ae {
                 il.a(103);
             } else {
                 if (!(param3 != ((qc) this).field_U)) {
-                    int discarded$0 = 55;
-                    this.i();
+                    this.i(55);
                 }
             }
             int var6_int = -2 % ((-85 - param1) / 36);

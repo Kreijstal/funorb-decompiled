@@ -52,8 +52,7 @@ final class ma {
                 if (param0 == 1) {
                   break L2;
                 } else {
-                  int discarded$4 = 0;
-                  int discarded$5 = ma.a();
+                  int discarded$2 = ma.a(false);
                   break L2;
                 }
               }
@@ -101,7 +100,7 @@ final class ma {
         return stackIn_9_0;
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         return -gi.field_c + qg.field_g;
     }
 
@@ -365,8 +364,7 @@ final class ma {
         field_a = null;
         field_h = null;
         if (param0 != 0) {
-          int discarded$4 = 0;
-          int discarded$5 = ma.a();
+          int discarded$2 = ma.a(false);
           field_d = null;
           return;
         } else {

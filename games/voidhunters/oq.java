@@ -108,8 +108,8 @@ final class oq implements ntb {
             L1: {
               var5 = (oq) (Object) param0;
               var4 = 0;
-              if (var5.field_F != var5.field_F) {
-                System.out.println("int x has changed. before=" + var5.field_F + ", now=" + var5.field_F);
+              if (((oq) this).field_F != var5.field_F) {
+                System.out.println("int x has changed. before=" + var5.field_F + ", now=" + ((oq) this).field_F);
                 var4 = 1;
                 break L1;
               } else {
@@ -118,26 +118,26 @@ final class oq implements ntb {
             }
             if (param1 < -19) {
               L2: {
-                if (var5.field_u != var5.field_u) {
+                if (var5.field_u != ((oq) this).field_u) {
                   var4 = 1;
-                  System.out.println("int y has changed. before=" + var5.field_u + ", now=" + var5.field_u);
+                  System.out.println("int y has changed. before=" + var5.field_u + ", now=" + ((oq) this).field_u);
                   break L2;
                 } else {
                   break L2;
                 }
               }
               L3: {
-                if (var5.field_r == var5.field_r) {
+                if (var5.field_r == ((oq) this).field_r) {
                   break L3;
                 } else {
-                  System.out.println("int dx has changed. before=" + var5.field_r + ", now=" + var5.field_r);
+                  System.out.println("int dx has changed. before=" + var5.field_r + ", now=" + ((oq) this).field_r);
                   var4 = 1;
                   break L3;
                 }
               }
               L4: {
-                if (var5.field_D != var5.field_D) {
-                  System.out.println("int dy has changed. before=" + var5.field_D + ", now=" + var5.field_D);
+                if (var5.field_D != ((oq) this).field_D) {
+                  System.out.println("int dy has changed. before=" + var5.field_D + ", now=" + ((oq) this).field_D);
                   var4 = 1;
                   break L4;
                 } else {
@@ -145,28 +145,28 @@ final class oq implements ntb {
                 }
               }
               L5: {
-                if (var5.field_b == var5.field_b) {
+                if (var5.field_b == ((oq) this).field_b) {
                   break L5;
                 } else {
                   var4 = 1;
-                  System.out.println("int life has changed. before=" + var5.field_b + ", now=" + var5.field_b);
+                  System.out.println("int life has changed. before=" + var5.field_b + ", now=" + ((oq) this).field_b);
                   break L5;
                 }
               }
               L6: {
-                if (var5.field_i == var5.field_i) {
+                if (var5.field_i == ((oq) this).field_i) {
                   break L6;
                 } else {
                   var4 = 1;
-                  System.out.println("int fadestart has changed. before=" + var5.field_i + ", now=" + var5.field_i);
+                  System.out.println("int fadestart has changed. before=" + var5.field_i + ", now=" + ((oq) this).field_i);
                   break L6;
                 }
               }
               L7: {
-                if (var5.field_f == var5.field_f) {
+                if (((oq) this).field_f == var5.field_f) {
                   break L7;
                 } else {
-                  System.out.println("int type has changed. before=" + var5.field_f + ", now=" + var5.field_f);
+                  System.out.println("int type has changed. before=" + var5.field_f + ", now=" + ((oq) this).field_f);
                   var4 = 1;
                   break L7;
                 }
@@ -423,13 +423,13 @@ final class oq implements ntb {
           L0: {
             var5 = (oq) (Object) param1;
             var6 = var5;
-            var6.field_b = var5.field_b;
-            var6.field_F = var5.field_F;
-            var6.field_r = var5.field_r;
-            var6.field_f = var5.field_f;
-            var6.field_D = var5.field_D;
-            var6.field_u = var5.field_u;
-            var6.field_i = var5.field_i;
+            var6.field_b = ((oq) this).field_b;
+            var6.field_F = ((oq) this).field_F;
+            var6.field_r = ((oq) this).field_r;
+            var6.field_f = ((oq) this).field_f;
+            var6.field_D = ((oq) this).field_D;
+            var6.field_u = ((oq) this).field_u;
+            var6.field_i = ((oq) this).field_i;
             if (param0 > 54) {
               break L0;
             } else {
@@ -614,25 +614,25 @@ final class oq implements ntb {
               L2: {
                 var4 = 27 % ((22 - param0) / 59);
                 var3 = (oq) (Object) param1;
-                if (var3.field_F != var3.field_F) {
+                if (var3.field_F != ((oq) this).field_F) {
                   break L2;
                 } else {
-                  if (var3.field_u != var3.field_u) {
+                  if (((oq) this).field_u != var3.field_u) {
                     break L2;
                   } else {
-                    if (var3.field_r != var3.field_r) {
+                    if (((oq) this).field_r != var3.field_r) {
                       break L2;
                     } else {
-                      if (var3.field_D != var3.field_D) {
+                      if (var3.field_D != ((oq) this).field_D) {
                         break L2;
                       } else {
-                        if (var3.field_b != var3.field_b) {
+                        if (((oq) this).field_b != var3.field_b) {
                           break L2;
                         } else {
-                          if (var3.field_i != var3.field_i) {
+                          if (((oq) this).field_i != var3.field_i) {
                             break L2;
                           } else {
-                            if (var3.field_f == var3.field_f) {
+                            if (((oq) this).field_f == var3.field_f) {
                               stackOut_9_0 = 0;
                               stackIn_10_0 = stackOut_9_0;
                               break L1;

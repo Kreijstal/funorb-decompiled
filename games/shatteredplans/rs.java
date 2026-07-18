@@ -37,7 +37,7 @@ final class rs extends qr {
         int var4 = 8;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_yb = null;
         field_zb = null;
         field_Eb = null;
@@ -57,7 +57,7 @@ final class rs extends qr {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

@@ -32,7 +32,7 @@ final class qn extends fa {
         field_l = null;
     }
 
-    final static String a(java.applet.Applet param0, String param1) {
+    final static String a(java.applet.Applet param0, String param1, byte param2) {
         try {
             String var3 = null;
             Throwable var3_ref = null;
@@ -362,7 +362,7 @@ final class qn extends fa {
                 break L1;
               } else {
                 if (param0.indexOf("<br>") == -1) {
-                  param2[0] = (String) (Object) param2;
+                  param2[0] = param0;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;

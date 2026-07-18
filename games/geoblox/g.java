@@ -85,8 +85,7 @@ final class g extends q {
                         break L1;
                       }
                     }
-                    int discarded$2 = -29267;
-                    if (this.a(param1)) {
+                    if (this.a(param1, -29267)) {
                       stackOut_18_0 = uf.field_i;
                       stackIn_19_0 = stackOut_18_0;
                       return stackIn_19_0;
@@ -163,7 +162,7 @@ final class g extends q {
         return stackIn_34_0;
     }
 
-    private final boolean a(String param0) {
+    private final boolean a(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -312,10 +311,8 @@ final class g extends q {
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;
             } else {
-              int discarded$8 = -25321;
-              if (dd.a(var4, var3)) {
-                int discarded$9 = -29267;
-                if (!this.a(param1)) {
+              if (dd.a(var4, var3, -25321)) {
+                if (!this.a(param1, -29267)) {
                   stackOut_12_0 = kk.field_w;
                   stackIn_13_0 = stackOut_12_0;
                   break L0;

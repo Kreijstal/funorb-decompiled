@@ -10,7 +10,7 @@ final class uk extends ana {
         field_w = null;
     }
 
-    private final void e() {
+    private final void e(int param0) {
         aga var2 = null;
         iv var3 = null;
         ad var4 = null;
@@ -39,26 +39,24 @@ final class uk extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$6 = ((uk) this).field_l - 1;
+        int fieldTemp$2 = ((uk) this).field_l - 1;
         ((uk) this).field_l = ((uk) this).field_l - 1;
-        if (fieldTemp$6 >= 0) {
+        if (fieldTemp$2 >= 0) {
           if (((uk) this).field_l == 25) {
             jja.a(256, -1, 35);
-            int discarded$7 = 1;
-            this.e();
+            this.e(1);
             return false;
           } else {
             return false;
           }
         } else {
-          int discarded$8 = 11642;
-          this.f();
+          this.f(11642);
           var2 = -109 % ((param0 - 71) / 47);
           return true;
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
     }
 
     uk(gj param0, kh param1) {

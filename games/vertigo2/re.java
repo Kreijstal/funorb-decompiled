@@ -86,7 +86,7 @@ final class re {
         return ((re) this).field_h + 1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_f = null;
@@ -132,9 +132,8 @@ final class re {
         }
     }
 
-    final static cr c() {
-        int discarded$0 = 98;
-        return tf.b();
+    final static cr c(int param0) {
+        return tf.b((byte) 98);
     }
 
     final void b(int param0, int param1) {

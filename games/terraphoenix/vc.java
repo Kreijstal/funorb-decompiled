@@ -29,7 +29,7 @@ abstract class vc {
 
     abstract int a(int param0, long param1);
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
         field_c = null;
         field_f = null;
@@ -140,18 +140,11 @@ abstract class vc {
         l.a();
         try {
             kf.field_f = 0;
-            int discarded$0 = -2766;
-            af.d();
+            af.d(-2766);
             var2 = var1.d();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.b(-2, -2, 16777215);
-                int discarded$1 = 140;
-                int discarded$2 = 540;
-                int discarded$3 = 0;
-                int discarded$4 = 0;
-                int discarded$5 = 4;
-                int discarded$6 = 4;
-                l.e();
+                l.e(4, 4, 0, 0, 540, 140);
             }
             s.field_a.a();
             var1.f(0, 0);

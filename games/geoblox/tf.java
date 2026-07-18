@@ -26,9 +26,7 @@ final class tf {
         if (param2 <= 90) {
             field_d = null;
         }
-        int discarded$0 = 1;
-        int discarded$1 = 1;
-        return n.a(param4, 1, param3, 3, (byte) 1, param1, param0);
+        return n.a(param4, 1, param3, 3, (byte) 1, param1, param0, 1, 1);
     }
 
     final hf g(int param0) {
@@ -106,7 +104,7 @@ final class tf {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return oh.field_b != null && oh.field_b.j(75) != null;
     }
 

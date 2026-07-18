@@ -23,7 +23,7 @@ final class hn implements db {
     private int field_t;
     static byte[][] field_b;
 
-    final static int a(ih param0) {
+    final static int a(ih param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -204,7 +204,7 @@ final class hn implements db {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_f = null;
         field_h = null;

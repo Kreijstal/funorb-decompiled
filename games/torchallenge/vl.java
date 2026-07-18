@@ -7,7 +7,7 @@ final class vl {
     static uj field_a;
     static boolean[][][] field_d;
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(lj.field_q)) {
             throw new IllegalStateException();
         }
@@ -16,9 +16,8 @@ final class vl {
         gj.field_c = 0;
     }
 
-    final static void b() {
-        int discarded$0 = 126;
-        fg.i();
+    final static void b(byte param0) {
+        fg.i(126);
         eb.field_m = true;
         ga.field_y = true;
         int var1 = -22;
@@ -26,7 +25,7 @@ final class vl {
         gh.a((byte) -116, ub.field_g, false);
     }
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

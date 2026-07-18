@@ -13,7 +13,7 @@ final class of extends ms {
     int field_l;
     int field_s;
 
-    final static of a(int param0, int param1, int param2) {
+    final static of a(int param0, int param1, int param2, int param3, int param4) {
         of var5 = null;
         int var6 = 0;
         var6 = Sumoblitz.field_L ? 1 : 0;
@@ -125,11 +125,11 @@ final class of extends ms {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         po.field_a = true;
     }
 
-    final static boolean a(fs param0) {
+    final static boolean a(fs param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

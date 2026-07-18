@@ -12,7 +12,7 @@ final class wd {
         throw new IllegalStateException();
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         lh var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -35,8 +35,7 @@ final class wd {
                   }
                 }
               } else {
-                int discarded$2 = 1;
-                sc.a(4, var4);
+                sc.a(4, var4, 1);
                 var4 = (hi) (Object) bf.field_e.b((byte) -105);
                 continue L1;
               }
@@ -84,8 +83,7 @@ final class wd {
               sd.field_i.a(ue.field_a[2], (byte) -96);
               var5_int = 0;
               sd.field_i.a(ue.field_a[3], (byte) -104);
-              int discarded$1 = -113;
-              lc.a(sd.field_i);
+              lc.a(sd.field_i, (byte) -113);
               sd.field_i.b((byte) 99, param3);
               param2.a(sd.field_i, (byte) -100);
               ud.field_b.field_i = 0;

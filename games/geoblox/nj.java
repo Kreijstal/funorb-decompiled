@@ -6,7 +6,7 @@ final class nj extends hf {
     int field_h;
     static int field_g;
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!hl.field_G) {
             throw new IllegalStateException();
         }
@@ -15,7 +15,7 @@ final class nj extends hf {
         hj.field_a = 0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = 118;
         field_f = null;
     }

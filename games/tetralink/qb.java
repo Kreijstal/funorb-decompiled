@@ -10,8 +10,7 @@ final class qb extends gn implements dm {
 
     final static boolean a(int param0, byte param1) {
         if (param1 != 114) {
-            int discarded$0 = 0;
-            qb.a();
+            qb.a(false);
         }
         return 0 <= param0 ? true : false;
     }
@@ -53,16 +52,14 @@ final class qb extends gn implements dm {
                   break L2;
                 } else {
                   if (param1 == ((qb) this).field_O) {
-                    int discarded$27 = 5959;
-                    vg.i();
+                    vg.i(5959);
                     break L2;
                   } else {
                     break L2;
                   }
                 }
               } else {
-                int discarded$28 = 11;
-                fi.t();
+                fi.t(11);
                 break L2;
               }
             }
@@ -115,7 +112,7 @@ final class qb extends gn implements dm {
         field_K = null;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

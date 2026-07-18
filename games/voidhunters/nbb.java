@@ -127,10 +127,10 @@ final class nbb extends anb implements ntb, ofa, utb {
               super.a(param0, -52);
               var3 = (nbb) (Object) param0;
               var4 = 0;
-              if (var3.field_v == var3.field_v) {
+              if (var3.field_v == ((nbb) this).field_v) {
                 break L1;
               } else {
-                System.out.println("boolean phantom has changed. before=" + var3.field_v + ", now=" + var3.field_v);
+                System.out.println("boolean phantom has changed. before=" + var3.field_v + ", now=" + ((nbb) this).field_v);
                 var4 = 1;
                 break L1;
               }
@@ -355,12 +355,12 @@ final class nbb extends anb implements ntb, ofa, utb {
         try {
           L0: {
             var3 = (nbb) (Object) param1;
-            if (var3.field_w != var3.field_w) {
+            if (((nbb) this).field_w != var3.field_w) {
               L1: {
-                var3.field_w = var3.field_w;
+                var3.field_w = ((nbb) this).field_w;
                 this.a(true, var3);
                 super.b((byte) 60, param1);
-                var3.field_v = var3.field_v;
+                var3.field_v = ((nbb) this).field_v;
                 if (param0 >= 54) {
                   break L1;
                 } else {
@@ -454,7 +454,7 @@ final class nbb extends anb implements ntb, ofa, utb {
                 if (super.a((byte) 93, param1)) {
                   break L2;
                 } else {
-                  if (var3.field_v == var3.field_v) {
+                  if (var3.field_v == ((nbb) this).field_v) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;

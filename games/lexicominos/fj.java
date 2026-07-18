@@ -19,7 +19,7 @@ final class fj extends si {
         }
     }
 
-    final static void a(int param0, mc param1) {
+    final static void a(int param0, mc param1, boolean param2) {
         th var3 = ed.field_q;
         var3.h(5, 0);
         var3.c(2, -1);
@@ -81,8 +81,7 @@ final class fj extends si {
                   } else {
                     if (var3_int <= 12) {
                       L2: {
-                        int discarded$4 = -48;
-                        var4 = ck.a(param0);
+                        var4 = ck.a(param0, (byte) -48);
                         if (var4 == null) {
                           break L2;
                         } else {
@@ -90,12 +89,10 @@ final class fj extends si {
                             break L2;
                           } else {
                             L3: {
-                              int discarded$5 = 78;
-                              if (cf.a(var4.charAt(0))) {
+                              if (cf.a(var4.charAt(0), (byte) 78)) {
                                 break L3;
                               } else {
-                                int discarded$6 = 78;
-                                if (!cf.a(var4.charAt(-1 + var4.length()))) {
+                                if (!cf.a(var4.charAt(-1 + var4.length()), (byte) 78)) {
                                   var5 = 0;
                                   var6 = 0;
                                   L4: while (true) {
@@ -110,8 +107,7 @@ final class fj extends si {
                                     } else {
                                       L5: {
                                         var7 = param0.charAt(var6);
-                                        int discarded$7 = 78;
-                                        if (!cf.a((char) var7)) {
+                                        if (!cf.a((char) var7, (byte) 78)) {
                                           var5 = 0;
                                           break L5;
                                         } else {
@@ -224,7 +220,7 @@ final class fj extends si {
         return 100;
     }
 
-    final static kb a(String param0, String param1) {
+    final static kb a(String param0, String param1, boolean param2, int param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;

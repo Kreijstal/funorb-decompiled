@@ -251,7 +251,7 @@ class r extends ek {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_s, -1, 2147483647, false);
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -300,8 +300,7 @@ class r extends ek {
             }
             {
                 if (var2_int >= 0) {
-                    int discarded$2 = 79;
-                    if (we.a() <= 30000L) {
+                    if (we.a((byte) 79) <= 30000L) {
                         return false;
                     }
                 }
@@ -319,7 +318,7 @@ class r extends ek {
         field_r = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, kc[] param5, int param6, ee param7, int param8, kc[] param9) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, kc[] param5, int param6, ee param7, int param8, kc[] param9, int param10) {
         RuntimeException var11 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -368,8 +367,7 @@ class r extends ek {
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
         try {
-          int discarded$2 = 31668;
-          wd.a();
+          wd.a(31668);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

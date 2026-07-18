@@ -347,8 +347,7 @@ final class r extends eh {
             gp.a(var10, 0, param5, 1);
             var9 = new int[param6];
             gp.a(var9, 0, param6, 1);
-            int discarded$0 = 0;
-            this.a(var10);
+            this.a(var10, 0);
             this.a(84, var9);
         } catch (RuntimeException runtimeException) {
             throw sh.a((Throwable) (Object) runtimeException, "r.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
@@ -381,7 +380,7 @@ final class r extends eh {
         }
     }
 
-    private final void a(int[] param0) {
+    private final void a(int[] param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int[] var5 = null;
@@ -740,7 +739,7 @@ final class r extends eh {
         ((r) this).field_D = param2;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_J = null;
         field_I = null;
         field_G = null;

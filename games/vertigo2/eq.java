@@ -354,7 +354,7 @@ final class eq extends ji {
         }
     }
 
-    final static void a(String[] args, String param1, int param2) {
+    final static void a(String[] args, String param1, int param2, int param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         Object var6 = null;

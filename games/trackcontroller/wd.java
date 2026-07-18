@@ -39,7 +39,7 @@ abstract class wd extends hl {
         return super.j(-87);
     }
 
-    final static StringBuilder a(StringBuilder param0) {
+    final static StringBuilder a(StringBuilder param0, char param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -134,11 +134,11 @@ abstract class wd extends hl {
         ((wd) this).field_N = param1;
     }
 
-    final static k q() {
+    final static k q(int param0) {
         return qc.field_e;
     }
 
-    public static void p() {
+    public static void p(int param0) {
         field_J = null;
         field_I = null;
         field_H = null;

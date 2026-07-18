@@ -18,8 +18,7 @@ class vd extends oh {
 
     final void d(int param0, int param1, int param2) {
         int var5 = 0;
-        Object var6 = null;
-        var6 = null;
+        vd var6 = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 == 0) {
           if (0 == param0) {
@@ -27,13 +26,13 @@ class vd extends oh {
           } else {
             ((vd) this).field_k = ((vd) this).field_k + param1;
             ((vd) this).field_t = ((vd) this).field_t + param0;
-            var6 = (Object) (Object) (vd) (Object) ((vd) var6).field_l.d(param2);
+            var6 = (vd) (Object) ((vd) this).field_l.d(param2);
             L0: while (true) {
               if (var6 == null) {
                 return;
               } else {
-                ((vd) var6).d(param0, param1, 0);
-                var6 = (Object) (Object) (vd) (Object) ((vd) var6).field_l.a((byte) -71);
+                var6.d(param0, param1, 0);
+                var6 = (vd) (Object) ((vd) this).field_l.a((byte) -71);
                 continue L0;
               }
             }
@@ -41,13 +40,13 @@ class vd extends oh {
         } else {
           ((vd) this).field_k = ((vd) this).field_k + param1;
           ((vd) this).field_t = ((vd) this).field_t + param0;
-          var6 = (Object) (Object) (vd) (Object) ((vd) this).field_l.d(param2);
+          var6 = (vd) (Object) ((vd) this).field_l.d(param2);
           L1: while (true) {
             if (var6 == null) {
               return;
             } else {
-              ((vd) var6).d(param0, param1, 0);
-              var6 = (Object) (Object) (vd) (Object) ((vd) var6).field_l.a((byte) -71);
+              var6.d(param0, param1, 0);
+              var6 = (vd) (Object) ((vd) this).field_l.a((byte) -71);
               continue L1;
             }
           }
@@ -59,7 +58,7 @@ class vd extends oh {
         vd var4 = (vd) (Object) ((vd) this).field_l.d(param0 ^ param0);
         while (var4 != null) {
             var4.b((byte) -69);
-            var4 = (vd) (Object) var4.field_l.a((byte) -71);
+            var4 = (vd) (Object) ((vd) this).field_l.a((byte) -71);
         }
     }
 
@@ -107,7 +106,7 @@ class vd extends oh {
                     stackIn_9_0 = stackOut_8_0;
                     return stackIn_9_0 != 0;
                   } else {
-                    var6 = (vd) (Object) var6.field_l.a((byte) -71);
+                    var6 = (vd) (Object) ((vd) this).field_l.a((byte) -71);
                     continue L1;
                   }
                 }
@@ -884,31 +883,30 @@ class vd extends oh {
 
     final void c(boolean param0) {
         int var3 = 0;
-        Object var4 = null;
-        var4 = null;
+        vd var4 = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!param0) {
-          var4 = (Object) (Object) (vd) (Object) ((vd) this).field_l.d(0);
+          var4 = (vd) (Object) ((vd) this).field_l.d(0);
           L0: while (true) {
             if (var4 == null) {
               ((vd) this).e(0);
               return;
             } else {
-              ((vd) var4).c(false);
-              var4 = (Object) (Object) (vd) (Object) ((vd) var4).field_l.a((byte) -71);
+              var4.c(false);
+              var4 = (vd) (Object) ((vd) this).field_l.a((byte) -71);
               continue L0;
             }
           }
         } else {
           ((vd) this).a((byte) 48, 44, -59);
-          var4 = (Object) (Object) (vd) (Object) ((vd) var4).field_l.d(0);
+          var4 = (vd) (Object) ((vd) this).field_l.d(0);
           L1: while (true) {
             if (var4 == null) {
               ((vd) this).e(0);
               return;
             } else {
-              ((vd) var4).c(false);
-              var4 = (Object) (Object) (vd) (Object) ((vd) var4).field_l.a((byte) -71);
+              var4.c(false);
+              var4 = (vd) (Object) ((vd) this).field_l.a((byte) -71);
               continue L1;
             }
           }
@@ -929,7 +927,7 @@ class vd extends oh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_n = null;
         field_q = null;
         field_j = null;
@@ -966,18 +964,17 @@ class vd extends oh {
                     break L2;
                   } else {
                     var4 = null;
-                    boolean discarded$6 = vd.a(0, (bc) null, -70, 78);
+                    boolean discarded$4 = vd.a(0, (bc) null, -70, 78);
                     break L2;
                   }
                 }
                 break L0;
               } else {
                 var1.h(8, 255);
-                int fieldTemp$7 = var1.field_j + 1;
+                int fieldTemp$5 = var1.field_j + 1;
                 var1.field_j = var1.field_j + 1;
-                var2 = fieldTemp$7;
-                int discarded$8 = -128;
-                hs.a(var1);
+                var2 = fieldTemp$5;
+                hs.a(var1, (byte) -128);
                 js.field_f.b(-var2 + var1.field_j, (byte) 118);
                 continue L1;
               }

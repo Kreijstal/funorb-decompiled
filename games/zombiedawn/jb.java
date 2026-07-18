@@ -881,7 +881,7 @@ final class jb implements io {
         }
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         if (2 <= ld.field_j) {
           if (f.field_i == null) {
             if (vo.field_d.a((byte) 73)) {
@@ -925,8 +925,7 @@ final class jb implements io {
         if (Character.isISOControl(param1)) {
           return false;
         } else {
-          int discarded$6 = 441;
-          if (!c.a(param1)) {
+          if (!c.a(param1, 441)) {
             if (param1 != 45) {
               if (160 != param1) {
                 if (param1 != 32) {

@@ -264,7 +264,7 @@ final class ni {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (sl.field_a != -eg.field_i) {
             if (sl.field_a == -eg.field_i + 250) {
             }
@@ -272,7 +272,7 @@ final class ni {
         sl.field_a = sl.field_a + 1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;

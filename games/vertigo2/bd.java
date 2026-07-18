@@ -152,7 +152,7 @@ final class bd {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_e = null;
         field_d = null;
         field_g = null;

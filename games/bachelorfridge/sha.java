@@ -5,7 +5,7 @@ final class sha extends pu {
     static vr field_l;
     static int field_m;
 
-    final static void a(vr param0) {
+    final static void a(vr param0, boolean param1) {
         kv var2 = new kv(param0.a((byte) 123, "", "final_frame.jpg"), (java.awt.Component) (Object) dca.field_y);
         int var3 = var2.field_q;
         int var4 = var2.field_p;
@@ -108,7 +108,7 @@ final class sha extends pu {
         return stackIn_9_0 != 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_l = null;
     }
 

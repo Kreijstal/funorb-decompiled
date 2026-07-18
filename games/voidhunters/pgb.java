@@ -224,7 +224,7 @@ final class pgb {
         return 2;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_g = null;
         field_l = null;

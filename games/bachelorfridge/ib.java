@@ -92,8 +92,7 @@ final class ib {
                             }
                           }
                         }
-                        int discarded$2 = 0;
-                        qja.a();
+                        qja.a(0);
                         break L4;
                       }
                     }
@@ -102,8 +101,7 @@ final class ib {
                     break L4;
                   } else {
                     if (ub.field_j != 2) {
-                      int discarded$3 = 0;
-                      qja.a();
+                      qja.a(0);
                       break L4;
                     } else {
                       break L4;
@@ -159,7 +157,7 @@ final class ib {
         return stackIn_27_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
     }
 

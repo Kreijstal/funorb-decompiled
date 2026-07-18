@@ -23,7 +23,7 @@ final class fi {
         }
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -45,9 +45,7 @@ final class fi {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$4 = 10;
-            int discarded$5 = 1;
-            stackOut_2_0 = fj.a(97, param0);
+            stackOut_2_0 = fj.a(97, param0, true, 10);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

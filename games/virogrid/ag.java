@@ -83,7 +83,7 @@ final class ag extends java.awt.Canvas {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -172,29 +172,17 @@ final class ag extends java.awt.Canvas {
         field_i = new int[8192];
         field_c = 256;
         field_j = new int[12][];
-        int discarded$0 = 150;
-        og.a(0, 490, 116, new int[8], 32, (byte) 126);
-        int discarded$1 = 150;
-        og.a(1, 490, 136, new int[6], 32, (byte) 97);
-        int discarded$2 = 150;
-        og.a(2, 490, 102, new int[8], 32, (byte) 90);
-        int discarded$3 = 150;
-        og.a(3, 490, 88, new int[9], 29, (byte) 66);
-        int discarded$4 = 150;
-        og.a(4, 490, 92, new int[8], 32, (byte) 71);
-        int discarded$5 = 150;
-        og.a(5, 490, 92, new int[7], 32, (byte) 61);
-        int discarded$6 = 150;
-        og.a(6, 490, 328, new int[2], 32, (byte) 90);
-        int discarded$7 = 150;
-        og.a(7, 490, 330, new int[2], 32, (byte) 106);
-        int discarded$8 = 150;
-        og.a(8, 490, 328, new int[2], 32, (byte) 109);
-        int discarded$9 = 150;
-        og.a(9, 490, 300, new int[1], 32, (byte) 58);
-        int discarded$10 = 150;
-        og.a(10, 490, 300, new int[0], 32, (byte) 103);
-        int discarded$11 = 150;
-        og.a(11, 490, 116, new int[5], 32, (byte) 78);
+        og.a(0, 490, 116, new int[8], 32, (byte) 126, 150);
+        og.a(1, 490, 136, new int[6], 32, (byte) 97, 150);
+        og.a(2, 490, 102, new int[8], 32, (byte) 90, 150);
+        og.a(3, 490, 88, new int[9], 29, (byte) 66, 150);
+        og.a(4, 490, 92, new int[8], 32, (byte) 71, 150);
+        og.a(5, 490, 92, new int[7], 32, (byte) 61, 150);
+        og.a(6, 490, 328, new int[2], 32, (byte) 90, 150);
+        og.a(7, 490, 330, new int[2], 32, (byte) 106, 150);
+        og.a(8, 490, 328, new int[2], 32, (byte) 109, 150);
+        og.a(9, 490, 300, new int[1], 32, (byte) 58, 150);
+        og.a(10, 490, 300, new int[0], 32, (byte) 103, 150);
+        og.a(11, 490, 116, new int[5], 32, (byte) 78, 150);
     }
 }

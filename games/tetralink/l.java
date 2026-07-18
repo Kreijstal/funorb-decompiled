@@ -357,8 +357,7 @@ final class l {
             if (!(var3 == 0)) {
                 return false;
             }
-            int discarded$0 = -20715;
-            em.d();
+            em.d(-20715);
             return true;
         }
         if (dg.field_e == 11) {
@@ -375,8 +374,7 @@ final class l {
                     return false;
                 }
             }
-            int discarded$5 = -46;
-            if (!(!ui.a())) {
+            if (!(!ui.a((byte) -46))) {
                 Object var4 = null;
                 eo.a(-3, me.field_g, param0, qf.field_j, kd.field_h, (String) null);
             }
@@ -646,7 +644,7 @@ final class l {
         me.field_a = param0;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         bc var2 = nd.field_Lb;
         var2.f(11, (byte) -92);
         var2.field_t = var2.field_t + 1;
@@ -659,7 +657,7 @@ final class l {
         var2.b(var2.field_t + -var3, -2);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         int var1 = 0;
         field_c = null;

@@ -69,7 +69,7 @@ final class dn extends ie {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_j = null;
         field_q = null;
         field_l = null;
@@ -78,8 +78,7 @@ final class dn extends ie {
     }
 
     final long a(int param0) {
-        int discarded$0 = -8325;
-        ((dn) this).field_g = ((dn) this).field_g + this.c();
+        ((dn) this).field_g = ((dn) this).field_g + this.c(-8325);
         if (param0 != -22962) {
             ((dn) this).field_o = 53;
         }
@@ -89,7 +88,7 @@ final class dn extends ie {
         return 0L;
     }
 
-    final static ac b() {
+    final static ac b(byte param0) {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         ac var2 = null;
@@ -118,7 +117,7 @@ final class dn extends ie {
         }
     }
 
-    private final long c() {
+    private final long c(int param0) {
         int var8 = 0;
         int var9 = client.field_A ? 1 : 0;
         long var2 = System.nanoTime();

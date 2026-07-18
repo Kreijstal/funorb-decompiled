@@ -201,11 +201,11 @@ final class crb extends anb implements ntb, utb, ofa {
         try {
           L0: {
             var3 = (crb) (Object) param1;
-            if (var3.field_u == var3.field_u) {
+            if (((crb) this).field_u == var3.field_u) {
               return;
             } else {
               L1: {
-                var3.field_u = var3.field_u;
+                var3.field_u = ((crb) this).field_u;
                 super.b((byte) 94, param1);
                 if (param0 > 54) {
                   break L1;
@@ -252,8 +252,7 @@ final class crb extends anb implements ntb, utb, ofa {
     final static void a(int param0, boolean param1) {
         if (param0 == 3) {
           L0: {
-            int discarded$6 = 105;
-            if (wq.e()) {
+            if (wq.e((byte) 105)) {
               param1 = false;
               break L0;
             } else {
@@ -347,8 +346,7 @@ final class crb extends anb implements ntb, utb, ofa {
         int fieldTemp$0 = ogb.field_o;
         ogb.field_o = ogb.field_o + 1;
         ((crb) this).field_u = fieldTemp$0;
-        int discarded$1 = -125;
-        ikb.e();
+        ikb.e((byte) -125);
         int var2 = -58 / ((param0 - -4) / 38);
     }
 

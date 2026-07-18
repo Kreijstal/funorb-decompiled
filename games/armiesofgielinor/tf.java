@@ -82,12 +82,12 @@ final class tf extends tc {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_m = null;
         field_p = null;
     }
 
-    final static void a(int param0, nt param1) {
+    final static void a(int param0, nt param1, byte param2) {
         bv var3 = null;
         try {
             var3 = vl.field_n;

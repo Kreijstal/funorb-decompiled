@@ -18,7 +18,7 @@ abstract class ba implements nb {
         ((ba) this).field_a = ik.a(param0 + 55);
     }
 
-    final static boolean a(ji param0) {
+    final static boolean a(ji param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -79,7 +79,7 @@ abstract class ba implements nb {
 
     abstract String e(byte param0);
 
-    public static void d() {
+    public static void d(byte param0) {
         field_f = null;
         field_e = null;
         field_b = null;

@@ -97,11 +97,10 @@ final class vk extends og implements ho, vd {
         }
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         L0: {
           L1: {
-            int discarded$6 = 0;
-            if (oo.b()) {
+            if (oo.b(false)) {
               break L1;
             } else {
               if (0 >= ((vk) this).field_J.field_o.length()) {
@@ -178,24 +177,21 @@ final class vk extends og implements ho, vd {
                     break L1;
                   } else {
                     if (((vk) this).field_E) {
-                      int discarded$1293 = 125;
-                      cb.e();
+                      cb.e((byte) 125);
                       break L1;
                     } else {
                       if (!((vk) this).field_A) {
                         wg.f(-11142);
                         break L1;
                       } else {
-                        int discarded$1294 = 93;
-                        ba.c();
+                        ba.c((byte) 93);
                         break L1;
                       }
                     }
                   }
                 }
               } else {
-                int discarded$1295 = 0;
-                this.c();
+                this.c(false);
                 break L1;
               }
             }
@@ -235,8 +231,8 @@ final class vk extends og implements ho, vd {
     }
 
     final static void a(int param0, boolean param1, boolean param2) {
-        int discarded$0 = 1;
-        fa.a(param1, param2, (String) null);
+        Object var4 = null;
+        fa.a(param1, param2, (String) null, true);
     }
 
     final String i(int param0) {
@@ -653,8 +649,7 @@ final class vk extends og implements ho, vd {
             }
             L13: {
               var8 = ee.field_q;
-              int discarded$3 = -20;
-              var9 = ua.a(-11662, le.b());
+              var9 = ua.a(-11662, le.b((byte) -20));
               if (var9 != gg.field_d) {
                 if (var9 != wp.field_c) {
                   break L13;
@@ -668,13 +663,13 @@ final class vk extends og implements ho, vd {
               }
             }
             L14: {
-              ei dupTemp$4 = new ei(10, ((vk) this).field_j, -20 + ((vk) this).field_g, 25, (qm) (Object) ((vk) this).field_J, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$4;
-              ((vk) this).b((qm) (Object) dupTemp$4, 16);
+              ei dupTemp$2 = new ei(10, ((vk) this).field_j, -20 + ((vk) this).field_g, 25, (qm) (Object) ((vk) this).field_J, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$2;
+              ((vk) this).b((qm) (Object) dupTemp$2, 16);
               ((vk) this).field_j = ((vk) this).field_j + (((qm) (Object) var12).field_f + 5);
-              ei dupTemp$5 = new ei(10, ((vk) this).field_j, -20 + ((vk) this).field_g, 25, (qm) (Object) ((vk) this).field_z, false, 80, 3, var7, 16777215, fh.field_h);
-              var13 = dupTemp$5;
-              ((vk) this).b((qm) (Object) dupTemp$5, -127);
+              ei dupTemp$3 = new ei(10, ((vk) this).field_j, -20 + ((vk) this).field_g, 25, (qm) (Object) ((vk) this).field_z, false, 80, 3, var7, 16777215, fh.field_h);
+              var13 = dupTemp$3;
+              ((vk) this).b((qm) (Object) dupTemp$3, -127);
               ((vk) this).field_M.field_l = (bi) this;
               ((vk) this).field_j = ((vk) this).field_j + (5 + ((qm) (Object) var13).field_f);
               if (((vk) this).field_H == null) {
@@ -935,7 +930,7 @@ final class vk extends og implements ho, vd {
             L1: {
               var3_int = 3 / ((param0 - -20) / 46);
               if (param1 == ((vk) this).field_J) {
-                boolean discarded$4 = ((vk) this).field_z.a(true, (qm) this);
+                boolean discarded$2 = ((vk) this).field_z.a(true, (qm) this);
                 break L1;
               } else {
                 break L1;
@@ -945,8 +940,7 @@ final class vk extends og implements ho, vd {
               if (((vk) this).field_z != param1) {
                 break L2;
               } else {
-                int discarded$5 = 0;
-                this.c();
+                this.c(false);
                 break L2;
               }
             }

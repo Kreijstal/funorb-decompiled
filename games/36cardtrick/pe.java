@@ -6,7 +6,7 @@ abstract class pe {
     static int[] field_a;
     private static String field_z;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }

@@ -6,7 +6,7 @@ final class gf {
     static sm field_b;
     static boolean field_a;
 
-    final static boolean a(int[] param0) {
+    final static boolean a(int[] param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         long var3 = 0L;
@@ -106,8 +106,7 @@ final class gf {
                   }
                 }
               }
-              int discarded$1 = -2887;
-              if (!nn.a()) {
+              if (!nn.a(-2887)) {
                 stackOut_23_0 = 0;
                 stackIn_24_0 = stackOut_23_0;
                 return stackIn_24_0 != 0;
@@ -311,8 +310,7 @@ final class gf {
             if (param2 == 8) {
               var4_int = param0.a(param3, (byte) 8);
               var5 = param0.a(var4_int, param1, true);
-              int discarded$2 = -2;
-              stackOut_3_0 = hg.a(var5, var4_int, param0);
+              stackOut_3_0 = hg.a(var5, var4_int, param0, -2);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -404,7 +402,7 @@ final class gf {
         return stackIn_4_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ig.m((byte) -102);
         mp.field_e = true;
         nm.field_c = true;
@@ -412,7 +410,7 @@ final class gf {
         ti.a(tg.field_a, false, false);
     }
 
-    final static int a(int param0) {
+    final static int a(int param0, int param1) {
         int var2 = 0;
         if (param0 == 0) {
             return 0;

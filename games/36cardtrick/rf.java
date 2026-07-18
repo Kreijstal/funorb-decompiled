@@ -80,7 +80,7 @@ final class rf implements Runnable {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -180,8 +180,7 @@ final class rf implements Runnable {
                       var3 = var4.getOutputStream();
                       var3.write(17);
                       var5 = (CharSequence) (Object) ("JAGGRAB " + ((rf) this).field_a.getFile() + "\n\n");
-                      int discarded$1 = -127;
-                      var3.write(dd.a(var5));
+                      var3.write(dd.a(var5, (byte) -127));
                       ((rf) this).field_h = new DataInputStream(var4.getInputStream());
                       break L7;
                     } else {
@@ -231,7 +230,7 @@ final class rf implements Runnable {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -253,8 +252,7 @@ final class rf implements Runnable {
         try {
           L0: {
             if (!Character.isISOControl(param0)) {
-              int discarded$8 = 0;
-              if (ph.a(param0)) {
+              if (ph.a(param0, false)) {
                 stackOut_6_0 = 1;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0 != 0;

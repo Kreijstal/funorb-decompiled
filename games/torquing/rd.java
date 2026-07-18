@@ -215,7 +215,7 @@ final class rd extends am {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             int var1 = 0;
             Exception var2 = null;
@@ -567,8 +567,7 @@ final class rd extends am {
             Object var3 = null;
             rd.a((uc) null, -27, 36, (String) null, (kp) null);
         }
-        int discarded$0 = 14837;
-        ie.a();
+        ie.a(14837);
     }
 
     public static void c(int param0) {

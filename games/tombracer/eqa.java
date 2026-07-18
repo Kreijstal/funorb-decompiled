@@ -9,29 +9,33 @@ final class eqa implements os {
         int var4 = 0;
         String var4_ref_String = null;
         int var5 = 0;
-        String var6 = null;
         String var7 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        String var12 = null;
-        String var53 = null;
-        String var54 = null;
-        String var55 = null;
-        String var56 = null;
-        String var57 = null;
-        String var58 = null;
-        String var59 = null;
+        Object var12 = null;
+        Object var13 = null;
+        Object var14 = null;
+        Object var15 = null;
+        String var16 = null;
         String var60 = null;
         String var61 = null;
-        Object var62 = null;
-        Object var63 = null;
-        Object var64 = null;
-        CharSequence var65 = null;
+        String var62 = null;
+        String var63 = null;
+        String var64 = null;
+        String var65 = null;
+        String var66 = null;
+        String var67 = null;
+        String var68 = null;
+        String var69 = null;
+        Object var70 = null;
+        Object var71 = null;
+        Object var72 = null;
+        CharSequence var73 = null;
         L0: {
-          var62 = null;
-          var63 = null;
-          var64 = null;
+          var70 = null;
+          var71 = null;
+          var72 = null;
           var11 = TombRacer.field_G ? 1 : 0;
           var3 = 1;
           if (voa.field_v) {
@@ -61,8 +65,7 @@ final class eqa implements os {
           if (bta.field_q != 2) {
             break L2;
           } else {
-            int discarded$16 = 24316;
-            if (at.f()) {
+            if (at.f(24316)) {
               break L2;
             } else {
               var3 = 0;
@@ -74,7 +77,7 @@ final class eqa implements os {
           if (fna.field_h == 85) {
             if (var3 != 0) {
               if (vc.field_n.length() > 0) {
-                StringBuilder discarded$17 = ana.a(-1 + vc.field_n.length(), ' ', -11, vc.field_n);
+                StringBuilder discarded$6 = ana.a(-1 + vc.field_n.length(), ' ', -11, vc.field_n);
                 return true;
               } else {
                 return true;
@@ -88,12 +91,11 @@ final class eqa implements os {
               if (var3 != 0) {
                 if (vc.field_n.length() < 80) {
                   L3: {
-                    StringBuilder discarded$18 = vc.field_n.append((char) var4);
+                    StringBuilder discarded$7 = vc.field_n.append((char) var4);
                     var5 = 485;
-                    var6 = fna.field_k;
-                    int discarded$19 = 8;
-                    var12 = ima.a(var6);
-                    var56 = var12;
+                    var60 = fna.field_k;
+                    var16 = ima.a(var60, (byte) 8);
+                    var64 = var16;
                     if (bta.field_q != 2) {
                       L4: {
                         var7 = "";
@@ -119,11 +121,11 @@ final class eqa implements os {
                                         if (tla.field_f == null) {
                                           break L7;
                                         } else {
-                                          var55 = "[" + tla.field_f + "] ";
-                                          var57 = var55 + var56 + ": ";
-                                          var5 = var5 - lpa.field_s.b(var57);
+                                          var63 = "[" + tla.field_f + "] ";
+                                          var65 = var63 + var64 + ": ";
+                                          var5 = var5 - lpa.field_s.b(var65);
                                           if (var5 < lpa.field_s.b(vc.field_n.toString())) {
-                                            StringBuilder discarded$20 = ana.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
+                                            StringBuilder discarded$8 = ana.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
                                             return true;
                                           } else {
                                             return true;
@@ -135,10 +137,10 @@ final class eqa implements os {
                                     break L6;
                                   }
                                 }
-                                var58 = var7 + var56 + ": ";
-                                var5 = var5 - lpa.field_s.b(var58);
+                                var66 = var7 + var64 + ": ";
+                                var5 = var5 - lpa.field_s.b(var66);
                                 if (var5 < lpa.field_s.b(vc.field_n.toString())) {
-                                  StringBuilder discarded$21 = ana.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
+                                  StringBuilder discarded$9 = ana.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
                                   return true;
                                 } else {
                                   return true;
@@ -156,11 +158,11 @@ final class eqa implements os {
                                 if (tla.field_f == null) {
                                   break L8;
                                 } else {
-                                  var59 = "[" + tla.field_f + "] ";
-                                  var60 = var59 + var56 + ": ";
-                                  var5 = var5 - lpa.field_s.b(var60);
+                                  var67 = "[" + tla.field_f + "] ";
+                                  var68 = var67 + var64 + ": ";
+                                  var5 = var5 - lpa.field_s.b(var68);
                                   if (var5 < lpa.field_s.b(vc.field_n.toString())) {
-                                    StringBuilder discarded$22 = ana.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
+                                    StringBuilder discarded$10 = ana.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
                                     return true;
                                   } else {
                                     return true;
@@ -173,15 +175,15 @@ final class eqa implements os {
                           }
                         }
                       }
-                      var61 = var7 + var56 + ": ";
-                      var5 = var5 - lpa.field_s.b(var61);
+                      var69 = var7 + var64 + ": ";
+                      var5 = var5 - lpa.field_s.b(var69);
                       break L3;
                     } else {
-                      var65 = (CharSequence) (Object) wp.field_a;
-                      var53 = gl.a((byte) 115, wha.field_G, new String[1]);
-                      var54 = gl.a((byte) 102, li.field_a, new String[1]);
-                      var9 = lpa.field_s.b(var53);
-                      var10 = lpa.field_s.b(var54);
+                      var73 = (CharSequence) (Object) wp.field_a;
+                      var61 = gl.a((byte) 115, wha.field_G, new String[1]);
+                      var62 = gl.a((byte) 102, li.field_a, new String[1]);
+                      var9 = lpa.field_s.b(var61);
+                      var10 = lpa.field_s.b(var62);
                       if (var9 > var10) {
                         var5 = var5 - var9;
                         break L3;
@@ -192,7 +194,7 @@ final class eqa implements os {
                     }
                   }
                   if (var5 < lpa.field_s.b(vc.field_n.toString())) {
-                    StringBuilder discarded$23 = ana.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
+                    StringBuilder discarded$11 = ana.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
                     return true;
                   } else {
                     return true;
@@ -211,8 +213,7 @@ final class eqa implements os {
           if (var3 != 0) {
             if (vc.field_n.length() > 0) {
               var4_ref_String = vc.field_n.toString();
-              int discarded$24 = -1;
-              if (!lt.a(var4_ref_String)) {
+              if (!lt.a(var4_ref_String, -1)) {
                 L9: {
                   var5 = bta.field_q;
                   if (var5 != 0) {
@@ -228,34 +229,31 @@ final class eqa implements os {
                 }
                 if (gda.a(var5, -20011) != 2) {
                   opa.a(bta.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
-                  int discarded$25 = 1;
-                  ufa.a();
+                  ufa.a(true);
                   return true;
                 } else {
                   loa.a(var5, param2, (byte) 108, 1);
                   opa.a(bta.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
-                  int discarded$26 = 1;
-                  ufa.a();
+                  ufa.a(true);
                   return true;
                 }
               } else {
-                int discarded$27 = 2;
-                gu.a(0, true, (String) null, sba.field_m, (String) null);
-                int discarded$28 = 2;
-                gu.a(0, true, (String) null, mm.field_f, (String) null);
-                int discarded$29 = 1;
-                ufa.a();
+                var13 = null;
+                var12 = null;
+                gu.a(0, true, (String) null, sba.field_m, (String) null, 2);
+                var15 = null;
+                var14 = null;
+                gu.a(0, true, (String) null, mm.field_f, (String) null, 2);
+                ufa.a(true);
                 return true;
               }
             } else {
-              int discarded$30 = 1;
-              ufa.a();
+              ufa.a(true);
               return true;
             }
           } else {
             if (bta.field_q != 0) {
-              int discarded$31 = 1;
-              ufa.a();
+              ufa.a(true);
               return true;
             } else {
               return true;

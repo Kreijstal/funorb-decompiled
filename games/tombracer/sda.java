@@ -12,7 +12,7 @@ final class sda extends vg {
     static String field_k;
     static ssa field_g;
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_h = null;
         field_f = null;

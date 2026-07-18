@@ -123,15 +123,13 @@ final class el extends rg {
                 if (sq.field_Q <= 0) {
                   break L2;
                 } else {
-                  int discarded$20 = 1;
-                  gg.a(11, param4, param9);
+                  gg.a(11, param4, param9, true);
                   break L2;
                 }
               }
               L3: {
                 if (0 < da.field_a) {
-                  int discarded$21 = 11;
-                  so.a(50, param4, param9, param1);
+                  so.a(50, param4, param9, param1, 11);
                   break L3;
                 } else {
                   break L3;
@@ -171,15 +169,13 @@ final class el extends rg {
                   if (sq.field_Q <= 0) {
                     break L6;
                   } else {
-                    int discarded$22 = 1;
-                    gg.a(11, param4, param9);
+                    gg.a(11, param4, param9, true);
                     break L6;
                   }
                 }
                 L7: {
                   if (0 < da.field_a) {
-                    int discarded$23 = 11;
-                    so.a(50, param4, param9, param1);
+                    so.a(50, param4, param9, param1, 11);
                     break L7;
                   } else {
                     break L7;
@@ -220,15 +216,13 @@ final class el extends rg {
                   if (sq.field_Q <= 0) {
                     break L8;
                   } else {
-                    int discarded$24 = 1;
-                    gg.a(11, param4, param9);
+                    gg.a(11, param4, param9, true);
                     break L8;
                   }
                 }
                 L9: {
                   if (0 < da.field_a) {
-                    int discarded$25 = 11;
-                    so.a(50, param4, param9, param1);
+                    so.a(50, param4, param9, param1, 11);
                     break L9;
                   } else {
                     break L9;
@@ -303,15 +297,13 @@ final class el extends rg {
                 if (sq.field_Q <= 0) {
                   break L12;
                 } else {
-                  int discarded$26 = 1;
-                  gg.a(11, param4, param9);
+                  gg.a(11, param4, param9, true);
                   break L12;
                 }
               }
               L13: {
                 if (0 < da.field_a) {
-                  int discarded$27 = 11;
-                  so.a(50, param4, param9, param1);
+                  so.a(50, param4, param9, param1, 11);
                   break L13;
                 } else {
                   break L13;
@@ -350,8 +342,7 @@ final class el extends rg {
                 if (sq.field_Q <= 0) {
                   L16: {
                     if (0 < da.field_a) {
-                      int discarded$28 = 11;
-                      so.a(50, param4, param9, param1);
+                      so.a(50, param4, param9, param1, 11);
                       break L16;
                     } else {
                       break L16;
@@ -386,11 +377,9 @@ final class el extends rg {
                   }
                 } else {
                   L17: {
-                    int discarded$29 = 1;
-                    gg.a(11, param4, param9);
+                    gg.a(11, param4, param9, true);
                     if (0 < da.field_a) {
-                      int discarded$30 = 11;
-                      so.a(50, param4, param9, param1);
+                      so.a(50, param4, param9, param1, 11);
                       break L17;
                     } else {
                       break L17;
@@ -429,15 +418,13 @@ final class el extends rg {
                   if (sq.field_Q <= 0) {
                     break L20;
                   } else {
-                    int discarded$31 = 1;
-                    gg.a(11, param4, param9);
+                    gg.a(11, param4, param9, true);
                     break L20;
                   }
                 }
                 L21: {
                   if (0 < da.field_a) {
-                    int discarded$32 = 11;
-                    so.a(50, param4, param9, param1);
+                    so.a(50, param4, param9, param1, 11);
                     break L21;
                   } else {
                     break L21;
@@ -488,15 +475,13 @@ final class el extends rg {
               if (sq.field_Q <= 0) {
                 break L25;
               } else {
-                int discarded$33 = 1;
-                gg.a(11, param4, param9);
+                gg.a(11, param4, param9, true);
                 break L25;
               }
             }
             L26: {
               if (0 < da.field_a) {
-                int discarded$34 = 11;
-                so.a(50, param4, param9, param1);
+                so.a(50, param4, param9, param1, 11);
                 break L26;
               } else {
                 break L26;
@@ -535,8 +520,7 @@ final class el extends rg {
               if (sq.field_Q <= 0) {
                 L29: {
                   if (0 < da.field_a) {
-                    int discarded$35 = 11;
-                    so.a(50, param4, param9, param1);
+                    so.a(50, param4, param9, param1, 11);
                     break L29;
                   } else {
                     break L29;
@@ -571,11 +555,9 @@ final class el extends rg {
                 }
               } else {
                 L30: {
-                  int discarded$36 = 1;
-                  gg.a(11, param4, param9);
+                  gg.a(11, param4, param9, true);
                   if (0 < da.field_a) {
-                    int discarded$37 = 11;
-                    so.a(50, param4, param9, param1);
+                    so.a(50, param4, param9, param1, 11);
                     break L30;
                   } else {
                     break L30;
@@ -614,15 +596,13 @@ final class el extends rg {
                 if (sq.field_Q <= 0) {
                   break L33;
                 } else {
-                  int discarded$38 = 1;
-                  gg.a(11, param4, param9);
+                  gg.a(11, param4, param9, true);
                   break L33;
                 }
               }
               L34: {
                 if (0 < da.field_a) {
-                  int discarded$39 = 11;
-                  so.a(50, param4, param9, param1);
+                  so.a(50, param4, param9, param1, 11);
                   break L34;
                 } else {
                   break L34;
@@ -666,7 +646,7 @@ final class el extends rg {
         return var3;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_E = null;
         field_H = null;
     }

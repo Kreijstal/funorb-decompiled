@@ -31,7 +31,7 @@ class gk extends eg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_s = null;
     }
 
@@ -43,7 +43,7 @@ class gk extends eg {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_I, -1, 2147483647, false);
     }
 
-    final static lc a(int param0, int param1, int param2, int param3) {
+    final static lc a(int param0, int param1, int param2, int param3, int param4) {
         lc var5 = null;
         int var6 = 0;
         int var7 = 0;

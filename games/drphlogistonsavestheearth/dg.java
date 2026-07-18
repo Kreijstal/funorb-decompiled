@@ -10,7 +10,7 @@ final class dg implements Iterable {
     static String field_a;
     static int field_d;
 
-    final static void a() {
+    final static void a(byte param0) {
         if (70 > field_e) {
             lc.a(field_e + 10, (byte) 24);
             return;
@@ -148,7 +148,7 @@ final class dg implements Iterable {
         }
     }
 
-    final static sd a(java.applet.Applet param0) {
+    final static sd a(java.applet.Applet param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         sd[] var3 = null;
@@ -180,8 +180,7 @@ final class dg implements Iterable {
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
-            int discarded$2 = 43;
-            var2 = le.a(param0, "jagex-last-login-method");
+            var2 = le.a(param0, "jagex-last-login-method", 43);
             if (var2 == null) {
               stackOut_3_0 = mf.field_A;
               stackIn_4_0 = stackOut_3_0;

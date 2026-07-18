@@ -15,7 +15,7 @@ final class dk extends ib implements ha, en, vf {
     private d field_P;
     ri field_K;
 
-    final static void a(String param0, boolean param1, int param2, boolean param3) {
+    final static void a(String param0, boolean param1, int param2, boolean param3, int param4) {
         RuntimeException var5 = null;
         String var6 = null;
         int var7 = 0;
@@ -255,15 +255,15 @@ final class dk extends ib implements ha, en, vf {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_R = null;
     }
 
-    private final String j() {
+    private final String j(int param0) {
         return "</col></u>";
     }
 
-    private final boolean i() {
+    private final boolean i(int param0) {
         if (!this.h(10000536)) {
             return false;
         }
@@ -275,7 +275,7 @@ final class dk extends ib implements ha, en, vf {
         return bc.a(((dk) this).field_J.field_A, ((dk) this).field_O.field_A, ((dk) this).field_M.field_A, var2, (byte) -126, (dk) this, ((dk) this).field_N.field_F);
     }
 
-    private final String c() {
+    private final String c(boolean param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -299,8 +299,7 @@ final class dk extends ib implements ha, en, vf {
         String stackOut_5_2 = null;
         try {
           if (ln.a(-123, param3, param1, param2)) {
-            int discarded$2 = 21;
-            return n.a();
+            return n.a((byte) 21);
           } else {
             return null;
           }
@@ -444,8 +443,7 @@ final class dk extends ib implements ha, en, vf {
                 break L1;
               } else {
                 if (param4 == ((dk) this).field_Q) {
-                  int discarded$10 = -1;
-                  boolean discarded$11 = this.i();
+                  boolean discarded$5 = this.i(-1);
                   break L1;
                 } else {
                   break L1;
@@ -494,7 +492,7 @@ final class dk extends ib implements ha, en, vf {
         }
     }
 
-    private final int a(oc param0, int param1, String param2, int param3, int param4, String param5) {
+    private final int a(oc param0, int param1, String param2, int param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         nf var9 = null;
         ma var10 = null;
@@ -640,7 +638,7 @@ final class dk extends ib implements ha, en, vf {
         return stackIn_1_0;
     }
 
-    private final int a(String param0, oc param1, int param2, int param3) {
+    private final int a(String param0, oc param1, int param2, int param3, int param4) {
         ma var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -850,7 +848,7 @@ final class dk extends ib implements ha, en, vf {
         return stackIn_1_0;
     }
 
-    final static void h() {
+    final static void h(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         km var2 = null;
@@ -914,8 +912,7 @@ final class dk extends ib implements ha, en, vf {
               if (param1 == 56) {
                 break L1;
               } else {
-                int discarded$4 = 1;
-                String discarded$5 = this.c();
+                String discarded$2 = this.c(true);
                 break L1;
               }
             }
@@ -1121,8 +1118,7 @@ final class dk extends ib implements ha, en, vf {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$2 = 170;
-            stackOut_0_0 = this.a(param4, param5, param1, 35, 170, param2);
+            stackOut_0_0 = this.a(param4, param5, param1, 35, 170, param2, 170);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -1253,16 +1249,11 @@ final class dk extends ib implements ha, en, vf {
         ob dupTemp$1 = new ob(10000536);
         ((dk) this).field_L.field_l = (ub) (Object) dupTemp$1;
         ((dk) this).field_O.field_l = (ub) (Object) dupTemp$1;
-        int discarded$2 = 1;
-        int discarded$3 = -987472479;
         String var2 = rd.a(ch.field_e, new String[2], (byte) 103);
         int var3 = 20;
-        int discarded$4 = 170;
-        var3 = var3 + this.a(kq.field_l, (oc) (Object) ((dk) this).field_M, var3, 37);
-        int discarded$5 = 170;
-        var3 = var3 + (this.a((oc) (Object) ((dk) this).field_H, var3, "", 20, 170, pg.field_o) + 5);
-        int discarded$6 = 170;
-        var3 = var3 + this.a(wc.field_c, (oc) (Object) ((dk) this).field_O, var3, 84);
+        var3 = var3 + this.a(kq.field_l, (oc) (Object) ((dk) this).field_M, var3, 37, 170);
+        var3 = var3 + (this.a((oc) (Object) ((dk) this).field_H, var3, "", 20, 170, pg.field_o, 170) + 5);
+        var3 = var3 + this.a(wc.field_c, (oc) (Object) ((dk) this).field_O, var3, 84, 170);
         var3 = var3 + (this.a(170, md.field_x, cp.field_G, -3, (oc) (Object) ((dk) this).field_L, var3) - -5);
         var3 = var3 + (this.a(170, dj.field_h, of.field_j, -3, (oc) (Object) ((dk) this).field_J, var3) + 5);
         var3 = var3 + this.a((oc) (Object) ((dk) this).field_S, fk.field_d, 170, 111, var3);

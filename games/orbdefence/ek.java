@@ -24,12 +24,12 @@ final class ek implements Iterable {
         return (Iterator) (Object) new pl((ek) this);
     }
 
-    final static void c() {
+    final static void c(int param0) {
         pc.field_Z = false;
         int discarded$0 = cd.field_t.b((byte) 90);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_a = null;
         field_e = null;
@@ -83,7 +83,7 @@ final class ek implements Iterable {
         throw new Error();
     }
 
-    final static void a() {
+    final static void a(int param0) {
     }
 
     static {

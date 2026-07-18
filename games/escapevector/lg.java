@@ -42,8 +42,7 @@ final class lg {
         String stackOut_12_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            var3 = na.a(param2);
+            var3 = na.a(param2, false);
             if (param1.indexOf(param2) != -1) {
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;

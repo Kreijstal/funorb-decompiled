@@ -49,9 +49,7 @@ final class ej implements Runnable {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$4 = 1;
-            int discarded$5 = 10;
-            stackOut_2_0 = mb.a(55, param1);
+            stackOut_2_0 = mb.a(55, param1, 10, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -703,7 +701,7 @@ final class ej implements Runnable {
         ((ej) this).field_k = null;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_f = null;
         field_d = null;

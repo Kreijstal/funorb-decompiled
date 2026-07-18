@@ -578,7 +578,7 @@ final class wb {
         }
     }
 
-    final static void g(int param0) {
+    final static void g(int param0, int param1, int param2, int param3, int param4, int param5) {
         wb.e(param0, 146, 32, 3100495, 64);
         wb.e(param0, 177, 32, 3100495, 64);
         wb.a(param0, 147, 30, 3100495, 64);

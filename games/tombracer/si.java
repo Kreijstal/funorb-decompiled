@@ -129,7 +129,7 @@ final class si extends kna {
         return false;
     }
 
-    public static void B() {
+    public static void B(int param0) {
         field_F = null;
     }
 

@@ -209,7 +209,7 @@ abstract class ht implements ft {
         }
     }
 
-    final static oh a(qj[] param0, on param1) {
+    final static oh a(qj[] param0, on param1, byte param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         long var3_long = 0L;
@@ -658,9 +658,8 @@ abstract class ht implements ft {
         }
     }
 
-    final static lj c() {
-        int discarded$0 = 77;
-        return new lj(of.c(100), bt.b());
+    final static lj c(boolean param0) {
+        return new lj(of.c(100), bt.b(77));
     }
 
     ht(fr param0, int param1, int param2, int param3, boolean param4) {

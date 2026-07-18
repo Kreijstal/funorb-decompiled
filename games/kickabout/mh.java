@@ -205,7 +205,7 @@ final class mh extends jd {
         return stackIn_13_0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_o = null;
         field_q = null;
         field_l = null;

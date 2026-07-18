@@ -225,7 +225,7 @@ final class ssa {
         ((ssa) this).field_f = var3;
     }
 
-    final static byte[] a(uia param0) throws Exception {
+    final static byte[] a(uia param0, int param1, boolean param2) throws Exception {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -290,8 +290,7 @@ final class ssa {
               if (2 < var7) {
                 throw ssa.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: header error: version=" + var7));
               } else {
-                int discarded$1 = 1;
-                var36 = fqa.e();
+                var36 = fqa.e(true);
                 var32 = var36;
                 var28 = var32;
                 var25 = var28;
@@ -478,7 +477,7 @@ final class ssa {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

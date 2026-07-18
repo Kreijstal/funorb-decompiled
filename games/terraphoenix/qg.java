@@ -105,8 +105,7 @@ final class qg {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = ih.a(var6, var5_int, param1, var4);
+                          int discarded$1 = ih.a(var16, var5_int, param1, var4, 9);
                           break L5;
                         }
                       }
@@ -313,8 +312,7 @@ final class qg {
           L0: {
             var5_int = param3.c(-1, param2);
             var6 = param3.a(-128, var5_int, param4);
-            int discarded$2 = -121;
-            stackOut_0_0 = wl.a(param1, var5_int, param3, var6);
+            stackOut_0_0 = wl.a(param1, var5_int, param3, var6, -121);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

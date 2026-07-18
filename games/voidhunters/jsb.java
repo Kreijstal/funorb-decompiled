@@ -32,11 +32,11 @@ final class jsb extends wm implements ntb {
               super.a(param0, -47);
               var3 = (jsb) (Object) param0;
               var4 = 0;
-              if (var3.field_c == var3.field_c) {
+              if (var3.field_c == ((jsb) this).field_c) {
                 break L1;
               } else {
                 var4 = 1;
-                System.out.println("int team_id has changed. before=" + var3.field_c + ", now=" + var3.field_c);
+                System.out.println("int team_id has changed. before=" + var3.field_c + ", now=" + ((jsb) this).field_c);
                 break L1;
               }
             }
@@ -458,7 +458,7 @@ final class jsb extends wm implements ntb {
                 if (super.a((byte) -56, param1)) {
                   break L2;
                 } else {
-                  if (var4.field_c == var4.field_c) {
+                  if (((jsb) this).field_c == var4.field_c) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;

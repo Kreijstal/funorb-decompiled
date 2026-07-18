@@ -10,7 +10,7 @@ final class qk {
     static String[][] field_c;
     static vh field_e;
 
-    final static void a(di param0) {
+    final static void a(di param0, int param1) {
         byte[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -1485,7 +1485,7 @@ final class qk {
         }
         L163: {
           var2 = cm.a("ballset_space_group_1", (byte) 77);
-          var3 = 0;
+          var3 = 50 % ((param1 - 58) / 42);
           if (var2 == null) {
             break L163;
           } else {

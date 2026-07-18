@@ -166,7 +166,7 @@ final class jb extends tc {
         return ((jb) this).field_s != -1 ? true : false;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

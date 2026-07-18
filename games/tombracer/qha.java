@@ -9,7 +9,7 @@ final class qha extends ou {
         super(-1 + aq.a(-5640) - -aq.a(-5640), param0);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_g = null;
     }
 
@@ -158,17 +158,14 @@ final class qha extends ou {
             break L0;
           }
         }
-        int discarded$9 = 0;
-        upa.a(param1);
+        upa.a(param1, 0);
         if (bs.field_g) {
           bea.d(rm.field_e.field_a.field_qb, rm.field_e.field_a.field_T, rm.field_e.field_a.field_G, rm.field_e.field_a.field_t);
           rm.field_e.field_a.b(121, param1);
-          int discarded$10 = -16838;
-          ea.a(param1);
+          ea.a(param1, -16838);
           return;
         } else {
-          int discarded$11 = -16838;
-          ea.a(param1);
+          ea.a(param1, -16838);
           return;
         }
     }

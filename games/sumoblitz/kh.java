@@ -9,11 +9,11 @@ final class kh {
     static String field_d;
     static int[] field_b;
 
-    final static boolean a(pl param0) {
+    final static boolean a(pl param0, boolean param1) {
         return param0.b(1, (byte) -116) == 1;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -152,7 +152,7 @@ final class kh {
         ih.field_c = true;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;

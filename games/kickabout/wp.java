@@ -430,7 +430,7 @@ final class wp {
         }
     }
 
-    final static ut[] a() {
+    final static ut[] a(int param0) {
         ut[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -553,8 +553,7 @@ final class wp {
                 break L1;
               } else {
                 var7 = (CharSequence) (Object) param3;
-                int discarded$2 = 0;
-                var4_long = jc.a(var7);
+                var4_long = jc.a(var7, false);
                 break L1;
               }
             }
@@ -894,8 +893,7 @@ final class wp {
         }
         try {
             il.field_a.a((gn) (Object) param1, 3);
-            int discarded$0 = -112;
-            te.a(param0, param1);
+            te.a(param0, param1, (byte) -112);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "wp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -144,7 +144,7 @@ final class bh {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         Object var2 = null;
         rf.a((String) null, -128, re.field_d);
     }

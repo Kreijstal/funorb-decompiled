@@ -165,7 +165,7 @@ final class ni extends mh {
         }
     }
 
-    final static ra h() {
+    final static ra h(int param0) {
         return ob.field_J;
     }
 

@@ -139,7 +139,7 @@ final class qd extends w {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_Pb = null;
     }
 

@@ -13,7 +13,7 @@ final class qk {
         return 1 + param2 + hs.field_I + param0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_f = null;
         field_b = null;
@@ -25,8 +25,6 @@ final class qk {
 
     private static void $cfr$clinit() {
         field_f = "Single-Player";
-        int discarded$0 = 122;
-        int discarded$1 = 50;
-        ut.a();
+        ut.a(50, (byte) 122);
     }
 }

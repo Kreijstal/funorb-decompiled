@@ -15,7 +15,7 @@ final class fl extends oe {
     static wd field_h;
     static int[] field_e;
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         return null != ed.field_q && ed.field_q.k(0) != null;
     }
 
@@ -720,7 +720,7 @@ final class fl extends oe {
         return (java.net.Socket) (Object) stackIn_20_0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_e = null;
         field_h = null;
         int var1 = 0;

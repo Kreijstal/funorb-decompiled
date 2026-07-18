@@ -16,7 +16,7 @@ final class ck {
     private float field_e;
     static rl[] field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_b = null;
         field_j = null;
@@ -302,8 +302,7 @@ final class ck {
               param2.field_e = 0;
               w.field_y = new il(var3_int, param2, param2);
               jd.field_k = new u(var3_int, param2, param2, (hj) (Object) new dn());
-              int discarded$1 = -3060;
-              var4 = fl.c();
+              var4 = fl.c(-3060);
               if (var4 == null) {
                 var11 = null;
                 jo.a(1, "QC2", (Throwable) null);

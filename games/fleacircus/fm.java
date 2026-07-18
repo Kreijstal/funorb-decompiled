@@ -67,8 +67,7 @@ final class fm {
               } else {
                 L2: {
                   var3 = param1.charAt(var2_int);
-                  int discarded$5 = 67;
-                  if (ak.a((char) var3)) {
+                  if (ak.a((char) var3, (byte) 67)) {
                     break L2;
                   } else {
                     if (!em.a((byte) -65, (char) var3)) {

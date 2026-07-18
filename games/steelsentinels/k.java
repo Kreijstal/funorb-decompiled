@@ -45,12 +45,10 @@ class k extends gd implements ae {
         }
         ((k) this).field_Q = false;
         if (((k) this).field_Jb) {
-            int discarded$1 = 0;
-            il.d();
+            il.d(0);
         } else {
             if (((k) this).field_Mb) {
-                int discarded$2 = 0;
-                jf.n();
+                jf.n(0);
                 return;
             }
             return;
@@ -317,8 +315,7 @@ class k extends gd implements ae {
                 hc.a(3, 0);
                 ((k) this).m(106);
             } else {
-                int discarded$0 = -21;
-                rj.a("tochangedisplayname.ws", wl.d(), (byte) -47);
+                rj.a("tochangedisplayname.ws", wl.d((byte) -21), (byte) -47);
             }
             int var6_int = 31 / ((param1 - -85) / 36);
         } catch (RuntimeException runtimeException) {

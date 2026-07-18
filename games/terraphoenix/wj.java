@@ -9,7 +9,7 @@ final class wj {
     static String field_b;
     static String field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
         field_d = null;
@@ -168,8 +168,7 @@ final class wj {
                     di.field_l.field_k = 0;
                     di.field_l.i(14, 28);
                     di.field_l.i(am.field_K.c(0).field_c, -115);
-                    int discarded$10 = 0;
-                    bc.a(-1);
+                    bc.a(-1, 0);
                     mh.field_a = s.field_c;
                     break L2;
                   }
@@ -254,13 +253,12 @@ final class wj {
                       L9: {
                         oj.field_y = mk.field_j.h((byte) 78);
                         mm.field_e = mk.field_j.a(-16384);
-                        int discarded$11 = mk.field_j.a(-16384);
+                        int discarded$6 = mk.field_j.a(-16384);
                         me.field_o = mk.field_j.i(-25578);
                         var6_ref = mk.field_j.j(-1915115064);
                         var7 = mk.field_j.a(-16384);
                         if (0 != (var7 & 1)) {
-                          int discarded$12 = 96;
-                          wh.b();
+                          wh.b(96);
                           break L9;
                         } else {
                           break L9;
@@ -305,9 +303,9 @@ final class wj {
                         if (!hf.field_x) {
                           break L13;
                         } else {
-                          int discarded$13 = mk.field_j.a(-16384);
-                          int discarded$14 = mk.field_j.a(-16384);
-                          int discarded$15 = mk.field_j.f((byte) -107);
+                          int discarded$7 = mk.field_j.a(-16384);
+                          int discarded$8 = mk.field_j.a(-16384);
+                          int discarded$9 = mk.field_j.f((byte) -107);
                           kf.field_g = mk.field_j.i(-25578);
                           r.field_O = new byte[kf.field_g];
                           var8 = 0;
@@ -357,7 +355,7 @@ final class wj {
                             if (!si.field_gb) {
                               try {
                                 L19: {
-                                  Object discarded$16 = cd.a((byte) -128, "unzap", dg.a(false));
+                                  Object discarded$10 = cd.a((byte) -128, "unzap", dg.a(false));
                                   break L19;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -375,9 +373,7 @@ final class wj {
                         }
                         try {
                           L21: {
-                            int discarded$17 = -12382;
-                            int discarded$18 = 10056;
-                            Object discarded$19 = cd.a(dg.a(false), "zap", new Object[1]);
+                            Object discarded$11 = cd.a(dg.a(false), "zap", new Object[1], 10056);
                             break L21;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {

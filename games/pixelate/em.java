@@ -6,7 +6,7 @@ final class em {
     static String field_b;
     static String field_c;
 
-    final static void a() {
+    final static void a(byte param0) {
         oa.field_j = 0;
     }
 
@@ -22,7 +22,7 @@ final class em {
         }
     }
 
-    final static void a(tf[] param0) {
+    final static void a(tf[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -116,14 +116,11 @@ final class em {
 
     final static void a(vj param0, int param1, int param2, fm param3) {
         try {
-            int discarded$0 = 1;
-            ub.field_a = pf.a() * param2 / 1000;
-            int discarded$1 = 14;
-            nj.a(param3);
+            ub.field_a = pf.a(true) * param2 / 1000;
+            nj.a(param3, (byte) 14);
             dk.a(false, param3);
             ec.a(false, param3);
-            int discarded$2 = 260;
-            op.e();
+            op.e(260);
             ng.g(0);
             ga.field_f = -ub.field_a;
             int var4_int = 0;

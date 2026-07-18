@@ -94,7 +94,7 @@ final class ima extends bca {
         super(param0, param1);
     }
 
-    final static jna a(lu param0) {
+    final static jna a(lu param0, boolean param1) {
         jna var2 = null;
         RuntimeException var2_ref = null;
         jna stackIn_3_0 = null;

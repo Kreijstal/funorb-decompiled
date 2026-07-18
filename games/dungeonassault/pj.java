@@ -530,8 +530,7 @@ final class pj {
                       }
                     }
                   }
-                  int discarded$1 = 98;
-                  return this.a(var7 != 0, var3, param1);
+                  return this.a(var7 != 0, var9, param1, (byte) 98);
                 }
               } else {
                 L11: {
@@ -576,7 +575,7 @@ final class pj {
         }
     }
 
-    private final void a(wm param0, ec param1) {
+    private final void a(wm param0, ec param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
@@ -676,7 +675,7 @@ final class pj {
         }
     }
 
-    private final void a(hb param0) {
+    private final void a(hb param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         hb[] var4 = null;
@@ -807,19 +806,17 @@ final class pj {
         try {
           L0: {
             this.a(105, param2, ((pj) this).field_v);
-            ai dupTemp$4 = new ai(3);
-            ((pj) this).field_h[48] = dupTemp$4;
-            ((pj) this).field_h[42] = dupTemp$4;
-            ((pj) this).field_h[6] = dupTemp$4;
-            ((pj) this).field_h[0] = dupTemp$4;
+            ai dupTemp$1 = new ai(3);
+            ((pj) this).field_h[48] = dupTemp$1;
+            ((pj) this).field_h[42] = dupTemp$1;
+            ((pj) this).field_h[6] = dupTemp$1;
+            ((pj) this).field_h[0] = dupTemp$1;
             ((pj) this).field_h[24] = new ai(2);
             var4_int = 0;
             L1: while (true) {
               if (49 <= var4_int) {
-                int discarded$5 = -23082;
-                this.a(((pj) this).field_p, param2);
-                int discarded$6 = -23082;
-                this.a(((pj) this).field_j, param2);
+                this.a(((pj) this).field_p, param2, -23082);
+                this.a(((pj) this).field_j, param2, -23082);
                 ((pj) this).field_q = param2.a((byte) 2);
                 ((pj) this).field_B = param2.a((byte) 2);
                 var4_int = 0;
@@ -857,8 +854,7 @@ final class pj {
                         ((pj) this).field_o = param2.f(-110);
                         ((pj) this).field_y = param2.f(-94);
                         ((pj) this).field_l = param2.f(-107);
-                        int discarded$7 = -23082;
-                        this.a(((pj) this).field_d, param2);
+                        this.a(((pj) this).field_d, param2, -23082);
                         break L4;
                       }
                     }
@@ -1020,7 +1016,7 @@ final class pj {
         }
     }
 
-    private final mo a(boolean param0, ai param1, int param2) {
+    private final mo a(boolean param0, ai param1, int param2, byte param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         h var6 = null;
@@ -1556,8 +1552,7 @@ final class pj {
         ec var6 = new ec(3);
         var6.i(param3, -128);
         if (this.a(param4, param3, param2 + 18031, param1, param0)) {
-            int discarded$1 = 47;
-            var6.a(6, 16 | this.a());
+            var6.a(6, 16 | this.a((byte) 47));
             ((pj) this).a(32768, 2);
         } else {
             var6.a(6, 0);
@@ -1593,8 +1588,7 @@ final class pj {
             if (param0 <= 97) {
                 ((pj) this).field_g = 87;
             }
-            int discarded$0 = 6;
-            this.a(param1);
+            this.a(param1, 6);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "pj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -2071,8 +2065,7 @@ final class pj {
             if (param4 < param1) {
               break L2;
             } else {
-              int discarded$2 = -21;
-              if (ha.a() >= this.c(param3, param0, param1, 2, param4)) {
+              if (ha.a((byte) -21) >= this.c(param3, param0, param1, 2, param4)) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 break L1;
@@ -2921,8 +2914,7 @@ final class pj {
                 break L8;
               }
             }
-            int discarded$1 = 6;
-            this.a(((pj) this).field_u);
+            this.a(((pj) this).field_u, 6);
             return;
           }
         }
@@ -2961,7 +2953,7 @@ final class pj {
                 break L1;
               } else {
                 var4 = null;
-                String discarded$4 = pj.a((byte) -8, -92, (String) null);
+                String discarded$2 = pj.a((byte) -8, -92, (String) null);
                 break L1;
               }
             }
@@ -2978,8 +2970,7 @@ final class pj {
             }
             param2 = stackIn_5_0;
             if (mh.a(125, param1)) {
-              int discarded$5 = 255;
-              stackOut_8_0 = ln.a(param1, param2);
+              stackOut_8_0 = ln.a(param1, param2, 255);
               stackIn_9_0 = stackOut_8_0;
               break L0;
             } else {
@@ -3618,7 +3609,7 @@ final class pj {
         return ((pj) this).field_m.a(param0, (byte) 113);
     }
 
-    private final int a() {
+    private final int a(byte param0) {
         int var3 = 0;
         int var4 = DungeonAssault.field_K;
         int var2 = 0;

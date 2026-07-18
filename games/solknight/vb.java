@@ -167,8 +167,7 @@ final class vb extends il {
                       ic.field_z.b(-1955895016, var14);
                       ic.field_z.b(param6 + -1955873256, var8);
                       var15 = (CharSequence) (Object) param3;
-                      int discarded$4 = 1;
-                      ic.field_z.b(-1955895016, sa.a(var15));
+                      ic.field_z.b(-1955895016, sa.a(var15, true));
                       ic.field_z.a(true, param1);
                       ic.field_z.c(-112, param0);
                       ic.field_z.c(105, var9);
@@ -293,10 +292,8 @@ final class vb extends il {
                       ef.field_e = bj.field_a;
                       break L9;
                     } else {
-                      int discarded$5 = -9917;
-                      boolean discarded$6 = bf.c(54, sk.g());
-                      int discarded$7 = -2;
-                      n.field_b = new Boolean(lj.a((gb) (Object) te.field_N));
+                      boolean discarded$1 = bf.c(54, sk.g(-9917));
+                      n.field_b = new Boolean(lj.a((gb) (Object) te.field_N, -2));
                       te.field_N.field_m = 0;
                       break L9;
                     }
@@ -490,7 +487,7 @@ final class vb extends il {
         field_f = null;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1 = -12;
         return v.field_d;
     }
@@ -526,15 +523,14 @@ final class vb extends il {
           if (param0 == 255) {
             break L0;
           } else {
-            o[] discarded$2 = vb.e(64);
+            o[] discarded$1 = vb.e(64);
             break L0;
           }
         }
         var2 = 0;
         L1: while (true) {
           if (var2 >= nb.field_c) {
-            int discarded$3 = -97;
-            og.a();
+            og.a((byte) -97);
             return var1;
           } else {
             var3 = uj.field_b[var2] * sa.field_l[var2];

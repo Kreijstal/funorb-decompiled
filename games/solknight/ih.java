@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ih {
-    final static mb a() {
+    final static mb a(boolean param0) {
         String var1 = rg.a(0);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
@@ -19,11 +19,9 @@ final class ih {
                 ih.a(-65, (java.awt.Canvas) null);
             }
             if (!(fj.field_i != 11)) {
-                int discarded$0 = -128;
-                wg.a();
+                wg.a((byte) -128);
             }
-            int discarded$1 = -77;
-            uj.a(jl.field_e, pe.field_m, ib.field_o);
+            uj.a(jl.field_e, pe.field_m, ib.field_o, (byte) -77);
             uf.a((byte) 99, 0, 0, param1);
         } catch (RuntimeException runtimeException) {
             throw fc.a((Throwable) (Object) runtimeException, "ih.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

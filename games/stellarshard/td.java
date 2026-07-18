@@ -89,7 +89,7 @@ final class td {
         return stackIn_23_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_c = null;
         field_e = null;

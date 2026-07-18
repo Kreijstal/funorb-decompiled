@@ -97,7 +97,7 @@ final class va {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
         field_a = null;
         field_e = null;
@@ -168,7 +168,7 @@ final class va {
         return stackIn_3_0;
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return 1;
     }
 

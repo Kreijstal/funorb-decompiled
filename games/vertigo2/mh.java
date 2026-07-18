@@ -7,7 +7,7 @@ final class mh {
     static String field_b;
     static dd field_d;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1, int param2) {
         int var3 = 0;
         String var4 = null;
         Object var5 = null;
@@ -60,8 +60,7 @@ final class mh {
                   }
                   L3: {
                     if (2 == hk.field_n) {
-                      int discarded$1 = 100;
-                      var5 = (Object) (Object) br.a(var4, 13);
+                      var5 = (Object) (Object) br.a(var4, 13, 100);
                       break L3;
                     } else {
                       break L3;
@@ -97,7 +96,7 @@ final class mh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -109,6 +108,8 @@ final class mh {
 
     final static void a(boolean param0, er[][] param1, byte[] param2, int param3, r param4, r param5, boolean param6, int[] param7, String[] param8, String[][] param9, er[][] param10, int param11, String[][] param12, byte[] param13, r param14) {
         RuntimeException var15 = null;
+        Object var16 = null;
+        Object var17 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
@@ -276,8 +277,9 @@ final class mh {
         StringBuilder stackOut_33_1 = null;
         String stackOut_33_2 = null;
         try {
-          int discarded$1 = 1;
-          wn.a(param8, param13, param7, param9, (u[]) null, param5, param4, (byte) -42, param10, param12, param14, 3, param2, param1, 2, (int[]) null);
+          var17 = null;
+          var16 = null;
+          wn.a(param8, param13, param7, param9, (u[]) null, param5, param4, (byte) -42, param10, param12, param14, 3, param2, param1, 2, (int[]) null, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

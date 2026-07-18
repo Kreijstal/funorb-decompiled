@@ -9,10 +9,9 @@ final class da {
     static String field_e;
     static int field_c;
 
-    final static void a(ha param0) {
+    final static void a(ha param0, boolean param1, byte param2) {
         try {
-            int discarded$0 = 256;
-            sb.a(true, (byte) -33, param0);
+            sb.a(true, (byte) -33, param0, 256);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "da.C(" + (param0 != null ? "{...}" : "null") + ',' + true + ',' + -119 + ')');
         }
@@ -21,13 +20,11 @@ final class da {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param2 < 115) {
           field_d = null;
-          int discarded$4 = 65280;
-          ec.a();
+          ec.a(65280);
           de.a(param3, param4, param0, param1);
           return;
         } else {
-          int discarded$5 = 65280;
-          ec.a();
+          ec.a(65280);
           de.a(param3, param4, param0, param1);
           return;
         }
@@ -56,7 +53,7 @@ final class da {
         field_f = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         ff.field_c = tj.field_t.b(ce.field_g[20]);
         var1 = tj.field_t.b(ce.field_g[21]);

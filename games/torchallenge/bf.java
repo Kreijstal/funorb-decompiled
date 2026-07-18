@@ -18,7 +18,7 @@ final class bf {
     static int[] field_l;
     int field_m;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_g = null;
         field_l = null;

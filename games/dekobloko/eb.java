@@ -37,7 +37,7 @@ final class eb {
         return ka.a((byte) 81, var2, tf.field_cb) + 24;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_n = null;
         field_r = null;
@@ -45,7 +45,7 @@ final class eb {
         field_k = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         be.field_w[93] = 43;
         be.field_w[59] = 57;
         be.field_w[45] = 26;
@@ -94,9 +94,8 @@ final class eb {
         }
     }
 
-    final static void a() {
-        int discarded$0 = 8225;
-        j.a();
+    final static void a(int param0) {
+        j.a(8225);
     }
 
     eb(int param0, boolean param1, int param2, int param3, int param4, int param5, String[] param6) {

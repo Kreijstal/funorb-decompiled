@@ -127,7 +127,7 @@ final class lk {
         }
     }
 
-    private final boolean q() {
+    private final boolean q(int param0) {
         int[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -176,8 +176,7 @@ final class lk {
             ((lk) this).field_B = ((lk) this).field_T;
             ((lk) this).field_zb = var3;
             ((lk) this).field_T = var2;
-            int discarded$6 = -117;
-            if (this.c()) {
+            if (this.c((byte) -117)) {
               ((lk) this).field_T = ((lk) this).field_B;
               ((lk) this).field_B = var2;
               ((lk) this).field_zb = ((lk) this).field_C;
@@ -190,8 +189,7 @@ final class lk {
               var3 = ((lk) this).field_db;
               ((lk) this).field_db = -((lk) this).field_o;
               ((lk) this).field_o = var3;
-              int discarded$7 = 30968;
-              this.d();
+              this.d(30968);
               var3 = 0;
               this.h(-1);
               var6 = 0;
@@ -224,9 +222,9 @@ final class lk {
                 var4++;
                 continue L2;
               } else {
-                int incrementValue$8 = var3;
+                int incrementValue$2 = var3;
                 var3++;
-                ((lk) this).field_B[var5] = ((lk) this).field_T[incrementValue$8];
+                ((lk) this).field_B[var5] = ((lk) this).field_T[incrementValue$2];
                 var5 = var5 + ((lk) this).field_zb;
                 var6++;
                 continue L5;
@@ -365,7 +363,7 @@ final class lk {
         }
     }
 
-    private final int l() {
+    private final int l(int param0) {
         int var2 = 0;
         return 80 + ((lk) this).field_g * ((lk) this).field_a;
     }
@@ -961,8 +959,7 @@ final class lk {
               L1: {
                 ((lk) this).field_Ab = ((lk) this).field_Ab - 1;
                 if (0 != (1 & var3)) {
-                  int discarded$7 = -116;
-                  this.b();
+                  this.b((byte) -116);
                   ((lk) this).field_Cb = -10;
                   break L1;
                 } else {
@@ -978,13 +975,12 @@ final class lk {
               L2: {
                 if (0 > ((lk) this).field_Cb) {
                   if ((param0 & 1) != 0) {
-                    int fieldTemp$8 = ((lk) this).field_Cb + 1;
+                    int fieldTemp$3 = ((lk) this).field_Cb + 1;
                     ((lk) this).field_Cb = ((lk) this).field_Cb + 1;
-                    if (fieldTemp$8 != 0) {
+                    if (fieldTemp$3 != 0) {
                       break L2;
                     } else {
-                      int discarded$9 = -116;
-                      this.b();
+                      this.b((byte) -116);
                       ((lk) this).field_Cb = -3;
                       break L2;
                     }
@@ -998,9 +994,9 @@ final class lk {
                       ((lk) this).field_Cb = 0;
                       break L2;
                     } else {
-                      int fieldTemp$10 = ((lk) this).field_Cb - 1;
+                      int fieldTemp$4 = ((lk) this).field_Cb - 1;
                       ((lk) this).field_Cb = ((lk) this).field_Cb - 1;
-                      if (fieldTemp$10 == 0) {
+                      if (fieldTemp$4 == 0) {
                         this.j(4);
                         ((lk) this).field_Cb = 3;
                         break L2;
@@ -1032,8 +1028,7 @@ final class lk {
               if ((8 & var3) == 0) {
                 break L0;
               } else {
-                int discarded$11 = 0;
-                this.i();
+                this.i(0);
                 break L0;
               }
             }
@@ -1042,7 +1037,7 @@ final class lk {
             if (param1 == -1674843007) {
               break L5;
             } else {
-              boolean discarded$12 = lk.a(50, -101, 127, 94, false, 20, 66);
+              boolean discarded$5 = lk.a(50, -101, 127, 94, false, 20, 66);
               break L5;
             }
           }
@@ -1073,8 +1068,7 @@ final class lk {
                       if (((lk) this).field_g != ((lk) this).field_e) {
                         break L8;
                       } else {
-                        int discarded$13 = 32;
-                        if (this.o() != ((lk) this).field_M) {
+                        if (this.o(32) != ((lk) this).field_M) {
                           break L8;
                         } else {
                           if (null != ((lk) this).field_rb) {
@@ -1371,10 +1365,8 @@ final class lk {
                     }
                     ((lk) this).field_e = stackIn_31_1;
                     ((lk) this).field_y = false;
-                    int discarded$2 = 123;
-                    ((lk) this).field_Ab = this.l();
-                    int discarded$3 = 32;
-                    ((lk) this).field_M = this.o();
+                    ((lk) this).field_Ab = this.l(123);
+                    ((lk) this).field_M = this.o(32);
                     break L0;
                   } else {
                     ((lk) this).field_b[var4_int] = 8;
@@ -1616,20 +1608,17 @@ final class lk {
     private final void b(boolean param0) {
         int var2 = -300 + ka.a((byte) 122, 601, tf.field_cb);
         var2 = var2 * (var2 * var2) / 90000;
-        int discarded$0 = 256;
-        a.a(var2, ((lk) this).field_J / 4, ak.field_b, ((lk) this).field_sb);
+        a.a(var2, ((lk) this).field_J / 4, ak.field_b, ((lk) this).field_sb, 256);
     }
 
-    private final void i() {
-        int discarded$0 = 21200;
-        if (this.q()) {
+    private final void i(int param0) {
+        if (this.q(21200)) {
             return;
         }
         if ((((lk) this).field_db | ((lk) this).field_o) != 0) {
             ((lk) this).field_o = -((lk) this).field_o;
             ((lk) this).field_db = -((lk) this).field_db;
-            int discarded$1 = 21200;
-            if (this.q()) {
+            if (this.q(21200)) {
                 return;
             }
             ((lk) this).field_o = -((lk) this).field_o;
@@ -2252,9 +2241,9 @@ final class lk {
                     he.field_ab = he.field_ab + var8;
                     ((lk) this).field_ub = ((lk) this).field_ub + var7;
                     if (0 < var7) {
-                      int fieldTemp$8 = gg.field_B;
+                      int fieldTemp$6 = gg.field_B;
                       gg.field_B = gg.field_B - 1;
-                      ((lk) this).field_rb.a((bh) (Object) new sa(true, ((lk) this).field_O * 128, -384 + fieldTemp$8 * 256, var7, jg.field_f, -2 + var6, 0, new String[3]), 2777);
+                      ((lk) this).field_rb.a((bh) (Object) new sa(true, ((lk) this).field_O * 128, -384 + fieldTemp$6 * 256, var7, jg.field_f, -2 + var6, 0, new String[3]), 2777);
                       break L41;
                     } else {
                       break L41;
@@ -2262,9 +2251,9 @@ final class lk {
                   }
                   var8 = le.b(32085, ((lk) this).field_nb);
                   if (0 < var8) {
-                    int fieldTemp$9 = gg.field_B;
+                    int fieldTemp$7 = gg.field_B;
                     gg.field_B = gg.field_B - 1;
-                    ((lk) this).field_W = new sa(true, 128 * ((lk) this).field_O, -384 + fieldTemp$9 * 256, var8, nf.field_f, ((lk) this).field_nb + -2, 0, new String[3]);
+                    ((lk) this).field_W = new sa(true, 128 * ((lk) this).field_O, -384 + fieldTemp$7 * 256, var8, nf.field_f, ((lk) this).field_nb + -2, 0, new String[3]);
                     break L40;
                   } else {
                     break L40;
@@ -2467,7 +2456,7 @@ final class lk {
                                     if ((((lk) this).field_P[var7 + ((lk) this).field_O] & 1879048192) != 0) {
                                       break L59;
                                     } else {
-                                      int discarded$10 = this.a(false, 1, 1, param3, false, -1, var7 - -((lk) this).field_O, 3, param0, false, (byte) 123);
+                                      int discarded$8 = this.a(false, 1, 1, param3, false, -1, var7 - -((lk) this).field_O, 3, param0, false, (byte) 123);
                                       break L59;
                                     }
                                   }
@@ -2479,7 +2468,7 @@ final class lk {
                                     if (0 != (((lk) this).field_P[((lk) this).field_O + var7] & 1879048192)) {
                                       break L60;
                                     } else {
-                                      int discarded$11 = this.a(false, 1, 1, param3, true, -1, ((lk) this).field_O + var7, 3, param0, false, (byte) 72);
+                                      int discarded$9 = this.a(false, 1, 1, param3, true, -1, ((lk) this).field_O + var7, 3, param0, false, (byte) 72);
                                       break L60;
                                     }
                                   }
@@ -2501,7 +2490,7 @@ final class lk {
                             L62: {
                               var10 = ((lk) this).field_P[var7];
                               if (var10 == 25) {
-                                int discarded$12 = this.a(false, 2, 1, param3, false, -2, ((lk) this).field_O + var7, 3, param0, false, (byte) 109);
+                                int discarded$10 = this.a(false, 2, 1, param3, false, -2, ((lk) this).field_O + var7, 3, param0, false, (byte) 109);
                                 this.b(-1, ((lk) this).field_O + var7, false);
                                 break L62;
                               } else {
@@ -2510,7 +2499,7 @@ final class lk {
                             }
                             L63: {
                               if (27 == var10) {
-                                int discarded$13 = this.a(true, 2, 1, param3, true, -2, ((lk) this).field_O + var7, 3, param0, false, (byte) -99);
+                                int discarded$11 = this.a(true, 2, 1, param3, true, -2, ((lk) this).field_O + var7, 3, param0, false, (byte) -99);
                                 this.b(-1, var7 - -((lk) this).field_O, false);
                                 break L63;
                               } else {
@@ -2793,16 +2782,14 @@ final class lk {
                       }
                     }
                     L86: {
-                      int discarded$14 = -117;
-                      if (this.c()) {
+                      if (this.c((byte) -117)) {
                         ((lk) this).field_L = ((lk) this).field_L - 1;
                         break L86;
                       } else {
                         break L86;
                       }
                     }
-                    int discarded$15 = 32;
-                    ((lk) this).field_M = this.o();
+                    ((lk) this).field_M = this.o(32);
                     break L84;
                   } else {
                     break L83;
@@ -2818,14 +2805,13 @@ final class lk {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_i = null;
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         ((lk) this).field_q = ((lk) this).field_q - 1;
-        int discarded$0 = -117;
-        if (this.c()) {
+        if (this.c((byte) -117)) {
             ((lk) this).field_q = ((lk) this).field_q + 1;
         } else {
             this.h(-1);
@@ -2837,7 +2823,7 @@ final class lk {
         ge.a(((lk) this).field_sb, ((lk) this).field_J / 8, (byte) 127, ul.field_i);
     }
 
-    private final rf p() {
+    private final rf p(int param0) {
         int var3 = 0;
         int var4 = client.field_A ? 1 : 0;
         if (((lk) this).field_t <= 0) {
@@ -3060,13 +3046,12 @@ final class lk {
         }
     }
 
-    private final int o() {
+    private final int o(int param0) {
         return ((lk) this).field_o + ((lk) this).field_zb + 2 * ((lk) this).field_L;
     }
 
-    private final void d() {
-        int discarded$0 = 32;
-        int var2 = this.o();
+    private final void d(int param0) {
+        int var2 = this.o(32);
         if (!(((lk) this).field_M >= var2)) {
             ((lk) this).field_M = var2;
         }
@@ -3178,7 +3163,7 @@ final class lk {
         }
     }
 
-    private final boolean t() {
+    private final boolean t(int param0) {
         int[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -3227,8 +3212,7 @@ final class lk {
             ((lk) this).field_zb = var3;
             ((lk) this).field_B = ((lk) this).field_T;
             ((lk) this).field_T = var2;
-            int discarded$6 = -117;
-            if (this.c()) {
+            if (this.c((byte) -117)) {
               ((lk) this).field_T = ((lk) this).field_B;
               ((lk) this).field_zb = ((lk) this).field_C;
               ((lk) this).field_B = var2;
@@ -3241,8 +3225,7 @@ final class lk {
               var3 = ((lk) this).field_db;
               ((lk) this).field_db = ((lk) this).field_o;
               ((lk) this).field_o = -var3;
-              int discarded$7 = 30968;
-              this.d();
+              this.d(30968);
               var3 = 0;
               this.h(-1);
               var6 = 0;
@@ -3275,9 +3258,9 @@ final class lk {
                 var4++;
                 continue L2;
               } else {
-                int incrementValue$8 = var3;
+                int incrementValue$2 = var3;
                 var3++;
-                ((lk) this).field_B[var5] = ((lk) this).field_T[incrementValue$8];
+                ((lk) this).field_B[var5] = ((lk) this).field_T[incrementValue$2];
                 var5 = var5 - ((lk) this).field_zb;
                 var6++;
                 continue L5;
@@ -3344,13 +3327,11 @@ final class lk {
         int var3 = 0;
         int var4 = client.field_A ? 1 : 0;
         ((lk) this).field_L = ((lk) this).field_L + 1;
-        int discarded$0 = -117;
-        if (!(!this.c())) {
+        if (!(!this.c((byte) -117))) {
             ((lk) this).field_L = ((lk) this).field_L - 1;
             return true;
         }
-        int discarded$1 = 30968;
-        this.d();
+        this.d(30968);
         if (param1) {
             var3 = this.a((byte) 103);
             if (var3 != 1) {
@@ -3372,7 +3353,7 @@ final class lk {
         return false;
     }
 
-    private final boolean c() {
+    private final boolean c(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -3679,7 +3660,7 @@ final class lk {
         }
     }
 
-    final static void a(mm param0, boolean param1, mm param2) {
+    final static void a(mm param0, boolean param1, mm param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -4263,16 +4244,14 @@ final class lk {
     }
 
     private final void c(boolean param0) {
-        int discarded$0 = 0;
-        if (!(!this.t())) {
+        if (!(!this.t(0))) {
             return;
         }
-        boolean discarded$3 = this.c(61, 75);
+        boolean discarded$2 = this.c(61, 75);
         if (!((((lk) this).field_db | ((lk) this).field_o) == 0)) {
             ((lk) this).field_db = -((lk) this).field_db;
             ((lk) this).field_o = -((lk) this).field_o;
-            int discarded$4 = 0;
-            if (!(!this.t())) {
+            if (!(!this.t(0))) {
                 return;
             }
             ((lk) this).field_db = -((lk) this).field_db;
@@ -4302,8 +4281,7 @@ final class lk {
 
     private final void j(int param0) {
         ((lk) this).field_q = ((lk) this).field_q + 1;
-        int discarded$0 = -117;
-        if (!this.c()) {
+        if (!this.c((byte) -117)) {
             this.h(-1);
             ge.a(((lk) this).field_lb, ((lk) this).field_k / 4, (byte) 127, hm.field_d);
         } else {
@@ -4639,11 +4617,10 @@ final class lk {
                 if (((lk) this).field_t <= 0) {
                   break L21;
                 } else {
-                  if (((lk) this).field_X[0].field_e < 13) {
+                  if (-14 < ((lk) this).field_X[0].field_e) {
                     break L21;
                   } else {
-                    int discarded$3 = 127;
-                    rf discarded$4 = this.p();
+                    rf discarded$2 = this.p(127);
                     continue L20;
                   }
                 }
@@ -4664,7 +4641,7 @@ final class lk {
                       }
                     }
                     L24: {
-                      if (-323 != ((lk) this).field_pb) {
+                      if (((lk) this).field_pb != 322) {
                         break L24;
                       } else {
                         this.c(0);
@@ -4674,7 +4651,7 @@ final class lk {
                     ((lk) this).field_pb = ((lk) this).field_pb + 1;
                     if (335 == ((lk) this).field_pb) {
                       ((lk) this).field_pb = 0;
-                      bh discarded$5 = ((lk) this).field_cb.a(param0 + 21146);
+                      bh discarded$3 = ((lk) this).field_cb.a(param0 + 21146);
                       break L22;
                     } else {
                       break L22;

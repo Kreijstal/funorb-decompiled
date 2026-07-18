@@ -1358,8 +1358,7 @@ final class ie extends qd {
                     var9 = (int)var8.field_g;
                     var12 = (pq) (Object) ((ie) this).field_w.a(-70, (long)var9);
                     if (var12 == null) {
-                      int discarded$1 = 8;
-                      var13 = mi.a(param3, var9);
+                      var13 = mi.a(param3, var9, 8);
                       if (var13 != null) {
                         ((ie) this).field_w.a(34, (nm) (Object) var13, (long)var9);
                         if (!var13.a(var8.field_i, (byte) -73, param4, (int[]) var7)) {
@@ -2355,7 +2354,7 @@ final class ie extends qd {
         }
     }
 
-    final static void a(int param0, jp[] param1, jp[] param2, int param3, jp[] param4, int param5, int param6, dh param7) {
+    final static void a(int param0, jp[] param1, jp[] param2, int param3, jp[] param4, int param5, int param6, dh param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         int var15_int = 0;
         int var16 = 0;
         try {

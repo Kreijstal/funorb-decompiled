@@ -14,7 +14,7 @@ final class uc {
         field_b = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         w.field_a = nf.field_l.g(12248);
         CharSequence var2 = (CharSequence) (Object) w.field_a;
         kf.field_e = hj.a((byte) -125, var2);

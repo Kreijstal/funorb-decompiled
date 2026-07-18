@@ -599,7 +599,7 @@ final class aj extends pa {
         return stackIn_24_0;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_t = null;
         field_r = null;
         field_x = null;

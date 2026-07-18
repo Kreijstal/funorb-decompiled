@@ -32,8 +32,7 @@ class rm extends ck {
                     break L1;
                   }
                 }
-                int discarded$1 = -127;
-                this.a(var2);
+                this.a(var2, (byte) -127);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -50,13 +49,13 @@ class rm extends ck {
         }
     }
 
-    private final void s() {
+    private final void s(int param0) {
         if (((rm) this).field_n instanceof jo) {
             ((jo) (Object) ((rm) this).field_n).a((rm) this, (byte) -127);
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_12_0 = null;
@@ -254,9 +253,9 @@ class rm extends ck {
                             break L6;
                           } else {
                             ((rm) this).field_w = ((rm) this).field_w + param1;
-                            int dupTemp$3 = ((rm) this).field_w.length();
-                            ((rm) this).field_L = dupTemp$3;
-                            ((rm) this).field_M = dupTemp$3;
+                            int dupTemp$1 = ((rm) this).field_w.length();
+                            ((rm) this).field_L = dupTemp$1;
+                            ((rm) this).field_M = dupTemp$1;
                             break L6;
                           }
                         }
@@ -383,8 +382,7 @@ class rm extends ck {
                                 return stackIn_34_0 != 0;
                               } else {
                                 if (param2 == 84) {
-                                  int discarded$4 = 32;
-                                  this.s();
+                                  this.s(32);
                                   stackOut_31_0 = 1;
                                   stackIn_32_0 = stackOut_31_0;
                                   return stackIn_32_0 != 0;
@@ -394,8 +392,7 @@ class rm extends ck {
                                       break L10;
                                     } else {
                                       if (param2 == 65) {
-                                        int discarded$5 = 0;
-                                        this.i();
+                                        this.i(0);
                                         stackOut_29_0 = 1;
                                         stackIn_30_0 = stackOut_29_0;
                                         return stackIn_30_0 != 0;
@@ -580,15 +577,13 @@ class rm extends ck {
         if (param0 >= -73) {
             return;
         }
-        int discarded$0 = 82;
-        String var2 = this.k();
+        String var2 = this.k(82);
         if (var2.length() > 0) {
-            int discarded$1 = 82;
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.k()), (java.awt.datatransfer.ClipboardOwner) null);
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.k(82)), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    private final void i() {
+    private final void i(int param0) {
         this.h((byte) -89);
         this.g((byte) -111);
     }
@@ -1009,7 +1004,7 @@ class rm extends ck {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_S = null;
         field_J = null;
     }
@@ -1162,7 +1157,7 @@ class rm extends ck {
         }
     }
 
-    final static void q() {
+    final static void q(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -1327,13 +1322,13 @@ class rm extends ck {
         ((rm) this).n(4746);
     }
 
-    private final String k() {
+    private final String k(int param0) {
         int var2 = ((rm) this).field_L <= ((rm) this).field_M ? ((rm) this).field_L : ((rm) this).field_M;
         int var3 = ((rm) this).field_M < ((rm) this).field_L ? ((rm) this).field_L : ((rm) this).field_M;
         return ((rm) this).field_w.substring(var2, var3);
     }
 
-    final static void r() {
+    final static void r(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -1356,30 +1351,21 @@ class rm extends ck {
                 break L1;
               }
             }
-            int discarded$9 = 71;
-            ga.field_o[0] = rc.a("", sb.field_a, "intro_01.jpg");
-            int discarded$10 = 71;
-            ga.field_o[1] = rc.a("", sb.field_a, "intro_03.jpg");
-            int discarded$11 = 71;
-            ga.field_o[2] = rc.a("", sb.field_a, "intro_02.jpg");
-            int discarded$12 = 71;
-            ga.field_o[3] = rc.a("", sb.field_a, "intro_04.jpg");
-            int discarded$13 = 71;
-            ga.field_o[4] = rc.a("", sb.field_a, "intro_05.jpg");
+            ga.field_o[0] = rc.a("", sb.field_a, "intro_01.jpg", (byte) 71);
+            ga.field_o[1] = rc.a("", sb.field_a, "intro_03.jpg", (byte) 71);
+            ga.field_o[2] = rc.a("", sb.field_a, "intro_02.jpg", (byte) 71);
+            ga.field_o[3] = rc.a("", sb.field_a, "intro_04.jpg", (byte) 71);
+            ga.field_o[4] = rc.a("", sb.field_a, "intro_05.jpg", (byte) 71);
             ga.field_o[5] = ga.field_o[4];
-            int discarded$14 = 71;
-            ga.field_o[6] = rc.a("", sb.field_a, "intro_06.jpg");
-            int discarded$15 = 71;
-            ga.field_o[7] = rc.a("", sb.field_a, "intro_07.jpg");
-            int discarded$16 = 71;
-            ga.field_o[8] = rc.a("", sb.field_a, "intro_08.jpg");
+            ga.field_o[6] = rc.a("", sb.field_a, "intro_06.jpg", (byte) 71);
+            ga.field_o[7] = rc.a("", sb.field_a, "intro_07.jpg", (byte) 71);
+            ga.field_o[8] = rc.a("", sb.field_a, "intro_08.jpg", (byte) 71);
             jh.c();
             var1_int = 0;
             L2: while (true) {
               if (var1_int >= ga.field_o.length) {
                 jh.b();
-                int discarded$17 = 71;
-                sg.field_b = rc.a("", sb.field_a, "logo.jpg");
+                sg.field_b = rc.a("", sb.field_a, "logo.jpg", (byte) 71);
                 ro.field_B = true;
                 break L0;
               } else {

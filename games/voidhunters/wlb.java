@@ -82,11 +82,11 @@ final class wlb extends rqa {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_q = null;
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;

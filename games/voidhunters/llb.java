@@ -615,7 +615,7 @@ class llb extends fgb {
                 } else {
                   var4.field_N = true;
                   var4.g(127);
-                  var4 = (llb) (Object) var4.field_lb.a(-1155566844);
+                  var4 = (llb) (Object) ((llb) this).field_lb.a(-1155566844);
                   continue L1;
                 }
               }
@@ -626,8 +626,7 @@ class llb extends fgb {
     }
 
     llb(String param0, llb param1, int param2, int param3, int param4, int param5, String param6) {
-        this(qua.a((CharSequence) (Object) param0), param1, param2, param3, param4, param5, param6);
-        int discarded$0 = 1;
+        this(qua.a((CharSequence) (Object) param0, true), param1, param2, param3, param4, param5, param6);
     }
 
     private final void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5) {
@@ -637,7 +636,7 @@ class llb extends fgb {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
+        llb var13 = null;
         int var14 = 0;
         Object stackIn_27_0 = null;
         Object stackIn_28_0 = null;
@@ -670,7 +669,6 @@ class llb extends fgb {
         Object stackOut_37_0 = null;
         int stackOut_37_1 = 0;
         L0: {
-          var13 = null;
           var14 = VoidHunters.field_G;
           if (((llb) this).field_sb > 0) {
             var7 = -(-((llb) this).field_sb >> 2);
@@ -868,13 +866,13 @@ class llb extends fgb {
         L12: {
           ((llb) this).field_O = stackIn_38_1 != 0;
           if (((llb) this).field_lb != null) {
-            var13 = (Object) (Object) (llb) (Object) ((llb) this).field_lb.b((byte) 119);
+            var13 = (llb) (Object) ((llb) this).field_lb.b((byte) 119);
             L13: while (true) {
               if (var13 == null) {
                 break L12;
               } else {
-                ((llb) var13).a(true, ((llb) var13).field_M, ((llb) var13).field_G, param3, ((llb) var13).field_u, ((llb) var13).field_hb);
-                var13 = (Object) (Object) (llb) (Object) ((llb) var13).field_lb.a(-1155566844);
+                var13.a(true, ((llb) this).field_M, ((llb) this).field_G, param3, ((llb) this).field_u, ((llb) this).field_hb);
+                var13 = (llb) (Object) ((llb) this).field_lb.a(-1155566844);
                 continue L13;
               }
             }
@@ -883,7 +881,7 @@ class llb extends fgb {
           }
         }
         L14: {
-          if (!((llb) var13).field_Q) {
+          if (!((llb) this).field_Q) {
             break L14;
           } else {
             dca.field_p = true;
@@ -900,16 +898,16 @@ class llb extends fgb {
         }
         L16: {
           dma.b(var8, var9, var10, var11);
-          if (((llb) var13).field_C == 0) {
+          if (((llb) this).field_C == 0) {
             break L16;
           } else {
-            if (!((llb) var13).field_Z) {
+            if (!((llb) this).field_Z) {
               break L16;
             } else {
               L17: {
-                ((llb) this).field_K = -((llb) var13).field_n + uia.field_b - param4;
-                ((llb) this).field_L = -param1 + -((llb) var13).field_r + kc.field_b;
-                if (((llb) var13).field_L < 0) {
+                ((llb) this).field_K = -((llb) this).field_n + uia.field_b - param4;
+                ((llb) this).field_L = -param1 + -((llb) this).field_r + kc.field_b;
+                if (((llb) this).field_L < 0) {
                   ((llb) this).field_L = 0;
                   break L17;
                 } else {
@@ -917,15 +915,15 @@ class llb extends fgb {
                 }
               }
               L18: {
-                if (((llb) var13).field_L > -((llb) var13).field_hb + param5) {
-                  ((llb) this).field_L = param5 - ((llb) var13).field_hb;
+                if (((llb) this).field_L > -((llb) this).field_hb + param5) {
+                  ((llb) this).field_L = param5 - ((llb) this).field_hb;
                   break L18;
                 } else {
                   break L18;
                 }
               }
               L19: {
-                if (((llb) var13).field_K >= 0) {
+                if (((llb) this).field_K >= 0) {
                   break L19;
                 } else {
                   ((llb) this).field_K = 0;
@@ -933,17 +931,17 @@ class llb extends fgb {
                 }
               }
               L20: {
-                if (((llb) var13).field_K <= -((llb) var13).field_G + param2) {
+                if (((llb) this).field_K <= -((llb) this).field_G + param2) {
                   break L20;
                 } else {
-                  ((llb) this).field_K = param2 - ((llb) var13).field_G;
+                  ((llb) this).field_K = param2 - ((llb) this).field_G;
                   break L20;
                 }
               }
-              ((llb) this).field_M = ((llb) var13).field_L + param1;
+              ((llb) this).field_M = ((llb) this).field_L + param1;
               ((llb) this).field_sb = 0;
               ((llb) this).field_db = 0;
-              ((llb) this).field_u = param4 + ((llb) var13).field_K;
+              ((llb) this).field_u = param4 + ((llb) this).field_K;
               break L16;
             }
           }
@@ -1098,7 +1096,7 @@ class llb extends fgb {
     final void a(boolean param0, llb param1) {
         wc var3 = null;
         RuntimeException var3_ref = null;
-        Object var4 = null;
+        llb var4 = null;
         int var5 = 0;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
@@ -1125,7 +1123,6 @@ class llb extends fgb {
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
         String stackOut_15_2 = null;
-        var4 = null;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -1134,13 +1131,13 @@ class llb extends fgb {
                 break L1;
               } else {
                 var3 = new wc(((llb) this).field_lb);
-                var4 = (Object) (Object) (llb) (Object) var3.c(570);
+                var4 = (llb) (Object) var3.c(570);
                 L2: while (true) {
                   if (var4 == null) {
                     break L1;
                   } else {
-                    ((llb) var4).a(param0, param1);
-                    var4 = (Object) (Object) (llb) (Object) var3.a(19072);
+                    var4.a(param0, param1);
+                    var4 = (llb) (Object) var3.a(19072);
                     continue L2;
                   }
                 }
@@ -1166,8 +1163,8 @@ class llb extends fgb {
             }
             L4: {
               ((llb) this).field_pb = stackIn_8_1 != 0;
-              if (((llb) var4).field_W) {
-                ((llb) this).field_J = ((llb) var4).field_pb;
+              if (((llb) this).field_W) {
+                ((llb) this).field_J = ((llb) this).field_pb;
                 break L4;
               } else {
                 break L4;
@@ -1611,8 +1608,8 @@ class llb extends fgb {
               if (var23_ref == null) {
                 break L30;
               } else {
-                var23_ref.a(param0, var23_ref.field_G, param2, var23_ref.field_hb, true, param5, param6, param7, var23_ref.field_pb, var19 + var23_ref.field_M, var23_ref.field_u - -var20);
-                var23_ref = (llb) (Object) var23_ref.field_lb.a((byte) 109);
+                var23_ref.a(param0, ((llb) this).field_G, param2, ((llb) this).field_hb, true, param5, param6, param7, ((llb) this).field_pb, var19 + ((llb) this).field_M, ((llb) this).field_u - -var20);
+                var23_ref = (llb) (Object) ((llb) this).field_lb.a((byte) 109);
                 continue L31;
               }
             }

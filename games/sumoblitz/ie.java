@@ -87,7 +87,7 @@ abstract class ie extends pk implements ug {
         return stackIn_5_0 != 0;
     }
 
-    final static jj[] a() {
+    final static jj[] a(int param0) {
         return new jj[]{go.field_m, tr.field_j, na.field_c};
     }
 
@@ -515,8 +515,7 @@ abstract class ie extends pk implements ug {
                   stackIn_9_0 = stackOut_8_0;
                   break L2;
                 } else {
-                  int discarded$3 = 0;
-                  stackOut_7_0 = this.a(param0);
+                  stackOut_7_0 = this.a(param0, false);
                   stackIn_9_0 = stackOut_7_0;
                   break L2;
                 }
@@ -893,7 +892,7 @@ abstract class ie extends pk implements ug {
         }
     }
 
-    private final boolean a(pk param0) {
+    private final boolean a(pk param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;

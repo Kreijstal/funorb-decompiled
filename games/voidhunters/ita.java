@@ -402,7 +402,7 @@ final class ita extends vq {
         }
     }
 
-    public static void j() {
+    public static void j(byte param0) {
         field_A = null;
         field_D = null;
     }

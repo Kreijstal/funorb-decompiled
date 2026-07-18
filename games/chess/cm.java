@@ -14,7 +14,7 @@ abstract class cm extends l {
 
     abstract Object f(int param0);
 
-    final static void d() {
+    final static void d(byte param0) {
         int var1 = 0;
         if (bc.field_b > 10) {
             rf.b(80, bc.field_b + -10);
@@ -29,7 +29,7 @@ abstract class cm extends l {
         ((cm) this).field_q = param0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_s = null;
         field_t = null;
         field_v = null;

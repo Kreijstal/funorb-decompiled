@@ -17,13 +17,23 @@ abstract class gm {
         int var5 = 0;
         int stackIn_3_0 = 0;
         int stackIn_9_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_26_0 = 0;
+        char stackIn_13_0 = 0;
+        int stackIn_13_1 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_21_1 = 0;
+        int stackIn_23_0 = 0;
         int stackIn_29_0 = 0;
+        int stackIn_32_0 = 0;
         RuntimeException decompiledCaughtException = null;
+        char stackOut_12_0 = 0;
+        int stackOut_12_1 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_20_1 = 0;
+        int stackOut_16_0 = 0;
         int stackOut_28_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_15_0 = 0;
+        int stackOut_31_0 = 0;
         int stackOut_8_0 = 0;
         int stackOut_2_0 = 0;
         var5 = Chess.field_G;
@@ -42,37 +52,105 @@ abstract class gm {
                 var2 = td.field_l;
                 var3 = 0;
                 L2: while (true) {
-                  if (~var3 <= ~var2.length) {
-                    var2 = vl.field_I;
-                    var3 = 0;
-                    L3: while (true) {
-                      if (var3 >= var2.length) {
-                        stackOut_28_0 = 0;
-                        stackIn_29_0 = stackOut_28_0;
-                        break L0;
-                      } else {
-                        var4 = var2[var3];
-                        if (~var4 == ~param0) {
-                          stackOut_25_0 = 1;
-                          stackIn_26_0 = stackOut_25_0;
-                          return stackIn_26_0 != 0;
-                        } else {
-                          var3++;
-                          continue L3;
+                  L3: {
+                    L4: {
+                      L5: {
+                        L6: {
+                          if (~var3 <= ~var2.length) {
+                            break L6;
+                          } else {
+                            var4 = var2[var3];
+                            stackOut_12_0 = param0;
+                            stackOut_12_1 = var4;
+                            stackIn_21_0 = stackOut_12_0;
+                            stackIn_21_1 = stackOut_12_1;
+                            stackIn_13_0 = stackOut_12_0;
+                            stackIn_13_1 = stackOut_12_1;
+                            if (var5 != 0) {
+                              L7: while (true) {
+                                if (stackIn_21_0 >= stackIn_21_1) {
+                                  break L4;
+                                } else {
+                                  var4 = var2[var3];
+                                  stackOut_22_0 = ~var4;
+                                  stackIn_32_0 = stackOut_22_0;
+                                  stackIn_23_0 = stackOut_22_0;
+                                  if (var5 != 0) {
+                                    break L3;
+                                  } else {
+                                    if (stackIn_23_0 == ~param0) {
+                                      break L5;
+                                    } else {
+                                      var3++;
+                                      if (var5 == 0) {
+                                        stackOut_20_0 = var3;
+                                        stackOut_20_1 = var2.length;
+                                        stackIn_21_0 = stackOut_20_0;
+                                        stackIn_21_1 = stackOut_20_1;
+                                        continue L7;
+                                      } else {
+                                        break L4;
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            } else {
+                              if (stackIn_13_0 != stackIn_13_1) {
+                                var3++;
+                                if (var5 == 0) {
+                                  continue L2;
+                                } else {
+                                  break L6;
+                                }
+                              } else {
+                                stackOut_16_0 = 1;
+                                stackIn_17_0 = stackOut_16_0;
+                                return stackIn_17_0 != 0;
+                              }
+                            }
+                          }
+                        }
+                        var2 = vl.field_I;
+                        var3 = 0;
+                        L8: while (true) {
+                          stackOut_20_0 = var3;
+                          stackOut_20_1 = var2.length;
+                          stackIn_21_0 = stackOut_20_0;
+                          stackIn_21_1 = stackOut_20_1;
+                          if (stackIn_21_0 >= stackIn_21_1) {
+                            break L4;
+                          } else {
+                            var4 = var2[var3];
+                            stackOut_22_0 = ~var4;
+                            stackIn_32_0 = stackOut_22_0;
+                            stackIn_23_0 = stackOut_22_0;
+                            if (var5 != 0) {
+                              break L3;
+                            } else {
+                              if (stackIn_23_0 == ~param0) {
+                                break L5;
+                              } else {
+                                var3++;
+                                if (var5 == 0) {
+                                  continue L8;
+                                } else {
+                                  break L4;
+                                }
+                              }
+                            }
+                          }
                         }
                       }
+                      stackOut_28_0 = 1;
+                      stackIn_29_0 = stackOut_28_0;
+                      return stackIn_29_0 != 0;
                     }
-                  } else {
-                    var4 = var2[var3];
-                    if (param0 != var4) {
-                      var3++;
-                      continue L2;
-                    } else {
-                      stackOut_15_0 = 1;
-                      stackIn_16_0 = stackOut_15_0;
-                      return stackIn_16_0 != 0;
-                    }
+                    stackOut_31_0 = 0;
+                    stackIn_32_0 = stackOut_31_0;
+                    break L3;
                   }
+                  break L0;
                 }
               } else {
                 stackOut_8_0 = 1;
@@ -90,7 +168,7 @@ abstract class gm {
           var2_ref = decompiledCaughtException;
           throw fk.a((Throwable) (Object) var2_ref, "gm.I(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_29_0 != 0;
+        return stackIn_32_0 != 0;
     }
 
     abstract int a(long param0, int param1);
@@ -100,6 +178,9 @@ abstract class gm {
     final static void a(um param0, int param1) {
         byte[] var2 = null;
         int var3 = 0;
+        int stackIn_1847_0 = 0;
+        int stackOut_1846_0 = 0;
+        int stackOut_1845_0 = 0;
         L0: {
           var3 = Chess.field_G;
           sc.field_c = param0;
@@ -6807,21 +6888,36 @@ abstract class gm {
           }
         }
         sc.field_c = null;
+        L745: {
+          if (var3 == 0) {
+            break L745;
+          } else {
+            L746: {
+              if (!fa.field_b) {
+                stackOut_1846_0 = 1;
+                stackIn_1847_0 = stackOut_1846_0;
+                break L746;
+              } else {
+                stackOut_1845_0 = 0;
+                stackIn_1847_0 = stackOut_1845_0;
+                break L746;
+              }
+            }
+            fa.field_b = stackIn_1847_0 != 0;
+            break L745;
+          }
+        }
     }
 
-    public static void a() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void a(int param0) {
         try {
-          L0: {
             field_a = null;
             field_b = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1, "gm.K(" + 6 + ')');
+            if (param0 != 6) {
+                boolean discarded$0 = gm.a(']', (byte) -50);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "gm.K(" + param0 + ')');
         }
     }
 

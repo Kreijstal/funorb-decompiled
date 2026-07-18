@@ -7,7 +7,7 @@ final class cb extends Exception {
     static je field_c;
     static um[] field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         int var1 = -112;
         field_c = null;
@@ -127,8 +127,7 @@ final class cb extends Exception {
         try {
           L0: {
             if (kp.a(false, param2, param1, param3)) {
-              int discarded$2 = 122;
-              stackOut_5_0 = md.g();
+              stackOut_5_0 = md.g(122);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

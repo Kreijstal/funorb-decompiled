@@ -908,8 +908,7 @@ abstract class vn extends pj {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    int discarded$4 = 16;
-                                    field_J = ea.a((byte) -73, var7);
+                                    field_J = ea.a((byte) -73, var7, 16);
                                     break L1;
                                   }
                                 } else {
@@ -922,8 +921,7 @@ abstract class vn extends pj {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              int discarded$5 = 16;
-                              field_v = ea.a((byte) -73, var6);
+                              field_v = ea.a((byte) -73, var6, 16);
                               break L1;
                             }
                           } else {
@@ -936,8 +934,7 @@ abstract class vn extends pj {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        int discarded$6 = 16;
-                        field_x = ea.a((byte) -73, var5);
+                        field_x = ea.a((byte) -73, var5, 16);
                         break L1;
                       }
                     } else {
@@ -955,8 +952,7 @@ abstract class vn extends pj {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                int discarded$7 = 16;
-                field_H = ea.a((byte) -73, var3);
+                field_H = ea.a((byte) -73, var3, 16);
                 break L1;
               }
             }
@@ -1006,10 +1002,7 @@ abstract class vn extends pj {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          int discarded$8 = 0;
-          int discarded$9 = 32;
-          int discarded$10 = 60;
-          StringBuilder discarded$11 = lb.a(field_w);
+          StringBuilder discarded$5 = lb.a(field_w, 60, ' ', 0);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -1045,9 +1038,9 @@ abstract class vn extends pj {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$12 = field_w.append('<');
-                        StringBuilder discarded$13 = field_w.append(var15);
-                        StringBuilder discarded$14 = field_w.append('>');
+                        StringBuilder discarded$6 = field_w.append('<');
+                        StringBuilder discarded$7 = field_w.append(var15);
+                        StringBuilder discarded$8 = field_w.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1234,7 +1227,7 @@ abstract class vn extends pj {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$15 = field_w.append((char) var14);
+                        StringBuilder discarded$9 = field_w.append((char) var14);
                         var14 = (char)(uo.a(true, (char) var14) & 255);
                         var4 = var4 + ((vn) this).field_L[var14];
                         if (((vn) this).field_D == null) {

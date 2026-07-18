@@ -151,7 +151,7 @@ final class v {
         }
     }
 
-    final static int a(byte[] param0, int param1) {
+    final static int a(byte[] param0, int param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

@@ -34,7 +34,7 @@ final class ic {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         int var1 = 0;
         field_c = null;
         field_a = null;
@@ -78,7 +78,7 @@ final class ic {
         }
     }
 
-    final static String a(String param0, String[] param1) {
+    final static String a(String param0, String[] param1, byte param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

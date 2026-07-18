@@ -291,8 +291,7 @@ final class wd {
                     return stackIn_13_0 != 0;
                   } else {
                     if (!nm.a(param1, (byte) -89, param2)) {
-                      int discarded$7 = 0;
-                      if (!qd.a(param1, param2)) {
+                      if (!qd.a(param1, param2, false)) {
                         if (!ig.a(param1, 0, param2)) {
                           stackOut_23_0 = 1;
                           stackIn_24_0 = stackOut_23_0;

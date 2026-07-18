@@ -34,8 +34,7 @@ final class kea extends td {
           L0: {
             if (param1 != null) {
               var2 = new fea(param1, fl.field_j, fd.field_D, lq.field_A, eha.field_s, baa.field_P);
-              int discarded$2 = -18073;
-              al.b();
+              al.b(-18073);
               stackOut_3_0 = (fea) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -493,7 +492,7 @@ final class kea extends td {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_r = null;
         field_p = null;
         field_q = null;

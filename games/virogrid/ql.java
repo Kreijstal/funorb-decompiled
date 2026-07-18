@@ -183,14 +183,12 @@ final class ql implements ol {
                 if (!we.a((byte) 12, param2)) {
                   if (param1.length() != 0) {
                     if (!mj.a(param2, param1, (byte) 113)) {
-                      int discarded$16 = 1;
-                      if (me.a(param2, param1)) {
+                      if (me.a(param2, param1, true)) {
                         stackOut_19_0 = 0;
                         stackIn_20_0 = stackOut_19_0;
                         return stackIn_20_0 != 0;
                       } else {
-                        int discarded$17 = 0;
-                        if (w.a(param2, param1)) {
+                        if (w.a(param2, param1, false)) {
                           stackOut_23_0 = 0;
                           stackIn_24_0 = stackOut_23_0;
                           break L0;
@@ -282,7 +280,7 @@ final class ql implements ol {
         return stackIn_24_0 != 0;
     }
 
-    final static java.awt.Frame a(int param0, int param1, pd param2, int param3, int param4) {
+    final static java.awt.Frame a(int param0, int param1, pd param2, int param3, int param4, boolean param5) {
         RuntimeException var6 = null;
         ch[] var6_array = null;
         int var7_int = 0;
@@ -543,7 +541,7 @@ final class ql implements ol {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_m = null;
         field_k = null;

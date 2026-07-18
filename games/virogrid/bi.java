@@ -6,7 +6,7 @@ final class bi {
     int field_b;
     int field_a;
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, boolean param2) {
         int var3 = 0;
         Object var4 = null;
         int stackIn_3_0 = 0;
@@ -45,8 +45,7 @@ final class bi {
                     }
                   }
                   if (2 == ve.field_o) {
-                    int discarded$6 = -120;
-                    if (!he.h()) {
+                    if (!he.h(-120)) {
                       return true;
                     } else {
                       var4 = null;
@@ -57,8 +56,7 @@ final class bi {
                     if (var3 != 0) {
                       return false;
                     } else {
-                      int discarded$7 = -120;
-                      if (!he.h()) {
+                      if (!he.h(-120)) {
                         return true;
                       } else {
                         var4 = null;
@@ -102,8 +100,7 @@ final class bi {
                       return false;
                     } else {
                       if (2 == ve.field_o) {
-                        int discarded$8 = -120;
-                        if (!he.h()) {
+                        if (!he.h(-120)) {
                           return true;
                         } else {
                           var4 = null;
@@ -114,8 +111,7 @@ final class bi {
                         if (var3 != 0) {
                           return false;
                         } else {
-                          int discarded$9 = -120;
-                          if (!he.h()) {
+                          if (!he.h(-120)) {
                             return true;
                           } else {
                             var4 = null;
@@ -127,8 +123,7 @@ final class bi {
                     }
                   } else {
                     if (2 == ve.field_o) {
-                      int discarded$10 = -120;
-                      if (he.h()) {
+                      if (he.h(-120)) {
                         var4 = null;
                         jl.a(ld.field_d, ve.field_o, hn.field_n, param0, (byte) 39, (String) null);
                         return true;
@@ -137,8 +132,7 @@ final class bi {
                       }
                     } else {
                       if (var3 == 0) {
-                        int discarded$11 = -120;
-                        if (he.h()) {
+                        if (he.h(-120)) {
                           var4 = null;
                           jl.a(ld.field_d, ve.field_o, hn.field_n, param0, (byte) 39, (String) null);
                           return true;
@@ -168,7 +162,7 @@ final class bi {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
     }
 

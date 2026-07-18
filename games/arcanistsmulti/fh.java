@@ -22,7 +22,7 @@ final class fh implements Iterator {
         ((fh) this).field_b = null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_i = null;
         field_a = null;
@@ -88,13 +88,11 @@ final class fh implements Iterator {
                     param2.dispose();
                     break L0;
                   } else {
-                    int discarded$20 = 1;
-                    ao.a(100L);
+                    ao.a(100L, 1);
                     continue L1;
                   }
                 } else {
-                  int discarded$21 = 1;
-                  ao.a(10L);
+                  ao.a(10L, 1);
                   continue L2;
                 }
               }

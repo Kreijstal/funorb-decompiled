@@ -33,8 +33,7 @@ final class qi extends jj {
             if (var4 == null) {
               return;
             } else {
-              int discarded$2 = 1183261192;
-              sn.a(var4);
+              sn.a(var4, 1183261192);
               var4 = (jn) (Object) ((qi) this).field_n.f(1504642273);
               continue L0;
             }

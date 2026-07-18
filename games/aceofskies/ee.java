@@ -7,7 +7,7 @@ abstract class ee extends or {
     static int[] field_e;
     static int[] field_d;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_d = null;
     }
@@ -16,12 +16,11 @@ abstract class ee extends or {
         throw new Error();
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         int var1 = vs.b(-99);
         int var2 = un.e(-121);
         qg.field_d.a(-652, var1 + (ku.field_h << 1), (po.field_j << 1) + var2, pt.field_a + -po.field_j, -ku.field_h + ac.field_c);
-        int discarded$0 = -37;
-        qa.b();
+        qa.b(-37);
     }
 
     final static String a(CharSequence param0, int param1) {
@@ -217,12 +216,11 @@ abstract class ee extends or {
                 break L1;
               } else {
                 var3 = null;
-                byte[] discarded$4 = ee.a(false, (File) null);
+                byte[] discarded$2 = ee.a(false, (File) null);
                 break L1;
               }
             }
-            int discarded$5 = 0;
-            stackOut_2_0 = cn.a(param1, (int)param1.length());
+            stackOut_2_0 = cn.a(param1, (int)param1.length(), false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

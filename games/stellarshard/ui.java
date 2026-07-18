@@ -67,7 +67,7 @@ abstract class ui extends g {
         }
     }
 
-    private final int a() {
+    private final int a(int param0) {
         int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -118,8 +118,7 @@ abstract class ui extends g {
         int stackOut_9_0 = 0;
         if (param0) {
           L0: {
-            int discarded$2 = 0;
-            var2 = this.a();
+            var2 = this.a(0);
             var3 = var2 - ((ui) this).field_E;
             if (var3 > 0) {
               ((ui) this).field_E = ((ui) this).field_E + (8 + (var3 + -1)) / 8;
@@ -181,8 +180,7 @@ abstract class ui extends g {
         } else {
           L5: {
             field_B = null;
-            int discarded$3 = 0;
-            var2 = this.a();
+            var2 = this.a(0);
             var3 = var2 - ((ui) this).field_E;
             if (var3 > 0) {
               ((ui) this).field_E = ((ui) this).field_E + (8 + (var3 + -1)) / 8;
@@ -248,8 +246,7 @@ abstract class ui extends g {
 
     boolean h(int param0) {
         if (param0 > 98) {
-          int discarded$2 = 0;
-          ((ui) this).field_E = this.a();
+          ((ui) this).field_E = this.a(0);
           if (((ui) this).field_E == 0) {
             if (((ui) this).field_G) {
               return false;

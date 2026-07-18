@@ -9,7 +9,7 @@ final class fva extends rqa {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, int param1, int[] param2, int param3, int[] param4, int param5) {
+    final static int a(int param0, int param1, int[] param2, int param3, int[] param4, int param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -328,7 +328,7 @@ final class fva extends rqa {
         return stackIn_4_0;
     }
 
-    final static String a(int[] param0) {
+    final static String a(int[] param0, boolean param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

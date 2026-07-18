@@ -11,17 +11,15 @@ final class jc extends ai {
     int field_j;
     int field_l;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_m = null;
         field_h = null;
         field_n = null;
         field_g = null;
     }
 
-    final static gk a(int param0) {
-        int discarded$0 = 1;
-        int discarded$1 = 1;
-        return j.a(false, (byte) -104, false, param0);
+    final static gk a(int param0, boolean param1, int param2, int param3, boolean param4) {
+        return j.a(false, (byte) -104, false, param0, true, 1);
     }
 
     private jc() throws Throwable {

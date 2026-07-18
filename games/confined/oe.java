@@ -18,8 +18,7 @@ abstract class oe extends ga {
     abstract void b(int param0, byte param1, int param2);
 
     boolean j(int param0) {
-        int discarded$2 = 0;
-        ((oe) this).field_V = this.b();
+        ((oe) this).field_V = this.b(false);
         if (param0 <= -35) {
           if (((oe) this).field_V == 0) {
             if (((oe) this).field_H) {
@@ -64,7 +63,7 @@ abstract class oe extends ga {
         }
     }
 
-    private final int b() {
+    private final int b(boolean param0) {
         return !((oe) this).field_H ? 0 : (Object) (Object) ((oe) this).field_L.h(0) == this ? 256 : 0;
     }
 
@@ -106,8 +105,7 @@ abstract class oe extends ga {
         int stackOut_8_0 = 0;
         int stackOut_9_0 = 0;
         if (param0 == -6) {
-          int discarded$2 = 0;
-          var2 = this.b();
+          var2 = this.b(false);
           var3 = var2 + -((oe) this).field_V;
           if (var3 > 0) {
             L0: {
@@ -177,8 +175,7 @@ abstract class oe extends ga {
           }
         } else {
           field_Q = null;
-          int discarded$3 = 0;
-          var2 = this.b();
+          var2 = this.b(false);
           var3 = var2 + -((oe) this).field_V;
           if (var3 <= 0) {
             L6: {
@@ -254,47 +251,39 @@ abstract class oe extends ga {
                 if (((oe) this).field_F <= ga.field_K.field_u) {
                   if (ga.field_K.field_w < ((oe) this).field_z) {
                     ga.field_K = new nf(((oe) this).field_F, ((oe) this).field_z);
-                    int discarded$16 = -8409;
-                    vm.a(ga.field_K);
+                    vm.a(ga.field_K, -8409);
                     fn.d();
                     ((oe) this).b(0, (byte) -90, 0);
                     super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
-                    int discarded$17 = 0;
-                    ib.b();
+                    ib.b(false);
                     ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
                     return;
                   } else {
-                    int discarded$18 = -8409;
-                    vm.a(ga.field_K);
+                    vm.a(ga.field_K, -8409);
                     fn.d();
                     ((oe) this).b(0, (byte) -90, 0);
                     super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
-                    int discarded$19 = 0;
-                    ib.b();
+                    ib.b(false);
                     ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
                     return;
                   }
                 } else {
                   ga.field_K = new nf(((oe) this).field_F, ((oe) this).field_z);
-                  int discarded$20 = -8409;
-                  vm.a(ga.field_K);
+                  vm.a(ga.field_K, -8409);
                   fn.d();
                   ((oe) this).b(0, (byte) -90, 0);
                   super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
-                  int discarded$21 = 0;
-                  ib.b();
+                  ib.b(false);
                   ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
                   return;
                 }
               } else {
                 ga.field_K = new nf(((oe) this).field_F, ((oe) this).field_z);
-                int discarded$22 = -8409;
-                vm.a(ga.field_K);
+                vm.a(ga.field_K, -8409);
                 fn.d();
                 ((oe) this).b(0, (byte) -90, 0);
                 super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
-                int discarded$23 = 0;
-                ib.b();
+                ib.b(false);
                 ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
                 return;
               }
@@ -304,47 +293,39 @@ abstract class oe extends ga {
                 if (((oe) this).field_F <= ga.field_K.field_u) {
                   if (ga.field_K.field_w < ((oe) this).field_z) {
                     ga.field_K = new nf(((oe) this).field_F, ((oe) this).field_z);
-                    int discarded$24 = -8409;
-                    vm.a(ga.field_K);
+                    vm.a(ga.field_K, -8409);
                     fn.d();
                     ((oe) this).b(0, (byte) -90, 0);
                     super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
-                    int discarded$25 = 0;
-                    ib.b();
+                    ib.b(false);
                     ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
                     return;
                   } else {
-                    int discarded$26 = -8409;
-                    vm.a(ga.field_K);
+                    vm.a(ga.field_K, -8409);
                     fn.d();
                     ((oe) this).b(0, (byte) -90, 0);
                     super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
-                    int discarded$27 = 0;
-                    ib.b();
+                    ib.b(false);
                     ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
                     return;
                   }
                 } else {
                   ga.field_K = new nf(((oe) this).field_F, ((oe) this).field_z);
-                  int discarded$28 = -8409;
-                  vm.a(ga.field_K);
+                  vm.a(ga.field_K, -8409);
                   fn.d();
                   ((oe) this).b(0, (byte) -90, 0);
                   super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
-                  int discarded$29 = 0;
-                  ib.b();
+                  ib.b(false);
                   ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
                   return;
                 }
               } else {
                 ga.field_K = new nf(((oe) this).field_F, ((oe) this).field_z);
-                int discarded$30 = -8409;
-                vm.a(ga.field_K);
+                vm.a(ga.field_K, -8409);
                 fn.d();
                 ((oe) this).b(0, (byte) -90, 0);
                 super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
-                int discarded$31 = 0;
-                ib.b();
+                ib.b(false);
                 ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
                 return;
               }

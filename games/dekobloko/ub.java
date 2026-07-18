@@ -67,7 +67,7 @@ final class ub {
         return stackIn_18_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (jh.field_h) {
             hk.d(hk.field_c, hk.field_h, hk.field_g + -hk.field_c, hk.field_b - hk.field_h);
             ie.field_c.a(1141039778, false);
@@ -84,7 +84,7 @@ final class ub {
         return var4;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_f = null;
         field_e = null;
         field_c = null;

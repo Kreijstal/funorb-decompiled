@@ -23,7 +23,7 @@ final class fb {
     static int field_r;
     static int[] field_l;
 
-    final static byte[] a(int param0, byte[] param1, ia param2) {
+    final static byte[] a(int param0, byte[] param1, ia param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -179,7 +179,7 @@ final class fb {
         return stackIn_16_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ia var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -194,11 +194,10 @@ final class fb {
                 break L0;
               } else {
                 var1.d((byte) 84, 8);
-                int fieldTemp$10 = var1.field_g + 1;
+                int fieldTemp$5 = var1.field_g + 1;
                 var1.field_g = var1.field_g + 1;
-                var2 = fieldTemp$10;
-                int discarded$11 = -68;
-                rh.a(var1);
+                var2 = fieldTemp$5;
+                rh.a(var1, (byte) -68);
                 d.field_b.b(var1.field_g - var2, 31700);
                 continue L1;
               }
@@ -211,7 +210,7 @@ final class fb {
         }
     }
 
-    final static ig a(String param0, int param1) {
+    final static ig a(String param0, int param1, int param2) {
         ig var3 = null;
         RuntimeException var3_ref = null;
         ig stackIn_1_0 = null;
@@ -417,7 +416,7 @@ final class fb {
                 L2: while (true) {
                   var9 = param0.indexOf("<%", var6);
                   if (var9 < 0) {
-                    StringBuilder discarded$5 = var7.append(param0.substring(var8));
+                    StringBuilder discarded$3 = var7.append(param0.substring(var8));
                     stackOut_22_0 = var7.toString();
                     stackIn_23_0 = stackOut_22_0;
                     break L0;
@@ -447,11 +446,10 @@ final class fb {
                             continue L2;
                           } else {
                             var6++;
-                            int discarded$6 = 10;
-                            var11 = pd.a((CharSequence) (Object) var10);
-                            StringBuilder discarded$7 = var7.append(param0.substring(var8, var9));
+                            var11 = pd.a((CharSequence) (Object) var10, 10);
+                            StringBuilder discarded$4 = var7.append(param0.substring(var8, var9));
                             var8 = var6;
-                            StringBuilder discarded$8 = var7.append(param2[var11]);
+                            StringBuilder discarded$5 = var7.append(param2[var11]);
                             continue L2;
                           }
                         }
@@ -481,8 +479,7 @@ final class fb {
                     } else {
                       if (62 == param0.charAt(var6)) {
                         var6++;
-                        int discarded$9 = 10;
-                        var9 = pd.a((CharSequence) (Object) var8_ref_String);
+                        var9 = pd.a((CharSequence) (Object) var8_ref_String, 10);
                         var4 = var4 + (-var6 + var7_int + param2[var9].length());
                         continue L1;
                       } else {

@@ -16,14 +16,11 @@ final class qh {
                 if (!param9) {
                   L1: {
                     va.field_u = (-640 + tq.field_c) / 2;
-                    int discarded$26 = -120;
-                    je.c(param9);
+                    je.c(param9, -120);
                     if (gk.field_J <= 0) {
                       break L1;
                     } else {
-                      int discarded$27 = 11;
-                      int discarded$28 = 117;
-                      bn.a(param0, param9);
+                      bn.a(param0, param9, 117, 11);
                       break L1;
                     }
                   }
@@ -31,8 +28,7 @@ final class qh {
                     pi.field_N.field_O = ke.field_e.field_O;
                     pi.field_N.field_Eb = 1;
                     if (bd.field_r > 0) {
-                      int discarded$29 = 11;
-                      j.a(1, param9, param0);
+                      j.a(1, param9, param0, 11);
                       break L2;
                     } else {
                       break L2;
@@ -73,14 +69,11 @@ final class qh {
                 } else {
                   L6: {
                     va.field_u = qm.field_L;
-                    int discarded$30 = -120;
-                    je.c(param9);
+                    je.c(param9, -120);
                     if (gk.field_J <= 0) {
                       break L6;
                     } else {
-                      int discarded$31 = 11;
-                      int discarded$32 = 117;
-                      bn.a(param0, param9);
+                      bn.a(param0, param9, 117, 11);
                       break L6;
                     }
                   }
@@ -88,8 +81,7 @@ final class qh {
                     pi.field_N.field_O = ke.field_e.field_O;
                     pi.field_N.field_Eb = 1;
                     if (bd.field_r > 0) {
-                      int discarded$33 = 11;
-                      j.a(1, param9, param0);
+                      j.a(1, param9, param0, 11);
                       break L7;
                     } else {
                       break L7;
@@ -150,14 +142,11 @@ final class qh {
                     }
                   }
                   L13: {
-                    int discarded$34 = -120;
-                    je.c(param9);
+                    je.c(param9, -120);
                     if (gk.field_J <= 0) {
                       break L13;
                     } else {
-                      int discarded$35 = 11;
-                      int discarded$36 = 117;
-                      bn.a(param0, param9);
+                      bn.a(param0, param9, 117, 11);
                       break L13;
                     }
                   }
@@ -165,8 +154,7 @@ final class qh {
                     pi.field_N.field_O = ke.field_e.field_O;
                     pi.field_N.field_Eb = 1;
                     if (bd.field_r > 0) {
-                      int discarded$37 = 11;
-                      j.a(1, param9, param0);
+                      j.a(1, param9, param0, 11);
                       break L14;
                     } else {
                       break L14;
@@ -209,8 +197,7 @@ final class qh {
                     je.a(108, true);
                     break L11;
                   } else {
-                    int discarded$38 = 0;
-                    ak.b();
+                    ak.b(false);
                     break L11;
                   }
                 }
@@ -219,15 +206,13 @@ final class qh {
           }
           if (param9) {
             va.field_u = qm.field_L;
-            int discarded$39 = -120;
-            je.c(param9);
+            je.c(param9, -120);
             if (gk.field_J <= 0) {
               L18: {
                 pi.field_N.field_O = ke.field_e.field_O;
                 pi.field_N.field_Eb = 1;
                 if (bd.field_r > 0) {
-                  int discarded$40 = 11;
-                  j.a(1, param9, param0);
+                  j.a(1, param9, param0, 11);
                   break L18;
                 } else {
                   break L18;
@@ -270,14 +255,11 @@ final class qh {
               }
             } else {
               L20: {
-                int discarded$41 = 11;
-                int discarded$42 = 117;
-                bn.a(param0, param9);
+                bn.a(param0, param9, 117, 11);
                 pi.field_N.field_O = ke.field_e.field_O;
                 pi.field_N.field_Eb = 1;
                 if (bd.field_r > 0) {
-                  int discarded$43 = 11;
-                  j.a(1, param9, param0);
+                  j.a(1, param9, param0, 11);
                   break L20;
                 } else {
                   break L20;
@@ -319,14 +301,11 @@ final class qh {
           } else {
             L24: {
               va.field_u = (-640 + tq.field_c) / 2;
-              int discarded$44 = -120;
-              je.c(param9);
+              je.c(param9, -120);
               if (gk.field_J <= 0) {
                 break L24;
               } else {
-                int discarded$45 = 11;
-                int discarded$46 = 117;
-                bn.a(param0, param9);
+                bn.a(param0, param9, 117, 11);
                 break L24;
               }
             }
@@ -334,8 +313,7 @@ final class qh {
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
               if (bd.field_r > 0) {
-                int discarded$47 = 11;
-                j.a(1, param9, param0);
+                j.a(1, param9, param0, 11);
                 break L25;
               } else {
                 break L25;
@@ -377,14 +355,11 @@ final class qh {
         } else {
           L28: {
             va.field_u = qm.field_L;
-            int discarded$48 = -120;
-            je.c(param9);
+            je.c(param9, -120);
             if (gk.field_J <= 0) {
               break L28;
             } else {
-              int discarded$49 = 11;
-              int discarded$50 = 117;
-              bn.a(param0, param9);
+              bn.a(param0, param9, 117, 11);
               break L28;
             }
           }
@@ -392,8 +367,7 @@ final class qh {
             pi.field_N.field_O = ke.field_e.field_O;
             pi.field_N.field_Eb = 1;
             if (bd.field_r > 0) {
-              int discarded$51 = 11;
-              j.a(1, param9, param0);
+              j.a(1, param9, param0, 11);
               break L29;
             } else {
               break L29;
@@ -434,21 +408,21 @@ final class qh {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         if (!(null == ik.field_d)) {
             qn.d(qn.field_j, qn.field_a, -qn.field_j + qn.field_e, -qn.field_a + qn.field_f);
             ik.field_d.b(param0, 20);
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         if (!nw.g(81)) {
             vl.field_n.h(32161, 81);
             bu.field_b = null;
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         lq.field_e = -1;
         ev.field_a = 0;
         ei.field_b = false;

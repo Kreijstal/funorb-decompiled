@@ -33,7 +33,7 @@ final class id implements Serializable {
     static bd field_w;
     static String field_b;
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -534,7 +534,7 @@ final class id implements Serializable {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_s = null;
         int var1 = -12;
         field_b = null;
@@ -879,8 +879,7 @@ final class id implements Serializable {
     id(byte[] param0) {
         ((id) this).field_x = new qg[]{};
         try {
-            int discarded$0 = 127;
-            this.a(param0);
+            this.a(param0, 127);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

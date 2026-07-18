@@ -34,8 +34,7 @@ final class rd extends id {
               return;
             }
           } else {
-            int discarded$1 = 107;
-            this.a(((rd) this).field_A.field_x.a((byte) 78, ((rd) this).field_C), param9, param5 * 6.283185307179586);
+            this.a(((rd) this).field_A.field_x.a((byte) 78, ((rd) this).field_C), param9, param5 * 6.283185307179586, (byte) 107);
             var18 = -15 % ((-3 - param6) / 32);
             return;
           }
@@ -57,7 +56,7 @@ final class rd extends id {
         ((rd) this).field_cb = 0.0;
     }
 
-    private final void a(double param0, double param1, double param2) {
+    private final void a(double param0, double param1, double param2, byte param3) {
         ((rd) this).field_Z = 0.0;
         ((rd) this).field_ub = param0;
         ((rd) this).field_cb = 0.0;
@@ -1853,14 +1852,10 @@ final class rd extends id {
                         if ((6 & ((rd) this).field_V) == 0) {
                           break L3;
                         } else {
-                          int discarded$4 = 16711680;
-                          fn.g(var25 + -1, -1 + var26, var27);
-                          int discarded$5 = 16711680;
-                          fn.g(var25, var26 - 1, var27);
-                          int discarded$6 = 16711680;
-                          fn.g(-1 + var25, var26, var27);
-                          int discarded$7 = 16711680;
-                          fn.g(var25, var26, var27);
+                          fn.g(var25 + -1, -1 + var26, var27, 16711680);
+                          fn.g(var25, var26 - 1, var27, 16711680);
+                          fn.g(-1 + var25, var26, var27, 16711680);
+                          fn.g(var25, var26, var27, 16711680);
                           break L3;
                         }
                       }

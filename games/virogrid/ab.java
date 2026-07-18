@@ -122,8 +122,7 @@ final class ab extends gf implements ta {
                   stackIn_9_0 = stackOut_8_0;
                   return stackIn_9_0;
                 } else {
-                  int discarded$2 = -73;
-                  if (!ch.a(param1)) {
+                  if (!ch.a(param1, (byte) -73)) {
                     L1: {
                       if (sg.field_j < 100) {
                         break L1;
@@ -148,7 +147,7 @@ final class ab extends gf implements ta {
                         var6.b(var6.field_l + -var4, param0 + -74);
                         if (param0 != 73) {
                           var5 = null;
-                          String discarded$3 = ab.a((byte) -58, (String) null, 66);
+                          String discarded$1 = ab.a((byte) -58, (String) null, 66);
                           stackOut_26_0 = null;
                           stackIn_27_0 = stackOut_26_0;
                           break L0;
@@ -232,7 +231,7 @@ final class ab extends gf implements ta {
         dk.field_j.b(bn.field_c, 4 + (((ab) this).field_l + param1), 4 + (dk.field_j.field_H + (((ab) this).field_u + param2)), 16777215, -1);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_G = null;
         field_I = null;
         field_L = null;

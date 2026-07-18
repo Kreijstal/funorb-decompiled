@@ -19,7 +19,7 @@ final class qg extends lf {
     private int field_t;
     static bd[] field_g;
 
-    final static void b() {
+    final static void b(byte param0) {
     }
 
     private final void a(int param0, byte param1) {

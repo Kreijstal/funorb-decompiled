@@ -55,7 +55,7 @@ final class gf {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -134,7 +134,7 @@ final class gf {
         var2.d((byte) -20, 0);
     }
 
-    final static String a(String param0, rh param1, String param2, String param3) {
+    final static String a(String param0, rh param1, String param2, String param3, boolean param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;
@@ -321,7 +321,7 @@ final class gf {
         return stackIn_5_0;
     }
 
-    final static String a() {
+    final static String a(int param0) {
         return v.field_e;
     }
 

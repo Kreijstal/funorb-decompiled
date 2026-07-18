@@ -19,7 +19,7 @@ final class oq extends qc {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         rh.b(-14, 4);
     }
 
@@ -114,7 +114,7 @@ final class oq extends qc {
         }
     }
 
-    final static String a(CharSequence[] param0) {
+    final static String a(CharSequence[] param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -136,8 +136,7 @@ final class oq extends qc {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 1039685793;
-            stackOut_0_0 = lr.a(param0.length, 0, param0);
+            stackOut_0_0 = lr.a(param0.length, 0, param0, 1039685793);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -233,8 +232,7 @@ final class oq extends qc {
                     if (param2 != 10) {
                       break L4;
                     } else {
-                      int discarded$2 = 83;
-                      pc.a();
+                      pc.a((byte) 83);
                       var3_int = 0;
                       break L4;
                     }
@@ -323,7 +321,7 @@ final class oq extends qc {
         return false;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_H = null;
         field_G = null;
         field_D = null;

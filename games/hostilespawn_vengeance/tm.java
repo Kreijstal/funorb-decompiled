@@ -28,7 +28,7 @@ final class tm extends am {
     static int field_v;
     static String field_s;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1, int param2, boolean param3) {
         ce.field_c = param0;
         hh.field_e = param1;
         nf.field_m = param2;
@@ -138,7 +138,7 @@ final class tm extends am {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_s = null;
         field_o = null;
     }

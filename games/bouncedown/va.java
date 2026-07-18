@@ -10,14 +10,14 @@ final class va {
     static tg[] field_d;
     static int field_a;
 
-    public static void c() {
+    public static void c(int param0) {
         field_e = null;
         field_c = null;
         field_g = null;
         field_d = null;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         if (!(pe.field_d != -1)) {
             if (!qb.a(1, 3)) {
                 return false;
@@ -35,21 +35,19 @@ final class va {
         return qb.a(pe.field_d, 3);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (10 != mh.field_U) {
           if (cg.a(1)) {
             tk.field_a = true;
             return;
           } else {
-            int discarded$4 = 41;
-            j.c();
+            j.c((byte) 41);
             mh.field_U = 11;
             tk.field_a = true;
             return;
           }
         } else {
-          int discarded$5 = 41;
-          j.c();
+          j.c((byte) 41);
           mh.field_U = 11;
           tk.field_a = true;
           return;

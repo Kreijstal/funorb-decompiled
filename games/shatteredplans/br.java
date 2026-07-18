@@ -251,7 +251,7 @@ final class br extends oh {
         return null;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_l = null;
         field_o = null;
     }

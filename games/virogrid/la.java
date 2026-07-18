@@ -23,7 +23,7 @@ final class la extends l {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_i = null;
         field_m = null;
@@ -54,8 +54,7 @@ final class la extends l {
             if (null == wc.field_f) {
               break L0;
             } else {
-              int discarded$3 = 1;
-              wl.a(1048576, param0 + -10509, param1, param3);
+              wl.a(1048576, param0 + -10509, param1, param3, true);
               break L0;
             }
           }

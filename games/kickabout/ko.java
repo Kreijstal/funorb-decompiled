@@ -14,7 +14,7 @@ final class ko {
     static String field_k;
     static int field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_j = null;
         field_f = null;

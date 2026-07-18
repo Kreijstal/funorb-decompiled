@@ -62,11 +62,11 @@ final class kw extends qe {
         }
     }
 
-    final static java.awt.Canvas b() {
+    final static java.awt.Canvas b(byte param0) {
         return null != dq.field_f ? (java.awt.Canvas) (Object) dq.field_f : nma.field_l;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         L0: {
           ((kw) this).field_g = new tla(((kw) this).field_a, 2);
           ((kw) this).field_g.a((byte) 6, 0);
@@ -112,8 +112,7 @@ final class kw extends qe {
         super(param0);
         try {
             ((kw) this).field_c = param1;
-            int discarded$0 = -122;
-            this.a();
+            this.a((byte) -122);
             ((kw) this).field_d = new uga(((kw) this).field_a, 6406, 2, new byte[2], 6406);
             ((kw) this).field_d.a(76, false);
         } catch (RuntimeException runtimeException) {
@@ -231,7 +230,7 @@ final class kw extends qe {
         return var4 * var2 >> 12;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_e = null;
         field_f = null;
         int var1 = 0;

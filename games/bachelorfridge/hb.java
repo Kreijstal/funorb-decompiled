@@ -10,7 +10,7 @@ final class hb extends aba {
     static String field_i;
     static boolean field_j;
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         field_g = null;
         field_i = null;
@@ -27,8 +27,7 @@ final class hb extends aba {
             L0: {
               eg.field_p[kaa.field_m].a(param3, 32);
               if (kaa.field_m == 11) {
-                int discarded$1 = -77;
-                fba.a(param3);
+                fba.a(param3, (byte) -77);
                 break L0;
               } else {
                 break L0;

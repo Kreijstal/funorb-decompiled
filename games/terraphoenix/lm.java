@@ -10,7 +10,7 @@ final class lm {
     static ci field_e;
     static int field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_a = null;
         field_g = null;
@@ -377,7 +377,7 @@ final class lm {
         }
     }
 
-    final static void a(int param0, int param1, ci param2, int param3, byte param4, int param5, int param6) {
+    final static void a(int param0, int param1, ci param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;

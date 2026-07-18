@@ -9,7 +9,7 @@ final class ko extends pm {
         super(param0, param1);
     }
 
-    final static String a(rb param0) {
+    final static String a(rb param0, int param1, byte param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -99,7 +99,7 @@ final class ko extends pm {
         return iu.field_h;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_g = null;
     }
 

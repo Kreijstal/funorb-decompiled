@@ -11,7 +11,7 @@ final class lb {
         return param0 | param1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         int var1 = -53;
     }

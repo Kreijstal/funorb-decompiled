@@ -26,7 +26,7 @@ final class baa extends ana {
     static String field_E;
     static byte[][] field_P;
 
-    final static void e() {
+    final static void e(int param0) {
         bn.field_h = null;
         nw.field_p = null;
         jla.field_d = null;
@@ -111,14 +111,13 @@ final class baa extends ana {
             }
           }
           var2 = 59 % ((param0 - 71) / 47);
-          int fieldTemp$2 = ((baa) this).field_L - 1;
+          int fieldTemp$1 = ((baa) this).field_L - 1;
           ((baa) this).field_L = ((baa) this).field_L - 1;
-          if (fieldTemp$2 < 0) {
+          if (fieldTemp$1 < 0) {
             ((baa) this).field_O = ((baa) this).field_K;
             ((baa) this).field_I = ((baa) this).field_G;
             if (!this.d(-44)) {
-              int discarded$3 = -126;
-              this.f();
+              this.f(-126);
               return true;
             } else {
               ((baa) this).a(((baa) this).field_K, ((baa) this).field_G, ((baa) this).field_R, 0);
@@ -145,13 +144,13 @@ final class baa extends ana {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         if (!(((baa) this).field_B.field_o.e(12917))) {
             throw new IllegalStateException();
         }
     }
 
-    final static void a(eaa param0, boolean param1, int param2, int param3, int param4) {
+    final static void a(eaa param0, boolean param1, int param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         rea var6_ref = null;
         int var7 = 0;
@@ -229,7 +228,7 @@ final class baa extends ana {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_C = null;
         field_E = null;
         field_P = null;

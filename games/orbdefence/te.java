@@ -238,7 +238,7 @@ class te extends s {
         }
     }
 
-    final static int j() {
+    final static int j(int param0) {
         return h.field_H;
     }
 

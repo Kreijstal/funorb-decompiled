@@ -26,12 +26,10 @@ final class vi extends sj {
     static String field_L;
     ti field_H;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
-            int discarded$0 = 1;
-            gj.a("", param0);
-            int discarded$1 = 3279;
-            vf.a(param0);
+            gj.a("", param0, true);
+            vf.a(param0, 3279);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "vi.I(" + (param0 != null ? "{...}" : "null") + ',' + 22770 + ')');
         }
@@ -390,7 +388,7 @@ final class vi extends sj {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_y = null;
         field_s = null;
         field_L = null;

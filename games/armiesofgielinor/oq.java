@@ -32,7 +32,7 @@ final class oq extends wv {
         return qv.field_l;
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         return ii.field_b;
     }
 

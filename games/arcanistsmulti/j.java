@@ -10,7 +10,7 @@ final class j implements pf {
     private ti field_d;
     static volatile int field_g;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_f = null;
@@ -192,7 +192,7 @@ final class j implements pf {
         return stackIn_4_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             if (null != pg.field_f) {
                 try {
@@ -281,6 +281,7 @@ final class j implements pf {
         Object var8 = null;
         String var9 = null;
         int var10 = 0;
+        Object var11 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -336,8 +337,8 @@ final class j implements pf {
               if (param1 == 5592405) {
                 break L3;
               } else {
-                int discarded$1 = 0;
-                j.a(false, (String) null, true);
+                var11 = null;
+                j.a(false, (String) null, true, false);
                 break L3;
               }
             }
@@ -383,7 +384,7 @@ final class j implements pf {
         }
     }
 
-    final static void a(boolean param0, String param1, boolean param2) {
+    final static void a(boolean param0, String param1, boolean param2, boolean param3) {
         try {
             hk.d(-24225);
             p.field_b.f(-117);

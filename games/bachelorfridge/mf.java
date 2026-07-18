@@ -379,13 +379,11 @@ class mf extends uda implements lja {
               if (!((mf) this).field_fb) {
                 return;
               } else {
-                int discarded$8 = 0;
-                dla.b();
+                dla.b(0);
                 return;
               }
             } else {
-              int discarded$9 = 1;
-              sp.b();
+              sp.b(1);
               return;
             }
           } else {
@@ -399,13 +397,11 @@ class mf extends uda implements lja {
               if (!((mf) this).field_fb) {
                 return;
               } else {
-                int discarded$10 = 0;
-                dla.b();
+                dla.b(0);
                 return;
               }
             } else {
-              int discarded$11 = 1;
-              sp.b();
+              sp.b(1);
               return;
             }
           } else {

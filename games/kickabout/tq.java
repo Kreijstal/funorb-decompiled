@@ -8,12 +8,12 @@ final class tq extends tm {
     static String field_D;
     static char[] field_B;
 
-    final static void g() {
+    final static void g(byte param0) {
         eq.a(0);
         qn.a(-24823, il.field_d[0].field_o, el.field_I, eb.field_b, sh.field_c, oe.field_f);
     }
 
-    final static ut[] a(int param0, boolean param1, int param2, int param3, boolean param4) {
+    final static ut[] a(int param0, boolean param1, int param2, int param3, boolean param4, byte param5) {
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;

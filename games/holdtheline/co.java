@@ -8,17 +8,18 @@ final class co {
     static String field_c;
     static String field_e;
 
-    final static int a() {
+    final static int a(int param0) {
         return cb.field_j;
     }
 
     final static void a(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
+        Object var3 = null;
         Throwable decompiledCaughtException = null;
         if (null == tf.field_n) {
-          int discarded$8 = 26;
-          boolean discarded$9 = co.a((gn) null, (gn) null);
+          var3 = null;
+          boolean discarded$4 = co.a((gn) null, (gn) null, 26);
           return;
         } else {
           var1 = (Object) (Object) tf.field_n;
@@ -28,13 +29,13 @@ final class co {
               break L0;
             }
           }
-          int discarded$10 = 26;
-          boolean discarded$11 = co.a((gn) null, (gn) null);
+          var3 = null;
+          boolean discarded$5 = co.a((gn) null, (gn) null, 26);
           return;
         }
     }
 
-    final static boolean a(gn param0, gn param1) {
+    final static boolean a(gn param0, gn param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_9_0 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -162,7 +163,7 @@ final class co {
         return stackIn_9_0 != 0;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -181,8 +182,7 @@ final class co {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$2 = -1;
-          mn.a("", param0);
+          mn.a("", param0, -1);
           ae.a(-16666, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -217,7 +217,7 @@ final class co {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         if (cf.field_q != -lf.field_l) {
           if (cf.field_q != -lf.field_l + 250) {
             cf.field_q = cf.field_q + 1;
@@ -232,7 +232,7 @@ final class co {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         int var1 = 0;
         field_e = null;
         field_c = null;

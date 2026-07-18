@@ -7,13 +7,13 @@ final class gb {
     static int[] field_a;
     static String field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;
     }
 
-    final static void a(pm param0, pm param1) {
+    final static void a(pm param0, pm param1, byte param2) {
         double var3_double = 0.0;
         RuntimeException var3 = null;
         double var5 = 0.0;

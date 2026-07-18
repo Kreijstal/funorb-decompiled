@@ -4,7 +4,7 @@
 final class sab extends rqa {
     static int field_o;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException var8 = null;
         int var8_int = 0;
         int var9 = 0;
@@ -219,12 +219,10 @@ final class sab extends rqa {
 
     final static boolean e(byte param0) {
         int var1 = 26 % ((-51 - param0) / 45);
-        int discarded$7 = 114;
-        if (!(gpb.a("jaclib"))) {
+        if (!(gpb.a("jaclib", (byte) 114))) {
             return false;
         }
-        int discarded$8 = 114;
-        return gpb.a("hw3d");
+        return gpb.a("hw3d", (byte) 114);
     }
 
     final static boolean[] a(boolean[] param0, int param1, boolean[] param2) {

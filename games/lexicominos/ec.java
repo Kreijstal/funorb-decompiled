@@ -47,7 +47,7 @@ final class ec implements Iterator {
         ((ec) this).field_f = null;
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return tb.field_b;
     }
 

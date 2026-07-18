@@ -201,7 +201,7 @@ final class cc implements Runnable {
         return stackIn_4_0;
     }
 
-    final static String a(char param0, int param1) {
+    final static String a(char param0, int param1, int param2) {
         int var4 = 0;
         int var5 = DungeonAssault.field_K;
         char[] var6 = new char[param1];
@@ -212,7 +212,7 @@ final class cc implements Runnable {
         return new String(var6);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_e = null;
         field_i = null;

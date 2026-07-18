@@ -6,12 +6,11 @@ final class ke {
     static int field_b;
     static int field_a;
 
-    final static void a() {
+    final static void a(int param0) {
         if (!fd.d((byte) -21)) {
             return;
         }
-        int discarded$0 = 0;
-        qc.a(4, false);
+        qc.a(4, false, 0);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {

@@ -311,7 +311,7 @@ final class df {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_k = null;
         int var1 = 0;

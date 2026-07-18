@@ -11,7 +11,7 @@ final class jn {
     static int field_c;
     static ml field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_f = null;

@@ -30,7 +30,7 @@ final class fl implements Iterator {
         ((fl) this).field_c = null;
     }
 
-    final static qr a() {
+    final static qr a(int param0) {
         int var1 = 0;
         return wg.field_a.field_Eb;
     }
@@ -264,14 +264,13 @@ final class fl implements Iterator {
         ((fl) this).field_c = null;
         try {
             ((fl) this).field_g = param0;
-            int discarded$0 = -107;
-            this.c();
+            this.c(-107);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "fl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         ((fl) this).field_c = null;
         ((fl) this).field_d = 1;
         ((fl) this).field_a = ((fl) this).field_g.field_f[0].field_f;

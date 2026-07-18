@@ -274,7 +274,7 @@ final class df extends ii {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_q = null;
         field_s = null;
     }

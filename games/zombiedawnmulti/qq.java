@@ -104,7 +104,7 @@ final class qq {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_g = null;

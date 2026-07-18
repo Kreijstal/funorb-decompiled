@@ -11,7 +11,7 @@ final class vb extends le {
     int field_Gb;
     static bd[] field_Kb;
 
-    public static void f() {
+    public static void f(int param0) {
         field_Hb = null;
         field_Lb = null;
         field_Fb = null;

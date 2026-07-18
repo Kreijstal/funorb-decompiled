@@ -10,7 +10,7 @@ final class jjb {
     aia[] field_c;
     ob field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
     }
 
@@ -75,36 +75,29 @@ final class jjb {
                       if (16 <= var2_int) {
                         break L1;
                       } else {
-                        int discarded$8 = 32768;
-                        int discarded$9 = 1;
-                        var24 = ppb.a(pjb.field_vb, var2_int * 32768);
+                        var24 = ppb.a(pjb.field_vb, var2_int * 32768, true, 32768);
                         ((jjb) this).field_c[var2_int] = new aia(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
                         var2_int++;
                         continue L3;
                       }
                     }
                   } else {
-                    int discarded$10 = 32768;
-                    int discarded$11 = 1;
-                    var23 = ppb.a(pra.field_p, 32768 * var2_int);
+                    var23 = ppb.a(pra.field_p, 32768 * var2_int, true, 32768);
                     ((jjb) this).field_e[var2_int] = new aia(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
                     var2_int++;
                     continue L2;
                   }
                 }
               } else {
-                int discarded$12 = 1;
-                var20 = ffb.a(false, pra.field_p);
+                var20 = ffb.a(false, pra.field_p, true);
                 ((jjb) this).field_b = new ob(param0, 6410, 128, 128, 16, var20, 6410);
-                int discarded$13 = 1;
-                var21 = ffb.a(false, pjb.field_vb);
+                var21 = ffb.a(false, pjb.field_vb, true);
                 ((jjb) this).field_g = new ob(param0, 6410, 128, 128, 16, var21, 6410);
                 var10 = param0.field_yb;
                 if (!var10.a(92)) {
                   break L1;
                 } else {
-                  int discarded$14 = 1;
-                  var22 = ffb.a(false, lda.field_o);
+                  var22 = ffb.a(false, lda.field_o, true);
                   ((jjb) this).field_a = new ob(param0, 6408, 128, 128, 16);
                   var4 = new ob(param0, 6409, 128, 128, 16, var22, 6409);
                   if (!var10.a(2.0f, -28279, var4, ((jjb) this).field_a)) {
@@ -113,7 +106,7 @@ final class jjb {
                     var4.e(0);
                     return;
                   } else {
-                    boolean discarded$15 = ((jjb) this).field_a.c(9729);
+                    boolean discarded$1 = ((jjb) this).field_a.c(9729);
                     var4.e(0);
                     return;
                   }

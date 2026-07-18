@@ -2915,7 +2915,7 @@ final class dk {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -2945,16 +2945,13 @@ final class dk {
                     L3: {
                       var6 = 5;
                       var7 = 8;
-                      int discarded$3 = 1;
-                      var8 = of.field_k[wf.a("City" + ((int)((double)var6 * Math.random()) + 1))];
+                      var8 = of.field_k[wf.a("City" + ((int)((double)var6 * Math.random()) + 1), true)];
                       if (var5 < 32) {
                         break L3;
                       } else {
-                        int discarded$4 = 1;
-                        var8 = of.field_k[wf.a("City" + (1 - -(int)((double)var7 * Math.random())))];
+                        var8 = of.field_k[wf.a("City" + (1 - -(int)((double)var7 * Math.random())), true)];
                         if (100.0 * Math.random() < 90.0) {
-                          int discarded$5 = 1;
-                          var8 = of.field_k[wf.a("City" + (6 - -(int)(3.0 * Math.random())))];
+                          var8 = of.field_k[wf.a("City" + (6 - -(int)(3.0 * Math.random())), true)];
                           break L3;
                         } else {
                           break L3;
@@ -4711,7 +4708,7 @@ final class dk {
               if (!param0) {
                 break L5;
               } else {
-                ue discarded$2 = ((dk) this).a(true, 75, 67, -64, 52, 26, 57);
+                ue discarded$1 = ((dk) this).a(true, 75, 67, -64, 52, 26, 57);
                 break L5;
               }
             }
@@ -4956,8 +4953,7 @@ final class dk {
                             var3 = ((dl) (Object) stackIn_51_0).a(stackIn_51_1, stackIn_51_2, (gi[]) (Object) stackIn_51_3, stackIn_51_4, (byte) stackIn_51_5, stackIn_51_6 != 0);
                             break L7;
                           } else {
-                            int discarded$3 = 127;
-                            bm.a(var6, var5);
+                            bm.a(var6, var5, (byte) 127);
                             break L7;
                           }
                         }
@@ -6546,14 +6542,12 @@ final class dk {
                         continue L13;
                       } else {
                         L19: {
-                          int discarded$39 = 1;
-                          var10_ref_byte__ = of.field_k[wf.a("AB-Corridors")];
+                          var10_ref_byte__ = of.field_k[wf.a("AB-Corridors", true)];
                           var15 = (int)(6.0 * Math.random());
                           if (var15 != 1) {
                             break L19;
                           } else {
-                            int discarded$40 = 1;
-                            var10_ref_byte__ = of.field_k[wf.a("AB-Room0")];
+                            var10_ref_byte__ = of.field_k[wf.a("AB-Room0", true)];
                             break L19;
                           }
                         }
@@ -6561,8 +6555,7 @@ final class dk {
                           if (var15 != 2) {
                             break L20;
                           } else {
-                            int discarded$41 = 1;
-                            var10_ref_byte__ = of.field_k[wf.a("AB-Room1")];
+                            var10_ref_byte__ = of.field_k[wf.a("AB-Room1", true)];
                             break L20;
                           }
                         }
@@ -6570,8 +6563,7 @@ final class dk {
                           if (var15 != 3) {
                             break L21;
                           } else {
-                            int discarded$42 = 1;
-                            var10_ref_byte__ = of.field_k[wf.a("AB-Room2")];
+                            var10_ref_byte__ = of.field_k[wf.a("AB-Room2", true)];
                             break L21;
                           }
                         }
@@ -6579,8 +6571,7 @@ final class dk {
                           if (var15 != 4) {
                             break L22;
                           } else {
-                            int discarded$43 = 1;
-                            var10_ref_byte__ = of.field_k[wf.a("AB-Room3")];
+                            var10_ref_byte__ = of.field_k[wf.a("AB-Room3", true)];
                             break L22;
                           }
                         }
@@ -6588,8 +6579,7 @@ final class dk {
                           if (var15 != 5) {
                             break L23;
                           } else {
-                            int discarded$44 = 1;
-                            var10_ref_byte__ = of.field_k[wf.a("AB-Room4")];
+                            var10_ref_byte__ = of.field_k[wf.a("AB-Room4", true)];
                             break L23;
                           }
                         }
@@ -6603,8 +6593,7 @@ final class dk {
                               if (6 != ((dk) this).field_k) {
                                 break L24;
                               } else {
-                                int discarded$45 = 1;
-                                var10_ref_byte__ = of.field_k[wf.a("AB-CommandCenter")];
+                                var10_ref_byte__ = of.field_k[wf.a("AB-CommandCenter", true)];
                                 break L24;
                               }
                             }
@@ -6617,8 +6606,7 @@ final class dk {
                             if (~var14 != ~var9) {
                               break L25;
                             } else {
-                              int discarded$46 = 1;
-                              var10_ref_byte__ = of.field_k[wf.a("AB-Entrance")];
+                              var10_ref_byte__ = of.field_k[wf.a("AB-Entrance", true)];
                               break L25;
                             }
                           }
@@ -6633,8 +6621,7 @@ final class dk {
                               if (((dk) this).field_k != 9) {
                                 break L26;
                               } else {
-                                int discarded$47 = 1;
-                                var10_ref_byte__ = of.field_k[wf.a("AB-Reactor")];
+                                var10_ref_byte__ = of.field_k[wf.a("AB-Reactor", true)];
                                 break L26;
                               }
                             }
@@ -6650,8 +6637,7 @@ final class dk {
                               if (((dk) this).field_k != 9) {
                                 break L27;
                               } else {
-                                int discarded$48 = 1;
-                                var10_ref_byte__ = of.field_k[wf.a("AB-Hangerdoor")];
+                                var10_ref_byte__ = of.field_k[wf.a("AB-Hangerdoor", true)];
                                 break L27;
                               }
                             }
@@ -6667,8 +6653,7 @@ final class dk {
                               if (((dk) this).field_k != 6) {
                                 break L28;
                               } else {
-                                int discarded$49 = 1;
-                                var10_ref_byte__ = of.field_k[wf.a("AB-Maindoor")];
+                                var10_ref_byte__ = of.field_k[wf.a("AB-Maindoor", true)];
                                 break L28;
                               }
                             }
@@ -6761,14 +6746,12 @@ final class dk {
                           continue L35;
                         } else {
                           L37: {
-                            int discarded$50 = 1;
-                            var10_ref_byte__ = of.field_k[wf.a("AB-Corridors")];
+                            var10_ref_byte__ = of.field_k[wf.a("AB-Corridors", true)];
                             var15 = (int)(6.0 * Math.random());
                             if (var15 != 1) {
                               break L37;
                             } else {
-                              int discarded$51 = 1;
-                              var10_ref_byte__ = of.field_k[wf.a("AB-Room0")];
+                              var10_ref_byte__ = of.field_k[wf.a("AB-Room0", true)];
                               break L37;
                             }
                           }
@@ -6776,8 +6759,7 @@ final class dk {
                             if (var15 != 2) {
                               break L38;
                             } else {
-                              int discarded$52 = 1;
-                              var10_ref_byte__ = of.field_k[wf.a("AB-Room1")];
+                              var10_ref_byte__ = of.field_k[wf.a("AB-Room1", true)];
                               break L38;
                             }
                           }
@@ -6785,8 +6767,7 @@ final class dk {
                             if (3 != var15) {
                               break L39;
                             } else {
-                              int discarded$53 = 1;
-                              var10_ref_byte__ = of.field_k[wf.a("AB-Room2")];
+                              var10_ref_byte__ = of.field_k[wf.a("AB-Room2", true)];
                               break L39;
                             }
                           }
@@ -6794,8 +6775,7 @@ final class dk {
                             if (4 != var15) {
                               break L40;
                             } else {
-                              int discarded$54 = 1;
-                              var10_ref_byte__ = of.field_k[wf.a("AB-Room3")];
+                              var10_ref_byte__ = of.field_k[wf.a("AB-Room3", true)];
                               break L40;
                             }
                           }
@@ -6803,8 +6783,7 @@ final class dk {
                             if (var15 != 5) {
                               break L41;
                             } else {
-                              int discarded$55 = 1;
-                              var10_ref_byte__ = of.field_k[wf.a("AB-Room4")];
+                              var10_ref_byte__ = of.field_k[wf.a("AB-Room4", true)];
                               break L41;
                             }
                           }
@@ -6815,8 +6794,7 @@ final class dk {
                               if (~var9 != ~var14) {
                                 break L42;
                               } else {
-                                int discarded$56 = 1;
-                                var10_ref_byte__ = of.field_k[wf.a("AB-Hanger")];
+                                var10_ref_byte__ = of.field_k[wf.a("AB-Hanger", true)];
                                 break L42;
                               }
                             }
@@ -6828,8 +6806,7 @@ final class dk {
                               if (var7 != var14) {
                                 break L43;
                               } else {
-                                int discarded$57 = 1;
-                                var10_ref_byte__ = of.field_k[wf.a("AB-Entrance")];
+                                var10_ref_byte__ = of.field_k[wf.a("AB-Entrance", true)];
                                 break L43;
                               }
                             }
@@ -6841,8 +6818,7 @@ final class dk {
                               if (var14 != 1) {
                                 break L44;
                               } else {
-                                int discarded$58 = 1;
-                                var10_ref_byte__ = of.field_k[wf.a("AB-Maindoor")];
+                                var10_ref_byte__ = of.field_k[wf.a("AB-Maindoor", true)];
                                 break L44;
                               }
                             }
@@ -6877,8 +6853,7 @@ final class dk {
                 if (((dk) this).field_k != 7) {
                   break L46;
                 } else {
-                  int discarded$59 = 1;
-                  var23 = of.field_k[wf.a("MissileBase")];
+                  var23 = of.field_k[wf.a("MissileBase", true)];
                   var7 = ((dk) this).field_b / 2;
                   var8 = ((dk) this).field_e / 2;
                   ((dk) this).a(var7 - var23[0] / 2, (byte) 104, -(var23[1] / 2) + var8, var23);
@@ -7005,8 +6980,7 @@ final class dk {
               if (((dk) this).field_k != 1) {
                 break L5;
               } else {
-                int discarded$60 = 1;
-                var24 = of.field_k[wf.a("Tutorial")];
+                var24 = of.field_k[wf.a("Tutorial", true)];
                 ((dk) this).a(0, (byte) 104, 0, var24);
                 break L5;
               }
@@ -7069,14 +7043,12 @@ final class dk {
                         break L65;
                       } else {
                         var12 = 0;
-                        int discarded$61 = 1;
-                        var13_ref = (Object) (Object) of.field_k[wf.a("Hanger")];
+                        var13_ref = (Object) (Object) of.field_k[wf.a("Hanger", true)];
                         var6 = 0;
                         if (param0.field_G.field_Bb != 3) {
                           break L65;
                         } else {
-                          int discarded$62 = 1;
-                          var13_ref = (Object) (Object) of.field_k[wf.a("AlienHanger")];
+                          var13_ref = (Object) (Object) of.field_k[wf.a("AlienHanger", true)];
                           break L65;
                         }
                       }
@@ -7090,8 +7062,7 @@ final class dk {
                         break L66;
                       } else {
                         var8 = 0;
-                        int discarded$63 = 1;
-                        var13_ref = (Object) (Object) of.field_k[wf.a("ResearchBase")];
+                        var13_ref = (Object) (Object) of.field_k[wf.a("ResearchBase", true)];
                         var12 = 0;
                         break L66;
                       }
@@ -7104,15 +7075,13 @@ final class dk {
                       if (var9 == 0) {
                         break L67;
                       } else {
-                        int discarded$64 = 1;
-                        var13_ref = (Object) (Object) of.field_k[wf.a("FactoryBase")];
+                        var13_ref = (Object) (Object) of.field_k[wf.a("FactoryBase", true)];
                         var9 = 0;
                         var12 = 0;
                         if (param0.field_G.field_Bb != 3) {
                           break L67;
                         } else {
-                          int discarded$65 = 1;
-                          var13_ref = (Object) (Object) of.field_k[wf.a("AlienFactoryBase")];
+                          var13_ref = (Object) (Object) of.field_k[wf.a("AlienFactoryBase", true)];
                           break L67;
                         }
                       }
@@ -7126,8 +7095,7 @@ final class dk {
                         break L68;
                       } else {
                         var12 = 0;
-                        int discarded$66 = 1;
-                        var13_ref = (Object) (Object) of.field_k[wf.a("Helepad")];
+                        var13_ref = (Object) (Object) of.field_k[wf.a("Helepad", true)];
                         var7 = 0;
                         break L68;
                       }
@@ -7142,8 +7110,7 @@ final class dk {
                       } else {
                         var12 = 0;
                         var10--;
-                        int discarded$67 = 1;
-                        var13_ref = (Object) (Object) of.field_k[wf.a("Barracks")];
+                        var13_ref = (Object) (Object) of.field_k[wf.a("Barracks", true)];
                         break L69;
                       }
                     }
@@ -7157,8 +7124,7 @@ final class dk {
                       } else {
                         var11--;
                         var12 = 0;
-                        int discarded$68 = 1;
-                        var13_ref = (Object) (Object) of.field_k[wf.a("FuelDump")];
+                        var13_ref = (Object) (Object) of.field_k[wf.a("FuelDump", true)];
                         break L70;
                       }
                     }
@@ -7180,8 +7146,7 @@ final class dk {
                             if (var4 != 1) {
                               break L72;
                             } else {
-                              int discarded$69 = 1;
-                              var13_ref = (Object) (Object) of.field_k[wf.a("UFO-Transport")];
+                              var13_ref = (Object) (Object) of.field_k[wf.a("UFO-Transport", true)];
                               break L72;
                             }
                           }
@@ -7189,8 +7154,7 @@ final class dk {
                             if (var4 != 2) {
                               break L73;
                             } else {
-                              int discarded$70 = 1;
-                              var13_ref = (Object) (Object) of.field_k[wf.a("UFO-Invader")];
+                              var13_ref = (Object) (Object) of.field_k[wf.a("UFO-Invader", true)];
                               break L73;
                             }
                           }
@@ -7198,8 +7162,7 @@ final class dk {
                             if (var4 != 3) {
                               break L74;
                             } else {
-                              int discarded$71 = 1;
-                              var13_ref = (Object) (Object) of.field_k[wf.a("UFO-Dominator")];
+                              var13_ref = (Object) (Object) of.field_k[wf.a("UFO-Dominator", true)];
                               break L74;
                             }
                           }
@@ -7215,8 +7178,7 @@ final class dk {
                             if (5 != var4) {
                               break L76;
                             } else {
-                              int discarded$72 = 1;
-                              var13_ref = (Object) (Object) of.field_k[wf.a("UFO-Transport")];
+                              var13_ref = (Object) (Object) of.field_k[wf.a("UFO-Transport", true)];
                               var4 = 1;
                               break L76;
                             }
@@ -7225,8 +7187,7 @@ final class dk {
                             break L71;
                           } else {
                             var4 = 5;
-                            int discarded$73 = 1;
-                            var13_ref = (Object) (Object) of.field_k[wf.a("UFO-Transport")];
+                            var13_ref = (Object) (Object) of.field_k[wf.a("UFO-Transport", true)];
                             break L71;
                           }
                         }
@@ -7307,8 +7268,7 @@ final class dk {
                           this.a(1);
                           break L83;
                         } else {
-                          int discarded$74 = -106;
-                          this.a();
+                          this.a((byte) -106);
                           break L83;
                         }
                       }
@@ -7320,8 +7280,7 @@ final class dk {
                           if (var4 != 1) {
                             break L85;
                           } else {
-                            int discarded$75 = 1;
-                            var25 = of.field_k[wf.a("UFO-Transport")];
+                            var25 = of.field_k[wf.a("UFO-Transport", true)];
                             ((dk) this).a(((dk) this).field_b / 2 - var25[0] / 2, (byte) 104, ((dk) this).field_e / 2 + -(var25[1] / 2), var25);
                             break L85;
                           }
@@ -7330,8 +7289,7 @@ final class dk {
                           if (var4 != 2) {
                             break L86;
                           } else {
-                            int discarded$76 = 1;
-                            var26 = of.field_k[wf.a("UFO-Invader")];
+                            var26 = of.field_k[wf.a("UFO-Invader", true)];
                             ((dk) this).a(((dk) this).field_b / 2 + -(var26[0] / 2), (byte) 104, ((dk) this).field_e / 2 - var26[1] / 2, var26);
                             break L86;
                           }
@@ -7340,8 +7298,7 @@ final class dk {
                           if (3 != var4) {
                             break L87;
                           } else {
-                            int discarded$77 = 1;
-                            var27 = of.field_k[wf.a("UFO-Dominator")];
+                            var27 = of.field_k[wf.a("UFO-Dominator", true)];
                             ((dk) this).a(((dk) this).field_b / 2 - var27[0] / 2, (byte) 104, ((dk) this).field_e / 2 - var27[1] / 2, var27);
                             break L87;
                           }

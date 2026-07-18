@@ -248,13 +248,11 @@ final class gg extends hd {
         tf.field_a = 0.0;
     }
 
-    final static void a() {
-        int discarded$0 = 1;
-        int discarded$1 = 112;
-        ba.a();
+    final static void a(int param0) {
+        ba.a(112, true);
     }
 
-    final static void a(String[] args) {
+    final static void a(String[] args, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

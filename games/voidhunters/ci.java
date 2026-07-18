@@ -6,7 +6,7 @@ final class ci implements dja {
     static int field_b;
     static String field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (!li.field_i) {
           dma.d(param4, param0, param3, param1, param2);
           field_a = null;
@@ -33,7 +33,7 @@ final class ci implements dja {
         return (tv) (Object) new gqa();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }

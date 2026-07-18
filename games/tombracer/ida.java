@@ -17,7 +17,7 @@ final class ida {
         field_b = null;
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, int param1) {
         qla.field_b.setTime(new Date(param0));
         int var3 = qla.field_b.get(7);
         int var4 = qla.field_b.get(5);

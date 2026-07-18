@@ -103,7 +103,7 @@ final class km extends gp {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_w = null;
         field_u = null;
         field_v = null;
@@ -117,7 +117,7 @@ final class km extends gp {
         }
     }
 
-    final static void i() {
+    final static void i(int param0) {
         int var1 = (qg.field_G + -640) / 2;
         int var2 = ld.field_b * ld.field_b;
         int var3 = var2 - rk.field_y * rk.field_y;

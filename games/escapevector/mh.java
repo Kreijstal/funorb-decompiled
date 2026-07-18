@@ -20,14 +20,13 @@ final class mh {
         field_c = null;
     }
 
-    final static String b() {
+    final static String b(byte param0) {
         String var1 = "";
         if (!(null == dd.field_d)) {
             var1 = dd.field_d.j(35);
         }
         if (var1.length() == 0) {
-            int discarded$0 = 0;
-            var1 = tg.i();
+            var1 = tg.i(0);
         }
         if (var1.length() == 0) {
             var1 = fi.field_e;
@@ -114,7 +113,7 @@ final class mh {
         return stackIn_5_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (null != bk.field_r) {
             bk.field_r.a((byte) -109);
         }

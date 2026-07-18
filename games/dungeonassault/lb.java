@@ -44,7 +44,7 @@ final class lb {
     int field_z;
     int field_s;
 
-    final static void a() {
+    final static void a(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         hb var2 = null;
@@ -144,7 +144,7 @@ final class lb {
             }
             L3: {
               if (param2 < 1) {
-                int discarded$6 = param0.f(-127);
+                int discarded$5 = param0.f(-127);
                 ((lb) this).field_s = param0.f(-106);
                 ((lb) this).field_m = ((lb) this).field_N;
                 ((lb) this).field_l = ((lb) this).field_N;
@@ -175,7 +175,7 @@ final class lb {
             }
             L5: {
               if (param2 >= 6) {
-                int discarded$7 = param0.h(-78);
+                int discarded$6 = param0.h(-78);
                 ((lb) this).field_q = param0.h(-83);
                 break L5;
               } else {
@@ -211,7 +211,7 @@ final class lb {
               if (param2 < 4) {
                 break L8;
               } else {
-                int discarded$8 = param0.c(true);
+                int discarded$7 = param0.c(true);
                 break L8;
               }
             }
@@ -220,11 +220,11 @@ final class lb {
               if (~var5 <= ~((lb) this).field_k.field_f.length) {
                 ((lb) this).field_L = new ai[49];
                 ((lb) this).field_L[24] = new ai(2);
-                ai dupTemp$9 = new ai(3);
-                ((lb) this).field_L[48] = dupTemp$9;
-                ((lb) this).field_L[42] = dupTemp$9;
-                ((lb) this).field_L[6] = dupTemp$9;
-                ((lb) this).field_L[0] = dupTemp$9;
+                ai dupTemp$8 = new ai(3);
+                ((lb) this).field_L[48] = dupTemp$8;
+                ((lb) this).field_L[42] = dupTemp$8;
+                ((lb) this).field_L[6] = dupTemp$8;
+                ((lb) this).field_L[0] = dupTemp$8;
                 var5 = 0;
                 L10: while (true) {
                   if (var5 >= 49) {
@@ -335,7 +335,7 @@ final class lb {
                                         break L24;
                                       } else {
                                         ((lb) this).field_u = param0.c(true);
-                                        int discarded$10 = param0.k(0);
+                                        int discarded$9 = param0.k(0);
                                         ((lb) this).field_g = param0.h(-125);
                                         ((lb) this).field_i = param0.h(-76);
                                         ((lb) this).field_p = param0.h(-72);
@@ -419,8 +419,7 @@ final class lb {
                               if (var5 == 48) {
                                 break L29;
                               } else {
-                                int discarded$11 = -36;
-                                ((lb) this).field_L[var5] = gk.a(param0);
+                                ((lb) this).field_L[var5] = gk.a(param0, (byte) -36);
                                 break L29;
                               }
                             }
@@ -484,7 +483,7 @@ final class lb {
         field_v = null;
     }
 
-    final static void a(se param0, se param1, int param2) {
+    final static void a(se param0, se param1, int param2, int param3) {
         try {
             wa.field_l = param2;
             i.field_x = param0;

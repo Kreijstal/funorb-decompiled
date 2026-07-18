@@ -83,12 +83,11 @@ final class eg extends fg {
         return stackIn_6_0 != 0;
     }
 
-    final static boolean c() {
+    final static boolean c(byte param0) {
         if (vh.field_n >= 20) {
           if (fe.c((byte) -121)) {
             if (0 < cb.field_j) {
-              int discarded$4 = 85;
-              if (ld.a()) {
+              if (ld.a((byte) 85)) {
                 return false;
               } else {
                 return true;
@@ -104,7 +103,7 @@ final class eg extends fg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_x = null;
         int var1 = 71;
         field_w = null;
@@ -255,12 +254,11 @@ final class eg extends fg {
                 break L1;
               } else {
                 var4 = null;
-                boolean discarded$4 = eg.a((se) null, -102);
+                boolean discarded$2 = eg.a((se) null, -102);
                 break L1;
               }
             }
-            int discarded$5 = 77;
-            stackOut_2_0 = im.a('*', param1.field_l.length());
+            stackOut_2_0 = im.a('*', param1.field_l.length(), 77);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -319,8 +317,7 @@ final class eg extends fg {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_2_0 = sd.a(0, param0, param2);
+            stackOut_2_0 = sd.a(0, param0, param2, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

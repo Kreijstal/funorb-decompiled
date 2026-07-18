@@ -488,8 +488,7 @@ final class qe implements Runnable {
             }
             ch.field_B = param1;
             lg.field_i = param0;
-            int discarded$0 = 1;
-            h.a();
+            h.a(true);
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) (Object) runtimeException, "qe.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

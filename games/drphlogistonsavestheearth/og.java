@@ -17,7 +17,7 @@ final class og {
         field_c = null;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -129,7 +129,7 @@ final class og {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(gf.field_G)) {
             throw new IllegalStateException();
         }

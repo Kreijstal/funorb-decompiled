@@ -6,13 +6,13 @@ final class qa {
     static eg field_b;
     static String field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -289,14 +289,12 @@ final class qa {
               break L1;
             }
           }
-          int discarded$3 = -14492;
-          cm.a(wd.field_v);
+          cm.a(wd.field_v, -14492);
           re.a();
           vp.a();
           wj.e((byte) -124);
           if (var5 >= 256) {
-            int discarded$4 = 2765;
-            sl.c();
+            sl.c(2765);
             if (it.field_c < 150) {
               L2: {
                 L3: {
@@ -522,8 +520,7 @@ final class qa {
           } else {
             L23: {
               vp.b(0, 0, vp.field_i, vp.field_c, 0, -var5 + 256);
-              int discarded$5 = 2765;
-              sl.c();
+              sl.c(2765);
               if (it.field_c < 150) {
                 wd.field_v.d(var3, var4);
                 break L23;

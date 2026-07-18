@@ -81,7 +81,7 @@ final class nf extends li {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_u = null;
         field_w = null;
         field_o = null;

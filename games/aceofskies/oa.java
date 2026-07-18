@@ -34,21 +34,16 @@ final class oa extends ha implements e {
         ((oa) this).field_g = false;
         try {
           L0: {
-            int discarded$15 = -16;
-            if (ei.a("sw3d")) {
+            if (ei.a("sw3d", (byte) -16)) {
               L1: {
-                int discarded$16 = 0;
-                vk.b();
+                vk.b(false);
                 this.MA(((oa) this).field_a, 0, 0);
-                int discarded$17 = 1;
-                int discarded$18 = 0;
-                fr.a(false);
+                fr.a(false, 0, true);
                 ((oa) this).field_g = true;
-                ja discarded$19 = new ja();
+                ja discarded$2 = new ja();
                 this.a((ao) (Object) new ja());
                 this.g(1);
-                int discarded$20 = 0;
-                this.f();
+                this.f(0);
                 if (param0 == null) {
                   break L1;
                 } else {
@@ -78,7 +73,7 @@ final class oa extends ha implements e {
         this.wa(param0, param1, param2, param3, param4, param5);
     }
 
-    private final void f() {
+    private final void f(int param0) {
         ((oa) this).field_k[0].a();
     }
 
@@ -111,8 +106,7 @@ final class oa extends ha implements e {
             ((oa) this).field_g = false;
         }
         this.g();
-        int discarded$0 = 0;
-        vk.a();
+        vk.a(false);
         ((oa) this).field_j = true;
     }
 

@@ -457,7 +457,7 @@ final class vm {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_b = null;
         field_d = null;

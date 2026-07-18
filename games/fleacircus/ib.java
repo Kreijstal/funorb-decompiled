@@ -207,9 +207,8 @@ final class ib implements ch {
         String stackOut_15_2 = null;
         try {
           L0: {
-            ri.a(param3, 8, param14, 8, 0, true, 240, param5, param2, 320, param10, rg.field_n, fb.field_c, 0, param9, 480, (dd[]) null, param4, 2, param1, cm.field_j);
-            int discarded$3 = -74;
-            li.a(param13);
+            ri.a(param3, param12, param14, param8, param6, true, param7, param5, param2, param0, param10, rg.field_n, fb.field_c, 0, param9, 480, (dd[]) null, param4, param11, param1, cm.field_j);
+            li.a(param13, (byte) -74);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -217,7 +216,7 @@ final class ib implements ch {
           L1: {
             runtimeException = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) runtimeException;
-            stackOut_2_1 = new StringBuilder().append("ib.C(").append(320).append(',').append(param1).append(',');
+            stackOut_2_1 = new StringBuilder().append("ib.C(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -292,7 +291,7 @@ final class ib implements ch {
           }
           L4: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param5).append(',').append(0).append(',').append(240).append(',').append(8).append(',').append(param9).append(',').append(param10).append(',').append(2).append(',').append(8).append(',').append(param13).append(',');
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',');
             stackIn_17_0 = stackOut_14_0;
             stackIn_17_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -319,7 +318,7 @@ final class ib implements ch {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         ih var1_ref = null;
         int var2 = 0;
@@ -389,9 +388,9 @@ final class ib implements ch {
                   } else {
                     var6 = new gm();
                     di.field_b.a((pa) (Object) var6, -1, (long)uk.a(41, (CharSequence) (Object) var4_ref_String).hashCode());
-                    int fieldTemp$5 = gk.field_A;
+                    int fieldTemp$3 = gk.field_A;
                     gk.field_A = gk.field_A + 1;
-                    var6.field_mb = fieldTemp$5;
+                    var6.field_mb = fieldTemp$3;
                     tf.field_E.a(false, (lh) (Object) var6);
                     break L4;
                   }
@@ -415,8 +414,7 @@ final class ib implements ch {
                         if (var7_ref == null) {
                           break L9;
                         } else {
-                          int discarded$6 = 1;
-                          stackOut_45_0 = hm.a(var7_ref, var6);
+                          stackOut_45_0 = hm.a(var7_ref, var6, true);
                           stackIn_56_0 = stackOut_45_0 ? 1 : 0;
                           stackIn_46_0 = stackOut_45_0;
                           if (var8 != 0) {
@@ -480,8 +478,15 @@ final class ib implements ch {
                     return;
                   } else {
                     if (4 != var2) {
-                      int discarded$7 = 1;
-                      ud.a("F1: " + ak.a(), (Throwable) null, 0);
+                      L13: {
+                        if (param0 <= -94) {
+                          break L13;
+                        } else {
+                          field_f = null;
+                          break L13;
+                        }
+                      }
+                      ud.a("F1: " + ak.a(true), (Throwable) null, 0);
                       k.c(-28354);
                       break L0;
                     } else {
@@ -496,71 +501,71 @@ final class ib implements ch {
                 }
               }
             } else {
-              L13: {
+              L14: {
                 if (null != kc.field_c) {
-                  break L13;
+                  break L14;
                 } else {
                   kc.field_c = new qk(128);
                   ij.field_I = 0;
-                  break L13;
-                }
-              }
-              L14: {
-                if (var1_ref.e(false) != 1) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
-                  break L14;
-                } else {
-                  stackOut_8_0 = 1;
-                  stackIn_11_0 = stackOut_8_0;
                   break L14;
                 }
               }
               L15: {
-                var3_int = stackIn_11_0;
-                var4_ref_String = var1_ref.h(0);
-                if (var3_int == 0) {
+                if (var1_ref.e(false) != 1) {
+                  stackOut_10_0 = 0;
+                  stackIn_11_0 = stackOut_10_0;
                   break L15;
                 } else {
-                  String discarded$8 = var1_ref.h(0);
+                  stackOut_8_0 = 1;
+                  stackIn_11_0 = stackOut_8_0;
                   break L15;
                 }
               }
               L16: {
+                var3_int = stackIn_11_0;
+                var4_ref_String = var1_ref.h(0);
+                if (var3_int == 0) {
+                  break L16;
+                } else {
+                  String discarded$4 = var1_ref.h(0);
+                  break L16;
+                }
+              }
+              L17: {
                 var5_ref = vb.a(var4_ref_String, (byte) -47);
                 var6_ref = var1_ref.h(0);
                 var7 = uk.a(-109, (CharSequence) (Object) var4_ref_String);
                 if (null == var7) {
                   var7 = var4_ref_String;
-                  break L16;
+                  break L17;
                 } else {
-                  break L16;
+                  break L17;
                 }
               }
-              L17: {
+              L18: {
                 if (null != var5_ref) {
-                  break L17;
+                  break L18;
                 } else {
                   var5_ref = vb.a(var6_ref, (byte) 93);
                   if (var5_ref != null) {
                     kc.field_c.a((pa) (Object) var5_ref, -1, (long)var7.hashCode());
-                    break L17;
+                    break L18;
                   } else {
-                    break L17;
+                    break L18;
                   }
                 }
               }
-              L18: {
+              L19: {
                 if (var5_ref != null) {
-                  break L18;
+                  break L19;
                 } else {
                   var5_ref = new gm();
                   kc.field_c.a((pa) (Object) var5_ref, -1, (long)var7.hashCode());
-                  int fieldTemp$9 = ij.field_I;
+                  int fieldTemp$5 = ij.field_I;
                   ij.field_I = ij.field_I + 1;
-                  var5_ref.field_mb = fieldTemp$9;
+                  var5_ref.field_mb = fieldTemp$5;
                   cl.field_e.a(false, (lh) (Object) var5_ref);
-                  break L18;
+                  break L19;
                 }
               }
               var5_ref.field_jb = var4_ref_String;
@@ -570,7 +575,7 @@ final class ib implements ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1, "ib.E(" + -118 + ')');
+          throw pf.a((Throwable) (Object) var1, "ib.E(" + param0 + ')');
         }
     }
 
@@ -708,21 +713,17 @@ final class ib implements ch {
         return stackIn_16_0;
     }
 
-    public static void a() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void a(int param0) {
+        field_e = null;
+        field_d = null;
+        field_f = null;
+        if (param0 >= -1) {
+            return;
+        }
         try {
-          L0: {
-            field_e = null;
-            field_d = null;
-            field_f = null;
             field_a = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1, "ib.A(" + -111 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "ib.A(" + param0 + ')');
         }
     }
 

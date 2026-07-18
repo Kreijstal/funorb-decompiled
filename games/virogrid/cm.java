@@ -8,7 +8,7 @@ final class cm extends l {
     static String field_g;
     static String field_j;
 
-    public static void c() {
+    public static void c(int param0) {
         field_k = null;
         field_i = null;
         field_g = null;
@@ -17,7 +17,7 @@ final class cm extends l {
         int var1 = -84;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -106,10 +106,8 @@ final class cm extends l {
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
-                            int discarded$2 = 0;
-                            fe.a(gl.field_c, true, true, var17, false, lh.field_a);
-                            int discarded$3 = -22085;
-                            gf.a(var13, var7, var14, var12, var17, var9, var8);
+                            fe.a(gl.field_c, true, true, var17, false, lh.field_a, false);
+                            gf.a(var13, var7, var14, var12, var17, var9, var8, -22085);
                             var15++;
                             continue L3;
                           } else {
@@ -197,19 +195,13 @@ final class cm extends l {
                     break L2;
                   }
                 }
-                int discarded$57 = 98;
-                int discarded$58 = 11108;
-                int discarded$59 = -126;
-                ub.a(hf.field_v, var3_int != 0, wm.a(), qe.g());
+                ub.a(hf.field_v, var3_int != 0, wm.a((byte) 98), qe.g(11108), -126);
                 break L1;
               } else {
-                int discarded$60 = 2;
-                if (nm.c()) {
+                if (nm.c(2)) {
                   if (j.field_l == 0) {
                     wb.a(false, (byte) 119, param2);
-                    int discarded$61 = 0;
-                    int discarded$62 = 0;
-                    td.a(-30179, param0);
+                    td.a(-30179, param0, 0, 0);
                     break L1;
                   } else {
                     uh.a((byte) 114, param0);
@@ -218,9 +210,7 @@ final class cm extends l {
                 } else {
                   df.c();
                   fh.a(240, 0, 320);
-                  int discarded$63 = 0;
-                  int discarded$64 = 0;
-                  td.a(-30179, param0);
+                  td.a(-30179, param0, 0, 0);
                   break L1;
                 }
               }

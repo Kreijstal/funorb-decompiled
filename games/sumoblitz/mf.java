@@ -1893,7 +1893,7 @@ final class mf extends hj {
         }
     }
 
-    final static mf a(qp param0) {
+    final static mf a(qp param0, int param1, int param2) {
         if (param0.field_p != null) {
           if (param0.field_p.length == 0) {
             return null;

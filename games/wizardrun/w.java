@@ -11,17 +11,17 @@ final class w {
         field_d = null;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         int var1 = 24;
         return jd.field_f > 250 ? true : false;
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         int var1 = 0;
         return ub.field_m;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, vd param4, int param5, int param6, int param7, int param8, int param9, vd param10, qj param11, int param12, byte param13, qj param14, int param15, int param16, qj param17) {
+    final static void a(int param0, int param1, int param2, int param3, vd param4, int param5, int param6, int param7, int param8, int param9, vd param10, qj param11, int param12, byte param13, qj param14, int param15, int param16, qj param17, int param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -104,8 +104,7 @@ final class w {
             gk.a(95, 480, param10, param4);
             qk.a(param12, param6, param5, 1882, param2);
             kj.a(1048576, 240, 320);
-            int discarded$1 = 12;
-            jl.a(-122, 12, 12, param14, param17);
+            jl.a(-122, 12, 12, param14, param17, 12);
             bb.a(12, 12, (byte) -13, param11);
             vk.a(-67, 16776960, 16777088, 16777215);
             break L0;
@@ -242,7 +241,7 @@ final class w {
         }
     }
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, int param2) {
         try {
             int var3_int = -27;
             de.a((byte) -52, param1, param0, false);

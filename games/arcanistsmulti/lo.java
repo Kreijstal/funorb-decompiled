@@ -15,7 +15,7 @@ final class lo extends rl {
     static kc field_r;
     static String field_t;
 
-    final static boolean e() {
+    final static boolean e(boolean param0) {
         if (null == tc.field_A) {
             return false;
         }
@@ -58,8 +58,7 @@ final class lo extends rl {
         try {
           L0: {
             var5 = (CharSequence) (Object) param0;
-            int discarded$5 = 10;
-            if (fi.a(var5)) {
+            if (fi.a(var5, 10)) {
               L1: {
                 var6 = (CharSequence) (Object) param0;
                 var3_int = dc.a(var6, 127);
@@ -116,7 +115,7 @@ final class lo extends rl {
         return stackIn_7_0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_t = null;
         field_r = null;
         field_y = null;

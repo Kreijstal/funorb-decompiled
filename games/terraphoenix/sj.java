@@ -46,8 +46,7 @@ final class sj {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$2 = -124;
-          dh.g();
+          dh.g((byte) -124);
           jl.field_I.b(false);
           mb.field_s = new uh(ol.field_Hb, (String) null, qi.field_b, param2, param0);
           bj.field_f = new jg(jl.field_I, (gl) (Object) mb.field_s);

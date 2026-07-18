@@ -209,14 +209,13 @@ public final class Transmogrify extends ig {
             }
             var1 = ff.field_D;
             L2: while (true) {
-              int discarded$16 = -5591;
-              if (!cg.g()) {
+              if (!cg.g(-5591)) {
                 break L0;
               } else {
                 var1.a(false, 8);
-                int fieldTemp$17 = var1.field_h + 1;
+                int fieldTemp$9 = var1.field_h + 1;
                 var1.field_h = var1.field_h + 1;
-                var2 = fieldTemp$17;
+                var2 = fieldTemp$9;
                 lc.a((byte) 65, var1);
                 ff.field_D.a((byte) -42, var1.field_h - var2);
                 continue L2;
@@ -440,14 +439,11 @@ public final class Transmogrify extends ig {
                 break L0;
               } else {
                 L3: {
-                  int discarded$4 = 1;
-                  if (ll.c()) {
-                    int discarded$5 = 91;
-                    fg.d();
+                  if (ll.c(true)) {
+                    fg.d((byte) 91);
                     break L3;
                   } else {
-                    int discarded$6 = 0;
-                    qg.b();
+                    qg.b(false);
                     break L3;
                   }
                 }
@@ -482,9 +478,9 @@ public final class Transmogrify extends ig {
               }
             } else {
               L4: {
-                int fieldTemp$7 = lc.field_q + 1;
+                int fieldTemp$1 = lc.field_q + 1;
                 lc.field_q = lc.field_q + 1;
-                if (16 != fieldTemp$7) {
+                if (16 != fieldTemp$1) {
                   if (lc.field_q != 1) {
                     break L4;
                   } else {
@@ -840,7 +836,6 @@ public final class Transmogrify extends ig {
 
     private final boolean a(byte param0, boolean param1) {
         int var3 = 0;
-        byte[] var3_ref_byte__ = null;
         int var4 = 0;
         int var5_int = 0;
         ad[] var5 = null;
@@ -853,7 +848,6 @@ public final class Transmogrify extends ig {
         int var9_int = 0;
         sj var9 = null;
         int var10 = 0;
-        byte[] var11 = null;
         ti var12 = null;
         ti[] var13 = null;
         ti var14 = null;
@@ -861,8 +855,6 @@ public final class Transmogrify extends ig {
         ad[] var16 = null;
         sj var17 = null;
         sj var18 = null;
-        byte[] var19 = null;
-        byte[] var20 = null;
         byte[] var21 = null;
         var10 = field_A ? 1 : 0;
         if (null != pc.field_a) {
@@ -903,9 +895,7 @@ public final class Transmogrify extends ig {
                                           } else {
                                             if (oi.field_g.a((byte) 123, "")) {
                                               L6: {
-                                                int discarded$21 = 0;
-                                                int discarded$22 = 0;
-                                                if (!wl.a()) {
+                                                if (!wl.a(false, 0)) {
                                                   break L6;
                                                 } else {
                                                   L7: {
@@ -944,8 +934,7 @@ public final class Transmogrify extends ig {
                                                                   if (!param1) {
                                                                     return false;
                                                                   } else {
-                                                                    int discarded$23 = -121;
-                                                                    cg.b();
+                                                                    cg.b((byte) -121);
                                                                     ((Transmogrify) this).b(15648);
                                                                     rc.field_a = new bl(pc.field_a, di.field_h);
                                                                     dg.field_d[0] = r.a(pc.field_a, "", "trans16_button_click").a();
@@ -966,8 +955,7 @@ public final class Transmogrify extends ig {
                                                                 }
                                                               }
                                                             }
-                                                            int discarded$24 = -38;
-                                                            vf.a((byte) -4, 54.0f, rj.a(l.field_a));
+                                                            vf.a((byte) -4, 54.0f, rj.a(l.field_a, (byte) -38));
                                                             return false;
                                                           } else {
                                                             vf.a((byte) -123, 53.0f, ee.a(dj.field_a, (byte) 123, i.field_c, li.field_k, "arialish20"));
@@ -1006,8 +994,7 @@ public final class Transmogrify extends ig {
                                 }
                               }
                             }
-                            int discarded$25 = 32389;
-                            vf.a((byte) 25, 48.0f, fg.a(kh.field_e, be.field_n, 0, i.field_d));
+                            vf.a((byte) 25, 48.0f, fg.a(kh.field_e, be.field_n, 0, i.field_d, 32389));
                             return false;
                           }
                         }
@@ -1075,8 +1062,7 @@ public final class Transmogrify extends ig {
                     a.field_R = pc.a("", "logo_highscores", oi.field_g, param0 ^ 118);
                     mk.field_y = pc.a("", "logo_achievements", oi.field_g, 58);
                     se.field_t = pc.a("", "logo_instructions", oi.field_g, -33);
-                    int discarded$26 = -122;
-                    uj.field_e = cf.a();
+                    uj.field_e = cf.a((byte) -122);
                     kk.field_d = kl.a(oi.field_g, (byte) 121, "", "frame_trans");
                     ck.field_C = kl.a(oi.field_g, (byte) 123, "", "frame_trans_inner");
                     pf.field_d = pc.a("", "banner", oi.field_g, 71);
@@ -1091,9 +1077,7 @@ public final class Transmogrify extends ig {
                         L13: {
                           rk.field_r[4].e();
                           uj.field_e.f(0, 0);
-                          int discarded$27 = 0;
-                          int discarded$28 = 0;
-                          if (!wl.a()) {
+                          if (!wl.a(false, 0)) {
                             pc.a("", "achievementsbg_nobox", oi.field_g, -126).c(0, 0);
                             break L13;
                           } else {
@@ -1109,9 +1093,7 @@ public final class Transmogrify extends ig {
                           rk.field_r[1] = new ti(640, 480);
                           rk.field_r[1].e();
                           uj.field_e.f(0, 0);
-                          int discarded$29 = 0;
-                          int discarded$30 = 0;
-                          if (!wl.a()) {
+                          if (!wl.a(false, 0)) {
                             pc.a("", "pausemenu_nobox", oi.field_g, ~param0).c(0, 0);
                             break L14;
                           } else {
@@ -1163,9 +1145,9 @@ public final class Transmogrify extends ig {
                         var5_int = 0;
                         L17: while (true) {
                           if (var5_int >= var15.length) {
-                            int incrementValue$31 = var4;
+                            int incrementValue$3 = var4;
                             var4--;
-                            var16 = new ad[incrementValue$31];
+                            var16 = new ad[incrementValue$3];
                             var5 = var16;
                             var6_int = var15.length - 1;
                             L18: while (true) {
@@ -1182,9 +1164,9 @@ public final class Transmogrify extends ig {
                                     ob.a(1, 1, var17, 0);
                                     ue.field_c[1].field_h = var6.field_c.field_D - -8;
                                     var17.d(1);
-                                    sj dupTemp$32 = w.a(de.field_d, 1, var6, (byte) 88, var6.field_n.charAt(1));
-                                    sg.field_p = dupTemp$32;
-                                    var18 = dupTemp$32;
+                                    sj dupTemp$4 = w.a(de.field_d, 1, var6, (byte) 88, var6.field_n.charAt(1));
+                                    sg.field_p = dupTemp$4;
+                                    var18 = dupTemp$4;
                                     var7 = var18;
                                     var7.field_g = 1000;
                                     var9 = var7;
@@ -1214,9 +1196,9 @@ public final class Transmogrify extends ig {
                               } else {
                                 L21: {
                                   if (var15[var6_int] != null) {
-                                    int incrementValue$33 = var4;
+                                    int incrementValue$5 = var4;
                                     var4--;
-                                    var5[incrementValue$33] = var15[var6_int];
+                                    var5[incrementValue$5] = var15[var6_int];
                                     break L21;
                                   } else {
                                     break L21;
@@ -1242,9 +1224,7 @@ public final class Transmogrify extends ig {
                       }
                     } else {
                       L23: {
-                        int discarded$34 = 0;
-                        int discarded$35 = 0;
-                        if (wl.a()) {
+                        if (wl.a(false, 0)) {
                           rk.field_r[0] = kf.a(pc.a("halloween", "mainmenu_packed", oi.field_g, -125), false, (byte) 101);
                           break L23;
                         } else {
@@ -1267,9 +1247,7 @@ public final class Transmogrify extends ig {
                         rk.field_r[2] = new ti(640, 480);
                         rk.field_r[2].e();
                         jh.field_h.f(0, 0);
-                        int discarded$36 = 0;
-                        int discarded$37 = 0;
-                        if (wl.a()) {
+                        if (wl.a(false, 0)) {
                           pc.a("halloween", "highscorebg_nobox", oi.field_g, -127).c(0, 0);
                           break L24;
                         } else {
@@ -1297,9 +1275,7 @@ public final class Transmogrify extends ig {
                       L25: while (true) {
                         if (~var13.length >= ~var4) {
                           L26: {
-                            int discarded$38 = 0;
-                            int discarded$39 = 0;
-                            if (wl.a()) {
+                            if (wl.a(false, 0)) {
                               ij.field_h = pc.a("halloween", "intro_host", oi.field_g, -128);
                               hc.field_r = pc.a("halloween", "intro_hostess", oi.field_g, 59);
                               qe.field_F = kl.a(oi.field_g, (byte) 127, "halloween", "hostanims_uniq");
@@ -1327,15 +1303,9 @@ public final class Transmogrify extends ig {
                 } else {
                   L27: {
                     var21 = ig.field_y.a("", (byte) 92, "arialish20");
-                    var20 = var21;
-                    var19 = var20;
-                    var11 = var19;
-                    var3_ref_byte__ = var11;
                     wf.field_d = jd.a(var21, 98, gb.field_a);
                     og.field_a = ua.a(oi.field_g, "", 32, kk.field_a, "arialish20narrow");
-                    int discarded$40 = 119;
-                    int discarded$41 = 255;
-                    le.field_A = eh.a(gb.field_a, param0 ^ -96, var3_ref_byte__);
+                    le.field_A = eh.a(gb.field_a, param0 ^ -96, var21, 255, 119);
                     le.field_A.field_K[1] = new int[3];
                     hk.field_a = am.a("", li.field_k, (byte) 72, ig.field_y, "arialish12");
                     gb.field_a = null;
@@ -1516,8 +1486,7 @@ public final class Transmogrify extends ig {
           if (null == nk.field_d) {
             break L0;
           } else {
-            int discarded$9 = 119;
-            dl.a(nk.field_d);
+            dl.a(nk.field_d, (byte) 119);
             nk.field_d = null;
             el.b(-6491);
             break L0;
@@ -1531,12 +1500,11 @@ public final class Transmogrify extends ig {
           ta.field_d = cg.a((byte) -82, 5);
           l.field_a = cg.a((byte) -82, 6);
           kk.field_a = cg.a((byte) -82, 7);
-          int discarded$10 = 22;
-          of.b();
+          of.b(22);
           if (param0 == -7632) {
             break L1;
           } else {
-            String discarded$11 = Transmogrify.k(115);
+            String discarded$2 = Transmogrify.k(115);
             break L1;
           }
         }
@@ -1545,365 +1513,236 @@ public final class Transmogrify extends ig {
     final void c(int param0) {
         Transmogrify.l(0);
         qj.c((byte) -115);
-        int discarded$129 = 67;
-        ai.a();
+        ai.a((byte) 67);
         kb.b(false);
-        int discarded$130 = -31455;
-        ub.a();
-        int discarded$131 = 1;
-        i.c();
-        int discarded$132 = -21;
-        uh.c();
+        ub.a(-31455);
+        i.c(true);
+        uh.c(-21);
         cd.a(107);
         dk.a((byte) 127);
         we.a(-11509);
         gj.b(-102);
         ci.d(-120);
-        int discarded$133 = -49;
-        ig.i();
-        int discarded$134 = 6;
-        kl.a();
+        ig.i((byte) -49);
+        kl.a(6);
         fa.f(-121);
-        int discarded$135 = -62;
-        qb.a();
-        int discarded$136 = -127;
-        ce.a();
-        int discarded$137 = 74;
-        qi.a();
-        int discarded$138 = 0;
-        rj.a();
+        qb.a((byte) -62);
+        ce.a((byte) -127);
+        qi.a(74);
+        rj.a(false);
         sb.a();
         mh.a(0);
         gb.a(param0 + -5);
-        int discarded$139 = -99;
-        oa.b();
-        int discarded$140 = -124;
-        lk.a();
+        oa.b((byte) -99);
+        lk.a((byte) -124);
         bc.a(122);
         n.a(false);
         vf.a(true);
-        int discarded$141 = 100;
-        ql.a();
-        int discarded$142 = 68;
-        ne.a();
+        ql.a(100);
+        ne.a((byte) 68);
         aa.a(param0 ^ 3);
-        int discarded$143 = -121;
-        sg.a();
+        sg.a((byte) -121);
         ok.a(42);
         af.a((byte) 22);
-        int discarded$144 = -21068;
-        of.a();
-        int discarded$145 = 0;
-        td.b();
-        int discarded$146 = 119;
-        cj.a();
+        of.a(-21068);
+        td.b(0);
+        cj.a((byte) 119);
         gg.c(127);
         dg.a(-1);
-        int discarded$147 = 100;
-        ea.b();
-        int discarded$148 = -28;
-        mg.a();
-        int discarded$149 = 116;
-        bl.b();
-        int discarded$150 = -60;
-        vg.a();
+        ea.b((byte) 100);
+        mg.a((byte) -28);
+        bl.b(116);
+        vg.a((byte) -60);
         nf.a((byte) -41);
-        int discarded$151 = 9;
-        gk.a();
+        gk.a(9);
         wf.a(false);
-        int discarded$152 = -122;
-        lc.e();
+        lc.e(-122);
         ul.b();
         ej.b(false);
         qh.f();
         oj.e(param0 ^ 111);
         ga.a(true);
         al.a(-84);
-        int discarded$153 = -119;
-        pg.a();
+        pg.a((byte) -119);
         l.a((byte) 108);
         kg.a();
-        int discarded$154 = 1;
-        tb.a();
-        int discarded$155 = -101;
-        fj.a();
-        int discarded$156 = 99;
-        el.a();
-        int discarded$157 = 69;
-        qd.c();
-        int discarded$158 = -46;
-        ih.a();
-        int discarded$159 = 1;
-        ad.a();
-        int discarded$160 = 103;
-        lb.a();
+        tb.a(true);
+        fj.a((byte) -101);
+        el.a((byte) 99);
+        qd.c(69);
+        ih.a((byte) -46);
+        ad.a(1);
+        lb.a((byte) 103);
         il.a((byte) -24);
         da.i(param0 ^ param0);
-        int discarded$161 = 1;
-        sf.c();
+        sf.c(true);
         sd.e((byte) 4);
         rf.r(param0 + -2394);
         ik.s(param0 ^ 107);
-        int discarded$162 = 66;
-        wl.d();
-        int discarded$163 = 486302657;
-        jk.m();
+        wl.d((byte) 66);
+        jk.m(486302657);
         ff.m(param0 + 124);
-        int discarded$164 = -123;
-        ck.l();
-        int discarded$165 = -15;
-        hg.b();
-        int discarded$166 = -126;
-        vd.a();
-        int discarded$167 = 96;
-        jj.a();
+        ck.l(-123);
+        hg.b((byte) -15);
+        vd.a((byte) -126);
+        jj.a(96);
         mj.a();
         ml.c();
         mb.a();
         hk.a((byte) 35);
         ri.a((byte) 18);
-        int discarded$168 = 0;
-        k.a();
+        k.a(false);
         se.c((byte) 99);
-        int discarded$169 = 92;
-        id.a();
-        int discarded$170 = -110;
-        ei.a();
+        id.a((byte) 92);
+        ei.a((byte) -110);
         j.a((byte) -119);
-        int discarded$171 = 102;
-        ld.a();
-        int discarded$172 = -15;
-        sj.b();
+        ld.a(102);
+        sj.b((byte) -15);
         ua.a(-124);
         hj.m(param0 ^ 252);
-        int discarded$173 = 1;
-        d.a();
+        d.a(1);
         uc.a(0);
-        int discarded$174 = 26;
-        eh.a();
+        eh.a((byte) 26);
         ic.a(param0 ^ 2);
-        int discarded$175 = 126;
-        bh.a();
-        int discarded$176 = -119;
-        nk.a();
-        int discarded$177 = 0;
-        kk.a();
-        int discarded$178 = 118;
-        ug.a();
+        bh.a(126);
+        nk.a((byte) -119);
+        kk.a(false);
+        ug.a((byte) 118);
         mc.a(true);
         ef.a(-106);
         nd.e(0);
-        int discarded$179 = 107;
-        tj.d();
+        tj.d((byte) 107);
         bk.b(-123);
         pj.g(124);
-        int discarded$180 = 116;
-        ak.a();
-        int discarded$181 = 113;
-        be.c();
+        ak.a((byte) 116);
+        be.c((byte) 113);
         di.b(54);
         eg.a((byte) 66);
-        int discarded$182 = 1;
-        rh.b();
-        int discarded$183 = 0;
-        ec.c();
+        rh.b(true);
+        ec.c(0);
         rl.b(7);
-        int discarded$184 = 8192;
-        db.a();
-        int discarded$185 = 48;
-        dj.a();
+        db.a(8192);
+        dj.a(48);
         gf.a();
-        int discarded$186 = -37;
-        re.a();
-        int discarded$187 = 807;
-        ch.a();
-        int discarded$188 = 5;
-        ll.q();
-        int discarded$189 = 125;
-        u.a();
-        int discarded$190 = 95;
-        h.a();
+        re.a((byte) -37);
+        ch.a(807);
+        ll.q(5);
+        u.a((byte) 125);
+        h.a(95);
         ka.a();
-        int discarded$191 = -104;
-        hd.c();
-        int discarded$192 = -27273;
-        oe.a();
-        int discarded$193 = 62;
-        e.b();
+        hd.c((byte) -104);
+        oe.a(-27273);
+        e.b(62);
         f.a(false);
         qf.a(param0 ^ 3);
         uf.a(103);
-        int discarded$194 = 0;
-        tg.a();
+        tg.a(false);
         de.a((byte) -79);
-        int discarded$195 = -42;
-        th.a();
-        int discarded$196 = -116;
-        ae.b();
-        int discarded$197 = -79;
-        bj.c();
+        th.a((byte) -42);
+        ae.b(-116);
+        bj.c((byte) -79);
         wb.b((byte) 83);
         ah.a(param0 ^ -23430);
         c.a(param0 + 18123);
         ba.d(param0 + -1);
         fd.a(127);
-        int discarded$198 = 66;
-        wi.a();
-        int discarded$199 = 122;
-        pa.a();
-        int discarded$200 = 2;
-        ij.a();
+        wi.a(66);
+        pa.a(122);
+        ij.a(2);
         ue.a((byte) 18);
-        int discarded$201 = 1;
-        lj.c();
+        lj.c(true);
         fi.h(param0 ^ 30382);
         bi.o(-31);
         mk.n(param0 + -116);
-        int discarded$202 = 32;
-        aj.h();
+        aj.h(32);
         rd.a(param0 ^ 31);
-        int discarded$203 = 1;
-        cc.a();
+        cc.a(true);
         rk.b(false);
-        int discarded$204 = 1;
-        pc.c();
+        pc.c(1);
         wc.a(7);
         lf.a(66);
-        int discarded$205 = 40;
-        vj.a();
-        int discarded$206 = -102;
-        pe.a();
+        vj.a((byte) 40);
+        pe.a((byte) -102);
         rb.a(-53);
-        int discarded$207 = -19424;
-        ha.a();
-        int discarded$208 = 123;
-        kf.e();
-        int discarded$209 = 107;
-        fg.b();
-        int discarded$210 = 0;
-        og.a();
+        ha.a(-19424);
+        kf.e(123);
+        fg.b((byte) 107);
+        og.a(false);
         nb.a(param0 + 17);
-        int discarded$211 = 126;
-        wd.a();
-        int discarded$212 = 106;
-        si.a();
-        int discarded$213 = -33;
-        nh.a();
+        wd.a((byte) 126);
+        si.a((byte) 106);
+        nh.a(-33);
         oc.i(124);
         vc.p(93);
-        int discarded$214 = -43;
-        rg.g();
-        int discarded$215 = -13;
-        a.e();
+        rg.g((byte) -43);
+        a.e((byte) -13);
         qe.i(-156630320);
-        int discarded$216 = -1;
-        dh.l();
+        dh.l(-1);
         le.i(param0 + -4);
         ve.a((byte) -108);
-        int discarded$217 = -128;
-        ob.k();
+        ob.k(-128);
         bf.a((byte) 16);
         me.a((byte) 122);
         v.a(17320);
-        int discarded$218 = 1843;
-        ge.n();
-        int discarded$219 = 43;
-        wh.h();
-        int discarded$220 = 114;
-        fk.a();
+        ge.n(1843);
+        wh.h(43);
+        fk.a((byte) 114);
         jg.a();
-        int discarded$221 = -110;
-        pi.a();
-        int discarded$222 = 1;
-        mf.a();
-        int discarded$223 = -114;
-        nl.d();
+        pi.a((byte) -110);
+        mf.a(true);
+        nl.d(-114);
         hf.a((byte) 118);
-        int discarded$224 = -1;
-        jh.c();
+        jh.c(-1);
         te.a((byte) 41);
-        int discarded$225 = 2147483647;
-        vl.i();
+        vl.i(2147483647);
         g.i(19224);
         vi.a(param0 + 62);
-        int discarded$226 = 17205;
-        pf.a();
-        int discarded$227 = 0;
-        dl.b();
-        int discarded$228 = 105;
-        hc.d();
-        int discarded$229 = -128;
-        je.a();
-        int discarded$230 = -117;
-        w.b();
-        int discarded$231 = 20738;
-        wg.a();
-        int discarded$232 = 0;
-        o.d();
+        pf.a(17205);
+        dl.b(false);
+        hc.d((byte) 105);
+        je.a((byte) -128);
+        w.b((byte) -117);
+        wg.a(20738);
+        o.d(0);
         am.a((byte) 5);
         ta.a(param0 + 4);
-        int discarded$233 = 1;
-        od.b();
-        int discarded$234 = -38;
-        ek.a();
+        od.b(true);
+        ek.a((byte) -38);
         ni.b(param0 + 252);
-        int discarded$235 = 94;
-        nc.c();
+        nc.c(94);
         kd.a(-73);
         gl.i(param0 ^ 2480);
-        int discarded$236 = 122;
-        ng.a();
-        int discarded$237 = -86;
-        qk.a();
+        ng.a((byte) 122);
+        qk.a((byte) -86);
         oh.a((byte) 104);
-        int discarded$238 = 111;
-        gd.d();
-        int discarded$239 = -74;
-        pd.b();
-        int discarded$240 = -1;
-        uj.b();
-        int discarded$241 = 0;
-        fc.a();
-        int discarded$242 = 0;
-        hi.a();
-        int discarded$243 = -22826;
-        b.d();
-        int discarded$244 = -31263;
-        ee.l();
-        int discarded$245 = 0;
-        kh.a();
+        gd.d(111);
+        pd.b((byte) -74);
+        uj.b(-1);
+        fc.a(false);
+        hi.a(false);
+        b.d(-22826);
+        ee.l(-31263);
+        kh.a(0);
         wj.c(param0 ^ 483);
         bd.b(true);
         ac.a((byte) -114);
-        int discarded$246 = 0;
-        sh.a();
-        int discarded$247 = -4;
-        ia.a();
-        int discarded$248 = -97;
-        oi.d();
-        int discarded$249 = 27;
-        jl.a();
-        int discarded$250 = 58;
-        he.a();
-        int discarded$251 = 58;
-        gh.e();
-        int discarded$252 = -2147483648;
-        ab.b();
-        int discarded$253 = 0;
-        ol.a();
+        sh.a(false);
+        ia.a((byte) -4);
+        oi.d(-97);
+        jl.a((byte) 27);
+        he.a((byte) 58);
+        gh.e(58);
+        ab.b(-2147483648);
+        ol.a(false);
         li.h(param0 ^ 122);
         bg.b((byte) 54);
-        int discarded$254 = 118;
-        vh.b();
-        int discarded$255 = 1;
-        md.b();
+        vh.b((byte) 118);
+        md.b(true);
         wk.a(-30254);
         nj.d(param0 ^ -115);
-        int discarded$256 = 1;
-        rc.a();
+        rc.a(true);
         ca.d(param0 ^ -577295245);
-        int discarded$257 = 4;
-        q.a();
+        q.a(4);
         ((Transmogrify) this).field_q = null;
     }
 

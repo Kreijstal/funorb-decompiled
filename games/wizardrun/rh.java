@@ -43,8 +43,7 @@ final class rh extends mf {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
             } else {
-              int discarded$11 = 67;
-              if (!od.a(var4, var3)) {
+              if (!od.a(var4, var3, 67)) {
                 stackOut_6_0 = hg.field_c;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
@@ -212,7 +211,7 @@ final class rh extends mf {
         return stackIn_14_0 != 0;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         int var1 = 0;
         field_m = null;
     }
@@ -267,7 +266,7 @@ final class rh extends mf {
                   break L1;
                 } else {
                   var6 = null;
-                  ok discarded$9 = ((rh) this).a(126, (String) null);
+                  ok discarded$2 = ((rh) this).a(126, (String) null);
                   break L1;
                 }
               }
@@ -295,8 +294,7 @@ final class rh extends mf {
                           return stackIn_23_0;
                         } else {
                           if (!pa.a(0, var7, var5)) {
-                            int discarded$10 = 0;
-                            if (!id.a(var5, var7)) {
+                            if (!id.a(var5, var7, 0)) {
                               stackOut_30_0 = bh.field_d;
                               stackIn_31_0 = stackOut_30_0;
                               return stackIn_31_0;

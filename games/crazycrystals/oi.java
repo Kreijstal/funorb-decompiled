@@ -7,7 +7,7 @@ final class oi {
     static j field_c;
     static ob field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_a = null;
         field_b = null;

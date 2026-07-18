@@ -4,7 +4,7 @@
 final class mg extends rqa {
     static phb[][] field_o;
 
-    public static void e() {
+    public static void e(int param0) {
         int var1 = 0;
         field_o = null;
     }
@@ -21,7 +21,7 @@ final class mg extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         jk var1_ref = null;
         mm var1_ref2 = null;

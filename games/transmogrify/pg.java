@@ -43,8 +43,7 @@ final class pg {
           return;
         } else {
           if (param0 % 10L != 0L) {
-            int discarded$23 = -23850;
-            bc.a(param0);
+            bc.a(param0, -23850);
             if (param1 <= -76) {
               return;
             } else {
@@ -52,10 +51,8 @@ final class pg {
               return;
             }
           } else {
-            int discarded$24 = -23850;
-            bc.a(-1L + param0);
-            int discarded$25 = -23850;
-            bc.a(1L);
+            bc.a(-1L + param0, -23850);
+            bc.a(1L, -23850);
             if (param1 <= -76) {
               return;
             } else {
@@ -66,7 +63,7 @@ final class pg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 

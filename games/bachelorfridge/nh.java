@@ -4,7 +4,7 @@
 final class nh extends td {
     static String field_p;
 
-    final static hba a(lu param0, int param1) {
+    final static hba a(lu param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         hba stackIn_1_0 = null;

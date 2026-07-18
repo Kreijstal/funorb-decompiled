@@ -17,7 +17,7 @@ final class r implements Runnable {
     static boolean field_d;
     private pb field_i;
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         gr var3 = null;
@@ -73,12 +73,12 @@ final class r implements Runnable {
                         L5: while (true) {
                           if (var5 <= var7_int) {
                             bh.a(var6, (byte) -111);
-                            String[][] dupTemp$5 = new String[2][var6];
-                            var3.field_n = dupTemp$5;
-                            var7 = dupTemp$5;
-                            int[][] dupTemp$6 = new int[2][4 * var6];
-                            var3.field_m = dupTemp$6;
-                            var8 = dupTemp$6;
+                            String[][] dupTemp$2 = new String[2][var6];
+                            var3.field_n = dupTemp$2;
+                            var7 = dupTemp$2;
+                            int[][] dupTemp$3 = new int[2][4 * var6];
+                            var3.field_m = dupTemp$3;
+                            var8 = dupTemp$3;
                             var9 = wm.field_c;
                             var10 = 0;
                             var11 = 0;
@@ -99,8 +99,7 @@ final class r implements Runnable {
                                       var8[1][4 * var15 + 1] = fb.field_zb[var12];
                                       var8[1][var15 * 4 + 2] = aj.field_d[var12];
                                       var8[1][var15 * 4 - -3] = f.field_y[var12];
-                                      int discarded$7 = -105;
-                                      if (!jp.a(wb.field_a[var12])) {
+                                      if (!jp.a(wb.field_a[var12], (byte) -105)) {
                                         break L8;
                                       } else {
                                         if (0 != fb.field_zb[var12] + aj.field_d[var12] + f.field_y[var12]) {
@@ -125,8 +124,7 @@ final class r implements Runnable {
                                   var8[0][var11 * 4 - -1] = fb.field_zb[var12];
                                   var8[0][2 + var11 * 4] = aj.field_d[var12];
                                   var8[0][var11 * 4 - -3] = f.field_y[var12];
-                                  int discarded$8 = -105;
-                                  if (!jp.a(wb.field_a[var12])) {
+                                  if (!jp.a(wb.field_a[var12], (byte) -105)) {
                                     break L9;
                                   } else {
                                     if (f.field_y[var12] + aj.field_d[var12] + fb.field_zb[var12] != 0) {
@@ -145,8 +143,7 @@ final class r implements Runnable {
                             }
                           } else {
                             L10: {
-                              int discarded$9 = 0;
-                              qg.a((ob) (Object) var16);
+                              qg.a((ob) (Object) var16, false);
                               if (var7_int != 0) {
                                 ul.a(0, na.field_L, np.field_j, gp.field_c, var7_int, ig.field_d);
                                 var7_int++;
@@ -218,7 +215,7 @@ final class r implements Runnable {
         ((r) this).field_a = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         bi var1 = null;
         bi var2 = null;
         int var3 = 0;
@@ -251,7 +248,7 @@ final class r implements Runnable {
         }
     }
 
-    final static fk a(byte[] param0) {
+    final static fk a(byte[] param0, byte param1, int param2) {
         fk var3 = null;
         RuntimeException var3_ref = null;
         fk stackIn_1_0 = null;
@@ -276,8 +273,7 @@ final class r implements Runnable {
           L0: {
             var3 = new fk(param0);
             tr.field_vb.a((byte) -113, (oh) (Object) var3);
-            int discarded$2 = 13;
-            dn.a(6, var3);
+            dn.a(6, var3, (byte) 13);
             stackOut_0_0 = (fk) var3;
             stackIn_1_0 = stackOut_0_0;
             break L0;

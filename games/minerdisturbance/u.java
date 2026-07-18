@@ -192,16 +192,16 @@ final class u {
         return stackIn_4_0;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return t.field_c;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return g.a((byte) -128);
     }
 

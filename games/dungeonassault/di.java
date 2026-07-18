@@ -226,7 +226,7 @@ final class di {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
         field_k = null;
     }

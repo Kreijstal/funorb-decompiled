@@ -225,13 +225,13 @@ final class ec {
         return var8;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_c = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
     }
 
     static {

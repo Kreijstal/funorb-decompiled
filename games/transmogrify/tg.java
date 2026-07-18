@@ -9,7 +9,7 @@ final class tg {
     static int field_a;
     static volatile long field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
     }
 
@@ -41,8 +41,7 @@ final class tg {
         String stackOut_15_2 = null;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
-          int discarded$17 = 0;
-          var3 = rb.a((byte) -84, param2);
+          var3 = rb.a((byte) -84, param2, false);
           var4 = -49;
           if (var3 != null) {
             stackOut_3_0 = (String) var3;
@@ -52,8 +51,7 @@ final class tg {
             var5 = 0;
             L0: while (true) {
               if (var5 < param2.length()) {
-                int discarded$18 = -161;
-                if (!bc.a(param2.charAt(var5))) {
+                if (!bc.a(param2.charAt(var5), -161)) {
                   stackOut_10_0 = ff.field_C;
                   stackIn_11_0 = stackOut_10_0;
                   return stackIn_11_0;

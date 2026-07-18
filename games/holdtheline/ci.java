@@ -288,8 +288,7 @@ final class ci {
               var12 = rd.field_e;
               var2 = var12.f((byte) -84);
               if (0 == var2) {
-                int discarded$3 = 1023;
-                var10 = vd.c();
+                var10 = vd.c(1023);
                 var18 = var10;
                 var17 = var18;
                 var16 = var17;
@@ -336,16 +335,14 @@ final class ci {
                       r.a(-28036);
                       return;
                     } else {
-                      int discarded$4 = 1023;
-                      var13.field_j = vd.c();
+                      var13.field_j = vd.c(1023);
                       var13.field_m = var13.field_j[0];
                       var13.field_i = true;
                       var13.d(0);
                       break L2;
                     }
                   } else {
-                    int discarded$5 = 0;
-                    bl.a((Throwable) null, (byte) -52, "A1: " + em.b());
+                    bl.a((Throwable) null, (byte) -52, "A1: " + em.b(false));
                     r.a(-28036);
                     break L2;
                   }

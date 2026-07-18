@@ -34,8 +34,7 @@ final class ks {
                       } else {
                         if (param0) {
                           if (ol.field_g == hm.field_q) {
-                            int discarded$4 = 0;
-                            if (!vn.a()) {
+                            if (!vn.a(0)) {
                               break L1;
                             } else {
                               fl.a(0, "enter");
@@ -43,8 +42,7 @@ final class ks {
                             }
                           } else {
                             js.a((byte) -10);
-                            int discarded$5 = 0;
-                            if (!vn.a()) {
+                            if (!vn.a(0)) {
                               return true;
                             } else {
                               fl.a(0, "enter");
@@ -74,8 +72,7 @@ final class ks {
                     if (je.field_d != 0) {
                       if (param0) {
                         if (ol.field_g == hm.field_q) {
-                          int discarded$6 = 0;
-                          if (vn.a()) {
+                          if (vn.a(0)) {
                             fl.a(0, "enter");
                             return true;
                           } else {
@@ -83,8 +80,7 @@ final class ks {
                           }
                         } else {
                           js.a((byte) -10);
-                          int discarded$7 = 0;
-                          if (!vn.a()) {
+                          if (!vn.a(0)) {
                             return true;
                           } else {
                             fl.a(0, "enter");
@@ -149,8 +145,7 @@ final class ks {
             L1: {
               var3 = new tm(param2, false);
               if (qd.field_a >= 18) {
-                int discarded$2 = 1;
-                gs.a(var3);
+                gs.a(var3, true);
                 break L1;
               } else {
                 ld.field_p.a((byte) -113, (oh) (Object) var3);
@@ -194,7 +189,7 @@ final class ks {
         return stackIn_4_0;
     }
 
-    final static sp c() {
+    final static sp c(int param0) {
         if (!(vr.field_a != null)) {
             vr.field_a = new sp();
             vr.field_a.a(gn.field_u, true);
@@ -357,7 +352,7 @@ final class ks {
         return ((ks) this).field_f;
     }
 
-    final static void a(nf param0) {
+    final static void a(nf param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -624,7 +619,7 @@ final class ks {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_e = null;
         field_a = null;
@@ -633,11 +628,10 @@ final class ks {
         field_j = null;
     }
 
-    final static void a(int param0, wj param1) {
+    final static void a(int param0, wj param1, int param2) {
         try {
             wd.field_P.a((byte) -113, (oh) (Object) param1);
-            int discarded$0 = 1;
-            eg.a(3, param1);
+            eg.a(3, param1, true);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "ks.A(" + 20 + ',' + (param1 != null ? "{...}" : "null") + ',' + 3 + ')');
         }

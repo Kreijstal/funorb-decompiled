@@ -197,7 +197,7 @@ final class td extends kg {
         return ((td) this).field_F;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_O = null;
         int var1 = 0;
         field_N = null;

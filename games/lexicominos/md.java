@@ -105,7 +105,7 @@ final class md extends w {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, param6 >> 1 & 8355711);
     }
 
-    private final db d() {
+    private final db d(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -246,8 +246,7 @@ final class md extends w {
               }
             }
             var3 = (CharSequence) (Object) param0;
-            int discarded$2 = -48;
-            stackOut_2_0 = cb.field_t.equals((Object) (Object) ck.a(var3));
+            stackOut_2_0 = cb.field_t.equals((Object) (Object) ck.a(var3, (byte) -48));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -304,11 +303,9 @@ final class md extends w {
     private final void f(int param0) {
         ((md) this).field_F = new db[]{this.a(((md) this).field_E, ((md) this).field_x, (byte) -50), this.a(((md) this).field_C, ((md) this).field_M, (byte) -98)};
         if (param0 >= -59) {
-            int discarded$0 = 0;
-            db discarded$1 = this.d();
+            db discarded$0 = this.d(false);
         }
-        int discarded$2 = 0;
-        ((md) this).field_H = this.d();
+        ((md) this).field_H = this.d(false);
         ((md) this).field_z = ((md) this).field_H.g();
         ((md) this).field_D = new db(((md) this).field_v >> 1, ((md) this).field_v);
     }

@@ -7,7 +7,7 @@ final class p {
     static long field_c;
     static String field_b;
 
-    final static void a(tg param0) {
+    final static void a(tg param0, int param1, byte param2) {
         th var5 = null;
         int var4 = 0;
         try {
@@ -31,7 +31,7 @@ final class p {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;

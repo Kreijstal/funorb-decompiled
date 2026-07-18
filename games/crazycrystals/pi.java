@@ -13,16 +13,15 @@ final class pi extends jb {
     int[] field_g;
     byte[][][] field_h;
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
     }
 
-    final static java.awt.Container d() {
+    final static java.awt.Container d(int param0) {
         if (null != uc.field_d) {
             return (java.awt.Container) (Object) uc.field_d;
         }
-        int discarded$0 = -20;
-        return (java.awt.Container) (Object) le.b();
+        return (java.awt.Container) (Object) le.b((byte) -20);
     }
 
     pi() {

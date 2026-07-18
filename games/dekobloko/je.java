@@ -357,7 +357,7 @@ final class je {
         return stackIn_39_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_b = null;
     }

@@ -322,8 +322,7 @@ final class md extends nj {
     }
 
     final static void c(int param0) {
-        int discarded$0 = 0;
-        cj.a(bn.c(-1));
+        cj.a(bn.c(-1), 0);
     }
 
     final byte[] a(byte param0) {
@@ -340,7 +339,7 @@ final class md extends nj {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_n = null;
         field_f = null;
         field_l = null;

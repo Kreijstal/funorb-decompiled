@@ -209,8 +209,7 @@ final class ld extends bd {
                   }
                 }
                 L11: {
-                  int discarded$1 = 0;
-                  var9 = lp.a(stackIn_26_0, stackIn_26_1 != 0);
+                  var9 = lp.a(stackIn_26_0, stackIn_26_1 != 0, false);
                   if (cj.field_k[var8] == -1) {
                     break L11;
                   } else {
@@ -505,7 +504,7 @@ final class ld extends bd {
         }
     }
 
-    final static void a(int param0, wk[] param1, tu param2, String param3, int param4, int param5) {
+    final static void a(int param0, wk[] param1, tu param2, String param3, int param4, int param5, int param6) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -574,8 +573,7 @@ final class ld extends bd {
                 }
               }
             }
-            int discarded$1 = -8991;
-            jp.a(-(var7_int >> 1) + param5, param0, var7_int, param1, param4);
+            jp.a(-(var7_int >> 1) + param5, param0, var7_int, param1, param4, -8991);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

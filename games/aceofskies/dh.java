@@ -15,7 +15,7 @@ final class dh {
     int field_b;
     byte[] field_g;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_d = null;
     }
@@ -49,8 +49,7 @@ final class dh {
               var13 = nm.field_c;
               var2 = var13.g(121);
               if (var2 == 0) {
-                int discarded$6 = 1;
-                var11 = fu.a();
+                var11 = fu.a(true);
                 var19 = var11;
                 var18 = var19;
                 var17 = var18;
@@ -71,8 +70,7 @@ final class dh {
                       var16_ref.c(-124);
                       break L1;
                     } else {
-                      int discarded$7 = 1;
-                      te.b();
+                      te.b(true);
                       return;
                     }
                   } else {
@@ -86,12 +84,10 @@ final class dh {
                   if (var2 == 2) {
                     var14 = (eh) (Object) wu.field_w.d(268435455);
                     if (var14 == null) {
-                      int discarded$8 = 1;
-                      te.b();
+                      te.b(true);
                       return;
                     } else {
-                      int discarded$9 = 1;
-                      var14.field_f = fu.a();
+                      var14.field_f = fu.a(true);
                       var14.field_g = true;
                       var14.field_e = var14.field_f[0];
                       var14.c(-125);
@@ -99,8 +95,7 @@ final class dh {
                     }
                   } else {
                     v.a("A1: " + dl.k((byte) 65), (byte) -52, (Throwable) null);
-                    int discarded$10 = 1;
-                    te.b();
+                    te.b(true);
                     break L1;
                   }
                 } else {
@@ -109,8 +104,7 @@ final class dh {
                     var12.c(-123);
                     break L1;
                   } else {
-                    int discarded$11 = 1;
-                    te.b();
+                    te.b(true);
                     return;
                   }
                 }

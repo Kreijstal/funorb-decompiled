@@ -26,7 +26,7 @@ final class eba extends pb {
         return true;
     }
 
-    final static int a(CharSequence param0, int param1) {
+    final static int a(CharSequence param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -174,7 +174,7 @@ final class eba extends pb {
         return stackIn_9_0;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -254,7 +254,7 @@ final class eba extends pb {
         return stackIn_10_0 != 0;
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         return era.field_d != null || vo.field_b;
     }
 

@@ -74,7 +74,7 @@ final class bnb extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_q = null;
         int var1 = 0;
     }

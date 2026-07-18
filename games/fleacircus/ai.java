@@ -109,7 +109,7 @@ final class ai extends r {
         field_o = null;
     }
 
-    final static void a(int param0, int param1, qc param2) {
+    final static void a(int param0, int param1, qc param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

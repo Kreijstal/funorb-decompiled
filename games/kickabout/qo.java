@@ -9,7 +9,7 @@ final class qo extends jd {
     static eg[] field_l;
     static String field_j;
 
-    final static tf d() {
+    final static tf d(byte param0) {
         tf var1 = new tf();
         var1.a((gn) (Object) new hm("sumIntegers", new Class[1], (String) null), 3);
         var1.a((gn) (Object) new kb("writeIntegers", new Class[1], (String) null), 3);
@@ -229,7 +229,7 @@ final class qo extends jd {
         return stackIn_6_0;
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_k = null;
         field_l = null;
         field_j = null;
@@ -260,8 +260,7 @@ final class qo extends jd {
                     wb.field_n = param0 ? -2 : -1;
                     kq.field_Ab = param0 ? -2 : -1;
                     dh.a(fp.field_g, il.field_g, (iw) (Object) or.field_d, -3210, s.field_E);
-                    int discarded$1 = 0;
-                    c.a(-1);
+                    c.a(-1, false);
                 }
             }
             wt.field_A = null;

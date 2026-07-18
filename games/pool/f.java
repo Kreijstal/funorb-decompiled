@@ -242,7 +242,7 @@ final class f {
         uc.field_b.b(oi.field_n.field_Db + -40, 2147483647, var3, oi.field_n.field_gb - var3, 40);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_c = null;
         field_b = null;
@@ -255,8 +255,7 @@ final class f {
     }
 
     private static void $cfr$clinit() {
-        int discarded$0 = -128;
-        hi.g();
+        hi.g(-128);
         field_d = "Location";
         field_f = 8;
         field_g = 12;

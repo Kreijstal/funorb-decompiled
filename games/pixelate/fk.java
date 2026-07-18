@@ -8,7 +8,7 @@ final class fk extends de {
     static int field_o;
     static String field_p;
 
-    public static void e() {
+    public static void e(int param0) {
         int var1 = 41;
         field_p = null;
         field_s = null;
@@ -530,8 +530,7 @@ final class fk extends de {
         if (param0 >= -13) {
             ((fk) this).b(-19);
         }
-        int discarded$0 = -25528;
-        la.a(((fk) this).field_l, nc.field_a, false);
+        la.a(((fk) this).field_l, nc.field_a, false, -25528);
     }
 
     static {

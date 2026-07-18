@@ -7,7 +7,7 @@ final class ng {
     static String field_d;
     static String field_a;
 
-    final static void a(int param0, boolean param1, long param2, int param3, String param4) {
+    final static void a(int param0, boolean param1, long param2, int param3, String param4, int param5) {
         int var7_int = 0;
         try {
             qn.field_U.f(14, -60);
@@ -23,7 +23,7 @@ final class ng {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_a = null;

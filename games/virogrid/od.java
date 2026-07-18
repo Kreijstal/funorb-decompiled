@@ -32,29 +32,25 @@ abstract class od extends uk {
         wg.a(ih.field_c, 5000, ((od) this).field_p, ((od) this).field_s, ei.field_c, ((od) this).field_x, 64, param6, 5000, ((od) this).field_r, param0, ((od) this).field_v, ((od) this).field_w, ((od) this).field_z);
         ch.a(((od) this).field_p, ei.field_c, ((od) this).field_z, param0, ((od) this).field_v, ih.field_c, 86, ((od) this).field_r, ((od) this).field_w);
         lb.a(42);
-        int discarded$0 = -110;
-        sb.field_d = s.a();
+        sb.field_d = s.a((byte) -110);
         nn.a(fi.field_v, (byte) -128);
         ae.field_a = param1;
         ck.field_c = param2;
         ka.field_j = param5;
         ej.field_P = param3;
         te.field_h = param4;
-        int discarded$1 = 116;
-        this.c();
-        int discarded$2 = 20128;
-        kn.g();
+        this.c((byte) 116);
+        kn.g(20128);
     }
 
-    private final void o() {
+    private final void o(int param0) {
         di.field_r[13] = true;
         di.field_r[12] = true;
         di.field_r[11] = true;
     }
 
-    private final void i() {
-        int discarded$0 = -47;
-        String var2 = ti.a();
+    private final void i(int param0) {
+        String var2 = ti.a(-47);
         qk.a(var2, mb.g((byte) 24), -1);
     }
 
@@ -78,9 +74,7 @@ abstract class od extends uk {
               L0: {
                 if (var4 == 1) {
                   L1: {
-                    int discarded$13 = 1;
-                    int discarded$14 = 27984;
-                    var5 = ii.a(hh.a(-30890), je.h());
+                    var5 = ii.a(hh.a(-30890), je.h(true), 27984);
                     if (-1 == var5) {
                       break L1;
                     } else {
@@ -103,10 +97,7 @@ abstract class od extends uk {
               }
               L2: {
                 if (var4 == 2) {
-                  int discarded$15 = -127;
-                  int discarded$16 = -52;
-                  int discarded$17 = 8;
-                  var5 = ld.a((byte) 2, ag.a(true), jl.a(), ne.a(), eh.d(86), f.a(), ((od) this).field_k);
+                  var5 = ld.a((byte) 2, ag.a(true), jl.a(-127), ne.a((byte) -52), eh.d(86), f.a(8), ((od) this).field_k);
                   if (-1 == var5) {
                     break L2;
                   } else {
@@ -129,8 +120,7 @@ abstract class od extends uk {
                     } else {
                       if (0 != nh.field_o) {
                         nh.field_o = -1;
-                        int discarded$18 = 1;
-                        rl.e();
+                        rl.e(true);
                         break L4;
                       } else {
                         break L4;
@@ -138,21 +128,17 @@ abstract class od extends uk {
                     }
                   }
                   if (!param2) {
-                    int discarded$19 = 8;
-                    int discarded$20 = -52;
-                    var5 = pa.a(f.a(), false, ((od) this).field_k, (byte) -57, ((od) this).field_u, ne.a());
+                    var5 = pa.a(f.a(8), false, ((od) this).field_k, (byte) -57, ((od) this).field_u, ne.a((byte) -52));
                     if (var5 == -1) {
                       break L3;
                     } else {
                       if (var5 != 0) {
-                        int discarded$21 = 0;
-                        a.a(ld.field_g, var5);
+                        a.a(ld.field_g, var5, false);
                         ld.field_g = null;
                         break L3;
                       } else {
                         ae.field_d = md.field_a;
-                        int discarded$22 = -2;
-                        sg.a();
+                        sg.a(-2);
                         j.field_l = 10;
                         oi.field_d = false;
                         break L3;
@@ -217,8 +203,7 @@ abstract class od extends uk {
               }
               L10: {
                 if (var4 == 9) {
-                  int discarded$23 = 0;
-                  oa.a(mb.g((byte) -107));
+                  oa.a(mb.g((byte) -107), 0);
                   break L10;
                 } else {
                   break L10;
@@ -242,8 +227,7 @@ abstract class od extends uk {
               }
               L13: {
                 if (12 == var4) {
-                  int discarded$24 = -1;
-                  pi.a(pg.a(), -17713, mb.g((byte) 8));
+                  pi.a(pg.a(-1), -17713, mb.g((byte) 8));
                   break L13;
                 } else {
                   break L13;
@@ -289,8 +273,7 @@ abstract class od extends uk {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     L19: {
                       var6 = (Exception) (Object) decompiledCaughtException;
-                      int discarded$25 = 1;
-                      en.a("S1", (Throwable) (Object) var6);
+                      en.a("S1", (Throwable) (Object) var6, 1);
                       var11 = null;
                       kd.a((byte) -114, (String) null);
                       nb.field_p = null;
@@ -325,13 +308,14 @@ abstract class od extends uk {
         }
     }
 
-    private final void a(int param0, int param1, String param2, int param3) {
+    private final void a(int param0, int param1, String param2, int param3, int param4) {
         Exception var6 = null;
         RuntimeException var6_ref = null;
         String var6_ref2 = null;
         String var7 = null;
         String var8 = null;
         String var9 = null;
+        Object var10 = null;
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
@@ -444,8 +428,8 @@ abstract class od extends uk {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            int discarded$1 = 1;
-            en.a((String) null, (Throwable) (Object) var6);
+            var10 = null;
+            en.a((String) null, (Throwable) (Object) var6, 1);
             ((od) this).a(-25296, "crash");
             return;
           }
@@ -481,7 +465,7 @@ abstract class od extends uk {
         }
     }
 
-    private final int j() {
+    private final int j(int param0) {
         int var2 = 0;
         if (!((od) this).field_i) {
           if (!eg.b((byte) -107)) {
@@ -490,9 +474,7 @@ abstract class od extends uk {
             if (ri.field_f) {
               return -1;
             } else {
-              int discarded$8 = 8;
-              int discarded$9 = -52;
-              var2 = pa.a(f.a(), true, ((od) this).field_k, (byte) -57, ((od) this).field_u, ne.a());
+              var2 = pa.a(f.a(8), true, ((od) this).field_k, (byte) -57, ((od) this).field_u, ne.a((byte) -52));
               if (-1 == var2) {
                 return -1;
               } else {
@@ -512,8 +494,7 @@ abstract class od extends uk {
                         }
                       }
                       ve.c((byte) -105);
-                      int discarded$10 = 0;
-                      a.a(ld.field_g, var2);
+                      a.a(ld.field_g, var2, false);
                       ri.field_f = true;
                       hc.field_a = hc.a(-9986) + 15000L;
                       return var2;
@@ -527,8 +508,7 @@ abstract class od extends uk {
                     if (nh.field_o != 0) {
                       break L2;
                     } else {
-                      int discarded$11 = -2;
-                      sg.a();
+                      sg.a(-2);
                       break L2;
                     }
                   }
@@ -542,7 +522,7 @@ abstract class od extends uk {
         }
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         jc.field_i[7] = -1;
         jc.field_i[4] = -1;
         jc.field_i[16] = -1;
@@ -561,7 +541,7 @@ abstract class od extends uk {
         jc.field_i[1] = 16;
     }
 
-    private final void l() {
+    private final void l(int param0) {
         di.field_r[2] = true;
     }
 
@@ -586,8 +566,7 @@ abstract class od extends uk {
         try {
           L0: {
             L1: {
-              int discarded$2 = 640;
-              this.a(480, 0, param0, param1);
+              this.a(480, 0, param0, param1, 640);
               if (param2 >= 99) {
                 break L1;
               } else {
@@ -633,8 +612,7 @@ abstract class od extends uk {
         int var2 = 0;
         L0: {
           L1: {
-            int discarded$4 = 80;
-            var2 = this.j();
+            var2 = this.j(80);
             if (var2 == param0) {
               break L1;
             } else {
@@ -687,8 +665,7 @@ abstract class od extends uk {
           }
           L7: {
             if (di.field_r[6]) {
-              int discarded$5 = 7;
-              kl.a((byte) -52);
+              kl.a((byte) -52, 7);
               break L7;
             } else {
               break L7;
@@ -704,7 +681,7 @@ abstract class od extends uk {
         return var2;
     }
 
-    private final void k() {
+    private final void k(int param0) {
         di.field_r[5] = true;
     }
 
@@ -750,8 +727,7 @@ abstract class od extends uk {
               if (null != ih.field_b) {
                 break L1;
               } else {
-                int discarded$20 = 0;
-                var6 = bf.a();
+                var6 = bf.a(0);
                 var4 = var6.getSize();
                 kk.field_q.a(var4.width, var4.height, (byte) -107);
                 break L1;
@@ -764,15 +740,13 @@ abstract class od extends uk {
           }
         }
         L2: {
-          int discarded$21 = 112;
-          th.b();
+          th.b((byte) 112);
           vc.h((byte) -47);
           if (j.a(-1)) {
             break L2;
           } else {
             if (j.field_l != 11) {
-              int discarded$22 = -119;
-              vj.a();
+              vj.a((byte) -119);
               break L2;
             } else {
               break L2;
@@ -792,8 +766,7 @@ abstract class od extends uk {
             break L4;
           } else {
             L5: {
-              int discarded$23 = 5;
-              var3 = 1200 * wh.a();
+              var3 = 1200 * wh.a((byte) 5);
               if (((od) this).field_q) {
                 break L5;
               } else {
@@ -811,8 +784,7 @@ abstract class od extends uk {
             ((od) this).field_q = false;
             tn.a(false);
             ve.c((byte) -50);
-            int discarded$24 = 0;
-            a.a(je.field_H, 2);
+            a.a(je.field_H, 2, false);
             sa.a(-76);
             ri.field_f = true;
             hc.field_a = 15000L + hc.a(-9986);
@@ -853,8 +825,7 @@ abstract class od extends uk {
                   break L9;
                 } else {
                   if (!eg.b((byte) -81)) {
-                    int discarded$25 = -2;
-                    sg.a();
+                    sg.a(-2);
                     break L9;
                   } else {
                     break L9;
@@ -918,29 +889,24 @@ abstract class od extends uk {
                     ve.c((byte) 90);
                     if (nh.field_o != 3) {
                       if (4 == nh.field_o) {
-                        int discarded$26 = 0;
-                        a.a(i.field_v, 256);
+                        a.a(i.field_v, 256, false);
                         break L12;
                       } else {
                         if (2 == nh.field_o) {
-                          int discarded$27 = 0;
-                          a.a(gb.field_L, 256);
+                          a.a(gb.field_L, 256, false);
                           break L12;
                         } else {
                           if (nh.field_o != 5) {
-                            int discarded$28 = 0;
-                            a.a(li.field_b, 256);
+                            a.a(li.field_b, 256, false);
                             break L12;
                           } else {
-                            int discarded$29 = 0;
-                            a.a(bm.field_g, 5);
+                            a.a(bm.field_g, 5, false);
                             break L12;
                           }
                         }
                       }
                     } else {
-                      int discarded$30 = 0;
-                      a.a(sj.field_k, 256);
+                      a.a(sj.field_k, 256, false);
                       break L12;
                     }
                   }
@@ -981,8 +947,7 @@ abstract class od extends uk {
             } else {
               if (0 != nh.field_o) {
                 nh.field_o = -1;
-                int discarded$31 = 1;
-                rl.e();
+                rl.e(true);
                 break L13;
               } else {
                 break L13;
@@ -1006,8 +971,7 @@ abstract class od extends uk {
         }
         L17: {
           if (dj.field_n == 0) {
-            int discarded$32 = -20940;
-            if (ga.h()) {
+            if (ga.h(-20940)) {
               dj.field_n = 1;
               break L17;
             } else {
@@ -1083,14 +1047,11 @@ abstract class od extends uk {
               if (i.a((byte) 110, qn.field_I)) {
                 L23: {
                   L24: {
-                    int discarded$33 = 45;
-                    ci.c();
-                    int discarded$34 = 14;
-                    ba.b();
+                    ci.c((byte) 45);
+                    ba.b(14);
                     ne.field_g = ul.field_e;
                     pg.field_h = false;
-                    int discarded$35 = -1;
-                    jf.a(wg.field_c, jf.field_j, td.field_a, qn.field_I);
+                    jf.a(wg.field_c, jf.field_j, td.field_a, qn.field_I, -1);
                     if (af.field_b) {
                       break L24;
                     } else {
@@ -1144,8 +1105,7 @@ abstract class od extends uk {
                       break L26;
                     }
                   }
-                  int discarded$36 = 1;
-                  mi.a(stackIn_111_0, stackIn_111_1 != 0, stackIn_111_2 != 0);
+                  mi.a(stackIn_111_0, stackIn_111_1 != 0, stackIn_111_2 != 0, true);
                   break L23;
                 }
                 L27: {
@@ -1160,10 +1120,8 @@ abstract class od extends uk {
                   if (em.field_a != null) {
                     break L28;
                   } else {
-                    int discarded$37 = -94;
-                    em.field_a = hm.a();
-                    int discarded$38 = 88;
-                    td.field_f = wd.a();
+                    em.field_a = hm.a(-94);
+                    td.field_f = wd.a((byte) 88);
                     break L28;
                   }
                 }
@@ -1286,8 +1244,7 @@ abstract class od extends uk {
         }
         L39: {
           if (di.field_r[8]) {
-            int discarded$39 = -1;
-            rc.c();
+            rc.c(-1);
             break L39;
           } else {
             break L39;
@@ -1295,7 +1252,7 @@ abstract class od extends uk {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         di.field_r[6] = true;
     }
 
@@ -1444,7 +1401,7 @@ abstract class od extends uk {
         }
     }
 
-    private final void p() {
+    private final void p(int param0) {
         di.field_r[1] = true;
     }
 
@@ -1458,7 +1415,7 @@ abstract class od extends uk {
         na.field_Hb = param1;
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         di.field_r[4] = true;
     }
 
@@ -1515,24 +1472,22 @@ abstract class od extends uk {
                 break L2;
               }
             }
-            int discarded$154 = this.a(stackIn_12_1, stackIn_12_2 != 0, false);
+            int discarded$92 = this.a(stackIn_12_1, stackIn_12_2 != 0, false);
             break L1;
           } else {
             if (dj.field_n < 10) {
               break L1;
             } else {
-              int discarded$155 = 2;
-              if (nm.c()) {
+              if (nm.c(2)) {
                 if (j.field_l != 0) {
                   jb.a(og.field_b, 45);
                   break L1;
                 } else {
-                  int discarded$156 = this.a(-118, false, false);
+                  int discarded$93 = this.a(-118, false, false);
                   break L1;
                 }
               } else {
-                int discarded$157 = 1;
-                ee.a();
+                ee.a(true);
                 break L1;
               }
             }
@@ -1540,7 +1495,7 @@ abstract class od extends uk {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         int var2 = sh.field_qb.g(11132);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = ba.field_a - 1;
@@ -1589,8 +1544,7 @@ abstract class od extends uk {
                                 if (var2 != 7) {
                                   if (8 != var2) {
                                     if (16 == var2) {
-                                      int discarded$11 = 115;
-                                      mb.i();
+                                      mb.i((byte) 115);
                                       break L1;
                                     } else {
                                       L2: {
@@ -1604,19 +1558,15 @@ abstract class od extends uk {
                                             } else {
                                               if (var2 != 17) {
                                                 if (18 == var2) {
-                                                  int discarded$12 = -532;
-                                                  he.i();
+                                                  he.i(-532);
                                                   break L1;
                                                 } else {
-                                                  int discarded$13 = 1;
-                                                  int discarded$14 = 1;
-                                                  en.a("MGS1: " + rg.a(), (Throwable) null);
+                                                  en.a("MGS1: " + rg.a(true), (Throwable) null, 1);
                                                   tn.a(false);
                                                   break L1;
                                                 }
                                               } else {
-                                                int discarded$15 = -6731;
-                                                this.h();
+                                                this.h(-6731);
                                                 break L1;
                                               }
                                             }
@@ -1637,8 +1587,7 @@ abstract class od extends uk {
                                         }
                                       }
                                       var3 = el.a(stackIn_28_0 != 0, 0);
-                                      int discarded$16 = 78;
-                                      cf.a(var3);
+                                      cf.a(var3, (byte) 78);
                                       break L1;
                                     }
                                   } else {
@@ -1646,15 +1595,13 @@ abstract class od extends uk {
                                     break L1;
                                   }
                                 } else {
-                                  int discarded$17 = -50;
-                                  this.i();
+                                  this.i(-50);
                                   break L1;
                                 }
                               }
                             }
                           } else {
-                            int discarded$18 = -61;
-                            sb.a();
+                            sb.a((byte) -61);
                             break L1;
                           }
                         }
@@ -1663,8 +1610,7 @@ abstract class od extends uk {
                         break L1;
                       }
                     } else {
-                      int discarded$19 = -2;
-                      el.e();
+                      el.e(-2);
                       break L1;
                     }
                   }
@@ -1680,9 +1626,7 @@ abstract class od extends uk {
             }
           }
         }
-        int discarded$20 = 1;
-        int discarded$21 = 1;
-        en.a("MGS2: " + rg.a(), (Throwable) null);
+        en.a("MGS2: " + rg.a(true), (Throwable) null, 1);
         tn.a(false);
     }
 
@@ -1785,28 +1729,22 @@ abstract class od extends uk {
             ((od) this).field_p = 9;
         }
         if (param0) {
-            int discarded$0 = 102;
-            this.p();
+            this.p(102);
         }
         if (!(!param6)) {
-            int discarded$1 = 25745;
-            this.l();
+            this.l(25745);
         }
         if (!(!param5)) {
-            int discarded$2 = 12;
-            this.b();
+            this.b((byte) 12);
         }
         if (param4) {
-            int discarded$3 = 116;
-            this.k();
+            this.k(116);
         }
         if (param1) {
-            int discarded$4 = 113;
-            this.d();
+            this.d((byte) 113);
         }
         if (!(!param3)) {
-            int discarded$5 = 12;
-            this.o();
+            this.o(12);
         }
     }
 

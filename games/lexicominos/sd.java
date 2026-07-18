@@ -845,8 +845,8 @@ final class sd extends kd {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
+                                    int discarded$3 = sd.a(16);
                                     int discarded$4 = sd.a(16);
-                                    int discarded$5 = sd.a(16);
                                     field_w[var6] = sd.a(8);
                                     var6++;
                                     continue L6;
@@ -871,7 +871,7 @@ final class sd extends kd {
                       }
                     }
                   } else {
-                    int discarded$6 = sd.a(16);
+                    int discarded$5 = sd.a(16);
                     var3++;
                     continue L2;
                   }
@@ -931,8 +931,7 @@ final class sd extends kd {
                               continue L0;
                             }
                           } else {
-                            int discarded$7 = 1;
-                            var9[var11] = ah.a(var10, var11);
+                            var9[var11] = ah.a(var10, var11, true);
                             var11++;
                             continue L12;
                           }

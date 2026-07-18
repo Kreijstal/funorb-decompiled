@@ -17,7 +17,7 @@ final class ob extends wm {
     static String field_x;
     static String field_A;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_B = null;
         field_x = null;
         field_r = null;
@@ -28,7 +28,7 @@ final class ob extends wm {
         field_A = null;
     }
 
-    final static void f() {
+    final static void f(int param0) {
         int var1_int = 0;
         int var2 = Chess.field_G;
         try {

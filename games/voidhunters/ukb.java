@@ -164,14 +164,13 @@ final class ukb extends rqa {
             var5 = 6 + qc.field_q.field_eb.b(param0, 500);
             var6 = 2 + nna.field_w * var4;
             var7 = jv.a((byte) -109, var2_int, 12, var5);
-            int discarded$0 = -16;
-            var8 = lma.a(20, var3, var6);
+            var8 = lma.a(20, var3, var6, (byte) -16);
             dma.b(var7, var8, var5, var6, 0);
             if (param1 <= 9) {
                 ukb.e((byte) 26);
             }
             dma.d(1 + var7, 1 + var8, var5 + -2, -2 + var6, 16777088);
-            int discarded$1 = qc.field_q.field_eb.a(param0, 3 + var7, var8 + 1 - -atb.field_d - qc.field_q.field_eb.field_k, 500, 1000, 0, -1, 0, 0, nna.field_w);
+            int discarded$0 = qc.field_q.field_eb.a(param0, 3 + var7, var8 + 1 - -atb.field_d - qc.field_q.field_eb.field_k, 500, 1000, 0, -1, 0, 0, nna.field_w);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "ukb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

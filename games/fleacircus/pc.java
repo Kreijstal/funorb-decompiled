@@ -24,7 +24,7 @@ final class pc {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -71,7 +71,7 @@ final class pc {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -100,8 +100,7 @@ final class pc {
                 var2 = 0;
                 L2: while (true) {
                   if (256 <= var2) {
-                    int discarded$1 = 2;
-                    this.b();
+                    this.b(2);
                     ((pc) this).field_c = 256;
                     return;
                   } else {
@@ -272,13 +271,12 @@ final class pc {
             field_m = null;
         }
         if (((pc) this).field_c == 0) {
-            int discarded$0 = 2;
-            this.b();
+            this.b(2);
             ((pc) this).field_c = 256;
         }
-        int fieldTemp$1 = ((pc) this).field_c - 1;
+        int fieldTemp$0 = ((pc) this).field_c - 1;
         ((pc) this).field_c = ((pc) this).field_c - 1;
-        return ((pc) this).field_e[fieldTemp$1];
+        return ((pc) this).field_e[fieldTemp$0];
     }
 
     pc(int[] param0) {
@@ -289,8 +287,7 @@ final class pc {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((pc) this).field_e[var2_int] = param0[var2_int];
             }
-            int discarded$0 = -125;
-            this.a();
+            this.a((byte) -125);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) (Object) runtimeException, "pc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

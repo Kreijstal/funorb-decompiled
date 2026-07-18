@@ -143,8 +143,7 @@ final class pg {
         int var2 = ((pg) this).field_e.length;
         System.arraycopy((Object) (Object) ((pg) this).field_e, 0, (Object) (Object) field_k, 0, var2);
         int var3 = field_b[((pg) this).field_c - 1];
-        int discarded$0 = -31479;
-        int var4 = d.a(var3 - 1);
+        int var4 = d.a(var3 - 1, -31479);
         field_l[0] = b.f(var4);
         field_l[1] = b.f(var4);
         int var5 = 2;
@@ -160,9 +159,9 @@ final class pg {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((pg) this).field_a[var7][var11 & var10];
                 var11 = var11 >>> var9;
-                int incrementValue$1 = var5;
+                int incrementValue$0 = var5;
                 var5++;
-                field_l[incrementValue$1] = var13 >= 0 ? b.field_O[var13].b() : 0;
+                field_l[incrementValue$0] = var13 >= 0 ? b.field_O[var13].b() : 0;
             }
         }
         return true;

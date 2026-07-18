@@ -492,8 +492,7 @@ final class po {
 
     final static void a(boolean param0) {
         if (un.field_l) {
-            int discarded$0 = 0;
-            mj.a();
+            mj.a(false);
             return;
         }
     }
@@ -673,7 +672,7 @@ final class po {
         return stackIn_10_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -1;
         field_e = null;
         field_f = null;

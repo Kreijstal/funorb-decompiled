@@ -170,7 +170,7 @@ final class rj implements ol {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_j = null;
         field_d = null;

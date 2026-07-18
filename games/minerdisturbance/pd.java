@@ -40,8 +40,7 @@ final class pd {
             vb.a(nn.field_c, 127);
             dj.a();
             eh.d();
-            int discarded$1 = -1236579128;
-            oj.o();
+            oj.o(-1236579128);
             if (var5 < 256) {
               eh.b(0, 0, eh.field_g, eh.field_c, 0, 256 + -var5);
               break L2;
@@ -251,7 +250,7 @@ final class pd {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }

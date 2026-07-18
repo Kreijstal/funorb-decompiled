@@ -6,7 +6,7 @@ final class vi {
     static int field_a;
     static String field_b;
 
-    final static void a(int param0) {
+    final static void a(int param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -606,7 +606,7 @@ final class vi {
         }
     }
 
-    final static String b() {
+    final static String b(byte param0) {
         if (cb.field_v == wi.field_f) {
           return ag.field_e;
         } else {
@@ -622,12 +622,12 @@ final class vi {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         cg.a((byte) -105, 17);
     }
 

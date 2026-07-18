@@ -17,7 +17,7 @@ final class em {
         field_d = null;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         hg var2 = gk.field_g;
         var2.g(11, 8);
         var2.field_l = var2.field_l + 1;
@@ -30,7 +30,7 @@ final class em {
         var2.b(var2.field_l - var3, -1);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -123,10 +123,8 @@ final class em {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$9 = 109;
-            if (hn.a(param2, param0, param1)) {
-              int discarded$10 = 20;
-              em.b();
+            if (hn.a(param2, param0, param1, (byte) 109)) {
+              em.b(20);
               stackOut_3_0 = pm.a(-9618, param4.a(param0, param1, 0));
               stackIn_4_0 = stackOut_3_0;
               break L0;

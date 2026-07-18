@@ -10,7 +10,7 @@ final class qo extends vf {
     static int[] field_r;
     static boolean field_x;
 
-    final static void c() {
+    final static void c(int param0) {
     }
 
     final void a(int param0, vn[] param1, int param2) {
@@ -811,7 +811,7 @@ final class qo extends vf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_r = null;
         field_t = null;
         field_w = null;

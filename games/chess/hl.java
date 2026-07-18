@@ -235,9 +235,7 @@ class hl implements jm, mg {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$4 = 0;
-          int discarded$5 = 0;
-          this.a((byte) 119, param2, param3, param0, ((hl) this).field_b, ((hl) this).field_g);
+          this.a((byte) 119, param2, param3, param0, ((hl) this).field_b, ((hl) this).field_g, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -615,7 +613,7 @@ class hl implements jm, mg {
         return stackIn_3_0;
     }
 
-    private final void a(byte param0, int param1, mf param2, int param3, int param4, int param5) {
+    private final void a(byte param0, int param1, mf param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -648,7 +646,7 @@ class hl implements jm, mg {
               var9_int = ((hl) this).b(param2, 0);
               var10 = this.c((byte) 18, param2);
               if (((hl) this).field_o) {
-                int discarded$2 = ((hl) this).field_e.a(((hl) this).a(-29558, param2), this.a(0, 2668, param3, param2), this.a(122, param2, 0, param1), var9_int, var10, param5, param4, ((hl) this).field_l, ((hl) this).field_c, ((hl) this).field_j);
+                int discarded$1 = ((hl) this).field_e.a(((hl) this).a(-29558, param2), this.a(0, 2668, param3, param2), this.a(122, param2, 0, param1), var9_int, var10, param5, param4, ((hl) this).field_l, ((hl) this).field_c, ((hl) this).field_j);
                 break L1;
               } else {
                 L2: {
@@ -703,8 +701,7 @@ class hl implements jm, mg {
                 break L1;
               }
             }
-            int discarded$3 = 28773;
-            fd.a();
+            fd.a(28773);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1242,14 +1239,12 @@ class hl implements jm, mg {
                   break L15;
                 }
                 ((ci) (Object) stackIn_67_0).a(stackIn_67_1 != 0, stackIn_67_2 != 0);
-                int discarded$4 = 28773;
-                fd.a();
+                fd.a(28773);
                 return;
               }
             }
           }
-          int discarded$5 = 28773;
-          fd.a();
+          fd.a(28773);
           return;
         } else {
           L17: {
@@ -1441,8 +1436,7 @@ class hl implements jm, mg {
                 break L23;
               }
             }
-            int discarded$6 = 28773;
-            fd.a();
+            fd.a(28773);
             return;
           } else {
             L29: {
@@ -1531,8 +1525,7 @@ class hl implements jm, mg {
               break L32;
             }
             ((ci) (Object) stackIn_26_0).a(stackIn_26_1 != 0, stackIn_26_2 != 0);
-            int discarded$7 = 28773;
-            fd.a();
+            fd.a(28773);
             return;
           }
         }
@@ -1835,8 +1828,7 @@ class hl implements jm, mg {
                 var12 = stackIn_5_0 - -Math.min(stackIn_5_1, Math.min(stackIn_5_2, stackIn_5_3));
                 cf.b(param4.field_C + param2 - -param4.field_r, param4.field_y + param4.field_u + param0, param2 + param4.field_r, 80, param4.field_u + param0);
                 a.field_a.a(var10, ((hl) this).field_i, var10, var11, var12, false);
-                int discarded$1 = 28773;
-                fd.a();
+                fd.a(28773);
                 break L1;
               } else {
                 break L1;
@@ -1881,7 +1873,7 @@ class hl implements jm, mg {
         }
     }
 
-    final static km a() {
+    final static km a(int param0) {
         int var4_int = 0;
         int var5 = Chess.field_G;
         int var1 = b.field_c[0] * wm.field_b[0];
@@ -1891,8 +1883,7 @@ class hl implements jm, mg {
             var3[var4_int] = uh.field_r[ce.a((int) var2[var4_int], 255)];
         }
         km var4 = new km(cd.field_p, ek.field_a, be.field_a[0], a.field_c[0], wm.field_b[0], b.field_c[0], var3);
-        int discarded$0 = 4210752;
-        ch.k();
+        ch.k(4210752);
         return var4;
     }
 
@@ -2249,8 +2240,7 @@ class hl implements jm, mg {
                   var12 = var10;
                   L3: while (true) {
                     if (var11 < var12) {
-                      int discarded$1 = 28773;
-                      fd.a();
+                      fd.a(28773);
                       break L1;
                     } else {
                       L4: {

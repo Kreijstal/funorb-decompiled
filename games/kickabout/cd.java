@@ -6,8 +6,7 @@ final class cd {
     static String field_b;
 
     final static void a(byte param0, int param1, int param2) {
-        int discarded$9 = 0;
-        ku.a(16777215, al.a(false, (byte) 66), param2, -1, param1);
+        ku.a(16777215, al.a(false, (byte) 66), param2, -1, param1, 0);
         if (param0 >= -126) {
             cd.a((byte) 70);
         }
@@ -21,7 +20,7 @@ final class cd {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return hk.field_G;
     }
 

@@ -23,9 +23,7 @@ class uc implements eb, af {
 
     private final void a(int param0, ng param1, int param2, int param3) {
         try {
-            int discarded$0 = 0;
-            int discarded$1 = -3;
-            this.a(0, ((uc) this).field_p, param1, param2, ((uc) this).field_g, param3);
+            this.a(0, ((uc) this).field_p, param1, param2, ((uc) this).field_g, param3, -3, 0);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "uc.IA(" + -115 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -124,12 +122,12 @@ class uc implements eb, af {
         return stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_m = null;
     }
 
-    final static java.awt.Frame a(cb param0, int param1, int param2, int param3) {
+    final static java.awt.Frame a(cb param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var6 = null;
         bo[] var6_array = null;
         int var7_int = 0;
@@ -170,8 +168,7 @@ class uc implements eb, af {
                 if (0 != param1) {
                   break L1;
                 } else {
-                  int discarded$2 = -855969982;
-                  var10 = jj.a(param0);
+                  var10 = jj.a(param0, -855969982);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;
@@ -221,8 +218,7 @@ class uc implements eb, af {
                     return (java.awt.Frame) (Object) stackIn_24_0;
                   }
                 } else {
-                  int discarded$3 = 23;
-                  vg.a(10L);
+                  vg.a(10L, (byte) 23);
                   continue L4;
                 }
               }
@@ -279,7 +275,7 @@ class uc implements eb, af {
         }
     }
 
-    final static String a(aa param0) {
+    final static String a(aa param0, int param1) {
         Object var2 = null;
         String var3 = null;
         int var4 = 0;
@@ -748,7 +744,7 @@ class uc implements eb, af {
                 break L1;
               } else {
                 var17 = null;
-                int discarded$2 = ((uc) this).a(-51, -38, 41, 14, 84, (ng) null);
+                int discarded$1 = ((uc) this).a(-51, -38, 41, 14, 84, (ng) null);
                 break L1;
               }
             }
@@ -774,8 +770,7 @@ class uc implements eb, af {
                   var12 = var10;
                   L4: while (true) {
                     if (var11 < var12) {
-                      int discarded$3 = 92;
-                      ia.a();
+                      ia.a((byte) 92);
                       break L2;
                     } else {
                       L5: {
@@ -1041,8 +1036,7 @@ class uc implements eb, af {
             L1: {
               var3_int = 72 / ((param1 - 19) / 45);
               if (hf.field_q >= 10) {
-                int discarded$10 = 22452;
-                if (dm.q()) {
+                if (dm.q(22452)) {
                   if (el.field_b != 0) {
                     si.a(-1913, param2);
                     break L1;
@@ -1068,9 +1062,7 @@ class uc implements eb, af {
                     break L2;
                   }
                 }
-                int discarded$11 = 0;
-                int discarded$12 = 16422;
-                on.a(true, var4 != 0, sl.field_i, nl.a(), sc.c());
+                on.a(true, var4 != 0, sl.field_i, nl.a(false), sc.c(16422));
                 break L1;
               }
             }
@@ -1207,8 +1199,7 @@ class uc implements eb, af {
                 var13 = stackIn_4_0 - -Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_4_3));
                 hp.a(param0 + param3.field_z, param3.field_p + param1 - -param3.field_C, param3.field_E + param0 - -param3.field_z, (byte) -91, param1 + param3.field_p);
                 h.field_X.a(var12, var13, var11, var11, ((uc) this).field_e, false);
-                int discarded$1 = 92;
-                ia.a();
+                ia.a((byte) 92);
                 break L1;
               }
             }
@@ -1517,7 +1508,7 @@ class uc implements eb, af {
         return stackIn_4_0;
     }
 
-    private final void a(int param0, int param1, ng param2, int param3, int param4, int param5) {
+    private final void a(int param0, int param1, ng param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -1599,12 +1590,11 @@ class uc implements eb, af {
                 ((uc) this).field_a.a(((uc) this).b(param2, -472248767), this.b(param5, param2, 2, 0), var11 + this.a(88, 0, param3, param2), param4, param1);
                 break L1;
               } else {
-                int discarded$2 = ((uc) this).field_a.a(((uc) this).b(param2, -472248767), this.b(param5, param2, 2, 0), this.a(95, 0, param3, param2), var9_int, var10, param4, param1, ((uc) this).field_l, ((uc) this).field_d, ((uc) this).field_j);
+                int discarded$1 = ((uc) this).field_a.a(((uc) this).b(param2, -472248767), this.b(param5, param2, 2, 0), this.a(95, 0, param3, param2), var9_int, var10, param4, param1, ((uc) this).field_l, ((uc) this).field_d, ((uc) this).field_j);
                 break L1;
               }
             }
-            int discarded$3 = 92;
-            ia.a();
+            ia.a((byte) 92);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

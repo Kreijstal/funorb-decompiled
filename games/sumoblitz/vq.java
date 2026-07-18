@@ -8,15 +8,14 @@ final class vq extends sp implements oe, ai {
     static String field_D;
     private wp field_C;
 
-    private final boolean e() {
-        int discarded$0 = -116;
-        if (this.a((op) (Object) ((vq) this).field_B)) {
+    private final boolean e(byte param0) {
+        if (this.a((op) (Object) ((vq) this).field_B, (byte) -116)) {
             return true;
         }
         return false;
     }
 
-    private final boolean a(op param0) {
+    private final boolean a(op param0, byte param1) {
         v var3 = null;
         RuntimeException var3_ref = null;
         gf var4 = null;
@@ -100,12 +99,10 @@ final class vq extends sp implements oe, ai {
     }
 
     private final void e(boolean param0) {
-        int discarded$0 = 91;
-        if (!this.e()) {
+        if (!this.e((byte) 91)) {
             return;
         }
-        int discarded$1 = -47;
-        ld.a(((vq) this).field_B.field_m);
+        ld.a(((vq) this).field_B.field_m, (byte) -47);
     }
 
     final static void a(int param0, int param1, byte[] param2, int param3, int param4, int param5, int param6) {
@@ -309,7 +306,7 @@ final class vq extends sp implements oe, ai {
         ((vq) this).a(116, 0, 0, 55 + (var3 - -var4), 496);
     }
 
-    private final int a(byte param0, pk param1, int param2, int param3, String param4, String param5) {
+    private final int a(byte param0, pk param1, int param2, int param3, String param4, String param5, int param6) {
         RuntimeException var8 = null;
         bn var9 = null;
         int var10 = 0;
@@ -526,7 +523,7 @@ final class vq extends sp implements oe, ai {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_D = null;
     }
 
@@ -673,8 +670,7 @@ final class vq extends sp implements oe, ai {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$2 = 35;
-            stackOut_0_0 = this.a((byte) 107, param3, 70, 170, param5, param4);
+            stackOut_0_0 = this.a((byte) 107, param3, 70, 170, param5, param4, 35);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -765,8 +761,7 @@ final class vq extends sp implements oe, ai {
         try {
             int var5_int = -111 / ((-25 - param1) / 45);
             super.a(param0, -86, param2, param3);
-            int discarded$0 = 91;
-            ((vq) this).field_C.field_x = this.e();
+            ((vq) this).field_C.field_x = this.e((byte) 91);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) (Object) runtimeException, "vq.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -794,8 +789,7 @@ final class vq extends sp implements oe, ai {
           L0: {
             L1: {
               if (param2 == ((vq) this).field_A) {
-                int discarded$2 = 0;
-                mu.e();
+                mu.e(0);
                 break L1;
               } else {
                 if (((vq) this).field_C != param2) {

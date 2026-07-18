@@ -19,7 +19,7 @@ final class i implements iq {
     private int field_b;
     static String field_a;
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return k.field_b;
     }
 
@@ -47,11 +47,9 @@ final class i implements iq {
             gi.field_a = param1;
             em.field_h = 2;
             var5 = (CharSequence) (Object) param1;
-            int discarded$4 = 1;
-            nd.field_k = ji.a(var5);
+            nd.field_k = ji.a(var5, true);
             hd.field_k = param2;
-            int discarded$5 = 0;
-            bo.r();
+            bo.r(0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -176,7 +174,7 @@ final class i implements iq {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_a = null;
         field_g = null;

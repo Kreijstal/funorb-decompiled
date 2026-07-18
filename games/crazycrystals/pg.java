@@ -10,14 +10,14 @@ final class pg extends java.awt.Canvas {
     static String field_c;
     static String field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;
         field_e = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -70,12 +70,10 @@ final class pg extends java.awt.Canvas {
                 Object var6 = null;
                 pg.a((byte) 43, (db) null, false, (db) null, (db) null);
             }
-            int discarded$0 = 51;
-            gk.field_e = lc.a("");
+            gk.field_e = lc.a("", (byte) 51);
             gk.field_e.a(106, false);
             e.a(4, param1, param4, param3);
-            int discarded$1 = -3121;
-            hm.a();
+            hm.a(-3121);
             sg.field_b = tl.field_e;
             lc.field_c = tl.field_e;
         } catch (RuntimeException runtimeException) {

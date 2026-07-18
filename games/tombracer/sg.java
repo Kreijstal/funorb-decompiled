@@ -22,7 +22,7 @@ final class sg extends nv {
         return param0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_n = null;
         field_q = null;
         field_s = null;
@@ -42,7 +42,7 @@ final class sg extends nv {
         }
     }
 
-    final static Class a(String param0) throws ClassNotFoundException {
+    final static Class a(String param0, int param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_3_0 = null;
         Class stackIn_7_0 = null;

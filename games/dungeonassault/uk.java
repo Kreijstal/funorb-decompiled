@@ -273,8 +273,7 @@ final class uk {
                           }
                         }
                       } else {
-                        int discarded$2 = 1;
-                        fo.a(-126, gd.a(param1));
+                        fo.a(-126, gd.a(param1, true));
                         continue L3;
                       }
                     }
@@ -318,9 +317,9 @@ final class uk {
                                         break L22;
                                       } else {
                                         if (var2_int != 66) {
-                                          int fieldTemp$3 = h.field_j;
+                                          int fieldTemp$1 = h.field_j;
                                           h.field_j = h.field_j + 1;
-                                          wl.field_e[fieldTemp$3] = var2_int;
+                                          wl.field_e[fieldTemp$1] = var2_int;
                                           break L22;
                                         } else {
                                           break L22;
@@ -402,8 +401,7 @@ final class uk {
         try {
           L0: {
             L1: {
-              int discarded$10 = 70;
-              lj.a((java.awt.Component) (Object) param0);
+              lj.a((java.awt.Component) (Object) param0, (byte) 70);
               if (param1 < -119) {
                 break L1;
               } else {
@@ -412,8 +410,7 @@ final class uk {
               }
             }
             L2: {
-              int discarded$11 = 94;
-              im.a((java.awt.Component) (Object) param0);
+              im.a((java.awt.Component) (Object) param0, (byte) 94);
               if (bn.field_j == null) {
                 break L2;
               } else {
@@ -455,7 +452,7 @@ final class uk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_e = null;
     }

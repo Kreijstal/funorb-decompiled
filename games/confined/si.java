@@ -15,7 +15,7 @@ final class si {
         throw new IllegalStateException();
     }
 
-    final static nf[] a() {
+    final static nf[] a(byte param0) {
         nf[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -111,7 +111,7 @@ final class si {
         field_d = null;
     }
 
-    final static void a(java.awt.Frame param0, df param1) {
+    final static void a(java.awt.Frame param0, df param1, boolean param2) {
         bc var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

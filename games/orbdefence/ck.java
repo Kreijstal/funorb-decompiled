@@ -128,7 +128,7 @@ final class ck implements td {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_j = null;
         field_n = null;

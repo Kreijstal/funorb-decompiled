@@ -21,7 +21,7 @@ abstract class mn extends tk {
         field_w = null;
     }
 
-    final static void a(int param0, int param1, id param2, mm param3, byte param4, int param5) {
+    final static void a(int param0, int param1, id param2, mm param3, byte param4, int param5, int param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;

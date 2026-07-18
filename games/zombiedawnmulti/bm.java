@@ -13,34 +13,42 @@ final class bm extends fc {
         try {
           L0: {
             L1: {
-              L2: {
+              if (param0 == 33554432) {
+                break L1;
+              } else {
+                th discarded$2 = ((bm) this).a(-55);
+                break L1;
+              }
+            }
+            L2: {
+              L3: {
                 if ((33554432 & this.b(param2, (byte) -124, param1)) == 0) {
-                  break L2;
+                  break L3;
                 } else {
                   if ((this.b(param2, (byte) -75, param1) >> 7 & 511) <= 64) {
                     stackOut_9_0 = 0;
                     stackIn_10_0 = stackOut_9_0;
-                    break L1;
-                  } else {
                     break L2;
+                  } else {
+                    break L3;
                   }
                 }
               }
               stackOut_7_0 = 1;
               stackIn_10_0 = stackOut_7_0;
-              break L1;
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var4, "bm.P(" + 33554432 + ',' + param1 + ',' + param2 + ')');
+          throw fa.a((Throwable) (Object) var4, "bm.P(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_10_0 != 0;
     }
 
-    private final int b(int param0, int param1) {
+    private final int b(int param0, int param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -96,84 +104,72 @@ final class bm extends fc {
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            var4_int = this.b(param1, (byte) -83, param0);
-            var4_int = var4_int & -67108865;
             L1: {
-              var5 = (var4_int & 65408) >> 7;
-              if ((var4_int & 33554432) == 0) {
+              var4_int = this.b(param1, (byte) -83, param0);
+              var4_int = var4_int & -67108865;
+              if (param2 == -8130) {
                 break L1;
               } else {
+                int discarded$1 = this.b(-33, (byte) 40, -88);
+                break L1;
+              }
+            }
+            L2: {
+              var5 = (var4_int & 65408) >> 7;
+              if ((var4_int & 33554432) == 0) {
+                break L2;
+              } else {
                 if (var5 == 0) {
-                  L2: {
-                    L3: {
+                  L3: {
+                    L4: {
                       var4_int = var4_int & -65409;
                       if (this.c(33554432, param0 - -1, param1)) {
-                        break L3;
+                        break L4;
                       } else {
                         if (this.a(param1, (byte) 2, 1 + param0)) {
-                          break L3;
+                          break L4;
                         } else {
                           stackOut_14_0 = 1;
                           stackIn_17_0 = stackOut_14_0;
-                          break L2;
+                          break L3;
                         }
                       }
                     }
                     stackOut_16_0 = 0;
                     stackIn_17_0 = stackOut_16_0;
-                    break L2;
+                    break L3;
                   }
-                  L4: {
-                    L5: {
+                  L5: {
+                    L6: {
                       var6 = stackIn_17_0;
                       var7 = this.c(33554432, param0, param1 + 3) ? 1 : 0;
                       var8 = this.c(33554432, param0, param1 + -1) ? 1 : 0;
                       if (this.c(33554432, param0 - 1, param1)) {
-                        break L5;
+                        break L6;
                       } else {
                         if (this.a(param1, (byte) 2, param0 + -1)) {
                           stackOut_23_0 = 0;
                           stackIn_24_0 = stackOut_23_0;
-                          break L4;
-                        } else {
                           break L5;
+                        } else {
+                          break L6;
                         }
                       }
                     }
                     stackOut_21_0 = 1;
                     stackIn_24_0 = stackOut_21_0;
-                    break L4;
+                    break L5;
                   }
-                  L6: {
-                    L7: {
+                  L7: {
+                    L8: {
                       var9 = stackIn_24_0;
-                      var10 = this.c(33554432, 1 + param0, param1) ? 1 : 0;
+                      var10 = this.c(param2 ^ -33562562, 1 + param0, param1) ? 1 : 0;
                       if (!this.a(param1, (byte) 2, param0)) {
-                        break L7;
+                        break L8;
                       } else {
                         if (var6 != 0) {
-                          break L7;
+                          break L8;
                         } else {
-                          L8: {
-                            if (var7 == 0) {
-                              break L8;
-                            } else {
-                              if (var8 == 0) {
-                                break L8;
-                              } else {
-                                if (var9 == 0) {
-                                  break L8;
-                                } else {
-                                  if (var10 == 0) {
-                                    break L8;
-                                  } else {
-                                    var4_int = var4_int | this.a(9, 0);
-                                    break L8;
-                                  }
-                                }
-                              }
-                            }
-                          }
                           L9: {
                             if (var7 == 0) {
                               break L9;
@@ -185,9 +181,9 @@ final class bm extends fc {
                                   break L9;
                                 } else {
                                   if (var10 == 0) {
-                                    var4_int = var4_int | this.a(10, 0);
                                     break L9;
                                   } else {
+                                    var4_int = var4_int | this.a(9, 0);
                                     break L9;
                                   }
                                 }
@@ -201,13 +197,13 @@ final class bm extends fc {
                               if (var8 == 0) {
                                 break L10;
                               } else {
-                                if (var9 != 0) {
+                                if (var9 == 0) {
                                   break L10;
                                 } else {
                                   if (var10 == 0) {
+                                    var4_int = var4_int | this.a(10, 0);
                                     break L10;
                                   } else {
-                                    var4_int = var4_int | this.a(11, 0);
                                     break L10;
                                   }
                                 }
@@ -225,9 +221,9 @@ final class bm extends fc {
                                   break L11;
                                 } else {
                                   if (var10 == 0) {
-                                    var4_int = var4_int | this.a(18, 0);
                                     break L11;
                                   } else {
+                                    var4_int = var4_int | this.a(11, 0);
                                     break L11;
                                   }
                                 }
@@ -238,16 +234,16 @@ final class bm extends fc {
                             if (var7 == 0) {
                               break L12;
                             } else {
-                              if (var8 != 0) {
+                              if (var8 == 0) {
                                 break L12;
                               } else {
-                                if (var9 == 0) {
+                                if (var9 != 0) {
                                   break L12;
                                 } else {
                                   if (var10 == 0) {
+                                    var4_int = var4_int | this.a(18, param2 ^ -8130);
                                     break L12;
                                   } else {
-                                    var4_int = var4_int | this.a(12, 0);
                                     break L12;
                                   }
                                 }
@@ -265,9 +261,9 @@ final class bm extends fc {
                                   break L13;
                                 } else {
                                   if (var10 == 0) {
-                                    var4_int = var4_int | this.a(14, 0);
                                     break L13;
                                   } else {
+                                    var4_int = var4_int | this.a(12, 0);
                                     break L13;
                                   }
                                 }
@@ -281,13 +277,13 @@ final class bm extends fc {
                               if (var8 != 0) {
                                 break L14;
                               } else {
-                                if (var9 != 0) {
+                                if (var9 == 0) {
                                   break L14;
                                 } else {
                                   if (var10 == 0) {
+                                    var4_int = var4_int | this.a(14, 0);
                                     break L14;
                                   } else {
-                                    var4_int = var4_int | this.a(15, 0);
                                     break L14;
                                   }
                                 }
@@ -305,9 +301,9 @@ final class bm extends fc {
                                   break L15;
                                 } else {
                                   if (var10 == 0) {
-                                    var4_int = var4_int | this.a(21, 0);
                                     break L15;
                                   } else {
+                                    var4_int = var4_int | this.a(15, 0);
                                     break L15;
                                   }
                                 }
@@ -315,19 +311,19 @@ final class bm extends fc {
                             }
                           }
                           L16: {
-                            if (var7 != 0) {
+                            if (var7 == 0) {
                               break L16;
                             } else {
-                              if (var8 == 0) {
+                              if (var8 != 0) {
                                 break L16;
                               } else {
-                                if (var9 == 0) {
+                                if (var9 != 0) {
                                   break L16;
                                 } else {
                                   if (var10 == 0) {
+                                    var4_int = var4_int | this.a(21, param2 ^ -8130);
                                     break L16;
                                   } else {
-                                    var4_int = var4_int | this.a(13, 0);
                                     break L16;
                                   }
                                 }
@@ -345,9 +341,9 @@ final class bm extends fc {
                                   break L17;
                                 } else {
                                   if (var10 == 0) {
-                                    var4_int = var4_int | this.a(16, 0);
                                     break L17;
                                   } else {
+                                    var4_int = var4_int | this.a(13, 0);
                                     break L17;
                                   }
                                 }
@@ -361,11 +357,11 @@ final class bm extends fc {
                               if (var8 == 0) {
                                 break L18;
                               } else {
-                                if (var9 != 0) {
+                                if (var9 == 0) {
                                   break L18;
                                 } else {
-                                  if (var10 != 0) {
-                                    var4_int = var4_int | this.a(17, 0);
+                                  if (var10 == 0) {
+                                    var4_int = var4_int | this.a(16, 0);
                                     break L18;
                                   } else {
                                     break L18;
@@ -385,9 +381,9 @@ final class bm extends fc {
                                   break L19;
                                 } else {
                                   if (var10 != 0) {
+                                    var4_int = var4_int | this.a(17, 0);
                                     break L19;
                                   } else {
-                                    var4_int = var4_int | this.a(20, 0);
                                     break L19;
                                   }
                                 }
@@ -398,16 +394,16 @@ final class bm extends fc {
                             if (var7 != 0) {
                               break L20;
                             } else {
-                              if (var8 != 0) {
+                              if (var8 == 0) {
                                 break L20;
                               } else {
-                                if (var9 == 0) {
+                                if (var9 != 0) {
                                   break L20;
                                 } else {
-                                  if (var10 == 0) {
+                                  if (var10 != 0) {
                                     break L20;
                                   } else {
-                                    var4_int = var4_int | this.a(19, 0);
+                                    var4_int = var4_int | this.a(20, param2 + 8130);
                                     break L20;
                                   }
                                 }
@@ -424,10 +420,10 @@ final class bm extends fc {
                                 if (var9 == 0) {
                                   break L21;
                                 } else {
-                                  if (var10 != 0) {
+                                  if (var10 == 0) {
                                     break L21;
                                   } else {
-                                    var4_int = var4_int | this.a(22, 0);
+                                    var4_int = var4_int | this.a(19, 0);
                                     break L21;
                                   }
                                 }
@@ -441,37 +437,57 @@ final class bm extends fc {
                               if (var8 != 0) {
                                 break L22;
                               } else {
-                                if (var9 != 0) {
+                                if (var9 == 0) {
                                   break L22;
                                 } else {
-                                  if (var10 == 0) {
+                                  if (var10 != 0) {
                                     break L22;
                                   } else {
-                                    var4_int = var4_int | this.a(23, 0);
+                                    var4_int = var4_int | this.a(22, param2 + 8130);
                                     break L22;
                                   }
                                 }
                               }
                             }
                           }
+                          L23: {
+                            if (var7 != 0) {
+                              break L23;
+                            } else {
+                              if (var8 != 0) {
+                                break L23;
+                              } else {
+                                if (var9 != 0) {
+                                  break L23;
+                                } else {
+                                  if (var10 == 0) {
+                                    break L23;
+                                  } else {
+                                    var4_int = var4_int | this.a(23, 0);
+                                    break L23;
+                                  }
+                                }
+                              }
+                            }
+                          }
                           if (var7 != 0) {
-                            break L6;
+                            break L7;
                           } else {
                             if (var8 != 0) {
-                              break L6;
+                              break L7;
                             } else {
                               if (var9 != 0) {
-                                break L6;
+                                break L7;
                               } else {
                                 if (var10 == 0) {
                                   var4_int = var4_int | this.a(24, 0);
                                   if (var12 == 0) {
-                                    break L6;
-                                  } else {
                                     break L7;
+                                  } else {
+                                    break L8;
                                   }
                                 } else {
-                                  break L6;
+                                  break L7;
                                 }
                               }
                             }
@@ -479,87 +495,71 @@ final class bm extends fc {
                         }
                       }
                     }
-                    L23: {
-                      L24: {
+                    L24: {
+                      L25: {
                         if (!this.a(param1, (byte) 2, param0)) {
-                          break L24;
+                          break L25;
                         } else {
                           if (var6 != 0) {
-                            break L23;
-                          } else {
                             break L24;
+                          } else {
+                            break L25;
                           }
                         }
                       }
-                      L25: {
-                        if (this.c(33554432, param0, 1 + param1)) {
-                          break L25;
+                      L26: {
+                        if (this.c(param2 ^ -33562562, param0, 1 + param1)) {
+                          break L26;
                         } else {
-                          if (this.c(33554432, param0, param1 + 2)) {
-                            L26: {
-                              if (!this.c(33554432, 1 + param0, param1)) {
-                                break L26;
+                          if (this.c(param2 + 33562562, param0, param1 + 2)) {
+                            L27: {
+                              if (!this.c(param2 ^ -33562562, 1 + param0, param1)) {
+                                break L27;
                               } else {
                                 if (!this.c(33554432, -1 + param0, param1)) {
-                                  break L26;
+                                  break L27;
                                 } else {
-                                  var4_int = var4_int | this.a(6, 0);
+                                  var4_int = var4_int | this.a(6, param2 + 8130);
                                   if (var12 == 0) {
-                                    break L6;
+                                    break L7;
                                   } else {
-                                    break L26;
+                                    break L27;
                                   }
                                 }
                               }
                             }
-                            L27: {
-                              if (!this.c(33554432, param0 - -1, param1)) {
-                                break L27;
+                            L28: {
+                              if (!this.c(param2 + 33562562, param0 - -1, param1)) {
+                                break L28;
                               } else {
                                 var4_int = var4_int | this.a(8, 0);
                                 if (var12 == 0) {
-                                  break L6;
-                                } else {
-                                  break L27;
-                                }
-                              }
-                            }
-                            L28: {
-                              if (!this.c(33554432, param0 - 1, param1)) {
-                                break L28;
-                              } else {
-                                var4_int = var4_int | this.a(4, 0);
-                                if (var12 == 0) {
-                                  break L6;
+                                  break L7;
                                 } else {
                                   break L28;
                                 }
                               }
                             }
-                            var4_int = var4_int | this.a(2, 0);
+                            L29: {
+                              if (!this.c(param2 ^ -33562562, param0 - 1, param1)) {
+                                break L29;
+                              } else {
+                                var4_int = var4_int | this.a(4, 0);
+                                if (var12 == 0) {
+                                  break L7;
+                                } else {
+                                  break L29;
+                                }
+                              }
+                            }
+                            var4_int = var4_int | this.a(2, param2 + 8130);
                             if (var12 == 0) {
-                              break L6;
+                              break L7;
                             } else {
-                              break L25;
+                              break L26;
                             }
                           } else {
-                            break L6;
-                          }
-                        }
-                      }
-                      L29: {
-                        if (!this.c(33554432, param0 - -1, param1)) {
-                          break L29;
-                        } else {
-                          if (!this.c(33554432, -1 + param0, param1)) {
-                            break L29;
-                          } else {
-                            var4_int = var4_int | this.a(5, 0);
-                            if (var12 == 0) {
-                              break L6;
-                            } else {
-                              break L29;
-                            }
+                            break L7;
                           }
                         }
                       }
@@ -567,40 +567,56 @@ final class bm extends fc {
                         if (!this.c(33554432, param0 - -1, param1)) {
                           break L30;
                         } else {
-                          var4_int = var4_int | this.a(7, 0);
-                          if (var12 == 0) {
-                            break L6;
-                          } else {
+                          if (!this.c(33554432, -1 + param0, param1)) {
                             break L30;
+                          } else {
+                            var4_int = var4_int | this.a(5, 0);
+                            if (var12 == 0) {
+                              break L7;
+                            } else {
+                              break L30;
+                            }
                           }
                         }
                       }
                       L31: {
-                        if (this.c(33554432, param0 - 1, param1)) {
+                        if (!this.c(33554432, param0 - -1, param1)) {
                           break L31;
                         } else {
-                          var4_int = var4_int | this.a(1, 0);
+                          var4_int = var4_int | this.a(7, 0);
                           if (var12 == 0) {
-                            break L6;
+                            break L7;
                           } else {
                             break L31;
                           }
                         }
                       }
+                      L32: {
+                        if (this.c(param2 + 33562562, param0 - 1, param1)) {
+                          break L32;
+                        } else {
+                          var4_int = var4_int | this.a(1, param2 + 8130);
+                          if (var12 == 0) {
+                            break L7;
+                          } else {
+                            break L32;
+                          }
+                        }
+                      }
                       var4_int = var4_int | this.a(3, 0);
                       if (var12 == 0) {
-                        break L6;
+                        break L7;
                       } else {
-                        break L23;
+                        break L24;
                       }
                     }
-                    L32: {
-                      L33: {
+                    L33: {
+                      L34: {
                         stackOut_264_0 = var10;
                         stackIn_270_0 = stackOut_264_0;
                         stackIn_265_0 = stackOut_264_0;
                         if (this.c(33554432, param0 - -1, 2 + param1)) {
-                          break L33;
+                          break L34;
                         } else {
                           stackOut_265_0 = stackIn_265_0;
                           stackIn_267_0 = stackOut_265_0;
@@ -612,11 +628,11 @@ final class bm extends fc {
                             stackOut_272_1 = 0;
                             stackIn_273_0 = stackOut_272_0;
                             stackIn_273_1 = stackOut_272_1;
-                            break L32;
+                            break L33;
                           } else {
                             stackOut_268_0 = stackIn_268_0;
                             stackIn_270_0 = stackOut_268_0;
-                            break L33;
+                            break L34;
                           }
                         }
                       }
@@ -624,30 +640,30 @@ final class bm extends fc {
                       stackOut_270_1 = 1;
                       stackIn_273_0 = stackOut_270_0;
                       stackIn_273_1 = stackOut_270_1;
-                      break L32;
+                      break L33;
                     }
-                    L34: {
-                      L35: {
+                    L35: {
+                      L36: {
                         var10 = stackIn_273_0 | stackIn_273_1;
                         stackOut_273_0 = var9;
                         stackIn_277_0 = stackOut_273_0;
                         stackIn_274_0 = stackOut_273_0;
-                        if (this.c(33554432, param0 + -1, 2 + param1)) {
-                          break L35;
+                        if (this.c(param2 ^ -33562562, param0 + -1, 2 + param1)) {
+                          break L36;
                         } else {
                           stackOut_274_0 = stackIn_274_0;
                           stackIn_279_0 = stackOut_274_0;
                           stackIn_275_0 = stackOut_274_0;
-                          if (!this.c(33554432, -1 + param0, param1 + 1)) {
+                          if (!this.c(param2 + 33562562, -1 + param0, param1 + 1)) {
                             stackOut_279_0 = stackIn_279_0;
                             stackOut_279_1 = 0;
                             stackIn_280_0 = stackOut_279_0;
                             stackIn_280_1 = stackOut_279_1;
-                            break L34;
+                            break L35;
                           } else {
                             stackOut_275_0 = stackIn_275_0;
                             stackIn_277_0 = stackOut_275_0;
-                            break L35;
+                            break L36;
                           }
                         }
                       }
@@ -655,73 +671,73 @@ final class bm extends fc {
                       stackOut_277_1 = 1;
                       stackIn_280_0 = stackOut_277_0;
                       stackIn_280_1 = stackOut_277_1;
-                      break L34;
+                      break L35;
                     }
-                    L36: {
+                    L37: {
                       var9 = stackIn_280_0 | stackIn_280_1;
                       if (!this.c(33554432, param0 + 1, 1 + param1)) {
                         stackOut_283_0 = 0;
                         stackIn_284_0 = stackOut_283_0;
-                        break L36;
+                        break L37;
                       } else {
                         stackOut_281_0 = 128;
                         stackIn_284_0 = stackOut_281_0;
-                        break L36;
+                        break L37;
                       }
                     }
-                    L37: {
+                    L38: {
                       var11 = stackIn_284_0;
                       if (var7 != 0) {
-                        break L37;
+                        break L38;
                       } else {
                         if (var8 != 0) {
-                          break L37;
+                          break L38;
                         } else {
                           if (var9 == 0) {
-                            break L37;
+                            break L38;
                           } else {
                             if (var10 == 0) {
-                              break L37;
+                              break L38;
                             } else {
                               var4_int = var4_int | this.a(26, 0) - var11;
-                              break L37;
+                              break L38;
                             }
                           }
                         }
                       }
                     }
                     if (var7 != 0) {
-                      break L6;
+                      break L7;
                     } else {
                       if (var8 != 0) {
-                        break L6;
+                        break L7;
                       } else {
                         if (var9 != 0) {
-                          break L6;
+                          break L7;
                         } else {
                           if (var10 != 0) {
                             var4_int = var4_int | -var11 + this.a(28, 0);
-                            break L6;
+                            break L7;
                           } else {
-                            break L6;
+                            break L7;
                           }
                         }
                       }
                     }
                   }
-                  L38: {
+                  L39: {
                     if ((65408 & var4_int) != 0) {
-                      break L38;
+                      break L39;
                     } else {
                       var4_int = var4_int | this.a(24, 0);
-                      break L38;
+                      break L39;
                     }
                   }
                   stackOut_310_0 = var4_int;
                   stackIn_311_0 = stackOut_310_0;
                   break L0;
                 } else {
-                  break L1;
+                  break L2;
                 }
               }
             }
@@ -732,7 +748,7 @@ final class bm extends fc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var4, "bm.V(" + param0 + ',' + param1 + ',' + -8130 + ')');
+          throw fa.a((Throwable) (Object) var4, "bm.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_311_0;
     }
@@ -1019,8 +1035,8 @@ final class bm extends fc {
     }
 
     final static void a(int param0, ul param1) {
+        RuntimeException runtimeException = null;
         ja var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -1044,25 +1060,27 @@ final class bm extends fc {
             var2 = new ja(param1.a("final_frame.jpg", "", false), (java.awt.Component) (Object) dk.field_Ib);
             var3 = var2.field_x;
             var4 = var2.field_w;
-            int discarded$3 = 540;
-            m.c();
-            qp.field_v = new ja(var3, var4 * 3 / 4);
-            qp.field_v.a();
-            var2.c(0, 0);
-            qd.field_s = new ja(var3, -qp.field_v.field_w + var4);
-            qd.field_s.a();
-            var2.c(0, -qp.field_v.field_w);
-            qd.field_s.field_y = qp.field_v.field_w;
-            int discarded$4 = 1;
-            ql.a();
-            break L0;
+            m.c(540);
+            if (param0 == 30651) {
+              qp.field_v = new ja(var3, var4 * 3 / 4);
+              qp.field_v.a();
+              var2.c(0, 0);
+              qd.field_s = new ja(var3, -qp.field_v.field_w + var4);
+              qd.field_s.a();
+              var2.c(0, -qp.field_v.field_w);
+              qd.field_s.field_y = qp.field_v.field_w;
+              ql.a(true);
+              break L0;
+            } else {
+              return;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
-            var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2_ref;
-            stackOut_4_1 = new StringBuilder().append("bm.W(").append(30651).append(',');
+            runtimeException = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) runtimeException;
+            stackOut_4_1 = new StringBuilder().append("bm.W(").append(param0).append(',');
             stackIn_7_0 = stackOut_4_0;
             stackIn_7_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -1091,45 +1109,54 @@ final class bm extends fc {
 
     private final boolean a(int param0, byte param1, int param2) {
         RuntimeException var4 = null;
+        int stackIn_2_0 = 0;
         int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_9_0 = 0;
+        int stackOut_1_0 = 0;
         try {
           L0: {
-            L1: {
-              L2: {
-                if (this.c(33554432, param2, param0 - -1)) {
-                  break L2;
-                } else {
-                  if (this.c(33554432, param2, param0 - -2)) {
+            if (param1 == 2) {
+              L1: {
+                L2: {
+                  if (this.c(33554432, param2, param0 - -1)) {
                     break L2;
                   } else {
-                    stackOut_7_0 = 1;
-                    stackIn_10_0 = stackOut_7_0;
-                    break L1;
+                    if (this.c(33554432, param2, param0 - -2)) {
+                      break L2;
+                    } else {
+                      stackOut_7_0 = 1;
+                      stackIn_10_0 = stackOut_7_0;
+                      break L1;
+                    }
                   }
                 }
+                stackOut_9_0 = 0;
+                stackIn_10_0 = stackOut_9_0;
+                break L1;
               }
-              stackOut_9_0 = 0;
-              stackIn_10_0 = stackOut_9_0;
-              break L1;
+              break L0;
+            } else {
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var4, "bm.Q(" + param0 + ',' + 2 + ',' + param2 + ')');
+          throw fa.a((Throwable) (Object) var4, "bm.Q(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_10_0 != 0;
     }
 
     private final ek a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var6 = null;
+        sh var6 = null;
         int var6_int = 0;
-        sh var6_ref = null;
+        RuntimeException var6_ref = null;
         ge var7 = null;
+        Object stackIn_2_0 = null;
         lm stackIn_8_0 = null;
         sh stackIn_11_0 = null;
         ge stackIn_13_0 = null;
@@ -1139,40 +1166,46 @@ final class bm extends fc {
         Object stackOut_14_0 = null;
         sh stackOut_10_0 = null;
         lm stackOut_7_0 = null;
+        Object stackOut_1_0 = null;
         try {
           L0: {
-            if (0 == param4) {
-              var6_int = 1073741823 & param3;
-              var7 = new ge(param0, param1, var6_int);
-              var7.field_gb = (byte)((-1073741824 & param3) >>> 30);
-              stackOut_12_0 = (ge) var7;
-              stackIn_13_0 = stackOut_12_0;
-              return (ek) (Object) stackIn_13_0;
-            } else {
-              if (param4 != 1) {
-                if (param4 != 4) {
-                  stackOut_14_0 = null;
-                  stackIn_15_0 = stackOut_14_0;
-                  break L0;
-                } else {
-                  var6_ref = new sh(param0, param1);
-                  var6_ref.field_O = (byte)(3 & param3 >>> 30);
-                  stackOut_10_0 = (sh) var6_ref;
-                  stackIn_11_0 = stackOut_10_0;
-                  return (ek) (Object) stackIn_11_0;
-                }
+            if (param2 == -8944) {
+              if (0 == param4) {
+                var6_int = 1073741823 & param3;
+                var7 = new ge(param0, param1, var6_int);
+                var7.field_gb = (byte)((-1073741824 & param3) >>> 30);
+                stackOut_12_0 = (ge) var7;
+                stackIn_13_0 = stackOut_12_0;
+                return (ek) (Object) stackIn_13_0;
               } else {
-                int discarded$1 = 1;
-                stackOut_7_0 = ee.a(param3, param1, param0);
-                stackIn_8_0 = stackOut_7_0;
-                return (ek) (Object) stackIn_8_0;
+                if (param4 != 1) {
+                  if (param4 != 4) {
+                    stackOut_14_0 = null;
+                    stackIn_15_0 = stackOut_14_0;
+                    break L0;
+                  } else {
+                    var6 = new sh(param0, param1);
+                    var6.field_O = (byte)(3 & param3 >>> 30);
+                    stackOut_10_0 = (sh) var6;
+                    stackIn_11_0 = stackOut_10_0;
+                    return (ek) (Object) stackIn_11_0;
+                  }
+                } else {
+                  stackOut_7_0 = ee.a(param3, param1, param0, true);
+                  stackIn_8_0 = stackOut_7_0;
+                  return (ek) (Object) stackIn_8_0;
+                }
               }
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (ek) (Object) stackIn_2_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var6, "bm.S(" + param0 + ',' + param1 + ',' + -8944 + ',' + param3 + ',' + param4 + ')');
+          var6_ref = decompiledCaughtException;
+          throw fa.a((Throwable) (Object) var6_ref, "bm.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
         return (ek) (Object) stackIn_15_0;
     }
@@ -1213,101 +1246,103 @@ final class bm extends fc {
         try {
           L0: {
             var3_int = 0;
-            L1: while (true) {
-              stackOut_3_0 = var3_int;
-              stackOut_3_1 = param1.length;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              L2: while (true) {
-                L3: {
-                  L4: {
-                    if (stackIn_4_0 >= stackIn_4_1) {
-                      break L4;
-                    } else {
-                      if (var8 != 0) {
-                        break L3;
+            if (param0 < -105) {
+              L1: while (true) {
+                stackOut_3_0 = var3_int;
+                stackOut_3_1 = param1.length;
+                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_1 = stackOut_3_1;
+                L2: while (true) {
+                  L3: {
+                    L4: {
+                      if (stackIn_4_0 >= stackIn_4_1) {
+                        break L4;
                       } else {
-                        var4 = 0;
-                        L5: while (true) {
-                          L6: {
-                            if (~param1[0].length >= ~var4) {
-                              break L6;
-                            } else {
-                              int discarded$2 = -8130;
-                              var5 = this.b(var4, var3_int);
-                              var6 = (65408 & var5) >> 7;
-                              var7 = (33488896 & var5) >> 16;
-                              stackOut_8_0 = 0;
-                              stackOut_8_1 = -2147483648 & var5;
-                              stackIn_4_0 = stackOut_8_0;
-                              stackIn_4_1 = stackOut_8_1;
-                              stackIn_9_0 = stackOut_8_0;
-                              stackIn_9_1 = stackOut_8_1;
-                              if (var8 != 0) {
-                                continue L2;
+                        if (var8 != 0) {
+                          break L3;
+                        } else {
+                          var4 = 0;
+                          L5: while (true) {
+                            L6: {
+                              if (~param1[0].length >= ~var4) {
+                                break L6;
                               } else {
-                                L7: {
-                                  if (stackIn_9_0 == stackIn_9_1) {
-                                    break L7;
-                                  } else {
-                                    L8: {
-                                      L9: {
-                                        if (var6 < 9) {
-                                          break L9;
-                                        } else {
-                                          if (var6 <= 32) {
-                                            break L8;
-                                          } else {
-                                            break L9;
-                                          }
-                                        }
-                                      }
-                                      L10: {
-                                        if (9 > var7) {
-                                          break L10;
-                                        } else {
-                                          if (var7 <= 32) {
-                                            break L8;
-                                          } else {
-                                            break L10;
-                                          }
-                                        }
-                                      }
-                                      int discarded$3 = -8130;
-                                      if ((this.b(var4, 1 + var3_int) >> 7 & 511) != 16) {
-                                        break L7;
-                                      } else {
-                                        break L8;
-                                      }
-                                    }
-                                    var5 = var5 | 67108864;
-                                    break L7;
-                                  }
-                                }
-                                ((bm) this).field_f[var3_int][var4] = var5;
-                                var4++;
-                                if (var8 == 0) {
-                                  continue L5;
+                                var5 = this.b(var4, var3_int, -8130);
+                                var6 = (65408 & var5) >> 7;
+                                var7 = (33488896 & var5) >> 16;
+                                stackOut_8_0 = 0;
+                                stackOut_8_1 = -2147483648 & var5;
+                                stackIn_4_0 = stackOut_8_0;
+                                stackIn_4_1 = stackOut_8_1;
+                                stackIn_9_0 = stackOut_8_0;
+                                stackIn_9_1 = stackOut_8_1;
+                                if (var8 != 0) {
+                                  continue L2;
                                 } else {
-                                  break L6;
+                                  L7: {
+                                    if (stackIn_9_0 == stackIn_9_1) {
+                                      break L7;
+                                    } else {
+                                      L8: {
+                                        L9: {
+                                          if (var6 < 9) {
+                                            break L9;
+                                          } else {
+                                            if (var6 <= 32) {
+                                              break L8;
+                                            } else {
+                                              break L9;
+                                            }
+                                          }
+                                        }
+                                        L10: {
+                                          if (9 > var7) {
+                                            break L10;
+                                          } else {
+                                            if (var7 <= 32) {
+                                              break L8;
+                                            } else {
+                                              break L10;
+                                            }
+                                          }
+                                        }
+                                        if ((this.b(var4, 1 + var3_int, -8130) >> 7 & 511) != 16) {
+                                          break L7;
+                                        } else {
+                                          break L8;
+                                        }
+                                      }
+                                      var5 = var5 | 67108864;
+                                      break L7;
+                                    }
+                                  }
+                                  ((bm) this).field_f[var3_int][var4] = var5;
+                                  var4++;
+                                  if (var8 == 0) {
+                                    continue L5;
+                                  } else {
+                                    break L6;
+                                  }
                                 }
                               }
                             }
-                          }
-                          var3_int++;
-                          if (var8 == 0) {
-                            continue L1;
-                          } else {
-                            break L4;
+                            var3_int++;
+                            if (var8 == 0) {
+                              continue L1;
+                            } else {
+                              break L4;
+                            }
                           }
                         }
                       }
                     }
+                    break L3;
                   }
-                  break L3;
+                  break L0;
                 }
-                break L0;
               }
+            } else {
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1315,7 +1350,7 @@ final class bm extends fc {
           L11: {
             var3 = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var3;
-            stackOut_29_1 = new StringBuilder().append("bm.AA(").append(-117).append(',');
+            stackOut_29_1 = new StringBuilder().append("bm.AA(").append(param0).append(',');
             stackIn_32_0 = stackOut_29_0;
             stackIn_32_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -1450,8 +1485,7 @@ final class bm extends fc {
                       break L7;
                     }
                   } else {
-                    int discarded$1 = 0;
-                    bd.a("no target_menu ", (Throwable) null);
+                    bd.a("no target_menu ", (Throwable) null, false);
                     return;
                   }
                 }

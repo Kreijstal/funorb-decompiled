@@ -33,8 +33,7 @@ final class nc extends ni {
         try {
           L0: {
             if (param1 > 53) {
-              int discarded$2 = 42;
-              stackOut_3_0 = hk.a(0, param0.field_k.length());
+              stackOut_3_0 = hk.a(0, param0.field_k.length(), '*');
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -80,7 +79,7 @@ final class nc extends ni {
         this(vd.field_h, param0);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_s = null;
         field_p = null;
         field_q = null;

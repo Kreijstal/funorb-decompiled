@@ -164,7 +164,7 @@ final class aj extends ig {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_s = null;
     }
 

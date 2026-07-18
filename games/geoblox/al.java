@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class al {
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -72,8 +72,7 @@ final class al {
                     }
                   }
                 } else {
-                  int discarded$16 = 125;
-                  gi.a((Throwable) null, "A1: " + og.e(55));
+                  gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
                   jl.a((byte) -120);
                   break L1;
                 }

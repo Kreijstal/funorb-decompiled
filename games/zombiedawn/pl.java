@@ -830,31 +830,27 @@ final class pl extends al {
 
     final static void a(String param0, byte param1, java.applet.Applet param2) {
         try {
-            String var6 = null;
+            String var3 = null;
             String var5 = null;
             String var4 = null;
-            String var7 = null;
             try {
                 g.field_H = param0;
                 try {
-                    var6 = param2.getParameter("cookieprefix");
-                    var5 = var6;
-                    var5 = var6;
+                    var3 = param2.getParameter("cookieprefix");
+                    var5 = var3;
+                    var5 = var3;
                     var4 = param2.getParameter("cookiehost");
                     var5 = var4;
                     var5 = var4;
-                    var7 = var6 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
-                    var5 = var7;
-                    var5 = var7;
+                    var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
                     if (param0.length() == 0) {
-                        var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                        var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
                     qe.a("document.cookie=\"" + var5 + "\"", param2, (byte) 116);
                 } catch (Throwable throwable) {
                 }
                 int var3_int = 60 % ((6 - param1) / 62);
-                int discarded$0 = 1;
-                hl.a(param2);
+                hl.a(param2, 1);
             } catch (RuntimeException runtimeException) {
                 throw sh.a((Throwable) (Object) runtimeException, "pl.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
@@ -1493,7 +1489,7 @@ final class pl extends al {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_t = null;
         field_p = null;
     }

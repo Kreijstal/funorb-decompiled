@@ -54,8 +54,7 @@ final class jg extends ha implements ql {
                   if (param0.field_i == 248) {
                     L2: {
                       if (!param2) {
-                        int discarded$3 = 100;
-                        jg.i();
+                        jg.i((byte) 100);
                         break L2;
                       } else {
                         break L2;
@@ -85,7 +84,7 @@ final class jg extends ha implements ql {
                   ((jg) this).c((byte) 54, (we) (Object) new ja((jg) this));
                   return;
                 } else {
-                  t discarded$4 = var5.a(0, (of) this, pi.field_i);
+                  t discarded$2 = var5.a(0, (of) this, pi.field_i);
                   break L3;
                 }
               } else {
@@ -100,7 +99,7 @@ final class jg extends ha implements ql {
                       break L4;
                     }
                   } else {
-                    t discarded$5 = var5.a(0, (of) this, pi.field_i);
+                    t discarded$3 = var5.a(0, (of) this, pi.field_i);
                     break L4;
                   }
                 }
@@ -164,7 +163,7 @@ final class jg extends ha implements ql {
         }
     }
 
-    public static void r() {
+    public static void r(int param0) {
         field_kb = null;
     }
 
@@ -234,9 +233,8 @@ final class jg extends ha implements ql {
         }
     }
 
-    private final static void i() {
-        int discarded$0 = 0;
-        nh.a((byte) 93, ii.a());
+    private final static void i(byte param0) {
+        nh.a((byte) 93, ii.a(false));
     }
 
     final static int a(byte param0, int param1, Random param2) {

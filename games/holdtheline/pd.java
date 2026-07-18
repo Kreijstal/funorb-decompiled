@@ -40,8 +40,7 @@ class pd extends sd {
           L0: {
             dl.field_i = dl.field_i + 65536;
             L1: while (true) {
-              int discarded$1 = -100;
-              if (on.a(bg.field_c, dl.field_i) < 65536) {
+              if (on.a(bg.field_c, dl.field_i, (byte) -100) < 65536) {
                 L2: {
                   var2_int = -1;
                   if (qk.field_y != null) {
@@ -289,13 +288,13 @@ class pd extends sd {
         return stackIn_81_0;
     }
 
-    final static Boolean b() {
+    final static Boolean b(byte param0) {
         Boolean var1 = wd.field_u;
         wd.field_u = null;
         return var1;
     }
 
-    final static boolean a(vk param0) {
+    final static boolean a(vk param0, boolean param1) {
         RuntimeException var2 = null;
         int[] var2_array = null;
         int var3_int = 0;
@@ -342,8 +341,7 @@ class pd extends sd {
         var9 = HoldTheLine.field_D;
         try {
           L0: {
-            int discarded$1 = -65;
-            if (mm.a(param0)) {
+            if (mm.a(param0, -65)) {
               var10 = go.field_g[param0.field_p];
               var2_array = var10;
               var3_int = 0;

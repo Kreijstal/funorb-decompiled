@@ -5,7 +5,7 @@ final class wd extends rqa {
     static gj field_p;
     static gl field_o;
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_p = null;
     }

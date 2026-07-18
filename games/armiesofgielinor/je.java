@@ -72,7 +72,7 @@ class je extends im {
         }
     }
 
-    final static void c(boolean param0) {
+    final static void c(boolean param0, int param1) {
         int var3 = 0;
         L0: {
           L1: {
@@ -133,8 +133,7 @@ class je extends im {
                         if (gk.field_J != 0) {
                           break L4;
                         } else {
-                          int discarded$1 = 14570;
-                          tr.h();
+                          tr.h(14570);
                           break L4;
                         }
                       }
@@ -719,7 +718,7 @@ class je extends im {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
+        je var13 = null;
         int var14 = 0;
         Object stackIn_24_0 = null;
         Object stackIn_25_0 = null;
@@ -752,7 +751,6 @@ class je extends im {
         Object stackOut_37_0 = null;
         int stackOut_37_1 = 0;
         L0: {
-          var13 = null;
           var14 = ArmiesOfGielinor.field_M ? 1 : 0;
           if (((je) this).field_J > 0) {
             var7 = -(-((je) this).field_J >> 2);
@@ -949,13 +947,13 @@ class je extends im {
           if (null == ((je) this).field_fb) {
             break L11;
           } else {
-            var13 = (Object) (Object) (je) (Object) ((je) this).field_fb.d((byte) -82);
+            var13 = (je) (Object) ((je) this).field_fb.d((byte) -82);
             L12: while (true) {
               if (var13 == null) {
                 break L11;
               } else {
-                ((je) var13).a(param0, param1, ((je) var13).field_D, ((je) var13).field_ob, ((je) var13).field_gb, ((je) var13).field_V);
-                var13 = (Object) (Object) (je) (Object) ((je) var13).field_fb.b((byte) 88);
+                var13.a(param0, param1, ((je) this).field_D, ((je) this).field_ob, ((je) this).field_gb, ((je) this).field_V);
+                var13 = (je) (Object) ((je) this).field_fb.b((byte) 88);
                 continue L12;
               }
             }
@@ -970,7 +968,7 @@ class je extends im {
           }
         }
         L14: {
-          if (!((je) var13).field_jb) {
+          if (!((je) this).field_jb) {
             break L14;
           } else {
             bl.field_f = true;
@@ -979,14 +977,14 @@ class je extends im {
         }
         L15: {
           qn.f(var8, var9, var10, var11);
-          if (((je) var13).field_hb == 0) {
+          if (((je) this).field_hb == 0) {
             break L15;
           } else {
-            if (((je) var13).field_Gb) {
+            if (((je) this).field_Gb) {
               L16: {
-                ((je) this).field_S = -((je) var13).field_bb + sm.field_d - param5;
-                ((je) this).field_ab = -((je) var13).field_Ab + ko.field_b - param2;
-                if (0 > ((je) var13).field_S) {
+                ((je) this).field_S = -((je) this).field_bb + sm.field_d - param5;
+                ((je) this).field_ab = -((je) this).field_Ab + ko.field_b - param2;
+                if (0 > ((je) this).field_S) {
                   ((je) this).field_S = 0;
                   break L16;
                 } else {
@@ -994,7 +992,7 @@ class je extends im {
                 }
               }
               L17: {
-                if (((je) var13).field_ab < 0) {
+                if (((je) this).field_ab < 0) {
                   ((je) this).field_ab = 0;
                   break L17;
                 } else {
@@ -1002,25 +1000,25 @@ class je extends im {
                 }
               }
               L18: {
-                if (((je) var13).field_S <= param4 - ((je) var13).field_gb) {
+                if (((je) this).field_S <= param4 - ((je) this).field_gb) {
                   break L18;
                 } else {
-                  ((je) this).field_S = -((je) var13).field_gb + param4;
+                  ((je) this).field_S = -((je) this).field_gb + param4;
                   break L18;
                 }
               }
               L19: {
                 ((je) this).field_db = 0;
-                if (((je) var13).field_ab <= param3 + -((je) var13).field_ob) {
+                if (((je) this).field_ab <= param3 + -((je) this).field_ob) {
                   break L19;
                 } else {
-                  ((je) this).field_ab = param3 - ((je) var13).field_ob;
+                  ((je) this).field_ab = param3 - ((je) this).field_ob;
                   break L19;
                 }
               }
-              ((je) this).field_V = ((je) var13).field_S + param5;
+              ((je) this).field_V = ((je) this).field_S + param5;
               ((je) this).field_J = 0;
-              ((je) this).field_D = param2 - -((je) var13).field_ab;
+              ((je) this).field_D = param2 - -((je) this).field_ab;
               break L15;
             } else {
               break L15;
@@ -1032,7 +1030,7 @@ class je extends im {
     final void b(int param0, je param1) {
         bb var3 = null;
         RuntimeException var3_ref = null;
-        Object var4 = null;
+        je var4 = null;
         int var5 = 0;
         Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
@@ -1059,7 +1057,6 @@ class je extends im {
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
         String stackOut_15_2 = null;
-        var4 = null;
         var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -1074,13 +1071,13 @@ class je extends im {
             L2: {
               if (null != ((je) this).field_fb) {
                 var3 = new bb(((je) this).field_fb);
-                var4 = (Object) (Object) (je) (Object) var3.c(param0 + 47);
+                var4 = (je) (Object) var3.c(param0 + 47);
                 L3: while (true) {
                   if (var4 == null) {
                     break L2;
                   } else {
-                    ((je) var4).b(param0, param1);
-                    var4 = (Object) (Object) (je) (Object) var3.b(param0 + 47);
+                    var4.b(param0, param1);
+                    var4 = (je) (Object) var3.b(param0 + 47);
                     continue L3;
                   }
                 }
@@ -1108,10 +1105,10 @@ class je extends im {
             }
             L5: {
               ((je) this).field_Y = stackIn_11_1 != 0;
-              if (!((je) var4).field_Db) {
+              if (!((je) this).field_Db) {
                 break L5;
               } else {
-                ((je) this).field_rb = ((je) var4).field_Y;
+                ((je) this).field_rb = ((je) this).field_Y;
                 break L5;
               }
             }
@@ -1525,7 +1522,7 @@ class je extends im {
             while (var4 != null) {
                 var4.field_Cb = true;
                 var4.i(-10027);
-                var4 = (je) (Object) var4.field_fb.b((byte) -104);
+                var4 = (je) (Object) ((je) this).field_fb.b((byte) -104);
             }
         }
         if (param0 != -10027) {
@@ -1996,8 +1993,8 @@ class je extends im {
               if (var23_ref == null) {
                 break L30;
               } else {
-                var23_ref.a((byte) -26, var23_ref.field_ob, param2, var23_ref.field_gb, var20 + var23_ref.field_D, param5, var23_ref.field_Y, param7, var23_ref.field_V - -var19, param9, param10);
-                var23_ref = (je) (Object) var23_ref.field_fb.a((byte) 123);
+                var23_ref.a((byte) -26, ((je) this).field_ob, param2, ((je) this).field_gb, var20 + ((je) this).field_D, param5, ((je) this).field_Y, param7, ((je) this).field_V - -var19, param9, param10);
+                var23_ref = (je) (Object) ((je) this).field_fb.a((byte) 123);
                 continue L31;
               }
             }

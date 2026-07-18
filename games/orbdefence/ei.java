@@ -5,7 +5,7 @@ final class ei {
     static String field_b;
     static String field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
     }
@@ -77,7 +77,7 @@ final class ei {
         return stackIn_5_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2_int = 0;
         Object var2 = null;

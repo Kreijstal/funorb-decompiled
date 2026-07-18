@@ -12,7 +12,7 @@ final class ae {
     static wi field_a;
     static String field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_g = null;
         field_d = null;

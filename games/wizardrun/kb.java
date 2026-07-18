@@ -6,7 +6,7 @@ import java.io.*;
 final class kb extends gf {
     static o field_jb;
 
-    final static void j() {
+    final static void j(byte param0) {
         tj.a(3088, jg.f(1));
     }
 
@@ -387,7 +387,7 @@ final class kb extends gf {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_jb = null;
     }
 

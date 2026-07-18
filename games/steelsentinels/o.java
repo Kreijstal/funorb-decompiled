@@ -61,7 +61,7 @@ final class o {
         return -1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_f = null;
@@ -95,8 +95,7 @@ final class o {
           L0: {
             if (param0 < -29) {
               L1: {
-                int discarded$11 = -41;
-                if (null == da.a(param1)) {
+                if (null == da.a(param1, (byte) -41)) {
                   stackOut_5_0 = 0;
                   stackIn_6_0 = stackOut_5_0;
                   break L1;

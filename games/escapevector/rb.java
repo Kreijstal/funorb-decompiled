@@ -8,7 +8,7 @@ final class rb extends hg {
     String field_g;
     int field_i;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_k = null;
         field_j = null;

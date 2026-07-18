@@ -118,15 +118,14 @@ final class cg {
               if (((cg) this).field_e < ((cg) this).field_a) {
                 break L1;
               } else {
-                int discarded$4 = -1;
-                this.c();
+                this.c(-1);
                 break L1;
               }
             }
             L2: {
-              int fieldTemp$5 = ((cg) this).field_e;
+              int fieldTemp$2 = ((cg) this).field_e;
               ((cg) this).field_e = ((cg) this).field_e + 1;
-              var3_int = fieldTemp$5;
+              var3_int = fieldTemp$2;
               ((cg) this).field_g[var3_int] = param0;
               var5 = param0.field_d;
               if (param1 == -83) {
@@ -202,7 +201,7 @@ final class cg {
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var3 = 0;
         int var4 = OrbDefence.field_D ? 1 : 0;
         ((cg) this).field_a = ((cg) this).field_a << 1;

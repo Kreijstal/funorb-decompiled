@@ -13,7 +13,7 @@ final class tc extends pi {
     static String field_p;
     String field_n;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_r = null;
         field_o = null;
         field_v = null;

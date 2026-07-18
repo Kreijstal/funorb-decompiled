@@ -11,7 +11,7 @@ final class kj {
     static String field_f;
     static he field_g;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1, int param2) {
         int var4 = 0;
         if (pj.field_h == null) {
             return;
@@ -20,8 +20,7 @@ final class kj {
         if (var3 != -2) {
             if (!(var3 == -1)) {
                 var4 = pj.field_h.b(false) ? 1 : 0;
-                int discarded$0 = 79;
-                ng.a(14, var4 != 0, pj.field_h.field_Lb, var3, pj.field_h.a(true));
+                ng.a(14, var4 != 0, pj.field_h.field_Lb, var3, pj.field_h.a(true), 79);
             }
             pj.field_h = null;
             fi.a(-393711775);
@@ -73,7 +72,7 @@ final class kj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_f = null;
         field_g = null;

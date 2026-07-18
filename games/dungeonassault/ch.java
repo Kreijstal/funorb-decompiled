@@ -76,16 +76,16 @@ class ch extends hl {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_l = null;
         field_n = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
     }
 
-    final static void a(byte param0, fn param1) {
+    final static void a(byte param0, fn param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;

@@ -269,11 +269,11 @@ final class va extends hs {
         }
     }
 
-    private final int h() {
+    private final int h(int param0) {
         return ((va) this).a((byte) 13) ? ((va) this).field_g : ((va) this).field_a.b((byte) -69, ((va) this).field_h);
     }
 
-    private final void l() {
+    private final void l(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -448,7 +448,7 @@ final class va extends hs {
             if (!((va) this).field_B) {
               break L2;
             } else {
-              wh discarded$13 = sp.c(34, 75);
+              wh discarded$12 = sp.c(34, 75);
               ((va) this).field_B = false;
               break L2;
             }
@@ -466,7 +466,7 @@ final class va extends hs {
                   break L3;
                 } else {
                   ((va) this).field_j = true;
-                  wh discarded$14 = sp.c(33, 98);
+                  wh discarded$13 = sp.c(33, 98);
                   break L3;
                 }
               }
@@ -482,7 +482,7 @@ final class va extends hs {
                   break L3;
                 } else {
                   ((va) this).field_j = true;
-                  wh discarded$15 = sp.c(33, 98);
+                  wh discarded$14 = sp.c(33, 98);
                   break L3;
                 }
               }
@@ -666,8 +666,7 @@ final class va extends hs {
               break L16;
             }
             if (3 == rm.field_C) {
-              int discarded$16 = -23079;
-              this.o();
+              this.o(-23079);
               break L15;
             } else {
               break L15;
@@ -695,14 +694,14 @@ final class va extends hs {
           }
           if (Math.abs(((va) this).field_a.field_V.field_n >> 16) <= 4) {
             if (((va) this).field_a.field_V.e(-118) > 6553600) {
-              wh discarded$17 = sp.c(37, -113);
+              wh discarded$15 = sp.c(37, -113);
               break L18;
             } else {
-              wh discarded$18 = sp.c(36, -102);
+              wh discarded$16 = sp.c(36, -102);
               break L18;
             }
           } else {
-            wh discarded$19 = sp.c(35, 91);
+            wh discarded$17 = sp.c(35, 91);
             break L18;
           }
         }
@@ -782,7 +781,7 @@ final class va extends hs {
                 } else {
                   L26: {
                     if (rm.field_C == 1) {
-                      wh discarded$20 = gt.a(false, -1, (byte) 122, 5);
+                      wh discarded$18 = gt.a(false, -1, (byte) 122, 5);
                       break L26;
                     } else {
                       break L26;
@@ -792,12 +791,12 @@ final class va extends hs {
                     if (rm.field_C != 2) {
                       break L27;
                     } else {
-                      wh discarded$21 = gt.a(false, -1, (byte) -106, 26);
+                      wh discarded$19 = gt.a(false, -1, (byte) -106, 26);
                       break L27;
                     }
                   }
                   if (rm.field_C == 3) {
-                    wh discarded$22 = gt.a(false, -1, (byte) -75, 32);
+                    wh discarded$20 = gt.a(false, -1, (byte) -75, 32);
                     break L22;
                   } else {
                     break L22;
@@ -890,7 +889,7 @@ final class va extends hs {
                     break L32;
                   }
                 }
-                wh discarded$23 = gt.a(stackIn_119_0 != 0, stackIn_119_1, (byte) stackIn_119_2, stackIn_119_3);
+                wh discarded$21 = gt.a(stackIn_119_0 != 0, stackIn_119_1, (byte) stackIn_119_2, stackIn_119_3);
                 break L31;
               } else {
                 break L31;
@@ -930,7 +929,7 @@ final class va extends hs {
                     break L34;
                   }
                 }
-                wh discarded$24 = gt.a(stackIn_125_0 != 0, stackIn_125_1, (byte) stackIn_125_2, stackIn_125_3);
+                wh discarded$22 = gt.a(stackIn_125_0 != 0, stackIn_125_1, (byte) stackIn_125_2, stackIn_125_3);
                 break L33;
               } else {
                 break L33;
@@ -969,7 +968,7 @@ final class va extends hs {
                   break L35;
                 }
               }
-              wh discarded$25 = gt.a(stackIn_131_0 != 0, stackIn_131_1, (byte) stackIn_131_2, stackIn_131_3);
+              wh discarded$23 = gt.a(stackIn_131_0 != 0, stackIn_131_1, (byte) stackIn_131_2, stackIn_131_3);
               break L28;
             } else {
               break L28;
@@ -1015,9 +1014,8 @@ final class va extends hs {
         return stackIn_5_0 != 0;
     }
 
-    final static ec f() {
-        int discarded$0 = 320;
-        return new ec(he.a(), lj.a(false));
+    final static ec f(int param0) {
+        return new ec(he.a(320), lj.a(false));
     }
 
     private final void c(int param0, int param1, int param2) {
@@ -1079,12 +1077,11 @@ final class va extends hs {
         if (param0 > -77) {
             this.g(-34, -31);
         }
-        int discarded$0 = 370;
-        this.a(((va) this).field_a, ((va) this).field_f);
+        this.a(((va) this).field_a, ((va) this).field_f, 370);
         ((va) this).a((tf) null, (byte) -126);
     }
 
-    private final void n() {
+    private final void n(int param0) {
         boolean[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -1300,8 +1297,7 @@ final class va extends hs {
                   }
                 }
                 ((va) this).field_H = var7;
-                int discarded$1 = 0;
-                this.b();
+                this.b(false);
                 break L8;
               } else {
                 break L8;
@@ -1432,7 +1428,7 @@ final class va extends hs {
         }
     }
 
-    private final void i() {
+    private final void i(int param0) {
         int var2 = 0;
         int var3 = 0;
         nl var4 = null;
@@ -1481,8 +1477,7 @@ final class va extends hs {
         int stackOut_18_0 = 0;
         L0: {
           var5 = Kickabout.field_G;
-          int discarded$1 = 640;
-          if (!kl.b()) {
+          if (!kl.b(640)) {
             break L0;
           } else {
             if (((va) this).b((byte) -65)) {
@@ -1823,8 +1818,7 @@ final class va extends hs {
                     var3_int++;
                     continue L2;
                   } else {
-                    int discarded$1 = 1;
-                    ((va) this).field_r.a((gn) (Object) lb.a((gm) (Object) ((va) this).field_a.field_P[var3_int][var4_int]), 3);
+                    ((va) this).field_r.a((gn) (Object) lb.a((gm) (Object) ((va) this).field_a.field_P[var3_int][var4_int], 1), 3);
                     var4_int++;
                     continue L5;
                   }
@@ -1864,7 +1858,7 @@ final class va extends hs {
         }
     }
 
-    private final void o() {
+    private final void o(int param0) {
         int var2 = 0;
         int var3 = 0;
         wh var4 = null;
@@ -1887,7 +1881,7 @@ final class va extends hs {
         }
     }
 
-    private final void a(nu param0, boolean param1) {
+    private final void a(nu param0, boolean param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -2224,8 +2218,7 @@ final class va extends hs {
             return;
           } else {
             if (ja.field_O) {
-              int discarded$2 = 13459;
-              nt.j();
+              nt.j(13459);
               return;
             } else {
               L0: {
@@ -2237,8 +2230,7 @@ final class va extends hs {
                 }
               }
               L1: {
-                int discarded$3 = -41;
-                var2 = this.h();
+                var2 = this.h(-41);
                 var3 = (gm) (Object) ((va) this).field_a.a((byte) -70, var2);
                 if (((va) this).field_a.c(var2, -67)) {
                   var4 = var3.g(1606384336);
@@ -2277,7 +2269,7 @@ final class va extends hs {
         }
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         int var2 = 0;
         int var3 = 0;
         gm var4 = null;
@@ -2545,7 +2537,7 @@ final class va extends hs {
         }
     }
 
-    private final void k() {
+    private final void k(int param0) {
         ut var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -2568,7 +2560,7 @@ final class va extends hs {
         }
     }
 
-    final static java.awt.Container d() {
+    final static java.awt.Container d(byte param0) {
         if (rq.field_A != null) {
             return (java.awt.Container) (Object) rq.field_A;
         }
@@ -2685,20 +2677,16 @@ final class va extends hs {
             }
             L3: {
               ((va) this).field_B = stackIn_7_1 != 0;
-              int discarded$4 = 370;
-              this.a(param0, param3);
+              this.a(param0, param3, 370);
               ((va) this).a((tf) null, (byte) -97);
-              int discarded$5 = -41;
-              var6_int = this.h();
+              var6_int = this.h(-41);
               ((va) this).field_C = uj.a((byte) -97, param0.field_g, param0.field_S, param0.field_g[var6_int].field_p);
               ((va) this).field_l = true;
-              int discarded$6 = 1;
-              sf.a(((va) this).field_h, param1, param0);
+              sf.a(((va) this).field_h, param1, param0, true);
               wt.a(0, param0, var6_int, ((va) this).field_C);
               st.a(param0, var6_int, 50);
               ih.a(-3, param0, ((va) this).field_h);
-              int discarded$7 = 101;
-              un.a(param0, ((va) this).field_h);
+              un.a(param0, ((va) this).field_h, 101);
               ((va) this).field_q = 172;
               if (param0.field_g[var6_int].field_p != 1) {
                 stackOut_9_0 = 0;
@@ -2771,7 +2759,7 @@ final class va extends hs {
         }
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         this.a(false, mg.a(false, ((va) this).field_H, ((va) this).field_g));
         if (!(!((va) this).field_f)) {
             or.field_d.b(68, (byte) -65);
@@ -2855,16 +2843,14 @@ final class va extends hs {
         int stackOut_19_0 = 0;
         L0: {
           var5 = Kickabout.field_G;
-          int discarded$6 = -126;
-          qa.i();
+          qa.i(-126);
           if (!((va) this).field_u) {
             break L0;
           } else {
             if (!((va) this).a((byte) 13)) {
               break L0;
             } else {
-              int discarded$7 = 107;
-              this.e();
+              this.e((byte) 107);
               break L0;
             }
           }
@@ -2940,15 +2926,13 @@ final class va extends hs {
                         }
                       }
                     }
-                    int discarded$8 = 70;
-                    ue.a();
+                    ue.a((byte) 70);
                     break L7;
                   }
                   L9: {
                     if (((va) this).field_f) {
                       if (((va) this).field_a.field_O < ((va) this).field_a.field_v) {
-                        int discarded$9 = 0;
-                        this.k();
+                        this.k(0);
                         if (!((va) this).a((byte) 13)) {
                           break L9;
                         } else {
@@ -3020,15 +3004,13 @@ final class va extends hs {
                             if (var4 >= 5) {
                               break L12;
                             } else {
-                              int discarded$10 = 99;
-                              or.a(((va) this).field_a, var4, var2);
+                              or.a(((va) this).field_a, var4, var2, (byte) 99);
                               var4++;
                               continue L13;
                             }
                           }
                         } else {
-                          int discarded$11 = 99;
-                          or.a(((va) this).field_a, var3, var2);
+                          or.a(((va) this).field_a, var3, var2, (byte) 99);
                           break L12;
                         }
                       }
@@ -3276,10 +3258,8 @@ final class va extends hs {
     final void a(int param0, boolean param1) {
         ((va) this).field_u = param1 ? true : false;
         if (((va) this).field_u) {
-            int discarded$0 = -122;
-            this.n();
-            int discarded$1 = 16623;
-            this.i();
+            this.n(-122);
+            this.i(16623);
         }
         if (((va) this).field_g == ((va) this).field_a.field_V.field_j) {
             if (!(!ei.field_n)) {
@@ -3289,8 +3269,7 @@ final class va extends hs {
         this.a(true, ((va) this).field_a);
         if (((va) this).field_a.field_G != ((va) this).field_n) {
             ((va) this).field_n = ((va) this).field_a.field_G;
-            int discarded$2 = -90;
-            this.j();
+            this.j(-90);
         }
         nl var4 = ((va) this).field_a.b((byte) -96);
         if (var4 != null) {
@@ -3300,21 +3279,15 @@ final class va extends hs {
             return;
         }
         uc.a(((va) this).field_r, -22488);
-        int discarded$3 = 7249;
-        is.a();
-        int discarded$4 = 2115;
-        this.l();
-        int discarded$5 = 40;
-        de.b();
-        int discarded$6 = 88;
-        kl.c();
-        int discarded$7 = 0;
-        he.i();
-        int discarded$8 = 0;
-        qs.a();
+        is.a(7249);
+        this.l(2115);
+        de.b(40);
+        kl.c(88);
+        he.i(0);
+        qs.a(false);
     }
 
-    private final void j() {
+    private final void j(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -3432,7 +3405,7 @@ final class va extends hs {
         }
     }
 
-    final static void a(java.awt.Canvas param0, boolean param1) {
+    final static void a(java.awt.Canvas param0, boolean param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -3467,9 +3440,7 @@ final class va extends hs {
                     break L2;
                   }
                 }
-                int discarded$2 = 60;
-                int discarded$3 = 92;
-                fo.a(var3_int != 0, -68, ki.g(), hm.field_A, pe.a());
+                fo.a(var3_int != 0, -68, ki.g((byte) 60), hm.field_A, pe.a((byte) 92));
                 break L1;
               } else {
                 if (!nq.i(-86)) {

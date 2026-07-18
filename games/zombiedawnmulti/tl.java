@@ -9,9 +9,8 @@ final class tl extends qa {
     private String[] field_u;
     private int[] field_q;
 
-    final static boolean d() {
-        int discarded$0 = 2;
-        return pd.a(jj.field_M, ql.field_a);
+    final static boolean d(byte param0) {
+        return pd.a(jj.field_M, ql.field_a, 2);
     }
 
     final void a(k param0, byte param1) {
@@ -182,8 +181,7 @@ final class tl extends qa {
                         } else {
                           L5: {
                             var7 = param1.d((byte) 69);
-                            int discarded$1 = 35;
-                            var8 = r.a(var7);
+                            var8 = r.a(var7, (byte) 35);
                             if (var8 != null) {
                               ((tl) this).field_q[var6] = var7;
                               ((tl) this).field_s[var6] = new int[var8.field_f];
@@ -271,7 +269,7 @@ final class tl extends qa {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_t = null;
     }
 

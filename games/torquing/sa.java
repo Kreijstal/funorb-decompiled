@@ -69,7 +69,7 @@ final class sa implements Runnable {
         }
     }
 
-    final static dq a() {
+    final static dq a(byte param0) {
         if (!(null != lk.field_v)) {
             lk.field_v = new dq();
             lk.field_v.a(dg.field_e, (byte) -124);
@@ -85,7 +85,7 @@ final class sa implements Runnable {
         return lk.field_v;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, boolean param1) {
         param0.addMouseListener((java.awt.event.MouseListener) (Object) ef.field_b);
         param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ef.field_b);
         try {

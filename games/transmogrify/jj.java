@@ -6,7 +6,7 @@ final class jj {
     static String[] field_b;
     static int[][] field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -116,7 +116,7 @@ final class jj {
         }
     }
 
-    final static void a(boolean param0, String param1) {
+    final static void a(boolean param0, String param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

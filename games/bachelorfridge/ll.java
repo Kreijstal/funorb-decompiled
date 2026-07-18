@@ -480,7 +480,7 @@ final class ll extends pu {
         return stackIn_24_0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_l = null;
     }
 

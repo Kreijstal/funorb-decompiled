@@ -105,13 +105,13 @@ final class wg extends aba {
         return stackIn_15_0;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         if (!qo.field_c) {
             throw new IllegalStateException();
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_h = null;
         field_i = null;
     }
@@ -165,8 +165,7 @@ final class wg extends aba {
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
               } else {
-                int discarded$14 = 63;
-                if (kaa.a(var5)) {
+                if (kaa.a(var5, (byte) 63)) {
                   stackOut_9_0 = sh.field_D;
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
@@ -189,8 +188,7 @@ final class wg extends aba {
                             stackIn_25_0 = stackOut_24_0;
                             return stackIn_25_0;
                           } else {
-                            int discarded$15 = 0;
-                            if (db.a(var7, var5)) {
+                            if (db.a(var7, var5, false)) {
                               stackOut_28_0 = me.field_s;
                               stackIn_29_0 = stackOut_28_0;
                               return stackIn_29_0;

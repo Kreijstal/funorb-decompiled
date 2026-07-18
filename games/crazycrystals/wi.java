@@ -11,7 +11,7 @@ abstract class wi {
     int field_g;
     static String field_b;
 
-    final static boolean a(int param0, int param1, CharSequence param2) {
+    final static boolean a(int param0, int param1, CharSequence param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -21,6 +21,7 @@ abstract class wi {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        Object var12 = null;
         int stackIn_24_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_35_0 = 0;
@@ -58,8 +59,8 @@ abstract class wi {
                     if (param0 == 48) {
                       break L2;
                     } else {
-                      int discarded$2 = 1;
-                      boolean discarded$3 = wi.a(-107, 91, (CharSequence) null);
+                      var12 = null;
+                      boolean discarded$1 = wi.a(-107, 91, (CharSequence) null, true);
                       break L2;
                     }
                   }
@@ -376,7 +377,7 @@ abstract class wi {
 
     abstract void a(int param0, int param1);
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
@@ -399,8 +400,7 @@ abstract class wi {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$2 = 2;
-          qc.a(192, param2, param3, param1, param0, param5);
+          qc.a(192, param2, param3, param1, param0, param5, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

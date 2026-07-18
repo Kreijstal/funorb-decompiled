@@ -7,7 +7,7 @@ final class vf {
     static boolean field_b;
     static String field_a;
 
-    final static sk a(String param0) {
+    final static sk a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -89,7 +89,7 @@ final class vf {
         return stackIn_12_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -167,7 +167,7 @@ final class vf {
         field_a = null;
     }
 
-    final static boolean a(rb param0) {
+    final static boolean a(rb param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

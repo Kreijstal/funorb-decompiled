@@ -81,8 +81,7 @@ final class oi extends ana {
         if (fieldTemp$0 >= 0) {
             if (((oi) this).field_l == 25) {
                 jja.a(256, -1, 48);
-                int discarded$1 = 48;
-                this.e();
+                this.e(48);
             }
             return false;
         }
@@ -90,7 +89,7 @@ final class oi extends ana {
         return true;
     }
 
-    private final void e() {
+    private final void e(int param0) {
         int var2 = 0;
         int var3 = 0;
         wia var4 = null;
@@ -122,7 +121,7 @@ final class oi extends ana {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_w = null;
         field_v = null;
     }

@@ -30,7 +30,7 @@ final class st extends cha implements java.awt.image.ImageProducer, java.awt.ima
         }
     }
 
-    final static jo b() {
+    final static jo b(int param0) {
         return new jo(0, 0, afa.field_c.field_m, 0, (isa) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
     }
 

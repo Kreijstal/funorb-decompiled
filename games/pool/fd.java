@@ -301,7 +301,7 @@ final class fd extends kk {
         return stackIn_79_0;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         oq var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -312,16 +312,14 @@ final class fd extends kk {
           L0: {
             var1 = ej.field_j;
             L1: while (true) {
-              int discarded$13 = -120;
-              if (!va.g()) {
+              if (!va.g((byte) -120)) {
                 break L0;
               } else {
                 var1.b(false, 8);
-                int fieldTemp$14 = var1.field_v + 1;
+                int fieldTemp$5 = var1.field_v + 1;
                 var1.field_v = var1.field_v + 1;
-                var2 = fieldTemp$14;
-                int discarded$15 = 1;
-                wn.a(var1);
+                var2 = fieldTemp$5;
+                wn.a(var1, 1);
                 ej.field_j.b(var1.field_v + -var2, true);
                 continue L1;
               }

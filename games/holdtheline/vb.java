@@ -7,7 +7,7 @@ final class vb {
     static boolean field_b;
     static ud[] field_a;
 
-    final static void a() {
+    final static void a(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -47,8 +47,7 @@ final class vb {
               break L2;
             }
           }
-          int discarded$1 = -10;
-          dm.b();
+          dm.b((byte) -10);
           if (cf.field_q >= 150) {
             w.field_c.d(15 + var3, 10 + var4, var5);
             var6 = -125 + cf.field_q;
@@ -287,8 +286,7 @@ final class vb {
 
     final static void a(int param0, hj param1) {
         try {
-            int discarded$2 = 32381;
-            ok.a();
+            ok.a(32381);
             if (param0 > -44) {
                 vb.a(51);
             }

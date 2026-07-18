@@ -37,8 +37,8 @@ final class rj implements Iterable {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
-            java.net.URL var2_ref2 = null;
             String var3 = null;
+            java.net.URL var4 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
@@ -58,15 +58,14 @@ final class rj implements Iterable {
             try {
               try {
                 if (param1 < -52) {
-                  var2_ref2 = param0.getCodeBase();
-                  int discarded$7 = 0;
-                  var3 = of.a(param0, var2_ref2).getFile();
+                  var4 = param0.getCodeBase();
+                  var3 = of.a(param0, var4, false).getFile();
+                  Object discarded$6 = sj.a(param0, new Object[2], 7648, "updatelinks");
+                  Object discarded$7 = sj.a(param0, new Object[2], 7648, "updatelinks");
                   Object discarded$8 = sj.a(param0, new Object[2], 7648, "updatelinks");
                   Object discarded$9 = sj.a(param0, new Object[2], 7648, "updatelinks");
                   Object discarded$10 = sj.a(param0, new Object[2], 7648, "updatelinks");
                   Object discarded$11 = sj.a(param0, new Object[2], 7648, "updatelinks");
-                  Object discarded$12 = sj.a(param0, new Object[2], 7648, "updatelinks");
-                  Object discarded$13 = sj.a(param0, new Object[2], 7648, "updatelinks");
                   return;
                 } else {
                   return;
@@ -139,12 +138,12 @@ final class rj implements Iterable {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_d = null;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         if (param0 < 65) {
           if (param0 >= 97) {
             if (param0 <= 122) {

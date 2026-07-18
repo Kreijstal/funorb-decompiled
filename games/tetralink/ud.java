@@ -89,12 +89,12 @@ final class ud extends hl {
         super(0L, (hl) null);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Qb = null;
         field_Pb = null;
     }
 
-    final static boolean c() {
+    final static boolean c(boolean param0) {
         return ai.a((byte) 105);
     }
 

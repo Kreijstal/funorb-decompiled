@@ -8,12 +8,10 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
     final static void a(java.awt.Canvas param0, int param1) {
         try {
             if (!(param1 != ~ob.field_d)) {
-                int discarded$0 = 87;
-                st.a();
+                st.a((byte) 87);
             }
             hr.a(ct.field_I, 0, w.field_a, dq.field_b);
-            int discarded$1 = 0;
-            ps.a(0, false, param0);
+            ps.a(0, false, param0, 0);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "hj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

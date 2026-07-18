@@ -102,7 +102,7 @@ final class tc extends ib {
         this(ia.field_c, param0);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_w = null;
         field_C = null;
         field_x = null;
@@ -119,7 +119,7 @@ final class tc extends ib {
         super(param0, param1);
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         int stackIn_2_0 = 0;

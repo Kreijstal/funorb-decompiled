@@ -8,7 +8,7 @@ abstract class ua {
     static String field_c;
     static String field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_e = null;

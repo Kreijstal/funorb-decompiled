@@ -6,7 +6,7 @@ final class hva extends RuntimeException {
     String field_a;
     static String[] field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         int var1 = 0;
     }

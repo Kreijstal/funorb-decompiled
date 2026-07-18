@@ -90,8 +90,7 @@ final class tha extends td {
             iw.a(param19, false, param11, param1);
             mja.a(param7, param10, 3, param9, param17);
             iea.a(param15, param2, (byte) -115);
-            int discarded$1 = 85;
-            nna.a(param0, param3, param18, param4, param13);
+            nna.a(param0, param3, param18, param4, param13, (byte) 85);
             ua.a((byte) -50, param5, param6, param12);
             ng.a(param20, param16, param14, 116);
             break L0;

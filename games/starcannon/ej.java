@@ -218,9 +218,8 @@ final class ej extends mi {
         field_q = null;
     }
 
-    final static void f() {
-        int discarded$0 = 150;
-        ne.a(true, lh.field_D, wj.field_c);
+    final static void f(byte param0) {
+        ne.a(true, lh.field_D, wj.field_c, 150);
         vj.field_V = true;
     }
 
@@ -246,7 +245,7 @@ final class ej extends mi {
         return false;
     }
 
-    final static void a(ue param0, ue param1) {
+    final static void a(ue param0, ue param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

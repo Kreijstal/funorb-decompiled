@@ -108,7 +108,7 @@ final class jj extends rqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 32;
         field_q = null;
         field_r = null;

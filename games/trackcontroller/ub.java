@@ -17,7 +17,7 @@ final class ub extends rc implements java.awt.image.ImageProducer, java.awt.imag
         ((ub) this).field_g.imageComplete(2);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
     }
 

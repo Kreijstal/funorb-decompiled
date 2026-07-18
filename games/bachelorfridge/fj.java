@@ -13,7 +13,7 @@ final class fj extends bw {
     int field_h;
     int[] field_o;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_m = null;
         field_i = null;
     }

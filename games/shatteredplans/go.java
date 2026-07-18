@@ -31,7 +31,7 @@ class go extends kg {
         var2 = 75 % ((-61 - param0) / 54);
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         this.h(-1);
         this.k((byte) 120);
     }
@@ -178,8 +178,7 @@ class go extends kg {
                     if (((go) this).field_P) {
                       L5: {
                         ((go) this).field_N = this.g((byte) 96);
-                        int discarded$1 = -1;
-                        ((go) this).field_H = this.a();
+                        ((go) this).field_H = this.a(-1);
                         if (((go) this).field_H <= 0) {
                           break L5;
                         } else {
@@ -248,7 +247,7 @@ class go extends kg {
         return stackIn_21_0 != 0;
     }
 
-    private final void j() {
+    private final void j(byte param0) {
         qo var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -502,9 +501,9 @@ class go extends kg {
                               break L7;
                             } else {
                               ((go) this).field_s = ((go) this).field_s + param1;
-                              int dupTemp$5 = ((go) this).field_s.length();
-                              ((go) this).field_H = dupTemp$5;
-                              ((go) this).field_N = dupTemp$5;
+                              int dupTemp$1 = ((go) this).field_s.length();
+                              ((go) this).field_H = dupTemp$1;
+                              ((go) this).field_N = dupTemp$1;
                               break L7;
                             }
                           }
@@ -598,10 +597,9 @@ class go extends kg {
                                     stackIn_50_2 = stackOut_49_2;
                                     break L10;
                                   } else {
-                                    int discarded$6 = -1;
                                     stackOut_48_0 = this;
                                     stackOut_48_1 = stackIn_48_1;
-                                    stackOut_48_2 = this.a();
+                                    stackOut_48_2 = this.a(-1);
                                     stackIn_50_0 = stackOut_48_0;
                                     stackIn_50_1 = stackOut_48_1;
                                     stackIn_50_2 = stackOut_48_2;
@@ -619,8 +617,7 @@ class go extends kg {
                               if (102 != param0) {
                                 if (param0 != 103) {
                                   if (param0 == 84) {
-                                    int discarded$7 = 2;
-                                    this.i();
+                                    this.i((byte) 2);
                                     stackOut_43_0 = 1;
                                     stackIn_44_0 = stackOut_43_0;
                                     return stackIn_44_0 != 0;
@@ -632,8 +629,7 @@ class go extends kg {
                                         if (param0 != 65) {
                                           break L11;
                                         } else {
-                                          int discarded$8 = -95;
-                                          this.h();
+                                          this.h((byte) -95);
                                           stackOut_31_0 = 1;
                                           stackIn_32_0 = stackOut_31_0;
                                           return stackIn_32_0 != 0;
@@ -658,8 +654,7 @@ class go extends kg {
                                       break L8;
                                     } else {
                                       if (67 == param0) {
-                                        int discarded$9 = -7;
-                                        this.m();
+                                        this.m((byte) -7);
                                         stackOut_39_0 = 1;
                                         stackIn_40_0 = stackOut_39_0;
                                         return stackIn_40_0 != 0;
@@ -750,7 +745,7 @@ class go extends kg {
         return js.a(-83, kq.f((byte) 127));
     }
 
-    private final int a() {
+    private final int a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -815,8 +810,7 @@ class go extends kg {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              int discarded$2 = -59;
-              this.j();
+              this.j((byte) -59);
               if (1 != ((go) this).field_o) {
                 break L1;
               } else {
@@ -1057,9 +1051,7 @@ class go extends kg {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$4 = 1;
-            int discarded$5 = 126;
-            stackOut_0_0 = wk.a(10, param1);
+            stackOut_0_0 = wk.a(10, param1, 126, true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -1096,7 +1088,7 @@ class go extends kg {
         return stackIn_1_0;
     }
 
-    private final void m() {
+    private final void m(byte param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -1326,7 +1318,7 @@ class go extends kg {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_G = null;
         field_I = null;
         field_E = null;
@@ -1361,7 +1353,7 @@ class go extends kg {
         }
     }
 
-    private final void i() {
+    private final void i(byte param0) {
         if (!(((go) this).field_u instanceof od)) {
             return;
         }

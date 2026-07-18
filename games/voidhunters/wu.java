@@ -87,7 +87,7 @@ final class wu extends uda {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         int var1 = 0;
         field_h = null;
         field_e = null;

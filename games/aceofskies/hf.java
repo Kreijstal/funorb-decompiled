@@ -811,8 +811,7 @@ final class hf extends un {
         String stackOut_5_2 = null;
         try {
           if (tn.a(param1, (byte) -127, param3, param2)) {
-            int discarded$2 = 0;
-            return gl.a();
+            return gl.a(0);
           } else {
             return null;
           }

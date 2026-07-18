@@ -19,7 +19,7 @@ final class hg {
         return var2;
     }
 
-    private final void a(java.awt.Frame param0) {
+    private final void a(java.awt.Frame param0, int param1) {
         ((hg) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 
@@ -36,8 +36,7 @@ final class hg {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
-            int discarded$2 = 20350;
-            this.a(param0);
+            this.a(param0, 20350);
             if (param4 == 0) {
               var6 = ((hg) this).field_b.getRefreshRate();
               var7 = ((hg) this).field_a.getDisplayModes();
@@ -103,8 +102,7 @@ final class hg {
             }
             ((hg) this).field_b = null;
         }
-        int discarded$0 = 20350;
-        this.a((java.awt.Frame) null);
+        this.a((java.awt.Frame) null, 20350);
     }
 
     public hg() throws Exception {

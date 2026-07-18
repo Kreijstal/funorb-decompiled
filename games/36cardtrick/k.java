@@ -14,18 +14,14 @@ abstract class k implements ba {
     abstract String d(int param0);
 
     final static void c(int param0) {
-        int discarded$6 = -23687;
-        j.j();
+        j.j(-23687);
         if (param0 >= -107) {
-          return;
-        } else {
-          cg.field_f = true;
-          ei.field_e = true;
-          sd.field_c.k(117);
-          int discarded$7 = 16777215;
-          ca.a(ni.field_e, false);
-          return;
+            return;
         }
+        cg.field_f = true;
+        ei.field_e = true;
+        sd.field_c.k(117);
+        ca.a(ni.field_e, false, 16777215);
     }
 
     public final sg a(boolean param0) {
@@ -99,8 +95,7 @@ abstract class k implements ba {
                   if (param0 == null) {
                     break L1;
                   } else {
-                    int discarded$2 = -3;
-                    var3_ref = mf.a(param0);
+                    var3_ref = mf.a(param0, (byte) -3);
                     break L1;
                   }
                 }
@@ -181,7 +176,7 @@ abstract class k implements ba {
                           break L6;
                         } else {
                           var6 = (DataInputStream) var5.field_e;
-                          int discarded$3 = var6.read();
+                          int discarded$1 = var6.read();
                           var6.close();
                           break L6;
                         }

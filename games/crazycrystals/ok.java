@@ -12,23 +12,19 @@ final class ok implements wo {
     static db field_c;
     static wb field_a;
 
-    final static void a() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static void a(int param0) {
+        jm.field_a = null;
+        ui.field_c = null;
+        if (param0 != 2188450) {
+            return;
+        }
         try {
-          L0: {
-            jm.field_a = null;
-            ui.field_c = null;
             uo.field_l = null;
             je.field_c = null;
             gh.field_z = null;
             uo.field_k = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1, "ok.A(" + 2188450 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "ok.A(" + param0 + ')');
         }
     }
 
@@ -50,7 +46,7 @@ final class ok implements wo {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        int stackIn_11_0 = 0;
+        boolean stackIn_11_0 = false;
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_28_1 = 0;
@@ -65,7 +61,7 @@ final class ok implements wo {
         StringBuilder stackIn_60_1 = null;
         String stackIn_60_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
+        boolean stackOut_10_0 = false;
         int stackOut_24_0 = 0;
         int stackOut_22_0 = 0;
         int stackOut_27_0 = 0;
@@ -85,18 +81,16 @@ final class ok implements wo {
         try {
           L0: {
             L1: {
-              var5_int = 8;
+              var5_int = 8 / ((-86 - param2) / 33);
               var6 = eq.c((-param1 + param4) * 3, (byte) 100);
               var7 = param1 * 3;
               var8 = var6 - 10;
-              int discarded$2 = -21587;
-              go.a();
+              go.a(-21587);
               if (0 >= param0.field_s) {
                 break L1;
               } else {
                 if (null != param0.field_o) {
-                  int discarded$3 = 48;
-                  ck.n();
+                  ck.n(48);
                   break L1;
                 } else {
                   break L1;
@@ -114,15 +108,15 @@ final class ok implements wo {
                     var10 = param0.field_K[var9];
                     var11 = param0.field_g[var9];
                     var12 = param0.field_c[var9];
-                    stackOut_10_0 = 0;
-                    stackIn_45_0 = stackOut_10_0;
+                    stackOut_10_0 = param3;
+                    stackIn_45_0 = stackOut_10_0 ? 1 : 0;
                     stackIn_11_0 = stackOut_10_0;
                     if (var20 != 0) {
                       break L3;
                     } else {
                       L5: {
                         L6: {
-                          if (stackIn_11_0 == 0) {
+                          if (!stackIn_11_0) {
                             break L6;
                           } else {
                             var13 = dn.field_a[var10];
@@ -311,27 +305,23 @@ final class ok implements wo {
               break L16;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_60_0, stackIn_60_2 + ',' + param1 + ',' + -119 + ',' + false + ',' + param4 + ')');
+          throw dn.a((Throwable) (Object) stackIn_60_0, stackIn_60_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(boolean param0) {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+        if (param0) {
+            return;
+        }
         try {
-          L0: {
             field_b = null;
             field_g = null;
             field_c = null;
             field_e = null;
             field_i = null;
             field_a = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1, "ok.D(" + false + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "ok.D(" + param0 + ')');
         }
     }
 

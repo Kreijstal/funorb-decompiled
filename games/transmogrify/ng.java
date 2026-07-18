@@ -10,7 +10,7 @@ final class ng extends wf {
     static String[] field_l;
     static String field_h;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_g = null;
         field_j = null;
@@ -26,8 +26,7 @@ final class ng extends wf {
     final static void a(boolean param0, java.awt.Canvas param1) {
         try {
             if (!(gl.field_y != 11)) {
-                int discarded$0 = 274;
-                sd.q();
+                sd.q(274);
             }
             ch.a(58, ea.field_n, g.field_A, ah.field_a);
             ah.a(0, 0, (byte) 90, param1);

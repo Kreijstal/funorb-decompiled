@@ -18,8 +18,7 @@ final class nt extends rqa {
                   vbb.a(2051507073, param4, param7, param3, param2, param5, param6, param1);
                   return;
                 } else {
-                  int discarded$1 = 21601;
-                  sab.a(param2, param1, param5, param7, param6, param3, param4);
+                  sab.a(param2, param1, param5, param7, param6, param3, param4, 21601);
                   return;
                 }
               } else {
@@ -108,7 +107,7 @@ final class nt extends rqa {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
         field_p = null;
     }

@@ -20,7 +20,7 @@ final class fk extends sn {
     private int field_r;
     private int field_s;
 
-    final static void f() {
+    final static void f(int param0) {
         kb.field_e.field_m = 0;
         kb.field_e.field_j = 0;
     }
@@ -74,7 +74,7 @@ final class fk extends sn {
         return (java.awt.Container) (Object) ob.e((byte) 116);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_A = null;
         field_G = null;
     }
@@ -732,7 +732,7 @@ final class fk extends sn {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         String var3 = null;
         long var4 = 0L;
         tb.field_b = true;
@@ -915,8 +915,7 @@ final class fk extends sn {
                     var4 = var4 + gd.field_k;
                     break L2;
                   } else {
-                    int discarded$3 = 0;
-                    var6 = uc.a(mn.field_q[var3_int], true);
+                    var6 = uc.a(mn.field_q[var3_int], true, false);
                     var7 = -(var6 >> 1) + vm.field_c;
                     var4 = var4 + al.field_z;
                     if (pe.a(kd.field_z + (qc.field_z << 1), var4, param0, param2, (byte) 17, var7 - gl.field_l, (gl.field_l << 1) + var6)) {

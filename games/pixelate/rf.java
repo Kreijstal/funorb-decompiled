@@ -21,7 +21,7 @@ abstract class rf {
 
     abstract boolean a(boolean param0);
 
-    public static void c() {
+    public static void c(byte param0) {
         field_d = null;
         field_j = null;
         field_i = null;

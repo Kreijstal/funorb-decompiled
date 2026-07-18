@@ -236,16 +236,12 @@ final class mk extends rqa {
         try {
           L0: {
             bd.a(101, param1, param3, param7, param4);
-            int discarded$4 = -97;
-            hka.a(param7);
+            hka.a(param7, -97);
             vrb.a(param10, 10231, 8, param7, param11, param6, param14, 1, param12, param8, param19, param9, 1, param16, param5);
             et.a(param7, param2, 2874, true);
-            int discarded$5 = -107;
-            vqb.f();
-            int discarded$6 = 8611;
-            fma.l();
-            int discarded$7 = 116;
-            gba.e();
+            vqb.f((byte) -107);
+            fma.l(8611);
+            gba.e(116);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -634,7 +630,7 @@ final class mk extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
         field_p = null;
     }

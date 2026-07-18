@@ -9,12 +9,13 @@ final class ja extends ua implements u, ql {
     static boolean field_F;
     static int[][] field_A;
 
-    private final String d() {
+    private final String d(byte param0) {
         return "</col></u>";
     }
 
     final static rb a(String param0, int param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         rb var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -23,22 +24,22 @@ final class ja extends ua implements u, ql {
         CharSequence var8 = null;
         Object stackIn_3_0 = null;
         rb stackIn_17_0 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        Object stackIn_22_0 = null;
+        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        Object stackIn_23_0 = null;
+        RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         rb stackOut_16_0 = null;
         Object stackOut_2_0 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
-        Object stackOut_22_0 = null;
+        RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
         String stackOut_22_2 = null;
-        Object stackOut_21_0 = null;
+        RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -46,11 +47,11 @@ final class ja extends ua implements u, ql {
           if (null != ah.field_b) {
             L0: {
               var7 = (CharSequence) (Object) param0;
-              var2 = (Object) (Object) pl.a((byte) 119, var7);
+              var2 = pl.a((byte) 119, var7);
               if (var2 != null) {
                 break L0;
               } else {
-                var2 = (Object) (Object) var7;
+                var2 = param0;
                 break L0;
               }
             }
@@ -63,7 +64,7 @@ final class ja extends ua implements u, ql {
                 break L1;
               }
             }
-            var3 = (rb) (Object) ah.field_b.a((long)((String) var2).hashCode(), false);
+            var3 = (rb) (Object) ah.field_b.a((long)var2.hashCode(), false);
             L2: while (true) {
               if (var3 != null) {
                 L3: {
@@ -76,7 +77,7 @@ final class ja extends ua implements u, ql {
                     break L3;
                   }
                 }
-                if (var4.equals(var2)) {
+                if (var4.equals((Object) (Object) var2)) {
                   stackOut_16_0 = (rb) var3;
                   stackIn_17_0 = stackOut_16_0;
                   return stackIn_17_0;
@@ -96,15 +97,15 @@ final class ja extends ua implements u, ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_20_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_20_0 = (RuntimeException) var2_ref;
             stackOut_20_1 = new StringBuilder().append("ja.B(");
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param0 == null) {
-              stackOut_22_0 = stackIn_22_0;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
               stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
@@ -112,7 +113,7 @@ final class ja extends ua implements u, ql {
               stackIn_23_2 = stackOut_22_2;
               break L4;
             } else {
-              stackOut_21_0 = stackIn_21_0;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
@@ -150,21 +151,18 @@ final class ja extends ua implements u, ql {
           L0: {
             L1: {
               if (param0 == 0) {
-                int discarded$27 = 0;
-                wc.a("terms.ws");
+                wc.a("terms.ws", false);
                 break L1;
               } else {
                 if (param0 != 1) {
                   if (param0 == 2) {
-                    int discarded$28 = 0;
-                    wc.a("conduct.ws");
+                    wc.a("conduct.ws", false);
                     break L1;
                   } else {
                     break L1;
                   }
                 } else {
-                  int discarded$29 = 0;
-                  wc.a("privacy.ws");
+                  wc.a("privacy.ws", false);
                   break L1;
                 }
               }
@@ -212,7 +210,7 @@ final class ja extends ua implements u, ql {
         }
     }
 
-    private final String a() {
+    private final String a(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -318,8 +316,6 @@ final class ja extends ua implements u, ql {
             ((ja) this).field_C = param0;
             ((ja) this).field_D = new t(pi.field_i, (of) null);
             ((ja) this).field_D.field_h = (ml) (Object) new hd();
-            int discarded$2 = 1971849544;
-            int discarded$3 = 106;
             var7 = gg.a(new String[2], oi.field_i, true);
             var3 = 20;
             var4 = new a(t.field_z, 0, 0, 0, 0, 16777215, -1, 3, 0, t.field_z.field_C, -1, 2147483647, true);
@@ -817,7 +813,7 @@ final class ja extends ua implements u, ql {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_A = null;
         field_B = null;
     }

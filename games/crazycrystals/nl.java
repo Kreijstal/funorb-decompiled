@@ -169,7 +169,7 @@ final class nl extends fb {
         }
     }
 
-    final static void a(db param0) {
+    final static void a(db param0, int param1) {
         bl var2 = null;
         try {
             bl.b(param0.a(7693, "", "headers.packvorbis"));

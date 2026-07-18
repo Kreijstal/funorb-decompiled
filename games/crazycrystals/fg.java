@@ -84,7 +84,7 @@ final class fg extends pd {
         return (pb) (Object) new rn();
     }
 
-    final static void c() {
+    final static void c(byte param0) {
     }
 
     final void a(byte param0) {

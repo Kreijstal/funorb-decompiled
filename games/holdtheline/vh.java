@@ -14,7 +14,7 @@ final class vh implements dh {
     static ll field_a;
     static uf field_i;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_i = null;
         field_f = null;
         field_a = null;
@@ -73,8 +73,7 @@ final class vh implements dh {
                   if (param0 > 93) {
                     break L1;
                   } else {
-                    int discarded$2 = 1;
-                    vh.a();
+                    vh.a(true);
                     break L1;
                   }
                 }

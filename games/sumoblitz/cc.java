@@ -121,8 +121,7 @@ final class cc implements Runnable {
                     var4 = var5.getOutputStream();
                     var4.write(17);
                     var6 = (CharSequence) (Object) ("JAGGRAB " + ((cc) this).field_a.getFile() + "\n\n");
-                    int discarded$1 = 32;
-                    var4.write(mb.a(var6));
+                    var4.write(mb.a(var6, (byte) 32));
                     ((cc) this).field_h = new DataInputStream(var5.getInputStream());
                     break L6;
                   } else {

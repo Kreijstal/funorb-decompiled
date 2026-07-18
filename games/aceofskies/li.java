@@ -62,7 +62,7 @@ abstract class li implements sp {
         return ((li) this).c(0);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
     }
 
@@ -119,8 +119,7 @@ abstract class li implements sp {
                   L4: {
                     var4 = 1;
                     if (10 == param1) {
-                      int discarded$2 = 10;
-                      bt.a();
+                      bt.a(10);
                       var4 = 0;
                       break L4;
                     } else {

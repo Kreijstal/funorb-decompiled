@@ -8,14 +8,14 @@ final class kb {
     static String field_d;
     static int field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_d = null;
         field_b = null;
         field_e = null;
     }
 
-    final static String a(int param0) {
+    final static String a(int param0, boolean param1, char param2) {
         int var4 = 0;
         int var5 = MinerDisturbance.field_ab;
         char[] var6 = new char[param0];
@@ -23,8 +23,7 @@ final class kb {
         for (var4 = 0; param0 > var4; var4++) {
             var6[var4] = '*';
         }
-        int discarded$0 = 81;
-        kb.a();
+        kb.a((byte) 81);
         return new String(var3);
     }
 

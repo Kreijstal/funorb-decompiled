@@ -4,13 +4,13 @@
 final class spb {
     static String field_a;
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(null != psb.field_b)) {
             return;
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 

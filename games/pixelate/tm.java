@@ -253,7 +253,7 @@ final class tm extends qm {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_Q = null;
         field_O = null;
         field_X = null;

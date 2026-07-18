@@ -9,7 +9,7 @@ final class pqa extends dg {
     static int field_p;
     private int field_o;
 
-    final static void i() {
+    final static void i(int param0) {
         int var2 = 0;
         var2 = TombRacer.field_G ? 1 : 0;
         if (mla.field_a <= 0) {
@@ -34,8 +34,7 @@ final class pqa extends dg {
                   }
                 }
               } else {
-                int discarded$4 = 16;
-                ji.a();
+                ji.a(16);
                 if (gt.field_a <= 0) {
                   if (fp.field_e <= 0) {
                     return;
@@ -72,8 +71,7 @@ final class pqa extends dg {
                   }
                 }
               } else {
-                int discarded$5 = 16;
-                ji.a();
+                ji.a(16);
                 if (gt.field_a <= 0) {
                   if (fp.field_e > 0) {
                     dga.a(fp.field_e, 199);
@@ -112,8 +110,7 @@ final class pqa extends dg {
                 }
               }
             } else {
-              int discarded$6 = 16;
-              ji.a();
+              ji.a(16);
               if (gt.field_a <= 0) {
                 if (fp.field_e > 0) {
                   dga.a(fp.field_e, 199);
@@ -138,8 +135,7 @@ final class pqa extends dg {
         } else {
           mla.field_a = mla.field_a - 1;
           if (0 < mla.field_a) {
-            int discarded$7 = 16;
-            ji.a();
+            ji.a(16);
             if (gt.field_a > 0) {
               dga.a(gt.field_a, 199);
               if (fp.field_e > 0) {
@@ -195,7 +191,7 @@ final class pqa extends dg {
         ((pqa) this).field_o = 0;
     }
 
-    public static void n() {
+    public static void n(byte param0) {
         field_m = null;
         field_r = null;
     }

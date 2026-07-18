@@ -10,7 +10,7 @@ final class kh {
     static int field_g;
     static int field_b;
 
-    final static Object a(boolean param0, byte[] param1) {
+    final static Object a(boolean param0, byte[] param1, int param2) {
         qe var3 = null;
         RuntimeException var3_ref = null;
         qe stackIn_6_0 = null;
@@ -80,7 +80,7 @@ final class kh {
         return (Object) (Object) stackIn_6_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

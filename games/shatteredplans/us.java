@@ -63,7 +63,7 @@ final class us {
         }
     }
 
-    final static fs a(ob param0, fs[] param1) {
+    final static fs a(ob param0, fs[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         fs stackIn_5_0 = null;
@@ -172,7 +172,7 @@ final class us {
         return stackIn_5_0;
     }
 
-    final static va b() {
+    final static va b(int param0) {
         va var1 = new va();
         var1.field_k = true;
         var1.field_h = 2;

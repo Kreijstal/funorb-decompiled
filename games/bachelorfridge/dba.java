@@ -13,13 +13,12 @@ final class dba {
         field_a = null;
     }
 
-    final static int b() {
+    final static int b(byte param0) {
         ga.field_c.b((byte) 102);
         if (aka.field_G.c((byte) 69)) {
             return 0;
         }
-        int discarded$0 = 0;
-        return sca.a();
+        return sca.a(0);
     }
 
     static {

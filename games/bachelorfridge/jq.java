@@ -102,15 +102,13 @@ final class jq extends k {
         }
     }
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1) {
         try {
             if (jv.field_j == 11) {
                 dja.b(false);
             }
-            int discarded$0 = -36;
-            nl.a(qd.field_q, mp.field_p, wk.field_b);
-            int discarded$1 = 0;
-            av.a(0, -77, param0);
+            nl.a(qd.field_q, mp.field_p, wk.field_b, -36);
+            av.a(0, -77, param0, 0);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "jq.D(" + (param0 != null ? "{...}" : "null") + ',' + -128 + ')');
         }
@@ -260,7 +258,7 @@ final class jq extends k {
         return var3;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_k = null;
         field_l = null;
     }
@@ -321,8 +319,7 @@ final class jq extends k {
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      int discarded$2 = 5431;
-                      var7 = ol.a(var6);
+                      var7 = ol.a(var6, 5431);
                       if (var7 != null) {
                         stackOut_15_0 = (rga) var7;
                         stackIn_16_0 = stackOut_15_0;

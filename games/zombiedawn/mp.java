@@ -260,7 +260,7 @@ final class mp {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_f = null;
         field_g = null;

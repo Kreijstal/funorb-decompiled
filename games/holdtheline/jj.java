@@ -17,7 +17,7 @@ abstract class jj extends ln {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_p = null;
         int var1 = -28;
     }
@@ -44,8 +44,7 @@ abstract class jj extends ln {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = ae.a(param1, (byte) -44, param1.length);
+            stackOut_0_0 = ae.a(param1, (byte) -44, param1.length, 0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -82,7 +81,7 @@ abstract class jj extends ln {
         return stackIn_1_0;
     }
 
-    final static mf a(java.applet.Applet param0) {
+    final static mf a(java.applet.Applet param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         mf[] var3 = null;
@@ -120,8 +119,7 @@ abstract class jj extends ln {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              int discarded$2 = 84;
-              var3 = ko.a();
+              var3 = ko.a(84);
               var4 = 0;
               L1: while (true) {
                 if (var4 >= var3.length) {

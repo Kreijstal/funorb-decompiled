@@ -14,8 +14,7 @@ final class qd {
         int var4 = 0;
         ad[] var5 = null;
         var4 = DungeonAssault.field_K;
-        int discarded$2 = 65280;
-        var5 = ad.b();
+        var5 = ad.b(65280);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -32,11 +31,11 @@ final class qd {
         }
     }
 
-    final static nh a(boolean param0, boolean param1, int param2) {
+    final static nh a(boolean param0, boolean param1, int param2, byte param3, int param4) {
         return uo.a(false, 1, true, param2, 27847, false);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_e = null;
         field_c = null;

@@ -15,7 +15,7 @@ final class np {
     private int field_b;
     static String field_e;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_e = null;
         field_g = null;
@@ -336,11 +336,9 @@ final class np {
                 } else {
                   if (param2 <= ((np) this).field_b) {
                     L3: {
-                      int discarded$6 = 93;
-                      var6 = this.a(param0, param2, true, param3) ? 1 : 0;
+                      var6 = this.a(param0, param2, true, param3, (byte) 93) ? 1 : 0;
                       if (var6 == 0) {
-                        int discarded$7 = 93;
-                        var6 = this.a(param0, param2, false, param3) ? 1 : 0;
+                        var6 = this.a(param0, param2, false, param3, (byte) 93) ? 1 : 0;
                         break L3;
                       } else {
                         break L3;
@@ -390,7 +388,7 @@ final class np {
         }
     }
 
-    private final boolean a(int param0, int param1, boolean param2, byte[] param3) {
+    private final boolean a(int param0, int param1, boolean param2, byte[] param3, byte param4) {
         try {
             Object var6 = null;
             RuntimeException var6_ref = null;
@@ -940,8 +938,7 @@ final class np {
                 }
                 L9: {
                   if (ff.field_b == tl.field_J) {
-                    int discarded$9 = 39;
-                    if (wf.a()) {
+                    if (wf.a((byte) 39)) {
                       L10: {
                         hm.field_a = kn.field_e.h(-412303328);
                         ei.field_E = param5;
@@ -951,8 +948,7 @@ final class np {
                         var12 = kn.field_e.m(108);
                         var7 = kn.field_e.g(-76);
                         if (0 != (1 & var7)) {
-                          int discarded$10 = 100;
-                          ke.a();
+                          ke.a(100);
                           break L10;
                         } else {
                           break L10;
@@ -1022,9 +1018,9 @@ final class np {
                         if (!hk.field_s) {
                           break L16;
                         } else {
-                          int discarded$11 = kn.field_e.g(-114);
-                          int discarded$12 = kn.field_e.g(-99);
-                          int discarded$13 = kn.field_e.b(true);
+                          int discarded$6 = kn.field_e.g(-114);
+                          int discarded$7 = kn.field_e.g(-99);
+                          int discarded$8 = kn.field_e.b(true);
                           va.field_X = kn.field_e.d(-1034);
                           sn.field_n = new byte[va.field_X];
                           var8 = 0;
@@ -1101,7 +1097,7 @@ final class np {
                             } else {
                               try {
                                 L23: {
-                                  Object discarded$14 = mo.a((byte) 126, "unzap", hk.d(125));
+                                  Object discarded$9 = mo.a((byte) 126, "unzap", hk.d(125));
                                   break L23;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -1117,7 +1113,7 @@ final class np {
                         }
                         try {
                           L25: {
-                            Object discarded$15 = mo.a("zap", new Object[1], 105, hk.d(107));
+                            Object discarded$10 = mo.a("zap", new Object[1], 105, hk.d(107));
                             break L25;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -1163,7 +1159,7 @@ final class np {
                     break L29;
                   } else {
                     var10 = null;
-                    int discarded$16 = np.a(true, (String) null, false, false, 59, (String) null);
+                    int discarded$11 = np.a(true, (String) null, false, false, 59, (String) null);
                     break L29;
                   }
                 }
@@ -1171,8 +1167,7 @@ final class np {
                   if (tl.field_J != hm.field_k) {
                     break L30;
                   } else {
-                    int discarded$17 = 39;
-                    if (wf.a()) {
+                    if (wf.a((byte) 39)) {
                       L31: {
                         dn.c(-64);
                         if (uq.field_c != 7) {

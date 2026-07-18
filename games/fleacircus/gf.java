@@ -250,7 +250,7 @@ final class gf {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         vh var1 = (vh) (Object) al.field_e.c((byte) 47);
         if (!(var1 != null)) {
             k.c(-28354);

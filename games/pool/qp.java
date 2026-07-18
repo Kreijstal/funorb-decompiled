@@ -317,12 +317,10 @@ final class qp extends vh {
                 ub.a((byte) 117, (String) null, param3, fm.field_I, hn.field_b, var5);
                 uq.a(var5, fm.field_I, hn.field_b, (byte) -76, c.field_d);
                 lq.i(15975);
-                int discarded$246 = 0;
-                cp.a();
+                cp.a(false);
                 break L0;
               } else {
-                int discarded$247 = 1;
-                mf.j();
+                mf.j(1);
                 lq.i(15975);
                 break L0;
               }

@@ -113,7 +113,7 @@ final class cm extends fa {
         return (param2 - -var3) / param0 + -var3;
     }
 
-    final static char a(byte param0) {
+    final static char a(byte param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         var2 = 255 & param0;
@@ -146,12 +146,12 @@ final class cm extends fa {
         return param0 & param1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_o = null;
     }
 
-    final static void a(int param0, boolean param1, long param2, String param3, int param4) {
+    final static void a(int param0, boolean param1, long param2, String param3, int param4, int param5) {
         int var8 = 0;
         try {
             int var7_int = 0;
@@ -168,7 +168,7 @@ final class cm extends fa {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

@@ -12,7 +12,7 @@ final class q {
     static int field_d;
     static String field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_f = null;
         field_g = null;
@@ -25,7 +25,7 @@ final class q {
         throw new IllegalStateException();
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -54,8 +54,7 @@ final class q {
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
-            int discarded$14 = 26;
-            if (vg.a(false, param0)) {
+            if (vg.a(false, param0, (byte) 26)) {
               var3_int = 0;
               L1: while (true) {
                 if (var3_int >= param0.length()) {
@@ -63,8 +62,7 @@ final class q {
                   stackIn_11_0 = stackOut_10_0;
                   break L0;
                 } else {
-                  int discarded$15 = -161;
-                  if (bc.a(param0.charAt(var3_int))) {
+                  if (bc.a(param0.charAt(var3_int), -161)) {
                     var3_int++;
                     continue L1;
                   } else {

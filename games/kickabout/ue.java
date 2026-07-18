@@ -170,7 +170,7 @@ final class ue extends gn {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -545,7 +545,7 @@ final class ue extends gn {
         }
     }
 
-    final static String f() {
+    final static String f(byte param0) {
         if (ow.field_e == null) {
             return "";
         }

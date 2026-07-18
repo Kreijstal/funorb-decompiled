@@ -21,7 +21,7 @@ final class ad implements Runnable {
     static int field_m;
     private int field_i;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         field_b = null;
         field_c = null;
@@ -59,8 +59,7 @@ final class ad implements Runnable {
               }
             }
             L2: {
-              int discarded$8 = 105;
-              if (mc.a(param1) == null) {
+              if (mc.a(param1, (byte) 105) == null) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
@@ -269,6 +268,7 @@ final class ad implements Runnable {
             InterruptedException var4 = null;
             Throwable var5 = null;
             int var6 = 0;
+            Object var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var6 = SolKnight.field_L ? 1 : 0;
@@ -395,8 +395,8 @@ final class ad implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter4;
               L17: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                int discarded$1 = 1;
-                hi.a((Throwable) (Object) var1_ref, (String) null);
+                var7 = null;
+                hi.a((Throwable) (Object) var1_ref, (String) null, 1);
                 break L17;
               }
             }
@@ -411,7 +411,7 @@ final class ad implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         if (null != dh.field_j) {
           field_b = null;
           if (param1 >= sa.field_m) {
@@ -771,9 +771,9 @@ final class ad implements Runnable {
         return (pc) (Object) stackIn_47_0;
     }
 
-    final static int c() {
-        RuntimeException var1 = null;
+    final static int c(int param0) {
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
@@ -788,8 +788,7 @@ final class ad implements Runnable {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              int discarded$1 = -56;
-              if (!wk.a()) {
+              if (!wk.a((byte) -56)) {
                 L2: {
                   bc.field_K.a(-121, uc.a(gb.field_j, 1691746689, field_m), uc.a(db.field_o, 1691746689, s.field_gb));
                   if (bc.field_K.d((byte) -36)) {

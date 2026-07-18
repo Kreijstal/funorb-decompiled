@@ -16,7 +16,7 @@ final class kl extends g implements cl, qh, wi {
     private dg field_H;
     private v field_G;
 
-    private final String n() {
+    private final String n(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -309,7 +309,7 @@ final class kl extends g implements cl, qh, wi {
         }
     }
 
-    private final boolean l() {
+    private final boolean l(int param0) {
         if (!(this.e((byte) 38))) {
             return false;
         }
@@ -526,7 +526,7 @@ final class kl extends g implements cl, qh, wi {
         }
     }
 
-    private final int a(lk param0, boolean param1, int param2, String param3, String param4) {
+    private final int a(lk param0, boolean param1, int param2, String param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -694,8 +694,7 @@ final class kl extends g implements cl, qh, wi {
               if (((kl) this).field_O != param3) {
                 break L0;
               } else {
-                int discarded$4 = 20;
-                boolean discarded$5 = this.l();
+                boolean discarded$2 = this.l(20);
                 return;
               }
             }
@@ -782,8 +781,7 @@ final class kl extends g implements cl, qh, wi {
                   return stackIn_11_0 != 0;
                 } else {
                   if (il.field_e != var4) {
-                    int discarded$4 = -121;
-                    String discarded$5 = this.d();
+                    String discarded$2 = this.d((byte) -121);
                     stackOut_15_0 = 1;
                     stackIn_16_0 = stackOut_15_0;
                     break L0;
@@ -829,7 +827,7 @@ final class kl extends g implements cl, qh, wi {
         return stackIn_16_0 != 0;
     }
 
-    private final String d() {
+    private final String d(byte param0) {
         return "</col></u>";
     }
 
@@ -1073,18 +1071,13 @@ final class kl extends g implements cl, qh, wi {
         rl dupTemp$1 = new rl(10000536);
         ((kl) this).field_K.field_v = (ci) (Object) dupTemp$1;
         ((kl) this).field_G.field_v = (ci) (Object) dupTemp$1;
-        int discarded$2 = 2716;
-        int discarded$3 = 62;
-        int discarded$4 = -50;
-        String var2 = re.a(lk.field_t, new String[2]);
+        String var2 = re.a(lk.field_t, new String[2], (byte) -50);
         int var3 = 20;
         var3 = var3 + this.a(cf.field_a, 170, (lk) (Object) ((kl) this).field_M, -74, var3);
         var3 = var3 + (5 + this.a((lk) (Object) ((kl) this).field_J, 170, "", mb.field_b, var3, 25, 20));
         var3 = var3 + this.a(fl.field_b, 170, (lk) (Object) ((kl) this).field_G, -96, var3);
-        int discarded$5 = 170;
-        var3 = var3 + (this.a((lk) (Object) ((kl) this).field_K, true, var3, hk.field_c, mc.field_a) + 5);
-        int discarded$6 = 170;
-        var3 = var3 + (this.a((lk) (Object) ((kl) this).field_D, true, var3, mj.field_a, pk.field_c) - -5);
+        var3 = var3 + (this.a((lk) (Object) ((kl) this).field_K, true, var3, hk.field_c, mc.field_a, 170) + 5);
+        var3 = var3 + (this.a((lk) (Object) ((kl) this).field_D, true, var3, mj.field_a, pk.field_c, 170) - -5);
         var3 = var3 + this.a(170, var3, th.field_b, (byte) -21, (lk) (Object) ((kl) this).field_I);
         ck var4 = new ck(46, var3, -90 + ((kl) this).field_h, 25, (lk) (Object) ((kl) this).field_N, true, -120 + ((kl) this).field_h, 5, me.field_c, 11579568, Main.field_M);
         ((kl) this).b((lk) (Object) var4, (byte) 118);

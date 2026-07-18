@@ -8,15 +8,14 @@ final class ta {
     static String field_e;
     static String field_b;
 
-    final static void c() {
+    final static void c(int param0) {
         tg var1 = null;
         tg var2 = null;
         int var3 = 0;
         int var4 = Bounce.field_N;
         try {
             var1 = new tg(540, 140);
-            int discarded$0 = 1;
-            kh.a(var1);
+            kh.a(var1, 1);
             qk.c();
             na.a();
             oa.field_a = 0;
@@ -50,7 +49,7 @@ final class ta {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_e = null;
@@ -174,8 +173,7 @@ final class ta {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = ad.a(var6, var5, param1, var4);
+                          int discarded$1 = ad.a(var17, var5, param1, var4, 9);
                           break L5;
                         }
                       }

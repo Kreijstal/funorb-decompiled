@@ -117,17 +117,13 @@ final class va {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         kn.a(-1431, true, am.field_a, mc.field_g);
         bl.field_h = true;
     }
 
     final static boolean a(byte param0, int param1, int param2, int param3) {
-        int discarded$0 = 12;
-        int discarded$1 = 15;
-        int discarded$2 = -23936;
-        int discarded$3 = 13;
-        return jm.a();
+        return jm.a(13, -23936, 15, 12);
     }
 
     public static void a(int param0) {

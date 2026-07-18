@@ -7,7 +7,7 @@ abstract class al {
     int field_a;
     String field_b;
 
-    final static boolean a(ad param0) {
+    final static boolean a(ad param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -190,7 +190,7 @@ abstract class al {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return fd.field_s;
     }
 
@@ -211,7 +211,7 @@ abstract class al {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

@@ -61,22 +61,17 @@ final class df extends fe {
                     break L2;
                   }
                 }
-                int discarded$11 = 118;
-                kc.a(sa.b(), fi.a(true), var3_int != 0, 300, d.field_S);
+                kc.a(sa.b((byte) 118), fi.a(true), var3_int != 0, 300, d.field_S);
                 break L1;
               } else {
                 if (!km.a(-124)) {
                   pb.b();
-                  int discarded$12 = 320;
-                  int discarded$13 = 240;
-                  int discarded$14 = 17;
-                  ff.a();
+                  ff.a((byte) 17, 240, 320);
                   kg.a(0, 0, 28594, param1);
                   break L1;
                 } else {
                   if (0 != uj.field_d) {
-                    int discarded$15 = -28003;
-                    en.a(param1);
+                    en.a(param1, -28003);
                     break L1;
                   } else {
                     fa.a(false, (byte) 88, param2);
@@ -159,7 +154,7 @@ final class df extends fe {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_J = null;
     }
 

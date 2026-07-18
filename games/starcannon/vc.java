@@ -31,7 +31,7 @@ final class vc extends rf {
         field_m = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         a.field_e = param1;
         dg.field_n = param0;
     }

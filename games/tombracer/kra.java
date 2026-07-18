@@ -10,7 +10,7 @@ final class kra {
     private int[] field_d;
     private byte[] field_e;
 
-    final static void a() {
+    final static void a(boolean param0) {
         era.field_d = new ara(lma.field_r, oba.field_f, cga.field_g, kua.field_i, (jea) (Object) kt.field_F, dja.field_p);
     }
 

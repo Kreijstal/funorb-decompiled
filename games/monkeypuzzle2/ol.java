@@ -12,7 +12,7 @@ final class ol {
     static id field_g;
     static int field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_h = null;
     }
@@ -27,7 +27,7 @@ final class ol {
         return ((ol) this).field_a[fieldTemp$0];
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -180,7 +180,7 @@ final class ol {
         }
     }
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -537,8 +537,7 @@ final class ol {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((ol) this).field_a[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 8273;
-            this.d();
+            this.d(8273);
         } catch (RuntimeException runtimeException) {
             throw la.a((Throwable) (Object) runtimeException, "ol.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -548,8 +547,7 @@ final class ol {
         if (param0 >= -87) {
             field_g = null;
         }
-        int discarded$0 = 50;
-        return em.a(false, param1, false, true, 1);
+        return em.a(false, param1, false, true, 1, 50);
     }
 
     static {

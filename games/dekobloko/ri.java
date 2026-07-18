@@ -376,9 +376,9 @@ final class ri {
             }
           }
           if (((ri) this).field_q) {
-            int fieldTemp$2 = ((ri) this).field_u - 1;
+            int fieldTemp$1 = ((ri) this).field_u - 1;
             ((ri) this).field_u = ((ri) this).field_u - 1;
-            if (fieldTemp$2 > 0) {
+            if (fieldTemp$1 > 0) {
               return;
             } else {
               ((ri) this).field_u = ((ri) this).field_s;
@@ -387,8 +387,7 @@ final class ri {
                 return;
               } else {
                 L1: {
-                  int discarded$3 = 60;
-                  this.d();
+                  this.d(60);
                   if (!param0) {
                     break L1;
                   } else {
@@ -445,7 +444,7 @@ final class ri {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -866,7 +865,7 @@ final class ri {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_k = null;
     }

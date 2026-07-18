@@ -17,7 +17,7 @@ final class qj {
         ig.a(((qj) this).field_g, param4, (byte) -110, param1, param2, param0);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_e = null;

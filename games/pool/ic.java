@@ -6,7 +6,7 @@ final class ic {
     static int field_a;
     static String field_b;
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         hj.field_g = 133;
         hj.field_f = 21845;
         hj.field_l = 33;
@@ -403,7 +403,7 @@ final class ic {
         return (byte) stackIn_49_0;
     }
 
-    final static dd a(int param0, boolean param1, int param2, String param3) {
+    final static dd a(int param0, boolean param1, int param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

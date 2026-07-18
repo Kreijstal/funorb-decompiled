@@ -6,7 +6,7 @@ final class vg {
     static String field_b;
     static ta field_c;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (eq.field_g == null) {
             return false;
         }
@@ -24,7 +24,7 @@ final class vg {
         var3.b((byte) 121, param0);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;

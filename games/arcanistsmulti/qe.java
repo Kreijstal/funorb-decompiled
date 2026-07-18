@@ -173,7 +173,7 @@ final class qe extends pg {
         return stackIn_7_0;
     }
 
-    final static void a(dl param0, int param1, wk param2) {
+    final static void a(dl param0, int param1, wk param2, int param3) {
         try {
             RuntimeException var4 = null;
             int var5 = 0;
@@ -602,14 +602,14 @@ final class qe extends pg {
         return stackIn_3_0;
     }
 
-    final static java.awt.Container a() {
+    final static java.awt.Container a(int param0) {
         if (gk.field_c != null) {
             return (java.awt.Container) (Object) gk.field_c;
         }
         return (java.awt.Container) (Object) cd.e(113);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_l = null;
         field_r = null;
         field_j = null;

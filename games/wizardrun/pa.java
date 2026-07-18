@@ -11,14 +11,13 @@ final class pa {
 
     final static void a(java.math.BigInteger param0, int param1, java.math.BigInteger param2, va param3, va param4) {
         try {
-            int discarded$0 = 0;
-            vk.a(param3.field_k, param4, param2, true, param3.field_m, param0);
+            vk.a(param3.field_k, param4, param2, true, param3.field_m, param0, 0);
         } catch (RuntimeException runtimeException) {
             throw bd.a((Throwable) (Object) runtimeException, "pa.C(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return pl.field_E == wc.field_j;
     }
 
@@ -63,10 +62,8 @@ final class pa {
           L0: {
             L1: {
               L2: {
-                int discarded$4 = 95;
-                param1 = fa.a((byte) 122, "", param1);
-                int discarded$5 = 1;
-                var3 = ag.a(param2);
+                param1 = fa.a((byte) 122, "", param1, '_');
+                var3 = ag.a(param2, 1);
                 if (param1.indexOf(param2) != -1) {
                   break L2;
                 } else {

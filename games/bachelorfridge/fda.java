@@ -48,8 +48,7 @@ final class fda extends pp {
         try {
           L0: {
             var10 = (CharSequence) (Object) param2;
-            int discarded$4 = 50;
-            var3_int = tea.a(var10, param1);
+            var3_int = tea.a(var10, param1, 50);
             var4 = new String[var3_int - -1];
             var5 = 0;
             var6 = 0;
@@ -64,9 +63,9 @@ final class fda extends pp {
                 var8 = var6;
                 L2: while (true) {
                   if (param1 == param2.charAt(var8)) {
-                    int incrementValue$5 = var5;
+                    int incrementValue$2 = var5;
                     var5++;
-                    var4[incrementValue$5] = param2.substring(var6, var8);
+                    var4[incrementValue$2] = param2.substring(var6, var8);
                     var6 = 1 + var8;
                     var7++;
                     continue L1;
@@ -111,7 +110,7 @@ final class fda extends pp {
         return stackIn_8_0;
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return (int)(1000000000L / fe.field_h);
     }
 
@@ -192,7 +191,7 @@ final class fda extends pp {
         return stackIn_24_0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_m = null;
         field_l = null;
         field_i = null;
@@ -319,7 +318,7 @@ final class fda extends pp {
         }
     }
 
-    final static void a(gs param0) {
+    final static void a(gs param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         gs var3 = null;

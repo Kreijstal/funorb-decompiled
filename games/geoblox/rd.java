@@ -316,7 +316,7 @@ final class rd extends ff {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         kd.field_e.f(10936);
         if (!(null != vg.field_i)) {
             vg.field_i = new rl(kd.field_e, ff.field_d);
@@ -324,7 +324,7 @@ final class rd extends ff {
         kd.field_e.a(false, (el) (Object) vg.field_i);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         oe.field_P[45] = 26;
         oe.field_P[44] = 71;
         oe.field_P[520] = 59;
@@ -560,8 +560,7 @@ final class rd extends ff {
               }
             }
             ((rd) this).field_t.a((rd) this, param0, param2, param4, 0);
-            int discarded$1 = 1;
-            id.a();
+            id.a(true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -633,8 +632,7 @@ final class rd extends ff {
         String stackOut_5_2 = null;
         try {
           if (mf.a(param2, param0, 114, param3)) {
-            int discarded$2 = 104;
-            return hj.a();
+            return hj.a(104);
           } else {
             return null;
           }

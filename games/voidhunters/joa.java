@@ -5,7 +5,7 @@ final class joa {
     private static int[] field_b;
     static int field_a;
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, boolean param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_3_0 = null;
@@ -74,7 +74,7 @@ final class joa {
         return stackIn_3_0;
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -231,7 +231,7 @@ final class joa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

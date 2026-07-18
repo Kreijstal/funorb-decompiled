@@ -65,18 +65,17 @@ final class sf {
             var3[var4_int] = ig.field_H[fi.a(255, (int) var2[var4_int])];
         }
         o var4 = new o(kl.field_a, we.field_e, ph.field_h[param0], qf.field_d[0], sa.field_l[0], uj.field_b[0], var3);
-        int discarded$0 = -97;
-        og.a();
+        og.a((byte) -97);
         return var4;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         int var1 = -9;
         field_i = null;
     }
 
-    final static Boolean d() {
+    final static Boolean d(int param0) {
         Boolean var1 = n.field_b;
         n.field_b = null;
         return var1;
@@ -170,22 +169,20 @@ final class sf {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         L0: {
           L1: {
             if (10 == fj.field_i) {
               break L1;
             } else {
-              int discarded$6 = 6144;
-              if (!rd.b()) {
+              if (!rd.b(6144)) {
                 break L1;
               } else {
                 break L0;
               }
             }
           }
-          int discarded$7 = -110;
-          jd.n();
+          jd.n(-110);
           fj.field_i = 11;
           break L0;
         }

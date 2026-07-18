@@ -10,7 +10,7 @@ final class uf {
     static int field_b;
     static jp field_e;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -516,7 +516,7 @@ final class uf {
         }
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -591,8 +591,7 @@ final class uf {
         try {
           L0: {
             var9 = (CharSequence) (Object) param0;
-            int discarded$5 = 0;
-            if (tk.a(var9)) {
+            if (tk.a(var9, false)) {
               if (2 != wk.field_m) {
                 stackOut_5_0 = hd.field_b;
                 stackIn_6_0 = stackOut_5_0;

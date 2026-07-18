@@ -21,31 +21,26 @@ final class ol extends de {
             if (null != ib.field_f) {
                 ln.a(75);
             }
-            int discarded$0 = -60;
-            m.a(ao.a(13867));
+            m.a(ao.a(13867), -60);
         }
         if (var2 == 1) {
-            int discarded$1 = -25528;
-            la.a(ti.field_t, 0, false);
+            la.a(ti.field_t, 0, false, -25528);
         }
         if (!(var2 != 2)) {
-            int discarded$2 = -25528;
-            la.a(ti.field_t, 0, true);
+            la.a(ti.field_t, 0, true, -25528);
         }
     }
 
     final void a(int param0) {
-        int discarded$4 = 3782;
-        if (!(!se.d())) {
-            int discarded$5 = 12;
-            mc.e();
+        if (!(!se.d(3782))) {
+            mc.e(12);
         }
         if (param0 != 11) {
             field_q = 43;
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -105,7 +100,7 @@ final class ol extends de {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_p = null;
     }
 

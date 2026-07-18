@@ -10,7 +10,7 @@ final class uk extends gn {
     static boolean field_O;
     static boolean field_N;
 
-    final static void a(byte param0, vl param1) {
+    final static void a(byte param0, vl param1, int param2) {
         ga var3 = null;
         try {
             var3 = ma.field_a;
@@ -64,16 +64,14 @@ final class uk extends gn {
                     r.a(0, bp.field_s);
                     oo.b();
                     var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                    int discarded$8 = 1;
-                    ql.a();
+                    ql.a(true);
                     bp.field_s.e(var5 + -var18.field_z, var6 - var18.field_u, 256);
                     return;
                   } else {
                     bp.field_s = new ja(var9, var10);
                     r.a(0, bp.field_s);
                     var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                    int discarded$9 = 1;
-                    ql.a();
+                    ql.a(true);
                     bp.field_s.e(var5 + -var18.field_z, var6 - var18.field_u, 256);
                     return;
                   }
@@ -81,8 +79,7 @@ final class uk extends gn {
                   bp.field_s = new ja(var9, var10);
                   r.a(0, bp.field_s);
                   var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                  int discarded$10 = 1;
-                  ql.a();
+                  ql.a(true);
                   bp.field_s.e(var5 + -var18.field_z, var6 - var18.field_u, 256);
                   return;
                 }
@@ -90,8 +87,7 @@ final class uk extends gn {
                 bp.field_s = new ja(var9, var10);
                 r.a(0, bp.field_s);
                 var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                int discarded$11 = 1;
-                ql.a();
+                ql.a(true);
                 bp.field_s.e(var5 + -var18.field_z, var6 - var18.field_u, 256);
                 return;
               }
@@ -106,16 +102,14 @@ final class uk extends gn {
                   r.a(0, bp.field_s);
                   oo.b();
                   var15.a(112, 144, var15.field_z << 4, var15.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                  int discarded$12 = 1;
-                  ql.a();
+                  ql.a(true);
                   bp.field_s.e(var5 + -var15.field_z, var6 - var15.field_u, 256);
                   return;
                 } else {
                   bp.field_s = new ja(var9, var10);
                   r.a(0, bp.field_s);
                   var15.a(112, 144, var15.field_z << 4, var15.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                  int discarded$13 = 1;
-                  ql.a();
+                  ql.a(true);
                   bp.field_s.e(var5 + -var15.field_z, var6 - var15.field_u, 256);
                   return;
                 }
@@ -123,8 +117,7 @@ final class uk extends gn {
                 bp.field_s = new ja(var9, var10);
                 r.a(0, bp.field_s);
                 var15.a(112, 144, var15.field_z << 4, var15.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                int discarded$14 = 1;
-                ql.a();
+                ql.a(true);
                 bp.field_s.e(var5 + -var15.field_z, var6 - var15.field_u, 256);
                 return;
               }
@@ -132,8 +125,7 @@ final class uk extends gn {
               bp.field_s = new ja(var9, var10);
               r.a(0, bp.field_s);
               var15.a(112, 144, var15.field_z << 4, var15.field_u << 4, -((uk) this).field_Q << 10, 4096);
-              int discarded$15 = 1;
-              ql.a();
+              ql.a(true);
               bp.field_s.e(var5 + -var15.field_z, var6 - var15.field_u, 256);
               return;
             }
@@ -235,7 +227,7 @@ final class uk extends gn {
         return stackIn_3_0 != 0;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_R = null;
         field_M = null;
     }

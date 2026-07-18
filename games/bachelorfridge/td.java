@@ -120,8 +120,7 @@ class td extends sfa {
                           var11 = var13;
                           var6 = var11;
                           if (1 == var3) {
-                            int discarded$2 = 9;
-                            int discarded$3 = pca.a(var6, var5, param1, var4);
+                            int discarded$1 = pca.a(var17, var5, param1, var4, 9);
                             break L5;
                           } else {
                             var7 = (Object) (Object) kca.field_b;

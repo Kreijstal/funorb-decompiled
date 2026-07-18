@@ -253,10 +253,8 @@ final class bd extends en {
           if (var2 == null) {
             break L1;
           } else {
-            int discarded$2 = 30496;
-            var4_ref_String = jk.a(new String[1], "<col=178B8B><%0></col>");
-            int discarded$3 = 30496;
-            var11 = ck.field_H.a(jk.a(new String[1], var2), (byte) -48);
+            var4_ref_String = jk.a(new String[1], "<col=178B8B><%0></col>", 30496);
+            var11 = ck.field_H.a(jk.a(new String[1], var2, 30496), (byte) -48);
             var2 = var11;
             var3 = (Object) (Object) jn.a(var11, new int[1], -122, (se) (Object) db.field_v);
             break L1;

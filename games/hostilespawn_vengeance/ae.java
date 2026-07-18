@@ -12,14 +12,14 @@ abstract class ae extends dk {
 
     abstract byte[] c(byte param0);
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_r = null;
         field_q = null;
     }
 
     abstract int d(int param0);
 
-    final static String a(java.applet.Applet param0, String param1) {
+    final static String a(java.applet.Applet param0, String param1, int param2) {
         try {
             String var3 = null;
             Throwable var3_ref = null;

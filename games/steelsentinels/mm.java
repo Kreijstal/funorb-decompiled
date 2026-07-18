@@ -162,7 +162,7 @@ final class mm {
                       if (param1 >= 88) {
                         break L2;
                       } else {
-                        boolean discarded$2 = mm.a(true);
+                        boolean discarded$1 = mm.a(true);
                         break L2;
                       }
                     }
@@ -174,8 +174,7 @@ final class mm {
                         var7 = var9 + "; Discard;";
                         break L3;
                       } else {
-                        int discarded$3 = 0;
-                        var7 = var9 + "; Expires=" + mj.b(param4 * 1000L + mm.a(-75)) + "; Max-Age=" + param4;
+                        var7 = var9 + "; Expires=" + mj.b(param4 * 1000L + mm.a(-75), 0) + "; Max-Age=" + param4;
                         break L3;
                       }
                     }
@@ -391,7 +390,7 @@ final class mm {
         return stackIn_22_0 != 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_e = null;
         field_d = null;

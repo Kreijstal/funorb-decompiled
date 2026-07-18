@@ -120,7 +120,7 @@ abstract class ka extends ud {
         return super.c(false);
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_R = null;
         field_P = null;
         field_W = null;

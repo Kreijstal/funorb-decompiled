@@ -91,8 +91,7 @@ final class qc {
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      int discarded$2 = 8286;
-                      var7 = vf.a(var6);
+                      var7 = vf.a(var6, 8286);
                       if (var7 != null) {
                         stackOut_16_0 = (hh) var7;
                         stackIn_17_0 = stackOut_16_0;
@@ -303,8 +302,7 @@ final class qc {
     }
 
     final static void b(byte param0) {
-        int discarded$4 = 1;
-        if (ug.a()) {
+        if (ug.a(true)) {
           if (param0 != -12) {
             qc.b((byte) -103);
             nm.a(false, 4, (byte) 107);
@@ -325,7 +323,7 @@ final class qc {
         hd.field_f = 1000000000L / (long)param0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_f = null;
     }

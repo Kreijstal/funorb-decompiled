@@ -530,7 +530,7 @@ final class uj extends o {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -638,7 +638,7 @@ final class uj extends o {
         throw new Error();
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_l = null;
         field_m = null;
         field_j = null;

@@ -78,7 +78,7 @@ final class es extends gn {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_e = null;
         field_f = null;
@@ -159,8 +159,7 @@ final class es extends gn {
                 }
               }
               var6 = param1.a(true) - param4.c(879306160);
-              int discarded$2 = 170;
-              var7 = nb.a(param1);
+              var7 = nb.a(param1, 170);
               if (var7 * var7 > var5_int * var5_int + var6 * var6) {
                 param1.b(0, -1);
                 param1.field_L = 200;

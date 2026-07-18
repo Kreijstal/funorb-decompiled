@@ -5,7 +5,7 @@ final class jta extends qr {
     static int[] field_z;
     private vna field_y;
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_z = null;
     }
 

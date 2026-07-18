@@ -45,8 +45,7 @@ final class bl extends af {
         String stackOut_15_2 = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          int discarded$2 = 3;
-          var3 = kf.a(false, param2);
+          var3 = kf.a(false, param2, 3);
           if (var3 != null) {
             stackOut_3_0 = (String) var3;
             stackIn_4_0 = stackOut_3_0;
@@ -104,8 +103,7 @@ final class bl extends af {
         int stackIn_13_0 = 0;
         int stackOut_12_0 = 0;
         int stackOut_11_0 = 0;
-        int discarded$13 = -75;
-        if (eo.a(((bl) this).field_t, param0)) {
+        if (eo.a(((bl) this).field_t, param0, (byte) -75)) {
           return false;
         } else {
           if (param1 == 38) {
@@ -164,7 +162,7 @@ final class bl extends af {
         ((bl) this).field_t = mk.field_b;
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_G = null;
         field_J = null;
         field_H = null;

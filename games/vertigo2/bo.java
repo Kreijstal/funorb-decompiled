@@ -16,7 +16,7 @@ final class bo extends li {
         return param1;
     }
 
-    private final void e() {
+    private final void e(int param0) {
         ((bo) this).field_r = 0;
     }
 
@@ -63,11 +63,11 @@ final class bo extends li {
         return ((bo) this).field_r == 10 ? true : false;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
     }
 
-    final static byte[] a(CharSequence param0) {
+    final static byte[] a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;
@@ -308,7 +308,7 @@ final class bo extends li {
         return stackIn_69_0;
     }
 
-    private final void f() {
+    private final void f(int param0) {
         ((bo) this).field_o = new int[10];
     }
 
@@ -323,8 +323,7 @@ final class bo extends li {
                 param1.a((byte) 118, 6, this.a((byte) 117, ((bo) this).field_o[var3_int]));
             }
             param1.q(param0 + -9);
-            int discarded$0 = -85;
-            this.e();
+            this.e(-85);
         } catch (RuntimeException runtimeException) {
             throw wn.a((Throwable) (Object) runtimeException, "bo.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -335,8 +334,7 @@ final class bo extends li {
         short fieldTemp$0 = sk.field_a;
         sk.field_a = (short)(sk.field_a + 1);
         ((bo) this).field_q = fieldTemp$0 % 255;
-        int discarded$1 = -7307;
-        this.f();
+        this.f(-7307);
     }
 
     static {

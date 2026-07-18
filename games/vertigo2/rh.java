@@ -123,7 +123,7 @@ final class rh extends cj implements ij {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -2;
         field_I = null;
         field_G = null;
@@ -304,7 +304,7 @@ final class rh extends cj implements ij {
         }
     }
 
-    final static boolean e() {
+    final static boolean e(byte param0) {
         return ii.field_z;
     }
 
@@ -430,7 +430,7 @@ final class rh extends cj implements ij {
         nm.field_F = param1;
     }
 
-    final static er[] a(er param0) {
+    final static er[] a(er param0, int param1) {
         er[] var2 = null;
         RuntimeException var2_ref = null;
         er[] var3 = null;

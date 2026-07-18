@@ -10,7 +10,7 @@ final class ca extends rk {
     static Boolean field_o;
     static String field_s;
 
-    public static void b() {
+    public static void b(int param0) {
         field_r = null;
         field_s = null;
         field_q = null;
@@ -22,7 +22,7 @@ final class ca extends rk {
         throw new Error();
     }
 
-    final static void c() {
+    final static void c(int param0) {
         if (da.field_h > 0) {
             ti.c(nl.field_c, nl.field_c + 64);
             nl.field_c = 64 + nl.field_c & 511;
@@ -31,8 +31,7 @@ final class ca extends rk {
     }
 
     final static void a(int param0, int param1) {
-        int discarded$6 = 1;
-        int discarded$10 = oc.b();
+        int discarded$4 = oc.b(1);
         if (param1 != -1856653215) {
             ca.a(19, -59);
         }

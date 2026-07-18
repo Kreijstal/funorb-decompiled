@@ -51,14 +51,12 @@ class fn extends fw {
         }
     }
 
-    private final void b() {
-        int discarded$0 = -53;
-        this.a();
-        int discarded$1 = 1000;
-        this.j();
+    private final void b(boolean param0) {
+        this.a((byte) -53);
+        this.j(1000);
     }
 
-    private final void j() {
+    private final void j(int param0) {
         int var2 = 0;
         int var3 = 0;
         if (((fn) this).field_L != ((fn) this).field_O) {
@@ -167,7 +165,7 @@ class fn extends fw {
         }
     }
 
-    private final void n() {
+    private final void n(int param0) {
         if (((fn) this).field_x instanceof fb) {
             ((fb) (Object) ((fn) this).field_x).a((fn) this, 80);
         }
@@ -352,8 +350,7 @@ class fn extends fw {
                           break L9;
                         } else {
                           L10: {
-                            int discarded$1 = -17900;
-                            if (th.a(var6)) {
+                            if (th.a(var6, -17900)) {
                               nh.field_D[param1] = true;
                               break L10;
                             } else {
@@ -510,8 +507,7 @@ class fn extends fw {
                             if (((fn) this).field_O == ((fn) this).field_L) {
                               break L3;
                             } else {
-                              int discarded$10 = 1000;
-                              this.j();
+                              this.j(1000);
                               break L3;
                             }
                           }
@@ -530,9 +526,9 @@ class fn extends fw {
                             L6: {
                               if (((fn) this).field_O >= ((fn) this).field_v.length()) {
                                 ((fn) this).field_v = ((fn) this).field_v + param2;
-                                int dupTemp$11 = ((fn) this).field_v.length();
-                                ((fn) this).field_O = dupTemp$11;
-                                ((fn) this).field_L = dupTemp$11;
+                                int dupTemp$1 = ((fn) this).field_v.length();
+                                ((fn) this).field_O = dupTemp$1;
+                                ((fn) this).field_L = dupTemp$1;
                                 break L6;
                               } else {
                                 ((fn) this).field_v = ((fn) this).field_v.substring(0, ((fn) this).field_O) + param2 + ((fn) this).field_v.substring(((fn) this).field_O, ((fn) this).field_v.length());
@@ -560,15 +556,13 @@ class fn extends fw {
                               break L7;
                             } else {
                               ((fn) this).field_L = 1 + ((fn) this).field_O;
-                              int discarded$12 = 1000;
-                              this.j();
+                              this.j(1000);
                               stackOut_65_0 = 1;
                               stackIn_66_0 = stackOut_65_0;
                               return stackIn_66_0 != 0;
                             }
                           } else {
-                            int discarded$13 = 1000;
-                            this.j();
+                            this.j(1000);
                             stackOut_62_0 = 1;
                             stackIn_63_0 = stackOut_62_0;
                             return stackIn_63_0 != 0;
@@ -597,8 +591,7 @@ class fn extends fw {
                                           if (param1 != 65) {
                                             break L8;
                                           } else {
-                                            int discarded$14 = 1;
-                                            this.b();
+                                            this.b(true);
                                             stackOut_45_0 = 1;
                                             stackIn_46_0 = stackOut_45_0;
                                             return stackIn_46_0 != 0;
@@ -610,8 +603,7 @@ class fn extends fw {
                                           break L9;
                                         } else {
                                           if (param1 == 66) {
-                                            int discarded$15 = -53;
-                                            this.a();
+                                            this.a((byte) -53);
                                             stackOut_55_0 = 1;
                                             stackIn_56_0 = stackOut_55_0;
                                             return stackIn_56_0 != 0;
@@ -624,8 +616,7 @@ class fn extends fw {
                                         break L7;
                                       } else {
                                         if (67 == param1) {
-                                          int discarded$16 = -104;
-                                          this.f();
+                                          this.f((byte) -104);
                                           stackOut_53_0 = 1;
                                           stackIn_54_0 = stackOut_53_0;
                                           return stackIn_54_0 != 0;
@@ -634,8 +625,7 @@ class fn extends fw {
                                         }
                                       }
                                     } else {
-                                      int discarded$17 = -92;
-                                      this.n();
+                                      this.n(-92);
                                       stackOut_41_0 = 1;
                                       stackIn_42_0 = stackOut_41_0;
                                       return stackIn_42_0 != 0;
@@ -711,16 +701,14 @@ class fn extends fw {
                       break L0;
                     } else {
                       if (((fn) this).field_L != ((fn) this).field_O) {
-                        int discarded$18 = 1000;
-                        this.j();
+                        this.j(1000);
                         stackOut_17_0 = 1;
                         stackIn_18_0 = stackOut_17_0;
                         return stackIn_18_0 != 0;
                       } else {
                         if (0 < ((fn) this).field_O) {
                           ((fn) this).field_L = -1 + ((fn) this).field_O;
-                          int discarded$19 = 1000;
-                          this.j();
+                          this.j(1000);
                           stackOut_15_0 = 1;
                           stackIn_16_0 = stackOut_15_0;
                           return stackIn_16_0 != 0;
@@ -1001,7 +989,7 @@ class fn extends fw {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         String var2 = this.o(-89);
         if (0 < var2.length()) {
             java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.o(-74)), (java.awt.datatransfer.ClipboardOwner) null);
@@ -1177,7 +1165,7 @@ class fn extends fw {
         return stackIn_21_0 != 0;
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_S = null;
         field_Q = null;
     }
@@ -1205,7 +1193,7 @@ class fn extends fw {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -1213,10 +1201,8 @@ class fn extends fw {
             try {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                int discarded$2 = 1000;
-                this.j();
-                int discarded$3 = -114;
-                this.a(var2);
+                this.j(1000);
+                this.a(var2, (byte) -114);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -1233,7 +1219,7 @@ class fn extends fw {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;

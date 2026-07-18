@@ -61,8 +61,7 @@ final class lm extends kn implements f, sh {
             L2: {
               L3: {
                 param0 = ke.a('_', (byte) 75, param0, "");
-                int discarded$2 = 0;
-                var3 = re.a(param0);
+                var3 = re.a(param0, 0);
                 if (param1.indexOf(param0) != -1) {
                   break L3;
                 } else {
@@ -301,8 +300,7 @@ final class lm extends kn implements f, sh {
                 if (param0.field_u.length <= param0.field_o) {
                   break L2;
                 } else {
-                  int discarded$2 = -113;
-                  var3_int = af.a(param0, var2);
+                  var3_int = af.a(param0, var2, -113);
                   if (!ne.a(var3_int, uf.field_q, param0, (byte) -87)) {
                     continue L1;
                   } else {
@@ -393,7 +391,7 @@ final class lm extends kn implements f, sh {
                 break L1;
               } else {
                 var7 = null;
-                int discarded$4 = this.a(false, (String) null, -122, (String) null, -18, (fe) null);
+                int discarded$2 = this.a(false, (String) null, -122, (String) null, -18, (fe) null);
                 break L1;
               }
             }
@@ -402,8 +400,7 @@ final class lm extends kn implements f, sh {
                 if (((lm) this).field_P != param2) {
                   break L2;
                 } else {
-                  int discarded$5 = -93;
-                  this.g();
+                  this.g((byte) -93);
                   break L2;
                 }
               } else {
@@ -477,7 +474,7 @@ final class lm extends kn implements f, sh {
         ((lm) this).a(55 + (var3 + var4), -101, 0, 496, 0);
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         if (!this.e((byte) -68)) {
             return;
         }

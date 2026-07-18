@@ -11,7 +11,7 @@ final class ci {
     static vj field_h;
     static String field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_f = null;
         field_g = null;
@@ -21,7 +21,7 @@ final class ci {
         field_a = null;
     }
 
-    final static pi[] b() {
+    final static pi[] b(int param0) {
         int var2 = 0;
         int var3 = client.field_A ? 1 : 0;
         pi[] var1 = new pi[ec.field_g];

@@ -23,7 +23,7 @@ final class d extends km {
         this.b(param0, param4, param3 ^ -20132);
     }
 
-    final static km h() {
+    final static km h(int param0) {
         return ve.field_q.field_Lb;
     }
 
@@ -102,7 +102,7 @@ final class d extends km {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_Lb = null;
         field_Gb = null;
         field_Kb = null;

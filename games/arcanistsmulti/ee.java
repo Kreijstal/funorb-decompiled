@@ -329,9 +329,7 @@ abstract class ee implements pd {
         try {
           L0: {
             var2_int = -29;
-            int discarded$4 = 0;
-            int discarded$5 = 59;
-            stackOut_0_0 = hd.a(param1);
+            stackOut_0_0 = hd.a(param1, (byte) 59, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

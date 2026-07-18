@@ -7,7 +7,7 @@ final class qn {
     static st field_a;
     static tp field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
         int var1 = 0;
@@ -15,7 +15,7 @@ final class qn {
         field_c = null;
     }
 
-    final static String b() {
+    final static String b(int param0) {
         if (2 > bl.field_c) {
             return ji.field_a;
         }

@@ -71,7 +71,7 @@ final class ir extends rqa {
         return stackIn_4_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
         int var1 = 56;
     }
@@ -151,7 +151,7 @@ final class ir extends rqa {
         }
     }
 
-    final static void a(ml param0) {
+    final static void a(ml param0, byte param1) {
         ml var4 = null;
         ml var5 = null;
         try {

@@ -190,7 +190,7 @@ final class qk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -490,9 +490,7 @@ final class qk {
             L6: {
               ((cl) (Object) stackIn_6_0).a(stackIn_6_1 != 0, stackIn_6_2, stackIn_6_3);
               if (param1 != -1) {
-                int discarded$4 = 0;
-                int discarded$5 = 0;
-                pn.a(param1, 256, 16769381);
+                pn.a(param1, 256, 16769381, false, false);
                 break L6;
               } else {
                 break L6;
@@ -510,9 +508,7 @@ final class qk {
               rh.field_M.c();
               kk.field_X[param4].a(false, param2, 1);
               if (-1 != param1) {
-                int discarded$6 = 0;
-                int discarded$7 = 0;
-                pn.a(param1, 256, 16769381);
+                pn.a(param1, 256, 16769381, false, false);
                 fh.a(true);
                 if (param0 == 7230) {
                   return;

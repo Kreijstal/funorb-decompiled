@@ -337,8 +337,7 @@ final class mg extends al {
         try {
           L0: {
             var5 = (CharSequence) (Object) param0;
-            int discarded$2 = 8351;
-            var3 = db.a(var5);
+            var3 = db.a(var5, 8351);
             if (var3 == null) {
               L1: {
                 if (param0.equals((Object) (Object) ((mg) this).field_m)) {
@@ -414,7 +413,7 @@ final class mg extends al {
         return stackIn_17_0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_k = null;
         field_l = null;
         field_j = null;
@@ -480,9 +479,7 @@ final class mg extends al {
     }
 
     final static void d(int param0) {
-        int discarded$8 = 1;
-        int discarded$10 = 640;
-        la.a();
+        la.a(640, true);
         if (param0 != 30432) {
             mg.h((byte) -25);
         }

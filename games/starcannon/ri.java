@@ -8,13 +8,13 @@ final class ri {
     static ue field_c;
     static int[] field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
     }
 
-    final static ue a(boolean param0, boolean param1, int param2, int param3) {
+    final static ue a(boolean param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;
@@ -79,7 +79,7 @@ final class ri {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         we.field_i = se.field_p.a(-104);
         CharSequence var2 = (CharSequence) (Object) we.field_i;
         ba.field_e = ni.a(123, var2);

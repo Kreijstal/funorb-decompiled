@@ -436,7 +436,7 @@ final class wd {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_i = null;
         field_s = null;
@@ -481,8 +481,7 @@ final class wd {
     wd(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-            int discarded$0 = -18694;
-            ((wd) this).field_d = w.a(param0.length, param0);
+            ((wd) this).field_d = w.a(param0.length, param0, -18694);
             if (param1 != ((wd) this).field_d) {
                 throw new RuntimeException();
             }

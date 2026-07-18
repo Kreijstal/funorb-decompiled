@@ -82,7 +82,7 @@ final class pd {
         }
     }
 
-    final static boolean a(int param0, CharSequence param1) {
+    final static boolean a(int param0, CharSequence param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -92,30 +92,30 @@ final class pd {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_34_0 = 0;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
+        int stackIn_20_0 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_36_0 = 0;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
-        String stackIn_38_2 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_40_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_33_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_21_0 = 0;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
+        int stackOut_35_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_29_0 = 0;
+        int stackOut_23_0 = 0;
         RuntimeException stackOut_37_0 = null;
         StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        String stackOut_39_2 = null;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
+        String stackOut_38_2 = null;
         var11 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
@@ -126,8 +126,8 @@ final class pd {
             var8 = 0;
             L1: while (true) {
               if (var8 >= var7) {
-                stackOut_33_0 = var5;
-                stackIn_34_0 = stackOut_33_0;
+                stackOut_35_0 = var5;
+                stackIn_36_0 = stackOut_35_0;
                 break L0;
               } else {
                 L2: {
@@ -174,9 +174,9 @@ final class pd {
                       }
                     }
                     if (var9 < 97) {
-                      stackOut_17_0 = 0;
-                      stackIn_18_0 = stackOut_17_0;
-                      return stackIn_18_0 != 0;
+                      stackOut_19_0 = 0;
+                      stackIn_20_0 = stackOut_19_0;
+                      return stackIn_20_0 != 0;
                     } else {
                       if (var9 <= 122) {
                         var9 -= 87;
@@ -197,18 +197,18 @@ final class pd {
                     }
                     var10 = var9 + 10 * var6;
                     if (var10 / 10 != var6) {
-                      stackOut_27_0 = 0;
-                      stackIn_28_0 = stackOut_27_0;
-                      return stackIn_28_0 != 0;
+                      stackOut_29_0 = 0;
+                      stackIn_30_0 = stackOut_29_0;
+                      return stackIn_30_0 != 0;
                     } else {
                       var5 = 1;
                       var6 = var10;
                       break L2;
                     }
                   } else {
-                    stackOut_21_0 = 0;
-                    stackIn_22_0 = stackOut_21_0;
-                    return stackIn_22_0 != 0;
+                    stackOut_23_0 = 0;
+                    stackIn_24_0 = stackOut_23_0;
+                    return stackIn_24_0 != 0;
                   }
                 }
                 var8++;
@@ -220,33 +220,33 @@ final class pd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var4 = decompiledCaughtException;
-            stackOut_35_0 = (RuntimeException) var4;
-            stackOut_35_1 = new StringBuilder().append("pd.A(").append(65).append(',');
-            stackIn_37_0 = stackOut_35_0;
-            stackIn_37_1 = stackOut_35_1;
-            stackIn_36_0 = stackOut_35_0;
-            stackIn_36_1 = stackOut_35_1;
+            stackOut_37_0 = (RuntimeException) var4;
+            stackOut_37_1 = new StringBuilder().append("pd.A(").append(65).append(',');
+            stackIn_39_0 = stackOut_37_0;
+            stackIn_39_1 = stackOut_37_1;
+            stackIn_38_0 = stackOut_37_0;
+            stackIn_38_1 = stackOut_37_1;
             if (param1 == null) {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
-              stackOut_37_2 = "null";
-              stackIn_38_0 = stackOut_37_0;
-              stackIn_38_1 = stackOut_37_1;
-              stackIn_38_2 = stackOut_37_2;
+              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
+              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_2 = "null";
+              stackIn_40_0 = stackOut_39_0;
+              stackIn_40_1 = stackOut_39_1;
+              stackIn_40_2 = stackOut_39_2;
               break L8;
             } else {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
-              stackOut_36_2 = "{...}";
-              stackIn_38_0 = stackOut_36_0;
-              stackIn_38_1 = stackOut_36_1;
-              stackIn_38_2 = stackOut_36_2;
+              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
+              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_2 = "{...}";
+              stackIn_40_0 = stackOut_38_0;
+              stackIn_40_1 = stackOut_38_1;
+              stackIn_40_2 = stackOut_38_2;
               break L8;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ',' + 10 + ',' + true + ')');
+          throw la.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + 10 + ',' + true + ')');
         }
-        return stackIn_34_0 != 0;
+        return stackIn_36_0 != 0;
     }
 
     final static void a(boolean param0) {
@@ -329,7 +329,7 @@ final class pd {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_f = null;
         int var1 = 0;
@@ -340,7 +340,7 @@ final class pd {
         throw new Error();
     }
 
-    final static java.awt.Frame a(int param0, int param1, md param2, int param3, int param4) {
+    final static java.awt.Frame a(int param0, int param1, md param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         eg[] var6_array = null;
         int var7_int = 0;
@@ -375,8 +375,7 @@ final class pd {
             if (param2.a(2)) {
               L1: {
                 if (param4 == 0) {
-                  int discarded$3 = 1;
-                  var10 = eg.a(param2);
+                  var10 = eg.a(param2, true);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;
@@ -417,8 +416,7 @@ final class pd {
                       stackIn_27_0 = stackOut_26_0;
                       break L0;
                     } else {
-                      int discarded$4 = 0;
-                      rk.a(param2, var7);
+                      rk.a(param2, var7, false);
                       stackOut_24_0 = null;
                       stackIn_25_0 = stackOut_24_0;
                       return (java.awt.Frame) (Object) stackIn_25_0;
@@ -427,8 +425,7 @@ final class pd {
                     return null;
                   }
                 } else {
-                  int discarded$5 = 0;
-                  em.a(10L);
+                  em.a(10L, false);
                   continue L4;
                 }
               }

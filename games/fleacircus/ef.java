@@ -23,18 +23,18 @@ class ef extends kc {
         var2.a(-11, 0);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_j = null;
         field_m = null;
         field_h = null;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1 = 10;
         return bm.field_K - ei.field_M;
     }
 
-    final static void a(sg param0) {
+    final static void a(sg param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

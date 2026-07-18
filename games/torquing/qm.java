@@ -79,7 +79,7 @@ abstract class qm {
         return 1 + param1;
     }
 
-    final static ae a(String param0) {
+    final static ae a(String param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         ae var3 = null;

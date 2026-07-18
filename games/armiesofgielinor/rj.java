@@ -20,7 +20,6 @@ final class rj extends kb {
     static int[] field_Q;
 
     private final wk b(int param0, int param1, int param2) {
-        wk var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -30,6 +29,7 @@ final class rj extends kb {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        wk var14 = null;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int stackOut_6_0 = 0;
@@ -37,16 +37,15 @@ final class rj extends kb {
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
         var13 = ArmiesOfGielinor.field_M ? 1 : 0;
-        var4 = new wk(((rj) this).field_C * 2, ((rj) this).field_w);
-        int discarded$1 = 3;
-        vn.a(var4);
+        var14 = new wk(((rj) this).field_C * 2, ((rj) this).field_w);
+        vn.a(var14, 3);
         var5 = ((rj) this).field_w >> 1;
         if (param1 < -54) {
           var6 = 0;
           L0: while (true) {
             if (var6 >= ((rj) this).field_w) {
               rf.b(-18862);
-              return var4;
+              return var14;
             } else {
               L1: {
                 var7 = (((rj) this).field_C * 2 - 1) * (var6 >> 1) % (((rj) this).field_C * 2);
@@ -94,8 +93,7 @@ final class rj extends kb {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        int discarded$0 = 3;
-        this.i();
+        this.i(3);
     }
 
     final void c(int param0, int param1, int param2) {
@@ -103,8 +101,7 @@ final class rj extends kb {
         ((rj) this).field_H = param0;
         ((rj) this).field_P = param1 >> 1 & 8355711;
         ((rj) this).field_E = 8355711 & param0 >> 1;
-        int discarded$0 = 3;
-        this.i();
+        this.i(3);
         if (param2 != 27178) {
             field_F = null;
         }
@@ -145,8 +142,7 @@ final class rj extends kb {
                 L2: {
                   rf.b(-18862);
                   if (qn.field_j <= param3 + ((rj) this).field_J.field_y) {
-                    int discarded$2 = 3;
-                    vn.a(((rj) this).field_K);
+                    vn.a(((rj) this).field_K, 3);
                     param2.g(-((rj) this).field_N, 0);
                     param2.g(((rj) this).field_C * 2 - ((rj) this).field_N, 0);
                     ((rj) this).field_S.b(0, 0);
@@ -159,8 +155,7 @@ final class rj extends kb {
                 }
                 L3: {
                   if (-((rj) this).field_J.field_y + var5_int <= qn.field_e) {
-                    int discarded$3 = 3;
-                    vn.a(((rj) this).field_K);
+                    vn.a(((rj) this).field_K, 3);
                     var8 = -((rj) this).field_J.field_y + ((rj) this).field_l + ((rj) this).field_N;
                     L4: while (true) {
                       if (var8 <= ((rj) this).field_C * 2) {
@@ -304,7 +299,7 @@ final class rj extends kb {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, (param6 & 16711422) >> 1);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_G = null;
         field_M = null;
         field_F = null;
@@ -424,7 +419,7 @@ final class rj extends kb {
         ps.field_v = false;
     }
 
-    private final wk j() {
+    private final wk j(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -432,8 +427,7 @@ final class rj extends kb {
         int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var2 = ((rj) this).field_w >> 1;
         wk var3 = new wk(var2, ((rj) this).field_w);
-        int discarded$0 = 3;
-        vn.a(var3);
+        vn.a(var3, 3);
         for (var4 = 0; var4 < ((rj) this).field_w; var4++) {
             for (var5 = 0; var2 > var5; var5++) {
                 var6 = (double)var5 * (double)var5 / (double)((-var4 + ((rj) this).field_w) * var4);
@@ -449,10 +443,9 @@ final class rj extends kb {
         return var3;
     }
 
-    private final void i() {
+    private final void i(int param0) {
         ((rj) this).field_O = new wk[]{this.b(((rj) this).field_H, -61, ((rj) this).field_L), this.b(((rj) this).field_E, -120, ((rj) this).field_P)};
-        int discarded$0 = 750;
-        ((rj) this).field_J = this.j();
+        ((rj) this).field_J = this.j(750);
         ((rj) this).field_S = ((rj) this).field_J.e();
         ((rj) this).field_K = new wk(((rj) this).field_w >> 1, ((rj) this).field_w);
     }

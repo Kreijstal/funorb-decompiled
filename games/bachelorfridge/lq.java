@@ -9,7 +9,7 @@ abstract class lq extends wj implements e {
     static int field_y;
     wj[] field_B;
 
-    public static void a() {
+    public static void a(int param0) {
         field_A = null;
         field_z = null;
     }
@@ -130,7 +130,7 @@ abstract class lq extends wj implements e {
         return stackIn_7_0;
     }
 
-    private final wj b() {
+    private final wj b(boolean param0) {
         wj[] var2 = null;
         int var3 = 0;
         wj var4 = null;
@@ -377,7 +377,7 @@ abstract class lq extends wj implements e {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         cq var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -993,8 +993,7 @@ abstract class lq extends wj implements e {
                   if (var5_int == 80) {
                     L2: {
                       if (wga.field_q[81]) {
-                        int discarded$3 = -99;
-                        stackOut_17_0 = this.b(param3);
+                        stackOut_17_0 = this.b(param3, -99);
                         stackIn_18_0 = stackOut_17_0;
                         break L2;
                       } else {
@@ -1136,7 +1135,7 @@ abstract class lq extends wj implements e {
         return stackIn_3_0;
     }
 
-    private final boolean b(wj param0) {
+    private final boolean b(wj param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;
@@ -1160,9 +1159,7 @@ abstract class lq extends wj implements e {
         try {
           L0: {
             var3_int = 0;
-            int discarded$4 = 1;
-            int discarded$5 = 0;
-            stackOut_0_0 = this.a(param0);
+            stackOut_0_0 = this.a(param0, false, 1);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -1349,11 +1346,10 @@ abstract class lq extends wj implements e {
         if (param0 != 1023) {
             return false;
         }
-        int discarded$0 = 0;
-        return null != this.b() ? true : false;
+        return null != this.b(false) ? true : false;
     }
 
-    private final boolean a(wj param0) {
+    private final boolean a(wj param0, boolean param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         wj var5 = null;

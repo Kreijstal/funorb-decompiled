@@ -22,7 +22,7 @@ final class db extends sh {
         return ((db) this).field_A.field_q * 100 / (-((db) this).field_F + ((db) this).field_A.field_m.length);
     }
 
-    final static void j() {
+    final static void j(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -53,7 +53,7 @@ final class db extends sh {
         }
     }
 
-    final static void i() {
+    final static void i(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -158,7 +158,7 @@ final class db extends sh {
         field_D = null;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

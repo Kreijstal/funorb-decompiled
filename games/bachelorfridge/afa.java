@@ -9,7 +9,7 @@ final class afa extends k {
     private int[] field_p;
     private int field_n;
 
-    private final void e() {
+    private final void e(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -209,7 +209,7 @@ final class afa extends k {
         return ((afa) this).field_o[param0];
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
     }
 
@@ -245,7 +245,7 @@ final class afa extends k {
         return var8;
     }
 
-    final static fe a(lu param0) {
+    final static fe a(lu param0, int param1) {
         RuntimeException var2 = null;
         fe stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -304,7 +304,7 @@ final class afa extends k {
         return stackIn_3_0;
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         int[] var14 = ((afa) this).field_o[0];
         int[] var12 = var14;
         int[] var10 = var12;
@@ -415,12 +415,10 @@ final class afa extends k {
             throw new RuntimeException("Curve operation requires at least two markers");
         }
         if (((afa) this).field_n == 2) {
-            int discarded$0 = 0;
-            this.b();
+            this.b(false);
         }
         gea.a(param0 ^ -4293);
-        int discarded$1 = 0;
-        this.e();
+        this.e(0);
     }
 
     static {

@@ -7,7 +7,7 @@ final class tf {
     static int field_c;
     static df[] field_d;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return we.field_d;
     }
 

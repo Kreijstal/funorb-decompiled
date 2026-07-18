@@ -16,7 +16,7 @@ final class da {
         ci.field_c.a(nk.field_n, -20 + c.field_e.field_Db, (byte) -112, 2, c.field_e.field_gb, 0, 20);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         ea var3 = null;
@@ -64,18 +64,17 @@ final class da {
                     var6_int = 1;
                     L4: while (true) {
                       if (var6_int >= var4) {
-                        int discarded$3 = 0;
-                        gn.a(var4, var5);
+                        gn.a(var4, var5, false);
                         var6_int = 0;
                         L5: while (true) {
                           if (var6_int >= var4) {
                             sp.a(true, var5);
-                            String[][] dupTemp$4 = new String[2][var5];
-                            var3.field_n = dupTemp$4;
-                            var6 = dupTemp$4;
-                            int[][] dupTemp$5 = new int[2][var5 * 4];
-                            var3.field_q = dupTemp$5;
-                            var7 = dupTemp$5;
+                            String[][] dupTemp$2 = new String[2][var5];
+                            var3.field_n = dupTemp$2;
+                            var6 = dupTemp$2;
+                            int[][] dupTemp$3 = new int[2][var5 * 4];
+                            var3.field_q = dupTemp$3;
+                            var7 = dupTemp$3;
                             var8 = jh.field_c;
                             var9 = 0;
                             var10 = 0;
@@ -307,8 +306,7 @@ final class da {
                       var2 = 1;
                       L4: while (true) {
                         if (9 < var2) {
-                          int discarded$1 = -96;
-                          hf.a(dl.field_e, hj.field_e);
+                          hf.a(dl.field_e, hj.field_e, (byte) -96);
                           break L0;
                         } else {
                           wj.field_S[var2 + 12] = or.field_k[var2];
@@ -337,7 +335,7 @@ final class da {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
     }
 

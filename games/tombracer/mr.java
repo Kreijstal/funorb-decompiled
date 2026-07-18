@@ -206,7 +206,7 @@ final class mr extends b implements tma, tsa, mia {
         return stackIn_4_0;
     }
 
-    private final boolean c() {
+    private final boolean c(int param0) {
         if (!(this.g(1877))) {
             return false;
         }
@@ -367,7 +367,6 @@ final class mr extends b implements tma, tsa, mia {
         poa dupTemp$1 = new poa(10000536);
         ((mr) this).field_C.field_r = (isa) (Object) dupTemp$1;
         ((mr) this).field_E.field_r = (isa) (Object) dupTemp$1;
-        int discarded$2 = 170;
         String var2 = gl.a((byte) 90, uqa.field_y, new String[2]);
         int var3 = 20;
         var3 = var3 + this.a((ae) (Object) ((mr) this).field_z, var3, 170, (byte) 74, em.field_f);
@@ -375,8 +374,7 @@ final class mr extends b implements tma, tsa, mia {
         var3 = var3 + this.a((ae) (Object) ((mr) this).field_E, var3, 170, (byte) 59, rta.field_j);
         var3 = var3 + (this.a(gea.field_c, gt.field_d, (ae) (Object) ((mr) this).field_C, -3, 170, var3) + 5);
         var3 = var3 + (this.a(rea.field_r, za.field_f, (ae) (Object) ((mr) this).field_G, -3, 170, var3) + 5);
-        int discarded$3 = 170;
-        var3 = var3 + this.a((ae) (Object) ((mr) this).field_I, var3, (byte) 99, iqa.field_g);
+        var3 = var3 + this.a((ae) (Object) ((mr) this).field_I, var3, (byte) 99, iqa.field_g, 170);
         jsa var4 = new jsa(46, var3, ((mr) this).field_m + -90, 25, (ae) (Object) ((mr) this).field_D, true, ((mr) this).field_m + -120, 5, eka.field_o, 11579568, jja.field_l);
         ((mr) this).a((ae) (Object) var4, -1);
         var3 = var3 + var4.field_p;
@@ -643,7 +641,7 @@ final class mr extends b implements tma, tsa, mia {
         return stackIn_9_0;
     }
 
-    private final String d() {
+    private final String d(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -1021,8 +1019,7 @@ final class mr extends b implements tma, tsa, mia {
                 if (param2 != ((mr) this).field_F) {
                   break L1;
                 } else {
-                  int discarded$4 = -1;
-                  boolean discarded$5 = this.c();
+                  boolean discarded$2 = this.c(-1);
                   break L1;
                 }
               }
@@ -1066,7 +1063,7 @@ final class mr extends b implements tma, tsa, mia {
         }
     }
 
-    private final int a(ae param0, int param1, byte param2, String param3) {
+    private final int a(ae param0, int param1, byte param2, String param3, int param4) {
         jsa var6 = null;
         RuntimeException var6_ref = null;
         mha var7 = null;

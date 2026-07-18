@@ -9,14 +9,14 @@ final class cg extends gn {
     static boolean field_I;
     static pb field_H;
 
-    final static String b() {
+    final static String b(boolean param0) {
         if (null == kn.field_J) {
             return "";
         }
         return kn.field_J;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_H = null;
     }
 

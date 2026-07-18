@@ -16,7 +16,7 @@ final class jk {
         sf.field_F = param2;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         int var1 = 0;
         field_b = null;

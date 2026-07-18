@@ -85,7 +85,7 @@ final class in {
         ((in) this).field_a.field_m = ((in) this).field_a;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_b = null;
     }

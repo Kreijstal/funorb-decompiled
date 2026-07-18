@@ -15,7 +15,7 @@ abstract class id extends ff {
 
     abstract void a(int param0, nm param1);
 
-    final static void d() {
+    final static void d(byte param0) {
         br var1 = null;
         RuntimeException var1_ref = null;
         br var2 = null;
@@ -34,8 +34,7 @@ abstract class id extends ff {
                     L3: while (true) {
                       if (!(var1 instanceof wj)) {
                         L4: {
-                          int discarded$5 = 127;
-                          wp.b();
+                          wp.b(127);
                           if (null == td.field_b) {
                             break L4;
                           } else {

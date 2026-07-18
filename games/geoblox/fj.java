@@ -16,7 +16,7 @@ abstract class fj extends rc {
         ((fj) this).field_n = param0;
     }
 
-    final static boolean f() {
+    final static boolean f(int param0) {
         if (hj.field_a < 10) {
             return false;
         }
@@ -26,7 +26,7 @@ abstract class fj extends rc {
         return true;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_p = null;
         field_q = null;
     }
@@ -37,8 +37,7 @@ abstract class fj extends rc {
             int var5_int = 103;
             ih.field_c.a((byte) -126, false);
             ha.a((byte) 103, param1, param4, param3);
-            int discarded$0 = -121;
-            qh.h();
+            qh.h((byte) -121);
             kd.field_b = uf.field_l;
             si.field_g = uf.field_l;
         } catch (RuntimeException runtimeException) {

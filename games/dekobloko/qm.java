@@ -10,7 +10,7 @@ final class qm {
     int field_f;
     static String field_b;
 
-    final static void a(boolean param0, int param1, boolean param2) {
+    final static void a(boolean param0, int param1, boolean param2, byte param3) {
         int var5 = 0;
         w stackIn_2_0 = null;
         int stackIn_2_1 = 0;
@@ -579,7 +579,7 @@ final class qm {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_g = null;

@@ -129,7 +129,7 @@ final class eea {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
     }
@@ -181,8 +181,7 @@ final class eea {
                 if (null == pw.field_w) {
                   break L3;
                 } else {
-                  int discarded$3 = 28791;
-                  if (uka.a(param1) == null) {
+                  if (uka.a(param1, 28791) == null) {
                     break L3;
                   } else {
                     stackOut_6_0 = 1;

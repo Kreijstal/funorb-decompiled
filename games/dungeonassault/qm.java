@@ -107,7 +107,7 @@ final class qm extends ip {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_q = null;
         field_m = null;
         field_r = null;
@@ -143,8 +143,7 @@ final class qm extends ip {
         try {
           L0: {
             L1: {
-              int discarded$10 = 1;
-              if (null != kc.a(param0)) {
+              if (null != kc.a(param0, true)) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;

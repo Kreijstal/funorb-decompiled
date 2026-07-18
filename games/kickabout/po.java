@@ -173,7 +173,7 @@ final class po {
         return stackIn_15_0 != 0;
     }
 
-    final static int a(js param0) {
+    final static int a(js param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;

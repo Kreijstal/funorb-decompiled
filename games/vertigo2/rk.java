@@ -134,11 +134,11 @@ abstract class rk extends gp {
         return stackIn_28_0;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         rh.b(-14, 17);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_w = null;
         field_v = null;
         field_x = null;

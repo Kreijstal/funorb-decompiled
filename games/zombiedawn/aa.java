@@ -31,8 +31,7 @@ final class aa {
             }
             if (((aa) this).field_d != oc.field_b) {
               if (w.field_b == 2) {
-                int discarded$3 = 1;
-                if (mc.a(((aa) this).field_c)) {
+                if (mc.a(((aa) this).field_c, true)) {
                   return 1;
                 } else {
                   return 0;
@@ -53,8 +52,7 @@ final class aa {
               if (((aa) this).field_l <= 0) {
                 if (((aa) this).field_d != oc.field_b) {
                   if (w.field_b == 2) {
-                    int discarded$4 = 1;
-                    if (mc.a(((aa) this).field_c)) {
+                    if (mc.a(((aa) this).field_c, true)) {
                       return 1;
                     } else {
                       return 0;
@@ -71,8 +69,7 @@ final class aa {
             } else {
               if (((aa) this).field_d != oc.field_b) {
                 if (w.field_b == 2) {
-                  int discarded$5 = 1;
-                  if (mc.a(((aa) this).field_c)) {
+                  if (mc.a(((aa) this).field_c, true)) {
                     return 1;
                   } else {
                     return 0;

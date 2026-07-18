@@ -150,8 +150,7 @@ final class ia extends md {
     }
 
     final long b(byte param0) {
-        int discarded$0 = 1;
-        ((ia) this).field_m = ((ia) this).field_m + this.a();
+        ((ia) this).field_m = ((ia) this).field_m + this.a(true);
         if (param0 != 66) {
             return -28L;
         }
@@ -161,7 +160,7 @@ final class ia extends md {
         return 0L;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -238,7 +237,7 @@ final class ia extends md {
         }
     }
 
-    private final long a() {
+    private final long a(boolean param0) {
         int var8 = 0;
         int var9 = wizardrun.field_H;
         long var2 = System.nanoTime();

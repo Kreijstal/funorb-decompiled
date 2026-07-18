@@ -27,8 +27,7 @@ final class p extends uc {
             return;
         }
         ((p) this).field_e.a(157, gj.field_n, 26, (byte) 76, 325);
-        int discarded$0 = 69;
-        boolean discarded$1 = this.c();
+        boolean discarded$0 = this.c((byte) 69);
     }
 
     private final void a(int param0, int param1, int param2, boolean param3) {
@@ -74,8 +73,7 @@ final class p extends uc {
           var6 = 157;
           var7 = 168;
           var8 = 26;
-          int discarded$1 = 0;
-          il.a(var8, param3, param1, var6, var7);
+          il.a(var8, param3, param1, var6, var7, false);
           if (param3) {
             stackOut_5_0 = 1;
             stackIn_6_0 = stackOut_5_0;
@@ -160,7 +158,7 @@ final class p extends uc {
         }
     }
 
-    private final boolean c() {
+    private final boolean c(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int stackIn_70_0 = 0;
@@ -186,8 +184,7 @@ final class p extends uc {
             if (!((p) this).field_e.a(true)) {
               break L1;
             } else {
-              int discarded$2 = 0;
-              hc.a(true);
+              hc.a(true, false);
               uh.field_p = null;
               return true;
             }
@@ -389,8 +386,7 @@ final class p extends uc {
             if (!((p) this).field_e.a(true)) {
               break L17;
             } else {
-              int discarded$3 = 0;
-              qc.a(((p) this).field_e.field_i);
+              qc.a(((p) this).field_e.field_i, 0);
               ((p) this).field_e.a(-1, true, -1);
               return true;
             }
@@ -438,8 +434,7 @@ final class p extends uc {
         }
         if (pj.field_q != 13) {
             ((p) this).field_e.f(0);
-            int discarded$0 = 69;
-            return this.c();
+            return this.c((byte) 69);
         }
         uh.field_p = null;
         return true;

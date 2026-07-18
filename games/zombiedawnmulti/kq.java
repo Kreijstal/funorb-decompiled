@@ -67,7 +67,7 @@ final class kq extends java.awt.Canvas {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 

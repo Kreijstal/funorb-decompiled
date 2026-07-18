@@ -77,8 +77,7 @@ final class hc {
                   }
                 }
                 d.a(param0, param2 + -23210);
-                int discarded$3 = 1;
-                var5 = cm.a(param0, var4);
+                var5 = cm.a(param0, var4, true);
                 var6 = var5.length;
                 var7 = 0;
                 L3: while (true) {
@@ -90,15 +89,14 @@ final class hc {
                       break L1;
                     } else {
                       L4: {
-                        int discarded$4 = -37;
-                        nd.a(var5[var7]);
+                        nd.a(var5[var7], (byte) -37);
                         if (var5[var7].field_K <= 0) {
                           var7++;
                           break L4;
                         } else {
-                          int incrementValue$5 = var6;
+                          int incrementValue$1 = var6;
                           var6++;
-                          var10.field_b[incrementValue$5] = nd.a(109, var5[var7], hp.a(var10.field_d, (byte) 32));
+                          var10.field_b[incrementValue$1] = nd.a(109, var5[var7], hp.a(var10.field_d, (byte) 32));
                           var7++;
                           break L4;
                         }

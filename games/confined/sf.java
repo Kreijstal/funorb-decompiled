@@ -13,7 +13,7 @@ final class sf extends rk {
     static bi field_p;
     int field_n;
 
-    final static void c() {
+    final static void c(int param0) {
         da.field_i = false;
         int discarded$0 = e.field_c.c(32);
     }
@@ -94,8 +94,7 @@ final class sf extends rk {
         int stackOut_15_3 = 0;
         var2 = 96 % ((param1 - -16) / 47);
         ej.field_b = false;
-        int discarded$3 = 1;
-        if (tj.a()) {
+        if (tj.a(true)) {
           if (oj.field_B == 0) {
             if (lc.field_J == null) {
               if (oj.field_B == 0) {
@@ -183,8 +182,7 @@ final class sf extends rk {
                   break L1;
                 }
               }
-              int discarded$4 = 120;
-              hh.field_d = ih.a(stackIn_25_0 != 0, stackIn_25_1 != 0, stackIn_25_2 != 0, stackIn_25_3 != 0);
+              hh.field_d = ih.a(stackIn_25_0 != 0, stackIn_25_1 != 0, stackIn_25_2 != 0, stackIn_25_3 != 0, (byte) 120);
               return;
             }
           } else {
@@ -246,8 +244,7 @@ final class sf extends rk {
                 break L3;
               }
             }
-            int discarded$5 = 120;
-            hh.field_d = ih.a(stackIn_17_0 != 0, stackIn_17_1 != 0, stackIn_17_2 != 0, stackIn_17_3 != 0);
+            hh.field_d = ih.a(stackIn_17_0 != 0, stackIn_17_1 != 0, stackIn_17_2 != 0, stackIn_17_3 != 0, (byte) 120);
             return;
           }
         } else {

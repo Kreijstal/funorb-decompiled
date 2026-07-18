@@ -55,12 +55,12 @@ final class o extends pg {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         jl.field_c.field_i = 0;
         jl.field_c.field_o = 0;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_o = null;
         field_E = null;
         field_F = null;

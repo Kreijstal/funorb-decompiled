@@ -4,7 +4,7 @@
 final class qha extends rqa {
     static int field_o;
 
-    final static void b() {
+    final static void b(boolean param0) {
         fw.field_a = -1;
         tg.field_o = -1;
     }

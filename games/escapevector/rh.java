@@ -228,7 +228,7 @@ final class rh extends bj implements qb {
         return stackIn_12_0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_O = null;
         field_I = null;
         field_J = null;

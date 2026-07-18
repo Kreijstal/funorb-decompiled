@@ -149,7 +149,7 @@ final class hh extends mg {
         ((hh) this).field_E = ((hh) this).field_o;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_M = null;
         field_N = null;
         field_G = null;
@@ -508,7 +508,7 @@ final class hh extends mg {
         }
     }
 
-    final static fh a() {
+    final static fh a(byte param0) {
         if (!(null != bg.field_d)) {
             bg.field_d = new fh();
             bg.field_d.a(ql.field_Q, 48);

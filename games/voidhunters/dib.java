@@ -10,7 +10,7 @@ final class dib extends ev {
     static String field_j;
     private int field_h;
 
-    final static void a(File param0, int param1, byte[] param2) throws IOException {
+    final static void a(File param0, int param1, byte[] param2, byte param3) throws IOException {
         DataInputStream var4 = null;
         try {
             var4 = new DataInputStream((InputStream) (Object) new BufferedInputStream((InputStream) (Object) new FileInputStream(param0)));
@@ -169,17 +169,15 @@ final class dib extends ev {
         var4 = param1 * ((dib) this).field_g >> 12;
         var5 = ((dib) this).field_i * param1 >> 12;
         if (param0 != -112) {
-          int discarded$3 = dib.a((byte) 92, -127, 80, 107);
+          int discarded$1 = dib.a((byte) 92, -127, 80, 107);
           var6 = param2 * ((dib) this).field_f >> 12;
           var7 = ((dib) this).field_h * param2 >> 12;
-          int discarded$4 = -117;
-          fcb.a(((dib) this).field_e, var7, var6, var4, var5);
+          fcb.a(((dib) this).field_e, var7, var6, var4, var5, (byte) -117);
           return;
         } else {
           var6 = param2 * ((dib) this).field_f >> 12;
           var7 = ((dib) this).field_h * param2 >> 12;
-          int discarded$5 = -117;
-          fcb.a(((dib) this).field_e, var7, var6, var4, var5);
+          fcb.a(((dib) this).field_e, var7, var6, var4, var5, (byte) -117);
           return;
         }
     }

@@ -125,8 +125,7 @@ final class pl extends bd {
             var5.field_k = 10;
             var5.field_r = param1;
             lf.field_c.a((byte) -119, (tc) (Object) var5);
-            int discarded$2 = 0;
-            gn.a(3, var5);
+            gn.a(3, var5, 0);
             return var5;
           } else {
             if (param1 == var5.field_r) {

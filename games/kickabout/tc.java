@@ -293,8 +293,7 @@ final class tc extends am {
                               if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                                 break L4;
                               } else {
-                                int discarded$10 = -113;
-                                ka.a(dc.field_d, cf.field_Db);
+                                ka.a(dc.field_d, cf.field_Db, (byte) -113);
                                 break L4;
                               }
                             }
@@ -325,8 +324,7 @@ final class tc extends am {
                         if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                           break L5;
                         } else {
-                          int discarded$11 = -113;
-                          ka.a(dc.field_d, cf.field_Db);
+                          ka.a(dc.field_d, cf.field_Db, (byte) -113);
                           break L5;
                         }
                       }
@@ -365,8 +363,7 @@ final class tc extends am {
                         if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                           break L7;
                         } else {
-                          int discarded$12 = -113;
-                          ka.a(dc.field_d, cf.field_Db);
+                          ka.a(dc.field_d, cf.field_Db, (byte) -113);
                           break L7;
                         }
                       }
@@ -394,8 +391,7 @@ final class tc extends am {
                       if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                         break L8;
                       } else {
-                        int discarded$13 = -113;
-                        ka.a(dc.field_d, cf.field_Db);
+                        ka.a(dc.field_d, cf.field_Db, (byte) -113);
                         return;
                       }
                     }
@@ -418,8 +414,7 @@ final class tc extends am {
                       if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                         break L9;
                       } else {
-                        int discarded$14 = -113;
-                        ka.a(dc.field_d, cf.field_Db);
+                        ka.a(dc.field_d, cf.field_Db, (byte) -113);
                         return;
                       }
                     }
@@ -444,8 +439,7 @@ final class tc extends am {
                       if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                         break L10;
                       } else {
-                        int discarded$15 = -113;
-                        ka.a(dc.field_d, cf.field_Db);
+                        ka.a(dc.field_d, cf.field_Db, (byte) -113);
                         return;
                       }
                     }
@@ -467,8 +461,7 @@ final class tc extends am {
                       if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                         break L11;
                       } else {
-                        int discarded$16 = -113;
-                        ka.a(dc.field_d, cf.field_Db);
+                        ka.a(dc.field_d, cf.field_Db, (byte) -113);
                         return;
                       }
                     }
@@ -499,8 +492,7 @@ final class tc extends am {
                         if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                           break L13;
                         } else {
-                          int discarded$17 = -113;
-                          ka.a(dc.field_d, cf.field_Db);
+                          ka.a(dc.field_d, cf.field_Db, (byte) -113);
                           break L13;
                         }
                       }
@@ -525,8 +517,7 @@ final class tc extends am {
                         if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                           break L14;
                         } else {
-                          int discarded$18 = -113;
-                          ka.a(dc.field_d, cf.field_Db);
+                          ka.a(dc.field_d, cf.field_Db, (byte) -113);
                           break L14;
                         }
                       }
@@ -548,8 +539,7 @@ final class tc extends am {
                   if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
                     break L15;
                   } else {
-                    int discarded$19 = -113;
-                    ka.a(dc.field_d, cf.field_Db);
+                    ka.a(dc.field_d, cf.field_Db, (byte) -113);
                     return;
                   }
                 }

@@ -8,7 +8,7 @@ class wa extends vh {
     static String field_t;
     static bg[] field_r;
 
-    public static void c() {
+    public static void c(int param0) {
         field_t = null;
         field_q = null;
         field_r = null;

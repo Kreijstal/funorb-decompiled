@@ -11,7 +11,7 @@ final class sf {
     static String field_a;
     static gh field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_a = null;
         field_g = null;

@@ -165,8 +165,7 @@ final class qa {
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_2_0 = qa.a(param1.length, 0, param1);
+            stackOut_2_0 = qa.a(param1.length, 0, param1, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -343,7 +342,7 @@ final class qa {
         this(param0, false);
     }
 
-    private final static String a(int param0, int param1, CharSequence[] param2) {
+    private final static String a(int param0, int param1, CharSequence[] param2, int param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -474,7 +473,7 @@ final class qa {
         return stackIn_24_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_i = null;
         field_d = null;

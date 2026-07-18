@@ -16,7 +16,7 @@ final class mf {
         field_d = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2_double = 0.0;

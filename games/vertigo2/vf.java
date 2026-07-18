@@ -598,7 +598,7 @@ final class vf extends ji {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_C = null;
         field_B = null;
         field_y = null;

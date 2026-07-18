@@ -73,7 +73,7 @@ final class dl {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }

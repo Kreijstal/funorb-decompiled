@@ -152,8 +152,7 @@ final class qa {
 
     final void b(int param0) {
         Object var3 = null;
-        int discarded$2 = 0;
-        if (!this.a()) {
+        if (!this.a(0)) {
           return;
         } else {
           ((qa) this).field_n.a(((qa) this).field_e, ((qa) this).field_p, ((qa) this).field_k, ((qa) this).field_c, ((qa) this).field_l, ((qa) this).field_a, 51);
@@ -175,7 +174,7 @@ final class qa {
             }
           } else {
             var3 = null;
-            int discarded$3 = qa.a(true, (mi[]) null, 44);
+            int discarded$1 = qa.a(true, (mi[]) null, 44);
             if (!((qa) this).field_a.f((byte) 33)) {
               if (!((qa) this).field_a.field_A) {
                 ((qa) this).field_d.a(((qa) this).field_p, ((qa) this).field_k, ((qa) this).field_e, -88, ((qa) this).field_a, ((qa) this).field_c, ((qa) this).field_l);
@@ -330,7 +329,7 @@ final class qa {
         }
     }
 
-    private final boolean a() {
+    private final boolean a(int param0) {
         return this.a(aaa.a(false), (byte) 59, koa.b(0), 0, 0);
     }
 

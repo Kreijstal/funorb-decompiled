@@ -16,12 +16,12 @@ final class g {
     int field_c;
     int field_m;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_k = null;
     }
 
-    final static jg a(int param0, int param1, dl param2, int param3) {
+    final static jg a(int param0, int param1, dl param2, int param3, byte param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         jg var7 = null;
@@ -99,7 +99,7 @@ final class g {
         return stackIn_4_0;
     }
 
-    final static void a(java.applet.Applet param0, String param1) {
+    final static void a(java.applet.Applet param0, String param1, int param2) {
         try {
             String var3 = null;
             Throwable var3_ref = null;
@@ -163,8 +163,7 @@ final class g {
                     break L3;
                   }
                 }
-                int discarded$2 = 1;
-                la.a(param0);
+                la.a(param0, true);
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

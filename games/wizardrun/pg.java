@@ -13,7 +13,7 @@ final class pg extends wl {
     static int field_n;
     private int field_k;
 
-    final static int d() {
+    final static int d(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -90,8 +90,7 @@ final class pg extends wl {
                         break L6;
                       } else {
                         var3 = 2;
-                        int discarded$1 = 15991;
-                        le.a(true, 5);
+                        le.a(true, 5, 15991);
                         break L6;
                       }
                     }
@@ -127,7 +126,7 @@ final class pg extends wl {
         return stackIn_27_0;
     }
 
-    final static void a(long param0) {
+    final static void a(long param0, int param1) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
@@ -428,7 +427,7 @@ final class pg extends wl {
         mh.field_ob = null;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_r = null;
     }
 
@@ -454,7 +453,7 @@ final class pg extends wl {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         td.field_f.c((ub) (Object) new ki(), -123);
     }
 

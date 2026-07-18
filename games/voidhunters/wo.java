@@ -84,7 +84,7 @@ final class wo extends rqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
     }
 

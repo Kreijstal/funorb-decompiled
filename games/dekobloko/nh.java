@@ -152,7 +152,7 @@ final class nh {
         return ((nh) this).field_n;
     }
 
-    private final void a() throws IOException {
+    private final void a(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = client.field_A ? 1 : 0;
@@ -267,8 +267,7 @@ final class nh {
                     break L5;
                   } else {
                     L6: {
-                      int discarded$2 = 0;
-                      this.a();
+                      this.a(0);
                       var9_int = param3;
                       if (((nh) this).field_m < var9_int) {
                         var9_int = ((nh) this).field_m;
@@ -325,9 +324,9 @@ final class nh {
                             break L9;
                           } else {
                             param3--;
-                            int incrementValue$3 = param0;
+                            int incrementValue$1 = param0;
                             param0++;
-                            param1[incrementValue$3] = (byte) 0;
+                            param1[incrementValue$1] = (byte) 0;
                             ((nh) this).field_j = ((nh) this).field_j + 1L;
                             continue L11;
                           }

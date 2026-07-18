@@ -12,7 +12,7 @@ final class og {
     static String field_g;
     static String field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_f = null;
         field_g = null;

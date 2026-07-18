@@ -13,7 +13,7 @@ final class ok {
         field_f = null;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_5_0 = null;
@@ -113,7 +113,7 @@ final class ok {
         ((ok) this).field_c = 0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         tn.field_h[kf.field_F] = tc.field_b;
         ce.field_q[kf.field_F] = tc.field_d;
         dm.field_b[kf.field_F] = tc.field_e;

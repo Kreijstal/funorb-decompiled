@@ -11,7 +11,7 @@ final class hf extends pi {
     static ul field_q;
     byte[] field_n;
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
         field_q = null;
         field_u = null;

@@ -9,7 +9,7 @@ final class pd extends ksa {
     int field_d;
     int field_h;
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = 0;
         field_g = null;
     }

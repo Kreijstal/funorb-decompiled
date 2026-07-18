@@ -9,7 +9,7 @@ final class l {
     static String field_a;
     static long[] field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
         field_f = null;
@@ -172,8 +172,7 @@ final class l {
         try {
           L0: {
             L1: {
-              int discarded$8 = -105;
-              eb.a((java.awt.Component) (Object) param1);
+              eb.a((java.awt.Component) (Object) param1, (byte) -105);
               fb.a((java.awt.Component) (Object) param1, (byte) -42);
               if (null != hg.field_k) {
                 hg.field_k.a((java.awt.Component) (Object) param1, false);

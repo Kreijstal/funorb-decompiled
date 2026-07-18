@@ -229,7 +229,7 @@ final class nj {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
     }
 
@@ -267,8 +267,7 @@ final class nj {
             mc.a(-8497, rj.field_H);
             ig.b();
             ge.d();
-            int discarded$1 = -128;
-            ec.b();
+            ec.b(-128);
             if (var5 < 256) {
               ge.c(0, 0, ge.field_h, ge.field_g, 0, 256 - var5);
               break L2;

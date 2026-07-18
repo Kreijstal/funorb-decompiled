@@ -129,16 +129,14 @@ final class deb extends mfb {
           var2.h(24335, param1);
           var2.c(0, 2);
           var2.c(0, 4);
-          int discarded$4 = 75;
-          var2.c(0, kua.a());
+          var2.c(0, kua.a((byte) 75));
           return;
         } else {
           var2 = dpa.field_p;
           var2.h(24335, param1);
           var2.c(0, 2);
           var2.c(0, 4);
-          int discarded$5 = 75;
-          var2.c(0, kua.a());
+          var2.c(0, kua.a((byte) 75));
           return;
         }
     }

@@ -11,11 +11,11 @@ abstract class a {
     static String[] field_g;
     static String field_b;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return true;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         wk[] var5 = eb.field_s;
         jm.a(param0, 30, var5, 1, param1, 80);
     }
@@ -122,8 +122,7 @@ abstract class a {
                   break L1;
                 }
               }
-              int discarded$2 = 69;
-              vl.field_x = fn.a(stackIn_10_0 != 0);
+              vl.field_x = fn.a(stackIn_10_0 != 0, (byte) 69);
               var7 = null;
               ki.a((byte) -54, (String[]) null);
               break L0;

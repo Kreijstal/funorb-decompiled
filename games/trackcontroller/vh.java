@@ -6,7 +6,7 @@ abstract class vh extends gb {
     static String field_p;
     static volatile boolean field_q;
 
-    final static void h() {
+    final static void h(int param0) {
         bk.field_J = null;
         jf.field_i = null;
         ue.field_c = null;
@@ -14,7 +14,7 @@ abstract class vh extends gb {
         el.field_O = null;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_p = null;
     }
 
@@ -434,8 +434,7 @@ abstract class vh extends gb {
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
         try {
-          int discarded$2 = -105;
-          nf.a(false, param2, param0);
+          nf.a(false, param2, param0, (byte) -105);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

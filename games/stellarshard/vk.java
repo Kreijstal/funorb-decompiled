@@ -391,7 +391,7 @@ abstract class vk {
         int var2 = 0;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         nf var4 = null;
@@ -414,8 +414,7 @@ abstract class vk {
                   }
                 }
               } else {
-                int discarded$2 = 80;
-                ea.a(3, var4);
+                ea.a(3, var4, (byte) 80);
                 var4 = (nf) (Object) wb.field_f.b((byte) 120);
                 continue L1;
               }

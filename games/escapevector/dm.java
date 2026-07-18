@@ -62,7 +62,7 @@ final class dm extends hg {
         }
     }
 
-    final static void a(mf param0, int param1) {
+    final static void a(mf param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -90,8 +90,7 @@ final class dm extends hg {
               if (4 <= var3_int) {
                 break L0;
               } else {
-                int discarded$5 = 1;
-                sl.field_b[param1][var3_int] = fe.a(da.field_d[param1], param0, "layer" + var3_int);
+                sl.field_b[param1][var3_int] = fe.a(da.field_d[param1], param0, "layer" + var3_int, true);
                 var3_int++;
                 continue L1;
               }

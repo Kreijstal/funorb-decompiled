@@ -64,7 +64,7 @@ final class jv {
         return -param3 + dma.field_g;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_d = null;
     }

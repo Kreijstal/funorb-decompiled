@@ -9,13 +9,13 @@ final class fe extends l {
     static int[] field_h;
     static CrazyCrystals field_g;
 
-    public static void d() {
+    public static void d(byte param0) {
         field_e = null;
         field_h = null;
         field_g = null;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         dc.a(param0, (byte) 114, true);
     }
 
@@ -36,8 +36,7 @@ final class fe extends l {
             jj.field_b = jj.field_b + -(~jj.field_b >> 3);
             if (!(((fe) this).field_f.field_n > jj.field_b)) {
                 kk.field_a = null;
-                int discarded$0 = 0;
-                hc.a(true);
+                hc.a(true, false);
                 return null;
             }
         }
@@ -193,8 +192,7 @@ final class fe extends l {
 
     final l b(byte param0) {
         kk.field_a = null;
-        int discarded$3 = 0;
-        hc.a(true);
+        hc.a(true, false);
         if (param0 == -90) {
             return null;
         }
@@ -202,7 +200,7 @@ final class fe extends l {
         return null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -210,25 +208,18 @@ final class fe extends l {
         var2 = CrazyCrystals.field_B;
         try {
           L0: {
-            int discarded$7 = 0;
-            sc.field_i[0] = new am(kg.a(fk.field_x[0], 100));
-            int discarded$8 = 0;
-            sc.field_i[1] = new am(kg.a(fk.field_x[1], 100));
-            int discarded$9 = 0;
-            ga.field_B = new am(kg.a(nk.field_j, 100));
-            int discarded$10 = 0;
-            ua.field_a = new am(kg.a(uk.field_i, 100));
-            int discarded$11 = 0;
-            cb.field_n = new am(kg.a(aq.field_t, 100));
-            int discarded$12 = 0;
-            tm.field_f = new am(kg.a(qf.field_w, 100));
+            sc.field_i[0] = new am(kg.a(fk.field_x[0], 100, 0));
+            sc.field_i[1] = new am(kg.a(fk.field_x[1], 100, 0));
+            ga.field_B = new am(kg.a(nk.field_j, 100, 0));
+            ua.field_a = new am(kg.a(uk.field_i, 100, 0));
+            cb.field_n = new am(kg.a(aq.field_t, 100, 0));
+            tm.field_f = new am(kg.a(qf.field_w, 100, 0));
             var1_int = 0;
             L1: while (true) {
               if (var1_int >= 4) {
                 break L0;
               } else {
-                int discarded$13 = 0;
-                il.field_h[var1_int] = new am(kg.a(fo.field_i[var1_int], 100));
+                il.field_h[var1_int] = new am(kg.a(fo.field_i[var1_int], 100, 0));
                 var1_int++;
                 continue L1;
               }

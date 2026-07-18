@@ -25,10 +25,9 @@ final class mba extends uq {
         if (((mba) this).field_k >= 25) {
           if (50 > ((mba) this).field_k) {
             ((mba) this).field_m = 8;
-            int discarded$8 = 16094;
-            ((mba) this).field_m = ((mba) this).field_m + (2 + this.h()) % 4;
+            ((mba) this).field_m = ((mba) this).field_m + (2 + this.h(16094)) % 4;
             if (param0 <= 125) {
-              int discarded$9 = ((mba) this).c((byte) -70);
+              int discarded$4 = ((mba) this).c((byte) -70);
               return;
             } else {
               return;
@@ -36,34 +35,31 @@ final class mba extends uq {
           } else {
             if (((mba) this).field_k < 75) {
               ((mba) this).field_m = 4;
-              int discarded$10 = 16094;
-              ((mba) this).field_m = ((mba) this).field_m + (2 + this.h()) % 4;
+              ((mba) this).field_m = ((mba) this).field_m + (2 + this.h(16094)) % 4;
               if (param0 <= 125) {
-                int discarded$11 = ((mba) this).c((byte) -70);
+                int discarded$5 = ((mba) this).c((byte) -70);
                 return;
               } else {
                 return;
               }
             } else {
               ((mba) this).field_m = 0;
-              int discarded$12 = 16094;
-              ((mba) this).field_m = ((mba) this).field_m + (2 + this.h()) % 4;
+              ((mba) this).field_m = ((mba) this).field_m + (2 + this.h(16094)) % 4;
               if (param0 > 125) {
                 return;
               } else {
-                int discarded$13 = ((mba) this).c((byte) -70);
+                int discarded$6 = ((mba) this).c((byte) -70);
                 return;
               }
             }
           }
         } else {
           ((mba) this).field_m = 12;
-          int discarded$14 = 16094;
-          ((mba) this).field_m = ((mba) this).field_m + (2 + this.h()) % 4;
+          ((mba) this).field_m = ((mba) this).field_m + (2 + this.h(16094)) % 4;
           if (param0 > 125) {
             return;
           } else {
-            int discarded$15 = ((mba) this).c((byte) -70);
+            int discarded$7 = ((mba) this).c((byte) -70);
             return;
           }
         }
@@ -75,8 +71,7 @@ final class mba extends uq {
         uq var4 = null;
         int var5 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
-        int discarded$4 = 16094;
-        if (0 != this.h()) {
+        if (0 != this.h(16094)) {
           var2 = ((mba) this).field_e.c((byte) 106) / 2 * 2;
           var3 = ((mba) this).field_e.f(116) / 2 * 2;
           var4 = ((mba) this).field_e.a(18641).a(25, var2, var3).b((byte) -95);
@@ -103,8 +98,7 @@ final class mba extends uq {
                 }
               }
             } else {
-              int discarded$5 = -84;
-              this.f();
+              this.f((byte) -84);
               if (param0 <= -31) {
                 return;
               } else {
@@ -136,8 +130,7 @@ final class mba extends uq {
                 }
               }
             } else {
-              int discarded$6 = -84;
-              this.f();
+              this.f((byte) -84);
               if (param0 > -31) {
                 ((mba) this).g(97);
                 return;
@@ -170,8 +163,7 @@ final class mba extends uq {
               }
             }
           } else {
-            int discarded$7 = -84;
-            this.f();
+            this.f((byte) -84);
             if (param0 <= -31) {
               return;
             } else {
@@ -195,15 +187,14 @@ final class mba extends uq {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         int var2 = 0;
         var2 = ((mba) this).field_e.field_h;
         if (0 != var2) {
           if (var2 != 1) {
             return;
           } else {
-            int discarded$2 = 0;
-            this.b();
+            this.b(false);
             return;
           }
         } else {
@@ -212,11 +203,11 @@ final class mba extends uq {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_g = null;
     }
 
-    private final int h() {
+    private final int h(int param0) {
         return ((mba) this).field_e.c((byte) 102) % 2 - -(2 * (((mba) this).field_e.f(-77) % 2));
     }
 
@@ -665,7 +656,7 @@ final class mba extends uq {
         }
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         if (((mba) this).field_k < 50) {
           ((mba) this).field_m = 16;
           this.h((byte) -45);

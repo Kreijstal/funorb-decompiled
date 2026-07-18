@@ -18,7 +18,7 @@ final class nq {
     lr field_i;
     int field_e;
 
-    final static boolean a(byte param0) {
+    final static boolean a(byte param0, int param1) {
         aa var2 = null;
         RuntimeException var2_ref = null;
         ij var3 = null;
@@ -632,8 +632,7 @@ final class nq {
         try {
           L0: {
             L1: {
-              int discarded$4 = 10;
-              bp.a(param7, param6);
+              bp.a(param7, param6, 10);
               ib.field_s = bp.a(param1, param2, 0, param3);
               kk.field_D = bp.a(param1, param2, 1, param5);
               qf.field_d = new ai();
@@ -645,7 +644,7 @@ final class nq {
               if (!param4) {
                 break L1;
               } else {
-                boolean discarded$5 = nq.a('`', (byte) -1);
+                boolean discarded$2 = nq.a('`', (byte) -1);
                 break L1;
               }
             }

@@ -127,7 +127,7 @@ class rk extends ek {
         }
     }
 
-    private final void k() {
+    private final void k(int param0) {
         cf var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -201,7 +201,7 @@ class rk extends ek {
         var2 = -30 / ((param0 - 40) / 59);
     }
 
-    private final int e() {
+    private final int e(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -335,10 +335,8 @@ class rk extends ek {
                   ((rk) this).field_W = stackIn_9_1 != 0;
                   if (((rk) this).field_W) {
                     L4: {
-                      int discarded$2 = 0;
-                      ((rk) this).field_M = this.n();
-                      int discarded$3 = -30;
-                      ((rk) this).field_S = this.e();
+                      ((rk) this).field_M = this.n(0);
+                      ((rk) this).field_S = this.e((byte) -30);
                       if (((rk) this).field_S <= 0) {
                         break L4;
                       } else {
@@ -403,7 +401,7 @@ class rk extends ek {
         this.f((byte) -95);
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         if (!(!(((rk) this).field_v instanceof qh))) {
             ((qh) (Object) ((rk) this).field_v).b(-2569, (rk) this);
         }
@@ -426,12 +424,11 @@ class rk extends ek {
     }
 
     final static void c(boolean param0) {
-        int discarded$0 = -1199770620;
-        em.a();
+        em.a(-1199770620);
         hm.a(4, (byte) -104);
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_12_0 = null;
@@ -511,7 +508,7 @@ class rk extends ek {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         try {
             Exception var2 = null;
             String var2_ref = null;
@@ -520,8 +517,7 @@ class rk extends ek {
               L0: {
                 var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.f((byte) -92);
-                int discarded$1 = 1;
-                this.a(var2_ref);
+                this.a(var2_ref, true);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -586,8 +582,7 @@ class rk extends ek {
           L0: {
             L1: {
               super.a(param0, 94, param2, param3);
-              int discarded$2 = -17122;
-              this.k();
+              this.k(-17122);
               if (((rk) this).field_o != 1) {
                 break L1;
               } else {
@@ -675,7 +670,7 @@ class rk extends ek {
         return ((rk) this).field_E.substring(var2, var3);
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_N = null;
         field_R = null;
         field_L = null;
@@ -703,8 +698,8 @@ class rk extends ek {
             java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.i(103)), (java.awt.datatransfer.ClipboardOwner) null);
         }
         if (param0 > -96) {
-            int discarded$0 = 1;
-            this.a((String) null);
+            Object var3 = null;
+            this.a((String) null, true);
         }
     }
 
@@ -832,9 +827,9 @@ class rk extends ek {
                               break L6;
                             } else {
                               ((rk) this).field_E = ((rk) this).field_E + param3;
-                              int dupTemp$5 = ((rk) this).field_E.length();
-                              ((rk) this).field_S = dupTemp$5;
-                              ((rk) this).field_M = dupTemp$5;
+                              int dupTemp$1 = ((rk) this).field_E.length();
+                              ((rk) this).field_S = dupTemp$1;
+                              ((rk) this).field_M = dupTemp$1;
                               break L6;
                             }
                           }
@@ -883,10 +878,9 @@ class rk extends ek {
                                   stackIn_54_0 = stackOut_53_0;
                                   stackIn_54_1 = stackOut_53_1;
                                   if (bj.field_d[82]) {
-                                    int discarded$6 = -30;
                                     stackOut_55_0 = this;
                                     stackOut_55_1 = stackIn_55_1;
-                                    stackOut_55_2 = this.e();
+                                    stackOut_55_2 = this.e((byte) -30);
                                     stackIn_56_0 = stackOut_55_0;
                                     stackIn_56_1 = stackOut_55_1;
                                     stackIn_56_2 = stackOut_55_2;
@@ -949,16 +943,14 @@ class rk extends ek {
                                       if (param1 != 67) {
                                         break L7;
                                       } else {
-                                        int discarded$7 = 118;
-                                        this.h();
+                                        this.h(118);
                                         stackOut_44_0 = 1;
                                         stackIn_45_0 = stackOut_44_0;
                                         return stackIn_45_0 != 0;
                                       }
                                     }
                                   } else {
-                                    int discarded$8 = 0;
-                                    this.b();
+                                    this.b(false);
                                     stackOut_34_0 = 1;
                                     stackIn_35_0 = stackOut_34_0;
                                     return stackIn_35_0 != 0;
@@ -981,10 +973,9 @@ class rk extends ek {
                                 stackIn_24_0 = stackOut_23_0;
                                 stackIn_24_1 = stackOut_23_1;
                                 if (bj.field_d[82]) {
-                                  int discarded$9 = 0;
                                   stackOut_25_0 = this;
                                   stackOut_25_1 = stackIn_25_1;
-                                  stackOut_25_2 = this.n();
+                                  stackOut_25_2 = this.n(0);
                                   stackIn_26_0 = stackOut_25_0;
                                   stackIn_26_1 = stackOut_25_1;
                                   stackIn_26_2 = stackOut_25_2;
@@ -1077,7 +1068,7 @@ class rk extends ek {
         return stackIn_76_0 != 0;
     }
 
-    private final int n() {
+    private final int n(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = client.field_A ? 1 : 0;

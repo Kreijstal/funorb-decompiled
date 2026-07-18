@@ -9,7 +9,7 @@ final class nm {
     static boolean field_a;
     private int[] field_d;
 
-    final static char a(byte param0) {
+    final static char a(byte param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         var2 = param0 & 255;

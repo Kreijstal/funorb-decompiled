@@ -140,11 +140,11 @@ final class vf extends pg {
         return stackIn_29_0;
     }
 
-    final static cg a(long param0) {
+    final static cg a(long param0, int param1) {
         return (cg) (Object) kn.field_qb.a(param0, (byte) -121);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_h = null;
         field_p = null;
@@ -172,9 +172,7 @@ final class vf extends pg {
     private static void $cfr$clinit() {
         field_g = new so(1);
         field_p = "Press '<col=ffffff><%0></col>' or '<col=ffffff><%1></col>' to cycle through your minions or to centre on your Arcanist.<br>  Use the '<col=ffffff>Arrow keys</col>' to scroll around the map.";
-        int discarded$0 = 50;
-        int discarded$1 = 100;
-        km.a();
+        km.a(100, 50);
         field_v = new int[8192];
         field_h = "Spellbook not acquired";
     }

@@ -23,7 +23,7 @@ final class ff {
         return ((ff) this).field_b[fieldTemp$0];
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -223,7 +223,7 @@ final class ff {
         }
     }
 
-    final static cn a() {
+    final static cn a(byte param0) {
         int var4_int = 0;
         int var5 = DungeonAssault.field_K;
         int var1 = jc.field_f[0] * jn.field_k[0];
@@ -233,12 +233,11 @@ final class ff {
             var3[var4_int] = uo.field_b[nb.a(255, (int) var2[var4_int])];
         }
         cn var4 = new cn(ce.field_x, tb.field_i, hg.field_t[0], fe.field_g[0], jc.field_f[0], jn.field_k[0], var3);
-        int discarded$0 = 500;
-        sb.a();
+        sb.a(500);
         return var4;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_f = null;
     }
 
@@ -250,8 +249,7 @@ final class ff {
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 ((ff) this).field_b[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 77;
-            this.b();
+            this.b((byte) 77);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "ff.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

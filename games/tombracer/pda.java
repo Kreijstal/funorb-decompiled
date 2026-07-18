@@ -24,7 +24,7 @@ final class pda {
         vt discarded$0 = new vt();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         int var1 = 0;
         field_d = null;

@@ -248,8 +248,7 @@ final class vo extends nc {
                 break L3;
               } else {
                 if (100 < ((vo) this).field_t) {
-                  int discarded$1 = -115;
-                  this.h();
+                  this.h(-115);
                   break L3;
                 } else {
                   break L3;
@@ -308,7 +307,7 @@ final class vo extends nc {
         ((vo) this).field_t = 0;
     }
 
-    private final void h() {
+    private final void h(int param0) {
         bm.a(true, 1, 127, sp.field_g);
     }
 
@@ -321,6 +320,9 @@ final class vo extends nc {
     }
 
     final void a(boolean param0) {
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
         int var5 = 0;
         L0: {
           var5 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -334,8 +336,62 @@ final class vo extends nc {
         L1: {
           oo.b();
           if (260 <= ((vo) this).field_t) {
-            int discarded$2 = 520;
-            this.g();
+            L2: {
+              if (((vo) this).field_t >= 388) {
+                if (508 > ((vo) this).field_t) {
+                  this.b(0, 0, -115);
+                  wd.field_P.a(0, 480 - wd.field_P.field_a);
+                  break L2;
+                } else {
+                  if (((vo) this).field_t >= 1564) {
+                    if (1724 > ((vo) this).field_t) {
+                      this.b(-264, 0, -115);
+                      var2 = 924;
+                      bl.field_g.a(-var2 + 622, 0);
+                      break L2;
+                    } else {
+                      if (-1853 < ((vo) this).field_t) {
+                        var2 = 924;
+                        this.b(-264, 0, -115);
+                        bl.field_g.a(622 + -var2, 0);
+                        oo.f(0, 0, 640, 480, 0, 2 * (-1724 + ((vo) this).field_t));
+                        break L2;
+                      } else {
+                        if (-2153 <= ((vo) this).field_t) {
+                          break L2;
+                        } else {
+                          this.g(520);
+                          if (((vo) this).field_t <= 120) {
+                            break L1;
+                          } else {
+                            if (((vo) this).field_t >= 388) {
+                              break L1;
+                            } else {
+                              pb.field_e.b(no.field_Fb, 320, 460, 16777215, 0);
+                              break L1;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    var2 = -508 + ((vo) this).field_t;
+                    this.b(-(var2 >> 2), 0, -115);
+                    var3 = var2 * 7 >> 3;
+                    var4 = 9 * var2 >> 4;
+                    wd.field_P.a(-var4, -wd.field_P.field_a + 480);
+                    bl.field_g.a(-var3 + 622, 0);
+                    break L2;
+                  }
+                }
+              } else {
+                this.b(0, 0, -115);
+                wd.field_P.a(0, -wd.field_P.field_a + 480);
+                oo.f(0, 0, 640, 480, 0, 256 - (-520 + 2 * ((vo) this).field_t));
+                break L2;
+              }
+            }
+            this.g(520);
             if (((vo) this).field_t <= 120) {
               break L1;
             } else {
@@ -347,8 +403,7 @@ final class vo extends nc {
               }
             }
           } else {
-            int discarded$3 = 520;
-            this.g();
+            this.g(520);
             if (((vo) this).field_t <= 120) {
               break L1;
             } else {
@@ -363,7 +418,7 @@ final class vo extends nc {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_l = null;
         field_n = null;
         field_r = null;
@@ -373,7 +428,7 @@ final class vo extends nc {
         field_s = null;
     }
 
-    private final void g() {
+    private final void g(int param0) {
         Object var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -502,7 +557,7 @@ final class vo extends nc {
         }
     }
 
-    final static boolean e() {
+    final static boolean e(int param0) {
         return null != ki.field_h && pi.field_a == field_l;
     }
 

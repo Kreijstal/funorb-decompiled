@@ -36,7 +36,7 @@ final class ie extends wl {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(aa.field_lb == null)) {
             aa.field_lb.l(-27697);
         }
@@ -44,7 +44,7 @@ final class ie extends wl {
         td.field_f.c((ub) (Object) ik.field_G, -128);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_l = null;
     }
 

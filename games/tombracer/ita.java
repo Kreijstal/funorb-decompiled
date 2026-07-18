@@ -11,7 +11,7 @@ final class ita implements mw {
     static int field_f;
     float[] field_h;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_e = null;

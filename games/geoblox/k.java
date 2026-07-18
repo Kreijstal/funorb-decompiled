@@ -105,8 +105,7 @@ final class k implements Iterator {
         ((k) this).field_c = null;
         try {
             ((k) this).field_d = param0;
-            int discarded$0 = -1;
-            this.a();
+            this.a(-1);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "k.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -136,7 +135,7 @@ final class k implements Iterator {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         ((k) this).field_c = null;
         ((k) this).field_j = 1;
         ((k) this).field_h = ((k) this).field_d.field_a[0].field_b;

@@ -87,7 +87,7 @@ final class aq {
         return ek.field_M;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -377,7 +377,7 @@ final class aq {
         return stackIn_21_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_h = null;
     }
@@ -433,7 +433,7 @@ final class aq {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         cb.field_d.a((lq) (Object) sk.field_d);
         nm.field_k = null;
     }
@@ -450,8 +450,7 @@ final class aq {
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 ((aq) this).field_a[var2_int] = param0[var2_int];
             }
-            int discarded$0 = -113;
-            this.a();
+            this.a((byte) -113);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "aq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

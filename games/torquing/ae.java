@@ -30,7 +30,7 @@ final class ae extends w {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_lb = null;
         field_mb = null;
         field_nb = null;

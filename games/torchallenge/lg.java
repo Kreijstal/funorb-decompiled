@@ -548,7 +548,7 @@ abstract class lg {
         return ((lg) this).field_a.length;
     }
 
-    final static hb a(java.applet.Applet param0) {
+    final static hb a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         hb[] var3 = null;
@@ -582,8 +582,7 @@ abstract class lg {
           L0: {
             var2 = g.a("jagex-last-login-method", (byte) 75, param0);
             if (var2 != null) {
-              int discarded$2 = 1;
-              var3 = dg.j();
+              var3 = dg.j(1);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {

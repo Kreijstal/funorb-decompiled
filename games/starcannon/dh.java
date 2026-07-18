@@ -5,7 +5,7 @@ final class dh {
     static ge field_a;
     static String field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }

@@ -12,7 +12,7 @@ final class dh implements Iterable {
     static int field_g;
     static String field_e;
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         return true;
     }
 
@@ -82,7 +82,7 @@ final class dh implements Iterable {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (0 - hh.field_b != nl.field_d) {
           if (nl.field_d != -hh.field_b + 250) {
             nl.field_d = nl.field_d + 1;

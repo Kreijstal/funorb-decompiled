@@ -91,7 +91,7 @@ final class jm extends gn {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         pc.field_c = nj.a(82);
         cv.field_d = 0;
     }
@@ -207,8 +207,7 @@ final class jm extends gn {
                   break L6;
                 } else {
                   L7: {
-                    int discarded$6 = 97;
-                    if (sk.a() != tu.field_E.field_p) {
+                    if (sk.a((byte) 97) != tu.field_E.field_p) {
                       break L7;
                     } else {
                       if (gn.b((byte) -110) != tu.field_E.field_F) {
@@ -320,8 +319,7 @@ final class jm extends gn {
                     }
                   }
                   L16: {
-                    int discarded$7 = 97;
-                    var5 = sk.a();
+                    var5 = sk.a((byte) 97);
                     if (var5 <= 255) {
                       break L16;
                     } else {
@@ -340,8 +338,7 @@ final class jm extends gn {
                       break L17;
                     }
                   }
-                  int discarded$8 = 97;
-                  tu.field_E.field_p = sk.a();
+                  tu.field_E.field_p = sk.a((byte) 97);
                   tu.field_E.field_F = gn.b((byte) -95);
                   tu.field_E.field_d = pf.field_c;
                   tu.field_E.field_A = ei.field_n;
@@ -394,7 +391,7 @@ final class jm extends gn {
                         }
                       }
                       var3_int = stackIn_74_0;
-                      wh discarded$9 = sp.c(var3_int, -119);
+                      wh discarded$3 = sp.c(var3_int, -119);
                       break L20;
                     }
                   }
@@ -406,7 +403,7 @@ final class jm extends gn {
                     if (!(cq.field_h instanceof qt)) {
                       break L23;
                     } else {
-                      wh discarded$10 = sp.c(55, 22);
+                      wh discarded$4 = sp.c(55, 22);
                       break L20;
                     }
                   }
@@ -417,7 +414,7 @@ final class jm extends gn {
                   if (!(ra.field_G instanceof qt)) {
                     break L20;
                   } else {
-                    wh discarded$11 = sp.c(56, 49);
+                    wh discarded$5 = sp.c(56, 49);
                     break L20;
                   }
                 }
@@ -468,7 +465,7 @@ final class jm extends gn {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_i = null;
         int var1 = -43;

@@ -310,7 +310,7 @@ final class qe {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         return null != ed.a(param0, (byte) -108);
     }
 
@@ -440,8 +440,7 @@ final class qe {
             var1 = dm.field_c.j(80);
         }
         if (!(var1.length() != 0)) {
-            int discarded$0 = 122;
-            var1 = db.b();
+            var1 = db.b((byte) 122);
         }
         if (var1.length() == 0) {
             var1 = wh.field_e;
@@ -449,7 +448,7 @@ final class qe {
         return var1;
     }
 
-    final static ck[] a(boolean param0, int param1, boolean param2, int param3, int param4) {
+    final static ck[] a(boolean param0, int param1, boolean param2, int param3, int param4, int param5) {
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -510,7 +509,7 @@ final class qe {
         return new ck[]{null, null, null, (ck) var10, var9, (ck) var11, null, null, null};
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_h = null;
         field_e = null;

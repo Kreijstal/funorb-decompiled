@@ -112,7 +112,7 @@ final class tn {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return 1;
     }
 
@@ -132,22 +132,21 @@ final class tn {
         return var1.toString();
     }
 
-    final static String d() {
+    final static String d(int param0) {
         if (!(bb.field_a != sf.field_n)) {
             return ol.field_a;
         }
         if (!(ak.field_b != sf.field_n)) {
             return rd.field_j;
         }
-        int discarded$10 = -82;
-        int discarded$16 = tn.a();
+        int discarded$7 = tn.a((byte) -82);
         if (!(fj.field_o.a(250))) {
             return rd.field_j;
         }
         return ec.field_v;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_d = null;
         field_b = null;
@@ -442,16 +441,13 @@ final class tn {
             return;
         }
         if (!pj.b((byte) 85)) {
-            int discarded$1 = -53;
-            var2 = aj.a();
+            var2 = aj.a((byte) -53);
             byte[] var1 = var2;
-            int discarded$2 = 0;
-            int discarded$3 = 6;
-            fl discarded$4 = ub.a(var2);
+            fl discarded$0 = ub.a(var2, 6, 0);
         } else {
             ad.field_a = true;
         }
-        int discarded$5 = tn.a(-121, -112);
+        int discarded$1 = tn.a(-121, -112);
     }
 
     private final int a(boolean param0, int param1) {

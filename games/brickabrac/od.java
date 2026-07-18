@@ -184,7 +184,7 @@ final class od extends java.awt.Canvas {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

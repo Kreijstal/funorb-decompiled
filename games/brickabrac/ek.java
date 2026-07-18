@@ -254,7 +254,7 @@ final class ek extends bj implements en {
         }
     }
 
-    private final void d() {
+    private final void d(boolean param0) {
         if (!((ek) this).field_N) {
             return;
         }
@@ -409,8 +409,7 @@ final class ek extends bj implements en {
               }
             }
             if (param4 == ((ek) this).field_ib) {
-              int discarded$2 = 0;
-              this.d();
+              this.d(false);
               break L0;
             } else {
               return;
@@ -451,6 +450,7 @@ final class ek extends bj implements en {
     final static int a(m param0, m param1, byte param2) {
         RuntimeException var3 = null;
         Object var4 = null;
+        Object var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -491,12 +491,12 @@ final class ek extends bj implements en {
                 break L1;
               } else {
                 var4 = null;
-                int discarded$4 = ek.a((m) null, (m) null, (byte) 87);
+                int discarded$2 = ek.a((m) null, (m) null, (byte) 87);
                 break L1;
               }
             }
-            int discarded$5 = 4;
-            stackOut_2_0 = wl.a((String) null, false, 0, param0, 0, param1);
+            var5 = null;
+            stackOut_2_0 = wl.a((String) null, false, 0, param0, 0, param1, 4);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -559,8 +559,7 @@ final class ek extends bj implements en {
     }
 
     final static void l(int param0) {
-        int discarded$0 = 2;
-        ih.a(true, am.field_cc, fj.field_Qb);
+        ih.a(true, am.field_cc, fj.field_Qb, 2);
         ln.field_l = true;
         int var1 = -31 / ((-11 - param0) / 62);
     }

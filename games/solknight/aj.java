@@ -31,7 +31,7 @@ final class aj {
         mi.a(param6, param0, param2, param5, param3, param1);
     }
 
-    private final void a(int param0, String param1, int param2) {
+    private final void a(int param0, String param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -289,8 +289,7 @@ final class aj {
             L1: {
               var5_int = 4 / ((-41 - param0) / 55);
               if (((aj) this).field_c) {
-                int discarded$2 = 5101;
-                this.a(param1, param3, param2);
+                this.a(param1, param3, param2, 5101);
                 break L1;
               } else {
                 this.a((byte) -123, param1, param3, param2);
@@ -400,9 +399,9 @@ final class aj {
             ((aj) this).field_d = 3;
             ((aj) this).field_q = 3;
             ((aj) this).field_l = 15658734;
-            bf discarded$15 = var4.a((byte) -80, 0).d(-126, 15658734).a(mb.a(8947848, 10066329, 120, 7829367), (byte) 119);
-            bf discarded$16 = var4.a((byte) -68, 1).a(mb.a(11184810, 10066329, 114, 13421772), (byte) 119);
-            bf discarded$17 = var4.a((byte) -39, 3).a(mb.a(8947848, 7829367, 93, 10066329), (byte) 119).b(1, -119).a(1, (byte) 85);
+            bf discarded$10 = var4.a((byte) -80, 0).d(-126, 15658734).a(mb.a(8947848, 10066329, 120, 7829367), (byte) 119);
+            bf discarded$11 = var4.a((byte) -68, 1).a(mb.a(11184810, 10066329, 114, 13421772), (byte) 119);
+            bf discarded$12 = var4.a((byte) -39, 3).a(mb.a(8947848, 7829367, 93, 10066329), (byte) 119).b(1, -119).a(1, (byte) 85);
             var5 = new o[9];
             var17 = new ui(32, 32);
             var19 = var17;
@@ -410,27 +409,22 @@ final class aj {
             L2: while (true) {
               if (var7_int >= var19.field_v.length) {
                 var5[4] = (o) (Object) var19;
-                bf discarded$18 = var4.a((byte) -85, 4).a(0, true).a(var5, (byte) 119);
-                int discarded$19 = 0;
-                int discarded$20 = 0;
-                int discarded$21 = 65793;
-                int discarded$22 = -124;
-                int discarded$23 = 0;
-                bf discarded$24 = var4.a((byte) -38, 5).a(je.a(), (byte) 119).a(0, true).d(-123, -1);
+                bf discarded$13 = var4.a((byte) -85, 4).a(0, true).a(var5, (byte) 119);
+                bf discarded$14 = var4.a((byte) -38, 5).a(je.a(0, (byte) -124, 65793, 0, 0), (byte) 119).a(0, true).d(-123, -1);
                 ((aj) this).field_i = (j) (Object) var4;
                 var6 = new ql(var4, true);
                 var6.field_g = 0;
                 var7 = new ql(var4, true);
                 var7.field_g = 0;
                 var7.a((byte) -94, ha.a(8947848, 118));
-                bf discarded$25 = var7.a((byte) -80, 1).a(ha.a(11184810, -96), (byte) 119).d(-128, 2236962);
+                bf discarded$15 = var7.a((byte) -80, 1).a(ha.a(11184810, -96), (byte) 119).d(-128, 2236962);
                 ((aj) this).field_r = (j) (Object) new td(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                we discarded$26 = new we(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                sj discarded$27 = new sj(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                we discarded$16 = new we(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                sj discarded$17 = new sj(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new ql();
                 var18.a((af) (Object) var8, 6935);
-                bf discarded$28 = var8.a((byte) -56, 0).a(mb.a(15658734, 7829367, 126, 10066329), (byte) 119).d(-120, 1118481).a(-1, 256);
-                bf discarded$29 = var8.a((byte) -85, 4).a(0, true).a(var5, (byte) 119);
+                bf discarded$18 = var8.a((byte) -56, 0).a(mb.a(15658734, 7829367, 126, 10066329), (byte) 119).d(-120, 1118481).a(-1, 256);
+                bf discarded$19 = var8.a((byte) -85, 4).a(0, true).a(var5, (byte) 119);
                 ((aj) this).field_h = (j) (Object) var8;
                 var9 = new o[9];
                 var9[4] = new o(2, 1);
@@ -495,7 +489,7 @@ final class aj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_s = null;
         field_m = null;
         field_t = null;

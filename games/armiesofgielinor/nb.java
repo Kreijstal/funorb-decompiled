@@ -83,7 +83,7 @@ final class nb {
         }
     }
 
-    final static int c() {
+    final static int c(byte param0) {
         return ku.field_K;
     }
 
@@ -134,7 +134,7 @@ final class nb {
         return var5 != 0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_h = null;
         int var1 = -44;
         field_i = null;
@@ -194,7 +194,7 @@ final class nb {
         ((nb) this).field_s = true;
     }
 
-    private final void a() {
+    private final void a(int param0) {
         ((nb) this).field_j = ((nb) this).field_k[0].field_A;
     }
 
@@ -202,8 +202,7 @@ final class nb {
         this.g(param0 ^ 1043);
         this.a((byte) -91, param0);
         this.a((byte) -121, 1);
-        int discarded$0 = -1342059263;
-        this.e();
+        this.e(-1342059263);
     }
 
     final boolean b(boolean param0) {
@@ -932,7 +931,7 @@ final class nb {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1033,8 +1032,7 @@ final class nb {
             ((nb) this).field_l = param2;
             ((nb) this).field_k = param0;
             ((nb) this).field_m = param1;
-            int discarded$2 = 27150;
-            this.a();
+            this.a(27150);
             this.b(0);
             ((nb) this).b((byte) -65);
             break L0;

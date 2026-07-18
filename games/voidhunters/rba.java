@@ -15,8 +15,7 @@ final class rba implements ntb {
     final void b(lta param0, int param1) {
         try {
             kq.a((float)((rba) this).field_f * param0.field_a, (byte) 55, param0.b(true, ((rba) this).field_c), qpb.a(false, ((rba) this).field_d, 13894143), param0.a(((rba) this).field_i, (byte) 124));
-            int discarded$0 = 8947848;
-            this.a(param0);
+            this.a(param0, 8947848);
             int var3_int = 97 % ((55 - param1) / 49);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "rba.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -52,19 +51,19 @@ final class rba implements ntb {
               L2: {
                 var3 = (rba) (Object) param1;
                 var4 = 3 % ((22 - param0) / 59);
-                if (var3.field_i != var3.field_i) {
+                if (((rba) this).field_i != var3.field_i) {
                   break L2;
                 } else {
-                  if (var3.field_c != var3.field_c) {
+                  if (var3.field_c != ((rba) this).field_c) {
                     break L2;
                   } else {
-                    if (var3.field_f != var3.field_f) {
+                    if (((rba) this).field_f != var3.field_f) {
                       break L2;
                     } else {
-                      if (var3.field_d != var3.field_d) {
+                      if (((rba) this).field_d != var3.field_d) {
                         break L2;
                       } else {
-                        if (var3.field_e == var3.field_e) {
+                        if (((rba) this).field_e == var3.field_e) {
                           stackOut_7_0 = 0;
                           stackIn_8_0 = stackOut_7_0;
                           break L1;
@@ -207,36 +206,36 @@ final class rba implements ntb {
             L1: {
               var5 = (rba) (Object) param0;
               var4 = 0;
-              if (var5.field_i == var5.field_i) {
+              if (((rba) this).field_i == var5.field_i) {
                 break L1;
               } else {
                 var4 = 1;
-                System.out.println("int x has changed. before=" + var5.field_i + ", now=" + var5.field_i);
+                System.out.println("int x has changed. before=" + var5.field_i + ", now=" + ((rba) this).field_i);
                 break L1;
               }
             }
             L2: {
-              if (var5.field_c == var5.field_c) {
+              if (((rba) this).field_c == var5.field_c) {
                 break L2;
               } else {
-                System.out.println("int y has changed. before=" + var5.field_c + ", now=" + var5.field_c);
+                System.out.println("int y has changed. before=" + var5.field_c + ", now=" + ((rba) this).field_c);
                 var4 = 1;
                 break L2;
               }
             }
             L3: {
-              if (var5.field_f == var5.field_f) {
+              if (((rba) this).field_f == var5.field_f) {
                 break L3;
               } else {
                 var4 = 1;
-                System.out.println("int radius has changed. before=" + var5.field_f + ", now=" + var5.field_f);
+                System.out.println("int radius has changed. before=" + var5.field_f + ", now=" + ((rba) this).field_f);
                 break L3;
               }
             }
             L4: {
-              if (var5.field_d != var5.field_d) {
+              if (((rba) this).field_d != var5.field_d) {
                 var4 = 1;
-                System.out.println("int team has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+                System.out.println("int team has changed. before=" + var5.field_d + ", now=" + ((rba) this).field_d);
                 break L4;
               } else {
                 break L4;
@@ -244,11 +243,11 @@ final class rba implements ntb {
             }
             if (param1 <= -19) {
               L5: {
-                if (var5.field_e == var5.field_e) {
+                if (((rba) this).field_e == var5.field_e) {
                   break L5;
                 } else {
                   var4 = 1;
-                  System.out.println("int capture_timer has changed. before=" + var5.field_e + ", now=" + var5.field_e);
+                  System.out.println("int capture_timer has changed. before=" + var5.field_e + ", now=" + ((rba) this).field_e);
                   break L5;
                 }
               }
@@ -305,21 +304,21 @@ final class rba implements ntb {
     public final void b(byte param0, tv param1) {
         rba var4 = (rba) (Object) param1;
         rba var3 = var4;
-        var4.field_d = var4.field_d;
-        var4.field_f = var4.field_f;
+        var4.field_d = ((rba) this).field_d;
+        var4.field_f = ((rba) this).field_f;
         if (param0 <= 54) {
             return;
         }
         try {
-            var4.field_c = var4.field_c;
-            var4.field_i = var4.field_i;
-            var4.field_e = var4.field_e;
+            var4.field_c = ((rba) this).field_c;
+            var4.field_i = ((rba) this).field_i;
+            var4.field_e = ((rba) this).field_e;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "rba.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(lta param0) {
+    private final void a(lta param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -353,8 +352,7 @@ final class rba implements ntb {
               uv.a(126, var3_int - 1, var6 + 2, -1 + var4, 8947848, var5 + 2);
               var7 = qpb.a(false, ((rba) this).field_h, 13894143);
               var8 = rmb.a(-16777216, var7);
-              int discarded$2 = 0;
-              ci.a(var4, var6, var8, ((rba) this).field_e * var5 / oq.field_G, var3_int, var7);
+              ci.a(var4, var6, var8, ((rba) this).field_e * var5 / oq.field_G, var3_int, var7, 0);
               break L0;
             } else {
               return;
@@ -491,7 +489,7 @@ final class rba implements ntb {
     rba() {
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_b = null;
     }

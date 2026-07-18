@@ -4,7 +4,7 @@
 final class mi extends rqa {
     static phb field_o;
 
-    final static void a(kka param0, boolean param1) {
+    final static void a(kka param0, boolean param1, int param2, byte param3) {
         Object var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;

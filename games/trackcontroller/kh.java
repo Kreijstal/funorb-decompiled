@@ -33,8 +33,7 @@ final class kh {
         try {
           L0: {
             if (sk.a(param2, param3, 1, param1)) {
-              int discarded$2 = 0;
-              stackOut_3_0 = ec.a();
+              stackOut_3_0 = ec.a(0);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -357,7 +356,7 @@ final class kh {
         this(param0, false);
     }
 
-    final static ck a(kk param0, String param1, kk param2, String param3) {
+    final static ck a(kk param0, String param1, kk param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -428,8 +427,7 @@ final class kh {
           L0: {
             var5_int = param2.a(true, param3);
             var6 = param2.a(param1, var5_int, -1);
-            int discarded$2 = 126;
-            stackOut_0_0 = pb.a(var5_int, var6, param2, param0);
+            stackOut_0_0 = pb.a(var5_int, var6, param2, param0, (byte) 126);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -548,7 +546,7 @@ final class kh {
         return ((kh) this).field_d;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_b = null;
         field_e = null;

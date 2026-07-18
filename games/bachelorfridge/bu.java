@@ -24,7 +24,7 @@ final class bu extends kj {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_j = null;
         field_g = null;
         int var1 = -81;

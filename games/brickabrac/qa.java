@@ -31,13 +31,11 @@ final class qa extends ki {
           nk.field_h = jh.a(0, mj.field_d);
           mp.field_Zb = jh.a(0, ap.field_f);
           rh.field_c = jh.a(0, hn.field_b);
-          int discarded$7 = 0;
-          pl.a(hn.field_b);
+          pl.a(hn.field_b, 0);
           if (param0) {
             return false;
           } else {
-            int discarded$8 = 0;
-            pl.a(rh.field_c);
+            pl.a(rh.field_c, 0);
             return true;
           }
         }
@@ -48,8 +46,7 @@ final class qa extends ki {
         if (param0) {
           if (((qa) this).b((byte) -110)) {
             L0: {
-              int discarded$2 = -20777;
-              var6 = ge.a(((qa) this).field_m, param3);
+              var6 = ge.a(((qa) this).field_m, param3, -20777);
               if (!var6.a((byte) -84, param3, ((qa) this).field_m)) {
                 aa.a(0, hn.field_b, true, param3, var6, 1);
                 var6.a(((qa) this).field_m, param3, (byte) 78);
@@ -73,7 +70,7 @@ final class qa extends ki {
         super(param0, param1, param2, param3);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_s = null;
         field_v = null;
         field_x = null;
@@ -152,7 +149,7 @@ final class qa extends ki {
         }
     }
 
-    final static jp[] a(int param0, int param1, mf param2) {
+    final static jp[] a(int param0, int param1, mf param2, boolean param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         jp[] stackIn_4_0 = null;
@@ -177,8 +174,7 @@ final class qa extends ki {
         try {
           L0: {
             if (ln.a(-97, param0, param2, param1)) {
-              int discarded$2 = -835;
-              stackOut_3_0 = v.a();
+              stackOut_3_0 = v.a(-835);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -235,25 +231,26 @@ final class qa extends ki {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var7 = null;
+        Object var7 = null;
+        pb var8 = null;
         if (((qa) this).b((byte) -127)) {
-          var7 = kd.a(((qa) this).field_m, param3, (byte) 120);
-          if (var7.a((byte) -84, param3, ((qa) this).field_m)) {
-            tl.a(var7.field_p, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
+          var8 = kd.a(((qa) this).field_m, param3, (byte) 120);
+          if (var8.a((byte) -84, param3, ((qa) this).field_m)) {
+            tl.a(var8.field_p, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
             if (param1 <= -84) {
               return;
             } else {
-              int discarded$6 = 1;
-              jp[] discarded$7 = qa.a(90, 38, (mf) null);
+              var7 = null;
+              jp[] discarded$3 = qa.a(90, 38, (mf) null, true);
               return;
             }
           } else {
-            aa.a(0, rh.field_c, true, param3, var7, 2);
-            var7.a(((qa) this).field_m, param3, (byte) 78);
-            tl.a(var7.field_p, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
+            aa.a(0, rh.field_c, true, param3, var8, 2);
+            var8.a(((qa) this).field_m, param3, (byte) 78);
+            tl.a(var8.field_p, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
             if (param1 > -84) {
-              int discarded$8 = 1;
-              jp[] discarded$9 = qa.a(90, 38, (mf) null);
+              var7 = null;
+              jp[] discarded$4 = qa.a(90, 38, (mf) null, true);
               return;
             } else {
               return;
@@ -264,8 +261,8 @@ final class qa extends ki {
           if (param1 <= -84) {
             return;
           } else {
-            int discarded$10 = 1;
-            jp[] discarded$11 = qa.a(90, 38, (mf) null);
+            var7 = null;
+            jp[] discarded$5 = qa.a(90, 38, (mf) null, true);
             return;
           }
         }

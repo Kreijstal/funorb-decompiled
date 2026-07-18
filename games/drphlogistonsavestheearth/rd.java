@@ -49,10 +49,8 @@ final class rd extends wh {
         StringBuilder stackOut_7_1 = null;
         String stackOut_7_2 = null;
         try {
-          int discarded$9 = -98;
-          if (fl.a(param0, param3, param2)) {
-            int discarded$10 = 24782;
-            return ih.k();
+          if (fl.a(param0, param3, param2, (byte) -98)) {
+            return ih.k(24782);
           } else {
             return null;
           }

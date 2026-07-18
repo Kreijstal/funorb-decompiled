@@ -14,12 +14,11 @@ final class oa extends RuntimeException {
     static long[] field_f;
     static boolean field_j;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1) {
         if (oj.c(96)) {
             param0 = false;
         }
-        int discarded$4 = 118;
-        jk.a(param0);
+        jk.a(param0, 118);
         if (ji.field_f) {
             qh.g(na.field_e.field_i.field_qb, na.field_e.field_i.field_eb, na.field_e.field_i.field_gb, na.field_e.field_i.field_Db);
             na.field_e.field_i.a((byte) -79, param0);

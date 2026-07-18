@@ -24,7 +24,7 @@ final class ma extends h {
         int discarded$0 = ((ma) this).field_H.a(((ma) this).field_M, ((ma) this).field_L + var5 - -var7, ((ma) this).field_L + var6, ((ma) this).field_N + -((ma) this).field_L, -(2 * ((ma) this).field_L) + ((ma) this).field_s, ((ma) this).field_K, -1, !((ma) this).field_J ? 2 : 0, 1, ((ma) this).field_H.field_F);
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_O = null;
         field_I = null;
         field_G = null;

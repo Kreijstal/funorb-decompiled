@@ -58,8 +58,7 @@ final class em {
             ((em) this).field_a[var6] = (short)(param1 * ((em) this).field_a[var6] / param4);
             ((em) this).field_H[var6] = (short)(param3 * ((em) this).field_H[var6] / param4);
         }
-        int discarded$0 = 1;
-        this.a();
+        this.a(true);
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
@@ -73,11 +72,10 @@ final class em {
         if (param3 != -81) {
             ((em) this).a(-105, 51, -27, (byte) -74);
         }
-        int discarded$0 = 1;
-        this.a();
+        this.a(true);
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         ((em) this).field_c = false;
     }
 
@@ -94,7 +92,7 @@ final class em {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_k = null;
         field_m = null;
         field_M = null;
@@ -155,8 +153,7 @@ final class em {
           if (an.field_e <= 0) {
             break L3;
           } else {
-            int discarded$2 = -120;
-            tb.a(11, param2, param5);
+            tb.a(11, param2, param5, (byte) -120);
             break L3;
           }
         }
@@ -198,8 +195,7 @@ final class em {
           s.a(21487, ib.field_c, param9, 11, param3);
           break L6;
         }
-        int discarded$3 = 1;
-        mk.a(11, 16777215, param9, (byte) -68, 16777215, param3);
+        mk.a(11, 16777215, param9, (byte) -68, 16777215, param3, true);
         s.a(21487, se.field_S, param9, 11, param3);
         g.field_c = g.field_c + 1;
     }

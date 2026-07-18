@@ -138,13 +138,13 @@ final class ph extends fa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
         field_l = null;
         field_m = null;
     }
 
-    final static void a(fm param0) {
+    final static void a(fm param0, byte param1) {
         RuntimeException var2 = null;
         ak var3 = null;
         ak var5 = null;

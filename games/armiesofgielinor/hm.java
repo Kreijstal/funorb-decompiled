@@ -15,7 +15,7 @@ final class hm {
     static int[] field_l;
     static je field_f;
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_l = null;
         field_e = null;
@@ -32,7 +32,7 @@ final class hm {
         }
     }
 
-    final static int a(mo param0) {
+    final static int a(mo param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -317,7 +317,7 @@ final class hm {
         return stackIn_26_0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         as.field_E.a(param5, -20500, 640, 0, 5);
         if (qd.field_I != null) {
             qd.field_I.b(param1, param3, param5, -kn.field_z + param1, param5, -6519);

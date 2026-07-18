@@ -3311,7 +3311,7 @@ final class de {
         de.a(0, 0, 0, 0, 0, var15, var5, var22, field_l, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 0;
         for (var7 = 0; var7 < 2; var7++) {
             de.f(param0 + var7, param1 + var7, 17 - (var7 << 1), 17 - (var7 << 1), 16777215, 128);

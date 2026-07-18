@@ -226,7 +226,7 @@ final class gj implements Runnable {
         }
     }
 
-    final static int a(byte param0, String param1) {
+    final static int a(byte param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var5 = 0;
@@ -446,7 +446,7 @@ final class gj implements Runnable {
         }
     }
 
-    final static void a(byte param0, cf param1) {
+    final static void a(byte param0, cf param1, int param2) {
         hj var3 = ff.field_D;
         var3.a(false, 2);
         var3.f(6389, param1.field_g);
@@ -577,7 +577,7 @@ final class gj implements Runnable {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         ha.field_a = null;
         hk.field_c = null;
     }
@@ -753,7 +753,7 @@ final class gj implements Runnable {
         return ((gj) this).field_d.read();
     }
 
-    final static String a() {
+    final static String a(int param0) {
         if (w.field_a == null) {
             return "";
         }

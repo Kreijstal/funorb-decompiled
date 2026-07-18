@@ -16,7 +16,7 @@ final class jd extends ub {
     private int field_N;
     private int field_H;
 
-    final static hj[] h() {
+    final static hj[] h(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -58,7 +58,7 @@ final class jd extends ub {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -508,7 +508,7 @@ final class jd extends ub {
         }
     }
 
-    final static uf a(String param0) {
+    final static uf a(String param0, int param1) {
         RuntimeException var2 = null;
         uf stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -603,8 +603,7 @@ final class jd extends ub {
             }
             wj.field_o.f();
             var1.c(0, param0);
-            int discarded$0 = -10;
-            dm.b();
+            dm.b((byte) -10);
         } catch (RuntimeException runtimeException) {
             throw kk.a((Throwable) (Object) runtimeException, "jd.NA(" + param0 + ')');
         }

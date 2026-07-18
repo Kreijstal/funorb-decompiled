@@ -5,7 +5,7 @@ final class wi {
     static ib field_b;
     static kg field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }
@@ -62,8 +62,7 @@ final class wi {
                 break L1;
               }
             }
-            int discarded$2 = 1;
-            stackOut_3_0 = eb.a((String) var6, var4_long, false, param3);
+            stackOut_3_0 = eb.a((String) var6, var4_long, false, param3, true);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }

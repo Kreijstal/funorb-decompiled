@@ -90,8 +90,7 @@ final class gl {
                       break L1;
                     }
                   }
-                  int discarded$1 = 124;
-                  je.a(param2, "document.cookie=\"" + var7 + "\"");
+                  je.a(param2, "document.cookie=\"" + var7 + "\"", (byte) 124);
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -187,7 +186,7 @@ final class gl {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         kg.c((byte) 76);
         nn.a(1, ia.field_G, r.field_f, re.field_k, kb.field_d[0].field_x, nl.field_k);
     }

@@ -29,7 +29,7 @@ final class kn extends bo implements Cloneable {
 
     protected final Object clone() {
         kn var1 = (kn) super.clone();
-        var1.field_r = var1.field_r;
+        var1.field_r = ((kn) this).field_r;
         return (Object) (Object) var1;
     }
 
@@ -582,7 +582,7 @@ final class kn extends bo implements Cloneable {
         return (f) (Object) stackIn_3_0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         int var1 = 0;
         field_p = null;
     }

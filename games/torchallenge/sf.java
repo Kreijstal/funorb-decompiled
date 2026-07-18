@@ -62,7 +62,7 @@ final class sf {
         }
     }
 
-    final static void a(ka param0, ka[] param1, int param2, int param3, int param4, int param5) {
+    final static void a(ka param0, ka[] param1, int param2, int param3, int param4, int param5, byte param6) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -219,8 +219,7 @@ final class sf {
                               if (ea.field_e == 1) {
                                 var1 = 1;
                                 if (~ag.field_d != ~var1) {
-                                  int discarded$22 = 1;
-                                  bd.d();
+                                  bd.d(1);
                                   if (var1 == -1) {
                                     ag.field_d = var1;
                                     return;
@@ -252,8 +251,7 @@ final class sf {
                                     if (ea.field_e == 4) {
                                       var1 = 4;
                                       if (~ag.field_d != ~var1) {
-                                        int discarded$23 = 1;
-                                        bd.d();
+                                        bd.d(1);
                                         if (var1 == -1) {
                                           ag.field_d = var1;
                                           return;
@@ -294,8 +292,7 @@ final class sf {
                                               break L1;
                                             } else {
                                               if (~ag.field_d != ~var1) {
-                                                int discarded$24 = 1;
-                                                bd.d();
+                                                bd.d(1);
                                                 if (var1 == -1) {
                                                   ag.field_d = var1;
                                                   return;
@@ -369,8 +366,7 @@ final class sf {
                     }
                     var1 = 9;
                     if (~ag.field_d != ~var1) {
-                      int discarded$25 = 1;
-                      bd.d();
+                      bd.d(1);
                       if (var1 == -1) {
                         ag.field_d = var1;
                         return;
@@ -407,8 +403,7 @@ final class sf {
                     } else {
                       var1 = -1;
                       if (~ag.field_d != ~var1) {
-                        int discarded$26 = 1;
-                        bd.d();
+                        bd.d(1);
                         if (var1 == -1) {
                           ag.field_d = var1;
                           return;
@@ -447,8 +442,7 @@ final class sf {
                       if (gh.field_x) {
                         var1 = 11;
                         if (~ag.field_d != ~var1) {
-                          int discarded$27 = 1;
-                          bd.d();
+                          bd.d(1);
                           if (var1 == -1) {
                             ag.field_d = var1;
                             return;
@@ -477,8 +471,7 @@ final class sf {
                       } else {
                         var1 = 10;
                         if (~ag.field_d != ~var1) {
-                          int discarded$28 = 1;
-                          bd.d();
+                          bd.d(1);
                           if (var1 == -1) {
                             ag.field_d = var1;
                             return;
@@ -517,8 +510,7 @@ final class sf {
                     } else {
                       var1 = 13;
                       if (~ag.field_d != ~var1) {
-                        int discarded$29 = 1;
-                        bd.d();
+                        bd.d(1);
                         if (var1 == -1) {
                           ag.field_d = var1;
                           return;
@@ -571,8 +563,7 @@ final class sf {
                                 } else {
                                   var1 = 8;
                                   if (~ag.field_d != ~var1) {
-                                    int discarded$30 = 1;
-                                    bd.d();
+                                    bd.d(1);
                                     if (var1 == -1) {
                                       ag.field_d = var1;
                                       return;
@@ -602,8 +593,7 @@ final class sf {
                               } else {
                                 var1 = 7;
                                 if (~ag.field_d != ~var1) {
-                                  int discarded$31 = 1;
-                                  bd.d();
+                                  bd.d(1);
                                   if (var1 == -1) {
                                     ag.field_d = var1;
                                     return;
@@ -637,8 +627,7 @@ final class sf {
                     }
                     var1 = 7;
                     if (~ag.field_d != ~var1) {
-                      int discarded$32 = 1;
-                      bd.d();
+                      bd.d(1);
                       if (var1 == -1) {
                         ag.field_d = var1;
                         return;
@@ -668,8 +657,7 @@ final class sf {
                     if (6 == var3) {
                       var1 = 12;
                       if (~ag.field_d != ~var1) {
-                        int discarded$33 = 1;
-                        bd.d();
+                        bd.d(1);
                         if (var1 == -1) {
                           ag.field_d = var1;
                           return;
@@ -716,8 +704,7 @@ final class sf {
                                     } else {
                                       var1 = 8;
                                       if (~ag.field_d != ~var1) {
-                                        int discarded$34 = 1;
-                                        bd.d();
+                                        bd.d(1);
                                         if (var1 == -1) {
                                           ag.field_d = var1;
                                           return;
@@ -756,8 +743,7 @@ final class sf {
                         break L21;
                       }
                       if (~ag.field_d != ~var1) {
-                        int discarded$35 = 1;
-                        bd.d();
+                        bd.d(1);
                         if (var1 == -1) {
                           ag.field_d = var1;
                           return;
@@ -792,8 +778,7 @@ final class sf {
               }
             }
             if (~ag.field_d != ~var1) {
-              int discarded$36 = 1;
-              bd.d();
+              bd.d(1);
               if (var1 == -1) {
                 ag.field_d = var1;
                 return;
@@ -976,8 +961,7 @@ final class sf {
                                 } else {
                                   var1 = 8;
                                   if (~ag.field_d != ~var1) {
-                                    int discarded$37 = 1;
-                                    bd.d();
+                                    bd.d(1);
                                     if (var1 == -1) {
                                       ag.field_d = var1;
                                       return;
@@ -1007,8 +991,7 @@ final class sf {
                               } else {
                                 var1 = 7;
                                 if (~ag.field_d != ~var1) {
-                                  int discarded$38 = 1;
-                                  bd.d();
+                                  bd.d(1);
                                   if (var1 == -1) {
                                     ag.field_d = var1;
                                     return;
@@ -1042,8 +1025,7 @@ final class sf {
                     }
                     var1 = 7;
                     if (~ag.field_d != ~var1) {
-                      int discarded$39 = 1;
-                      bd.d();
+                      bd.d(1);
                       if (var1 == -1) {
                         ag.field_d = var1;
                         return;
@@ -1073,8 +1055,7 @@ final class sf {
                     if (6 == var3) {
                       var1 = 12;
                       if (~ag.field_d != ~var1) {
-                        int discarded$40 = 1;
-                        bd.d();
+                        bd.d(1);
                         if (var1 == -1) {
                           ag.field_d = var1;
                           return;
@@ -1134,8 +1115,7 @@ final class sf {
                         break L39;
                       }
                       if (~ag.field_d != ~var1) {
-                        int discarded$41 = 1;
-                        bd.d();
+                        bd.d(1);
                         if (var1 == -1) {
                           ag.field_d = var1;
                           return;
@@ -1169,8 +1149,7 @@ final class sf {
               break L26;
             }
             if (~ag.field_d != ~var1) {
-              int discarded$42 = 1;
-              bd.d();
+              bd.d(1);
               if (var1 == -1) {
                 ag.field_d = var1;
                 return;
@@ -1200,8 +1179,7 @@ final class sf {
         } else {
           var1 = ag.field_d;
           if (~ag.field_d != ~var1) {
-            int discarded$43 = 1;
-            bd.d();
+            bd.d(1);
             if (var1 == -1) {
               ag.field_d = var1;
               return;
@@ -1230,7 +1208,7 @@ final class sf {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_b = null;
         field_a = null;

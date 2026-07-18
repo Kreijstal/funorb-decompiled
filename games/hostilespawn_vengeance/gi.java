@@ -17,7 +17,7 @@ final class gi {
     static bd field_c;
     static bd field_j;
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -170,7 +170,7 @@ final class gi {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         int var1 = -1;
         return li.field_o;
     }
@@ -247,8 +247,7 @@ final class gi {
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 ((gi) this).field_k[var2_int] = param0[var2_int];
             }
-            int discarded$0 = -7;
-            this.a();
+            this.a(-7);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

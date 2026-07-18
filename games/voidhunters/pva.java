@@ -38,7 +38,7 @@ final class pva extends uj {
         return true;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_f = null;
         field_e = null;
         field_d = null;

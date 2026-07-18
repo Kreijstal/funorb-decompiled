@@ -449,7 +449,7 @@ final class kc extends bh {
         }
     }
 
-    final static ji a(boolean param0, int param1, int param2) {
+    final static ji a(boolean param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;
@@ -517,7 +517,7 @@ final class kc extends bh {
     kc() {
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
         field_s = null;
     }

@@ -244,12 +244,9 @@ final class ge {
           L0: {
             L1: {
               oe.a(param19 + -84, param2, param11, param18, param13);
-              int discarded$6 = -106;
-              ph.a(param2);
+              ph.a(param2, (byte) -106);
               fa.a(param14, param2, param15, (byte) 126, param10, param16, param8, param4, args, param12, param6, param9, param5, param1, param3);
-              int discarded$7 = -94;
-              int discarded$8 = 1;
-              aj.a(param7, param2);
+              aj.a(param7, param2, true, -94);
               if (param19 == -41) {
                 break L1;
               } else {
@@ -257,12 +254,9 @@ final class ge {
                 break L1;
               }
             }
-            int discarded$9 = 1565;
-            ve.j();
-            int discarded$10 = -7;
-            gd.a();
-            int discarded$11 = 0;
-            jj.a();
+            ve.j(1565);
+            gd.a((byte) -7);
+            jj.a(0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -666,7 +660,7 @@ final class ge {
         throw new IllegalStateException();
     }
 
-    final static int a(rh param0, ue param1, int param2) {
+    final static int a(rh param0, ue param1, int param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

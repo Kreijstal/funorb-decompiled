@@ -100,8 +100,7 @@ final class qa {
                     break L4;
                   } else {
                     L5: {
-                      int discarded$2 = -1;
-                      this.c();
+                      this.c(-1);
                       var9_int = param3;
                       if (((qa) this).field_f < var9_int) {
                         var9_int = ((qa) this).field_f;
@@ -157,9 +156,9 @@ final class qa {
                           if (var9_int <= param2) {
                             break L8;
                           } else {
-                            int incrementValue$3 = param2;
+                            int incrementValue$1 = param2;
                             param2++;
-                            param1[incrementValue$3] = (byte) 0;
+                            param1[incrementValue$1] = (byte) 0;
                             param3--;
                             ((qa) this).field_g = ((qa) this).field_g + 1L;
                             continue L10;
@@ -419,7 +418,7 @@ final class qa {
         ((qa) this).field_g = param0;
     }
 
-    private final void c() throws IOException {
+    private final void c(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = CrazyCrystals.field_B;

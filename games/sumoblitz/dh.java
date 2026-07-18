@@ -130,8 +130,7 @@ class dh extends wp {
                     break L4;
                   } else {
                     L5: {
-                      int discarded$1 = 14236;
-                      ((dh) this).field_E = this.g();
+                      ((dh) this).field_E = this.g(14236);
                       ((dh) this).field_F = this.d(true);
                       if (((dh) this).field_F <= 0) {
                         break L5;
@@ -200,7 +199,7 @@ class dh extends wp {
         }
     }
 
-    final static int b(int param0, int param1) {
+    final static int b(int param0, int param1, boolean param2) {
         int var3 = param0 >>> 31;
         return (var3 + param0) / param1 + -var3;
     }
@@ -223,7 +222,7 @@ class dh extends wp {
         return ((dh) this).field_m.substring(var2, var3);
     }
 
-    private final void h() {
+    private final void h(int param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -329,7 +328,7 @@ class dh extends wp {
         }
     }
 
-    private final int g() {
+    private final int g(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
@@ -587,9 +586,9 @@ class dh extends wp {
                           L5: {
                             if (~((dh) this).field_F <= ~((dh) this).field_m.length()) {
                               ((dh) this).field_m = ((dh) this).field_m + param1;
-                              int dupTemp$5 = ((dh) this).field_m.length();
-                              ((dh) this).field_F = dupTemp$5;
-                              ((dh) this).field_E = dupTemp$5;
+                              int dupTemp$1 = ((dh) this).field_m.length();
+                              ((dh) this).field_F = dupTemp$1;
+                              ((dh) this).field_E = dupTemp$1;
                               break L5;
                             } else {
                               ((dh) this).field_m = ((dh) this).field_m.substring(0, ((dh) this).field_F) + param1 + ((dh) this).field_m.substring(((dh) this).field_F, ((dh) this).field_m.length());
@@ -645,10 +644,9 @@ class dh extends wp {
                                 stackIn_55_0 = stackOut_54_0;
                                 stackIn_55_1 = stackOut_54_1;
                                 if (hw.field_b[82]) {
-                                  int discarded$6 = 14236;
                                   stackOut_56_0 = this;
                                   stackOut_56_1 = stackIn_56_1;
-                                  stackOut_56_2 = this.g();
+                                  stackOut_56_2 = this.g(14236);
                                   stackIn_57_0 = stackOut_56_0;
                                   stackIn_57_1 = stackOut_56_1;
                                   stackIn_57_2 = stackOut_56_2;
@@ -685,8 +683,7 @@ class dh extends wp {
                                   return stackIn_49_0 != 0;
                                 } else {
                                   if (param3 == 84) {
-                                    int discarded$7 = -106;
-                                    this.e();
+                                    this.e((byte) -106);
                                     stackOut_46_0 = 1;
                                     stackIn_47_0 = stackOut_46_0;
                                     return stackIn_47_0 != 0;
@@ -698,8 +695,7 @@ class dh extends wp {
                                         if (param3 != 65) {
                                           break L8;
                                         } else {
-                                          int discarded$8 = 96;
-                                          this.f();
+                                          this.f(96);
                                           stackOut_34_0 = 1;
                                           stackIn_35_0 = stackOut_34_0;
                                           return stackIn_35_0 != 0;
@@ -724,8 +720,7 @@ class dh extends wp {
                                       break L6;
                                     } else {
                                       if (param3 == 67) {
-                                        int discarded$9 = -1;
-                                        this.h();
+                                        this.h(-1);
                                         stackOut_42_0 = 1;
                                         stackIn_43_0 = stackOut_42_0;
                                         return stackIn_43_0 != 0;
@@ -853,13 +848,13 @@ class dh extends wp {
         var2 = -67 / ((85 - param0) / 37);
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         if (!(!(((dh) this).field_o instanceof pw))) {
             ((pw) (Object) ((dh) this).field_o).a((dh) this, -66);
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         this.e(false);
         this.h((byte) 123);
     }

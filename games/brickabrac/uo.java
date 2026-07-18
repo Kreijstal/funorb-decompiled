@@ -152,12 +152,12 @@ final class uo {
         return stackIn_1_0;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, boolean param1) {
         gp.a(param0, false);
         nk.a((byte) -25, param0);
     }
 
-    final static void a(eg param0, int param1) {
+    final static void a(eg param0, int param1, byte param2) {
         pi var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -235,7 +235,7 @@ final class uo {
         }
     }
 
-    final static boolean a(java.applet.Applet param0) {
+    final static boolean a(java.applet.Applet param0, byte param1) {
         try {
             String var2 = null;
             Throwable var2_ref = null;

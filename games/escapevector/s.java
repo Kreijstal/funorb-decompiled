@@ -113,8 +113,7 @@ final class s extends oa {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = i.a(var6, var5, param1, var4);
+                          int discarded$1 = i.a(var17, var5, param1, var4, 9);
                           break L5;
                         }
                       }
@@ -172,7 +171,7 @@ final class s extends oa {
         return stackIn_21_0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_B = null;
         field_I = null;
         field_H = null;
@@ -242,12 +241,11 @@ final class s extends oa {
                 break L1;
               } else {
                 var3 = null;
-                String discarded$4 = s.a((byte) -12, (CharSequence[]) null);
+                String discarded$2 = s.a((byte) -12, (CharSequence[]) null);
                 break L1;
               }
             }
-            int discarded$5 = 4;
-            stackOut_2_0 = ua.a(0, param1.length, param1);
+            stackOut_2_0 = ua.a(0, param1.length, param1, 4);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

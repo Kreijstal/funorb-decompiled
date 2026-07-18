@@ -13,7 +13,7 @@ final class nn {
         int var4 = -1;
     }
 
-    final static void a(ga param0, int param1, int param2) {
+    final static void a(ga param0, int param1, int param2, byte param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -171,7 +171,7 @@ final class nn {
         }
     }
 
-    final static java.awt.Container a() {
+    final static java.awt.Container a(int param0) {
         if (null != cg.field_m) {
             return (java.awt.Container) (Object) cg.field_m;
         }

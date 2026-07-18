@@ -183,14 +183,14 @@ final class fg {
         return stackIn_23_0;
     }
 
-    final static java.awt.Container b() {
+    final static java.awt.Container b(byte param0) {
         if (!(null == md.field_n)) {
             return (java.awt.Container) (Object) md.field_n;
         }
         return (java.awt.Container) (Object) bn.c(-1);
     }
 
-    final static bd a(String param0, String param1, gb param2) {
+    final static bd a(String param0, String param1, gb param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -333,7 +333,7 @@ final class fg {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_d = null;

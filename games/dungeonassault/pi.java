@@ -418,7 +418,7 @@ final class pi {
         }
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return ql.field_f == wd.field_d;
     }
 
@@ -440,7 +440,7 @@ final class pi {
         return (pi) this;
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var7 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

@@ -5,7 +5,7 @@ final class se {
     static String[] field_a;
     static p field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }
@@ -14,7 +14,7 @@ final class se {
         return (int)(1000000000L / sn.field_d);
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         bo.field_F.a(0, 0, (byte) -55);
     }
 

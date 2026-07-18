@@ -38,13 +38,12 @@ final class tj extends si implements n {
                 break L1;
               } else {
                 var3 = null;
-                String discarded$4 = tj.a((CharSequence) null, 66);
+                String discarded$2 = tj.a((CharSequence) null, 66);
                 break L1;
               }
             }
             L2: {
-              int discarded$5 = -12382;
-              var2 = hi.a(qd.a(-113, param0));
+              var2 = hi.a(qd.a(-113, param0), -12382);
               if (var2 != null) {
                 break L2;
               } else {
@@ -98,7 +97,7 @@ final class tj extends si implements n {
         }
     }
 
-    public static void p() {
+    public static void p(int param0) {
         field_ub = null;
     }
 

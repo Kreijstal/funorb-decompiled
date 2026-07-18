@@ -8,7 +8,7 @@ final class cr extends br {
     static int field_j;
     static String field_g;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_i = null;
         field_g = null;
     }
@@ -174,8 +174,7 @@ final class cr extends br {
         int stackOut_5_0 = 0;
         var1 = 35 / ((-63 - param0) / 49);
         if (null == pk.field_b) {
-          int discarded$5 = 123;
-          if (!oe.a()) {
+          if (!oe.a(123)) {
             if (null == bk.field_i) {
               if (nc.a((byte) 68)) {
                 return true;

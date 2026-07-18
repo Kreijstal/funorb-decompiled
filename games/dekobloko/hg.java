@@ -8,7 +8,7 @@ final class hg {
     static String field_d;
     static ck field_a;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         int var3 = 0;
         var3 = client.field_A ? 1 : 0;
         if (param0) {
@@ -386,7 +386,7 @@ final class hg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_d = null;
         field_c = null;

@@ -228,8 +228,7 @@ final class kh {
         ((kh) this).field_f = vc.field_B;
         ((kh) this).field_j.a(111, ((kh) this).field_u, ((kh) this).field_b);
         mf.field_Ib = false;
-        int discarded$2 = 0;
-        var2 = gf.a(oo.field_c, 0, ((kh) this).field_b, 0, ((kh) this).field_u);
+        var2 = gf.a(oo.field_c, 0, ((kh) this).field_b, 0, ((kh) this).field_u, 0);
         if (param0 == 30182) {
           if (var2 == null) {
             ((kh) this).a(0);
@@ -277,9 +276,9 @@ final class kh {
             }
           }
           if (((kh) this).field_l) {
-            int fieldTemp$2 = ((kh) this).field_p - 1;
+            int fieldTemp$1 = ((kh) this).field_p - 1;
             ((kh) this).field_p = ((kh) this).field_p - 1;
-            if (0 < fieldTemp$2) {
+            if (0 < fieldTemp$1) {
               return;
             } else {
               ((kh) this).field_p = ((kh) this).field_i;
@@ -287,8 +286,7 @@ final class kh {
                 ((kh) this).field_l = false;
                 return;
               } else {
-                int discarded$3 = -113;
-                this.a();
+                this.a((byte) -113);
                 return;
               }
             }
@@ -346,7 +344,7 @@ final class kh {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

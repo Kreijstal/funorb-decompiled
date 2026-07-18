@@ -88,7 +88,7 @@ final class jd {
         field_i = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;
@@ -254,8 +254,7 @@ final class jd {
                   }
                 }
                 var5 = new java.net.URL(param1.getCodeBase(), var4);
-                int discarded$2 = -87;
-                param1.getAppletContext().showDocument(rh.a(var5, param1), "_self");
+                param1.getAppletContext().showDocument(rh.a(var5, param1, (byte) -87), "_self");
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -375,9 +374,8 @@ final class jd {
         }
     }
 
-    final static boolean b() {
-        int discarded$0 = 29712;
-        return kn.a(ec.field_f, re.field_p);
+    final static boolean b(byte param0) {
+        return kn.a(ec.field_f, re.field_p, 29712);
     }
 
     static {

@@ -224,7 +224,7 @@ class ug extends ii {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    private final void a(ug param0) {
+    private final void a(ug param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_92_0 = null;
         StringBuilder stackIn_92_1 = null;
@@ -628,8 +628,7 @@ class ug extends ii {
           L0: {
             L1: {
               ((ug) this).field_b = param0;
-              int discarded$2 = 256;
-              this.a(param1);
+              this.a(param1, 256);
               if (param6 == null) {
                 break L1;
               } else {

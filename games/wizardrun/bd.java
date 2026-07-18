@@ -39,15 +39,14 @@ final class bd {
         return hc.a(gd.field_c, -28266);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
     }
 
-    final static void a() {
-        int discarded$0 = 4;
-        kc.field_H = jl.c();
+    final static void a(int param0) {
+        kc.field_H = jl.c(4);
         u.field_A = new wi();
         di.a(true, true, 117);
     }

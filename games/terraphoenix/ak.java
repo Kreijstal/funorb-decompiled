@@ -50,7 +50,7 @@ final class ak {
         field_g = null;
     }
 
-    private final void c() throws IOException {
+    private final void c(byte param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = Terraphoenix.field_V;
@@ -327,8 +327,7 @@ final class ak {
                     break L4;
                   } else {
                     L6: {
-                      int discarded$2 = -127;
-                      this.c();
+                      this.c((byte) -127);
                       var10_int = param3;
                       if (var10_int <= ((ak) this).field_m) {
                         break L6;
@@ -367,9 +366,9 @@ final class ak {
                           if (var10_int <= param2) {
                             break L8;
                           } else {
-                            int incrementValue$3 = param2;
+                            int incrementValue$1 = param2;
                             param2++;
-                            param0[incrementValue$3] = (byte) 0;
+                            param0[incrementValue$1] = (byte) 0;
                             param3--;
                             ((ak) this).field_p = ((ak) this).field_p + 1L;
                             continue L10;
@@ -495,7 +494,7 @@ final class ak {
         }
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_6_0 = 0;

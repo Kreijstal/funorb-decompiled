@@ -84,7 +84,7 @@ final class mm extends le {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         if (j.field_l == null) {
             j.field_l = t.a(false, 6);
         }
@@ -123,7 +123,7 @@ final class mm extends le {
         }
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         if (!(!uh.field_g)) {
             return;
         }

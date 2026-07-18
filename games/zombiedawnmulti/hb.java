@@ -5,12 +5,12 @@ final class hb {
     static String[] field_b;
     static String field_a;
 
-    final static void b() {
+    final static void b(int param0) {
         lk.g((byte) 89);
         kf.a(2, wp.field_j[0].field_z, nj.field_h, qa.field_o, jo.field_f, jk.field_f);
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -102,8 +102,7 @@ final class hb {
                         var10 = var12;
                         var6 = var10;
                         if (var3 == 1) {
-                          int discarded$2 = 9;
-                          int discarded$3 = wo.a(var6, var5_int, param0, var4);
+                          int discarded$1 = wo.a(var16, var5_int, param0, var4, 9);
                           break L5;
                         } else {
                           var7 = (Object) (Object) hg.field_wb;
@@ -165,7 +164,7 @@ final class hb {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         hd.field_s = new fe();
         wj.field_i.a((cf) (Object) hd.field_s, (byte) 121);
     }

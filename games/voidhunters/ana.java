@@ -9,7 +9,7 @@ final class ana extends ksa {
     int field_d;
     ksa field_g;
 
-    final static byte[] a(File param0) {
+    final static byte[] a(File param0, byte param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -68,7 +68,7 @@ final class ana extends ksa {
         return stackIn_3_0;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         int var1 = -34;
     }
 
@@ -101,8 +101,7 @@ final class ana extends ksa {
             try {
               var4 = new byte[param1];
               var3 = var4;
-              int discarded$2 = 119;
-              dib.a(param2, param1, var4);
+              dib.a(param2, param1, var4, (byte) 119);
               stackOut_0_0 = (byte[]) var4;
               stackIn_1_0 = stackOut_0_0;
               return stackIn_1_0;

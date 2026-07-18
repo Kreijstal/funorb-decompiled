@@ -242,7 +242,7 @@ final class fn extends vw {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_f = null;
     }
 

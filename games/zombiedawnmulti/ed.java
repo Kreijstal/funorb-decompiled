@@ -100,7 +100,7 @@ final class ed {
         return (gh) (Object) stackIn_10_0;
     }
 
-    final static void a(String param0, long param1, int param2, int param3, boolean param4) {
+    final static void a(String param0, long param1, int param2, int param3, boolean param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         ga stackIn_1_0 = null;
@@ -203,13 +203,13 @@ final class ed {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_a = null;
     }
 
-    final static ci a(ul param0) {
+    final static ci a(ul param0, int param1) {
         RuntimeException var2 = null;
         ci var2_ref = null;
         ci stackIn_3_0 = null;

@@ -26,7 +26,7 @@ final class he extends hd {
     int field_Pb;
     static String field_Bb;
 
-    public static void b() {
+    public static void b(int param0) {
         field_yb = null;
         field_Bb = null;
         field_Eb = null;
@@ -247,7 +247,7 @@ final class he extends hd {
         return stackIn_20_0 != 0;
     }
 
-    final static String a() {
+    final static String a(int param0) {
         if (!(nr.field_f != wk.field_f)) {
             return ld.field_a;
         }
@@ -260,7 +260,7 @@ final class he extends hd {
         return ep.field_b;
     }
 
-    final static void i() {
+    final static void i(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -284,8 +284,7 @@ final class he extends hd {
                     var10 = (gm) (Object) nw.field_b.a((byte) -76, ek.field_G);
                     var2 = ug.a(0, var10.field_kb >> 16);
                     var3 = lf.a((byte) -119, var10.field_bb >> 16);
-                    int discarded$11 = 480;
-                    if (!lb.a(var2, var3)) {
+                    if (!lb.a(var2, var3, 480)) {
                       var2 = 320;
                       var3 = 240;
                       break L2;
@@ -365,7 +364,7 @@ final class he extends hd {
         return wt.a(param3, ga.field_O[param4], em.field_e ? true : false, param4, param0, -121);
     }
 
-    final static void a(vm param0) {
+    final static void a(vm param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

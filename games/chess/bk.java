@@ -13,7 +13,7 @@ final class bk extends o {
         return null != ae.field_f ? (ln) (Object) ae.field_f.a((long)param1, 3000) : null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         me.field_a = null;
     }
 
@@ -95,8 +95,7 @@ final class bk extends o {
               var8 = new vd(jh.field_e, param3);
               var7 = var8;
               jh.field_e.b((mf) (Object) var8, (byte) -93);
-              int discarded$8 = 32359;
-              if (jn.a()) {
+              if (jn.a(32359)) {
                 var8.o(-10896);
                 stackOut_8_0 = 1;
                 stackIn_9_0 = stackOut_8_0;

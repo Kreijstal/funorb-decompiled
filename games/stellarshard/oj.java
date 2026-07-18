@@ -19,7 +19,7 @@ final class oj {
         return var2;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         if (!(ob.field_b == null)) {
             ob.field_b.a(true);
             ob.field_b = null;
@@ -56,7 +56,7 @@ final class oj {
         return ((oj) this).field_d == ((oj) this).field_d.field_g ? true : false;
     }
 
-    final static void a(pb param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(pb param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         RuntimeException var8 = null;
         int var10 = 0;
         int var11 = 0;
@@ -278,7 +278,7 @@ final class oj {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 

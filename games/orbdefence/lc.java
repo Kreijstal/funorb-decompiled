@@ -29,7 +29,7 @@ final class lc extends nf {
         return false;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_s = null;
         field_w = null;
         field_u = null;

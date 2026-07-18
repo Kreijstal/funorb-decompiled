@@ -16,7 +16,7 @@ final class hk {
     int field_g;
     int field_h;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -151,7 +151,7 @@ final class hk {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         try {
             int var2_int = 0;
             param0.setFocusTraversalKeysEnabled(false);
@@ -183,14 +183,12 @@ final class hk {
                     if (param0.length() == 0) {
                         var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     } else {
-                        int discarded$0 = -1;
-                        var5 = var7 + "; Expires=" + wc.a(94608000000L + ll.a(1000)) + "; Max-Age=" + 94608000L;
+                        var5 = var7 + "; Expires=" + wc.a(94608000000L + ll.a(1000), -1) + "; Max-Age=" + 94608000L;
                     }
                     cd.a(param2, 13162, "document.cookie=\"" + var5 + "\"");
                 } catch (Throwable throwable) {
                 }
-                int discarded$1 = 1;
-                dh.a(param2);
+                dh.a(param2, true);
             } catch (RuntimeException runtimeException) {
                 throw qk.a((Throwable) (Object) runtimeException, "hk.D(" + (param0 != null ? "{...}" : "null") + ',' + 3 + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
@@ -222,8 +220,7 @@ final class hk {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 126;
-            me.a((java.awt.Component) (Object) param0);
+            me.a((java.awt.Component) (Object) param0, (byte) 126);
             pd.a(-26, (java.awt.Component) (Object) param0);
             var2_int = 42 % ((param1 - 61) / 32);
             if (lk.field_d != null) {

@@ -31,14 +31,13 @@ final class kha {
             param0.field_f = param1 ? true : false;
             param0.c((byte) 66);
             param0.b(-3846);
-            int discarded$0 = 0;
-            this.c();
+            this.c(false);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "kha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         int var6 = 0;
         int var5 = 0;
         int var8 = VoidHunters.field_G;
@@ -130,10 +129,8 @@ final class kha {
                     }
                   }
                   ((kha) this).field_i.b(-10258, (ksa) (Object) param1);
-                  int discarded$4 = 0;
-                  this.c();
-                  int discarded$5 = 0;
-                  if (!this.b()) {
+                  this.c(false);
+                  if (!this.b(false)) {
                     break L3;
                   } else {
                     L5: {
@@ -242,8 +239,7 @@ final class kha {
                   }
                 }
               }
-              int discarded$1 = 0;
-              if (this.b()) {
+              if (this.b(false)) {
                 ((kha) this).field_g = param1;
                 ((kha) this).field_m = param0;
                 ((kha) this).field_k = true;
@@ -260,7 +256,7 @@ final class kha {
         return false;
     }
 
-    private final boolean b() {
+    private final boolean b(boolean param0) {
         int var3 = 0;
         aia[] stackIn_30_0 = null;
         int stackIn_30_1 = 0;

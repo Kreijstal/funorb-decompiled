@@ -10,7 +10,7 @@ final class pa extends ta {
     static jp field_j;
     static int field_n;
 
-    final static void a(int param0, int param1, int param2, dh param3, int param4, int param5, int param6, ta param7, int param8, int param9, int param10, int param11, int param12, ta param13, int param14, int param15, dh param16, ta param17, int param18) {
+    final static void a(int param0, int param1, int param2, dh param3, int param4, int param5, int param6, ta param7, int param8, int param9, int param10, int param11, int param12, ta param13, int param14, int param15, dh param16, ta param17, int param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -89,18 +89,12 @@ final class pa extends ta {
         StringBuilder stackOut_15_1 = null;
         String stackOut_15_2 = null;
         try {
-          int discarded$6 = 1;
-          fr.a(480, param16, param3);
+          fr.a(480, param16, param3, true);
           tn.a(param11, param14, 256, param18, param0);
-          int discarded$7 = 19;
-          pp.a(320, 240);
+          pp.a(320, 240, (byte) 19);
           cp.a(8, 2, param13, 73, param17, 8);
           hd.a(117, param7, 0, 0);
-          int discarded$8 = 2;
-          int discarded$9 = 0;
-          int discarded$10 = 1;
-          int discarded$11 = 0;
-          mj.a();
+          mj.a(0, 1, false, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -239,7 +233,7 @@ final class pa extends ta {
         super.a(param0, param1, param2, param3, param4);
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         ed.a(0, 0);
     }
 
@@ -247,7 +241,7 @@ final class pa extends ta {
         super(param0);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_m = null;
         field_i = null;
         field_k = null;

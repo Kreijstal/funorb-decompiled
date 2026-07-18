@@ -29,7 +29,7 @@ final class lq {
         }
     }
 
-    final static void a(ki param0) {
+    final static void a(ki param0, int param1) {
         wb var2 = null;
         int var3 = 0;
         int var4 = 0;

@@ -87,7 +87,7 @@ final class mn implements Iterator {
         return ((mn) this).field_f.field_d != ((mn) this).field_c;
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         return !ig.field_j.a(114);
     }
 

@@ -127,7 +127,7 @@ final class pl {
         }
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         if (ch.field_d != cf.field_b) {
           if (bb.field_a.a(0)) {
             if (cf.field_b == ed.field_c) {
@@ -203,8 +203,7 @@ final class pl {
                 if (!md.field_f.startsWith("win")) {
                   break L0;
                 } else {
-                  int discarded$8 = 30;
-                  if (cg.a(param3)) {
+                  if (cg.a(param3, (byte) 30)) {
                     return;
                   } else {
                     break L0;
@@ -277,7 +276,7 @@ final class pl {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_k = null;
         field_c = null;
@@ -364,13 +363,12 @@ final class pl {
                               var6++;
                               break L5;
                             } else {
-                              int discarded$2 = -201;
-                              var8 = qb.a((char) var7);
+                              var8 = qb.a((char) var7, -201);
                               if (var8 == 0) {
                                 var6++;
                                 break L5;
                               } else {
-                                StringBuilder discarded$3 = var5.append((char) var8);
+                                StringBuilder discarded$1 = var5.append((char) var8);
                                 var6++;
                                 break L5;
                               }

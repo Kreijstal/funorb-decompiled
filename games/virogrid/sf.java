@@ -220,7 +220,7 @@ final class sf extends fd implements ta {
                 break L1;
               } else {
                 if (param1.indexOf("<br>") == -1) {
-                  param4[0] = (String) (Object) param4;
+                  param4[0] = param1;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;

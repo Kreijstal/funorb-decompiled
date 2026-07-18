@@ -7,7 +7,7 @@ final class ic {
     static th field_b;
     static boolean field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
     }

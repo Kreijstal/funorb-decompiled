@@ -15,7 +15,7 @@ final class ak extends ne {
     static int[] field_o;
     int field_q;
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_j = null;
         field_o = null;

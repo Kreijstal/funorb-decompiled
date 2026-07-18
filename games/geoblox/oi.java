@@ -224,7 +224,7 @@ final class oi {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         int var1 = 59;
         field_e = null;

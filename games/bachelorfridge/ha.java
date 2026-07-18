@@ -66,7 +66,7 @@ final class ha extends tia {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, boolean param2) {
         ld.field_n = param1;
         hda.field_o = param0;
     }
@@ -88,7 +88,7 @@ final class ha extends tia {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_i = null;
         field_m = null;
     }

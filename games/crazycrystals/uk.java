@@ -106,7 +106,7 @@ final class uk extends nf {
         return stackIn_7_0;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;

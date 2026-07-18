@@ -16,11 +16,11 @@ final class ua {
         field_f = null;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return null != nk.field_b && lj.field_z.a(-65);
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

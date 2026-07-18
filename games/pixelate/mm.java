@@ -559,7 +559,7 @@ class mm {
         ((mm) this).field_a = param0;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, int param2) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -611,8 +611,7 @@ class mm {
                       field_b = null;
                       break L0;
                     } else {
-                      int discarded$1 = 23;
-                      vg.a(50L);
+                      vg.a(50L, (byte) 23);
                       continue L2;
                     }
                   }

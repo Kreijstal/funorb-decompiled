@@ -2242,7 +2242,7 @@ final class nb extends kd {
         }
     }
 
-    final static nb a(jg param0) {
+    final static nb a(jg param0, int param1, int param2) {
         if (param0.field_n != null) {
           if (param0.field_n.length == 0) {
             return null;
@@ -2254,7 +2254,7 @@ final class nb extends kd {
         }
     }
 
-    final static nb b(jg param0) {
+    final static nb b(jg param0, int param1, int param2) {
         if (param0.field_n != null) {
           if (param0.field_n.length == 0) {
             return null;

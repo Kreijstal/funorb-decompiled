@@ -6,12 +6,11 @@ final class ml {
     static nn field_a;
     static String field_b;
 
-    final static boolean a(char param0) {
-        int discarded$0 = -11217;
-        return d.a(param0);
+    final static boolean a(char param0, int param1) {
+        return d.a(param0, -11217);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;
@@ -132,7 +131,7 @@ final class ml {
         return stackIn_7_0;
     }
 
-    final static void a(ik param0) {
+    final static void a(ik param0, int param1, byte param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

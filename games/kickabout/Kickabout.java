@@ -126,10 +126,9 @@ public final class Kickabout extends tu {
         L6: {
           L7: {
             L8: {
-              int discarded$8 = -116;
-              kw.b(stackIn_17_0 != 0);
+              kw.b(stackIn_17_0 != 0, (byte) -116);
               re.b(param0 ^ -105);
-              boolean discarded$9 = ((eh) (Object) ma.field_t).e(0);
+              boolean discarded$1 = ((eh) (Object) ma.field_t).e(0);
               if (um.field_e != null) {
                 break L8;
               } else {
@@ -154,8 +153,7 @@ public final class Kickabout extends tu {
               }
             }
           }
-          int discarded$10 = 2;
-          io.a();
+          io.a(2);
           break L6;
         }
         L9: {
@@ -245,9 +243,7 @@ public final class Kickabout extends tu {
             var4 = -ce.field_I + 24;
             var5 = (var4 * var4 << 8) / 576;
             var6 = -var5 + 256;
-            int discarded$11 = -4;
-            int discarded$12 = -4;
-            wr.field_f = var5 * po.a(cq.field_h) - -(po.a(ra.field_G) * var6) >> 8;
+            wr.field_f = var5 * po.a(cq.field_h, -4) - -(po.a(ra.field_G, -4) * var6) >> 8;
             if (ce.field_I == 24) {
               cv.a((byte) 105);
               break L12;
@@ -257,8 +253,7 @@ public final class Kickabout extends tu {
           }
         }
         L15: {
-          int discarded$13 = 1;
-          dh.b();
+          dh.b(true);
           if (!((Kickabout) this).field_L) {
             break L15;
           } else {
@@ -272,8 +267,7 @@ public final class Kickabout extends tu {
                       if (!tu.field_E.field_m) {
                         break L18;
                       } else {
-                        int discarded$14 = 0;
-                        gw.c();
+                        gw.c(0);
                         tu.field_E.field_m = false;
                         break L18;
                       }
@@ -315,8 +309,7 @@ public final class Kickabout extends tu {
             break L21;
           } else {
             if (ws.field_f) {
-              int discarded$15 = 31663;
-              ql.a();
+              ql.a(31663);
               ws.field_f = false;
               break L21;
             } else {
@@ -468,7 +461,7 @@ public final class Kickabout extends tu {
         }
     }
 
-    private final void w() {
+    private final void w(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -692,8 +685,7 @@ public final class Kickabout extends tu {
                       }
                     }
                     if (param2 == 96) {
-                      int discarded$3 = 26;
-                      r.field_d = new kd(qo.d(), (hu) (Object) pb.field_C, oo.field_c);
+                      r.field_d = new kd(qo.d((byte) 26), (hu) (Object) pb.field_C, oo.field_c);
                       oa.a(false, (hc) (Object) r.field_d);
                       return r.field_d.a(11516, param1, param2);
                     } else {
@@ -1077,9 +1069,9 @@ public final class Kickabout extends tu {
                         return true;
                       } else {
                         if (27 == param1) {
-                          int fieldTemp$4 = fa.field_j + 1;
+                          int fieldTemp$1 = fa.field_j + 1;
                           fa.field_j = fa.field_j + 1;
-                          fa.field_j = fieldTemp$4 & 3;
+                          fa.field_j = fieldTemp$1 & 3;
                           return true;
                         } else {
                           if (85 == param1) {
@@ -1099,8 +1091,7 @@ public final class Kickabout extends tu {
                           } else {
                             L33: {
                               if (35 == param1) {
-                                int discarded$5 = -116;
-                                lr.b();
+                                lr.b((byte) -116);
                                 break L33;
                               } else {
                                 break L33;
@@ -1311,7 +1302,7 @@ public final class Kickabout extends tu {
         }
     }
 
-    private final void v() {
+    private final void v(int param0) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -1343,8 +1334,7 @@ public final class Kickabout extends tu {
 
     public Kickabout() {
         CharSequence var2 = (CharSequence) (Object) gw.field_b;
-        int discarded$0 = 0;
-        tu.field_E = new gr(jc.a(var2));
+        tu.field_E = new gr(jc.a(var2, false));
         nm.field_g = (Kickabout) this;
     }
 
@@ -1489,13 +1479,11 @@ public final class Kickabout extends tu {
     }
 
     final void c(byte param0) {
-        int discarded$3 = 4;
-        ph.a();
+        ph.a(4);
         if (param0 != -24) {
             return;
         }
-        int discarded$4 = 1;
-        r.a();
+        r.a(true);
     }
 
     final void g(byte param0) {
@@ -1764,7 +1752,7 @@ public final class Kickabout extends tu {
           if (param2 == 1) {
             break L0;
           } else {
-            boolean discarded$14 = ((Kickabout) this).m((byte) -8);
+            boolean discarded$1 = ((Kickabout) this).m((byte) -8);
             break L0;
           }
         }
@@ -1874,8 +1862,7 @@ public final class Kickabout extends tu {
                                   var5 = 0;
                                   L6: while (true) {
                                     if (var32.length <= var5) {
-                                      int discarded$15 = 88;
-                                      gg.a(var4);
+                                      gg.a(var32, (byte) 88);
                                       return true;
                                     } else {
                                       var4[var5] = param1.a(ek.b(param2, -112));
@@ -1893,10 +1880,8 @@ public final class Kickabout extends tu {
                                               if (!od.field_n) {
                                                 break L7;
                                               } else {
-                                                int discarded$16 = 119;
-                                                vc.f();
-                                                int discarded$17 = 122;
-                                                vu.b();
+                                                vc.f((byte) 119);
+                                                vu.b(122);
                                                 jm.a(0, false, -2);
                                                 wi.field_B = true;
                                                 k.field_k = true;
@@ -1915,8 +1900,7 @@ public final class Kickabout extends tu {
                                                 break L8;
                                               } else {
                                                 if (od.field_n) {
-                                                  int discarded$18 = 14;
-                                                  na.i();
+                                                  na.i(14);
                                                   return true;
                                                 } else {
                                                   break L8;
@@ -2015,8 +1999,7 @@ public final class Kickabout extends tu {
                                                               param1.p(-114);
                                                               var5 = 0;
                                                               var4_int = 0;
-                                                              int discarded$19 = -39;
-                                                              if (!mu.a(param1)) {
+                                                              if (!mu.a(param1, (byte) -39)) {
                                                                 stackOut_213_0 = 0;
                                                                 stackIn_214_0 = stackOut_213_0;
                                                                 break L15;
@@ -2028,8 +2011,7 @@ public final class Kickabout extends tu {
                                                             }
                                                             L16: {
                                                               var4_int = stackIn_214_0;
-                                                              int discarded$20 = -39;
-                                                              if (!mu.a(param1)) {
+                                                              if (!mu.a(param1, (byte) -39)) {
                                                                 stackOut_216_0 = 0;
                                                                 stackIn_217_0 = stackOut_216_0;
                                                                 break L16;
@@ -2041,8 +2023,7 @@ public final class Kickabout extends tu {
                                                             }
                                                             L17: {
                                                               var5 = stackIn_217_0;
-                                                              int discarded$21 = -39;
-                                                              if (!mu.a(param1)) {
+                                                              if (!mu.a(param1, (byte) -39)) {
                                                                 stackOut_219_0 = 0;
                                                                 stackIn_220_0 = stackOut_219_0;
                                                                 break L17;
@@ -2137,8 +2118,7 @@ public final class Kickabout extends tu {
                                                                     var6 = 0;
                                                                     var4_int = 0;
                                                                     var5 = 0;
-                                                                    int discarded$22 = -39;
-                                                                    if (!mu.a(param1)) {
+                                                                    if (!mu.a(param1, (byte) -39)) {
                                                                       stackOut_242_0 = 0;
                                                                       stackIn_243_0 = stackOut_242_0;
                                                                       break L24;
@@ -2150,8 +2130,7 @@ public final class Kickabout extends tu {
                                                                   }
                                                                   L25: {
                                                                     var4_int = stackIn_243_0;
-                                                                    int discarded$23 = -39;
-                                                                    if (!mu.a(param1)) {
+                                                                    if (!mu.a(param1, (byte) -39)) {
                                                                       stackOut_245_0 = 0;
                                                                       stackIn_246_0 = stackOut_245_0;
                                                                       break L25;
@@ -2163,8 +2142,7 @@ public final class Kickabout extends tu {
                                                                   }
                                                                   L26: {
                                                                     var5 = stackIn_246_0;
-                                                                    int discarded$24 = -39;
-                                                                    if (!mu.a(param1)) {
+                                                                    if (!mu.a(param1, (byte) -39)) {
                                                                       stackOut_248_0 = 0;
                                                                       stackIn_249_0 = stackOut_248_0;
                                                                       break L26;
@@ -2594,11 +2572,8 @@ public final class Kickabout extends tu {
                                         } else {
                                           L58: {
                                             cv.a((byte) 81);
-                                            int discarded$25 = -116;
-                                            int discarded$26 = 1024;
-                                            q.a(ma.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), dd.b(), sn.field_c, dr.a(param2 ^ 1), 150, ow.field_c.length);
-                                            int discarded$27 = -64;
-                                            ln.a(64, qq.h(), qt.f((byte) -63));
+                                            q.a(ma.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), dd.b(-116), sn.field_c, dr.a(param2 ^ 1), 150, ow.field_c.length, 1024);
+                                            ln.a(64, qq.h((byte) -64), qt.f((byte) -63));
                                             ec.field_e = false;
                                             od.field_n = true;
                                             if (!an.field_d) {
@@ -2925,8 +2900,7 @@ public final class Kickabout extends tu {
             break L0;
           } else {
             L1: {
-              int discarded$8 = -4;
-              if (po.a(cq.field_h) < 640) {
+              if (po.a(cq.field_h, -4) < 640) {
                 stackOut_3_0 = 0;
                 stackIn_4_0 = stackOut_3_0;
                 break L1;
@@ -2955,8 +2929,7 @@ public final class Kickabout extends tu {
                   break L0;
                 } else {
                   L4: {
-                    int discarded$9 = -4;
-                    if (po.a(ra.field_G) < 640) {
+                    if (po.a(ra.field_G, -4) < 640) {
                       stackOut_13_0 = 0;
                       stackIn_14_0 = stackOut_13_0;
                       break L4;
@@ -3040,9 +3013,9 @@ public final class Kickabout extends tu {
                 if (var5 >= 0) {
                   break L8;
                 } else {
-                  int incrementValue$10 = var4;
+                  int incrementValue$1 = var4;
                   var4++;
-                  on.field_a[incrementValue$10] = 65793;
+                  on.field_a[incrementValue$1] = 65793;
                   var5++;
                   continue L11;
                 }
@@ -3051,8 +3024,7 @@ public final class Kickabout extends tu {
           }
           L12: {
             if (wr.field_f < 680) {
-              int discarded$11 = -48;
-              hr.a();
+              hr.a((byte) -48);
               break L12;
             } else {
               break L12;
@@ -3351,13 +3323,11 @@ public final class Kickabout extends tu {
           }
         }
         L29: {
-          int discarded$12 = 102;
-          this.w();
+          this.w(102);
           if (!pb.field_B) {
             break L29;
           } else {
-            int discarded$13 = -119;
-            sc.g();
+            sc.g((byte) -119);
             break L29;
           }
         }
@@ -3383,68 +3353,47 @@ public final class Kickabout extends tu {
             break L32;
           } else {
             if (cq.field_h.field_c != -4) {
-              int discarded$14 = 81;
-              this.v();
+              this.v(81);
               break L32;
             } else {
               break L32;
             }
           }
         }
-        int discarded$15 = 71;
-        wq.a();
+        wq.a((byte) 71);
         gs.a((byte) -106);
     }
 
     final void b(int param0) {
         Kickabout.o((byte) -99);
-        int discarded$0 = 0;
-        bw.a();
+        bw.a(false);
         uq.a(-91);
-        int discarded$1 = -1;
-        ug.a();
-        int discarded$2 = 121;
-        et.a();
-        int discarded$3 = 23;
-        w.b();
+        ug.a(-1);
+        et.a(121);
+        w.b(23);
         ng.b(param0 ^ 126);
-        int discarded$4 = 112;
-        up.g();
-        int discarded$5 = 122;
-        hn.a();
-        int discarded$6 = 9;
-        pt.a();
-        int discarded$7 = -115;
-        su.a();
+        up.g(112);
+        hn.a((byte) 122);
+        pt.a((byte) 9);
+        su.a((byte) -115);
         gr.b((byte) 0);
-        int discarded$8 = -23834;
-        fp.a();
-        int discarded$9 = -67;
-        wk.a();
-        int discarded$10 = -13827;
-        pc.b();
-        int discarded$11 = 115;
-        nd.a();
+        fp.a(-23834);
+        wk.a((byte) -67);
+        pc.b(-13827);
+        nd.a((byte) 115);
         oo.a(param0 ^ -18184);
-        int discarded$12 = 20177;
-        pl.a();
-        int discarded$13 = 0;
-        pr.a();
-        int discarded$14 = 0;
-        oi.a();
+        pl.a(20177);
+        pr.a(0);
+        oi.a(false);
         tf.a(param0 + -133);
         on.c();
         jl.a(param0 ^ 8198);
         ml.m(0);
-        int discarded$15 = -117;
-        gs.b();
+        gs.b((byte) -117);
         mi.a(param0 + -6);
-        int discarded$16 = 72;
-        nc.a();
-        int discarded$17 = -90;
-        ss.a();
-        int discarded$18 = 30907;
-        tu.q();
+        nc.a((byte) 72);
+        ss.a((byte) -90);
+        tu.q(30907);
         de.a(param0 + 3896);
         gw.d(param0 + 92);
         qr.a(false);
@@ -3453,694 +3402,442 @@ public final class Kickabout extends tu {
         ah.c(1);
         u.a(param0 + -8);
         ku.a(param0 + -7);
-        int discarded$19 = 66;
-        rg.a();
+        rg.a((byte) 66);
         sj.c(param0 ^ -122);
-        int discarded$20 = 29136;
-        fc.a();
-        int discarded$21 = 0;
-        td.a();
-        int discarded$22 = 88;
-        iw.g();
-        int discarded$23 = -64;
-        nj.a();
-        int discarded$24 = 122;
-        fh.a();
+        fc.a(29136);
+        td.a(false);
+        iw.g((byte) 88);
+        nj.a((byte) -64);
+        fh.a((byte) 122);
         fs.a(-81);
-        int discarded$25 = 53;
-        ms.a();
-        int discarded$26 = 0;
-        tn.a();
+        ms.a((byte) 53);
+        tn.a(false);
         cu.a(param0 ^ 6);
         oa.a(param0 + -6);
-        int discarded$27 = 2;
-        tv.a();
-        int discarded$28 = 0;
-        hp.a();
-        int discarded$29 = 60;
-        ns.a();
+        tv.a(2);
+        hp.a(0);
+        ns.a((byte) 60);
         mc.a((byte) -116);
-        int discarded$30 = 1;
-        qe.a();
-        int discarded$31 = 25;
-        vq.a();
+        qe.a(true);
+        vq.a((byte) 25);
         kh.d(param0 + -1712);
-        int discarded$32 = -1;
-        sd.a();
-        int discarded$33 = 1;
-        ap.a();
-        int discarded$34 = 1;
-        lm.a();
+        sd.a(-1);
+        ap.a(true);
+        lm.a(true);
         js.a((byte) 125);
         kd.c(-1);
         lu.g((byte) -28);
         am.e(13421568);
         gn.d(126);
         hj.a(param0 + 50);
-        int discarded$35 = 1;
-        rd.a();
-        int discarded$36 = -49;
-        ds.a();
-        int discarded$37 = 110;
-        cq.b();
-        int discarded$38 = 1;
-        eh.d();
-        int discarded$39 = -13;
-        ig.a();
-        int discarded$40 = 0;
-        vb.a();
+        rd.a(true);
+        ds.a(-49);
+        cq.b(110);
+        eh.d(1);
+        ig.a((byte) -13);
+        vb.a(0);
         fn.q(140);
         hs.b(104);
-        int discarded$41 = 101;
-        il.a();
-        int discarded$42 = 0;
-        jb.c();
-        int discarded$43 = -73;
-        ar.a();
-        int discarded$44 = 14;
-        gm.i();
-        int discarded$45 = 17;
-        ak.a();
-        int discarded$46 = -118;
-        vr.a();
+        il.a((byte) 101);
+        jb.c(false);
+        ar.a((byte) -73);
+        gm.i((byte) 14);
+        ak.a(17);
+        vr.a((byte) -118);
         ca.a((byte) -72);
-        int discarded$47 = -25514;
-        ws.a();
-        int discarded$48 = 1;
-        fj.b();
-        int discarded$49 = 114;
-        c.a();
-        int discarded$50 = -1316;
-        sn.a();
-        int discarded$51 = -126;
-        ti.a();
+        ws.a(-25514);
+        fj.b(true);
+        c.a((byte) 114);
+        sn.a(-1316);
+        ti.a((byte) -126);
         nh.a();
-        int discarded$52 = -9097;
-        aj.a();
-        int discarded$53 = 0;
-        le.a();
-        int discarded$54 = -127;
-        bq.a();
-        int discarded$55 = -90;
-        dg.a();
+        aj.a(-9097);
+        le.a(false);
+        bq.a((byte) -127);
+        dg.a((byte) -90);
         t.a();
-        int discarded$56 = 0;
-        ep.a();
-        int discarded$57 = 0;
-        ck.a();
+        ep.a(0);
+        ck.a(false);
         rj.a((byte) -116);
-        int discarded$58 = 0;
-        ks.a();
+        ks.a(0);
         uh.a();
         jj.a((byte) -99);
         qt.c((byte) -107);
-        int discarded$59 = 108;
-        fv.b();
+        fv.b((byte) 108);
         mt.a(param0 ^ 7);
-        int discarded$60 = -123;
-        ji.a();
+        ji.a(-123);
         hd.g(-14457);
         io.a((byte) -6);
-        int discarded$61 = -22;
-        ko.a();
-        int discarded$62 = 81;
-        ew.d();
-        int discarded$63 = 1;
-        te.a();
-        int discarded$64 = 0;
-        ec.a();
+        ko.a((byte) -22);
+        ew.d(81);
+        te.a(true);
+        ec.a(0);
         we.a((byte) -43);
         kr.a(param0 ^ -121);
-        int discarded$65 = -118;
-        kj.b();
+        kj.b((byte) -118);
         ps.b(-27680);
         bh.c(param0 ^ -109);
-        int discarded$66 = 125;
-        kt.a();
+        kt.a(125);
         e.a(-1);
         ta.g((byte) 91);
         sp.j(param0 + -246);
-        int discarded$67 = -17;
-        jt.h();
+        jt.h((byte) -17);
         in.a(param0 ^ 31347);
-        int discarded$68 = 14513;
-        ud.e();
-        int discarded$69 = 1;
-        gt.a();
-        int discarded$70 = 119;
-        ch.a();
-        int discarded$71 = -124;
-        qn.a();
+        ud.e(14513);
+        gt.a(true);
+        ch.a((byte) 119);
+        qn.a((byte) -124);
         hu.a();
-        int discarded$72 = 1;
-        nu.a();
-        int discarded$73 = 1;
-        aq.b();
-        int discarded$74 = 111;
-        vj.a();
+        nu.a(true);
+        aq.b(1);
+        vj.a((byte) 111);
         tg.a();
         wh.a(0);
         bd.f(param0 ^ -54);
-        int discarded$75 = -127;
-        gk.a();
+        gk.a((byte) -127);
         rm.f(-71);
         uf.b(param0 ^ 3547);
         ne.g(29250);
-        int discarded$76 = -100;
-        cb.a();
-        int discarded$77 = 127;
-        ob.i();
-        int discarded$78 = -124;
-        la.a();
-        int discarded$79 = 0;
-        tj.f();
+        cb.a((byte) -100);
+        ob.i(127);
+        la.a((byte) -124);
+        tj.f(0);
         nl.e((byte) -108);
-        int discarded$80 = 116;
-        is.b();
+        is.b(116);
         mj.a(param0 ^ 6);
-        int discarded$81 = 0;
-        om.b();
+        om.b(0);
         na.a(param0 ^ 116);
         iv.a(false);
-        int discarded$82 = 38;
-        gu.h();
+        gu.h((byte) 38);
         al.a(1);
-        int discarded$83 = 123;
-        uv.c();
-        int discarded$84 = -122;
-        np.i();
-        int discarded$85 = 1;
-        rb.c();
-        int discarded$86 = 240;
-        he.b();
-        int discarded$87 = -7;
-        qb.a();
-        int discarded$88 = 36;
-        em.c();
+        uv.c(123);
+        np.i((byte) -122);
+        rb.c(true);
+        he.b(240);
+        qb.a(-7);
+        em.c((byte) 36);
         sk.a(-5514);
         ph.b(1114366657);
         ad.a(param0 + -6);
         bn.e(-38);
-        int discarded$89 = -113;
-        so.a();
-        int discarded$90 = 1;
-        jq.a();
-        int discarded$91 = 101;
-        kp.a();
+        so.a((byte) -113);
+        jq.a(true);
+        kp.a((byte) 101);
         vk.a(50);
-        int discarded$92 = -116;
-        pi.a();
+        pi.a((byte) -116);
         h.a(false);
-        int discarded$93 = 48;
-        jc.a();
+        jc.a(48);
         p.a(320);
-        int discarded$94 = 92;
-        it.c();
-        int discarded$95 = -90;
-        oe.a();
+        it.c(92);
+        oe.a((byte) -90);
         wr.a(true);
         ua.a((byte) -30);
-        int discarded$96 = 0;
-        ki.a();
+        ki.a(0);
         mo.a(-3);
         po.a(0);
-        int discarded$97 = 130;
-        sc.e();
-        int discarded$98 = 1;
-        rq.a();
-        int discarded$99 = -89;
-        dc.a();
+        sc.e(130);
+        rq.a(true);
+        dc.a(-89);
         bo.a(param0 ^ 78);
         tt.a(false);
         eg.d();
-        int discarded$100 = 320;
-        sh.a();
+        sh.a(320);
         ul.a(param0 ^ 125);
         o.d(1603);
-        int discarded$101 = -53;
-        be.d();
-        int discarded$102 = -64;
-        lj.a();
-        int discarded$103 = 123;
-        ts.a();
+        be.d((byte) -53);
+        lj.a(-64);
+        ts.a((byte) 123);
         vg.m(param0 + 90);
         qd.a(-75);
-        int discarded$104 = 0;
-        rk.a();
-        int discarded$105 = 126;
-        nr.a();
-        int discarded$106 = -127;
-        dr.a();
-        int discarded$107 = 81;
-        fm.g();
+        rk.a(0);
+        nr.a((byte) 126);
+        dr.a((byte) -127);
+        fm.g((byte) 81);
         eo.c();
         tk.i((byte) -69);
         wf.h((byte) -53);
         jw.a(0);
-        int discarded$108 = 68;
-        jh.k();
-        int discarded$109 = -25734;
-        jr.i();
-        int discarded$110 = -111;
-        kc.a();
-        int discarded$111 = -2010043359;
-        b.f();
-        int discarded$112 = -127;
-        mf.i();
-        int discarded$113 = -108;
-        pu.i();
+        jh.k((byte) 68);
+        jr.i(-25734);
+        kc.a((byte) -111);
+        b.f(-2010043359);
+        mf.i((byte) -127);
+        pu.i((byte) -108);
         qs.h((byte) -111);
-        int discarded$114 = 0;
-        bp.c();
-        int discarded$115 = -123;
-        kq.i();
+        bp.c(false);
+        kq.i((byte) -123);
         vu.a(-15410);
         rf.a(-97);
-        int discarded$116 = 1;
-        kf.c();
+        kf.c(true);
         sl.i((byte) 39);
         ac.b((byte) 16);
-        int discarded$117 = 116;
-        wa.a();
+        wa.a((byte) 116);
         rr.a(param0 + -121);
         ru.a((byte) -32);
         kl.a(param0 ^ 6);
         rc.a(113);
-        int discarded$118 = 0;
-        ow.a();
+        ow.a(false);
         km.a();
-        int discarded$119 = 60;
-        cp.a();
-        int discarded$120 = -107;
-        fw.f();
-        int discarded$121 = 90;
-        i.f();
-        int discarded$122 = -111;
-        pv.g();
-        int discarded$123 = 13;
-        sq.g();
+        cp.a((byte) 60);
+        fw.f(-107);
+        i.f((byte) 90);
+        pv.g((byte) -111);
+        sq.g(13);
         qq.g(param0 + 2350);
-        int discarded$124 = -117;
-        aw.h();
+        aw.h((byte) -117);
         ha.g(100);
-        int discarded$125 = 22100;
-        hg.h();
-        int discarded$126 = 0;
-        nq.h();
+        hg.h(22100);
+        nq.h(0);
         no.g((byte) -93);
         pq.g(-14948);
-        int discarded$127 = -8332;
-        pw.g();
-        int discarded$128 = -31922;
-        gi.h();
-        int discarded$129 = 0;
-        hk.g();
+        pw.g(-8332);
+        gi.h(-31922);
+        hk.g(0);
         rt.g(param0 ^ 25994);
         ie.h(24342);
-        int discarded$130 = 0;
-        ek.d();
-        int discarded$131 = 2;
-        kn.g();
-        int discarded$132 = -45;
-        vf.g();
+        ek.d(false);
+        kn.g(2);
+        vf.g((byte) -45);
         ce.g(30);
         bm.d(false);
         lt.a(-122);
-        int discarded$133 = 0;
-        of.a();
-        int discarded$134 = 66049;
-        ih.a();
-        int discarded$135 = 0;
-        d.a();
-        int discarded$136 = -1;
-        se.m();
+        of.a(false);
+        ih.a(66049);
+        d.a(0);
+        se.m(-1);
         jn.s(248);
-        int discarded$137 = 110;
-        oj.j();
+        oj.j((byte) 110);
         vo.j((byte) 53);
         wv.j((byte) -108);
         ae.a((byte) -94);
-        int discarded$138 = 2;
-        nn.k();
+        nn.k(2);
         pd.k(param0 ^ -11205);
         mb.a((byte) -94);
         wc.a(10);
-        int discarded$139 = -100;
-        ee.a();
+        ee.a((byte) -100);
         th.a(false);
-        int discarded$140 = 77;
-        ve.j();
+        ve.j((byte) 77);
         cd.a((byte) -98);
-        int discarded$141 = 1;
-        cm.o();
+        cm.o(1);
         qv.a(true);
         wi.a(79);
         fd.g((byte) 88);
-        int discarded$142 = -103;
-        ub.a();
+        ub.a((byte) -103);
         wj.i(param0 ^ -336184830);
-        int discarded$143 = -65;
-        nw.c();
-        int discarded$144 = 0;
-        iq.b();
+        nw.c((byte) -65);
+        iq.b(0);
         ct.j(31068);
-        int discarded$145 = 127;
-        pg.b();
+        pg.b(127);
         bi.f(param0 + -6);
-        int discarded$146 = 2;
-        eb.a();
-        int discarded$147 = -2147483648;
-        n.b();
+        eb.a(2);
+        n.b(-2147483648);
         gf.a(64);
         kk.a((byte) 94);
-        int discarded$148 = 7;
-        pe.b();
+        pe.b((byte) 7);
         wq.a(-109);
-        int discarded$149 = -88;
-        f.a();
-        int discarded$150 = 0;
-        tl.c();
+        f.a((byte) -88);
+        tl.c(0);
         ao.b(113);
-        int discarded$151 = 125;
-        sa.a();
-        int discarded$152 = -10;
-        di.a();
-        int discarded$153 = 94;
-        lf.a();
-        int discarded$154 = 98;
-        pf.a();
+        sa.a((byte) 125);
+        di.a(-10);
+        lf.a((byte) 94);
+        pf.a((byte) 98);
         au.a();
-        int discarded$155 = 3;
-        os.b();
+        os.b(3);
         si.a(0);
-        int discarded$156 = 106;
-        un.a();
-        int discarded$157 = 109;
-        re.a();
-        int discarded$158 = -116;
-        id.a();
-        int discarded$159 = -19485;
-        ei.a();
-        int discarded$160 = -24229;
-        du.a();
-        int discarded$161 = 7;
-        ql.b();
-        int discarded$162 = 1;
-        mv.a();
-        int discarded$163 = 19044;
-        ka.a();
-        int discarded$164 = 0;
-        sg.a();
-        int discarded$165 = 111;
-        bb.b();
-        int discarded$166 = 1;
-        bt.a();
-        int discarded$167 = 30297;
-        an.a();
+        un.a((byte) 106);
+        re.a((byte) 109);
+        id.a(-116);
+        ei.a(-19485);
+        du.a(-24229);
+        ql.b(7);
+        mv.a(true);
+        ka.a(19044);
+        sg.a(false);
+        bb.b(111);
+        bt.a(true);
+        an.a(30297);
         bg.a(71);
-        int discarded$168 = -32;
-        eq.a();
-        int discarded$169 = 99;
-        av.b();
-        int discarded$170 = -125;
-        lw.a();
-        int discarded$171 = 125;
-        vi.d();
-        int discarded$172 = -29;
-        dh.a();
+        eq.a((byte) -32);
+        av.b(99);
+        lw.a((byte) -125);
+        vi.d(125);
+        dh.a((byte) -29);
         hq.a(param0 + 55);
         cl.a(-1);
-        int discarded$173 = 0;
-        tr.a();
-        int discarded$174 = -39;
-        ol.g();
+        tr.a(false);
+        ol.g(-39);
         va.c((byte) -40);
         wb.g(param0 + -119);
         fk.f(1);
         lr.f(param0 + -15646);
-        int discarded$175 = -113;
-        bf.b();
+        bf.b((byte) -113);
         ib.a(param0 + 905215451);
         cv.b((byte) -39);
-        int discarded$176 = 107;
-        ia.a();
-        int discarded$177 = -66;
-        rn.a();
+        ia.a((byte) 107);
+        rn.a(-66);
         je.a(-1);
         ok.a(param0 + 121);
-        int discarded$178 = -31;
-        ef.h();
+        ef.h((byte) -31);
         db.a();
-        int discarded$179 = 17437;
-        mk.a();
+        mk.a(17437);
         uk.a((byte) -128);
-        int discarded$180 = 256;
-        nm.a();
-        int discarded$181 = 1;
-        g.a();
-        int discarded$182 = 40;
-        us.f();
-        int discarded$183 = -123;
-        ip.a();
+        nm.a(256);
+        g.a(true);
+        us.f((byte) 40);
+        ip.a(-123);
         vp.b((byte) 125);
-        int discarded$184 = -80;
-        da.a();
+        da.a((byte) -80);
         rs.b();
         pp.a(false);
         dj.e(param0 + -29110);
-        int discarded$185 = -115;
-        tb.c();
-        int discarded$186 = 1;
-        ui.a();
-        int discarded$187 = -1;
-        qh.b();
-        int discarded$188 = -26236;
-        hi.g();
+        tb.c((byte) -115);
+        ui.a(true);
+        qh.b(-1);
+        hi.g(-26236);
         wm.a((byte) -119);
-        int discarded$189 = 69;
-        or.a();
+        or.a((byte) 69);
         vv.g((byte) 18);
-        int discarded$190 = 105;
-        af.a();
-        int discarded$191 = 115;
-        cg.k();
+        af.a((byte) 105);
+        cg.k(115);
         mr.n((byte) 74);
         ga.l(param0 + -6);
-        int discarded$192 = 12;
-        mu.p();
+        mu.p(12);
         fr.a(param0 + -6);
         lb.i(param0 + 9568);
-        int discarded$193 = 38;
-        gb.a();
-        int discarded$194 = -120;
-        ju.h();
-        int discarded$195 = 108;
-        qk.a();
-        int discarded$196 = -124;
-        jd.b();
+        gb.a((byte) 38);
+        ju.h((byte) -120);
+        qk.a((byte) 108);
+        jd.b((byte) -124);
         br.a(true);
         ai.l(0);
-        int discarded$197 = -79;
-        bk.b();
+        bk.b(-79);
         kv.a();
-        int discarded$198 = 96;
-        hw.a();
-        int discarded$199 = 90;
-        sf.f();
-        int discarded$200 = 128;
-        ra.g();
-        int discarded$201 = 60;
-        qa.g();
-        int discarded$202 = 0;
-        df.c();
-        int discarded$203 = 8;
-        ja.h();
+        hw.a(96);
+        sf.f(90);
+        ra.g(128);
+        qa.g(60);
+        df.c(false);
+        ja.h(8);
         um.a(123);
-        int discarded$204 = -49;
-        es.a();
+        es.a((byte) -49);
         hl.f(param0 ^ -5);
         fb.n(-23192);
-        int discarded$205 = 0;
-        wt.b();
-        int discarded$206 = 99;
-        go.a();
+        wt.b(false);
+        go.a(99);
         mg.a(param0 ^ 136);
-        int discarded$207 = 23;
-        hv.a();
-        int discarded$208 = -37;
-        jk.f();
-        int discarded$209 = 93;
-        gl.a();
+        hv.a(23);
+        jk.f((byte) -37);
+        gl.a(93);
         m.a(0);
-        int discarded$210 = -1;
-        s.i();
-        int discarded$211 = 696;
-        nv.j();
+        s.i(-1);
+        nv.j(696);
         st.b((byte) -103);
-        int discarded$212 = -112;
-        jg.h();
+        jg.h((byte) -112);
         ln.k(31235);
         ll.b((byte) -56);
-        int discarded$213 = 1;
-        fu.a();
-        int discarded$214 = 0;
-        ht.a();
-        int discarded$215 = 18;
-        ci.a();
+        fu.a(true);
+        ht.a(false);
+        ci.a(18);
         ij.g((byte) -46);
         ff.a((byte) 101);
         pn.b(-1);
         dq.a(false);
-        int discarded$216 = 43;
-        dt.a();
+        dt.a(43);
         cj.a(param0 ^ -104);
-        int discarded$217 = -73;
-        vt.a();
+        vt.a(-73);
         as.a();
-        int discarded$218 = 4476;
-        nt.i();
-        int discarded$219 = 1;
-        ov.a();
-        int discarded$220 = -119;
-        lc.a();
+        nt.i(4476);
+        ov.a(1);
+        lc.a(-119);
         nb.a(true);
         ag.a((byte) 100);
-        int discarded$221 = -126;
-        vc.g();
-        int discarded$222 = 122;
-        wd.a();
-        int discarded$223 = -1859;
-        ni.a();
+        vc.g((byte) -126);
+        wd.a((byte) 122);
+        ni.a(-1859);
         sm.a(0);
         wp.b(param0 ^ 6);
         op.b(-1842526431);
         cr.a(param0 + 18080);
-        int discarded$224 = 1;
-        ri.b();
-        int discarded$225 = 102;
-        rp.a();
-        int discarded$226 = 106;
-        mn.a();
-        int discarded$227 = 115;
-        pj.h();
-        int discarded$228 = -116;
-        oc.b();
-        int discarded$229 = 7571;
-        dk.a();
-        int discarded$230 = 84;
-        ii.a();
-        int discarded$231 = -104;
-        bl.b();
+        ri.b(true);
+        rp.a(102);
+        mn.a((byte) 106);
+        pj.h((byte) 115);
+        oc.b((byte) -116);
+        dk.a(7571);
+        ii.a(84);
+        bl.b((byte) -104);
         lk.a(param0 + -6);
         li.a((byte) -126);
         tm.a(15);
         fi.a((byte) 121);
         dw.a(param0 ^ 6);
-        int discarded$232 = -127;
-        sb.a();
-        int discarded$233 = -84;
-        q.b();
-        int discarded$234 = 38;
-        en.b();
+        sb.a(-127);
+        q.b(-84);
+        en.b((byte) 38);
         rl.b(20);
-        int discarded$235 = -35;
-        ba.c();
+        ba.c((byte) -35);
         od.b(param0 + -6);
-        int discarded$236 = 85;
-        qi.b();
+        qi.b((byte) 85);
         sr.a((byte) 121);
         nk.a(-15207);
-        int discarded$237 = 125;
-        pa.c();
+        pa.c((byte) 125);
         md.c(param0 ^ 32312);
         fa.a(param0 + -121);
-        int discarded$238 = -122;
-        kw.d();
+        kw.d((byte) -122);
         r.a(param0 ^ -94);
-        int discarded$239 = 104;
-        jm.a();
+        jm.a(104);
         vd.a(-5);
         wn.a(param0 ^ param0);
         ue.a(92);
-        int discarded$240 = 1;
-        j.a();
+        j.a(true);
         vl.a(120);
-        int discarded$241 = -104;
-        aa.b();
+        aa.b((byte) -104);
         wo.a(false);
-        int discarded$242 = 85;
-        gp.c();
-        int discarded$243 = -47;
-        oh.b();
+        gp.c(85);
+        oh.b((byte) -47);
         vs.a(0);
-        int discarded$244 = -13;
-        cf.a();
-        int discarded$245 = -123;
-        iu.a();
-        int discarded$246 = 22897;
-        gd.a();
-        int discarded$247 = 10040319;
-        hm.g();
-        int discarded$248 = 1;
-        kb.g();
+        cf.a(-13);
+        iu.a((byte) -123);
+        gd.a(22897);
+        hm.g(10040319);
+        kb.g(1);
         jo.g(param0 + -6);
         jf.g(param0 + 121);
-        int discarded$249 = 0;
-        ir.a();
-        int discarded$250 = 50;
-        pb.g();
+        ir.a(false);
+        pb.g(50);
         tq.g(115);
         ik.g(param0 ^ -107);
         uc.g(220);
-        int discarded$251 = 1;
-        ev.g();
-        int discarded$252 = 52;
-        el.g();
-        int discarded$253 = 0;
-        uj.a();
-        int discarded$254 = 96;
-        lh.g();
+        ev.g(1);
+        el.g((byte) 52);
+        uj.a(false);
+        lh.g((byte) 96);
         ej.h((byte) 118);
-        int discarded$255 = -18523;
-        im.a();
+        im.a(-18523);
         at.h((byte) -117);
-        int discarded$256 = 1;
-        dn.c();
-        int discarded$257 = 14;
-        qp.a();
+        dn.c(true);
+        qp.a(14);
         hh.a((byte) 121);
         qj.b((byte) -125);
-        int discarded$258 = -61;
-        dl.a();
+        dl.a((byte) -61);
         hr.a(2);
-        int discarded$259 = -77;
-        k.a();
-        int discarded$260 = 1;
-        mp.a();
+        k.a(-77);
+        mp.a(1);
         hf.a(true);
-        int discarded$261 = 0;
-        v.b();
-        int discarded$262 = -70;
-        bv.g();
-        int discarded$263 = -96;
-        lo.c();
-        int discarded$264 = -126;
-        qo.f();
-        int discarded$265 = -29635;
-        mh.g();
+        v.b(0);
+        bv.g(-70);
+        lo.c((byte) -96);
+        qo.f((byte) -126);
+        mh.g(-29635);
         fo.c((byte) 92);
-        int discarded$266 = 76;
-        ge.c();
-        int discarded$267 = 68;
-        ic.a();
-        int discarded$268 = -94;
-        er.a();
-        int discarded$269 = -89;
-        rv.a();
+        ge.c((byte) 76);
+        ic.a((byte) 68);
+        er.a((byte) -94);
+        rv.a(-89);
         lg.d(param0 ^ 344);
         ea.a(param0 ^ -110);
-        int discarded$270 = 112;
-        ld.a();
+        ld.a((byte) 112);
         ((Kickabout) this).field_z = null;
     }
 

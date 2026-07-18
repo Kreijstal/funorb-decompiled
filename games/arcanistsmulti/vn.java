@@ -44,7 +44,7 @@ final class vn {
         return var2;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(qe.field_p)) {
             throw new IllegalStateException();
         }
@@ -796,7 +796,7 @@ final class vn {
         }
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_b = null;
         field_a = null;
         field_j = null;
@@ -890,8 +890,7 @@ final class vn {
               if (param1) {
                 break L1;
               } else {
-                int discarded$2 = 1;
-                vn.e();
+                vn.e(true);
                 break L1;
               }
             }

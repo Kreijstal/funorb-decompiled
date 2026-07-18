@@ -104,7 +104,7 @@ final class fd extends id {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_G = null;
         field_M = null;
         field_L = null;
@@ -365,8 +365,7 @@ final class fd extends id {
               L0: {
                 L1: {
                   if (ki.field_h == null) {
-                    int discarded$14 = 0;
-                    if (!ee.a(param1)) {
+                    if (!ee.a(param1, false)) {
                       stackOut_5_0 = -1;
                       stackIn_6_0 = stackOut_5_0;
                       return stackIn_6_0;
@@ -383,8 +382,7 @@ final class fd extends id {
                   } else {
                     L3: {
                       if (!param1) {
-                        int discarded$15 = 0;
-                        ki.field_a = cn.a((byte) 125, param4, param3);
+                        ki.field_a = cn.a((byte) 125, param4, param3, false);
                         break L3;
                       } else {
                         var10 = null;
@@ -488,8 +486,7 @@ final class fd extends id {
                         var11 = s.field_e.g((byte) -89);
                         var7 = s.field_e.g(31365);
                         if ((var7 & 1) != 0) {
-                          int discarded$16 = 85;
-                          fj.a();
+                          fj.a((byte) 85);
                           break L9;
                         } else {
                           break L9;
@@ -556,9 +553,9 @@ final class fd extends id {
                           if (!gj.field_e) {
                             break L10;
                           } else {
-                            int discarded$17 = s.field_e.g(31365);
-                            int discarded$18 = s.field_e.g(31365);
-                            int discarded$19 = s.field_e.i(-1478490344);
+                            int discarded$8 = s.field_e.g(31365);
+                            int discarded$9 = s.field_e.g(31365);
+                            int discarded$10 = s.field_e.i(-1478490344);
                             vn.field_f = s.field_e.d((byte) 69);
                             kq.field_b = new byte[vn.field_f];
                             var8 = 0;
@@ -588,9 +585,9 @@ final class fd extends id {
                           if (!gj.field_e) {
                             break L10;
                           } else {
-                            int discarded$20 = s.field_e.g(31365);
-                            int discarded$21 = s.field_e.g(31365);
-                            int discarded$22 = s.field_e.i(-1478490344);
+                            int discarded$11 = s.field_e.g(31365);
+                            int discarded$12 = s.field_e.g(31365);
+                            int discarded$13 = s.field_e.i(-1478490344);
                             vn.field_f = s.field_e.d((byte) 69);
                             kq.field_b = new byte[vn.field_f];
                             var8 = 0;
@@ -609,8 +606,7 @@ final class fd extends id {
                       L19: {
                         ta.field_lb = s.field_e.f((byte) -48);
                         var12 = (CharSequence) (Object) ta.field_lb;
-                        int discarded$23 = 0;
-                        kf.field_k = tg.a(var12);
+                        kf.field_k = tg.a(var12, false);
                         qq.field_a = s.field_e.g(31365);
                         vo.field_l = pi.field_a;
                         if (ki.field_a.b(7) != uq.field_b) {
@@ -644,7 +640,7 @@ final class fd extends id {
                             } else {
                               try {
                                 L23: {
-                                  Object discarded$24 = fo.b(jl.b(0), 13093, "unzap");
+                                  Object discarded$14 = fo.b(jl.b(0), 13093, "unzap");
                                   break L23;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -660,8 +656,7 @@ final class fd extends id {
                         }
                         try {
                           L25: {
-                            int discarded$25 = 26;
-                            Object discarded$26 = fo.a(jl.b(0), "zap", (byte) 23, new Object[1]);
+                            Object discarded$15 = fo.a(jl.b(0), "zap", (byte) 23, new Object[1]);
                             break L25;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -742,8 +737,7 @@ final class fd extends id {
                   if (ki.field_h == null) {
                     if (sk.field_j) {
                       L33: {
-                        int discarded$27 = -22;
-                        if (he.b() > 30000L) {
+                        if (he.b((byte) -22) > 30000L) {
                           ol.field_q = aj.field_l;
                           break L33;
                         } else {

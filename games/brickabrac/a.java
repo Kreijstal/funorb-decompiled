@@ -825,8 +825,7 @@ final class a extends ih {
                 L4: {
                   ((a) this).field_q = (wh) param0;
                   this.g((byte) 116);
-                  int discarded$1 = 0;
-                  this.a(param1);
+                  this.a(param1, false);
                   if (param2 == 12) {
                     break L4;
                   } else {
@@ -919,7 +918,7 @@ final class a extends ih {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void a(boolean param0, boolean param1) {
         try {
             IOException iOException = null;
             Exception var4 = null;

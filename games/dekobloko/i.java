@@ -12,11 +12,11 @@ final class i {
     static int field_d;
     static w field_e;
 
-    final static int a() {
+    final static int a(int param0) {
         return ql.field_c;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_e = null;
         field_b = null;
@@ -24,7 +24,7 @@ final class i {
         field_a = null;
     }
 
-    final static void a(wl param0) {
+    final static void a(wl param0, int param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;
@@ -246,8 +246,7 @@ final class i {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = td.a(var7, var6_int, param0, var4);
+                          int discarded$1 = td.a(var17, var6_int, param0, var4, 9);
                           break L5;
                         }
                       }

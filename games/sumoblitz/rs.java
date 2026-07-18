@@ -175,7 +175,7 @@ final class rs {
         ((rs) this).field_a = var5;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -287,7 +287,7 @@ final class rs {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_c = null;
     }

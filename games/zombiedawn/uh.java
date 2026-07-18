@@ -134,7 +134,7 @@ final class uh {
         }
     }
 
-    final static java.awt.Canvas e() {
+    final static java.awt.Canvas e(int param0) {
         return cn.field_b != null ? (java.awt.Canvas) (Object) cn.field_b : cj.field_d;
     }
 

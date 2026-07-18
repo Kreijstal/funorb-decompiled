@@ -130,7 +130,7 @@ final class rc implements Runnable {
         return stackIn_6_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_e = null;
         field_k = null;
@@ -280,8 +280,7 @@ final class rc implements Runnable {
           }
         }
         L6: {
-          int discarded$1 = 1;
-          var7 = w.field_kb.a(kk.a(param2, param1, true));
+          var7 = w.field_kb.a(kk.a(param2, param1, true, true));
           if (var6 < var7) {
             var6 = var7;
             break L6;

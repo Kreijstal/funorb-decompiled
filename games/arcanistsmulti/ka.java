@@ -15,7 +15,7 @@ final class ka extends go {
     static uk field_m;
     static int field_p;
 
-    final static boolean c() {
+    final static boolean c(byte param0) {
         int stackIn_5_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_4_0 = 0;
@@ -44,7 +44,7 @@ final class ka extends go {
         return stackIn_5_0 != 0;
     }
 
-    final static go a(String param0, int param1) {
+    final static go a(String param0, int param1, int param2) {
         ka var3 = null;
         RuntimeException var3_ref = null;
         ka stackIn_3_0 = null;
@@ -354,7 +354,7 @@ final class ka extends go {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         if (!(ch.field_c == null)) {
             ch.field_c.d(-23482);
             ch.field_c = null;

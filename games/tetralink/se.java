@@ -8,7 +8,7 @@ abstract class se {
 
     abstract void a(int param0, java.awt.Component param1);
 
-    final static void a() {
+    final static void a(boolean param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -28,8 +28,7 @@ abstract class se {
             if (0 == var2) {
               var8 = (km) (Object) ph.field_F.c(false);
               if (var8 == null) {
-                int discarded$4 = 0;
-                mk.a();
+                mk.a(false);
                 return;
               } else {
                 L1: {
@@ -45,8 +44,7 @@ abstract class se {
                 }
                 var9.field_t = var9.field_t + 4;
                 if (!var9.h(4)) {
-                  int discarded$5 = 0;
-                  mk.a();
+                  mk.a(false);
                   return;
                 } else {
                   var8.b(false);
@@ -71,8 +69,7 @@ abstract class se {
                     }
                   }
                   if (var4_ref_hc == null) {
-                    int discarded$6 = 0;
-                    mk.a();
+                    mk.a(false);
                     return;
                   } else {
                     var4_ref_hc.b(false);
@@ -81,8 +78,7 @@ abstract class se {
                 }
               } else {
                 fk.a(-83, (Throwable) null, "A1: " + hc.a(false));
-                int discarded$7 = 0;
-                mk.a();
+                mk.a(false);
                 return;
               }
             }
@@ -96,7 +92,7 @@ abstract class se {
 
     abstract void b(int param0, java.awt.Component param1);
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_a = null;
     }

@@ -35,7 +35,7 @@ final class f {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ep.a(4, 8192);
     }
 

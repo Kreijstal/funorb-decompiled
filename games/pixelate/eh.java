@@ -90,7 +90,7 @@ abstract class eh {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_c = null;
         field_d = null;
         field_f = null;
@@ -257,7 +257,7 @@ abstract class eh {
         return new java.net.Socket(((eh) this).field_b, ((eh) this).field_e);
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         int var3 = -1 + param1 & param0 >> 31;
         return var3 + (param0 + (param0 >>> 31)) % param1;
     }

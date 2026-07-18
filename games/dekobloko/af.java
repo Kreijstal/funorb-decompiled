@@ -30,8 +30,7 @@ final class af {
         String stackOut_5_2 = null;
         try {
           if (gb.a(param3, param2, param0, 49)) {
-            int discarded$2 = 26;
-            return nm.g();
+            return nm.g((byte) 26);
           } else {
             return null;
           }
@@ -76,7 +75,7 @@ final class af {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_a = null;
         field_c = null;

@@ -12,7 +12,7 @@ final class ab {
     private be field_g;
     static String field_d;
 
-    final static int e() {
+    final static int e(int param0) {
         int var1 = 0;
         if (!(lg.field_W <= var1)) {
             var1 = lg.field_W;
@@ -310,7 +310,7 @@ final class ab {
         return stackIn_5_0 != 0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_c = null;
         field_a = null;
         field_d = null;
@@ -327,7 +327,7 @@ final class ab {
         return var2;
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return null != kb.field_i || jh.field_h;
     }
 

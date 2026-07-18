@@ -443,7 +443,7 @@ final class oi {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         L0: {
           L1: {
@@ -718,7 +718,7 @@ final class oi {
                 break L1;
               } else {
                 var12 = null;
-                String discarded$6 = oi.a((String[]) null, (String) null, -50);
+                String discarded$4 = oi.a((String[]) null, (String) null, -50);
                 break L1;
               }
             }
@@ -752,11 +752,10 @@ final class oi {
                         } else {
                           if (param1.charAt(var5) == 62) {
                             var5++;
-                            int discarded$7 = 0;
-                            var10 = fm.a((CharSequence) (Object) var9);
-                            StringBuilder discarded$8 = var6.append(param1.substring(var7, var8));
+                            var10 = fm.a((CharSequence) (Object) var9, false);
+                            StringBuilder discarded$5 = var6.append(param1.substring(var7, var8));
                             var7 = var5;
-                            StringBuilder discarded$9 = var6.append(args[var10]);
+                            StringBuilder discarded$6 = var6.append(args[var10]);
                             continue L3;
                           } else {
                             continue L3;
@@ -767,7 +766,7 @@ final class oi {
                       }
                     }
                   } else {
-                    StringBuilder discarded$10 = var6.append(param1.substring(var7));
+                    StringBuilder discarded$7 = var6.append(param1.substring(var7));
                     stackOut_26_0 = var6.toString();
                     stackIn_27_0 = stackOut_26_0;
                     break L0;
@@ -797,8 +796,7 @@ final class oi {
                         continue L2;
                       } else {
                         var5++;
-                        int discarded$11 = 0;
-                        var8 = fm.a((CharSequence) (Object) var7_ref_String);
+                        var8 = fm.a((CharSequence) (Object) var7_ref_String, false);
                         var4 = var4 + (-var5 - -var6_int + args[var8].length());
                         continue L2;
                       }
@@ -868,7 +866,7 @@ final class oi {
         return stackIn_27_0;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         mi.a(param0, -8241);
         we.a(false, param0);
     }
@@ -1077,8 +1075,7 @@ final class oi {
             vg.field_H.c(var6, 320, var4, 8437759, -1);
             return;
           } else {
-            int discarded$1 = -86;
-            this.b();
+            this.b((byte) -86);
             return;
           }
         } else {
@@ -1309,7 +1306,7 @@ final class oi {
         ((oi) this).field_f.d((byte) 32);
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         vg.field_H.c(mb.field_mb.toUpperCase(), 320, 197 + hd.field_b.field_H, 8437759, -1);
     }
 
@@ -1621,9 +1618,9 @@ final class oi {
                                                                     if (!((oi) this).field_f.c(-1)) {
                                                                       break L1;
                                                                     } else {
-                                                                      int fieldTemp$4 = bc.field_c + 1;
+                                                                      int fieldTemp$3 = bc.field_c + 1;
                                                                       bc.field_c = bc.field_c + 1;
-                                                                      if (~fieldTemp$4 > ~cc.field_v.length) {
+                                                                      if (~fieldTemp$3 > ~cc.field_v.length) {
                                                                         break L11;
                                                                       } else {
                                                                         bc.field_c = 2;
@@ -1631,9 +1628,9 @@ final class oi {
                                                                       }
                                                                     }
                                                                   } else {
-                                                                    int fieldTemp$5 = bc.field_c - 1;
+                                                                    int fieldTemp$4 = bc.field_c - 1;
                                                                     bc.field_c = bc.field_c - 1;
-                                                                    if (2 > fieldTemp$5) {
+                                                                    if (2 > fieldTemp$4) {
                                                                       bc.field_c = cc.field_v.length + -1;
                                                                       break L11;
                                                                     } else {
@@ -1723,8 +1720,7 @@ final class oi {
                                                             if (ag.field_c >= 256) {
                                                               break L17;
                                                             } else {
-                                                              int discarded$6 = 64;
-                                                              ul.c();
+                                                              ul.c((byte) 64);
                                                               var4 = 1;
                                                               break L17;
                                                             }
@@ -1742,7 +1738,7 @@ final class oi {
                                                               }
                                                             }
                                                           }
-                                                          pe discarded$7 = vm.a((byte) 30, bg.field_Lb);
+                                                          pe discarded$5 = vm.a((byte) 30, bg.field_Lb);
                                                           qd.field_c = id.field_r + 20;
                                                           break L0;
                                                         } else {
@@ -1875,8 +1871,7 @@ final class oi {
                     wh.a(2094, false, 2);
                     continue L1;
                   } else {
-                    int discarded$2 = 0;
-                    this.a();
+                    this.a(0);
                     if (-1 == ((oi) this).field_f.field_d) {
                       continue L1;
                     } else {
@@ -1895,7 +1890,7 @@ final class oi {
           if (param0 < -45) {
             break L4;
           } else {
-            int discarded$3 = this.c(-89, -85);
+            int discarded$1 = this.c(-89, -85);
             break L4;
           }
         }
@@ -2309,7 +2304,7 @@ final class oi {
         return 30;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_c = null;
         field_h = null;

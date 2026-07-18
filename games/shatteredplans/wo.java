@@ -13,10 +13,11 @@ final class wo {
     }
 
     final static void a(int param0, byte param1, String[] param2, String param3) {
-        String[] var4 = null;
-        RuntimeException var4_ref = null;
+        RuntimeException var4 = null;
         int var5 = 0;
         Object var6 = null;
+        Object var7 = null;
+        String[] var8 = null;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_0 = 0;
@@ -76,9 +77,8 @@ final class wo {
                   break L2;
                 } else {
                   if (param0 <= 105) {
-                    var4 = param2;
-                    int discarded$4 = 0;
-                    jp.a(var4);
+                    var8 = param2;
+                    jp.a(var8, false);
                     ij.field_a = tc.a(param2, (byte) -89);
                     break L0;
                   } else {
@@ -108,16 +108,16 @@ final class wo {
                 }
               }
               ij.field_a = ub.a((byte) stackIn_7_0, stackIn_7_1 != 0);
-              int discarded$5 = 0;
-              jp.a((String[]) null);
+              var7 = null;
+              jp.a((String[]) null, false);
               return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var4_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4_ref;
+            var4 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var4;
             stackOut_14_1 = new StringBuilder().append("wo.B(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;

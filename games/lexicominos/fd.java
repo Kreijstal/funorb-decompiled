@@ -86,8 +86,7 @@ final class fd implements Runnable {
             if (bk.field_c == c.field_m) {
               var8 = new u(ug.field_A, param4);
               ug.field_A.a(-14579, (w) (Object) var8);
-              int discarded$16 = 256;
-              if (!g.f()) {
+              if (!g.f(256)) {
                 L1: {
                   ce.field_d = param0;
                   Lexicominos.field_H = param3;
@@ -376,8 +375,7 @@ final class fd implements Runnable {
                     }
                 }
                 ge.a(0, 10L);
-                int discarded$0 = 50;
-                ki.a((Object) null, ((fd) this).field_b);
+                ki.a((Object) null, ((fd) this).field_b, 50);
             }
         } catch (Exception exception) {
             Object var5 = null;
@@ -387,7 +385,7 @@ final class fd implements Runnable {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_a = null;
     }

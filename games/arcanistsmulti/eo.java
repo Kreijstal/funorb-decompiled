@@ -6,7 +6,7 @@ final class eo {
     static int[] field_b;
     static ne field_c;
 
-    final static short[] a(ab param0, short[] param1) {
+    final static short[] a(ab param0, short[] param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -162,7 +162,7 @@ final class eo {
         return stackIn_16_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;

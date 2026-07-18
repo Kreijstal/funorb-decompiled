@@ -191,7 +191,7 @@ final class b {
         return ((b) this).field_d.length();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_c = null;
         field_g = null;
@@ -494,7 +494,7 @@ final class b {
         }
     }
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;

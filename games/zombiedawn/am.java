@@ -35,7 +35,7 @@ final class am extends de {
         ((am) this).field_j = (7 + ((am) this).field_n) / param0;
     }
 
-    final static void k() {
+    final static void k(int param0) {
         if (ej.field_x != -mj.field_b) {
             if (ej.field_x == -mj.field_b + 250) {
             }
@@ -226,7 +226,7 @@ final class am extends de {
         super(param0);
     }
 
-    public static void j() {
+    public static void j(int param0) {
         int var1 = 0;
         field_m = null;
     }
@@ -265,8 +265,7 @@ final class am extends de {
               if (11 != fl.field_a) {
                 break L1;
               } else {
-                int discarded$4 = 29756;
-                qo.c();
+                qo.c(29756);
                 break L1;
               }
             }
@@ -277,7 +276,7 @@ final class am extends de {
                 break L2;
               } else {
                 var3 = null;
-                String discarded$5 = am.a((String) null, 84);
+                String discarded$2 = am.a((String) null, 84);
                 break L2;
               }
             }

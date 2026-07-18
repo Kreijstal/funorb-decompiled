@@ -5,12 +5,12 @@ final class rr {
     static String field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
 
-    final static ru b() {
+    final static ru b(int param0) {
         ru var1 = new ru(lg.field_d, wr.field_J, j.field_e[0], iq.field_g[0], qm.field_K[0], c.field_e[0], vj.field_j[0], qv.field_j);
         rj.d((byte) 99);
         return var1;

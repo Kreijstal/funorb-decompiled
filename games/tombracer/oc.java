@@ -217,7 +217,7 @@ final class oc {
         }
     }
 
-    private final int a(int param0, short param1, oc param2) {
+    private final int a(int param0, short param1, oc param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -360,7 +360,7 @@ final class oc {
         return stackIn_14_0;
     }
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, int param1) {
         uia var4 = null;
         uia var5 = null;
         uia var6 = null;
@@ -1911,8 +1911,7 @@ final class oc {
                   if (param0[param0.length + -2] != -1) {
                     break L2;
                   } else {
-                    int discarded$2 = 0;
-                    this.a(param0);
+                    this.a(param0, 0);
                     break L1;
                   }
                 }
@@ -2198,12 +2197,9 @@ final class oc {
                                   if (var17 != 0) {
                                     break L16;
                                   } else {
-                                    int discarded$12 = 1;
-                                    ((oc) this).field_s[((oc) this).field_F] = (short)this.a((int) var15.field_s[var16], (short) var14, var15);
-                                    int discarded$13 = 1;
-                                    ((oc) this).field_q[((oc) this).field_F] = (short)this.a((int) var15.field_q[var16], (short) var14, var15);
-                                    int discarded$14 = 1;
-                                    ((oc) this).field_K[((oc) this).field_F] = (short)this.a((int) var15.field_K[var16], (short) var14, var15);
+                                    ((oc) this).field_s[((oc) this).field_F] = (short)this.a((int) var15.field_s[var16], (short) var14, var15, 1);
+                                    ((oc) this).field_q[((oc) this).field_F] = (short)this.a((int) var15.field_q[var16], (short) var14, var15, 1);
+                                    ((oc) this).field_K[((oc) this).field_F] = (short)this.a((int) var15.field_K[var16], (short) var14, var15, 1);
                                     break L16;
                                   }
                                 }
@@ -2248,10 +2244,10 @@ final class oc {
                               } else {
                                 L20: {
                                   L21: {
-                                    int incrementValue$15 = var12;
+                                    int incrementValue$2 = var12;
                                     var12++;
                                     stackOut_95_0 = ((oc) this).field_g;
-                                    stackOut_95_1 = incrementValue$15;
+                                    stackOut_95_1 = incrementValue$2;
                                     stackIn_98_0 = stackOut_95_0;
                                     stackIn_98_1 = stackOut_95_1;
                                     stackIn_96_0 = stackOut_95_0;
@@ -2317,9 +2313,9 @@ final class oc {
                             break L23;
                           } else {
                             var16_ref_jt = var14_ref_oc.field_m[var15_int];
-                            int incrementValue$16 = var5;
+                            int incrementValue$3 = var5;
                             var5++;
-                            ((oc) this).field_m[incrementValue$16] = var16_ref_jt.a(9677, var16_ref_jt.field_a + ((oc) this).field_o);
+                            ((oc) this).field_m[incrementValue$3] = var16_ref_jt.a(9677, var16_ref_jt.field_a + ((oc) this).field_o);
                             var15_int++;
                             continue L24;
                           }
@@ -2338,12 +2334,9 @@ final class oc {
                               if (var14_ref_oc.field_B.length <= var15_int) {
                                 break L26;
                               } else {
-                                int discarded$17 = 1;
-                                var16 = this.a(var14_ref_oc.field_B[var15_int].field_a, (short) var13, var14_ref_oc);
-                                int discarded$18 = 1;
-                                var17 = this.a(var14_ref_oc.field_B[var15_int].field_c, (short) var13, var14_ref_oc);
-                                int discarded$19 = 1;
-                                var18 = this.a(var14_ref_oc.field_B[var15_int].field_b, (short) var13, var14_ref_oc);
+                                var16 = this.a(var14_ref_oc.field_B[var15_int].field_a, (short) var13, var14_ref_oc, 1);
+                                var17 = this.a(var14_ref_oc.field_B[var15_int].field_c, (short) var13, var14_ref_oc, 1);
+                                var18 = this.a(var14_ref_oc.field_B[var15_int].field_b, (short) var13, var14_ref_oc, 1);
                                 ((oc) this).field_B[var3_int] = var14_ref_oc.field_B[var15_int].a(0, var17, var18, var16);
                                 var3_int++;
                                 var15_int++;
@@ -2360,8 +2353,7 @@ final class oc {
                             if (var14_ref_oc.field_e.length <= var15_int) {
                               break L22;
                             } else {
-                              int discarded$20 = 1;
-                              var16 = this.a(var14_ref_oc.field_e[var15_int].field_a, (short) var13, var14_ref_oc);
+                              var16 = this.a(var14_ref_oc.field_e[var15_int].field_a, (short) var13, var14_ref_oc, 1);
                               ((oc) this).field_e[var4] = var14_ref_oc.field_e[var15_int].a(0, var16);
                               var4++;
                               var15_int++;
@@ -2433,12 +2425,9 @@ final class oc {
                             }
                           }
                         }
-                        int discarded$21 = 1;
-                        ((oc) this).field_a[((oc) this).field_o] = (short)this.a((int) var14_ref_oc.field_a[var15_int], (short) var13, var14_ref_oc);
-                        int discarded$22 = 1;
-                        ((oc) this).field_t[((oc) this).field_o] = (short)this.a((int) var14_ref_oc.field_t[var15_int], (short) var13, var14_ref_oc);
-                        int discarded$23 = 1;
-                        ((oc) this).field_J[((oc) this).field_o] = (short)this.a((int) var14_ref_oc.field_J[var15_int], (short) var13, var14_ref_oc);
+                        ((oc) this).field_a[((oc) this).field_o] = (short)this.a((int) var14_ref_oc.field_a[var15_int], (short) var13, var14_ref_oc, 1);
+                        ((oc) this).field_t[((oc) this).field_o] = (short)this.a((int) var14_ref_oc.field_t[var15_int], (short) var13, var14_ref_oc, 1);
+                        ((oc) this).field_J[((oc) this).field_o] = (short)this.a((int) var14_ref_oc.field_J[var15_int], (short) var13, var14_ref_oc, 1);
                         ((oc) this).field_h[((oc) this).field_o] = (short)var13;
                         ((oc) this).field_A[((oc) this).field_o] = var14_ref_oc.field_A[var15_int];
                         ((oc) this).field_o = ((oc) this).field_o + 1;

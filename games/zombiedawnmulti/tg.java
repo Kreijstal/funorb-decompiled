@@ -362,7 +362,7 @@ final class tg implements Runnable {
         return new ja[]{var10, var11, var10, var9, (ja) var14, var9, var12, var13, var12};
     }
 
-    final static int b() {
+    final static int b(int param0) {
         if (fn.field_i < 2) {
           return 0;
         } else {
@@ -444,7 +444,7 @@ final class tg implements Runnable {
         }
     }
 
-    final static uc a(String param0) {
+    final static uc a(String param0, boolean param1) {
         RuntimeException var2 = null;
         uc stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -503,7 +503,7 @@ final class tg implements Runnable {
         return stackIn_1_0;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -737,8 +737,7 @@ final class tg implements Runnable {
               L2: {
                 gk.a(2, 1).b(0);
                 oo.f(0, 0, 640, 480, 0, 128);
-                int discarded$6 = 21262;
-                var18 = vb.a();
+                var18 = vb.a(21262);
                 if (var18 != null) {
                   L3: {
                     var4 = var18.field_zb / 2 + var18.field_w;
@@ -843,10 +842,9 @@ final class tg implements Runnable {
                   }
                   ((ja) (Object) stackIn_11_0).c(stackIn_11_1, stackIn_11_2, stackIn_11_3);
                   if (400 > wf.field_m % 1000) {
-                    int discarded$7 = qp.field_w.a(nq.field_A, 80 + var4, -30 + var5, 100, 50, 16777215, 65793, 1, 0, 0);
+                    int discarded$2 = qp.field_w.a(nq.field_A, 80 + var4, -30 + var5, 100, 50, 16777215, 65793, 1, 0, 0);
                     oo.c();
-                    int discarded$8 = 0;
-                    tm.a(vk.i((byte) -39));
+                    tm.a(vk.i((byte) -39), false);
                     br.a(vk.i((byte) -39), 2);
                     pm.a(false, vk.i((byte) -39));
                     break L0;
@@ -855,10 +853,9 @@ final class tg implements Runnable {
                       oo.c();
                       break L2;
                     } else {
-                      int discarded$9 = qp.field_w.a(wm.field_P, -130 + var4, var5 - 30, 100, 50, 16777215, 65793, 1, 0, 0);
+                      int discarded$3 = qp.field_w.a(wm.field_P, -130 + var4, var5 - 30, 100, 50, 16777215, 65793, 1, 0, 0);
                       oo.c();
-                      int discarded$10 = 0;
-                      tm.a(vk.i((byte) -39));
+                      tm.a(vk.i((byte) -39), false);
                       br.a(vk.i((byte) -39), 2);
                       pm.a(false, vk.i((byte) -39));
                       break L0;
@@ -868,8 +865,7 @@ final class tg implements Runnable {
                   break L2;
                 }
               }
-              int discarded$11 = 0;
-              tm.a(vk.i((byte) -39));
+              tm.a(vk.i((byte) -39), false);
               br.a(vk.i((byte) -39), 2);
               pm.a(false, vk.i((byte) -39));
               break L0;
@@ -958,8 +954,8 @@ final class tg implements Runnable {
                 de.a(((tg) this).field_b, (byte) 99, (Object) null);
             }
         } catch (Exception exception) {
-            int discarded$0 = 0;
-            bd.a((String) null, (Throwable) (Object) exception);
+            Object var6 = null;
+            bd.a((String) null, (Throwable) (Object) exception, false);
         } finally {
             ((tg) this).field_c = false;
         }
@@ -1121,8 +1117,7 @@ final class tg implements Runnable {
                             break L10;
                           } else {
                             L11: {
-                              int discarded$1 = 51603;
-                              if (!h.i()) {
+                              if (!h.i(51603)) {
                                 break L11;
                               } else {
                                 if (!jk.a((byte) -128, ll.field_k.field_s[var9_int])) {
@@ -1165,7 +1160,7 @@ final class tg implements Runnable {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_g = null;
         field_d = null;

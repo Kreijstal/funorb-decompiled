@@ -434,7 +434,7 @@ final class hf extends an {
         return -1;
     }
 
-    final static tj a(dj param0, String param1, String param2, dj param3) {
+    final static tj a(dj param0, String param1, String param2, dj param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

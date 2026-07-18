@@ -5,7 +5,7 @@ final class wg extends rqa {
     static String field_p;
     static String field_o;
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_5_0 = 0;
@@ -124,7 +124,7 @@ final class wg extends rqa {
         return stackIn_5_0 != 0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_o = null;
         field_p = null;
     }

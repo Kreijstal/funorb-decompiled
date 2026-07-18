@@ -7,7 +7,7 @@ class rd extends uh {
     static String field_o;
     static String[] field_q;
 
-    public static void e() {
+    public static void e(int param0) {
         field_q = null;
         field_n = null;
         field_o = null;

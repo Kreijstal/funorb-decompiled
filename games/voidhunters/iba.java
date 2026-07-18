@@ -139,8 +139,7 @@ final class iba extends rqa {
           L0: {
             L1: {
               qma.a(param0, ag.field_p, fda.field_o, param13, param12, param14, param10, param3, param0, skb.field_o, param14, param8, new bc(param11), mb.field_j, eqa.field_o, eh.field_p, param2 + 29, param1, new bc(param4), param10);
-              int discarded$1 = 25;
-              k.a(param7, param9, param6, param5);
+              k.a(param7, param9, param6, param5, (byte) 25);
               if (param2 == -115) {
                 break L1;
               } else {

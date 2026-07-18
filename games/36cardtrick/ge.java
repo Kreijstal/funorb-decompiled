@@ -150,7 +150,7 @@ final class ge {
         }
     }
 
-    final static void a(int param0, kc[] param1, int param2, int param3, int param4) {
+    final static void a(int param0, kc[] param1, int param2, int param3, int param4, byte param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -246,20 +246,17 @@ final class ge {
         var1 = ij.a((byte) 114);
         if (var1 != null) {
           if (var1.indexOf('@') < 0) {
-            int discarded$6 = 0;
-            return new jk(ij.a((byte) 122), dg.a());
+            return new jk(ij.a((byte) 122), dg.a(0));
           } else {
             var1 = "";
-            int discarded$7 = 0;
-            return new jk(ij.a((byte) 122), dg.a());
+            return new jk(ij.a((byte) 122), dg.a(0));
           }
         } else {
-          int discarded$8 = 0;
-          return new jk(ij.a((byte) 122), dg.a());
+          return new jk(ij.a((byte) 122), dg.a(0));
         }
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
@@ -288,7 +285,7 @@ final class ge {
         return stackIn_7_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
     }

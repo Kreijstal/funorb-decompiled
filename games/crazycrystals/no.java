@@ -10,7 +10,7 @@ final class no extends se {
     static int field_k;
     private String field_l;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_i = null;
     }
 
@@ -142,8 +142,7 @@ final class no extends se {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$2 = 1;
-          ja.a(param0, param3, param2, false);
+          ja.a(param0, param3, param2, false, 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -295,7 +294,7 @@ final class no extends se {
         return stackIn_17_0;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         if (ph.field_E != null) {
           fq.a(-32, (java.awt.Canvas) (Object) ph.field_E);
           ph.field_E.a(te.field_a, (byte) -92);

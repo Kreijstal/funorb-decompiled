@@ -14,7 +14,7 @@ final class gd {
         return 255 & param1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

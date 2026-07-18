@@ -8,7 +8,7 @@ final class wd extends jl {
     private tc[] field_r;
     static String field_q;
 
-    private final void a(byte param0, String[] param1, int param2, int param3) {
+    private final void a(byte param0, String[] param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var9 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -84,10 +84,9 @@ final class wd extends jl {
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 640;
-        int discarded$0 = 0;
-        int var3 = this.a(((wd) this).field_r);
+        int var3 = this.a(((wd) this).field_r, 0);
         int var4 = ((wd) this).a(((wd) this).field_t, 0);
         int var5 = -45;
         ((wd) this).field_o = var4 + var3;
@@ -104,13 +103,11 @@ final class wd extends jl {
         }
         param0 = param0 + var3;
         param0 = param0 + ((wd) this).b(param0, param1 ^ 13944);
-        int discarded$0 = -121;
-        this.a(param0, ((wd) this).field_r);
-        int discarded$1 = -1;
-        this.a((byte) -95, ((wd) this).field_t, param0, ((wd) this).field_s);
+        this.a(param0, ((wd) this).field_r, (byte) -121);
+        this.a((byte) -95, ((wd) this).field_t, param0, ((wd) this).field_s, -1);
     }
 
-    private final void a(int param0, tc[] param1) {
+    private final void a(int param0, tc[] param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         tc[] var5 = null;
@@ -210,14 +207,13 @@ final class wd extends jl {
             super.a(0, param1, param2, -80);
             ((wd) this).field_s = param0;
             int var5_int = 77 % ((param3 - 47) / 60);
-            int discarded$0 = 126;
-            this.c();
+            this.c(126);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "wd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final int a(tc[] param0) {
+    private final int a(tc[] param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

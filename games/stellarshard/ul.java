@@ -268,8 +268,7 @@ final class ul extends g implements oi {
                         }
                       }
                     } else {
-                      int discarded$1 = 1;
-                      ((ul) this).field_E[var4_int] = jf.b((CharSequence) (Object) param1[var4_int]).replace(' ', ' ');
+                      ((ul) this).field_E[var4_int] = jf.b((CharSequence) (Object) param1[var4_int], true).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }

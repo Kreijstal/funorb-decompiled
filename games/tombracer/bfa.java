@@ -84,8 +84,7 @@ final class bfa {
 
     public final String toString() {
         if (((bfa) this).field_a) {
-            int discarded$0 = 0;
-            return (Object) (Object) jd.a(((bfa) this).field_d) + "{" + ((bfa) this).field_d + "}";
+            return (Object) (Object) jd.a(((bfa) this).field_d, 0) + "{" + ((bfa) this).field_d + "}";
         }
         if (!(null != ((bfa) this).field_d)) {
             return "null";

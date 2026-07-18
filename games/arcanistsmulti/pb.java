@@ -429,7 +429,7 @@ final class pb extends pg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
         field_i = null;
         field_m = null;

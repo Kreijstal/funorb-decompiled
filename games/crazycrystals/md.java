@@ -18,7 +18,7 @@ final class md extends ng {
         super(param0);
     }
 
-    final static boolean l() {
+    final static boolean l(int param0) {
         if (null == kf.field_h) {
             return false;
         }
@@ -369,7 +369,7 @@ final class md extends ng {
         ((md) this).field_f = (((md) this).field_l - -7) / 8;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_o = null;
         field_s = null;
         field_u = null;

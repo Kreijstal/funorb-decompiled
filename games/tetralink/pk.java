@@ -177,8 +177,7 @@ final class pk extends en {
                           var10 = var12;
                           var6 = var10;
                           if (var3 == 1) {
-                            int discarded$2 = 9;
-                            int discarded$3 = sl.a(var6, var5_int, param0, var4);
+                            int discarded$1 = sl.a(var16, var5_int, param0, var4, 9);
                             break L5;
                           } else {
                             var7 = (Object) (Object) oc.field_z;

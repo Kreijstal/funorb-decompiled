@@ -51,8 +51,7 @@ final class lr extends bw {
                   break L0;
                 } else {
                   if (null == rv.field_n) {
-                    int discarded$6 = -6;
-                    kf.a();
+                    kf.a((byte) -6);
                     break L0;
                   } else {
                     pv.a(true, true);
@@ -93,9 +92,7 @@ final class lr extends bw {
         }
         L5: {
           if (dja.field_m > 0) {
-            int discarded$7 = -51;
-            int discarded$8 = 11;
-            mh.a(param0, param6, param9);
+            mh.a(param0, param6, param9, 11, (byte) -51);
             break L5;
           } else {
             break L5;
@@ -121,10 +118,7 @@ final class lr extends bw {
           vt.a(qba.field_m, 11, 0, param8, param1);
           break L6;
         }
-        int discarded$9 = 16777215;
-        int discarded$10 = 11;
-        int discarded$11 = 16777215;
-        sma.a(true, param8, -6, param1);
+        sma.a(true, param8, -6, param1, 16777215, 11, 16777215);
         vt.a(ak.field_q, 11, 0, param8, param1);
         qf.field_v = qf.field_v + 1;
     }

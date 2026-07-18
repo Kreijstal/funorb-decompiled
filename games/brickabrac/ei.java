@@ -136,7 +136,7 @@ final class ei implements ub {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = BrickABrac.field_J ? 1 : 0;
@@ -147,15 +147,13 @@ final class ei implements ub {
           if (var1 > 0) {
             if (var1 != 1) {
               ke.field_b = rd.a(ed.field_c, new String[1], (byte) 103);
-              int discarded$2 = 1;
-              ke.field_b = nm.a(new CharSequence[3]);
+              ke.field_b = nm.a(new CharSequence[3], true);
               ej.field_I.m(17);
               qa.e((byte) -117);
               return;
             } else {
               ke.field_b = ib.field_C;
-              int discarded$3 = 1;
-              ke.field_b = nm.a(new CharSequence[3]);
+              ke.field_b = nm.a(new CharSequence[3], true);
               ej.field_I.m(17);
               qa.e((byte) -117);
               return;
@@ -171,7 +169,7 @@ final class ei implements ub {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_a = null;
     }

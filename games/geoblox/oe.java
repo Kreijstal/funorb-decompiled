@@ -112,7 +112,7 @@ abstract class oe extends dd {
         ((oe) this).k(-107);
     }
 
-    final static void l() {
+    final static void l(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -376,15 +376,14 @@ abstract class oe extends dd {
                         } else {
                           L7: {
                             var7 = param0.charAt(var6);
-                            int discarded$2 = -47;
-                            if (!fb.a((char) var7)) {
+                            if (!fb.a((char) var7, -47)) {
                               break L7;
                             } else {
                               var8 = hc.a((char) var7, param1 + -239);
                               if (var8 == 0) {
                                 break L7;
                               } else {
-                                StringBuilder discarded$3 = var5.append((char) var8);
+                                StringBuilder discarded$1 = var5.append((char) var8);
                                 break L7;
                               }
                             }
@@ -751,10 +750,8 @@ abstract class oe extends dd {
                     break L2;
                   }
                 }
-                int discarded$2 = 107;
-                vl.a(id.field_c, -10 + ((oe) this).field_r, 35 + param2, 5 + param0);
-                int discarded$3 = 107;
-                vl.a(fh.field_e, ((oe) this).field_r, -22 + (((oe) this).field_h + param2), param0);
+                vl.a(id.field_c, -10 + ((oe) this).field_r, 35 + param2, 5 + param0, (byte) 107);
+                vl.a(fh.field_e, ((oe) this).field_r, -22 + (((oe) this).field_h + param2), param0, (byte) 107);
                 var4 = ((oe) this).field_h + -79;
                 var5 = 169;
                 var6 = 127;

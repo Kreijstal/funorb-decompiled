@@ -10,7 +10,7 @@ final class wm extends wd implements java.awt.image.ImageProducer, java.awt.imag
     static String[] field_n;
     private java.awt.image.ImageConsumer field_m;
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         return d.a(-17840, lk.q(13));
     }
 
@@ -269,8 +269,7 @@ final class wm extends wd implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final static oh[] a(boolean param0, int param1, int param2, int param3) {
-        int discarded$0 = 126;
-        return bd.a(param1, 1, param2, param3);
+        return bd.a(param1, 1, param2, param3, (byte) 126);
     }
 
     final static boolean b(int param0) {
@@ -288,7 +287,7 @@ final class wm extends wd implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         if (null == wa.field_e) {
             return false;
         }

@@ -50,7 +50,7 @@ final class wc {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_g = null;
         field_c = null;
         field_b = null;
@@ -59,7 +59,7 @@ final class wc {
         field_e = null;
     }
 
-    final static gj b() {
+    final static gj b(int param0) {
         try {
             Throwable var1 = null;
             gj stackIn_1_0 = null;

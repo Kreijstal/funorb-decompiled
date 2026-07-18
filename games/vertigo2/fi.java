@@ -42,7 +42,7 @@ final class fi {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_j = null;
         field_e = null;
         field_b = null;
@@ -141,7 +141,7 @@ final class fi {
         }
     }
 
-    final static co a(int param0, r param1, r param2, int param3) {
+    final static co a(int param0, r param1, r param2, int param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
@@ -183,8 +183,7 @@ final class fi {
           L0: {
             var5_int = 0;
             if (hq.a(124, param0, param3, param1)) {
-              int discarded$2 = 0;
-              stackOut_3_0 = m.a(param2.a(param0, param3, (byte) -103));
+              stackOut_3_0 = m.a(param2.a(param0, param3, (byte) -103), 0);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

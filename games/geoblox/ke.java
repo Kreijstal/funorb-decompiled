@@ -25,7 +25,7 @@ final class ke {
         field_a = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1 = 0;
     }
 

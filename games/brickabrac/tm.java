@@ -276,7 +276,7 @@ final class tm {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         int var4 = 0;

@@ -150,7 +150,7 @@ final class ue extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void update(java.awt.Graphics param0) {
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, boolean param1) {
         if (wb.field_R > 0) {
         }
         w.field_r = w.field_r + param0;

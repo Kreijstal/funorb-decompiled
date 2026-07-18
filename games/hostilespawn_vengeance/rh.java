@@ -66,7 +66,7 @@ final class rh extends ae {
         }
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

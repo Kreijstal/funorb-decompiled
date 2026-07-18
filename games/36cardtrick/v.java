@@ -193,7 +193,7 @@ final class v extends hf implements of {
         super(param0, param1, param2);
     }
 
-    final static int g() {
+    final static int g(byte param0) {
         return cc.field_e;
     }
 

@@ -10,7 +10,7 @@ final class di {
     static od field_d;
     static String field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_g = null;

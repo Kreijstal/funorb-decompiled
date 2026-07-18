@@ -6,7 +6,7 @@ final class c {
     static vo field_b;
     static int field_c;
 
-    final static cg[] b() {
+    final static cg[] b(int param0) {
         return new cg[]{kl.field_p, hl.field_d, rf.field_c, hl.field_g, uj.field_a, mh.field_I, lo.field_s, nl.field_m, bd.field_q, be.field_i, nb.field_l, jl.field_v, mp.field_b, se.field_n};
     }
 
@@ -15,7 +15,7 @@ final class c {
         field_b = null;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackOut_26_0 = 0;
@@ -95,7 +95,7 @@ final class c {
         }
     }
 
-    final static String a(dj param0, String param1, String param2, String param3) {
+    final static String a(dj param0, String param1, String param2, String param3, byte param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;
@@ -282,7 +282,7 @@ final class c {
         return stackIn_5_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         String var1 = null;
         if (!nm.field_c) {
           throw new IllegalStateException();

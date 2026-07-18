@@ -38,7 +38,7 @@ final class dm {
         }
     }
 
-    final static String a() {
+    final static String a(int param0) {
         String var1 = "";
         if (null != wo.field_e) {
             var1 = wo.field_e.a(-16);
@@ -184,7 +184,7 @@ final class dm {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_b = null;
         field_d = null;

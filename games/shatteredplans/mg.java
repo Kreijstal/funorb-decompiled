@@ -64,7 +64,7 @@ final class mg extends cn {
         }
     }
 
-    final static ln a(dc param0, ob param1) {
+    final static ln a(dc param0, ob param1, int param2) {
         RuntimeException var3 = null;
         ln stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

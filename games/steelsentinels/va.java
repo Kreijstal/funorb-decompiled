@@ -39,8 +39,7 @@ final class va {
         try {
           L0: {
             if (wa.a((byte) 30, param3, param0, param1)) {
-              int discarded$2 = 51;
-              stackOut_3_0 = ul.d();
+              stackOut_3_0 = ul.d((byte) 51);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -93,16 +92,15 @@ final class va {
         field_g = null;
     }
 
-    final static void a() {
-        int discarded$0 = -29713;
-        ql.j();
+    final static void a(int param0) {
+        ql.j(-29713);
         rg.field_e = true;
         de.field_d = true;
         ag.field_p.h(124);
         bf.a((byte) -83, false, pf.field_f);
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -124,9 +122,7 @@ final class va {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$4 = -16121;
-            int discarded$5 = 0;
-            stackOut_0_0 = ln.a(param0);
+            stackOut_0_0 = ln.a(param0, false, -16121);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -163,7 +159,7 @@ final class va {
         return stackIn_1_0;
     }
 
-    final static void a(int param0, int param1, mi param2, int param3, int param4, int param5, wk[] param6, wk[] param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, wk[] param16, int param17, mi param18) {
+    final static void a(int param0, int param1, mi param2, int param3, int param4, int param5, wk[] param6, wk[] param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, wk[] param16, int param17, mi param18, int param19) {
         RuntimeException var20 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

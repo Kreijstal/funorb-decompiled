@@ -103,7 +103,7 @@ abstract class lea extends kna {
         }
     }
 
-    public static void r() {
+    public static void r(byte param0) {
         field_F = null;
         int var1 = 92;
     }

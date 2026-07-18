@@ -195,21 +195,18 @@ final class jlb extends le {
     final static boolean b(int param0, int param1, int param2, int param3) {
         if (cka.field_o != null) {
             if (!(!cka.field_o.a(0))) {
-                int discarded$0 = 0;
-                lnb.d();
+                lnb.d(0);
                 return true;
             }
         }
         if (crb.field_v != null) {
             if (crb.field_v.h(-15244)) {
                 crb.field_v = null;
-                int discarded$1 = 0;
-                lnb.d();
+                lnb.d(0);
                 return true;
             }
         }
-        int discarded$6 = 114;
-        if (!(!nu.e())) {
+        if (!(!nu.e((byte) 114))) {
             return true;
         }
         if (param1 != -2048) {
@@ -222,8 +219,7 @@ final class jlb extends le {
     }
 
     final void c(byte param0) {
-        int discarded$0 = -34;
-        this.e();
+        this.e((byte) -34);
         if (param0 >= -35) {
             ((jlb) this).field_p = -6;
         }
@@ -241,7 +237,7 @@ final class jlb extends le {
         ((jlb) this).field_s = 8;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;

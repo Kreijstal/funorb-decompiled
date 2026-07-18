@@ -74,7 +74,7 @@ final class ml {
         field_d = null;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         kj var2 = mm.field_g;
         var2.a(11, (byte) -117);
         var2.a((byte) 118, 1);

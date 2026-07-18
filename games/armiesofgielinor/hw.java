@@ -43,8 +43,7 @@ final class hw extends mn {
                 break L1;
               }
             }
-            int discarded$2 = -95;
-            stackOut_2_0 = nk.a(false, param0);
+            stackOut_2_0 = nk.a(false, param0, (byte) -95);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -492,7 +491,7 @@ final class hw extends mn {
         return (bd) (Object) stackIn_30_0;
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         return -co.field_f + bm.field_h;
     }
 

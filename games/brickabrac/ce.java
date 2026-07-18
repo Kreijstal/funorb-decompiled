@@ -10,7 +10,7 @@ final class ce {
     static int field_d;
     static bi field_e;
 
-    final static void a() {
+    final static void a(int param0) {
         if (mf.field_f != null) {
           L0: {
             mf.field_f.i((byte) -36);
@@ -48,8 +48,7 @@ final class ce {
               break L0;
             } else {
               if (var4 == 0) {
-                int discarded$1 = 1;
-                th.b();
+                th.b(1);
                 param0 = false;
                 break L0;
               } else {
@@ -165,7 +164,7 @@ final class ce {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_f = null;
         field_b = null;

@@ -1236,7 +1236,7 @@ final class bi {
         }
     }
 
-    final static void d(int param0, int param1) {
+    final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6 = 0;
         for (var6 = 0; var6 < 2; var6++) {
             bi.e(param0 + var6, param1 + var6, 121 - (var6 << 1), 10 - (var6 << 1), 1);

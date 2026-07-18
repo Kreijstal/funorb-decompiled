@@ -46,7 +46,7 @@ final class fr {
     static oe[] field_e;
     short[] field_t;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return cg.field_l;
     }
 
@@ -61,7 +61,7 @@ final class fr {
         this.b(-107);
     }
 
-    final static void a(mf param0) {
+    final static void a(mf param0, byte param1) {
         RuntimeException var2 = null;
         mh var3 = null;
         mh var5 = null;
@@ -141,13 +141,12 @@ final class fr {
         }
     }
 
-    final static void a(int param0, dh param1, dh param2) {
+    final static void a(int param0, dh param1, dh param2, boolean param3) {
         try {
             m.field_b = 480;
             kp.field_b = param1;
             ni.field_Wb = param2;
-            int discarded$0 = 19;
-            pp.a(lb.field_c / 2, lb.field_d / 2);
+            pp.a(lb.field_c / 2, lb.field_d / 2, (byte) 19);
             tn.a(param1.field_B, param1.field_P + param1.field_B, 256, param2.field_B, param2.field_P + param2.field_B);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "fr.K(" + 480 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + true + ')');
@@ -168,7 +167,7 @@ final class fr {
         this.b(-122);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_M = null;
         field_e = null;
         field_l = null;
@@ -344,7 +343,7 @@ final class fr {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         o.field_c = new dk();
         rj.field_c.b((byte) 120, (oc) (Object) o.field_c);
     }

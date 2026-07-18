@@ -480,7 +480,7 @@ abstract class pa extends ga implements jf {
         ((pa) this).b(true);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_C = null;
         field_A = null;
         field_x = null;
@@ -820,7 +820,8 @@ abstract class pa extends ga implements jf {
     }
 
     final static oh a(String param0, byte param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         oh var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -828,22 +829,22 @@ abstract class pa extends ga implements jf {
         CharSequence var7 = null;
         Object stackIn_9_0 = null;
         oh stackIn_16_0 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        Object stackIn_22_0 = null;
+        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         oh stackOut_15_0 = null;
         Object stackOut_8_0 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
-        Object stackOut_21_0 = null;
+        RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
         var5 = ZombieDawn.field_J;
@@ -851,15 +852,15 @@ abstract class pa extends ga implements jf {
           if (nk.field_a != null) {
             L0: {
               var6 = (CharSequence) (Object) param0;
-              var2 = (Object) (Object) fm.a(var6, -85);
+              var2 = fm.a(var6, -85);
               if (var2 == null) {
-                var2 = (Object) (Object) var6;
+                var2 = param0;
                 break L0;
               } else {
                 break L0;
               }
             }
-            var3 = (oh) (Object) nk.field_a.a(93, (long)((String) var2).hashCode());
+            var3 = (oh) (Object) nk.field_a.a(93, (long)var2.hashCode());
             if (param1 == -66) {
               L1: while (true) {
                 if (var3 != null) {
@@ -873,7 +874,7 @@ abstract class pa extends ga implements jf {
                       break L2;
                     }
                   }
-                  if (!var4.equals(var2)) {
+                  if (!var4.equals((Object) (Object) var2)) {
                     var3 = (oh) (Object) nk.field_a.b((byte) -117);
                     continue L1;
                   } else {
@@ -896,15 +897,15 @@ abstract class pa extends ga implements jf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_19_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var2_ref;
             stackOut_19_1 = new StringBuilder().append("pa.V(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = stackIn_21_0;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
@@ -912,7 +913,7 @@ abstract class pa extends ga implements jf {
               stackIn_22_2 = stackOut_21_2;
               break L3;
             } else {
-              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;

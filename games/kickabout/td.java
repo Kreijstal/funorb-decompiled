@@ -7,7 +7,7 @@ final class td {
     static int field_d;
     static ut field_c;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_a = null;
     }
@@ -692,7 +692,7 @@ final class td {
         ov.field_b = 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         eo.a(param4, param2);
         eo.a(463, 687, 134, param3);
         pt.a(911, -22914, 15, 1359, 283);

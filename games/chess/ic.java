@@ -134,22 +134,16 @@ final class ic {
         }
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2, int param3, boolean param4, int param5, int param6, boolean param7, int param8, int param9, boolean param10) {
+    final static void a(boolean param0, boolean param1, boolean param2, int param3, boolean param4, int param5, int param6, boolean param7, int param8, int param9, boolean param10, int param11, int param12, int param13) {
         pc.field_Mb = null;
-        int discarded$0 = -26285;
-        jc.a();
-        int discarded$1 = 14;
-        int discarded$2 = 11;
-        int discarded$3 = 13;
-        int discarded$4 = 15;
-        param4 = ah.a((byte) 111, 0, param4);
+        jc.a(-26285);
+        param4 = ah.a((byte) 111, 0, param4, 15, 13, 11, 14);
         em.a(16777215, 2, param0, param9, 16777215, param4, param7, 11, true, param10);
         ie.a(param10, (byte) -107, param9);
-        int discarded$5 = 0;
-        q.a(-6844, param9, param4);
+        q.a(-6844, param9, param4, 0);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_f = null;
         field_a = null;

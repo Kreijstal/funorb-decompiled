@@ -367,7 +367,7 @@ final class pb {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_c = null;
     }
@@ -710,8 +710,7 @@ final class pb {
           L0: {
             var4_int = param3.a(-1, param2);
             var5 = param3.a(param0, -104, var4_int);
-            int discarded$2 = 482809644;
-            stackOut_0_0 = mi.a(var4_int, param3, var5);
+            stackOut_0_0 = mi.a(var4_int, param3, var5, 482809644);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

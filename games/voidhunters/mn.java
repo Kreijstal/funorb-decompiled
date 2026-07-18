@@ -4,14 +4,14 @@
 final class mn {
     static String field_a;
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
-        pgb var4_ref = null;
         llb var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
+        pgb var9 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = VoidHunters.field_G;
         try {
@@ -41,7 +41,7 @@ final class mn {
                   break L3;
                 } else {
                   if (erb.field_p) {
-                    boolean discarded$4 = ada.field_b.a((byte) -5, hca.field_o.field_M, hca.field_o.field_u, param0);
+                    boolean discarded$1 = ada.field_b.a((byte) -5, hca.field_o.field_M, hca.field_o.field_u, param0);
                     break L3;
                   } else {
                     ada.field_b = null;
@@ -61,19 +61,16 @@ final class mn {
                     }
                   }
                   L6: {
-                    int discarded$5 = -123;
-                    var4_ref = aq.b(nna.field_w, qs.field_c, param1);
-                    if (var4_ref != null) {
-                      int discarded$6 = 22859;
-                      aka.a(var4_ref);
+                    var9 = aq.b(nna.field_w, qs.field_c, param1, -123);
+                    if (var9 != null) {
+                      aka.a(var9, 22859);
                       break L6;
                     } else {
                       break L6;
                     }
                   }
                   L7: {
-                    int discarded$7 = -8037;
-                    var8 = sdb.a();
+                    var8 = sdb.a(-8037);
                     var6 = 50;
                     if (var8 != null) {
                       lob.field_a = var8;
@@ -107,7 +104,7 @@ final class mn {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 19;
         field_a = null;
     }

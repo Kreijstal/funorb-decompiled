@@ -10,7 +10,7 @@ final class d {
     static int field_e;
     static String field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_d = null;
@@ -156,13 +156,10 @@ final class d {
     }
 
     final static void a(boolean param0) {
-        int discarded$0 = 95;
-        int var1 = hg.a();
-        int discarded$1 = 20719;
-        int var2 = ml.b();
+        int var1 = hg.a((byte) 95);
+        int var2 = ml.b(20719);
         nc.field_c.a(ie.field_j - bi.field_g, (bi.field_g << 1) + var2, -51, var1 - -(em.field_j << 1), -em.field_j + mk.field_d);
-        int discarded$2 = 117;
-        mk.c();
+        mk.c(117);
     }
 
     static {

@@ -7,7 +7,7 @@ final class gj {
     static String field_d;
     static jp[] field_c;
 
-    final static kn b() {
+    final static kn b(int param0) {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         kn var2 = null;
@@ -202,7 +202,7 @@ final class gj {
         return stackIn_21_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_c = null;

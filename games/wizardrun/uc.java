@@ -187,8 +187,7 @@ final class uc {
                 uc.a(true, (java.awt.Canvas) null);
             }
             if (11 == ml.field_t) {
-                int discarded$0 = 124;
-                hh.a();
+                hh.a((byte) 124);
             }
             p.a((byte) 67, dg.field_a, cb.field_c, ok.field_b);
             fc.a((byte) 80, 0, param1, 0);
@@ -197,7 +196,7 @@ final class uc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_e = null;
         field_b = null;

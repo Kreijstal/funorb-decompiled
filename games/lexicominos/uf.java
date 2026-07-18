@@ -41,7 +41,7 @@ final class uf extends tj {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_l = null;
         field_o = null;
         field_m = null;

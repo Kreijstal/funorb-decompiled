@@ -9,7 +9,7 @@ final class oi {
         return -sg.field_d + c.field_e;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

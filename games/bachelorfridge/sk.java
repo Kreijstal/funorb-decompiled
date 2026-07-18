@@ -102,7 +102,7 @@ final class sk extends k {
         ((sk) this).field_l = 1;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_p = null;
         field_n = null;
         field_m = null;

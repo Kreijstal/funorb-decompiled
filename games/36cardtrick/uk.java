@@ -11,7 +11,7 @@ abstract class uk {
     int field_c;
     static ml field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
     }
 

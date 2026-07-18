@@ -176,14 +176,14 @@ final class dk extends da {
         return stackIn_19_0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_o = null;
         field_n = null;
         field_m = null;
         field_l = null;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         int var1 = 0;
         if (tg.field_e > 32) {
             var1 = tg.field_e % 32;

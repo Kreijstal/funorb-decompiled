@@ -374,10 +374,9 @@ final class lj {
         }
     }
 
-    final static sc a() {
+    final static sc a(byte param0) {
         int var1 = 125;
-        int discarded$0 = -5057;
-        return new sc(wc.d(0), wg.a());
+        return new sc(wc.d(0), wg.a(-5057));
     }
 
     final long b(byte param0) throws IOException {

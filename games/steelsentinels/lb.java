@@ -22,7 +22,7 @@ final class lb extends gh {
     private gh field_Xb;
     static int field_gc;
 
-    public static void j() {
+    public static void j(int param0) {
         field_Vb = null;
         field_fc = null;
         field_Wb = null;
@@ -57,8 +57,7 @@ final class lb extends gh {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$1 = 0;
-            ce.field_p = rl.a(param1, "basic", "display_name_changed");
+            ce.field_p = rl.a(param1, "basic", "display_name_changed", false);
             km.field_j = new ql(0L, l.field_e, qg.field_i, cb.field_d);
             vi.field_W = new ql(0L, l.field_e, ge.field_k, sa.field_a);
             ig.field_m = new gh(0L, (gh) null);

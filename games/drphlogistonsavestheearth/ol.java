@@ -18,8 +18,7 @@ final class ol {
         field_j = null;
         field_a = null;
         if (param0 >= -51) {
-            int discarded$0 = 0;
-            ol.a();
+            ol.a(false);
             field_i = null;
             return;
         }
@@ -152,7 +151,7 @@ final class ol {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         int var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         ff.field_Q = new he[][]{ph.field_a, ib.field_u, dh.field_S, fa.field_n, t.field_c, cm.field_Q, od.field_i, jd.field_M, we.field_b, ee.field_b, ae.field_lb, ad.field_s, ub.field_a, jj.field_a, nc.field_I, pf.field_c, wd.field_a, sd.field_c, ff.field_R, dm.field_y, wh.field_u, ng.field_b, g.field_q, pj.field_z, tl.field_Q, ld.field_d, eb.field_c, ri.field_h, el.field_vb, bk.field_j, ik.field_f, vc.field_b, ij.field_d, db.field_b, kf.field_e, af.field_e, uk.field_b, uf.field_j, bg.field_t, wd.field_f, ng.field_f, nj.field_d, wi.field_c, oi.field_g, jk.field_H, u.field_a, eh.field_b, oi.field_a, pj.field_B[0], pj.field_B[1], pj.field_B[2], nl.field_n[0], nl.field_n[1], nl.field_n[2], m.field_a, ki.field_a, ph.field_c[0], ph.field_c[1], ph.field_c[2], lf.field_e[0], lf.field_e[1], ca.field_bb, sf.field_m, sj.field_f, le.field_b, eb.field_a, wh.field_u, cm.field_L, ca.field_Y, pj.field_z, tl.field_Q, cf.field_g, eb.field_c, ri.field_h, el.field_vb, ei.field_k, ij.field_e};
         sh.field_c = new he[][]{ph.field_a, ib.field_u, dh.field_S, fa.field_n, t.field_c, cm.field_Q, od.field_i, jd.field_M, we.field_b, ee.field_b, ae.field_lb, ad.field_s, fa.field_k, j.field_db, mk.field_e, pf.field_c, wd.field_a, sd.field_c, ff.field_R, df.field_f, ah.field_L, mk.field_f, qg.field_U, bf.field_v, vg.field_h, rg.field_a, fi.field_e, jd.field_Q, r.field_e, nf.field_s, pc.field_c, vc.field_b, ij.field_d, db.field_b, kf.field_e, af.field_e, wk.field_m, uf.field_j, bg.field_t, wd.field_f, ng.field_f, nj.field_d, wi.field_c, oi.field_g, jk.field_H, wa.field_O, eh.field_b, mj.field_w, pj.field_B[0], pj.field_B[1], pj.field_B[2], nl.field_n[0], nl.field_n[1], nl.field_n[2], kc.field_l, ta.field_d, hc.field_M[0], hc.field_M[1], hc.field_M[2], kk.field_b[0], kk.field_b[1], ca.field_bb, sf.field_m, sj.field_f, le.field_b, fa.field_m, we.field_c, d.field_c, ek.field_l, oj.field_g, mh.field_g, u.field_c, ai.field_y, bk.field_d, ek.field_t, hh.field_c, lk.field_m};

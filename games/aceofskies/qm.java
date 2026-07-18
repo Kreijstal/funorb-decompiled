@@ -56,10 +56,9 @@ class qm implements ir, et {
             L1: {
               fp.a((byte) 39, param6.field_h + param0, param6.field_n + (param0 - -param6.field_h), param6.field_q + param1 + param6.field_p, param6.field_p + param1);
               var9_int = ((qm) this).b(param6, -90);
-              int discarded$3 = 0;
-              var10 = this.a(param6);
+              var10 = this.a(param6, false);
               if (((qm) this).field_c) {
-                int discarded$4 = ((qm) this).field_i.a(((qm) this).d(param6, 38), this.a(param6, 123, param1, 0), this.a((byte) -24, 0, param0, param6), var9_int, var10, param7, param4, ((qm) this).field_e, ((qm) this).field_f, ((qm) this).field_k);
+                int discarded$1 = ((qm) this).field_i.a(((qm) this).d(param6, 38), this.a(param6, 123, param1, 0), this.a((byte) -24, 0, param0, param6), var9_int, var10, param7, param4, ((qm) this).field_e, ((qm) this).field_f, ((qm) this).field_k);
                 break L1;
               } else {
                 L2: {
@@ -114,8 +113,7 @@ class qm implements ir, et {
                 break L1;
               }
             }
-            int discarded$5 = 2765;
-            sl.c();
+            sl.c(2765);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -486,9 +484,8 @@ class qm implements ir, et {
                 var9 = var14.b(param3, param0 ^ -45);
                 var10 = this.a(param4, param0 ^ 48, param1, var9);
                 var11 = ((qm) this).a(param2, false, param4) - -Math.max(0, var8.field_f);
-                int discarded$2 = 0;
                 stackOut_4_0 = ((qm) this).a(param2, false, param4);
-                stackOut_4_1 = this.a(param4);
+                stackOut_4_1 = this.a(param4, false);
                 stackOut_4_2 = var8.field_d;
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
@@ -521,8 +518,7 @@ class qm implements ir, et {
               var12 = stackIn_7_0 - -Math.min(stackIn_7_1, Math.min(stackIn_7_2, stackIn_7_3));
               fp.a((byte) 108, param2 + param4.field_h, param4.field_h + param2 - -param4.field_n, param4.field_q + (param1 + param4.field_p), param4.field_p + param1);
               ag.field_n.a(((qm) this).field_d, var11, var10, var10, 13053, var12);
-              int discarded$3 = 2765;
-              sl.c();
+              sl.c(2765);
               break L0;
             } else {
               return;
@@ -823,7 +819,7 @@ class qm implements ir, et {
         }
     }
 
-    private final void c(ea param0) {
+    private final void c(ea param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -859,8 +855,7 @@ class qm implements ir, et {
             }
             L2: {
               var3_int = ((qm) this).b(param0, 117);
-              int discarded$1 = 0;
-              var4 = this.a(param0);
+              var4 = this.a(param0, false);
               var6 = ((qm) this).field_f;
               if (var6 != 0) {
                 if (2 != var6) {
@@ -1061,12 +1056,10 @@ class qm implements ir, et {
             if (param0 >= 65) {
               L2: {
                 if (!((qm) this).field_c) {
-                  int discarded$5 = -1;
-                  this.c(param1);
+                  this.c(param1, -1);
                   break L2;
                 } else {
-                  int discarded$6 = 0;
-                  ((vg) (Object) param1.field_m).a(((qm) this).d(param1, 114), ((qm) this).field_i, ((qm) this).field_f, 127395681, ((qm) this).b(param1, 109), this.a(param1), ((qm) this).field_e, ((qm) this).field_k);
+                  ((vg) (Object) param1.field_m).a(((qm) this).d(param1, 114), ((qm) this).field_i, ((qm) this).field_f, 127395681, ((qm) this).b(param1, 109), this.a(param1, false), ((qm) this).field_e, ((qm) this).field_k);
                   break L2;
                 }
               }
@@ -1116,7 +1109,7 @@ class qm implements ir, et {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final int a(ea param0) {
+    private final int a(ea param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -1412,8 +1405,7 @@ class qm implements ir, et {
                   var13 = var11;
                   L3: while (true) {
                     if (var12 < var13) {
-                      int discarded$1 = 2765;
-                      sl.c();
+                      sl.c(2765);
                       break L1;
                     } else {
                       L4: {

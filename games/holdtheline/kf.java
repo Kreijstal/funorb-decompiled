@@ -1927,8 +1927,8 @@ final class kf extends tj {
     }
 
     final static String a(CharSequence param0, byte param1) {
-        RuntimeException var2 = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -2002,15 +2002,14 @@ final class kf extends tj {
                       } else {
                         L5: {
                           var8 = param0.charAt(var7);
-                          int discarded$2 = -116;
-                          if (!sd.a((char) var8)) {
+                          if (!sd.a((char) var8, (byte) -116)) {
                             break L5;
                           } else {
                             var9 = ba.a(true, (char) var8);
                             if (0 == var9) {
                               break L5;
                             } else {
-                              StringBuilder discarded$3 = var6.append((char) var9);
+                              StringBuilder discarded$2 = var6.append((char) var9);
                               break L5;
                             }
                           }

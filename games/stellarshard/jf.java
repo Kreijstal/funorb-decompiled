@@ -8,7 +8,7 @@ final class jf extends gg {
     int field_o;
     static pb[] field_n;
 
-    final static void e() {
+    final static void e(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -34,8 +34,7 @@ final class jf extends gg {
                 if (var2 != 1) {
                   if (var2 != 2) {
                     qe.a(115, "A1: " + bh.b((byte) -121), (Throwable) null);
-                    int discarded$4 = -2290;
-                    oj.c();
+                    oj.c(-2290);
                     break L1;
                   } else {
                     var15 = (he) (Object) pl.field_W.b(-98);
@@ -45,16 +44,14 @@ final class jf extends gg {
                       var15.c(20);
                       break L1;
                     } else {
-                      int discarded$5 = -2290;
-                      oj.c();
+                      oj.c(-2290);
                       return;
                     }
                   }
                 } else {
                   var12 = (kl) (Object) nl.field_e.b(-97);
                   if (var12 == null) {
-                    int discarded$6 = -2290;
-                    oj.c();
+                    oj.c(-2290);
                     return;
                   } else {
                     var12.c(20);
@@ -73,8 +70,7 @@ final class jf extends gg {
                   if (var7 >= var6) {
                     var13 = (he) (Object) pl.field_W.b(-78);
                     if (var13 == null) {
-                      int discarded$7 = -2290;
-                      oj.c();
+                      oj.c(-2290);
                       return;
                     } else {
                       var13.field_m = var3;
@@ -99,14 +95,14 @@ final class jf extends gg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_n = null;
         field_k = null;
         field_l = null;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         ck.field_db = false;
         gk.field_a = false;
         rh.a(-1, (byte) -72);
@@ -114,7 +110,7 @@ final class jf extends gg {
         o.field_l = ok.field_a;
     }
 
-    final static String b(CharSequence param0) {
+    final static String b(CharSequence param0, boolean param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_4_0 = null;

@@ -236,8 +236,7 @@ final class vl extends mk {
               }
             }
             L2: {
-              int discarded$10 = -24;
-              if (null != gt.b(param1)) {
+              if (null != gt.b(param1, (byte) -24)) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
@@ -291,7 +290,7 @@ final class vl extends mk {
         return stackIn_9_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_n = null;
         field_m = null;
         field_p = null;

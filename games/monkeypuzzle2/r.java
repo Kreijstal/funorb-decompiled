@@ -17,8 +17,7 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
             return;
         }
         try {
-            int discarded$0 = 0;
-            rk.a(param1, ((r) this).field_c);
+            rk.a(param1, ((r) this).field_c, false);
         } catch (RuntimeException runtimeException) {
             throw la.a((Throwable) (Object) runtimeException, "r.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -109,7 +108,7 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         int var1 = 44;

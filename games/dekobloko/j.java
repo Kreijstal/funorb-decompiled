@@ -9,7 +9,7 @@ final class j {
     static String field_a;
     static int field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         jb.a(tg.field_h, ua.field_H, gf.field_g, -47, ui.field_x);
     }
 
@@ -288,7 +288,7 @@ final class j {
         }
     }
 
-    final static String a(Throwable param0) throws IOException {
+    final static String a(Throwable param0, byte param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;
@@ -472,7 +472,7 @@ final class j {
         field_d = null;
     }
 
-    final static byte a(char param0) {
+    final static byte a(char param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = client.field_A ? 1 : 0;
@@ -1062,7 +1062,7 @@ final class j {
         }
     }
 
-    final static String a(String param0, String param1, String param2) {
+    final static String a(String param0, String param1, String param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

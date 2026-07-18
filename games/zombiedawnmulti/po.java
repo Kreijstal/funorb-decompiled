@@ -31,7 +31,7 @@ final class po extends br {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_i = null;
         field_l = null;
         field_k = null;
@@ -39,7 +39,7 @@ final class po extends br {
         field_f = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         nk.field_n = new String[mo.field_Kb];
         nk.field_n[7] = kg.field_l;
         nk.field_n[5] = jk.field_e;
@@ -57,7 +57,7 @@ final class po extends br {
         nk.field_n[15] = eh.field_f;
     }
 
-    final static int d() {
+    final static int d(int param0) {
         return hp.a((byte) -122, g.field_a, 16) + 4;
     }
 

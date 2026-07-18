@@ -37,10 +37,10 @@ final class uoa extends rna implements ntb {
                 if (super.a((byte) -48, param1)) {
                   break L2;
                 } else {
-                  if (var3.field_a != var3.field_a) {
+                  if (((uoa) this).field_a != var3.field_a) {
                     break L2;
                   } else {
-                    if (var3.field_b == var3.field_b) {
+                    if (((uoa) this).field_b == var3.field_b) {
                       stackOut_5_0 = 0;
                       stackIn_6_0 = stackOut_5_0;
                       break L1;
@@ -324,18 +324,18 @@ final class uoa extends rna implements ntb {
               L1: {
                 var5 = (uoa) (Object) param0;
                 var4 = 0;
-                if (var5.field_a != var5.field_a) {
+                if (var5.field_a != ((uoa) this).field_a) {
                   var4 = 1;
-                  System.out.println("int index has changed. before=" + var5.field_a + ", now=" + var5.field_a);
+                  System.out.println("int index has changed. before=" + var5.field_a + ", now=" + ((uoa) this).field_a);
                   break L1;
                 } else {
                   break L1;
                 }
               }
               L2: {
-                if (var5.field_b != var5.field_b) {
+                if (((uoa) this).field_b != var5.field_b) {
                   var4 = 1;
-                  System.out.println("int value_added has changed. before=" + var5.field_b + ", now=" + var5.field_b);
+                  System.out.println("int value_added has changed. before=" + var5.field_b + ", now=" + ((uoa) this).field_b);
                   break L2;
                 } else {
                   break L2;

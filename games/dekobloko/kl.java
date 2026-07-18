@@ -19,7 +19,7 @@ final class kl extends bh {
     static w field_r;
     static String field_w;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_B = null;
         field_r = null;
         field_x = null;

@@ -40,7 +40,7 @@ final class da extends th {
         return var5;
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_p = null;
         field_s = null;
         int var1 = 121;
@@ -168,7 +168,7 @@ final class da extends th {
         ((da) this).field_t = 8;
     }
 
-    final static void a(boolean param0, String param1) {
+    final static void a(boolean param0, String param1, int param2) {
         gn.field_g = param0;
         aa.field_k = true;
         try {

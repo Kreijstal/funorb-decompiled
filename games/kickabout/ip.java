@@ -7,7 +7,7 @@ final class ip {
     static gm[] field_b;
     static hd field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_b = null;

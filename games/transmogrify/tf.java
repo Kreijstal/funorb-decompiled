@@ -8,7 +8,7 @@ final class tf {
     static int field_a;
     int field_c;
 
-    final static void a() {
+    final static void a(int param0, boolean param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         am var4 = null;
@@ -20,16 +20,13 @@ final class tf {
             var4 = (am) (Object) ec.field_b.a((byte) -95);
             L1: while (true) {
               if (var4 == null) {
-                int discarded$8 = 0;
-                int discarded$9 = -55;
-                tf.a();
+                tf.a(-55, false);
                 var5 = (o) (Object) mh.field_a.a((byte) -95);
                 L2: while (true) {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$10 = -31995;
-                    nk.a(3, var5);
+                    nk.a(3, var5, -31995);
                     var5 = (o) (Object) mh.field_a.a(true);
                     continue L2;
                   }

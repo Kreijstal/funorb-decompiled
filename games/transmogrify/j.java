@@ -57,10 +57,9 @@ final class j {
               }
             }
           } else {
-            int incrementValue$4 = var2;
+            int incrementValue$2 = var2;
             var2--;
-            int discarded$5 = 0;
-            var3 = li.a(incrementValue$4, o.field_o);
+            var3 = li.a(incrementValue$2, o.field_o, false);
             var4 = ((j) this).field_e[var3];
             ((j) this).field_e[var3] = ((j) this).field_e[var2];
             ((j) this).field_e[var2] = var4;

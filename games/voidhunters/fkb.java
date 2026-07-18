@@ -30,8 +30,7 @@ final class fkb extends ksa {
 
     final static int a(int param0, byte param1) {
         if (li.field_i) {
-            int discarded$0 = 300;
-            return de.a(param0).field_e;
+            return de.a(param0, 300).field_e;
         }
         return ita.a(param0, 7988).field_A;
     }

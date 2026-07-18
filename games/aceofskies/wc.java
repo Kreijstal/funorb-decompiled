@@ -4,7 +4,7 @@
 final class wc {
     static int[] field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 

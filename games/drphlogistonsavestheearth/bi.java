@@ -19,7 +19,7 @@ final class bi extends lb {
         return ((bi) this).field_F;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_I = null;
         field_K = null;
         field_J = null;

@@ -14,7 +14,7 @@ final class qh {
     static String field_a;
     private ew field_i;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_g = null;
         field_e = null;
@@ -831,9 +831,7 @@ final class qh {
                         if (var5 != null) {
                           break L8;
                         } else {
-                          int discarded$2 = 0;
-                          int discarded$3 = 0;
-                          var9 = cu.a(false, 0, var3, var2);
+                          var9 = cu.a(false, 0, var3, var2, false, false);
                           var5 = var9;
                           var9.a(true, 327, 5, var4, 16);
                           break L8;

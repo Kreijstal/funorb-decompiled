@@ -10,7 +10,7 @@ final class ua extends vi {
     static String field_G;
     private Object field_F;
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, boolean param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_6_0 = null;
@@ -87,7 +87,7 @@ final class ua extends vi {
         return ((ua) this).field_F;
     }
 
-    final static void h() {
+    final static void h(byte param0) {
         if (gd.field_e != 0 - sh.field_i) {
           if (gd.field_e != -sh.field_i + 250) {
             gd.field_e = gd.field_e + 1;
@@ -147,7 +147,7 @@ final class ua extends vi {
         }
     }
 
-    final static void i() {
+    final static void i(byte param0) {
         ug dupTemp$0 = (ug) (Object) qi.field_Q.c((byte) -121);
         ug var4 = dupTemp$0;
         ug var1 = dupTemp$0;
@@ -181,7 +181,7 @@ final class ua extends vi {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_G = null;
         field_H = null;
         field_D = null;

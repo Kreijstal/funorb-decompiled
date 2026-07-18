@@ -165,7 +165,7 @@ final class rl extends td implements se, m {
         ((rl) this).field_F.l(-72);
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_C = null;
         field_D = null;
     }
@@ -750,8 +750,7 @@ final class rl extends td implements se, m {
     private final void c(boolean param0) {
         L0: {
           L1: {
-            int discarded$4 = -128;
-            if (kk.b()) {
+            if (kk.b((byte) -128)) {
               break L1;
             } else {
               if (0 >= ((rl) this).field_H.field_s.length()) {
@@ -885,16 +884,14 @@ final class rl extends td implements se, m {
                   } else {
                     if (!((rl) this).field_L) {
                       if (!((rl) this).field_I) {
-                        int discarded$322 = 93;
-                        ie.a();
+                        ie.a((byte) 93);
                         break L1;
                       } else {
                         hl.m(param4 ^ 1217388583);
                         break L1;
                       }
                     } else {
-                      int discarded$323 = -58;
-                      ti.a();
+                      ti.a((byte) -58);
                       break L1;
                     }
                   }

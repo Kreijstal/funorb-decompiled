@@ -37,7 +37,7 @@ final class sa extends pn {
         }
     }
 
-    final static int a(CharSequence param0, byte param1) {
+    final static int a(CharSequence param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;

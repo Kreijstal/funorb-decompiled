@@ -9,7 +9,7 @@ final class ek {
     static String field_f;
     static je field_a;
 
-    final static void a() {
+    final static void a(byte param0) {
         if (qc.field_a != null) {
           qc.field_a.b(true);
           tj.field_C = new na();

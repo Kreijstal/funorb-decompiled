@@ -10,7 +10,7 @@ abstract class gm extends ab {
     static String field_w;
     static id field_x;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_v = null;
         field_x = null;
         field_y = null;
@@ -26,7 +26,7 @@ abstract class gm extends ab {
 
     abstract void a(boolean param0, int param1, int param2);
 
-    private final int d() {
+    private final int d(byte param0) {
         int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -53,8 +53,7 @@ abstract class gm extends ab {
 
     boolean i(int param0) {
         int var2 = 0;
-        int discarded$2 = 76;
-        ((gm) this).field_t = this.d();
+        ((gm) this).field_t = this.d((byte) 76);
         var2 = 105 / ((20 - param0) / 62);
         if (((gm) this).field_t == 0) {
           if (((gm) this).field_z) {
@@ -72,13 +71,11 @@ abstract class gm extends ab {
           if (((gm) this).field_t < 256) {
             if (null == na.field_b) {
               na.field_b = new ll(((gm) this).field_q, ((gm) this).field_n);
-              int discarded$8 = -14492;
-              cm.a(na.field_b);
+              cm.a(na.field_b, -14492);
               vp.a();
               ((gm) this).a(false, 0, 0);
               super.a((byte) 87, param1, -((gm) this).field_h + -param2, -((gm) this).field_p + -param3);
-              int discarded$9 = 2765;
-              sl.c();
+              sl.c(2765);
               na.field_b.a(param3 + ((gm) this).field_p, param2 + ((gm) this).field_h, ((gm) this).field_t);
               if (param0 > 64) {
                 return;
@@ -89,13 +86,11 @@ abstract class gm extends ab {
             } else {
               if (na.field_b.field_r < ((gm) this).field_q) {
                 na.field_b = new ll(((gm) this).field_q, ((gm) this).field_n);
-                int discarded$10 = -14492;
-                cm.a(na.field_b);
+                cm.a(na.field_b, -14492);
                 vp.a();
                 ((gm) this).a(false, 0, 0);
                 super.a((byte) 87, param1, -((gm) this).field_h + -param2, -((gm) this).field_p + -param3);
-                int discarded$11 = 2765;
-                sl.c();
+                sl.c(2765);
                 na.field_b.a(param3 + ((gm) this).field_p, param2 + ((gm) this).field_h, ((gm) this).field_t);
                 if (param0 <= 64) {
                   ((gm) this).a(true, -76, 79);
@@ -106,13 +101,11 @@ abstract class gm extends ab {
               } else {
                 if (na.field_b.field_n < ((gm) this).field_n) {
                   na.field_b = new ll(((gm) this).field_q, ((gm) this).field_n);
-                  int discarded$12 = -14492;
-                  cm.a(na.field_b);
+                  cm.a(na.field_b, -14492);
                   vp.a();
                   ((gm) this).a(false, 0, 0);
                   super.a((byte) 87, param1, -((gm) this).field_h + -param2, -((gm) this).field_p + -param3);
-                  int discarded$13 = 2765;
-                  sl.c();
+                  sl.c(2765);
                   na.field_b.a(param3 + ((gm) this).field_p, param2 + ((gm) this).field_h, ((gm) this).field_t);
                   if (param0 <= 64) {
                     ((gm) this).a(true, -76, 79);
@@ -121,13 +114,11 @@ abstract class gm extends ab {
                     return;
                   }
                 } else {
-                  int discarded$14 = -14492;
-                  cm.a(na.field_b);
+                  cm.a(na.field_b, -14492);
                   vp.a();
                   ((gm) this).a(false, 0, 0);
                   super.a((byte) 87, param1, -((gm) this).field_h + -param2, -((gm) this).field_p + -param3);
-                  int discarded$15 = 2765;
-                  sl.c();
+                  sl.c(2765);
                   na.field_b.a(param3 + ((gm) this).field_p, param2 + ((gm) this).field_h, ((gm) this).field_t);
                   if (param0 > 64) {
                     return;
@@ -163,7 +154,7 @@ abstract class gm extends ab {
         }
     }
 
-    final static long g() {
+    final static long g(int param0) {
         return -ff.field_b + kh.a(-92);
     }
 
@@ -177,8 +168,7 @@ abstract class gm extends ab {
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         L0: {
-          int discarded$2 = 76;
-          var2 = this.d();
+          var2 = this.d((byte) 76);
           var3 = -((gm) this).field_t + var2;
           if (var3 > 0) {
             ((gm) this).field_t = ((gm) this).field_t + (-1 + (var3 - -8)) / 8;

@@ -34,8 +34,7 @@ abstract class uh {
         try {
           L0: {
             if (ia.a(param0, param2, param3, -60)) {
-              int discarded$2 = 76;
-              stackOut_3_0 = gd.e();
+              stackOut_3_0 = gd.e((byte) 76);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -109,7 +108,7 @@ abstract class uh {
 
     abstract long b(byte param0);
 
-    final static hl b() {
+    final static hl b(int param0) {
         return wa.a(57);
     }
 

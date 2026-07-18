@@ -31,14 +31,12 @@ final class eia {
         ((eia) this).field_f = null;
     }
 
-    final static void b() {
-        int discarded$0 = 117;
-        lha.b();
-        int discarded$1 = -10901;
-        qs.c();
+    final static void b(byte param0) {
+        lha.b((byte) 117);
+        qs.c(-10901);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(null == lc.field_l)) {
             lc.field_l.b();
         }

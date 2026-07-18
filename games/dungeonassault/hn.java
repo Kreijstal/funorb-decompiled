@@ -27,7 +27,7 @@ final class hn extends kl {
         }
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         cn var1 = null;
         cn var2 = null;
         int var3 = 0;
@@ -46,8 +46,7 @@ final class hn extends kl {
             }
             ie.field_l.e();
             var1.a(0, 0);
-            int discarded$0 = 1;
-            ti.c();
+            ti.c(true);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "hn.C(" + -117 + ')');
         }

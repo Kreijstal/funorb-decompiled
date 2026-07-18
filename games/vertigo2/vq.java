@@ -96,7 +96,7 @@ final class vq {
         }
     }
 
-    final static String a(java.applet.Applet param0) {
+    final static String a(java.applet.Applet param0, byte param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
@@ -326,7 +326,7 @@ final class vq {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_i = null;
         int var1 = 0;

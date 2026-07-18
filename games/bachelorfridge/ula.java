@@ -13,7 +13,7 @@ final class ula {
     jfa field_c;
     private int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_j = null;
     }
@@ -133,7 +133,7 @@ final class ula {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         if (48 > param0) {
             return false;
         }

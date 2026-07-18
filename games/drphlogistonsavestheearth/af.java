@@ -37,8 +37,7 @@ final class af {
             var2_int = 0;
             if (param1 != null) {
               var3 = new bm(param1, kh.field_i, vi.field_b, gf.field_o, qa.field_J, aj.field_a, a.field_e);
-              int discarded$2 = -21;
-              oc.a();
+              oc.a((byte) -21);
               stackOut_3_0 = (bm) var3;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -79,7 +78,7 @@ final class af {
         return stackIn_4_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (!(null != df.field_l)) {
             return;
         }
@@ -100,18 +99,17 @@ final class af {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         kc var1 = (kc) (Object) rd.field_C.h(-11151);
         if (!(var1 != null)) {
-            int discarded$0 = 126;
-            eg.a();
+            eg.a((byte) 126);
             return;
         }
         lh var2 = dh.field_N;
-        int discarded$1 = var2.h(23);
-        int discarded$2 = var2.h(97);
-        int discarded$3 = var2.h(-104);
-        int discarded$4 = var2.h(113);
+        int discarded$0 = var2.h(23);
+        int discarded$1 = var2.h(97);
+        int discarded$2 = var2.h(-104);
+        int discarded$3 = var2.h(113);
         var1.a(-16175);
     }
 

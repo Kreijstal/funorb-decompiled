@@ -128,7 +128,7 @@ final class pt extends wda {
         }
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] a(byte[] param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -304,6 +304,8 @@ final class pt extends wda {
         Object var4 = null;
         upa var4_ref = null;
         int var5 = 0;
+        upa var6 = null;
+        upa var7 = null;
         var4 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 == 22578) {
@@ -317,13 +319,12 @@ final class pt extends wda {
                 return var4_ref;
               }
             } else {
-              var4_ref = new upa();
-              var4_ref.field_n = param3;
-              var4_ref.field_k = param2;
-              ina.field_d.b((byte) -49, (vg) (Object) var4_ref);
-              int discarded$2 = 2147;
-              ip.a(var4_ref, param1);
-              return var4_ref;
+              var6 = new upa();
+              var6.field_n = param3;
+              var6.field_k = param2;
+              ina.field_d.b((byte) -49, (vg) (Object) var6);
+              ip.a(var6, param1, 2147);
+              return var6;
             }
           }
         } else {
@@ -338,13 +339,13 @@ final class pt extends wda {
                 return var4_ref;
               }
             } else {
-              var4_ref = new upa();
-              var4_ref.field_n = param3;
-              var4_ref.field_k = param2;
-              ina.field_d.b((byte) -49, (vg) (Object) var4_ref);
-              int discarded$3 = 2147;
-              ip.a(var4_ref, param1);
-              return var4_ref;
+              var7 = new upa();
+              var4_ref = var7;
+              var7.field_n = param3;
+              var7.field_k = param2;
+              ina.field_d.b((byte) -49, (vg) (Object) var7);
+              ip.a(var7, param1, 2147);
+              return var7;
             }
           }
         }

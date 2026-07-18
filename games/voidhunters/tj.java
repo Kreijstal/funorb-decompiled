@@ -140,7 +140,7 @@ final class tj extends ara implements ntb {
         ((tj) this).field_l = param0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_r = null;
         int var1 = 0;
         field_k = null;
@@ -547,7 +547,7 @@ final class tj extends ara implements ntb {
         ((tj) this).field_p = param1;
     }
 
-    final static boolean f() {
+    final static boolean f(byte param0) {
         return tla.field_c;
     }
 
@@ -580,16 +580,16 @@ final class tj extends ara implements ntb {
             var5 = (tj) (Object) param1;
             var6 = var5;
             super.b((byte) 103, param1);
-            var6.field_o = var5.field_o;
-            var6.field_p = var5.field_p;
-            var6.field_l = var5.field_l;
-            var6.field_i = var5.field_i;
-            var6.field_j = var5.field_j;
-            var6.field_m = var5.field_m;
+            var6.field_o = ((tj) this).field_o;
+            var6.field_p = ((tj) this).field_p;
+            var6.field_l = ((tj) this).field_l;
+            var6.field_i = ((tj) this).field_i;
+            var6.field_j = ((tj) this).field_j;
+            var6.field_m = ((tj) this).field_m;
             if (param0 <= 54) {
                 ((tj) this).field_i = -107;
             }
-            var6.field_n = var5.field_n;
+            var6.field_n = ((tj) this).field_n;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "tj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -641,25 +641,25 @@ final class tj extends ara implements ntb {
                 if (super.a((byte) -121, param1)) {
                   break L2;
                 } else {
-                  if (var3.field_i != var3.field_i) {
+                  if (((tj) this).field_i != var3.field_i) {
                     break L2;
                   } else {
-                    if (var3.field_o != var3.field_o) {
+                    if (((tj) this).field_o != var3.field_o) {
                       break L2;
                     } else {
-                      if (var3.field_p != var3.field_p) {
+                      if (((tj) this).field_p != var3.field_p) {
                         break L2;
                       } else {
-                        if (var3.field_n != var3.field_n) {
+                        if (((tj) this).field_n != var3.field_n) {
                           break L2;
                         } else {
-                          if (var3.field_m != var3.field_m) {
+                          if (((tj) this).field_m != var3.field_m) {
                             break L2;
                           } else {
-                            if (var3.field_l != var3.field_l) {
+                            if (((tj) this).field_l != var3.field_l) {
                               break L2;
                             } else {
-                              if (var3.field_j == var3.field_j) {
+                              if (var3.field_j == ((tj) this).field_j) {
                                 stackOut_10_0 = 0;
                                 stackIn_11_0 = stackOut_10_0;
                                 break L1;
@@ -788,26 +788,26 @@ final class tj extends ara implements ntb {
               var5 = (tj) (Object) param0;
               super.a(param0, -106);
               var4 = 0;
-              if (var5.field_i != var5.field_i) {
+              if (var5.field_i != ((tj) this).field_i) {
                 var4 = 1;
-                System.out.println("int angle has changed. before=" + var5.field_i + ", now=" + var5.field_i);
+                System.out.println("int angle has changed. before=" + var5.field_i + ", now=" + ((tj) this).field_i);
                 break L1;
               } else {
                 break L1;
               }
             }
             L2: {
-              if (var5.field_o == var5.field_o) {
+              if (((tj) this).field_o == var5.field_o) {
                 break L2;
               } else {
                 var4 = 1;
-                System.out.println("int life has changed. before=" + var5.field_o + ", now=" + var5.field_o);
+                System.out.println("int life has changed. before=" + var5.field_o + ", now=" + ((tj) this).field_o);
                 break L2;
               }
             }
             L3: {
-              if (var5.field_p != var5.field_p) {
-                System.out.println("int fired_team has changed. before=" + var5.field_p + ", now=" + var5.field_p);
+              if (((tj) this).field_p != var5.field_p) {
+                System.out.println("int fired_team has changed. before=" + var5.field_p + ", now=" + ((tj) this).field_p);
                 var4 = 1;
                 break L3;
               } else {
@@ -815,18 +815,18 @@ final class tj extends ara implements ntb {
               }
             }
             L4: {
-              if (var5.field_n == var5.field_n) {
+              if (((tj) this).field_n == var5.field_n) {
                 break L4;
               } else {
-                System.out.println("int fired_player has changed. before=" + var5.field_n + ", now=" + var5.field_n);
+                System.out.println("int fired_player has changed. before=" + var5.field_n + ", now=" + ((tj) this).field_n);
                 var4 = 1;
                 break L4;
               }
             }
             L5: {
-              if (var5.field_m != var5.field_m) {
+              if (((tj) this).field_m != var5.field_m) {
                 var4 = 1;
-                System.out.println("int type has changed. before=" + var5.field_m + ", now=" + var5.field_m);
+                System.out.println("int type has changed. before=" + var5.field_m + ", now=" + ((tj) this).field_m);
                 break L5;
               } else {
                 break L5;
@@ -841,8 +841,8 @@ final class tj extends ara implements ntb {
               }
             }
             L7: {
-              if (var5.field_l != var5.field_l) {
-                System.out.println("int target_body has changed. before=" + var5.field_l + ", now=" + var5.field_l);
+              if (((tj) this).field_l != var5.field_l) {
+                System.out.println("int target_body has changed. before=" + var5.field_l + ", now=" + ((tj) this).field_l);
                 var4 = 1;
                 break L7;
               } else {
@@ -850,9 +850,9 @@ final class tj extends ara implements ntb {
               }
             }
             L8: {
-              if (var5.field_j != var5.field_j) {
+              if (((tj) this).field_j != var5.field_j) {
                 var4 = 1;
-                System.out.println("int damage has changed. before=" + var5.field_j + ", now=" + var5.field_j);
+                System.out.println("int damage has changed. before=" + var5.field_j + ", now=" + ((tj) this).field_j);
                 break L8;
               } else {
                 break L8;

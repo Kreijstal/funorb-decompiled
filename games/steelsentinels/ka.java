@@ -226,8 +226,7 @@ final class ka extends ug {
                     mm.field_g.a((byte) 127, 16);
                     mm.field_g.field_p = mm.field_g.field_p + 1;
                     var9 = mm.field_g.field_p;
-                    int discarded$6 = 5;
-                    qi.a(jd.field_ib, ne.field_y, (gi) (Object) mm.field_g, qe.field_d);
+                    qi.a(jd.field_ib, ne.field_y, (gi) (Object) mm.field_g, qe.field_d, 5);
                     mm.field_g.b((byte) -32, -var9 + mm.field_g.field_p);
                     break L3;
                   } else {
@@ -254,8 +253,7 @@ final class ka extends ug {
                       mm.field_g.a((byte) 117, 18);
                       mm.field_g.field_p = mm.field_g.field_p + 2;
                       var10 = mm.field_g.field_p;
-                      int discarded$7 = -21;
-                      var11_ref_String = gh.a(-58, wl.d());
+                      var11_ref_String = gh.a(-58, wl.d((byte) -21));
                       if (var11_ref_String == null) {
                         var11_ref_String = "";
                         break L7;
@@ -264,8 +262,7 @@ final class ka extends ug {
                       }
                     }
                     mm.field_g.a(var11_ref_String, -63);
-                    int discarded$8 = 5;
-                    qi.a(jd.field_ib, ne.field_y, (gi) (Object) mm.field_g, qe.field_d);
+                    qi.a(jd.field_ib, ne.field_y, (gi) (Object) mm.field_g, qe.field_d, 5);
                     mm.field_g.c(30, -var10 + mm.field_g.field_p);
                     break L3;
                   }
@@ -298,8 +295,7 @@ final class ka extends ug {
                     }
                   }
                   if (var9 == 248) {
-                    int discarded$9 = -21;
-                    bj.a(-117, wl.d());
+                    bj.a(-117, wl.d((byte) -21));
                     di.field_e = ng.field_o;
                     pm.m(83);
                     ui.field_T = false;
@@ -308,7 +304,7 @@ final class ka extends ug {
                     return stackIn_32_0;
                   } else {
                     if (var9 == 99) {
-                      boolean discarded$10 = ve.a((byte) -85, rf.a(-58));
+                      boolean discarded$1 = ve.a((byte) -85, rf.a(-58));
                       ma.field_bb = new Boolean(ai.a((gi) (Object) rf.field_d, -32599));
                       rf.field_d.field_p = 0;
                       break L8;
@@ -372,8 +368,7 @@ final class ka extends ug {
                       if (var9_ref_String == null) {
                         break L14;
                       } else {
-                        int discarded$11 = -21;
-                        ri.a(var9_ref_String, wl.d(), 124);
+                        ri.a(var9_ref_String, wl.d((byte) -21), 124);
                         break L14;
                       }
                     } else {
@@ -817,8 +812,7 @@ final class ka extends ug {
               if (!jn.field_g) {
                 break L2;
               } else {
-                int discarded$22 = -126;
-                ac.a(param1, param7, param1, param4, 20, param5, param2, param3);
+                ac.a(param1, param7, param1, param4, 20, param5, param2, param3, -126);
                 hh.field_a.a((byte) 121, param0);
                 if (param0) {
                   L3: {

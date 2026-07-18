@@ -48,15 +48,14 @@ final class kf extends td {
         var2 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
-            int discarded$21 = -12863;
-            if (ae.a()) {
-              boolean discarded$22 = oi.field_k.a(fc.field_f, ij.field_a, true, 4);
+            if (ae.a(-12863)) {
+              boolean discarded$17 = oi.field_k.a(fc.field_f, ij.field_a, true, 4);
               oi.field_k.l(param0 ^ param0);
               L1: while (true) {
                 if (!pc.b(param0 ^ -121)) {
                   break L0;
                 } else {
-                  boolean discarded$23 = oi.field_k.a(-81, sg.field_n, ch.field_d);
+                  boolean discarded$18 = oi.field_k.a(-81, sg.field_n, ch.field_d);
                   continue L1;
                 }
               }
@@ -84,7 +83,7 @@ final class kf extends td {
         }
     }
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -387,7 +386,7 @@ final class kf extends td {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_e = null;
         field_h = null;
         int var1 = 87;

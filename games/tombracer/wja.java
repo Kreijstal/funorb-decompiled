@@ -6,7 +6,7 @@ final class wja extends ci {
     private int field_n;
     static String field_o;
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         rv.field_c.field_r = param0;
@@ -149,7 +149,7 @@ final class wja extends ci {
         ((wja) this).field_m = 4096;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
     }
 
     final int[][] b(int param0, int param1) {

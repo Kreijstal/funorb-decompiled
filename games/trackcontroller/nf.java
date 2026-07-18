@@ -13,7 +13,7 @@ final class nf {
     private int field_j;
     private int field_a;
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -166,12 +166,12 @@ final class nf {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_g = null;
     }
 
-    final static void a(boolean param0, String param1, String param2) {
+    final static void a(boolean param0, String param1, String param2, byte param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -208,8 +208,7 @@ final class nf {
           L0: {
             qg.field_c = param2;
             lf.field_T = param1;
-            int discarded$2 = -16257;
-            nb.a(rk.field_Z, param0);
+            nb.a(rk.field_Z, param0, -16257);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -345,8 +344,7 @@ final class nf {
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 ((nf) this).field_i[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 66;
-            this.a();
+            this.a(66);
         } catch (RuntimeException runtimeException) {
             throw sl.a((Throwable) (Object) runtimeException, "nf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

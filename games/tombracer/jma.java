@@ -39,7 +39,7 @@ final class jma implements noa {
         }
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         ((jma) this).field_n = 3;
     }
 
@@ -53,8 +53,7 @@ final class jma implements noa {
     private final void e(byte param0) {
         if (param0 == -102) {
           if (((jma) this).field_l <= 0) {
-            int discarded$4 = 8;
-            this.a();
+            this.a(8);
             return;
           } else {
             ((jma) this).field_n = 4;
@@ -64,8 +63,7 @@ final class jma implements noa {
         } else {
           ((jma) this).a(-19, 46, -116, 50, -114, 44);
           if (((jma) this).field_l <= 0) {
-            int discarded$5 = 8;
-            this.a();
+            this.a(8);
             return;
           } else {
             ((jma) this).field_n = 4;
@@ -75,7 +73,7 @@ final class jma implements noa {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_a = null;
         field_h = null;
         field_o = null;
@@ -129,7 +127,7 @@ final class jma implements noa {
         this(param0, new lj[0]);
     }
 
-    private final void a() {
+    private final void a(int param0) {
         if (((jma) this).field_k > 0) {
             ((jma) this).field_b = ((jma) this).field_k;
             ((jma) this).field_n = 5;
@@ -177,7 +175,7 @@ final class jma implements noa {
         return ((jma) this).field_d;
     }
 
-    private final boolean b() {
+    private final boolean b(boolean param0) {
         if (((jma) this).field_b <= 0) {
             return true;
         }
@@ -238,8 +236,7 @@ final class jma implements noa {
           if (param0 == -14) {
             var3 = ((jma) this).field_n;
             if (var3 == 0) {
-              int discarded$7 = 1;
-              if (this.b()) {
+              if (this.b(true)) {
                 if (!param1) {
                   return;
                 } else {
@@ -252,8 +249,7 @@ final class jma implements noa {
             } else {
               if (1 != var3) {
                 if (var3 == 2) {
-                  int discarded$8 = 1;
-                  if (!this.b()) {
+                  if (!this.b(true)) {
                     return;
                   } else {
                     this.g(103);
@@ -263,8 +259,7 @@ final class jma implements noa {
                   if (var3 != 3) {
                     if (4 != var3) {
                       if (5 == var3) {
-                        int discarded$9 = 1;
-                        if (!this.b()) {
+                        if (!this.b(true)) {
                           return;
                         } else {
                           this.a((byte) 122);
@@ -275,17 +270,14 @@ final class jma implements noa {
                       }
                     } else {
                       if (!param1) {
-                        int discarded$10 = 1;
-                        if (!this.b()) {
+                        if (!this.b(true)) {
                           return;
                         } else {
-                          int discarded$11 = 8;
-                          this.a();
+                          this.a(8);
                           return;
                         }
                       } else {
-                        int discarded$12 = -69;
-                        this.c();
+                        this.c((byte) -69);
                         return;
                       }
                     }
@@ -300,8 +292,7 @@ final class jma implements noa {
                 }
               } else {
                 if (param1) {
-                  int discarded$13 = 1;
-                  if (!this.b()) {
+                  if (!this.b(true)) {
                     return;
                   } else {
                     this.d(-121);
@@ -748,8 +739,7 @@ final class jma implements noa {
         int stackOut_2_1 = 0;
         if (param0 != -2) {
           L0: {
-            int discarded$6 = 1;
-            boolean discarded$7 = this.b();
+            boolean discarded$4 = this.b(true);
             stackOut_5_0 = this;
             stackIn_7_0 = stackOut_5_0;
             stackIn_6_0 = stackOut_5_0;

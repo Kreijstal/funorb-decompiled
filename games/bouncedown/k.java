@@ -113,21 +113,18 @@ final class k extends lc implements rc {
         try {
           if (param0 >= 6) {
             if (((k) this).field_A == param4) {
-              int discarded$6 = 0;
-              hc.a();
+              hc.a(0);
               return;
             } else {
               if (((k) this).field_z != param4) {
                 if (((k) this).field_F == param4) {
-                  int discarded$7 = -10;
-                  u.a();
+                  u.a((byte) -10);
                   return;
                 } else {
                   return;
                 }
               } else {
-                int discarded$8 = 8;
-                ii.n();
+                ii.n(8);
                 return;
               }
             }

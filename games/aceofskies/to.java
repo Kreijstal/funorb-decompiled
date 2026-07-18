@@ -265,7 +265,7 @@ abstract class to extends ea implements vm {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         um.field_j = false;
         int discarded$0 = nm.field_c.g(-43);
     }
@@ -807,7 +807,7 @@ abstract class to extends ea implements vm {
         return (ha) (Object) stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_r = null;
     }
 
@@ -819,7 +819,7 @@ abstract class to extends ea implements vm {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

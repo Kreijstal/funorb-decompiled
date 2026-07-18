@@ -49,7 +49,7 @@ final class eg extends oh {
         ((eg) this).field_v.a((byte) -113, (oh) (Object) new ne(((eg) this).field_w, param0, param2, 0));
     }
 
-    final static void a(int param0, wj param1) {
+    final static void a(int param0, wj param1, boolean param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -141,7 +141,7 @@ final class eg extends oh {
         return null != ck.field_a ? true : false;
     }
 
-    final static tq c() {
+    final static tq c(int param0, int param1) {
         tq var2 = new tq(1, false);
         return var2;
     }

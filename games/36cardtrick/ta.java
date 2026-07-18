@@ -261,12 +261,12 @@ abstract class ta extends jc {
         ((ta) this).field_W.field_A = 0;
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         dg.field_H.field_b = 0;
         dg.field_H.field_l = 0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_fb = null;
         int var1 = 0;
         field_ib = null;

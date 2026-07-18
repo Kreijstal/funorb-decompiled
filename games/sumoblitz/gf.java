@@ -9,7 +9,7 @@ final class gf {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

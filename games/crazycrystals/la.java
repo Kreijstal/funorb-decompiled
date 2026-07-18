@@ -4,11 +4,11 @@
 final class la {
     static hj field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         dl var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -153,7 +153,7 @@ final class la {
                           break L0;
                         } else {
                           ld.field_v[var7].a();
-                          int discarded$5 = rn.field_k.a(hf.field_c[var7], 3, 3, ld.field_v[var7].field_l + -6, -6 + ld.field_v[var7].field_u, qm.field_n, -1, 1, 1, rn.field_k.field_u + rn.field_k.field_o);
+                          int discarded$3 = rn.field_k.a(hf.field_c[var7], 3, 3, ld.field_v[var7].field_l + -6, -6 + ld.field_v[var7].field_u, qm.field_n, -1, 1, 1, rn.field_k.field_u + rn.field_k.field_o);
                           hb.a(3, ld.field_v[var7].field_u, 0, ld.field_v[var7].field_l, ld.field_v[var7], -76, 1, 0);
                           var7++;
                           continue L1;
@@ -250,7 +250,7 @@ final class la {
                 a.field_c.e();
                 var9 = new dl(a.field_c.field_n, a.field_c.field_o);
                 var9.a();
-                int discarded$6 = ra.field_c.a(var14, km.field_e, fk.field_u, wn.field_c, sc.field_h, 16777215, -1, 1, 1, ra.field_c.field_u + ra.field_c.field_o);
+                int discarded$4 = ra.field_c.a(var14, km.field_e, fk.field_u, wn.field_c, sc.field_h, 16777215, -1, 1, 1, ra.field_c.field_u + ra.field_c.field_o);
                 hb.a(3, var9.field_o, 0, var9.field_n, var9, -42, 1, 0);
                 a.field_c.a();
                 var9.a(0, 0);
@@ -280,7 +280,7 @@ final class la {
                 var17 = ci.a(new String[1], nk.field_l, 3);
                 gh.field_A = null;
                 var16.a();
-                int discarded$7 = rn.field_k.a(var17, 3, 3, var16.field_l + -6, var16.field_u - 6, 16777215, -1, 0, 1, rn.field_k.field_o + rn.field_k.field_u);
+                int discarded$5 = rn.field_k.a(var17, 3, 3, var16.field_l + -6, var16.field_u - 6, 16777215, -1, 0, 1, rn.field_k.field_o + rn.field_k.field_u);
                 hb.a(3, var16.field_u, 0, var16.field_l, var16, -38, 1, 0);
                 wl.field_o.a();
                 var16.a(-wl.field_o.field_v + 199, -wl.field_o.field_t + 83);
@@ -538,8 +538,7 @@ final class la {
                         }
                       }
                     } else {
-                      int discarded$8 = 0;
-                      rh.a();
+                      rh.a(false);
                       ld.field_v[ue.field_a].a(269, 340);
                       break L20;
                     }
@@ -549,8 +548,7 @@ final class la {
                 }
               }
             }
-            int discarded$9 = 0;
-            rh.a();
+            rh.a(false);
             ld.field_v[ue.field_a].a(269, 340);
             break L20;
           }

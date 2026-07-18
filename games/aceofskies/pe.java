@@ -13,7 +13,7 @@ final class pe implements Iterator {
     static String field_c;
     static long field_g;
 
-    final static Class a(String param0) throws ClassNotFoundException {
+    final static Class a(String param0, int param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_5_0 = null;
         Class stackIn_8_0 = null;
@@ -413,7 +413,7 @@ final class pe implements Iterator {
         field_c = null;
     }
 
-    final static qm a() {
+    final static qm a(byte param0) {
         int var1 = 33;
         if (!(ij.field_j != null)) {
             ij.field_j = new qm(oi.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, oi.field_c.field_I, -1, 2147483647, true);

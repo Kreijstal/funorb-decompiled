@@ -36,7 +36,7 @@ final class jg extends bh implements mj {
         }
     }
 
-    final static void n() {
+    final static void n(int param0) {
         kn.field_L = true;
         vk.field_g = 0;
     }
@@ -62,10 +62,8 @@ final class jg extends bh implements mj {
         String stackOut_5_2 = null;
         try {
           var4_int = -76;
-          int discarded$9 = 83;
-          if (tj.a(param3, param1, param2)) {
-            int discarded$10 = 8;
-            return rf.b();
+          if (tj.a(param3, param1, param2, (byte) 83)) {
+            return rf.b((byte) 8);
           } else {
             return null;
           }
@@ -117,7 +115,7 @@ final class jg extends bh implements mj {
         ((jg) this).c((byte) 113);
     }
 
-    final static ci k() {
+    final static ci k(int param0) {
         return ci.field_zb.field_Kb;
     }
 
@@ -209,7 +207,7 @@ final class jg extends bh implements mj {
         }
     }
 
-    final static int m() {
+    final static int m(int param0) {
         return v.field_d + ((ii.field_Q << 2) + (sg.field_d << 4));
     }
 
@@ -224,7 +222,7 @@ final class jg extends bh implements mj {
         field_O = null;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         ri.g(124);
         uk.a(false, 4);
     }

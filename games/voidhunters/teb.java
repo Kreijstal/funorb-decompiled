@@ -22,7 +22,7 @@ final class teb extends mfb {
         return qea.field_o;
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_b = null;
     }
 

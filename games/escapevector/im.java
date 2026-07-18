@@ -6,7 +6,7 @@ import java.io.*;
 final class im extends IOException {
     static int field_a;
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -48,7 +48,7 @@ final class im extends IOException {
         return stackIn_6_0;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         cc var4 = null;
@@ -65,8 +65,7 @@ final class im extends IOException {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$4 = -755;
-                    oa.a(5, var5);
+                    oa.a(5, var5, -755);
                     var5 = (dc) (Object) en.field_i.b((byte) 70);
                     continue L2;
                   }

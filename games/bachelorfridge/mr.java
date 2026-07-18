@@ -17,7 +17,7 @@ final class mr extends kj {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_f = null;
         field_h = null;
     }

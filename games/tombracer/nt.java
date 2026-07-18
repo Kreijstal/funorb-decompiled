@@ -9,7 +9,7 @@ final class nt {
     static int field_d;
     static int field_b;
 
-    final static cn a(int param0, int param1, int param2, boolean param3, boolean param4) {
+    final static cn a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;
@@ -82,11 +82,11 @@ final class nt {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Exception var2_ref = null;

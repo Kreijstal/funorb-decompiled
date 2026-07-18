@@ -18,7 +18,7 @@ final class al extends li {
     static String[] field_y;
     static int field_t;
 
-    final static void a() {
+    final static void a(byte param0) {
         rc.field_d = null;
     }
 

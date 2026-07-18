@@ -9,7 +9,7 @@ abstract class tl {
     String field_c;
     static int field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 
@@ -99,13 +99,13 @@ abstract class tl {
         }
         L4: {
           if (hg.field_b == 1) {
-            int discarded$6 = var8.d((byte) 72);
-            String discarded$7 = var8.c(false);
+            int discarded$4 = var8.d((byte) 72);
+            String discarded$5 = var8.c(false);
             break L4;
           } else {
             if (hg.field_b == 4) {
-              int discarded$8 = var8.d((byte) 72);
-              String discarded$9 = var8.c(false);
+              int discarded$6 = var8.d((byte) 72);
+              String discarded$7 = var8.c(false);
               break L4;
             } else {
               break L4;
@@ -113,9 +113,7 @@ abstract class tl {
           }
         }
         if (!param1) {
-          int discarded$10 = 80;
-          int discarded$11 = 104;
-          hi.field_b = ab.a((pb) (Object) var8);
+          hi.field_b = ab.a((pb) (Object) var8, 104, 80);
           bl.field_c = null;
           return new vk(param1);
         } else {

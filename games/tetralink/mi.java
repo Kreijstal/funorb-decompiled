@@ -9,7 +9,7 @@ final class mi extends hl {
     private hl field_Lb;
     static String field_Nb;
 
-    final static void a(hl param0, hl param1) {
+    final static void a(hl param0, hl param1, int param2) {
         try {
             if (null == param0.field_fb) {
                 param0.field_fb = new je();
@@ -25,8 +25,7 @@ final class mi extends hl {
             }
             og.field_j = param0.field_fb;
             mm.field_s = param1.field_fb;
-            int discarded$0 = 0;
-            ji.h();
+            ji.h(0);
         } catch (RuntimeException runtimeException) {
             throw oi.a((Throwable) (Object) runtimeException, "mi.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
@@ -77,7 +76,7 @@ final class mi extends hl {
         this(param0, param1.field_Lb, param1.field_Ob, param2);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Kb = null;
         field_Mb = null;
         field_Nb = null;

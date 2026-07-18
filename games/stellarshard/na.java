@@ -20,8 +20,7 @@ final class na {
             eh.field_a = new qc(param3);
             sa.field_h = param2;
             if (param1 != 256) {
-                int discarded$0 = 1;
-                pf discarded$1 = na.a(67, 84, 117, false, true);
+                pf discarded$0 = na.a(67, 84, 117, false, true, true);
             }
             ka.field_q = param0;
             tf.a(0);
@@ -246,7 +245,7 @@ final class na {
         }
     }
 
-    final static pf a(int param0, int param1, int param2, boolean param3, boolean param4) {
+    final static pf a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;
@@ -333,7 +332,7 @@ final class na {
         return ((na) this).field_h[fieldTemp$0];
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
         field_d = null;
         field_e = null;

@@ -110,14 +110,13 @@ abstract class wj extends hf implements vc {
         String stackOut_8_2 = null;
         try {
           L0: {
-            int discarded$9 = -3;
-            if (wg.a(param3, param1, param2)) {
+            if (wg.a(param3, param1, param2, -3)) {
               L1: {
                 if (param0 == 83) {
                   break L1;
                 } else {
                   var5 = null;
-                  le[] discarded$10 = wj.a((byte) -96, -124, (ad) null, -100);
+                  le[] discarded$2 = wj.a((byte) -96, -124, (ad) null, -100);
                   break L1;
                 }
               }
@@ -163,7 +162,7 @@ abstract class wj extends hf implements vc {
 
     abstract String a(int param0, String param1);
 
-    final static void a(int param0, wf param1) {
+    final static void a(int param0, wf param1, int param2) {
         hb var5 = null;
         int var4 = 0;
         try {
@@ -185,7 +184,7 @@ abstract class wj extends hf implements vc {
         }
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         if (!(me.field_f == null)) {
             me.field_f.g((byte) -75);
         }

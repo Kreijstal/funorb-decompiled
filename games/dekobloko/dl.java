@@ -57,9 +57,7 @@ final class dl extends ek {
                   break L1;
                 }
               } else {
-                int discarded$5 = 1;
-                int discarded$6 = 0;
-                lj.a(param4, param3);
+                lj.a(param4, param3, 0, true);
                 break L1;
               }
             }
@@ -115,7 +113,7 @@ final class dl extends ek {
         field_L = null;
     }
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         cl var4 = null;
@@ -128,8 +126,7 @@ final class dl extends ek {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$2 = 7;
-                fh.a((byte) 104, var4);
+                fh.a((byte) 104, var4, 7);
                 var4 = (cl) (Object) oe.field_I.d(true);
                 continue L1;
               }
@@ -156,7 +153,7 @@ final class dl extends ek {
         super.b(param0, param1, param2, param3);
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return 250 < gd.field_e;
     }
 

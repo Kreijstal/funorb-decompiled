@@ -115,8 +115,7 @@ final class te {
         }
         L1: {
           if (param0 >= ((te) this).field_g.length) {
-            int discarded$4 = 0;
-            this.c(param0);
+            this.c(param0, 0);
             break L1;
           } else {
             break L1;
@@ -124,7 +123,7 @@ final class te {
         }
         ((te) this).field_g[param0] = param1;
         if (param2 > -111) {
-          int discarded$5 = this.a(-66, (byte) 61);
+          int discarded$2 = this.a(-66, (byte) 61);
           return;
         } else {
           return;
@@ -282,7 +281,7 @@ final class te {
         }
     }
 
-    private final void c(int param0) {
+    private final void c(int param0, int param1) {
         int[] var4 = new int[this.a(param0, (byte) -53)];
         int[] var3 = var4;
         ji.a(((te) this).field_g, 0, var4, 0, ((te) this).field_g.length);

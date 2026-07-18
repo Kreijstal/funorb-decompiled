@@ -254,8 +254,7 @@ final class rc extends le {
                             var32 = var30 & 65280;
                             var33 = (var32 * var28 & 16711929) >>> 8 | (-16711868 & var31 * var28) >>> 8;
                             var33 = var33 + var29 * 65793;
-                            int discarded$1 = 75;
-                            fp.a(var22, var27, var24, var33 >> 1 & 8355711, var25, var23, var26);
+                            fp.a(var22, var27, var24, var33 >> 1 & 8355711, var25, var23, var26, (byte) 75);
                             break L10;
                           } else {
                             break L11;
@@ -431,6 +430,8 @@ final class rc extends le {
                   break L1;
                 } else {
                   var3 = (Object) (Object) nj.field_X;
+                  var4 = var3;
+                  var4 = var3;
                   break L1;
                 }
               }
@@ -447,8 +448,7 @@ final class rc extends le {
                 }
               }
             }
-            int discarded$2 = -1;
-            stackOut_7_0 = jp.a((byte) 97, param2, (String) var4, (String) var3);
+            stackOut_7_0 = jp.a((byte) 97, param2, (String) var4, (String) var3, -1);
             stackIn_8_0 = stackOut_7_0;
             break L0;
           }
@@ -517,7 +517,7 @@ final class rc extends le {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_r = null;
         field_u = null;
         field_v = null;

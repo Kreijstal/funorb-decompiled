@@ -84,7 +84,7 @@ abstract class a extends wf implements pi {
         return ((a) this).a(((a) this).field_f.field_i, (byte) -112);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_h = null;
         field_g = null;
         field_e = null;
@@ -99,7 +99,7 @@ abstract class a extends wf implements pi {
         }
     }
 
-    final static String a(gb param0) {
+    final static String a(gb param0, int param1, boolean param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -138,8 +138,7 @@ abstract class a extends wf implements pi {
             }
             var4 = new byte[var3_int];
             param0.field_m = param0.field_m + v.field_g.a(0, param0.field_m, 4, var4, var3_int, param0.field_l);
-            int discarded$2 = 160;
-            var5 = vd.a(var4, 0, var3_int);
+            var5 = vd.a(var4, 0, var3_int, 160);
             stackOut_2_0 = (String) var5;
             stackIn_3_0 = stackOut_2_0;
             return stackIn_3_0;

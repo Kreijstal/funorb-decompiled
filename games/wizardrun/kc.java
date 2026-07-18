@@ -71,40 +71,32 @@ final class kc extends pl {
                 if (ue.field_d.field_z >= var9) {
                   if (ue.field_d.field_p < var10) {
                     ue.field_d = new o(var9, var10);
-                    int discarded$16 = 0;
-                    ud.a(ue.field_d);
+                    ud.a(ue.field_d, false);
                     var18.b(112, 144, var18.field_x << 4, var18.field_s << 4, -((kc) this).field_K << 10, 4096);
-                    int discarded$17 = 4;
-                    bb.b();
+                    bb.b(4);
                     ue.field_d.a(var5 - var18.field_x, var6 - var18.field_s, 256);
                     return;
                   } else {
-                    int discarded$18 = 0;
-                    ud.a(ue.field_d);
+                    ud.a(ue.field_d, false);
                     ed.d();
                     var18.b(112, 144, var18.field_x << 4, var18.field_s << 4, -((kc) this).field_K << 10, 4096);
-                    int discarded$19 = 4;
-                    bb.b();
+                    bb.b(4);
                     ue.field_d.a(var5 - var18.field_x, var6 - var18.field_s, 256);
                     return;
                   }
                 } else {
                   ue.field_d = new o(var9, var10);
-                  int discarded$20 = 0;
-                  ud.a(ue.field_d);
+                  ud.a(ue.field_d, false);
                   var18.b(112, 144, var18.field_x << 4, var18.field_s << 4, -((kc) this).field_K << 10, 4096);
-                  int discarded$21 = 4;
-                  bb.b();
+                  bb.b(4);
                   ue.field_d.a(var5 - var18.field_x, var6 - var18.field_s, 256);
                   return;
                 }
               } else {
                 ue.field_d = new o(var9, var10);
-                int discarded$22 = 0;
-                ud.a(ue.field_d);
+                ud.a(ue.field_d, false);
                 var18.b(112, 144, var18.field_x << 4, var18.field_s << 4, -((kc) this).field_K << 10, 4096);
-                int discarded$23 = 4;
-                bb.b();
+                bb.b(4);
                 ue.field_d.a(var5 - var18.field_x, var6 - var18.field_s, 256);
                 return;
               }
@@ -117,40 +109,32 @@ final class kc extends pl {
               if (ue.field_d.field_z >= var9) {
                 if (ue.field_d.field_p < var10) {
                   ue.field_d = new o(var9, var10);
-                  int discarded$24 = 0;
-                  ud.a(ue.field_d);
+                  ud.a(ue.field_d, false);
                   var15.b(112, 144, var15.field_x << 4, var15.field_s << 4, -((kc) this).field_K << 10, 4096);
-                  int discarded$25 = 4;
-                  bb.b();
+                  bb.b(4);
                   ue.field_d.a(var5 - var15.field_x, var6 - var15.field_s, 256);
                   return;
                 } else {
-                  int discarded$26 = 0;
-                  ud.a(ue.field_d);
+                  ud.a(ue.field_d, false);
                   ed.d();
                   var15.b(112, 144, var15.field_x << 4, var15.field_s << 4, -((kc) this).field_K << 10, 4096);
-                  int discarded$27 = 4;
-                  bb.b();
+                  bb.b(4);
                   ue.field_d.a(var5 - var15.field_x, var6 - var15.field_s, 256);
                   return;
                 }
               } else {
                 ue.field_d = new o(var9, var10);
-                int discarded$28 = 0;
-                ud.a(ue.field_d);
+                ud.a(ue.field_d, false);
                 var15.b(112, 144, var15.field_x << 4, var15.field_s << 4, -((kc) this).field_K << 10, 4096);
-                int discarded$29 = 4;
-                bb.b();
+                bb.b(4);
                 ue.field_d.a(var5 - var15.field_x, var6 - var15.field_s, 256);
                 return;
               }
             } else {
               ue.field_d = new o(var9, var10);
-              int discarded$30 = 0;
-              ud.a(ue.field_d);
+              ud.a(ue.field_d, false);
               var15.b(112, 144, var15.field_x << 4, var15.field_s << 4, -((kc) this).field_K << 10, 4096);
-              int discarded$31 = 4;
-              bb.b();
+              bb.b(4);
               ue.field_d.a(var5 - var15.field_x, var6 - var15.field_s, 256);
               return;
             }
@@ -225,7 +209,7 @@ final class kc extends pl {
         return stackIn_4_0 != 0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_G = null;
         field_J = null;
         field_H = null;

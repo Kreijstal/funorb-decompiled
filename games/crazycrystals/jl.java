@@ -20,7 +20,7 @@ final class jl {
         return true;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_b = null;
         field_f = null;
@@ -29,7 +29,7 @@ final class jl {
         field_a = null;
     }
 
-    final static void a(int param0, ng param1, byte[] param2, java.math.BigInteger param3, int param4, java.math.BigInteger param5) {
+    final static void a(int param0, ng param1, byte[] param2, java.math.BigInteger param3, int param4, java.math.BigInteger param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;
@@ -286,7 +286,7 @@ final class jl {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             Exception var1 = null;
             int decompiledRegionSelector0 = 0;

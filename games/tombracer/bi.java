@@ -7,7 +7,7 @@ final class bi {
     static su field_d;
     static String[] field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_b = null;
         field_d = null;

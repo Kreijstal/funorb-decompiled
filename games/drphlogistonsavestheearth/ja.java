@@ -58,7 +58,7 @@ final class ja {
         this.c(param2 ^ 17503);
     }
 
-    final static void a(fg param0) {
+    final static void a(fg param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -179,7 +179,7 @@ final class ja {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_Q = null;
         field_t = null;
@@ -188,7 +188,7 @@ final class ja {
         field_n = null;
     }
 
-    final static int[] a(int param0, int param1) {
+    final static int[] a(int param0, int param1, int param2) {
         int var3 = dg.a(-20870, param0);
         int var4 = u.a(param0, (byte) 74);
         int var5 = dg.a(-20870, param1);

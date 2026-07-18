@@ -15,7 +15,7 @@ final class cm extends bo {
         super(param0, param1);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_q = null;
         field_u = null;
         field_r = null;

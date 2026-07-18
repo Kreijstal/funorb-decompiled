@@ -11,7 +11,7 @@ final class td {
     static hi field_f;
     int field_h;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;

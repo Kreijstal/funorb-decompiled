@@ -20,7 +20,7 @@ final class ud extends gn {
     static String field_Z;
     static String[] field_O;
 
-    final static boolean a(int param0, ul param1, int param2) {
+    final static boolean a(int param0, ul param1, int param2, byte param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -218,8 +218,7 @@ final class ud extends gn {
             ui.a(7478, param2);
             lh.a(-30, param2);
             bm.a(30651, param2);
-            int discarded$0 = 0;
-            pg.a();
+            pg.a(false);
             eh.a(-1741);
             f.field_a = 0 - vm.field_hb;
         } catch (RuntimeException runtimeException) {

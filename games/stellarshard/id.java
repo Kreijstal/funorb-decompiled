@@ -117,8 +117,7 @@ class id implements uk, pj {
                       }
                     }
                     var15 = stackIn_19_0;
-                    int discarded$1 = 0;
-                    n.field_i.a(this.a(param0, var14, param4), ((id) this).field_o, ((id) this).field_o >>> 24, param0.field_n + (param2 + param0.field_k) - -((id) this).field_c - -var13.field_b, var13.field_c, var15 + -var14, (byte) 76);
+                    n.field_i.a(this.a(param0, var14, param4, false), ((id) this).field_o, ((id) this).field_o >>> 24, param0.field_n + (param2 + param0.field_k) - -((id) this).field_c - -var13.field_b, var13.field_c, var15 + -var14, (byte) 76);
                     var12++;
                     continue L2;
                   }
@@ -217,8 +216,7 @@ class id implements uk, pj {
                   var7 = var14.a(74, param0);
                   var8 = var13.field_a[var7];
                   var9 = var14.b(param0, -126);
-                  int discarded$1 = 0;
-                  var10 = this.a(param3, var9, param4);
+                  var10 = this.a(param3, var9, param4, false);
                   var11 = ((id) this).a((byte) -64, param3, param2) + Math.max(0, var8.field_b);
                   stackOut_2_0 = ((id) this).a((byte) -117, param3, param2);
                   stackOut_2_1 = this.a((byte) -89, param3);
@@ -324,8 +322,7 @@ class id implements uk, pj {
         try {
           L0: {
             if (param0 == 0) {
-              int discarded$2 = 0;
-              stackOut_3_0 = this.a(param1, 0, param2);
+              stackOut_3_0 = this.a(param1, 0, param2, false);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -393,12 +390,11 @@ class id implements uk, pj {
               if (param1 == 28361) {
                 break L1;
               } else {
-                int discarded$4 = 1;
-                id.a();
+                id.a(true);
                 break L1;
               }
             }
-            vk discarded$5 = ((id) this).b(param0, (byte) 125);
+            vk discarded$2 = ((id) this).b(param0, (byte) 125);
             stackOut_2_0 = param0.field_r.a(17201) - -((id) this).field_c + ((id) this).field_k;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -696,15 +692,13 @@ class id implements uk, pj {
                     if (var12 != 3) {
                       if (1 != var12) {
                         if (2 == var12) {
-                          int discarded$6 = 0;
-                          ((id) this).field_a.b(((id) this).b(param6, 0), this.a(param6, param4, param3) - -var9_int, var11 + this.a(param5, param6, (byte) -127, param2), param7, param1);
+                          ((id) this).field_a.b(((id) this).b(param6, 0), this.a(param6, param4, param3, false) - -var9_int, var11 + this.a(param5, param6, (byte) -127, param2), param7, param1);
                           break L1;
                         } else {
                           break L1;
                         }
                       } else {
-                        int discarded$7 = 0;
-                        ((id) this).field_a.c(((id) this).b(param6, 0), this.a(param6, param4, param3) + (var9_int >> 1), var11 + this.a(param5, param6, (byte) -127, param2), param7, param1);
+                        ((id) this).field_a.c(((id) this).b(param6, 0), this.a(param6, param4, param3, false) + (var9_int >> 1), var11 + this.a(param5, param6, (byte) -127, param2), param7, param1);
                         break L1;
                       }
                     } else {
@@ -714,12 +708,10 @@ class id implements uk, pj {
                     break L4;
                   }
                 }
-                int discarded$8 = 0;
-                ((id) this).field_a.a(((id) this).b(param6, param0), this.a(param6, param4, param3), this.a(param5, param6, (byte) -128, param2) + var11, param7, param1);
+                ((id) this).field_a.a(((id) this).b(param6, param0), this.a(param6, param4, param3, false), this.a(param5, param6, (byte) -128, param2) + var11, param7, param1);
                 break L1;
               } else {
-                int discarded$9 = 0;
-                int discarded$10 = ((id) this).field_a.a(((id) this).b(param6, 0), this.a(param6, param4, param3), this.a(param5, param6, (byte) -126, param2), var9_int, var10, param7, param1, ((id) this).field_h, ((id) this).field_d, ((id) this).field_j);
+                int discarded$2 = ((id) this).field_a.a(((id) this).b(param6, 0), this.a(param6, param4, param3, false), this.a(param5, param6, (byte) -126, param2), var9_int, var10, param7, param1, ((id) this).field_h, ((id) this).field_d, ((id) this).field_j);
                 break L1;
               }
             }
@@ -728,7 +720,7 @@ class id implements uk, pj {
               break L0;
             } else {
               var14 = null;
-              int discarded$11 = this.a((byte) 2, (rj) null);
+              int discarded$3 = this.a((byte) 2, (rj) null);
               return;
             }
           }
@@ -914,7 +906,7 @@ class id implements uk, pj {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;
@@ -998,7 +990,7 @@ class id implements uk, pj {
         }
     }
 
-    private final int a(rj param0, int param1, int param2) {
+    private final int a(rj param0, int param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

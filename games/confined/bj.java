@@ -15,7 +15,7 @@ final class bj extends rk {
     static int field_q;
     static boolean field_m;
 
-    final static ce a(String param0, mi param1, mi param2, String param3) {
+    final static ce a(String param0, mi param1, mi param2, String param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -222,8 +222,7 @@ final class bj extends rk {
         try {
           L0: {
             L1: {
-              int discarded$8 = 1;
-              if (pm.a(param1) == null) {
+              if (pm.a(param1, true) == null) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L1;
@@ -363,7 +362,7 @@ final class bj extends rk {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_w = null;
     }
 

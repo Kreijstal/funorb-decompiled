@@ -5,7 +5,7 @@ final class kd {
     static iw field_b;
     static int[][] field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }
@@ -301,7 +301,7 @@ final class kd {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         ut.field_o.a(120, param0);
     }
 

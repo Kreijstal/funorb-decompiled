@@ -104,7 +104,7 @@ final class s extends am {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         pe var3_ref_pe = null;
@@ -195,7 +195,7 @@ final class s extends am {
         }
     }
 
-    final static int a(bn param0, bn param1) {
+    final static int a(bn param0, bn param1, byte param2) {
         RuntimeException var3 = null;
         Object var4 = null;
         int stackIn_1_0 = 0;

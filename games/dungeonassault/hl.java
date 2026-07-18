@@ -74,7 +74,7 @@ abstract class hl {
         }
     }
 
-    final static int a(int param0, CharSequence param1) {
+    final static int a(int param0, CharSequence param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -104,8 +104,7 @@ abstract class hl {
                 break L1;
               }
             }
-            int discarded$2 = 3703;
-            stackOut_2_0 = mm.a(param1, true, 16);
+            stackOut_2_0 = mm.a(param1, true, 16, 3703);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

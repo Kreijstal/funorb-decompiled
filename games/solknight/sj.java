@@ -121,11 +121,11 @@ final class sj implements j {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.removeMouseListener((java.awt.event.MouseListener) (Object) ee.field_j);
             param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ee.field_j);
@@ -136,7 +136,7 @@ final class sj implements j {
         }
     }
 
-    final static void a(int param0, bl param1) {
+    final static void a(int param0, bl param1, int param2) {
         try {
             m.field_h.a((gg) (Object) param1, -7044);
             la.a(0, 4, param1);
@@ -145,7 +145,7 @@ final class sj implements j {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

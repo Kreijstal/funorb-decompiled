@@ -109,7 +109,7 @@ final class ag implements Iterator {
         return ((ag) this).field_g != ((ag) this).field_f.field_c;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_h = null;
         field_e = null;
@@ -124,8 +124,7 @@ final class ag implements Iterator {
         } else {
             var2 = (Object) (Object) new wh();
         }
-        int discarded$0 = -121;
-        nl.a(new lg((wa) var2));
+        nl.a(new lg((wa) var2), (byte) -121);
     }
 
     final static void a(int param0, boolean param1, bo param2) {

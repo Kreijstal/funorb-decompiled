@@ -37,7 +37,7 @@ final class bl extends l {
     String[] field_k;
     private int field_s;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_N = null;
         field_r = null;
         field_q = null;
@@ -45,7 +45,7 @@ final class bl extends l {
         field_o = null;
     }
 
-    final static ug c() {
+    final static ug c(boolean param0) {
         return (ug) (Object) new nl();
     }
 
@@ -53,13 +53,14 @@ final class bl extends l {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         String[] var10 = null;
         String[] var11 = null;
+        String var12 = null;
+        String var13 = null;
         int stackIn_28_0 = 0;
         int stackIn_31_0 = 0;
         String[] stackIn_37_0 = null;
@@ -489,9 +490,8 @@ final class bl extends l {
                         break L25;
                       } else {
                         L28: {
-                          var6_ref_String = var11[var5];
-                          int discarded$4 = 0;
-                          var7 = uc.a(var6_ref_String, false);
+                          var13 = var11[var5];
+                          var7 = uc.a(var13, false, false);
                           if (var7 <= var3_int) {
                             break L28;
                           } else {
@@ -504,9 +504,8 @@ final class bl extends l {
                     }
                   } else {
                     L29: {
-                      var6_ref_String = var10[var5];
-                      int discarded$5 = 0;
-                      var7 = uc.a(var6_ref_String, false);
+                      var12 = var10[var5];
+                      var7 = uc.a(var12, false, false);
                       if (var7 <= var3_int) {
                         break L29;
                       } else {
@@ -550,8 +549,7 @@ final class bl extends l {
                         var5 = var5 + gd.field_k;
                         break L33;
                       } else {
-                        int discarded$6 = 0;
-                        var7 = uc.a(mn.field_q[var4], true);
+                        var7 = uc.a(mn.field_q[var4], true, false);
                         var8 = -(var7 >> 1) + vm.field_c;
                         var5 = var5 + al.field_z;
                         vi.field_C[var4] = new int[4];
@@ -611,8 +609,7 @@ final class bl extends l {
               }
             }
             L36: {
-              int discarded$7 = 0;
-              var5 = uc.a(stackIn_89_0, stackIn_89_1 != 0);
+              var5 = uc.a(stackIn_89_0, stackIn_89_1 != 0, false);
               if (var3_int < var5) {
                 var3_int = var5;
                 break L36;

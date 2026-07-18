@@ -83,7 +83,7 @@ class vk extends hb implements vo {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_sb = null;
         field_mb = null;
         field_ub = null;
@@ -118,13 +118,11 @@ class vk extends hb implements vo {
               if (!((vk) this).field_ob) {
                 return;
               } else {
-                int discarded$8 = 20700;
-                a.l();
+                a.l(20700);
                 return;
               }
             } else {
-              int discarded$9 = -102;
-              m.a();
+              m.a((byte) -102);
               return;
             }
           } else {
@@ -134,13 +132,11 @@ class vk extends hb implements vo {
               if (!((vk) this).field_ob) {
                 return;
               } else {
-                int discarded$10 = 20700;
-                a.l();
+                a.l(20700);
                 return;
               }
             } else {
-              int discarded$11 = -102;
-              m.a();
+              m.a((byte) -102);
               return;
             }
           }

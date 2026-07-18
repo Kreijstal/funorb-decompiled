@@ -251,7 +251,7 @@ final class lo extends sd {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_A = null;
     }
 

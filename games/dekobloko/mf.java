@@ -111,7 +111,7 @@ final class mf extends oe implements vn {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -703,7 +703,7 @@ final class mf extends oe implements vn {
         var2.a(true, am.b(112));
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_O = null;
         field_S = null;
         field_V = null;

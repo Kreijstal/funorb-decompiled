@@ -8,7 +8,7 @@ final class wi {
     private int[] field_e;
     static int[] field_a;
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;

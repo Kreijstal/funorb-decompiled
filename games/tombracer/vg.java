@@ -32,7 +32,7 @@ class vg {
         field_b = null;
     }
 
-    final static void q() {
+    final static void q(int param0) {
         Object var2 = null;
         pr.a(0, faa.field_g, (String) null);
     }

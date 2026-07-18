@@ -125,8 +125,7 @@ final class lg {
                   break L5;
                 }
               }
-              int discarded$2 = -101;
-              ef.a(param0);
+              ef.a(param0, (byte) -101);
               break L0;
             }
           }

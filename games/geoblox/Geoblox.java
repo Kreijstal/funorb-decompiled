@@ -11,7 +11,7 @@ public final class Geoblox extends wf {
     static qg field_B;
     public static int field_C;
 
-    private final void n() {
+    private final void n(int param0) {
         if (ll.field_f.a(0)) {
             if (!(ll.field_f.a("sports", (byte) -126))) {
                 return;
@@ -30,16 +30,14 @@ public final class Geoblox extends wf {
         if (param0 != 1) {
             this.h(true);
         }
-        int discarded$4 = 122;
-        me.b();
+        me.b(122);
         if (!(vl.field_n == null)) {
             vl.field_n.a(0, ka.field_i);
         }
-        int discarded$5 = 124;
-        pc.a();
+        pc.a((byte) 124);
     }
 
-    private final boolean o() {
+    private final boolean o(int param0) {
         int var2 = 0;
         dm[] var12 = null;
         int var4 = 0;
@@ -90,8 +88,7 @@ public final class Geoblox extends wf {
                     dd.field_G.field_K[1] = new int[var2];
                     sf.a(dd.field_G.field_K[0], 0, dd.field_G.field_K[1], 0, var2);
                     dd.field_G.field_K[1][wf.field_p] = 16777215;
-                    int discarded$0 = 0;
-                    var12 = wj.a("geoms", "", ll.field_f);
+                    var12 = wj.a("geoms", "", ll.field_f, 0);
                     var4 = -1;
                     for (var5_int = 0; ~var12.length < ~var5_int; var5_int++) {
                         var6_int = var5_int % 7;
@@ -110,8 +107,7 @@ public final class Geoblox extends wf {
                             var12[var5_int].b(0, 0, jg.field_f[var4][var9]);
                         }
                     }
-                    int discarded$1 = 0;
-                    var13 = wj.a("amorphic", "", ll.field_f);
+                    var13 = wj.a("amorphic", "", ll.field_f, 0);
                     for (var4 = 0; var4 < 7; var4++) {
                         for (var5_int = 0; var5_int < 7; var5_int++) {
                             for (var6_int = 0; ~var6_int > ~var13.length; var6_int++) {
@@ -124,20 +120,14 @@ public final class Geoblox extends wf {
                     }
                     sh.field_y.a(255);
                     fi.field_d = gi.a(ii.field_k, 1, ll.field_f, "small_font", "");
-                    int discarded$2 = 0;
-                    fc.field_g = wj.a("black", "", ll.field_f);
-                    int discarded$3 = 0;
-                    hg.field_b = wj.a("black_implode", "", ll.field_f);
-                    int discarded$4 = 0;
-                    hb.field_d = wj.a("silver", "", ll.field_f);
-                    int discarded$5 = 0;
-                    ej.field_a = wj.a("amorph_crack", "", ll.field_f);
+                    fc.field_g = wj.a("black", "", ll.field_f, 0);
+                    hg.field_b = wj.a("black_implode", "", ll.field_f, 0);
+                    hb.field_d = wj.a("silver", "", ll.field_f, 0);
+                    ej.field_a = wj.a("amorph_crack", "", ll.field_f, 0);
                     i.field_a = ug.a("player_back", ll.field_f, (byte) -78, "");
-                    int discarded$6 = 0;
-                    var5 = wj.a("player_eyes", "", ll.field_f);
+                    var5 = wj.a("player_eyes", "", ll.field_f, 0);
                     if (da.a(0, 125)) {
-                        int discarded$7 = 0;
-                        var5 = wj.a("player_eyes", "halloween", ll.field_f);
+                        var5 = wj.a("player_eyes", "halloween", ll.field_f, 0);
                     }
                     fc.field_b = new dm[var5.length];
                     for (var6_int = 0; var5.length > var6_int; var6_int++) {
@@ -147,11 +137,9 @@ public final class Geoblox extends wf {
                         k.a(0, 0, fc.field_b[var6_int].field_s, -27085, fc.field_b[var6_int].field_m);
                         fc.field_b[var6_int].d();
                     }
-                    int discarded$8 = 0;
-                    var6 = wj.a("player_mouth", "", ll.field_f);
+                    var6 = wj.a("player_mouth", "", ll.field_f, 0);
                     if (da.a(0, 95)) {
-                        int discarded$9 = 0;
-                        var6 = wj.a("player_mouth", "halloween", ll.field_f);
+                        var6 = wj.a("player_mouth", "halloween", ll.field_f, 0);
                     }
                     vh.field_H = new dm[var6.length];
                     for (var7_int = 0; ~var6.length < ~var7_int; var7_int++) {
@@ -168,34 +156,23 @@ public final class Geoblox extends wf {
                     ee.field_A = ug.a("menu_background", ll.field_f, (byte) -78, "");
                     vc.field_j = ug.a("menu_foreground", ll.field_f, (byte) -78, "");
                     qj.field_c = ug.a("transition", ll.field_f, (byte) -78, "");
-                    int discarded$10 = 0;
-                    vg.field_f = wj.a("silver_shock", "", ll.field_f);
-                    int discarded$11 = 0;
-                    mi.field_B = wj.a("sparkle", "", ll.field_f);
+                    vg.field_f = wj.a("silver_shock", "", ll.field_f, 0);
+                    mi.field_B = wj.a("sparkle", "", ll.field_f, 0);
                     for (var7_int = 0; ~mi.field_B.length < ~var7_int; var7_int++) {
                         mi.field_B[var7_int].g(1);
                     }
-                    int discarded$12 = 0;
-                    vj.field_a = wj.a("bang", "", ll.field_f);
-                    int discarded$13 = 0;
-                    eg.field_q = wj.a("bonus_glow", "", ll.field_f);
+                    vj.field_a = wj.a("bang", "", ll.field_f, 0);
+                    eg.field_q = wj.a("bonus_glow", "", ll.field_f, 0);
                     pk.field_k = ug.a("bubble", ll.field_f, (byte) -78, "");
                     k.field_a = ug.a("pop", ll.field_f, (byte) -78, "");
-                    int discarded$14 = 0;
-                    eb.field_g = wj.a("box_mouse", "", ll.field_f);
-                    int discarded$15 = 0;
-                    vf.field_H = wj.a("cry_begin", "", ll.field_f);
-                    int discarded$16 = 0;
-                    ok.field_a = wj.a("cry_middle", "", ll.field_f);
-                    int discarded$17 = 0;
-                    ld.field_b = wj.a("cry_end", "", ll.field_f);
+                    eb.field_g = wj.a("box_mouse", "", ll.field_f, 0);
+                    vf.field_H = wj.a("cry_begin", "", ll.field_f, 0);
+                    ok.field_a = wj.a("cry_middle", "", ll.field_f, 0);
+                    ld.field_b = wj.a("cry_end", "", ll.field_f, 0);
                     if (!(!da.a(0, 110))) {
-                        int discarded$18 = 0;
-                        vf.field_H = wj.a("cry_begin", "halloween", ll.field_f);
-                        int discarded$19 = 0;
-                        ok.field_a = wj.a("cry_middle", "halloween", ll.field_f);
-                        int discarded$20 = 0;
-                        ld.field_b = wj.a("cry_end", "halloween", ll.field_f);
+                        vf.field_H = wj.a("cry_begin", "halloween", ll.field_f, 0);
+                        ok.field_a = wj.a("cry_middle", "halloween", ll.field_f, 0);
+                        ld.field_b = wj.a("cry_end", "halloween", ll.field_f, 0);
                     }
                     var7 = new na[8];
                     var7[0] = jg.a(ll.field_f, 1, "", "keyboard_left");
@@ -243,18 +220,14 @@ public final class Geoblox extends wf {
                     lj.field_d = ug.a("box_sml", ll.field_f, (byte) -78, "");
                     g.field_i = ug.a("box_count", ll.field_f, (byte) -78, "");
                     vh.field_G = ug.a("box_lgr", ll.field_f, (byte) -78, "");
-                    int discarded$21 = 0;
-                    tl.field_r = wj.a("intro_faces", "", ll.field_f);
+                    tl.field_r = wj.a("intro_faces", "", ll.field_f, 0);
                     if (da.a(0, -105)) {
-                        int discarded$22 = 0;
-                        tl.field_r = wj.a("intro_faces", "halloween", ll.field_f);
+                        tl.field_r = wj.a("intro_faces", "halloween", ll.field_f, 0);
                     }
-                    int discarded$23 = 0;
-                    qh.field_O = wj.a("intro_geoms", "", ll.field_f);
-                    int discarded$24 = 0;
-                    sl.field_f = wj.a("achievements", "", ll.field_f);
+                    qh.field_O = wj.a("intro_geoms", "", ll.field_f, 0);
+                    sl.field_f = wj.a("achievements", "", ll.field_f, 0);
                     am.field_b = ug.a("unachieved", ki.field_b, (byte) -78, "basic");
-                    dm discarded$25 = ug.a("locked", ki.field_b, (byte) -78, "basic");
+                    dm discarded$0 = ug.a("locked", ki.field_b, (byte) -78, "basic");
                     uk.field_m = ug.a("orbcoin", ki.field_b, (byte) -78, "basic");
                     c.field_ab = 1;
                     cd.a((byte) 79);
@@ -267,12 +240,11 @@ public final class Geoblox extends wf {
         }
         lc.a(uj.field_a, -2, 100.0f);
         ((Geoblox) this).a(25853);
-        int discarded$26 = 9313;
-        qg.b();
+        qg.b(9313);
         return true;
     }
 
-    private final boolean g() {
+    private final boolean g(boolean param0) {
         if (ef.field_e) {
           return true;
         } else {
@@ -337,8 +309,7 @@ public final class Geoblox extends wf {
                                                             }
                                                           }
                                                         }
-                                                        int discarded$8 = 1;
-                                                        lc.a(gf.a(s.field_F, ll.field_f, "halloween", uj.field_c), -2, 45.0f);
+                                                        lc.a(gf.a(s.field_F, ll.field_f, "halloween", uj.field_c, true), -2, 45.0f);
                                                         return false;
                                                       }
                                                     }
@@ -353,26 +324,22 @@ public final class Geoblox extends wf {
                                                         }
                                                       }
                                                     }
-                                                    int discarded$9 = 1;
-                                                    lc.a(gf.a(ff.field_l, ki.field_b, "basic", wi.field_F), -2, 50.0f);
+                                                    lc.a(gf.a(ff.field_l, ki.field_b, "basic", wi.field_F, true), -2, 50.0f);
                                                     return false;
                                                   }
                                                 }
                                               }
-                                              int discarded$10 = 1;
-                                              lc.a(gf.a(ff.field_l, ll.field_f, "sun", wi.field_F), -2, 45.0f);
+                                              lc.a(gf.a(ff.field_l, ll.field_f, "sun", wi.field_F, true), -2, 45.0f);
                                               return false;
                                             }
                                           }
                                         }
-                                        int discarded$11 = 1;
-                                        lc.a(gf.a(ff.field_l, ll.field_f, "", wi.field_F), -2, 45.0f);
+                                        lc.a(gf.a(ff.field_l, ll.field_f, "", wi.field_F, true), -2, 45.0f);
                                         return false;
                                       }
                                     }
                                   }
-                                  int discarded$12 = 1;
-                                  lc.a(gf.a(ik.field_b, ii.field_k, "", nb.field_a), -2, 35.0f);
+                                  lc.a(gf.a(ik.field_b, ii.field_k, "", nb.field_a, true), -2, 35.0f);
                                   return false;
                                 } else {
                                   break L3;
@@ -386,20 +353,17 @@ public final class Geoblox extends wf {
                           }
                         }
                       }
-                      int discarded$13 = 1;
-                      lc.a(gf.a(ji.field_n, fe.field_a, "", dd.field_F), -2, 15.0f);
+                      lc.a(gf.a(ji.field_n, fe.field_a, "", dd.field_F, true), -2, 15.0f);
                       return false;
                     }
                   }
                 }
-                int discarded$14 = 1;
-                lc.a(gf.a(pa.field_e, ah.field_c, "", ud.field_b), -2, 10.0f);
+                lc.a(gf.a(pa.field_e, ah.field_c, "", ud.field_b, true), -2, 10.0f);
                 return false;
               }
             }
           }
-          int discarded$15 = 1;
-          lc.a(gf.a(pa.field_e, wj.field_F, "", ud.field_b), -2, 5.0f);
+          lc.a(gf.a(pa.field_e, wj.field_F, "", ud.field_b, true), -2, 5.0f);
           return false;
         }
     }
@@ -408,364 +372,239 @@ public final class Geoblox extends wf {
         Geoblox.r(0);
         ch.c((byte) 122);
         kj.b(false);
-        int discarded$0 = 9144;
-        ug.a();
+        ug.a(9144);
         sg.a(-13575);
-        int discarded$1 = -17525;
-        hg.a();
+        hg.a(-17525);
         ic.a(16424);
-        int discarded$2 = 1;
-        ok.a();
+        ok.a(true);
         wf.g(30344);
-        int discarded$3 = 108;
-        wg.c();
-        int discarded$4 = 31997;
-        wl.a();
-        int discarded$5 = -29313;
-        le.a();
-        int discarded$6 = -42;
-        vk.a();
+        wg.c((byte) 108);
+        wl.a(31997);
+        le.a(-29313);
+        vk.a(-42);
         vb.a();
         rh.b(30261);
-        int discarded$7 = 17062;
-        b.a();
-        int discarded$8 = 105;
-        kb.c();
-        int discarded$9 = 0;
-        qc.d();
-        int discarded$10 = 8192;
-        oa.b();
-        int discarded$11 = -60;
-        ab.a();
+        b.a(17062);
+        kb.c(105);
+        qc.d(0);
+        oa.b(8192);
+        ab.a((byte) -60);
         gf.a(true);
-        int discarded$12 = 45;
-        gg.a();
+        gg.a(45);
         jk.a(param0 ^ 10848);
-        int discarded$13 = 48;
-        ik.a();
+        ik.a(48);
         vd.b(param0 + 59);
-        int discarded$14 = 22059;
-        pg.b();
-        int discarded$15 = -1;
-        lj.a();
+        pg.b(22059);
+        lj.a(-1);
         cl.a(-9474);
         i.a(false);
         cj.b(param0 ^ 78);
-        int discarded$16 = 58;
-        sc.b();
-        int discarded$17 = -127;
-        eb.a();
+        sc.b((byte) 58);
+        eb.a((byte) -127);
         he.a(param0 + 64);
-        int discarded$18 = 1;
-        v.a();
+        v.a(true);
         c.d((byte) 28);
-        int discarded$19 = -17199;
-        gh.i();
-        int discarded$20 = -50;
-        ji.d();
+        gh.i(-17199);
+        ji.d(-50);
         uf.a(param0 ^ 74);
         em.a(86);
-        int discarded$21 = 21888;
-        ba.e();
+        ba.e(21888);
         tf.f(51);
         hf.b((byte) -128);
         fi.a(param0 + -63);
         jb.b();
         ad.c(-1);
-        int discarded$22 = 54;
-        je.a();
+        je.a((byte) 54);
         qk.h();
         tj.a(param0 + 154);
         ud.a(0);
-        int discarded$23 = 50;
-        da.a();
-        int discarded$24 = 114;
-        bm.a();
-        int discarded$25 = -127;
-        fe.c();
-        int discarded$26 = 1;
-        nh.a();
+        da.a(50);
+        bm.a(114);
+        fe.c(-127);
+        nh.a(true);
         eh.a(-6910);
-        int discarded$27 = 1;
-        ld.a();
-        int discarded$28 = 30970;
-        fa.a();
+        ld.a(true);
+        fa.a(30970);
         ng.k(param0 + -33);
-        int discarded$29 = -60;
-        r.r();
-        int discarded$30 = 57;
-        rl.h();
+        r.r(-60);
+        rl.h((byte) 57);
         ei.n(param0 ^ 69);
-        int discarded$31 = -107;
-        f.n();
+        f.n(-107);
         qh.h(0);
         wi.f(1);
         pf.a((byte) -97);
-        int discarded$32 = -85;
-        hi.i();
+        hi.i((byte) -85);
         mb.a(param0 + 63);
         ej.a(-89);
         mj.a(param0 + 168);
         ue.a(true);
-        int discarded$33 = 102;
-        w.a();
+        w.a((byte) 102);
         bl.a(param0 ^ 9769);
         m.a();
         rc.c((byte) -110);
         wh.f(param0 ^ -5558);
-        int discarded$34 = 45;
-        nj.c();
+        nj.c((byte) 45);
         ke.a((byte) -80);
-        int discarded$35 = -103;
-        af.a();
-        int discarded$36 = -8297;
-        te.a();
+        af.a((byte) -103);
+        te.a(-8297);
         qe.a(-8616);
-        int discarded$37 = 85;
-        qg.a();
+        qg.a(85);
         df.a(param0 + 64);
         pk.j(param0 ^ -64);
-        int discarded$38 = -64;
-        ki.a();
-        int discarded$39 = 26;
-        ka.a();
-        int discarded$40 = -88;
-        oh.a();
+        ki.a((byte) -64);
+        ka.a((byte) 26);
+        oh.a((byte) -88);
         wd.b(-10943);
-        int discarded$41 = 104;
-        ja.e();
-        int discarded$42 = 126;
-        kc.a();
-        int discarded$43 = 0;
-        mf.a();
+        ja.e((byte) 104);
+        kc.a(126);
+        mf.a(false);
         ah.a(39);
         fl.a(33);
-        int discarded$44 = 122;
-        kd.a();
-        int discarded$45 = 5366;
-        ri.a();
+        kd.a((byte) 122);
+        ri.a(5366);
         pa.b((byte) 74);
-        int discarded$46 = 81;
-        bh.a();
+        bh.a((byte) 81);
         ec.a(true);
-        int discarded$47 = 0;
-        pj.b();
-        int discarded$48 = 1;
-        vl.b();
-        int discarded$49 = 17348;
-        t.a();
-        int discarded$50 = 104;
-        kh.a();
-        int discarded$51 = -125;
-        ne.b();
-        int discarded$52 = -84;
-        kk.i();
-        int discarded$53 = 118;
-        sd.e();
-        int discarded$54 = 1;
-        bj.b();
-        int discarded$55 = 31735;
-        pb.f();
+        pj.b(false);
+        vl.b(true);
+        t.a(17348);
+        kh.a(104);
+        ne.b((byte) -125);
+        kk.i(-84);
+        sd.e((byte) 118);
+        bj.b(true);
+        pb.f(31735);
         dl.a(true);
         ij.i((byte) -80);
-        int discarded$56 = 1;
-        bk.a();
-        int discarded$57 = 1;
-        ff.a();
+        bk.a(true);
+        ff.a(true);
         mh.c();
         ua.a();
-        int discarded$58 = 126;
-        dc.b();
-        int discarded$59 = 115;
-        nf.b();
-        int discarded$60 = 31;
-        lb.a();
-        int discarded$61 = -112;
-        rb.a();
-        int discarded$62 = -126;
-        fc.a();
+        dc.b(126);
+        nf.b((byte) 115);
+        lb.a(31);
+        rb.a((byte) -112);
+        fc.a((byte) -126);
         nb.a(-102);
         ak.a(param0 ^ 30613);
         kf.b(param0 + -15583);
         tc.a(true);
-        int discarded$63 = 0;
-        mi.b();
-        int discarded$64 = 1;
-        vg.a();
+        mi.b(false);
+        vg.a(true);
         am.a((byte) 49);
         oj.a(-87);
         tb.a();
-        int discarded$65 = 0;
-        eg.b();
-        int discarded$66 = -108;
-        oi.a();
-        int discarded$67 = -128;
-        ek.a();
-        int discarded$68 = 1;
-        bi.a();
+        eg.b(false);
+        oi.a((byte) -108);
+        ek.a(-128);
+        bi.a(1);
         rd.a((byte) 94);
         hb.a(param0 ^ -64);
-        int discarded$69 = -89;
-        jf.b();
-        int discarded$70 = -5927;
-        el.b();
+        jf.b((byte) -89);
+        el.b(-5927);
         hk.f((byte) -11);
         sh.a((byte) -3);
         oe.j(89);
-        int discarded$71 = 256;
-        dd.i();
-        int discarded$72 = 14078;
-        ee.e();
-        int discarded$73 = 79;
-        gb.b();
+        dd.i(256);
+        ee.e(14078);
+        gb.b((byte) 79);
         a.a(param0);
         u.a();
-        int discarded$74 = -113;
-        ul.a();
+        ul.a(-113);
         og.f(111);
-        int discarded$75 = 73;
-        ih.a();
-        int discarded$76 = 107;
-        di.a();
-        int discarded$77 = 126;
-        jj.a();
-        int discarded$78 = 95;
-        wb.a();
-        int discarded$79 = -30;
-        qa.a();
+        ih.a((byte) 73);
+        di.a((byte) 107);
+        jj.a(126);
+        wb.a((byte) 95);
+        qa.a((byte) -30);
         kg.e((byte) 77);
-        int discarded$80 = 0;
-        sb.b();
-        int discarded$81 = -97;
-        vj.a();
-        int discarded$82 = 16712207;
-        jg.c();
-        int discarded$83 = -20152;
-        bd.b();
+        sb.b(false);
+        vj.a(-97);
+        jg.c(16712207);
+        bd.b(-20152);
         cm.a(false);
-        int discarded$84 = -117;
-        bf.c();
+        bf.c((byte) -117);
         rj.a(param0 ^ -33);
-        int discarded$85 = 1;
-        id.b();
+        id.b(true);
         md.a((byte) 40);
-        int discarded$86 = 0;
-        li.a();
-        int discarded$87 = 0;
-        va.a();
-        int discarded$88 = 102;
-        ge.b();
+        li.a(false);
+        va.a(0);
+        ge.b(102);
         ed.a();
         cg.c((byte) -120);
-        int discarded$89 = -52;
-        hd.f();
+        hd.f((byte) -52);
         hc.k(-243);
-        int discarded$90 = -15;
-        dj.l();
+        dj.l((byte) -15);
         qf.m(param0 ^ -320);
         hl.f(407213000);
         vh.b(true);
-        int discarded$91 = 0;
-        vf.h();
-        int discarded$92 = -116;
-        td.f();
-        int discarded$93 = 24033;
-        pi.j();
-        int discarded$94 = -75;
-        vi.f();
+        vf.h(0);
+        td.f(-116);
+        pi.j(24033);
+        vi.f(-75);
         q.f(param0 + 65);
-        int discarded$95 = -43;
-        jc.a();
+        jc.a(-43);
         s.b(false);
-        int discarded$96 = 0;
-        qb.f();
-        int discarded$97 = 0;
-        ol.f();
+        qb.f(0);
+        ol.f(0);
         ll.a(param0 + 71);
-        int discarded$98 = -87;
-        vc.b();
+        vc.b((byte) -87);
         l.b(param0 ^ 47);
-        int discarded$99 = 27;
-        sj.a();
-        int discarded$100 = -113;
-        la.g();
+        sj.a(27);
+        la.g((byte) -113);
         fk.f(param0 + 14576);
-        int discarded$101 = -113;
-        ck.a();
+        ck.a(-113);
         gi.a(param0 ^ 63);
         ra.a(param0 + 63);
-        int discarded$102 = -111;
-        fj.e();
+        fj.e(-111);
         gj.h(-1);
-        int discarded$103 = 1353;
-        cd.e();
+        cd.e(1353);
         ub.a();
-        int discarded$104 = -23;
-        qj.a();
+        qj.a((byte) -23);
         k.b(0);
-        int discarded$105 = 101;
-        ef.a();
+        ef.a((byte) 101);
         ai.b(46695);
-        int discarded$106 = 112;
-        ph.a();
+        ph.a((byte) 112);
         ml.b(16777215);
         fh.a(1);
         ac.a((byte) 68);
-        int discarded$107 = 0;
-        uh.c();
+        uh.c(0);
         oc.a(true);
-        int discarded$108 = -60;
-        wj.f();
+        wj.f((byte) -60);
         j.f((byte) -128);
-        int discarded$109 = 127;
-        re.b();
-        int discarded$110 = 122;
-        ii.a();
-        int discarded$111 = 102;
-        sl.a();
+        re.b(127);
+        ii.a(122);
+        sl.a(102);
         gk.a(param0 ^ -64);
         ni.a((byte) -113);
-        int discarded$112 = 59;
-        qi.c();
+        qi.c(59);
         p.b(param0 ^ 25);
-        int discarded$113 = -92;
-        od.a();
+        od.a((byte) -92);
         lf.b(8221);
-        int discarded$114 = -109;
-        th.d();
-        int discarded$115 = -17226;
-        nk.b();
-        int discarded$116 = -53;
-        uj.a();
+        th.d((byte) -109);
+        nk.b(-17226);
+        uj.a(-53);
         tl.b(param0 ^ -6501);
-        int discarded$117 = 1000;
-        ea.b();
+        ea.b(1000);
         se.b(param0 ^ -65);
-        int discarded$118 = 0;
-        ca.b();
-        int discarded$119 = 0;
-        si.a();
+        ca.b(false);
+        si.a(false);
         lk.a((byte) 0);
-        int discarded$120 = -40;
-        me.c();
-        int discarded$121 = 113;
-        uk.d();
+        me.c((byte) -40);
+        uk.d((byte) 113);
         g.g(param0 + -51);
         ag.g(param0 + -22);
         mk.c((byte) -9);
-        int discarded$122 = -48;
-        cf.g();
+        cf.g(-48);
         n.g(param0 + 64);
-        int discarded$123 = 0;
-        hh.a();
-        int discarded$124 = 1;
-        fb.b();
+        hh.a(false);
+        fb.b(true);
         lh.b(-481);
         ib.a(true);
         ((Geoblox) this).field_n = null;
     }
 
-    private final void i() {
+    private final void i(byte param0) {
         if (ll.field_f.a(0)) {
             if (!(ll.field_f.a("germs", (byte) -126))) {
                 return;
@@ -887,8 +726,7 @@ public final class Geoblox extends wf {
         int stackOut_62_0 = 0;
         int stackOut_61_0 = 0;
         var3 = field_C;
-        int discarded$20 = 78;
-        ng.h();
+        ng.h(78);
         if (!param0) {
           L0: {
             if (vl.field_n == null) {
@@ -952,21 +790,17 @@ public final class Geoblox extends wf {
           L4: while (true) {
             if (!sh.a((byte) -118, pb.field_m)) {
               L5: {
-                int discarded$21 = 255;
-                if (!bl.b()) {
+                if (!bl.b(255)) {
                   L6: {
                     if (!ib.field_a) {
                       L7: {
                         oj.a(vc.field_i, (byte) -98);
-                        int discarded$22 = 0;
-                        if (!this.g()) {
+                        if (!this.g(false)) {
                           break L7;
                         } else {
-                          int discarded$23 = 25869;
-                          if (this.o()) {
+                          if (this.o(25869)) {
                             ib.field_a = true;
-                            int discarded$24 = 82;
-                            this.m();
+                            this.m(82);
                             break L6;
                           } else {
                             break L7;
@@ -981,8 +815,7 @@ public final class Geoblox extends wf {
                         break L6;
                       } else {
                         L8: {
-                          int discarded$25 = 47;
-                          if (!dd.a()) {
+                          if (!dd.a((byte) 47)) {
                             break L8;
                           } else {
                             if (!jk.field_a) {
@@ -998,8 +831,7 @@ public final class Geoblox extends wf {
                                 }
                               }
                               L10: {
-                                int discarded$26 = 0;
-                                var2 = sl.a(stackIn_91_0 != 0, (wf) this);
+                                var2 = sl.a(stackIn_91_0 != 0, (wf) this, false);
                                 if (var2 != 2364824) {
                                   L11: {
                                     if (var2 == 1) {
@@ -1022,8 +854,7 @@ public final class Geoblox extends wf {
                                     }
                                   }
                                   if (var2 == 2) {
-                                    int discarded$27 = 62;
-                                    gf.a(k.c(109));
+                                    gf.a(k.c(109), 62);
                                     break L10;
                                   } else {
                                     break L10;
@@ -1056,34 +887,29 @@ public final class Geoblox extends wf {
                         }
                         L14: {
                           if (!ll.field_g[2]) {
-                            int discarded$28 = 7;
-                            this.p();
+                            this.p(7);
                             break L14;
                           } else {
                             if (ll.field_g[0]) {
                               if (ll.field_g[3]) {
                                 if (ll.field_g[6]) {
                                   if (!ll.field_g[5]) {
-                                    int discarded$29 = 75;
-                                    this.n();
+                                    this.n(75);
                                     break L14;
                                   } else {
                                     if (ll.field_g[4]) {
                                       break L14;
                                     } else {
-                                      int discarded$30 = 2;
-                                      this.q();
+                                      this.q(2);
                                       break L14;
                                     }
                                   }
                                 } else {
-                                  int discarded$31 = 0;
-                                  this.e();
+                                  this.e(false);
                                   break L14;
                                 }
                               } else {
-                                int discarded$32 = -117;
-                                this.i();
+                                this.i((byte) -117);
                                 break L14;
                               }
                             } else {
@@ -1183,9 +1009,9 @@ public final class Geoblox extends wf {
                               break L22;
                             }
                           }
-                          int fieldTemp$33 = nf.field_A + 1;
+                          int fieldTemp$2 = nf.field_A + 1;
                           nf.field_A = nf.field_A + 1;
-                          if (fieldTemp$33 != 160) {
+                          if (fieldTemp$2 != 160) {
                             break L6;
                           } else {
                             L23: {
@@ -1198,12 +1024,10 @@ public final class Geoblox extends wf {
                                   } else {
                                     L25: {
                                       if (cd.field_j != 0) {
-                                        int discarded$34 = -106;
-                                        kb.a();
+                                        kb.a(-106);
                                         break L25;
                                       } else {
-                                        int discarded$35 = 118;
-                                        nj.a();
+                                        nj.a((byte) 118);
                                         break L25;
                                       }
                                     }
@@ -1258,8 +1082,7 @@ public final class Geoblox extends wf {
                       }
                     }
                   }
-                  int discarded$36 = -122;
-                  je.c();
+                  je.c((byte) -122);
                   cm.a(-1, 0);
                   if (!sb.a(54)) {
                     break L5;
@@ -1283,12 +1106,10 @@ public final class Geoblox extends wf {
                     }
                   }
                   ((Geoblox) this).h(115);
-                  int discarded$37 = -31456;
-                  if (!fj.f()) {
+                  if (!fj.f(-31456)) {
                     break L5;
                   } else {
-                    int discarded$38 = 0;
-                    boolean discarded$39 = this.g();
+                    boolean discarded$3 = this.g(false);
                     break L5;
                   }
                 }
@@ -1330,8 +1151,7 @@ public final class Geoblox extends wf {
           }
         }
         var2 = stackIn_3_0;
-        int discarded$5 = 255;
-        if (!bl.b()) {
+        if (!bl.b(255)) {
           if (!ib.field_a) {
             fc.a(true, (java.awt.Canvas) var2);
             return;
@@ -1437,14 +1257,12 @@ public final class Geoblox extends wf {
                       break L9;
                     }
                   }
-                  int discarded$6 = 0;
-                  kb.a(stackIn_42_0 != 0);
+                  kb.a(stackIn_42_0 != 0, false);
                   break L8;
                 }
               }
               L10: {
-                int discarded$7 = 0;
-                i.a(0, (byte) 110, (java.awt.Canvas) var2);
+                i.a(0, (byte) 110, (java.awt.Canvas) var2, 0);
                 if (param0 == 25853) {
                   break L10;
                 } else {
@@ -1487,7 +1305,7 @@ public final class Geoblox extends wf {
         }
     }
 
-    private final void q() {
+    private final void q(int param0) {
         if (ll.field_f.a(0)) {
             if (!(ll.field_f.a("baking", (byte) -125))) {
                 return;
@@ -1499,7 +1317,7 @@ public final class Geoblox extends wf {
         }
     }
 
-    private final void e() {
+    private final void e(boolean param0) {
         if (ll.field_f.a(0)) {
             if (!ll.field_f.a("space", (byte) -127)) {
                 return;
@@ -1517,16 +1335,13 @@ public final class Geoblox extends wf {
             ak.field_b = null;
             ih.b(-105);
         }
-        int discarded$0 = -111;
-        int discarded$1 = 1;
-        ll.field_f = je.a(1, true, param0);
+        ll.field_f = je.a(1, true, param0, true, (byte) -111);
         wj.field_F = kk.a(2, (byte) -62);
         ah.field_c = kk.a(3, (byte) -62);
         cd.field_m = kk.a(4, (byte) -62);
         fe.field_a = kk.a(5, (byte) -62);
         ii.field_k = kk.a(6, (byte) -62);
-        int discarded$2 = -84;
-        qe.a(ki.field_b, re.field_i);
+        qe.a(ki.field_b, re.field_i, -84);
     }
 
     final static void a(byte param0, int param1) {
@@ -1665,7 +1480,7 @@ public final class Geoblox extends wf {
         lk.field_f = bm.a(var2 * var4, param0, var5 * var2);
     }
 
-    private final void m() {
+    private final void m(int param0) {
         int var2 = 0;
         int var3 = field_C;
         if (!(og.field_n > 0)) {
@@ -1676,8 +1491,7 @@ public final class Geoblox extends wf {
         }
         ai.field_p = -1;
         tc.field_c = -1;
-        int discarded$0 = 0;
-        vf.f();
+        vf.f(0);
         ne.a((byte) -74);
         gb.field_g = 5997;
         oa.field_a = 4703;
@@ -1687,12 +1501,10 @@ public final class Geoblox extends wf {
         dc.field_a = 0;
         el.field_g = 8801;
         sc.field_f = 3382;
-        int discarded$1 = 20;
-        int discarded$2 = 150;
-        da.b();
+        da.b(150, 20);
     }
 
-    private final void p() {
+    private final void p(int param0) {
         if (ll.field_f.a(0)) {
             if (!(ll.field_f.a("sweets", (byte) -128))) {
                 return;

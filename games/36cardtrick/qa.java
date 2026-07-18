@@ -379,7 +379,7 @@ final class qa {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 
@@ -462,7 +462,7 @@ final class qa {
         return var3;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         try {
             int var2_int = 0;
             param0.addMouseListener((java.awt.event.MouseListener) (Object) wc.field_B);

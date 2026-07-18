@@ -102,7 +102,7 @@ final class cp extends se implements jn, in {
         return stackIn_10_0;
     }
 
-    private final void i() {
+    private final void i(int param0) {
         if (!(this.h(20))) {
             return;
         }
@@ -139,8 +139,7 @@ final class cp extends se implements jn, in {
             L1: {
               if (param2 != ((cp) this).field_W) {
                 if (param2 == ((cp) this).field_M) {
-                  int discarded$2 = 16777215;
-                  this.i();
+                  this.i(16777215);
                   break L1;
                 } else {
                   break L1;
@@ -304,7 +303,7 @@ final class cp extends se implements jn, in {
         ((cp) this).b(0, 0, 28972, 496, var4 + 55 + var3);
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_S = null;
         field_J = null;
         field_P = null;

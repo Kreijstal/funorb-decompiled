@@ -67,8 +67,7 @@ final class la extends ca {
                   L5: {
                     if (10 == param0) {
                       var3_int = 0;
-                      int discarded$2 = 1;
-                      fe.a();
+                      fe.a(true);
                       break L5;
                     } else {
                       break L5;
@@ -151,7 +150,7 @@ final class la extends ca {
         }
     }
 
-    final static boolean a(java.applet.Applet param0) {
+    final static boolean a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -414,7 +413,7 @@ final class la extends ca {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (uj.field_m != null) {
             uj.field_m.h();
             if (eb.field_e == null) {
@@ -651,12 +650,10 @@ final class la extends ca {
     }
 
     final static s b(boolean param0) {
-        int discarded$0 = 93;
-        int discarded$1 = 8;
-        return new s(jm.a(), hm.c());
+        return new s(jm.a((byte) 93), hm.c(8));
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_h = null;
         field_i = null;

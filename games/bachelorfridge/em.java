@@ -221,9 +221,7 @@ final class em extends am implements lja {
                     break L14;
                   } else {
                     L15: {
-                      int discarded$2 = 0;
-                      int discarded$3 = 0;
-                      ic.field_i.a(wja.a(jc.field_r, nfa.field_a), -121, wja.a(gd.field_m, mk.field_p));
+                      ic.field_i.a(wja.a(jc.field_r, nfa.field_a, false), -121, wja.a(gd.field_m, mk.field_p, false));
                       if (!ic.field_i.e(0)) {
                         break L15;
                       } else {
@@ -567,7 +565,7 @@ final class em extends am implements lja {
         }
     }
 
-    private final void n() {
+    private final void n(int param0) {
         if (!((em) this).field_C) {
             return;
         }
@@ -575,7 +573,7 @@ final class em extends am implements lja {
         ((em) this).field_C = false;
     }
 
-    final static boolean d() {
+    final static boolean d(byte param0) {
         return null != wh.field_p;
     }
 
@@ -603,8 +601,7 @@ final class em extends am implements lja {
               if (((em) this).field_U != param1) {
                 break L1;
               } else {
-                int discarded$2 = 0;
-                this.n();
+                this.n(0);
                 break L1;
               }
             }

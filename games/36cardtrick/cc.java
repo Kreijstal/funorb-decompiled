@@ -31,7 +31,7 @@ final class cc {
         return (char)var2;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -104,7 +104,7 @@ final class cc {
         return ei.field_e;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_b = null;
     }

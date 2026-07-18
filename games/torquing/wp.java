@@ -91,7 +91,7 @@ final class wp extends am {
         }
     }
 
-    final static da b() {
+    final static da b(int param0) {
         return new da(of.d((byte) -77), sd.b(2));
     }
 
@@ -186,7 +186,7 @@ final class wp extends am {
         }
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         int var5 = 0;
         int var6 = Torquing.field_u;
         ((wp) this).field_u = new int[1 + ((wp) this).field_x];
@@ -336,8 +336,7 @@ final class wp extends am {
         if (param0 <= 123) {
             ((wp) this).field_s = 91;
         }
-        int discarded$0 = 39;
-        this.g();
+        this.g((byte) 39);
     }
 
     public wp() {

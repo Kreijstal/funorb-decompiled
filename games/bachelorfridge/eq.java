@@ -12,7 +12,7 @@ final class eq {
     static int[] field_c;
     boolean field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_c = null;
         field_b = null;
@@ -186,12 +186,10 @@ final class eq {
             L10: {
               hi.a(stackIn_31_0 != 0, stackIn_31_1);
               if (li.field_m) {
-                int discarded$2 = 73;
-                pka.a(mu.field_d, false);
+                pka.a(mu.field_d, false, (byte) 73);
                 break L10;
               } else {
-                int discarded$3 = 73;
-                pka.a(nu.field_h, false);
+                pka.a(nu.field_h, false, (byte) 73);
                 break L10;
               }
             }

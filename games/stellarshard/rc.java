@@ -16,7 +16,7 @@ final class rc extends ci {
     static int field_m;
     private long field_n;
 
-    private final long b() {
+    private final long b(byte param0) {
         int var8 = 0;
         int var9 = stellarshard.field_B;
         long var2 = System.nanoTime();
@@ -38,7 +38,7 @@ final class rc extends ci {
         return var6 / (long)((rc) this).field_i;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         field_f = null;
         field_e = null;
@@ -94,11 +94,10 @@ final class rc extends ci {
     }
 
     final long b(int param0) {
-        int discarded$0 = 51;
-        ((rc) this).field_n = ((rc) this).field_n + this.b();
+        ((rc) this).field_n = ((rc) this).field_n + this.b((byte) 51);
         if (param0 != 30393) {
-            int discarded$1 = 1;
-            rc.a((String) null, (String) null);
+            Object var3 = null;
+            rc.a((String) null, (String) null, true);
         }
         if (!(~((rc) this).field_g >= ~((rc) this).field_n)) {
             return (-((rc) this).field_n + ((rc) this).field_g) / 1000000L;
@@ -141,9 +140,7 @@ final class rc extends ci {
         String stackOut_17_2 = null;
         var5 = stellarshard.field_B;
         try {
-          int discarded$19 = 3;
-          int discarded$20 = 0;
-          var3 = s.a(param2);
+          var3 = s.a(param2, false, (byte) 3);
           if (var3 != null) {
             stackOut_5_0 = (String) var3;
             stackIn_6_0 = stackOut_5_0;
@@ -152,8 +149,7 @@ final class rc extends ci {
             var4 = 0;
             L0: while (true) {
               if (var4 < param2.length()) {
-                int discarded$21 = -123;
-                if (!b.a(param2.charAt(var4))) {
+                if (!b.a(param2.charAt(var4), (byte) -123)) {
                   stackOut_12_0 = ob.field_d;
                   stackIn_13_0 = stackOut_12_0;
                   return stackIn_13_0;
@@ -198,7 +194,7 @@ final class rc extends ci {
         }
     }
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

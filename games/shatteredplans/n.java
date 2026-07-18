@@ -13,7 +13,7 @@ final class n extends oh {
     static String field_j;
     static qr[] field_n;
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
         field_k = null;
         field_m = null;
@@ -32,7 +32,7 @@ final class n extends oh {
         }
     }
 
-    final static sq a(String param0) {
+    final static sq a(String param0, int param1) {
         sq[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

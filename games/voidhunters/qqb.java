@@ -73,8 +73,7 @@ final class qqb implements ntb {
           L0: {
             L1: {
               var3 = (qqb) (Object) param1;
-              int discarded$2 = 0;
-              var3.field_a = (wna[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) var3.field_a, 1, lm.field_b);
+              var3.field_a = (wna[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) ((qqb) this).field_a, 1, lm.field_b, false);
               if (param0 >= 54) {
                 break L1;
               } else {
@@ -292,7 +291,7 @@ final class qqb implements ntb {
           L0: {
             var4 = -100 / ((22 - param0) / 59);
             var3 = (qqb) (Object) param1;
-            stackOut_0_0 = dn.a((tv[]) (Object) var3.field_a, false, 1, (tv[]) (Object) var3.field_a, -39);
+            stackOut_0_0 = dn.a((tv[]) (Object) var3.field_a, false, 1, (tv[]) (Object) ((qqb) this).field_a, -39);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -667,9 +666,9 @@ final class qqb implements ntb {
             }
             L2: {
               var3 = (qqb) (Object) param0;
-              boolean discarded$2 = tja.a((ntb[]) (Object) var3.field_a, 1, (ntb[]) (Object) var3.field_a, false, 5547);
+              boolean discarded$2 = tja.a((ntb[]) (Object) var3.field_a, 1, (ntb[]) (Object) ((qqb) this).field_a, false, 5547);
               var4 = 0;
-              if (!dn.a((tv[]) (Object) var3.field_a, false, 1, (tv[]) (Object) var3.field_a, -12)) {
+              if (!dn.a((tv[]) (Object) var3.field_a, false, 1, (tv[]) (Object) ((qqb) this).field_a, -12)) {
                 break L2;
               } else {
                 System.out.println("RoundResult[] results has changed. ");

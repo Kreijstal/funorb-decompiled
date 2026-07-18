@@ -120,8 +120,7 @@ class ha extends pc implements ql {
             ((ha) this).g((byte) -75);
             return;
           } else {
-            int discarded$2 = 0;
-            k.a(ii.a(), (byte) -31, "tochangedisplayname.ws");
+            k.a(ii.a(false), (byte) -31, "tochangedisplayname.ws");
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -187,7 +186,7 @@ class ha extends pc implements ql {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_Z = null;
         field_fb = null;
     }
@@ -230,8 +229,7 @@ class ha extends pc implements ql {
                 return;
               }
             } else {
-              int discarded$5 = 1;
-              nc.a();
+              nc.a(1);
               if (param0 == -75) {
                 return;
               } else {

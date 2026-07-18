@@ -268,14 +268,13 @@ final class wi {
         return '_';
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static boolean a(int param0, int param1, int param2, int param3, boolean param4, byte param5, int param6) {
         if (!(!oj.c(-86))) {
             qe.a(15, 13, -40960, param4);
             if (vl.field_m != null) {
                 if (!(!vl.field_m.a(0, 11, param4, 25427, 13))) {
                     param4 = false;
-                    int discarded$0 = 8421504;
-                    wa.m();
+                    wa.m(8421504);
                 }
             }
             ii.a(-31668, 13, param4);
@@ -286,12 +285,11 @@ final class wi {
     }
 
     final static void a(boolean param0) {
-        int discarded$0 = -97;
-        oc.d();
+        oc.d(-97);
         sq.b((byte) 118);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_e = null;
         field_c = null;
@@ -413,7 +411,7 @@ final class wi {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

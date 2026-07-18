@@ -25,8 +25,7 @@ class uh extends gi {
 
     final static he e(int param0) {
         he var1 = new he(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], qa.field_J[0], a.field_e[0], aj.field_a);
-        int discarded$0 = -21;
-        oc.a();
+        oc.a((byte) -21);
         return var1;
     }
 

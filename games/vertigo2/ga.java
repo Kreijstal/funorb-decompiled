@@ -25,7 +25,7 @@ final class ga extends rl {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_ib = null;
         field_jb = null;
         field_hb = null;

@@ -67,14 +67,13 @@ final class bh {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         ed.field_b.b(0);
         int var1 = -118;
         if (kg.field_h.e(255)) {
             return 0;
         }
-        int discarded$0 = -123;
-        return d.d();
+        return d.d((byte) -123);
     }
 
     public static void a(int param0) {

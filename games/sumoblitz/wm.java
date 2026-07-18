@@ -98,7 +98,7 @@ final class wm {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0, int param1) {
         ms var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

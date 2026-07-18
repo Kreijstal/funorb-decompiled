@@ -31,7 +31,7 @@ final class una {
         ((una) this).field_e = param0;
     }
 
-    final static int a(BitSet param0) {
+    final static int a(BitSet param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -58,8 +58,7 @@ final class una {
         try {
           L0: {
             var2_int = ml.a(41);
-            int discarded$2 = 83;
-            var3 = qda.a(param0);
+            var3 = qda.a(param0, 83);
             var4 = aq.a(-5640);
             var5 = var3 * var2_int / var4;
             var5 = Math.min(2 + var5, var2_int);
@@ -100,7 +99,7 @@ final class una {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_m = null;
         field_a = null;
         field_g = null;

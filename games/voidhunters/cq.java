@@ -16,10 +16,10 @@ final class cq extends ksa implements ntb {
             }
             var5 = (cq) (Object) param1;
             var6 = var5;
-            var6.field_g = var5.field_g;
-            var6.field_e = var5.field_e;
-            var6.field_f = var5.field_f;
-            var6.field_d = var5.field_d;
+            var6.field_g = ((cq) this).field_g;
+            var6.field_e = ((cq) this).field_e;
+            var6.field_f = ((cq) this).field_f;
+            var6.field_d = ((cq) this).field_d;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "cq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -140,37 +140,37 @@ final class cq extends ksa implements ntb {
             L1: {
               var5 = (cq) (Object) param0;
               var4 = 0;
-              if (var5.field_f != var5.field_f) {
+              if (((cq) this).field_f != var5.field_f) {
                 var4 = 1;
-                System.out.println("int x has changed. before=" + var5.field_f + ", now=" + var5.field_f);
+                System.out.println("int x has changed. before=" + var5.field_f + ", now=" + ((cq) this).field_f);
                 break L1;
               } else {
                 break L1;
               }
             }
             L2: {
-              if (var5.field_g != var5.field_g) {
+              if (var5.field_g != ((cq) this).field_g) {
                 var4 = 1;
-                System.out.println("int y has changed. before=" + var5.field_g + ", now=" + var5.field_g);
+                System.out.println("int y has changed. before=" + var5.field_g + ", now=" + ((cq) this).field_g);
                 break L2;
               } else {
                 break L2;
               }
             }
             L3: {
-              if (var5.field_e == var5.field_e) {
+              if (var5.field_e == ((cq) this).field_e) {
                 break L3;
               } else {
                 var4 = 1;
-                System.out.println("int width has changed. before=" + var5.field_e + ", now=" + var5.field_e);
+                System.out.println("int width has changed. before=" + var5.field_e + ", now=" + ((cq) this).field_e);
                 break L3;
               }
             }
             L4: {
-              if (var5.field_d == var5.field_d) {
+              if (var5.field_d == ((cq) this).field_d) {
                 break L4;
               } else {
-                System.out.println("int height has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+                System.out.println("int height has changed. before=" + var5.field_d + ", now=" + ((cq) this).field_d);
                 var4 = 1;
                 break L4;
               }
@@ -265,16 +265,16 @@ final class cq extends ksa implements ntb {
               L2: {
                 var3 = (cq) (Object) param1;
                 var4 = 86 % ((param0 - 22) / 59);
-                if (var3.field_f != var3.field_f) {
+                if (((cq) this).field_f != var3.field_f) {
                   break L2;
                 } else {
-                  if (var3.field_g != var3.field_g) {
+                  if (((cq) this).field_g != var3.field_g) {
                     break L2;
                   } else {
-                    if (var3.field_e != var3.field_e) {
+                    if (var3.field_e != ((cq) this).field_e) {
                       break L2;
                     } else {
-                      if (var3.field_d == var3.field_d) {
+                      if (var3.field_d == ((cq) this).field_d) {
                         stackOut_6_0 = 0;
                         stackIn_7_0 = stackOut_6_0;
                         break L1;

@@ -46,15 +46,13 @@ final class ri extends na {
             if (param1 != null) {
               if (param1.length() != 0) {
                 var6 = (CharSequence) (Object) param1;
-                int discarded$4 = 21;
-                var2 = il.a(var6);
+                var2 = il.a(var6, (byte) 21);
                 if (var2 != null) {
                   var3 = (qk) (Object) gl.field_e.a(true, (long)var2.hashCode());
                   L0: while (true) {
                     if (var3 != null) {
                       var7 = (CharSequence) (Object) var3.field_F;
-                      int discarded$5 = 21;
-                      var4 = il.a(var7);
+                      var4 = il.a(var7, (byte) 21);
                       if (!var4.equals((Object) (Object) var2)) {
                         var3 = (qk) (Object) gl.field_e.a((byte) 125);
                         continue L0;
@@ -119,7 +117,7 @@ final class ri extends na {
         return dh.field_V;
     }
 
-    final static void f() {
+    final static void f(int param0) {
         if (!(pg.field_p == null)) {
             je.a((byte) 15, pg.field_p);
         }

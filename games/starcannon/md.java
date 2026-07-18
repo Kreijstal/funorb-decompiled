@@ -8,7 +8,7 @@ final class md {
     static String field_b;
     static int field_a;
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String a(boolean param0, CharSequence param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -160,7 +160,7 @@ final class md {
         return stackIn_31_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

@@ -141,7 +141,7 @@ final class f implements eb {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         ck[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -173,7 +173,7 @@ final class f implements eb {
         }
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, byte param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -259,7 +259,7 @@ final class f implements eb {
         return stackIn_12_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_i = null;

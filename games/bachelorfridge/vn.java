@@ -11,12 +11,10 @@ final class vn extends lka implements mca {
           if (null != ((vn) this).field_h) {
             if (param0 != 16) {
               ((vn) this).field_P = 104;
-              int discarded$4 = 0;
-              ha.a(gd.field_m, mk.field_p - (((vn) this).field_P + -((vn) this).field_p));
+              ha.a(gd.field_m, mk.field_p - (((vn) this).field_P + -((vn) this).field_p), false);
               return ((vn) this).field_h;
             } else {
-              int discarded$5 = 0;
-              ha.a(gd.field_m, mk.field_p - (((vn) this).field_P + -((vn) this).field_p));
+              ha.a(gd.field_m, mk.field_p - (((vn) this).field_P + -((vn) this).field_p), false);
               return ((vn) this).field_h;
             }
           } else {

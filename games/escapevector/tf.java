@@ -320,8 +320,7 @@ final class tf {
             break L2;
           } else {
             if (ch.field_a.b((byte) -18)) {
-              int discarded$3 = 112;
-              ac.b();
+              ac.b(112);
               ma.field_a.field_Jb = true;
               ma.field_a.field_Cb = true;
               ma.field_a.x((byte) 68);
@@ -341,8 +340,7 @@ final class tf {
             if (!ch.field_a.b((byte) -18)) {
               break L3;
             } else {
-              int discarded$4 = 0;
-              ek.a(ch.field_a.field_j);
+              ek.a(ch.field_a.field_j, false);
               return true;
             }
           }
@@ -481,7 +479,7 @@ final class tf {
           if (param1 >= 121) {
             break L15;
           } else {
-            int discarded$5 = this.c((byte) -39);
+            int discarded$1 = this.c((byte) -39);
             break L15;
           }
         }
@@ -1224,9 +1222,7 @@ final class tf {
           }
         }
         md.field_D.a(107);
-        int discarded$2 = 1;
-        int discarded$3 = 1;
-        cf.a(mj.field_b);
+        cf.a(mj.field_b, true, 1);
         mj.field_b.h(5267536);
         mj.field_b.e((-mj.field_b.field_A + 640) / 2, param1);
     }

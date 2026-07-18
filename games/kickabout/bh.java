@@ -132,9 +132,8 @@ final class bh implements Runnable {
         }
     }
 
-    final static void a() {
-        int discarded$0 = -45;
-        fj.a();
+    final static void a(boolean param0) {
+        fj.a(-45);
         qd.b(38, 4);
     }
 
@@ -510,8 +509,7 @@ final class bh implements Runnable {
     private static void $cfr$clinit() {
         field_q = "Loading graphics";
         field_t = "Your search returned no results.";
-        int discarded$0 = -23091;
-        field_f = st.c();
+        field_f = st.c(-23091);
         field_k = -2;
     }
 }

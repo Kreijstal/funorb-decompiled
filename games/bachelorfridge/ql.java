@@ -8,7 +8,7 @@ final class ql extends td {
     static String field_p;
     static String[] field_r;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_q = null;
         field_p = null;
         field_t = null;

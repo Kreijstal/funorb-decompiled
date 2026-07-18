@@ -39,8 +39,7 @@ final class nm extends sj implements vg {
             if (param0 != ((nm) this).field_kb) {
               break L0;
             } else {
-              int discarded$2 = 110;
-              this.m();
+              this.m(110);
               return;
             }
           }
@@ -76,7 +75,7 @@ final class nm extends sj implements vg {
         }
     }
 
-    private final void m() {
+    private final void m(int param0) {
         int var2 = 0;
         if (!((nm) this).field_T) {
             return;
@@ -238,8 +237,7 @@ final class nm extends sj implements vg {
                 if (param1 == of.field_g) {
                   var3 = (Object) (Object) jg.field_b;
                   ((nm) this).field_s = ((nm) this).field_s + 10;
-                  int discarded$25 = 119;
-                  if (!eh.b()) {
+                  if (!eh.b(119)) {
                     break L1;
                   } else {
                     ((nm) this).field_s = ((nm) this).field_s + 20;
@@ -324,7 +322,7 @@ final class nm extends sj implements vg {
         }
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_lb = null;
         field_jb = null;
         field_ib = null;

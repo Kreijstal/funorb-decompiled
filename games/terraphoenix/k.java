@@ -23,7 +23,7 @@ final class k {
         return var2;
     }
 
-    final static void a(int param0, String param1) {
+    final static void a(int param0, String param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_24_0 = null;
@@ -74,8 +74,7 @@ final class k {
                     if (param0 != 10) {
                       break L4;
                     } else {
-                      int discarded$2 = 124;
-                      cm.a();
+                      cm.a((byte) 124);
                       var3_int = 0;
                       break L4;
                     }
@@ -246,7 +245,7 @@ final class k {
         return stackIn_8_0;
     }
 
-    final static fd a() {
+    final static fd a(int param0) {
         if (qb.field_b == null) {
           qb.field_b = new fd(ra.field_l, 20, 0, 0, 0, 11579568, -1, 0, 0, ra.field_l.field_s, -1, 2147483647, true);
           return qb.field_b;

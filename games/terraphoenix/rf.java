@@ -17,7 +17,7 @@ abstract class rf extends vh {
     static rh field_z;
     static String field_q;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_t = null;
         field_s = null;
         field_z = null;

@@ -49,8 +49,7 @@ final class pa extends dg {
                 try {
                   L1: {
                     var3 = new java.net.URL(param0.getCodeBase(), param1);
-                    int discarded$2 = -1;
-                    var3 = fh.a(param0, var3);
+                    var3 = fh.a(param0, var3, -1);
                     bk.a(param0, -25573, var3.toString(), true);
                     break L1;
                   }
@@ -408,8 +407,7 @@ final class pa extends dg {
                       pd.field_l = var9;
                       break L8;
                     } else {
-                      int discarded$3 = -5;
-                      boolean discarded$4 = r.a(ia.b(), (byte) 119);
+                      boolean discarded$1 = r.a(ia.b(-5), (byte) 119);
                       ni.field_f = new Boolean(tg.a(-2, (pb) (Object) rd.field_j));
                       rd.field_j.field_i = 0;
                       break L8;
@@ -487,8 +485,7 @@ final class pa extends dg {
               } else {
                 if (lk.field_w) {
                   L15: {
-                    int discarded$5 = 79;
-                    if (we.a() > 30000L) {
+                    if (we.a((byte) 79) > 30000L) {
                       e.field_a = jf.field_k;
                       break L15;
                     } else {
@@ -596,7 +593,7 @@ final class pa extends dg {
         return stackIn_62_0;
     }
 
-    final static ic a(byte[] param0) {
+    final static ic a(byte[] param0, int param1) {
         ic var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -667,8 +664,7 @@ final class pa extends dg {
     }
 
     pa(ba param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (ci) (Object) dj.b());
-        int discarded$0 = 31959;
+        super(param1, (ci) (Object) dj.b(31959));
         try {
             ((pa) this).field_O = param0;
             ((pa) this).field_P = param1;
@@ -749,7 +745,7 @@ final class pa extends dg {
         return stackIn_3_0 != 0;
     }
 
-    final static void i() {
+    final static void i(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -787,8 +783,7 @@ final class pa extends dg {
                   }
                 } else {
                   if (var2 != 2) {
-                    int discarded$1 = 92;
-                    k.a((Throwable) null, (byte) 70, "A1: " + aj.a());
+                    k.a((Throwable) null, (byte) 70, "A1: " + aj.a((byte) 92));
                     mc.a((byte) -128);
                     break L1;
                   } else {

@@ -274,7 +274,7 @@ final class tg extends kd {
         int var3 = -78 % ((param2 - -61) / 51);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
     }
 

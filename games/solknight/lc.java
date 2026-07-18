@@ -104,7 +104,7 @@ final class lc extends gg {
         return stackIn_10_0 != 0;
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         return og.field_b;
     }
 

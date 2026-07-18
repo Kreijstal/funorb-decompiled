@@ -868,8 +868,8 @@ class ci extends ei {
               if (var23_ref == null) {
                 break L31;
               } else {
-                var23_ref.a(param0, var20 + var23_ref.field_wb, var23_ref.field_ob, param3, var23_ref.field_M, param5, (byte) 76, param7, var23_ref.field_pb, param9, var23_ref.field_U - -var19);
-                var23_ref = (ci) (Object) var23_ref.field_I.a((byte) -110);
+                var23_ref.a(param0, var20 + ((ci) this).field_wb, ((ci) this).field_ob, param3, ((ci) this).field_M, param5, (byte) 76, param7, ((ci) this).field_pb, param9, ((ci) this).field_U - -var19);
+                var23_ref = (ci) (Object) ((ci) this).field_I.a((byte) -110);
                 continue L32;
               }
             }
@@ -999,7 +999,7 @@ class ci extends ei {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_zb = null;
         field_J = null;
         field_x = null;
@@ -1171,7 +1171,7 @@ class ci extends ei {
             while (var4 != null) {
                 var4.field_W = true;
                 var4.h(0);
-                var4 = (ci) (Object) var4.field_I.a(true);
+                var4 = (ci) (Object) ((ci) this).field_I.a(true);
             }
         }
     }
@@ -1187,7 +1187,7 @@ class ci extends ei {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
+        ci var13 = null;
         int var14 = 0;
         Object stackIn_26_0 = null;
         Object stackIn_27_0 = null;
@@ -1220,7 +1220,6 @@ class ci extends ei {
         Object stackOut_39_0 = null;
         int stackOut_39_1 = 0;
         L0: {
-          var13 = null;
           var14 = Chess.field_G;
           if (param5 > 113) {
             break L0;
@@ -1428,13 +1427,13 @@ class ci extends ei {
           if (((ci) this).field_I == null) {
             break L13;
           } else {
-            var13 = (Object) (Object) (ci) (Object) ((ci) this).field_I.b(28937);
+            var13 = (ci) (Object) ((ci) this).field_I.b(28937);
             L14: while (true) {
               if (var13 == null) {
                 break L13;
               } else {
-                ((ci) var13).a(((ci) var13).field_U, param1, ((ci) var13).field_M, ((ci) var13).field_wb, ((ci) var13).field_pb, 127);
-                var13 = (Object) (Object) (ci) (Object) ((ci) var13).field_I.a(true);
+                var13.a(((ci) this).field_U, param1, ((ci) this).field_M, ((ci) this).field_wb, ((ci) this).field_pb, 127);
+                var13 = (ci) (Object) ((ci) this).field_I.a(true);
                 continue L14;
               }
             }
@@ -1449,7 +1448,7 @@ class ci extends ei {
           }
         }
         L16: {
-          if (((ci) var13).field_Db) {
+          if (((ci) this).field_Db) {
             gd.field_e = true;
             break L16;
           } else {
@@ -1458,14 +1457,14 @@ class ci extends ei {
         }
         L17: {
           wb.b(var8, var9, var10, var11);
-          if (((ci) var13).field_kb == 0) {
+          if (((ci) this).field_kb == 0) {
             break L17;
           } else {
-            if (((ci) var13).field_rb) {
+            if (((ci) this).field_rb) {
               L18: {
-                ((ci) this).field_mb = -((ci) var13).field_qb + hn.field_k - param0;
-                ((ci) this).field_V = rf.field_b + (-((ci) var13).field_lb + -param3);
-                if (((ci) var13).field_mb >= 0) {
+                ((ci) this).field_mb = -((ci) this).field_qb + hn.field_k - param0;
+                ((ci) this).field_V = rf.field_b + (-((ci) this).field_lb + -param3);
+                if (((ci) this).field_mb >= 0) {
                   break L18;
                 } else {
                   ((ci) this).field_mb = 0;
@@ -1473,7 +1472,7 @@ class ci extends ei {
                 }
               }
               L19: {
-                if (((ci) var13).field_V >= 0) {
+                if (((ci) this).field_V >= 0) {
                   break L19;
                 } else {
                   ((ci) this).field_V = 0;
@@ -1481,25 +1480,25 @@ class ci extends ei {
                 }
               }
               L20: {
-                if (-((ci) var13).field_M + param2 >= ((ci) var13).field_mb) {
+                if (-((ci) this).field_M + param2 >= ((ci) this).field_mb) {
                   break L20;
                 } else {
-                  ((ci) this).field_mb = param2 + -((ci) var13).field_M;
+                  ((ci) this).field_mb = param2 + -((ci) this).field_M;
                   break L20;
                 }
               }
               L21: {
                 ((ci) this).field_E = 0;
                 ((ci) this).field_vb = 0;
-                ((ci) this).field_U = param0 - -((ci) var13).field_mb;
-                if (((ci) var13).field_V <= -((ci) var13).field_pb + param4) {
+                ((ci) this).field_U = param0 - -((ci) this).field_mb;
+                if (((ci) this).field_V <= -((ci) this).field_pb + param4) {
                   break L21;
                 } else {
-                  ((ci) this).field_V = param4 + -((ci) var13).field_pb;
+                  ((ci) this).field_V = param4 + -((ci) this).field_pb;
                   break L21;
                 }
               }
-              ((ci) this).field_wb = param3 - -((ci) var13).field_V;
+              ((ci) this).field_wb = param3 - -((ci) this).field_V;
               break L17;
             } else {
               break L17;
@@ -1590,9 +1589,9 @@ class ci extends ei {
         return stackIn_7_0;
     }
 
-    final static void j() {
-        int discarded$0 = 0;
-        ld.a(oc.field_o, (String) null);
+    final static void j(int param0) {
+        Object var2 = null;
+        ld.a(oc.field_o, (String) null, 0);
     }
 
     final static boolean f(int param0) {

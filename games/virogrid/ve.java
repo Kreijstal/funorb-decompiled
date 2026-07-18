@@ -159,7 +159,7 @@ final class ve extends qe {
         return stackIn_12_0;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_q = null;
         field_u = null;
         field_v = null;
@@ -191,8 +191,7 @@ final class ve extends qe {
               }
             }
           }
-          int discarded$2 = -107;
-          ii.b();
+          ii.b((byte) -107);
           j.field_l = 11;
           break L0;
         }
@@ -235,8 +234,7 @@ final class ve extends qe {
               }
             }
             L2: {
-              int discarded$10 = 119;
-              if (null != vd.a(param0)) {
+              if (null != vd.a(param0, 119)) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;

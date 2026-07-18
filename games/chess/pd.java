@@ -319,8 +319,7 @@ final class pd extends ci {
                 return false;
             }
             if (vg.field_f == 2) {
-                int discarded$9 = 29712;
-                if (!(kn.a(hd.field_e, tj.field_m))) {
+                if (!(kn.a(hd.field_e, tj.field_m, 29712))) {
                     return false;
                 }
             }
@@ -329,8 +328,7 @@ final class pd extends ci {
                     return false;
                 }
             }
-            int discarded$13 = 0;
-            if (dk.c()) {
+            if (dk.c(false)) {
                 Object var4 = null;
                 ke.a(9822, vg.field_f, hd.field_e, param1, ja.field_i, (String) null);
             }
@@ -339,7 +337,7 @@ final class pd extends ci {
         return false;
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_Ob = null;
         field_Lb = null;
         field_Nb = null;

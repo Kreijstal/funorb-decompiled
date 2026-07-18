@@ -49,8 +49,7 @@ final class sd extends ie {
         h.a(-111, var7);
         int var6 = -5 % ((70 - param3) / 49);
         ((sd) this).field_H.a(0, param1, 0, (byte) -79);
-        int discarded$0 = 92;
-        ia.a();
+        ia.a((byte) 92);
         var7.a(((sd) this).field_z + param2, ((sd) this).field_p + param0, ((sd) this).field_O);
     }
 
@@ -136,8 +135,7 @@ final class sd extends ie {
                         continue L1;
                       } else {
                         var5++;
-                        int discarded$5 = -33;
-                        var8 = na.a((CharSequence) (Object) var7_ref_String);
+                        var8 = na.a((CharSequence) (Object) var7_ref_String, (byte) -33);
                         var4 = var4 + (param2[var8].length() + var6_int + -var5);
                         continue L1;
                       }
@@ -174,10 +172,9 @@ final class sd extends ie {
                         } else {
                           if (62 == param0.charAt(var5)) {
                             var5++;
-                            int discarded$6 = -33;
-                            var10 = na.a((CharSequence) (Object) var9);
-                            StringBuilder discarded$7 = var6.append(param0.substring(var7, var8));
-                            StringBuilder discarded$8 = var6.append(param2[var10]);
+                            var10 = na.a((CharSequence) (Object) var9, (byte) -33);
+                            StringBuilder discarded$3 = var6.append(param0.substring(var7, var8));
+                            StringBuilder discarded$4 = var6.append(param2[var10]);
                             var7 = var5;
                             continue L4;
                           } else {
@@ -187,7 +184,7 @@ final class sd extends ie {
                       }
                     }
                   } else {
-                    StringBuilder discarded$9 = var6.append(param0.substring(var7));
+                    StringBuilder discarded$5 = var6.append(param0.substring(var7));
                     if (param1 > 17) {
                       stackOut_27_0 = var6.toString();
                       stackIn_28_0 = stackOut_27_0;
@@ -260,7 +257,7 @@ final class sd extends ie {
         return stackIn_28_0;
     }
 
-    final static void a(byte param0, rh param1) {
+    final static void a(byte param0, rh param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;

@@ -26,8 +26,7 @@ final class be {
         String stackOut_5_2 = null;
         try {
           if (ha.a(param3, -32180, param1, param0)) {
-            int discarded$2 = 0;
-            return pg.b();
+            return pg.b(0);
           } else {
             return null;
           }
@@ -63,11 +62,11 @@ final class be {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
     }
 
-    final static void a(int param0, java.awt.Canvas param1, byte param2) {
+    final static void a(int param0, java.awt.Canvas param1, byte param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;

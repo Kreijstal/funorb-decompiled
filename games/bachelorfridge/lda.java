@@ -22,7 +22,7 @@ final class lda {
         }
     }
 
-    final static rma a(String param0, int param1) {
+    final static rma a(String param0, int param1, byte param2) {
         dm var3 = null;
         RuntimeException var3_ref = null;
         dm stackIn_1_0 = null;
@@ -233,7 +233,7 @@ final class lda {
         return (String) (Object) stackIn_27_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_d = null;
         field_b = null;

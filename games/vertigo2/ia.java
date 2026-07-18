@@ -240,8 +240,7 @@ final class ia extends rk {
                   mk.field_J.a((li) (Object) param1, false);
                   break L4;
                 } else {
-                  int discarded$3 = 18724;
-                  jn.a((li) (Object) param1, (li) (Object) var2);
+                  jn.a((li) (Object) param1, (li) (Object) var2, 18724);
                   break L4;
                 }
               }
@@ -772,7 +771,7 @@ final class ia extends rk {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_I = null;
         field_H = null;
         field_E = null;

@@ -5,7 +5,7 @@ final class ml {
     static gn field_a;
     static String field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
@@ -16,7 +16,7 @@ final class ml {
         }
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return lb.field_v;
     }
 

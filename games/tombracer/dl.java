@@ -389,7 +389,7 @@ final class dl extends me {
         }
     }
 
-    final static String a(uia param0) {
+    final static String a(uia param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;

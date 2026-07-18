@@ -34,16 +34,16 @@ final class gka extends at {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_r = null;
         field_m = null;
         field_n = null;
     }
 
-    private final void d() {
+    private final void d(int param0) {
     }
 
-    final static rk a(lu param0) {
+    final static rk a(lu param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         rk var3 = null;
@@ -143,8 +143,7 @@ final class gka extends at {
             }
           } else {
             ((gka) this).a(27799, (at) (Object) new fha((kj) (Object) ((gka) this).field_l));
-            int discarded$2 = 91;
-            this.d();
+            this.d(91);
             return true;
           }
         } else {

@@ -121,8 +121,7 @@ final class ob extends le {
                   break L7;
                 } else {
                   if (var13 <= ((ob) this).field_H.field_m) {
-                    int discarded$2 = 256;
-                    oj.a(((ob) this).field_H);
+                    oj.a(((ob) this).field_H, 256);
                     sb.c();
                     break L6;
                   } else {
@@ -132,8 +131,7 @@ final class ob extends le {
               }
             }
             ((ob) this).field_H = new ti(var12, var13);
-            int discarded$3 = 256;
-            oj.a(((ob) this).field_H);
+            oj.a(((ob) this).field_H, 256);
             break L6;
           }
           var15.a(112, 144, var15.field_r << 4, var15.field_s << 4, -((ob) this).field_K << 10, 4096);
@@ -344,7 +342,7 @@ final class ob extends le {
         return stackIn_3_0 != 0;
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_M = null;
         int var1 = 0;
         field_F = null;
@@ -486,7 +484,7 @@ final class ob extends le {
         return stackIn_20_0;
     }
 
-    final static void l() {
+    final static void l(int param0) {
         int var1 = -27;
         wg.field_f = new qj();
     }

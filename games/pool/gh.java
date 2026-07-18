@@ -107,8 +107,7 @@ final class gh extends vc {
                   }
                 }
               }
-              int discarded$1 = 98;
-              bf.b();
+              bf.b((byte) 98);
               break L0;
             }
           }
@@ -574,11 +573,11 @@ final class gh extends vc {
         }
     }
 
-    final static vh f() {
+    final static vh f(boolean param0) {
         return ci.field_c.field_Rb;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_Q = null;
     }
 
@@ -888,10 +887,8 @@ final class gh extends vc {
               var19 = var52;
               var11 = var19;
               var5_ref_int__ = var11;
-              int discarded$2 = 1;
-              oh.field_d[0] = var94[0] - sb.a(288.0f) >> 2;
-              int discarded$3 = 1;
-              oh.field_d[1] = var94[1] + -sb.a(144.0f) >> 2;
+              oh.field_d[0] = var94[0] - sb.a(288.0f, true) >> 2;
+              oh.field_d[1] = var94[1] + -sb.a(144.0f, true) >> 2;
               oh.field_d[2] = var94[2] >> 2;
               if (var5_ref_int__ == oh.field_d) {
                 break L1;
@@ -1348,14 +1345,13 @@ final class gh extends vc {
             return;
         }
         try {
-            int discarded$0 = 0;
-            this.m();
+            this.m(0);
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "gh.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_7_0 = 0;
@@ -1681,7 +1677,7 @@ final class gh extends vc {
         }
     }
 
-    private final void m() {
+    private final void m(int param0) {
     }
 
     final void c(boolean param0) {

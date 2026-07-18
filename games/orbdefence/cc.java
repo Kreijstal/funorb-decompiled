@@ -22,7 +22,7 @@ final class cc extends ca {
         vc.field_j = 20000000L;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_r = null;
         field_f = null;
         field_t = null;

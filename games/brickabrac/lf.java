@@ -151,20 +151,19 @@ final class lf extends km {
 
     lf() {
         super(6, 38, 460, 402, 35, td.field_s);
-        String[] var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         String[] var8 = null;
+        String[] var9 = null;
         L0: {
           ((lf) this).field_v = 0;
           qo.field_N = 10 + ob.field_D.c("10. ");
           var8 = new String[]{so.field_e, vl.field_c, be.field_e, hj.field_Vb, jg.field_p};
-          var1 = var8;
-          int discarded$2 = 1;
-          var2 = nn.field_g.c(nm.a((CharSequence[]) (Object) var1));
+          var9 = var8;
+          var2 = nn.field_g.c(nm.a((CharSequence[]) (Object) var9, true));
           var3 = 582;
           var4 = 182;
           var5 = (-var4 + (var3 - var2)) / 5;
@@ -208,8 +207,7 @@ final class lf extends km {
             Object var2 = null;
             lf.a((pb) null, -117, -10, (jp) null, -120, 52);
         }
-        int discarded$0 = 122;
-        ag.f();
+        ag.f((byte) 122);
     }
 
     final static void a(boolean param0, int param1, boolean param2) {
@@ -221,8 +219,7 @@ final class lf extends km {
         } else {
             lb.d();
         }
-        int discarded$0 = -1;
-        wc.a(param2);
+        wc.a(param2, -1);
     }
 
     final boolean a(int param0, boolean param1, byte param2) {
@@ -480,7 +477,7 @@ final class lf extends km {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_r = null;
         field_t = null;
         field_s = null;

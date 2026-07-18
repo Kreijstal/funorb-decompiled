@@ -35,8 +35,7 @@ final class cc {
         try {
           L0: {
             if (rl.a(param0, 0, param3, param1)) {
-              int discarded$2 = 106;
-              stackOut_5_0 = bc.a();
+              stackOut_5_0 = bc.a((byte) 106);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -163,7 +162,7 @@ final class cc {
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_f = null;
         field_c = null;

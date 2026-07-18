@@ -14,7 +14,7 @@ final class kd extends da {
     int field_i;
     int field_l;
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_m = null;
         field_k = null;

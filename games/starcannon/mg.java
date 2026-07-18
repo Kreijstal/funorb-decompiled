@@ -380,7 +380,7 @@ final class mg extends tk implements java.awt.image.ImageProducer, java.awt.imag
     mg() {
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int stackIn_6_0 = 0;
@@ -469,7 +469,7 @@ final class mg extends tk implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_k = null;
         field_i = null;
         field_m = null;

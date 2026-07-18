@@ -17,7 +17,7 @@ final class he {
         db.field_db = param2;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_f = null;
         field_c = null;

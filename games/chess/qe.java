@@ -79,9 +79,7 @@ final class qe extends uk {
           }
         }
         L2: {
-          int discarded$2 = -13147;
-          int discarded$3 = 64;
-          this.a(param3, param1);
+          this.a(param3, param1, 64, -13147);
           if (rn.field_b == 0) {
             break L2;
           } else {
@@ -280,8 +278,7 @@ final class qe extends uk {
         km var14 = null;
         L0: {
           var11 = Chess.field_G;
-          int discarded$1 = -73;
-          this.e();
+          this.e(-73);
           ((qe) this).field_S.b(0, 0);
           if (rn.field_b != 0) {
             ((qe) this).field_A.b(0, 0, 128);
@@ -374,7 +371,7 @@ final class qe extends uk {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         int[] var5 = wb.field_d;
         int[] var2 = var5;
         int var3 = wb.field_h;
@@ -412,7 +409,7 @@ final class qe extends uk {
         }
     }
 
-    private final void c(int[] param0, int param1, int param2) {
+    private final void c(int[] param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -697,7 +694,7 @@ final class qe extends uk {
         this(true);
     }
 
-    private final void a(int[] param0, int param1) {
+    private final void a(int[] param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -755,8 +752,7 @@ final class qe extends uk {
             var11 = 0;
             L2: while (true) {
               if (var11 >= pj.field_b.length) {
-                int discarded$1 = 64;
-                this.c(param0, -119, param1);
+                this.c(param0, -119, param1, 64);
                 wb.a(var19, var8, var9);
                 break L0;
               } else {
@@ -862,16 +858,14 @@ final class qe extends uk {
         L1: {
           var6 = new double[]{0.0, 1.0, 0.0};
           var7 = new double[]{1.0, 0.0, 0.0};
-          int discarded$3 = -40;
-          var13 = this.a(var7, var6, var5);
+          var13 = this.a(var7, var6, var5, (byte) -40);
           var12 = var13;
           var11 = var12;
           var10 = var11;
           var8 = var10;
           var9 = -420 + (int)((-((qe) this).field_t + 3.141592653589793) * 400.0 / 3.141592653589793);
           var8[0] = (int)((double)var8[0] - (double)var9 * qn.a(-17513, ((qe) this).field_T));
-          int discarded$4 = 2278;
-          var8[2] = (int)((double)var8[2] - mn.a(((qe) this).field_T) * (double)var9);
+          var8[2] = (int)((double)var8[2] - mn.a(((qe) this).field_T, 2278) * (double)var9);
           if (((qe) this).field_F == null) {
             ((qe) this).field_F = new km(640, 480);
             vk.field_e = true;
@@ -882,8 +876,7 @@ final class qe extends uk {
         }
         L2: {
           if (vk.field_e) {
-            int discarded$5 = 0;
-            this.b(var8);
+            this.b(var13, var2, 0, var4);
             break L2;
           } else {
             break L2;
@@ -905,7 +898,7 @@ final class qe extends uk {
         field_y = null;
     }
 
-    private final void b(int[] param0) {
+    private final void b(int[] param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6_int = 0;
@@ -964,8 +957,7 @@ final class qe extends uk {
               vk.field_e = false;
               qk.field_k.field_x = wb.field_d;
               ((qe) this).field_F.e();
-              int discarded$1 = -63;
-              var5_int = 170 + ((int)(500.0 * ((qe) this).field_t) - -(ec.c() / 2));
+              var5_int = 170 + ((int)(500.0 * ((qe) this).field_t) - -(ec.c((byte) -63) / 2));
               wb.b();
               if (ph.field_f == null) {
                 break L1;
@@ -2003,8 +1995,7 @@ final class qe extends uk {
             var7 = ((qe) this).field_K.a(false, false, param1, 0, (byte) -100, false);
         }
         wb.a(var8, var5, var6);
-        int discarded$0 = -63;
-        ((qe) this).field_q.b(120, ec.c() / 2 + -21, 196);
+        ((qe) this).field_q.b(120, ec.c((byte) -63) / 2 + -21, 196);
         return var7;
     }
 
@@ -2052,7 +2043,7 @@ final class qe extends uk {
         }
     }
 
-    private final int[] a(double[] param0, double[] param1, double[] param2) {
+    private final int[] a(double[] param0, double[] param1, double[] param2, byte param3) {
         int[] var5 = null;
         RuntimeException var5_ref = null;
         int[] var8 = null;
@@ -2115,15 +2106,9 @@ final class qe extends uk {
           L0: {
             da.a(param1, 0, param2, 0, 0, -2, param0);
             da.a(param2, 0, param0, 0, 0, -2, param1);
-            int discarded$6 = 16801;
-            int discarded$7 = 0;
-            jn.a(param0);
-            int discarded$8 = 16801;
-            int discarded$9 = 0;
-            jn.a(param1);
-            int discarded$10 = 16801;
-            int discarded$11 = 0;
-            jn.a(param2);
+            jn.a(param0, 0, 16801);
+            jn.a(param1, 0, 16801);
+            jn.a(param2, 0, 16801);
             var19 = rd.a(16, -1, param0);
             var16 = var19;
             var13 = var16;

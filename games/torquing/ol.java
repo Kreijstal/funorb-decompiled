@@ -226,12 +226,12 @@ final class ol {
         return kj.field_d.h((byte) 118);
     }
 
-    final static int b() {
+    final static int b(int param0) {
         int var1 = -85;
         return 1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_f = null;
         field_e = null;

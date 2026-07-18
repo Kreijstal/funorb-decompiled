@@ -156,7 +156,7 @@ abstract class pj extends nb {
         ((pj) this).field_q = true;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_p = null;
         field_u = null;
         field_s = null;

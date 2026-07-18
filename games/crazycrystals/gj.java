@@ -35,8 +35,7 @@ final class gj extends ta {
     final int c(int param0) {
         if (param0 == -1) {
           if (19 != ((gj) this).field_p.field_g) {
-            int discarded$2 = -1;
-            lc.a();
+            lc.a(-1);
             ((gj) this).field_g = ((gj) this).field_g - 1;
             ((gj) this).field_p.field_g = ((gj) this).field_p.field_g - 1;
             return 4;
@@ -47,8 +46,7 @@ final class gj extends ta {
         } else {
           field_o = null;
           if (19 != ((gj) this).field_p.field_g) {
-            int discarded$3 = -1;
-            lc.a();
+            lc.a(-1);
             ((gj) this).field_g = ((gj) this).field_g - 1;
             ((gj) this).field_p.field_g = ((gj) this).field_p.field_g - 1;
             return 4;

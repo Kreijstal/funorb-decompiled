@@ -7,7 +7,7 @@ final class hw {
     static boolean[] field_b;
     static ki field_a;
 
-    final static void a(File param0, String param1) {
+    final static void a(File param0, String param1, int param2) {
         try {
             Object discarded$0 = mi.field_b.put((Object) (Object) param1, (Object) (Object) param0);
         } catch (RuntimeException runtimeException) {
@@ -35,7 +35,7 @@ final class hw {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

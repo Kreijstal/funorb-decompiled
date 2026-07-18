@@ -134,7 +134,7 @@ final class ah {
         return var2;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         oi.field_f = false;
         aa.field_j = null;
         dg.field_b = null;
@@ -246,7 +246,7 @@ final class ah {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_d = null;
     }
@@ -369,6 +369,8 @@ final class ah {
                   break L1;
                 } else {
                   var3 = (Object) (Object) il.field_a;
+                  var4 = var3;
+                  var4 = var3;
                   break L1;
                 }
               }
@@ -386,9 +388,7 @@ final class ah {
               }
             }
             if (param2 > 6) {
-              int discarded$4 = -1;
-              int discarded$5 = -118;
-              stackOut_9_0 = ab.a((String) var3, (String) var4, param0);
+              stackOut_9_0 = ab.a((String) var3, (String) var4, param0, (byte) -118, -1);
               stackIn_10_0 = stackOut_9_0;
               break L0;
             } else {
@@ -620,8 +620,7 @@ final class ah {
             return var2;
           }
         } else {
-          int discarded$5 = 1;
-          ah.a();
+          ah.a(true);
           if (((ah) this).field_e == var2) {
             ((ah) this).field_c = null;
             return null;

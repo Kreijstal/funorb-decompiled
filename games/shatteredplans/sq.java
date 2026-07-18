@@ -55,8 +55,7 @@ final class sq {
             if (param1 instanceof byte[]) {
               var3 = (byte[]) param1;
               if (param2) {
-                int discarded$4 = 0;
-                stackOut_8_0 = ck.a(var3);
+                stackOut_8_0 = ck.a(var3, false);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
@@ -70,7 +69,7 @@ final class sq {
                   break L0;
                 } else {
                   var4 = null;
-                  byte[] discarded$5 = sq.a(101, (Object) null, true);
+                  byte[] discarded$2 = sq.a(101, (Object) null, true);
                   break L0;
                 }
               }
@@ -351,15 +350,13 @@ final class sq {
                                 continue L5;
                               }
                             }
-                            int discarded$2 = -3903;
-                            var7_ref.field_c = wi.a(param1, param6, var7_ref.field_c, param3, param2, param4);
+                            var7_ref.field_c = wi.a(param1, param6, var7_ref.field_c, param3, param2, param4, -3903);
                             break L2;
                           }
                         }
                       }
                     }
-                    int discarded$3 = -3903;
-                    bj.field_J[param0] = wi.a(param1, param6, var9, param3, param2, param4);
+                    bj.field_J[param0] = wi.a(param1, param6, var9, param3, param2, param4, -3903);
                     break L2;
                   }
                   break L0;
@@ -374,7 +371,7 @@ final class sq {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_s = null;
         field_p = null;
         field_i = null;

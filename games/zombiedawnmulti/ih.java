@@ -8,7 +8,7 @@ final class ih {
     static String field_c;
     static String field_a;
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         int var2 = ZombieDawnMulti.field_E ? 1 : 0;
         if (dl.field_h == null) {
@@ -36,7 +36,7 @@ final class ih {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -75,7 +75,7 @@ final class ih {
         return param5;
     }
 
-    final static void a(n param0) {
+    final static void a(n param0, int param1, int param2) {
         ga var5 = null;
         int var4 = 0;
         try {
@@ -99,7 +99,7 @@ final class ih {
         }
     }
 
-    final static void a(byte param0, ab param1) {
+    final static void a(byte param0, ab param1, int param2) {
         ga var6 = null;
         int var4 = 0;
         try {

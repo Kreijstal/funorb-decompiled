@@ -274,7 +274,7 @@ final class r extends ci {
         return !((r) this).e(-4) ? true : false;
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_Zb = null;
         int var1 = 28;
         field_Tb = null;

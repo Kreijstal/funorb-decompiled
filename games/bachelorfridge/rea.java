@@ -13,7 +13,7 @@ final class rea extends bw {
     static kv field_k;
     int field_h;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_g = null;
         field_k = null;
         field_f = null;

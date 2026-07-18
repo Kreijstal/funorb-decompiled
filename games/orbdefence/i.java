@@ -5,10 +5,10 @@ final class i {
     static hj field_a;
 
     final static void a(int param0, String param1, String[] param2, int param3) {
-        RuntimeException var4 = null;
+        String[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         Object var6 = null;
-        String[] var7 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -55,8 +55,8 @@ final class i {
                 uc.field_q = oe.a(param3, param1, -3);
                 return;
               } else {
-                var7 = param2;
-                gi.a(var7, (byte) -66);
+                var4 = param2;
+                gi.a(var4, (byte) -66);
                 uc.field_q = hi.a(2, param2);
                 return;
               }
@@ -73,8 +73,7 @@ final class i {
                 break L0;
               }
             }
-            int discarded$2 = -68;
-            uc.field_q = fk.a(stackIn_5_0 != 0);
+            uc.field_q = fk.a(stackIn_5_0 != 0, (byte) -68);
             var6 = null;
             gi.a((String[]) null, (byte) -73);
             return;
@@ -82,8 +81,8 @@ final class i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
-            var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4;
+            var4_ref = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var4_ref;
             stackOut_12_1 = new StringBuilder().append("i.C(").append(-35).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;

@@ -7,12 +7,12 @@ final class kc {
     static String field_b;
     static int field_a;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
-            java.net.URL var2 = null;
-            Throwable var2_ref = null;
-            RuntimeException var2_ref2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
+            java.net.URL var4 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
@@ -31,26 +31,25 @@ final class kc {
             String stackOut_7_2 = null;
             try {
               try {
-                var2 = param0.getCodeBase();
-                int discarded$7 = 0;
-                var3 = ag.a(param0, var2).getFile();
+                var4 = param0.getCodeBase();
+                var3 = ag.a(param0, var4, false).getFile();
+                Object discarded$6 = ac.a(true, new Object[2], param0, "updatelinks");
+                Object discarded$7 = ac.a(true, new Object[2], param0, "updatelinks");
                 Object discarded$8 = ac.a(true, new Object[2], param0, "updatelinks");
                 Object discarded$9 = ac.a(true, new Object[2], param0, "updatelinks");
                 Object discarded$10 = ac.a(true, new Object[2], param0, "updatelinks");
                 Object discarded$11 = ac.a(true, new Object[2], param0, "updatelinks");
-                Object discarded$12 = ac.a(true, new Object[2], param0, "updatelinks");
-                Object discarded$13 = ac.a(true, new Object[2], param0, "updatelinks");
                 return;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = decompiledCaughtException;
+                var2 = decompiledCaughtException;
                 return;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L0: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref2;
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref;
                 stackOut_6_1 = new StringBuilder().append("kc.B(");
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
@@ -109,8 +108,7 @@ final class kc {
         var2 = 0;
         L0: while (true) {
           if (nj.field_p <= var2) {
-            int discarded$1 = 122;
-            vb.a();
+            vb.a((byte) 122);
             return var1;
           } else {
             var3 = ih.field_V[var2] * qh.field_i[var2];
@@ -167,7 +165,7 @@ final class kc {
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(dh.field_a == null)) {
             dh.field_a.a((byte) -70);
             dh.field_a = null;

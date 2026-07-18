@@ -70,13 +70,13 @@ final class jh extends bp {
         super(param0, param1, param2, param3);
     }
 
-    public static void k() {
+    public static void k(byte param0) {
         field_Hb = null;
         field_Jb = null;
         field_Ib = null;
     }
 
-    final static lk a(q param0) throws fi {
+    final static lk a(q param0, int param1) throws fi {
         RuntimeException var2 = null;
         int var4 = 0;
         lk var5 = null;
@@ -129,8 +129,7 @@ final class jh extends bp {
                             } else {
                               if (param0.a((byte) 90).field_k != og.field_c) {
                                 param0.field_a = param0.field_a - 1;
-                                int discarded$1 = 1422;
-                                var5.field_j.a((gn) (Object) jh.a(param0), 3);
+                                var5.field_j.a((gn) (Object) jh.a(param0, 1422), 3);
                                 if (!param0.a(6)) {
                                   var7 = param0.a((byte) 72);
                                   if (og.field_c != var7.field_k) {

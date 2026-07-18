@@ -90,7 +90,7 @@ final class bg {
         return stackIn_7_0;
     }
 
-    final static String a(java.applet.Applet param0, String param1) {
+    final static String a(java.applet.Applet param0, String param1, byte param2) {
         try {
             String var3 = null;
             Throwable var3_ref = null;
@@ -342,7 +342,7 @@ final class bg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

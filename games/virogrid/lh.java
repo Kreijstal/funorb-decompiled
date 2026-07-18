@@ -8,7 +8,7 @@ final class lh {
     static String field_c;
     static int field_e;
 
-    final static void a() {
+    final static void a(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -26,7 +26,7 @@ final class lh {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_b = null;
         field_d = null;
         field_c = null;

@@ -10,7 +10,7 @@ abstract class oa extends fl {
     boolean field_r;
     boolean field_s;
 
-    final static void a(int param0, dc param1) {
+    final static void a(int param0, dc param1, int param2) {
         c var3 = null;
         try {
             var3 = om.field_c;

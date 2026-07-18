@@ -16,7 +16,7 @@ final class vr {
     static int field_g;
     int field_b;
 
-    final static bi a(bc param0, int param1) {
+    final static bi a(bc param0, int param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         bi stackIn_3_0 = null;
@@ -40,8 +40,7 @@ final class vr {
         try {
           L0: {
             var3 = "turn0" + param1;
-            int discarded$2 = 0;
-            stackOut_2_0 = mf.a(param0, "", var3);
+            stackOut_2_0 = mf.a(param0, "", var3, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -377,7 +376,7 @@ final class vr {
         field_d = null;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;

@@ -6,7 +6,7 @@ final class gn {
     private StringBuilder field_a;
     private boolean field_b;
 
-    final static void a(int param0, wj param1) {
+    final static void a(int param0, wj param1, int param2) {
         bv var3 = null;
         try {
             var3 = vl.field_n;
@@ -52,8 +52,7 @@ final class gn {
         try {
           L0: {
             L1: {
-              int discarded$2 = 0;
-              this.a(param1);
+              this.a(param1, 0);
               this.b(124);
               if (param0 == 19) {
                 break L1;
@@ -104,7 +103,7 @@ final class gn {
         ((gn) this).field_b = true;
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -126,14 +125,13 @@ final class gn {
           L0: {
             L1: {
               if (((gn) this).field_b) {
-                int discarded$4 = 0;
-                this.a();
+                this.a(0);
                 break L1;
               } else {
                 break L1;
               }
             }
-            StringBuilder discarded$5 = ((gn) this).field_a.append(param0);
+            StringBuilder discarded$2 = ((gn) this).field_a.append(param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -199,7 +197,7 @@ final class gn {
         return ((gn) this).field_a.toString();
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         for (var2 = 0; var2 < ((gn) this).field_c; var2++) {

@@ -106,11 +106,10 @@ final class vba extends we {
         }
     }
 
-    private final nh h(int param0) {
+    private final nh h(int param0, int param1) {
         L0: {
           L1: {
-            int discarded$5 = 0;
-            if (!eq.c()) {
+            if (!eq.c(0)) {
               break L1;
             } else {
               if (oj.field_tb[82]) {
@@ -273,8 +272,7 @@ final class vba extends we {
               break L1;
             }
             if (this.i(var8, 94)) {
-              int discarded$1 = 0;
-              var9 = this.h(var8);
+              var9 = this.h(var8, 0);
               var10 = ((vba) this).field_r[var8];
               var9.a(-(var10 >> 1) + (var6 - -4), -(var10 >> 1) + (var7 - -4), var10 + 32, var10 + 32);
               var5++;
@@ -291,8 +289,7 @@ final class vba extends we {
     }
 
     private final boolean a(boolean param0, int param1) {
-        int discarded$0 = -101;
-        return vaa.a(rb.field_o, param1);
+        return vaa.a(rb.field_o, param1, -101);
     }
 
     final static pha a(byte param0, long param1) {
@@ -353,13 +350,11 @@ final class vba extends we {
         } else {
           if (this.i(var6, 65)) {
             L1: {
-              int discarded$4 = 0;
-              this.h(var6).a(var4 - -var3, var3 + var5);
+              this.h(var6, 0).a(var4 - -var3, var3 + var5);
               var7 = var5 + 200;
               var8 = lq.field_p[var6].toUpperCase();
               var12 = kv.field_c[var6];
-              int discarded$5 = 15;
-              var10 = this.a(var8, ds.field_n, -6671872, 180, var4, eda.field_f, 128, var7);
+              var10 = this.a(var8, ds.field_n, -6671872, 180, var4, eda.field_f, 128, var7, 15);
               var7 = var7 + (5 + 15 * var10);
               if (!this.a(false, var6)) {
                 kn.field_p.a(var7, false, pg.field_x, var4, -6671872, -1);
@@ -370,8 +365,7 @@ final class vba extends we {
               }
             }
             var7 += 20;
-            int discarded$6 = 15;
-            int discarded$7 = this.a(var12 + "<br><br>" + jn.field_r + sw.field_zb[var6] + "       " + vla.field_m + sw.field_zb[var6] / 100, kv.field_a, -14671840, 180, var4, kn.field_p, 128, var7);
+            int discarded$1 = this.a(var12 + "<br><br>" + jn.field_r + sw.field_zb[var6] + "       " + vla.field_m + sw.field_zb[var6] / 100, kv.field_a, -14671840, 180, var4, kn.field_p, 128, var7, 15);
             return;
           } else {
             return;
@@ -386,7 +380,7 @@ final class vba extends we {
         return -30 + koa.b(param1 ^ 30);
     }
 
-    private final int a(String param0, qla param1, int param2, int param3, int param4, da param5, int param6, int param7) {
+    private final int a(String param0, qla param1, int param2, int param3, int param4, da param5, int param6, int param7, int param8) {
         String[] var10 = null;
         RuntimeException var10_ref = null;
         int var11 = 0;
@@ -596,7 +590,7 @@ final class vba extends we {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_x = null;
         field_u = null;
     }

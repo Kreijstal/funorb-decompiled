@@ -5,7 +5,7 @@ final class ufa extends rqa {
     static char[] field_p;
     static boolean field_o;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 37;
         field_p = null;
     }

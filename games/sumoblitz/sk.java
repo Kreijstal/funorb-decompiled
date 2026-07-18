@@ -36,6 +36,10 @@ final class sk {
         byte[] var24 = null;
         byte[] var25 = null;
         byte[] var26 = null;
+        byte[] var27 = null;
+        byte[] var28 = null;
+        byte[] var29 = null;
+        byte[] var30 = null;
         int stackIn_19_0 = 0;
         int stackOut_18_0 = 0;
         int stackOut_17_0 = 0;
@@ -46,35 +50,34 @@ final class sk {
           } else {
             L1: {
               if (ab.field_b == null) {
-                int discarded$10 = 128;
-                int discarded$11 = 8;
-                int discarded$12 = 16;
-                var18 = mr.a(0.6000000238418579f, 0.5f, 128, -30865, (ab) (Object) new vu(419684), 4.0f, 4.0f, 16.0f);
+                var28 = mr.a(0.6000000238418579f, 0.5f, 128, -30865, (ab) (Object) new vu(419684), 4.0f, 4.0f, 16.0f, 16, 8, 128);
+                var25 = var28;
+                var22 = var25;
+                var19 = var22;
+                var18 = var19;
                 var2 = var18;
-                int discarded$13 = 0;
-                ab.field_b = aj.a((byte) -121, var18);
+                ab.field_b = aj.a((byte) -121, var28, false);
                 break L1;
               } else {
                 break L1;
               }
             }
-            int discarded$14 = 0;
-            var25 = ab.a(false, ab.field_b);
-            var23 = var25;
-            var21 = var23;
-            var19 = var21;
-            var17 = var19;
+            var29 = ab.a(false, ab.field_b, 0);
+            var26 = var29;
+            var23 = var26;
+            var20 = var23;
+            var17 = var20;
             var2 = var17;
-            var26 = new byte[4 * var25.length];
-            var24 = var26;
-            var22 = var24;
-            var20 = var22;
-            var3 = var20;
+            var30 = new byte[4 * var29.length];
+            var27 = var30;
+            var24 = var27;
+            var21 = var24;
+            var3 = var21;
             var4 = 0;
             var5 = 0;
             L2: while (true) {
               if (16 <= var5) {
-                ((sk) this).field_e = ((sk) this).field_a.a(true, nl.field_p, 16, 128, var26, 128);
+                ((sk) this).field_e = ((sk) this).field_a.a(true, nl.field_p, 16, 128, var30, 128);
                 break L0;
               } else {
                 var6 = 16384 * var5;
@@ -97,20 +100,20 @@ final class sk {
                         var13 = (float)((var2[var12 + var10] & 255) + -(var2[var12 + var11] & 255));
                         var14 = (float)((var2[(var12 + -1 & 127) + var9] & 255) - (255 & var2[var9 + (127 & var12 + 1)]));
                         var15 = (float)(128.0 / Math.sqrt((double)(16384.0f + var14 * var14 + var13 * var13)));
-                        int incrementValue$15 = var4;
+                        int incrementValue$5 = var4;
                         var4++;
-                        var3[incrementValue$15] = (byte)(int)(127.0f + var15 * var14);
-                        int incrementValue$16 = var4;
+                        var3[incrementValue$5] = (byte)(int)(127.0f + var15 * var14);
+                        int incrementValue$6 = var4;
                         var4++;
-                        var3[incrementValue$16] = (byte)(int)(127.0f + 128.0f * var15);
-                        int incrementValue$17 = var4;
+                        var3[incrementValue$6] = (byte)(int)(127.0f + 128.0f * var15);
+                        int incrementValue$7 = var4;
                         var4++;
-                        var3[incrementValue$17] = (byte)(int)(var13 * var15 + 127.0f);
-                        int incrementValue$18 = var4;
+                        var3[incrementValue$7] = (byte)(int)(var13 * var15 + 127.0f);
+                        int incrementValue$8 = var4;
                         var4++;
-                        int incrementValue$19 = var6;
+                        int incrementValue$9 = var6;
                         var6++;
-                        var3[incrementValue$18] = var2[incrementValue$19];
+                        var3[incrementValue$8] = var2[incrementValue$9];
                         var12++;
                         continue L4;
                       }
@@ -381,8 +384,7 @@ final class sk {
               }
             }
             L3: {
-              int discarded$4 = 23369;
-              as.f();
+              as.f(23369);
               if (!((sk) this).field_g) {
                 ((sk) this).field_d = new ru[16];
                 var2_int = 0;
@@ -408,12 +410,10 @@ final class sk {
                   }
                 }
               } else {
-                int discarded$5 = 0;
-                var15 = ab.a(false, pd.field_n);
+                var15 = ab.a(false, pd.field_n, 0);
                 ((sk) this).field_f = ((sk) this).field_a.a(true, ps.field_c, 16, 128, var15, 128);
-                int discarded$6 = 0;
-                var16 = ab.a(false, mk.field_d);
-                nh discarded$7 = ((sk) this).field_a.a(true, ps.field_c, 16, 128, var16, 128);
+                var16 = ab.a(false, mk.field_d, 0);
+                nh discarded$1 = ((sk) this).field_a.a(true, ps.field_c, 16, 128, var16, 128);
                 break L3;
               }
             }

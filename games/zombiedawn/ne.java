@@ -6,12 +6,12 @@ final class ne {
     static no field_c;
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
     }
 
-    final static sn a(java.applet.Applet param0) {
+    final static sn a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         sn[] var3 = null;
@@ -49,8 +49,7 @@ final class ne {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              int discarded$2 = 31114;
-              var3 = cn.b();
+              var3 = cn.b(31114);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {

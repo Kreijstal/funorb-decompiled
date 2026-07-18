@@ -23,7 +23,7 @@ abstract class vk {
     volatile int field_t;
     qa field_d;
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = 0;
         field_s = null;
         field_b = null;
@@ -88,7 +88,7 @@ abstract class vk {
         }
     }
 
-    final static boolean a(long param0, int[] param1, String param2, int param3) {
+    final static boolean a(long param0, int[] param1, String param2, int param3, int param4) {
         RuntimeException var6 = null;
         int stackIn_8_0 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -308,7 +308,7 @@ abstract class vk {
         return 20 <= ((vk) this).a((byte) 16) ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, ak param6, byte param7, mi param8, int param9, ak param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, mi param18, ak param19) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, ak param6, byte param7, mi param8, int param9, ak param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, mi param18, ak param19, int param20) {
         int var21_int = 0;
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
@@ -390,15 +390,11 @@ abstract class vk {
         try {
           L0: {
             var21_int = 0;
-            int discarded$4 = 480;
-            kg.a(2048, param8, param18);
+            kg.a(2048, param8, param18, 480);
             he.a(false, param14, param0, param17, param9);
             sf.a(52, 320, 240);
             hf.a(param10, 8, 2, param6, -125, 8);
-            int discarded$5 = 3;
-            int discarded$6 = 8;
-            int discarded$7 = 8;
-            qe.a(param19);
+            qe.a(param19, 8, 8, 3);
             ph.a(0, 16777215, 1146810, -97);
             break L0;
           }

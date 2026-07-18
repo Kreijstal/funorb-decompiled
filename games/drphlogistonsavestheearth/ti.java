@@ -8,8 +8,8 @@ final class ti {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
-            java.net.URL var2_ref2 = null;
             String var3 = null;
+            java.net.URL var4 = null;
             RuntimeException stackIn_6_0 = null;
             StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
@@ -29,15 +29,14 @@ final class ti {
             try {
               try {
                 L0: {
-                  var2_ref2 = param1.getCodeBase();
-                  int discarded$7 = 4767999;
-                  var3 = kk.a(var2_ref2, param1).getFile();
+                  var4 = param1.getCodeBase();
+                  var3 = kk.a(var4, param1, 4767999).getFile();
+                  Object discarded$6 = pb.a(param1, -11455, new Object[2], "updatelinks");
+                  Object discarded$7 = pb.a(param1, -11455, new Object[2], "updatelinks");
                   Object discarded$8 = pb.a(param1, -11455, new Object[2], "updatelinks");
                   Object discarded$9 = pb.a(param1, -11455, new Object[2], "updatelinks");
                   Object discarded$10 = pb.a(param1, -11455, new Object[2], "updatelinks");
                   Object discarded$11 = pb.a(param1, -11455, new Object[2], "updatelinks");
-                  Object discarded$12 = pb.a(param1, -11455, new Object[2], "updatelinks");
-                  Object discarded$13 = pb.a(param1, -11455, new Object[2], "updatelinks");
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -83,7 +82,7 @@ final class ti {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         nf.field_w = 0;
         ig.field_k = 0;
         la.field_b = rd.field_F;
@@ -92,7 +91,7 @@ final class ti {
         lb.field_w.a(-1, ua.a(ob.field_g, -13412, ck.field_c), param0, -76);
     }
 
-    final static boolean a(lh param0) {
+    final static boolean a(lh param0, boolean param1) {
         return param0.e(1, (byte) 98) == 1;
     }
 

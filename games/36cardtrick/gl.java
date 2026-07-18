@@ -6,7 +6,7 @@ final class gl extends hl {
     private ba field_F;
     static String[] field_G;
 
-    public static void a() {
+    public static void a(int param0) {
         field_G = null;
     }
 
@@ -21,7 +21,7 @@ final class gl extends hl {
         return null;
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         fd var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -93,7 +93,7 @@ final class gl extends hl {
         return stackIn_18_0 != 0;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -214,7 +214,7 @@ final class gl extends hl {
         }
     }
 
-    final static kc[] a(String param0, qk param1, String param2) {
+    final static kc[] a(String param0, qk param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -564,7 +564,7 @@ final class gl extends hl {
         }
     }
 
-    final static void a(int param0, ib param1, int param2) {
+    final static void a(int param0, ib param1, int param2, int param3) {
         li var4 = null;
         jg var5 = null;
         try {

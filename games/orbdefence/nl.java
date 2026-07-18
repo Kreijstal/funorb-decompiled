@@ -8,7 +8,7 @@ final class nl {
     static String field_a;
     static String field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_e = null;

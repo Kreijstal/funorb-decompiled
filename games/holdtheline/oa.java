@@ -8,7 +8,7 @@ final class oa extends el {
     private String field_r;
     static String field_o;
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         if (bk.field_w < 10) {
             return false;
         }
@@ -52,7 +52,7 @@ final class oa extends el {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_s = null;
         field_o = null;
         field_p = null;

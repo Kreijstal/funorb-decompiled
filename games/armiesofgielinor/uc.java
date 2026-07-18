@@ -7,18 +7,17 @@ final class uc {
     static je field_b;
     static String field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
         field_d = null;
     }
 
     final static void a(int param0) {
-        int discarded$0 = 2858;
-        bc.a();
+        bc.a(2858);
     }
 
-    final static void a(dq param0) {
+    final static void a(dq param0, int param1) {
         try {
             ds.field_c = param0;
         } catch (RuntimeException runtimeException) {

@@ -215,8 +215,7 @@ final class uk extends ql {
         try {
           var4_int = 45 / ((62 - param0) / 60);
           if (nb.a(param2, param3, (byte) -45, param1)) {
-            int discarded$2 = 0;
-            return ql.e();
+            return ql.e(false);
           } else {
             return null;
           }
@@ -395,7 +394,7 @@ final class uk extends ql {
         return stackIn_3_0;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         int var1 = 1;
         field_U = null;
     }
@@ -419,14 +418,13 @@ final class uk extends ql {
               }
             }
             L2: while (true) {
-              int discarded$9 = 1;
-              if (!kf.d()) {
+              if (!kf.d(true)) {
                 break L0;
               } else {
                 var1.h(8, 0);
-                int fieldTemp$10 = var1.field_h + 1;
+                int fieldTemp$5 = var1.field_h + 1;
                 var1.field_h = var1.field_h + 1;
-                var2 = fieldTemp$10;
+                var2 = fieldTemp$5;
                 ej.a(-17, var1);
                 ed.field_q.d(-var2 + var1.field_h, (byte) -125);
                 continue L2;

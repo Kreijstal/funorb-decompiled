@@ -7,7 +7,7 @@ final class np extends hh {
     static String field_e;
     static float[] field_d;
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -100,7 +100,7 @@ final class np extends hh {
         }
     }
 
-    final static int a(nf param0) {
+    final static int a(nf param0, boolean param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -192,7 +192,7 @@ final class np extends hh {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
         field_e = null;
     }

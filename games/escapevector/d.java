@@ -17,7 +17,7 @@ final class d {
         ((d) this).field_b = true;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -126,7 +126,7 @@ final class d {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_d = null;
         field_f = null;

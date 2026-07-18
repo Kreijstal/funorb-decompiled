@@ -19,7 +19,7 @@ final class fc {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         ei.field_i = false;
         eb.field_H = false;
         lj.a(-1, 52);

@@ -122,7 +122,7 @@ final class hh {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
     }
 

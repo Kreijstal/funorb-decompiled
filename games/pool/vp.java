@@ -115,7 +115,7 @@ final class vp extends sq {
         return 1;
     }
 
-    private final boolean o() {
+    private final boolean o(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = Pool.field_O;
@@ -227,8 +227,7 @@ final class vp extends sq {
         if (param0 != -1) {
             field_f = -63;
         }
-        int discarded$0 = 24812;
-        return this.o() ? 2 : 0;
+        return this.o(24812) ? 2 : 0;
     }
 
     final int a(qe param0, int param1) {
@@ -476,7 +475,7 @@ final class vp extends sq {
         }
     }
 
-    public static void p() {
+    public static void p(int param0) {
         field_e = null;
     }
 

@@ -9,8 +9,13 @@ public final class NativeHeap {
     private int a;
 
     public final synchronized void a() {
-        if (!(!((jaclib.memory.heap.NativeHeap) this).b)) {
+        L0: {
+          if (((jaclib.memory.heap.NativeHeap) this).b) {
             this.deallocateHeap();
+            break L0;
+          } else {
+            break L0;
+          }
         }
         ((jaclib.memory.heap.NativeHeap) this).b = false;
     }
@@ -18,25 +23,35 @@ public final class NativeHeap {
     final synchronized native void deallocateBuffer(int param0);
 
     public final jaclib.memory.heap.NativeHeapBuffer a(int param0, boolean param1) {
-        if (!(((jaclib.memory.heap.NativeHeap) this).b)) {
-            throw new IllegalStateException();
+        RuntimeException var3 = null;
+        if (!((jaclib.memory.heap.NativeHeap) this).b) {
+          throw new IllegalStateException();
+        } else {
+          return new jaclib.memory.heap.NativeHeapBuffer((jaclib.memory.heap.NativeHeap) this, ((jaclib.memory.heap.NativeHeap) this).allocateBuffer(param0, param1), param0);
         }
-        return new jaclib.memory.heap.NativeHeapBuffer((jaclib.memory.heap.NativeHeap) this, ((jaclib.memory.heap.NativeHeap) this).allocateBuffer(param0, param1), param0);
     }
 
     final synchronized native int allocateBuffer(int param0, boolean param1);
 
     public NativeHeap(int param0) {
-        ((jaclib.memory.heap.NativeHeap) this).a = param0;
-        this.allocateHeap(((jaclib.memory.heap.NativeHeap) this).a);
-        ((jaclib.memory.heap.NativeHeap) this).b = true;
+        try {
+            ((jaclib.memory.heap.NativeHeap) this).a = param0;
+            this.allocateHeap(((jaclib.memory.heap.NativeHeap) this).a);
+            ((jaclib.memory.heap.NativeHeap) this).b = true;
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     private final native void deallocateHeap();
 
     protected final synchronized void finalize() throws Throwable {
-        super.finalize();
-        ((jaclib.memory.heap.NativeHeap) this).a();
+        try {
+            super.finalize();
+            ((jaclib.memory.heap.NativeHeap) this).a();
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     final synchronized boolean b() {

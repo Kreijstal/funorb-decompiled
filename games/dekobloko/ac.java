@@ -77,8 +77,7 @@ final class ac extends be {
           L0: {
             var4_int = param3.b(-1, param1);
             var5 = param3.a(var4_int, 13030, param2);
-            int discarded$2 = -46;
-            stackOut_0_0 = si.a(var5, var4_int, param3);
+            stackOut_0_0 = si.a(var5, var4_int, param3, (byte) -46);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -201,8 +200,7 @@ final class ac extends be {
               if (var3_int == 0) {
                 break L0;
               } else {
-                int discarded$4 = -127;
-                this.a(var3_int, param1);
+                this.a(var3_int, param1, -127);
                 continue L2;
               }
             }
@@ -246,7 +244,7 @@ final class ac extends be {
         field_z = null;
     }
 
-    private final void a(int param0, wl param1) {
+    private final void a(int param0, wl param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

@@ -7,7 +7,7 @@ final class ma {
     static String[] field_d;
     static int field_c;
 
-    final static kc[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static kc[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
         int var9 = 0;
         kc[] var10 = null;
         kc[] var11_ref_kc__ = null;
@@ -127,7 +127,7 @@ final class ma {
         }
     }
 
-    final static qa a(java.applet.Applet param0) {
+    final static qa a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         qa[] var3 = null;
@@ -165,8 +165,7 @@ final class ma {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              int discarded$2 = -21739;
-              var3 = ff.a();
+              var3 = ff.a(-21739);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -231,7 +230,7 @@ final class ma {
         return var2;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_b = null;

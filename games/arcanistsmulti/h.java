@@ -38,7 +38,7 @@ final class h extends wn {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_K = null;
         field_E = null;
         field_G = null;
@@ -142,21 +142,18 @@ final class h extends wn {
         }
     }
 
-    final static hc g() {
+    final static hc g(byte param0) {
         int var1 = 0;
-        int discarded$0 = -952;
-        String var2 = ed.k();
+        String var2 = ed.k(-952);
         if (var2 != null) {
             if (!(var2.indexOf('@') < 0)) {
                 var2 = "";
             }
         }
-        int discarded$1 = -952;
-        int discarded$2 = -1;
-        return new hc(ed.k(), hc.a());
+        return new hc(ed.k(-952), hc.a(-1));
     }
 
-    final static void j() {
+    final static void j(int param0) {
         qb var1 = null;
         qb var2 = null;
         int var3 = 0;
@@ -167,8 +164,7 @@ final class h extends wn {
             id.a();
             de.b();
             gi.field_a = 0;
-            int discarded$0 = 252566882;
-            cg.f();
+            cg.f(252566882);
             var2 = var1.g();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.a(-2, -2, 16777215);

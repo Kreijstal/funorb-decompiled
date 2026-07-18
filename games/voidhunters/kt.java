@@ -39,7 +39,7 @@ class kt extends elb {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         int var1 = 2;
         field_r = null;
     }
@@ -168,8 +168,7 @@ class kt extends elb {
                   }
                 }
               }
-              int discarded$1 = -15;
-              ila.c();
+              ila.c((byte) -15);
               break L1;
             }
             var66 = new int[param0.field_L];

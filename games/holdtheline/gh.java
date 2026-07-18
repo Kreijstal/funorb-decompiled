@@ -34,19 +34,17 @@ final class gh {
           if (fc.field_a <= 0) {
             ((gh) this).field_h = false;
             if (((gh) this).field_h) {
-              int fieldTemp$6 = ((gh) this).field_g - 1;
+              int fieldTemp$2 = ((gh) this).field_g - 1;
               ((gh) this).field_g = ((gh) this).field_g - 1;
-              if (0 >= fieldTemp$6) {
+              if (0 >= fieldTemp$2) {
                 ((gh) this).field_g = ((gh) this).field_p;
                 if (~((gh) this).field_s >= ~d.field_g) {
                   if (param0 == -9) {
-                    int discarded$7 = 124;
-                    this.a();
+                    this.a((byte) 124);
                     return;
                   } else {
                     ((gh) this).b(50);
-                    int discarded$8 = 124;
-                    this.a();
+                    this.a((byte) 124);
                     return;
                   }
                 } else {
@@ -104,19 +102,17 @@ final class gh {
             }
           } else {
             if (((gh) this).field_h) {
-              int fieldTemp$9 = ((gh) this).field_g - 1;
+              int fieldTemp$3 = ((gh) this).field_g - 1;
               ((gh) this).field_g = ((gh) this).field_g - 1;
-              if (0 >= fieldTemp$9) {
+              if (0 >= fieldTemp$3) {
                 ((gh) this).field_g = ((gh) this).field_p;
                 if (~((gh) this).field_s >= ~d.field_g) {
                   if (param0 == -9) {
-                    int discarded$10 = 124;
-                    this.a();
+                    this.a((byte) 124);
                     return;
                   } else {
                     ((gh) this).b(50);
-                    int discarded$11 = 124;
-                    this.a();
+                    this.a((byte) 124);
                     return;
                   }
                 } else {
@@ -238,7 +234,7 @@ final class gh {
         throw new Error();
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

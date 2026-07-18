@@ -18,8 +18,7 @@ final class nk {
         try {
             gl.field_E = co.a("", param1 + -118);
             gl.field_E.a(false, -54);
-            int discarded$11 = -19041;
-            ll.a(param2, param3, param0);
+            ll.a(param2, param3, param0, -19041);
             if (param1 != -1) {
                 Object var6 = null;
                 nk.a((dj) null, 101, (dj) null, (dj) null, false);
@@ -32,12 +31,12 @@ final class nk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_a = null;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         lf.field_n = true;
         qh.field_e = pd.a(-22826) + 15000L;
         return 11 == fl.field_a ? true : false;

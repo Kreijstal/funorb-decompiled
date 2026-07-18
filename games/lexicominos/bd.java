@@ -9,7 +9,7 @@ final class bd extends kd {
     static int[] field_m;
     static be[] field_i;
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_i = null;
         field_m = null;
@@ -18,7 +18,7 @@ final class bd extends kd {
         field_k = null;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -94,9 +94,7 @@ final class bd extends kd {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$4 = 24;
-                int discarded$5 = 6;
-                p.a(var4);
+                p.a(var4, 6, (byte) 24);
                 var4 = (tg) (Object) bg.field_c.f(2);
                 continue L1;
               }
@@ -109,7 +107,7 @@ final class bd extends kd {
         }
     }
 
-    final static boolean c() {
+    final static boolean c(boolean param0) {
         if (jc.field_b == null) {
             return false;
         }

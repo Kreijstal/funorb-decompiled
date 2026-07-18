@@ -12,7 +12,7 @@ final class al {
     int field_g;
     int field_i;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return ph.field_E == null ? mb.field_d : true;
     }
 

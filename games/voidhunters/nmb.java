@@ -77,8 +77,7 @@ final class nmb extends hrb {
     }
 
     final long a(byte param0) {
-        int discarded$0 = -110;
-        ((nmb) this).field_g = ((nmb) this).field_g + this.c();
+        ((nmb) this).field_g = ((nmb) this).field_g + this.c(-110);
         if (param0 != -81) {
             ((nmb) this).field_h = 67;
         }
@@ -169,7 +168,7 @@ final class nmb extends hrb {
         }
     }
 
-    private final long c() {
+    private final long c(int param0) {
         int var8 = 0;
         int var9 = VoidHunters.field_G;
         long var2 = System.nanoTime();

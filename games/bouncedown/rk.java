@@ -4,7 +4,7 @@
 final class rk {
     static int field_a;
 
-    final static void a() {
+    final static void a(int param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         sa var4 = null;
@@ -21,8 +21,7 @@ final class rk {
                   if (var4 == null) {
                     break L0;
                   } else {
-                    int discarded$4 = 3;
-                    ha.a(-17765, var4);
+                    ha.a(-17765, var4, 3);
                     var4 = (sa) (Object) jl.field_f.d((byte) -29);
                     continue L2;
                   }
@@ -75,8 +74,7 @@ final class rk {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_2_0 = lh.a(-121, param1.length, param1);
+            stackOut_2_0 = lh.a(-121, param1.length, param1, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -153,8 +151,7 @@ final class rk {
           L0: {
             var5_int = 0;
             if (c.a(param0, false, param4, param3)) {
-              int discarded$2 = 41;
-              stackOut_3_0 = gi.a(param1.b(-127, param3, param4));
+              stackOut_3_0 = gi.a(param1.b(-127, param3, param4), 41);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -219,7 +216,7 @@ final class rk {
         return stackIn_4_0;
     }
 
-    final static String a(boolean param0, boolean param1) {
+    final static String a(boolean param0, boolean param1, int param2, boolean param3) {
         int var4 = 0;
         var4 = 0;
         if (param1) {

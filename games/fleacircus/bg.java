@@ -100,8 +100,7 @@ final class bg {
             }
             L2: {
               se.a(qj.field_I, (byte) 121, rj.field_m, wa.field_l);
-              int discarded$12 = 0;
-              be.a(0, param1, (byte) -68);
+              be.a(0, param1, (byte) -68, 0);
               if (param0 < -12) {
                 break L2;
               } else {
@@ -144,7 +143,7 @@ final class bg {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_a = null;
     }
@@ -292,7 +291,7 @@ final class bg {
         return stackIn_3_0;
     }
 
-    final static mk a() {
+    final static mk a(byte param0) {
         if (!(cb.field_v != ql.field_l)) {
             throw new IllegalStateException();
         }
@@ -309,8 +308,7 @@ final class bg {
             return;
         }
         try {
-            int discarded$0 = 1;
-            sc.a(param1, param0);
+            sc.a(param1, param0, 1);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) (Object) runtimeException, "bg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

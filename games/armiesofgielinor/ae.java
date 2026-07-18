@@ -25,8 +25,7 @@ final class ae extends bp {
         var2.h(32161, param1);
         var2.b(1, 2);
         var2.b(1, 4);
-        int discarded$0 = 3;
-        var2.b(1, gm.f());
+        var2.b(1, gm.f(3));
     }
 
     final void a(Object param0, boolean param1, int param2) {

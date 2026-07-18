@@ -159,7 +159,7 @@ final class ke extends cn {
         ((ke) this).field_g = pe.field_eb;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_B = null;
         field_w = null;
         field_s = null;

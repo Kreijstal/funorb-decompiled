@@ -94,7 +94,7 @@ final class sg {
         return stackIn_7_0;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1, int param2, int param3) {
         if (!(wb.field_c < param2 + param0 + param1)) {
             return param2 + param0;
         }
@@ -112,8 +112,7 @@ final class sg {
             }
             try {
                 var3 = new java.net.URL(param0.getCodeBase(), param2);
-                int discarded$1 = -87;
-                var3 = rh.a(var3, param0);
+                var3 = rh.a(var3, param0, (byte) -87);
                 fe.a(var3.toString(), true, (byte) 112, param0);
             } catch (Exception exception) {
                 exception.printStackTrace();
@@ -125,7 +124,7 @@ final class sg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;

@@ -16,7 +16,7 @@ final class rla extends b implements tsa {
     il field_H;
     static String field_y;
 
-    private final void a(String param0) {
+    private final void a(String param0, byte param1) {
         if (!(((rla) this).field_z.field_I != null)) {
             return;
         }
@@ -38,8 +38,7 @@ final class rla extends b implements tsa {
             if (hc.field_h >= param4) {
                 param1 = rp.a(ss.field_c, -16226, pka.field_b, param1);
                 param0 = rp.a(ss.field_c, param2 ^ 16224, pka.field_b, param0);
-                int discarded$0 = 0;
-                uea.a(param0, param3, param4, param1);
+                uea.a(param0, param3, param4, param1, false);
             }
         }
         if (param2 != -2) {
@@ -218,8 +217,7 @@ final class rla extends b implements tsa {
           L0: {
             L1: {
               if (!((rla) this).j((byte) -73)) {
-                int discarded$2 = -21088;
-                this.d();
+                this.d(-21088);
                 break L1;
               } else {
                 this.a((byte) 119);
@@ -346,7 +344,7 @@ final class rla extends b implements tsa {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var2 = ((rla) this).field_z.c(23112);
         int var3 = var2;
         int var4 = 0;
@@ -358,8 +356,7 @@ final class rla extends b implements tsa {
         ((rla) this).field_z.a((byte) -31, ((rla) this).field_m, var2, 0, 0);
         ((rla) this).field_F = new cca(0, 0, 0, 0, (isa) (Object) new pu(), (ae) (Object) ((rla) this).field_z, (isa) null);
         if (!(var4 == 0)) {
-            int discarded$0 = -5412;
-            ((rla) this).field_F.a(1, st.b(), true);
+            ((rla) this).field_F.a(1, st.b(-5412), true);
         }
         ((rla) this).field_F.a((byte) -31, ((rla) this).field_m, ((rla) this).field_p - ((rla) this).field_C, 0, ((rla) this).field_C);
         ((rla) this).field_G = true;
@@ -372,7 +369,7 @@ final class rla extends b implements tsa {
         return ((rla) this).field_G;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_x = null;
         field_D = null;
         field_y = null;
@@ -585,8 +582,7 @@ final class rla extends b implements tsa {
                                     this.a((byte) 122);
                                     break L5;
                                   } else {
-                                    int discarded$4 = -21088;
-                                    this.d();
+                                    this.d(-21088);
                                     break L5;
                                   }
                                 }
@@ -610,8 +606,7 @@ final class rla extends b implements tsa {
                                   } else {
                                     if (param0 < 128) {
                                       var6 = ((rla) this).field_w + param0;
-                                      int discarded$5 = 106;
-                                      this.a(var6);
+                                      this.a(var6, (byte) 106);
                                       stackOut_55_0 = 1;
                                       stackIn_56_0 = stackOut_55_0;
                                       return stackIn_56_0 != 0;
@@ -628,8 +623,7 @@ final class rla extends b implements tsa {
                           if (((rla) this).j((byte) 88)) {
                             break L6;
                           } else {
-                            int discarded$6 = -21088;
-                            this.d();
+                            this.d(-21088);
                             break L6;
                           }
                         }
@@ -670,8 +664,7 @@ final class rla extends b implements tsa {
                   }
                   L10: {
                     if (!((rla) this).j((byte) 101)) {
-                      int discarded$7 = -21088;
-                      this.d();
+                      this.d(-21088);
                       break L10;
                     } else {
                       break L10;

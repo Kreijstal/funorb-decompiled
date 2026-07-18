@@ -10,7 +10,7 @@ final class mb {
     static int field_f;
     static boolean field_d;
 
-    final static void a(ca param0) {
+    final static void a(ca param0, int param1, int param2) {
         try {
             gn.field_Q.b(0, (jb) (Object) param0);
             nh.a(4, (byte) -94, param0);
@@ -110,7 +110,7 @@ final class mb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;

@@ -13,7 +13,7 @@ final class hg {
     int field_h;
     static int field_e;
 
-    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1) {
+    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, int param2) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_9_0 = null;
@@ -168,8 +168,7 @@ final class hg {
                 break L1;
               } else {
                 if (!param1.equals((Object) (Object) ma.field_I.a(0))) {
-                  int discarded$2 = 16711935;
-                  ma.field_I = rm.a(param1);
+                  ma.field_I = rm.a(param1, 16711935);
                   break L1;
                 } else {
                   break L1;
@@ -213,7 +212,7 @@ final class hg {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_a = null;
         field_b = null;

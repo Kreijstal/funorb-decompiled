@@ -14,7 +14,7 @@ final class wk implements Iterator {
         return ((wk) this).field_e != ((wk) this).field_d.field_f;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
     }
 
@@ -65,8 +65,7 @@ final class wk implements Iterator {
             L1: {
               jd.field_G = param0;
               ig.field_p = param2;
-              int discarded$3 = -13;
-              ke.a(no.field_i, param1);
+              ke.a(no.field_i, param1, -13);
               if (!param3) {
                 break L1;
               } else {

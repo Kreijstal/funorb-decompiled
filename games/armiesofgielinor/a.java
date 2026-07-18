@@ -410,7 +410,7 @@ final class a extends tc {
         return stackIn_119_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_m = null;
         field_o = null;
         field_k = null;
@@ -442,8 +442,7 @@ final class a extends tc {
           L0: {
             if (param0 != 0) {
               var3 = new jd();
-              int discarded$2 = -24721;
-              no.a(param2, (uo) (Object) var3, param0);
+              no.a(param2, (uo) (Object) var3, param0, -24721);
               stackOut_3_0 = (jd) var3;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -484,7 +483,7 @@ final class a extends tc {
         return stackIn_4_0;
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, byte param1) {
         bv var2 = vl.field_n;
         var2.h(32161, param0);
         var2.b(1, 1);

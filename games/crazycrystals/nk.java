@@ -23,7 +23,7 @@ class nk extends ik {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_k = null;
         field_l = null;
         field_j = null;
@@ -68,8 +68,7 @@ class nk extends ik {
             var4 = 0;
             L0: while (true) {
               if (param2.length() > var4) {
-                int discarded$8 = 108;
-                if (oh.a(param2.charAt(var4))) {
+                if (oh.a(param2.charAt(var4), (byte) 108)) {
                   var4++;
                   continue L0;
                 } else {

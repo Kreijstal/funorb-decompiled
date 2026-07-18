@@ -11,9 +11,8 @@ final class vi extends nt {
     static dc field_y;
     private int field_s;
 
-    final static void e() {
-        int discarded$0 = 5178;
-        od.a();
+    final static void e(int param0) {
+        od.a(5178);
         rd.a(4, -27);
     }
 
@@ -42,7 +41,7 @@ final class vi extends nt {
         return super.a(-2567);
     }
 
-    final static boolean f() {
+    final static boolean f(int param0) {
         int var1 = 0;
         if (null == kd.field_a[0]) {
           L0: {
@@ -160,7 +159,7 @@ final class vi extends nt {
         ((vi) this).field_w = param4;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         km var3 = null;
@@ -233,8 +232,7 @@ final class vi extends nt {
                                       var20[1][1 + 4 * var15] = jf.field_f[var11];
                                       var20[1][2 + 4 * var15] = ic.field_c[var11];
                                       var20[1][var15 * 4 + 3] = field_z[var11];
-                                      int discarded$2 = -25;
-                                      if (!ea.a(rf.field_b[var11])) {
+                                      if (!ea.a(rf.field_b[var11], (byte) -25)) {
                                         break L8;
                                       } else {
                                         if (jf.field_f[var11] - (-ic.field_c[var11] - field_z[var11]) != 0) {
@@ -262,8 +260,7 @@ final class vi extends nt {
                                   var20[0][var10 * 4 + 1] = jf.field_f[var11];
                                   var20[0][2 + 4 * var10] = ic.field_c[var11];
                                   var20[0][var10 * 4 + 3] = field_z[var11];
-                                  int discarded$3 = -25;
-                                  if (ea.a(rf.field_b[var11])) {
+                                  if (ea.a(rf.field_b[var11], (byte) -25)) {
                                     if (field_z[var11] + jf.field_f[var11] + ic.field_c[var11] == 0) {
                                       var6[0][var10] = null;
                                       var10--;
@@ -320,7 +317,7 @@ final class vi extends nt {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         id var4 = null;

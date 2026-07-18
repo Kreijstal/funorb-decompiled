@@ -4,7 +4,7 @@
 final class vr {
     static int[] field_a;
 
-    final static void a(kl param0) {
+    final static void a(kl param0, int param1) {
         RuntimeException var2 = null;
         String var2_ref = null;
         int var3 = 0;
@@ -127,10 +127,8 @@ final class vr {
                 td.field_f.a(var10, 0);
                 ds.a(10, 50, va.field_G[0], 27066, false, var10, true, va.field_G[3]);
                 ds.a(10, 50, va.field_G[0], 27066, false, var10, false, va.field_G[3]);
-                int discarded$2 = 1;
-                vu.a(true, false, 10, 50, var10, 1);
-                int discarded$3 = 1;
-                vu.a(false, false, 10, 50, var10, 1);
+                vu.a(true, false, 10, 50, var10, 1, 1);
+                vu.a(false, false, 10, 50, var10, 1, 1);
                 var10++;
                 continue L9;
               }
@@ -168,7 +166,7 @@ final class vr {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -219,11 +217,9 @@ final class vr {
           L0: {
             L1: {
               var5 = (CharSequence) (Object) param1;
-              int discarded$4 = 0;
-              var3 = k.a(var5);
+              var3 = k.a(var5, false);
               var6 = (CharSequence) (Object) param2;
-              int discarded$5 = 0;
-              var4 = k.a(var6);
+              var4 = k.a(var6, false);
               if (var3 != null) {
                 break L1;
               } else {

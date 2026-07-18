@@ -189,20 +189,11 @@ abstract class ia extends v implements fd {
           L0: {
             re.field_ib = param3;
             a.field_a = param18;
-            int discarded$9 = -89;
-            rj.a(param14, param19, param7, param12);
-            int discarded$10 = -89;
-            int discarded$11 = 8;
-            int discarded$12 = 8;
-            mj.a(param1);
-            int discarded$13 = 2;
-            en.a((byte) -55, param2, 8, 8, param0);
+            rj.a(param14, param19, param7, param12, (byte) -89);
+            mj.a(param1, 8, 8, -89);
+            en.a((byte) -55, param2, 8, 8, param0, 2);
             of.a(320, 240, 11);
-            int discarded$14 = 1146810;
-            int discarded$15 = 16777215;
-            int discarded$16 = 0;
-            int discarded$17 = -92;
-            dk.a();
+            dk.a(-92, 0, 16777215, 1146810);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -369,8 +360,7 @@ abstract class ia extends v implements fd {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = -48;
-            stackOut_0_0 = on.a(em.a(param1, 100, 96));
+            stackOut_0_0 = on.a(em.a(param1, 100, 96), -48);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

@@ -452,8 +452,7 @@ final class kda {
                     var5 = (uqb) (Object) wc.field_a.a((byte) 77);
                     var5.field_e = param1.field_g;
                     var5.a(param2, -125);
-                    int discarded$2 = 1000;
-                    this.a(var5, param3);
+                    this.a(var5, param3, 1000);
                     ((kda) this).field_p = true;
                     break L1;
                   } else {
@@ -670,8 +669,7 @@ final class kda {
                         ((kda) this).field_i.b(-10258, (ksa) (Object) var8_ref);
                         break L6;
                       } else {
-                        int discarded$1 = 1000;
-                        this.a(param1, param6);
+                        this.a(param1, param6, 1000);
                         break L6;
                       }
                     } else {
@@ -776,7 +774,7 @@ final class kda {
         }
     }
 
-    private final void a(uqb param0, faa param1) {
+    private final void a(uqb param0, faa param1, int param2) {
         try {
             em.field_o = false;
             rkb.a(0, (tv) (Object) param0, param1, pra.field_o);
@@ -1563,8 +1561,8 @@ final class kda {
     }
 
     final void a(faa param0, int param1) {
-        RuntimeException var3 = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         uqb var4 = null;
         int var5 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -1642,8 +1640,7 @@ final class kda {
                     if (var4 == null) {
                       break L6;
                     } else {
-                      int discarded$1 = 1000;
-                      this.a(var4, param0);
+                      this.a(var4, param0, 1000);
                       var4.b(-3846);
                       var4 = (uqb) (Object) ((kda) this).field_i.a((byte) 100);
                       continue L7;

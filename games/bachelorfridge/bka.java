@@ -11,7 +11,7 @@ final class bka implements qda {
     private int field_e;
     private int field_f;
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         pf var2 = sja.field_fb;
         var2.c(11, (byte) 113);
         var2.field_g = var2.field_g + 1;
@@ -28,7 +28,7 @@ final class bka implements qda {
         cm.a(param1, (byte) -111);
     }
 
-    final static void a(vr param0) {
+    final static void a(vr param0, boolean param1) {
         try {
             to.field_b = new kv(param0.a((byte) 123, "dirty-floor.jpg", ""), (java.awt.Component) (Object) dca.field_y);
             r.field_n = new kv(param0.a((byte) 123, "instr_fridge_view.jpg", ""), (java.awt.Component) (Object) dca.field_y);

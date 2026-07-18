@@ -9,7 +9,7 @@ final class dd {
     static String field_f;
     static jm field_b;
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         int stackIn_2_0 = 0;
@@ -93,7 +93,7 @@ final class dd {
         return stackIn_8_0 != 0;
     }
 
-    final static mg[] a() {
+    final static mg[] a(byte param0) {
         mg[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -101,55 +101,54 @@ final class dd {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
-        int[] var9 = null;
-        int[] var13 = null;
-        int[] var16 = null;
-        int[] var20 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
-        byte[] var23 = null;
-        int[] var24 = null;
+        int[] var10 = null;
+        int[] var14 = null;
+        int[] var17 = null;
+        int[] var21 = null;
+        byte[] var22 = null;
+        int[] var23 = null;
+        byte[] var24 = null;
+        int[] var25 = null;
         var8 = Virogrid.field_F ? 1 : 0;
         var1 = new mg[rj.field_h];
         var2 = 0;
         L0: while (true) {
           if (rj.field_h <= var2) {
-            int discarded$1 = -28;
-            pe.b();
+            pe.b((byte) -28);
             return var1;
           } else {
             var3 = db.field_k[var2] * gb.field_F[var2];
-            var21 = lj.field_j[var2];
+            var22 = lj.field_j[var2];
             if (ei.field_d[var2]) {
-              var23 = md.field_g[var2];
-              var24 = new int[var3];
-              var20 = var24;
-              var16 = var20;
-              var13 = var16;
-              var6 = var13;
+              var24 = md.field_g[var2];
+              var25 = new int[var3];
+              var21 = var25;
+              var17 = var21;
+              var14 = var17;
+              var6 = var14;
               var7 = 0;
               L1: while (true) {
                 if (var7 >= var3) {
-                  var1[var2] = (mg) (Object) new kc(oj.field_Kb, se.field_d, el.field_w[var2], mb.field_bb[var2], db.field_k[var2], gb.field_F[var2], var24);
+                  var1[var2] = (mg) (Object) new kc(oj.field_Kb, se.field_d, el.field_w[var2], mb.field_bb[var2], db.field_k[var2], gb.field_F[var2], var25);
                   var2++;
                   continue L0;
                 } else {
-                  var6[var7] = oh.a(rb.a((int) var23[var7], 255) << 24, k.field_c[rb.a((int) var21[var7], 255)]);
+                  var6[var7] = oh.a(rb.a((int) var24[var7], 255) << 24, k.field_c[rb.a((int) var22[var7], 255)]);
                   var7++;
                   continue L1;
                 }
               }
             } else {
-              var9 = new int[var3];
-              var22 = var9;
+              var10 = new int[var3];
+              var23 = var10;
               var6_int = 0;
               L2: while (true) {
                 if (var3 <= var6_int) {
-                  var1[var2] = new mg(oj.field_Kb, se.field_d, el.field_w[var2], mb.field_bb[var2], db.field_k[var2], gb.field_F[var2], var22);
+                  var1[var2] = new mg(oj.field_Kb, se.field_d, el.field_w[var2], mb.field_bb[var2], db.field_k[var2], gb.field_F[var2], var23);
                   var2++;
                   continue L0;
                 } else {
-                  var9[var6_int] = k.field_c[rb.a((int) var21[var6_int], 255)];
+                  var10[var6_int] = k.field_c[rb.a((int) var22[var6_int], 255)];
                   var6_int++;
                   continue L2;
                 }
@@ -159,7 +158,7 @@ final class dd {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_f = null;
         field_b = null;

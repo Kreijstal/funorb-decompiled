@@ -16,7 +16,7 @@ abstract class ie extends al {
     static cj field_jb;
     private na field_hb;
 
-    public static void l() {
+    public static void l(int param0) {
         field_jb = null;
         field_ob = null;
         field_ib = null;
@@ -166,8 +166,7 @@ abstract class ie extends al {
           } else {
             ((ie) this).field_pb = lf.field_a;
             ((ie) this).field_lb = 0;
-            int discarded$2 = 0;
-            this.a(((ie) this).field_kb);
+            this.a(((ie) this).field_kb, false);
             ((ie) this).field_hb.field_E = 0;
             ((ie) this).field_kb = null;
             return;
@@ -179,8 +178,7 @@ abstract class ie extends al {
           } else {
             ((ie) this).field_pb = lf.field_a;
             ((ie) this).field_lb = 0;
-            int discarded$3 = 0;
-            this.a(((ie) this).field_kb);
+            this.a(((ie) this).field_kb, false);
             ((ie) this).field_hb.field_E = 0;
             ((ie) this).field_kb = null;
             return;
@@ -203,8 +201,7 @@ abstract class ie extends al {
             ((ie) this).field_qb = param3;
             ((ie) this).field_mb = param4;
             ((ie) this).field_rb = param2;
-            int discarded$0 = 0;
-            this.a(param1);
+            this.a(param1, false);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "ie.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -219,18 +216,17 @@ abstract class ie extends al {
             if (param0 >= 29) {
               return;
             } else {
-              boolean discarded$8 = ((ie) this).h(-78);
+              boolean discarded$6 = ((ie) this).h(-78);
               return;
             }
           } else {
             ((ie) this).b(12 + ((ie) this).field_kb.field_n, ((ie) this).field_kb.field_w + (((ie) this).field_rb + 12), 78);
-            int discarded$9 = 0;
-            this.a(((ie) this).field_kb);
+            this.a(((ie) this).field_kb, false);
             ((ie) this).field_pb = null;
             ((ie) this).field_hb.field_E = 256;
             super.h((byte) 63);
             if (param0 < 29) {
-              boolean discarded$10 = ((ie) this).h(-78);
+              boolean discarded$7 = ((ie) this).h(-78);
               return;
             } else {
               return;
@@ -241,7 +237,7 @@ abstract class ie extends al {
           if (param0 >= 29) {
             return;
           } else {
-            boolean discarded$11 = ((ie) this).h(-78);
+            boolean discarded$8 = ((ie) this).h(-78);
             return;
           }
         }
@@ -316,7 +312,7 @@ abstract class ie extends al {
         }
     }
 
-    private final void a(cf param0) {
+    private final void a(cf param0, boolean param1) {
         try {
             if (null != ((ie) this).field_hb) {
                 ((ie) this).field_hb.a(true);

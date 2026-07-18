@@ -15,7 +15,7 @@ final class s extends hc {
     static int[] field_I;
     static bj field_P;
 
-    final static int a() {
+    final static int a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

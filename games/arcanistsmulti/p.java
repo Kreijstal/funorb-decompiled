@@ -102,7 +102,7 @@ final class p extends RuntimeException {
         he.field_e.f(param5, (byte) -128);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_h = null;
         field_j = null;

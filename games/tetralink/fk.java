@@ -234,10 +234,9 @@ class fk extends ae {
         }
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         if (!(!hi.field_a)) {
-            int discarded$0 = 42;
-            go.c();
+            go.c((byte) 42);
         }
     }
 
@@ -314,7 +313,7 @@ class fk extends ae {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_R = null;
         field_Q = null;
         field_U = null;

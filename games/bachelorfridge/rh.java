@@ -97,8 +97,7 @@ final class rh {
                 break L1;
               } else {
                 var3 = (CharSequence) (Object) var2;
-                int discarded$2 = 1;
-                if (0L != mp.a(var3)) {
+                if (0L != mp.a(var3, true)) {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -146,11 +145,11 @@ final class rh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void a(int param0, int param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         sna var5 = null;
@@ -187,7 +186,7 @@ final class rh {
                   break L3;
                 } else {
                   if (hl.field_I) {
-                    boolean discarded$2 = ao.field_d.a(param2, i.field_a.field_D, i.field_a.field_M, 6381);
+                    boolean discarded$1 = ao.field_d.a(param2, i.field_a.field_D, i.field_a.field_M, 6381);
                     break L3;
                   } else {
                     ao.field_d = null;
@@ -216,8 +215,7 @@ final class rh {
                     }
                   }
                   L7: {
-                    int discarded$3 = 2;
-                    var8 = gr.a();
+                    var8 = gr.a(2);
                     if (var8 != null) {
                       jja.field_m = var8;
                       break L7;

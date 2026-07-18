@@ -71,7 +71,7 @@ class ma extends oa {
         ((ma) this).f((byte) -109);
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_eb = null;
         field_cb = null;
         field_Y = null;
@@ -215,7 +215,7 @@ class ma extends oa {
         }
     }
 
-    final static void a(int param0, kf param1) {
+    final static void a(int param0, kf param1, int param2) {
         kj var3 = null;
         try {
             var3 = mm.field_g;

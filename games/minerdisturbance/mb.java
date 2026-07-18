@@ -36,11 +36,11 @@ final class mb {
         }
     }
 
-    final static int b() {
+    final static int b(byte param0) {
         return me.field_j;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         try {
             Exception var1 = null;
             java.lang.reflect.Method var1_ref = null;

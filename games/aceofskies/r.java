@@ -5,14 +5,14 @@ abstract class r extends wt {
     static String field_o;
     static int field_n;
 
-    public static void f() {
+    public static void f(int param0) {
         field_o = null;
     }
 
     protected r() {
     }
 
-    final static void e() {
+    final static void e(int param0) {
         int var1 = 0;
         if (32 < gn.field_a) {
           L0: {

@@ -165,14 +165,12 @@ final class ci {
         String stackOut_10_2 = null;
         try {
           if (1 == ((ci) this).field_d.a(false)) {
-            int discarded$4 = 14;
-            stackOut_2_0 = this.a(param2, 0, param0);
+            stackOut_2_0 = this.a(param2, 0, param0, (byte) 14);
             stackIn_3_0 = stackOut_2_0;
             return stackIn_3_0;
           } else {
             if (param1 == ((ci) this).field_d.c(-9467, param0)) {
-              int discarded$5 = 14;
-              stackOut_6_0 = this.a(param2, param0, 0);
+              stackOut_6_0 = this.a(param2, param0, 0, (byte) 14);
               stackIn_7_0 = stackOut_6_0;
               return stackIn_7_0;
             } else {
@@ -319,13 +317,11 @@ final class ci {
         try {
           L0: {
             if (!((ci) this).field_c.b((byte) -126, "")) {
-              int discarded$4 = 1;
-              stackOut_3_0 = this.a(param2, "", param1);
+              stackOut_3_0 = this.a(param2, "", param1, true);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
-              int discarded$5 = 1;
-              stackOut_1_0 = this.a(param2, param1, "");
+              stackOut_1_0 = this.a(param2, param1, "", true);
               stackIn_2_0 = stackOut_1_0;
               return stackIn_2_0;
             }
@@ -469,7 +465,7 @@ final class ci {
         return stackIn_7_0;
     }
 
-    private final gd a(int[] param0, String param1, String param2) {
+    private final gd a(int[] param0, String param1, String param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -735,7 +731,7 @@ final class ci {
         return stackIn_16_0;
     }
 
-    private final gd a(int[] param0, int param1, int param2) {
+    private final gd a(int[] param0, int param1, int param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -854,7 +850,7 @@ final class ci {
         return stackIn_19_0;
     }
 
-    final static void a(String[] args) {
+    final static void a(String[] args, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -1098,8 +1094,7 @@ final class ci {
             if (0 <= var5_int) {
               var6 = ((ci) this).field_d.a(param0, -89, var5_int);
               if (var6 >= 0) {
-                int discarded$2 = 14;
-                stackOut_7_0 = this.a(param1, var5_int, var6);
+                stackOut_7_0 = this.a(param1, var5_int, var6, (byte) 14);
                 stackIn_8_0 = stackOut_7_0;
                 break L0;
               } else {

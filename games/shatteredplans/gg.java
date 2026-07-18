@@ -77,7 +77,7 @@ final class gg {
         }
     }
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, byte param1) {
         try {
             if (!(param0[0] < 0)) {
                 uc.field_A = param0[1];

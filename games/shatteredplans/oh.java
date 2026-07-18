@@ -55,15 +55,13 @@ class oh {
             oi.field_f = true;
             return;
           } else {
-            int discarded$4 = -125;
-            qk.g();
+            qk.g(-125);
             gm.field_i = 11;
             oi.field_f = true;
             return;
           }
         } else {
-          int discarded$5 = -125;
-          qk.g();
+          qk.g(-125);
           gm.field_i = 11;
           oi.field_f = true;
           return;

@@ -19,7 +19,7 @@ final class mu extends jea {
         super(0L, (jea) null);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_wb = null;
         field_Bb = null;
     }

@@ -8,7 +8,7 @@ final class vj {
     static String field_e;
     static String field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_e = null;
@@ -93,7 +93,7 @@ final class vj {
             oe.field_g = (eg) (Object) qi.a(param0, "commonui", param3, "arezzo14", param2 ^ param2);
             dl.field_H = (eg) (Object) qi.a(param0, "commonui", param3, "arezzo14bold", param2 + -23081);
             var17 = new ka(param1.a(-2, "", "button.gif"), (java.awt.Component) (Object) bg.field_P);
-            ge discarded$2 = rb.a(param3, "commonui", (byte) -114, "dropdown");
+            ge discarded$1 = rb.a(param3, "commonui", (byte) -114, "dropdown");
             var5 = mh.a(32, param3, "screen_options", "commonui");
             c.field_d = new ge[4];
             we.field_o = new ge[4];
@@ -129,8 +129,7 @@ final class vj {
                     var12 = new ka(-(2 * var9) + var17.field_u, var9);
                     var12.d();
                     var17.a(-var9, 0);
-                    int discarded$3 = -9;
-                    ie.b();
+                    ie.b((byte) -9);
                     ae.field_v = new ka[]{var15, var12, var11};
                     break L0;
                   } else {

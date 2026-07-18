@@ -253,7 +253,7 @@ final class ko {
         return ((ko) this).field_b[fieldTemp$0];
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_g = null;
         field_f = null;

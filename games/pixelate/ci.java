@@ -267,7 +267,7 @@ final class ci extends jj {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_m = null;
         field_r = null;
     }

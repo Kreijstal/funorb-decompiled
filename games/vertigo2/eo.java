@@ -17,7 +17,7 @@ final class eo extends mo {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_k = null;
         field_l = null;
         field_n = null;

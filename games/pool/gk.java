@@ -9,7 +9,7 @@ final class gk extends tj implements tb {
     private fe field_gb;
     static boolean field_kb;
 
-    private final void j() {
+    private final void j(byte param0) {
         if (!(((gk) this).field_R)) {
             return;
         }
@@ -63,8 +63,7 @@ final class gk extends tj implements tb {
                 if (el.field_K == param1) {
                   var3 = (Object) (Object) wh.field_i;
                   ((gk) this).field_y = ((gk) this).field_y + 10;
-                  int discarded$5 = 124;
-                  if (!je.b()) {
+                  if (!je.b((byte) 124)) {
                     break L1;
                   } else {
                     ((gk) this).field_y = ((gk) this).field_y + 20;
@@ -293,8 +292,7 @@ final class gk extends tj implements tb {
           L0: {
             L1: {
               if (param3 == ((gk) this).field_gb) {
-                int discarded$2 = -59;
-                this.j();
+                this.j((byte) -59);
                 break L1;
               } else {
                 break L1;

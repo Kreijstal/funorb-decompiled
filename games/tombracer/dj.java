@@ -40,7 +40,7 @@ final class dj {
         return uca.field_c.a(param1, 0);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

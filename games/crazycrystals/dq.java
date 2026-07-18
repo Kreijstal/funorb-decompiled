@@ -21,8 +21,7 @@ final class dq extends pc {
               se.a((byte) -108, param1, 3);
               return;
             } else {
-              int discarded$2 = 1;
-              mm.a((java.awt.Canvas) (Object) ph.field_E);
+              mm.a((java.awt.Canvas) (Object) ph.field_E, true);
               se.a((byte) -80, param1, 2);
               return;
             }
@@ -43,8 +42,7 @@ final class dq extends pc {
               se.a((byte) -108, param1, 3);
               return;
             } else {
-              int discarded$3 = 1;
-              mm.a((java.awt.Canvas) (Object) ph.field_E);
+              mm.a((java.awt.Canvas) (Object) ph.field_E, true);
               se.a((byte) -80, param1, 2);
               return;
             }
@@ -76,7 +74,7 @@ final class dq extends pc {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         oj.a(true, tm.field_d, 480, 480, bq.field_i[1], 0, bq.field_i[2], 0, (byte) -32, bq.field_i[0]);
         if (ab.field_D == null) {
           if (go.field_i) {
@@ -253,8 +251,7 @@ final class dq extends pc {
             if (param1 != null) {
               L1: {
                 var2 = new dh(param1, uo.field_k, jm.field_a, uo.field_l, je.field_c, gh.field_z, ui.field_c);
-                int discarded$5 = 2188450;
-                ok.a();
+                ok.a(2188450);
                 if (param0 == -18289) {
                   break L1;
                 } else {

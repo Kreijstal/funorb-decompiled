@@ -249,7 +249,7 @@ abstract class wf extends cc {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_Y = null;
         field_P = null;
         field_V = null;

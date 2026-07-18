@@ -7,7 +7,7 @@ final class qg {
     private int[] field_d;
     static int field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_b = null;
     }
@@ -37,7 +37,7 @@ final class qg {
         }
     }
 
-    final static void a(hf param0) {
+    final static void a(hf param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

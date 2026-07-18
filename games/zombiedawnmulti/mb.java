@@ -99,7 +99,7 @@ final class mb extends br {
                 break L1;
               } else {
                 if (param2.indexOf("<br>") == -1) {
-                  param3[0] = (String) (Object) param3;
+                  param3[0] = param2;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;
@@ -318,7 +318,7 @@ final class mb extends br {
         ((mb) this).field_C = null;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_n = null;
         field_k = null;
         field_j = null;

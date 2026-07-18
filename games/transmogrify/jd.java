@@ -466,8 +466,7 @@ final class jd extends IOException {
                       ff.field_D.f(6389, 18);
                       ff.field_D.field_h = ff.field_D.field_h + 2;
                       var10 = ff.field_D.field_h;
-                      int discarded$8 = -45;
-                      var11_ref_String = wk.a(ha.b(116));
+                      var11_ref_String = wk.a(ha.b(116), (byte) -45);
                       if (var11_ref_String == null) {
                         var11_ref_String = "";
                         break L5;
@@ -565,18 +564,15 @@ final class jd extends IOException {
                       ca.field_e = var9;
                       break L8;
                     } else {
-                      int discarded$9 = -114;
-                      boolean discarded$10 = ue.a(jk.a(), 0);
+                      boolean discarded$1 = ue.a(jk.a((byte) -114), 0);
                       ch.field_f = new Boolean(oh.a((byte) -87, (oa) (Object) nf.field_l));
                       nf.field_l.field_h = 0;
                       break L8;
                     }
                   } else {
-                    int discarded$11 = 1;
-                    tb.a(ha.b(73));
+                    tb.a(ha.b(73), true);
                     Transmogrify.field_B = nj.field_j;
-                    int discarded$12 = 1;
-                    pc.a();
+                    pc.a(1);
                     ej.field_k = false;
                     stackOut_31_0 = var9;
                     stackIn_32_0 = stackOut_31_0;
@@ -600,8 +596,7 @@ final class jd extends IOException {
                     var12 = 0;
                     L11: while (true) {
                       if (var11 <= var12) {
-                        int discarded$13 = 1;
-                        pc.a();
+                        pc.a(1);
                         ej.field_k = false;
                         stackOut_43_0 = var11 + 100;
                         stackIn_44_0 = stackOut_43_0;
@@ -635,8 +630,7 @@ final class jd extends IOException {
                       break L13;
                     }
                   }
-                  int discarded$14 = 1;
-                  pc.a();
+                  pc.a(1);
                   ej.field_k = false;
                   stackOut_53_0 = ca.field_e;
                   stackIn_54_0 = stackOut_53_0;
@@ -654,8 +648,7 @@ final class jd extends IOException {
               } else {
                 if (ej.field_k) {
                   L15: {
-                    int discarded$15 = 1;
-                    if (mc.b() <= 30000L) {
+                    if (mc.b(true) <= 30000L) {
                       Transmogrify.field_B = bd.field_s;
                       break L15;
                     } else {

@@ -26,8 +26,7 @@ final class uh extends lk {
 
     final synchronized void a(byte param0, int param1, ih param2, int param3) {
         try {
-            int discarded$0 = 91;
-            this.a(256, param3, false, param2, param1);
+            this.a(256, param3, false, param2, param1, (byte) 91);
             int var5_int = 83 / ((param0 - -55) / 51);
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "uh.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -683,7 +682,7 @@ final class uh extends lk {
         }
     }
 
-    private final synchronized void a(int param0, int param1, boolean param2, ih param3, int param4) {
+    private final synchronized void a(int param0, int param1, boolean param2, ih param3, int param4, byte param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -879,8 +878,7 @@ final class uh extends lk {
         try {
           L0: {
             if (nb.a(param1, param3, (byte) 127, param0)) {
-              int discarded$2 = 27;
-              stackOut_5_0 = eb.a();
+              stackOut_5_0 = eb.a((byte) 27);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

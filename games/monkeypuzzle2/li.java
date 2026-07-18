@@ -575,7 +575,7 @@ final class li extends fh {
         }
     }
 
-    final static li a(td param0) {
+    final static li a(td param0, int param1, int param2) {
         if (param0.field_j != null) {
           if (param0.field_j.length == 0) {
             return null;

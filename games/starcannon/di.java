@@ -184,8 +184,7 @@ final class di extends qf {
               }
               L2: {
                 var5 = (CharSequence) (Object) param0;
-                int discarded$2 = 10;
-                var3_int = pd.a(var5);
+                var3_int = pd.a(var5, 10);
                 if (0 >= var3_int) {
                   break L2;
                 } else {

@@ -6,7 +6,7 @@ final class cf extends rna implements ntb {
     private int field_c;
     static String field_a;
 
-    final static void d() {
+    final static void d(int param0) {
         if (!(efb.field_b == null)) {
             efb.field_b.field_b = false;
         }
@@ -61,19 +61,19 @@ final class cf extends rna implements ntb {
               super.a(param0, -87);
               var5 = (cf) (Object) param0;
               var4 = 0;
-              if (var5.field_b == var5.field_b) {
+              if (((cf) this).field_b == var5.field_b) {
                 break L1;
               } else {
                 var4 = 1;
-                System.out.println("int index has changed. before=" + var5.field_b + ", now=" + var5.field_b);
+                System.out.println("int index has changed. before=" + var5.field_b + ", now=" + ((cf) this).field_b);
                 break L1;
               }
             }
             L2: {
-              if (var5.field_c == var5.field_c) {
+              if (var5.field_c == ((cf) this).field_c) {
                 break L2;
               } else {
-                System.out.println("int label has changed. before=" + var5.field_c + ", now=" + var5.field_c);
+                System.out.println("int label has changed. before=" + var5.field_c + ", now=" + ((cf) this).field_c);
                 var4 = 1;
                 break L2;
               }
@@ -455,10 +455,10 @@ final class cf extends rna implements ntb {
                 if (super.a((byte) 96, param1)) {
                   break L2;
                 } else {
-                  if (var3.field_b != var3.field_b) {
+                  if (((cf) this).field_b != var3.field_b) {
                     break L2;
                   } else {
-                    if (var3.field_c == var3.field_c) {
+                    if (((cf) this).field_c == var3.field_c) {
                       stackOut_5_0 = 0;
                       stackIn_6_0 = stackOut_5_0;
                       break L1;
@@ -518,8 +518,7 @@ final class cf extends rna implements ntb {
     final static void b(int param0) {
         msa.field_s = brb.f((byte) 62);
         qn.field_h = new ida();
-        int discarded$3 = 117;
-        lva.e();
+        lva.e((byte) 117);
         if (param0 != 32) {
             cf.b(3);
         }
@@ -535,8 +534,8 @@ final class cf extends rna implements ntb {
             var5 = (cf) (Object) param1;
             var6 = var5;
             super.b((byte) 110, param1);
-            var6.field_c = var5.field_c;
-            var6.field_b = var5.field_b;
+            var6.field_c = ((cf) this).field_c;
+            var6.field_b = ((cf) this).field_b;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "cf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

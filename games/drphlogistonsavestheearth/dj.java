@@ -91,7 +91,7 @@ final class dj extends pj implements ke {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         nl var4 = null;

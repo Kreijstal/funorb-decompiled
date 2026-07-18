@@ -8,19 +8,15 @@ final class kp {
     static int field_e;
     static int[] field_a;
 
-    final static void a() {
-        int discarded$80 = 930;
-        ib.a();
+    final static void a(int param0) {
+        ib.a(930);
         if (null != c.field_h) {
           L0: {
-            int discarded$81 = -32;
-            pd.a(c.field_h);
-            int discarded$82 = -32;
-            hf.i();
+            pd.a(c.field_h, -32);
+            hf.i((byte) -32);
             fd.a(52);
             lm.b((byte) -99);
-            int discarded$83 = 0;
-            if (ef.b()) {
+            if (ef.b(0)) {
               ac.field_B.d((byte) -87, 1);
               op.a(0, 0);
               break L0;
@@ -32,12 +28,10 @@ final class kp {
           return;
         } else {
           L1: {
-            int discarded$84 = -32;
-            hf.i();
+            hf.i((byte) -32);
             fd.a(52);
             lm.b((byte) -99);
-            int discarded$85 = 0;
-            if (ef.b()) {
+            if (ef.b(0)) {
               ac.field_B.d((byte) -87, 1);
               op.a(0, 0);
               break L1;
@@ -50,7 +44,7 @@ final class kp {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
         field_d = null;

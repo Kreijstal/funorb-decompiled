@@ -147,7 +147,7 @@ final class qj extends am {
         }
     }
 
-    final static fa a(java.applet.Applet param0) {
+    final static fa a(java.applet.Applet param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         fa[] var3 = null;
@@ -179,11 +179,9 @@ final class qj extends am {
         var6 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
-            int discarded$4 = 0;
-            var2 = ae.a(param0, "jagex-last-login-method");
+            var2 = ae.a(param0, "jagex-last-login-method", 0);
             if (var2 != null) {
-              int discarded$5 = 274;
-              var3 = pe.p();
+              var3 = pe.p(274);
               var4 = 0;
               L1: while (true) {
                 if (var4 >= var3.length) {
@@ -241,7 +239,7 @@ final class qj extends am {
         return stackIn_11_0;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         jd var4 = null;
@@ -258,8 +256,7 @@ final class qj extends am {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$4 = 746037954;
-                    rl.a(3, var5);
+                    rl.a(3, var5, 746037954);
                     var5 = (ic) (Object) ch.field_p.a(12684);
                     continue L2;
                   }
@@ -410,7 +407,7 @@ final class qj extends am {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_n = null;
         field_k = null;
         field_l = null;
@@ -545,8 +542,7 @@ final class qj extends am {
                         if (!var7.field_s) {
                           break L7;
                         } else {
-                          int discarded$1 = 1;
-                          tk.a(1, jc.field_c, 27);
+                          tk.a(1, jc.field_c, 27, true);
                           break L7;
                         }
                       }

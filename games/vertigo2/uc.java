@@ -21,7 +21,7 @@ final class uc {
         ie.b(20983, param1);
     }
 
-    final static int a(String param0, boolean param1) {
+    final static int a(String param0, boolean param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -88,7 +88,7 @@ final class uc {
         return stackIn_4_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;

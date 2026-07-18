@@ -143,8 +143,7 @@ final class cp {
             }
             L2: {
               if (!((cp) this).field_o) {
-                int discarded$2 = -22699;
-                this.a(param0, param3, param2);
+                this.a(param0, param3, param2, -22699);
                 break L2;
               } else {
                 this.b(param2, param3, -84, param0);
@@ -193,7 +192,7 @@ final class cp {
         }
     }
 
-    private final void a(int param0, String param1, int param2) {
+    private final void a(int param0, String param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -654,7 +653,7 @@ final class cp {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_k = null;
     }

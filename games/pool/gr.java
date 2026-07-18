@@ -117,8 +117,7 @@ abstract class gr extends rg {
           L0: {
             var4_int = param0.b(param1, -1);
             var5 = param0.a(var4_int, 0, param3);
-            int discarded$2 = 120;
-            stackOut_2_0 = pn.a(var5, param0, var4_int);
+            stackOut_2_0 = pn.a(var5, param0, var4_int, 120);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

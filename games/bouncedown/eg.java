@@ -197,7 +197,7 @@ abstract class eg extends ug {
 
     abstract boolean c(byte param0);
 
-    public static void d() {
+    public static void d(int param0) {
         field_p = null;
         int var1 = 0;
         field_q = null;

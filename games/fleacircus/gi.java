@@ -202,7 +202,7 @@ abstract class gi {
         }
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -373,7 +373,7 @@ abstract class gi {
 
     abstract rf a(int param0);
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_d = null;

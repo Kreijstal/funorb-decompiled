@@ -9,7 +9,7 @@ final class uj {
     static int[] field_a;
     static String field_d;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return ed.field_b;
     }
 

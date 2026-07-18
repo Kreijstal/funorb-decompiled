@@ -230,8 +230,7 @@ abstract class ri implements ma {
             }
             L6: {
               ed.field_q.c(var6, -1);
-              int discarded$1 = -28;
-              var7 = pg.a(kk.c(-14047));
+              var7 = pg.a(kk.c(-14047), (byte) -28);
               if (var7 != null) {
                 break L6;
               } else {

@@ -42,8 +42,7 @@ final class md {
               ui.field_p.b(false, pl.field_a[1]);
               ui.field_p.b(false, pl.field_a[2]);
               ui.field_p.b(false, pl.field_a[3]);
-              int discarded$2 = -69;
-              vd.a(ui.field_p);
+              vd.a(ui.field_p, (byte) -69);
               ui.field_p.b(param1, (byte) -124);
               param0.a((byte) -6, ui.field_p);
               ra.field_C.field_k = 0;
@@ -94,8 +93,7 @@ final class md {
             }
             L6: {
               ra.field_C.a(var6, (byte) -77);
-              int discarded$3 = -22004;
-              var7 = bg.a(gd.b((byte) 77));
+              var7 = bg.a(gd.b((byte) 77), -22004);
               if (var7 == null) {
                 var7 = "";
                 break L6;
@@ -172,7 +170,7 @@ final class md {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_e = null;
         field_b = null;

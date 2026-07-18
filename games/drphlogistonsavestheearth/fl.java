@@ -19,17 +19,17 @@ final class fl {
         return null;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_e = null;
         field_d = null;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return kc.field_k;
     }
 
-    final static boolean a(int param0, vj param1, int param2) {
+    final static boolean a(int param0, vj param1, int param2, byte param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -62,8 +62,7 @@ final class fl {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
             } else {
-              int discarded$2 = 87;
-              lk.a(var5);
+              lk.a(var5, 87);
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
               break L0;

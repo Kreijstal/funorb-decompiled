@@ -19,7 +19,7 @@ final class kh extends dj {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_j = null;
         field_f = null;
     }

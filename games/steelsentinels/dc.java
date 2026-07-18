@@ -46,7 +46,7 @@ final class dc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_f = null;

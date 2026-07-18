@@ -20,7 +20,7 @@ final class qh extends ee implements pe, pl, ta {
     static String field_S;
     private hk field_L;
 
-    private final int a(int param0, String param1, int param2, el param3) {
+    private final int a(int param0, String param1, int param2, el param3, int param4) {
         hd var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
@@ -307,18 +307,14 @@ final class qh extends ee implements pe, pl, ta {
         uh dupTemp$1 = new uh(10000536);
         ((qh) this).field_N.field_q = (dh) (Object) dupTemp$1;
         ((qh) this).field_M.field_q = (dh) (Object) dupTemp$1;
-        int discarded$2 = 0;
         String var2 = wj.a(bm.field_p, new String[2], (byte) -72);
         int var3 = 20;
-        int discarded$3 = 5;
-        var3 = var3 + this.a(var3, ug.field_b, 170, (el) (Object) ((qh) this).field_I);
+        var3 = var3 + this.a(var3, ug.field_b, 170, (el) (Object) ((qh) this).field_I, 5);
         var3 = var3 + (5 + this.a((el) (Object) ((qh) this).field_G, 170, ok.field_e, 20, "", var3, (byte) -65));
-        int discarded$4 = 5;
-        var3 = var3 + this.a(var3, qg.field_b, 170, (el) (Object) ((qh) this).field_M);
+        var3 = var3 + this.a(var3, qg.field_b, 170, (el) (Object) ((qh) this).field_M, 5);
         var3 = var3 + (this.a(-99, (el) (Object) ((qh) this).field_N, v.field_m, var3, 170, field_Q) + 5);
         var3 = var3 + (this.a(-103, (el) (Object) ((qh) this).field_H, wj.field_E, var3, 170, gk.field_c) + 5);
-        int discarded$5 = -127;
-        var3 = var3 + this.a(var3, 170, (el) (Object) ((qh) this).field_R, ue.field_g);
+        var3 = var3 + this.a(var3, 170, (el) (Object) ((qh) this).field_R, ue.field_g, (byte) -127);
         hd var4 = new hd(46, var3, ((qh) this).field_r - 90, 25, (el) (Object) ((qh) this).field_P, true, ((qh) this).field_r + -120, 5, hh.field_d, 11579568, ue.field_d);
         ((qh) this).b((byte) -106, (el) (Object) var4);
         var3 = var3 + var4.field_h;
@@ -346,8 +342,7 @@ final class qh extends ee implements pe, pl, ta {
     }
 
     private final boolean g(int param0) {
-        int discarded$0 = 6626;
-        if (!this.f()) {
+        if (!this.f(6626)) {
             return false;
         }
         int var2 = -1;
@@ -358,7 +353,7 @@ final class qh extends ee implements pe, pl, ta {
         return mc.a(((qh) this).field_H.field_s, ((qh) this).field_I.field_s, var2, (qh) this, 0, ((qh) this).field_P.field_y, ((qh) this).field_M.field_s);
     }
 
-    final static mb i() {
+    final static mb i(int param0) {
         String var1 = al.b(0);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
@@ -368,7 +363,7 @@ final class qh extends ee implements pe, pl, ta {
         return new mb(al.b(0), rl.n(-1071908447));
     }
 
-    private final int a(int param0, int param1, el param2, String param3) {
+    private final int a(int param0, int param1, el param2, String param3, byte param4) {
         hd var6 = null;
         RuntimeException var6_ref = null;
         td var7 = null;
@@ -553,15 +548,14 @@ final class qh extends ee implements pe, pl, ta {
         }
     }
 
-    final static void h() {
-        int discarded$0 = 125;
-        hb.field_j = f.p();
+    final static void h(byte param0) {
+        hb.field_j = f.p(125);
         int var1 = -58;
         kd.field_e = new ng();
         b.a(true, true, false);
     }
 
-    private final String c() {
+    private final String c(boolean param0) {
         return "</col></u>";
     }
 
@@ -750,7 +744,7 @@ final class qh extends ee implements pe, pl, ta {
         field_F = null;
     }
 
-    private final boolean f() {
+    private final boolean f(int param0) {
         if (this.a((byte) -104, (nl) (Object) ((qh) this).field_H)) {
           if (this.a((byte) -118, (nl) (Object) ((qh) this).field_I)) {
             if (this.a((byte) -108, (nl) (Object) ((qh) this).field_G)) {
@@ -1039,8 +1033,7 @@ final class qh extends ee implements pe, pl, ta {
     final void a(boolean param0, int param1, el param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 6626;
-            ((qh) this).field_D.field_D = this.f();
+            ((qh) this).field_D.field_D = this.f(6626);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "qh.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

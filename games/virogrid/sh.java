@@ -24,12 +24,10 @@ class sh extends mb implements ta {
         }
         ((sh) this).field_G = false;
         if (((sh) this).field_vb) {
-            int discarded$1 = -127;
-            ch.a();
+            ch.a((byte) -127);
         } else {
             if (((sh) this).field_zb) {
-                int discarded$2 = 0;
-                hm.c();
+                hm.c(0);
             }
         }
         if (!param0) {
@@ -127,7 +125,7 @@ class sh extends mb implements ta {
         return stackIn_12_0;
     }
 
-    public static void g() {
+    public static void g(boolean param0) {
         field_yb = null;
         field_sb = null;
         field_tb = null;
@@ -560,7 +558,7 @@ class sh extends mb implements ta {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -1182,8 +1180,7 @@ class sh extends mb implements ta {
         var2.g(param1, 8);
         var2.a(2, -66);
         var2.a(4, -95);
-        int discarded$0 = 4;
-        var2.a(nl.b(), -75);
+        var2.a(nl.b(4), -75);
     }
 
     final void k(int param0) {

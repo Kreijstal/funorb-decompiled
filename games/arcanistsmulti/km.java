@@ -188,7 +188,7 @@ final class km {
         return ((km) this).field_h;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         vf.field_q = 21845;
         vf.field_m = 133;
         vf.field_o = 33;
@@ -202,7 +202,7 @@ final class km {
         return ((km) this).field_d;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_g = null;
         field_e = null;

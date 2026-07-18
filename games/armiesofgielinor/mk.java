@@ -126,7 +126,7 @@ abstract class mk extends rb implements fb {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_d = null;
         field_f = null;
         field_i = null;

@@ -447,21 +447,18 @@ final class qh extends fd implements im, ta, fc {
           L0: {
             L1: {
               if (param0 == 0) {
-                int discarded$59 = 12;
-                wf.a("terms.ws");
+                wf.a("terms.ws", 12);
                 break L1;
               } else {
                 if (param0 != 1) {
                   if (param0 == 2) {
-                    int discarded$60 = 12;
-                    wf.a("conduct.ws");
+                    wf.a("conduct.ws", 12);
                     break L1;
                   } else {
                     break L1;
                   }
                 } else {
-                  int discarded$61 = 12;
-                  wf.a("privacy.ws");
+                  wf.a("privacy.ws", 12);
                   break L1;
                 }
               }
@@ -506,19 +503,13 @@ final class qh extends fd implements im, ta, fc {
         }
     }
 
-    private final boolean a() {
-        int discarded$12 = 11516;
-        if (this.a((fg) (Object) ((qh) this).field_I)) {
-          int discarded$13 = 11516;
-          if (this.a((fg) (Object) ((qh) this).field_J)) {
-            int discarded$14 = 11516;
-            if (this.a((fg) (Object) ((qh) this).field_D)) {
-              int discarded$15 = 11516;
-              if (this.a((fg) (Object) ((qh) this).field_Q)) {
-                int discarded$16 = 11516;
-                if (this.a((fg) (Object) ((qh) this).field_E)) {
-                  int discarded$17 = 11516;
-                  if (!this.a((fg) (Object) ((qh) this).field_S)) {
+    private final boolean a(int param0) {
+        if (this.a((fg) (Object) ((qh) this).field_I, 11516)) {
+          if (this.a((fg) (Object) ((qh) this).field_J, 11516)) {
+            if (this.a((fg) (Object) ((qh) this).field_D, 11516)) {
+              if (this.a((fg) (Object) ((qh) this).field_Q, 11516)) {
+                if (this.a((fg) (Object) ((qh) this).field_E, 11516)) {
+                  if (!this.a((fg) (Object) ((qh) this).field_S, 11516)) {
                     return false;
                   } else {
                     return true;
@@ -577,7 +568,6 @@ final class qh extends fd implements im, ta, fc {
         a dupTemp$1 = new a(10000536);
         ((qh) this).field_E.field_w = (ol) (Object) dupTemp$1;
         ((qh) this).field_Q.field_w = (ol) (Object) dupTemp$1;
-        int discarded$2 = -1;
         String var2 = oi.a(new String[2], eh.field_m, 2);
         int var3 = 20;
         var3 = var3 + this.a(170, 126, pc.field_d, var3, (fi) (Object) ((qh) this).field_J);
@@ -715,8 +705,7 @@ final class qh extends fd implements im, ta, fc {
     }
 
     private final boolean g(int param0) {
-        int discarded$0 = 16777215;
-        if (!(this.a())) {
+        if (!(this.a(16777215))) {
             return false;
         }
         int var2 = -76 % ((-1 - param0) / 53);
@@ -728,7 +717,7 @@ final class qh extends fd implements im, ta, fc {
         return af.a(((qh) this).field_I.field_n, ((qh) this).field_Q.field_n, (qh) this, ((qh) this).field_P.field_z, 122, ((qh) this).field_J.field_n, var3);
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         if (!(null == hf.field_w)) {
             hf.field_w.h(true);
         }
@@ -736,11 +725,11 @@ final class qh extends fd implements im, ta, fc {
         fi.field_t.b((fi) (Object) qi.field_c, (byte) -53);
     }
 
-    private final String g() {
+    private final String g(byte param0) {
         return "</col></u>";
     }
 
-    private final boolean a(fg param0) {
+    private final boolean a(fg param0, int param1) {
         le var3 = null;
         RuntimeException var3_ref = null;
         wl var4 = null;
@@ -841,8 +830,7 @@ final class qh extends fd implements im, ta, fc {
             if (param1 <= 113) {
                 ((qh) this).field_P = null;
             }
-            int discarded$0 = 16777215;
-            ((qh) this).field_L.field_C = this.a();
+            ((qh) this).field_L.field_C = this.a(16777215);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "qh.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

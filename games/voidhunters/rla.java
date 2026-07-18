@@ -8,7 +8,7 @@ final class rla extends dqa implements oo {
     static dja field_v;
     static int field_x;
 
-    final static boolean c() {
+    final static boolean c(boolean param0) {
         if (!upa.field_a) {
             return false;
         }
@@ -39,7 +39,7 @@ final class rla extends dqa implements oo {
         }
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_v = null;
     }
 
@@ -184,8 +184,7 @@ final class rla extends dqa implements oo {
                 break L1;
               } else {
                 if (((rla) this).field_w == param3) {
-                  int discarded$1 = 70;
-                  kga.a();
+                  kga.a(70);
                   break L1;
                 } else {
                   if (param3 == ((rla) this).field_z) {

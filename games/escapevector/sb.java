@@ -76,7 +76,7 @@ abstract class sb {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_i = null;
         field_a = null;
     }

@@ -11,7 +11,7 @@ final class nl extends al {
     private int field_q;
     static cg field_m;
 
-    final static void a(lg param0) {
+    final static void a(lg param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -115,8 +115,7 @@ final class nl extends al {
         L0: {
           var21 = ZombieDawn.field_J;
           super.a((byte) -71);
-          int discarded$8 = 0;
-          li.a();
+          li.a(false);
           var22 = hk.field_J;
           var2 = var22;
           var3 = gd.field_C;
@@ -157,27 +156,24 @@ final class nl extends al {
                 if (var10 == -1) {
                   break L3;
                 } else {
-                  int discarded$9 = -30858;
-                  if (!this.e(var10)) {
+                  if (!this.e(var10, -30858)) {
                     break L3;
                   } else {
                     L4: {
                       var23 = this.c(var10, true);
                       var23.b(110 + vh.field_b, 140 + id.field_M + -32);
-                      int discarded$10 = var6.a(var22[var10], vh.field_b + 260, id.field_M + 80, 300, 85, 0, 0, 1, 2, 35);
+                      int discarded$2 = var6.a(var22[var10], vh.field_b + 260, id.field_M + 80, 300, 85, 0, 0, 1, 2, 35);
                       var12 = 280 + vh.field_b;
                       var13 = -32 + id.field_M - -200;
                       var14 = 280;
                       var15 = 100;
                       var16 = var7.field_I + var7.field_x;
-                      int discarded$11 = -21;
-                      if (!this.f(var10)) {
+                      if (!this.f(var10, -21)) {
                         break L4;
                       } else {
-                        int discarded$12 = -7;
-                        if (!this.g(var10)) {
+                        if (!this.g(var10, -7)) {
                           var25 = sh.field_f;
-                          int discarded$13 = var7.a(var25, var12, var13, var14, var15, 16777215, 0, 0, 0, var16);
+                          int discarded$3 = var7.a(var25, var12, var13, var14, var15, 16777215, 0, 0, 0, var16);
                           break L3;
                         } else {
                           break L4;
@@ -210,15 +206,13 @@ final class nl extends al {
               return;
             }
           } else {
-            int discarded$14 = -30858;
-            if (this.e(var10)) {
+            if (this.e(var10, -30858)) {
               L6: {
                 var9 = id.field_M - -cg.field_g[var10];
                 var8 = ld.field_k[var10] + vh.field_b;
                 if (((nl) this).field_d == 6) {
                   bi.a(-3 + var8, -3 + var9, 38, 38, 6, 3355443, 128);
-                  int discarded$15 = -7;
-                  if (this.g(var10)) {
+                  if (this.g(var10, -7)) {
                     break L6;
                   } else {
                     var10++;
@@ -268,13 +262,10 @@ final class nl extends al {
         try {
             mj.field_b = nk.a((byte) 122) * param0 / 1000;
             tp.a((byte) 124, param3);
-            int discarded$0 = -128;
-            ae.a(param3);
+            ae.a(param3, (byte) -128);
             mn.a(param3, true);
-            int discarded$1 = 255;
-            ta.a();
-            int discarded$2 = -101;
-            hg.a();
+            ta.a(255);
+            hg.a((byte) -101);
             int var4_int = 67;
             ej.field_x = 0 - mj.field_b;
         } catch (RuntimeException runtimeException) {
@@ -294,8 +285,7 @@ final class nl extends al {
     }
 
     private final vn c(int param0, boolean param1) {
-        int discarded$0 = -7;
-        if (!(!this.g(param0))) {
+        if (!(!this.g(param0, -7))) {
             return ed.field_a[param0];
         }
         if (be.field_j <= 0) {
@@ -343,8 +333,7 @@ final class nl extends al {
                         if (0 > ((nl) this).field_n) {
                           break L1;
                         } else {
-                          int discarded$1 = -7;
-                          if (this.g(((nl) this).field_n)) {
+                          if (this.g(((nl) this).field_n, -7)) {
                             break L1;
                           } else {
                             ((nl) this).field_n = -1;
@@ -460,8 +449,7 @@ final class nl extends al {
                   if (var12 >= 32) {
                     return;
                   } else {
-                    int discarded$2 = -30858;
-                    if (this.e(var12)) {
+                    if (this.e(var12, -30858)) {
                       ld.field_k[var12] = var7;
                       cg.field_g[var12] = var8;
                       var7 += 40;
@@ -492,8 +480,7 @@ final class nl extends al {
               }
             }
           } else {
-            int discarded$3 = -30858;
-            if (!this.e(var5)) {
+            if (!this.e(var5, -30858)) {
               var4--;
               var5++;
               continue L1;
@@ -505,7 +492,7 @@ final class nl extends al {
         }
     }
 
-    private final boolean g(int param0) {
+    private final boolean g(int param0, int param1) {
         int[] var4 = ((nl) this).field_d != 6 ? dj.field_i : kg.field_g;
         int[] var3 = var4;
         return vi.a(param0, var4, -112);
@@ -517,14 +504,13 @@ final class nl extends al {
         ((nl) this).field_q = -1;
     }
 
-    private final boolean e(int param0) {
+    private final boolean e(int param0, int param1) {
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
         L0: {
           L1: {
-            int discarded$2 = -7;
-            if (this.g(param0)) {
+            if (this.g(param0, -7)) {
               break L1;
             } else {
               L2: {
@@ -587,7 +573,7 @@ final class nl extends al {
         return ((nl) this).c(param1, 6) - -((nl) this).field_i;
     }
 
-    private final boolean f(int param0) {
+    private final boolean f(int param0, int param1) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;

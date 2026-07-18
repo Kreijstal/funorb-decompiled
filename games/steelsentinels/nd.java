@@ -4,11 +4,11 @@
 final class nd {
     static gh field_a;
 
-    final static int a() {
+    final static int a(byte param0) {
         return (pm.field_Z << 2) + (sg.field_c << 4) - -fi.field_y;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         hf.a(param0, 1);
         if (null != ll.field_i) {
             jg.a(ll.field_i, 1);

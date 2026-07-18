@@ -71,8 +71,7 @@ final class oe {
               var8.d(param4, 117);
               break L1;
             } else {
-              int discarded$5 = 0;
-              int discarded$6 = r.a((gi) (Object) var8, param5);
+              int discarded$3 = r.a((gi) (Object) var8, param5, 0);
               break L1;
             }
           }
@@ -220,8 +219,7 @@ final class oe {
         String stackOut_5_2 = null;
         try {
           if (wa.a((byte) 30, param1, param0, param3)) {
-            int discarded$2 = 1;
-            return d.a();
+            return d.a(true);
           } else {
             return null;
           }

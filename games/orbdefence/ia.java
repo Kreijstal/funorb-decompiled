@@ -30,15 +30,13 @@ abstract class ia {
             if (pi.field_j != null) {
               break L2;
             } else {
-              int discarded$7 = 1024;
-              if (gj.c()) {
+              if (gj.c(1024)) {
                 break L2;
               } else {
                 if (am.field_h != null) {
                   break L2;
                 } else {
-                  int discarded$8 = -1;
-                  if (!l.a()) {
+                  if (!l.a(-1)) {
                     stackOut_8_0 = 0;
                     stackIn_9_0 = stackOut_8_0;
                     break L1;
@@ -56,7 +54,7 @@ abstract class ia {
         return stackIn_9_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -67;
         field_a = null;
         field_j = null;
@@ -64,7 +62,7 @@ abstract class ia {
         field_e = null;
     }
 
-    final static void b(int param0) {
+    final static void b(int param0, int param1) {
         ij.field_g = param0;
         if (!(ml.field_c == null)) {
             ml.field_c.b(param0, 111);
@@ -134,7 +132,7 @@ abstract class ia {
         }
     }
 
-    final static void a(og param0) {
+    final static void a(og param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

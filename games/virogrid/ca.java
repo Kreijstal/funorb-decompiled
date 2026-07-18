@@ -71,7 +71,7 @@ final class ca extends fd implements bo, ta {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_L = null;
         field_Q = null;
         field_R = null;
@@ -638,11 +638,10 @@ final class ca extends fd implements bo, ta {
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         try {
             pi.a(param0, 0);
-            int discarded$0 = 0;
-            gk.a(false, bn.field_a);
+            gk.a(false, bn.field_a, false);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "ca.S(" + (param0 != null ? "{...}" : "null") + ',' + -124 + ')');
         }
@@ -950,7 +949,7 @@ final class ca extends fd implements bo, ta {
         return ((ca) this).field_E.field_n;
     }
 
-    final static int b(int param0, int param1) {
+    final static int b(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -1010,7 +1009,7 @@ final class ca extends fd implements bo, ta {
                 break L1;
               } else {
                 var8 = null;
-                boolean discarded$339 = ((ca) this).a((fi) null, '', 57, -15);
+                boolean discarded$2 = ((ca) this).a((fi) null, '', 57, -15);
                 break L1;
               }
             }
@@ -1026,8 +1025,7 @@ final class ca extends fd implements bo, ta {
                         ee.a((byte) 49);
                         break L2;
                       } else {
-                        int discarded$340 = -33;
-                        g.a();
+                        g.a((byte) -33);
                         break L2;
                       }
                     } else {

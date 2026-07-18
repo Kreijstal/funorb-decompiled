@@ -376,7 +376,7 @@ final class re {
               }
             }
             var17 = new t(param2.a(-126, "", "button.gif"), (java.awt.Component) (Object) k.field_d);
-            sm discarded$2 = md.a("dropdown", 31094, param3, "commonui");
+            sm discarded$1 = md.a("dropdown", 31094, param3, "commonui");
             var5 = ip.a(param3, -126, "commonui", "screen_options");
             jn.field_c = new sm[4];
             s.field_s = new sm[4];
@@ -424,8 +424,7 @@ final class re {
                         var9++;
                         continue L5;
                       } else {
-                        int discarded$3 = 0;
-                        var14[var11_int] = jj.a(var5[var9], var21[var11_int]);
+                        var14[var11_int] = jj.a(var5[var9], var21[var11_int], 0);
                         var11_int++;
                         continue L6;
                       }
@@ -547,7 +546,7 @@ final class re {
         return var2;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_e = null;
     }

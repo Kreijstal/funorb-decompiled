@@ -184,7 +184,7 @@ final class mpa extends rqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
         field_o = null;
     }

@@ -114,8 +114,7 @@ final class r extends eb {
             gk.field_a[0] = oj.field_h;
             gk.field_a[2] = mk.field_f;
             gk.field_a[1] = am.field_a;
-            int discarded$2 = 122;
-            db.a(param1, (jb) (Object) rn.field_e);
+            db.a(param1, (jb) (Object) rn.field_e, 122);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -302,7 +301,7 @@ final class r extends eb {
         }
     }
 
-    final static void a(ie param0, java.awt.Frame param1) {
+    final static void a(ie param0, java.awt.Frame param1, int param2) {
         vl var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -1022,7 +1021,7 @@ final class r extends eb {
         return null;
     }
 
-    final static fj a(int param0, int param1, int param2) {
+    final static fj a(int param0, int param1, int param2, int param3) {
         Object var4 = null;
         int var5 = 0;
         int var6 = 0;

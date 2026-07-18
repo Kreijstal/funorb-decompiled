@@ -12,7 +12,7 @@ final class me {
     static int field_a;
     static int field_b;
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -78,7 +78,7 @@ final class me {
         vc.field_c = vc.field_c + 1;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_i = null;
         field_h = null;
         field_f = null;
@@ -86,7 +86,7 @@ final class me {
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         if (32 >= jj.field_a) {
             ve.a(0, 98);

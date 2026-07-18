@@ -27,7 +27,7 @@ final class ak {
         return var4;
     }
 
-    private final void l() {
+    private final void l(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -252,7 +252,7 @@ final class ak {
         return stackIn_16_0;
     }
 
-    private final boolean f() {
+    private final boolean f(byte param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -325,7 +325,7 @@ final class ak {
         return -1;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_d = null;
     }
 
@@ -333,11 +333,7 @@ final class ak {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
-        int[] var8 = null;
         String[] var10 = null;
-        int[] var12 = null;
-        int[] var15 = null;
-        int[] var18 = null;
         int[] var21 = null;
         int[] var22 = null;
         long[] var23 = null;
@@ -377,16 +373,11 @@ final class ak {
             var6_int = jb.a(102, param4);
             var7 = jb.a(99, param0);
             var21 = this.a(var7, param2, param1, ((ak) this).field_c, -17, ((ak) this).field_c, var6_int);
-            var18 = var21;
-            var15 = var18;
-            var12 = var15;
-            var8 = var12;
             var22 = this.a(param2.field_o[((ak) this).field_c], 10, var21, param1.field_o[((ak) this).field_c]);
             param1.field_o[((ak) this).field_c] = var22;
             var10 = this.a((byte) 56, param2.field_m[((ak) this).field_c], var21, param1.field_m[((ak) this).field_c]);
             param1.field_m[((ak) this).field_c] = var10;
-            int discarded$1 = 1;
-            var23 = this.a(param2.field_k[((ak) this).field_c], param1.field_k[((ak) this).field_c], var8);
+            var23 = this.a(param2.field_k[((ak) this).field_c], param1.field_k[((ak) this).field_c], var21, true);
             param1.field_k[((ak) this).field_c] = var23;
             this.a((byte) 69, param4, var21, param0);
             break L0;
@@ -448,7 +439,7 @@ final class ak {
         }
     }
 
-    private final void m() {
+    private final void m(int param0) {
         int var2 = 0;
         int var3 = EscapeVector.field_A;
         if (((ak) this).field_b == null) {
@@ -459,7 +450,7 @@ final class ak {
         }
     }
 
-    private final int[] d(int param0, int param1) {
+    private final int[] d(int param0, int param1, int param2) {
         int var5 = 0;
         int var6 = EscapeVector.field_A;
         int[] var7 = new int[10];
@@ -536,8 +527,7 @@ final class ak {
     final void a(boolean param0) {
         em.d();
         od.b(2);
-        int discarded$0 = -1;
-        this.l();
+        this.l(-1);
         pb.a(4);
         if (param0) {
             return;
@@ -545,7 +535,7 @@ final class ak {
         this.b(true);
     }
 
-    private final void i() {
+    private final void i(byte param0) {
         int var3 = 0;
         int[] var4 = null;
         ij[] var5 = ol.field_N;
@@ -557,8 +547,7 @@ final class ak {
             var3 = this.b((byte) -92);
             var4 = vn.field_a[var3];
             if (1 == var5.length) {
-                int discarded$0 = 0;
-                ((ak) this).field_b[((ak) this).field_c] = this.d(10, var4[0]);
+                ((ak) this).field_b[((ak) this).field_c] = this.d(10, var4[0], 0);
                 return;
             }
             this.a(var4[1], var5[0], var5[1], 6144, var4[0]);
@@ -589,7 +578,7 @@ final class ak {
         return -1;
     }
 
-    private final boolean e() {
+    private final boolean e(int param0) {
         ij[] var2 = null;
         ij[] var3 = null;
         int var4 = 0;
@@ -631,7 +620,7 @@ final class ak {
         return false;
     }
 
-    private final long[] a(long[] param0, long[] param1, int[] param2) {
+    private final long[] a(long[] param0, long[] param1, int[] param2, boolean param3) {
         long[] var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -956,8 +945,7 @@ final class ak {
                     }
                   }
                 }
-                int discarded$1 = -10;
-                this.a(var5, var3_int, var4);
+                this.a(var5, var3_int, var4, (byte) -10);
                 break L9;
               }
             }
@@ -1002,8 +990,7 @@ final class ak {
         dk var2 = null;
         int var3 = 0;
         if (!(!di.field_d.field_e)) {
-            int discarded$0 = 82;
-            var2 = this.j();
+            var2 = this.j((byte) 82);
             var3 = nk.a(-122, var2);
             rk.field_e.a(oa.field_w, 100, 1536 * qm.field_c / 64, var3);
         }
@@ -1091,20 +1078,17 @@ final class ak {
         return var3;
     }
 
-    private final dk j() {
+    private final dk j(byte param0) {
         int var2 = di.field_d.field_h;
-        int discarded$0 = 0;
-        dk var3 = m.a(((ak) this).field_k, var2);
+        dk var3 = m.a(((ak) this).field_k, var2, 0);
         if (!(var3 == null)) {
             return var3;
         }
-        int discarded$1 = 0;
-        var3 = m.a(((ak) this).field_i, var2);
+        var3 = m.a(((ak) this).field_i, var2, 0);
         if (var3 != null) {
             return var3;
         }
-        int discarded$2 = 0;
-        var3 = m.a(((ak) this).field_j, var2);
+        var3 = m.a(((ak) this).field_j, var2, 0);
         if (var3 == null) {
             return null;
         }
@@ -1118,21 +1102,17 @@ final class ak {
         int var10 = 0;
         int var11 = 0;
         int[] var12 = null;
-        int[] var13 = null;
         int var14 = 0;
         int var15 = 0;
         int[] var16 = null;
         int[] var17 = null;
         int[] var18 = null;
-        int[] var19 = null;
         int[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
-        int[] var23 = null;
         int[] var24 = null;
         int[] var25 = null;
         int[] var26 = null;
-        int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
         int[] var30 = null;
@@ -1194,16 +1174,11 @@ final class ak {
             qg.a(var8_array, 0, var12, 0, var29.length);
             qg.a(var9, 0, var12, var29.length, var30.length);
             var31 = new int[var11];
-            var27 = var31;
-            var23 = var27;
-            var19 = var23;
-            var13 = var19;
             var14 = 0;
             L1: while (true) {
               if (var14 >= var31.length) {
                 uk.a(-1, var32, var31);
-                int discarded$1 = 12;
-                var16 = this.a(var13);
+                var16 = this.a(var31, 12);
                 stackOut_4_0 = (int[]) var16;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -1284,7 +1259,7 @@ final class ak {
         return var5;
     }
 
-    private final void b() {
+    private final void b(int param0) {
         L0: {
           if (mj.field_d != 0) {
             de.field_j = true;
@@ -1373,10 +1348,8 @@ final class ak {
     final boolean f(int param0) {
         int var2 = -60 / ((param0 - -22) / 35);
         int var3 = 0;
-        int discarded$0 = 100;
-        this.b();
-        int discarded$1 = 3;
-        var3 = this.a() ? 1 : 0;
+        this.b(100);
+        var3 = this.a((byte) 3) ? 1 : 0;
         if (var3 != 0) {
             return var3 != 0;
         }
@@ -1386,7 +1359,7 @@ final class ak {
         return var3 != 0;
     }
 
-    private final int[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, ih param7) {
+    private final int[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, ih param7, int param8) {
         int[] var10 = null;
         RuntimeException var10_ref = null;
         String[] var11 = null;
@@ -1419,8 +1392,7 @@ final class ak {
             var10 = var16;
             var11 = new String[]{ag.field_a};
             var12 = var16.length;
-            int discarded$2 = 10;
-            var26 = this.b(var12, param3);
+            var26 = this.b(var12, param3, 10);
             var28 = this.a(10, -47, var12, param4);
             var27 = this.a(var12, 1, 0);
             ((ak) this).field_j = na.a(640, var26, param6, 0, param7, var11, var27, false, var28);
@@ -1471,7 +1443,7 @@ final class ak {
     }
 
     private final void h(byte param0) {
-        ih var19 = fh.field_g;
+        ih var18 = fh.field_g;
         int var3 = 640;
         int var4 = 0;
         int var5 = 10;
@@ -1479,42 +1451,38 @@ final class ak {
         int var7 = 1;
         int var8 = 78;
         int var9 = var8;
-        int[] var10 = this.a(var7, 0, var9, 0, var5, var6, var19, var3 + -1);
-        dk var18 = ((ak) this).field_k[0];
-        var9 = var9 + (var18.field_i - -3);
+        int[] var10 = this.a(var7, 0, var9, 0, var5, var6, var18, var3 + -1, var4);
+        dk var19 = ((ak) this).field_k[0];
+        var9 = var9 + (var19.field_i - -3);
         ((ak) this).field_g = new gj(((ak) this).field_e, var9, ((ak) this).field_h);
         int var12 = (var3 - ((ak) this).field_g.field_m) / 2;
         var9 = var9 + (3 + ((ak) this).field_g.field_c);
         int var13 = var12 + ((ak) this).field_g.field_m;
-        int[] var28 = this.a(var7, var12, var8, 0, var5, var6, var19, var13);
+        int[] var28 = this.a(var7, var12, var8, 0, var5, var6, var18, var13, var4);
         var5 = var5 + var28.length;
         var4 = var4 + var28.length;
-        int[] var29 = this.a(var19, var6, var5, var13, var12, 98, var4, var7, var9);
+        int[] var29 = this.a(var18, var6, var5, var13, var12, 98, var4, var7, var9);
         var5 = var5 + var29.length;
         var4 = var4 + var29.length;
         dk var21 = ((ak) this).field_i[0];
         var9 = var9 + (var21.field_i - -20);
-        int discarded$0 = 0;
-        int[] var30 = this.a(var6, var7, var3 + -1, var4, var5, -28, var9, var19);
+        int[] var30 = this.a(var6, var7, var3 + -1, var4, var5, -28, var9, var18, 0);
         int var16 = var28.length - (-var29.length - var30.length);
         var4 = 0;
         ((ak) this).field_a = new int[var16];
         var4 = qe.a(((ak) this).field_a, var4, true, var28);
         var4 = qe.a(((ak) this).field_a, var4, true, var29);
-        int discarded$15 = qe.a(((ak) this).field_a, var4, true, var30);
-        int discarded$21 = 41;
-        gn.a(((ak) this).field_k, true);
+        int discarded$7 = qe.a(((ak) this).field_a, var4, true, var30);
+        gn.a(((ak) this).field_k, true, (byte) 41);
         if (param0 > -120) {
             ((ak) this).field_a = null;
         }
-        int discarded$22 = 41;
-        gn.a(((ak) this).field_i, !aj.b(-102) ? true : false);
-        int discarded$23 = 41;
-        gn.a(((ak) this).field_j, false);
+        gn.a(((ak) this).field_i, !aj.b(-102) ? true : false, (byte) 41);
+        gn.a(((ak) this).field_j, false, (byte) 41);
         ((ak) this).field_g = null;
     }
 
-    private final int[] a(int[] param0) {
+    private final int[] a(int[] param0, int param1) {
         int[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -1669,7 +1637,7 @@ final class ak {
         }
     }
 
-    private final boolean a() {
+    private final boolean a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1684,8 +1652,7 @@ final class ak {
           } else {
             L1: {
               di.field_d.a(127);
-              int discarded$69 = 0;
-              qk.a(((ak) this).field_a);
+              qk.a(((ak) this).field_a, 0);
               if (nk.field_n == 13) {
                 var3 = ((ak) this).a(1, 0);
                 di.field_d.a(false, var3);
@@ -1715,7 +1682,7 @@ final class ak {
         }
     }
 
-    private final int[] a(int param0, int param1, int param2, int param3, int param4, int param5, ih param6, int param7) {
+    private final int[] a(int param0, int param1, int param2, int param3, int param4, int param5, ih param6, int param7, int param8) {
         int[] var10 = null;
         RuntimeException var10_ref = null;
         String[] var11 = null;
@@ -1757,8 +1724,7 @@ final class ak {
               }
             }
             var13 = var10.length;
-            int discarded$2 = 10;
-            var26 = this.b(var13, 0);
+            var26 = this.b(var13, 0, 10);
             var28 = this.a(10, 115, var13, 10);
             var27 = this.a(var13, 1, 0);
             ((ak) this).field_k = na.a(param7 + (-param1 + 1), var26, 78, param1, param6, var11, var27, false, var28);
@@ -1814,7 +1780,7 @@ final class ak {
         return -1;
     }
 
-    private final String g() {
+    private final String g(byte param0) {
         String var2 = null;
         ij[] var3 = null;
         ij[] var4 = null;
@@ -1875,7 +1841,7 @@ final class ak {
         return var2;
     }
 
-    private final void a(int param0, int param1, String param2) {
+    private final void a(int param0, int param1, String param2, byte param3) {
         RuntimeException runtimeException = null;
         ij[] var5 = null;
         ij var6 = null;
@@ -1901,8 +1867,7 @@ final class ak {
           L0: {
             L1: {
               if (null == ((ak) this).field_b[((ak) this).field_c]) {
-                int discarded$2 = -107;
-                this.i();
+                this.i((byte) -107);
                 break L1;
               } else {
                 break L1;
@@ -2182,8 +2147,7 @@ final class ak {
             }
             var12 = var10_array.length;
             var13 = 38;
-            int discarded$1 = 10;
-            var26 = this.b(var12, param6);
+            var26 = this.b(var12, param6, 10);
             var28 = this.a(10, -47, var12, param2);
             var27 = this.a(var12, 1, 0);
             ((ak) this).field_i = na.a(1 + (-param4 + param3), var26, param8, param4, param0, var11, var27, false, var28);
@@ -2329,7 +2293,7 @@ final class ak {
         }
     }
 
-    private final int[] b(int param0, int param1) {
+    private final int[] b(int param0, int param1, int param2) {
         int var5 = 0;
         int var6 = EscapeVector.field_A;
         int[] var7 = new int[param0];
@@ -2344,8 +2308,7 @@ final class ak {
         int var6 = 0;
         int var4 = 0;
         if (!(!param1)) {
-            int discarded$0 = -123;
-            if (!(!this.f())) {
+            if (!(!this.f((byte) -123))) {
                 return var4 != 0;
             }
             if (!(!this.c(17592))) {
@@ -2369,7 +2332,7 @@ final class ak {
         return var4 != 0;
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var5 = 0;
         int var6 = EscapeVector.field_A;
         int var2 = this.b((byte) -89);
@@ -2383,8 +2346,7 @@ final class ak {
         ij[] var4 = new ij[var3.length];
         for (var5 = 0; var5 < var4.length; var5++) {
             var4[var5] = bk.a(var3[var5], true, 10, 3, 1);
-            int discarded$0 = 0;
-            this.m();
+            this.m(0);
         }
         ol.field_N = var4;
     }
@@ -2406,13 +2368,11 @@ final class ak {
             return var2;
         }
         if (!(var3 != null)) {
-            int discarded$0 = -83;
-            this.d();
+            this.d((byte) -83);
             ((ak) this).field_g = null;
             return var2;
         }
-        int discarded$1 = 0;
-        if (!this.e()) {
+        if (!this.e(0)) {
             var2 = le.field_b;
             return var2;
         }
@@ -2420,8 +2380,7 @@ final class ak {
         if (var2 != null) {
             return var2;
         }
-        int discarded$2 = 86;
-        var2 = this.g();
+        var2 = this.g((byte) 86);
         return var2;
     }
 

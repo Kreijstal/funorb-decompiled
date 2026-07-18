@@ -878,7 +878,7 @@ final class tn {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         var1 = -1;
         if (p.field_h == ca.field_M.field_b) {

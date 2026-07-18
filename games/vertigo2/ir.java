@@ -9,7 +9,7 @@ final class ir {
     static String field_b;
     static int field_f;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_b = null;
         field_a = null;
@@ -199,7 +199,7 @@ final class ir {
         return stackIn_16_0 != 0;
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, byte param1) {
         L0: {
           rm.field_B = (param0 & 63) >> 4;
           oa.field_p = param0 >> 2 & 3;
@@ -233,7 +233,7 @@ final class ir {
         System.out.println("Error: " + mr.a("%0a", (byte) -48, "\n", param1));
     }
 
-    final static void a(String param0, int param1, String param2, int param3) {
+    final static void a(String param0, int param1, String param2, int param3, int param4) {
         try {
             dj.field_d.field_Fb = dj.field_d.field_Fb + ui.field_b.field_Fb;
             dj.field_d.field_S = param2;

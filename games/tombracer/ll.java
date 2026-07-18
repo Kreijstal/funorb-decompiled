@@ -16,13 +16,13 @@ final class ll {
     int field_i;
     static String field_h;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_g = null;
         field_d = null;
     }
 
-    final static int a(int param0) {
+    final static int a(int param0, int param1) {
         g[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

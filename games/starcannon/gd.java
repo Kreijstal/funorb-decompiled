@@ -97,8 +97,7 @@ final class gd {
             if (!(((gd) this).field_c >= param3)) {
                 throw new IllegalStateException();
             }
-            int discarded$0 = -31649;
-            this.b(param2);
+            this.b(param2, -31649);
             ((gd) this).field_f = ((gd) this).field_f - param3;
             while (((gd) this).field_f < 0) {
                 var6 = (mi) (Object) ((gd) this).field_e.b(-57);
@@ -117,7 +116,7 @@ final class gd {
         throw new Error();
     }
 
-    private final void b(long param0) {
+    private final void b(long param0, int param1) {
         mi var4 = (mi) (Object) ((gd) this).field_b.a(param0, 1);
         this.a((byte) 23, var4);
     }
@@ -183,7 +182,7 @@ final class gd {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

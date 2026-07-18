@@ -8,7 +8,7 @@ final class dk {
     static String field_b;
     static int[] field_c;
 
-    final static int[] a(int param0, int param1) {
+    final static int[] a(int param0, int param1, boolean param2) {
         int var3 = lm.a(param0, (byte) -125);
         int var4 = mf.a(param0, -128);
         int var5 = lm.a(param1, (byte) -118);
@@ -20,7 +20,7 @@ final class dk {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         il.a(4, 0);
         int var1 = -68;
     }
@@ -34,7 +34,7 @@ final class dk {
         vd.a(false, -536866817, hi.field_f);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_c = null;
     }
@@ -351,7 +351,7 @@ final class dk {
         }
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;

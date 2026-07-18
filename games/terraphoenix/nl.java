@@ -45,8 +45,7 @@ final class nl {
         String stackOut_10_2 = null;
         try {
           L0: {
-            int discarded$7 = 1;
-            if (vh.a(param4, param3, param1)) {
+            if (vh.a(param4, param3, param1, true)) {
               stackOut_4_0 = sb.a(false, param0.b(param4, -95, param3));
               stackIn_5_0 = stackOut_4_0;
               break L0;
@@ -158,8 +157,7 @@ final class nl {
                     var3_int = -19 / ((param0 - -28) / 32);
                     var4 = new java.net.URL(param2.getCodeBase(), param1);
                     var4 = bb.a((byte) 119, var4, param2);
-                    int discarded$2 = 0;
-                    m.a(param2, true, var4.toString());
+                    m.a(param2, true, var4.toString(), 0);
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -238,8 +236,7 @@ final class nl {
         l.d(0, 74, 640, 406, 0, 192);
         if (param0 >= 72) {
           L0: {
-            int discarded$2 = 23196;
-            rf.field_B[bk.d()].a(0, 0, 102);
+            rf.field_B[bk.d(23196)].a(0, 0, 102);
             l.e(0, 74, 640, 406, 16777215);
             aa.field_j.b(120, 76);
             if (ef.field_j < 120) {
@@ -414,8 +411,7 @@ final class nl {
           return;
         } else {
           nl.a(105);
-          int discarded$3 = 23196;
-          rf.field_B[bk.d()].a(0, 0, 102);
+          rf.field_B[bk.d(23196)].a(0, 0, 102);
           l.e(0, 74, 640, 406, 16777215);
           aa.field_j.b(120, 76);
           if (ef.field_j >= 120) {
@@ -667,7 +663,7 @@ final class nl {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
     }
 

@@ -9,13 +9,13 @@ final class wc {
     static String field_d;
     static int field_c;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_b = null;
         field_d = null;
     }
 
-    final static o a(o param0) {
+    final static o a(o param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;

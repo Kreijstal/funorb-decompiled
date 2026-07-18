@@ -369,7 +369,7 @@ final class wc extends nl {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_R = null;
         field_K = null;
         field_J = null;
@@ -380,7 +380,7 @@ final class wc extends nl {
         td.a(param0, false, 108);
     }
 
-    final static qc c() {
+    final static qc c(boolean param0) {
         return (qc) (Object) new uk();
     }
 
@@ -541,8 +541,7 @@ final class wc extends nl {
         if (!(ik.field_b == null)) {
             ik.field_b.b(param0, 20);
         }
-        int discarded$0 = 0;
-        qh.a(param0);
+        qh.a(param0, 0);
     }
 
     wc(int param0, int param1, int param2, int param3, kh param4, qo param5, kb param6, boolean param7, boolean param8) {
@@ -558,7 +557,7 @@ final class wc extends nl {
         }
     }
 
-    final static long a(CharSequence param0) {
+    final static long a(CharSequence param0, int param1) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;

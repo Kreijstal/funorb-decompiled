@@ -102,7 +102,7 @@ final class db extends vm {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         if (!ad.field_b) {
             throw new IllegalStateException();
         }
@@ -292,7 +292,7 @@ final class db extends vm {
         return stackIn_13_0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         nk var3 = qn.field_U;
         var3.f(param0, -83);
         var3.c(3, (byte) 83);
@@ -300,7 +300,7 @@ final class db extends vm {
         var3.b(param1, 113);
     }
 
-    final static ci j() {
+    final static ci j(int param0) {
         return se.field_S.field_Kb;
     }
 

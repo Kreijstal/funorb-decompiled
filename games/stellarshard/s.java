@@ -19,7 +19,7 @@ final class s implements Iterator {
         return ((s) this).field_h != ((s) this).field_a.field_b;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, boolean param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -72,8 +72,7 @@ final class s implements Iterator {
                     break L1;
                   } else {
                     L2: {
-                      int discarded$2 = 0;
-                      var4 = nh.a(param0);
+                      var4 = nh.a(param0, false);
                       if (var4 == null) {
                         break L2;
                       } else {
@@ -182,14 +181,6 @@ final class s implements Iterator {
         char[] var7 = null;
         char[] var8 = null;
         int var9 = 0;
-        char[] var10 = null;
-        char[] var11 = null;
-        char[] var12 = null;
-        char[] var13 = null;
-        char[] var14 = null;
-        char[] var15 = null;
-        char[] var16 = null;
-        char[] var17 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
@@ -205,33 +196,24 @@ final class s implements Iterator {
         try {
           L0: {
             if (!Character.isISOControl(param1)) {
-              int discarded$6 = 0;
-              if (!od.a(param1)) {
-                var16 = nh.field_e;
-                var14 = var16;
-                var12 = var14;
-                var10 = var12;
-                var7 = var10;
+              if (!od.a(param1, false)) {
+                var7 = nh.field_e;
                 var2 = var7;
                 var3 = 0;
                 L1: while (true) {
-                  if (var16.length <= var3) {
-                    var17 = fe.field_g;
-                    var15 = var17;
-                    var13 = var15;
-                    var11 = var13;
-                    var8 = var11;
+                  if (var7.length <= var3) {
+                    var8 = fe.field_g;
                     var2 = var8;
                     var3 = 0;
                     var9 = 0;
                     var4 = var9;
                     L2: while (true) {
-                      if (var9 >= var17.length) {
+                      if (var9 >= var8.length) {
                         stackOut_20_0 = 0;
                         stackIn_21_0 = stackOut_20_0;
                         break L0;
                       } else {
-                        var5 = var17[var9];
+                        var5 = var8[var9];
                         if (param1 == var5) {
                           stackOut_17_0 = 1;
                           stackIn_18_0 = stackOut_17_0;
@@ -243,7 +225,7 @@ final class s implements Iterator {
                       }
                     }
                   } else {
-                    var4 = var16[var3];
+                    var4 = var7[var3];
                     if (param1 != var4) {
                       var3++;
                       continue L1;
@@ -293,7 +275,7 @@ final class s implements Iterator {
         return (Object) (Object) var1;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_g = null;
         field_f = null;

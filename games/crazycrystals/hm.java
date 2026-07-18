@@ -10,14 +10,13 @@ final class hm {
         return param0 | param1;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_a = null;
     }
 
-    final static void a() {
-        int discarded$0 = -9918;
-        pi.field_j = rl.c();
+    final static void a(int param0) {
+        pi.field_j = rl.c(-9918);
         qe.field_g = new ol();
         vk.a(-40, true, true);
     }

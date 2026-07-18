@@ -60,13 +60,12 @@ final class hc extends ug {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            var8 = mn.a(22230, param3, param1, param5, 0);
+            var8 = mn.a(22230, param3, param1, param5, 0, 0);
             var6 = var8;
             if (var8 != null) {
               var7 = new nn();
               var7.field_d = var8;
-              java.awt.Component discarded$5 = var7.field_d.add((java.awt.Component) (Object) var7);
+              java.awt.Component discarded$2 = var7.field_d.add((java.awt.Component) (Object) var7);
               var7.setBounds(0, 0, param5, param3);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();

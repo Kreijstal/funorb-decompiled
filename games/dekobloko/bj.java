@@ -9,7 +9,7 @@ final class bj {
     static ud field_e;
     static String field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_f = null;
         field_e = null;
@@ -17,7 +17,7 @@ final class bj {
         field_c = null;
     }
 
-    final static void a(int param0, ck[] param1, mm param2, boolean param3, mm param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, ck[] param12, int param13, int param14, int param15, ck[] param16) {
+    final static void a(int param0, ck[] param1, mm param2, boolean param3, mm param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, ck[] param12, int param13, int param14, int param15, ck[] param16, int param17, int param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -96,17 +96,7 @@ final class bj {
         StringBuilder stackOut_15_1 = null;
         String stackOut_15_2 = null;
         try {
-          int discarded$10 = 20;
-          int discarded$11 = 20;
-          int discarded$12 = 20;
-          int discarded$13 = 1;
-          int discarded$14 = 20;
-          int discarded$15 = 320;
-          int discarded$16 = 240;
-          int discarded$17 = 32;
-          int discarded$18 = -6;
-          int discarded$19 = 4;
-          n.a(16, new cc(param12), param4, 0, 5, new cc(param1), 14, param2, 480, 0, new cc(param16));
+          n.a(16, new cc(param12), param4, 0, 5, new cc(param1), 14, param2, 480, 0, new cc(param16), 4, -6, 32, 240, 320, 20, 1, 20, 20, 20);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

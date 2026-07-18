@@ -36,7 +36,7 @@ final class ig {
         return var3;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_e = null;
         field_a = null;
@@ -157,7 +157,7 @@ final class ig {
         }
     }
 
-    final static void a(byte param0, int param1, boolean param2) {
+    final static void a(byte param0, int param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         cj var5 = null;
@@ -194,7 +194,7 @@ final class ig {
                 dq.field_k.a(-11838, param2);
                 if (ra.field_f != null) {
                   if (nh.field_m) {
-                    boolean discarded$2 = ra.field_f.a(dq.field_k.field_w, (byte) -27, dq.field_k.field_qb, param2);
+                    boolean discarded$1 = ra.field_f.a(dq.field_k.field_w, (byte) -27, dq.field_k.field_qb, param2);
                     break L3;
                   } else {
                     ra.field_f = null;
@@ -225,8 +225,7 @@ final class ig {
                     }
                   }
                   L7: {
-                    int discarded$3 = -104;
-                    var8 = jp.a();
+                    var8 = jp.a((byte) -104);
                     if (var8 != null) {
                       ui.field_j = var8;
                       break L7;

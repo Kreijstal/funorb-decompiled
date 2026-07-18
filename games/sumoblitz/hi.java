@@ -11,7 +11,7 @@ final class hi implements vc {
     static ri[] field_b;
     static String field_g;
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_b = null;
         field_f = null;

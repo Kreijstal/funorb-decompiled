@@ -13,8 +13,7 @@ final class pg extends b implements tma, tsa {
     final static void b(boolean param0) {
         if (qga.field_m) {
           sra.field_t = true;
-          int discarded$2 = 262144;
-          jda.a(true);
+          jda.a(true, 262144);
           gda.field_c = 0;
           if (param0) {
             field_A = null;
@@ -27,7 +26,7 @@ final class pg extends b implements tma, tsa {
         }
     }
 
-    private final String c() {
+    private final String c(int param0) {
         int var2 = 0;
         return "<u=2164A2><col=2164A2>";
     }
@@ -153,8 +152,7 @@ final class pg extends b implements tma, tsa {
             if (((pg) this).field_B != param2) {
               break L0;
             } else {
-              int discarded$2 = -7694;
-              qr.d();
+              qr.d(-7694);
               ((pg) this).field_w.i((byte) 111);
               return;
             }
@@ -220,7 +218,6 @@ final class pg extends b implements tma, tsa {
             ((pg) this).field_w = param0;
             ((pg) this).field_B = new rj(aua.field_d, (qc) null);
             ((pg) this).field_B.field_r = (isa) (Object) new td();
-            int discarded$1 = -58;
             var7 = gl.a((byte) 108, sg.field_q, new String[2]);
             var3 = 20;
             var4 = new vpa(mj.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, mj.field_J.field_w, -1, 2147483647, true);

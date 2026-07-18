@@ -39,8 +39,7 @@ final class mda extends c implements fo, ffa, gma {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$4 = 2147;
-                ip.a(var4, param0);
+                ip.a(var4, param0, 2147);
                 var4 = (upa) (Object) ina.field_d.e(121);
                 continue L2;
               }
@@ -60,7 +59,7 @@ final class mda extends c implements fo, ffa, gma {
         return ((mda) this).field_o;
     }
 
-    private final void a(int param0, int param1, int param2, la param3, int param4) {
+    private final void a(int param0, int param1, int param2, la param3, int param4, int param5) {
         try {
             ((mda) this).field_o = false;
             ((mda) this).field_q = param3;
@@ -71,8 +70,7 @@ final class mda extends c implements fo, ffa, gma {
             ((mda) this).field_i = iia.d(2, 786432, 2);
             ((mda) this).field_t = 0;
             ((mda) this).field_k = ((mda) this).field_l;
-            int discarded$0 = 0;
-            this.s();
+            this.s(0);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "mda.R(" + param0 + ',' + 1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + 2 + ')');
         }
@@ -144,8 +142,7 @@ final class mda extends c implements fo, ffa, gma {
                   break L1;
                 }
               }
-              int discarded$2 = 2;
-              var5_int = eha.a(((mda) this).field_k, 12, ((mda) this).field_j, ((mda) this).field_k, param3, ((mda) this).field_p);
+              var5_int = eha.a(((mda) this).field_k, 12, ((mda) this).field_j, ((mda) this).field_k, param3, ((mda) this).field_p, 2);
               if (var5_int == -1) {
                 stackOut_8_0 = 0;
                 stackIn_9_0 = stackOut_8_0;
@@ -347,14 +344,12 @@ final class mda extends c implements fo, ffa, gma {
         String stackOut_10_2 = null;
         try {
           L0: {
-            int discarded$28 = 2;
-            if (eha.a(((mda) this).field_k, param1, ((mda) this).field_j, ((mda) this).field_k, param2, ((mda) this).field_p) < 0) {
+            if (eha.a(((mda) this).field_k, param1, ((mda) this).field_j, ((mda) this).field_k, param2, ((mda) this).field_p, 2) < 0) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
             } else {
-              int discarded$29 = -6;
-              stackOut_4_0 = this.a(param0);
+              stackOut_4_0 = this.a(param0, -6);
               stackIn_5_0 = stackOut_4_0;
               break L0;
             }
@@ -565,7 +560,7 @@ final class mda extends c implements fo, ffa, gma {
         return stackIn_8_0 != 0;
     }
 
-    private final boolean a(gma param0) {
+    private final boolean a(gma param0, byte param1) {
         return ((mda) this).field_s == 1;
     }
 
@@ -765,7 +760,7 @@ final class mda extends c implements fo, ffa, gma {
         return 0;
     }
 
-    private final int a(up param0) {
+    private final int a(up param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -910,8 +905,7 @@ final class mda extends c implements fo, ffa, gma {
                 break L1;
               } else {
                 if (param4 != 0) {
-                  int discarded$4 = 0;
-                  this.s();
+                  this.s(0);
                   this.a(param3, (byte) -36, param2, param4, param5);
                   if (~(((mda) this).field_u - -param4) != ~((mda) this).field_p) {
                     break L1;
@@ -930,8 +924,7 @@ final class mda extends c implements fo, ffa, gma {
                   } else {
                     L2: {
                       L3: {
-                        int discarded$5 = 0;
-                        this.s();
+                        this.s(0);
                         this.a(param3, (byte) -36, param2, param4, param5);
                         if (~(((mda) this).field_u - -param4) != ~((mda) this).field_p) {
                           break L3;
@@ -966,8 +959,7 @@ final class mda extends c implements fo, ffa, gma {
               if (param3 == 0) {
                 return true;
               } else {
-                int discarded$6 = 0;
-                this.s();
+                this.s(0);
                 this.a(param3, (byte) -36, param2, param4, param5);
                 if (~(((mda) this).field_u - -param4) == ~((mda) this).field_p) {
                   L4: {
@@ -987,8 +979,7 @@ final class mda extends c implements fo, ffa, gma {
                 }
               }
             } else {
-              int discarded$7 = 0;
-              this.s();
+              this.s(0);
               this.a(param3, (byte) -36, param2, param4, param5);
               if (~(((mda) this).field_u - -param4) == ~((mda) this).field_p) {
                 if (~((mda) this).field_j == ~(((mda) this).field_r - -param3)) {
@@ -1045,8 +1036,7 @@ final class mda extends c implements fo, ffa, gma {
         int var6 = 0;
         if (1 == ((mda) this).field_s) {
           L0: {
-            int discarded$1 = 0;
-            this.s();
+            this.s(0);
             var6 = 0;
             if (param3 != 0) {
               var6 = 1;
@@ -1221,7 +1211,7 @@ final class mda extends c implements fo, ffa, gma {
         return ((mda) this).field_k;
     }
 
-    private final void s() {
+    private final void s(int param0) {
         ((mda) this).field_u = ((mda) this).field_p;
         ((mda) this).field_r = ((mda) this).field_j;
     }
@@ -1244,8 +1234,7 @@ final class mda extends c implements fo, ffa, gma {
             if (param2 <= 36) {
                 ((mda) this).field_t = -51;
             }
-            int discarded$0 = 2;
-            this.a(param4, 1, var8, param0, param5);
+            this.a(param4, 1, var8, param0, param5, 2);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "mda.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -1443,8 +1432,7 @@ final class mda extends c implements fo, ffa, gma {
                 break L1;
               }
             }
-            int discarded$2 = 61;
-            stackOut_2_0 = this.a(param0);
+            stackOut_2_0 = this.a(param0, (byte) 61);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -1505,8 +1493,7 @@ final class mda extends c implements fo, ffa, gma {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$2 = 61;
-            if (!this.a(param1)) {
+            if (!this.a(param1, (byte) 61)) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
@@ -1605,8 +1592,7 @@ final class mda extends c implements fo, ffa, gma {
                   break L1;
                 }
               }
-              int discarded$2 = -6;
-              stackOut_5_0 = this.a(param0);
+              stackOut_5_0 = this.a(param0, -6);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

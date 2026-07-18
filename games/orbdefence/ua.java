@@ -44,8 +44,7 @@ final class ua {
                 if (var2_int >= var3) {
                   break L1;
                 } else {
-                  int discarded$4 = -46;
-                  if (!sk.a(param1.charAt(var2_int))) {
+                  if (!sk.a(param1.charAt(var2_int), -46)) {
                     break L1;
                   } else {
                     var2_int++;
@@ -58,8 +57,7 @@ final class ua {
                   if (var3 <= var2_int) {
                     break L3;
                   } else {
-                    int discarded$5 = -46;
-                    if (!sk.a(param1.charAt(var3 + -1))) {
+                    if (!sk.a(param1.charAt(var3 + -1), -46)) {
                       break L3;
                     } else {
                       var3--;
@@ -84,12 +82,11 @@ final class ua {
                         L5: {
                           var8 = param1.charAt(var7);
                           if (tc.a((byte) -20, (char) var8)) {
-                            int discarded$6 = 33;
-                            var9 = p.a((char) var8);
+                            var9 = p.a((char) var8, 33);
                             if (0 == var9) {
                               break L5;
                             } else {
-                              StringBuilder discarded$7 = var6.append((char) var9);
+                              StringBuilder discarded$1 = var6.append((char) var9);
                               break L5;
                             }
                           } else {
@@ -220,7 +217,7 @@ final class ua {
         return stackIn_6_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
     }

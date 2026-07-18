@@ -443,13 +443,12 @@ final class ra {
     final void a(long param0, byte param1) throws IOException {
         ((ra) this).field_d.seek(param0);
         if (param1 <= 25) {
-            int discarded$0 = 0;
-            ra.a();
+            ra.a(false);
         }
         ((ra) this).field_h = param0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_i = null;
         field_j = null;
         field_a = null;

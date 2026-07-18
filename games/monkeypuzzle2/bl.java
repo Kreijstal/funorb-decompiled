@@ -14,7 +14,7 @@ final class bl extends ug {
     int field_l;
     int field_h;
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_o = null;
         field_g = null;

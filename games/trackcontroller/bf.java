@@ -86,8 +86,7 @@ final class bf {
                           if (((bf) this).field_l != 512) {
                             break L6;
                           } else {
-                            int discarded$2 = -2;
-                            this.b();
+                            this.b(-2);
                             ((bf) this).field_l = 0;
                             ((bf) this).field_i = 0;
                             break L6;
@@ -118,8 +117,7 @@ final class bf {
                             if (((bf) this).field_l != 512) {
                               break L8;
                             } else {
-                              int discarded$3 = -2;
-                              this.b();
+                              this.b(-2);
                               ((bf) this).field_l = 0;
                               ((bf) this).field_i = 0;
                               break L8;
@@ -178,7 +176,7 @@ final class bf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_f = null;
         field_d = null;
@@ -255,14 +253,13 @@ final class bf {
                 if (((bf) this).field_i > 32) {
                   L2: while (true) {
                     if (((bf) this).field_i >= 64) {
-                      int discarded$4 = -2;
-                      this.b();
+                      this.b(-2);
                       ((bf) this).field_i = 0;
                       break L1;
                     } else {
-                      int fieldTemp$5 = ((bf) this).field_i;
+                      int fieldTemp$2 = ((bf) this).field_i;
                       ((bf) this).field_i = ((bf) this).field_i + 1;
-                      ((bf) this).field_g[fieldTemp$5] = (byte) 0;
+                      ((bf) this).field_g[fieldTemp$2] = (byte) 0;
                       continue L2;
                     }
                   }
@@ -273,8 +270,7 @@ final class bf {
               L3: while (true) {
                 if (((bf) this).field_i >= 32) {
                   pd.a(((bf) this).field_n, 0, ((bf) this).field_g, 32, 32);
-                  int discarded$6 = -2;
-                  this.b();
+                  this.b(-2);
                   var4_int = 0;
                   var5 = param1;
                   L4: while (true) {
@@ -296,9 +292,9 @@ final class bf {
                     }
                   }
                 } else {
-                  int fieldTemp$7 = ((bf) this).field_i;
+                  int fieldTemp$3 = ((bf) this).field_i;
                   ((bf) this).field_i = ((bf) this).field_i + 1;
-                  ((bf) this).field_g[fieldTemp$7] = (byte) 0;
+                  ((bf) this).field_g[fieldTemp$3] = (byte) 0;
                   continue L3;
                 }
               }
@@ -410,7 +406,7 @@ final class bf {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

@@ -221,7 +221,7 @@ final class hn {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         dc var2 = null;
         dc var3 = null;
         int var4 = 0;
@@ -333,8 +333,7 @@ final class hn {
           ke.field_Z = var19[10] * -4.0;
           var3 = -91 / ((param0 - 45) / 32);
           if (((hn) this).field_x.field_a <= 1) {
-            int discarded$2 = 938;
-            this.n();
+            this.n(938);
             break L0;
           } else {
             this.k(-125);
@@ -357,8 +356,7 @@ final class hn {
         var6 = -((hn) this).field_A + ((hn) this).field_E;
         ((hn) this).field_x.a(false, 64.0, var4, ((hn) this).field_m);
         var8 = (pm) (Object) ((hn) this).field_g.a(false);
-        int discarded$3 = 22189;
-        this.h();
+        this.h(22189);
         var9 = (oi) (Object) var4.a(85);
         var10 = -2 + ((hn) this).field_x.field_a;
         L2: while (true) {
@@ -705,10 +703,8 @@ final class hn {
         int var11 = 0;
         wd var12 = null;
         var11 = Confined.field_J ? 1 : 0;
-        int discarded$2 = -26;
-        var12 = this.a();
-        int discarded$3 = 120;
-        this.b();
+        var12 = this.a((byte) -26);
+        this.b((byte) 120);
         var3 = (pm) (Object) ((hn) this).field_g.a(8);
         var4 = null;
         var5 = null;
@@ -961,8 +957,7 @@ final class hn {
         }
         dh.field_vb.b((byte) 28);
         if (!om.field_s.a((byte) 14)) {
-            int discarded$0 = -116;
-            return cl.h();
+            return cl.h((byte) -116);
         }
         return 0;
     }
@@ -1008,7 +1003,7 @@ final class hn {
             } else {
               L1: {
                 if (var2.g((byte) 103)) {
-                  rk discarded$4 = ((hn) this).field_N.b((rk) (Object) var2, param0 + 5);
+                  rk discarded$2 = ((hn) this).field_N.b((rk) (Object) var2, param0 + 5);
                   var3 = (pm) (Object) ((hn) this).field_N.b(param0 + 110);
                   L2: while (true) {
                     if (var3 == null) {
@@ -1021,8 +1016,7 @@ final class hn {
                           if (!var3.g((byte) 127)) {
                             break L3;
                           } else {
-                            int discarded$5 = 84;
-                            gb.a(var2, var3);
+                            gb.a(var2, var3, (byte) 84);
                             break L3;
                           }
                         }
@@ -1221,7 +1215,7 @@ final class hn {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         pm var2 = null;
         pm var3 = null;
         int var4 = 0;
@@ -1260,7 +1254,7 @@ final class hn {
         } while (var4 == 0);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_C = null;
         field_p = null;
         field_f = null;
@@ -1280,8 +1274,7 @@ final class hn {
           L0: {
             var6 = 256;
             if (param1) {
-              int discarded$1 = 109;
-              var6 = (int)(this.a(256.0) + 0.5);
+              var6 = (int)(this.a(256.0, 109) + 0.5);
               break L0;
             } else {
               break L0;
@@ -1357,7 +1350,7 @@ final class hn {
         return ((hn) this).a(param1, 0, ((hn) this).field_E + ((hn) this).field_A);
     }
 
-    private final wd a() {
+    private final wd a(byte param0) {
         pm var3 = null;
         pm var4 = null;
         int var5 = 0;
@@ -1434,7 +1427,7 @@ final class hn {
         }
     }
 
-    private final void n() {
+    private final void n(int param0) {
         double var2 = 0.0;
         double var4 = 0.0;
         double var6 = 0.0;
@@ -1549,8 +1542,7 @@ final class hn {
             var6 = 0;
             L1: while (true) {
               if (var3_ref == null) {
-                int discarded$1 = 87;
-                fc.a(param1);
+                fc.a(param1, (byte) 87);
                 var3_ref = (pm) (Object) ((hn) this).field_g.a(13);
                 L2: while (true) {
                   if (var3_ref == null) {
@@ -1647,7 +1639,7 @@ final class hn {
         }
     }
 
-    private final double a(double param0) {
+    private final double a(double param0, int param1) {
         double var4 = 0.0;
         double var6 = 0.0;
         double var8 = 0.0;

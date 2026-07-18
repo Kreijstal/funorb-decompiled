@@ -80,8 +80,7 @@ abstract class jc extends qf {
               gh.field_h.a(-246, kb.field_e[1]);
               gh.field_h.a(-246, kb.field_e[2]);
               gh.field_h.a(-246, kb.field_e[3]);
-              int discarded$1 = -25;
-              bj.a(gh.field_h);
+              bj.a(gh.field_h, -25);
               gh.field_h.e(param0, 26040);
               param3.a(-1, gh.field_h);
               na.field_r.field_i = 0;
@@ -187,7 +186,7 @@ abstract class jc extends qf {
         }
     }
 
-    public static void p() {
+    public static void p(int param0) {
         field_S = null;
         field_P = null;
         field_O = null;

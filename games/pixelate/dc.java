@@ -62,13 +62,11 @@ final class dc {
                     param1.dispose();
                     break L0;
                   } else {
-                    int discarded$16 = 23;
-                    vg.a(100L);
+                    vg.a(100L, (byte) 23);
                     continue L2;
                   }
                 } else {
-                  int discarded$17 = 23;
-                  vg.a(10L);
+                  vg.a(10L, (byte) 23);
                   continue L3;
                 }
               }

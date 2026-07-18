@@ -111,7 +111,7 @@ final class tl extends ci {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -154,14 +154,14 @@ final class tl extends ci {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_Ib = null;
         field_Gb = null;
         field_Fb = null;
         field_Eb = null;
     }
 
-    final static void a(ac param0) {
+    final static void a(ac param0, int param1, byte param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -231,8 +231,7 @@ final class tl extends ci {
                 return true;
             }
         }
-        int discarded$3 = 125;
-        if (af.b()) {
+        if (af.b((byte) 125)) {
             return true;
         }
         if (!(!fn.a(param0, 23012, param1, param3))) {
@@ -260,7 +259,7 @@ final class tl extends ci {
         return param1 + (var4 - (-param0 - (var5 + param1)));
     }
 
-    final static void k() {
+    final static void k(int param0) {
         if (hd.field_l.g(-18110) != null) {
             int fieldTemp$0 = fb.field_K + 1;
             fb.field_K = fb.field_K + 1;

@@ -25,7 +25,7 @@ final class sd {
         return s.field_E[var4];
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_a = null;
         field_b = null;
@@ -40,7 +40,7 @@ final class sd {
         wj.a(-118, true, true);
     }
 
-    final static int a(int param0, byte[] param1, int param2) {
+    final static int a(int param0, byte[] param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -114,7 +114,7 @@ final class sd {
         return stackIn_7_0;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         bd.field_u.a(param0, (byte) -89);
     }
 

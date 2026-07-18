@@ -13,7 +13,7 @@ final class dq extends av {
     static boolean field_e;
     static String field_h;
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         gn var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -141,7 +141,7 @@ final class dq extends av {
         return stackIn_9_0;
     }
 
-    final static void a(bu param0, java.awt.Frame param1) {
+    final static void a(bu param0, java.awt.Frame param1, int param2) {
         wu var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

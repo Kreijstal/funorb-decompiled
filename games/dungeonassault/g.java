@@ -9,7 +9,7 @@ final class g extends ok {
     static String field_Jb;
     static String field_Kb;
 
-    final static cn a(cn param0) {
+    final static cn a(cn param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -214,7 +214,7 @@ final class g extends ok {
         return stackIn_33_0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_Jb = null;
         field_Kb = null;
         field_Gb = null;
@@ -231,8 +231,7 @@ final class g extends ok {
                 field_Hb = -115;
             }
             kj.a(lj.field_e, u.field_O, -2958, lc.field_e);
-            int discarded$0 = 0;
-            ob.a(0, -102, param0);
+            ob.a(0, -102, param0, 0);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "g.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -251,7 +250,7 @@ final class g extends ok {
         return oa.field_c[var4];
     }
 
-    final static void a(int param0, ak param1) {
+    final static void a(int param0, ak param1, byte param2) {
         wj var3 = null;
         int var4 = 0;
         try {

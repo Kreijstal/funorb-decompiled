@@ -9,9 +9,8 @@ final class np {
     static jp[][] field_c;
     static int field_a;
 
-    final static void b() {
-        int discarded$0 = 84;
-        bj.field_T = sh.a();
+    final static void b(boolean param0) {
+        bj.field_T = sh.a((byte) 84);
         mf.field_f = new cp();
         ag.a((byte) -16, true, true);
     }

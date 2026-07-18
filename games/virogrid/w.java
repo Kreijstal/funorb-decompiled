@@ -50,14 +50,14 @@ final class w extends tg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_F = null;
         field_M = null;
         field_L = null;
         field_I = null;
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_5_0 = 0;
@@ -202,8 +202,7 @@ final class w extends tg {
         try {
           L0: {
             var4_int = 0;
-            int discarded$7 = 109;
-            if (hn.a(param0, param3, param2)) {
+            if (hn.a(param0, param3, param2, (byte) 109)) {
               stackOut_3_0 = gn.c((byte) -9);
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -287,8 +286,7 @@ final class w extends tg {
               if (null != hh.field_a) {
                 if (var9 <= hh.field_a.field_w) {
                   if (hh.field_a.field_p >= var10) {
-                    int discarded$8 = 16865;
-                    kb.a(hh.field_a);
+                    kb.a(hh.field_a, 16865);
                     df.c();
                     var16.a(112, 144, var16.field_u << 4, var16.field_z << 4, -((w) this).field_N << 10, 4096);
                     ai.a(true);
@@ -296,8 +294,7 @@ final class w extends tg {
                     return;
                   } else {
                     hh.field_a = new mg(var9, var10);
-                    int discarded$9 = 16865;
-                    kb.a(hh.field_a);
+                    kb.a(hh.field_a, 16865);
                     var16.a(112, 144, var16.field_u << 4, var16.field_z << 4, -((w) this).field_N << 10, 4096);
                     ai.a(true);
                     hh.field_a.e(var5 + -var16.field_u, -var16.field_z + var6, 256);
@@ -305,8 +302,7 @@ final class w extends tg {
                   }
                 } else {
                   hh.field_a = new mg(var9, var10);
-                  int discarded$10 = 16865;
-                  kb.a(hh.field_a);
+                  kb.a(hh.field_a, 16865);
                   var16.a(112, 144, var16.field_u << 4, var16.field_z << 4, -((w) this).field_N << 10, 4096);
                   ai.a(true);
                   hh.field_a.e(var5 + -var16.field_u, -var16.field_z + var6, 256);
@@ -314,8 +310,7 @@ final class w extends tg {
                 }
               } else {
                 hh.field_a = new mg(var9, var10);
-                int discarded$11 = 16865;
-                kb.a(hh.field_a);
+                kb.a(hh.field_a, 16865);
                 var16.a(112, 144, var16.field_u << 4, var16.field_z << 4, -((w) this).field_N << 10, 4096);
                 ai.a(true);
                 hh.field_a.e(var5 + -var16.field_u, -var16.field_z + var6, 256);
@@ -329,8 +324,7 @@ final class w extends tg {
             if (null != hh.field_a) {
               if (var9 <= hh.field_a.field_w) {
                 if (hh.field_a.field_p >= var10) {
-                  int discarded$12 = 16865;
-                  kb.a(hh.field_a);
+                  kb.a(hh.field_a, 16865);
                   df.c();
                   var15.a(112, 144, var15.field_u << 4, var15.field_z << 4, -((w) this).field_N << 10, 4096);
                   ai.a(true);
@@ -338,8 +332,7 @@ final class w extends tg {
                   return;
                 } else {
                   hh.field_a = new mg(var9, var10);
-                  int discarded$13 = 16865;
-                  kb.a(hh.field_a);
+                  kb.a(hh.field_a, 16865);
                   var15.a(112, 144, var15.field_u << 4, var15.field_z << 4, -((w) this).field_N << 10, 4096);
                   ai.a(true);
                   hh.field_a.e(var5 + -var15.field_u, -var15.field_z + var6, 256);
@@ -347,8 +340,7 @@ final class w extends tg {
                 }
               } else {
                 hh.field_a = new mg(var9, var10);
-                int discarded$14 = 16865;
-                kb.a(hh.field_a);
+                kb.a(hh.field_a, 16865);
                 var15.a(112, 144, var15.field_u << 4, var15.field_z << 4, -((w) this).field_N << 10, 4096);
                 ai.a(true);
                 hh.field_a.e(var5 + -var15.field_u, -var15.field_z + var6, 256);
@@ -356,8 +348,7 @@ final class w extends tg {
               }
             } else {
               hh.field_a = new mg(var9, var10);
-              int discarded$15 = 16865;
-              kb.a(hh.field_a);
+              kb.a(hh.field_a, 16865);
               var15.a(112, 144, var15.field_u << 4, var15.field_z << 4, -((w) this).field_N << 10, 4096);
               ai.a(true);
               hh.field_a.e(var5 + -var15.field_u, -var15.field_z + var6, 256);

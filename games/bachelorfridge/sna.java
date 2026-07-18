@@ -736,7 +736,7 @@ class sna extends tf {
             while (var4 != null) {
                 var4.field_q = true;
                 var4.d((byte) 118);
-                var4 = (sna) (Object) var4.field_z.c((byte) 116);
+                var4 = (sna) (Object) ((sna) this).field_z.c((byte) 116);
             }
         }
     }
@@ -1101,8 +1101,8 @@ class sna extends tf {
               if (var23_ref == null) {
                 break L31;
               } else {
-                var23_ref.a(param0, var23_ref.field_tb, var20 + var23_ref.field_M, param3, -2147483648, var23_ref.field_D + var19, var23_ref.field_p, param7, var23_ref.field_sb, param9, param10);
-                var23_ref = (sna) (Object) var23_ref.field_z.c(0);
+                var23_ref.a(param0, ((sna) this).field_tb, var20 + ((sna) this).field_M, param3, -2147483648, ((sna) this).field_D + var19, ((sna) this).field_p, param7, ((sna) this).field_sb, param9, param10);
+                var23_ref = (sna) (Object) ((sna) this).field_z.c(0);
                 continue L32;
               }
             }
@@ -1152,7 +1152,7 @@ class sna extends tf {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
+        sna var13 = null;
         int var14 = 0;
         Object stackIn_24_0 = null;
         Object stackIn_25_0 = null;
@@ -1185,7 +1185,6 @@ class sna extends tf {
         Object stackOut_37_0 = null;
         int stackOut_37_1 = 0;
         L0: {
-          var13 = null;
           var14 = BachelorFridge.field_y;
           if (((sna) this).field_mb > 0) {
             var7 = -(-((sna) this).field_mb >> 2);
@@ -1380,13 +1379,13 @@ class sna extends tf {
         L11: {
           ((sna) this).field_T = stackIn_38_1 != 0;
           if (null != ((sna) this).field_z) {
-            var13 = (Object) (Object) (sna) (Object) ((sna) this).field_z.a(6);
+            var13 = (sna) (Object) ((sna) this).field_z.a(6);
             L12: while (true) {
               if (var13 == null) {
                 break L11;
               } else {
-                ((sna) var13).a(param0, ((sna) var13).field_D, false, ((sna) var13).field_sb, ((sna) var13).field_p, ((sna) var13).field_M);
-                var13 = (Object) (Object) (sna) (Object) ((sna) var13).field_z.c((byte) 116);
+                var13.a(param0, ((sna) this).field_D, false, ((sna) this).field_sb, ((sna) this).field_p, ((sna) this).field_M);
+                var13 = (sna) (Object) ((sna) this).field_z.c((byte) 116);
                 continue L12;
               }
             }
@@ -1403,7 +1402,7 @@ class sna extends tf {
           }
         }
         L14: {
-          if (((sna) var13).field_E) {
+          if (((sna) this).field_E) {
             on.field_x = true;
             break L14;
           } else {
@@ -1412,16 +1411,16 @@ class sna extends tf {
         }
         L15: {
           dg.a(var8, var9, var10, var11);
-          if (((sna) var13).field_ib == 0) {
+          if (((sna) this).field_ib == 0) {
             break L15;
           } else {
-            if (!((sna) var13).field_ub) {
+            if (!((sna) this).field_ub) {
               break L15;
             } else {
               L16: {
-                ((sna) this).field_rb = -param5 + (-((sna) var13).field_S + gd.field_m);
-                ((sna) this).field_kb = -param1 + mk.field_p - ((sna) var13).field_nb;
-                if (((sna) var13).field_kb >= 0) {
+                ((sna) this).field_rb = -param5 + (-((sna) this).field_S + gd.field_m);
+                ((sna) this).field_kb = -param1 + mk.field_p - ((sna) this).field_nb;
+                if (((sna) this).field_kb >= 0) {
                   break L16;
                 } else {
                   ((sna) this).field_kb = 0;
@@ -1429,7 +1428,7 @@ class sna extends tf {
                 }
               }
               L17: {
-                if (0 > ((sna) var13).field_rb) {
+                if (0 > ((sna) this).field_rb) {
                   ((sna) this).field_rb = 0;
                   break L17;
                 } else {
@@ -1437,25 +1436,25 @@ class sna extends tf {
                 }
               }
               L18: {
-                if (param3 + -((sna) var13).field_sb >= ((sna) var13).field_kb) {
+                if (param3 + -((sna) this).field_sb >= ((sna) this).field_kb) {
                   break L18;
                 } else {
-                  ((sna) this).field_kb = param3 + -((sna) var13).field_sb;
+                  ((sna) this).field_kb = param3 + -((sna) this).field_sb;
                   break L18;
                 }
               }
               L19: {
                 ((sna) this).field_mb = 0;
                 ((sna) this).field_I = 0;
-                ((sna) this).field_D = ((sna) var13).field_kb + param1;
-                if (param4 - ((sna) var13).field_p >= ((sna) var13).field_rb) {
+                ((sna) this).field_D = ((sna) this).field_kb + param1;
+                if (param4 - ((sna) this).field_p >= ((sna) this).field_rb) {
                   break L19;
                 } else {
-                  ((sna) this).field_rb = -((sna) var13).field_p + param4;
+                  ((sna) this).field_rb = -((sna) this).field_p + param4;
                   break L19;
                 }
               }
-              ((sna) this).field_M = ((sna) var13).field_rb + param5;
+              ((sna) this).field_M = ((sna) this).field_rb + param5;
               break L15;
             }
           }

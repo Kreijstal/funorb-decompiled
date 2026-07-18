@@ -143,7 +143,7 @@ final class tfb extends rqa {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
     }
 

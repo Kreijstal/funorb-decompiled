@@ -11,11 +11,11 @@ final class kh {
         return param1 == 2;
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, byte param1) {
         rk.field_A = hn.field_u[param0];
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         tk.field_e = false;
         ed.field_t = false;
         rh.b(-14, -1);

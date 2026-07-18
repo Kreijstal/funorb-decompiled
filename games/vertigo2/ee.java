@@ -11,8 +11,7 @@ final class ee {
         if (param1 > -25) {
             return;
         }
-        int discarded$0 = 0;
-        gg discarded$1 = e.a(on.field_b[param2][param0]);
+        gg discarded$0 = e.a(on.field_b[param2][param0], false);
     }
 
     final static void a(int param0, r param1) {
@@ -117,13 +116,13 @@ final class ee {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_b = null;
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -379,8 +378,7 @@ final class ee {
             bi.d(el.field_e.field_b.field_wb, el.field_e.field_b.field_N, el.field_e.field_b.field_Fb, el.field_e.field_b.field_db);
             el.field_e.field_b.b(param1, 0);
         }
-        int discarded$0 = 78;
-        ma.a(param1);
+        ma.a(param1, 78);
     }
 
     public final String toString() {

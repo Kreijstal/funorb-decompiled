@@ -50,13 +50,11 @@ final class ae {
                 } else {
                   if (((ae) this).field_g >= param1) {
                     L2: {
-                      int discarded$6 = -15;
-                      var6 = this.a(param2, true, param3, param1) ? 1 : 0;
+                      var6 = this.a(param2, true, param3, param1, (byte) -15) ? 1 : 0;
                       if (var6 != 0) {
                         break L2;
                       } else {
-                        int discarded$7 = -15;
-                        var6 = this.a(param2, false, param3, param1) ? 1 : 0;
+                        var6 = this.a(param2, false, param3, param1, (byte) -15) ? 1 : 0;
                         break L2;
                       }
                     }
@@ -104,7 +102,7 @@ final class ae {
         }
     }
 
-    private final boolean a(byte[] param0, boolean param1, int param2, int param3) {
+    private final boolean a(byte[] param0, boolean param1, int param2, int param3, byte param4) {
         try {
             Object var6 = null;
             RuntimeException var6_ref = null;

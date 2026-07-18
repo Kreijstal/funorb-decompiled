@@ -115,7 +115,7 @@ final class f extends vk {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_B = null;
         field_y = null;
         field_x = null;
@@ -178,8 +178,7 @@ final class f extends vk {
                 }
                 ((f) this).field_F = (sg) param0;
                 var4_int = 98 % ((param2 - -72) / 32);
-                int discarded$1 = 123;
-                this.f();
+                this.f(123);
                 this.a(true, param1);
                 ((f) this).field_c.field_p = 0;
                 ((f) this).field_d = null;
@@ -374,12 +373,10 @@ final class f extends vk {
                         break L1;
                       } else {
                         L2: {
-                          int discarded$24 = -33;
-                          if (jd.a(var4.charAt(0))) {
+                          if (jd.a(var4.charAt(0), -33)) {
                             break L2;
                           } else {
-                            int discarded$25 = -33;
-                            if (jd.a(var4.charAt(-1 + var4.length()))) {
+                            if (jd.a(var4.charAt(-1 + var4.length()), -33)) {
                               break L2;
                             } else {
                               var5 = 0;
@@ -398,8 +395,7 @@ final class f extends vk {
                                 } else {
                                   L4: {
                                     var7 = param0.charAt(var6);
-                                    int discarded$26 = -33;
-                                    if (!jd.a((char) var7)) {
+                                    if (!jd.a((char) var7, -33)) {
                                       var5 = 0;
                                       break L4;
                                     } else {
@@ -479,7 +475,7 @@ final class f extends vk {
         return stackIn_33_0 != 0;
     }
 
-    private final void f() {
+    private final void f(int param0) {
         try {
             int var2_int = 0;
             Exception var3 = null;

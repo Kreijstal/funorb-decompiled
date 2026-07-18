@@ -220,7 +220,7 @@ final class uh {
         }
     }
 
-    final static wh[] a(ha param0) {
+    final static wh[] a(ha param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

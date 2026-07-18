@@ -11,7 +11,7 @@ final class qb extends lk {
         super(param0);
     }
 
-    final static ci f() {
+    final static ci f(int param0) {
         return (ci) (Object) new rc();
     }
 
@@ -175,11 +175,11 @@ final class qb extends lk {
         return stackIn_4_0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_l = null;
     }
 
-    final static boolean e() {
+    final static boolean e(byte param0) {
         if (null == ob.field_b) {
             return false;
         }

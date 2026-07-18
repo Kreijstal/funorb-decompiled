@@ -95,7 +95,7 @@ abstract class fb {
         return stackIn_1_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
         field_e = null;
         field_h = null;
@@ -158,7 +158,7 @@ abstract class fb {
         return ((fb) this).a(0) >= 20 ? true : false;
     }
 
-    final static void a(ka param0, int param1, ej param2) {
+    final static void a(ka param0, int param1, ej param2, int param3) {
         try {
             RuntimeException var4 = null;
             int var5 = 0;
@@ -435,7 +435,7 @@ abstract class fb {
         }
     }
 
-    final static void a(int param0, String[] param1, int param2, java.applet.Applet param3) {
+    final static void a(int param0, String[] param1, int param2, java.applet.Applet param3, int param4, int param5) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -502,8 +502,7 @@ abstract class fb {
                   ic.field_a = 2;
                   break L3;
                 } else {
-                  int discarded$23 = 125;
-                  ic.field_a = pf.a((CharSequence) (Object) var6);
+                  ic.field_a = pf.a((CharSequence) (Object) var6, (byte) 125);
                   break L3;
                 }
               }

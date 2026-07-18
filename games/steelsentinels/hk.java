@@ -194,7 +194,7 @@ final class hk extends gh {
         return stackIn_12_0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_Jc = null;
         field_Yb = null;
         field_Zb = null;
@@ -557,8 +557,7 @@ final class hk extends gh {
                           } else {
                             if (var2 != 9) {
                               if (var2 != 19) {
-                                int discarded$1 = -31;
-                                hk.d();
+                                hk.d((byte) -31);
                                 return 17;
                               } else {
                                 return 18;

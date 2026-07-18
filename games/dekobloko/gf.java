@@ -64,8 +64,7 @@ final class gf {
         String stackOut_31_2 = null;
         try {
           L0: {
-            int discarded$9 = 0;
-            if (qf.a(param2)) {
+            if (qf.a(param2, 0)) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
@@ -203,7 +202,7 @@ final class gf {
         }
     }
 
-    final static void a(String[] args) {
+    final static void a(String[] args, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -270,13 +269,12 @@ final class gf {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(v.field_d)) {
             throw new IllegalStateException();
         }
         qi.field_M = true;
-        int discarded$0 = 841566312;
-        vk.a(false);
+        vk.a(false, 841566312);
         hc.field_d = 0;
     }
 

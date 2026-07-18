@@ -7,7 +7,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     static km[][] field_d;
     static int[] field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_d = null;
         field_c = null;
@@ -78,7 +78,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_5_0 = null;
@@ -102,8 +102,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           L0: {
             L1: {
-              int discarded$2 = 0;
-              var2 = tf.a(37, jl.a(param0));
+              var2 = tf.a(37, jl.a(param0, false));
               if (var2 != null) {
                 break L1;
               } else {
@@ -207,7 +206,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

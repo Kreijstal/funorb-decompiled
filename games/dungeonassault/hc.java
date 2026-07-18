@@ -12,7 +12,7 @@ final class hc {
     static se field_e;
     static int field_d;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -46,7 +46,7 @@ final class hc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_f = null;

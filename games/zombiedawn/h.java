@@ -415,8 +415,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
         String stackOut_5_2 = null;
         try {
           if (ph.a(param1, 31043, param3, param0)) {
-            int discarded$2 = -79;
-            return di.a();
+            return di.a(-79);
           } else {
             return null;
           }

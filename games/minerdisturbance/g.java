@@ -132,7 +132,7 @@ final class g {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         mj var4 = null;
@@ -549,8 +549,7 @@ final class g {
         try {
           L0: {
             L1: {
-              int discarded$5 = 0;
-              var17 = new sb(in.a(param1));
+              var17 = new sb(in.a(param1, 0));
               var4 = var17.d((byte) -54);
               if (var4 < 5) {
                 break L1;
@@ -612,9 +611,9 @@ final class g {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$6 = var8 + var17.a((byte) -117);
-                            var8 = dupTemp$6;
-                            ((g) this).field_t[var10] = dupTemp$6;
+                            int dupTemp$4 = var8 + var17.a((byte) -117);
+                            var8 = dupTemp$4;
+                            ((g) this).field_t[var10] = dupTemp$4;
                             if (~var9 <= ~((g) this).field_t[var10]) {
                               break L8;
                             } else {
@@ -633,9 +632,9 @@ final class g {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$7 = var8 + var17.e(-68);
-                            var8 = dupTemp$7;
-                            ((g) this).field_t[var10] = dupTemp$7;
+                            int dupTemp$5 = var8 + var17.e(-68);
+                            var8 = dupTemp$5;
+                            ((g) this).field_t[var10] = dupTemp$5;
                             if (~((g) this).field_t[var10] >= ~var9) {
                               break L10;
                             } else {
@@ -760,10 +759,10 @@ final class g {
                                       continue L22;
                                     } else {
                                       L25: {
-                                        int dupTemp$8 = var8 + var17.a((byte) -119);
-                                        var8 = dupTemp$8;
-                                        ((g) this).field_p[var11][var14] = dupTemp$8;
-                                        var15 = dupTemp$8;
+                                        int dupTemp$6 = var8 + var17.a((byte) -119);
+                                        var8 = dupTemp$6;
+                                        ((g) this).field_p[var11][var14] = dupTemp$6;
+                                        var15 = dupTemp$6;
                                         if (~var13 > ~var15) {
                                           var13 = var15;
                                           break L25;
@@ -813,10 +812,10 @@ final class g {
                                       continue L27;
                                     } else {
                                       L30: {
-                                        int dupTemp$9 = var8 + var17.e(eg.a(2, -71));
-                                        var8 = dupTemp$9;
-                                        ((g) this).field_p[var11][var14] = dupTemp$9;
-                                        var15 = dupTemp$9;
+                                        int dupTemp$7 = var8 + var17.e(eg.a(2, -71));
+                                        var8 = dupTemp$7;
+                                        ((g) this).field_p[var11][var14] = dupTemp$7;
+                                        var15 = dupTemp$7;
                                         if (~var13 <= ~var15) {
                                           break L30;
                                         } else {
@@ -930,7 +929,7 @@ final class g {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_j = null;
     }
@@ -980,7 +979,7 @@ final class g {
         return stackIn_10_0 != 0;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         return param0 >= 48 && param0 <= 57;
     }
 
@@ -996,8 +995,7 @@ final class g {
     g(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-            int discarded$0 = 1;
-            ((g) this).field_b = gn.a(param0.length, param0);
+            ((g) this).field_b = gn.a(param0.length, param0, true);
             if (param1 != ((g) this).field_b) {
                 throw new RuntimeException();
             }
@@ -1005,8 +1003,7 @@ final class g {
                 if (param2.length != 64) {
                     throw new RuntimeException();
                 }
-                int discarded$1 = 18738;
-                ((g) this).field_a = wb.a(param0.length, 0, param0);
+                ((g) this).field_a = wb.a(param0.length, 0, param0, 18738);
                 for (var4_int = 0; var4_int < 64; var4_int++) {
                     if (((g) this).field_a[var4_int] != param2[var4_int]) {
                         throw new RuntimeException();

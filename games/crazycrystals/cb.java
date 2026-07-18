@@ -213,7 +213,7 @@ final class cb extends pn implements Cloneable {
         return stackIn_3_0;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         rc.a(-25537, 17);
     }
 
@@ -557,7 +557,7 @@ final class cb extends pn implements Cloneable {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_p = null;
         field_r = null;
         field_n = null;

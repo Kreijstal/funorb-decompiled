@@ -8,7 +8,7 @@ final class te extends ma {
     static dd field_n;
     static short[] field_m;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_p = null;
         field_o = null;
         field_m = null;
@@ -23,7 +23,7 @@ final class te extends ma {
         }
     }
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         oq var2 = ej.field_j;
         var2.b(false, 11);
         var2.a(1, false);

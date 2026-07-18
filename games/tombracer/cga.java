@@ -18,7 +18,7 @@ final class cga extends vg {
         return 0 != (param0 & 34) ? true : false;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_i = null;
         field_l = null;
         field_g = null;

@@ -7,7 +7,7 @@ final class w extends wd implements m {
     static double field_U;
     static ce field_V;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_V = null;
     }
 
@@ -141,8 +141,7 @@ final class w extends wd implements m {
           L0: {
             if (param4 == -27322) {
               if (param0 == ((w) this).field_S) {
-                int discarded$2 = 0;
-                this.r();
+                this.r(0);
                 break L0;
               } else {
                 return;
@@ -237,8 +236,7 @@ final class w extends wd implements m {
                 } else {
                   var3 = (Object) (Object) fj.field_O;
                   ((w) this).field_u = ((w) this).field_u + 10;
-                  int discarded$69 = 120;
-                  if (!rf.b()) {
+                  if (!rf.b(120)) {
                     break L1;
                   } else {
                     ((w) this).field_u = ((w) this).field_u + 20;
@@ -315,7 +313,7 @@ final class w extends wd implements m {
         }
     }
 
-    private final void r() {
+    private final void r(int param0) {
         if (!(((w) this).field_E)) {
             return;
         }

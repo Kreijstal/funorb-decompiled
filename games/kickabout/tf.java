@@ -218,8 +218,7 @@ final class tf {
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                int discarded$2 = -104;
-                var3 = -var3 + ((var3 << 5) - -mf.a(param1.charAt(var4)));
+                var3 = -var3 + ((var3 << 5) - -mf.a(param1.charAt(var4), (byte) -104));
                 var4++;
                 continue L1;
               }

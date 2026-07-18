@@ -94,7 +94,7 @@ final class ne {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 38;
         field_c = null;
         field_a = null;

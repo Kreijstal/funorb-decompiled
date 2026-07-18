@@ -575,7 +575,7 @@ final class f extends pg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_g = null;
     }
@@ -584,9 +584,7 @@ final class f extends pg {
         kh.field_c = null;
         ej.a(101);
         param3 = w.a(0, param8, param1, param11, param3, param2, param13);
-        int discarded$0 = 83;
-        int discarded$1 = 1;
-        fn.a(param9, param3, param7, param0, 16777215, 16777215, param10, param13);
+        fn.a(param9, param3, param7, param0, 16777215, 16777215, param10, param13, true, 83);
         mo.a(1, param10, param7);
         kn.a(param1, param7, false, param3);
     }

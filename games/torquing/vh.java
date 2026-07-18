@@ -175,7 +175,7 @@ final class vh implements Runnable {
         return this.a(param1, 2, (Object) (Object) param2, 0, (byte) -123);
     }
 
-    private final rc a(boolean param0, String param1, int param2) {
+    private final rc a(boolean param0, String param1, int param2, byte param3) {
         return this.a(param2, 1, (Object) (Object) param1, 0, (byte) -128);
     }
 
@@ -678,8 +678,7 @@ final class vh implements Runnable {
         if (param2 >= -58) {
             field_q = null;
         }
-        int discarded$0 = -96;
-        return this.a(false, param0, param1);
+        return this.a(false, param0, param1, (byte) -96);
     }
 
     final rc a(boolean param0, java.awt.Frame param1) {

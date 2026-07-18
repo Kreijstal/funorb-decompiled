@@ -325,8 +325,7 @@ final class mi extends de {
                 }
                 L8: {
                   if (e.field_d == uk.field_s) {
-                    int discarded$9 = -18481;
-                    if (!in.e()) {
+                    if (!in.e(-18481)) {
                       break L8;
                     } else {
                       L9: {
@@ -406,9 +405,9 @@ final class mi extends de {
                       }
                       L15: {
                         if (vm.field_d) {
-                          int discarded$10 = vi.field_o.f(255);
-                          int discarded$11 = vi.field_o.f(255);
-                          int discarded$12 = vi.field_o.k(0);
+                          int discarded$5 = vi.field_o.f(255);
+                          int discarded$6 = vi.field_o.f(255);
+                          int discarded$7 = vi.field_o.k(0);
                           mo.field_k = vi.field_o.a((byte) -115);
                           dc.field_b = new byte[mo.field_k];
                           var8 = 0;
@@ -460,7 +459,7 @@ final class mi extends de {
                             if (!wg.field_a) {
                               try {
                                 L21: {
-                                  Object discarded$13 = cq.a("unzap", (byte) -56, ao.a(13867));
+                                  Object discarded$8 = cq.a("unzap", (byte) -56, ao.a(13867));
                                   break L21;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -478,8 +477,7 @@ final class mi extends de {
                         }
                         try {
                           L23: {
-                            int discarded$14 = -7067;
-                            Object discarded$15 = cq.a(ao.a(13867), (byte) -37, new Object[1], "zap");
+                            Object discarded$9 = cq.a(ao.a(13867), (byte) -37, new Object[1], "zap");
                             break L23;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -522,8 +520,7 @@ final class mi extends de {
                   if (sl.field_b != uk.field_s) {
                     break L27;
                   } else {
-                    int discarded$16 = -18481;
-                    if (in.e()) {
+                    if (in.e(-18481)) {
                       L28: {
                         na.a(true);
                         if (mn.field_e != 7) {
@@ -568,8 +565,7 @@ final class mi extends de {
                       break L30;
                     } else {
                       L31: {
-                        int discarded$17 = 8;
-                        if (no.d() <= 30000L) {
+                        if (no.d(8) <= 30000L) {
                           gi.field_b = ho.field_b;
                           break L31;
                         } else {

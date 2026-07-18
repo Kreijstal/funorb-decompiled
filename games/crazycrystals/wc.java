@@ -8,7 +8,7 @@ class wc extends lb {
         this(ai.field_h, param0);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_q = null;
     }
 

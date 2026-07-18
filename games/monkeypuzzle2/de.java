@@ -16,7 +16,7 @@ final class de extends ug {
     static int field_m;
     private static String field_z;
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_f = null;
         field_j = null;

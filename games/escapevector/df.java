@@ -35,8 +35,7 @@ final class df {
         var2 = 0;
         L0: while (true) {
           if (var2 >= 4) {
-            int discarded$1 = -116;
-            df.a();
+            df.a((byte) -116);
             var2 = 0;
             L1: while (true) {
               if (var2 >= 256) {
@@ -231,7 +230,7 @@ final class df {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_d = null;
         field_h = null;

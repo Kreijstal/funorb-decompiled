@@ -104,7 +104,7 @@ class lj extends qg {
         return stackIn_12_0;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_z = null;
         field_u = null;
     }
@@ -204,8 +204,7 @@ class lj extends qg {
 
     final static void d(byte param0) {
         int var1 = -62 / ((37 - param0) / 44);
-        int discarded$0 = 1;
-        tb.a(ha.b(119));
+        tb.a(ha.b(119), true);
     }
 
     lj(String param0, ui param1, ma param2) {

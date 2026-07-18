@@ -30,11 +30,11 @@ final class au {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
-    final static void a(int param0, String param1) {
+    final static void a(int param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

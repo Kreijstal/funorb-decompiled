@@ -31,14 +31,13 @@ final class pr {
             return;
         }
         try {
-            int discarded$0 = 0;
-            pt.a(0, 12, param1);
+            pt.a(0, 12, param1, 0);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "pr.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void a(int param0, int param1, int param2, byte param3) {
         param2++;
         if (!(((pr) this).field_b[param2] != null)) {
             ((pr) this).field_b[param2] = new at();
@@ -73,7 +72,7 @@ final class pr {
         return stackIn_4_0 != 0;
     }
 
-    final static void a(vh param0) {
+    final static void a(vh param0, byte param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;
@@ -410,7 +409,7 @@ final class pr {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void a(int param0, int param1, boolean param2, int param3) {
         vo.a(mi.field_l, 2, jn.field_d, 320, gl.field_c, 180, param2);
     }
 
@@ -420,8 +419,7 @@ final class pr {
             ((pr) this).field_h = param0;
             ((pr) this).field_j = param2;
             ((pr) this).field_c = param1;
-            int discarded$0 = -91;
-            this.c();
+            this.c(-91);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "pr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -464,7 +462,7 @@ final class pr {
         return -1;
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -496,9 +494,9 @@ final class pr {
                           if (((pr) this).field_d[var6] != -1) {
                             break L3;
                           } else {
-                            int fieldTemp$2 = ((pr) this).field_e;
+                            int fieldTemp$1 = ((pr) this).field_e;
                             ((pr) this).field_e = ((pr) this).field_e + 1;
-                            ((pr) this).field_d[var6] = fieldTemp$2;
+                            ((pr) this).field_d[var6] = fieldTemp$1;
                             break L3;
                           }
                         }
@@ -506,8 +504,7 @@ final class pr {
                         var5++;
                         continue L2;
                       } else {
-                        int discarded$3 = -121;
-                        this.a(var5 / ((pr) this).field_h.field_e, var5 % ((pr) this).field_h.field_e, var4);
+                        this.a(var5 / ((pr) this).field_h.field_e, var5 % ((pr) this).field_h.field_e, var4, (byte) -121);
                         var5++;
                         continue L2;
                       }

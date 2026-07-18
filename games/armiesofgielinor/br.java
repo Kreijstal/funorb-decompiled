@@ -20,7 +20,7 @@ final class br {
         field_f = null;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -132,10 +132,9 @@ final class br {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         vo.a(-10232);
-        int discarded$0 = -6145;
-        g.b();
+        g.b(-6145);
     }
 
     final static cf a(int param0, byte param1) {

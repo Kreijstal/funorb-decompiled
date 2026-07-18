@@ -93,8 +93,7 @@ final class lf {
                 Object var5 = null;
                 boolean discarded$0 = lf.a((ce) null, 38);
             }
-            int discarded$1 = -20667;
-            di.b();
+            di.b(-20667);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) (Object) runtimeException, "lf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

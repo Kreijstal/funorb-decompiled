@@ -8,7 +8,7 @@ final class r extends pu {
     static lo field_m;
     static sna[] field_l;
 
-    final static void a(int[] param0, int param1, vr param2, String[][] param3, byte[] param4, byte[] param5, String[] param6, int param7, vr param8, vr param9, String[][] param10, kv[][] param11, boolean param12, kv[][] param13) {
+    final static void a(int[] param0, int param1, vr param2, String[][] param3, byte[] param4, byte[] param5, String[] param6, int param7, vr param8, vr param9, String[][] param10, kv[][] param11, boolean param12, kv[][] param13, int param14) {
         RuntimeException var15 = null;
         Object var16 = null;
         Object var17 = null;
@@ -465,7 +465,7 @@ final class r extends pu {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_m = null;
         field_n = null;
         field_l = null;

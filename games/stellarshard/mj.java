@@ -55,8 +55,7 @@ final class mj extends g implements md, oi, rf {
                 if (((mj) this).field_I != param2) {
                   break L0;
                 } else {
-                  int discarded$4 = 5255;
-                  boolean discarded$5 = this.j();
+                  boolean discarded$2 = this.j(5255);
                   return;
                 }
               } else {
@@ -99,14 +98,14 @@ final class mj extends g implements md, oi, rf {
         }
     }
 
-    final static ml i() {
+    final static ml i(int param0) {
         if (ok.field_a == o.field_l) {
             throw new IllegalStateException();
         }
         return null;
     }
 
-    private final boolean h() {
+    private final boolean h(int param0) {
         if (this.a(10000536, (je) (Object) ((mj) this).field_N)) {
           if (this.a(10000536, (je) (Object) ((mj) this).field_H)) {
             if (this.a(10000536, (je) (Object) ((mj) this).field_K)) {
@@ -210,8 +209,7 @@ final class mj extends g implements md, oi, rf {
                   if (var4 > 12) {
                     break L1;
                   } else {
-                    int discarded$2 = 0;
-                    var5 = nh.a(param2);
+                    var5 = nh.a(param2, false);
                     if (var5 == null) {
                       stackOut_13_0 = 0;
                       stackIn_14_0 = stackOut_13_0;
@@ -362,8 +360,7 @@ final class mj extends g implements md, oi, rf {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$2 = -2;
-            stackOut_0_0 = this.a(param4, param2, param5, param1, 170, 35);
+            stackOut_0_0 = this.a(param4, param2, param5, param1, 170, 35, -2);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -529,7 +526,7 @@ final class mj extends g implements md, oi, rf {
         }
     }
 
-    private final String k() {
+    private final String k(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -612,7 +609,7 @@ final class mj extends g implements md, oi, rf {
         return stackIn_9_0;
     }
 
-    private final int a(int param0, String param1, rj param2, int param3) {
+    private final int a(int param0, String param1, rj param2, int param3, int param4) {
         kg var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
@@ -714,7 +711,7 @@ final class mj extends g implements md, oi, rf {
         return stackIn_1_0;
     }
 
-    private final int a(int param0, int param1, rj param2, String param3) {
+    private final int a(int param0, int param1, rj param2, String param3, int param4) {
         RuntimeException var6 = null;
         ii var7 = null;
         kg var8 = null;
@@ -857,20 +854,14 @@ final class mj extends g implements md, oi, rf {
         il dupTemp$1 = new il(10000536);
         ((mj) this).field_B.field_u = (uk) (Object) dupTemp$1;
         ((mj) this).field_G.field_u = (uk) (Object) dupTemp$1;
-        int discarded$2 = 120;
-        int discarded$3 = 100;
         String var2 = h.a(hk.field_v, 0, new String[2]);
         int var3 = 20;
-        int discarded$4 = 170;
-        var3 = var3 + this.a(-31909, t.field_b, (rj) (Object) ((mj) this).field_H, var3);
-        int discarded$5 = -2;
-        var3 = var3 + (this.a("", var3, ca.field_a, (rj) (Object) ((mj) this).field_K, 170, 20) + 5);
-        int discarded$6 = 170;
-        var3 = var3 + this.a(-31909, th.field_b, (rj) (Object) ((mj) this).field_G, var3);
+        var3 = var3 + this.a(-31909, t.field_b, (rj) (Object) ((mj) this).field_H, var3, 170);
+        var3 = var3 + (this.a("", var3, ca.field_a, (rj) (Object) ((mj) this).field_K, 170, 20, -2) + 5);
+        var3 = var3 + this.a(-31909, th.field_b, (rj) (Object) ((mj) this).field_G, var3, 170);
         var3 = var3 + (this.a(170, (rj) (Object) ((mj) this).field_B, var3, (byte) -113, u.field_l, ta.field_l) - -5);
         var3 = var3 + (5 + this.a(170, (rj) (Object) ((mj) this).field_N, var3, (byte) -113, nk.field_h, si.field_I));
-        int discarded$7 = 170;
-        var3 = var3 + this.a(-17073, var3, (rj) (Object) ((mj) this).field_C, vd.field_c);
+        var3 = var3 + this.a(-17073, var3, (rj) (Object) ((mj) this).field_C, vd.field_c, 170);
         kg var4 = new kg(46, var3, ((mj) this).field_p - 90, 25, (rj) (Object) ((mj) this).field_D, true, ((mj) this).field_p + -120, 5, de.field_c, 11579568, nf.field_o);
         ((mj) this).b(4, (rj) (Object) var4);
         var3 = var3 + var4.field_t;
@@ -897,7 +888,7 @@ final class mj extends g implements md, oi, rf {
         ((mj) this).b(496, 0, 0, var3 - (-55 + -var6), 23987);
     }
 
-    private final int a(String param0, int param1, String param2, rj param3, int param4, int param5) {
+    private final int a(String param0, int param1, String param2, rj param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         cd var9 = null;
         kg var10 = null;
@@ -1043,9 +1034,8 @@ final class mj extends g implements md, oi, rf {
         return stackIn_1_0;
     }
 
-    private final boolean j() {
-        int discarded$0 = 40;
-        if (!this.h()) {
+    private final boolean j(int param0) {
+        if (!this.h(40)) {
             return false;
         }
         int var2 = -1;
@@ -1162,14 +1152,13 @@ final class mj extends g implements md, oi, rf {
     final void a(int param0, boolean param1, int param2, rj param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 40;
-            ((mj) this).field_I.field_E = this.h();
+            ((mj) this).field_I.field_E = this.h(40);
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "mj.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final String e() {
+    private final String e(byte param0) {
         return "</col></u>";
     }
 

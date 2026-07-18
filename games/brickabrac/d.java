@@ -13,7 +13,7 @@ class d extends oc {
     static int field_H;
     boolean field_J;
 
-    public static void g() {
+    public static void g(int param0) {
         field_G = null;
         field_C = null;
         field_D = null;

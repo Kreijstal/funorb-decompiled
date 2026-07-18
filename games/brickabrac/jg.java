@@ -33,7 +33,7 @@ final class jg {
         return null != sq.field_c || nq.field_p;
     }
 
-    private final void b() throws IOException {
+    private final void b(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = BrickABrac.field_J ? 1 : 0;
@@ -165,8 +165,7 @@ final class jg {
                 } else {
                   if (param0 > 0) {
                     L7: {
-                      int discarded$2 = 200000000;
-                      this.b();
+                      this.b(200000000);
                       var9_int = param0;
                       if (var9_int <= ((jg) this).field_f) {
                         break L7;
@@ -205,9 +204,9 @@ final class jg {
                           if (param1 >= var9_int) {
                             break L9;
                           } else {
-                            int incrementValue$3 = param1;
+                            int incrementValue$1 = param1;
                             param1++;
-                            param3[incrementValue$3] = (byte) 0;
+                            param3[incrementValue$1] = (byte) 0;
                             param0--;
                             ((jg) this).field_l = ((jg) this).field_l + 1L;
                             continue L11;
@@ -445,7 +444,7 @@ final class jg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_q = null;
         field_d = null;

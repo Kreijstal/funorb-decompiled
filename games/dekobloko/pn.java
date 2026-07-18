@@ -18,8 +18,7 @@ final class pn extends vb {
             ed.field_c = param2;
             pk.field_r = 2;
             var5 = (CharSequence) (Object) param2;
-            int discarded$0 = 2;
-            cf.field_c = kf.a(var5);
+            cf.field_c = kf.a(var5, (byte) 2);
             int var4_int = 54;
             fm.field_d = param1;
             v.b(0);
@@ -38,12 +37,9 @@ final class pn extends vb {
         }
         param0 = param0 + ((pn) this).field_u;
         param3 = param3 + ((pn) this).field_D;
-        int discarded$0 = 0;
-        this.a(param0, n.field_d, param3, (ce) (Object) ((pn) this).field_gb);
-        int discarded$1 = 0;
-        this.a(param0, ql.field_a, param3, (ce) (Object) ((pn) this).field_hb);
-        int discarded$2 = 0;
-        this.a(param0, pf.field_c, param3, (ce) (Object) ((pn) this).field_ib);
+        this.a(param0, n.field_d, param3, (ce) (Object) ((pn) this).field_gb, 0);
+        this.a(param0, ql.field_a, param3, (ce) (Object) ((pn) this).field_hb, 0);
+        this.a(param0, pf.field_c, param3, (ce) (Object) ((pn) this).field_ib, 0);
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, String param4, int param5, int param6, int param7) {
@@ -80,8 +76,7 @@ final class pn extends vb {
                   break L2;
                 } else {
                   if (wl.field_p) {
-                    int discarded$4 = -1045;
-                    aj.a();
+                    aj.a(-1045);
                     break L2;
                   } else {
                     jg.field_i = true;
@@ -110,8 +105,7 @@ final class pn extends vb {
                   if (bf.field_v.field_ob == 0) {
                     break L3;
                   } else {
-                    int discarded$5 = 94;
-                    qk.a();
+                    qk.a((byte) 94);
                     jg.field_i = false;
                     break L3;
                   }
@@ -436,13 +430,13 @@ final class pn extends vb {
         return stackIn_14_0 != 0;
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_bb = null;
         field_eb = null;
         field_fb = null;
     }
 
-    private final void a(int param0, String param1, int param2, ce param3) {
+    private final void a(int param0, String param1, int param2, ce param3, int param4) {
         try {
             bj.field_f.b(param1, (param3.field_t >> 1) + param3.field_u + param0, param2 + (param3.field_D - 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
@@ -538,7 +532,7 @@ final class pn extends vb {
         }
     }
 
-    final static we a(String param0, int param1) {
+    final static we a(String param0, int param1, int param2) {
         sc var3 = null;
         RuntimeException var3_ref = null;
         sc stackIn_1_0 = null;

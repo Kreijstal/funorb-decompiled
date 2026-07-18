@@ -90,7 +90,7 @@ final class md {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_N = null;
         field_u = null;
     }
@@ -227,8 +227,7 @@ final class md {
           if (bh.field_f != null) {
             L0: {
               var7 = (CharSequence) (Object) param1;
-              int discarded$4 = 0;
-              var2 = tg.a(var7);
+              var2 = tg.a(var7, false);
               var3 = 24 / ((47 - param0) / 43);
               if (var2 == null) {
                 var2 = param1;
@@ -242,8 +241,7 @@ final class md {
               if (var4 != null) {
                 L2: {
                   var8 = (CharSequence) (Object) var4.field_Hb;
-                  int discarded$5 = 0;
-                  var5 = tg.a(var8);
+                  var5 = tg.a(var8, false);
                   if (var5 != null) {
                     break L2;
                   } else {
@@ -311,8 +309,7 @@ final class md {
         if (param4 != 2122) {
             ((md) this).field_v = null;
         }
-        int discarded$0 = 255;
-        this.a();
+        this.a(255);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -323,8 +320,7 @@ final class md {
             ((md) this).field_E[var5] = (short)(((md) this).field_E[var5] + param3);
             ((md) this).field_v[var5] = (short)(((md) this).field_v[var5] + param0);
         }
-        int discarded$0 = 255;
-        this.a();
+        this.a(255);
         if (param1 != 3) {
             ((md) this).field_t = null;
         }
@@ -360,8 +356,7 @@ final class md {
                 break L1;
               }
             }
-            int discarded$2 = 1;
-            stackOut_2_0 = md.a(param0, 10, -31);
+            stackOut_2_0 = md.a(param0, 10, -31, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -943,11 +938,11 @@ final class md {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         ((md) this).field_d = false;
     }
 
-    final static int a(CharSequence param0, int param1, int param2) {
+    final static int a(CharSequence param0, int param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

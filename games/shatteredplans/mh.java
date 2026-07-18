@@ -145,19 +145,18 @@ final class mh {
 
     final int d(int param0) {
         if (!(((mh) this).field_c != 0)) {
-            int discarded$0 = 5;
-            this.c();
+            this.c(5);
             ((mh) this).field_c = 256;
         }
         if (param0 != 13) {
             field_b = null;
         }
-        int fieldTemp$1 = ((mh) this).field_c - 1;
+        int fieldTemp$0 = ((mh) this).field_c - 1;
         ((mh) this).field_c = ((mh) this).field_c - 1;
-        return ((mh) this).field_j[fieldTemp$1];
+        return ((mh) this).field_j[fieldTemp$0];
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -186,8 +185,7 @@ final class mh {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    int discarded$1 = 5;
-                    this.c();
+                    this.c(5);
                     ((mh) this).field_c = 256;
                     return;
                   } else {
@@ -311,7 +309,7 @@ final class mh {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -381,7 +379,7 @@ final class mh {
         np.field_f = new int[600];
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -443,8 +441,7 @@ final class mh {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((mh) this).field_j[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 75;
-            this.a();
+            this.a((byte) 75);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

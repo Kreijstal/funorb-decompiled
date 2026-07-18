@@ -289,7 +289,7 @@ final class kh extends vh {
         ((kh) this).field_tc = new byte[param0];
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_rc = null;
         field_gc = null;
         field_Vb = null;

@@ -309,7 +309,7 @@ class mg extends ca {
         return ((mg) this).b((byte) 90);
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -870,16 +870,14 @@ class mg extends ca {
         if (param0 != -18951) {
             return 41;
         }
-        int discarded$0 = 0;
-        int var3 = sd.a(param1, ((mg) this).field_j, ((mg) this).field_i);
+        int var3 = sd.a(param1, ((mg) this).field_j, ((mg) this).field_i, 0);
         ((mg) this).b(var3, param0 + 18950);
         return var3;
     }
 
     final boolean h(int param0) {
         ((mg) this).field_i = ((mg) this).field_i - 4;
-        int discarded$0 = 0;
-        int var2 = sd.a(0, ((mg) this).field_j, ((mg) this).field_i);
+        int var2 = sd.a(0, ((mg) this).field_j, ((mg) this).field_i, 0);
         int var3 = ((mg) this).l(0);
         if (!(var3 != var2)) {
             return true;

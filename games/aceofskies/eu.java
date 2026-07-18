@@ -28,7 +28,7 @@ final class eu extends o {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             Exception var1 = null;
             int decompiledRegionSelector0 = 0;

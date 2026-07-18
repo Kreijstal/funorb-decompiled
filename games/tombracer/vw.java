@@ -18,12 +18,12 @@ abstract class vw {
 
     abstract void a(int param0, iva param1, int param2);
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static q a(int param0, ffa param1, int param2) {
+    final static q a(int param0, ffa param1, int param2, boolean param3) {
         q var4 = null;
         RuntimeException var4_ref = null;
         RuntimeException stackIn_6_0 = null;

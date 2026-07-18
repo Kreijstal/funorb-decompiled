@@ -83,7 +83,7 @@ final class fi extends fc {
         return stackIn_1_0;
     }
 
-    final static aa[] e() {
+    final static aa[] e(int param0) {
         return new aa[]{hl.field_C, mj.field_e, ia.field_a, cb.field_b, dj.field_b, qe.field_n, sl.field_e, gb.field_n, cb.field_d, gi.field_q, ui.field_m, uj.field_a, kb.field_e, oj.field_a};
     }
 

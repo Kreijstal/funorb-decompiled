@@ -88,7 +88,7 @@ class wo extends ah {
         }
     }
 
-    final static em v() {
+    final static em v(int param0) {
         return new em(0, 0, se.field_j.field_p, 0, (io) null, se.field_j.field_s, se.field_j.field_m, se.field_j.field_p, se.field_j.field_p, se.field_j.field_o, se.field_j.field_f, false, true, 32768, 0);
     }
 
@@ -376,7 +376,7 @@ class wo extends ah {
         }
     }
 
-    public static void w() {
+    public static void w(int param0) {
         field_yb = null;
         field_zb = null;
         field_xb = null;

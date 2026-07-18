@@ -47,8 +47,7 @@ final class in {
             }
           } else {
             if (wba.field_o == null) {
-              int discarded$6 = 0;
-              dq.field_f = r.a(480, 0, param0 ^ -15579, dsa.field_c, 640);
+              dq.field_f = r.a(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
               if (dq.field_f == null) {
                 L2: {
                   var2 = 3;
@@ -65,8 +64,7 @@ final class in {
                 }
                 return;
               } else {
-                int discarded$7 = 75;
-                fpa.a((java.awt.Canvas) (Object) dq.field_f);
+                fpa.a((java.awt.Canvas) (Object) dq.field_f, (byte) 75);
                 var2 = 2;
                 if (wba.field_o == null) {
                   if (foa.field_b) {
@@ -95,8 +93,7 @@ final class in {
                   return;
                 }
               } else {
-                int discarded$8 = 75;
-                fpa.a((java.awt.Canvas) (Object) dq.field_f);
+                fpa.a((java.awt.Canvas) (Object) dq.field_f, (byte) 75);
                 var2 = 2;
                 if (wba.field_o == null) {
                   if (foa.field_b) {
@@ -140,12 +137,10 @@ final class in {
             }
           } else {
             if (wba.field_o == null) {
-              int discarded$9 = 0;
-              dq.field_f = r.a(480, 0, param0 ^ -15579, dsa.field_c, 640);
+              dq.field_f = r.a(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
               if (dq.field_f != null) {
                 L3: {
-                  int discarded$10 = 75;
-                  fpa.a((java.awt.Canvas) (Object) dq.field_f);
+                  fpa.a((java.awt.Canvas) (Object) dq.field_f, (byte) 75);
                   var2 = 2;
                   if (wba.field_o != null) {
                     break L3;
@@ -191,8 +186,7 @@ final class in {
                   return;
                 }
               } else {
-                int discarded$11 = 75;
-                fpa.a((java.awt.Canvas) (Object) dq.field_f);
+                fpa.a((java.awt.Canvas) (Object) dq.field_f, (byte) 75);
                 var2 = 2;
                 if (wba.field_o == null) {
                   if (!foa.field_b) {
@@ -210,11 +204,11 @@ final class in {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -371,8 +365,7 @@ final class in {
             }
           }
           if (stackIn_14_0 | stackIn_14_1 == 0) {
-            int discarded$17 = 13650;
-            if (vua.e(param0, param1)) {
+            if (vua.e(param0, param1, 13650)) {
               return true;
             } else {
               return false;
@@ -406,8 +399,7 @@ final class in {
             return true;
           } else {
             L2: {
-              int discarded$18 = 13650;
-              if (!vua.e(param0, param1)) {
+              if (!vua.e(param0, param1, 13650)) {
                 stackOut_7_0 = 0;
                 stackIn_8_0 = stackOut_7_0;
                 break L2;

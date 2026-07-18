@@ -183,7 +183,7 @@ final class ei {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_w = null;
         field_y = null;
     }

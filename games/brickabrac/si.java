@@ -252,7 +252,7 @@ final class si {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
         field_c = null;
         field_o = null;

@@ -5,7 +5,7 @@ final class jv {
     static int field_b;
     static int field_a;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, boolean param1) {
         sm.a((byte) 127, param0, false);
     }
 
@@ -19,7 +19,7 @@ final class jv {
         vt.a(param0, true);
     }
 
-    final static void a(int param0, String[] param1, String param2) {
+    final static void a(int param0, String[] param1, String param2, boolean param3) {
         String[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -72,8 +72,7 @@ final class jv {
               } else {
                 var4 = param1;
                 as.a(256, var4);
-                int discarded$2 = 8192;
-                jh.field_z = qr.a(param1);
+                jh.field_z = qr.a(param1, 8192);
                 return;
               }
             }

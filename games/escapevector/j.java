@@ -5,7 +5,7 @@ final class j {
     static int field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         int var1 = 0;
     }

@@ -6,7 +6,7 @@ final class gi {
     static String field_b;
     static int field_c;
 
-    final static StringBuilder a(StringBuilder param0, int param1, int param2) {
+    final static StringBuilder a(StringBuilder param0, int param1, int param2, char param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -80,7 +80,7 @@ final class gi {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 
@@ -205,8 +205,7 @@ final class gi {
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
               } else {
-                int discarded$2 = 0;
-                stackOut_5_0 = va.a(var3);
+                stackOut_5_0 = va.a(var3, 0);
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
               }

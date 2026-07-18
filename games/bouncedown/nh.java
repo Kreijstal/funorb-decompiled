@@ -181,8 +181,7 @@ final class nh extends wk implements rc {
             if (param4 != ((nh) this).field_Q) {
               break L0;
             } else {
-              int discarded$2 = 0;
-              this.m();
+              this.m(0);
               return;
             }
           }
@@ -218,7 +217,7 @@ final class nh extends wk implements rc {
         }
     }
 
-    private final void m() {
+    private final void m(int param0) {
         if (!((nh) this).field_D) {
             return;
         }

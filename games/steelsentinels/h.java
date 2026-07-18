@@ -594,7 +594,7 @@ final class h extends ug {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_T = null;
         field_Y = null;
         field_X = null;

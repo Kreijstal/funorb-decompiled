@@ -115,8 +115,7 @@ final class ki extends ek {
               }
             }
             L5: {
-              int discarded$2 = -10;
-              ge.a(param1.field_h, ((ki) this).field_r, var7, param1.field_o + param0, (-((ki) this).field_r[0].field_k + param1.field_q >> 1) + param3 + param1.field_i);
+              ge.a(param1.field_h, ((ki) this).field_r, var7, param1.field_o + param0, (-((ki) this).field_r[0].field_k + param1.field_q >> 1) + param3 + param1.field_i, (byte) -10);
               if (param4) {
                 stackOut_17_0 = 16777215;
                 stackIn_18_0 = stackOut_17_0;
@@ -128,7 +127,7 @@ final class ki extends ek {
               }
             }
             var8 = stackIn_18_0;
-            int discarded$3 = ((ki) this).field_c.a(param1.field_r, param1.field_o + param0, -2 + (param3 - -param1.field_i), param1.field_h, param1.field_q, var8, -1, 1, 1, ((ki) this).field_c.field_s);
+            int discarded$1 = ((ki) this).field_c.a(param1.field_r, param1.field_o + param0, -2 + (param3 - -param1.field_i), param1.field_h, param1.field_q, var8, -1, 1, 1, ((ki) this).field_c.field_s);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

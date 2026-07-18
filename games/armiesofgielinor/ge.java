@@ -225,7 +225,7 @@ final class ge extends sm {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_h = null;
         field_m = null;
         field_i = null;

@@ -134,18 +134,15 @@ final class eh implements pk {
             Object var14 = null;
             this.a(28, (ot) null);
         }
-        int discarded$0 = -19;
-        mf.h();
-        int discarded$1 = -1456;
-        up.e();
+        mf.h((byte) -19);
+        up.e(-1456);
         sj var16 = kh.field_g;
-        sj var3 = ht.field_b;
+        sj var17 = ht.field_b;
         if (null != ht.field_c) {
             if (!(null == d.field_b)) {
                 ml.k(61, 0);
                 if (!(null != sr.field_h)) {
-                    int discarded$2 = -100;
-                    it.a(new rj(ht.field_c, d.field_b), d.field_b);
+                    it.a(new rj(ht.field_c, d.field_b), d.field_b, (byte) -100);
                 }
                 d.field_b = null;
                 ht.field_c = null;
@@ -155,8 +152,7 @@ final class eh implements pk {
         }
         if (!(ni.field_i == null)) {
             ml.k(61, 1);
-            int discarded$3 = -122;
-            f.a(ni.field_i);
+            f.a(ni.field_i, (byte) -122);
             ni.field_i = null;
             dd.a((byte) 53);
             return false;
@@ -173,11 +169,11 @@ final class eh implements pk {
             eo.field_m = se.a(bo.field_Cb, -121, "lobby", "exhibition_icons");
             eo.field_m[0] = new ut(0, 0);
             eo.field_f = jo.a(bo.field_Cb, 17369, "lobby", "orb_icons");
-            ut[] discarded$4 = se.a(bo.field_Cb, -127, "lobby", "players");
+            ut[] discarded$0 = se.a(bo.field_Cb, -127, "lobby", "players");
             tf.field_e = eo.field_q;
             un.field_d = gm.a(v.field_b, 10, "font2", bo.field_Cb, "fonts");
             q.field_d = qk.a("font", v.field_b, 75, "fonts", bo.field_Cb);
-            pb.field_C = qk.a("", var3, 105, "arialish12", var16);
+            pb.field_C = qk.a("", var17, 105, "arialish12", var16);
             var4 = new ut(16, 9);
             iw.a(-64, var4);
             on.d(4, 4, 3, 7829367);
@@ -187,8 +183,7 @@ final class eh implements pk {
             pb.field_C.a((qd[]) (Object) new kg[1], new int[1]);
             sk.a(83, 100, 10);
             var6 = wa.a((byte) 100, "basic", var16, "orbcoin");
-            int discarded$5 = -123;
-            ch.a(var6, (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 77, "locked"), (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 77, "unachieved"));
+            ch.a(var6, (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 77, "locked"), (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 77, "unachieved"), -123);
             sh.field_g = nh.b(nh.a(var6));
             nn.field_B = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 69, "divider");
             tt.field_e = wa.a((byte) 122, "menu", bo.field_Cb, "button_left_shine");
@@ -232,9 +227,8 @@ final class eh implements pk {
                 ca.field_c[var10_int] = ri.a(tk.field_Fb[var10_int][0], param0);
             }
             kl.field_m = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 96, "help_up");
-            ut discarded$6 = bg.a("menu", bo.field_Cb, (byte) 100, "help_dwn");
-            int discarded$7 = 1;
-            mf.a(se.a(bo.field_Cb, -124, "menu", "tickbox"));
+            ut discarded$1 = bg.a("menu", bo.field_Cb, (byte) 100, "help_dwn");
+            mf.a(se.a(bo.field_Cb, -124, "menu", "tickbox"), true);
             sk.a(80, 100, 75);
             eq.field_h = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 93, "hammer_icon");
             ml.field_q = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 89, "hammer_icon_buy");
@@ -255,102 +249,70 @@ final class eh implements pk {
             var11 = new ut[][]{eo.field_p, null, eo.field_m, eo.field_j};
             var12 = new ut[][]{eo.field_p, null, eo.field_m, eo.field_j};
             Object var15 = null;
-            uf.a(var11, id.field_y, ow.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, rk.field_e, var3, sn.field_c, rp.field_y, ld.field_h, os.field_i, var12, (int[]) null, 8, 3, jd.field_i);
+            uf.a(var11, id.field_y, ow.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, rk.field_e, var17, sn.field_c, rp.field_y, ld.field_h, os.field_i, var12, (int[]) null, 8, 3, jd.field_i);
             la.field_k = da.field_k;
             qd.field_e = lr.field_n;
             wi.field_z = ja.field_Z;
             pn.field_t = 0;
             mr.a(false, 200);
             sk.a(-61, 100, 95);
-            int discarded$8 = 5198;
-            m.a(var3, var16);
+            m.a(var17, var16, 5198);
             bf.a(-70, rm.field_A, 0, (java.applet.Applet) (Object) nm.field_g, 0, 16777215);
-            var3 = null;
+            Object var3 = null;
             v.field_b = null;
             dd.a((byte) 104);
             return false;
         }
         if (!(sj.field_f == null)) {
             ml.k(61, 3);
-            int discarded$9 = 64;
-            cq.field_j = new ut(sj.field_f.a("background_guy.png", "", 36), (java.awt.Component) (Object) ln.l());
-            int discarded$10 = 64;
-            mk.field_a = new ut(sj.field_f.a("background.png", "", 66), (java.awt.Component) (Object) ln.l());
-            int discarded$11 = 64;
-            iu.field_k = new ut(sj.field_f.a("splash.jpg", "", 8), (java.awt.Component) (Object) ln.l());
-            int discarded$12 = 64;
-            ai.field_E = new ut(sj.field_f.a("botbar.png", "", 66), (java.awt.Component) (Object) ln.l());
+            cq.field_j = new ut(sj.field_f.a("background_guy.png", "", 36), (java.awt.Component) (Object) ln.l(64));
+            mk.field_a = new ut(sj.field_f.a("background.png", "", 66), (java.awt.Component) (Object) ln.l(64));
+            iu.field_k = new ut(sj.field_f.a("splash.jpg", "", 8), (java.awt.Component) (Object) ln.l(64));
+            ai.field_E = new ut(sj.field_f.a("botbar.png", "", 66), (java.awt.Component) (Object) ln.l(64));
             sk.a(-114, 23, 2);
-            int discarded$13 = 64;
-            vo.field_cb = nh.a(new ot(sj.field_f.a("bank_top.png", "", 3), (java.awt.Component) (Object) ln.l()));
-            int discarded$14 = 64;
-            nn.field_C = nh.a(new ot(sj.field_f.a("bank_mid.png", "", 52), (java.awt.Component) (Object) ln.l()));
-            int discarded$15 = 64;
-            du.field_i = nh.a(new ot(sj.field_f.a("bank_bot.png", "", 123), (java.awt.Component) (Object) ln.l()));
-            int discarded$16 = 64;
-            lb.field_L = nh.a(new ot(sj.field_f.a("button_lrg.png", "", 91), (java.awt.Component) (Object) ln.l()));
-            int discarded$17 = 64;
-            ll.field_m = nh.a(new ot(sj.field_f.a("button_sml.png", "", 81), (java.awt.Component) (Object) ln.l()));
+            vo.field_cb = nh.a(new ot(sj.field_f.a("bank_top.png", "", 3), (java.awt.Component) (Object) ln.l(64)));
+            nn.field_C = nh.a(new ot(sj.field_f.a("bank_mid.png", "", 52), (java.awt.Component) (Object) ln.l(64)));
+            du.field_i = nh.a(new ot(sj.field_f.a("bank_bot.png", "", 123), (java.awt.Component) (Object) ln.l(64)));
+            lb.field_L = nh.a(new ot(sj.field_f.a("button_lrg.png", "", 91), (java.awt.Component) (Object) ln.l(64)));
+            ll.field_m = nh.a(new ot(sj.field_f.a("button_sml.png", "", 81), (java.awt.Component) (Object) ln.l(64)));
             sk.a(122, 23, 4);
-            int discarded$18 = 64;
-            nn.field_K = new ot(sj.field_f.a("cone_1.png", "", 91), (java.awt.Component) (Object) ln.l());
-            int discarded$19 = 64;
-            re.field_o = new ot(sj.field_f.a("cone_2.png", "", 91), (java.awt.Component) (Object) ln.l());
-            int discarded$20 = 64;
-            uv.field_m = nh.a(new ot(sj.field_f.a("button_left.png", "", 8), (java.awt.Component) (Object) ln.l()));
-            int discarded$21 = 64;
-            uj.field_B = nh.a(new ot(sj.field_f.a("button_middle.png", "", 97), (java.awt.Component) (Object) ln.l()));
+            nn.field_K = new ot(sj.field_f.a("cone_1.png", "", 91), (java.awt.Component) (Object) ln.l(64));
+            re.field_o = new ot(sj.field_f.a("cone_2.png", "", 91), (java.awt.Component) (Object) ln.l(64));
+            uv.field_m = nh.a(new ot(sj.field_f.a("button_left.png", "", 8), (java.awt.Component) (Object) ln.l(64)));
+            uj.field_B = nh.a(new ot(sj.field_f.a("button_middle.png", "", 97), (java.awt.Component) (Object) ln.l(64)));
             sk.a(-114, 23, 6);
-            int discarded$22 = 64;
-            mf.field_Cb = nh.a(new ot(sj.field_f.a("button_right.png", "", 90), (java.awt.Component) (Object) ln.l()));
-            int discarded$23 = 64;
-            pw.field_H = (ut) (Object) new ot(sj.field_f.a("stopwatch.png", "", 101), (java.awt.Component) (Object) ln.l());
+            mf.field_Cb = nh.a(new ot(sj.field_f.a("button_right.png", "", 90), (java.awt.Component) (Object) ln.l(64)));
+            pw.field_H = (ut) (Object) new ot(sj.field_f.a("stopwatch.png", "", 101), (java.awt.Component) (Object) ln.l(64));
             sk.a(-58, 23, 8);
-            int discarded$24 = 64;
-            ut discarded$25 = nh.a(new ot(sj.field_f.a("thin_button_endl.png", "", 89), (java.awt.Component) (Object) ln.l()));
-            int discarded$26 = 64;
-            ut discarded$27 = nh.a(new ot(sj.field_f.a("thin_button_mid.png", "", 5), (java.awt.Component) (Object) ln.l()));
+            ut discarded$2 = nh.a(new ot(sj.field_f.a("thin_button_endl.png", "", 89), (java.awt.Component) (Object) ln.l(64)));
+            ut discarded$3 = nh.a(new ot(sj.field_f.a("thin_button_mid.png", "", 5), (java.awt.Component) (Object) ln.l(64)));
             sk.a(-105, 23, 10);
-            int discarded$28 = 64;
-            ut discarded$29 = nh.a(new ot(sj.field_f.a("thin_button_endr.png", "", 58), (java.awt.Component) (Object) ln.l()));
-            int discarded$30 = 64;
-            gu.field_zb = nh.a(new ot(sj.field_f.a("small_button_L.png", "", 52), (java.awt.Component) (Object) ln.l()));
+            ut discarded$4 = nh.a(new ot(sj.field_f.a("thin_button_endr.png", "", 58), (java.awt.Component) (Object) ln.l(64)));
+            gu.field_zb = nh.a(new ot(sj.field_f.a("small_button_L.png", "", 52), (java.awt.Component) (Object) ln.l(64)));
             sk.a(-61, 23, 12);
-            int discarded$31 = 64;
-            ae.field_H = nh.a(new ot(sj.field_f.a("small_button_mid.png", "", 53), (java.awt.Component) (Object) ln.l()));
-            int discarded$32 = 64;
-            fv.field_b = nh.a(new ot(sj.field_f.a("small_button_R.png", "", 117), (java.awt.Component) (Object) ln.l()));
+            ae.field_H = nh.a(new ot(sj.field_f.a("small_button_mid.png", "", 53), (java.awt.Component) (Object) ln.l(64)));
+            fv.field_b = nh.a(new ot(sj.field_f.a("small_button_R.png", "", 117), (java.awt.Component) (Object) ln.l(64)));
             sk.a(-85, 23, 14);
-            int discarded$33 = 64;
-            mg.field_g = nh.a(new ot(sj.field_f.a("top_bar_Seg.png", "", 127), (java.awt.Component) (Object) ln.l()));
+            mg.field_g = nh.a(new ot(sj.field_f.a("top_bar_Seg.png", "", 127), (java.awt.Component) (Object) ln.l(64)));
             sk.a(-49, 23, 16);
-            int discarded$34 = 64;
-            qt.field_u = nh.a(new ot(sj.field_f.a("top.png", "", 82), (java.awt.Component) (Object) ln.l()));
+            qt.field_u = nh.a(new ot(sj.field_f.a("top.png", "", 82), (java.awt.Component) (Object) ln.l(64)));
             sk.a(-98, 23, 18);
-            int discarded$35 = 64;
-            fn.field_f = new ot(sj.field_f.a("asphalt_corner.png", "", 6), (java.awt.Component) (Object) ln.l());
-            int discarded$36 = 64;
-            kn.field_J = new ut(sj.field_f.a("asphalt_v.png", "", 69), (java.awt.Component) (Object) ln.l());
+            fn.field_f = new ot(sj.field_f.a("asphalt_corner.png", "", 6), (java.awt.Component) (Object) ln.l(64));
+            kn.field_J = new ut(sj.field_f.a("asphalt_v.png", "", 69), (java.awt.Component) (Object) ln.l(64));
             sk.a(126, 23, 20);
-            int discarded$37 = 64;
-            vl.field_g = new ut(sj.field_f.a("asphalt_h.png", "", 124), (java.awt.Component) (Object) ln.l());
-            int discarded$38 = 64;
-            eo.field_a = new ot(sj.field_f.a("arrow_on.png", "", 63), (java.awt.Component) (Object) ln.l());
-            int discarded$39 = 64;
-            eo.field_b = new ot(sj.field_f.a("arrow_off.png", "", 4), (java.awt.Component) (Object) ln.l());
+            vl.field_g = new ut(sj.field_f.a("asphalt_h.png", "", 124), (java.awt.Component) (Object) ln.l(64));
+            eo.field_a = new ot(sj.field_f.a("arrow_on.png", "", 63), (java.awt.Component) (Object) ln.l(64));
+            eo.field_b = new ot(sj.field_f.a("arrow_off.png", "", 4), (java.awt.Component) (Object) ln.l(64));
             sk.a(-89, 23, 23);
-            int discarded$40 = 64;
-            this.a(11264, new ot(sj.field_f.a("achievements_large.png", "", 63), (java.awt.Component) (Object) ln.l()));
-            int discarded$41 = 64;
-            sf.field_C = (ut) (Object) new ot(sj.field_f.a("ka_logo.png", "", 37), (java.awt.Component) (Object) ln.l());
+            this.a(11264, new ot(sj.field_f.a("achievements_large.png", "", 63), (java.awt.Component) (Object) ln.l(64)));
+            sf.field_C = (ut) (Object) new ot(sj.field_f.a("ka_logo.png", "", 37), (java.awt.Component) (Object) ln.l(64));
             sj.field_f = null;
             dd.a((byte) 99);
             return false;
         }
         if (!(b.field_H == null)) {
             ml.k(61, 4);
-            int discarded$42 = 0;
-            ee.a(new ks(b.field_H.a("huffman", "", 93)));
+            ee.a(new ks(b.field_H.a("huffman", "", 93)), false);
             b.field_H = null;
             dd.a((byte) 78);
             return false;
@@ -381,7 +343,7 @@ final class eh implements pk {
         wc.field_k = new sn((ma) (Object) nm.field_g);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         ut var2 = null;
         ut var3 = null;
@@ -590,7 +552,7 @@ final class eh implements pk {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_f = null;
         field_b = null;
     }
@@ -604,12 +566,9 @@ final class eh implements pk {
         nm.a(0, -76, false, dq.a((byte) 79, 3, new Random()));
         ml.k(param0 ^ 12774, 7);
         t.a(0.6000000238418579f);
-        int discarded$16 = 0;
-        g.b();
-        int discarded$17 = 18;
-        fn.i();
-        int discarded$18 = 65280;
-        ii.b();
+        g.b(false);
+        fn.i(18);
+        ii.b(65280);
         ml.k(61, 8);
         td.b(param0 + -12854);
         sk.a(118, 2, 1);
@@ -617,19 +576,15 @@ final class eh implements pk {
         sk.a(84, 6, 1);
         eo.a();
         sk.a(-46, 6, 2);
-        int discarded$19 = 113;
-        iv.a(un.field_d);
+        iv.a(un.field_d, (byte) 113);
         sk.a(-89, 6, 3);
         uf.a((byte) -32);
-        int discarded$20 = 96;
-        cm.l();
+        cm.l(96);
         sk.a(-49, 6, 5);
         tu.n((byte) -10);
         ml.k(61, 10);
-        int discarded$21 = -47;
-        wb.b();
-        int discarded$22 = -124;
-        rf.a();
+        wb.b((byte) -47);
+        rf.a((byte) -124);
         sk.a(127, 4, 1);
         op.a(param0 ^ -363033958);
         sk.a(-69, 4, 2);
@@ -647,11 +602,9 @@ final class eh implements pk {
               jm.a(-5, false, -2);
               ml.k(61, 12);
               sk.a(-71, 4, 1);
-              int discarded$23 = 16777215;
-              nr.a(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, (hu) (Object) pb.field_C, (hu) (Object) un.field_d, (dg) (Object) new nk(), 20, 16777215, 30, (dg) (Object) new pa(true), 16777215, 9, (dg) (Object) new pa(false));
+              nr.a(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, (hu) (Object) pb.field_C, (hu) (Object) un.field_d, (dg) (Object) new nk(), 20, 16777215, 30, (dg) (Object) new pa(true), 16777215, 9, (dg) (Object) new pa(false), 16777215);
               sk.a(-57, 4, 2);
-              int discarded$24 = -94;
-              nb.a();
+              nb.a((byte) -94);
               sk.a(75, 4, 3);
               cm.a(param0 ^ 922092267, 50);
               Kickabout.t(param0 + -826888154);
@@ -780,8 +733,7 @@ final class eh implements pk {
           if (fn.field_b == null) {
             break L0;
           } else {
-            int discarded$1 = 1;
-            ad.a(fn.field_b);
+            ad.a(fn.field_b, 1);
             fn.field_b = null;
             dd.a((byte) 85);
             break L0;

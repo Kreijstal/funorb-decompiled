@@ -6,7 +6,7 @@ final class tj {
     static String field_c;
     static String field_a;
 
-    final static wb a(int param0, int param1, int param2, byte param3, int param4, int[] param5, int param6, int param7) {
+    final static wb a(int param0, int param1, int param2, byte param3, int param4, int[] param5, int param6, int param7, int param8) {
         wb var9 = null;
         RuntimeException var9_ref = null;
         wb stackIn_1_0 = null;
@@ -69,7 +69,7 @@ final class tj {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_c = null;
         field_b = null;

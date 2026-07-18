@@ -12,7 +12,7 @@ final class nl extends ug {
     private int field_g;
     static int field_k;
 
-    final static er[] a(int param0, int param1, r param2) {
+    final static er[] a(int param0, int param1, r param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -32,8 +32,7 @@ final class nl extends ug {
         String stackOut_5_2 = null;
         try {
           if (hq.a(124, param1, param0, param2)) {
-            int discarded$2 = 76;
-            return vd.a();
+            return vd.a((byte) 76);
           } else {
             return null;
           }
@@ -167,11 +166,11 @@ final class nl extends ug {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return 250 < hm.field_F;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         int var1 = 0;
         field_e = null;
     }

@@ -150,7 +150,7 @@ final class nc {
         return stackIn_32_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var2 = 0;
         int var1 = -126;
         if (th.field_D <= 32) {

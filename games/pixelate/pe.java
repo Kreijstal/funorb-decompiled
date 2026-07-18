@@ -8,12 +8,12 @@ final class pe {
     static Calendar field_a;
     static int field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static boolean a(fm param0) {
+    final static boolean a(fm param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;

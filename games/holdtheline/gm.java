@@ -64,8 +64,7 @@ final class gm implements dh {
               }
             }
             if (param3.c((byte) -20)) {
-              int discarded$1 = 19;
-              ei.a(param3.field_u - 4, param3.field_x + -4, 2 + var6_int, var7 - -2);
+              ei.a(param3.field_u - 4, param3.field_x + -4, 2 + var6_int, var7 - -2, (byte) 19);
               break L0;
             } else {
               return;

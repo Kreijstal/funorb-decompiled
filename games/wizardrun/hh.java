@@ -401,11 +401,11 @@ class hh extends ee {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_J = null;
         field_eb = null;
     }

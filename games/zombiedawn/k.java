@@ -6,7 +6,7 @@ final class k extends vf {
     static int field_t;
     private v[] field_s;
 
-    public static void c() {
+    public static void c(int param0) {
         field_r = null;
         int var1 = 0;
     }

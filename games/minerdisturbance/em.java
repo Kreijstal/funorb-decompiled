@@ -16,20 +16,20 @@ abstract class em extends al {
 
     abstract byte[] c(byte param0);
 
-    public static void b() {
+    public static void b(byte param0) {
         field_B = null;
         field_u = null;
         field_y = null;
     }
 
-    final static void g() {
+    final static void g(int param0) {
     }
 
     em() {
         ((em) this).field_C = true;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

@@ -209,8 +209,7 @@ final class rc extends kc {
                           }
                           break L6;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = tg.a(var6, var5_int, param0, var4);
+                          int discarded$1 = tg.a(var16, var5_int, param0, var4, 9);
                           break L6;
                         }
                       }
@@ -258,7 +257,7 @@ final class rc extends kc {
         return stackIn_23_0;
     }
 
-    final static void a(float param0, int param1) {
+    final static void a(float param0, int param1, byte param2) {
         if (0 >= param1) {
             bl.field_f = -1;
             mh.field_D = -1;
@@ -292,7 +291,7 @@ final class rc extends kc {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_i = null;
         field_j = null;
         field_k = null;

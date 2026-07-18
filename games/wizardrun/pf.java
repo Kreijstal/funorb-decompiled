@@ -259,7 +259,7 @@ final class pf {
         return var2;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_c = null;
         field_b = null;

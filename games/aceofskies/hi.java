@@ -7,7 +7,7 @@ final class hi extends to {
     static String field_x;
     static int field_w;
 
-    public static void k() {
+    public static void k(int param0) {
         field_v = null;
         field_x = null;
     }
@@ -109,20 +109,18 @@ final class hi extends to {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        ll var5 = null;
+        ll var6 = null;
         if (param1 != 0) {
           return;
         } else {
           if (((hi) this).field_s != null) {
             if (0 != ((hi) this).field_u) {
               if (((hi) this).field_u != 256) {
-                var5 = new ll(((hi) this).field_s.field_q, ((hi) this).field_s.field_n);
-                int discarded$20 = -14492;
-                cm.a(var5);
+                var6 = new ll(((hi) this).field_s.field_q, ((hi) this).field_s.field_n);
+                cm.a(var6, -14492);
                 ((hi) this).field_s.a((byte) 90, param1, 0, 0);
-                int discarded$21 = 2765;
-                sl.c();
-                var5.a(param3 - -((hi) this).field_p, param2 - -((hi) this).field_h, ((hi) this).field_u);
+                sl.c(2765);
+                var6.a(param3 - -((hi) this).field_p, param2 - -((hi) this).field_h, ((hi) this).field_u);
                 if (param0 < 64) {
                   field_v = null;
                   return;
@@ -142,7 +140,7 @@ final class hi extends to {
         }
     }
 
-    final static void j() {
+    final static void j(int param0) {
         if (!(gi.a(true))) {
             return;
         }

@@ -49,8 +49,7 @@ final class gg extends li {
               try {
                 L0: {
                   var3 = new java.net.URL(param2.getCodeBase(), param0);
-                  int discarded$2 = 0;
-                  var3 = ar.a(param2, var3);
+                  var3 = ar.a(param2, var3, 0);
                   hc.a(var3.toString(), 16011, true, param2);
                   break L0;
                 }
@@ -123,7 +122,7 @@ final class gg extends li {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_s = null;
         field_o = null;
         field_n = null;

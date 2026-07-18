@@ -6,7 +6,7 @@ final class gib {
     static int field_a;
     static String field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
     }
@@ -71,8 +71,7 @@ final class gib {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              int discarded$2 = 123;
-              var3 = pl.c();
+              var3 = pl.c((byte) 123);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {

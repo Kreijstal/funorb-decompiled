@@ -15,8 +15,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
             int var15_int = 85;
             Object var16 = null;
             rc.a(0, param2, 0, 31944, sd.field_a, param12, 480, param7, sb.field_m, param1, ig.field_b, param14, param6, param0, param9, param13, (hl[]) null, param3, param11, param10, param4);
-            int discarded$0 = 480;
-            se.a(param8);
+            se.a(param8, 480);
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "qc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + -109 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + (param14 != null ? "{...}" : "null") + ')');
         }
@@ -160,7 +159,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         try {
             int var2_int = 16;
             param0.setFocusTraversalKeysEnabled(false);
@@ -196,7 +195,8 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
             int var7 = 0;
             Throwable var8_ref_Throwable = null;
             int var8 = 0;
-            CharSequence var9 = null;
+            Object var9 = null;
+            CharSequence var10 = null;
             int stackIn_4_0 = 0;
             int stackIn_28_0 = 0;
             int stackIn_41_0 = 0;
@@ -272,8 +272,8 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
                         jh.field_h = ll.a(false, (byte) -49, param5, param0);
                         break L3;
                       } else {
-                        int discarded$13 = 0;
-                        jh.field_h = ik.a(param0, -66, cb.field_a, (String) null);
+                        var9 = null;
+                        jh.field_h = ik.a(param0, -66, cb.field_a, (String) null, false);
                         break L3;
                       }
                     }
@@ -338,8 +338,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
                             break L7;
                           } else {
                             if (8 == var6_int) {
-                              int discarded$14 = 27;
-                              ec.a();
+                              ec.a((byte) 27);
                               eb.field_f = false;
                               stackOut_27_0 = var6_int;
                               stackIn_28_0 = stackOut_27_0;
@@ -368,7 +367,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
                       L9: {
                         cb.field_a = se.field_p.c((byte) 5);
                         ad.field_y = se.field_p.j(7909);
-                        int discarded$15 = se.field_p.j(7909);
+                        int discarded$6 = se.field_p.j(7909);
                         u.field_d = se.field_p.i(-1174051992);
                         var6_ref = se.field_p.b((byte) 108);
                         var7 = se.field_p.j(7909);
@@ -418,9 +417,9 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
                         if (!qa.field_e) {
                           break L13;
                         } else {
-                          int discarded$16 = se.field_p.j(7909);
-                          int discarded$17 = se.field_p.j(7909);
-                          int discarded$18 = se.field_p.f((byte) -105);
+                          int discarded$7 = se.field_p.j(7909);
+                          int discarded$8 = se.field_p.j(7909);
+                          int discarded$9 = se.field_p.f((byte) -105);
                           na.field_f = se.field_p.i(-1174051992);
                           qb.field_m = new byte[na.field_f];
                           var8 = 0;
@@ -437,8 +436,8 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
                       }
                       L15: {
                         we.field_i = se.field_p.a(-110);
-                        var9 = (CharSequence) (Object) we.field_i;
-                        ba.field_e = ni.a(116, var9);
+                        var10 = (CharSequence) (Object) we.field_i;
+                        ba.field_e = ni.a(116, var10);
                         jj.field_F = se.field_p.j(7909);
                         r.field_c = pb.field_a;
                         if (jh.field_h.b((byte) 1) != j.field_d) {
@@ -470,8 +469,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
                             if (!jh.field_d) {
                               try {
                                 L19: {
-                                  int discarded$19 = 1;
-                                  Object discarded$20 = mb.a(ll.b(88), "unzap");
+                                  Object discarded$10 = mb.a(ll.b(88), "unzap", true);
                                   break L19;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -489,9 +487,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
                         }
                         try {
                           L21: {
-                            int discarded$21 = 16778;
-                            int discarded$22 = -27504;
-                            Object discarded$23 = mb.a(new Object[1], ll.b(114), "zap");
+                            Object discarded$11 = mb.a(new Object[1], ll.b(114), "zap", -27504);
                             break L21;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -538,8 +534,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
                       break L25;
                     } else {
                       L26: {
-                        int discarded$24 = 27;
-                        ec.a();
+                        ec.a((byte) 27);
                         if (vh.field_t != 7) {
                           break L26;
                         } else {
@@ -579,8 +574,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
                       break L28;
                     } else {
                       L29: {
-                        int discarded$25 = -71;
-                        if (kg.b() > 30000L) {
+                        if (kg.b((byte) -71) > 30000L) {
                           uj.field_r = ti.field_g;
                           break L29;
                         } else {
@@ -664,7 +658,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_e = null;

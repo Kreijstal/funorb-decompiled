@@ -30,7 +30,7 @@ final class qm extends se implements fi, in {
         }
     }
 
-    final static void a(jh param0, boolean param1, String param2) {
+    final static void a(jh param0, boolean param1, String param2, int param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -202,8 +202,7 @@ final class qm extends se implements fi, in {
                   break L1;
                 } else {
                   if (((qm) this).field_P == param2) {
-                    int discarded$30 = 0;
-                    hb.a();
+                    hb.a(0);
                     break L1;
                   } else {
                     if (param2 == ((qm) this).field_J) {
@@ -216,8 +215,7 @@ final class qm extends se implements fi, in {
                           break L1;
                         }
                       } else {
-                        int discarded$31 = -124;
-                        oi.a();
+                        oi.a(-124);
                         break L1;
                       }
                     } else {
@@ -722,7 +720,7 @@ final class qm extends se implements fi, in {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_N = null;
         field_I = null;
@@ -807,7 +805,7 @@ final class qm extends se implements fi, in {
         return stackIn_10_0;
     }
 
-    final static ae a(ga param0) {
+    final static ae a(ga param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -1018,7 +1016,7 @@ final class qm extends se implements fi, in {
         }
     }
 
-    final static vg b() {
+    final static vg b(int param0, int param1, int param2, int param3) {
         vg var4 = null;
         int var5 = 0;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -1060,8 +1058,7 @@ final class qm extends se implements fi, in {
         L0: {
           L1: {
             var2 = 12 % ((param0 - 8) / 49);
-            int discarded$4 = 0;
-            if (aa.e()) {
+            if (aa.e(0)) {
               break L1;
             } else {
               if (((qm) this).field_H.field_j.length() <= 0) {

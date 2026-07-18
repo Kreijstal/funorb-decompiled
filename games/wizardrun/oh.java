@@ -13,7 +13,7 @@ final class oh {
         field_b = null;
     }
 
-    final static void a(int param0, o param1, int param2, int param3, int param4, byte param5, int param6) {
+    final static void a(int param0, o param1, int param2, int param3, int param4, byte param5, int param6, int param7) {
         RuntimeException var8 = null;
         int var10 = 0;
         int var11 = 0;

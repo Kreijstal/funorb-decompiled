@@ -16,7 +16,7 @@ final class me extends fc {
     int field_m;
     int field_l;
 
-    final static ng[] d() {
+    final static ng[] d(int param0) {
         int var4 = TrackController.field_F ? 1 : 0;
         ng[] var1 = new ng[gi.field_o];
         int var2 = 0;
@@ -29,7 +29,7 @@ final class me extends fc {
         return var1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_k = null;
         int var1 = 0;
@@ -64,7 +64,7 @@ final class me extends fc {
         ((me) this).field_s = ((me) this).field_s + ((me) this).field_j;
     }
 
-    final static void a(dh param0) {
+    final static void a(dh param0, int param1, int param2) {
         la var5 = null;
         int var4 = 0;
         try {
@@ -279,8 +279,7 @@ final class me extends fc {
                       ra.field_C.a(18, (byte) -92);
                       ra.field_C.field_k = ra.field_C.field_k + 2;
                       var10 = ra.field_C.field_k;
-                      int discarded$5 = -22004;
-                      var11_ref_String = bg.a(gd.b((byte) 77));
+                      var11_ref_String = bg.a(gd.b((byte) 77), -22004);
                       if (var11_ref_String != null) {
                         break L7;
                       } else {
@@ -333,10 +332,8 @@ final class me extends fc {
                     return stackIn_33_0;
                   } else {
                     if (var9 == 99) {
-                      int discarded$6 = 93;
-                      boolean discarded$7 = hf.a(va.a(), false);
-                      int discarded$8 = -2;
-                      qi.field_c = new Boolean(bg.a((be) (Object) ne.field_a));
+                      boolean discarded$1 = hf.a(va.a(93), false);
+                      qi.field_c = new Boolean(bg.a((be) (Object) ne.field_a, -2));
                       ne.field_a.field_k = 0;
                       break L8;
                     } else {
@@ -384,8 +381,7 @@ final class me extends fc {
             L12: {
               var9 = 77 / ((param5 - 31) / 47);
               if (jc.field_a == sf.field_D) {
-                int discarded$9 = 520;
-                if (!fh.a()) {
+                if (!fh.a(520)) {
                   break L12;
                 } else {
                   L13: {

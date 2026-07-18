@@ -6,14 +6,46 @@ final class gua extends rqa {
         super(param0, param1, param2);
     }
 
-    final static int e() {
-        if (!vba.f((byte) -113)) {
-            return -1;
+    final static int e(byte param0) {
+        RuntimeException var1 = null;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_11_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_6_0 = 0;
+        try {
+          L0: {
+            L1: {
+              if (!vba.f((byte) -113)) {
+                break L1;
+              } else {
+                if (null == qn.field_h.g(0)) {
+                  break L1;
+                } else {
+                  if (param0 < -21) {
+                    stackOut_11_0 = qn.field_h.g(0).field_g;
+                    stackIn_12_0 = stackOut_11_0;
+                    break L0;
+                  } else {
+                    stackOut_9_0 = -42;
+                    stackIn_10_0 = stackOut_9_0;
+                    return stackIn_10_0;
+                  }
+                }
+              }
+            }
+            stackOut_6_0 = -1;
+            stackIn_7_0 = stackOut_6_0;
+            return stackIn_7_0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw rta.a((Throwable) (Object) var1, "gua.B(" + param0 + ')');
         }
-        if (null == qn.field_h.g(0)) {
-            return -1;
-        }
-        return qn.field_h.g(0).field_g;
+        return stackIn_12_0;
     }
 
     final nc a(nc[] param0, int param1) {
@@ -22,19 +54,19 @@ final class gua extends rqa {
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
         Object stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
@@ -56,29 +88,29 @@ final class gua extends rqa {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
             stackOut_5_1 = new StringBuilder().append("gua.A(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
+            stackIn_8_0 = stackOut_5_0;
+            stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
               break L1;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
               stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_9_0 = stackOut_6_0;
+              stackIn_9_1 = stackOut_6_1;
+              stackIn_9_2 = stackOut_6_2;
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

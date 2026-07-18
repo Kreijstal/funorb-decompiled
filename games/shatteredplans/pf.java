@@ -93,7 +93,7 @@ final class pf {
         return stackIn_5_0;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, int param2) {
         fc var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
@@ -248,7 +248,7 @@ final class pf {
         return var2;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_g = null;
         field_f = null;
         field_d = null;
@@ -493,7 +493,7 @@ final class pf {
         return var2;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

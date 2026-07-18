@@ -198,8 +198,7 @@ final class ji {
         String stackOut_7_2 = null;
         try {
           if (qb.a((byte) 126, param3, param2, param1)) {
-            int discarded$2 = 126;
-            return tj.h();
+            return tj.h(126);
           } else {
             return null;
           }

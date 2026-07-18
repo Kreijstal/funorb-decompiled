@@ -10,7 +10,7 @@ final class oa extends lh {
     static int[] field_m;
     static boolean field_n;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
         field_m = null;
         field_o = null;
@@ -59,8 +59,7 @@ final class oa extends lh {
             if (bc.field_V != 8) {
               return;
             } else {
-              int discarded$3 = -6359;
-              vf.e();
+              vf.e(-6359);
               return;
             }
           } else {
@@ -77,8 +76,7 @@ final class oa extends lh {
               if (bc.field_V != 8) {
                 return;
               } else {
-                int discarded$4 = -6359;
-                vf.e();
+                vf.e(-6359);
                 return;
               }
             } else {
@@ -96,8 +94,7 @@ final class oa extends lh {
               if (bc.field_V != 8) {
                 return;
               } else {
-                int discarded$5 = -6359;
-                vf.e();
+                vf.e(-6359);
                 return;
               }
             }
@@ -105,7 +102,7 @@ final class oa extends lh {
         }
     }
 
-    final static ob a(String param0) {
+    final static ob a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

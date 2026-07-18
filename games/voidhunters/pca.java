@@ -17,7 +17,7 @@ class pca extends uqb implements ntb {
         }
     }
 
-    private final void a(faa param0) {
+    private final void a(faa param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -83,7 +83,7 @@ class pca extends uqb implements ntb {
             var5 = (pca) (Object) param1;
             var6 = var5;
             super.b((byte) 126, param1);
-            var6.field_k = var5.field_k;
+            var6.field_k = ((pca) this).field_k;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "pca.D(" + 88 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -178,10 +178,10 @@ class pca extends uqb implements ntb {
             var4 = 0;
             if (param1 <= -19) {
               L1: {
-                if (var3.field_k == var3.field_k) {
+                if (((pca) this).field_k == var3.field_k) {
                   break L1;
                 } else {
-                  iva.a(-6940, "int playerid has changed. before=" + var3.field_k + ", now=" + var3.field_k);
+                  iva.a(-6940, "int playerid has changed. before=" + var3.field_k + ", now=" + ((pca) this).field_k);
                   var4 = 1;
                   break L1;
                 }
@@ -260,7 +260,7 @@ class pca extends uqb implements ntb {
                 if (super.a((byte) -50, param1)) {
                   break L2;
                 } else {
-                  if (var4.field_k == var4.field_k) {
+                  if (((pca) this).field_k == var4.field_k) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;
@@ -315,8 +315,7 @@ class pca extends uqb implements ntb {
                 ((pca) this).a((tv) null, -35);
             }
             super.a(param0, param1);
-            int discarded$0 = 0;
-            this.a(param0);
+            this.a(param0, 0);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "pca.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

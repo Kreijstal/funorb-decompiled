@@ -14,11 +14,9 @@ final class ba {
     final static ak a(int param0) {
         if (param0 != -26573) {
             ak discarded$0 = ba.a(77);
-            int discarded$1 = 0;
-            return g.b();
+            return g.b(false);
         }
-        int discarded$2 = 0;
-        return g.b();
+        return g.b(false);
     }
 
     final void b(int param0) {

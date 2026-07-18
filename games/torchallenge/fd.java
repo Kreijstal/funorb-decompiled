@@ -32,7 +32,7 @@ final class fd implements Iterable {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_h = null;
     }
@@ -349,15 +349,14 @@ final class fd implements Iterable {
         return (Iterator) (Object) new md((fd) this);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         fe var1 = cj.field_h[9];
         int var2 = ab.field_g[9];
         var1.field_l = var1.field_k.length;
         pg.field_p = nc.a(var1, 100, var2);
         pg.field_p.e(-1);
         pg.field_p.e(0, var1.field_k.length);
-        int discarded$0 = 6222;
-        ok.field_a = we.a(pg.field_p);
+        ok.field_a = we.a(pg.field_p, 6222);
     }
 
     private fd() throws Throwable {

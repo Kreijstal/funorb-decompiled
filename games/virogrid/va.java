@@ -11,7 +11,7 @@ final class va {
     static String field_f;
     static String field_a;
 
-    final static eh a(int param0, boolean param1, int param2, int param3) {
+    final static eh a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;
@@ -84,7 +84,7 @@ final class va {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_f = null;
         field_c = null;
@@ -97,7 +97,7 @@ final class va {
         fi.field_t.b((fi) (Object) tk.field_b, (byte) -53);
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;

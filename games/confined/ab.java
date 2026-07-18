@@ -61,7 +61,7 @@ final class ab {
         return stackIn_12_0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -122,7 +122,7 @@ final class ab {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 

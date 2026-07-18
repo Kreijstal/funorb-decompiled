@@ -141,7 +141,7 @@ final class se {
         return stackIn_10_0;
     }
 
-    final static o a(int param0, kl param1, int param2) {
+    final static o a(int param0, kl param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -161,8 +161,7 @@ final class se {
         String stackOut_7_2 = null;
         try {
           if (h.a(param0, param2, param1, -124)) {
-            int discarded$2 = 0;
-            return sl.g();
+            return sl.g(0);
           } else {
             return null;
           }

@@ -10,7 +10,7 @@ final class il extends en {
     int field_N;
     static String field_P;
 
-    final static rj a(String param0) {
+    final static rj a(String param0, int param1) {
         RuntimeException var2 = null;
         rj stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -240,7 +240,7 @@ final class il extends en {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_T = null;
         field_Q = null;
         int var1 = 0;

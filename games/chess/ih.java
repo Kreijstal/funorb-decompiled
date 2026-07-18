@@ -195,7 +195,7 @@ final class ih extends bf {
         }
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_Q = null;
         field_V = null;
         field_T = null;
@@ -203,12 +203,9 @@ final class ih extends bf {
         field_S = null;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, int param2, int param3) {
         rf.a((byte) -122, param1);
-        int discarded$0 = 15;
-        int discarded$1 = 13;
-        int discarded$2 = 69;
-        bb.a(param1);
+        bb.a(param1, 69, 13, 15);
     }
 
     private final void a(mf param0, int param1, String param2, int param3, int param4) {

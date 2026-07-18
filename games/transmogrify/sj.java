@@ -23,7 +23,7 @@ final class sj extends wf {
     static long field_m;
     char field_i;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_r = null;
         field_w = null;
         field_u = null;
@@ -231,8 +231,7 @@ final class sj extends wf {
                   if (((sj) this).field_q != ((sj) this).field_p) {
                     return;
                   } else {
-                    int discarded$14 = 0;
-                    od discarded$15 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
+                    od discarded$7 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
                     return;
                   }
                 } else {
@@ -243,11 +242,10 @@ final class sj extends wf {
                 ((sj) this).field_j = ((sj) this).field_j + (int)((double)(-((sj) this).field_j + ((sj) this).field_g) * var3);
                 ((sj) this).field_q = ((sj) this).field_q + (int)((double)(-((sj) this).field_q + ((sj) this).field_p) * var3);
                 if (((sj) this).field_j == ((sj) this).field_g) {
-                  if (((sj) this).field_q == ((sj) this).field_p) {
-                    int discarded$16 = 0;
-                    od discarded$17 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
+                  if (((sj) this).field_q != ((sj) this).field_p) {
                     return;
                   } else {
+                    od discarded$8 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
                     return;
                   }
                 } else {
@@ -263,11 +261,10 @@ final class sj extends wf {
               ((sj) this).field_j = ((sj) this).field_g;
               ((sj) this).field_q = ((sj) this).field_p;
               if (((sj) this).field_j == ((sj) this).field_g) {
-                if (((sj) this).field_q != ((sj) this).field_p) {
+                if (((sj) this).field_q == ((sj) this).field_p) {
+                  od discarded$9 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
                   return;
                 } else {
-                  int discarded$18 = 0;
-                  od discarded$19 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
                   return;
                 }
               } else {
@@ -281,8 +278,7 @@ final class sj extends wf {
                 if (((sj) this).field_q != ((sj) this).field_p) {
                   return;
                 } else {
-                  int discarded$20 = 0;
-                  od discarded$21 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
+                  od discarded$10 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
                   return;
                 }
               } else {
@@ -302,8 +298,7 @@ final class sj extends wf {
                   if (((sj) this).field_q != ((sj) this).field_p) {
                     return;
                   } else {
-                    int discarded$22 = 0;
-                    od discarded$23 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
+                    od discarded$11 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
                     return;
                   }
                 } else {
@@ -317,8 +312,7 @@ final class sj extends wf {
                   if (((sj) this).field_q != ((sj) this).field_p) {
                     return;
                   } else {
-                    int discarded$24 = 0;
-                    od discarded$25 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
+                    od discarded$12 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
                     return;
                   }
                 } else {
@@ -342,20 +336,16 @@ final class sj extends wf {
                 break L0;
               }
             }
-            L1: {
-              if (((sj) this).field_j != ((sj) this).field_g) {
-                break L1;
+            if (((sj) this).field_j == ((sj) this).field_g) {
+              if (((sj) this).field_q != ((sj) this).field_p) {
+                return;
               } else {
-                if (((sj) this).field_q == ((sj) this).field_p) {
-                  int discarded$26 = 0;
-                  od discarded$27 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
-                  break L1;
-                } else {
-                  break L1;
-                }
+                od discarded$13 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
+                return;
               }
+            } else {
+              return;
             }
-            return;
           }
         }
     }
@@ -382,7 +372,7 @@ final class sj extends wf {
         }
     }
 
-    final static boolean e() {
+    final static boolean e(int param0) {
         return we.field_j.b(false);
     }
 

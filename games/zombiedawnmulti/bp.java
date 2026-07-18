@@ -197,7 +197,7 @@ final class bp extends un {
         super(param0);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_s = null;
         field_t = null;
         field_v = null;

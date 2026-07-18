@@ -23,7 +23,7 @@ final class sj extends rm {
         super.a(param0, param1, param2, param3);
     }
 
-    final static void a(boolean param0, String param1, float param2) {
+    final static void a(boolean param0, String param1, float param2, int param3) {
         try {
             if (!(null != be.field_l)) {
                 be.field_l = new ra(ka.field_b, nl.field_c);
@@ -46,7 +46,7 @@ final class sj extends rm {
         }
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -298,7 +298,7 @@ final class sj extends rm {
         return var2;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_J = null;
         field_H = null;
         field_K = null;

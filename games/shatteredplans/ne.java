@@ -111,14 +111,14 @@ final class ne extends oh {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_q = null;
         field_m = null;
         field_l = null;
         field_n = null;
     }
 
-    final static bi a(int param0) {
+    final static bi a(int param0, boolean param1) {
         bi var2 = new bi(pf.field_d.field_z, pf.field_d.field_w);
         ra.a(-127);
         var2.e();
@@ -127,7 +127,7 @@ final class ne extends oh {
         return var2;
     }
 
-    final static void d() {
+    final static void d(boolean param0) {
         ch.field_c = null;
         jn.field_a = false;
         oi.field_d = null;
@@ -318,8 +318,7 @@ final class ne extends oh {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              int discarded$6 = 0;
-              if (!ef.a(param1)) {
+              if (!ef.a(param1, false)) {
                 var6 = tq.field_g;
                 var2 = var6;
                 var3 = 0;

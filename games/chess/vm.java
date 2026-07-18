@@ -343,7 +343,7 @@ abstract class vm extends jb implements ha {
         return (Object) (Object) stackIn_10_0;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         if (lf.field_S < 70) {
             an.a(lf.field_S - -10, (byte) 105);
         } else {
@@ -500,7 +500,7 @@ abstract class vm extends jb implements ha {
                 break L1;
               } else {
                 if (param0.indexOf("<br>") == -1) {
-                  param3[0] = (String) (Object) param3;
+                  param3[0] = param0;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;

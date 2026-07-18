@@ -12,7 +12,7 @@ final class sm extends l {
     static int field_i;
     static int field_e;
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
     }
 

@@ -51,7 +51,7 @@ final class ql extends um implements ij {
         bl.field_N.b(jq.field_d, param2 - (-((ql) this).field_o + -4), bl.field_N.field_z + (((ql) this).field_t + param3 + 4), 16777215, -1);
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_K = null;
         field_L = null;
     }

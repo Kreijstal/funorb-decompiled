@@ -154,7 +154,7 @@ final class qb extends qm {
         ((qb) this).field_i = b.field_c;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_o = null;
     }
 

@@ -9,7 +9,7 @@ abstract class g {
     static ta field_a;
     String field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_a = null;
     }

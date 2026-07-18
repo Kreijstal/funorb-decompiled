@@ -4,7 +4,7 @@
 final class kga extends rqa {
     static int field_o;
 
-    final static phb[] a(int param0, int param1) {
+    final static phb[] a(int param0, int param1, int param2, boolean param3) {
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         phb[] var7 = new phb[9];
@@ -84,7 +84,7 @@ final class kga extends rqa {
         return stackIn_4_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         fja.field_p = new rq();
         s.field_o.b((shb) (Object) fja.field_p, 99);
     }
@@ -113,8 +113,7 @@ final class kga extends rqa {
         try {
           L0: {
             var2_int = 49 / ((param0 - 53) / 41);
-            int discarded$2 = 13879;
-            stackOut_0_0 = tea.a(nua.field_p, param1);
+            stackOut_0_0 = tea.a(nua.field_p, param1, 13879);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

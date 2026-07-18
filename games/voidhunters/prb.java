@@ -6,11 +6,11 @@ final class prb extends rqa {
         super(param0, param1, param2);
     }
 
-    final static ri[] e() {
+    final static ri[] e(byte param0) {
         return new ri[]{vp.field_e, gha.field_r, go.field_o, efb.field_c, dh.field_r, dmb.field_b, dh.field_o, eaa.field_p, tpa.field_a, ppb.field_c, ae.field_g, qw.field_g, erb.field_o, qc.field_g};
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         if (null != flb.field_o) {
             flb.field_o.e();
             if (aaa.field_b == null) {

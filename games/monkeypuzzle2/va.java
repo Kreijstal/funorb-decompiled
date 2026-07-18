@@ -75,8 +75,7 @@ class va {
                       field_g = null;
                       break L0;
                     } else {
-                      int discarded$1 = 0;
-                      em.a(50L);
+                      em.a(50L, false);
                       continue L2;
                     }
                   }

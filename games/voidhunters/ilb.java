@@ -4,9 +4,8 @@
 final class ilb {
     private static String field_z;
 
-    final static void a() {
-        int discarded$0 = 4410;
-        dfb.a();
+    final static void a(byte param0) {
+        dfb.a(4410);
     }
 
     static {

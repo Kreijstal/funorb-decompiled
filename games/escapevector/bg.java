@@ -22,8 +22,9 @@ final class bg {
         }
     }
 
-    final static byte[][][] a(mf param0, byte[][][] param1, mf param2) {
+    final static byte[][][] a(mf param0, byte[][][] param1, mf param2, int param3) {
         RuntimeException var4 = null;
+        Object var5 = null;
         byte[][][] stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -74,8 +75,8 @@ final class bg {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = sl.a(param2, param0, (int[]) null, param1, 1);
+            var5 = null;
+            stackOut_0_0 = sl.a(param2, param0, (int[]) null, param1, 1, 0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

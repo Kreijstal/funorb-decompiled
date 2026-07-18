@@ -23,8 +23,7 @@ final class ho extends gn implements ij, dm, sh {
                 ((ho) this).a(true);
             }
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 15;
-            ((ho) this).field_V.field_K = this.h();
+            ((ho) this).field_V.field_K = this.h(15);
         } catch (RuntimeException runtimeException) {
             throw oi.a((Throwable) (Object) runtimeException, "ho.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -150,20 +149,14 @@ final class ho extends gn implements ij, dm, sh {
         ci dupTemp$1 = new ci(10000536);
         ((ho) this).field_N.field_H = (kg) (Object) dupTemp$1;
         ((ho) this).field_R.field_H = (kg) (Object) dupTemp$1;
-        int discarded$2 = -2;
-        int discarded$3 = 9;
         String var2 = sk.a(new String[2], ej.field_t, 120);
         int var3 = 20;
-        int discarded$4 = 170;
-        var3 = var3 + this.a(rm.field_c, (na) (Object) ((ho) this).field_W, 96, var3);
-        int discarded$5 = 0;
-        var3 = var3 + (5 + this.a("", 20, 170, om.field_Pb, (na) (Object) ((ho) this).field_K, var3));
-        int discarded$6 = 170;
-        var3 = var3 + this.a(gj.field_a, (na) (Object) ((ho) this).field_R, -115, var3);
+        var3 = var3 + this.a(rm.field_c, (na) (Object) ((ho) this).field_W, 96, var3, 170);
+        var3 = var3 + (5 + this.a("", 20, 170, om.field_Pb, (na) (Object) ((ho) this).field_K, var3, false));
+        var3 = var3 + this.a(gj.field_a, (na) (Object) ((ho) this).field_R, -115, var3, 170);
         var3 = var3 + (5 + this.a((na) (Object) ((ho) this).field_N, 170, qm.field_f, 120, var3, fm.field_e));
         var3 = var3 + (5 + this.a((na) (Object) ((ho) this).field_O, 170, jm.field_c, 120, var3, kl.field_e));
-        int discarded$7 = 107;
-        var3 = var3 + this.a(170, ba.field_P, var3, (na) (Object) ((ho) this).field_U);
+        var3 = var3 + this.a(170, ba.field_P, var3, (na) (Object) ((ho) this).field_U, 107);
         rc var4 = new rc(46, var3, ((ho) this).field_F + -90, 25, (na) (Object) ((ho) this).field_T, true, ((ho) this).field_F - 120, 5, dh.field_d, 11579568, ke.field_e);
         ((ho) this).c((na) (Object) var4, 10);
         var3 = var3 + var4.field_u;
@@ -216,20 +209,17 @@ final class ho extends gn implements ij, dm, sh {
               if (param0 != 0) {
                 if (param0 != 1) {
                   if (param0 == 2) {
-                    int discarded$6 = 24;
-                    al.a("conduct.ws");
+                    al.a("conduct.ws", (byte) 24);
                     break L0;
                   } else {
                     return;
                   }
                 } else {
-                  int discarded$7 = 24;
-                  al.a("privacy.ws");
+                  al.a("privacy.ws", (byte) 24);
                   return;
                 }
               } else {
-                int discarded$8 = 24;
-                al.a("terms.ws");
+                al.a("terms.ws", (byte) 24);
                 return;
               }
             } else {
@@ -406,8 +396,7 @@ final class ho extends gn implements ij, dm, sh {
                 if (((ho) this).field_V != param1) {
                   break L0;
                 } else {
-                  int discarded$4 = 88;
-                  boolean discarded$5 = this.e();
+                  boolean discarded$2 = this.e((byte) 88);
                   return;
                 }
               }
@@ -447,7 +436,7 @@ final class ho extends gn implements ij, dm, sh {
         }
     }
 
-    private final int a(int param0, String param1, int param2, na param3) {
+    private final int a(int param0, String param1, int param2, na param3, int param4) {
         RuntimeException var6 = null;
         ab var7 = null;
         int var8 = 0;
@@ -555,7 +544,7 @@ final class ho extends gn implements ij, dm, sh {
         return stackIn_1_0;
     }
 
-    private final int a(String param0, int param1, int param2, String param3, na param4, int param5) {
+    private final int a(String param0, int param1, int param2, String param3, na param4, int param5, boolean param6) {
         RuntimeException var8 = null;
         ck var9 = null;
         rc var10 = null;
@@ -714,7 +703,7 @@ final class ho extends gn implements ij, dm, sh {
         }
     }
 
-    private final String f() {
+    private final String f(byte param0) {
         return "</col></u>";
     }
 
@@ -725,10 +714,9 @@ final class ho extends gn implements ij, dm, sh {
         ((tm) (Object) ((ho) this).field_O.a(-117)).d((byte) -115);
     }
 
-    private final boolean e() {
+    private final boolean e(byte param0) {
         int var2 = 0;
-        int discarded$0 = 15;
-        if (!this.h()) {
+        if (!this.h(15)) {
             return false;
         }
         int var3 = -1;
@@ -739,7 +727,7 @@ final class ho extends gn implements ij, dm, sh {
         return sj.a(var3, ((ho) this).field_W.field_A, ((ho) this).field_R.field_A, (ho) this, ((ho) this).field_O.field_A, -1, ((ho) this).field_T.field_N);
     }
 
-    private final boolean h() {
+    private final boolean h(int param0) {
         if (this.a((byte) -123, (uc) (Object) ((ho) this).field_O)) {
           if (this.a((byte) -11, (uc) (Object) ((ho) this).field_W)) {
             if (this.a((byte) -92, (uc) (Object) ((ho) this).field_K)) {
@@ -767,7 +755,7 @@ final class ho extends gn implements ij, dm, sh {
         }
     }
 
-    private final int a(String param0, na param1, int param2, int param3) {
+    private final int a(String param0, na param1, int param2, int param3, int param4) {
         rc var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -923,8 +911,7 @@ final class ho extends gn implements ij, dm, sh {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = this.a(param2, 35, 170, param5, param0, param4);
+            stackOut_0_0 = this.a(param2, 35, 170, param5, param0, param4, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -1011,7 +998,7 @@ final class ho extends gn implements ij, dm, sh {
         return stackIn_1_0;
     }
 
-    private final String i() {
+    private final String i(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 

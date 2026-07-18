@@ -9,7 +9,7 @@ final class ue {
     static int field_e;
     static boolean field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_f = null;

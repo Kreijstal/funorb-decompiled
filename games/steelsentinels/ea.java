@@ -335,7 +335,7 @@ abstract class ea {
         }
     }
 
-    final static void a(cm param0) {
+    final static void a(cm param0, int param1) {
         uk var2 = null;
         try {
             uk.b(param0.a("", -742, "headers.packvorbis"));

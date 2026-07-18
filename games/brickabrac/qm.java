@@ -8,7 +8,7 @@ final class qm {
     static String field_e;
     static String field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_c = null;

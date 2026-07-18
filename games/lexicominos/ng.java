@@ -31,7 +31,7 @@ final class ng {
         }
     }
 
-    private final void a(kd param0, ng param1) {
+    private final void a(kd param0, ng param1, byte param2) {
         kd var4 = null;
         RuntimeException var4_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -203,8 +203,7 @@ final class ng {
     final void a(ng param0, int param1) {
         try {
             int var3_int = -10 / ((-70 - param1) / 50);
-            int discarded$0 = -9;
-            this.a(((ng) this).field_b.field_f, param0);
+            this.a(((ng) this).field_b.field_f, param0, (byte) -9);
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "ng.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -14,7 +14,7 @@ final class sg {
         int var2 = -79 % ((param0 - -20) / 51);
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return gk.field_a;
     }
 

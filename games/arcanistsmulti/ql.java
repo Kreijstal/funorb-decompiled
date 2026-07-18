@@ -8,7 +8,7 @@ final class ql {
     static int[] field_b;
     private String field_d;
 
-    final static void a(jg param0) {
+    final static void a(jg param0, byte param1) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         jg var3 = null;
@@ -120,7 +120,7 @@ final class ql {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -310,15 +310,14 @@ final class ql {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_e = null;
     }
 
     final static kc a(int param0) {
-        int discarded$0 = 21;
-        return mc.a();
+        return mc.a((byte) 21);
     }
 
     final static qb[] a(int param0, byte param1, int param2, int param3) {

@@ -9,7 +9,7 @@ abstract class kf {
         return param1 >= 48 && param1 <= 57;
     }
 
-    final static tg[] a(int param0, int param1, gk param2) {
+    final static tg[] a(int param0, int param1, gk param2, boolean param3) {
         RuntimeException var4 = null;
         tg[] stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -33,8 +33,7 @@ abstract class kf {
           L0: {
             if (c.a(param2, false, param0, param1)) {
               field_a = 78;
-              int discarded$2 = -107;
-              stackOut_3_0 = ng.a();
+              stackOut_3_0 = ng.a((byte) -107);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -78,7 +77,7 @@ abstract class kf {
 
     abstract void a(int param0, java.awt.Component param1);
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 

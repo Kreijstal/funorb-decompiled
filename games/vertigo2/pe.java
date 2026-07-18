@@ -28,7 +28,7 @@ final class pe extends li {
     int field_D;
     int field_v;
 
-    final static wp a(String param0) {
+    final static wp a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -151,7 +151,7 @@ final class pe extends li {
         ((pe) this).field_K = null;
     }
 
-    final static void a(ud param0) {
+    final static void a(ud param0, int param1) {
         param0.field_z = new int[]{-1};
         try {
             param0.field_u = new char[]{'?'};
@@ -160,7 +160,7 @@ final class pe extends li {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_u = null;
         field_L = null;
         field_t = null;

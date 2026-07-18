@@ -498,7 +498,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
         return stackIn_12_0;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         long var3 = 0L;
@@ -509,7 +509,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
         try {
           L0: {
             L1: {
-              var2_int = 0;
+              var2_int = 116 % ((36 - param0) / 48);
               var3 = kh.a(-86);
               var5 = pn.field_b[ce.field_A];
               pn.field_b[ce.field_A] = var3;
@@ -563,7 +563,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2, "vb.KA(" + 118 + ')');
+          throw pn.a((Throwable) (Object) var2, "vb.KA(" + param0 + ')');
         }
     }
 
@@ -678,7 +678,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         long var3 = 0L;
@@ -689,7 +689,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
         try {
           L0: {
             L1: {
-              var2_int = 0;
+              var2_int = 20 % ((param0 - 13) / 40);
               var3 = kh.a(-69);
               var5 = ob.field_c[ur.field_a];
               ob.field_c[ur.field_a] = var3;
@@ -717,7 +717,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw pn.a((Throwable) (Object) runtimeException, "vb.RA(" + 111 + ')');
+          throw pn.a((Throwable) (Object) runtimeException, "vb.RA(" + param0 + ')');
         }
     }
 
@@ -890,8 +890,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
               } else {
                 if (!sk.field_c) {
                   lb.field_g = kh.a(-96);
-                  int discarded$2 = 0;
-                  wf.a(5000L);
+                  wf.a(5000L, false);
                   mj.field_a = null;
                   this.a(false, (byte) 29);
                   break L0;
@@ -1118,8 +1117,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
                                   if (!vl.a(10, (CharSequence) (Object) var4)) {
                                     break L5;
                                   } else {
-                                    int discarded$4 = 38;
-                                    if (td.a((CharSequence) (Object) var4) < 10) {
+                                    if (td.a((CharSequence) (Object) var4, (byte) 38) < 10) {
                                       ((vb) this).a(-111, "wrongjava");
                                       if (var5 == 0) {
                                         break L2;
@@ -1212,7 +1210,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
                         if (var2_ref != null) {
                           try {
                             L16: {
-                              Object discarded$5 = var2_ref.invoke(var1, new Object[1]);
+                              Object discarded$1 = var2_ref.invoke(var1, new Object[1]);
                               break L16;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -1264,8 +1262,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
                               if (eu.field_g <= var3) {
                                 break L23;
                               } else {
-                                int discarded$6 = 111;
-                                this.c();
+                                this.c((byte) 111);
                                 var3++;
                                 if (var5 != 0) {
                                   break L22;
@@ -1278,8 +1275,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
                                 }
                               }
                             }
-                            int discarded$7 = 118;
-                            this.a();
+                            this.a((byte) 118);
                             rb.a(-116, (Object) (Object) ci.field_f, pt.field_b);
                             break L22;
                           }
@@ -1474,9 +1470,9 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
                     ci.field_g = param1;
                     jt.field_x = 0;
                     fb.field_c = bm.m(124);
-                    rk dupTemp$2 = new rk(param6, param3, param2, true);
-                    pt.field_b = dupTemp$2;
-                    mj.field_a = dupTemp$2;
+                    rk dupTemp$1 = new rk(param6, param3, param2, true);
+                    pt.field_b = dupTemp$1;
+                    mj.field_a = dupTemp$1;
                     var8_ref2 = pt.field_b.a(1, 1048576, (Runnable) this);
                     L1: while (true) {
                       L2: {
@@ -1484,8 +1480,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
                           if (var8_ref2.field_a != 0) {
                             break L3;
                           } else {
-                            int discarded$3 = 0;
-                            wf.a(10L);
+                            wf.a(10L, false);
                             if (var9 != 0) {
                               break L2;
                             } else {

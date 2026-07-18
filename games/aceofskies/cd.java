@@ -31,8 +31,7 @@ final class cd {
           L0: {
             L1: {
               ei.a(107, (java.awt.Component) (Object) param0);
-              int discarded$8 = 0;
-              de.a((java.awt.Component) (Object) param0);
+              de.a((java.awt.Component) (Object) param0, false);
               if (param1 >= 22) {
                 break L1;
               } else {
@@ -345,7 +344,7 @@ final class cd {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_a = null;
     }

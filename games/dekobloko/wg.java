@@ -161,7 +161,7 @@ final class wg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         return stackIn_12_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_c = null;
         field_a = null;

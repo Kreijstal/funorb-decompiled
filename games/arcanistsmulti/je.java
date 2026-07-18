@@ -295,7 +295,7 @@ final class je implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
@@ -669,7 +669,7 @@ final class je implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         return stackIn_1_0;
     }
 
-    final static void a(int param0, na param1, String param2) {
+    final static void a(int param0, na param1, String param2, boolean param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;

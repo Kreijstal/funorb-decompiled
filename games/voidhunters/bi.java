@@ -14,7 +14,7 @@ final class bi implements Runnable {
     private eab field_e;
     private int field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
     }
 

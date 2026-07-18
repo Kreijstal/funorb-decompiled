@@ -23,7 +23,7 @@ class vf extends hk {
         }
     }
 
-    final static df a(boolean param0, String param1, String param2) {
+    final static df a(boolean param0, String param1, String param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -75,8 +75,7 @@ class vf extends hk {
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_3_0 = wd.a(true, var4_long, (String) var6, param1);
+            stackOut_3_0 = wd.a(true, var4_long, (String) var6, param1, false);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
@@ -138,7 +137,7 @@ class vf extends hk {
         return stackIn_4_0;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_L = null;
         field_I = null;
         field_H = null;
@@ -268,14 +267,14 @@ class vf extends hk {
         }
     }
 
-    final static Boolean a() {
+    final static Boolean a(byte param0) {
         Boolean var1 = fi.field_b;
         int var2 = -97;
         fi.field_b = null;
         return var1;
     }
 
-    final static void f() {
+    final static void f(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         ja var2 = null;
@@ -371,7 +370,7 @@ class vf extends hk {
         return stackIn_3_0 != 0;
     }
 
-    final static String i() {
+    final static String i(int param0) {
         return eh.field_d.e((byte) 101);
     }
 

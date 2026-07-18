@@ -24,16 +24,14 @@ abstract class l {
         return param0 == (-param0 & param0);
     }
 
-    final static hf a() {
-        int discarded$0 = 32;
-        String var1 = s.a();
+    final static hf a(byte param0) {
+        String var1 = s.a((byte) 32);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }
-        int discarded$1 = 32;
-        return new hf(s.a(), bg.a(2));
+        return new hf(s.a((byte) 32), bg.a(2));
     }
 
     public static void a(int param0) {
@@ -51,8 +49,7 @@ abstract class l {
           return;
         } else {
           var2.a(109, 4);
-          int discarded$2 = 126;
-          var2.a(-119, ro.c());
+          var2.a(-119, ro.c((byte) 126));
           return;
         }
     }

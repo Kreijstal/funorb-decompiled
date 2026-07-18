@@ -690,8 +690,7 @@ final class tn extends gf {
         try {
           L0: {
             L1: {
-              int discarded$8 = 98;
-              if (lg.a(param1) != null) {
+              if (lg.a(param1, 98) != null) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;

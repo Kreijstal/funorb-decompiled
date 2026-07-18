@@ -18,7 +18,7 @@ abstract class wf {
 
     abstract void a(int param0, int param1, byte param2, java.awt.Component param3);
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         try {
             rf.field_a = param0;
             kf.a(12, -1);
@@ -398,7 +398,7 @@ abstract class wf {
         return stackIn_26_0;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;

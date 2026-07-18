@@ -184,8 +184,7 @@ final class wc {
                               tg.field_a = -1;
                               break L7;
                             } else {
-                              int discarded$10 = 1;
-                              pc.a();
+                              pc.a(1);
                               ej.field_k = false;
                               stackOut_30_0 = var7;
                               stackIn_31_0 = stackOut_30_0;
@@ -210,15 +209,14 @@ final class wc {
                       L10: {
                         ac.field_j = nf.field_l.e((byte) 117);
                         va.field_j = nf.field_l.d((byte) 58);
-                        int discarded$11 = nf.field_l.d((byte) 93);
+                        int discarded$6 = nf.field_l.d((byte) 93);
                         wj.field_o = nf.field_l.a((byte) -118);
                         var7_ref_String = nf.field_l.j(-1640531527);
                         var8 = nf.field_l.d((byte) 82);
                         if ((1 & var8) == 0) {
                           break L10;
                         } else {
-                          int discarded$12 = -114;
-                          rb.a();
+                          rb.a((byte) -114);
                           break L10;
                         }
                       }
@@ -259,9 +257,9 @@ final class wc {
                       }
                       L14: {
                         if (kc.field_D) {
-                          int discarded$13 = nf.field_l.d((byte) 63);
-                          int discarded$14 = nf.field_l.d((byte) 33);
-                          int discarded$15 = nf.field_l.c((byte) -119);
+                          int discarded$7 = nf.field_l.d((byte) 63);
+                          int discarded$8 = nf.field_l.d((byte) 33);
+                          int discarded$9 = nf.field_l.c((byte) -119);
                           ai.field_c = nf.field_l.a((byte) -119);
                           td.field_c = new byte[ai.field_c];
                           var9 = 0;
@@ -313,7 +311,7 @@ final class wc {
                             if (!el.field_g) {
                               try {
                                 L20: {
-                                  Object discarded$16 = kj.a(ha.b(87), false, "unzap");
+                                  Object discarded$10 = kj.a(ha.b(87), false, "unzap");
                                   break L20;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -331,7 +329,7 @@ final class wc {
                         }
                         try {
                           L22: {
-                            Object discarded$17 = kj.a(22102, "zap", new Object[1], ha.b(106));
+                            Object discarded$11 = kj.a(22102, "zap", new Object[1], ha.b(106));
                             break L22;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -380,8 +378,7 @@ final class wc {
                       break L26;
                     } else {
                       L27: {
-                        int discarded$18 = 1;
-                        pc.a();
+                        pc.a(1);
                         if (ca.field_e != 7) {
                           break L27;
                         } else {
@@ -417,8 +414,7 @@ final class wc {
                   } else {
                     if (ej.field_k) {
                       L30: {
-                        int discarded$19 = 1;
-                        if (mc.b() <= 30000L) {
+                        if (mc.b(true) <= 30000L) {
                           Transmogrify.field_B = bd.field_s;
                           break L30;
                         } else {
@@ -620,7 +616,7 @@ final class wc {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         ng var3 = null;
@@ -661,8 +657,7 @@ final class wc {
                 }
               }
               if (var3 == null) {
-                int discarded$4 = 1;
-                pc.a();
+                pc.a(1);
                 return;
               } else {
                 L3: {
@@ -674,8 +669,7 @@ final class wc {
                     var7_int = 1;
                     L4: while (true) {
                       if (var4 <= var7_int) {
-                        int discarded$5 = 24070;
-                        he.a(var6, var4);
+                        he.a(var6, var4, 24070);
                         var7_int = 0;
                         L5: while (true) {
                           if (var7_int >= var4) {
@@ -743,12 +737,10 @@ final class wc {
                             L10: {
                               th.a(101, (oa) (Object) var17);
                               if (0 != var7_int) {
-                                int discarded$6 = 0;
-                                vh.a(di.field_e, ug.field_b, cl.field_x, ia.field_j, var7_int);
+                                vh.a(di.field_e, ug.field_b, cl.field_x, ia.field_j, var7_int, false);
                                 break L10;
                               } else {
-                                int discarded$7 = 0;
-                                vh.a(di.field_e, ug.field_b, cl.field_x, ia.field_j, var7_int);
+                                vh.a(di.field_e, ug.field_b, cl.field_x, ia.field_j, var7_int, false);
                                 break L10;
                               }
                             }

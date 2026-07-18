@@ -6,7 +6,7 @@ final class qj {
     static dm field_c;
     static ck field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
     }

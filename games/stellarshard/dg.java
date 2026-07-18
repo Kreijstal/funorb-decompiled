@@ -7,7 +7,7 @@ abstract class dg extends rj implements f {
     rj field_y;
     static ei field_z;
 
-    public static void h() {
+    public static void h(int param0) {
         field_z = null;
     }
 
@@ -234,7 +234,7 @@ abstract class dg extends rj implements f {
         return ((dg) this).a(257) != null ? true : false;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         rh.a(17, (byte) -72);
     }
 

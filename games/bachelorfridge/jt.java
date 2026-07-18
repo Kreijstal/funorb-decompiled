@@ -23,7 +23,7 @@ final class jt {
     ula field_h;
     private sna field_e;
 
-    private final void h() {
+    private final void h(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = BachelorFridge.field_y;
@@ -329,7 +329,7 @@ final class jt {
         }
     }
 
-    private final int a() {
+    private final int a(byte param0) {
         Object var2 = null;
         Object var3 = null;
         int var3_int = 0;
@@ -407,8 +407,7 @@ final class jt {
                                   break L7;
                                 }
                               }
-                              int discarded$4 = -1;
-                              this.h();
+                              this.h(-1);
                               break L2;
                             }
                           } else {
@@ -480,14 +479,12 @@ final class jt {
                       if (var3_ref != null) {
                         var3_ref.field_zb.b(true);
                         ((jt) this).field_p = null;
-                        int discarded$5 = -1;
-                        this.h();
+                        this.h(-1);
                         break L0;
                       } else {
                         cc.field_b.a(-1, (sna) (Object) new ona(((jt) this).field_p.field_g, kka.field_i[((jt) this).field_p.field_g], new kna(((jt) this).field_p.field_g, ((jt) this).field_o[((jt) this).field_p.field_g])));
                         ((jt) this).field_p = null;
-                        int discarded$6 = -1;
-                        this.h();
+                        this.h(-1);
                         break L0;
                       }
                     } else {
@@ -587,8 +584,7 @@ final class jt {
                         break L16;
                       } else {
                         ((jt) this).field_c.field_m.a((bw) (Object) ((jt) this).field_h.field_c, true);
-                        int discarded$7 = -63;
-                        tw.a(((jt) this).field_h.field_g, ((jt) this).field_h.field_c);
+                        tw.a(((jt) this).field_h.field_g, ((jt) this).field_h.field_c, -63);
                         ((jt) this).field_h = null;
                         break L16;
                       }
@@ -830,7 +826,7 @@ final class jt {
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         sna var3 = mka.a(13558251, 13558251, 13558251, (byte) -119, (po) (Object) jha.field_g, 13558251, 1118481, 13558251);
         var3.field_eb = wd.field_w;
         var3.field_A = bla.field_p;
@@ -1108,8 +1104,7 @@ final class jt {
                     ((jt) this).field_j = 0;
                     break L8;
                   } else {
-                    int discarded$4 = -23;
-                    int discarded$5 = this.a();
+                    int discarded$2 = this.a((byte) -23);
                     break L7;
                   }
                 }
@@ -1118,13 +1113,12 @@ final class jt {
               }
             }
           }
-          int discarded$6 = -23;
-          int discarded$7 = this.a();
+          int discarded$3 = this.a((byte) -23);
           break L7;
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_g = null;
         field_f = null;
     }
@@ -1336,8 +1330,7 @@ final class jt {
         try {
             ((jt) this).field_c = param0;
             ((jt) this).field_o = new int[50];
-            int discarded$0 = 12716;
-            this.c();
+            this.c(12716);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "jt.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

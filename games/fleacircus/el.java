@@ -16,7 +16,7 @@ final class el extends wi {
     int field_A;
     int field_t;
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         try {
             ae.a(109, param0);
             wf.a(ll.field_o, false, false);
@@ -25,7 +25,7 @@ final class el extends wi {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_B = null;
         field_C = null;
         field_s = null;
@@ -45,7 +45,7 @@ final class el extends wi {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1, byte param2, int param3, String[] param4) {
+    final static void a(java.applet.Applet param0, int param1, byte param2, int param3, String[] param4, int param5) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -109,8 +109,7 @@ final class el extends wi {
                 break L3;
               } else {
                 if (ii.a(12969, (CharSequence) (Object) var6)) {
-                  int discarded$1 = -9816;
-                  di.field_d = pl.a((CharSequence) (Object) var6);
+                  di.field_d = pl.a((CharSequence) (Object) var6, -9816);
                   break L3;
                 } else {
                   di.field_d = 2;

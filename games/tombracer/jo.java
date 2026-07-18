@@ -400,7 +400,7 @@ final class jo extends rva implements tsa {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_E = null;
         field_K = null;
     }
@@ -688,8 +688,7 @@ final class jo extends rva implements tsa {
                     break L3;
                   } else {
                     var5_int = ((jo) this).field_C;
-                    int discarded$1 = -66;
-                    this.d();
+                    this.d(-66);
                     if (((jo) this).field_C == var5_int) {
                       break L3;
                     } else {
@@ -1125,15 +1124,13 @@ final class jo extends rva implements tsa {
                             return stackIn_39_0 != 0;
                           } else {
                             if (104 == param2) {
-                              int discarded$2 = 1553449360;
-                              this.a(((jo) this).field_O + -this.c(), (byte) -99);
+                              this.a(((jo) this).field_O + -this.c(1553449360), (byte) -99);
                               stackOut_36_0 = 1;
                               stackIn_37_0 = stackOut_36_0;
                               return stackIn_37_0 != 0;
                             } else {
                               if (105 == param2) {
-                                int discarded$3 = 1553449360;
-                                this.a(((jo) this).field_O + this.c(), (byte) -127);
+                                this.a(((jo) this).field_O + this.c(1553449360), (byte) -127);
                                 stackOut_34_0 = 1;
                                 stackIn_35_0 = stackOut_34_0;
                                 return stackIn_35_0 != 0;
@@ -1468,11 +1465,10 @@ final class jo extends rva implements tsa {
             param1 = false;
         }
         sa.a(param1, (byte) 88);
-        int discarded$0 = 23713;
-        dla.b();
+        dla.b(23713);
     }
 
-    private final int c() {
+    private final int c(int param0) {
         return (((jo) this).field_N.field_p << 16) / ((jo) this).field_D.field_p;
     }
 
@@ -1562,7 +1558,7 @@ final class jo extends rva implements tsa {
         return stackIn_7_0 != 0;
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var2 = ((jo) this).field_L != null ? ((jo) this).field_L.field_m + ((jo) this).field_L.field_i : ((jo) this).field_D.field_i;
         int var4 = 0;
         int var3 = null != ((jo) this).field_z ? -((jo) this).field_N.field_m + ((jo) this).field_z.field_i : -((jo) this).field_N.field_m + ((jo) this).field_D.field_i + ((jo) this).field_D.field_m;
@@ -1586,7 +1582,7 @@ final class jo extends rva implements tsa {
         this.e(param0 ^ -111);
     }
 
-    final static an a(kh param0) {
+    final static an a(kh param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

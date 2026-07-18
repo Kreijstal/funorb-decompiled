@@ -94,12 +94,11 @@ final class aia extends vg {
               }
               L2: {
                 var9 = ((aia) this).a(0) ? 1 : 0;
-                int discarded$4 = 21302;
-                var10 = this.h() ? 1 : 0;
+                var10 = this.h(21302) ? 1 : 0;
                 if (param4 <= -55) {
                   break L2;
                 } else {
-                  int discarded$5 = ((aia) this).g(-9);
+                  int discarded$1 = ((aia) this).g(-9);
                   break L2;
                 }
               }
@@ -153,8 +152,7 @@ final class aia extends vg {
                         break L6;
                       } else {
                         if (var9 == 0) {
-                          int discarded$6 = -92;
-                          this.a(param6);
+                          this.a(param6, -92);
                           break L6;
                         } else {
                           break L6;
@@ -309,8 +307,7 @@ final class aia extends vg {
                 if (param6.a((ffa) null, ((aia) this).field_q, 2, 1, param3 - -((aia) this).field_r, param0 + ((aia) this).field_n, false, (gma) (Object) param5, ((aia) this).field_q)) {
                   ((aia) this).field_o = ((aia) this).field_o + 2;
                   ((aia) this).field_o = et.b(75, ((aia) this).field_o, 125);
-                  int discarded$7 = 21302;
-                  if (this.h()) {
+                  if (this.h(21302)) {
                     ((aia) this).field_n = (((aia) this).field_n - var12) / 4 + var12;
                     ((aia) this).field_r = var13 + (-var13 + ((aia) this).field_r) / 4;
                     break L18;
@@ -501,8 +498,7 @@ final class aia extends vg {
                 if (((aia) this).a(0)) {
                   break L5;
                 } else {
-                  int discarded$2 = 21302;
-                  if (this.h()) {
+                  if (this.h(21302)) {
                     break L5;
                   } else {
                     if (var6_int == 0) {
@@ -531,7 +527,7 @@ final class aia extends vg {
                 if (param0 > 98) {
                   break L6;
                 } else {
-                  int discarded$3 = ((aia) this).d(5);
+                  int discarded$1 = ((aia) this).d(5);
                   break L6;
                 }
               }
@@ -572,7 +568,7 @@ final class aia extends vg {
         }
     }
 
-    final static int e() {
+    final static int e(int param0) {
         if (null != baa.field_d.field_i) {
           if ((Object) (Object) kra.field_a == (Object) (Object) baa.field_d.field_i.field_b) {
             return 0;
@@ -612,7 +608,7 @@ final class aia extends vg {
         return ((aia) this).field_n;
     }
 
-    private final boolean h() {
+    private final boolean h(int param0) {
         return 20 < ((aia) this).field_o;
     }
 
@@ -631,7 +627,7 @@ final class aia extends vg {
         ((aia) this).field_m = param2;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_v = null;
         field_t = null;
         int var1 = 0;
@@ -779,7 +775,7 @@ final class aia extends vg {
         return stackIn_1_0;
     }
 
-    private final void a(la param0) {
+    private final void a(la param0, int param1) {
         try {
             ((aia) this).field_k = 50 - -param0.q(-120).a(50, 0);
         } catch (RuntimeException runtimeException) {

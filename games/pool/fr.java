@@ -159,7 +159,7 @@ final class fr extends ma {
         }
     }
 
-    final static void a(int param0, kg param1) {
+    final static void a(int param0, kg param1, int param2) {
         oq var6 = null;
         int var4 = 0;
         try {

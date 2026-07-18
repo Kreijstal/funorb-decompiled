@@ -14,7 +14,7 @@ final class wp extends tga {
         ((wp) this).field_j = 3;
     }
 
-    private final void a(ub param0, int param1, int param2) {
+    private final void a(ub param0, int param1, int param2, byte param3) {
         RuntimeException runtimeException = null;
         gj var5 = null;
         op var6 = null;
@@ -247,6 +247,7 @@ final class wp extends tga {
         gna[] var30 = null;
         String var31 = null;
         String var32 = null;
+        String var33 = null;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_17_0 = 0;
@@ -973,9 +974,7 @@ final class wp extends tga {
                       break L43;
                     } else {
                       if (!param3) {
-                        int discarded$3 = 11;
-                        int discarded$4 = -112;
-                        bka.b();
+                        bka.b(-112, 11);
                         break L43;
                       } else {
                         break L42;
@@ -1514,14 +1513,13 @@ final class wp extends tga {
                           }
                           L78: {
                             if (var21 != null) {
-                              var21 = (Object) (Object) ("<col=A00000>" + (String) var21);
-                              int discarded$5 = -1;
-                              var32 = qm.a("<br><col=A00000>", "<br>", (String) var21);
+                              var32 = "<col=A00000>" + (String) var21;
+                              var33 = qm.a("<br><col=A00000>", "<br>", var32, -1);
                               if (var20 == null) {
-                                var20 = (Object) (Object) var32;
+                                var20 = (Object) (Object) var33;
                                 break L78;
                               } else {
-                                var20 = (Object) (Object) ((String) var20 + "<br>" + var32);
+                                var20 = (Object) (Object) ((String) var20 + "<br>" + var33);
                                 break L78;
                               }
                             } else {
@@ -1824,16 +1822,11 @@ final class wp extends tga {
                 }
               }
               param0.a(27799, (at) (Object) new fha((kj) (Object) new dw(var5, ((wp) this).field_n, ((wp) this).field_o)));
-              int discarded$5 = 83;
-              this.a(param0, ((wp) this).field_o, ((wp) this).field_n);
-              int discarded$6 = 83;
-              this.a(param0, ((wp) this).field_o, -1 + ((wp) this).field_n);
-              int discarded$7 = 83;
-              this.a(param0, ((wp) this).field_o, ((wp) this).field_n - -1);
-              int discarded$8 = 83;
-              this.a(param0, ((wp) this).field_o - 1, ((wp) this).field_n);
-              int discarded$9 = 83;
-              this.a(param0, 1 + ((wp) this).field_o, ((wp) this).field_n);
+              this.a(param0, ((wp) this).field_o, ((wp) this).field_n, (byte) 83);
+              this.a(param0, ((wp) this).field_o, -1 + ((wp) this).field_n, (byte) 83);
+              this.a(param0, ((wp) this).field_o, ((wp) this).field_n - -1, (byte) 83);
+              this.a(param0, ((wp) this).field_o - 1, ((wp) this).field_n, (byte) 83);
+              this.a(param0, 1 + ((wp) this).field_o, ((wp) this).field_n, (byte) 83);
               super.a(false, var5.field_h);
               break L0;
             } else {

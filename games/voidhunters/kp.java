@@ -99,8 +99,7 @@ final class kp extends rqa {
             }
             var3 = -1;
             var4 = -1;
-            int discarded$1 = 1;
-            var5 = feb.a(og.field_r);
+            var5 = feb.a(og.field_r, true);
             var6 = 0;
             L2: while (true) {
               if (dma.field_j <= var6) {

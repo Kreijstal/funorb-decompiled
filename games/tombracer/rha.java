@@ -7,7 +7,7 @@ final class rha extends vg {
     int field_i;
     long field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
     }
 

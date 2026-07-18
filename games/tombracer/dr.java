@@ -17,7 +17,7 @@ abstract class dr {
 
     abstract byte[] a(int param0, byte param1);
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

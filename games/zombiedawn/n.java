@@ -14,13 +14,13 @@ final class n extends le {
     op[] field_n;
     int field_o;
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_p = null;
         field_r = null;
     }
 
-    final static uc c() {
+    final static uc c(byte param0) {
         try {
             Throwable var1 = null;
             uc stackIn_1_0 = null;

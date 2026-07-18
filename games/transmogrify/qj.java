@@ -42,7 +42,7 @@ final class qj {
         }
     }
 
-    final static ti[] a(int param0, int param1, ci param2) {
+    final static ti[] a(int param0, int param1, ci param2, byte param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -62,8 +62,7 @@ final class qj {
         String stackOut_5_2 = null;
         try {
           if (rl.a(param1, 0, param0, param2)) {
-            int discarded$2 = 31151;
-            return uj.a();
+            return uj.a(31151);
           } else {
             return null;
           }
@@ -390,7 +389,7 @@ final class qj {
         ((qj) this).field_d.field_b = ((qj) this).field_d;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         int var1 = 0;
         if (kc.field_g <= 32) {
             ec.a(0, 9956);

@@ -271,10 +271,7 @@ final class we extends hi {
 
     final static void a(boolean param0, int param1, int param2, int param3) {
         gh.a((byte) 116, param0);
-        int discarded$0 = 0;
-        int discarded$1 = 15;
-        int discarded$2 = 13;
-        hj.a(param0);
+        hj.a(param0, 13, 15, false);
     }
 
     final void a(int param0, jb param1, int param2, int param3, String param4) {
@@ -676,7 +673,7 @@ final class we extends hi {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_e = null;
         field_k = null;
         field_m = null;

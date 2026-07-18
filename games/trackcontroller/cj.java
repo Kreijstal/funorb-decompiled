@@ -504,14 +504,14 @@ final class cj extends rb {
         j.field_c = param1;
     }
 
-    final static void a() {
+    final static void a(int param0, boolean param1) {
         la var2 = ra.field_C;
         var2.c(6, 7);
         var2.a(1, (byte) -104);
         var2.a(0, (byte) -88);
     }
 
-    final static void d() {
+    final static void d(int param0) {
         qj var1 = null;
         qj var2 = null;
         int var3 = 0;

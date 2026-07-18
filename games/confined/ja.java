@@ -130,7 +130,7 @@ final class ja {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_g = null;
         int var1 = 0;

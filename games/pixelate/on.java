@@ -70,7 +70,7 @@ final class on extends hb {
         }
     }
 
-    final static String a(int param0, String param1) {
+    final static String a(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -217,7 +217,7 @@ final class on extends hb {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_mb = null;
         field_pb = null;
         field_nb = null;
@@ -252,13 +252,12 @@ final class on extends hb {
             if (param0 != null) {
               L1: {
                 var2 = new ld(param0, fa.field_b, e.field_b, gf.field_g, ge.field_c, fl.field_g, wo.field_f);
-                int discarded$6 = 140;
-                re.b();
+                re.b(140);
                 if (param1 > 25) {
                   break L1;
                 } else {
                   var3 = null;
-                  ld discarded$7 = on.a((byte[]) null, -110);
+                  ld discarded$2 = on.a((byte[]) null, -110);
                   break L1;
                 }
               }

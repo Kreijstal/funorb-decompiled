@@ -237,7 +237,7 @@ final class esa {
         return ((esa) this).field_d;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
     }

@@ -8,7 +8,7 @@ final class ega {
     static nh field_e;
     private static String[] field_a;
 
-    final static boolean a(int param0, CharSequence param1) {
+    final static boolean a(int param0, CharSequence param1, boolean param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -18,30 +18,30 @@ final class ega {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_34_0 = 0;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
+        int stackIn_20_0 = 0;
+        int stackIn_26_0 = 0;
+        int stackIn_32_0 = 0;
+        int stackIn_36_0 = 0;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
-        String stackIn_38_2 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_40_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_33_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_29_0 = 0;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
+        int stackOut_35_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_31_0 = 0;
         RuntimeException stackOut_37_0 = null;
         StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        String stackOut_39_2 = null;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
+        String stackOut_38_2 = null;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -52,8 +52,8 @@ final class ega {
             var8 = 0;
             L1: while (true) {
               if (var8 >= var7) {
-                stackOut_33_0 = var5;
-                stackIn_34_0 = stackOut_33_0;
+                stackOut_35_0 = var5;
+                stackIn_36_0 = stackOut_35_0;
                 break L0;
               } else {
                 L2: {
@@ -100,9 +100,9 @@ final class ega {
                       }
                     }
                     if (var9 < 97) {
-                      stackOut_17_0 = 0;
-                      stackIn_18_0 = stackOut_17_0;
-                      return stackIn_18_0 != 0;
+                      stackOut_19_0 = 0;
+                      stackIn_20_0 = stackOut_19_0;
+                      return stackIn_20_0 != 0;
                     } else {
                       if (122 >= var9) {
                         var9 -= 87;
@@ -113,9 +113,9 @@ final class ega {
                     }
                   }
                   if (var9 >= 10) {
-                    stackOut_23_0 = 0;
-                    stackIn_24_0 = stackOut_23_0;
-                    return stackIn_24_0 != 0;
+                    stackOut_25_0 = 0;
+                    stackIn_26_0 = stackOut_25_0;
+                    return stackIn_26_0 != 0;
                   } else {
                     L7: {
                       if (var4_int == 0) {
@@ -127,9 +127,9 @@ final class ega {
                     }
                     var10 = var9 + 10 * var6;
                     if (var10 / 10 != var6) {
-                      stackOut_29_0 = 0;
-                      stackIn_30_0 = stackOut_29_0;
-                      return stackIn_30_0 != 0;
+                      stackOut_31_0 = 0;
+                      stackIn_32_0 = stackOut_31_0;
+                      return stackIn_32_0 != 0;
                     } else {
                       var5 = 1;
                       var6 = var10;
@@ -146,36 +146,36 @@ final class ega {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var4 = decompiledCaughtException;
-            stackOut_35_0 = (RuntimeException) var4;
-            stackOut_35_1 = new StringBuilder().append("ega.A(").append(10).append(',');
-            stackIn_37_0 = stackOut_35_0;
-            stackIn_37_1 = stackOut_35_1;
-            stackIn_36_0 = stackOut_35_0;
-            stackIn_36_1 = stackOut_35_1;
+            stackOut_37_0 = (RuntimeException) var4;
+            stackOut_37_1 = new StringBuilder().append("ega.A(").append(10).append(',');
+            stackIn_39_0 = stackOut_37_0;
+            stackIn_39_1 = stackOut_37_1;
+            stackIn_38_0 = stackOut_37_0;
+            stackIn_38_1 = stackOut_37_1;
             if (param1 == null) {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
-              stackOut_37_2 = "null";
-              stackIn_38_0 = stackOut_37_0;
-              stackIn_38_1 = stackOut_37_1;
-              stackIn_38_2 = stackOut_37_2;
+              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
+              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_2 = "null";
+              stackIn_40_0 = stackOut_39_0;
+              stackIn_40_1 = stackOut_39_1;
+              stackIn_40_2 = stackOut_39_2;
               break L8;
             } else {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
-              stackOut_36_2 = "{...}";
-              stackIn_38_0 = stackOut_36_0;
-              stackIn_38_1 = stackOut_36_1;
-              stackIn_38_2 = stackOut_36_2;
+              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
+              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_2 = "{...}";
+              stackIn_40_0 = stackOut_38_0;
+              stackIn_40_1 = stackOut_38_1;
+              stackIn_40_2 = stackOut_38_2;
               break L8;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ',' + true + ',' + true + ')');
+          throw tba.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + true + ',' + true + ')');
         }
-        return stackIn_34_0 != 0;
+        return stackIn_36_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_a = null;

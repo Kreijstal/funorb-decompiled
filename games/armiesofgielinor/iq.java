@@ -94,18 +94,16 @@ final class iq {
     final void a(int param0) {
         if (wg.a(-33, db.a(true, ((iq) this).field_f), db.a(true, ((iq) this).field_f + ((iq) this).field_i), u.a(((iq) this).field_c, (byte) 94), u.a(30 + ((iq) this).field_c, (byte) 94))) {
           fe.a(db.a(true, ((iq) this).field_f), u.a(((iq) this).field_c, (byte) 94), ((iq) this).field_i, 30, il.field_s, ci.field_e, 0, 0);
-          int discarded$2 = 1;
-          fe.c(((iq) this).field_d, db.a(true, ((iq) this).field_i / 2 + ((iq) this).field_f), u.a(((iq) this).field_c - -30, (byte) 94), param0);
+          fe.c(((iq) this).field_d, db.a(true, ((iq) this).field_i / 2 + ((iq) this).field_f), u.a(((iq) this).field_c - -30, (byte) 94), param0, true);
           return;
         } else {
           fe.a(db.a(true, ((iq) this).field_f), u.a(((iq) this).field_c, (byte) 94), ((iq) this).field_i, 30, il.field_s, nd.field_b, 0, 0);
-          int discarded$3 = 1;
-          fe.c(((iq) this).field_d, db.a(true, ((iq) this).field_i / 2 + ((iq) this).field_f), u.a(((iq) this).field_c - -30, (byte) 94), param0);
+          fe.c(((iq) this).field_d, db.a(true, ((iq) this).field_i / 2 + ((iq) this).field_f), u.a(((iq) this).field_c - -30, (byte) 94), param0, true);
           return;
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (!bl.field_b) {
             throw new IllegalStateException();
         }

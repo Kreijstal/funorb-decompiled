@@ -19,7 +19,7 @@ final class gg {
     ul field_d;
     static int field_c;
 
-    final static void a(int param0, boolean param1, boolean param2) {
+    final static void a(int param0, boolean param1, boolean param2, boolean param3) {
         RuntimeException var4 = null;
         cj var5 = null;
         cj var6 = null;
@@ -558,9 +558,7 @@ final class gg {
                     }
                   }
                 }
-                int discarded$2 = 1;
-                int discarded$3 = 11;
-                ld.a(ej.field_n, true);
+                ld.a(ej.field_n, true, 11, 1);
                 break L27;
               } else {
                 break L27;
@@ -591,7 +589,7 @@ final class gg {
         return fa.field_Ib;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_b = null;
         field_m = null;

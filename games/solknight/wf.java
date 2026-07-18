@@ -6,7 +6,7 @@ abstract class wf implements oe {
     static String field_b;
     private long field_c;
 
-    public static void f() {
+    public static void f(int param0) {
         field_a = null;
         field_b = null;
     }

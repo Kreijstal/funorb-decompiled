@@ -39,8 +39,7 @@ final class ml {
                 break L1;
               } else {
                 var3 = (CharSequence) (Object) var2;
-                int discarded$2 = 0;
-                if (0L != jl.a(var3)) {
+                if (0L != jl.a(var3, false)) {
                   L2: {
                     if (param1 == -43) {
                       break L2;
@@ -255,7 +254,7 @@ final class ml {
         return stackIn_18_0;
     }
 
-    private final int b(int param0) {
+    private final int b(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = Chess.field_G;
@@ -514,14 +513,13 @@ final class ml {
     }
 
     private final void d(int param0, int param1) {
-        int discarded$0 = -1;
-        int[] var4 = new int[this.b(param1)];
+        int[] var4 = new int[this.b(param1, -1)];
         int[] var3 = var4;
         ne.a(((ml) this).field_c, 0, var4, 0, ((ml) this).field_c.length);
         ((ml) this).field_c = var4;
     }
 
-    final static void a(String param0, ln param1) {
+    final static void a(String param0, ln param1, byte param2, boolean param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -719,13 +717,13 @@ final class ml {
         return 1 + ((ml) this).field_e;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_h = null;
         field_f = null;
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_4_0 = 0;

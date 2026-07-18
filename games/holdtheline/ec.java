@@ -363,7 +363,7 @@ final class ec extends pc {
         return ((ec) this).field_P == 3 ? true : false;
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var2 = 0;
         float var2_float = 0.0f;
         int var3 = 0;
@@ -788,7 +788,7 @@ final class ec extends pc {
         this.c(param1, -1, param0 * 160 - -80);
     }
 
-    final static void b() {
+    final static void b(int param0, byte param1) {
         hl var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -857,16 +857,16 @@ final class ec extends pc {
             if (((ec) this).field_P == 0) {
               L1: {
                 if (((ec) this).field_W == 0) {
-                  ui discarded$6 = bd.a(17405, 64, 0, j.field_c.field_f);
-                  ui discarded$7 = bd.a(param0 + 17514, 64, 256, j.field_c.field_h);
+                  ui discarded$4 = bd.a(17405, 64, 0, j.field_c.field_f);
+                  ui discarded$5 = bd.a(param0 + 17514, 64, 256, j.field_c.field_h);
                   break L1;
                 } else {
                   break L1;
                 }
               }
-              int fieldTemp$8 = ((ec) this).field_W + 1;
+              int fieldTemp$6 = ((ec) this).field_W + 1;
               ((ec) this).field_W = ((ec) this).field_W + 1;
-              if (fieldTemp$8 == 5 * ((ec) this).field_J.length + 50) {
+              if (fieldTemp$6 == 5 * ((ec) this).field_J.length + 50) {
                 ((ec) this).field_P = 1;
                 ((ec) this).field_W = 0;
                 break L0;
@@ -877,9 +877,9 @@ final class ec extends pc {
               if (((ec) this).field_P != 2) {
                 break L0;
               } else {
-                int fieldTemp$9 = ((ec) this).field_W + 1;
+                int fieldTemp$7 = ((ec) this).field_W + 1;
                 ((ec) this).field_W = ((ec) this).field_W + 1;
-                if (-260.0 <= (double)we.field_n * (1.0 - Math.exp((double)(0.20000000298023224f * (float)(fieldTemp$9 + -5))))) {
+                if (-260.0 <= (double)we.field_n * (1.0 - Math.exp((double)(0.20000000298023224f * (float)(fieldTemp$7 + -5))))) {
                   break L0;
                 } else {
                   ((ec) this).field_P = 3;
@@ -927,8 +927,7 @@ final class ec extends pc {
                           break L7;
                         } else {
                           if (-1 != nc.field_g) {
-                            int discarded$10 = 86;
-                            this.d();
+                            this.d(86);
                             break L7;
                           } else {
                             break L7;
@@ -945,8 +944,7 @@ final class ec extends pc {
                       }
                     }
                   }
-                  int discarded$11 = 1;
-                  th.b();
+                  th.b(true);
                   return;
                 } else {
                   ((ec) this).field_x[var5] = ((ec) this).field_x[var5] + (-((ec) this).field_x[var5] + (float)((ec) this).field_I[var5]) * 0.20000000298023224f;

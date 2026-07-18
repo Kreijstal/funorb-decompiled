@@ -11,7 +11,7 @@ final class oc extends l {
     static int field_k;
     static String field_h;
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_h = null;
         field_i = null;
     }

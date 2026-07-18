@@ -455,11 +455,9 @@ final class op {
             int var3_int = -55 / ((param1 - 85) / 37);
             param0.d(((op) this).field_M, 0);
             param0.d(((op) this).field_Q, 0);
-            int discarded$0 = 92;
-            this.c(param0);
+            this.c(param0, (byte) 92);
             this.d(param0, (byte) -115);
-            int discarded$1 = 113;
-            this.a(param0);
+            this.a(param0, (byte) 113);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "op.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -1155,7 +1153,7 @@ final class op {
         return stackIn_21_0 != 0;
     }
 
-    private final cj a(sfa param0) {
+    private final cj a(sfa param0, byte param1) {
         aga var3 = null;
         RuntimeException var3_ref = null;
         ii var4 = null;
@@ -1760,7 +1758,7 @@ final class op {
         int var2 = -34 % ((-46 - param0) / 53);
     }
 
-    private final String a() {
+    private final String a(byte param0) {
         return pn.a((byte) 48, ((op) this).field_E, new String[3]);
     }
 
@@ -2073,8 +2071,7 @@ final class op {
         }
         sfa var5 = (sfa) (Object) ((op) this).field_P.b((byte) 90);
         while (var5 != null) {
-            int discarded$0 = 91;
-            cj discarded$1 = this.a(var5);
+            cj discarded$0 = this.a(var5, (byte) 91);
             var5 = (sfa) (Object) ((op) this).field_P.c(param0 + -26125);
         }
     }
@@ -2442,8 +2439,7 @@ final class op {
         L0: {
           var6 = BachelorFridge.field_y;
           if (~(((op) this).field_A & 1) == param0) {
-            int discarded$2 = -74;
-            this.d();
+            this.d((byte) -74);
             break L0;
           } else {
             break L0;
@@ -2562,7 +2558,7 @@ final class op {
         return false;
     }
 
-    private final void c(lu param0) {
+    private final void c(lu param0, byte param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -2808,7 +2804,7 @@ final class op {
         return false;
     }
 
-    private final boolean b() {
+    private final boolean b(byte param0) {
         int var2 = 0;
         int var3 = 0;
         aga var4 = null;
@@ -2937,16 +2933,14 @@ final class op {
         if (!(((op) this).field_A <= 0)) {
             ((op) this).field_N = !((op) this).field_N ? true : false;
             ((op) this).field_A = ((op) this).field_A + 1;
-            int discarded$0 = 103;
-            this.f();
+            this.f((byte) 103);
             this.f(param0 + 26125);
         }
         if (param0 != 0) {
             return;
         }
         if (!((op) this).field_N) {
-            int discarded$1 = 0;
-            lc discarded$2 = this.e();
+            lc discarded$0 = this.e(0);
         }
     }
 
@@ -3277,7 +3271,7 @@ final class op {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -3949,7 +3943,7 @@ final class op {
         }
     }
 
-    private final int[] a(aga param0) {
+    private final int[] a(aga param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -4457,7 +4451,7 @@ final class op {
         return stackIn_6_0 != 0;
     }
 
-    private final void f() {
+    private final void f(byte param0) {
     }
 
     private final void b(int param0, lu param1) {
@@ -4853,8 +4847,7 @@ final class op {
                 }
                 break L0;
               } else {
-                int discarded$2 = -50;
-                var5 = tma.a(param2);
+                var5 = tma.a(param2, (byte) -50);
                 var5.field_j = param2.f(-98);
                 ((op) this).field_U.a((bw) (Object) var5, true);
                 continue L1;
@@ -5325,7 +5318,7 @@ final class op {
         return stackIn_17_0;
     }
 
-    private final lc e() {
+    private final lc e(int param0) {
         int var3 = 0;
         int var4 = 0;
         ej var4_ref_ej = null;
@@ -5341,8 +5334,7 @@ final class op {
         int stackOut_28_0 = 0;
         int stackOut_25_0 = 0;
         var7 = BachelorFridge.field_y;
-        int discarded$5 = 10;
-        boolean discarded$6 = this.b();
+        boolean discarded$2 = this.b((byte) 10);
         ((op) this).i((byte) 56);
         ((op) this).i(0);
         ((op) this).j(-1);
@@ -5395,9 +5387,9 @@ final class op {
                               } else {
                                 if (((op) this).field_a[var4][var5].a((byte) -63)) {
                                   if (((op) this).field_a[var4][var5].field_j == -1) {
-                                    int incrementValue$7 = var3;
+                                    int incrementValue$3 = var3;
                                     var3++;
-                                    sh.field_C[incrementValue$7] = new aj(var4, var5);
+                                    sh.field_C[incrementValue$3] = new aj(var4, var5);
                                     var5++;
                                     continue L7;
                                   } else {
@@ -5462,8 +5454,7 @@ final class op {
                     }
                     var8.a((op) this, false);
                     ((op) this).field_U.a((bw) (Object) var8, true);
-                    int discarded$8 = 73;
-                    this.a(var8);
+                    this.a(var8, (byte) 73);
                     var3 = 0;
                     L12: while (true) {
                       if (var3 >= ((op) this).field_d) {
@@ -5485,8 +5476,7 @@ final class op {
                                   }
                                 }
                                 this.c(101);
-                                int discarded$9 = 73;
-                                this.a(var8);
+                                this.a(var8, (byte) 73);
                                 break L13;
                               } else {
                                 if (!((op) this).field_S[var4].field_c) {
@@ -5693,7 +5683,7 @@ final class op {
         }
     }
 
-    private final void a(lc param0) {
+    private final void a(lc param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -5819,7 +5809,7 @@ final class op {
         }
     }
 
-    private final String j() {
+    private final String j(byte param0) {
         return pn.a((byte) -122, ((op) this).field_o, new String[4]);
     }
 
@@ -5962,8 +5952,7 @@ final class op {
         rha var8 = null;
         var6 = BachelorFridge.field_y;
         var8 = new rha();
-        int discarded$2 = 42;
-        var8.a((Object) (Object) ("gametype: " + this.j()), 4819);
+        var8.a((Object) (Object) ("gametype: " + this.j((byte) 42)), 4819);
         var8.a((Object) (Object) ("players: " + ((op) this).field_d), 4819);
         var8.a(99, 2);
         var3 = 0;
@@ -5971,8 +5960,7 @@ final class op {
           if (var3 >= ((op) this).field_d) {
             L1: {
               var8.a(102, -2);
-              int discarded$3 = -83;
-              var8.a((Object) (Object) ("boardtype: " + this.a()), 4819);
+              var8.a((Object) (Object) ("boardtype: " + this.a((byte) -83)), 4819);
               var8.a((Object) (Object) ("turnid: " + ((op) this).field_A), 4819);
               if (((op) this).field_o != 3) {
                 break L1;
@@ -6107,7 +6095,7 @@ final class op {
         }
     }
 
-    private final void a(lu param0) {
+    private final void a(lu param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

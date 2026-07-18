@@ -6,7 +6,7 @@ final class qt extends pu {
     static kv field_m;
     private static String field_z;
 
-    public static void b() {
+    public static void b(int param0) {
         field_l = null;
         field_m = null;
     }

@@ -10,6 +10,8 @@ final class op extends ofa implements tsa {
 
     final static void a(cn param0, int param1, int[] param2, byte[] param3, cn param4, String[][] param5, int param6, iu[][] param7, boolean param8, int param9, String[][] param10, cn param11, byte[] param12, String[] param13, iu[][] param14) {
         RuntimeException var15 = null;
+        Object var16 = null;
+        Object var17 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
@@ -186,8 +188,9 @@ final class op extends ofa implements tsa {
                 break L1;
               }
             }
-            int discarded$1 = 1;
-            ta.a(param14, param10, (int[]) null, param6, param0, param9, (hja[]) null, param3, param12, param5, param13, param11, (byte) 116, param2, param7, param4);
+            var17 = null;
+            var16 = null;
+            ta.a(param14, param10, (int[]) null, param6, param0, param9, (hja[]) null, param3, param12, param5, param13, param11, (byte) 116, param2, param7, param4, true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -583,8 +586,7 @@ final class op extends ofa implements tsa {
                 if (param2 != ((op) this).field_M) {
                   break L0;
                 } else {
-                  int discarded$2 = 0;
-                  og.b();
+                  og.b(0);
                   this.i((byte) 109);
                   return;
                 }
@@ -935,8 +937,7 @@ final class op extends ofa implements tsa {
               var5_long = -((op) this).field_P + bva.b((byte) -107);
               var7 = (int)((-var5_long + 10999L) / 1000L);
               if (0 >= var7) {
-                int discarded$1 = 0;
-                og.b();
+                og.b(0);
                 this.i((byte) 109);
                 ((op) this).field_z.c((ae) (Object) new gga(((op) this).field_z, uq.field_b), 120);
                 break L2;
@@ -1005,7 +1006,7 @@ final class op extends ofa implements tsa {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         int var1 = 0;
         field_O = null;
     }

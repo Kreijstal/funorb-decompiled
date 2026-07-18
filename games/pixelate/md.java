@@ -17,7 +17,7 @@ final class md extends db {
         return null;
     }
 
-    final static void a(tf param0, tf param1) {
+    final static void a(tf param0, tf param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -236,16 +236,14 @@ final class md extends db {
                 ((md) this).field_Z = new tf(var12, var13);
                 h.a(-119, ((md) this).field_Z);
                 var27.a(112, 144, var27.field_A << 4, var27.field_B << 4, -((md) this).field_X << 10, 4096);
-                int discarded$6 = 92;
-                ia.a();
+                ia.a((byte) 92);
                 ((md) this).field_Z.b(-(var27.field_A >> 1) + var9, var10 - var27.field_B, 256);
                 return;
               } else {
                 h.a(-72, ((md) this).field_Z);
                 t.d();
                 var27.a(112, 144, var27.field_A << 4, var27.field_B << 4, -((md) this).field_X << 10, 4096);
-                int discarded$7 = 92;
-                ia.a();
+                ia.a((byte) 92);
                 ((md) this).field_Z.b(-(var27.field_A >> 1) + var9, var10 - var27.field_B, 256);
                 return;
               }
@@ -253,8 +251,7 @@ final class md extends db {
               ((md) this).field_Z = new tf(var12, var13);
               h.a(-119, ((md) this).field_Z);
               var27.a(112, 144, var27.field_A << 4, var27.field_B << 4, -((md) this).field_X << 10, 4096);
-              int discarded$8 = 92;
-              ia.a();
+              ia.a((byte) 92);
               ((md) this).field_Z.b(-(var27.field_A >> 1) + var9, var10 - var27.field_B, 256);
               return;
             }
@@ -262,8 +259,7 @@ final class md extends db {
             ((md) this).field_Z = new tf(var12, var13);
             h.a(-119, ((md) this).field_Z);
             var27.a(112, 144, var27.field_A << 4, var27.field_B << 4, -((md) this).field_X << 10, 4096);
-            int discarded$9 = 92;
-            ia.a();
+            ia.a((byte) 92);
             ((md) this).field_Z.b(-(var27.field_A >> 1) + var9, var10 - var27.field_B, 256);
             return;
           }
@@ -319,8 +315,7 @@ final class md extends db {
                 break L3;
               }
               var20.a(112, 144, var20.field_A << 4, var20.field_B << 4, -((md) this).field_X << 10, 4096);
-              int discarded$10 = 92;
-              ia.a();
+              ia.a((byte) 92);
               ((md) this).field_Z.b(-(var20.field_A >> 1) + var9, var10 - var20.field_B, 256);
               return;
             }
@@ -351,15 +346,14 @@ final class md extends db {
               break L5;
             }
             var19.a(112, 144, var19.field_A << 4, var19.field_B << 4, -((md) this).field_X << 10, 4096);
-            int discarded$11 = 92;
-            ia.a();
+            ia.a((byte) 92);
             ((md) this).field_Z.b(-(var19.field_A >> 1) + var9, var10 - var19.field_B, 256);
             return;
           }
         }
     }
 
-    final static void a(rh param0) {
+    final static void a(rh param0, boolean param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -380,8 +374,7 @@ final class md extends db {
         try {
           L0: {
             de.field_b.a(22125, (fa) (Object) param0);
-            int discarded$2 = 3;
-            sd.a((byte) -52, param0);
+            sd.a((byte) -52, param0, 3);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -480,13 +473,12 @@ final class md extends db {
         return stackIn_3_0 != 0;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_V = null;
     }
 
     md(ml param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (eb) (Object) ih.a());
-        int discarded$0 = 45;
+        super(param1, (eb) (Object) ih.a((byte) 45));
         try {
             ((md) this).field_ab = param1;
             ((md) this).field_W = param0;

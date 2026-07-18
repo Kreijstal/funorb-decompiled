@@ -41,16 +41,13 @@ final class ei extends qf {
                     break L2;
                   }
                 }
-                int discarded$40 = 73;
-                pb.a(tj.a(), v.field_q, var3_int != 0, false, kh.a((byte) -85));
+                pb.a(tj.a((byte) 73), v.field_q, var3_int != 0, false, kh.a((byte) -85));
                 break L1;
               } else {
                 if (wj.f(7426)) {
                   if (hj.field_a == 0) {
-                    int discarded$41 = -102;
-                    ue.a(param0, false);
-                    int discarded$42 = 0;
-                    i.a(0, (byte) 42, param2);
+                    ue.a(param0, false, (byte) -102);
+                    i.a(0, (byte) 42, param2, 0);
                     break L1;
                   } else {
                     fc.a(true, param2);
@@ -59,8 +56,7 @@ final class ei extends qf {
                 } else {
                   vb.c();
                   eh.a(240, 320, -51);
-                  int discarded$43 = 0;
-                  i.a(0, (byte) 51, param2);
+                  i.a(0, (byte) 51, param2, 0);
                   break L1;
                 }
               }

@@ -72,8 +72,7 @@ final class vl extends br {
                     if (var5 >= var3_int) {
                       break L3;
                     } else {
-                      int discarded$5 = 85;
-                      if (!vh.a(param0.charAt(var5))) {
+                      if (!vh.a(param0.charAt(var5), (byte) 85)) {
                         break L3;
                       } else {
                         var5++;
@@ -107,7 +106,7 @@ final class vl extends br {
                   L4: while (true) {
                     var8 = param0.indexOf("<%", var5);
                     if (var8 < 0) {
-                      StringBuilder discarded$6 = var6.append(param0.substring(var7));
+                      StringBuilder discarded$3 = var6.append(param0.substring(var7));
                       stackOut_26_0 = var6.toString();
                       stackIn_27_0 = stackOut_26_0;
                       break L0;
@@ -118,8 +117,7 @@ final class vl extends br {
                           if (var3_int <= var5) {
                             break L6;
                           } else {
-                            int discarded$7 = 85;
-                            if (!vh.a(param0.charAt(var5))) {
+                            if (!vh.a(param0.charAt(var5), (byte) 85)) {
                               break L6;
                             } else {
                               var5++;
@@ -139,9 +137,9 @@ final class vl extends br {
                             } else {
                               var5++;
                               var10 = md.a((CharSequence) (Object) var9, param2 ^ -9157);
-                              StringBuilder discarded$8 = var6.append(param0.substring(var7, var8));
+                              StringBuilder discarded$4 = var6.append(param0.substring(var7, var8));
                               var7 = var5;
-                              StringBuilder discarded$9 = var6.append(param1[var10]);
+                              StringBuilder discarded$5 = var6.append(param1[var10]);
                               continue L4;
                             }
                           }
@@ -324,7 +322,7 @@ final class vl extends br {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_k = null;
         field_f = null;

@@ -9,11 +9,11 @@ final class nm {
     static int field_b;
     static String field_c;
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return 250 < kf.field_e;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
     }
@@ -30,7 +30,7 @@ final class nm {
         dh.field_o = null;
     }
 
-    final static boolean a(java.applet.Applet param0) {
+    final static boolean a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Throwable var2_ref = null;

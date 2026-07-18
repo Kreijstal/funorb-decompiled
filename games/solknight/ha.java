@@ -65,8 +65,7 @@ final class ha {
         try {
           L0: {
             L1: {
-              int discarded$5 = 6;
-              var17 = new gb(jh.a(param1));
+              var17 = new gb(jh.a(param1, 6));
               var4 = var17.j(255);
               if (5 > var4) {
                 break L1;
@@ -128,9 +127,9 @@ final class ha {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$6 = var8 + var17.e(6715);
-                            var8 = dupTemp$6;
-                            ((ha) this).field_f[var10] = dupTemp$6;
+                            int dupTemp$4 = var8 + var17.e(6715);
+                            var8 = dupTemp$4;
+                            ((ha) this).field_f[var10] = dupTemp$4;
                             if (~var9 > ~((ha) this).field_f[var10]) {
                               var9 = ((ha) this).field_f[var10];
                               break L8;
@@ -149,9 +148,9 @@ final class ha {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$7 = var8 + var17.i(-126);
-                            var8 = dupTemp$7;
-                            ((ha) this).field_f[var10] = dupTemp$7;
+                            int dupTemp$5 = var8 + var17.i(-126);
+                            var8 = dupTemp$5;
+                            ((ha) this).field_f[var10] = dupTemp$5;
                             if (var9 >= ((ha) this).field_f[var10]) {
                               break L10;
                             } else {
@@ -261,10 +260,10 @@ final class ha {
                                           continue L21;
                                         } else {
                                           L24: {
-                                            int dupTemp$8 = var8 + var17.i(-118);
-                                            var8 = dupTemp$8;
-                                            ((ha) this).field_a[var11][var14] = dupTemp$8;
-                                            var15 = dupTemp$8;
+                                            int dupTemp$6 = var8 + var17.i(-118);
+                                            var8 = dupTemp$6;
+                                            ((ha) this).field_a[var11][var14] = dupTemp$6;
+                                            var15 = dupTemp$6;
                                             if (~var13 > ~var15) {
                                               var13 = var15;
                                               break L24;
@@ -314,10 +313,10 @@ final class ha {
                                           continue L26;
                                         } else {
                                           L29: {
-                                            int dupTemp$9 = var8 + var17.e(6715);
-                                            var8 = dupTemp$9;
-                                            ((ha) this).field_a[var11][var14] = dupTemp$9;
-                                            var15 = dupTemp$9;
+                                            int dupTemp$7 = var8 + var17.e(6715);
+                                            var8 = dupTemp$7;
+                                            ((ha) this).field_a[var11][var14] = dupTemp$7;
+                                            var15 = dupTemp$7;
                                             if (~var13 > ~var15) {
                                               var13 = var15;
                                               break L29;
@@ -454,7 +453,7 @@ final class ha {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
         field_p = null;
     }

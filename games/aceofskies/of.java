@@ -8,7 +8,7 @@ final class of {
         throw new IllegalStateException();
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         return sd.field_h;
     }
 

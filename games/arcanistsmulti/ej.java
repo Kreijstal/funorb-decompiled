@@ -209,7 +209,7 @@ class ej extends ag {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_Q = null;
         field_H = null;
         field_R = null;

@@ -5,7 +5,7 @@ final class sj {
     static int[] field_b;
     static String field_a;
 
-    final static String a() {
+    final static String a(byte param0) {
         return "Hi!";
     }
 

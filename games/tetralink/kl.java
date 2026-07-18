@@ -35,14 +35,13 @@ final class kl extends java.awt.Canvas implements java.awt.event.FocusListener {
                 Object var4 = null;
                 ((kl) this).paint((java.awt.Graphics) null);
             }
-            int discarded$0 = 0;
-            r.a(param1, ((kl) this).field_d);
+            r.a(param1, ((kl) this).field_d, 0);
         } catch (RuntimeException runtimeException) {
             throw oi.a((Throwable) (Object) runtimeException, "kl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_f = null;
         field_g = null;

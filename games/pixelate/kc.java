@@ -14,7 +14,7 @@ final class kc extends mg {
     private String field_o;
     static String field_m;
 
-    public static void f() {
+    public static void f(int param0) {
         field_s = null;
         field_u = null;
         field_m = null;
@@ -113,7 +113,7 @@ final class kc extends mg {
         }
     }
 
-    final static ak e() {
+    final static ak e(int param0) {
         return ae.field_c.field_Fb;
     }
 
@@ -151,8 +151,7 @@ final class kc extends mg {
               if (((kc) this).field_t.a(param0, param1) != sk.field_a) {
                 L1: {
                   if (!param0.equals((Object) (Object) ((kc) this).field_o)) {
-                    int discarded$2 = -99;
-                    var3 = rn.a(param0);
+                    var3 = rn.a(param0, (byte) -99);
                     if (!var3.d(121)) {
                       stackOut_10_0 = tg.field_j;
                       stackIn_11_0 = stackOut_10_0;

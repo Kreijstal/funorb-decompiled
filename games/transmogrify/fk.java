@@ -33,7 +33,7 @@ final class fk extends lj {
         return -1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 1;
         field_F = null;
         field_D = null;

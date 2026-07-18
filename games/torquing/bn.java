@@ -20,14 +20,14 @@ abstract class bn {
     final static bm a(int param0, int param1, int param2, byte param3, int param4) {
         bm var5 = null;
         int var6 = 0;
-        bm var7 = null;
+        bm var8 = null;
         var6 = Torquing.field_u;
         var5 = (bm) (Object) gl.field_d.b(0);
         L0: while (true) {
           if (var5 == null) {
-            var7 = new bm();
-            var5 = var7;
-            var7.field_q = 10;
+            var8 = new bm();
+            var5 = var8;
+            var8.field_q = 10;
             var5.field_o = 1;
             var5.field_s = 11;
             gl.field_d.a((byte) 54, (q) (Object) var5);
@@ -51,7 +51,7 @@ abstract class bn {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_1_0 = false;

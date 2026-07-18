@@ -188,7 +188,7 @@ final class br extends mh {
         this((mh) (Object) param0, param0.field_Tb, param0.field_Pb, param0.field_ec, param0.field_Vb, param0.field_Qb, param0.field_Yb, param0.field_Sb, param0.field_Zb);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Ub = null;
         field_bc = null;
         field_Rb = null;

@@ -64,7 +64,7 @@ final class w implements Iterator {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((w) this).field_c = 1;
         ((w) this).field_d = ((w) this).field_b.field_d[0].field_b;
         ((w) this).field_e = null;
@@ -308,7 +308,7 @@ final class w implements Iterator {
         return param1.k(1, 1522829539) == 1;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
     }
 
@@ -316,8 +316,7 @@ final class w implements Iterator {
         ((w) this).field_e = null;
         try {
             ((w) this).field_b = param0;
-            int discarded$0 = -75;
-            this.a();
+            this.a((byte) -75);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "w.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

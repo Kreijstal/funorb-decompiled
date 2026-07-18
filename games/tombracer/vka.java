@@ -161,7 +161,7 @@ final class vka extends kna {
         return 3;
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_H = null;
         field_I = null;
     }

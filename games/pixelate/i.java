@@ -370,377 +370,136 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
         int var11 = 0;
         var11 = Pixelate.field_H ? 1 : 0;
         if (!param4) {
-          L0: {
-            if (ni.field_q != t.field_j) {
-              break L0;
-            } else {
-              if (t.field_d != wg.field_b) {
+          if (ni.field_q == t.field_j) {
+            L0: {
+              if (t.field_d == wg.field_b) {
                 break L0;
               } else {
-                if (param4) {
-                  L1: {
-                    ho.field_c = le.field_c;
-                    pj.a((byte) 111, param4);
-                    if (param6 == -28362) {
-                      break L1;
+                if (qa.field_f.field_i != t.field_d) {
+                  break L0;
+                } else {
+                  if (qa.field_f.field_a != t.field_j) {
+                    break L0;
+                  } else {
+                    if (io.field_c != null) {
+                      hn.a((byte) 32, false);
+                      break L0;
                     } else {
-                      field_m = null;
-                      break L1;
+                      if (bn.field_S != null) {
+                        hn.a((byte) 32, true);
+                        break L0;
+                      } else {
+                        we.b(false);
+                        break L0;
+                      }
                     }
                   }
-                  L2: {
-                    if (0 >= oo.field_b) {
-                      break L2;
+                }
+              }
+            }
+            if (param4) {
+              L1: {
+                ho.field_c = le.field_c;
+                pj.a((byte) 111, param4);
+                if (param6 == -28362) {
+                  break L1;
+                } else {
+                  field_m = null;
+                  break L1;
+                }
+              }
+              L2: {
+                if (0 >= oo.field_b) {
+                  break L2;
+                } else {
+                  jh.a(2, param0, param7, param4);
+                  break L2;
+                }
+              }
+              L3: {
+                nk.field_e.field_Bb = 1;
+                nk.field_e.field_C = kj.field_l.field_C;
+                if (vn.field_g <= 0) {
+                  break L3;
+                } else {
+                  ic.a(param0, param7, 3, param4);
+                  break L3;
+                }
+              }
+              L4: {
+                if (h.field_W > 0) {
+                  no.a(param1, param6 + 28363, param0, param4, param7);
+                  break L4;
+                } else {
+                  break L4;
+                }
+              }
+              L5: {
+                L6: {
+                  if (!bm.field_o) {
+                    break L6;
+                  } else {
+                    if (io.field_c.field_ec > io.field_c.field_mc) {
+                      break L6;
                     } else {
-                      jh.a(2, param0, param7, param4);
-                      break L2;
+                      jm.field_b.field_Ib.field_cb = fo.field_m;
+                      oc.field_O.field_rb = false;
+                      wd.a(jm.field_b.field_Fb, false);
+                      break L5;
                     }
                   }
-                  L3: {
-                    nk.field_e.field_Bb = 1;
-                    nk.field_e.field_C = kj.field_l.field_C;
-                    if (vn.field_g <= 0) {
-                      break L3;
-                    } else {
-                      ic.a(param0, param7, 3, param4);
-                      break L3;
-                    }
+                }
+                oc.field_O.field_rb = true;
+                jm.field_b.field_Ib.field_cb = null;
+                la.a(70, param0, jm.field_b, param8, param3);
+                break L5;
+              }
+              Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
+              la.a(58, param0, ae.field_c, param8, param3);
+              rb.field_o = rb.field_o + 1;
+              return;
+            } else {
+              ho.field_c = (-640 + ni.field_q) / 2;
+              pj.a((byte) 111, param4);
+              if (param6 == -28362) {
+                L7: {
+                  if (0 >= oo.field_b) {
+                    break L7;
+                  } else {
+                    jh.a(2, param0, param7, param4);
+                    break L7;
                   }
-                  L4: {
+                }
+                nk.field_e.field_Bb = 1;
+                nk.field_e.field_C = kj.field_l.field_C;
+                if (vn.field_g <= 0) {
+                  L8: {
                     if (h.field_W > 0) {
                       no.a(param1, param6 + 28363, param0, param4, param7);
-                      break L4;
+                      break L8;
                     } else {
-                      break L4;
+                      break L8;
                     }
                   }
-                  L5: {
-                    L6: {
-                      if (!bm.field_o) {
-                        break L6;
-                      } else {
-                        if (io.field_c.field_ec > io.field_c.field_mc) {
-                          break L6;
-                        } else {
-                          jm.field_b.field_Ib.field_cb = fo.field_m;
-                          oc.field_O.field_rb = false;
-                          int discarded$14 = 0;
-                          wd.a(jm.field_b.field_Fb);
-                          break L5;
-                        }
-                      }
-                    }
-                    oc.field_O.field_rb = true;
-                    jm.field_b.field_Ib.field_cb = null;
-                    la.a(70, param0, jm.field_b, param8, param3);
-                    break L5;
-                  }
-                  Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
-                  la.a(58, param0, ae.field_c, param8, param3);
-                  rb.field_o = rb.field_o + 1;
-                  return;
-                } else {
-                  ho.field_c = (-640 + ni.field_q) / 2;
-                  pj.a((byte) 111, param4);
-                  if (param6 == -28362) {
-                    if (0 >= oo.field_b) {
-                      nk.field_e.field_Bb = 1;
-                      nk.field_e.field_C = kj.field_l.field_C;
-                      if (vn.field_g <= 0) {
-                        L7: {
-                          if (h.field_W > 0) {
-                            no.a(param1, param6 + 28363, param0, param4, param7);
-                            break L7;
-                          } else {
-                            break L7;
-                          }
-                        }
-                        if (bm.field_o) {
-                          if (io.field_c.field_ec <= io.field_c.field_mc) {
-                            jm.field_b.field_Ib.field_cb = fo.field_m;
-                            oc.field_O.field_rb = false;
-                            int discarded$15 = 0;
-                            wd.a(jm.field_b.field_Fb);
-                            Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
-                            la.a(58, param0, ae.field_c, param8, param3);
-                            rb.field_o = rb.field_o + 1;
-                            return;
-                          } else {
-                            oc.field_O.field_rb = true;
-                            jm.field_b.field_Ib.field_cb = null;
-                            la.a(70, param0, jm.field_b, param8, param3);
-                            Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
-                            la.a(58, param0, ae.field_c, param8, param3);
-                            rb.field_o = rb.field_o + 1;
-                            return;
-                          }
-                        } else {
-                          oc.field_O.field_rb = true;
-                          jm.field_b.field_Ib.field_cb = null;
-                          la.a(70, param0, jm.field_b, param8, param3);
-                          Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
-                          la.a(58, param0, ae.field_c, param8, param3);
-                          rb.field_o = rb.field_o + 1;
-                          return;
-                        }
-                      } else {
-                        L8: {
-                          ic.a(param0, param7, 3, param4);
-                          if (h.field_W > 0) {
-                            no.a(param1, param6 + 28363, param0, param4, param7);
-                            break L8;
-                          } else {
-                            break L8;
-                          }
-                        }
-                        L9: {
-                          L10: {
-                            if (!bm.field_o) {
-                              break L10;
-                            } else {
-                              if (io.field_c.field_ec > io.field_c.field_mc) {
-                                break L10;
-                              } else {
-                                jm.field_b.field_Ib.field_cb = fo.field_m;
-                                oc.field_O.field_rb = false;
-                                int discarded$16 = 0;
-                                wd.a(jm.field_b.field_Fb);
-                                break L9;
-                              }
-                            }
-                          }
-                          oc.field_O.field_rb = true;
-                          jm.field_b.field_Ib.field_cb = null;
-                          la.a(70, param0, jm.field_b, param8, param3);
-                          break L9;
-                        }
-                        Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
-                        la.a(58, param0, ae.field_c, param8, param3);
-                        rb.field_o = rb.field_o + 1;
-                        return;
-                      }
+                  if (bm.field_o) {
+                    if (io.field_c.field_ec <= io.field_c.field_mc) {
+                      jm.field_b.field_Ib.field_cb = fo.field_m;
+                      oc.field_O.field_rb = false;
+                      wd.a(jm.field_b.field_Fb, false);
+                      Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
+                      la.a(58, param0, ae.field_c, param8, param3);
+                      rb.field_o = rb.field_o + 1;
+                      return;
                     } else {
-                      L11: {
-                        jh.a(2, param0, param7, param4);
-                        nk.field_e.field_Bb = 1;
-                        nk.field_e.field_C = kj.field_l.field_C;
-                        if (vn.field_g <= 0) {
-                          break L11;
-                        } else {
-                          ic.a(param0, param7, 3, param4);
-                          break L11;
-                        }
-                      }
-                      L12: {
-                        if (h.field_W > 0) {
-                          no.a(param1, param6 + 28363, param0, param4, param7);
-                          break L12;
-                        } else {
-                          break L12;
-                        }
-                      }
-                      L13: {
-                        L14: {
-                          if (!bm.field_o) {
-                            break L14;
-                          } else {
-                            if (io.field_c.field_ec > io.field_c.field_mc) {
-                              break L14;
-                            } else {
-                              jm.field_b.field_Ib.field_cb = fo.field_m;
-                              oc.field_O.field_rb = false;
-                              int discarded$17 = 0;
-                              wd.a(jm.field_b.field_Fb);
-                              break L13;
-                            }
-                          }
-                        }
-                        oc.field_O.field_rb = true;
-                        jm.field_b.field_Ib.field_cb = null;
-                        la.a(70, param0, jm.field_b, param8, param3);
-                        break L13;
-                      }
+                      oc.field_O.field_rb = true;
+                      jm.field_b.field_Ib.field_cb = null;
+                      la.a(70, param0, jm.field_b, param8, param3);
                       Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
                       la.a(58, param0, ae.field_c, param8, param3);
                       rb.field_o = rb.field_o + 1;
                       return;
                     }
                   } else {
-                    L15: {
-                      field_m = null;
-                      if (0 >= oo.field_b) {
-                        break L15;
-                      } else {
-                        jh.a(2, param0, param7, param4);
-                        break L15;
-                      }
-                    }
-                    L16: {
-                      nk.field_e.field_Bb = 1;
-                      nk.field_e.field_C = kj.field_l.field_C;
-                      if (vn.field_g <= 0) {
-                        break L16;
-                      } else {
-                        ic.a(param0, param7, 3, param4);
-                        break L16;
-                      }
-                    }
-                    L17: {
-                      if (h.field_W > 0) {
-                        no.a(param1, param6 + 28363, param0, param4, param7);
-                        break L17;
-                      } else {
-                        break L17;
-                      }
-                    }
-                    L18: {
-                      L19: {
-                        if (!bm.field_o) {
-                          break L19;
-                        } else {
-                          if (io.field_c.field_ec > io.field_c.field_mc) {
-                            break L19;
-                          } else {
-                            jm.field_b.field_Ib.field_cb = fo.field_m;
-                            oc.field_O.field_rb = false;
-                            int discarded$18 = 0;
-                            wd.a(jm.field_b.field_Fb);
-                            break L18;
-                          }
-                        }
-                      }
-                      oc.field_O.field_rb = true;
-                      jm.field_b.field_Ib.field_cb = null;
-                      la.a(70, param0, jm.field_b, param8, param3);
-                      break L18;
-                    }
-                    Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
-                    la.a(58, param0, ae.field_c, param8, param3);
-                    rb.field_o = rb.field_o + 1;
-                    return;
-                  }
-                }
-              }
-            }
-          }
-          L20: {
-            if (qa.field_f.field_i != t.field_d) {
-              break L20;
-            } else {
-              if (qa.field_f.field_a != t.field_j) {
-                break L20;
-              } else {
-                if (io.field_c != null) {
-                  hn.a((byte) 32, false);
-                  break L20;
-                } else {
-                  if (bn.field_S != null) {
-                    hn.a((byte) 32, true);
-                    break L20;
-                  } else {
-                    we.b(false);
-                    break L20;
-                  }
-                }
-              }
-            }
-          }
-          if (param4) {
-            L21: {
-              ho.field_c = le.field_c;
-              pj.a((byte) 111, param4);
-              if (param6 == -28362) {
-                break L21;
-              } else {
-                field_m = null;
-                break L21;
-              }
-            }
-            L22: {
-              if (0 >= oo.field_b) {
-                break L22;
-              } else {
-                jh.a(2, param0, param7, param4);
-                break L22;
-              }
-            }
-            L23: {
-              nk.field_e.field_Bb = 1;
-              nk.field_e.field_C = kj.field_l.field_C;
-              if (vn.field_g <= 0) {
-                break L23;
-              } else {
-                ic.a(param0, param7, 3, param4);
-                break L23;
-              }
-            }
-            L24: {
-              if (h.field_W > 0) {
-                no.a(param1, param6 + 28363, param0, param4, param7);
-                break L24;
-              } else {
-                break L24;
-              }
-            }
-            L25: {
-              L26: {
-                if (!bm.field_o) {
-                  break L26;
-                } else {
-                  if (io.field_c.field_ec > io.field_c.field_mc) {
-                    break L26;
-                  } else {
-                    jm.field_b.field_Ib.field_cb = fo.field_m;
-                    oc.field_O.field_rb = false;
-                    int discarded$19 = 0;
-                    wd.a(jm.field_b.field_Fb);
-                    break L25;
-                  }
-                }
-              }
-              oc.field_O.field_rb = true;
-              jm.field_b.field_Ib.field_cb = null;
-              la.a(70, param0, jm.field_b, param8, param3);
-              break L25;
-            }
-            Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
-            la.a(58, param0, ae.field_c, param8, param3);
-            rb.field_o = rb.field_o + 1;
-            return;
-          } else {
-            ho.field_c = (-640 + ni.field_q) / 2;
-            pj.a((byte) 111, param4);
-            if (param6 == -28362) {
-              L27: {
-                if (0 >= oo.field_b) {
-                  break L27;
-                } else {
-                  jh.a(2, param0, param7, param4);
-                  break L27;
-                }
-              }
-              nk.field_e.field_Bb = 1;
-              nk.field_e.field_C = kj.field_l.field_C;
-              if (vn.field_g <= 0) {
-                L28: {
-                  if (h.field_W > 0) {
-                    no.a(param1, param6 + 28363, param0, param4, param7);
-                    break L28;
-                  } else {
-                    break L28;
-                  }
-                }
-                if (bm.field_o) {
-                  if (io.field_c.field_ec <= io.field_c.field_mc) {
-                    jm.field_b.field_Ib.field_cb = fo.field_m;
-                    oc.field_O.field_rb = false;
-                    int discarded$20 = 0;
-                    wd.a(jm.field_b.field_Fb);
-                    Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
-                    la.a(58, param0, ae.field_c, param8, param3);
-                    rb.field_o = rb.field_o + 1;
-                    return;
-                  } else {
                     oc.field_O.field_rb = true;
                     jm.field_b.field_Ib.field_cb = null;
                     la.a(70, param0, jm.field_b, param8, param3);
@@ -750,103 +509,354 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                     return;
                   }
                 } else {
-                  oc.field_O.field_rb = true;
-                  jm.field_b.field_Ib.field_cb = null;
-                  la.a(70, param0, jm.field_b, param8, param3);
+                  L9: {
+                    ic.a(param0, param7, 3, param4);
+                    if (h.field_W > 0) {
+                      no.a(param1, param6 + 28363, param0, param4, param7);
+                      break L9;
+                    } else {
+                      break L9;
+                    }
+                  }
+                  L10: {
+                    L11: {
+                      if (!bm.field_o) {
+                        break L11;
+                      } else {
+                        if (io.field_c.field_ec > io.field_c.field_mc) {
+                          break L11;
+                        } else {
+                          jm.field_b.field_Ib.field_cb = fo.field_m;
+                          oc.field_O.field_rb = false;
+                          wd.a(jm.field_b.field_Fb, false);
+                          break L10;
+                        }
+                      }
+                    }
+                    oc.field_O.field_rb = true;
+                    jm.field_b.field_Ib.field_cb = null;
+                    la.a(70, param0, jm.field_b, param8, param3);
+                    break L10;
+                  }
                   Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
                   la.a(58, param0, ae.field_c, param8, param3);
                   rb.field_o = rb.field_o + 1;
                   return;
                 }
               } else {
-                L29: {
-                  ic.a(param0, param7, 3, param4);
-                  if (h.field_W > 0) {
-                    no.a(param1, param6 + 28363, param0, param4, param7);
-                    break L29;
+                L12: {
+                  field_m = null;
+                  if (0 >= oo.field_b) {
+                    break L12;
                   } else {
-                    break L29;
+                    jh.a(2, param0, param7, param4);
+                    break L12;
                   }
                 }
-                L30: {
-                  L31: {
+                L13: {
+                  nk.field_e.field_Bb = 1;
+                  nk.field_e.field_C = kj.field_l.field_C;
+                  if (vn.field_g <= 0) {
+                    break L13;
+                  } else {
+                    ic.a(param0, param7, 3, param4);
+                    break L13;
+                  }
+                }
+                L14: {
+                  if (h.field_W > 0) {
+                    no.a(param1, param6 + 28363, param0, param4, param7);
+                    break L14;
+                  } else {
+                    break L14;
+                  }
+                }
+                L15: {
+                  if (!bm.field_o) {
+                    break L15;
+                  } else {
+                    if (io.field_c.field_ec > io.field_c.field_mc) {
+                      break L15;
+                    } else {
+                      jm.field_b.field_Ib.field_cb = fo.field_m;
+                      oc.field_O.field_rb = false;
+                      wd.a(jm.field_b.field_Fb, false);
+                      Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
+                      la.a(58, param0, ae.field_c, param8, param3);
+                      rb.field_o = rb.field_o + 1;
+                      return;
+                    }
+                  }
+                }
+                oc.field_O.field_rb = true;
+                jm.field_b.field_Ib.field_cb = null;
+                la.a(70, param0, jm.field_b, param8, param3);
+                Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
+                la.a(58, param0, ae.field_c, param8, param3);
+                rb.field_o = rb.field_o + 1;
+                return;
+              }
+            }
+          } else {
+            L16: {
+              if (qa.field_f.field_i != t.field_d) {
+                break L16;
+              } else {
+                if (qa.field_f.field_a != t.field_j) {
+                  break L16;
+                } else {
+                  if (io.field_c != null) {
+                    hn.a((byte) 32, false);
+                    break L16;
+                  } else {
+                    if (bn.field_S != null) {
+                      hn.a((byte) 32, true);
+                      break L16;
+                    } else {
+                      we.b(false);
+                      break L16;
+                    }
+                  }
+                }
+              }
+            }
+            if (param4) {
+              L17: {
+                ho.field_c = le.field_c;
+                pj.a((byte) 111, param4);
+                if (param6 == -28362) {
+                  break L17;
+                } else {
+                  field_m = null;
+                  break L17;
+                }
+              }
+              L18: {
+                if (0 >= oo.field_b) {
+                  break L18;
+                } else {
+                  jh.a(2, param0, param7, param4);
+                  break L18;
+                }
+              }
+              L19: {
+                nk.field_e.field_Bb = 1;
+                nk.field_e.field_C = kj.field_l.field_C;
+                if (vn.field_g <= 0) {
+                  break L19;
+                } else {
+                  ic.a(param0, param7, 3, param4);
+                  break L19;
+                }
+              }
+              L20: {
+                if (h.field_W > 0) {
+                  no.a(param1, param6 + 28363, param0, param4, param7);
+                  break L20;
+                } else {
+                  break L20;
+                }
+              }
+              L21: {
+                L22: {
+                  if (!bm.field_o) {
+                    break L22;
+                  } else {
+                    if (io.field_c.field_ec > io.field_c.field_mc) {
+                      break L22;
+                    } else {
+                      jm.field_b.field_Ib.field_cb = fo.field_m;
+                      oc.field_O.field_rb = false;
+                      wd.a(jm.field_b.field_Fb, false);
+                      break L21;
+                    }
+                  }
+                }
+                oc.field_O.field_rb = true;
+                jm.field_b.field_Ib.field_cb = null;
+                la.a(70, param0, jm.field_b, param8, param3);
+                break L21;
+              }
+              Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
+              la.a(58, param0, ae.field_c, param8, param3);
+              rb.field_o = rb.field_o + 1;
+              return;
+            } else {
+              ho.field_c = (-640 + ni.field_q) / 2;
+              pj.a((byte) 111, param4);
+              if (param6 == -28362) {
+                if (0 >= oo.field_b) {
+                  nk.field_e.field_Bb = 1;
+                  nk.field_e.field_C = kj.field_l.field_C;
+                  if (vn.field_g <= 0) {
+                    L23: {
+                      if (h.field_W > 0) {
+                        no.a(param1, param6 + 28363, param0, param4, param7);
+                        break L23;
+                      } else {
+                        break L23;
+                      }
+                    }
+                    if (bm.field_o) {
+                      if (io.field_c.field_ec <= io.field_c.field_mc) {
+                        jm.field_b.field_Ib.field_cb = fo.field_m;
+                        oc.field_O.field_rb = false;
+                        wd.a(jm.field_b.field_Fb, false);
+                        Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
+                        la.a(58, param0, ae.field_c, param8, param3);
+                        rb.field_o = rb.field_o + 1;
+                        return;
+                      } else {
+                        oc.field_O.field_rb = true;
+                        jm.field_b.field_Ib.field_cb = null;
+                        la.a(70, param0, jm.field_b, param8, param3);
+                        Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
+                        la.a(58, param0, ae.field_c, param8, param3);
+                        rb.field_o = rb.field_o + 1;
+                        return;
+                      }
+                    } else {
+                      oc.field_O.field_rb = true;
+                      jm.field_b.field_Ib.field_cb = null;
+                      la.a(70, param0, jm.field_b, param8, param3);
+                      Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
+                      la.a(58, param0, ae.field_c, param8, param3);
+                      rb.field_o = rb.field_o + 1;
+                      return;
+                    }
+                  } else {
+                    L24: {
+                      ic.a(param0, param7, 3, param4);
+                      if (h.field_W > 0) {
+                        no.a(param1, param6 + 28363, param0, param4, param7);
+                        break L24;
+                      } else {
+                        break L24;
+                      }
+                    }
+                    L25: {
+                      L26: {
+                        if (!bm.field_o) {
+                          break L26;
+                        } else {
+                          if (io.field_c.field_ec > io.field_c.field_mc) {
+                            break L26;
+                          } else {
+                            jm.field_b.field_Ib.field_cb = fo.field_m;
+                            oc.field_O.field_rb = false;
+                            wd.a(jm.field_b.field_Fb, false);
+                            break L25;
+                          }
+                        }
+                      }
+                      oc.field_O.field_rb = true;
+                      jm.field_b.field_Ib.field_cb = null;
+                      la.a(70, param0, jm.field_b, param8, param3);
+                      break L25;
+                    }
+                    Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
+                    la.a(58, param0, ae.field_c, param8, param3);
+                    rb.field_o = rb.field_o + 1;
+                    return;
+                  }
+                } else {
+                  L27: {
+                    jh.a(2, param0, param7, param4);
+                    nk.field_e.field_Bb = 1;
+                    nk.field_e.field_C = kj.field_l.field_C;
+                    if (vn.field_g <= 0) {
+                      break L27;
+                    } else {
+                      ic.a(param0, param7, 3, param4);
+                      break L27;
+                    }
+                  }
+                  L28: {
+                    if (h.field_W > 0) {
+                      no.a(param1, param6 + 28363, param0, param4, param7);
+                      break L28;
+                    } else {
+                      break L28;
+                    }
+                  }
+                  L29: {
+                    L30: {
+                      if (!bm.field_o) {
+                        break L30;
+                      } else {
+                        if (io.field_c.field_ec > io.field_c.field_mc) {
+                          break L30;
+                        } else {
+                          jm.field_b.field_Ib.field_cb = fo.field_m;
+                          oc.field_O.field_rb = false;
+                          wd.a(jm.field_b.field_Fb, false);
+                          break L29;
+                        }
+                      }
+                    }
+                    oc.field_O.field_rb = true;
+                    jm.field_b.field_Ib.field_cb = null;
+                    la.a(70, param0, jm.field_b, param8, param3);
+                    break L29;
+                  }
+                  Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
+                  la.a(58, param0, ae.field_c, param8, param3);
+                  rb.field_o = rb.field_o + 1;
+                  return;
+                }
+              } else {
+                L31: {
+                  field_m = null;
+                  if (0 >= oo.field_b) {
+                    break L31;
+                  } else {
+                    jh.a(2, param0, param7, param4);
+                    break L31;
+                  }
+                }
+                L32: {
+                  nk.field_e.field_Bb = 1;
+                  nk.field_e.field_C = kj.field_l.field_C;
+                  if (vn.field_g <= 0) {
+                    break L32;
+                  } else {
+                    ic.a(param0, param7, 3, param4);
+                    break L32;
+                  }
+                }
+                L33: {
+                  if (h.field_W > 0) {
+                    no.a(param1, param6 + 28363, param0, param4, param7);
+                    break L33;
+                  } else {
+                    break L33;
+                  }
+                }
+                L34: {
+                  L35: {
                     if (!bm.field_o) {
-                      break L31;
+                      break L35;
                     } else {
                       if (io.field_c.field_ec > io.field_c.field_mc) {
-                        break L31;
+                        break L35;
                       } else {
                         jm.field_b.field_Ib.field_cb = fo.field_m;
                         oc.field_O.field_rb = false;
-                        int discarded$21 = 0;
-                        wd.a(jm.field_b.field_Fb);
-                        break L30;
+                        wd.a(jm.field_b.field_Fb, false);
+                        break L34;
                       }
                     }
                   }
                   oc.field_O.field_rb = true;
                   jm.field_b.field_Ib.field_cb = null;
                   la.a(70, param0, jm.field_b, param8, param3);
-                  break L30;
+                  break L34;
                 }
                 Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
                 la.a(58, param0, ae.field_c, param8, param3);
                 rb.field_o = rb.field_o + 1;
                 return;
               }
-            } else {
-              L32: {
-                field_m = null;
-                if (0 >= oo.field_b) {
-                  break L32;
-                } else {
-                  jh.a(2, param0, param7, param4);
-                  break L32;
-                }
-              }
-              L33: {
-                nk.field_e.field_Bb = 1;
-                nk.field_e.field_C = kj.field_l.field_C;
-                if (vn.field_g <= 0) {
-                  break L33;
-                } else {
-                  ic.a(param0, param7, 3, param4);
-                  break L33;
-                }
-              }
-              L34: {
-                if (h.field_W > 0) {
-                  no.a(param1, param6 + 28363, param0, param4, param7);
-                  break L34;
-                } else {
-                  break L34;
-                }
-              }
-              L35: {
-                if (!bm.field_o) {
-                  break L35;
-                } else {
-                  if (io.field_c.field_ec > io.field_c.field_mc) {
-                    break L35;
-                  } else {
-                    jm.field_b.field_Ib.field_cb = fo.field_m;
-                    oc.field_O.field_rb = false;
-                    int discarded$22 = 0;
-                    wd.a(jm.field_b.field_Fb);
-                    Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
-                    la.a(58, param0, ae.field_c, param8, param3);
-                    rb.field_o = rb.field_o + 1;
-                    return;
-                  }
-                }
-              }
-              oc.field_O.field_rb = true;
-              jm.field_b.field_Ib.field_cb = null;
-              la.a(70, param0, jm.field_b, param8, param3);
-              Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
-              la.a(58, param0, ae.field_c, param8, param3);
-              rb.field_o = rb.field_o + 1;
-              return;
             }
           }
         } else {
@@ -897,8 +907,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                   } else {
                     jm.field_b.field_Ib.field_cb = fo.field_m;
                     oc.field_O.field_rb = false;
-                    int discarded$23 = 0;
-                    wd.a(jm.field_b.field_Fb);
+                    wd.a(jm.field_b.field_Fb, false);
                     break L40;
                   }
                 }
@@ -932,8 +941,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                     if (io.field_c.field_ec <= io.field_c.field_mc) {
                       jm.field_b.field_Ib.field_cb = fo.field_m;
                       oc.field_O.field_rb = false;
-                      int discarded$24 = 0;
-                      wd.a(jm.field_b.field_Fb);
+                      wd.a(jm.field_b.field_Fb, false);
                       Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
                       la.a(58, param0, ae.field_c, param8, param3);
                       rb.field_o = rb.field_o + 1;
@@ -976,8 +984,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                         } else {
                           jm.field_b.field_Ib.field_cb = fo.field_m;
                           oc.field_O.field_rb = false;
-                          int discarded$25 = 0;
-                          wd.a(jm.field_b.field_Fb);
+                          wd.a(jm.field_b.field_Fb, false);
                           break L44;
                         }
                       }
@@ -1022,8 +1029,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                       } else {
                         jm.field_b.field_Ib.field_cb = fo.field_m;
                         oc.field_O.field_rb = false;
-                        int discarded$26 = 0;
-                        wd.a(jm.field_b.field_Fb);
+                        wd.a(jm.field_b.field_Fb, false);
                         break L48;
                       }
                     }
@@ -1076,8 +1082,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                     } else {
                       jm.field_b.field_Ib.field_cb = fo.field_m;
                       oc.field_O.field_rb = false;
-                      int discarded$27 = 0;
-                      wd.a(jm.field_b.field_Fb);
+                      wd.a(jm.field_b.field_Fb, false);
                       break L53;
                     }
                   }

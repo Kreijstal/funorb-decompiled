@@ -49,7 +49,7 @@ final class dq {
         return var3;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_e = null;
         field_f = null;
@@ -82,9 +82,7 @@ final class dq {
             L1: {
               if (!param3) {
                 gq.b(bc.field_j[3][0], param0, param5, param1);
-                int discarded$4 = 42;
-                int discarded$5 = 1;
-                fe.c(jc.a(param2), (uh.field_e[3][0] >> 1) - -param0, 20 + (uh.field_e[3][1] >> 1) + param5, 2);
+                fe.c(jc.a(param2, (byte) 42), (uh.field_e[3][0] >> 1) - -param0, 20 + (uh.field_e[3][1] >> 1) + param5, 2, true);
                 break L1;
               } else {
                 no.field_P.field_y = qn.field_l;
@@ -93,9 +91,7 @@ final class dq {
                 ku.field_J.b();
                 qn.b();
                 gq.b(bc.field_j[3][0], 0, 0, param1);
-                int discarded$6 = 42;
-                int discarded$7 = 1;
-                fe.c(jc.a(param2), uh.field_e[3][0] >> 1, 20 + (uh.field_e[3][1] >> 1), 2);
+                fe.c(jc.a(param2, (byte) 42), uh.field_e[3][0] >> 1, 20 + (uh.field_e[3][1] >> 1), 2, true);
                 no.field_P.b();
                 ku.field_J.h(param0, param5);
                 break L1;
@@ -161,8 +157,7 @@ final class dq {
         try {
           L0: {
             if (param0 > 7) {
-              int discarded$2 = 0;
-              stackOut_3_0 = ob.a(10, true, param1);
+              stackOut_3_0 = ob.a(10, true, param1, 0);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

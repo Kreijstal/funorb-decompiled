@@ -43,36 +43,36 @@ final class mqb extends anb implements ntb, utb {
               var5 = (mqb) (Object) param0;
               super.a(param0, -34);
               var4 = 0;
-              if (var5.field_B == var5.field_B) {
+              if (var5.field_B == ((mqb) this).field_B) {
                 break L1;
               } else {
-                System.out.println("int grabbed_object_id has changed. before=" + var5.field_B + ", now=" + var5.field_B);
+                System.out.println("int grabbed_object_id has changed. before=" + var5.field_B + ", now=" + ((mqb) this).field_B);
                 var4 = 1;
                 break L1;
               }
             }
             L2: {
-              if (var5.field_u == var5.field_u) {
+              if (var5.field_u == ((mqb) this).field_u) {
                 break L2;
               } else {
-                System.out.println("int grabbed_component_id has changed. before=" + var5.field_u + ", now=" + var5.field_u);
+                System.out.println("int grabbed_component_id has changed. before=" + var5.field_u + ", now=" + ((mqb) this).field_u);
                 var4 = 1;
                 break L2;
               }
             }
             if (param1 < -19) {
               L3: {
-                if (var5.field_w == var5.field_w) {
+                if (var5.field_w == ((mqb) this).field_w) {
                   break L3;
                 } else {
-                  System.out.println("int grabbed_component_offsetx has changed. before=" + var5.field_w + ", now=" + var5.field_w);
+                  System.out.println("int grabbed_component_offsetx has changed. before=" + var5.field_w + ", now=" + ((mqb) this).field_w);
                   var4 = 1;
                   break L3;
                 }
               }
               L4: {
-                if (var5.field_y != var5.field_y) {
-                  System.out.println("int grabbed_component_offsety has changed. before=" + var5.field_y + ", now=" + var5.field_y);
+                if (((mqb) this).field_y != var5.field_y) {
+                  System.out.println("int grabbed_component_offsety has changed. before=" + var5.field_y + ", now=" + ((mqb) this).field_y);
                   var4 = 1;
                   break L4;
                 } else {
@@ -80,27 +80,27 @@ final class mqb extends anb implements ntb, utb {
                 }
               }
               L5: {
-                if (var5.field_v != var5.field_v) {
+                if (var5.field_v != ((mqb) this).field_v) {
                   var4 = 1;
-                  System.out.println("int fired_from_id has changed. before=" + var5.field_v + ", now=" + var5.field_v);
+                  System.out.println("int fired_from_id has changed. before=" + var5.field_v + ", now=" + ((mqb) this).field_v);
                   break L5;
                 } else {
                   break L5;
                 }
               }
               L6: {
-                if (var5.field_A == var5.field_A) {
+                if (var5.field_A == ((mqb) this).field_A) {
                   break L6;
                 } else {
                   var4 = 1;
-                  System.out.println("int fired_from_player has changed. before=" + var5.field_A + ", now=" + var5.field_A);
+                  System.out.println("int fired_from_player has changed. before=" + var5.field_A + ", now=" + ((mqb) this).field_A);
                   break L6;
                 }
               }
               L7: {
-                if (var5.field_z != var5.field_z) {
+                if (var5.field_z != ((mqb) this).field_z) {
                   var4 = 1;
-                  System.out.println("boolean retracting has changed. before=" + var5.field_z + ", now=" + var5.field_z);
+                  System.out.println("boolean retracting has changed. before=" + var5.field_z + ", now=" + ((mqb) this).field_z);
                   break L7;
                 } else {
                   break L7;
@@ -264,7 +264,7 @@ final class mqb extends anb implements ntb, utb {
         return ((mqb) this).field_w;
     }
 
-    public static void j() {
+    public static void j(byte param0) {
         field_x = null;
         field_C = null;
     }
@@ -334,13 +334,13 @@ final class mqb extends anb implements ntb, utb {
             return;
         }
         try {
-            var4.field_B = var4.field_B;
-            var4.field_u = var4.field_u;
-            var4.field_A = var4.field_A;
-            var4.field_w = var4.field_w;
-            var4.field_v = var4.field_v;
-            var4.field_z = var4.field_z;
-            var4.field_y = var4.field_y;
+            var4.field_B = ((mqb) this).field_B;
+            var4.field_u = ((mqb) this).field_u;
+            var4.field_A = ((mqb) this).field_A;
+            var4.field_w = ((mqb) this).field_w;
+            var4.field_v = ((mqb) this).field_v;
+            var4.field_z = ((mqb) this).field_z;
+            var4.field_y = ((mqb) this).field_y;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "mqb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -388,26 +388,26 @@ final class mqb extends anb implements ntb, utb {
                 if (super.a((byte) 111, param1)) {
                   break L2;
                 } else {
-                  if (var5.field_B != var5.field_B) {
+                  if (((mqb) this).field_B != var5.field_B) {
                     break L2;
                   } else {
-                    if (var5.field_u != var5.field_u) {
+                    if (var5.field_u != ((mqb) this).field_u) {
                       break L2;
                     } else {
-                      if (var5.field_w != var5.field_w) {
+                      if (var5.field_w != ((mqb) this).field_w) {
                         break L2;
                       } else {
-                        if (var5.field_y != var5.field_y) {
+                        if (((mqb) this).field_y != var5.field_y) {
                           break L2;
                         } else {
-                          if (var5.field_v != var5.field_v) {
+                          if (var5.field_v != ((mqb) this).field_v) {
                             break L2;
                           } else {
-                            if (var5.field_A != var5.field_A) {
+                            if (var5.field_A != ((mqb) this).field_A) {
                               break L2;
                             } else {
                               L3: {
-                                if (var5.field_z) {
+                                if (((mqb) this).field_z) {
                                   stackOut_9_0 = 0;
                                   stackIn_10_0 = stackOut_9_0;
                                   break L3;

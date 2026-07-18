@@ -22,7 +22,7 @@ final class oo extends tf {
     static vg[] field_u;
     static qb field_t;
 
-    private final void a(wk param0, int param1) {
+    private final void a(wk param0, int param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -212,7 +212,7 @@ final class oo extends tf {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_C = null;
         field_t = null;
         field_r = null;
@@ -240,7 +240,7 @@ final class oo extends tf {
         }
     }
 
-    final static vh d() {
+    final static vh d(int param0) {
         if (!(null != fm.field_c)) {
             fm.field_c = new vh();
             fm.field_c.a((byte) -105, ia.field_c);
@@ -312,8 +312,7 @@ final class oo extends tf {
             L2: while (true) {
               var3_int = param1.e((byte) -98);
               if (0 != var3_int) {
-                int discarded$4 = 127;
-                this.a(param1, var3_int);
+                this.a(param1, var3_int, 127);
                 continue L2;
               } else {
                 break L0;
@@ -357,8 +356,7 @@ final class oo extends tf {
     }
 
     final static void g(int param0) {
-        int discarded$0 = 0;
-        ba.c();
+        ba.c(0);
         ee.a(param0, (byte) 30);
     }
 

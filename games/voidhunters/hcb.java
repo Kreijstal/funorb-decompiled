@@ -6,11 +6,11 @@ final class hcb extends rqa {
     static int field_o;
     static String field_q;
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         rb.field_c = new ij();
     }
 
@@ -18,7 +18,7 @@ final class hcb extends rqa {
         super(param0, param1, param2);
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_7_0 = 0;

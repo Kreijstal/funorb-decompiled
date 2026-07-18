@@ -11,7 +11,7 @@ final class tb extends q {
     int field_m;
     static uh field_l;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         field_l = null;
     }

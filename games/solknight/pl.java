@@ -7,7 +7,7 @@ final class pl {
     static kb field_b;
     static int[] field_c;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -80,7 +80,7 @@ final class pl {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_d = null;

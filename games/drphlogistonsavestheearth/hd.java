@@ -27,8 +27,7 @@ final class hd extends vg {
         }
         ((hd) this).field_N = param1;
         ((hd) this).field_A = param2;
-        int discarded$0 = 2;
-        this.f();
+        this.f(2);
     }
 
     private final nh a(int param0, byte param1, int param2) {
@@ -101,8 +100,7 @@ final class hd extends vg {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        int discarded$0 = 2;
-        this.f();
+        this.f(2);
     }
 
     hd(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -478,7 +476,7 @@ final class hd extends vg {
         }
     }
 
-    private final nh a() {
+    private final nh a(byte param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -502,7 +500,7 @@ final class hd extends vg {
         return var3;
     }
 
-    final static nh[] c() {
+    final static nh[] c(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -519,15 +517,13 @@ final class hd extends vg {
             }
             var1[var2] = new nh(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], var5);
         }
-        int discarded$0 = -21;
-        oc.a();
+        oc.a((byte) -21);
         return var1;
     }
 
-    private final void f() {
+    private final void f(int param0) {
         ((hd) this).field_D = new nh[]{this.a(((hd) this).field_A, (byte) 43, ((hd) this).field_N), this.a(((hd) this).field_K, (byte) 43, ((hd) this).field_G)};
-        int discarded$0 = 101;
-        ((hd) this).field_C = this.a();
+        ((hd) this).field_C = this.a((byte) 101);
         ((hd) this).field_H = ((hd) this).field_C.e();
         ((hd) this).field_F = new nh(((hd) this).field_k >> 1, ((hd) this).field_k);
     }

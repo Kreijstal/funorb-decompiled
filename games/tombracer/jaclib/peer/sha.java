@@ -9,18 +9,15 @@ public final class sha {
     private jaclib.peer.PeerReference b;
 
     public final void b(int param0) {
-        int discarded$6 = 8841;
-        this.a();
+        this.a(8841);
         L0: while (true) {
           if (((jaclib.peer.sha) this).b == null) {
             if (param0 != 14203) {
               ((jaclib.peer.sha) this).c = null;
-              int discarded$7 = 8841;
-              this.a();
+              this.a(8841);
               return;
             } else {
-              int discarded$8 = 8841;
-              this.a();
+              this.a(8841);
               return;
             }
           } else {
@@ -34,11 +31,10 @@ public final class sha {
         if (param0 != -24122) {
             return;
         }
-        int discarded$0 = 8841;
-        this.a();
+        this.a(8841);
     }
 
-    private final void a() {
+    private final void a(int param0) {
         java.lang.ref.Reference var2 = null;
         jaclib.peer.PeerReference var3 = null;
         L0: while (true) {

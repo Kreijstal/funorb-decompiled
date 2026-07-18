@@ -101,7 +101,7 @@ class fg extends jc {
         }
     }
 
-    final static void a(int param0, int param1, int param2, java.awt.Component param3, be param4, boolean param5, lj param6) {
+    final static void a(int param0, int param1, int param2, java.awt.Component param3, be param4, boolean param5, lj param6, boolean param7) {
         try {
             la.a(22050, true, 10);
             cd.field_w = la.a(param4, param3, 0, 22050);
@@ -362,7 +362,7 @@ class fg extends jc {
         t.a(param1, true, true);
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

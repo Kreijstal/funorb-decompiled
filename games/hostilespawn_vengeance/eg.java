@@ -43,8 +43,7 @@ final class eg {
         }
         if (bm.field_c == 0) {
             uf.field_i[4].b(0, 0, ((eg) this).field_y);
-            int discarded$0 = -7068;
-            this.b();
+            this.b(-7068);
             if (0 > ((eg) this).field_z) {
                 return;
             }
@@ -53,8 +52,7 @@ final class eg {
         }
         vg.field_c.a(0, 0, ((eg) this).field_y / 2);
         if (0 > ((eg) this).field_z) {
-            int discarded$1 = -7068;
-            this.b();
+            this.b(-7068);
             return;
         }
         int var2 = -(736 * ((eg) this).field_z / 50) + 480;
@@ -65,9 +63,7 @@ final class eg {
         if (var3 <= 0) {
             return;
         }
-        int discarded$2 = 640;
-        int discarded$3 = 32101;
-        hj.a(0, var2, 0, 256, -var2 + var3);
+        hj.a(0, var2, 0, 256, -var2 + var3, 32101, 640);
     }
 
     final void a(byte param0) {
@@ -525,7 +521,7 @@ final class eg {
         return stackIn_5_0 != 0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_l = null;
         field_v = null;
         field_j = null;
@@ -635,7 +631,7 @@ final class eg {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

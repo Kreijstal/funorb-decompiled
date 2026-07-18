@@ -11,7 +11,7 @@ final class eb extends ff {
     static int field_n;
     static boolean field_l;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_r = null;
         field_m = null;
         field_p = null;

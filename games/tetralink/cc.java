@@ -16,8 +16,8 @@ final class cc implements kg {
     static String field_e;
 
     final static String a(CharSequence param0, byte param1) {
-        RuntimeException var2 = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         StringBuilder var5 = null;
@@ -85,7 +85,7 @@ final class cc implements kg {
                           if (param1 >= 94) {
                             break L5;
                           } else {
-                            int discarded$3 = cc.a(86, (byte) -28);
+                            int discarded$2 = cc.a(86, (byte) -28);
                             break L5;
                           }
                         }
@@ -100,10 +100,9 @@ final class cc implements kg {
                           if (!sj.a(3010, (char) var7)) {
                             break L6;
                           } else {
-                            int discarded$4 = -122;
-                            var8 = kb.a((char) var7);
+                            var8 = kb.a((char) var7, -122);
                             if (var8 != 0) {
-                              StringBuilder discarded$5 = var5.append((char) var8);
+                              StringBuilder discarded$3 = var5.append((char) var8);
                               break L6;
                             } else {
                               break L6;
@@ -159,7 +158,7 @@ final class cc implements kg {
         }
     }
 
-    final static short[] a(short[] param0, bc param1) {
+    final static short[] a(short[] param0, bc param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -455,11 +454,11 @@ final class cc implements kg {
         }
     }
 
-    final static db[] b() {
+    final static db[] b(int param0) {
         return new db[]{rj.field_f, qj.field_c, ej.field_r, ni.field_h, e.field_e, mk.field_c, ji.field_Qb, la.field_i, dj.field_g, io.field_d, hh.field_b, uk.field_t, je.field_d, wd.field_e};
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         int stackIn_3_0 = 0;
@@ -543,7 +542,7 @@ final class cc implements kg {
         return stackIn_9_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_j = null;
         field_e = null;
@@ -570,8 +569,7 @@ final class cc implements kg {
             param1 = false;
         }
         on.a(true, param1);
-        int discarded$0 = -1;
-        kk.g();
+        kk.g(-1);
     }
 
     final static int a(int param0, byte param1) {
@@ -587,7 +585,7 @@ final class cc implements kg {
         return param0 - -1;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

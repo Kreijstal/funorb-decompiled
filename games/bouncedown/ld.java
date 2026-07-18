@@ -9,7 +9,7 @@ final class ld extends ai {
     int[] field_i;
     static int[] field_j;
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -45,13 +45,11 @@ final class ld extends ai {
                   var8.c(2);
                   break L0;
                 } else {
-                  int discarded$8 = 18;
-                  kc.a();
+                  kc.a((byte) 18);
                   return;
                 }
               } else {
-                int discarded$9 = 18;
-                kc.a();
+                kc.a((byte) 18);
                 return;
               }
             } else {
@@ -75,15 +73,13 @@ final class ld extends ai {
                     var4_ref_gf.c(2);
                     return;
                   } else {
-                    int discarded$10 = 18;
-                    kc.a();
+                    kc.a((byte) 18);
                     return;
                   }
                 }
               } else {
                 ti.a((Throwable) null, (byte) 100, "A1: " + la.a(-119));
-                int discarded$11 = 18;
-                kc.a();
+                kc.a((byte) 18);
                 return;
               }
             }
@@ -95,7 +91,7 @@ final class ld extends ai {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_j = null;
         field_h = null;
         field_l = null;

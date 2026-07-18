@@ -140,8 +140,7 @@ final class nj {
           L0: {
             var3_int = param2.field_u;
             var5 = (CharSequence) (Object) param0;
-            int discarded$2 = -711;
-            var4 = bo.a(var5);
+            var4 = bo.a(var5, -711);
             param2.a(var4.length, (byte) -73);
             param2.field_u = param2.field_u + ko.field_M.a(0, -56, param2.field_p, param2.field_u, var4.length, var4);
             stackOut_0_0 = param2.field_u - var3_int;
@@ -244,7 +243,7 @@ final class nj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_f = null;
         field_b = null;

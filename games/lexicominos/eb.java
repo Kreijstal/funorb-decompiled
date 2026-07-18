@@ -123,7 +123,7 @@ final class eb {
         }
     }
 
-    final static String c() {
+    final static String c(byte param0) {
         if (af.field_b) {
             return null;
         }
@@ -207,7 +207,7 @@ final class eb {
         return stackIn_3_0 != 0;
     }
 
-    final static db a() {
+    final static db a(byte param0) {
         int var4_int = 0;
         int var6 = Lexicominos.field_L ? 1 : 0;
         int var1 = bd.field_m[0] * pb.field_h[0];
@@ -375,7 +375,7 @@ final class eb {
               if (param3 == 256) {
                 break L1;
               } else {
-                boolean discarded$4 = this.a(20, (byte[][]) null, (byte) -51);
+                boolean discarded$2 = this.a(20, (byte[][]) null, (byte) -51);
                 break L1;
               }
             }
@@ -389,8 +389,7 @@ final class eb {
                 var6 = 0;
                 L3: while (true) {
                   if (param0.length <= var6) {
-                    int discarded$5 = 28;
-                    if (!this.a(param0)) {
+                    if (!this.a(param0, 28)) {
                       stackOut_7_0 = 256;
                       stackIn_8_0 = stackOut_7_0;
                       continue L2;
@@ -418,8 +417,7 @@ final class eb {
                     }
                     var7 = stackIn_13_0[stackIn_13_1];
                     var5_int = 255 & var7[rh.a(param3 + 14561, param1, var7.length)];
-                    int discarded$6 = 26;
-                    param0[var6] = el.a((byte)var5_int);
+                    param0[var6] = el.a((byte)var5_int, (byte) 26);
                     var6++;
                     continue L3;
                   }
@@ -589,14 +587,14 @@ final class eb {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_f = null;
         field_b = null;
         field_d = null;
     }
 
-    private final boolean a(char[] param0) {
+    private final boolean a(char[] param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -834,7 +832,7 @@ final class eb {
         ((eb) this).field_g = param0;
     }
 
-    final static int d() {
+    final static int d(byte param0) {
         return ph.field_b;
     }
 

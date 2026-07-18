@@ -9,11 +9,11 @@ abstract class vf {
 
     abstract byte[] a(byte param0);
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 
-    final static String a(int param0, int param1) {
+    final static String a(int param0, int param1, char param2) {
         int var4 = 0;
         int var5 = Main.field_T;
         char[] var6 = new char[param1];
@@ -46,11 +46,10 @@ abstract class vf {
         var2 = Main.field_T;
         try {
           L0: {
-            boolean discarded$28 = sd.field_c.a((byte) -116, lg.field_E, te.field_a, true);
+            boolean discarded$12 = sd.field_c.a((byte) -116, lg.field_E, te.field_a, true);
             sd.field_c.l(-2054);
             L1: while (true) {
-              int discarded$29 = -114;
-              if (!ge.b()) {
+              if (!ge.b((byte) -114)) {
                 if (ml.field_a != -1) {
                   var1_int = ml.field_a;
                   gh.a(-1, 31888);
@@ -93,7 +92,7 @@ abstract class vf {
                   }
                 }
               } else {
-                boolean discarded$30 = sd.field_c.a(fd.field_n, 34, tb.field_d);
+                boolean discarded$13 = sd.field_c.a(fd.field_n, 34, tb.field_d);
                 continue L1;
               }
             }

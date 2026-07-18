@@ -52,7 +52,7 @@ final class ra extends at {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         field_j = null;
         field_r = null;

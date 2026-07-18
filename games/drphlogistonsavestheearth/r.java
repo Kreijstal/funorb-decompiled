@@ -415,7 +415,7 @@ final class r {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         int var1 = 0;

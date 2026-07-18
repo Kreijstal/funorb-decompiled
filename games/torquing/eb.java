@@ -11,7 +11,7 @@ final class eb {
     static int field_f;
     private q[] field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         if (!kb.field_h) {
             throw new IllegalStateException();
         }

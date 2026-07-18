@@ -134,7 +134,7 @@ class dj extends hk {
         }
     }
 
-    private final int h() {
+    private final int h(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -169,7 +169,7 @@ class dj extends hk {
         return ((dj) this).field_s.substring(var3, var4);
     }
 
-    final static dm[] a(int param0, byte param1, int param2, int param3) {
+    final static dm[] a(int param0, byte param1, int param2, int param3, int param4) {
         dm[] var6 = new dm[9];
         dm[] var5 = var6;
         dm dupTemp$0 = ef.a(0, param0, 1);
@@ -205,12 +205,11 @@ class dj extends hk {
     }
 
     private final void h(int param0) {
-        int discarded$0 = -23161;
-        this.i();
+        this.i(-23161);
         this.g(0);
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -302,7 +301,7 @@ class dj extends hk {
         }
     }
 
-    public static void l() {
+    public static void l(byte param0) {
         field_F = null;
         field_N = null;
         field_I = null;
@@ -402,10 +401,8 @@ class dj extends hk {
                     ((dj) this).field_G = stackIn_8_1 != 0;
                     if (((dj) this).field_G) {
                       L5: {
-                        int discarded$2 = 77;
-                        ((dj) this).field_L = this.j();
-                        int discarded$3 = -57;
-                        ((dj) this).field_H = this.h();
+                        ((dj) this).field_L = this.j((byte) 77);
+                        ((dj) this).field_H = this.h((byte) -57);
                         if (0 >= ((dj) this).field_H) {
                           break L5;
                         } else {
@@ -468,7 +465,7 @@ class dj extends hk {
         return stackIn_17_0 != 0;
     }
 
-    private final void f() {
+    private final void f(int param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -477,8 +474,7 @@ class dj extends hk {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.g(0);
-                int discarded$1 = 121;
-                this.a(var2);
+                this.a(var2, 121);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -516,13 +512,13 @@ class dj extends hk {
         }
     }
 
-    private final void m() {
+    private final void m(byte param0) {
         if (((dj) this).field_u instanceof ga) {
             ((ga) (Object) ((dj) this).field_u).a((dj) this, -18649);
         }
     }
 
-    private final int j() {
+    private final int j(byte param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = Geoblox.field_C;
@@ -548,7 +544,7 @@ class dj extends hk {
         }
     }
 
-    private final void i() {
+    private final void i(int param0) {
         String var2 = this.k((byte) -128);
         if (var2.length() > 0) {
             java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.k((byte) -117)), (java.awt.datatransfer.ClipboardOwner) null);
@@ -673,9 +669,9 @@ class dj extends hk {
                           L5: {
                             if (((dj) this).field_H >= ((dj) this).field_s.length()) {
                               ((dj) this).field_s = ((dj) this).field_s + param2;
-                              int dupTemp$6 = ((dj) this).field_s.length();
-                              ((dj) this).field_H = dupTemp$6;
-                              ((dj) this).field_L = dupTemp$6;
+                              int dupTemp$1 = ((dj) this).field_s.length();
+                              ((dj) this).field_H = dupTemp$1;
+                              ((dj) this).field_L = dupTemp$1;
                               break L5;
                             } else {
                               ((dj) this).field_s = ((dj) this).field_s.substring(0, ((dj) this).field_H) + param2 + ((dj) this).field_s.substring(((dj) this).field_H, ((dj) this).field_s.length());
@@ -734,9 +730,8 @@ class dj extends hk {
                                   stackIn_55_1 = stackOut_54_1;
                                   break L7;
                                 } else {
-                                  int discarded$7 = 77;
                                   stackOut_53_0 = this;
-                                  stackOut_53_1 = this.j();
+                                  stackOut_53_1 = this.j((byte) 77);
                                   stackIn_55_0 = stackOut_53_0;
                                   stackIn_55_1 = stackOut_53_1;
                                   break L7;
@@ -765,9 +760,8 @@ class dj extends hk {
                                     stackIn_48_1 = stackOut_47_1;
                                     break L8;
                                   } else {
-                                    int discarded$8 = -57;
                                     stackOut_46_0 = this;
-                                    stackOut_46_1 = this.h();
+                                    stackOut_46_1 = this.h((byte) -57);
                                     stackIn_48_0 = stackOut_46_0;
                                     stackIn_48_1 = stackOut_46_1;
                                     break L8;
@@ -808,8 +802,7 @@ class dj extends hk {
                                         if (param0 != 66) {
                                           break L10;
                                         } else {
-                                          int discarded$9 = -23161;
-                                          this.i();
+                                          this.i(-23161);
                                           stackOut_35_0 = 1;
                                           stackIn_36_0 = stackOut_35_0;
                                           return stackIn_36_0 != 0;
@@ -820,8 +813,7 @@ class dj extends hk {
                                       break L6;
                                     } else {
                                       if (67 == param0) {
-                                        int discarded$10 = 82;
-                                        this.f();
+                                        this.f(82);
                                         stackOut_40_0 = 1;
                                         stackIn_41_0 = stackOut_40_0;
                                         return stackIn_41_0 != 0;
@@ -830,8 +822,7 @@ class dj extends hk {
                                       }
                                     }
                                   } else {
-                                    int discarded$11 = 111;
-                                    this.m();
+                                    this.m((byte) 111);
                                     stackOut_27_0 = 1;
                                     stackIn_28_0 = stackOut_27_0;
                                     return stackIn_28_0 != 0;

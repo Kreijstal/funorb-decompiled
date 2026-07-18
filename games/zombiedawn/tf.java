@@ -204,7 +204,7 @@ final class tf {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int[] var1_array = null;
         int var2 = 0;

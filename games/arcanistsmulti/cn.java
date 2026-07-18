@@ -70,7 +70,7 @@ final class cn extends kl implements vb {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_N = null;
         field_M = null;
         field_J = null;
@@ -101,7 +101,7 @@ final class cn extends kl implements vb {
         return false;
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         int var1_int = 0;
         int var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {

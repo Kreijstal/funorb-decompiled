@@ -5,7 +5,7 @@ final class li {
     static byte[][] field_a;
     static ue field_b;
 
-    final static void a(hl param0) {
+    final static void a(hl param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -106,7 +106,7 @@ final class li {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
     }
@@ -243,7 +243,7 @@ final class li {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

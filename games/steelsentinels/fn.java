@@ -258,7 +258,7 @@ final class fn {
         }
     }
 
-    final static e a(boolean param0) {
+    final static e a(boolean param0, byte param1) {
         e var2 = new e(true);
         var2.field_f = param0 ? true : false;
         return var2;

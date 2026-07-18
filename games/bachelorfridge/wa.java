@@ -48,14 +48,13 @@ final class wa extends lw {
                 break L1;
               } else {
                 var3 = null;
-                sba discarded$4 = wa.a(-91, (byte[]) null);
+                sba discarded$2 = wa.a(-91, (byte[]) null);
                 break L1;
               }
             }
             if (param1 != null) {
               var2 = new sba(param1, fl.field_j, fd.field_D, lq.field_A, eha.field_s, hk.field_f, baa.field_P);
-              int discarded$5 = -18073;
-              al.b();
+              al.b(-18073);
               stackOut_5_0 = (sba) var2;
               stackIn_6_0 = stackOut_5_0;
               break L0;
@@ -162,8 +161,7 @@ final class wa extends lw {
                     var1 = (kr) (Object) qg.field_b.field_z.c(0);
                 }
             }
-            int discarded$0 = 20434;
-            qf.e();
+            qf.e(20434);
             iaa.a(-119);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "wa.F(" + param0 + ')');

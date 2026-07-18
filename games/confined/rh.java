@@ -101,40 +101,32 @@ final class rh extends na {
             if (var11 <= ((rh) this).field_eb.field_u) {
               if (((rh) this).field_eb.field_w < var12) {
                 ((rh) this).field_eb = new nf(var11, var12);
-                int discarded$14 = -8409;
-                vm.a(((rh) this).field_eb);
+                vm.a(((rh) this).field_eb, -8409);
                 var26.a(112, 144, var26.field_t << 4, var26.field_x << 4, -((rh) this).field_Y << 10, 4096);
-                int discarded$15 = 0;
-                ib.b();
+                ib.b(false);
                 ((rh) this).field_eb.c(var9 - (var26.field_t >> 1), var10 - var26.field_x, 256);
                 return;
               } else {
-                int discarded$16 = -8409;
-                vm.a(((rh) this).field_eb);
+                vm.a(((rh) this).field_eb, -8409);
                 fn.d();
                 var26.a(112, 144, var26.field_t << 4, var26.field_x << 4, -((rh) this).field_Y << 10, 4096);
-                int discarded$17 = 0;
-                ib.b();
+                ib.b(false);
                 ((rh) this).field_eb.c(var9 - (var26.field_t >> 1), var10 - var26.field_x, 256);
                 return;
               }
             } else {
               ((rh) this).field_eb = new nf(var11, var12);
-              int discarded$18 = -8409;
-              vm.a(((rh) this).field_eb);
+              vm.a(((rh) this).field_eb, -8409);
               var26.a(112, 144, var26.field_t << 4, var26.field_x << 4, -((rh) this).field_Y << 10, 4096);
-              int discarded$19 = 0;
-              ib.b();
+              ib.b(false);
               ((rh) this).field_eb.c(var9 - (var26.field_t >> 1), var10 - var26.field_x, 256);
               return;
             }
           } else {
             ((rh) this).field_eb = new nf(var11, var12);
-            int discarded$20 = -8409;
-            vm.a(((rh) this).field_eb);
+            vm.a(((rh) this).field_eb, -8409);
             var26.a(112, 144, var26.field_t << 4, var26.field_x << 4, -((rh) this).field_Y << 10, 4096);
-            int discarded$21 = 0;
-            ib.b();
+            ib.b(false);
             ((rh) this).field_eb.c(var9 - (var26.field_t >> 1), var10 - var26.field_x, 256);
             return;
           }
@@ -174,8 +166,7 @@ final class rh extends na {
                       break L5;
                     } else {
                       if (((rh) this).field_eb.field_w >= var12) {
-                        int discarded$22 = -8409;
-                        vm.a(((rh) this).field_eb);
+                        vm.a(((rh) this).field_eb, -8409);
                         fn.d();
                         break L4;
                       } else {
@@ -185,13 +176,11 @@ final class rh extends na {
                   }
                 }
                 ((rh) this).field_eb = new nf(var11, var12);
-                int discarded$23 = -8409;
-                vm.a(((rh) this).field_eb);
+                vm.a(((rh) this).field_eb, -8409);
                 break L4;
               }
               var19.a(112, 144, var19.field_t << 4, var19.field_x << 4, -((rh) this).field_Y << 10, 4096);
-              int discarded$24 = 0;
-              ib.b();
+              ib.b(false);
               ((rh) this).field_eb.c(var9 - (var19.field_t >> 1), var10 - var19.field_x, 256);
               return;
             }
@@ -208,8 +197,7 @@ final class rh extends na {
                     break L7;
                   } else {
                     if (((rh) this).field_eb.field_w >= var12) {
-                      int discarded$25 = -8409;
-                      vm.a(((rh) this).field_eb);
+                      vm.a(((rh) this).field_eb, -8409);
                       fn.d();
                       break L6;
                     } else {
@@ -219,13 +207,11 @@ final class rh extends na {
                 }
               }
               ((rh) this).field_eb = new nf(var11, var12);
-              int discarded$26 = -8409;
-              vm.a(((rh) this).field_eb);
+              vm.a(((rh) this).field_eb, -8409);
               break L6;
             }
             var18.a(112, 144, var18.field_t << 4, var18.field_x << 4, -((rh) this).field_Y << 10, 4096);
-            int discarded$27 = 0;
-            ib.b();
+            ib.b(false);
             ((rh) this).field_eb.c(var9 - (var18.field_t >> 1), var10 - var18.field_x, 256);
             return;
           }
@@ -311,8 +297,7 @@ final class rh extends na {
     }
 
     rh(dm param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (fe) (Object) kc.a());
-        int discarded$0 = 93;
+        super(param1, (fe) (Object) kc.a((byte) 93));
         try {
             ((rh) this).field_cb = param1;
             ((rh) this).field_bb = param0;

@@ -199,7 +199,7 @@ class mf extends al {
         field_w = null;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

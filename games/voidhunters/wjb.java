@@ -129,8 +129,7 @@ final class wjb extends rqa {
           L0: {
             var4_int = param0.b(param2, -94);
             var5 = param0.a(true, var4_int, param3);
-            int discarded$2 = 0;
-            stackOut_0_0 = pib.a(param0, var5, var4_int);
+            stackOut_0_0 = pib.a(param0, var5, var4_int, 0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -224,11 +223,11 @@ final class wjb extends rqa {
         }
     }
 
-    final static int e() {
+    final static int e(int param0) {
         return (int)(1000000000L / asa.field_c);
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, boolean param7, boolean param8) {
+    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, boolean param7, boolean param8, int param9, int param10, int param11) {
         qdb.a(14, 15, 16777215, 13, param8, param4, param7, param0, -128, true, 16777215, 11, 0, param6);
     }
 

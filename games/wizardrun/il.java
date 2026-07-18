@@ -8,7 +8,7 @@ final class il {
     static uk field_b;
     static int field_c;
 
-    final static int a(int param0, byte param1, CharSequence param2) {
+    final static int a(int param0, byte param1, CharSequence param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -182,7 +182,7 @@ final class il {
         return stackIn_37_0;
     }
 
-    final static void a(int param0, vd param1, o[] param2, byte param3, o[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, o[] param12) {
+    final static void a(int param0, vd param1, o[] param2, byte param3, o[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, o[] param12, int param13, int param14) {
         int var15_int = 0;
         int var16 = 0;
         try {
@@ -195,7 +195,7 @@ final class il {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_b = null;
     }

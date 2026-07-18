@@ -19,7 +19,7 @@ final class aj extends tc {
         }
     }
 
-    final static void a(float[] param0) {
+    final static void a(float[] param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

@@ -35,8 +35,7 @@ final class re extends pe implements ng, qd {
           L0: {
             L1: {
               if (((re) this).field_H == param1) {
-                int discarded$2 = 92682;
-                hc.f();
+                hc.f(92682);
                 ((re) this).field_F.l(param0 + -8792);
                 break L1;
               } else {
@@ -82,7 +81,7 @@ final class re extends pe implements ng, qd {
         }
     }
 
-    private final String h() {
+    private final String h(byte param0) {
         return "</col></u>";
     }
 
@@ -202,7 +201,6 @@ final class re extends pe implements ng, qd {
             ((re) this).field_F = param0;
             ((re) this).field_H = new pl(e.field_e, (ce) null);
             ((re) this).field_H.field_w = (bf) (Object) new jl();
-            int discarded$1 = -85;
             var7 = di.a(new String[2], (byte) 79, t.field_b);
             var3 = 20;
             var4 = new ll(gh.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, gh.field_b.field_M, -1, 2147483647, true);
@@ -255,13 +253,13 @@ final class re extends pe implements ng, qd {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_E = null;
         field_G = null;
         field_I = null;
     }
 
-    final static db[] a(kl param0, String param1, String param2) {
+    final static db[] a(kl param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -410,16 +408,13 @@ final class re extends pe implements ng, qd {
         int var6 = wizardrun.field_H;
         try {
             if (param0 == 0) {
-                int discarded$1 = 12;
-                fa.a("terms.ws");
+                fa.a("terms.ws", 12);
             } else {
                 if (1 == param0) {
-                    int discarded$3 = 12;
-                    fa.a("privacy.ws");
+                    fa.a("privacy.ws", 12);
                 } else {
                     if (!(param0 != 2)) {
-                        int discarded$4 = 12;
-                        fa.a("conduct.ws");
+                        fa.a("conduct.ws", 12);
                     }
                 }
             }

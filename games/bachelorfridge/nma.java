@@ -12,20 +12,17 @@ final class nma extends ana {
     }
 
     final static boolean e(int param0) {
-        int discarded$0 = 15000;
-        return paa.a();
+        return paa.a(15000);
     }
 
     final static void a(vr param0, boolean param1, boolean param2, vr param3) {
         try {
-            int discarded$0 = 1;
-            qq.a(uaa.field_i, gfa.field_f, qf.field_y, rea.field_g, (po) (Object) hl.field_H, ina.field_n, qs.field_m, oe.field_c, dla.field_k, -30803, nu.field_c);
+            qq.a(uaa.field_i, gfa.field_f, qf.field_y, rea.field_g, (po) (Object) hl.field_H, ina.field_n, qs.field_m, oe.field_c, dla.field_k, -30803, nu.field_c, true);
             gi.field_b = gw.a("lobby", "chatfilter", param3, -112);
             qo.field_a[0] = wj.field_x;
             qo.field_a[2] = cn.field_i;
             qo.field_a[1] = de.field_K;
-            int discarded$1 = -95;
-            gaa.a((po) (Object) ds.field_l, param0);
+            gaa.a((po) (Object) ds.field_l, param0, -95);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "nma.G(" + (param0 != null ? "{...}" : "null") + ',' + true + ',' + true + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -33,12 +30,11 @@ final class nma extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$4 = ((nma) this).field_l - 1;
+        int fieldTemp$2 = ((nma) this).field_l - 1;
         ((nma) this).field_l = ((nma) this).field_l - 1;
-        if (fieldTemp$4 >= 0) {
+        if (fieldTemp$2 >= 0) {
           if (25 == ((nma) this).field_l) {
-            int discarded$5 = 100;
-            this.e();
+            this.e((byte) 100);
             return false;
           } else {
             return false;
@@ -50,13 +46,13 @@ final class nma extends ana {
         }
     }
 
-    final static Boolean b() {
+    final static Boolean b(boolean param0) {
         Boolean var1 = vg.field_l;
         vg.field_l = null;
         return var1;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         aga var2 = null;
         int var3 = 0;
         iv var4 = null;

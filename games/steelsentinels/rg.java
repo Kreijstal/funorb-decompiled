@@ -189,7 +189,7 @@ final class rg {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -204,7 +204,7 @@ final class rg {
         return new Date().getYear() - -1900;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -332,7 +332,7 @@ final class rg {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2_int = 0;
         Object var2 = null;
@@ -351,7 +351,7 @@ final class rg {
             if (jb.field_S == null) {
               L1: {
                 if (null != wn.field_a) {
-                  int discarded$5 = wn.field_a.a(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                  int discarded$3 = wn.field_a.a(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                   break L1;
                 } else {
                   break L1;
@@ -361,11 +361,13 @@ final class rg {
             } else {
               L2: {
                 var6 = jb.field_S[lh.field_r];
+                var7 = var6;
+                var7 = var6;
                 if (var6 == null) {
                   if (wn.field_a == null) {
                     break L2;
                   } else {
-                    int discarded$6 = wn.field_a.a(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                    int discarded$4 = wn.field_a.a(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                     break L2;
                   }
                 } else {
@@ -382,12 +384,10 @@ final class rg {
                     var2_int = (var7.field_z - -60) * ul.field_g / hh.field_i;
                     var3 = var2_int + -30;
                     if (rf.field_b) {
-                      int discarded$7 = -1;
-                      nn.a(245, -256 * var3 / 30, (var7.field_z - var3) * 256 / 30, 199, var7);
+                      nn.a(245, -256 * var3 / 30, (var7.field_z - var3) * 256 / 30, 199, var7, -1);
                       break L3;
                     } else {
-                      int discarded$8 = -1;
-                      nn.a(245, (var7.field_z + -var3) * 256 / 30, var3 * -256 / 30, 199, var7);
+                      nn.a(245, (var7.field_z + -var3) * 256 / 30, var3 * -256 / 30, 199, var7, -1);
                       break L3;
                     }
                   }
@@ -405,7 +405,7 @@ final class rg {
                       if (var2 == null) {
                         break L4;
                       } else {
-                        int discarded$9 = wn.field_a.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$5 = wn.field_a.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L4;
                       }
                     } else {

@@ -259,7 +259,7 @@ final class d extends bb {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$2 = param1.b(16, (byte) -87);
+                  int discarded$1 = param1.b(16, (byte) -87);
                   var5.field_E = qg.a((byte) 125, var5.field_E, 16, param1);
                   var5.field_i = qg.a((byte) 125, var5.field_i, 16, param1);
                   var5.field_t = qg.a((byte) 125, var5.field_t, 16, param1);
@@ -280,8 +280,7 @@ final class d extends bb {
                 if (!fb.a((byte) 98, param1)) {
                   break L4;
                 } else {
-                  int discarded$3 = 16;
-                  var5.field_J = bf.a(param1, 8, var5.field_J);
+                  var5.field_J = bf.a(param1, 8, var5.field_J, 16);
                   var6 = 0;
                   var7 = 0;
                   L5: while (true) {
@@ -497,7 +496,7 @@ final class d extends bb {
         return stackIn_21_0 != 0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_O = null;
     }
 
@@ -512,7 +511,7 @@ final class d extends bb {
         return ((d) this).field_K.b(0);
     }
 
-    final static void a(int param0, int param1, qc param2, qc param3, int param4, int param5, int param6, fa param7, fa param8, qc param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18) {
+    final static void a(int param0, int param1, qc param2, qc param3, int param4, int param5, int param6, fa param7, fa param8, qc param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -595,10 +594,8 @@ final class d extends bb {
             bk.a(-5237, 480, param7, param8);
             hg.a(0, param17, param0, param14, param16);
             rb.a(320, 240, (byte) 83);
-            int discarded$2 = 2;
-            sk.a(8, param2, 8, 443, param3);
-            int discarded$3 = 0;
-            ai.a(0, 0, param9);
+            sk.a(8, param2, 8, 443, param3, 2);
+            ai.a(0, 0, param9, false);
             mh.a(param12, 1, param18, param13);
             break L0;
           }

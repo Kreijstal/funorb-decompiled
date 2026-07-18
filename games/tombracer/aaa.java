@@ -12,7 +12,7 @@ final class aaa {
     static String field_e;
     boolean field_g;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_d = null;
         field_e = null;
@@ -69,16 +69,14 @@ final class aaa {
                       if (var2_int >= 16) {
                         break L1;
                       } else {
-                        int discarded$3 = 0;
-                        var24 = ua.a(gu.field_l, 32768, var2_int * 32768);
+                        var24 = ua.a(gu.field_l, 32768, var2_int * 32768, false);
                         ((aaa) this).field_i[var2_int] = new rt(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
                         var2_int++;
                         continue L3;
                       }
                     }
                   } else {
-                    int discarded$4 = 0;
-                    var23 = ua.a(hna.field_e, 32768, 32768 * var2_int);
+                    var23 = ua.a(hna.field_e, 32768, 32768 * var2_int, false);
                     ((aaa) this).field_f[var2_int] = new rt(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
                     var2_int++;
                     continue L2;
@@ -102,7 +100,7 @@ final class aaa {
                     var4.b(0);
                     return;
                   } else {
-                    boolean discarded$5 = ((aaa) this).field_c.e(9729);
+                    boolean discarded$1 = ((aaa) this).field_c.e(9729);
                     var4.b(0);
                     return;
                   }

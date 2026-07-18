@@ -13,7 +13,7 @@ class fe extends dk {
     private int field_C;
     static td[] field_J;
 
-    private final void h() {
+    private final void h(boolean param0) {
         Object var3 = null;
         if (((fe) this).field_g instanceof si) {
           ((si) (Object) ((fe) this).field_g).a(false, (fe) this);
@@ -28,12 +28,11 @@ class fe extends dk {
     }
 
     private final void e(boolean param0) {
-        int discarded$0 = 1;
-        this.g();
+        this.g(true);
         this.e((byte) -113);
     }
 
-    private final void e() {
+    private final void e(int param0) {
         bd var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -330,9 +329,9 @@ class fe extends dk {
                         L6: {
                           if (((fe) this).field_B >= ((fe) this).field_k.length()) {
                             ((fe) this).field_k = ((fe) this).field_k + param1;
-                            int dupTemp$3 = ((fe) this).field_k.length();
-                            ((fe) this).field_B = dupTemp$3;
-                            ((fe) this).field_D = dupTemp$3;
+                            int dupTemp$1 = ((fe) this).field_k.length();
+                            ((fe) this).field_B = dupTemp$1;
+                            ((fe) this).field_D = dupTemp$1;
                             break L6;
                           } else {
                             ((fe) this).field_k = ((fe) this).field_k.substring(0, ((fe) this).field_B) + param1 + ((fe) this).field_k.substring(((fe) this).field_B, ((fe) this).field_k.length());
@@ -410,8 +409,7 @@ class fe extends dk {
                             if (param3 != 102) {
                               if (param3 != 103) {
                                 if (param3 == 84) {
-                                  int discarded$4 = 0;
-                                  this.h();
+                                  this.h(false);
                                   stackOut_47_0 = 1;
                                   stackIn_48_0 = stackOut_47_0;
                                   return stackIn_48_0 != 0;
@@ -437,8 +435,7 @@ class fe extends dk {
                                       if (param3 != 66) {
                                         break L10;
                                       } else {
-                                        int discarded$5 = 1;
-                                        this.g();
+                                        this.g(true);
                                         stackOut_39_0 = 1;
                                         stackIn_40_0 = stackOut_39_0;
                                         return stackIn_40_0 != 0;
@@ -671,7 +668,7 @@ class fe extends dk {
         }
     }
 
-    final static void a(rf param0, rf param1) {
+    final static void a(rf param0, rf param1, boolean param2) {
         try {
             if (!(param1.field_d == null)) {
                 param1.b(4);
@@ -710,7 +707,7 @@ class fe extends dk {
         }
     }
 
-    private final void g() {
+    private final void g(boolean param0) {
         String var2 = this.h(-107);
         if (!(0 >= var2.length())) {
             java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.h(-110)), (java.awt.datatransfer.ClipboardOwner) null);
@@ -811,8 +808,7 @@ class fe extends dk {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.e((byte) -106);
                 if (param0 == -1) {
-                  int discarded$1 = 4;
-                  this.a(var2);
+                  this.a(var2, 4);
                   break L0;
                 } else {
                   return;
@@ -832,7 +828,7 @@ class fe extends dk {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
@@ -936,8 +932,7 @@ class fe extends dk {
         try {
           L0: {
             super.a(60, param1, param2, param3);
-            int discarded$2 = 0;
-            this.e();
+            this.e(0);
             L1: {
               if (((fe) this).field_l != 1) {
                 break L1;
@@ -1259,7 +1254,7 @@ class fe extends dk {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_H = null;
         field_J = null;
     }

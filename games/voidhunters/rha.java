@@ -37,16 +37,16 @@ final class rha implements ntb {
               L2: {
                 var3_int = 79 / ((param0 - 22) / 59);
                 var4 = (rha) (Object) param1;
-                if (var4.field_a != var4.field_a) {
+                if (((rha) this).field_a != var4.field_a) {
                   break L2;
                 } else {
-                  if (var4.field_e != var4.field_e) {
+                  if (var4.field_e != ((rha) this).field_e) {
                     break L2;
                   } else {
-                    if (var4.field_b != var4.field_b) {
+                    if (((rha) this).field_b != var4.field_b) {
                       break L2;
                     } else {
-                      if (var4.field_c == var4.field_c) {
+                      if (var4.field_c == ((rha) this).field_c) {
                         stackOut_6_0 = 0;
                         stackIn_7_0 = stackOut_6_0;
                         break L1;
@@ -237,36 +237,36 @@ final class rha implements ntb {
             L2: {
               var5 = (rha) (Object) param0;
               var4 = 0;
-              if (var5.field_a != var5.field_a) {
+              if (var5.field_a != ((rha) this).field_a) {
                 var4 = 1;
-                System.out.println("int tick has changed. before=" + var5.field_a + ", now=" + var5.field_a);
+                System.out.println("int tick has changed. before=" + var5.field_a + ", now=" + ((rha) this).field_a);
                 break L2;
               } else {
                 break L2;
               }
             }
             L3: {
-              if (var5.field_e != var5.field_e) {
+              if (((rha) this).field_e != var5.field_e) {
                 var4 = 1;
-                System.out.println("int string_id has changed. before=" + var5.field_e + ", now=" + var5.field_e);
+                System.out.println("int string_id has changed. before=" + var5.field_e + ", now=" + ((rha) this).field_e);
                 break L3;
               } else {
                 break L3;
               }
             }
             L4: {
-              if (var5.field_b != var5.field_b) {
+              if (var5.field_b != ((rha) this).field_b) {
                 var4 = 1;
-                System.out.println("int a_id has changed. before=" + var5.field_b + ", now=" + var5.field_b);
+                System.out.println("int a_id has changed. before=" + var5.field_b + ", now=" + ((rha) this).field_b);
                 break L4;
               } else {
                 break L4;
               }
             }
             L5: {
-              if (var5.field_c != var5.field_c) {
+              if (((rha) this).field_c != var5.field_c) {
                 var4 = 1;
-                System.out.println("int b_id has changed. before=" + var5.field_c + ", now=" + var5.field_c);
+                System.out.println("int b_id has changed. before=" + var5.field_c + ", now=" + ((rha) this).field_c);
                 break L5;
               } else {
                 break L5;
@@ -314,14 +314,14 @@ final class rha implements ntb {
     public final void b(byte param0, tv param1) {
         rha var4 = (rha) (Object) param1;
         rha var3 = var4;
-        var4.field_a = var4.field_a;
-        var4.field_e = var4.field_e;
+        var4.field_a = ((rha) this).field_a;
+        var4.field_e = ((rha) this).field_e;
         if (param0 <= 54) {
             return;
         }
         try {
-            var4.field_b = var4.field_b;
-            var4.field_c = var4.field_c;
+            var4.field_b = ((rha) this).field_b;
+            var4.field_c = ((rha) this).field_c;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "rha.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -397,8 +397,7 @@ final class nh extends fc {
                                   break L1;
                                 } else {
                                   if (3 == var2_int) {
-                                    int discarded$1 = 1;
-                                    tk.a(7, jc.field_c, 55);
+                                    tk.a(7, jc.field_c, 55, true);
                                     break L1;
                                   } else {
                                     if (var2_int != 4) {
@@ -738,7 +737,7 @@ final class nh extends fc {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_P = null;
         field_C = null;
         field_E = null;

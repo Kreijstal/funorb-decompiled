@@ -53,7 +53,7 @@ final class vc {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         if (hm.field_F != -sq.field_e) {
             if (-sq.field_e + 250 == hm.field_F) {
             }
@@ -62,7 +62,7 @@ final class vc {
         hm.field_F = hm.field_F + 1;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }
@@ -155,7 +155,7 @@ final class vc {
         return stackIn_9_0 != 0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         bs var1_ref = null;
         uh var1_ref2 = null;

@@ -7,7 +7,7 @@ final class he {
     static di field_b;
     static String[] field_d;
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -27,10 +27,8 @@ final class he {
         String stackOut_7_2 = null;
         try {
           L0: {
-            int discarded$4 = -39;
-            em.a((java.awt.Component) (Object) param0);
-            int discarded$5 = 0;
-            hj.a((java.awt.Component) (Object) param0);
+            em.a((java.awt.Component) (Object) param0, (byte) -39);
+            hj.a((java.awt.Component) (Object) param0, false);
             if (oa.field_a != null) {
               oa.field_a.a((java.awt.Component) (Object) param0, 84);
               break L0;
@@ -70,7 +68,7 @@ final class he {
         }
     }
 
-    final static boolean a(int param0, boolean param1, int param2) {
+    final static boolean a(int param0, boolean param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         int stackIn_35_0 = 0;
@@ -163,7 +161,7 @@ final class he {
         }
     }
 
-    final static boolean a(char param0, CharSequence param1) {
+    final static boolean a(char param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;

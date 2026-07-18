@@ -24,11 +24,11 @@ final class foa implements bo {
         field_a = null;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return jf.field_r;
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, int param2) {
         return 0 != (2048 & param0);
     }
 

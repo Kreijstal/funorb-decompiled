@@ -209,7 +209,7 @@ final class ml extends gi {
         }
     }
 
-    final static int a(byte[] param0, int param1, int param2) {
+    final static int a(byte[] param0, int param1, int param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

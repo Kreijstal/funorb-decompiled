@@ -33,7 +33,7 @@ final class vh {
     static String field_m;
     static vn field_a;
 
-    final static String a(int param0, int param1, CharSequence[] param2) {
+    final static String a(int param0, int param1, CharSequence[] param2, boolean param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -752,8 +752,7 @@ final class vh {
                     return null;
                   }
                 } else {
-                  int discarded$1 = 1;
-                  ao.a(10L);
+                  ao.a(10L, 1);
                   continue L4;
                 }
               }

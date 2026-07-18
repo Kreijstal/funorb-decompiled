@@ -165,7 +165,7 @@ final class qg implements ad {
         }
     }
 
-    final static hn a(long param0, String param1, int param2, String param3) {
+    final static hn a(long param0, String param1, int param2, String param3, boolean param4) {
         RuntimeException var6 = null;
         oc stackIn_3_0 = null;
         tl stackIn_5_0 = null;

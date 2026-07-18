@@ -10,7 +10,7 @@ final class ib extends ej implements v {
     static int field_cb;
     static String field_bb;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_ab = null;
         field_X = null;
         field_bb = null;
@@ -90,8 +90,7 @@ final class ib extends ej implements v {
 
     final static boolean p(int param0) {
         if (param0 <= 70) {
-            int discarded$0 = 0;
-            ib.b();
+            ib.b(false);
             return dg.field_d;
         }
         return dg.field_d;

@@ -606,7 +606,7 @@ final class gm extends oh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_o = null;
         field_j = null;

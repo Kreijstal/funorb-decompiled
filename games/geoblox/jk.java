@@ -55,7 +55,7 @@ final class jk {
         field_c = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -99,7 +99,7 @@ final class jk {
         }
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         return gh.field_P;
     }
 

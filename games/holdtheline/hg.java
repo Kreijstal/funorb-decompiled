@@ -131,7 +131,7 @@ final class hg extends rm {
         throw new Error();
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return -mk.field_d + vf.field_t;
     }
 

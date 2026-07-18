@@ -17,14 +17,13 @@ abstract class sr {
     static String field_e;
 
     final static void a(boolean param0, byte param1) {
-        int discarded$0 = 0;
-        cq.a(param0);
+        cq.a(param0, 0);
         vu.a(true, param0);
     }
 
     abstract int a(int param0);
 
-    final static kg[] a(int param0, int param1, boolean param2, byte param3, int param4) {
+    final static kg[] a(int param0, int param1, boolean param2, byte param3, int param4, int param5) {
         kg[] var6 = null;
         kg[][] var7 = null;
         ut[][] var8 = null;
@@ -156,9 +155,7 @@ abstract class sr {
                         return var6;
                       } else {
                         jm.a(100, 9863, (-param0 + param4) * var15 / 6 + param0);
-                        int discarded$5 = 95;
-                        int discarded$6 = 11;
-                        var16 = oa.a(param2);
+                        var16 = oa.a(param2, 11, (byte) 95);
                         iw.a(-101, var16);
                         var17 = 0;
                         L9: while (true) {
@@ -265,9 +262,7 @@ abstract class sr {
                   }
                 }
               } else {
-                int discarded$7 = 95;
-                int discarded$8 = 11;
-                var23 = oa.a(param2);
+                var23 = oa.a(param2, 11, (byte) 95);
                 iw.a(121, var23);
                 var15 = 0;
                 L16: while (true) {
@@ -329,8 +324,7 @@ abstract class sr {
               } else {
                 var11_ref_kg = var7[var9][var10];
                 var8[var9][var10] = var11_ref_kg.a();
-                int discarded$9 = 20684;
-                pd.a(var8[var9][var10]);
+                pd.a(var8[var9][var10], 20684);
                 var10++;
                 continue L20;
               }

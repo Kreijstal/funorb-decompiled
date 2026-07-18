@@ -10,16 +10,16 @@ final class am {
     static cn field_a;
     static ad field_b;
 
-    final static void b() {
+    final static void b(int param0) {
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_f = null;
         field_b = null;
     }
 
-    final static StringBuilder a(StringBuilder param0, char param1, int param2) {
+    final static StringBuilder a(StringBuilder param0, char param1, int param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

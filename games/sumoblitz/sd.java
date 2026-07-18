@@ -207,7 +207,7 @@ final class sd {
         return param0 & param1;
     }
 
-    final static void a(pl param0) {
+    final static void a(pl param0, int param1) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -553,7 +553,7 @@ final class sd {
         }
     }
 
-    private final void a(jt param0) {
+    private final void a(jt param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -642,8 +642,7 @@ final class sd {
               if (param2 == 19) {
                 break L1;
               } else {
-                int discarded$2 = 0;
-                this.a(-95L);
+                this.a(-95L, false);
                 break L1;
               }
             }
@@ -835,13 +834,12 @@ final class sd {
         return stackIn_18_0;
     }
 
-    private final void a(long param0) {
+    private final void a(long param0, boolean param1) {
         jt var4 = (jt) (Object) ((sd) this).field_c.a(575, param0);
-        int discarded$0 = -124;
-        this.a(var4);
+        this.a(var4, (byte) -124);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
         field_e = null;
@@ -855,13 +853,11 @@ final class sd {
             if (!(((sd) this).field_g >= 1)) {
                 throw new IllegalStateException();
             }
-            int discarded$0 = 0;
-            this.a(param3);
+            this.a(param3, false);
             ((sd) this).field_d = ((sd) this).field_d - 1;
             while (0 > ((sd) this).field_d) {
                 var6 = (jt) (Object) ((sd) this).field_h.b((byte) -61);
-                int discarded$1 = -124;
-                this.a(var6);
+                this.a(var6, (byte) -124);
             }
             var6_ref = new av(param2, 1);
             ((sd) this).field_c.a(-20657, (ms) (Object) var6_ref, param3);

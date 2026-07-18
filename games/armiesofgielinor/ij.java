@@ -158,7 +158,7 @@ final class ij extends dv {
                           break L9;
                         } else {
                           if (var10 == 41) {
-                            boolean discarded$9 = ((ij) this).field_o.a(101, -26126, '￿');
+                            boolean discarded$7 = ((ij) this).field_o.a(101, -26126, '￿');
                             break L8;
                           } else {
                             break L9;
@@ -173,7 +173,7 @@ final class ij extends dv {
                             break L10;
                           } else {
                             if (var10 == 34) {
-                              boolean discarded$10 = ((ij) this).field_o.a(101, -26126, '￿');
+                              boolean discarded$8 = ((ij) this).field_o.a(101, -26126, '￿');
                               break L8;
                             } else {
                               break L10;
@@ -190,7 +190,7 @@ final class ij extends dv {
                           if (39 != var10) {
                             break L8;
                           } else {
-                            boolean discarded$11 = ((ij) this).field_o.a(101, -26126, '￿');
+                            boolean discarded$9 = ((ij) this).field_o.a(101, -26126, '￿');
                             break L8;
                           }
                         }
@@ -198,7 +198,7 @@ final class ij extends dv {
                     }
                   }
                   L11: {
-                    boolean discarded$12 = super.a(-30847, param1, param2);
+                    boolean discarded$10 = super.a(-30847, param1, param2);
                     var4 = ((ij) this).field_o.q(param0 ^ -30847);
                     var5 = ((ij) this).field_o.o(param0 ^ -30779);
                     if (var6 != 0) {
@@ -208,7 +208,7 @@ final class ij extends dv {
                         break L11;
                       } else {
                         if (param1 == 40) {
-                          boolean discarded$13 = ((ij) this).field_o.a(-1, -26126, ')');
+                          boolean discarded$11 = ((ij) this).field_o.a(-1, -26126, ')');
                           ((ij) this).field_o.a(-98, var5, var5);
                           break L11;
                         } else {
@@ -225,7 +225,7 @@ final class ij extends dv {
                         break L12;
                       } else {
                         if (param1 == 34) {
-                          boolean discarded$14 = ((ij) this).field_o.a(-1, -26126, '"');
+                          boolean discarded$12 = ((ij) this).field_o.a(-1, -26126, '"');
                           ((ij) this).field_o.a(param0 + 30749, var5, var5);
                           break L12;
                         } else {
@@ -241,12 +241,11 @@ final class ij extends dv {
                       break L3;
                     } else {
                       if (param1 == 39) {
-                        boolean discarded$15 = ((ij) this).field_o.a(-1, param0 + 4721, '\'');
+                        boolean discarded$13 = ((ij) this).field_o.a(-1, param0 + 4721, '\'');
                         ((ij) this).field_o.a(-98, var5, var5);
                         break L3;
                       } else {
-                        int discarded$16 = -101;
-                        vs.field_c = wf.a(((ij) this).field_o.q(0));
+                        vs.field_c = wf.a(((ij) this).field_o.q(0), -101);
                         return true;
                       }
                     }
@@ -255,8 +254,7 @@ final class ij extends dv {
                 ((ij) this).field_o.c(1 + var5, false);
                 break L3;
               }
-              int discarded$17 = -101;
-              vs.field_c = wf.a(((ij) this).field_o.q(0));
+              vs.field_c = wf.a(((ij) this).field_o.q(0), -101);
               return true;
             } else {
               if (var8 == 0) {

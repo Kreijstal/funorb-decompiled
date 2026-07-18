@@ -146,8 +146,7 @@ final class cra {
             gva.field_b = ai.a((byte) 121, "");
             gva.field_b.a(-71, false);
             fha.a(true, param1, param0, param4);
-            int discarded$0 = 117;
-            pq.b();
+            pq.b(117);
             kl.field_a = fta.field_c;
             wt.field_d = fta.field_c;
         } catch (RuntimeException runtimeException) {
@@ -206,7 +205,7 @@ final class cra {
         return false;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
     }
 

@@ -6,7 +6,7 @@ final class uea extends kna {
         super(param0, param1);
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
         if (param3 > param0) {
           nra.a((byte) -55, param1, param3, vaa.field_a[param2], param0);
           return;
@@ -33,7 +33,7 @@ final class uea extends kna {
         super(param0, param1, param2, param3);
     }
 
-    final static uca[] a(kh param0) {
+    final static uca[] a(kh param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

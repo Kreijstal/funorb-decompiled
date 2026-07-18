@@ -20,7 +20,7 @@ final class bf extends bj implements sg, qb, qn {
     private gd field_U;
     private gd field_S;
 
-    private final int a(int param0, hm param1, String param2, int param3) {
+    private final int a(int param0, hm param1, String param2, int param3, int param4) {
         ki var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
@@ -147,8 +147,7 @@ final class bf extends bj implements sg, qb, qn {
                 if (((bf) this).field_K != param0) {
                   break L1;
                 } else {
-                  int discarded$4 = 123;
-                  boolean discarded$5 = this.h();
+                  boolean discarded$2 = this.h((byte) 123);
                   break L1;
                 }
               } else {
@@ -195,7 +194,7 @@ final class bf extends bj implements sg, qb, qn {
         }
     }
 
-    private final int a(int param0, String param1, int param2, hm param3, String param4) {
+    private final int a(int param0, String param1, int param2, hm param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -398,7 +397,7 @@ final class bf extends bj implements sg, qb, qn {
         }
     }
 
-    final static void a(int param0, int param1, DataInputStream param2, int param3, int param4, int[] param5) throws IOException {
+    final static void a(int param0, int param1, DataInputStream param2, int param3, int param4, int[] param5, int param6) throws IOException {
         int var7_int = param4 + param3 >> 1;
         int var8 = param0 - -param1 >> 1;
         int var9 = param2.readUnsignedByte();
@@ -415,7 +414,7 @@ final class bf extends bj implements sg, qb, qn {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_T = null;
         field_L = null;
         field_O = null;
@@ -459,21 +458,14 @@ final class bf extends bj implements sg, qb, qn {
         un dupTemp$1 = new un(10000536);
         ((bf) this).field_U.field_s = (db) (Object) dupTemp$1;
         ((bf) this).field_Q.field_s = (db) (Object) dupTemp$1;
-        int discarded$2 = 66;
-        int discarded$3 = 3674;
         String var2 = r.a(aj.field_b, -63, new String[2]);
         int var3 = 20;
-        int discarded$4 = 100;
-        var3 = var3 + this.a(170, (hm) (Object) ((bf) this).field_I, tm.field_Z, var3);
+        var3 = var3 + this.a(170, (hm) (Object) ((bf) this).field_I, tm.field_Z, var3, 100);
         var3 = var3 + (this.a(20, (hm) (Object) ((bf) this).field_R, 170, ri.field_a, 25, "", var3) - -5);
-        int discarded$5 = 100;
-        var3 = var3 + this.a(170, (hm) (Object) ((bf) this).field_Q, qc.field_vb, var3);
-        int discarded$6 = 170;
-        var3 = var3 + (this.a(170, mh.field_d, var3, (hm) (Object) ((bf) this).field_U, rm.field_a) + 5);
-        int discarded$7 = 170;
-        var3 = var3 + (5 + this.a(170, lf.field_J, var3, (hm) (Object) ((bf) this).field_S, ig.field_i));
-        int discarded$8 = 170;
-        var3 = var3 + this.a(qm.field_a, (byte) 123, var3, (hm) (Object) ((bf) this).field_N);
+        var3 = var3 + this.a(170, (hm) (Object) ((bf) this).field_Q, qc.field_vb, var3, 100);
+        var3 = var3 + (this.a(170, mh.field_d, var3, (hm) (Object) ((bf) this).field_U, rm.field_a, 170) + 5);
+        var3 = var3 + (5 + this.a(170, lf.field_J, var3, (hm) (Object) ((bf) this).field_S, ig.field_i, 170));
+        var3 = var3 + this.a(qm.field_a, (byte) 123, var3, (hm) (Object) ((bf) this).field_N, 170);
         ki var4 = new ki(46, var3, -90 + ((bf) this).field_g, 25, (hm) (Object) ((bf) this).field_J, true, -120 + ((bf) this).field_g, 5, ke.field_c, 11579568, ii.field_b);
         ((bf) this).b((hm) (Object) var4, false);
         var3 = var3 + var4.field_x;
@@ -500,7 +492,7 @@ final class bf extends bj implements sg, qb, qn {
         ((bf) this).a(496, 0, 0, true, var6 + (var3 - -55));
     }
 
-    private final String k() {
+    private final String k(int param0) {
         return "</col></u>";
     }
 
@@ -757,7 +749,7 @@ final class bf extends bj implements sg, qb, qn {
         return stackIn_3_0;
     }
 
-    private final int a(String param0, byte param1, int param2, hm param3) {
+    private final int a(String param0, byte param1, int param2, hm param3, int param4) {
         ki var6 = null;
         RuntimeException var6_ref = null;
         oj var7 = null;
@@ -863,21 +855,20 @@ final class bf extends bj implements sg, qb, qn {
         return stackIn_1_0;
     }
 
-    final static java.awt.Canvas i() {
+    final static java.awt.Canvas i(byte param0) {
         return null == df.field_d ? of.field_d : (java.awt.Canvas) (Object) df.field_d;
     }
 
     final void a(int param0, int param1, int param2, hm param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 1;
-            ((bf) this).field_K.field_y = this.b();
+            ((bf) this).field_K.field_y = this.b(true);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "bf.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final boolean b() {
+    private final boolean b(boolean param0) {
         if (this.a(false, (og) (Object) ((bf) this).field_S)) {
           if (this.a(false, (og) (Object) ((bf) this).field_I)) {
             if (this.a(false, (og) (Object) ((bf) this).field_R)) {
@@ -905,7 +896,7 @@ final class bf extends bj implements sg, qb, qn {
         }
     }
 
-    private final String j() {
+    private final String j(int param0) {
         int var2 = 0;
         return "<u=2164A2><col=2164A2>";
     }
@@ -1147,9 +1138,8 @@ final class bf extends bj implements sg, qb, qn {
         return stackIn_1_0;
     }
 
-    private final boolean h() {
-        int discarded$0 = 1;
-        if (!(this.b())) {
+    private final boolean h(byte param0) {
+        if (!(this.b(true))) {
             return false;
         }
         int var2 = -1;

@@ -39,17 +39,16 @@ final class ei extends vf {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_d = null;
     }
 
-    final static int c() {
+    final static int c(int param0) {
         ja.field_b.a((byte) -50);
         if (dg.field_H.b((byte) -125)) {
             return 0;
         }
-        int discarded$0 = 76;
-        return kf.a();
+        return kf.a(76);
     }
 
     ei() {

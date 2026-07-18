@@ -62,7 +62,7 @@ final class tk extends fa {
         return 0 <= param1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
     }
 

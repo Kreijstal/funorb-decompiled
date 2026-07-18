@@ -186,8 +186,7 @@ final class qnb extends rqa {
               }
             }
             if (!Character.isISOControl(param1)) {
-              int discarded$8 = 0;
-              if (hoa.a(param1)) {
+              if (hoa.a(param1, false)) {
                 stackOut_8_0 = 1;
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0 != 0;

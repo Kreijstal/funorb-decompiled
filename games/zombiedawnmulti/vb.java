@@ -10,7 +10,7 @@ final class vb {
     static byte[][] field_a;
     static String field_d;
 
-    final static cj a() {
+    final static cj a(int param0) {
         if (da.field_a > 0) {
             return dl.field_a;
         }
@@ -260,17 +260,12 @@ final class vb {
         try {
           L0: {
             lc.a(-12035, param14, param10, param19, param9);
-            int discarded$5 = -125;
-            km.a(param14);
+            km.a(param14, (byte) -125);
             md.a(param7, param13, param6, param14, param2, param12, param16, param1, param8, param0, true, param18, param3, 1, param5);
-            int discarded$6 = 1;
-            int discarded$7 = 0;
-            t.a(param17, param14);
-            int discarded$8 = 2;
-            po.a();
+            t.a(param17, param14, 0, true);
+            po.a(2);
             wf.a(6835);
-            int discarded$9 = 41;
-            hb.b();
+            hb.b(41);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

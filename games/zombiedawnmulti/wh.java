@@ -91,7 +91,7 @@ final class wh implements Iterable {
                 break L1;
               } else {
                 var3 = null;
-                fc discarded$4 = wh.a((byte[]) null, -96);
+                fc discarded$2 = wh.a((byte[]) null, -96);
                 break L1;
               }
             }
@@ -117,8 +117,7 @@ final class wh implements Iterable {
                 }
               }
             } else {
-              int discarded$5 = 1;
-              stackOut_3_0 = ee.a(param0);
+              stackOut_3_0 = ee.a(param0, true);
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             }
@@ -160,7 +159,7 @@ final class wh implements Iterable {
         return (Iterator) (Object) new up((wh) this);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
     }
 

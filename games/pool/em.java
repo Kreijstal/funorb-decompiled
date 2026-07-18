@@ -104,7 +104,7 @@ final class em extends ob {
         }
     }
 
-    private final void i() {
+    private final void i(int param0) {
         String var2 = null;
         String[] var3 = null;
         int var5 = 0;
@@ -145,9 +145,7 @@ final class em extends ob {
         L0: {
           var11 = Pool.field_O;
           if (null == eq.field_V) {
-            int discarded$2 = 10;
-            int discarded$3 = 3;
-            eq.field_V = jf.a(-112, 1, fd.field_O);
+            eq.field_V = jf.a(-112, 1, fd.field_O, 3, 10);
             break L0;
           } else {
             break L0;
@@ -272,7 +270,7 @@ final class em extends ob {
         return 0;
     }
 
-    private final void f() {
+    private final void f(int param0) {
     }
 
     em(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -383,7 +381,7 @@ final class em extends ob {
         }
     }
 
-    final static int a(float param0) {
+    final static int a(float param0, int param1) {
         return j.a(16, param0, (byte) 127);
     }
 
@@ -417,7 +415,7 @@ final class em extends ob {
         return 1900 + new Date().getYear();
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         param0.removeKeyListener((java.awt.event.KeyListener) (Object) wn.field_a);
         try {
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) wn.field_a);
@@ -562,11 +560,9 @@ final class em extends ob {
     final void c(int param0) {
         super.c(105);
         if (hk.b(95)) {
-            int discarded$1 = 2931;
-            this.f();
+            this.f(2931);
         } else {
-            int discarded$2 = -3;
-            this.i();
+            this.i(-3);
         }
         if (param0 <= 36) {
             field_P = -120;
@@ -885,12 +881,10 @@ final class em extends ob {
             wo.a(1, param9);
             rn.a(param10, param14, args, param2, (byte) 60, param12, param18, param15, 1, param5, param11, param19, param16, param7, param9);
             jk.a(param3, false, param9, param6);
-            int discarded$2 = -74;
-            ef.a();
+            ef.a(-74);
             var20_int = 0;
             cn.a(-119);
-            int discarded$3 = -22;
-            ho.c();
+            ho.c((byte) -22);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1282,7 +1276,7 @@ final class em extends ob {
         return this.g(param0, 53) ? ln.field_s : super.b(param0, -34);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         int var1 = 0;
         field_M = null;
         field_J = null;

@@ -150,8 +150,7 @@ final class cha extends lw {
                     if (param0 == 16) {
                       ((cha) this).b(1);
                       ((cha) this).c(98);
-                      int discarded$3 = 120;
-                      pea.d();
+                      pea.d((byte) 120);
                       return;
                     } else {
                       if (((cha) this).field_e != 1) {
@@ -264,8 +263,7 @@ final class cha extends lw {
                     if (param0 == 16) {
                       ((cha) this).b(1);
                       ((cha) this).c(98);
-                      int discarded$4 = 120;
-                      pea.d();
+                      pea.d((byte) 120);
                       return;
                     } else {
                       break L9;
@@ -383,8 +381,7 @@ final class cha extends lw {
                   if (param0 == 16) {
                     ((cha) this).b(1);
                     ((cha) this).c(98);
-                    int discarded$5 = 120;
-                    pea.d();
+                    pea.d((byte) 120);
                     return;
                   } else {
                     break L14;

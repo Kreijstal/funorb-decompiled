@@ -5,7 +5,7 @@ final class woa extends od {
     byte[] field_k;
     static String field_l;
 
-    final static void a(int param0, cga param1) {
+    final static void a(int param0, cga param1, boolean param2) {
         try {
             aba.field_a.b((byte) -86, (vg) (Object) param1);
             wj.a(param1, 4, -118);
@@ -14,7 +14,7 @@ final class woa extends od {
         }
     }
 
-    final static void a(int param0, cn param1, cn param2) {
+    final static void a(int param0, cn param1, cn param2, int param3) {
         jma.field_j = param1;
         try {
             dk.field_c = param2;
@@ -31,7 +31,7 @@ final class woa extends od {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
     }
 

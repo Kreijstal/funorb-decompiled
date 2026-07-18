@@ -13,7 +13,7 @@ abstract class tfa implements iva {
     static int[] field_d;
     int field_i;
 
-    private final int c() {
+    private final int c(byte param0) {
         int var2 = ((tfa) this).field_f.field_b * ((tfa) this).field_a.field_e * ((tfa) this).field_h;
         return !((tfa) this).field_b ? var2 : var2 * 4 / 3;
     }
@@ -189,10 +189,9 @@ abstract class tfa implements iva {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         if (!(0 >= ((tfa) this).field_c)) {
-            int discarded$0 = -120;
-            ((tfa) this).field_j.a(((tfa) this).field_c, this.c(), 2);
+            ((tfa) this).field_j.a(((tfa) this).field_c, this.c((byte) -120), 2);
             ((tfa) this).field_c = 0;
         }
         int var2 = 0;
@@ -272,8 +271,7 @@ abstract class tfa implements iva {
     }
 
     protected final void finalize() throws Throwable {
-        int discarded$0 = 114;
-        this.f();
+        this.f((byte) 114);
         super.finalize();
     }
 
@@ -389,7 +387,7 @@ abstract class tfa implements iva {
         }
     }
 
-    final static ija a(int param0, int param1, java.awt.Canvas param2) {
+    final static ija a(int param0, int param1, java.awt.Canvas param2, int param3) {
         try {
             Class var4 = null;
             Throwable var4_ref = null;
@@ -872,8 +870,7 @@ abstract class tfa implements iva {
 
     private final void a(byte param0, int param1) {
         ((tfa) this).field_j.field_Xb = ((tfa) this).field_j.field_Xb;
-        int discarded$0 = -120;
-        ((tfa) this).field_j.field_Xb = ((tfa) this).field_j.field_Xb + this.c();
+        ((tfa) this).field_j.field_Xb = ((tfa) this).field_j.field_Xb + this.c((byte) -120);
     }
 
     tfa(kda param0, int param1, ft param2, una param3, int param4, boolean param5) {

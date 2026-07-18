@@ -12,13 +12,13 @@ abstract class jt extends pj {
     static long field_x;
     int field_z;
 
-    public static void d() {
+    public static void d(byte param0) {
         field_t = null;
         field_v = null;
         field_y = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         if (tt.field_l >= 224) {
             lf.a(0, 256);

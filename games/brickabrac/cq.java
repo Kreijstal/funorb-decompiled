@@ -19,7 +19,7 @@ final class cq extends nm {
     int field_m;
     int field_k;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_q = null;
         field_o = null;
         field_i = null;
@@ -69,13 +69,12 @@ final class cq extends nm {
         if (!(null == no.field_p)) {
             no.field_p.a(true, param0);
         }
-        int discarded$0 = 1;
-        eh.a(param0);
+        eh.a(param0, true);
     }
 
     final static void a(int param0, boolean param1, int param2, oi param3) {
-        String[] var4 = null;
-        RuntimeException var4_ref = null;
+        RuntimeException var4 = null;
+        String[] var5 = null;
         String[] stackIn_1_0 = null;
         String[] stackIn_1_1 = null;
         int stackIn_1_2 = 0;
@@ -149,7 +148,7 @@ final class cq extends nm {
             }
             L2: {
               stackIn_3_1[stackIn_3_2] = stackIn_3_3;
-              var4 = stackIn_3_0;
+              var5 = stackIn_3_0;
               od.field_c = 13;
               fp.field_z = 57;
               og.field_Wb = 3;
@@ -158,8 +157,7 @@ final class cq extends nm {
               tm.field_g = 11;
               qm.field_a = 40;
               ek.field_kb = 72;
-              int discarded$4 = 66;
-              ck.a();
+              ck.a((byte) 66);
               r.field_A = be.field_a;
               if (!r.field_A) {
                 hd.a(true);
@@ -182,15 +180,14 @@ final class cq extends nm {
               }
             }
             oa.field_Sb = rd.a(param3.field_b.field_c[param2].field_l, (byte) 19);
-            int discarded$5 = -12665;
-            sk.a(var4, param2, param3, 1, param1);
+            sk.a(var5, param2, param3, 1, param1, -12665);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var4_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4_ref;
+            var4 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var4;
             stackOut_12_1 = new StringBuilder().append("cq.C(").append(16727).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;

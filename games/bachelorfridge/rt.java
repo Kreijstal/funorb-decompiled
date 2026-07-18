@@ -6,13 +6,13 @@ final class rt {
     static String field_c;
     static be[] field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;
     }
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

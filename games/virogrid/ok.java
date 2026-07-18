@@ -11,7 +11,7 @@ final class ok extends fd implements im, ta {
     private tg field_I;
     static String field_E;
 
-    public static void f() {
+    public static void f(int param0) {
         field_K = null;
         field_E = null;
     }
@@ -101,7 +101,7 @@ final class ok extends fd implements im, ta {
         return stackIn_12_0 != 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, e param9, int param10, mg[] param11, int param12, int param13, int param14, int param15, mg[] param16, e param17, mg[] param18, int param19) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, e param9, int param10, mg[] param11, int param12, int param13, int param14, int param15, mg[] param16, e param17, mg[] param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -382,7 +382,7 @@ final class ok extends fd implements im, ta {
         }
     }
 
-    private final String a() {
+    private final String a(byte param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -415,7 +415,6 @@ final class ok extends fd implements im, ta {
             ((ok) this).field_H = param0;
             ((ok) this).field_I = new tg(md.field_c, (cd) null);
             ((ok) this).field_I.field_w = (ol) (Object) new hf();
-            int discarded$1 = 125;
             var7 = oi.a(new String[2], gh.field_Kb, 2);
             var3 = 20;
             var4 = new aj(dj.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, dj.field_h.field_H, -1, 2147483647, true);
@@ -499,20 +498,17 @@ final class ok extends fd implements im, ta {
               }
             }
             if (0 == param0) {
-              int discarded$6 = 12;
-              wf.a("terms.ws");
+              wf.a("terms.ws", 12);
               return;
             } else {
               if (param0 == 1) {
-                int discarded$7 = 12;
-                wf.a("privacy.ws");
+                wf.a("privacy.ws", 12);
                 return;
               } else {
                 if (param0 != 2) {
                   break L0;
                 } else {
-                  int discarded$8 = 12;
-                  wf.a("conduct.ws");
+                  wf.a("conduct.ws", 12);
                   return;
                 }
               }
@@ -553,13 +549,11 @@ final class ok extends fd implements im, ta {
     final static void b(boolean param0, int param1) {
         if (param1 != 3410) {
           field_E = null;
-          int discarded$4 = 6;
-          oi.a(param0);
+          oi.a(param0, 6);
           cg.a(param0, param1 + 3441);
           return;
         } else {
-          int discarded$5 = 6;
-          oi.a(param0);
+          oi.a(param0, 6);
           cg.a(param0, param1 + 3441);
           return;
         }

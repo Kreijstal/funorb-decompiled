@@ -8,11 +8,11 @@ final class uk {
     static int field_a;
     static int field_b;
 
-    final static int a() {
+    final static int a(int param0) {
         return pa.field_a;
     }
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -256,7 +256,7 @@ final class uk {
         return stackIn_1_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_d = null;
     }

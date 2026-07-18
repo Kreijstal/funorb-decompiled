@@ -10,7 +10,7 @@ final class vh {
     private rk[] field_b;
     static hb field_a;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_e = null;
         field_a = null;
     }
@@ -22,8 +22,7 @@ final class vh {
                 param0.a(true);
             }
             if (param1 != 11) {
-                int discarded$0 = 0;
-                vh.b();
+                vh.b(false);
             }
             var5 = ((vh) this).field_b[(int)((long)(((vh) this).field_d - 1) & param2)];
             param0.field_h = var5;

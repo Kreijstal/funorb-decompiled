@@ -7,7 +7,7 @@ final class ug {
     static String[] field_d;
     static ed[] field_a;
 
-    final static boolean a(int param0) {
+    final static boolean a(int param0, int param1) {
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -49,7 +49,7 @@ final class ug {
         return stackIn_7_0 != 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_c = null;
         field_b = null;

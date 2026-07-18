@@ -459,7 +459,7 @@ final class hn extends gn {
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_f = null;
         field_h = null;

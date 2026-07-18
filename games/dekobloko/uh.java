@@ -327,7 +327,7 @@ final class uh implements Iterable {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
     }
 

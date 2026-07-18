@@ -14,7 +14,7 @@ final class pa {
     static cm field_a;
     static mi field_k;
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -34,8 +34,7 @@ final class pa {
         String stackOut_4_2 = null;
         try {
           L0: {
-            int discarded$5 = -30418;
-            qe.a((java.awt.Component) (Object) param0);
+            qe.a((java.awt.Component) (Object) param0, -30418);
             hb.a(0, (java.awt.Component) (Object) param0);
             if (nc.field_j == null) {
               break L0;
@@ -76,7 +75,7 @@ final class pa {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_k = null;
         field_g = null;

@@ -96,12 +96,12 @@ final class aj extends fa {
         return (Object) (Object) stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         field_k = null;
     }
 
-    final static void a(fm param0, fm param1) {
+    final static void a(fm param0, fm param1, boolean param2, int param3) {
         try {
             nk.a(eg.field_k, (jl) (Object) c.field_Y, ug.field_s, sc.field_g, (byte) 125, kj.field_l, dn.field_c, bl.field_d, qk.field_d, true, mg.field_h, l.field_q);
             h.field_V = eh.a("chatfilter", "lobby", (byte) 47, param1);

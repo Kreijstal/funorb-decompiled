@@ -282,7 +282,7 @@ abstract class qk extends ob {
         super.a(126);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_lb = null;
         field_qb = null;
         field_pb = null;

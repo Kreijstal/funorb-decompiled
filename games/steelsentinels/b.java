@@ -156,12 +156,11 @@ final class b implements qk {
         var2.a(param0, (byte) -117);
         var2.a((byte) 123, 2);
         var2.a((byte) 112, 4);
-        int discarded$0 = 56;
-        var2.a((byte) 127, nd.a());
+        var2.a((byte) 127, nd.a((byte) 56));
         int var3 = -47 % ((param1 - -35) / 61);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_l = null;
         field_i = null;

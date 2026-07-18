@@ -4,7 +4,7 @@
 final class mc {
     private int[] field_a;
 
-    final static String a() {
+    final static String a(int param0) {
         if (kj.field_R >= 2) {
           if (af.field_c != null) {
             if (!af.field_c.c((byte) -121)) {
@@ -377,7 +377,7 @@ final class mc {
         return stackIn_62_0;
     }
 
-    final static ia a(String param0) {
+    final static ia a(String param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         ia var3 = null;
@@ -413,15 +413,13 @@ final class mc {
             if (param0 != null) {
               if (param0.length() != 0) {
                 var6 = (CharSequence) (Object) param0;
-                int discarded$4 = -2;
-                var2 = jg.a(var6);
+                var2 = jg.a(var6, -2);
                 if (var2 != null) {
                   var3 = (ia) (Object) ok.field_a.a((long)var2.hashCode(), true);
                   L0: while (true) {
                     if (var3 != null) {
                       var7 = (CharSequence) (Object) var3.field_ib;
-                      int discarded$5 = -2;
-                      var4 = jg.a(var7);
+                      var4 = jg.a(var7, -2);
                       if (!var4.equals((Object) (Object) var2)) {
                         var3 = (ia) (Object) ok.field_a.a((byte) -9);
                         continue L0;

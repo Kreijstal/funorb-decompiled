@@ -49,7 +49,7 @@ final class on {
         }
     }
 
-    final static void a(cc param0, int param1, int param2, int param3, int param4, int param5, int param6, mp param7, mp param8, int param9, byte param10, int param11, mp param12, int param13, int param14, cc param15, int param16, int param17, int param18) {
+    final static void a(cc param0, int param1, int param2, int param3, int param4, int param5, int param6, mp param7, mp param8, int param9, byte param10, int param11, mp param12, int param13, int param14, cc param15, int param16, int param17, int param18, int param19) {
         RuntimeException var20 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -131,17 +131,10 @@ final class on {
           L0: {
             hd.field_f = param0;
             oc.field_s = param15;
-            int discarded$7 = 89;
-            t.a(param17, param3, param4, param18);
-            int discarded$8 = 8;
-            int discarded$9 = 8;
-            int discarded$10 = -122;
-            aq.a(param12);
+            t.a(param17, param3, param4, param18, (byte) 89);
+            aq.a(param12, (byte) -122, 8, 8);
             ni.a((byte) 107, 5, 10, 20, param7, param8);
-            int discarded$11 = 122;
-            int discarded$12 = 280;
-            int discarded$13 = 320;
-            af.a();
+            af.a(320, 280, (byte) 122);
             ug.a((byte) -113, 16766751, 16777215, 16777215);
             break L0;
           }
@@ -301,8 +294,7 @@ final class on {
               var5.field_o = 1;
               var5.field_p = param4;
               wg.field_i.a((li) (Object) var5, false);
-              int discarded$2 = 108;
-              mm.a(3, var5);
+              mm.a(3, var5, (byte) 108);
               return var5;
             }
           } else {
@@ -316,7 +308,7 @@ final class on {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (pm.field_a) {
             bm.g(0);
             return;

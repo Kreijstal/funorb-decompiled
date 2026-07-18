@@ -82,7 +82,7 @@ final class od {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 
@@ -151,7 +151,7 @@ final class od {
         }
     }
 
-    final static he a(int param0, int param1, int param2, int param3, d param4) {
+    final static he a(int param0, int param1, int param2, int param3, d param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         he var7 = null;
@@ -176,13 +176,12 @@ final class od {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            var8 = qe.a(0, -1, 480, 640, param4);
+            var8 = qe.a(0, -1, 480, 640, param4, 0);
             var6 = var8;
             if (var8 != null) {
               var7 = new he();
               var7.field_b = var8;
-              java.awt.Component discarded$5 = var7.field_b.add((java.awt.Component) (Object) var7);
+              java.awt.Component discarded$2 = var7.field_b.add((java.awt.Component) (Object) var7);
               var7.setBounds(0, 0, 640, 480);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();

@@ -13,7 +13,7 @@ final class u {
     static bd field_h;
     static String field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_f = null;
         field_g = null;
@@ -24,7 +24,7 @@ final class u {
         field_h = null;
     }
 
-    final static void a(oc param0, oc param1, int param2) {
+    final static void a(oc param0, oc param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -60,37 +60,30 @@ final class u {
         try {
           L0: {
             if (q.field_g.a((byte) -117)) {
-              int discarded$27 = 1;
-              u.a();
+              u.a(true);
               break L0;
             } else {
               qj.a(-114, param2, param0, param1);
-              int discarded$28 = -19706;
-              t.c();
+              t.c(-19706);
               if (null == vi.field_p[0]) {
-                int discarded$29 = 1;
-                u.a();
+                u.a(true);
                 return;
               } else {
                 if (8 != vi.field_p[0].field_i) {
-                  int discarded$30 = 1;
-                  u.a();
+                  u.a(true);
                   return;
                 } else {
                   if (vi.field_p[0].field_I <= 0) {
-                    int discarded$31 = 1;
-                    u.a();
+                    u.a(true);
                     return;
                   } else {
                     if (!vi.field_p[0].field_n) {
                       nl.field_b = 180;
-                      int discarded$32 = 1;
-                      u.a();
+                      u.a(true);
                       return;
                     } else {
                       nl.field_b = 256;
-                      int discarded$33 = 1;
-                      u.a();
+                      u.a(true);
                       return;
                     }
                   }

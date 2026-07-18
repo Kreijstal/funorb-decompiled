@@ -12,7 +12,7 @@ final class mq {
     static tg field_e;
     static jp field_f;
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         field_f = null;
         field_c = null;
@@ -153,13 +153,12 @@ final class mq {
         return stackIn_5_0;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         int var1 = 1;
-        int discarded$0 = 14;
-        return uo.a(uc.e((byte) -95));
+        return uo.a(uc.e((byte) -95), (byte) 14);
     }
 
-    final static mh c() {
+    final static mh c(int param0) {
         return fo.field_b.field_Rb;
     }
 

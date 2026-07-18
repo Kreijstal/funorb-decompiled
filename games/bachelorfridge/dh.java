@@ -4,7 +4,7 @@
 final class dh extends pp {
     static String field_i;
 
-    public static void d() {
+    public static void d(byte param0) {
         field_i = null;
     }
 

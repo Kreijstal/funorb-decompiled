@@ -34,46 +34,55 @@ public final class kr extends bf {
     private int field_tc;
 
     final void a(int param0, tl param1, int param2) {
-        cj var4 = (cj) (Object) param1;
-        int discarded$0 = ((kr) this).field_Rc.SetStreamSource(param2, var4.field_f, 0, var4.b(param0));
+        cj var4 = null;
+        try {
+            var4 = (cj) (Object) param1;
+            int discarded$0 = ((kr) this).field_Rc.SetStreamSource(param2, var4.field_f, 0, var4.b(param0));
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     final bp a(int param0, int param1, int param2, hd param3, int param4, byte[] param5) {
-        if (param1 > -93) {
+        RuntimeException var7 = null;
+        L0: {
+          if (param1 <= -93) {
+            break L0;
+          } else {
             ((kr) this).field_Qc = null;
+            break L0;
+          }
         }
         return (bp) (Object) new nt((kr) this, param3, param2, param0, param4, param5);
     }
 
     private final static boolean a(int param0, jagdx.D3DPRESENT_PARAMETERS param1, byte param2, int param3, int param4, jagdx.IDirect3D param5) {
-        int var6 = 0;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         Throwable var10 = null;
+        jagdx.D3DDISPLAYMODE var10_ref = null;
         int var11 = 0;
         int var12 = 0;
-        jagdx.D3DDISPLAYMODE var13 = null;
-        jagdx.D3DDISPLAYMODE var14 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_33_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_54_0 = 0;
+        int stackIn_56_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_30_0 = 0;
-        var6 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_55_0 = 0;
+        int stackOut_53_0 = 0;
+        var6_int = 0;
         var7 = 0;
         var9 = -92 % ((67 - param2) / 45);
         var8 = 0;
         try {
           L0: {
-            var13 = new jagdx.D3DDISPLAYMODE();
-            var14 = var13;
-            if (jagdx.gf.a(-1, param5.a(param4, var14))) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+            var10_ref = new jagdx.D3DDISPLAYMODE();
+            if (jagdx.gf.a(-1, param5.a(param4, var10_ref))) {
+              stackOut_4_0 = 0;
+              stackIn_5_0 = stackOut_4_0;
+              return stackIn_5_0 != 0;
             } else {
               L1: while (true) {
                 L2: {
@@ -91,10 +100,10 @@ public final class kr extends bf {
                             break L3;
                           } else {
                             L5: {
-                              if (0 != param5.CheckDeviceType(param4, param3, var13.Format, field_Jc[var11], true)) {
+                              if (0 != param5.CheckDeviceType(param4, param3, var10_ref.Format, field_Jc[var11], true)) {
                                 break L5;
                               } else {
-                                if (param5.CheckDeviceFormat(param4, param3, var13.Format, 1, 1, field_Jc[var11]) != 0) {
+                                if (param5.CheckDeviceFormat(param4, param3, var10_ref.Format, 1, 1, field_Jc[var11]) != 0) {
                                   break L5;
                                 } else {
                                   L6: {
@@ -114,15 +123,15 @@ public final class kr extends bf {
                                       break L5;
                                     } else {
                                       L8: {
-                                        if (param5.CheckDeviceFormat(param4, param3, var13.Format, 2, 1, field_uc[var12]) == 0) {
-                                          if (param5.CheckDepthStencilMatch(param4, param3, var13.Format, field_Jc[var11], field_uc[var12]) != -1) {
+                                        if (param5.CheckDeviceFormat(param4, param3, var10_ref.Format, 2, 1, field_uc[var12]) == 0) {
+                                          if (param5.CheckDepthStencilMatch(param4, param3, var10_ref.Format, field_Jc[var11], field_uc[var12]) != 0) {
                                             break L8;
                                           } else {
                                             L9: {
                                               if (param0 == 0) {
                                                 break L9;
                                               } else {
-                                                if (-1 == param5.CheckDeviceMultiSampleType(param4, param3, field_uc[var11], true, var8)) {
+                                                if (param5.CheckDeviceMultiSampleType(param4, param3, field_uc[var11], true, var8) == 0) {
                                                   break L9;
                                                 } else {
                                                   break L8;
@@ -130,7 +139,7 @@ public final class kr extends bf {
                                               }
                                             }
                                             var7 = field_Jc[var11];
-                                            var6 = field_uc[var12];
+                                            var6_int = field_uc[var12];
                                             break L2;
                                           }
                                         } else {
@@ -161,23 +170,23 @@ public final class kr extends bf {
                     if (var7 == 0) {
                       break L10;
                     } else {
-                      if (var6 == 0) {
+                      if (var6_int == 0) {
                         break L10;
                       } else {
                         param1.MultiSampleType = var8;
-                        param1.AutoDepthStencilFormat = var6;
+                        param1.AutoDepthStencilFormat = var6_int;
                         param1.BackBufferFormat = var7;
                         param1.MultiSampleQuality = 0;
-                        stackOut_32_0 = 1;
-                        stackIn_33_0 = stackOut_32_0;
+                        stackOut_55_0 = 1;
+                        stackIn_56_0 = stackOut_55_0;
                         break L0;
                       }
                     }
                   }
                 }
-                stackOut_30_0 = 0;
-                stackIn_31_0 = stackOut_30_0;
-                return stackIn_31_0 != 0;
+                stackOut_53_0 = 0;
+                stackIn_54_0 = stackOut_53_0;
+                return stackIn_54_0 != 0;
               }
             }
           }
@@ -186,26 +195,34 @@ public final class kr extends bf {
           var10 = decompiledCaughtException;
           return false;
         }
-        return stackIn_33_0 != 0;
+        return stackIn_56_0 != 0;
     }
 
     final void a(int param0, jagdx.IDirect3DPixelShader param1) {
-        int var3 = -25 / ((param0 - -55) / 42);
-        int discarded$0 = ((kr) this).field_Rc.SetPixelShader(param1);
+        try {
+            int var3_int = -25 / ((param0 - -55) / 42);
+            int discarded$0 = ((kr) this).field_Rc.SetPixelShader(param1);
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     final void I(int param0) {
-        int var2 = -74 / ((27 - param0) / 38);
-        int discarded$0 = ((kr) this).field_Rc.SetScissorRect(((kr) this).field_Rb - -((kr) this).field_R, ((kr) this).field_Nb + ((kr) this).field_Ib, ((kr) this).field_gc, ((kr) this).field_V);
+        try {
+            int var2_int = -74 / ((27 - param0) / 38);
+            int discarded$0 = ((kr) this).field_Rc.SetScissorRect(((kr) this).field_Rb - -((kr) this).field_R, ((kr) this).field_Nb + ((kr) this).field_Ib, ((kr) this).field_gc, ((kr) this).field_V);
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+        jagdx.IDirect3DSurface var8 = null;
         jagdx.IDirect3DSurface var9 = null;
         int var10 = 0;
         int var11 = 0;
-        jagdx.IDirect3DSurface var12 = null;
         L0: {
-          var12 = ((kr) this).field_Rc.c(0);
+          var8 = ((kr) this).field_Rc.c(0);
           var9 = ((kr) this).field_Rc.a(param2, param3, 21, 0, 0, true);
           if (jagdx.gf.a((byte) 93, var9.LockRect(0, 0, param2, param3, 0, ((kr) this).field_Ec))) {
             L1: {
@@ -219,10 +236,10 @@ public final class kr extends bf {
             L2: {
               L3: {
                 var10 = ((kr) this).field_Ec.getRowPitch();
-                if (param6 != param2) {
+                if (~param6 != ~param2) {
                   break L3;
                 } else {
-                  if (var10 != 4 * param2) {
+                  if (~var10 != ~(4 * param2)) {
                     break L3;
                   } else {
                     ((kr) this).field_Ec.a(param4, param5, 0, param2 * param3);
@@ -241,35 +258,49 @@ public final class kr extends bf {
                 }
               }
             }
-            boolean discarded$4 = var9.UnlockRect();
+            boolean discarded$3 = var9.UnlockRect();
             break L0;
           } else {
             break L0;
           }
         }
-        int discarded$5 = ((kr) this).field_Rc.StretchRect(var9, 0, 0, param2, param3, var12, param0, param1, param2, param3, 0);
+        int discarded$4 = ((kr) this).field_Rc.StretchRect(var9, 0, 0, param2, param3, var8, param0, param1, param2, param3, 0);
     }
 
     final void V(int param0) {
-        ((kr) this).field_Nc.SetDirection(-((kr) this).field_Jb[0], -((kr) this).field_Jb[1], -((kr) this).field_Jb[2]);
-        ((kr) this).field_yc.SetDirection(-((kr) this).field_Gb[param0], -((kr) this).field_Gb[1], -((kr) this).field_Gb[2]);
-        ((kr) this).field_Mc = false;
+        try {
+            ((kr) this).field_Nc.SetDirection(-((kr) this).field_Jb[0], -((kr) this).field_Jb[1], -((kr) this).field_Jb[2]);
+            ((kr) this).field_yc.SetDirection(-((kr) this).field_Gb[param0], -((kr) this).field_Gb[1], -((kr) this).field_Gb[2]);
+            ((kr) this).field_Mc = false;
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     final Object a(int param0, java.awt.Canvas param1) {
-        if (param0 == -15083) {
-            return null;
+        RuntimeException var3 = null;
+        L0: {
+          if (param0 == -15083) {
+            break L0;
+          } else {
+            sk discarded$2 = ((kr) this).b(26, (byte) 42);
+            break L0;
+          }
         }
-        sk discarded$0 = ((kr) this).b(26, (byte) 42);
         return null;
     }
 
     final void a(jagdx.IDirect3DVertexShader param0, int param1) {
-        ((kr) this).field_zc = param0;
-        if (param1 != 5243) {
+        L0: {
+          ((kr) this).field_zc = param0;
+          if (param1 == 5243) {
+            break L0;
+          } else {
             ((kr) this).field_vc = null;
+            break L0;
+          }
         }
-        int discarded$0 = ((kr) this).field_Rc.SetVertexShader(param0);
+        int discarded$2 = ((kr) this).field_Rc.SetVertexShader(param0);
         ((kr) this).p(-119);
     }
 
@@ -278,31 +309,39 @@ public final class kr extends bf {
         int stackIn_1_1 = 0;
         jagdx.IDirect3DDevice stackIn_2_0 = null;
         int stackIn_2_1 = 0;
-        jagdx.IDirect3DDevice stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
         jagdx.IDirect3DDevice stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         jagdx.IDirect3DDevice stackIn_5_0 = null;
         int stackIn_5_1 = 0;
-        int stackIn_5_2 = 0;
+        jagdx.IDirect3DDevice stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
+        jagdx.IDirect3DDevice stackIn_9_0 = null;
+        int stackIn_9_1 = 0;
+        jagdx.IDirect3DDevice stackIn_10_0 = null;
+        int stackIn_10_1 = 0;
+        int stackIn_10_2 = 0;
         jagdx.IDirect3DDevice stackOut_0_0 = null;
         int stackOut_0_1 = 0;
         jagdx.IDirect3DDevice stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         jagdx.IDirect3DDevice stackOut_2_0 = null;
         int stackOut_2_1 = 0;
-        jagdx.IDirect3DDevice stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
         jagdx.IDirect3DDevice stackOut_4_0 = null;
         int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
+        jagdx.IDirect3DDevice stackOut_5_0 = null;
+        int stackOut_5_1 = 0;
+        jagdx.IDirect3DDevice stackOut_7_0 = null;
+        int stackOut_7_1 = 0;
+        int stackOut_7_2 = 0;
+        jagdx.IDirect3DDevice stackOut_9_0 = null;
+        int stackOut_9_1 = 0;
+        int stackOut_9_2 = 0;
         L0: {
           L1: {
             stackOut_0_0 = ((kr) this).field_Rc;
             stackOut_0_1 = 28;
-            stackIn_4_0 = stackOut_0_0;
-            stackIn_4_1 = stackOut_0_1;
+            stackIn_9_0 = stackOut_0_0;
+            stackIn_9_1 = stackOut_0_1;
             stackIn_1_0 = stackOut_0_0;
             stackIn_1_1 = stackOut_0_1;
             if (!((kr) this).field_I) {
@@ -310,8 +349,8 @@ public final class kr extends bf {
             } else {
               stackOut_1_0 = (jagdx.IDirect3DDevice) (Object) stackIn_1_0;
               stackOut_1_1 = stackIn_1_1;
-              stackIn_4_0 = stackOut_1_0;
-              stackIn_4_1 = stackOut_1_1;
+              stackIn_9_0 = stackOut_1_0;
+              stackIn_9_1 = stackOut_1_1;
               stackIn_2_0 = stackOut_1_0;
               stackIn_2_1 = stackOut_1_1;
               if (!((kr) this).field_o) {
@@ -321,32 +360,40 @@ public final class kr extends bf {
                 stackOut_2_1 = stackIn_2_1;
                 stackIn_4_0 = stackOut_2_0;
                 stackIn_4_1 = stackOut_2_1;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
+                stackOut_4_0 = (jagdx.IDirect3DDevice) (Object) stackIn_4_0;
+                stackOut_4_1 = stackIn_4_1;
+                stackIn_9_0 = stackOut_4_0;
+                stackIn_9_1 = stackOut_4_1;
+                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_1 = stackOut_4_1;
                 if (((kr) this).field_p < 0) {
                   break L1;
                 } else {
-                  stackOut_3_0 = (jagdx.IDirect3DDevice) (Object) stackIn_3_0;
-                  stackOut_3_1 = stackIn_3_1;
-                  stackOut_3_2 = 1;
-                  stackIn_5_0 = stackOut_3_0;
-                  stackIn_5_1 = stackOut_3_1;
-                  stackIn_5_2 = stackOut_3_2;
+                  stackOut_5_0 = (jagdx.IDirect3DDevice) (Object) stackIn_5_0;
+                  stackOut_5_1 = stackIn_5_1;
+                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_1 = stackOut_5_1;
+                  stackOut_7_0 = (jagdx.IDirect3DDevice) (Object) stackIn_7_0;
+                  stackOut_7_1 = stackIn_7_1;
+                  stackOut_7_2 = 1;
+                  stackIn_10_0 = stackOut_7_0;
+                  stackIn_10_1 = stackOut_7_1;
+                  stackIn_10_2 = stackOut_7_2;
                   break L0;
                 }
               }
             }
           }
-          stackOut_4_0 = (jagdx.IDirect3DDevice) (Object) stackIn_4_0;
-          stackOut_4_1 = stackIn_4_1;
-          stackOut_4_2 = 0;
-          stackIn_5_0 = stackOut_4_0;
-          stackIn_5_1 = stackOut_4_1;
-          stackIn_5_2 = stackOut_4_2;
+          stackOut_9_0 = (jagdx.IDirect3DDevice) (Object) stackIn_9_0;
+          stackOut_9_1 = stackIn_9_1;
+          stackOut_9_2 = 0;
+          stackIn_10_0 = stackOut_9_0;
+          stackIn_10_1 = stackOut_9_1;
+          stackIn_10_2 = stackOut_9_2;
           break L0;
         }
         L2: {
-          int discarded$4 = ((jagdx.IDirect3DDevice) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2 != 0);
+          int discarded$4 = ((jagdx.IDirect3DDevice) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2 != 0);
           if (!param0) {
             break L2;
           } else {
@@ -358,13 +405,12 @@ public final class kr extends bf {
 
     final void b(int param0, int param1) throws lp {
         L0: {
-          int discarded$33 = ((kr) this).field_Rc.EndScene();
+          int discarded$16 = ((kr) this).field_Rc.EndScene();
           if (!((kr) this).field_xc.a(false)) {
-            int fieldTemp$34 = ((kr) this).field_Hc + 1;
+            int fieldTemp$17 = ((kr) this).field_Hc + 1;
             ((kr) this).field_Hc = ((kr) this).field_Hc + 1;
-            if (fieldTemp$34 <= 50) {
-              int discarded$35 = 1;
-              boolean discarded$36 = this.h();
+            if (fieldTemp$17 <= 50) {
+              boolean discarded$18 = this.h(true);
               break L0;
             } else {
               throw new lp();
@@ -372,29 +418,28 @@ public final class kr extends bf {
           } else {
             ((kr) this).field_Hc = 0;
             if (jagdx.gf.a(-1, ((kr) this).field_xc.a(0, -96))) {
-              int discarded$37 = 1;
-              boolean discarded$38 = this.h();
+              boolean discarded$19 = this.h(true);
               break L0;
             } else {
               break L0;
             }
           }
         }
-        int discarded$39 = ((kr) this).field_Rc.BeginScene();
+        int discarded$20 = ((kr) this).field_Rc.BeginScene();
     }
 
     final void G(int param0) {
-        int var2 = 0;
+        int var2_int = 0;
         boolean[] var3 = null;
         int var4 = 0;
-        var2 = 0;
+        var2_int = 0;
         L0: while (true) {
-          if (var2 >= ((kr) this).field_h) {
+          if (~var2_int <= ~((kr) this).field_h) {
             int discarded$15 = ((kr) this).field_Rc.SetTextureStageState(0, 6, 1);
             int discarded$16 = ((kr) this).field_Rc.SetRenderState(9, 2);
             int discarded$17 = ((kr) this).field_Rc.SetRenderState(23, 4);
             int discarded$18 = ((kr) this).field_Rc.SetRenderState(25, 5);
-            var2 = 39 / ((param0 - -65) / 51);
+            var2_int = 39 / ((param0 - -65) / 51);
             int discarded$19 = ((kr) this).field_Rc.SetRenderState(24, 0);
             int discarded$20 = ((kr) this).field_Rc.SetRenderState(22, 2);
             int discarded$21 = ((kr) this).field_Rc.SetRenderState(147, 1);
@@ -408,209 +453,218 @@ public final class kr extends bf {
             super.G(1);
             return;
           } else {
-            int discarded$25 = ((kr) this).field_Rc.SetSamplerState(var2, 7, 0);
-            int discarded$26 = ((kr) this).field_Rc.SetSamplerState(var2, 6, 2);
-            int discarded$27 = ((kr) this).field_Rc.SetSamplerState(var2, 5, 2);
-            int discarded$28 = ((kr) this).field_Rc.SetSamplerState(var2, 1, 1);
-            int discarded$29 = ((kr) this).field_Rc.SetSamplerState(var2, 2, 1);
-            ((kr) this).field_Oc[var2] = fg.field_A;
+            int discarded$25 = ((kr) this).field_Rc.SetSamplerState(var2_int, 7, 0);
+            int discarded$26 = ((kr) this).field_Rc.SetSamplerState(var2_int, 6, 2);
+            int discarded$27 = ((kr) this).field_Rc.SetSamplerState(var2_int, 5, 2);
+            int discarded$28 = ((kr) this).field_Rc.SetSamplerState(var2_int, 1, 1);
+            int discarded$29 = ((kr) this).field_Rc.SetSamplerState(var2_int, 2, 1);
+            ((kr) this).field_Oc[var2_int] = fg.field_A;
             var3 = ((kr) this).field_Qc;
-            var4 = var2;
-            ((kr) this).field_sc[var2] = true;
+            var4 = var2_int;
+            ((kr) this).field_sc[var2_int] = true;
             var3[var4] = true;
-            ((kr) this).field_Ac[var2] = false;
-            ((kr) this).field_Cc[var2] = 0;
-            var2++;
+            ((kr) this).field_Ac[var2_int] = false;
+            ((kr) this).field_Cc[var2_int] = 0;
+            var2_int++;
             continue L0;
           }
         }
     }
 
     final void a(ib param0, byte param1) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = 0;
-        int stackIn_4_0 = 0;
-        jagdx.IDirect3DDevice stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        int stackIn_7_2 = 0;
-        jagdx.IDirect3DDevice stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        int stackIn_8_2 = 0;
-        jagdx.IDirect3DDevice stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        int stackIn_9_2 = 0;
-        int stackIn_9_3 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_16_1 = 0;
-        jagdx.IDirect3DDevice stackIn_18_0 = null;
-        int stackIn_18_1 = 0;
-        int stackIn_18_2 = 0;
-        jagdx.IDirect3DDevice stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
-        int stackIn_19_2 = 0;
-        jagdx.IDirect3DDevice stackIn_20_0 = null;
-        int stackIn_20_1 = 0;
-        int stackIn_20_2 = 0;
-        int stackIn_20_3 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_14_1 = 0;
-        jagdx.IDirect3DDevice stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        int stackOut_17_2 = 0;
-        jagdx.IDirect3DDevice stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_19_2 = 0;
-        int stackOut_19_3 = 0;
-        jagdx.IDirect3DDevice stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int stackOut_18_2 = 0;
-        int stackOut_18_3 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        jagdx.IDirect3DDevice stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
-        jagdx.IDirect3DDevice stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
-        int stackOut_8_3 = 0;
-        jagdx.IDirect3DDevice stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        int stackOut_7_3 = 0;
+        int stackIn_7_0 = 0;
+        jagdx.IDirect3DDevice stackIn_11_0 = null;
+        int stackIn_11_1 = 0;
+        int stackIn_11_2 = 0;
+        jagdx.IDirect3DDevice stackIn_13_0 = null;
+        int stackIn_13_1 = 0;
+        int stackIn_13_2 = 0;
+        jagdx.IDirect3DDevice stackIn_14_0 = null;
+        int stackIn_14_1 = 0;
+        int stackIn_14_2 = 0;
+        int stackIn_14_3 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_23_1 = 0;
+        jagdx.IDirect3DDevice stackIn_25_0 = null;
+        int stackIn_25_1 = 0;
+        int stackIn_25_2 = 0;
+        jagdx.IDirect3DDevice stackIn_27_0 = null;
+        int stackIn_27_1 = 0;
+        int stackIn_27_2 = 0;
+        jagdx.IDirect3DDevice stackIn_29_0 = null;
+        int stackIn_29_1 = 0;
+        int stackIn_29_2 = 0;
+        jagdx.IDirect3DDevice stackIn_30_0 = null;
+        int stackIn_30_1 = 0;
+        int stackIn_30_2 = 0;
+        int stackIn_30_3 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_22_1 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_20_1 = 0;
+        jagdx.IDirect3DDevice stackOut_24_0 = null;
+        int stackOut_24_1 = 0;
+        int stackOut_24_2 = 0;
+        jagdx.IDirect3DDevice stackOut_29_0 = null;
+        int stackOut_29_1 = 0;
+        int stackOut_29_2 = 0;
+        int stackOut_29_3 = 0;
+        jagdx.IDirect3DDevice stackOut_25_0 = null;
+        int stackOut_25_1 = 0;
+        int stackOut_25_2 = 0;
+        jagdx.IDirect3DDevice stackOut_27_0 = null;
+        int stackOut_27_1 = 0;
+        int stackOut_27_2 = 0;
+        int stackOut_27_3 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
+        jagdx.IDirect3DDevice stackOut_10_0 = null;
+        int stackOut_10_1 = 0;
+        int stackOut_10_2 = 0;
+        jagdx.IDirect3DDevice stackOut_13_0 = null;
+        int stackOut_13_1 = 0;
+        int stackOut_13_2 = 0;
+        int stackOut_13_3 = 0;
+        jagdx.IDirect3DDevice stackOut_11_0 = null;
+        int stackOut_11_1 = 0;
+        int stackOut_11_2 = 0;
+        int stackOut_11_3 = 0;
         L0: {
-          int discarded$8 = ((kr) this).field_Rc.SetTexture(((kr) this).field_F, param0.b(110));
-          var3 = -65 % ((param1 - 26) / 32);
+          int discarded$5 = ((kr) this).field_Rc.SetTexture(((kr) this).field_F, param0.b(110));
+          var3_int = -65 % ((param1 - 26) / 32);
           if (((kr) this).field_Oc[((kr) this).field_F] != param0.field_a) {
             L1: {
-              int discarded$9 = 2;
-              var4 = kr.a(param0.field_a);
-              int discarded$10 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 6, var4);
-              int discarded$11 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 5, var4);
+              var4 = kr.a(param0.field_a, 2);
+              int discarded$6 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 6, var4);
+              int discarded$7 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 5, var4);
               ((kr) this).field_Oc[((kr) this).field_F] = param0.field_a;
               if (param0.field_b) {
-                stackOut_12_0 = 0;
-                stackIn_13_0 = stackOut_12_0;
+                stackOut_18_0 = 0;
+                stackIn_19_0 = stackOut_18_0;
                 break L1;
               } else {
-                stackOut_11_0 = 1;
-                stackIn_13_0 = stackOut_11_0;
+                stackOut_16_0 = 1;
+                stackIn_19_0 = stackOut_16_0;
                 break L1;
               }
             }
             L2: {
-              stackOut_13_0 = stackIn_13_0;
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_14_0 = stackOut_13_0;
+              stackOut_19_0 = stackIn_19_0;
+              stackIn_22_0 = stackOut_19_0;
+              stackIn_20_0 = stackOut_19_0;
               if (((kr) this).field_Ac[((kr) this).field_F]) {
-                stackOut_15_0 = stackIn_15_0;
-                stackOut_15_1 = 0;
-                stackIn_16_0 = stackOut_15_0;
-                stackIn_16_1 = stackOut_15_1;
+                stackOut_22_0 = stackIn_22_0;
+                stackOut_22_1 = 0;
+                stackIn_23_0 = stackOut_22_0;
+                stackIn_23_1 = stackOut_22_1;
                 break L2;
               } else {
-                stackOut_14_0 = stackIn_14_0;
-                stackOut_14_1 = 1;
-                stackIn_16_0 = stackOut_14_0;
-                stackIn_16_1 = stackOut_14_1;
+                stackOut_20_0 = stackIn_20_0;
+                stackOut_20_1 = 1;
+                stackIn_23_0 = stackOut_20_0;
+                stackIn_23_1 = stackOut_20_1;
                 break L2;
               }
             }
-            if (stackIn_16_0 == stackIn_16_1) {
+            if (stackIn_23_0 == stackIn_23_1) {
               break L0;
             } else {
               L3: {
-                stackOut_17_0 = ((kr) this).field_Rc;
-                stackOut_17_1 = ((kr) this).field_F;
-                stackOut_17_2 = 7;
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
-                stackIn_19_2 = stackOut_17_2;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
-                stackIn_18_2 = stackOut_17_2;
+                stackOut_24_0 = ((kr) this).field_Rc;
+                stackOut_24_1 = ((kr) this).field_F;
+                stackOut_24_2 = 7;
+                stackIn_29_0 = stackOut_24_0;
+                stackIn_29_1 = stackOut_24_1;
+                stackIn_29_2 = stackOut_24_2;
+                stackIn_25_0 = stackOut_24_0;
+                stackIn_25_1 = stackOut_24_1;
+                stackIn_25_2 = stackOut_24_2;
                 if (!param0.field_b) {
-                  stackOut_19_0 = (jagdx.IDirect3DDevice) (Object) stackIn_19_0;
-                  stackOut_19_1 = stackIn_19_1;
-                  stackOut_19_2 = stackIn_19_2;
-                  stackOut_19_3 = 0;
-                  stackIn_20_0 = stackOut_19_0;
-                  stackIn_20_1 = stackOut_19_1;
-                  stackIn_20_2 = stackOut_19_2;
-                  stackIn_20_3 = stackOut_19_3;
+                  stackOut_29_0 = (jagdx.IDirect3DDevice) (Object) stackIn_29_0;
+                  stackOut_29_1 = stackIn_29_1;
+                  stackOut_29_2 = stackIn_29_2;
+                  stackOut_29_3 = 0;
+                  stackIn_30_0 = stackOut_29_0;
+                  stackIn_30_1 = stackOut_29_1;
+                  stackIn_30_2 = stackOut_29_2;
+                  stackIn_30_3 = stackOut_29_3;
                   break L3;
                 } else {
-                  int discarded$12 = 2;
-                  stackOut_18_0 = (jagdx.IDirect3DDevice) (Object) stackIn_18_0;
-                  stackOut_18_1 = stackIn_18_1;
-                  stackOut_18_2 = stackIn_18_2;
-                  stackOut_18_3 = kr.a(param0.field_a);
-                  stackIn_20_0 = stackOut_18_0;
-                  stackIn_20_1 = stackOut_18_1;
-                  stackIn_20_2 = stackOut_18_2;
-                  stackIn_20_3 = stackOut_18_3;
+                  stackOut_25_0 = (jagdx.IDirect3DDevice) (Object) stackIn_25_0;
+                  stackOut_25_1 = stackIn_25_1;
+                  stackOut_25_2 = stackIn_25_2;
+                  stackIn_27_0 = stackOut_25_0;
+                  stackIn_27_1 = stackOut_25_1;
+                  stackIn_27_2 = stackOut_25_2;
+                  stackOut_27_0 = (jagdx.IDirect3DDevice) (Object) stackIn_27_0;
+                  stackOut_27_1 = stackIn_27_1;
+                  stackOut_27_2 = stackIn_27_2;
+                  stackOut_27_3 = kr.a(param0.field_a, 2);
+                  stackIn_30_0 = stackOut_27_0;
+                  stackIn_30_1 = stackOut_27_1;
+                  stackIn_30_2 = stackOut_27_2;
+                  stackIn_30_3 = stackOut_27_3;
                   break L3;
                 }
               }
-              int discarded$13 = ((jagdx.IDirect3DDevice) (Object) stackIn_20_0).SetSamplerState(stackIn_20_1, stackIn_20_2, stackIn_20_3);
+              int discarded$8 = ((jagdx.IDirect3DDevice) (Object) stackIn_30_0).SetSamplerState(stackIn_30_1, stackIn_30_2, stackIn_30_3);
               ((kr) this).field_Ac[((kr) this).field_F] = param0.field_b;
               break L0;
             }
           } else {
             L4: {
               if (((kr) this).field_Ac[((kr) this).field_F]) {
-                stackOut_3_0 = 0;
-                stackIn_4_0 = stackOut_3_0;
+                stackOut_6_0 = 0;
+                stackIn_7_0 = stackOut_6_0;
                 break L4;
               } else {
-                stackOut_2_0 = 1;
-                stackIn_4_0 = stackOut_2_0;
+                stackOut_4_0 = 1;
+                stackIn_7_0 = stackOut_4_0;
                 break L4;
               }
             }
-            if (stackIn_4_0 == (param0.field_b ? 1 : 0)) {
+            if (stackIn_7_0 == (param0.field_b ? 1 : 0)) {
               L5: {
-                stackOut_6_0 = ((kr) this).field_Rc;
-                stackOut_6_1 = ((kr) this).field_F;
-                stackOut_6_2 = 7;
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_8_2 = stackOut_6_2;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
-                stackIn_7_2 = stackOut_6_2;
+                stackOut_10_0 = ((kr) this).field_Rc;
+                stackOut_10_1 = ((kr) this).field_F;
+                stackOut_10_2 = 7;
+                stackIn_13_0 = stackOut_10_0;
+                stackIn_13_1 = stackOut_10_1;
+                stackIn_13_2 = stackOut_10_2;
+                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_1 = stackOut_10_1;
+                stackIn_11_2 = stackOut_10_2;
                 if (!param0.field_b) {
-                  stackOut_8_0 = (jagdx.IDirect3DDevice) (Object) stackIn_8_0;
-                  stackOut_8_1 = stackIn_8_1;
-                  stackOut_8_2 = stackIn_8_2;
-                  stackOut_8_3 = 0;
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
-                  stackIn_9_3 = stackOut_8_3;
+                  stackOut_13_0 = (jagdx.IDirect3DDevice) (Object) stackIn_13_0;
+                  stackOut_13_1 = stackIn_13_1;
+                  stackOut_13_2 = stackIn_13_2;
+                  stackOut_13_3 = 0;
+                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_1 = stackOut_13_1;
+                  stackIn_14_2 = stackOut_13_2;
+                  stackIn_14_3 = stackOut_13_3;
                   break L5;
                 } else {
-                  int discarded$14 = 2;
-                  stackOut_7_0 = (jagdx.IDirect3DDevice) (Object) stackIn_7_0;
-                  stackOut_7_1 = stackIn_7_1;
-                  stackOut_7_2 = stackIn_7_2;
-                  stackOut_7_3 = kr.a(param0.field_a);
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
-                  stackIn_9_3 = stackOut_7_3;
+                  stackOut_11_0 = (jagdx.IDirect3DDevice) (Object) stackIn_11_0;
+                  stackOut_11_1 = stackIn_11_1;
+                  stackOut_11_2 = stackIn_11_2;
+                  stackOut_11_3 = kr.a(param0.field_a, 2);
+                  stackIn_14_0 = stackOut_11_0;
+                  stackIn_14_1 = stackOut_11_1;
+                  stackIn_14_2 = stackOut_11_2;
+                  stackIn_14_3 = stackOut_11_3;
                   break L5;
                 }
               }
-              int discarded$15 = ((jagdx.IDirect3DDevice) (Object) stackIn_9_0).SetSamplerState(stackIn_9_1, stackIn_9_2, stackIn_9_3);
+              int discarded$9 = ((jagdx.IDirect3DDevice) (Object) stackIn_14_0).SetSamplerState(stackIn_14_1, stackIn_14_2, stackIn_14_3);
               ((kr) this).field_Ac[((kr) this).field_F] = param0.field_b;
               break L0;
             } else {
@@ -631,20 +685,33 @@ public final class kr extends bf {
     }
 
     final qi a(la param0, int param1, int param2, int param3, hd param4) {
-        if (param1 != 8) {
-            return null;
+        RuntimeException var6 = null;
+        if (param1 == 8) {
+          return (qi) (Object) new og((kr) this, param4, param0, param3, param2);
+        } else {
+          return null;
         }
-        return (qi) (Object) new og((kr) this, param4, param0, param3, param2);
     }
 
-    private final static int a(ke param0) {
-        if (fg.field_A == param0) {
-            return 2;
+    private final static int a(ke param0, int param1) {
+        RuntimeException var2 = null;
+        L0: {
+          if (param1 == 2) {
+            break L0;
+          } else {
+            field_Sc = null;
+            break L0;
+          }
         }
-        if (!(param0 != jp.field_a)) {
+        if (fg.field_A != param0) {
+          if (param0 == jp.field_a) {
             return 1;
+          } else {
+            throw new IllegalArgumentException();
+          }
+        } else {
+          return 2;
         }
-        throw new IllegalArgumentException();
     }
 
     final void w(int param0) {
@@ -652,27 +719,31 @@ public final class kr extends bf {
         int stackIn_1_1 = 0;
         jagdx.IDirect3DDevice stackIn_2_0 = null;
         int stackIn_2_1 = 0;
-        jagdx.IDirect3DDevice stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
         jagdx.IDirect3DDevice stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
+        jagdx.IDirect3DDevice stackIn_6_0 = null;
+        int stackIn_6_1 = 0;
+        jagdx.IDirect3DDevice stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
+        int stackIn_7_2 = 0;
         jagdx.IDirect3DDevice stackOut_0_0 = null;
         int stackOut_0_1 = 0;
         jagdx.IDirect3DDevice stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         jagdx.IDirect3DDevice stackOut_2_0 = null;
         int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        jagdx.IDirect3DDevice stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
+        jagdx.IDirect3DDevice stackOut_4_0 = null;
+        int stackOut_4_1 = 0;
+        int stackOut_4_2 = 0;
+        jagdx.IDirect3DDevice stackOut_6_0 = null;
+        int stackOut_6_1 = 0;
+        int stackOut_6_2 = 0;
         L0: {
           L1: {
             stackOut_0_0 = ((kr) this).field_Rc;
             stackOut_0_1 = 14;
-            stackIn_3_0 = stackOut_0_0;
-            stackIn_3_1 = stackOut_0_1;
+            stackIn_6_0 = stackOut_0_0;
+            stackIn_6_1 = stackOut_0_1;
             stackIn_1_0 = stackOut_0_0;
             stackIn_1_1 = stackOut_0_1;
             if (!((kr) this).field_mb) {
@@ -680,8 +751,8 @@ public final class kr extends bf {
             } else {
               stackOut_1_0 = (jagdx.IDirect3DDevice) (Object) stackIn_1_0;
               stackOut_1_1 = stackIn_1_1;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
+              stackIn_6_0 = stackOut_1_0;
+              stackIn_6_1 = stackOut_1_1;
               stackIn_2_0 = stackOut_1_0;
               stackIn_2_1 = stackOut_1_1;
               if (!((kr) this).field_Y) {
@@ -689,24 +760,28 @@ public final class kr extends bf {
               } else {
                 stackOut_2_0 = (jagdx.IDirect3DDevice) (Object) stackIn_2_0;
                 stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = 1;
                 stackIn_4_0 = stackOut_2_0;
                 stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
+                stackOut_4_0 = (jagdx.IDirect3DDevice) (Object) stackIn_4_0;
+                stackOut_4_1 = stackIn_4_1;
+                stackOut_4_2 = 1;
+                stackIn_7_0 = stackOut_4_0;
+                stackIn_7_1 = stackOut_4_1;
+                stackIn_7_2 = stackOut_4_2;
                 break L0;
               }
             }
           }
-          stackOut_3_0 = (jagdx.IDirect3DDevice) (Object) stackIn_3_0;
-          stackOut_3_1 = stackIn_3_1;
-          stackOut_3_2 = 0;
-          stackIn_4_0 = stackOut_3_0;
-          stackIn_4_1 = stackOut_3_1;
-          stackIn_4_2 = stackOut_3_2;
+          stackOut_6_0 = (jagdx.IDirect3DDevice) (Object) stackIn_6_0;
+          stackOut_6_1 = stackIn_6_1;
+          stackOut_6_2 = 0;
+          stackIn_7_0 = stackOut_6_0;
+          stackIn_7_1 = stackOut_6_1;
+          stackIn_7_2 = stackOut_6_2;
           break L0;
         }
         L2: {
-          int discarded$4 = ((jagdx.IDirect3DDevice) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2 != 0);
+          int discarded$4 = ((jagdx.IDirect3DDevice) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2 != 0);
           if (param0 == 0) {
             break L2;
           } else {
@@ -717,26 +792,41 @@ public final class kr extends bf {
     }
 
     final void j(int param0) {
-        if (((kr) this).field_Lc[((kr) this).field_F]) {
+        L0: {
+          if (!((kr) this).field_Lc[((kr) this).field_F]) {
+            break L0;
+          } else {
             ((kr) this).field_Lc[((kr) this).field_F] = false;
-            int discarded$0 = ((kr) this).field_Rc.SetTexture(((kr) this).field_F, (jagdx.IDirect3DBaseTexture) null);
+            int discarded$4 = ((kr) this).field_Rc.SetTexture(((kr) this).field_F, (jagdx.IDirect3DBaseTexture) null);
             ((kr) this).m((byte) -128);
             ((kr) this).N(0);
+            break L0;
+          }
         }
-        if (param0 != 1) {
-            boolean discarded$1 = ((kr) this).d();
+        L1: {
+          if (param0 == 1) {
+            break L1;
+          } else {
+            boolean discarded$5 = ((kr) this).d();
+            break L1;
+          }
         }
     }
 
     final void g(int param0) {
-        if (param0 != 0) {
+        L0: {
+          if (param0 == 0) {
+            break L0;
+          } else {
             ((kr) this).r(6);
+            break L0;
+          }
         }
-        int discarded$0 = ((kr) this).field_Rc.SetRenderState(60, ((kr) this).field_cc);
+        int discarded$2 = ((kr) this).field_Rc.SetRenderState(60, ((kr) this).field_cc);
     }
 
     final void p(int param0) {
-        int var2 = 0;
+        int var2_int = 0;
         L0: {
           L1: {
             if (((kr) this).field_zc != null) {
@@ -752,12 +842,12 @@ public final class kr extends bf {
                     break L2;
                   }
                 }
-                var2 = kr.a(true, ((kr) this).field_f[((kr) this).field_F]);
-                if (var2 == ((kr) this).field_Cc[((kr) this).field_F]) {
+                var2_int = kr.a(true, ((kr) this).field_f[((kr) this).field_F]);
+                if (var2_int == ((kr) this).field_Cc[((kr) this).field_F]) {
                   break L0;
                 } else {
-                  int discarded$7 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 24, var2);
-                  ((kr) this).field_Cc[((kr) this).field_F] = var2;
+                  int discarded$7 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 24, var2_int);
+                  ((kr) this).field_Cc[((kr) this).field_F] = var2_int;
                   break L0;
                 }
               } else {
@@ -780,21 +870,21 @@ public final class kr extends bf {
     }
 
     final void a(boolean param0, int param1, boolean param2, jb param3, boolean param4) {
-        int var6 = 0;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         L0: {
           var7 = 0;
           var8 = param1;
           if (var8 == 1) {
-            var6 = 3;
+            var6_int = 3;
             break L0;
           } else {
             if (var8 == 2) {
-              var6 = 26;
+              var6_int = 26;
               break L0;
             } else {
-              var6 = 2;
+              var6_int = 2;
               break L0;
             }
           }
@@ -823,31 +913,69 @@ public final class kr extends bf {
             break L3;
           }
         }
-        int discarded$2 = -68;
-        int discarded$3 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, var6, var7 | kr.a(param3));
+        int discarded$2 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, var6_int, var7 | kr.a(param3, (byte) -68));
     }
 
     final void a(pa param0, boolean param1) {
     }
 
     final void u(byte param0) {
-        int discarded$7 = ((kr) this).field_Rc.a(15, ((kr) this).field_Vb);
-        if (param0 > -29) {
-            go discarded$8 = ((kr) this).a(-112, -74, false, (int[][]) null);
+        try {
+            int discarded$7 = ((kr) this).field_Rc.a(15, ((kr) this).field_Vb);
+            if (param0 > -29) {
+                go discarded$8 = ((kr) this).a(-112, -74, false, (int[][]) null);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
         }
     }
 
     final void w(byte param0) {
-        if (param0 > -40) {
-            field_uc = null;
+        try {
+            if (param0 > -40) {
+                field_uc = null;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
         }
     }
 
     final void t(byte param0) {
-        float var2 = ((kr) this).field_Ab ? ((kr) this).field_fb : 0.0f;
-        int var3 = 92 % ((param0 - 17) / 37);
-        float var4 = ((kr) this).field_Ab ? -((kr) this).field_ub : 0.0f;
-        ((kr) this).field_Nc.SetDiffuse(var2 * ((kr) this).field_g, ((kr) this).field_rb * var2, ((kr) this).field_Hb * var2, 0.0f);
+        float var2_float = 0.0f;
+        int var3 = 0;
+        float var4 = 0.0f;
+        float stackIn_4_0 = 0.0f;
+        float stackIn_8_0 = 0.0f;
+        float stackOut_3_0 = 0.0f;
+        float stackOut_1_0 = 0.0f;
+        float stackOut_7_0 = 0.0f;
+        float stackOut_5_0 = 0.0f;
+        L0: {
+          if (!((kr) this).field_Ab) {
+            stackOut_3_0 = 0.0f;
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
+          } else {
+            stackOut_1_0 = ((kr) this).field_fb;
+            stackIn_4_0 = stackOut_1_0;
+            break L0;
+          }
+        }
+        L1: {
+          var2_float = stackIn_4_0;
+          var3 = 92 % ((param0 - 17) / 37);
+          if (!((kr) this).field_Ab) {
+            stackOut_7_0 = 0.0f;
+            stackIn_8_0 = stackOut_7_0;
+            break L1;
+          } else {
+            stackOut_5_0 = -((kr) this).field_ub;
+            stackIn_8_0 = stackOut_5_0;
+            break L1;
+          }
+        }
+        var4 = stackIn_8_0;
+        ((kr) this).field_Nc.SetDiffuse(var2_float * ((kr) this).field_g, ((kr) this).field_rb * var2_float, ((kr) this).field_Hb * var2_float, 0.0f);
         ((kr) this).field_yc.SetDiffuse(var4 * ((kr) this).field_g, var4 * ((kr) this).field_rb, ((kr) this).field_Hb * var4, 0.0f);
         ((kr) this).field_Mc = false;
     }
@@ -857,10 +985,10 @@ public final class kr extends bf {
     }
 
     final void m(byte param0) {
-        int var2 = 0;
-        int stackIn_5_0 = 0;
+        int var2_int = 0;
+        int stackIn_7_0 = 0;
+        int stackOut_6_0 = 0;
         int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         L0: {
           if (param0 < -124) {
             break L0;
@@ -871,18 +999,17 @@ public final class kr extends bf {
         }
         L1: {
           if (!((kr) this).field_Lc[((kr) this).field_F]) {
-            stackOut_4_0 = 1;
-            stackIn_5_0 = stackOut_4_0;
+            stackOut_6_0 = 1;
+            stackIn_7_0 = stackOut_6_0;
             break L1;
           } else {
-            int discarded$5 = 1;
-            stackOut_3_0 = kr.a(((kr) this).field_w[((kr) this).field_F]);
-            stackIn_5_0 = stackOut_3_0;
+            stackOut_4_0 = kr.a(((kr) this).field_w[((kr) this).field_F], true);
+            stackIn_7_0 = stackOut_4_0;
             break L1;
           }
         }
-        var2 = stackIn_5_0;
-        int discarded$6 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 4, var2);
+        var2_int = stackIn_7_0;
+        int discarded$2 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 4, var2_int);
     }
 
     final static ha createToolkit(java.awt.Canvas param0, d param1, gk param2, Integer param3) {
@@ -901,10 +1028,9 @@ public final class kr extends bf {
         jagdx.IDirect3DDevice var12 = null;
         cb var13 = null;
         jagdx.ie var14 = null;
-        kr var15 = null;
-        kr stackIn_43_0 = null;
+        Object stackIn_58_0 = null;
         Throwable decompiledCaughtException = null;
-        kr stackOut_42_0 = null;
+        Object stackOut_57_0 = null;
         var12_ref = null;
         var4 = null;
         try {
@@ -981,11 +1107,10 @@ public final class kr extends bf {
                                       }
                                     }
                                     var13 = new cb(var12.b(0), var12.b());
-                                    var15 = new kr(var5_int, var6, param0, var7, var8_ref, var12, var13, var10_ref, var9, param1, param2, param3.intValue());
-                                    var4 = (Object) (Object) var15;
-                                    var15.f((byte) 101);
-                                    stackOut_42_0 = (kr) var15;
-                                    stackIn_43_0 = stackOut_42_0;
+                                    var4 = (Object) (Object) new kr(var5_int, var6, param0, var7, var8_ref, var12, var13, var10_ref, var9, param1, param2, param3.intValue());
+                                    ((kr) var4).f((byte) 101);
+                                    stackOut_57_0 = var4;
+                                    stackIn_58_0 = stackOut_57_0;
                                     break L0;
                                   } else {
                                     throw new RuntimeException("");
@@ -1021,29 +1146,28 @@ public final class kr extends bf {
           }
           throw var5;
         }
-        return (ha) (Object) stackIn_43_0;
+        return (ha) (Object) stackIn_58_0;
     }
 
     final void N(int param0) {
-        int var2 = 0;
-        int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
+        int var2_int = 0;
+        int stackIn_4_0 = 0;
+        int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
         L0: {
           if (!((kr) this).field_Lc[((kr) this).field_F]) {
-            stackOut_2_0 = 1;
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_3_0 = 1;
+            stackIn_4_0 = stackOut_3_0;
             break L0;
           } else {
-            int discarded$14 = 1;
-            stackOut_1_0 = kr.a(((kr) this).field_H[((kr) this).field_F]);
-            stackIn_3_0 = stackOut_1_0;
+            stackOut_1_0 = kr.a(((kr) this).field_H[((kr) this).field_F], true);
+            stackIn_4_0 = stackOut_1_0;
             break L0;
           }
         }
         L1: {
-          var2 = stackIn_3_0;
-          int discarded$15 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 1, var2);
+          var2_int = stackIn_4_0;
+          int discarded$3 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 1, var2_int);
           if (param0 == 0) {
             break L1;
           } else {
@@ -1054,7 +1178,12 @@ public final class kr extends bf {
     }
 
     final void b(byte param0) {
-        if (((kr) this).field_Lb) {
+        int var2_int = 0;
+        L0: {
+          if (!((kr) this).field_Lb) {
+            float[] discarded$3 = ((kr) this).field_ec.a(field_Sc, true);
+            break L0;
+          } else {
             field_Sc[7] = 0.0f;
             field_Sc[13] = 0.0f;
             field_Sc[14] = 0.0f;
@@ -1071,17 +1200,22 @@ public final class kr extends bf {
             field_Sc[5] = 1.0f;
             field_Sc[2] = 0.0f;
             field_Sc[10] = 1.0f;
-        } else {
-            float[] discarded$0 = ((kr) this).field_ec.a(field_Sc, true);
+            break L0;
+          }
         }
-        int discarded$1 = ((kr) this).field_Rc.SetTransform(256, field_Sc);
-        int var2 = 15 / ((9 - param0) / 48);
+        int discarded$4 = ((kr) this).field_Rc.SetTransform(256, field_Sc);
+        var2_int = 15 / ((9 - param0) / 48);
     }
 
     final qi a(int param0, boolean param1, hd param2, int param3, byte param4, int param5, int param6, byte[] param7) {
-        if (param4 < 73) {
-            Object var10 = null;
+        RuntimeException var9 = null;
+        L0: {
+          if (param4 >= 73) {
+            break L0;
+          } else {
             ((kr) this).a((nf) null, true);
+            break L0;
+          }
         }
         return (qi) (Object) new og((kr) this, param2, param0, param3, param1, param7, param6, param5);
     }
@@ -1091,26 +1225,38 @@ public final class kr extends bf {
         if (param1 != 75) {
             return;
         }
-        int discarded$0 = ((kr) this).field_Rc.SetVertexDeclaration(var3.field_d);
+        try {
+            int discarded$0 = ((kr) this).field_Rc.SetVertexDeclaration(var3.field_d);
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     final void e() {
     }
 
     final void d(boolean param0) {
-        if (param0) {
-            Object var3 = null;
-            boolean discarded$0 = ((kr) this).a((la) null, -42, (hd) null);
+        L0: {
+          if (!param0) {
+            break L0;
+          } else {
+            boolean discarded$4 = ((kr) this).a((la) null, -42, (hd) null);
+            break L0;
+          }
         }
-        int discarded$1 = ((kr) this).field_Rc.a(7, ((kr) this).field_ib);
+        int discarded$5 = ((kr) this).field_Rc.a(7, ((kr) this).field_ib);
     }
 
     final void p(byte param0) {
-        if (param0 >= -127) {
-            Object var3 = null;
-            boolean discarded$0 = kr.a(-104, (jagdx.D3DPRESENT_PARAMETERS) null, (byte) -33, 21, -35, (jagdx.IDirect3D) null);
+        L0: {
+          if (param0 < -127) {
+            break L0;
+          } else {
+            boolean discarded$4 = kr.a(-104, (jagdx.D3DPRESENT_PARAMETERS) null, (byte) -33, 21, -35, (jagdx.IDirect3D) null);
+            break L0;
+          }
         }
-        int discarded$1 = ((kr) this).field_Rc.a(27, ((kr) this).field_Db);
+        int discarded$5 = ((kr) this).field_Rc.a(27, ((kr) this).field_Db);
     }
 
     final sm a(ra param0, gd param1) {
@@ -1118,17 +1264,22 @@ public final class kr extends bf {
     }
 
     final void b(byte param0, boolean param1) {
-        int discarded$6 = ((kr) this).field_Rc.a(161, param1);
-        if (param0 >= -113) {
-            ((kr) this).field_Hc = -52;
+        try {
+            int discarded$6 = ((kr) this).field_Rc.a(161, param1);
+            if (param0 >= -113) {
+                ((kr) this).field_Hc = -52;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
         }
     }
 
     final boolean a(la param0, int param1, hd param2) {
         jagdx.D3DDISPLAYMODE var4 = null;
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
+        RuntimeException var4_ref = null;
+        int stackIn_10_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_9_0 = 0;
         L0: {
           var4 = new jagdx.D3DDISPLAYMODE();
           if (param1 == 0) {
@@ -1146,50 +1297,55 @@ public final class kr extends bf {
               if (!jagdx.gf.a((byte) 78, ((kr) this).field_wc.CheckDeviceFormat(((kr) this).field_Kc, ((kr) this).field_tc, var4.Format, 0, 3, kr.a(param2, param0, false)))) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackOut_7_0 = 1;
+                stackIn_10_0 = stackOut_7_0;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackOut_9_0 = 0;
+          stackIn_10_0 = stackOut_9_0;
           break L1;
         }
-        return stackIn_6_0 != 0;
+        return stackIn_10_0 != 0;
     }
 
     final qi a(float[] param0, int param1, hd param2, boolean param3, int param4, int param5, int param6, boolean param7) {
-        if (!param3) {
-            return null;
+        RuntimeException var9 = null;
+        L0: {
+          if (!param3) {
+            break L0;
+          } else {
+            ((kr) this).d(false);
+            break L0;
+          }
         }
-        ((kr) this).d(false);
         return null;
     }
 
     final void a(nf param0, boolean param1) {
-        int var3 = 0;
+        int var3_int = 0;
         if (!param1) {
           L0: {
-            var3 = 0;
+            var3_int = 0;
             if (param0 != rg.field_A) {
               if (param0 == ij.field_g) {
-                var3 = 131072;
+                var3_int = 131072;
                 break L0;
               } else {
                 if (param0 != gk.field_g) {
                   break L0;
                 } else {
-                  var3 = 196608;
+                  var3_int = 196608;
                   break L0;
                 }
               }
             } else {
-              var3 = 65536;
+              var3_int = 65536;
               break L0;
             }
           }
-          int discarded$2 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 11, ((kr) this).field_F | var3);
+          int discarded$1 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 11, ((kr) this).field_F | var3_int);
           return;
         } else {
           return;
@@ -1201,9 +1357,8 @@ public final class kr extends bf {
     }
 
     final void v(int param0) {
-        if (((kr) this).field_bb.b((byte) -92)) {
-            float[] discarded$1 = ((kr) this).field_t.a(field_Sc, true);
-        } else {
+        L0: {
+          if (!((kr) this).field_bb.b((byte) -92)) {
             field_Sc[5] = 1.0f;
             field_Sc[6] = 0.0f;
             field_Sc[8] = 0.0f;
@@ -1220,12 +1375,21 @@ public final class kr extends bf {
             field_Sc[4] = 0.0f;
             field_Sc[11] = 0.0f;
             field_Sc[7] = 0.0f;
+            break L0;
+          } else {
+            float[] discarded$9 = ((kr) this).field_t.a(field_Sc, true);
+            break L0;
+          }
         }
-        if (param0 != 5) {
-            Object var3 = null;
+        L1: {
+          if (param0 == 5) {
+            break L1;
+          } else {
             ((kr) this).a(-26, (java.awt.Canvas) null, (Object) null);
+            break L1;
+          }
         }
-        int discarded$2 = ((kr) this).field_Rc.SetTransform(2, field_Sc);
+        int discarded$10 = ((kr) this).field_Rc.SetTransform(2, field_Sc);
     }
 
     final void a(sm param0) {
@@ -1236,28 +1400,32 @@ public final class kr extends bf {
         int stackIn_3_1 = 0;
         jagdx.IDirect3DDevice stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        jagdx.IDirect3DDevice stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
         jagdx.IDirect3DDevice stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        int stackIn_6_2 = 0;
+        jagdx.IDirect3DDevice stackIn_8_0 = null;
+        int stackIn_8_1 = 0;
+        jagdx.IDirect3DDevice stackIn_9_0 = null;
+        int stackIn_9_1 = 0;
+        int stackIn_9_2 = 0;
         jagdx.IDirect3DDevice stackOut_2_0 = null;
         int stackOut_2_1 = 0;
         jagdx.IDirect3DDevice stackOut_3_0 = null;
         int stackOut_3_1 = 0;
         jagdx.IDirect3DDevice stackOut_4_0 = null;
         int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        jagdx.IDirect3DDevice stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
+        jagdx.IDirect3DDevice stackOut_6_0 = null;
+        int stackOut_6_1 = 0;
+        int stackOut_6_2 = 0;
+        jagdx.IDirect3DDevice stackOut_8_0 = null;
+        int stackOut_8_1 = 0;
+        int stackOut_8_2 = 0;
         if (param0 == 0) {
           L0: {
             L1: {
               stackOut_2_0 = ((kr) this).field_Rc;
               stackOut_2_1 = 137;
-              stackIn_5_0 = stackOut_2_0;
-              stackIn_5_1 = stackOut_2_1;
+              stackIn_8_0 = stackOut_2_0;
+              stackIn_8_1 = stackOut_2_1;
               stackIn_3_0 = stackOut_2_0;
               stackIn_3_1 = stackOut_2_1;
               if (!((kr) this).field_ob) {
@@ -1265,8 +1433,8 @@ public final class kr extends bf {
               } else {
                 stackOut_3_0 = (jagdx.IDirect3DDevice) (Object) stackIn_3_0;
                 stackOut_3_1 = stackIn_3_1;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_5_1 = stackOut_3_1;
+                stackIn_8_0 = stackOut_3_0;
+                stackIn_8_1 = stackOut_3_1;
                 stackIn_4_0 = stackOut_3_0;
                 stackIn_4_1 = stackOut_3_1;
                 if (((kr) this).field_pc) {
@@ -1274,23 +1442,27 @@ public final class kr extends bf {
                 } else {
                   stackOut_4_0 = (jagdx.IDirect3DDevice) (Object) stackIn_4_0;
                   stackOut_4_1 = stackIn_4_1;
-                  stackOut_4_2 = 1;
                   stackIn_6_0 = stackOut_4_0;
                   stackIn_6_1 = stackOut_4_1;
-                  stackIn_6_2 = stackOut_4_2;
+                  stackOut_6_0 = (jagdx.IDirect3DDevice) (Object) stackIn_6_0;
+                  stackOut_6_1 = stackIn_6_1;
+                  stackOut_6_2 = 1;
+                  stackIn_9_0 = stackOut_6_0;
+                  stackIn_9_1 = stackOut_6_1;
+                  stackIn_9_2 = stackOut_6_2;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = (jagdx.IDirect3DDevice) (Object) stackIn_5_0;
-            stackOut_5_1 = stackIn_5_1;
-            stackOut_5_2 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            stackIn_6_2 = stackOut_5_2;
+            stackOut_8_0 = (jagdx.IDirect3DDevice) (Object) stackIn_8_0;
+            stackOut_8_1 = stackIn_8_1;
+            stackOut_8_2 = 0;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            stackIn_9_2 = stackOut_8_2;
             break L0;
           }
-          int discarded$2 = ((jagdx.IDirect3DDevice) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 != 0);
+          int discarded$2 = ((jagdx.IDirect3DDevice) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_9_2 != 0);
           return;
         } else {
           return;
@@ -1299,9 +1471,10 @@ public final class kr extends bf {
 
     final boolean a(byte param0, la param1, hd param2) {
         jagdx.D3DDISPLAYMODE var4 = null;
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
+        RuntimeException var4_ref = null;
+        int stackIn_9_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_8_0 = 0;
         if (param0 == -13) {
           L0: {
             L1: {
@@ -1312,91 +1485,99 @@ public final class kr extends bf {
                 if (!jagdx.gf.a((byte) 112, ((kr) this).field_wc.CheckDeviceFormat(((kr) this).field_Kc, ((kr) this).field_tc, var4.Format, 0, 4, kr.a(param2, param1, false)))) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackOut_6_0 = 1;
+                  stackIn_9_0 = stackOut_6_0;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackOut_8_0 = 0;
+            stackIn_9_0 = stackOut_8_0;
             break L0;
           }
-          return stackIn_6_0 != 0;
+          return stackIn_9_0 != 0;
         } else {
           return false;
         }
     }
 
     final void a(boolean param0, ia param1, int param2, int param3) {
-        int discarded$10 = ((kr) this).field_Rc.DrawPrimitive(kr.a(41, param1), param3, param2);
-        if (!param0) {
-            ((kr) this).field_Gc = false;
+        try {
+            int discarded$10 = ((kr) this).field_Rc.DrawPrimitive(kr.a(41, param1), param3, param2);
+            if (!param0) {
+                ((kr) this).field_Gc = false;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
         }
     }
 
     final void C(int param0) {
-        int discarded$7 = ((kr) this).field_Rc.SetTransform(3, ((kr) this).field_N);
-        if (param0 > -51) {
-            Object var3 = null;
-            ((kr) this).a((pa) null, true);
+        try {
+            int discarded$7 = ((kr) this).field_Rc.SetTransform(3, ((kr) this).field_N);
+            if (param0 > -51) {
+                ((kr) this).a((pa) null, true);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
         }
     }
 
     final void k(byte param0) {
-        int var2 = 0;
+        int var2_int = 0;
         sf var3 = null;
         int var4 = 0;
         int var5 = 0;
         float var6 = 0.0f;
-        Object var7 = null;
         L0: {
-          var2 = 0;
+          var2_int = 0;
           if (param0 >= 123) {
             break L0;
           } else {
-            var7 = null;
             ((kr) this).a((pa) null, true);
             break L0;
           }
         }
         L1: while (true) {
-          if (var2 >= ((kr) this).field_B) {
+          if (~var2_int <= ~((kr) this).field_B) {
             L2: while (true) {
-              if (((kr) this).field_ic <= var2) {
+              if (~((kr) this).field_ic >= ~var2_int) {
                 super.k((byte) 127);
                 return;
               } else {
-                boolean discarded$3 = ((kr) this).field_Rc.LightEnable(2 + var2, false);
-                var2++;
+                boolean discarded$3 = ((kr) this).field_Rc.LightEnable(2 + var2_int, false);
+                var2_int++;
                 continue L2;
               }
             }
           } else {
-            var3 = ((kr) this).field_D[var2];
-            var4 = 2 + var2;
+            var3 = ((kr) this).field_D[var2_int];
+            var4 = 2 + var2_int;
             var5 = var3.a(87);
             var6 = var3.a(false) / 255.0f;
             ((kr) this).field_Fc.SetPosition((float)var3.c((byte) -98), (float)var3.a((byte) -102), (float)var3.e(0));
-            ((kr) this).field_Fc.SetDiffuse(var6 * (float)((16721490 & var5) >> 16), (float)((65478 & var5) >> 8) * var6, (float)(255 & var5) * var6, 0.0f);
+            ((kr) this).field_Fc.SetDiffuse(var6 * (float)((16721490 & var5) >> -1061901424), (float)((65478 & var5) >> 1267442952) * var6, (float)(255 & var5) * var6, 0.0f);
             ((kr) this).field_Fc.SetAttenuation(0.0f, 0.0f, 1.0f / (float)(var3.d(0) * var3.d(0)));
             ((kr) this).field_Fc.SetRange((float)var3.d(0));
             int discarded$4 = ((kr) this).field_Rc.SetLight(var4, ((kr) this).field_Fc);
             boolean discarded$5 = ((kr) this).field_Rc.LightEnable(var4, true);
-            var2++;
+            var2_int++;
             continue L1;
           }
         }
     }
 
     final qi a(int param0, boolean param1, boolean param2, int param3, int param4, int[] param5, int param6) {
-        if (!param1) {
-            return null;
+        RuntimeException var8 = null;
+        if (param1) {
+          return (qi) (Object) new og((kr) this, param6, param3, param2, param5, param0, param4);
+        } else {
+          return null;
         }
-        return (qi) (Object) new og((kr) this, param6, param3, param2, param5, param0, param4);
     }
 
-    private final static int a(as param0) {
+    private final static int a(as param0, boolean param1) {
+        RuntimeException var2 = null;
         if (param0 == bd.field_C) {
           return 2;
         } else {
@@ -1408,7 +1589,11 @@ public final class kr extends bf {
                 if (param0 == fs.field_d) {
                   return 10;
                 } else {
-                  throw new IllegalArgumentException();
+                  if (param1) {
+                    throw new IllegalArgumentException();
+                  } else {
+                    return 29;
+                  }
                 }
               } else {
                 return 7;
@@ -1421,20 +1606,33 @@ public final class kr extends bf {
     }
 
     final ti c(boolean param0, int param1) {
-        if (param1 != 8762) {
+        RuntimeException var3 = null;
+        L0: {
+          if (param1 == 8762) {
+            break L0;
+          } else {
             ((kr) this).w(-85);
+            break L0;
+          }
         }
         return (ti) (Object) new dm((kr) this, la.field_b, param0);
     }
 
     final fa a(pl[] param0, int param1) {
-        if (param1 > -126) {
+        RuntimeException var3 = null;
+        L0: {
+          if (param1 <= -126) {
+            break L0;
+          } else {
             ((kr) this).w((byte) -105);
+            break L0;
+          }
         }
         return (fa) (Object) new dxVertexLayout((kr) this, param0);
     }
 
-    private final static int a(jb param0) {
+    private final static int a(jb param0, byte param1) {
+        RuntimeException var2 = null;
         if (param0 == dl.field_p) {
           return 2;
         } else {
@@ -1445,6 +1643,14 @@ public final class kr extends bf {
               if (param0 == bs.field_a) {
                 return 3;
               } else {
+                L0: {
+                  if (param1 == -68) {
+                    break L0;
+                  } else {
+                    int discarded$2 = kr.a((as) null, true);
+                    break L0;
+                  }
+                }
                 throw new IllegalArgumentException();
               }
             } else {
@@ -1458,70 +1664,100 @@ public final class kr extends bf {
     }
 
     final void c(int param0, byte param1) {
-        if (param1 >= -76) {
-            Object var4 = null;
-            int discarded$0 = kr.a(true, (st) null);
+        L0: {
+          if (param1 < -76) {
+            break L0;
+          } else {
+            int discarded$4 = kr.a(true, (st) null);
+            break L0;
+          }
         }
-        int discarded$1 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 11, param0);
+        int discarded$5 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 11, param0);
     }
 
-    private final boolean h() {
+    private final boolean h(boolean param0) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        cb var3 = null;
         int var4 = 0;
-        int var2 = ((kr) this).field_Rc.TestCooperativeLevel();
-        if (0 != var2) {
-            if (var2 != -2005530519) {
-                return false;
+        if (param0) {
+          L0: {
+            L1: {
+              var2_int = ((kr) this).field_Rc.TestCooperativeLevel();
+              if (0 == var2_int) {
+                break L1;
+              } else {
+                if (var2_int == -2005530519) {
+                  break L1;
+                } else {
+                  break L0;
+                }
+              }
             }
-        }
-        cb var3 = (cb) ((kr) this).field_Fb;
-        ((kr) this).o(0);
-        var3.a((byte) -83);
-        ((kr) this).field_Pc.BackBufferWidth = 0;
-        ((kr) this).field_Pc.BackBufferHeight = 0;
-        if (!(!kr.a(((kr) this).field_lc, ((kr) this).field_Pc, (byte) 114, ((kr) this).field_tc, ((kr) this).field_Kc, ((kr) this).field_wc))) {
-            var4 = ((kr) this).field_Rc.Reset(((kr) this).field_Pc);
-            if (jagdx.gf.a((byte) 78, var4)) {
+            var3 = (cb) ((kr) this).field_Fb;
+            ((kr) this).o(0);
+            var3.a((byte) -83);
+            ((kr) this).field_Pc.BackBufferWidth = 0;
+            ((kr) this).field_Pc.BackBufferHeight = 0;
+            if (kr.a(((kr) this).field_lc, ((kr) this).field_Pc, (byte) 114, ((kr) this).field_tc, ((kr) this).field_Kc, ((kr) this).field_wc)) {
+              var4 = ((kr) this).field_Rc.Reset(((kr) this).field_Pc);
+              if (!jagdx.gf.a((byte) 78, var4)) {
+                break L0;
+              } else {
                 var3.a(((kr) this).field_Rc.b(), ((kr) this).field_Rc.b(0), 0);
                 ((kr) this).c((byte) 61);
                 ((kr) this).G(117);
                 return true;
+              }
+            } else {
+              break L0;
             }
+          }
+          return false;
+        } else {
+          return false;
         }
-        return false;
     }
 
     final void Q(int param0) {
         if (param0 <= 52) {
             return;
         }
-        int discarded$0 = ((kr) this).field_Rc.SetViewport(((kr) this).field_Rb, ((kr) this).field_Ib, ((kr) this).field_Z, ((kr) this).field_jb, 0.0f, 1.0f);
+        try {
+            int discarded$0 = ((kr) this).field_Rc.SetViewport(((kr) this).field_Rb, ((kr) this).field_Ib, ((kr) this).field_Z, ((kr) this).field_jb, 0.0f, 1.0f);
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     final synchronized void b(int param0) {
-        ((kr) this).field_Ic.a((byte) 23);
-        super.b(param0);
+        try {
+            ((kr) this).field_Ic.a((byte) 23);
+            super.b(param0);
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     final sk b(int param0, byte param1) {
-        int var3 = 0;
-        Object var4 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         L0: {
           if (param1 >= 31) {
             break L0;
           } else {
-            var4 = null;
             ((kr) this).a(55, (tl) null, -60);
             break L0;
           }
         }
-        var3 = param0;
-        if (3 == var3) {
+        var3_int = param0;
+        if (3 == var3_int) {
           return (sk) (Object) new jl((kr) this, ((kr) this).field_d);
         } else {
-          if (4 == var3) {
+          if (4 == var3_int) {
             return (sk) (Object) new jh((kr) this, ((kr) this).field_d, ((kr) this).field_Tb);
           } else {
-            if (var3 != 8) {
+            if (var3_int != 8) {
               return super.b(param0, (byte) 54);
             } else {
               return (sk) (Object) new qu((kr) this, ((kr) this).field_d, ((kr) this).field_Tb);
@@ -1531,24 +1767,41 @@ public final class kr extends bf {
     }
 
     final float o(byte param0) {
-        if (param0 != 42) {
-            return -0.4905053675174713f;
+        RuntimeException var2 = null;
+        if (param0 == 42) {
+          return -0.5f;
+        } else {
+          return -0.4905053675174713f;
         }
-        return -0.5f;
     }
 
     final void a(int param0, nt param1) {
-        ((kr) this).a((ib) (Object) param1, (byte) 95);
-        if (!((kr) this).field_Qc[((kr) this).field_F]) {
-            int discarded$0 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 1, 1);
+        L0: {
+          ((kr) this).a((ib) (Object) param1, (byte) 95);
+          if (((kr) this).field_Qc[((kr) this).field_F]) {
+            break L0;
+          } else {
+            int discarded$4 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 1, 1);
             ((kr) this).field_Qc[((kr) this).field_F] = true;
+            break L0;
+          }
         }
-        if (param0 != 16) {
+        L1: {
+          if (param0 == 16) {
+            break L1;
+          } else {
             ((kr) this).h((byte) 54);
+            break L1;
+          }
         }
-        if (!((kr) this).field_sc[((kr) this).field_F]) {
-            int discarded$1 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 2, 1);
+        L2: {
+          if (((kr) this).field_sc[((kr) this).field_F]) {
+            break L2;
+          } else {
+            int discarded$5 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 2, 1);
             ((kr) this).field_sc[((kr) this).field_F] = true;
+            break L2;
+          }
         }
     }
 
@@ -1556,22 +1809,42 @@ public final class kr extends bf {
         if (param0 != 0) {
             return;
         }
-        int discarded$0 = ((kr) this).field_Rc.a(174, ((kr) this).field_Cb);
+        try {
+            int discarded$0 = ((kr) this).field_Rc.a(174, ((kr) this).field_Cb);
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     final void c() {
-        ((kr) this).field_Ic.b((byte) 57);
-        super.c();
+        try {
+            ((kr) this).field_Ic.b((byte) 57);
+            super.c();
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     final void a(int param0, java.awt.Canvas param1, Object param2) {
-        if (param0 != 0) {
-            int discarded$0 = 1;
-            boolean discarded$1 = this.h();
+        try {
+            if (param0 != 0) {
+                boolean discarded$0 = this.h(true);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
         }
     }
 
     private final static int a(boolean param0, st param1) {
+        RuntimeException var2 = null;
+        L0: {
+          if (param0) {
+            break L0;
+          } else {
+            field_Sc = null;
+            break L0;
+          }
+        }
         if (param1 == gj.field_b) {
           return 1;
         } else {
@@ -1596,35 +1869,47 @@ public final class kr extends bf {
     }
 
     final void h(byte param0) {
-        ((kr) this).field_y = (float)(((kr) this).field_x + -((kr) this).field_q);
-        ((kr) this).field_Xb = (float)(-((kr) this).field_p) + ((kr) this).field_y;
-        if (((kr) this).field_Xb < (float)((kr) this).field_Mb) {
+        L0: {
+          ((kr) this).field_y = (float)(((kr) this).field_x + -((kr) this).field_q);
+          ((kr) this).field_Xb = (float)(-((kr) this).field_p) + ((kr) this).field_y;
+          if (((kr) this).field_Xb >= (float)((kr) this).field_Mb) {
+            break L0;
+          } else {
             ((kr) this).field_Xb = (float)((kr) this).field_Mb;
+            break L0;
+          }
         }
-        int discarded$21 = ((kr) this).field_Rc.a(36, ((kr) this).field_Xb);
-        int discarded$36 = ((kr) this).field_Rc.a(37, ((kr) this).field_y);
-        int discarded$44 = ((kr) this).field_Rc.SetRenderState(34, ((kr) this).field_X);
-        if (param0 > -98) {
-            Object var3 = null;
-            qi discarded$45 = ((kr) this).a(-42, true, (hd) null, 19, (byte) 125, 4, -18, (byte[]) null);
+        L1: {
+          int discarded$8 = ((kr) this).field_Rc.a(36, ((kr) this).field_Xb);
+          int discarded$9 = ((kr) this).field_Rc.a(37, ((kr) this).field_y);
+          int discarded$10 = ((kr) this).field_Rc.SetRenderState(34, ((kr) this).field_X);
+          if (param0 <= -98) {
+            break L1;
+          } else {
+            qi discarded$11 = ((kr) this).a(-42, true, (hd) null, 19, (byte) 125, 4, -18, (byte[]) null);
+            break L1;
+          }
         }
     }
 
     final void m(int param0) {
-        ((kr) this).field_Nc.SetAmbient(((kr) this).field_g * ((kr) this).field_Wb, ((kr) this).field_Wb * ((kr) this).field_rb, ((kr) this).field_Wb * ((kr) this).field_Hb, 0.0f);
-        ((kr) this).field_Mc = false;
-        if (param0 > -108) {
-            float discarded$0 = ((kr) this).o((byte) 24);
+        try {
+            ((kr) this).field_Nc.SetAmbient(((kr) this).field_g * ((kr) this).field_Wb, ((kr) this).field_Wb * ((kr) this).field_rb, ((kr) this).field_Wb * ((kr) this).field_Hb, 0.0f);
+            ((kr) this).field_Mc = false;
+            if (param0 > -108) {
+                float discarded$0 = ((kr) this).o((byte) 24);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
         }
     }
 
     final static int a(hd param0, la param1, boolean param2) {
-        Object var4 = null;
+        RuntimeException var3 = null;
         L0: {
           if (!param2) {
             break L0;
           } else {
-            var4 = null;
             int discarded$2 = kr.a(-125, (ia) null);
             break L0;
           }
@@ -1664,6 +1949,7 @@ public final class kr extends bf {
     }
 
     private final static int a(int param0, ia param1) {
+        RuntimeException var2 = null;
         L0: {
           if (param0 >= 25) {
             break L0;
@@ -1700,52 +1986,244 @@ public final class kr extends bf {
     }
 
     final void a(og param0, int param1) {
-        if (param1 <= 84) {
+        int stackIn_7_0 = 0;
+        jagdx.IDirect3DDevice stackIn_9_0 = null;
+        int stackIn_9_1 = 0;
+        int stackIn_9_2 = 0;
+        jagdx.IDirect3DDevice stackIn_11_0 = null;
+        int stackIn_11_1 = 0;
+        int stackIn_11_2 = 0;
+        jagdx.IDirect3DDevice stackIn_13_0 = null;
+        int stackIn_13_1 = 0;
+        int stackIn_13_2 = 0;
+        jagdx.IDirect3DDevice stackIn_14_0 = null;
+        int stackIn_14_1 = 0;
+        int stackIn_14_2 = 0;
+        int stackIn_14_3 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_23_1 = 0;
+        jagdx.IDirect3DDevice stackIn_26_0 = null;
+        int stackIn_26_1 = 0;
+        int stackIn_26_2 = 0;
+        jagdx.IDirect3DDevice stackIn_28_0 = null;
+        int stackIn_28_1 = 0;
+        int stackIn_28_2 = 0;
+        jagdx.IDirect3DDevice stackIn_29_0 = null;
+        int stackIn_29_1 = 0;
+        int stackIn_29_2 = 0;
+        int stackIn_29_3 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
+        jagdx.IDirect3DDevice stackOut_8_0 = null;
+        int stackOut_8_1 = 0;
+        int stackOut_8_2 = 0;
+        jagdx.IDirect3DDevice stackOut_13_0 = null;
+        int stackOut_13_1 = 0;
+        int stackOut_13_2 = 0;
+        int stackOut_13_3 = 0;
+        jagdx.IDirect3DDevice stackOut_9_0 = null;
+        int stackOut_9_1 = 0;
+        int stackOut_9_2 = 0;
+        jagdx.IDirect3DDevice stackOut_11_0 = null;
+        int stackOut_11_1 = 0;
+        int stackOut_11_2 = 0;
+        int stackOut_11_3 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_22_1 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_20_1 = 0;
+        jagdx.IDirect3DDevice stackOut_25_0 = null;
+        int stackOut_25_1 = 0;
+        int stackOut_25_2 = 0;
+        jagdx.IDirect3DDevice stackOut_28_0 = null;
+        int stackOut_28_1 = 0;
+        int stackOut_28_2 = 0;
+        int stackOut_28_3 = 0;
+        jagdx.IDirect3DDevice stackOut_26_0 = null;
+        int stackOut_26_1 = 0;
+        int stackOut_26_2 = 0;
+        int stackOut_26_3 = 0;
+        L0: {
+          if (param1 > 84) {
+            break L0;
+          } else {
             ((kr) this).j(91);
+            break L0;
+          }
         }
-        ((kr) this).a((ib) (Object) param0, (byte) -31);
-        if ((!param0.field_j ? 1 : 0) == (((kr) this).field_Qc[((kr) this).field_F] ? 1 : 0)) {
-            int discarded$0 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 1, param0.field_j ? 1 : 3);
+        L1: {
+          ((kr) this).a((ib) (Object) param0, (byte) -31);
+          if (param0.field_j) {
+            stackOut_6_0 = 0;
+            stackIn_7_0 = stackOut_6_0;
+            break L1;
+          } else {
+            stackOut_4_0 = 1;
+            stackIn_7_0 = stackOut_4_0;
+            break L1;
+          }
+        }
+        L2: {
+          if (stackIn_7_0 != (((kr) this).field_Qc[((kr) this).field_F] ? 1 : 0)) {
+            break L2;
+          } else {
+            L3: {
+              stackOut_8_0 = ((kr) this).field_Rc;
+              stackOut_8_1 = ((kr) this).field_F;
+              stackOut_8_2 = 1;
+              stackIn_13_0 = stackOut_8_0;
+              stackIn_13_1 = stackOut_8_1;
+              stackIn_13_2 = stackOut_8_2;
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              if (!param0.field_j) {
+                stackOut_13_0 = (jagdx.IDirect3DDevice) (Object) stackIn_13_0;
+                stackOut_13_1 = stackIn_13_1;
+                stackOut_13_2 = stackIn_13_2;
+                stackOut_13_3 = 3;
+                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_1 = stackOut_13_1;
+                stackIn_14_2 = stackOut_13_2;
+                stackIn_14_3 = stackOut_13_3;
+                break L3;
+              } else {
+                stackOut_9_0 = (jagdx.IDirect3DDevice) (Object) stackIn_9_0;
+                stackOut_9_1 = stackIn_9_1;
+                stackOut_9_2 = stackIn_9_2;
+                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_1 = stackOut_9_1;
+                stackIn_11_2 = stackOut_9_2;
+                stackOut_11_0 = (jagdx.IDirect3DDevice) (Object) stackIn_11_0;
+                stackOut_11_1 = stackIn_11_1;
+                stackOut_11_2 = stackIn_11_2;
+                stackOut_11_3 = 1;
+                stackIn_14_0 = stackOut_11_0;
+                stackIn_14_1 = stackOut_11_1;
+                stackIn_14_2 = stackOut_11_2;
+                stackIn_14_3 = stackOut_11_3;
+                break L3;
+              }
+            }
+            int discarded$4 = ((jagdx.IDirect3DDevice) (Object) stackIn_14_0).SetSamplerState(stackIn_14_1, stackIn_14_2, stackIn_14_3);
             ((kr) this).field_Qc[((kr) this).field_F] = param0.field_j;
+            break L2;
+          }
         }
-        if (!((!((kr) this).field_sc[((kr) this).field_F] ? 1 : 0) == (!param0.field_g ? 1 : 0))) {
-            int discarded$1 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 2, param0.field_g ? 1 : 3);
+        L4: {
+          if (((kr) this).field_sc[((kr) this).field_F]) {
+            stackOut_18_0 = 0;
+            stackIn_19_0 = stackOut_18_0;
+            break L4;
+          } else {
+            stackOut_16_0 = 1;
+            stackIn_19_0 = stackOut_16_0;
+            break L4;
+          }
+        }
+        L5: {
+          stackOut_19_0 = stackIn_19_0;
+          stackIn_22_0 = stackOut_19_0;
+          stackIn_20_0 = stackOut_19_0;
+          if (param0.field_g) {
+            stackOut_22_0 = stackIn_22_0;
+            stackOut_22_1 = 0;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            break L5;
+          } else {
+            stackOut_20_0 = stackIn_20_0;
+            stackOut_20_1 = 1;
+            stackIn_23_0 = stackOut_20_0;
+            stackIn_23_1 = stackOut_20_1;
+            break L5;
+          }
+        }
+        L6: {
+          if (stackIn_23_0 != stackIn_23_1) {
+            L7: {
+              stackOut_25_0 = ((kr) this).field_Rc;
+              stackOut_25_1 = ((kr) this).field_F;
+              stackOut_25_2 = 2;
+              stackIn_28_0 = stackOut_25_0;
+              stackIn_28_1 = stackOut_25_1;
+              stackIn_28_2 = stackOut_25_2;
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              if (!param0.field_g) {
+                stackOut_28_0 = (jagdx.IDirect3DDevice) (Object) stackIn_28_0;
+                stackOut_28_1 = stackIn_28_1;
+                stackOut_28_2 = stackIn_28_2;
+                stackOut_28_3 = 3;
+                stackIn_29_0 = stackOut_28_0;
+                stackIn_29_1 = stackOut_28_1;
+                stackIn_29_2 = stackOut_28_2;
+                stackIn_29_3 = stackOut_28_3;
+                break L7;
+              } else {
+                stackOut_26_0 = (jagdx.IDirect3DDevice) (Object) stackIn_26_0;
+                stackOut_26_1 = stackIn_26_1;
+                stackOut_26_2 = stackIn_26_2;
+                stackOut_26_3 = 1;
+                stackIn_29_0 = stackOut_26_0;
+                stackIn_29_1 = stackOut_26_1;
+                stackIn_29_2 = stackOut_26_2;
+                stackIn_29_3 = stackOut_26_3;
+                break L7;
+              }
+            }
+            int discarded$5 = ((jagdx.IDirect3DDevice) (Object) stackIn_29_0).SetSamplerState(stackIn_29_1, stackIn_29_2, stackIn_29_3);
             ((kr) this).field_sc[((kr) this).field_F] = param0.field_g;
+            break L6;
+          } else {
+            break L6;
+          }
         }
     }
 
     final tl a(boolean param0, byte param1) {
-        if (param1 <= 72) {
+        RuntimeException var3 = null;
+        L0: {
+          if (param1 > 72) {
+            break L0;
+          } else {
             ((kr) this).m(-115);
+            break L0;
+          }
         }
         return (tl) (Object) new cj((kr) this, param0);
     }
 
     final void l(byte param0) {
-        Object var3 = null;
         L0: {
           if (param0 > 39) {
             break L0;
           } else {
-            var3 = null;
-            qi discarded$16 = ((kr) this).a((la) null, 12, 69, 77, (hd) null);
+            qi discarded$8 = ((kr) this).a((la) null, 12, 69, 77, (hd) null);
             break L0;
           }
         }
         L1: {
           if (((kr) this).field_zb == pi.field_x) {
-            int discarded$17 = ((kr) this).field_Rc.SetRenderState(19, 5);
-            int discarded$18 = ((kr) this).field_Rc.SetRenderState(20, 6);
+            int discarded$9 = ((kr) this).field_Rc.SetRenderState(19, 5);
+            int discarded$10 = ((kr) this).field_Rc.SetRenderState(20, 6);
             break L1;
           } else {
             if (((kr) this).field_zb == ne.field_i) {
-              int discarded$19 = ((kr) this).field_Rc.SetRenderState(19, 2);
-              int discarded$20 = ((kr) this).field_Rc.SetRenderState(20, 2);
+              int discarded$11 = ((kr) this).field_Rc.SetRenderState(19, 2);
+              int discarded$12 = ((kr) this).field_Rc.SetRenderState(20, 2);
               break L1;
             } else {
               if (((kr) this).field_zb == uc.field_l) {
-                int discarded$21 = ((kr) this).field_Rc.SetRenderState(19, 9);
-                int discarded$22 = ((kr) this).field_Rc.SetRenderState(20, 2);
+                int discarded$13 = ((kr) this).field_Rc.SetRenderState(19, 9);
+                int discarded$14 = ((kr) this).field_Rc.SetRenderState(20, 2);
                 break L1;
               } else {
                 break L1;
@@ -1763,25 +2241,25 @@ public final class kr extends bf {
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         Object stackIn_5_0 = null;
-        Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
         Object stackIn_8_0 = null;
+        int stackIn_8_1 = 0;
         Object stackIn_9_0 = null;
-        Object stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
         Object stackIn_11_0 = null;
         Object stackIn_12_0 = null;
+        int stackIn_12_1 = 0;
         Object stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
-        Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
         Object stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         Object stackIn_17_0 = null;
-        Object stackIn_18_0 = null;
         Object stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
+        Object stackIn_20_0 = null;
+        int stackIn_20_1 = 0;
+        Object stackIn_21_0 = null;
+        Object stackIn_23_0 = null;
+        Object stackIn_24_0 = null;
+        int stackIn_24_1 = 0;
         Throwable decompiledCaughtException = null;
         Object stackOut_1_0 = null;
         Object stackOut_3_0 = null;
@@ -1789,30 +2267,30 @@ public final class kr extends bf {
         Object stackOut_2_0 = null;
         int stackOut_2_1 = 0;
         Object stackOut_4_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
+        Object stackOut_7_0 = null;
+        int stackOut_7_1 = 0;
         Object stackOut_5_0 = null;
         int stackOut_5_1 = 0;
-        Object stackOut_7_0 = null;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
         Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        Object stackOut_10_0 = null;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
         Object stackOut_11_0 = null;
         int stackOut_11_1 = 0;
-        Object stackOut_13_0 = null;
+        Object stackOut_9_0 = null;
+        int stackOut_9_1 = 0;
+        Object stackOut_12_0 = null;
         Object stackOut_15_0 = null;
         int stackOut_15_1 = 0;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
+        Object stackOut_13_0 = null;
+        int stackOut_13_1 = 0;
         Object stackOut_16_0 = null;
-        Object stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
+        Object stackOut_19_0 = null;
+        int stackOut_19_1 = 0;
         Object stackOut_17_0 = null;
         int stackOut_17_1 = 0;
+        Object stackOut_20_0 = null;
+        Object stackOut_23_0 = null;
+        int stackOut_23_1 = 0;
+        Object stackOut_21_0 = null;
+        int stackOut_21_1 = 0;
         ((kr) this).field_Mc = false;
         ((kr) this).field_Hc = 0;
         try {
@@ -1852,105 +2330,105 @@ public final class kr extends bf {
             L2: {
               ((kr) this).field_Dc = stackIn_4_1 != 0;
               stackOut_4_0 = this;
-              stackIn_6_0 = stackOut_4_0;
+              stackIn_7_0 = stackOut_4_0;
               stackIn_5_0 = stackOut_4_0;
               if (0 == (((kr) this).field_Bc.TextureCaps & 65536)) {
-                stackOut_6_0 = this;
-                stackOut_6_1 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackOut_7_0 = this;
+                stackOut_7_1 = 0;
+                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_1 = stackOut_7_1;
                 break L2;
               } else {
                 stackOut_5_0 = this;
                 stackOut_5_1 = 1;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+                stackIn_8_0 = stackOut_5_0;
+                stackIn_8_1 = stackOut_5_1;
                 break L2;
               }
             }
             L3: {
-              ((kr) this).field_rc = stackIn_7_1 != 0;
-              stackOut_7_0 = this;
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_8_0 = stackOut_7_0;
+              ((kr) this).field_rc = stackIn_8_1 != 0;
+              stackOut_8_0 = this;
+              stackIn_11_0 = stackOut_8_0;
+              stackIn_9_0 = stackOut_8_0;
               if (0 == (16384 & ((kr) this).field_Bc.TextureCaps)) {
-                stackOut_9_0 = this;
-                stackOut_9_1 = 0;
-                stackIn_10_0 = stackOut_9_0;
-                stackIn_10_1 = stackOut_9_1;
+                stackOut_11_0 = this;
+                stackOut_11_1 = 0;
+                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_1 = stackOut_11_1;
                 break L3;
               } else {
-                stackOut_8_0 = this;
-                stackOut_8_1 = 1;
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_10_1 = stackOut_8_1;
+                stackOut_9_0 = this;
+                stackOut_9_1 = 1;
+                stackIn_12_0 = stackOut_9_0;
+                stackIn_12_1 = stackOut_9_1;
                 break L3;
               }
             }
             L4: {
-              ((kr) this).field_Gc = stackIn_10_1 != 0;
+              ((kr) this).field_Gc = stackIn_12_1 != 0;
               ((kr) this).field_h = ((kr) this).field_Bc.MaxSimultaneousTextures;
-              stackOut_10_0 = this;
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_11_0 = stackOut_10_0;
+              stackOut_12_0 = this;
+              stackIn_15_0 = stackOut_12_0;
+              stackIn_13_0 = stackOut_12_0;
               if ((((kr) this).field_Bc.TextureCaps & 8192) == 0) {
-                stackOut_12_0 = this;
-                stackOut_12_1 = 0;
-                stackIn_13_0 = stackOut_12_0;
-                stackIn_13_1 = stackOut_12_1;
+                stackOut_15_0 = this;
+                stackOut_15_1 = 0;
+                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_1 = stackOut_15_1;
                 break L4;
               } else {
-                stackOut_11_0 = this;
-                stackOut_11_1 = 1;
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_13_1 = stackOut_11_1;
+                stackOut_13_0 = this;
+                stackOut_13_1 = 1;
+                stackIn_16_0 = stackOut_13_0;
+                stackIn_16_1 = stackOut_13_1;
                 break L4;
               }
             }
             L5: {
-              ((kr) this).field_J = stackIn_13_1 != 0;
-              stackOut_13_0 = this;
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_14_0 = stackOut_13_0;
+              ((kr) this).field_J = stackIn_16_1 != 0;
+              stackOut_16_0 = this;
+              stackIn_19_0 = stackOut_16_0;
+              stackIn_17_0 = stackOut_16_0;
               if (((kr) this).field_Bc.MaxActiveLights > 0) {
-                stackOut_15_0 = this;
-                stackOut_15_1 = ((kr) this).field_Bc.MaxActiveLights;
-                stackIn_16_0 = stackOut_15_0;
-                stackIn_16_1 = stackOut_15_1;
+                stackOut_19_0 = this;
+                stackOut_19_1 = ((kr) this).field_Bc.MaxActiveLights;
+                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_1 = stackOut_19_1;
                 break L5;
               } else {
-                stackOut_14_0 = this;
-                stackOut_14_1 = 8;
-                stackIn_16_0 = stackOut_14_0;
-                stackIn_16_1 = stackOut_14_1;
+                stackOut_17_0 = this;
+                stackOut_17_1 = 8;
+                stackIn_20_0 = stackOut_17_0;
+                stackIn_20_1 = stackOut_17_1;
                 break L5;
               }
             }
             L6: {
-              ((kr) this).field_fc = stackIn_16_1;
-              stackOut_16_0 = this;
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_17_0 = stackOut_16_0;
+              ((kr) this).field_fc = stackIn_20_1;
+              stackOut_20_0 = this;
+              stackIn_23_0 = stackOut_20_0;
+              stackIn_21_0 = stackOut_20_0;
               if ((2048 & ((kr) this).field_Bc.TextureCaps) == 0) {
-                stackOut_18_0 = this;
-                stackOut_18_1 = 0;
-                stackIn_19_0 = stackOut_18_0;
-                stackIn_19_1 = stackOut_18_1;
+                stackOut_23_0 = this;
+                stackOut_23_1 = 0;
+                stackIn_24_0 = stackOut_23_0;
+                stackIn_24_1 = stackOut_23_1;
                 break L6;
               } else {
-                stackOut_17_0 = this;
-                stackOut_17_1 = 1;
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
+                stackOut_21_0 = this;
+                stackOut_21_1 = 1;
+                stackIn_24_0 = stackOut_21_0;
+                stackIn_24_1 = stackOut_21_1;
                 break L6;
               }
             }
             L7: {
-              ((kr) this).field_Pb = stackIn_19_1 != 0;
-              if (((kr) this).field_lc > 0) {
+              ((kr) this).field_Pb = stackIn_24_1 != 0;
+              if (((kr) this).field_lc <= 0) {
+                int discarded$4 = ((kr) this).field_wc.CheckDeviceMultiSampleType(((kr) this).field_Kc, ((kr) this).field_tc, ((kr) this).field_Pc.BackBufferFormat, true, 2);
                 break L7;
               } else {
-                int discarded$4 = ((kr) this).field_wc.CheckDeviceMultiSampleType(((kr) this).field_Kc, ((kr) this).field_tc, ((kr) this).field_Pc.BackBufferFormat, true, 2);
                 break L7;
               }
             }
@@ -1977,11 +2455,15 @@ public final class kr extends bf {
         if (param0 != -30535) {
             return;
         }
-        ((kr) this).s((byte) -94);
+        try {
+            ((kr) this).s((byte) -94);
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     final void a(jb param0, int param1, boolean param2, byte param3) {
-        int var5 = 0;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         L0: {
@@ -1996,14 +2478,14 @@ public final class kr extends bf {
           var6 = 0;
           var7 = param1;
           if (1 == var7) {
-            var5 = 6;
+            var5_int = 6;
             break L1;
           } else {
             if (2 == var7) {
-              var5 = 27;
+              var5_int = 27;
               break L1;
             } else {
-              var5 = 5;
+              var5_int = 5;
               break L1;
             }
           }
@@ -2016,28 +2498,37 @@ public final class kr extends bf {
             break L2;
           }
         }
-        int discarded$2 = -68;
-        int discarded$3 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, var5, var6 | kr.a(param0));
+        int discarded$2 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, var5_int, var6 | kr.a(param0, (byte) -68));
     }
 
     final go a(int param0, int param1, boolean param2, int[][] param3) {
-        int var5 = -45 / ((param1 - 18) / 51);
+        int var5_int = 0;
+        var5_int = -45 / ((param1 - 18) / 51);
         return (go) (Object) new tc((kr) this, param0, param2, param3);
     }
 
     final void s(byte param0) {
-        if (param0 != -94) {
-            Object var3 = null;
+        L0: {
+          if (param0 == -94) {
+            break L0;
+          } else {
             ((kr) this).a(true, 113, false, (jb) null, false);
+            break L0;
+          }
         }
-        if (!(((kr) this).field_Mc)) {
-            boolean discarded$0 = ((kr) this).field_Rc.LightEnable(0, false);
-            boolean discarded$1 = ((kr) this).field_Rc.LightEnable(1, false);
-            int discarded$2 = ((kr) this).field_Rc.SetLight(0, ((kr) this).field_Nc);
-            int discarded$3 = ((kr) this).field_Rc.SetLight(1, ((kr) this).field_yc);
-            boolean discarded$4 = ((kr) this).field_Rc.LightEnable(0, true);
-            boolean discarded$5 = ((kr) this).field_Rc.LightEnable(1, true);
+        L1: {
+          if (!((kr) this).field_Mc) {
+            boolean discarded$6 = ((kr) this).field_Rc.LightEnable(0, false);
+            boolean discarded$7 = ((kr) this).field_Rc.LightEnable(1, false);
+            int discarded$8 = ((kr) this).field_Rc.SetLight(0, ((kr) this).field_Nc);
+            int discarded$9 = ((kr) this).field_Rc.SetLight(1, ((kr) this).field_yc);
+            boolean discarded$10 = ((kr) this).field_Rc.LightEnable(0, true);
+            boolean discarded$11 = ((kr) this).field_Rc.LightEnable(1, true);
             ((kr) this).field_Mc = true;
+            break L1;
+          } else {
+            break L1;
+          }
         }
     }
 

@@ -10,7 +10,7 @@ final class pr {
     static int field_g;
     static String field_f;
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.setFocusTraversalKeysEnabled(false);
             param0.addKeyListener((java.awt.event.KeyListener) (Object) im.field_c);
@@ -20,7 +20,7 @@ final class pr {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_a = null;
         field_c = null;

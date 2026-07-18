@@ -59,7 +59,7 @@ final class sl {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_d = null;
         field_a = null;
     }
@@ -78,7 +78,7 @@ final class sl {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         ka var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -152,10 +152,8 @@ final class sl {
                       gl.field_h = qk.a("benefits", "menu_text", fd.field_c, 0);
                       ub.field_e = qk.a("benefits", "button_frame", fd.field_c, 0);
                       le.field_e = qk.a("benefits", "arrow", fd.field_c, 0);
-                      int discarded$11 = 0;
-                      tk.field_R = (eg) (Object) ad.a(fd.field_c, sf.field_a, "benefits", "large_font");
-                      int discarded$12 = 0;
-                      ek.field_G = (eg) (Object) ad.a(fd.field_c, sf.field_a, "benefits", "small_font");
+                      tk.field_R = (eg) (Object) ad.a(fd.field_c, sf.field_a, "benefits", "large_font", false);
+                      ek.field_G = (eg) (Object) ad.a(fd.field_c, sf.field_a, "benefits", "small_font", false);
                       var28 = qg.field_i;
                       var2 = qg.field_g;
                       var3 = qg.field_f;
@@ -163,8 +161,7 @@ final class sl {
                       var11 = new ka(4 + le.field_e.field_u, le.field_e.field_x + 4);
                       var11.d();
                       le.field_e.f(2, 2, vh.field_h);
-                      int discarded$13 = 1;
-                      ih.a(var11.field_u, 0, 4, var11.field_x, 2, var11, 0);
+                      ih.a(var11.field_u, 0, 4, var11.field_x, 2, var11, 0, 1);
                       le.field_e = var11;
                       dh.field_ab = le.field_e.i();
                       var12 = new ka(195, 221);
@@ -176,8 +173,7 @@ final class sl {
                       ek.field_G.a(ni.a(new String[1], 0, di.field_n), var6, 130, 16777215, -1);
                       tk.field_R.a(ub.field_m, var6, 180, 16777215, -1);
                       ek.field_G.a(wi.field_b, var6, 200, 16777215, -1);
-                      int discarded$14 = 1;
-                      ih.a(var12.field_u, 0, 4, var12.field_x, 3, var12, 0);
+                      ih.a(var12.field_u, 0, 4, var12.field_x, 3, var12, 0, 1);
                       me.field_e.d();
                       var12.g(-me.field_e.field_s + 18, -me.field_e.field_p + 241);
                       var7 = 0;
@@ -197,9 +193,8 @@ final class sl {
                           break L0;
                         } else {
                           ak.field_i[var7].d();
-                          int discarded$15 = ek.field_G.a(hb.field_g[var7], 3, 3, ak.field_i[var7].field_u - 6, ak.field_i[var7].field_x - 6, vh.field_h, -1, 1, 1, ek.field_G.field_x + ek.field_G.field_K);
-                          int discarded$16 = 1;
-                          ih.a(ak.field_i[var7].field_u, 0, 4, ak.field_i[var7].field_x, 3, ak.field_i[var7], 0);
+                          int discarded$3 = ek.field_G.a(hb.field_g[var7], 3, 3, ak.field_i[var7].field_u - 6, ak.field_i[var7].field_x - 6, vh.field_h, -1, 1, 1, ek.field_G.field_x + ek.field_G.field_K);
+                          ih.a(ak.field_i[var7].field_u, 0, 4, ak.field_i[var7].field_x, 3, ak.field_i[var7], 0, 1);
                           var7++;
                           continue L1;
                         }
@@ -291,9 +286,8 @@ final class sl {
                 vk.field_d.g();
                 var9 = new ka(vk.field_d.field_q, vk.field_d.field_v);
                 var9.d();
-                int discarded$17 = tk.field_R.a(var14, si.field_J, vk.field_k, fd.field_f, pi.field_b, 16777215, -1, 1, 1, tk.field_R.field_x + tk.field_R.field_K);
-                int discarded$18 = 1;
-                ih.a(var9.field_q, 0, 4, var9.field_v, 3, var9, 0);
+                int discarded$4 = tk.field_R.a(var14, si.field_J, vk.field_k, fd.field_f, pi.field_b, 16777215, -1, 1, 1, tk.field_R.field_x + tk.field_R.field_K);
+                ih.a(var9.field_q, 0, 4, var9.field_v, 3, var9, 0, 1);
                 vk.field_d.d();
                 var9.g(0, 0);
                 cf.field_c = new ka(640, 480);
@@ -324,9 +318,8 @@ final class sl {
                 var17 = ni.a(new String[1], 0, w.field_n);
                 ia.field_l = null;
                 var16.d();
-                int discarded$19 = ek.field_G.a(var17, 3, 3, var16.field_u + -6, var16.field_x - 6, 16777215, -1, 0, 1, ek.field_G.field_K + ek.field_G.field_x);
-                int discarded$20 = 1;
-                ih.a(var16.field_u, 0, 4, var16.field_x, 3, var16, 0);
+                int discarded$5 = ek.field_G.a(var17, 3, 3, var16.field_u + -6, var16.field_x - 6, 16777215, -1, 0, 1, ek.field_G.field_K + ek.field_G.field_x);
+                ih.a(var16.field_u, 0, 4, var16.field_x, 3, var16, 0, 1);
                 lj.field_f.d();
                 var16.g(199 - lj.field_f.field_s, 83 - lj.field_f.field_p);
                 qg.a(var30, var2, var3);
@@ -350,8 +343,7 @@ final class sl {
                 var7 = 20 + (var6 - -fc.field_m.field_q);
                 lj.field_f.d();
                 ek.field_G.c(dd.field_r, -lj.field_f.field_s + var7, ek.field_G.field_x + (155 - lj.field_f.field_p + ek.field_G.field_K), 16777215, -1);
-                int discarded$21 = 1;
-                ih.a(var4, -lj.field_f.field_s + (var7 + -4), 4, 50, 3, lj.field_f, -lj.field_f.field_p + 155);
+                ih.a(var4, -lj.field_f.field_s + (var7 + -4), 4, 50, 3, lj.field_f, -lj.field_f.field_p + 155, 1);
                 var8 = -((fc.field_m.field_v - (3 + ek.field_G.field_x - -ek.field_G.field_K)) / 2) + (-lj.field_f.field_p + 155);
                 fc.field_m.g(var6 - lj.field_f.field_s, var8);
                 qg.a(var31, var2, var3);
@@ -569,7 +561,7 @@ final class sl {
         }
     }
 
-    final static jk b() {
+    final static jk b(int param0) {
         return mj.field_a;
     }
 
@@ -703,8 +695,7 @@ final class sl {
             if (param0 < -103) {
               break L0;
             } else {
-              int discarded$2 = 0;
-              sl.a();
+              sl.a(false);
               break L0;
             }
           }
@@ -713,7 +704,7 @@ final class sl {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         sd.field_b = param1;
         kj.field_G = param0;
     }

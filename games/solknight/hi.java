@@ -8,7 +8,7 @@ import java.lang.String;
 final class hi {
     private o[] field_a;
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         char[] var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
@@ -87,7 +87,7 @@ final class hi {
         return stackIn_18_0 != 0;
     }
 
-    final static void a(Throwable param0, String param1) {
+    final static void a(Throwable param0, String param1, int param2) {
         try {
             Exception var3 = null;
             String var3_ref = null;
@@ -95,6 +95,9 @@ final class hi {
             DataInputStream var5 = null;
             int var6 = 0;
             String var7 = null;
+            String var8 = null;
+            String var9 = null;
+            String var10 = null;
             dl stackIn_12_0 = null;
             java.net.URL stackIn_12_1 = null;
             java.net.URL stackIn_12_2 = null;
@@ -157,16 +160,11 @@ final class hi {
                     break L2;
                   }
                 }
-                int discarded$6 = -1;
-                we.a(var3_ref);
-                int discarded$7 = 1;
-                var3_ref = hl.a(var3_ref, "%3a", ":");
-                int discarded$8 = 1;
-                var3_ref = hl.a(var3_ref, "%40", "@");
-                int discarded$9 = 1;
-                var3_ref = hl.a(var3_ref, "%26", "&");
-                int discarded$10 = 1;
-                var7 = hl.a(var3_ref, "%23", "#");
+                we.a(var3_ref, -1);
+                var7 = hl.a(var3_ref, "%3a", ":", true);
+                var8 = hl.a(var7, "%40", "@", true);
+                var9 = hl.a(var8, "%26", "&", true);
+                var10 = hl.a(var9, "%23", "#", true);
                 if (ik.field_c == null) {
                   return;
                 } else {
@@ -216,7 +214,7 @@ final class hi {
                       break L4;
                     }
                   }
-                  var4 = ((dl) (Object) stackIn_14_0).a(new java.net.URL(stackIn_14_3, stackIn_14_5 + "&v1=" + dl.field_a + "&v2=" + dl.field_x + "&e=" + var7), (byte) 68);
+                  var4 = ((dl) (Object) stackIn_14_0).a(new java.net.URL(stackIn_14_3, stackIn_14_5 + "&v1=" + dl.field_a + "&v2=" + dl.field_x + "&e=" + var10), (byte) 68);
                   L5: while (true) {
                     if (var4.field_c != 0) {
                       L6: {
@@ -224,7 +222,7 @@ final class hi {
                           break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_e;
-                          int discarded$11 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L6;
                         }
@@ -251,7 +249,7 @@ final class hi {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         bl var4 = null;
@@ -281,8 +279,7 @@ final class hi {
         if (param0) {
             return;
         }
-        int discarded$0 = 2;
-        uj.a(param1, param3, param4, ((hi) this).field_a, param2);
+        uj.a(param1, param3, param4, ((hi) this).field_a, param2, 2);
     }
 
     hi(o[] param0) {

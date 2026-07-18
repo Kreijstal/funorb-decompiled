@@ -67,8 +67,7 @@ final class oe extends mc {
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0 != 0;
               } else {
-                int discarded$6 = 17510;
-                if (!pi.a(param1)) {
+                if (!pi.a(param1, 17510)) {
                   if (param2.length() == 0) {
                     stackOut_12_0 = 1;
                     stackIn_13_0 = stackOut_12_0;

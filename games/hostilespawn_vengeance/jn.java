@@ -13,7 +13,7 @@ final class jn extends fc {
     static vm field_G;
     static vl field_H;
 
-    final static void l() {
+    final static void l(int param0) {
         Object var2 = null;
         ij.a((byte) -17, (ji) null);
     }
@@ -42,8 +42,7 @@ final class jn extends fc {
                   var9 = new bd(((jn) this).field_A.field_s, ((jn) this).field_A.field_x);
                   sb.a(var9, -125);
                   ((jn) this).field_A.a(0, 0, (byte) 60, param3);
-                  int discarded$2 = 0;
-                  eh.b();
+                  eh.b(false);
                   var9.b(((jn) this).field_v + param1, param0 - -((jn) this).field_m, ((jn) this).field_D);
                   return;
                 }
@@ -61,8 +60,7 @@ final class jn extends fc {
                   var8 = new bd(((jn) this).field_A.field_s, ((jn) this).field_A.field_x);
                   sb.a(var8, -125);
                   ((jn) this).field_A.a(0, 0, (byte) 60, param3);
-                  int discarded$3 = 0;
-                  eh.b();
+                  eh.b(false);
                   var8.b(((jn) this).field_v + param1, param0 - -((jn) this).field_m, ((jn) this).field_D);
                   return;
                 }
@@ -74,7 +72,7 @@ final class jn extends fc {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_E = null;
         field_K = null;
         field_H = null;
@@ -212,7 +210,7 @@ final class jn extends fc {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         q.field_d = 21845;
         q.field_k = 33;
         q.field_h = 133;

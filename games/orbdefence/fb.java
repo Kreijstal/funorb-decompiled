@@ -7,12 +7,12 @@ final class fb extends ca {
     int[] field_g;
     static int[] field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_i = null;
     }
 
-    final static String c() {
+    final static String c(int param0) {
         return cd.field_t.g(2);
     }
 
@@ -299,7 +299,7 @@ final class fb extends ca {
         }
     }
 
-    final static ee b() {
+    final static ee b(byte param0) {
         String var1 = am.b(114);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {

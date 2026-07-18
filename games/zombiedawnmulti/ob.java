@@ -26,8 +26,7 @@ final class ob extends qa {
             var1 = b.field_c.h(6728);
         }
         if (!(var1.length() != 0)) {
-            int discarded$0 = -127;
-            var1 = ki.a();
+            var1 = ki.a((byte) -127);
         }
         if (!(var1.length() != 0)) {
             var1 = hg.field_vb;
@@ -298,7 +297,7 @@ final class ob extends qa {
         }
     }
 
-    final static boolean d() {
+    final static boolean d(byte param0) {
         int var6 = ZombieDawnMulti.field_E ? 1 : 0;
         long var1 = bl.a((byte) 55);
         long var3 = -wn.field_r + var1;

@@ -81,8 +81,7 @@ final class ql {
                   }
                 }
               } else {
-                int discarded$2 = 5;
-                ol.a(-30329, var5);
+                ol.a(-30329, var5, 5);
                 var5 = (qf) (Object) vb.field_h.d(853);
                 continue L1;
               }
@@ -95,7 +94,7 @@ final class ql {
         }
     }
 
-    final static String a(ki param0, String param1, String param2) {
+    final static String a(ki param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
@@ -248,7 +247,7 @@ final class ql {
         return (aa) (Object) new g();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;

@@ -26,15 +26,14 @@ final class kj implements Iterator {
         return (Object) (Object) var1;
     }
 
-    final static s b() {
+    final static s b(int param0) {
         String var1 = qc.d(750938499);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }
-        int discarded$0 = 32674;
-        return new s(qc.d(750938499), ia.b());
+        return new s(qc.d(750938499), ia.b(32674));
     }
 
     final static int a(int param0) {
@@ -53,7 +52,7 @@ final class kj implements Iterator {
         ((kj) this).field_d = null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_g = null;
         field_a = null;

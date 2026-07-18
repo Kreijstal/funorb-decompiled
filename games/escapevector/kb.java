@@ -12,7 +12,7 @@ abstract class kb {
     static ed field_c;
     String field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_c = null;
     }

@@ -143,7 +143,7 @@ final class ch extends am {
         return var3;
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;

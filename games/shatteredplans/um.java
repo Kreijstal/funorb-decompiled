@@ -199,7 +199,7 @@ final class um {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -592,7 +592,7 @@ final class um {
         }
     }
 
-    final static bi[] a(int param0, bc param1, int param2) {
+    final static bi[] a(int param0, bc param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         bi[] stackIn_4_0 = null;
@@ -659,7 +659,7 @@ final class um {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_p = null;
         int var1 = -109;

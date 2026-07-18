@@ -13,7 +13,7 @@ final class p {
     ed field_d;
     int field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_j = null;
         field_e = null;
@@ -48,7 +48,7 @@ final class p {
         return true;
     }
 
-    private final int a(int param0, ed param1, int param2) {
+    private final int a(int param0, ed param1, int param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
@@ -73,8 +73,7 @@ final class p {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$2 = 5214;
-            var5_int = this.a(param2, param0, param1);
+            var5_int = this.a(param2, param0, param1, 5214);
             if (var5_int >= 0) {
               stackOut_3_0 = param1.field_B[var5_int];
               stackIn_4_0 = stackOut_3_0;
@@ -118,7 +117,7 @@ final class p {
         return stackIn_4_0;
     }
 
-    private final ed a(ed param0, ed param1) {
+    private final ed a(ed param0, ed param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -174,8 +173,7 @@ final class p {
                     continue L1;
                   } else {
                     L3: {
-                      int discarded$2 = -93;
-                      var6 = this.a(var5, param1, var4_int);
+                      var6 = this.a(var5, param1, var4_int, (byte) -93);
                       if (var6 != 0) {
                         break L3;
                       } else {
@@ -323,8 +321,7 @@ final class p {
 
     private final void a(int param0, int param1, byte param2, ed param3, int param4) {
         int var7 = -1;
-        int discarded$0 = 5214;
-        int var6_int = this.a(param0, param4, param3);
+        int var6_int = this.a(param0, param4, param3, 5214);
         if (0 > var6_int) {
             return;
         }
@@ -636,8 +633,7 @@ final class p {
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                int discarded$2 = -48;
-                var5 = this.a(param1[var4_int], param2[var4_int]);
+                var5 = this.a(param1[var4_int], param2[var4_int], (byte) -48);
                 param1[var4_int] = var5;
                 var4_int++;
                 continue L1;
@@ -788,7 +784,7 @@ final class p {
         return stackIn_8_0;
     }
 
-    private final int a(int param0, int param1, ed param2) {
+    private final int a(int param0, int param1, ed param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;

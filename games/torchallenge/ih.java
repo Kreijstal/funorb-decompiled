@@ -60,8 +60,7 @@ final class ih extends kj implements sg {
             L1: {
               if (param0 != ((ih) this).field_P) {
                 if (param0 == ((ih) this).field_M) {
-                  int discarded$5 = -14956;
-                  k.a();
+                  k.a(-14956);
                   break L1;
                 } else {
                   if (param0 != ((ih) this).field_L) {
@@ -72,8 +71,7 @@ final class ih extends kj implements sg {
                   }
                 }
               } else {
-                int discarded$6 = 116;
-                nd.b();
+                nd.b((byte) 116);
                 break L1;
               }
             }
@@ -152,7 +150,7 @@ final class ih extends kj implements sg {
         return stackIn_6_0 != 0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         oa.field_g = 0;
         ha.field_d = 0;
         jj.field_d = false;
@@ -209,8 +207,7 @@ final class ih extends kj implements sg {
         ql.field_n = 0;
         mj.field_b = false;
         wh.field_b = false;
-        int discarded$0 = 1;
-        qh.d();
+        qh.d(true);
         sd.a(123);
         sd.b(116);
     }
@@ -305,7 +302,7 @@ final class ih extends kj implements sg {
         return stackIn_13_0 != 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, ka param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, ka param5, int param6, int param7) {
         RuntimeException var8 = null;
         int var10 = 0;
         int var11 = 0;

@@ -307,7 +307,7 @@ final class li extends kj implements sg {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_O = null;
         field_J = null;
     }

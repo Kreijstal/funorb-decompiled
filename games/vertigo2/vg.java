@@ -45,8 +45,7 @@ final class vg {
         try {
           L0: {
             if (hq.a(124, param0, param1, param3)) {
-              int discarded$2 = 1;
-              stackOut_3_0 = w.a(param4.a(param0, param1, (byte) -114));
+              stackOut_3_0 = w.a(param4.a(param0, param1, (byte) -114), true);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -152,7 +151,7 @@ final class vg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;

@@ -7,7 +7,7 @@ final class ig {
     static int[] field_c;
     static int field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;

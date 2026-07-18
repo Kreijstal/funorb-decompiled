@@ -30,11 +30,10 @@ final class r extends ce {
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         super.b(param0, param1, param2, param3, param4);
-        int discarded$0 = 1;
-        this.b();
+        this.b(true);
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         ((r) this).field_P = new ck[]{this.b(-81, ((r) this).field_M, ((r) this).field_H), this.b(-107, ((r) this).field_S, ((r) this).field_N)};
         ((r) this).field_O = this.e((byte) -125);
         ((r) this).field_K = ((r) this).field_O.e();
@@ -169,8 +168,7 @@ final class r extends ce {
         ((r) this).field_H = param2;
         ((r) this).field_M = param0;
         ((r) this).field_S = (param0 & 16711422) >> 1;
-        int discarded$1 = 1;
-        this.b();
+        this.b(true);
     }
 
     final void a(ce param0, int param1, int param2, int param3) {

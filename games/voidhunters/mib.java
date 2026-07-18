@@ -17,7 +17,7 @@ final class mib implements ntb {
     private tja[] field_a;
     private boolean field_e;
 
-    private final void b(faa param0) {
+    private final void b(faa param0, byte param1) {
         uqb var5 = null;
         tja var3 = null;
         int var4 = VoidHunters.field_G;
@@ -43,8 +43,7 @@ final class mib implements ntb {
             return ((mib) this).b(28120);
         }
         if (((mib) this).field_b) {
-            int discarded$0 = 0;
-            return this.a();
+            return this.a(0);
         }
         return ((mib) this).field_a[(-param0 + ((mib) this).field_a.length + ((mib) this).field_i) % ((mib) this).field_a.length];
     }
@@ -160,11 +159,9 @@ final class mib implements ntb {
             if (param0 < 54) {
                 ((mib) this).field_j = null;
             }
-            var3.field_i = var3.field_i;
-            int discarded$0 = 0;
-            var3.field_a = (tja[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) var3.field_a, 1, gva.field_a);
-            int discarded$1 = -128;
-            this.b(param1);
+            var3.field_i = ((mib) this).field_i;
+            var3.field_a = (tja[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) ((mib) this).field_a, 1, gva.field_a, false);
+            this.b(param1, -128);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "mib.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -236,12 +233,12 @@ final class mib implements ntb {
         return ((mib) this).field_j;
     }
 
-    private final void b(tv param0) {
+    private final void b(tv param0, int param1) {
         mib var3 = null;
         try {
             var3 = (mib) (Object) param0;
-            var3.field_f = kk.a(var3.field_f, var3.field_f, 1, wc.field_a, 77);
-            var3.field_g = var3.field_g;
+            var3.field_f = kk.a(var3.field_f, ((mib) this).field_f, 1, wc.field_a, 77);
+            var3.field_g = ((mib) this).field_g;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "mib.W(" + (param0 != null ? "{...}" : "null") + ',' + -128 + ')');
         }
@@ -258,7 +255,7 @@ final class mib implements ntb {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var2 = 0;
         wc var3_ref_wc = null;
         int var3 = 0;
@@ -481,11 +478,9 @@ final class mib implements ntb {
     private final void a(byte param0, faa param1) {
         try {
             if (!osa.field_e) {
-                int discarded$1 = -19;
-                this.a(param1);
+                this.a(param1, (byte) -19);
             } else {
-                int discarded$2 = 42;
-                this.b(param1);
+                this.b(param1, (byte) 42);
             }
             int var3_int = 0;
         } catch (RuntimeException runtimeException) {
@@ -592,8 +587,8 @@ final class mib implements ntb {
             L1: {
               var6 = (mib) (Object) param0;
               var4 = 0;
-              if (var6.field_i != var6.field_i) {
-                iva.a(-6940, "int carouselslot has changed. before=" + var6.field_i + ", now=" + var6.field_i);
+              if (((mib) this).field_i != var6.field_i) {
+                iva.a(-6940, "int carouselslot has changed. before=" + var6.field_i + ", now=" + ((mib) this).field_i);
                 var4 = 1;
                 break L1;
               } else {
@@ -601,9 +596,9 @@ final class mib implements ntb {
               }
             }
             L2: {
-              boolean discarded$4 = tja.a((ntb[]) (Object) var6.field_a, 1, (ntb[]) (Object) var6.field_a, false, 5547);
-              boolean discarded$5 = trb.a(1, var6.field_f, 13, false, var6.field_f);
-              if (!dn.a((tv[]) (Object) var6.field_a, false, 1, (tv[]) (Object) var6.field_a, -66)) {
+              boolean discarded$37 = tja.a((ntb[]) (Object) var6.field_a, 1, (ntb[]) (Object) ((mib) this).field_a, false, 5547);
+              boolean discarded$38 = trb.a(1, ((mib) this).field_f, 13, false, var6.field_f);
+              if (!dn.a((tv[]) (Object) var6.field_a, false, 1, (tv[]) (Object) ((mib) this).field_a, -66)) {
                 break L2;
               } else {
                 var4 = 1;
@@ -621,9 +616,7 @@ final class mib implements ntb {
               }
             }
             L4: {
-              int discarded$6 = 210377952;
-              int discarded$7 = 210377952;
-              if (!dn.a(hob.a(var6.field_f), false, 1, hob.a(var6.field_f), 121)) {
+              if (!dn.a(hob.a(var6.field_f, 210377952), false, 1, hob.a(((mib) this).field_f, 210377952), 121)) {
                 break L4;
               } else {
                 var4 = 1;
@@ -688,7 +681,7 @@ final class mib implements ntb {
         }
     }
 
-    private final void a(faa param0) {
+    private final void a(faa param0, byte param1) {
         RuntimeException var3 = null;
         uqb[] var3_array = null;
         int var4 = 0;
@@ -834,12 +827,10 @@ final class mib implements ntb {
               L2: {
                 var4 = 1 / ((param0 - 22) / 59);
                 var3 = (mib) (Object) param1;
-                int discarded$21 = 210377952;
-                int discarded$22 = 210377952;
-                if (dn.a(hob.a(var3.field_f), false, 1, hob.a(var3.field_f), 122)) {
+                if (dn.a(hob.a(var3.field_f, 210377952), false, 1, hob.a(((mib) this).field_f, 210377952), 122)) {
                   break L2;
                 } else {
-                  if (var3.field_g == var3.field_g) {
+                  if (var3.field_g == ((mib) this).field_g) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;
@@ -909,8 +900,7 @@ final class mib implements ntb {
           L0: {
             L1: {
               if (!osa.field_e) {
-                int discarded$2 = 43;
-                this.c(param0);
+                this.c(param0, (byte) 43);
                 break L1;
               } else {
                 this.a(-1, param0);
@@ -974,8 +964,7 @@ final class mib implements ntb {
             ((mib) this).field_d = null;
         }
         if (((mib) this).field_b) {
-            int discarded$0 = 0;
-            return this.a();
+            return this.a(0);
         }
         return ((mib) this).field_a[((mib) this).field_i];
     }
@@ -990,7 +979,7 @@ final class mib implements ntb {
         }
     }
 
-    private final void c(faa param0) {
+    private final void c(faa param0, byte param1) {
         faa var11 = null;
         faa var3 = null;
         tv[] var10 = null;
@@ -1005,8 +994,7 @@ final class mib implements ntb {
         try {
             var11 = param0;
             var3 = var11;
-            int discarded$0 = 210377952;
-            var10 = hob.a(((mib) this).field_f);
+            var10 = hob.a(((mib) this).field_f, 210377952);
             var4 = var10;
             var5 = var4 == null ? 0 : var10.length;
             var11.a(-632, var5, 12);
@@ -1031,7 +1019,7 @@ final class mib implements ntb {
         }
     }
 
-    private final tja a() {
+    private final tja a(int param0) {
         if (null != ((mib) this).field_d) {
             if (((mib) this).field_d.c(116) != null) {
                 return ((mib) this).field_d.c(116).d(0);
@@ -1298,8 +1286,7 @@ final class mib implements ntb {
               L1: {
                 var6 = (var5 - -1) % ((mib) this).field_a.length;
                 if (tga.field_N) {
-                  int discarded$6 = 68;
-                  nc.a();
+                  nc.a((byte) 68);
                   break L1;
                 } else {
                   break L1;
@@ -1327,8 +1314,7 @@ final class mib implements ntb {
               L4: {
                 ((mib) this).field_a[var6].a(false, var4);
                 if (ndb.field_c == 1) {
-                  int discarded$7 = 71;
-                  this.b();
+                  this.b((byte) 71);
                   break L4;
                 } else {
                   break L4;
@@ -1379,21 +1365,17 @@ final class mib implements ntb {
                   L7: {
                     ((tja) (Object) stackIn_24_0).a(stackIn_24_1, stackIn_24_2, stackIn_24_3, stackIn_24_4 != 0);
                     if (poa.field_o) {
-                      int discarded$8 = 9487;
-                      uea.c();
+                      uea.c(9487);
                       var8 = tmb.a((tv) (Object) ((mib) this).field_a[var5], (byte) -117);
                       if (var8 == var7) {
                         ((mib) this).field_e = false;
                         break L7;
                       } else {
                         L8: {
-                          int discarded$9 = -39;
-                          var9 = dnb.c();
-                          int discarded$10 = 9487;
-                          uea.c();
+                          var9 = dnb.c((byte) -39);
+                          uea.c(9487);
                           this.a(var5, var6, 42);
-                          int discarded$11 = -39;
-                          ((mib) this).field_a[var5] = dnb.c();
+                          ((mib) this).field_a[var5] = dnb.c((byte) -39);
                           if (!((mib) this).field_e) {
                             iva.a(-6940, "Carousel_commongame shallow copy check: A field was changed before it was prepared");
                             iva.a(-6940, "******************************************");

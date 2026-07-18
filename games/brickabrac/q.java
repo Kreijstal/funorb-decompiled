@@ -235,7 +235,7 @@ final class q {
                                 if (((q) this).field_f == 42) {
                                   var8_ref_String = var4_ref.toLowerCase();
                                   var9_int = -16 + ((q) this).field_j;
-                                  int discarded$4 = nn.field_g.a(var8_ref_String, 8 + ((q) this).field_c, ((q) this).field_a - 5, var9_int, ((q) this).field_d, var7, -1, 1, 1, 3 + nn.field_g.field_B);
+                                  int discarded$2 = nn.field_g.a(var8_ref_String, 8 + ((q) this).field_c, ((q) this).field_a - 5, var9_int, ((q) this).field_d, var7, -1, 1, 1, 3 + nn.field_g.field_B);
                                   break L10;
                                 } else {
                                   nn.field_g.c(var4_ref.toLowerCase(), var6, 2 + (((q) this).field_a + (-nn.field_g.field_P + nn.field_g.field_B + ((q) this).field_d) / 2), var7, -1);
@@ -260,13 +260,11 @@ final class q {
                                   lb.c(var6, ((q) this).field_a + ((q) this).field_d / 2, 121, 0);
                                   lb.c(var6, ((q) this).field_d / 2 + ((q) this).field_a + 1, 121, 11184810);
                                   if (20 != ((q) this).field_f) {
-                                    int discarded$5 = -29946;
-                                    stackOut_55_0 = qi.i() * 120 / 256;
+                                    stackOut_55_0 = qi.i(-29946) * 120 / 256;
                                     stackIn_56_0 = stackOut_55_0;
                                     break L13;
                                   } else {
-                                    int discarded$6 = -44;
-                                    stackOut_54_0 = lh.g() * 120 / re.e((byte) 43);
+                                    stackOut_54_0 = lh.g((byte) -44) * 120 / re.e((byte) 43);
                                     stackIn_56_0 = stackOut_54_0;
                                     break L13;
                                   }
@@ -291,7 +289,7 @@ final class q {
                                 if (param0 == 4) {
                                   break L15;
                                 } else {
-                                  boolean discarded$7 = ((q) this).a(-113, 101, -34);
+                                  boolean discarded$3 = ((q) this).a(-113, 101, -34);
                                   break L15;
                                 }
                               }

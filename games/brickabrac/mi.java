@@ -8,7 +8,7 @@ final class mi {
     static String field_a;
     static String[] field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_b = null;
@@ -61,8 +61,7 @@ final class mi {
                     }
                   }
                   var6 = new java.net.URL(param1.getCodeBase(), var5);
-                  int discarded$2 = -1;
-                  param1.getAppletContext().showDocument(hg.a(param1, var6), "_self");
+                  param1.getAppletContext().showDocument(hg.a(param1, var6, -1), "_self");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -109,7 +108,7 @@ final class mi {
         }
     }
 
-    final static pq a(mf param0, int param1) {
+    final static pq a(mf param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

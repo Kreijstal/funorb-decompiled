@@ -355,7 +355,7 @@ final class gg {
         return stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
         field_e = null;

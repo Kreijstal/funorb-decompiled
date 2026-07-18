@@ -193,11 +193,19 @@ abstract class fsb extends ksa {
                                       break L3;
                                     } else {
                                       L4: {
-                                        if (6410 == param0) {
+                                        if (!param1) {
                                           break L4;
                                         } else {
+                                          fsb.a((lta) null, (int[]) null, 84, -107, (int[]) null, (int[]) null, -96, (int[]) null, 2);
+                                          break L4;
+                                        }
+                                      }
+                                      L5: {
+                                        if (6410 == param0) {
+                                          break L5;
+                                        } else {
                                           if (param0 == 34847) {
-                                            break L4;
+                                            break L5;
                                           } else {
                                             if (6402 == param0) {
                                               stackOut_50_0 = 6402;
@@ -243,7 +251,7 @@ abstract class fsb extends ksa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "fsb.B(" + param0 + ',' + false + ')');
+          throw rta.a((Throwable) (Object) var2, "fsb.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -398,232 +406,236 @@ abstract class fsb extends ksa {
         try {
           L0: {
             var9_int = param4.length >> 1;
-            L1: {
-              var10 = kdb.field_o;
-              var11 = eu.a(var10 * 1024, 54);
-              var12 = param6;
-              var13 = param7[var12];
-              var14 = param7[(-1 + (var9_int + var12)) % var9_int];
-              if (var13 > 0) {
-                L2: {
-                  if (~var13 > ~var14) {
-                    break L2;
-                  } else {
-                    var15 = 40;
-                    var13 = (var11 * var15 >> 16) + (255 - var15);
-                    if (var76 == 0) {
-                      break L1;
-                    } else {
+            if (param2 == 6407) {
+              L1: {
+                var10 = kdb.field_o;
+                var11 = eu.a(var10 * 1024, 54);
+                var12 = param6;
+                var13 = param7[var12];
+                var14 = param7[(-1 + (var9_int + var12)) % var9_int];
+                if (var13 > 0) {
+                  L2: {
+                    if (~var13 > ~var14) {
                       break L2;
+                    } else {
+                      var15 = 40;
+                      var13 = (var11 * var15 >> 16) + (255 - var15);
+                      if (var76 == 0) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
                     }
                   }
+                  var13 = 0;
+                  break L1;
+                } else {
+                  break L1;
                 }
-                var13 = 0;
-                break L1;
-              } else {
-                break L1;
               }
-            }
-            var15 = var12 << 1;
-            var16 = param4[var15];
-            var17 = param4[var15 - -1];
-            var18 = param1[var15];
-            var19 = param1[1 + var15];
-            var20 = param5[var15];
-            var21 = param5[var15 + 1];
-            var22 = -var16 + var18;
-            var23 = var19 - var17;
-            var24 = -var23;
-            var25 = var22;
-            var16 = var16 - var24;
-            var24 = var24 << 1;
-            var17 = var17 - var25;
-            var25 = var25 << 1;
-            var18 = var18 + (var24 - -(var22 / 2));
-            var21 = var21 + (var25 - var23 / 2);
-            var19 = var19 + (var23 / 2 + var25);
-            var20 = var20 + (var24 + -(var22 / 2));
-            var26 = param0.a(var16, (byte) 124);
-            var27 = param0.b(true, var17);
-            var28 = param0.a(var18, (byte) 119);
-            var29 = param0.b(true, var19);
-            var30 = param0.a(var20, (byte) 118);
-            var31 = param0.b(true, var21);
-            hcb.a(8, var29, 1, param8, var26, var28, var31, var27, 16777215 | var13 << 24, var30, param8);
-            var32 = 1;
-            L3: while (true) {
-              L4: {
-                L5: {
-                  if (var32 >= var9_int) {
-                    break L5;
-                  } else {
-                    var33 = (var9_int + param6 + var32) % var9_int;
-                    var34 = (1 + var32 + param6 + var9_int) % var9_int;
-                    if (var76 != 0) {
-                      break L4;
+              var15 = var12 << 1;
+              var16 = param4[var15];
+              var17 = param4[var15 - -1];
+              var18 = param1[var15];
+              var19 = param1[1 + var15];
+              var20 = param5[var15];
+              var21 = param5[var15 + 1];
+              var22 = -var16 + var18;
+              var23 = var19 - var17;
+              var24 = -var23;
+              var25 = var22;
+              var16 = var16 - var24;
+              var24 = var24 << 1;
+              var17 = var17 - var25;
+              var25 = var25 << 1;
+              var18 = var18 + (var24 - -(var22 / 2));
+              var21 = var21 + (var25 - var23 / 2);
+              var19 = var19 + (var23 / 2 + var25);
+              var20 = var20 + (var24 + -(var22 / 2));
+              var26 = param0.a(var16, (byte) 124);
+              var27 = param0.b(true, var17);
+              var28 = param0.a(var18, (byte) 119);
+              var29 = param0.b(true, var19);
+              var30 = param0.a(var20, (byte) 118);
+              var31 = param0.b(true, var21);
+              hcb.a(param2 + -6399, var29, 1, param8, var26, var28, var31, var27, 16777215 | var13 << 24, var30, param8);
+              var32 = 1;
+              L3: while (true) {
+                L4: {
+                  L5: {
+                    if (var32 >= var9_int) {
+                      break L5;
                     } else {
-                      L6: {
-                        if (param7[var33] <= 0) {
-                          break L6;
-                        } else {
-                          if (0 >= param7[var34]) {
+                      var33 = (var9_int + param6 + var32) % var9_int;
+                      var34 = (1 + var32 + param6 + var9_int) % var9_int;
+                      if (var76 != 0) {
+                        break L4;
+                      } else {
+                        L6: {
+                          if (param7[var33] <= 0) {
                             break L6;
                           } else {
-                            L7: {
-                              var35 = 5;
-                              var36 = var35 * (-var32 + var9_int) + param3;
-                              var37 = var35 * (-1 + (var9_int + -var32)) - -param3;
-                              var38 = var33 << 1;
-                              var39 = param4[var38];
-                              var40 = param4[var38 + 1];
-                              var41 = var34 << 1;
-                              var42 = param4[var41];
-                              var43 = param4[1 + var41];
-                              if (~var42 != ~var39) {
-                                break L7;
-                              } else {
-                                if (var40 != var43) {
+                            if (0 >= param7[var34]) {
+                              break L6;
+                            } else {
+                              L7: {
+                                var35 = 5;
+                                var36 = var35 * (-var32 + var9_int) + param3;
+                                var37 = var35 * (-1 + (var9_int + -var32)) - -param3;
+                                var38 = var33 << 1;
+                                var39 = param4[var38];
+                                var40 = param4[var38 + 1];
+                                var41 = var34 << 1;
+                                var42 = param4[var41];
+                                var43 = param4[1 + var41];
+                                if (~var42 != ~var39) {
                                   break L7;
                                 } else {
-                                  if (var76 == 0) {
-                                    break L6;
-                                  } else {
+                                  if (var40 != var43) {
                                     break L7;
+                                  } else {
+                                    if (var76 == 0) {
+                                      break L6;
+                                    } else {
+                                      break L7;
+                                    }
                                   }
                                 }
                               }
-                            }
-                            L8: {
-                              var44 = 128;
-                              var45 = var44 + var36 * 16;
-                              var46 = param0.a(var39, (byte) 123);
-                              var47 = param0.b(true, var40);
-                              var48 = param0.a(var42, (byte) 115);
-                              var49 = param0.b(true, var43);
-                              var50 = var42 - var39;
-                              var51 = -var40 + var43;
-                              var52 = ar.a(var50, (byte) 110, var51);
-                              var53 = var52 >> 6;
-                              var54 = Math.min(var53, -(var36 / 4) + 64) * param7[var33] >> 8;
-                              if (0 <= var54) {
-                                break L8;
-                              } else {
-                                var54 = 0;
-                                break L8;
+                              L8: {
+                                var44 = 128;
+                                var45 = var44 + var36 * 16;
+                                var46 = param0.a(var39, (byte) 123);
+                                var47 = param0.b(true, var40);
+                                var48 = param0.a(var42, (byte) 115);
+                                var49 = param0.b(true, var43);
+                                var50 = var42 - var39;
+                                var51 = -var40 + var43;
+                                var52 = ar.a(var50, (byte) 110, var51);
+                                var53 = var52 >> 6;
+                                var54 = Math.min(var53, -(var36 / 4) + 64) * param7[var33] >> 8;
+                                if (0 <= var54) {
+                                  break L8;
+                                } else {
+                                  var54 = 0;
+                                  break L8;
+                                }
                               }
-                            }
-                            L9: {
-                              var55 = Math.min(var53, -(var37 / 4) + 64) * param7[var34] >> 8;
-                              if (var55 >= 0) {
-                                break L9;
-                              } else {
-                                var55 = 0;
-                                break L9;
+                              L9: {
+                                var55 = Math.min(var53, -(var37 / 4) + 64) * param7[var34] >> 8;
+                                if (var55 >= 0) {
+                                  break L9;
+                                } else {
+                                  var55 = 0;
+                                  break L9;
+                                }
                               }
-                            }
-                            L10: {
-                              if (var55 != 0) {
-                                break L10;
-                              } else {
-                                if (var54 != 0) {
+                              L10: {
+                                if (var55 != 0) {
                                   break L10;
                                 } else {
+                                  if (var54 != 0) {
+                                    break L10;
+                                  } else {
+                                    if (var76 == 0) {
+                                      break L6;
+                                    } else {
+                                      break L10;
+                                    }
+                                  }
+                                }
+                              }
+                              L11: {
+                                var56 = var54 << 24 | param8;
+                                var57 = 1;
+                                if (bta.field_q == 0) {
+                                  break L11;
+                                } else {
+                                  L12: {
+                                    var58_int = param1[var38];
+                                    var59 = param1[1 + var38];
+                                    var60 = param5[var38];
+                                    var61 = param5[1 + var38];
+                                    var62 = param1[var41];
+                                    var63 = param1[1 + var41];
+                                    var64 = param5[var41];
+                                    var65 = param5[var41 + 1];
+                                    var58_int = wob.a(var45, var58_int, param2 ^ 6406, var39, var44);
+                                    var59 = wob.a(var45, var59, 1, var40, var44);
+                                    var60 = wob.a(var45, var60, param2 + -6406, var39, var44);
+                                    var61 = wob.a(var45, var61, 1, var40, var44);
+                                    if (var37 <= 0) {
+                                      break L12;
+                                    } else {
+                                      var45 = 16 * var37 - -var44;
+                                      var62 = wob.a(var45, var62, 1, var42, var44);
+                                      var63 = wob.a(var45, var63, 1, var43, var44);
+                                      var64 = wob.a(var45, var64, 1, var42, var44);
+                                      var65 = wob.a(var45, var65, 1, var43, var44);
+                                      break L12;
+                                    }
+                                  }
+                                  var66 = param0.a(var58_int, (byte) 121);
+                                  var67 = param0.b(true, var59);
+                                  var68 = param0.a(var62, (byte) 120);
+                                  var69 = param0.b(true, var63);
+                                  var70 = param0.a(var60, (byte) 126);
+                                  var71 = param0.b(true, var61);
+                                  var72 = param0.a(var64, (byte) 121);
+                                  var73 = param0.b(true, var65);
+                                  var74 = param8 | var55 << 24;
+                                  var75 = param8;
+                                  hcb.a(8, var69, var57, var75, var46, var68, var67, var47, var56, var66, var75);
+                                  hcb.a(8, var69, var57, var56, var48, var68, var47, var49, var74, var46, var75);
+                                  hcb.a(8, var49, var57, var56, var70, var48, var47, var71, var75, var46, var74);
+                                  hcb.a(param2 ^ 6415, var49, var57, var75, var72, var48, var71, var73, var75, var70, var74);
                                   if (var76 == 0) {
                                     break L6;
                                   } else {
-                                    break L10;
+                                    break L11;
                                   }
                                 }
                               }
-                            }
-                            L11: {
-                              var56 = var54 << 24 | param8;
-                              var57 = 1;
-                              if (bta.field_q == 0) {
-                                break L11;
-                              } else {
-                                L12: {
-                                  var58_int = param1[var38];
-                                  var59 = param1[1 + var38];
-                                  var60 = param5[var38];
-                                  var61 = param5[1 + var38];
-                                  var62 = param1[var41];
-                                  var63 = param1[1 + var41];
-                                  var64 = param5[var41];
-                                  var65 = param5[var41 + 1];
-                                  var58_int = wob.a(var45, var58_int, 1, var39, var44);
-                                  var59 = wob.a(var45, var59, 1, var40, var44);
-                                  var60 = wob.a(var45, var60, 1, var39, var44);
-                                  var61 = wob.a(var45, var61, 1, var40, var44);
-                                  if (var37 <= 0) {
-                                    break L12;
-                                  } else {
-                                    var45 = 16 * var37 - -var44;
-                                    var62 = wob.a(var45, var62, 1, var42, var44);
-                                    var63 = wob.a(var45, var63, 1, var43, var44);
-                                    var64 = wob.a(var45, var64, 1, var42, var44);
-                                    var65 = wob.a(var45, var65, 1, var43, var44);
-                                    break L12;
+                              try {
+                                L13: {
+                                  L14: {
+                                    var58_int = (int)(param0.field_a * 2048.0f);
+                                    if (var58_int >= 1) {
+                                      break L14;
+                                    } else {
+                                      var58_int = 1;
+                                      break L14;
+                                    }
                                   }
+                                  og.field_r.a(var46, var47, var48, var49, var56, var58_int, var57);
+                                  break L13;
                                 }
-                                var66 = param0.a(var58_int, (byte) 121);
-                                var67 = param0.b(true, var59);
-                                var68 = param0.a(var62, (byte) 120);
-                                var69 = param0.b(true, var63);
-                                var70 = param0.a(var60, (byte) 126);
-                                var71 = param0.b(true, var61);
-                                var72 = param0.a(var64, (byte) 121);
-                                var73 = param0.b(true, var65);
-                                var74 = param8 | var55 << 24;
-                                var75 = param8;
-                                hcb.a(8, var69, var57, var75, var46, var68, var67, var47, var56, var66, var75);
-                                hcb.a(8, var69, var57, var56, var48, var68, var47, var49, var74, var46, var75);
-                                hcb.a(8, var49, var57, var56, var70, var48, var47, var71, var75, var46, var74);
-                                hcb.a(8, var49, var57, var75, var72, var48, var71, var73, var75, var70, var74);
-                                if (var76 == 0) {
-                                  break L6;
-                                } else {
-                                  break L11;
+                              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                                decompiledCaughtException = decompiledCaughtParameter0;
+                                L15: {
+                                  var58 = (Exception) (Object) decompiledCaughtException;
+                                  break L15;
                                 }
                               }
+                              break L6;
                             }
-                            try {
-                              L13: {
-                                L14: {
-                                  var58_int = (int)(param0.field_a * 2048.0f);
-                                  if (var58_int >= 1) {
-                                    break L14;
-                                  } else {
-                                    var58_int = 1;
-                                    break L14;
-                                  }
-                                }
-                                og.field_r.a(var46, var47, var48, var49, var56, var58_int, var57);
-                                break L13;
-                              }
-                            } catch (java.lang.Exception decompiledCaughtParameter0) {
-                              decompiledCaughtException = decompiledCaughtParameter0;
-                              L15: {
-                                var58 = (Exception) (Object) decompiledCaughtException;
-                                break L15;
-                              }
-                            }
-                            break L6;
                           }
                         }
-                      }
-                      var32++;
-                      if (var76 == 0) {
-                        continue L3;
-                      } else {
-                        break L5;
+                        var32++;
+                        if (var76 == 0) {
+                          continue L3;
+                        } else {
+                          break L5;
+                        }
                       }
                     }
                   }
+                  break L4;
                 }
-                break L4;
+                break L0;
               }
-              break L0;
+            } else {
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -681,7 +693,7 @@ abstract class fsb extends ksa {
           }
           L18: {
             stackOut_55_0 = (RuntimeException) (Object) stackIn_55_0;
-            stackOut_55_1 = ((StringBuilder) (Object) stackIn_55_1).append(stackIn_55_2).append(',').append(6407).append(',').append(param3).append(',');
+            stackOut_55_1 = ((StringBuilder) (Object) stackIn_55_1).append(stackIn_55_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_58_0 = stackOut_55_0;
             stackIn_58_1 = stackOut_55_1;
             stackIn_56_0 = stackOut_55_0;

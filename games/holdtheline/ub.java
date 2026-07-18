@@ -257,7 +257,7 @@ abstract class ub extends n implements jm {
         return stackIn_7_0 != 0;
     }
 
-    final static fl a(byte[] param0) {
+    final static fl a(byte[] param0, int param1, int param2) {
         fl var3 = null;
         RuntimeException var3_ref = null;
         fl stackIn_3_0 = null;
@@ -592,7 +592,7 @@ abstract class ub extends n implements jm {
         return stackIn_7_0 != 0;
     }
 
-    final static uh a() {
+    final static uh a(int param0, int param1) {
         uh var2 = new uh(1, false);
         return var2;
     }
@@ -930,7 +930,7 @@ abstract class ub extends n implements jm {
         return null != ((ub) this).a((byte) 123) ? true : false;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_A = null;
         field_C = null;
         field_D = null;

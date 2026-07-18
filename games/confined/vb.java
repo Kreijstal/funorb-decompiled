@@ -46,8 +46,7 @@ final class vb {
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
-                int discarded$2 = 194;
-                stackOut_6_0 = ug.a(var3);
+                stackOut_6_0 = ug.a(var3, 194);
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
               }
@@ -410,7 +409,7 @@ final class vb {
         return var2;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_f = null;
         field_a = null;
         field_e = null;

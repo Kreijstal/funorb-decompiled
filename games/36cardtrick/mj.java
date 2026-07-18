@@ -131,8 +131,7 @@ abstract class mj {
                       if (param2 <= -26) {
                         break L1;
                       } else {
-                        int discarded$4 = 1;
-                        int discarded$5 = mj.a(42, 19, true);
+                        int discarded$2 = mj.a(42, 19, true, true);
                         break L1;
                       }
                     }
@@ -175,7 +174,7 @@ abstract class mj {
         return -1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -329,7 +328,7 @@ abstract class mj {
         return stackIn_17_0;
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int a(int param0, int param1, boolean param2, boolean param3) {
         return vf.b((byte) 103);
     }
 

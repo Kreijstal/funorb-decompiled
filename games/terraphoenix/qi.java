@@ -119,8 +119,7 @@ final class qi {
             if (var5.length != 65) {
               throw new RuntimeException();
             } else {
-              int discarded$1 = 8;
-              var17 = tg.a(var10.field_i, var10.field_k - var16.length - 5, 5);
+              var17 = tg.a(var10.field_i, var10.field_k - var16.length - 5, 5, 8);
               var7 = 0;
               L3: while (true) {
                 if (var7 >= 64) {

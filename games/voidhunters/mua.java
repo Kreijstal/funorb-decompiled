@@ -487,9 +487,9 @@ final class mua extends eka implements ntb {
             super.b((byte) 85, param1);
             var6 = (mua) (Object) param1;
             var7 = var6;
-            var7.field_c = var6.field_c;
-            var7.field_f = var6.field_f;
-            var7.field_e = var6.field_e;
+            var7.field_c = ((mua) this).field_c;
+            var7.field_f = ((mua) this).field_f;
+            var7.field_e = ((mua) this).field_e;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "mua.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

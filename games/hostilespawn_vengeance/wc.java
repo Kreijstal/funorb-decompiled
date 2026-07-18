@@ -26,7 +26,7 @@ final class wc {
     private int[] field_r;
     static boolean field_u;
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         wk.field_c = param0;
         qg.field_l = param1;
     }
@@ -187,8 +187,7 @@ final class wc {
         try {
           L0: {
             L1: {
-              int discarded$5 = -76;
-              var17 = new vi(ml.a(param1));
+              var17 = new vi(ml.a(param1, (byte) -76));
               var4 = var17.l(32270);
               if (5 > var4) {
                 break L1;
@@ -248,9 +247,9 @@ final class wc {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$6 = var8 + var17.e(8);
-                            var8 = dupTemp$6;
-                            ((wc) this).field_t[var10] = dupTemp$6;
+                            int dupTemp$4 = var8 + var17.e(8);
+                            var8 = dupTemp$4;
+                            ((wc) this).field_t[var10] = dupTemp$4;
                             if (var9 >= ((wc) this).field_t[var10]) {
                               break L8;
                             } else {
@@ -268,9 +267,9 @@ final class wc {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$7 = var8 + var17.a(true);
-                            var8 = dupTemp$7;
-                            ((wc) this).field_t[var10] = dupTemp$7;
+                            int dupTemp$5 = var8 + var17.a(true);
+                            var8 = dupTemp$5;
+                            ((wc) this).field_t[var10] = dupTemp$5;
                             if (((wc) this).field_t[var10] > var9) {
                               var9 = ((wc) this).field_t[var10];
                               break L10;
@@ -395,10 +394,10 @@ final class wc {
                                       continue L22;
                                     } else {
                                       L25: {
-                                        int dupTemp$8 = var8 + var17.a(true);
-                                        var8 = dupTemp$8;
-                                        ((wc) this).field_b[var11][var14] = dupTemp$8;
-                                        var15 = dupTemp$8;
+                                        int dupTemp$6 = var8 + var17.a(true);
+                                        var8 = dupTemp$6;
+                                        ((wc) this).field_b[var11][var14] = dupTemp$6;
+                                        var15 = dupTemp$6;
                                         if (var15 > var13) {
                                           var13 = var15;
                                           break L25;
@@ -448,10 +447,10 @@ final class wc {
                                       continue L27;
                                     } else {
                                       L30: {
-                                        int dupTemp$9 = var8 + var17.e(8);
-                                        var8 = dupTemp$9;
-                                        ((wc) this).field_b[var11][var14] = dupTemp$9;
-                                        var15 = dupTemp$9;
+                                        int dupTemp$7 = var8 + var17.e(8);
+                                        var8 = dupTemp$7;
+                                        ((wc) this).field_b[var11][var14] = dupTemp$7;
+                                        var15 = dupTemp$7;
                                         if (var13 < var15) {
                                           var13 = var15;
                                           break L30;

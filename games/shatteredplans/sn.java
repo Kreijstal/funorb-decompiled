@@ -13,7 +13,7 @@ final class sn {
         field_b = null;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -112,7 +112,7 @@ final class sn {
         }
     }
 
-    final static String a(char param0) {
+    final static String a(char param0, byte param1) {
         return String.valueOf(param0);
     }
 

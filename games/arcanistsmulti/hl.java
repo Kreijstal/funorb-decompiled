@@ -172,7 +172,7 @@ final class hl extends pg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_h = null;
         field_l = null;

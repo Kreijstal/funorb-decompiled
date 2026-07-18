@@ -70,23 +70,19 @@ final class eda extends kj {
                   ana.a(true, param4, param1, param2, param0);
                   return;
                 } else {
-                  int discarded$8 = -23;
-                  wu.a(param4, param0, param2, param1);
+                  wu.a(param4, param0, param2, param1, (byte) -23);
                   return;
                 }
               } else {
-                int discarded$9 = -23;
-                wu.a(param4, param0, param2, param1);
+                wu.a(param4, param0, param2, param1, (byte) -23);
                 return;
               }
             } else {
-              int discarded$10 = -23;
-              wu.a(param4, param0, param2, param1);
+              wu.a(param4, param0, param2, param1, (byte) -23);
               return;
             }
           } else {
-            int discarded$11 = -23;
-            wu.a(param4, param0, param2, param1);
+            wu.a(param4, param0, param2, param1, (byte) -23);
             return;
           }
         } else {

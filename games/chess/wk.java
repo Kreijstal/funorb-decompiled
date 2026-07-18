@@ -11,7 +11,7 @@ final class wk {
     static int field_b;
     static int[] field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_e = null;
         field_g = null;

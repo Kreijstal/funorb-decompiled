@@ -39,7 +39,7 @@ final class gj extends kb {
         return stackIn_3_0;
     }
 
-    final static void a(String param0, java.applet.Applet param1) {
+    final static void a(String param0, java.applet.Applet param1, boolean param2) {
         try {
             Throwable throwable = null;
             String var3 = null;
@@ -106,8 +106,7 @@ final class gj extends kb {
                   break L2;
                 }
               }
-              int discarded$2 = 0;
-              ib.a(param1);
+              ib.a(param1, false);
               return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
@@ -332,7 +331,7 @@ final class gj extends kb {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_T = null;
         field_W = null;
         field_R = null;

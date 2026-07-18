@@ -33,12 +33,10 @@ final class jr extends rqa {
                 break L1;
               } else {
                 L2: {
-                  int discarded$6 = -95;
-                  if (!bd.a(param1)) {
+                  if (!bd.a(param1, (byte) -95)) {
                     break L2;
                   } else {
-                    int discarded$7 = -95;
-                    if (!bd.a(param2)) {
+                    if (!bd.a(param2, (byte) -95)) {
                       break L2;
                     } else {
                       break L1;

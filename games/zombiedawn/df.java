@@ -8,11 +8,11 @@ final class df extends le {
     static boolean field_h;
     static boolean field_l;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return !gl.field_E.a(117);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_j = null;
     }
 

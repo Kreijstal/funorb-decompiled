@@ -13,7 +13,7 @@ final class lh {
     private int field_e;
     static String field_a;
 
-    final static hh a(int param0, fm param1, int param2) {
+    final static hh a(int param0, fm param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -33,8 +33,7 @@ final class lh {
         String stackOut_5_2 = null;
         try {
           if (rk.a(param2, false, param1, param0)) {
-            int discarded$2 = -103;
-            return tj.b();
+            return tj.b((byte) -103);
           } else {
             return null;
           }
@@ -70,7 +69,7 @@ final class lh {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -101,8 +100,7 @@ final class lh {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    int discarded$1 = 0;
-                    this.a();
+                    this.a(false);
                     ((lh) this).field_e = 256;
                     return;
                   } else {
@@ -228,19 +226,18 @@ final class lh {
 
     final int a(int param0) {
         if (!(0 != ((lh) this).field_e)) {
-            int discarded$0 = 0;
-            this.a();
+            this.a(false);
             ((lh) this).field_e = 256;
         }
         if (param0 != 256) {
             ((lh) this).field_f = -113;
         }
-        int fieldTemp$1 = ((lh) this).field_e - 1;
+        int fieldTemp$0 = ((lh) this).field_e - 1;
         ((lh) this).field_e = ((lh) this).field_e - 1;
-        return ((lh) this).field_h[fieldTemp$1];
+        return ((lh) this).field_h[fieldTemp$0];
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -287,7 +284,7 @@ final class lh {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_b = null;
         field_j = null;
@@ -404,8 +401,7 @@ final class lh {
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 ((lh) this).field_h[var2_int] = param0[var2_int];
             }
-            int discarded$0 = -60;
-            this.b();
+            this.b(-60);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "lh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

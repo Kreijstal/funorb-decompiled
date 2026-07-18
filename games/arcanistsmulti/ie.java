@@ -111,8 +111,7 @@ final class ie extends ed implements vb {
             return;
         }
         try {
-            int discarded$0 = -1;
-            mo.g();
+            mo.g(-1);
             ((ie) this).h(77);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ie.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -135,8 +134,7 @@ final class ie extends ed implements vb {
         }
         if (((ie) this).field_G) {
             if (!((ie) this).field_Ob) {
-                int discarded$0 = 0;
-                var2 = pe.e();
+                var2 = pe.e(false);
                 if (var2 != null) {
                     this.a(var2, (byte) 119, false);
                 }
@@ -317,8 +315,7 @@ final class ie extends ed implements vb {
                   if (param0.field_a == 248) {
                     L3: {
                       if (!param2) {
-                        int discarded$3 = 105;
-                        na.i();
+                        na.i((byte) 105);
                         break L3;
                       } else {
                         break L3;
@@ -351,7 +348,7 @@ final class ie extends ed implements vb {
                   ((ie) this).a((byte) -92, (qm) (Object) new ng((ie) this));
                   return;
                 } else {
-                  ag discarded$4 = var5.a(73, qn.field_lb, (wc) this);
+                  ag discarded$2 = var5.a(73, qn.field_lb, (wc) this);
                   break L4;
                 }
               } else {
@@ -366,7 +363,7 @@ final class ie extends ed implements vb {
                       break L5;
                     }
                   } else {
-                    ag discarded$5 = var5.a(116, qn.field_lb, (wc) this);
+                    ag discarded$3 = var5.a(116, qn.field_lb, (wc) this);
                     break L5;
                   }
                 }

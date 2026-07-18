@@ -201,7 +201,7 @@ final class bb {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_g = null;
         field_b = null;
@@ -210,7 +210,7 @@ final class bb {
         field_f = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         t.a(17, 0);
     }
 

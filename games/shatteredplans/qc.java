@@ -499,10 +499,8 @@ final class qc extends ar {
                   }
                 }
                 ((qc) this).field_v = (ke) param2;
-                int discarded$2 = -20189;
-                this.g();
-                int discarded$3 = 3;
-                this.a(param1);
+                this.g(-20189);
+                this.a(param1, 3);
                 ((qc) this).field_l = null;
                 ((qc) this).field_q.field_j = 0;
                 L4: while (true) {
@@ -603,7 +601,7 @@ final class qc extends ar {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         int var1 = 1;
         field_t = null;
         field_u = null;
@@ -611,7 +609,7 @@ final class qc extends ar {
         field_w = null;
     }
 
-    private final void a(boolean param0) {
+    private final void a(boolean param0, int param1) {
         try {
             IOException iOException = null;
             Exception var4 = null;
@@ -772,7 +770,7 @@ final class qc extends ar {
         return stackIn_12_0 != 0;
     }
 
-    private final void g() {
+    private final void g(int param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -798,7 +796,7 @@ final class qc extends ar {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         qj.a((byte) -127, 4);
     }
 

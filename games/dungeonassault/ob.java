@@ -430,14 +430,13 @@ final class ob extends ok {
             lb.field_C.e();
             var2.c(0, -dm.field_g.field_v);
             lb.field_C.field_A = dm.field_g.field_v;
-            int discarded$0 = 1;
-            ti.c();
+            ti.c(true);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "ob.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, int param1, java.awt.Canvas param2) {
+    final static void a(int param0, int param1, java.awt.Canvas param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;

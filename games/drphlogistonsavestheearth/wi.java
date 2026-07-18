@@ -11,7 +11,7 @@ final class wi {
     static long[] field_b;
     static String field_h;
 
-    final static int b() {
+    final static int b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -136,9 +136,7 @@ final class wi {
                 break L1;
               }
             }
-            int discarded$4 = 0;
-            int discarded$5 = 0;
-            stackOut_3_0 = tc.a(var4_long, param3, (String) var6);
+            stackOut_3_0 = tc.a(var4_long, param3, (String) var6, 0, false);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
@@ -212,7 +210,7 @@ final class wi {
         return var3;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -222,7 +220,7 @@ final class wi {
         field_e = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4, int param5, bl param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, String param4, int param5, bl param6, int param7, int param8) {
         try {
             oi.field_e = param6;
             j.field_ib = param0;

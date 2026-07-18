@@ -45,8 +45,7 @@ final class qb {
             var4_int = 52 / ((15 - param0) / 60);
             var5 = param3.a(param1, true, param2);
             if (var5 != null) {
-              int discarded$2 = 0;
-              hi.a(var5);
+              hi.a(var5, 0);
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -105,7 +104,7 @@ final class qb {
         return ((qb) this).field_i;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         tc.field_x = false;
         s.field_c = false;
         fd.a(-1, 0);
@@ -113,7 +112,7 @@ final class qb {
         uh.field_k = cl.field_k;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_b = null;
         field_m = null;

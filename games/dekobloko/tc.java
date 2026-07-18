@@ -50,7 +50,7 @@ final class tc extends w {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_Nb = null;
         field_Ob = null;
         field_Tb = null;
@@ -305,9 +305,8 @@ final class tc extends w {
         }
     }
 
-    final static w g() {
-        int discarded$0 = 108;
-        return dm.a();
+    final static w g(byte param0) {
+        return dm.a((byte) 108);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

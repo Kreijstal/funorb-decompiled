@@ -18,13 +18,13 @@ final class s {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
         field_e = null;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return ~qb.field_N.field_cc == ~oj.field_c;
     }
 

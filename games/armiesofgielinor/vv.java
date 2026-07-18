@@ -8,7 +8,7 @@ final class vv {
     static String field_c;
     static String field_a;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -2129,8 +2129,7 @@ final class vv {
         try {
           L0: {
             var2_int = 125 % ((17 - param0) / 52);
-            int discarded$2 = 10;
-            stackOut_0_0 = er.a(true, -108, param1);
+            stackOut_0_0 = er.a(true, -108, param1, 10);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -2167,7 +2166,7 @@ final class vv {
         return stackIn_1_0;
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         return "Hi!";
     }
 

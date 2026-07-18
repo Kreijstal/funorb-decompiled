@@ -149,7 +149,7 @@ final class qj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_j = null;
     }

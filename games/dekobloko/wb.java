@@ -235,7 +235,7 @@ final class wb extends w {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_Qb = null;
         field_Zb = null;
         field_Nb = null;

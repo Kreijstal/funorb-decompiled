@@ -12,53 +12,35 @@ final class cu extends ana {
     static String field_z;
 
     final boolean c(byte param0) {
-        pi var3 = null;
-        int var4 = 0;
-        aj var5 = null;
-        aj var6 = null;
-        int fieldTemp$3 = ((cu) this).field_l - 1;
+        int fieldTemp$0 = ((cu) this).field_l - 1;
         ((cu) this).field_l = ((cu) this).field_l - 1;
-        if (0 > fieldTemp$3) {
-          if (~((cu) this).field_w < ~((cu) this).field_A) {
-            L0: {
-              int fieldTemp$4 = ((cu) this).field_A;
-              ((cu) this).field_A = ((cu) this).field_A + 1;
-              var5 = ((cu) this).field_v[fieldTemp$4];
-              var6 = var5;
-              var3 = new pi(((cu) this).field_q, var6.field_c, var6.field_a);
-              ((kj) (Object) var3).a(0);
-              ((cu) this).field_q.field_h.field_a[var5.field_c][var5.field_a].field_i = false;
-              var4 = 75 % ((71 - param0) / 47);
-              ((cu) this).field_q.field_s.d(82);
-              ((cu) this).field_l = 200 / (((cu) this).field_q.field_h.field_z + ((cu) this).field_q.field_h.field_B);
-              if (((cu) this).field_l >= 1) {
-                break L0;
-              } else {
-                ((cu) this).field_l = 1;
-                break L0;
-              }
-            }
-            L1: {
-              if (((cu) this).field_A == 1) {
-                break L1;
-              } else {
-                if (((cu) this).field_A % (60 / ((cu) this).field_l) == 0) {
-                  break L1;
-                } else {
-                  return false;
-                }
-              }
-            }
-            wf.a(19, (byte) -77);
+        if (0 <= fieldTemp$0) {
             return false;
-          } else {
-            int discarded$5 = 19;
-            this.e();
-            return true;
-          }
-        } else {
-          return false;
         }
+        if (~((cu) this).field_w >= ~((cu) this).field_A) {
+            this.e(19);
+            return true;
+        }
+        int fieldTemp$1 = ((cu) this).field_A;
+        ((cu) this).field_A = ((cu) this).field_A + 1;
+        aj var5 = ((cu) this).field_v[fieldTemp$1];
+        aj var6 = var5;
+        pi var3 = new pi(((cu) this).field_q, var6.field_c, var6.field_a);
+        ((kj) (Object) var3).a(0);
+        ((cu) this).field_q.field_h.field_a[var5.field_c][var5.field_a].field_i = false;
+        int var4 = 75 % ((71 - param0) / 47);
+        ((cu) this).field_q.field_s.d(82);
+        ((cu) this).field_l = 200 / (((cu) this).field_q.field_h.field_z + ((cu) this).field_q.field_h.field_B);
+        if (((cu) this).field_l < 1) {
+            ((cu) this).field_l = 1;
+        }
+        if (((cu) this).field_A != 1) {
+            if (((cu) this).field_A % (60 / ((cu) this).field_l) != 0) {
+                return false;
+            }
+        }
+        wf.a(19, (byte) -77);
+        return false;
     }
 
     public static void d(int param0) {
@@ -67,7 +49,7 @@ final class cu extends ana {
         int var1 = -32;
     }
 
-    private final void e() {
+    private final void e(int param0) {
         ((cu) this).field_x.a(((cu) this).field_q.field_h, (byte) -2);
     }
 

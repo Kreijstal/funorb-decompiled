@@ -30,8 +30,7 @@ final class jp {
                 break L1;
               } else {
                 if (null != param1.field_g) {
-                  int discarded$2 = -98;
-                  ud.a(param1);
+                  ud.a(param1, -98);
                   break L0;
                 } else {
                   break L1;
@@ -72,7 +71,7 @@ final class jp {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 

@@ -438,7 +438,7 @@ class mn extends aa implements ng {
         }
     }
 
-    final static boolean a(CharSequence param0, boolean param1) {
+    final static boolean a(CharSequence param0, boolean param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -606,15 +606,13 @@ class mn extends aa implements ng {
             ((mn) this).field_D = false;
             if (!((mn) this).field_eb) {
               if (((mn) this).field_ab) {
-                int discarded$8 = -100;
-                kf.a();
+                kf.a((byte) -100);
                 return;
               } else {
                 return;
               }
             } else {
-              int discarded$9 = 107;
-              wo.a();
+              wo.a(107);
               return;
             }
           }
@@ -628,13 +626,11 @@ class mn extends aa implements ng {
               if (!((mn) this).field_ab) {
                 return;
               } else {
-                int discarded$10 = -100;
-                kf.a();
+                kf.a((byte) -100);
                 return;
               }
             } else {
-              int discarded$11 = 107;
-              wo.a();
+              wo.a(107);
               return;
             }
           }

@@ -7,7 +7,7 @@ final class sc {
     static int field_d;
     static boolean field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
@@ -48,8 +48,7 @@ final class sc {
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
-                int discarded$2 = -16;
-                stackOut_6_0 = kh.a(var3);
+                stackOut_6_0 = kh.a(var3, (byte) -16);
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
               }
@@ -100,7 +99,7 @@ final class sc {
         }
     }
 
-    final static ea[] a(int param0, int param1, int param2, int param3) {
+    final static ea[] a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7, int param8) {
         int var9 = 0;
         ea[] var10 = null;
         ea[] var11_ref_ea__ = null;

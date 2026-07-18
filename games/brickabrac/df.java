@@ -125,7 +125,7 @@ final class df {
         return stackIn_17_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         int var1 = 56;
         field_d = null;
@@ -148,7 +148,7 @@ final class df {
         return (param2 - -var3) / param0 + -var3;
     }
 
-    final static void a(e param0) {
+    final static void a(e param0, int param1, int param2) {
         try {
             na.field_Q.a((nm) (Object) param0, (byte) 3);
             ud.a(4, param0, (byte) 119);

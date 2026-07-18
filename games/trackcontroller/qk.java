@@ -430,7 +430,7 @@ final class qk extends rh {
         return ((qk) this).field_L;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_M = null;
         field_K = null;
         field_O = null;

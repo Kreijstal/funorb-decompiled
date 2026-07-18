@@ -16,12 +16,12 @@ final class nj {
     int field_k;
     static ri field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_a = null;
     }
 
-    final static ka a(boolean param0) {
+    final static ka a(boolean param0, byte param1) {
         ga var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -110,9 +110,7 @@ final class nj {
           }
         }
         if (!param0) {
-          int discarded$3 = 3460;
-          int discarded$4 = 80;
-          pg.field_b = jg.a((k) (Object) var8);
+          pg.field_b = jg.a((k) (Object) var8, 80, 3460);
           af.field_g = null;
           return new ka(param0);
         } else {
@@ -138,8 +136,7 @@ final class nj {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            int discarded$5 = 0;
-            bd.a("CC1", (Throwable) (Object) var6);
+            bd.a("CC1", (Throwable) (Object) var6, false);
             pg.field_b = null;
             af.field_g = null;
             return new ka(param0);

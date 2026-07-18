@@ -15,8 +15,7 @@ final class oi {
             return;
         }
         try {
-            int discarded$0 = 10792131;
-            int discarded$1 = td.a(param5, ((oi) this).field_b.field_j[((oi) this).field_f[param3 % ((oi) this).field_e]], param1, param2, param0);
+            int discarded$0 = td.a(param5, ((oi) this).field_b.field_j[((oi) this).field_f[param3 % ((oi) this).field_e]], param1, param2, param0, 10792131);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "oi.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -36,7 +35,7 @@ final class oi {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_a = null;
     }

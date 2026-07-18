@@ -10,14 +10,14 @@ final class lp {
     static boolean field_f;
     static int field_b;
 
-    final static java.awt.Container b() {
+    final static java.awt.Container b(int param0) {
         if (!(null == un.field_b)) {
             return (java.awt.Container) (Object) un.field_b;
         }
         return (java.awt.Container) (Object) ip.a(9);
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -163,7 +163,7 @@ final class lp {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_g = null;

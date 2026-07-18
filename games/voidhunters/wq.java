@@ -80,15 +80,13 @@ final class wq extends rqa {
         super(param0, param1, param2);
     }
 
-    final static boolean e() {
+    final static boolean e(byte param0) {
         int stackIn_7_0 = 0;
         int stackOut_5_0 = 0;
         if (null == cka.field_o) {
-          int discarded$9 = -128;
-          if (!oaa.a()) {
+          if (!oaa.a((byte) -128)) {
             if (null == crb.field_v) {
-              int discarded$10 = -26243;
-              if (kfa.a()) {
+              if (kfa.a(-26243)) {
                 return true;
               } else {
                 return false;

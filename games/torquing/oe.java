@@ -142,11 +142,11 @@ final class oe {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, byte param1) {
         eg.field_u = 20000000L;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0, int param1, boolean param2) {
         ik var4 = new ik(qo.field_t, bl.field_d);
         ik var3 = var4;
         if (param0) {

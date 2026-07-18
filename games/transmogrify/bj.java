@@ -42,7 +42,7 @@ class bj extends kb {
     private boolean field_F;
     private kg field_Y;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_X = null;
         field_P = null;
     }
@@ -410,14 +410,13 @@ class bj extends kb {
             if (param3 >= -100) {
                 field_X = null;
             }
-            int discarded$0 = 0;
-            gl.a((byte) -126, param1, param0, param4.field_g, param2, param4.field_h);
+            gl.a((byte) -126, param1, param0, param4.field_g, param2, param4.field_h, 0);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "bj.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         if (null != wg.field_d) {
             wg.field_d.r(77);
         }

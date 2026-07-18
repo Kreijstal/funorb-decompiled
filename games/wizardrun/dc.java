@@ -152,7 +152,7 @@ final class dc extends wl {
         }
     }
 
-    final static te a() {
+    final static te a(byte param0, int param1) {
         te var2 = new te();
         bk.field_d.a((wl) (Object) var2, false);
         hg.a(4, (byte) 106);

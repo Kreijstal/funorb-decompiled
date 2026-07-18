@@ -97,7 +97,7 @@ final class wd implements dv {
         return stackIn_7_0;
     }
 
-    final static void a(byte param0, int param1, boolean param2, la param3, fsa param4) {
+    final static void a(byte param0, int param1, boolean param2, la param3, fsa param4, boolean param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         ska var6_ref = null;
@@ -515,8 +515,7 @@ final class wd implements dv {
         try {
           L0: {
             L1: {
-              int discarded$2 = -26803;
-              ((wd) this).field_b = uma.a(5, param0);
+              ((wd) this).field_b = uma.a(5, param0, -26803);
               if (!param1) {
                 break L1;
               } else {
@@ -675,7 +674,7 @@ final class wd implements dv {
         }
     }
 
-    final static mf a(byte param0, kda param1, byte[] param2) {
+    final static mf a(byte param0, kda param1, byte[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_8_0 = null;

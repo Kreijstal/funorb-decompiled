@@ -9,7 +9,7 @@ final class f {
     static String field_f;
     static boolean field_e;
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         if (param0 < 65) {
           if (param0 >= 97) {
             if (param0 <= 122) {
@@ -37,7 +37,7 @@ final class f {
         }
     }
 
-    final static int[] a(int param0, int param1) {
+    final static int[] a(int param0, int param1, int param2) {
         int var3 = qj.a(-2942, param0);
         int var4 = wizardrun.a((byte) -110, param0);
         int var5 = qj.a(-2942, param1);
@@ -126,7 +126,7 @@ final class f {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_a = null;
         field_b = null;

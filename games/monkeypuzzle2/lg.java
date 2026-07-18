@@ -44,7 +44,7 @@ final class lg {
     private int field_D;
     static String field_I;
 
-    public static void b() {
+    public static void b(int param0) {
         field_I = null;
         field_M = null;
         field_E = null;
@@ -60,7 +60,7 @@ final class lg {
         uj.field_f = pl.a((byte) 112, var2);
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         td var4 = null;
@@ -161,7 +161,7 @@ final class lg {
           L0: {
             ((lg) this).field_i = param1;
             ((lg) this).field_s = 1 + param0.a((byte) 114);
-            int discarded$8 = param0.a((byte) 114);
+            int discarded$7 = param0.a((byte) 114);
             ((lg) this).field_j = 1 + param0.a((byte) 114);
             ((lg) this).field_D = 1 + param0.a((byte) 114);
             ((lg) this).field_G = param0.a((byte) 114) + 1;
@@ -213,8 +213,7 @@ final class lg {
                         var6 = 0;
                         L4: while (true) {
                           if (~((lg) this).field_G >= ~var6) {
-                            int discarded$9 = -1;
-                            this.a();
+                            this.a(-1);
                             break L0;
                           } else {
                             L5: {
@@ -280,43 +279,43 @@ final class lg {
                                                       }
                                                     }
                                                   } else {
-                                                    int dupTemp$10 = var4 + param0.a((byte) 114);
-                                                    var4 = dupTemp$10;
-                                                    ((lg) this).field_z[var6][var11] = ch.a(dupTemp$10, 255);
+                                                    int dupTemp$8 = var4 + param0.a((byte) 114);
+                                                    var4 = dupTemp$8;
+                                                    ((lg) this).field_z[var6][var11] = ch.a(dupTemp$8, 255);
                                                     var11++;
                                                     continue L10;
                                                   }
                                                 }
                                               } else {
-                                                int dupTemp$11 = var10 + param0.h(-129);
-                                                var10 = dupTemp$11;
-                                                var4 = var4 + dupTemp$11;
-                                                ((lg) this).field_r[var6][var11] = var4 + dupTemp$11;
+                                                int dupTemp$9 = var10 + param0.h(-129);
+                                                var10 = dupTemp$9;
+                                                var4 = var4 + dupTemp$9;
+                                                ((lg) this).field_r[var6][var11] = var4 + dupTemp$9;
                                                 var11++;
                                                 continue L9;
                                               }
                                             }
                                           } else {
-                                            int dupTemp$12 = var4 + param0.a((byte) 114);
-                                            var4 = dupTemp$12;
-                                            ((lg) this).field_u[var6][var11] = ch.a(255, dupTemp$12);
+                                            int dupTemp$10 = var4 + param0.a((byte) 114);
+                                            var4 = dupTemp$10;
+                                            ((lg) this).field_u[var6][var11] = ch.a(255, dupTemp$10);
                                             var11++;
                                             continue L8;
                                           }
                                         }
                                       } else {
-                                        int dupTemp$13 = var10 + param0.h(-129);
-                                        var10 = dupTemp$13;
-                                        var4 = var4 + dupTemp$13;
-                                        ((lg) this).field_y[var6][var11] = var4 + dupTemp$13;
+                                        int dupTemp$11 = var10 + param0.h(-129);
+                                        var10 = dupTemp$11;
+                                        var4 = var4 + dupTemp$11;
+                                        ((lg) this).field_y[var6][var11] = var4 + dupTemp$11;
                                         var11++;
                                         continue L7;
                                       }
                                     }
                                   } else {
-                                    int dupTemp$14 = var4 + param0.a((byte) 114);
-                                    var4 = dupTemp$14;
-                                    ((lg) this).field_t[var6][var8] = ch.a(255, dupTemp$14) + var5;
+                                    int dupTemp$12 = var4 + param0.a((byte) 114);
+                                    var4 = dupTemp$12;
+                                    ((lg) this).field_t[var6][var8] = ch.a(255, dupTemp$12) + var5;
                                     var8++;
                                     continue L6;
                                   }
@@ -351,9 +350,9 @@ final class lg {
                   }
                 }
               } else {
-                int dupTemp$15 = var4 + param0.a((byte) 114);
-                var4 = dupTemp$15;
-                ((lg) this).field_q[var5] = ch.a(255, dupTemp$15);
+                int dupTemp$13 = var4 + param0.a((byte) 114);
+                var4 = dupTemp$13;
+                ((lg) this).field_q[var5] = ch.a(255, dupTemp$13);
                 var5++;
                 continue L1;
               }

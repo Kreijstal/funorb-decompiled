@@ -248,8 +248,7 @@ class ck extends wl implements oi {
               if (param0 == 29657) {
                 break L1;
               } else {
-                int discarded$4 = 0;
-                int discarded$5 = ck.a(-53, 99, true);
+                int discarded$2 = ck.a(-53, 99, true, false);
                 break L1;
               }
             }
@@ -382,8 +381,7 @@ class ck extends wl implements oi {
             }
           }
           if (!((ck) this).field_fb) {
-            int discarded$2 = 16729;
-            gf.a(hf.a((byte) -6), "tochangedisplayname.ws");
+            gf.a(hf.a((byte) -6), "tochangedisplayname.ws", 16729);
             return;
           } else {
             rh.a(3, (byte) -72);
@@ -460,7 +458,7 @@ class ck extends wl implements oi {
         }
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int a(int param0, int param1, boolean param2, boolean param3) {
         return td.a((byte) -103);
     }
 
@@ -498,15 +496,13 @@ class ck extends wl implements oi {
             if (param1 != null) {
               if (0 != param1.length()) {
                 var6 = (CharSequence) (Object) param1;
-                int discarded$4 = 0;
-                var2 = nh.a(var6);
+                var2 = nh.a(var6, false);
                 if (var2 != null) {
                   var3 = (fd) (Object) ac.field_k.a((long)var2.hashCode(), -119);
                   L0: while (true) {
                     if (var3 != null) {
                       var7 = (CharSequence) (Object) var3.field_rb;
-                      int discarded$5 = 0;
-                      var4 = nh.a(var7);
+                      var4 = nh.a(var7, false);
                       if (var4.equals((Object) (Object) var2)) {
                         stackOut_16_0 = (fd) var3;
                         stackIn_17_0 = stackOut_16_0;

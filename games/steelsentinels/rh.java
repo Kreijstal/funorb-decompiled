@@ -13,7 +13,7 @@ final class rh extends ck {
     static int field_s;
     static gh field_w;
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void a(int param0, boolean param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         if (vb.field_e) {
@@ -81,7 +81,7 @@ final class rh extends ck {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         if (an.field_i == null) {
             return;
         }
@@ -91,7 +91,7 @@ final class rh extends ck {
         an.field_i.field_c.field_G = false;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_q = null;
         field_u = null;
         field_t = null;

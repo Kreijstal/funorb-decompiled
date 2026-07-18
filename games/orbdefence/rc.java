@@ -16,7 +16,7 @@ final class rc {
     int field_b;
     static String field_i;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         int var1 = 0;
         if (ne.field_b == null) {
             return false;
@@ -27,7 +27,7 @@ final class rc {
         return true;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_m = null;
         field_i = null;

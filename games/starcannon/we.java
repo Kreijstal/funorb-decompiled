@@ -9,7 +9,7 @@ final class we extends rf {
     int field_g;
     static byte[][] field_h;
 
-    final static String a() {
+    final static String a(int param0) {
         if (uh.field_k == jl.field_a) {
             return wj.field_c;
         }
@@ -26,7 +26,7 @@ final class we extends rf {
         throw new Error();
     }
 
-    final static boolean a(byte param0, CharSequence param1) {
+    final static boolean a(byte param0, CharSequence param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -191,7 +191,7 @@ final class we extends rf {
         return stackIn_35_0 != 0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_f = null;
         field_h = null;
         field_i = null;

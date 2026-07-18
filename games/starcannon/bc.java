@@ -18,8 +18,7 @@ final class bc extends rf {
             if (param1 != 26095) {
                 field_l = null;
             }
-            int discarded$0 = 1;
-            wj.b();
+            wj.b(true);
             ki.a(param0.field_B, param0.field_x, param0.field_q);
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "bc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -44,7 +43,7 @@ final class bc extends rf {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_h = null;
         field_j = null;
         field_l = null;

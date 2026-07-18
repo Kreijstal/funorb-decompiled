@@ -24,7 +24,7 @@ final class sk implements uj {
         bc.field_a = 2;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_b = null;
         field_e = null;
     }

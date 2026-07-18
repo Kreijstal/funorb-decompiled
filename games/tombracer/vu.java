@@ -38,7 +38,7 @@ final class vu extends vw {
         return false;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         int var1 = 0;
         field_d = null;
         field_e = null;
@@ -591,8 +591,7 @@ final class vu extends vw {
                   if (bc.field_b.field_y == 0) {
                     break L28;
                   } else {
-                    int discarded$1 = 28;
-                    gk.a(param3);
+                    gk.a(param3, (byte) 28);
                     break L28;
                   }
                 }

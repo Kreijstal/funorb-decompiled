@@ -6,7 +6,7 @@ final class ee {
     static int field_b;
     static int field_a;
 
-    final static boolean a(gk param0) {
+    final static boolean a(gk param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;

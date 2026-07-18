@@ -8,11 +8,11 @@ final class le {
         throw new IllegalStateException();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 
-    final static rd a() {
+    final static rd a(int param0) {
         if (null == uj.field_c) {
           uj.field_c = new rd();
           uj.field_c.a(13421772, gk.field_c);

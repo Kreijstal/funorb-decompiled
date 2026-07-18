@@ -31,8 +31,7 @@ final class je extends gn {
 
     final static void a(byte param0, pu param1) {
         et.field_b = true;
-        int discarded$3 = 0;
-        if (vl.a()) {
+        if (vl.a(false)) {
             return;
         }
         try {
@@ -43,7 +42,7 @@ final class je extends gn {
         }
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         L0: {
           if (ks.field_e != 1) {
             break L0;
@@ -60,8 +59,7 @@ final class je extends gn {
             return 4;
           } else {
             L1: {
-              int discarded$2 = 0;
-              int discarded$3 = je.a();
+              int discarded$1 = je.a(false);
               if (ks.field_e != 4) {
                 break L1;
               } else {

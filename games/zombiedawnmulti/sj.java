@@ -372,8 +372,7 @@ final class sj extends ae {
                   if (param0 == 0) {
                     break L3;
                   } else {
-                    int discarded$1 = 1;
-                    sj.c();
+                    sj.c(true);
                     break L3;
                   }
                 }
@@ -427,11 +426,11 @@ final class sj extends ae {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_j = null;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;

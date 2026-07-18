@@ -76,7 +76,7 @@ final class ktb extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         int var1 = -1;
         field_o = null;
     }

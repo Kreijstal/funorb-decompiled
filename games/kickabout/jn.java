@@ -312,8 +312,7 @@ final class jn extends wv implements vh {
     }
 
     final void t(int param0) {
-        int discarded$0 = -71;
-        this.a(true, wb.a(param0 ^ -105, nb.field_g, 248));
+        this.a(true, wb.a(param0 ^ -105, nb.field_g, 248), (byte) -71);
         if (param0 != 17) {
             field_qb = null;
         }
@@ -326,8 +325,7 @@ final class jn extends wv implements vh {
             if (!((jn) this).field_pb) {
               var2 = uf.a(param0 + -1459);
               if (var2 != null) {
-                int discarded$4 = -71;
-                this.a(false, var2);
+                this.a(false, var2, (byte) -71);
                 return super.k(-1);
               } else {
                 return super.k(-1);
@@ -344,8 +342,7 @@ final class jn extends wv implements vh {
             if (!((jn) this).field_pb) {
               var2 = uf.a(param0 + -1459);
               if (var2 != null) {
-                int discarded$5 = -71;
-                this.a(false, var2);
+                this.a(false, var2, (byte) -71);
                 return super.k(-1);
               } else {
                 return super.k(-1);
@@ -428,7 +425,7 @@ final class jn extends wv implements vh {
         }
     }
 
-    private final void a(boolean param0, wn param1) {
+    private final void a(boolean param0, wn param1, byte param2) {
         RuntimeException var4 = null;
         String var4_ref = null;
         qp var5 = null;

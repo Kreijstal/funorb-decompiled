@@ -168,12 +168,12 @@ final class mo {
         return null;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         ff.a(true, kf.field_a, (byte) -97, on.field_d);
         di.field_h = true;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return ih.field_b;
     }
 
@@ -196,8 +196,7 @@ final class mo {
                 var6 = ja.field_s;
                 var4.field_l.a(0, 0, param0 + -29467, var6, var5);
             }
-            int discarded$0 = 0;
-            hg.a(param2, param1);
+            hg.a(param2, param1, false);
             return;
         }
         var3 = bj.a(param1, -3, param2);
@@ -211,11 +210,10 @@ final class mo {
             var6 = ja.field_s;
             var4.field_l.a(0, 0, param0 + -29467, var6, var5);
         }
-        int discarded$1 = 0;
-        hg.a(param2, param1);
+        hg.a(param2, param1, false);
     }
 
-    final static ri a(String param0) {
+    final static ri a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -328,7 +326,7 @@ final class mo {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_l = null;
         field_d = null;
         field_j = null;
@@ -402,7 +400,7 @@ final class mo {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         fk var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

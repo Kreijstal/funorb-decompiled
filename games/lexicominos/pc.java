@@ -9,7 +9,7 @@ final class pc extends tj {
     static String field_m;
     static String field_l;
 
-    public static void d() {
+    public static void d(byte param0) {
         field_n = null;
         field_m = null;
         field_l = null;
@@ -190,7 +190,7 @@ final class pc extends tj {
         return stackIn_7_0;
     }
 
-    final static int e() {
+    final static int e(int param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;

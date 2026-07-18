@@ -8,11 +8,11 @@ class ii extends gb {
     static qj[] field_r;
     static java.awt.Frame field_s;
 
-    final static int b() {
+    final static int b(boolean param0) {
         return oi.field_b;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         li var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -88,7 +88,7 @@ class ii extends gb {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_s = null;
         field_p = null;
         field_q = null;

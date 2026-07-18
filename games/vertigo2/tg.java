@@ -29,7 +29,7 @@ final class tg extends java.awt.Canvas {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(kg.h(0))) {
             return;
         }
@@ -60,7 +60,7 @@ final class tg extends java.awt.Canvas {
         }
     }
 
-    final static void a(int param0, ri param1) {
+    final static void a(int param0, ri param1, int param2) {
         mi var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -141,7 +141,7 @@ final class tg extends java.awt.Canvas {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_d = null;
     }

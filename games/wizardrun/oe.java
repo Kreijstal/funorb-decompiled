@@ -38,7 +38,7 @@ final class oe {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         wl var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

@@ -22,7 +22,7 @@ final class tv {
     static ut[] field_b;
     static int[][] field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_k = null;
         field_e = null;

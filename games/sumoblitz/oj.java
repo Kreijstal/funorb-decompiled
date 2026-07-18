@@ -5,11 +5,11 @@ final class oj implements mh {
     static int field_a;
     static String field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
-    final static boolean b(int param0, int param1) {
+    final static boolean b(int param0, int param1, int param2) {
         return (34 & param0) != 0;
     }
 
@@ -103,7 +103,7 @@ final class oj implements mh {
         return 0 != (2048 & param0);
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         int var1 = -55;
         return dv.field_b;
     }

@@ -293,7 +293,7 @@ final class t extends di {
         return 2;
     }
 
-    final static hj[] a(String param0, ki param1, String param2) {
+    final static hj[] a(String param0, ki param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -888,8 +888,7 @@ final class t extends di {
         } else {
             ul.d(0, 0, ul.field_f, ul.field_l, 0, 192);
         }
-        int discarded$0 = 0;
-        m.a(param2);
+        m.a(param2, 0);
     }
 
     static {

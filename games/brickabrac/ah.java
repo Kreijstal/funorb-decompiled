@@ -84,8 +84,7 @@ final class ah extends km {
         try {
           L0: {
             L1: {
-              int discarded$3 = 2;
-              ih.a(false, param0, param2);
+              ih.a(false, param0, param2, 2);
               if (param1 == 11455) {
                 break L1;
               } else {
@@ -663,7 +662,7 @@ final class ah extends km {
         }
     }
 
-    final static void a(pi param0) {
+    final static void a(pi param0, byte param1) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -1349,10 +1348,7 @@ final class ah extends km {
             return;
         }
         if (rf.field_g == null) {
-            int discarded$0 = 3;
-            int discarded$1 = 10;
-            int discarded$2 = 2;
-            rf.field_g = cp.b(-2, ((ah) this).field_s);
+            rf.field_g = cp.b(-2, ((ah) this).field_s, 2, 10, 3);
         }
         ((ah) this).field_r.a(111);
     }

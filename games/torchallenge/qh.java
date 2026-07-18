@@ -11,7 +11,7 @@ final class qh extends kj implements tl, sg {
     static String field_L;
     static lj field_M;
 
-    private final String a() {
+    private final String a(int param0) {
         return "</col></u>";
     }
 
@@ -60,8 +60,7 @@ final class qh extends kj implements tl, sg {
             var3 = af.field_f[1];
             var5 = af.field_f[3];
             var4 = af.field_f[2];
-            int discarded$5 = -55;
-            sf.a(uk.field_N, ng.field_L, var3, var5, var2, var4);
+            sf.a(uk.field_N, ng.field_L, var3, var5, var2, var4, (byte) -55);
             if (param0 == 0) {
               break L4;
             } else {
@@ -71,8 +70,7 @@ final class qh extends kj implements tl, sg {
                   var5 = ed.field_i[3];
                   var4 = ed.field_i[2];
                   var2 = ed.field_i[0];
-                  int discarded$6 = -55;
-                  sf.a(uk.field_N, ng.field_L, var3, var5, var2, var4);
+                  sf.a(uk.field_N, ng.field_L, var3, var5, var2, var4, (byte) -55);
                   break L3;
                 } else {
                   break L3;
@@ -86,8 +84,7 @@ final class qh extends kj implements tl, sg {
           var3 = ob.field_b[1];
           var2 = ob.field_b[0];
           var5 = ob.field_b[3];
-          int discarded$7 = -55;
-          sf.a(uk.field_N, ng.field_L, var3, var5, var2, var4);
+          sf.a(uk.field_N, ng.field_L, var3, var5, var2, var4, (byte) -55);
           break L3;
         }
         L5: {
@@ -97,8 +94,7 @@ final class qh extends kj implements tl, sg {
             var5 = oj.field_e[3];
             var3 = oj.field_e[1];
             var10 = new ka(1 + var4 / 2, var5);
-            int discarded$8 = -55;
-            sf.a(var10, ph.field_h, 0, var5, 0, var4 / 2 + 1);
+            sf.a(var10, ph.field_h, 0, var5, 0, var4 / 2 + 1, (byte) -55);
             uk.field_N.d();
             var10.g(var2, var3);
             var10.d(var2 - -(var4 / 2) - 2, var3);
@@ -119,8 +115,7 @@ final class qh extends kj implements tl, sg {
                   var2 = oa.field_a[0];
                   var4 = oa.field_a[2];
                   var5 = oa.field_a[3];
-                  int discarded$9 = -55;
-                  sf.a(uk.field_N, ng.field_L, var3, var5, var2, var4);
+                  sf.a(uk.field_N, ng.field_L, var3, var5, var2, var4, (byte) -55);
                   break L5;
                 }
               }
@@ -241,7 +236,7 @@ final class qh extends kj implements tl, sg {
         }
     }
 
-    final static void d() {
+    final static void d(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -739,7 +734,7 @@ final class qh extends kj implements tl, sg {
         }
     }
 
-    private final String c() {
+    private final String c(boolean param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -772,8 +767,6 @@ final class qh extends kj implements tl, sg {
             ((qh) this).field_Q = param0;
             ((qh) this).field_K = new ng(be.field_a, (gg) null);
             ((qh) this).field_K.field_q = (j) (Object) new cl();
-            int discarded$2 = 0;
-            int discarded$3 = 109;
             var7 = ni.a(new String[2], 0, lc.field_m);
             var3 = 20;
             var4 = new bc(oe.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, oe.field_g.field_x, -1, 2147483647, true);

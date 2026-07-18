@@ -8,7 +8,7 @@ abstract class nh {
 
     abstract int a(int param0, int param1);
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -18,7 +18,7 @@ abstract class nh {
 
     abstract byte[] b(int param0, int param1);
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, int param2, qc param3, byte[] param4, int param5) {
+    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, int param2, qc param3, byte[] param4, int param5, boolean param6) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int[] var8 = null;

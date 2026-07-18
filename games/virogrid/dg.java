@@ -22,7 +22,7 @@ final class dg extends fi {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, param6 >> 1 & 8355711);
     }
 
-    final static bk a(String param0, int param1, String param2) {
+    final static bk a(String param0, int param1, String param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -74,8 +74,7 @@ final class dg extends fi {
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_3_0 = pl.a(var4_long, (String) var6, 127, param2);
+            stackOut_3_0 = pl.a(var4_long, (String) var6, 127, param2, false);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
@@ -145,8 +144,7 @@ final class dg extends fi {
         int var9 = Virogrid.field_F ? 1 : 0;
         int var2 = ((dg) this).field_m >> 1;
         mg var3 = new mg(var2, ((dg) this).field_m);
-        int discarded$3 = 16865;
-        kb.a(var3);
+        kb.a(var3, 16865);
         if (param0 < 63) {
             return null;
         }
@@ -165,7 +163,7 @@ final class dg extends fi {
         return var3;
     }
 
-    private final void a(int param0, mg param1, int param2) {
+    private final void a(int param0, mg param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -198,8 +196,7 @@ final class dg extends fi {
                 ai.a(true);
                 L2: {
                   if (df.field_i <= ((dg) this).field_A.field_w + param2) {
-                    int discarded$2 = 16865;
-                    kb.a(((dg) this).field_I);
+                    kb.a(((dg) this).field_I, 16865);
                     param1.d(-((dg) this).field_L, 0);
                     param1.d(2 * ((dg) this).field_J - ((dg) this).field_L, 0);
                     ((dg) this).field_B.c(0, 0);
@@ -212,8 +209,7 @@ final class dg extends fi {
                 }
                 L3: {
                   if (-((dg) this).field_A.field_w + var5_int <= df.field_k) {
-                    int discarded$3 = 16865;
-                    kb.a(((dg) this).field_I);
+                    kb.a(((dg) this).field_I, 16865);
                     var7 = ((dg) this).field_L + (-((dg) this).field_A.field_w + ((dg) this).field_g);
                     L4: while (true) {
                       if (((dg) this).field_J * 2 >= var7) {
@@ -278,16 +274,14 @@ final class dg extends fi {
         }
         int var5 = ((dg) this).field_l + param1;
         int var6 = param2 - -((dg) this).field_u;
-        int discarded$0 = 0;
-        this.a(var6, ((dg) this).field_D[0], var5);
+        this.a(var6, ((dg) this).field_D[0], var5, false);
         if (!(((dg) this).field_C >= 65536)) {
             uk.a(var6 + ((dg) this).field_m, 6, (((dg) this).field_C * ((dg) this).field_g >> 16) + var5, var5 + ((dg) this).field_g, var6);
-            int discarded$1 = 0;
-            this.a(var6, ((dg) this).field_D[1], var5);
+            this.a(var6, ((dg) this).field_D[1], var5, false);
             ai.a(true);
         }
         if (param0 != 37) {
-            mg discarded$2 = this.c(-103, -91, 31);
+            mg discarded$0 = this.c(-103, -91, 31);
         }
     }
 
@@ -303,13 +297,12 @@ final class dg extends fi {
         this.a(10);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_G = null;
         field_E = null;
     }
 
     private final mg c(int param0, int param1, int param2) {
-        mg var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -319,6 +312,7 @@ final class dg extends fi {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        mg var14 = null;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int stackOut_6_0 = 0;
@@ -330,19 +324,18 @@ final class dg extends fi {
           if (param2 <= -15) {
             break L0;
           } else {
-            mg discarded$2 = this.e(93);
+            mg discarded$1 = this.e(93);
             break L0;
           }
         }
-        var4 = new mg(((dg) this).field_J * 2, ((dg) this).field_m);
-        int discarded$3 = 16865;
-        kb.a(var4);
+        var14 = new mg(((dg) this).field_J * 2, ((dg) this).field_m);
+        kb.a(var14, 16865);
         var5 = ((dg) this).field_m >> 1;
         var6 = 0;
         L1: while (true) {
           if (var6 >= ((dg) this).field_m) {
             ai.a(true);
-            return var4;
+            return var14;
           } else {
             L2: {
               var7 = (var6 >> 1) * (-1 + 2 * ((dg) this).field_J) % (2 * ((dg) this).field_J);

@@ -120,7 +120,7 @@ final class nh extends v implements sg {
         return stackIn_1_0;
     }
 
-    private final static boolean g() {
+    private final static boolean g(byte param0) {
         if (null == tf.field_h) {
             return false;
         }
@@ -143,8 +143,7 @@ final class nh extends v implements sg {
             if (bj.field_b[param2] <= bj.field_b[param3]) {
               if (bg.field_Q[param2] >= bg.field_Q[param3]) {
                 if (bg.field_Q[param2] <= bg.field_Q[param3]) {
-                  int discarded$2 = 19;
-                  nh.l();
+                  nh.l(19);
                   var4 = ea.field_a[param2] + (rk.field_p[param2] - -cb.field_e[param2]);
                   var5 = cb.field_e[param3] + (rk.field_p[param3] - -ea.field_a[param3]);
                   if (var4 >= var5) {
@@ -177,8 +176,7 @@ final class nh extends v implements sg {
             } else {
               if (bj.field_b[param2] >= bj.field_b[param3]) {
                 if (bj.field_b[param3] >= bj.field_b[param2]) {
-                  int discarded$3 = 19;
-                  nh.l();
+                  nh.l(19);
                   var4 = ea.field_a[param2] + (rk.field_p[param2] - -cb.field_e[param2]);
                   var5 = cb.field_e[param3] + (rk.field_p[param3] - -ea.field_a[param3]);
                   if (var4 >= var5) {
@@ -324,8 +322,7 @@ final class nh extends v implements sg {
                 if (de.field_b == param1) {
                   ((nh) this).field_l = ((nh) this).field_l + 10;
                   var3 = (Object) (Object) uc.field_T;
-                  int discarded$5 = 94;
-                  if (!nh.g()) {
+                  if (!nh.g((byte) 94)) {
                     break L1;
                   } else {
                     ((nh) this).field_l = ((nh) this).field_l + 20;
@@ -413,7 +410,7 @@ final class nh extends v implements sg {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_hb = null;
         field_eb = null;
         field_ib = null;

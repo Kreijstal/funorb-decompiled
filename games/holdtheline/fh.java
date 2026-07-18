@@ -8,7 +8,7 @@ final class fh extends sd {
     private String field_f;
     static int field_e;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
     }
 
@@ -28,7 +28,7 @@ final class fh extends sd {
         }
     }
 
-    final static void a(int param0, int param1, int param2, hj param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, hj param3, int param4, int param5, int param6, int param7) {
         RuntimeException var8 = null;
         int var10 = 0;
         int var11 = 0;

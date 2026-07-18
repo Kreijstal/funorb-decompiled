@@ -11,7 +11,7 @@ final class pa extends o {
     int field_p;
     int[] field_q;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_j = null;
         field_n = null;
         field_k = null;

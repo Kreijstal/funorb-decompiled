@@ -5,7 +5,7 @@ final class f {
     static int field_a;
     static fe field_b;
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;

@@ -20,7 +20,7 @@ final class si extends wf {
         ((si) this).field_o = null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
     }
 

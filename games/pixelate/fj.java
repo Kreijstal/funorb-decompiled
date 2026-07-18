@@ -8,7 +8,7 @@ final class fj {
     static int field_a;
     static int field_b;
 
-    final static void a(aa param0) {
+    final static void a(aa param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -275,7 +275,7 @@ final class fj {
         ui.field_k = 33;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 

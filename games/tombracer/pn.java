@@ -5,7 +5,7 @@ final class pn extends or {
     static String field_o;
     private byte[] field_p;
 
-    final static void f() {
+    final static void f(int param0) {
         Object var2 = null;
         pr.a(0, "", (String) null);
     }
@@ -35,11 +35,11 @@ final class pn extends or {
         super(12, 5, 16, 2, 2, 0.44999998807907104f);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_o = null;
     }
 
-    final static iu[] i() {
+    final static iu[] i(int param0) {
         iu[] var1 = null;
         int var2 = 0;
         int var3 = 0;

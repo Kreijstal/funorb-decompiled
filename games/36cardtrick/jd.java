@@ -18,7 +18,7 @@ final class jd implements Runnable {
     private int field_a;
     private int field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 

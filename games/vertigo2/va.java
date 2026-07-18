@@ -572,7 +572,7 @@ class va implements ur, qa {
         return stackIn_3_0;
     }
 
-    private final int c(iq param0) {
+    private final int c(iq param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -690,7 +690,7 @@ class va implements ur, qa {
         return stackIn_1_0;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, iq param5, int param6) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, iq param5, int param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -717,8 +717,7 @@ class va implements ur, qa {
         try {
           jb.a(param0 - -param5.field_t, param5.field_n + (param5.field_o + param3), param5.field_o + param3, -30486, param5.field_s + param5.field_t + param0);
           var9_int = ((va) this).a(-1, param5);
-          int discarded$2 = 0;
-          var10 = this.c(param5);
+          var10 = this.c(param5, 0);
           if (!((va) this).field_q) {
             L0: {
               var12 = ((va) this).field_d;
@@ -775,7 +774,7 @@ class va implements ur, qa {
             ln.d(-28558);
             return;
           } else {
-            int discarded$3 = ((va) this).field_l.a(((va) this).a((byte) -90, param5), this.a(param3, (byte) -94, param5, 0), this.a(param0, (byte) 110, 0, param5), var9_int, var10, param6, param1, ((va) this).field_m, ((va) this).field_d, ((va) this).field_n);
+            int discarded$1 = ((va) this).field_l.a(((va) this).a((byte) -90, param5), this.a(param3, (byte) -94, param5, 0), this.a(param0, (byte) 110, 0, param5), var9_int, var10, param6, param1, ((va) this).field_m, ((va) this).field_d, ((va) this).field_n);
             ln.d(-28558);
             return;
           }
@@ -873,9 +872,8 @@ class va implements ur, qa {
                     var9 = var14.b(param1, -61);
                     var10 = this.a(param2, (byte) -94, param3, var9);
                     var11 = ((va) this).a(param3, 1, param4) + Math.max(0, var8.field_f);
-                    int discarded$1 = 0;
                     stackOut_3_0 = ((va) this).a(param3, 1, param4);
-                    stackOut_3_1 = this.c(param3);
+                    stackOut_3_1 = this.c(param3, 0);
                     stackOut_3_2 = var8.field_d;
                     stackIn_5_0 = stackOut_3_0;
                     stackIn_5_1 = stackOut_3_1;
@@ -1019,8 +1017,7 @@ class va implements ur, qa {
 
     private final void a(int param0, int param1, int param2, iq param3) {
         try {
-            int discarded$0 = 0;
-            this.a(param2, ((va) this).field_g, 0, param1, 65, param3, ((va) this).field_e);
+            this.a(param2, ((va) this).field_g, 0, param1, 65, param3, ((va) this).field_e, 0);
         } catch (RuntimeException runtimeException) {
             throw wn.a((Throwable) (Object) runtimeException, "va.R(" + 0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -1062,8 +1059,7 @@ class va implements ur, qa {
             }
             L2: {
               var3_int = ((va) this).a(-1, param1);
-              int discarded$1 = 0;
-              var4 = this.c(param1);
+              var4 = this.c(param1, 0);
               var6 = ((va) this).field_d;
               if (var6 == 0) {
                 var5 = ((va) this).field_l.field_z;
@@ -1534,8 +1530,7 @@ class va implements ur, qa {
                 this.a(false, param0);
                 break L3;
               } else {
-                int discarded$3 = 0;
-                ((sl) (Object) param0.field_r).a(((va) this).field_d, ((va) this).a((byte) -90, param0), 1, ((va) this).field_l, ((va) this).field_m, this.c(param0), ((va) this).a(-1, param0), ((va) this).field_n);
+                ((sl) (Object) param0.field_r).a(((va) this).field_d, ((va) this).a((byte) -90, param0), 1, ((va) this).field_l, ((va) this).field_m, this.c(param0, 0), ((va) this).a(-1, param0), ((va) this).field_n);
                 break L3;
               }
             }

@@ -17,7 +17,7 @@ final class cf {
         field_e = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -25,17 +25,15 @@ final class cf {
         var2 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
-            int discarded$15 = -107;
-            if (ml.b()) {
-              boolean discarded$16 = b.field_n.a(em.field_q, false, true, lc.field_t);
+            if (ml.b(-107)) {
+              boolean discarded$7 = b.field_n.a(em.field_q, false, true, lc.field_t);
               b.field_n.o(117);
               var1_int = 0;
               L1: while (true) {
-                int discarded$17 = 32722;
-                if (!nf.e()) {
+                if (!nf.e(32722)) {
                   break L0;
                 } else {
-                  boolean discarded$18 = b.field_n.a(od.field_k, true, ob.field_K);
+                  boolean discarded$8 = b.field_n.a(od.field_k, true, ob.field_K);
                   continue L1;
                 }
               }

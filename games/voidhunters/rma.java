@@ -86,7 +86,7 @@ final class rma extends mfb {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_c = null;
         field_d = null;
     }

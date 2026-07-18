@@ -80,7 +80,7 @@ final class vd {
         return var2;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_g = null;
         field_a = null;
@@ -201,8 +201,7 @@ final class vd {
         var2 = 0;
         L1: while (true) {
           if (bd.field_M <= var2) {
-            int discarded$1 = -21;
-            oc.a();
+            oc.a((byte) -21);
             return var1;
           } else {
             var3 = qa.field_J[var2] * gf.field_o[var2];
@@ -268,7 +267,7 @@ final class vd {
         return var3;
     }
 
-    final static StringBuilder a(char param0, StringBuilder param1) {
+    final static StringBuilder a(char param0, StringBuilder param1, int param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

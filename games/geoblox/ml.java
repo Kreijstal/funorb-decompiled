@@ -79,7 +79,7 @@ final class ml extends ff {
               if (param1 < -5) {
                 break L3;
               } else {
-                String discarded$3 = ml.c(-17);
+                String discarded$2 = ml.c(-17);
                 break L3;
               }
             }
@@ -102,8 +102,7 @@ final class ml extends ff {
             }
             L5: {
               var7 = stackIn_16_0;
-              int discarded$4 = -17154;
-              jf.a(((ml) this).field_y, var7, param0 + param4.field_v, param4.field_r, (-((ml) this).field_y[0].field_o + param4.field_h >> 1) + (param2 + param4.field_m));
+              jf.a(((ml) this).field_y, var7, param0 + param4.field_v, param4.field_r, (-((ml) this).field_y[0].field_o + param4.field_h >> 1) + (param2 + param4.field_m), -17154);
               if (param3) {
                 stackOut_18_0 = 16777215;
                 stackIn_19_0 = stackOut_18_0;
@@ -115,7 +114,7 @@ final class ml extends ff {
               }
             }
             var8 = stackIn_19_0;
-            int discarded$5 = ((ml) this).field_n.a(param4.field_s, param4.field_v + param0, -2 + param2 - -param4.field_m, param4.field_r, param4.field_h, var8, -1, 1, 1, ((ml) this).field_n.field_o);
+            int discarded$3 = ((ml) this).field_n.a(param4.field_s, param4.field_v + param0, -2 + param2 - -param4.field_m, param4.field_r, param4.field_h, var8, -1, 1, 1, ((ml) this).field_n.field_o);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

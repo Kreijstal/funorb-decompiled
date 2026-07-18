@@ -18,12 +18,11 @@ final class bc {
         field_a = null;
     }
 
-    final static void a() {
-        int discarded$0 = 16777215;
-        cd.d();
+    final static void a(byte param0) {
+        cd.d(16777215);
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

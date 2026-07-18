@@ -16,7 +16,7 @@ final class oa {
     static kk field_l;
     static bd field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_i = null;
         field_c = null;
@@ -83,8 +83,7 @@ final class oa {
             km.a((byte) var10, var7, var5, ni.field_c, var9, var6, (byte) var11, 100, var4_int, var22, var8);
             var23 = (int)((double)var8 / 1.3);
             var24 = (int)((double)var9 / 1.3);
-            int discarded$1 = 9233;
-            bh.a((byte) var10, HostileSpawn.field_E, (byte) var11, var23, var4_int, var5, var7, var24, var22, var6);
+            bh.a((byte) var10, HostileSpawn.field_E, (byte) var11, var23, var4_int, var5, var7, var24, var22, var6, 9233);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -183,7 +182,8 @@ final class oa {
     }
 
     final static vb a(byte param0, String param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         vb var4 = null;
         String var5 = null;
@@ -191,21 +191,21 @@ final class oa {
         CharSequence var7 = null;
         CharSequence var8 = null;
         vb stackIn_15_0 = null;
-        Object stackIn_19_0 = null;
+        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         vb stackOut_14_0 = null;
-        Object stackOut_18_0 = null;
+        RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
         String stackOut_19_2 = null;
         var6 = HostileSpawn.field_I ? 1 : 0;
@@ -214,15 +214,15 @@ final class oa {
             L0: {
               var3 = -23 / ((34 - param0) / 41);
               var7 = (CharSequence) (Object) param1;
-              var2 = (Object) (Object) mf.a(false, var7);
+              var2 = mf.a(false, var7);
               if (var2 == null) {
-                var2 = (Object) (Object) var7;
+                var2 = param1;
                 break L0;
               } else {
                 break L0;
               }
             }
-            var4 = (vb) (Object) n.field_t.a((long)((String) var2).hashCode(), -30828);
+            var4 = (vb) (Object) n.field_t.a((long)var2.hashCode(), -30828);
             L1: while (true) {
               if (var4 != null) {
                 L2: {
@@ -235,7 +235,7 @@ final class oa {
                     break L2;
                   }
                 }
-                if (var5.equals(var2)) {
+                if (var5.equals((Object) (Object) var2)) {
                   stackOut_14_0 = (vb) var4;
                   stackIn_15_0 = stackOut_14_0;
                   return stackIn_15_0;
@@ -253,15 +253,15 @@ final class oa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_18_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var2_ref;
             stackOut_18_1 = new StringBuilder().append("oa.D(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
@@ -269,7 +269,7 @@ final class oa {
               stackIn_21_2 = stackOut_20_2;
               break L3;
             } else {
-              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
               stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;

@@ -12,7 +12,7 @@ final class il {
     static int field_g;
     boolean field_i;
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         Object var2 = null;
         int var2_int = 0;
@@ -132,10 +132,9 @@ final class il {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         int var1 = 34;
-        int discarded$0 = 15000;
-        return uk.b();
+        return uk.b(15000);
     }
 
     public static void a(int param0) {

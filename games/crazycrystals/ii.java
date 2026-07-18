@@ -18,7 +18,7 @@ final class ii implements Iterator {
         ((ii) this).field_a = null;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((ii) this).field_a = null;
         ((ii) this).field_b = ((ii) this).field_c.field_c[0].field_b;
         ((ii) this).field_d = 1;
@@ -176,8 +176,7 @@ final class ii implements Iterator {
         ((ii) this).field_a = null;
         try {
             ((ii) this).field_c = param0;
-            int discarded$0 = -112;
-            this.a();
+            this.a((byte) -112);
         } catch (RuntimeException runtimeException) {
             throw dn.a((Throwable) (Object) runtimeException, "ii.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

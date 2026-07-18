@@ -140,7 +140,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
     }
@@ -455,16 +455,14 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                       uc.field_a.a(var14, -104);
                       uc.field_a.a(var8, -64);
                       var15 = (CharSequence) (Object) param6;
-                      int discarded$6 = 20;
-                      uc.field_a.a(q.a(var15), 122);
+                      uc.field_a.a(q.a(var15, 20), 122);
                       uc.field_a.c(param0, 127);
                       uc.field_a.b(param5, -49152);
                       uc.field_a.b(var9, -49152);
                       gf.field_c.b(18, -49152);
                       gf.field_c.field_h = gf.field_c.field_h + 2;
                       var10 = gf.field_c.field_h;
-                      int discarded$7 = 0;
-                      var11_ref_String = lc.a(ii.a(), (byte) -89);
+                      var11_ref_String = lc.a(ii.a(false), (byte) -89);
                       if (var11_ref_String != null) {
                         break L7;
                       } else {
@@ -505,8 +503,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                   }
                   if (var9 != 248) {
                     if (var9 == 99) {
-                      int discarded$8 = 57;
-                      boolean discarded$9 = hj.a(gb.a(), true);
+                      boolean discarded$1 = hj.a(gb.a((byte) 57), true);
                       kc.field_b = new Boolean(bi.a((byte) 122, (gk) (Object) MonkeyPuzzle2.field_D));
                       MonkeyPuzzle2.field_D.field_h = 0;
                       break L8;
@@ -517,8 +514,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                       break L8;
                     }
                   } else {
-                    int discarded$10 = 0;
-                    nh.a((byte) 99, ii.a());
+                    nh.a((byte) 99, ii.a(false));
                     sl.field_n = sb.field_q;
                     gk.a(-1);
                     ck.field_e = false;
@@ -579,8 +575,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                       if (var9_ref_String == null) {
                         break L13;
                       } else {
-                        int discarded$11 = 0;
-                        pe.a(var9_ref_String, (byte) -108, ii.a());
+                        pe.a(var9_ref_String, (byte) -108, ii.a(false));
                         break L13;
                       }
                     }
@@ -709,7 +704,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         return stackIn_66_0;
     }
 
-    final static void a(hl param0) {
+    final static void a(hl param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

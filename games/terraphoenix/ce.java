@@ -74,14 +74,13 @@ final class ce implements Iterable {
                 break L1;
               } else {
                 var6 = null;
-                ci[] discarded$4 = ce.a((String) null, (byte) 73, (String) null, (fa) null);
+                ci[] discarded$2 = ce.a((String) null, (byte) 73, (String) null, (fa) null);
                 break L1;
               }
             }
             var4_int = param3.c(-1, param2);
             var5 = param3.a(-103, var4_int, param0);
-            int discarded$5 = 1;
-            stackOut_2_0 = mj.a(param3, var4_int, var5);
+            stackOut_2_0 = mj.a(param3, var4_int, var5, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

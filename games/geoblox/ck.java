@@ -8,7 +8,7 @@ final class ck {
     static int[] field_c;
     static boolean field_e;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return true;
     }
 
@@ -102,11 +102,7 @@ final class ck {
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
-                            int discarded$4 = 1;
-                            int discarded$5 = 0;
-                            int discarded$6 = 0;
-                            int discarded$7 = 1;
-                            p.a(am.field_a, lk.field_f, var17);
+                            p.a(am.field_a, lk.field_f, var17, true, false, false, true);
                             hi.a(var14, var9, var12, 6562, var7, var17, var13, var8);
                             var15++;
                             continue L3;
@@ -160,28 +156,27 @@ final class ck {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_c = null;
         field_d = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Geoblox.field_C;
         try {
           L0: {
-            int discarded$19 = 124;
-            if (tf.a()) {
-              boolean discarded$20 = oh.field_b.a(true, 127, dk.field_c, ni.field_I);
+            if (tf.a((byte) 124)) {
+              boolean discarded$15 = oh.field_b.a(true, 127, dk.field_c, ni.field_I);
               oh.field_b.i(-50);
               L1: while (true) {
                 if (!hh.a(125)) {
                   break L0;
                 } else {
-                  boolean discarded$21 = oh.field_b.a((byte) -126, te.field_a, ki.field_d);
+                  boolean discarded$16 = oh.field_b.a((byte) -126, te.field_a, ki.field_d);
                   continue L1;
                 }
               }

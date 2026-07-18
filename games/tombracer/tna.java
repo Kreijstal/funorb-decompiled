@@ -8,7 +8,7 @@ final class tna extends loa {
     static String field_b;
     static int field_f;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_d = null;
         field_e = null;

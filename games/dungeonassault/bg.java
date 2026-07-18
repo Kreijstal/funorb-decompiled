@@ -135,12 +135,10 @@ final class bg extends qe {
             return;
           } else {
             L0: while (true) {
-              int discarded$20 = 47;
-              if (!ha.b()) {
+              if (!ha.b((byte) 47)) {
                 L1: {
                   if (kn.field_g) {
-                    int discarded$21 = 0;
-                    bl.a();
+                    bl.a(0);
                     break L1;
                   } else {
                     break L1;
@@ -225,8 +223,7 @@ final class bg extends qe {
         vf.a(432, true, 599, 115, 48);
         vf.a(32, true, 164, -54, 8);
         vf.a(32, true, 468, 107, 8);
-        int discarded$0 = 1;
-        un.a(41, (byte) 63, 558, 416);
+        un.a(41, (byte) 63, 558, 416, true);
         this.a(40, 70, 117);
         jh.b();
         fk.a((byte) 121, wj.field_u);
@@ -236,8 +233,7 @@ final class bg extends qe {
         }
         bj.field_G = false;
         if (ed.c(true)) {
-            int discarded$2 = 100;
-            oi.f();
+            oi.f((byte) 100);
         } else {
             ri.a(tc.field_u, -113);
         }
@@ -316,8 +312,7 @@ final class bg extends qe {
             var7_int = this.a(param3, (byte) -98);
             var8 = var7_int == 0 ? 0 : 10 + var7_int * 5;
             param4 = param4 - var8;
-            int discarded$0 = 115;
-            var9 = ta.a((se) (Object) la.field_b, param3.field_j, param4, param3.field_g);
+            var9 = ta.a((se) (Object) la.field_b, param3.field_j, param4, param3.field_g, 115);
             var10 = la.field_b.b(var9);
             param1 = param1 - ((var10 >> 1) + 5);
             for (var11 = 0; var11 < var7_int; var11++) {
@@ -711,8 +706,7 @@ final class bg extends qe {
                     }
                     var8 = var7_int + "%";
                     var9 = jk.a(param2 + 127, param3);
-                    int discarded$19 = 30496;
-                    ((bg) this).field_b = (kl) (Object) new pk(ia.field_Y, jk.a(new String[2], no.field_e), 0);
+                    ((bg) this).field_b = (kl) (Object) new pk(ia.field_Y, jk.a(new String[2], no.field_e, 30496), 0);
                     break L1;
                   }
                 }
@@ -890,24 +884,20 @@ final class bg extends qe {
             var7 = ek.a(0, (byte) -127, gm.field_d.field_N, ((di) var2).field_a);
             if (((di) var2).field_h > 0) {
               if (var7 <= 0.0) {
-                int discarded$5 = 30496;
-                var5 = jk.a(new String[1], mi.field_c);
+                var5 = jk.a(new String[1], mi.field_c, 30496);
                 break L1;
               } else {
                 var12 = gh.a((int)(1000.0 * var7), (byte) -112);
-                int discarded$6 = 30496;
-                var5 = jk.a(new String[3], ra.field_a);
+                var5 = jk.a(new String[3], ra.field_a, 30496);
                 break L1;
               }
             } else {
               if (0.0 >= var7) {
-                int discarded$7 = 30496;
-                var5 = jk.a(new String[1], le.field_a);
+                var5 = jk.a(new String[1], le.field_a, 30496);
                 break L1;
               } else {
                 var11 = gh.a((int)(var7 * 1000.0), (byte) -118);
-                int discarded$8 = 30496;
-                var5 = jk.a(new String[2], vl.field_l);
+                var5 = jk.a(new String[2], vl.field_l, 30496);
                 break L1;
               }
             }
@@ -916,7 +906,7 @@ final class bg extends qe {
             break L1;
           }
         }
-        int discarded$9 = db.field_v.a(var5, 215, var3, 210, 45, var6, -1, 1, 1, db.field_v.field_H);
+        int discarded$1 = db.field_v.a(var5, 215, var3, 210, 45, var6, -1, 1, 1, db.field_v.field_H);
     }
 
     private final void a(di param0, int param1) {
@@ -1038,7 +1028,7 @@ final class bg extends qe {
         }
     }
 
-    final static nh a(boolean param0, int param1) {
+    final static nh a(boolean param0, int param1, boolean param2, boolean param3, boolean param4) {
         return uo.a(true, 1, false, param1, 27847, false);
     }
 
@@ -1239,8 +1229,7 @@ final class bg extends qe {
               break L1;
             } else {
               this.a((byte) -104, hi.field_c.field_z);
-              int discarded$2 = 100;
-              oi.f();
+              oi.f((byte) 100);
               break L1;
             }
           }
@@ -1282,8 +1271,7 @@ final class bg extends qe {
                           break L4;
                         }
                       }
-                      int discarded$3 = 0;
-                      ac.a(k.field_b);
+                      ac.a(k.field_b, 0);
                       break L3;
                     } else {
                       var7 = null;

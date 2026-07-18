@@ -220,7 +220,7 @@ final class ap {
         param12[3] = var41;
     }
 
-    final static double b(double[] param0, int param1, double[] param2) {
+    final static double b(double[] param0, int param1, double[] param2, int param3) {
         return ap.a(param0[param1], param0[param1 + 1], param0[param1 + 2], param2[0], param2[1], param2[2]);
     }
 
@@ -246,12 +246,9 @@ final class ap {
         if (param0 == null) {
             param0 = new int[12];
         }
-        int discarded$0 = -25034;
-        param1 = b.e(2048, param1);
-        int discarded$1 = -25034;
-        param2 = b.e(2048, param2);
-        int discarded$2 = -25034;
-        param3 = b.e(2048, param3);
+        param1 = b.e(2048, param1, -25034);
+        param2 = b.e(2048, param2, -25034);
+        param3 = b.e(2048, param3, -25034);
         int var4 = be.field_l[param1];
         int var5 = be.field_o[param1];
         int var6 = be.field_l[param2];

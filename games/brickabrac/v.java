@@ -10,7 +10,7 @@ final class v extends RuntimeException {
     static String field_c;
     static int[] field_a;
 
-    final static int b() {
+    final static int b(int param0) {
         return jj.field_c;
     }
 
@@ -172,7 +172,7 @@ final class v extends RuntimeException {
         }
     }
 
-    final static jp[] a() {
+    final static jp[] a(int param0) {
         jp[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -198,8 +198,7 @@ final class v extends RuntimeException {
         var2 = 0;
         L0: while (true) {
           if (var2 >= nl.field_c) {
-            int discarded$1 = 96;
-            ee.d();
+            ee.d((byte) 96);
             return var1;
           } else {
             var3 = gg.field_t[var2] * jh.field_b[var2];

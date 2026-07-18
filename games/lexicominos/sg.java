@@ -20,7 +20,7 @@ final class sg {
     static oc field_i;
     static String field_f;
 
-    private final void a() {
+    private final void a(int param0) {
         int var3 = 0;
         L0: {
           var3 = Lexicominos.field_L ? 1 : 0;
@@ -1348,7 +1348,7 @@ final class sg {
         return qc.field_c[((sg) this).field_d];
     }
 
-    private final void b(boolean param0) {
+    private final void b(boolean param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1623,15 +1623,13 @@ final class sg {
             if (param1 != null) {
               if (param1.length() != 0) {
                 var6 = (CharSequence) (Object) param1;
-                int discarded$4 = -48;
-                var2 = ck.a(var6);
+                var2 = ck.a(var6, (byte) -48);
                 if (var2 != null) {
                   var3 = (hc) (Object) pf.field_n.a((long)var2.hashCode(), true);
                   L1: while (true) {
                     if (var3 != null) {
                       var7 = (CharSequence) (Object) var3.field_R;
-                      int discarded$5 = -48;
-                      var4 = ck.a(var7);
+                      var4 = ck.a(var7, (byte) -48);
                       if (!var4.equals((Object) (Object) var2)) {
                         var3 = (hc) (Object) pf.field_n.b(-109);
                         continue L1;
@@ -2493,11 +2491,11 @@ final class sg {
                     }
                   } else {
                     var2_ref_String = fd.field_a;
-                    int discarded$8 = jh.field_d.a(al.field_G, 20, -jh.field_d.field_E + 280, 271, 1000, 0, -1, 1, 0, var3);
+                    int discarded$6 = jh.field_d.a(al.field_G, 20, -jh.field_d.field_E + 280, 271, 1000, 0, -1, 1, 0, var3);
                     break L4;
                   }
                 }
-                int discarded$9 = bi.field_a.a(var2_ref_String, 20, -bi.field_a.field_E + 200, 271, 1000, 0, -1, 1, 0, var3);
+                int discarded$7 = bi.field_a.a(var2_ref_String, 20, -bi.field_a.field_E + 200, 271, 1000, 0, -1, 1, 0, var3);
                 break L3;
               } else {
                 if (((sg) this).field_d != 5) {
@@ -2737,9 +2735,7 @@ final class sg {
                           break L15;
                         }
                       }
-                      int discarded$10 = -11902;
-                      int discarded$11 = 0;
-                      var2 = stackIn_56_0 + stackIn_56_1 * ((cd) (Object) stackIn_56_2).a(dd.a(stackIn_56_3 != 0, stackIn_56_4 != 0), 40, var2 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3);
+                      var2 = stackIn_56_0 + stackIn_56_1 * ((cd) (Object) stackIn_56_2).a(dd.a(stackIn_56_3 != 0, stackIn_56_4 != 0, false, -11902), 40, var2 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3);
                       break L3;
                     } else {
                       L16: {
@@ -2756,21 +2752,21 @@ final class sg {
                                     if (((sg) this).field_d == 9) {
                                       var2 = (pa.field_d >> 1) + pa.field_d;
                                       var3 = 40;
-                                      int discarded$12 = jh.field_d.a(pk.field_D, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2);
+                                      int discarded$8 = jh.field_d.a(pk.field_D, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2);
                                       mk.field_h.c(rk.field_k, 294, -10 + lf.field_a, 0, -1);
                                       break L3;
                                     } else {
                                       if (((sg) this).field_d == 10) {
                                         var2 = pa.field_d - -(pa.field_d >> 1);
                                         var3 = 40;
-                                        int discarded$13 = jh.field_d.a(tf.field_b, 40, var3 - jh.field_d.field_E, 254, 1000, 0, -1, 0, 0, var2);
+                                        int discarded$9 = jh.field_d.a(tf.field_b, 40, var3 - jh.field_d.field_E, 254, 1000, 0, -1, 0, 0, var2);
                                         mk.field_h.c(bl.field_a, 294, lf.field_a + -10, 0, -1);
                                         break L3;
                                       } else {
                                         if (((sg) this).field_d == 11) {
                                           var2 = (pa.field_d >> 1) + pa.field_d;
                                           var3 = 40;
-                                          int discarded$14 = jh.field_d.a(kk.field_q, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2);
+                                          int discarded$10 = jh.field_d.a(kk.field_q, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2);
                                           mk.field_h.c(eg.field_E, 294, -10 + lf.field_a, 0, -1);
                                           break L3;
                                         } else {
@@ -2781,7 +2777,7 @@ final class sg {
                                   } else {
                                     var2 = pa.field_d - -(pa.field_d >> 1);
                                     var3 = 40;
-                                    int discarded$15 = jh.field_d.a(kk.field_n, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2);
+                                    int discarded$11 = jh.field_d.a(kk.field_n, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2);
                                     mk.field_h.c(cb.field_D, 294, lf.field_a + -10, 0, -1);
                                     break L3;
                                   }
@@ -2950,8 +2946,7 @@ final class sg {
         }
         L2: {
           if (5 == ((sg) this).field_d) {
-            int discarded$3 = 640;
-            this.b(false);
+            this.b(false, 640);
             break L2;
           } else {
             if (((sg) this).field_d != 7) {
@@ -2972,7 +2967,7 @@ final class sg {
                           if (((sg) this).field_d == 1) {
                             if (!ki.a((byte) -114)) {
                               var2 = (pa.field_d >> 1) + pa.field_d;
-                              int discarded$4 = jh.field_d.a(fl.field_b, 12, -jh.field_d.field_E + 370, 278, 1000, 0, -1, 0, 0, var2);
+                              int discarded$1 = jh.field_d.a(fl.field_b, 12, -jh.field_d.field_E + 370, 278, 1000, 0, -1, 0, 0, var2);
                               break L2;
                             } else {
                               break L2;
@@ -3020,8 +3015,7 @@ final class sg {
                 }
               }
             } else {
-              int discarded$5 = 640;
-              this.b(true);
+              this.b(true, 640);
               break L2;
             }
           }
@@ -3451,8 +3445,7 @@ final class sg {
                 }
               }
             } else {
-              int discarded$1 = -17253;
-              this.a();
+              this.a(-17253);
               if (((sg) this).field_c.field_d == -1) {
                 continue L0;
               } else {

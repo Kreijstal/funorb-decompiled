@@ -9,7 +9,7 @@ final class ao {
     static String field_e;
     static int field_b;
 
-    final static boolean a(java.applet.Applet param0) {
+    final static boolean a(java.applet.Applet param0, boolean param1) {
         try {
             String var2 = null;
             RuntimeException var2_ref = null;
@@ -282,7 +282,7 @@ final class ao {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_f = null;
         field_c = null;
@@ -540,8 +540,7 @@ final class ao {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = -115;
-            stackOut_0_0 = wc.a(param2, param0, param3);
+            stackOut_0_0 = wc.a(param2, param0, param3, (byte) -115);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

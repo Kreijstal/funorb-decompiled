@@ -17,8 +17,7 @@ final class na extends ei {
             nh.field_D = param3;
             ol.field_Hb = param1;
             int var4_int = -26 / ((32 - param2) / 55);
-            int discarded$0 = 10;
-            ta.a(fh.field_x, param0);
+            ta.a(fh.field_x, param0, 10);
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) (Object) runtimeException, "na.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -205,7 +204,7 @@ final class na extends ei {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_Z = null;
         field_db = null;
         field_X = null;

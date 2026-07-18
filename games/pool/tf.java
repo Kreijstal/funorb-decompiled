@@ -40,8 +40,7 @@ final class tf {
             return true;
           }
         } else {
-          int discarded$2 = -1;
-          th.b();
+          th.b(-1);
           return true;
         }
     }

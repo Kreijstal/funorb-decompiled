@@ -135,7 +135,7 @@ final class je implements el {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_g = null;
         int var1 = 0;

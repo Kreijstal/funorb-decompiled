@@ -166,7 +166,7 @@ final class sj {
         return (Object) (Object) stackIn_6_0;
     }
 
-    final static kc b() {
+    final static kc b(byte param0) {
         int var5_int = 0;
         int var6 = Main.field_T;
         int var1 = hb.field_a[0] * na.field_q[0];
@@ -181,7 +181,7 @@ final class sj {
         return var5;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -423,7 +423,7 @@ final class sj {
         field_d = null;
     }
 
-    final static nc a(String param0) {
+    final static nc a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

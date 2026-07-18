@@ -8,7 +8,7 @@ final class ng {
     static fk field_a;
     static String field_d;
 
-    final static void a() {
+    final static void a(int param0) {
         ag.field_c = bj.field_p + " <b>" + ap.field_s + "</b> " + oo.field_S + " <b>" + ki.field_bb + "</b> " + ub.field_j + "<br>" + "<br>" + id.field_L;
     }
 
@@ -37,7 +37,7 @@ final class ng {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_d = null;
         field_a = null;

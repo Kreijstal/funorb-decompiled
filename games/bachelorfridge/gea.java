@@ -66,7 +66,7 @@ final class gea extends bw {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_l = null;
         field_n = null;
         field_f = null;

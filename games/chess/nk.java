@@ -209,7 +209,7 @@ final class nk extends p {
         }
     }
 
-    final static dm a(boolean param0, String param1, String param2) {
+    final static dm a(boolean param0, String param1, String param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -254,8 +254,7 @@ final class nk extends p {
               var6 = null;
               if (-1 == param2.indexOf('@')) {
                 var7 = (CharSequence) (Object) param2;
-                int discarded$2 = 0;
-                var4_long = jl.a(var7);
+                var4_long = jl.a(var7, false);
                 break L1;
               } else {
                 var6 = (Object) (Object) param2;
@@ -329,12 +328,12 @@ final class nk extends p {
         ((nk) this).field_l = ((nk) this).field_l + 1;
         ((nk) this).field_o[fieldTemp$0] = (byte)(param0 + ((nk) this).field_p.b(-1));
         if (param1 > -49) {
-            int discarded$1 = 1;
-            dm discarded$2 = nk.a(true, (String) null, (String) null);
+            Object var4 = null;
+            dm discarded$1 = nk.a(true, (String) null, (String) null, true);
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_r = null;
         field_u = null;
         field_t = null;

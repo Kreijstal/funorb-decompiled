@@ -40,7 +40,7 @@ final class ik extends ah {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_cb = null;
     }
 
@@ -496,8 +496,7 @@ final class ik extends ah {
     final void g(int param0) {
         int var2 = 0;
         int var3 = Confined.field_J ? 1 : 0;
-        int discarded$0 = 4;
-        fl.a(((ik) this).a((byte) 108, ib.field_J, 1.5));
+        fl.a(((ik) this).a((byte) 108, ib.field_J, 1.5), 4);
         ((ik) this).a(mg.field_b, false);
         for (var2 = 0; var2 < 5; var2++) {
             ri.a((rk) this, param0 + -26402, (rk) (Object) new mm(((ik) this).field_A, (ee) this, ((ik) this).field_ab, mg.field_b[var2]));

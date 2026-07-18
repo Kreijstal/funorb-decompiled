@@ -355,8 +355,7 @@ final class gb extends iu {
                                 }
                               }
                             }
-                            int discarded$2 = -36;
-                            if (!this.j()) {
+                            if (!this.j(-36)) {
                               break L3;
                             } else {
                               if (uc.field_d[((gb) this).field_q.field_xb.field_B[0][((gb) this).field_C]][4] == 5) {
@@ -447,7 +446,7 @@ final class gb extends iu {
           if (param1 == -3) {
             break L5;
           } else {
-            boolean discarded$3 = this.b(82, (byte) 62);
+            boolean discarded$1 = this.b(82, (byte) 62);
             break L5;
           }
         }
@@ -1330,7 +1329,7 @@ final class gb extends iu {
         }
     }
 
-    private final int i() {
+    private final int i(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1934,7 +1933,7 @@ final class gb extends iu {
           if (param0 <= -113) {
             break L0;
           } else {
-            String discarded$3 = this.a((byte) -54, -8);
+            String discarded$2 = this.a((byte) -54, -8);
             break L0;
           }
         }
@@ -2036,9 +2035,9 @@ final class gb extends iu {
                   if (11 == var6) {
                     L9: {
                       var4 = r.field_E[26];
-                      String dupTemp$4 = fo.a(4800, var4, new String[1]);
-                      var8 = dupTemp$4;
-                      var4 = dupTemp$4;
+                      String dupTemp$3 = fo.a(4800, var4, new String[1]);
+                      var8 = dupTemp$3;
+                      var4 = dupTemp$3;
                       stackOut_43_0 = this;
                       stackOut_43_1 = 4800;
                       stackOut_43_2 = r.field_E;
@@ -2087,8 +2086,7 @@ final class gb extends iu {
                           }
                         } else {
                           L10: {
-                            int discarded$5 = -134;
-                            var9 = us.field_b[this.i()];
+                            var9 = us.field_b[this.i(-134)];
                             var5 = var9;
                             if (((gb) this).field_C == 0) {
                               var5 = fo.a(4800, r.field_E[27], new String[1]);
@@ -2126,7 +2124,7 @@ final class gb extends iu {
         }
     }
 
-    private final boolean j() {
+    private final boolean j(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = ArmiesOfGielinor.field_M ? 1 : 0;

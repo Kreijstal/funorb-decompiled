@@ -120,7 +120,7 @@ final class dm extends nb {
     dm() {
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_q = null;
         field_s = null;
         field_r = null;

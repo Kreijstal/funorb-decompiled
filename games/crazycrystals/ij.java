@@ -45,8 +45,7 @@ class ij extends jb {
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                int discarded$2 = 17176;
-                var3 = (long)dg.a(param1.charAt(var5)) + -var3 + (var3 << 5);
+                var3 = (long)dg.a(param1.charAt(var5), 17176) + -var3 + (var3 << 5);
                 var5++;
                 continue L1;
               }
@@ -118,8 +117,7 @@ class ij extends jb {
                     var4_int = param2 + 1;
                     L3: while (true) {
                       if (var4_int >= -1 + -param2 + param3.length) {
-                        int discarded$1 = 1;
-                        ja.a(param2, param3, param0, true);
+                        ja.a(param2, param3, param0, true, 1);
                         break L0;
                       } else {
                         var5 = 1 + param0;

@@ -5,7 +5,7 @@ final class hoa extends rqa {
     static int field_o;
     static String field_p;
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackOut_26_0 = 0;

@@ -64,7 +64,7 @@ class hf {
         }
     }
 
-    final static Object a(int param0, byte[] param1) {
+    final static Object a(int param0, byte[] param1, boolean param2) {
         l var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;

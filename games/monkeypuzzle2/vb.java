@@ -4,7 +4,7 @@
 class vb extends bf {
     static String field_i;
 
-    final static void f() {
+    final static void f(int param0) {
         RuntimeException var1 = null;
         double var1_double = 0.0;
         int var1_int = 0;
@@ -216,7 +216,7 @@ class vb extends bf {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         oa.field_G = -1;
         pf.field_b = null;
         ka.field_a = 0;
@@ -224,7 +224,7 @@ class vb extends bf {
         ac.field_b = false;
     }
 
-    final static void a(int param0, bk param1) {
+    final static void a(int param0, bk param1, boolean param2) {
         hb var3 = null;
         try {
             var3 = gf.field_c;
@@ -249,7 +249,7 @@ class vb extends bf {
         return var3;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         int var1 = -1;
         field_i = null;
     }
@@ -261,16 +261,14 @@ class vb extends bf {
         }
         if (null != me.field_f) {
             me.field_f.g((byte) -75);
-            int discarded$0 = 0;
-            var1 = hf.b();
+            var1 = hf.b(0);
             j.field_e = new qi(var1, (String) null, true, false, false);
             wg.field_j.b((byte) -54, (we) (Object) jh.field_C);
             jh.field_C.c((byte) 119, (we) (Object) j.field_e);
             jh.field_C.p(-21);
             return;
         }
-        int discarded$1 = 0;
-        var1 = hf.b();
+        var1 = hf.b(0);
         j.field_e = new qi(var1, (String) null, true, false, false);
         wg.field_j.b((byte) -54, (we) (Object) jh.field_C);
         jh.field_C.c((byte) 119, (we) (Object) j.field_e);

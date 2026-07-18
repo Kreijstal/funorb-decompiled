@@ -52,12 +52,10 @@ final class dg {
     final static void a(int param0, byte param1) {
         if (param1 >= -82) {
           field_e = null;
-          int discarded$4 = 1;
-          qh.a((byte) -93, 1048576, bj.field_c[param0]);
+          qh.a((byte) -93, 1048576, bj.field_c[param0], true);
           return;
         } else {
-          int discarded$5 = 1;
-          qh.a((byte) -93, 1048576, bj.field_c[param0]);
+          qh.a((byte) -93, 1048576, bj.field_c[param0], true);
           return;
         }
     }

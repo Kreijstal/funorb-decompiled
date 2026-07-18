@@ -10,16 +10,14 @@ final class pf implements hd {
     static String field_f;
     int field_a;
 
-    final static void a() {
+    final static void a(boolean param0) {
         ij.c(4);
         if (!(null == kd.field_b)) {
             om.a(-46342, kd.field_b);
         }
         co.a(false);
-        int discarded$16 = 1;
-        lg.b();
-        int discarded$23 = 27370;
-        jk.a();
+        lg.b(true);
+        jk.a(27370);
         if (!(!cm.a(-2043140287))) {
             da.field_p.c((byte) 33, 1);
             qn.a(0, 0);
@@ -91,7 +89,7 @@ final class pf implements hd {
           L0: {
             L1: {
               var3 = (pf) (Object) param1;
-              var4 = -(var3.field_e * var3.field_a) + var3.field_e * var3.field_a;
+              var4 = -(var3.field_e * ((pf) this).field_a) + ((pf) this).field_e * var3.field_a;
               if (param0 == -101) {
                 break L1;
               } else {
@@ -103,7 +101,7 @@ final class pf implements hd {
               if (var4 != 0) {
                 break L2;
               } else {
-                var4 = var3.field_a * var3.field_a + (-(var3.field_a * var3.field_a) + var3.field_e * var3.field_e) - var3.field_e * var3.field_e;
+                var4 = var3.field_a * var3.field_a + (-(((pf) this).field_a * ((pf) this).field_a) + var3.field_e * var3.field_e) - ((pf) this).field_e * ((pf) this).field_e;
                 break L2;
               }
             }

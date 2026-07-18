@@ -33,9 +33,7 @@ final class qm {
     final static void a(int param0, pn param1, int param2, ic param3, boolean param4, java.awt.Component param5) {
         try {
             int var6_int = -23;
-            int discarded$0 = -98;
-            int discarded$1 = 1024;
-            v.a(22050, true, 22050, param3, param1, param5);
+            v.a(22050, true, 22050, param3, param1, param5, 1024, -98);
         } catch (RuntimeException runtimeException) {
             throw ci.a((Throwable) (Object) runtimeException, "qm.E(" + -31 + ',' + (param1 != null ? "{...}" : "null") + ',' + 22050 + ',' + (param3 != null ? "{...}" : "null") + ',' + true + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -142,7 +140,7 @@ final class qm {
         ci.field_a.c((lh) (Object) nm.field_o, -22908735);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_g = null;
         field_c = null;

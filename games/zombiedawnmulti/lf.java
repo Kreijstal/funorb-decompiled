@@ -94,7 +94,7 @@ final class lf {
         return stackIn_7_0;
     }
 
-    final static void a(dm param0) {
+    final static void a(dm param0, boolean param1) {
         dm var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -135,8 +135,7 @@ final class lf {
               cg.field_i.a((br) (Object) param0, false);
               return;
             } else {
-              int discarded$2 = 1;
-              vc.a((br) (Object) var2, (br) (Object) param0);
+              vc.a((br) (Object) var2, (br) (Object) param0, true);
               return;
             }
           }
@@ -172,7 +171,7 @@ final class lf {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -333,7 +332,7 @@ final class lf {
         throw new IllegalStateException();
     }
 
-    final static void a(ef param0) {
+    final static void a(ef param0, int param1) {
         int var2_int = 0;
         ja var3 = null;
         if (null == of.field_k) {

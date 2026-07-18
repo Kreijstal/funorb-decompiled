@@ -18,12 +18,9 @@ final class kb extends lh {
         fl.a((byte) 101, param2);
         try {
             vc.a((byte) 125, param2);
-            int discarded$0 = -111;
-            ed.a(param2);
-            int discarded$1 = 31207;
-            kl.b();
-            int discarded$2 = -65;
-            aa.c();
+            ed.a(param2, (byte) -111);
+            kl.b(31207);
+            aa.c((byte) -65);
             vg.field_z = -wf.field_c;
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) (Object) runtimeException, "kb.A(" + -1 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

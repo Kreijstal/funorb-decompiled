@@ -168,7 +168,7 @@ final class km extends od {
         return stackIn_23_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
         field_n = null;
     }

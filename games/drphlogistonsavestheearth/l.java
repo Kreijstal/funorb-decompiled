@@ -655,8 +655,7 @@ class l implements cg, va {
             }
             L2: {
               if (!((l) this).field_r) {
-                int discarded$4 = -2;
-                this.b(param0);
+                this.b(param0, -2);
                 break L2;
               } else {
                 ((o) (Object) param0.field_s).a(((l) this).field_g, ((l) this).a(param0, -83), ((l) this).field_p, -3, ((l) this).field_a, ((l) this).b(-121, param0), ((l) this).field_c, this.b((byte) -127, param0));
@@ -667,7 +666,7 @@ class l implements cg, va {
               if (param1) {
                 break L3;
               } else {
-                boolean discarded$5 = l.b(13);
+                boolean discarded$2 = l.b(13);
                 break L3;
               }
             }
@@ -708,7 +707,7 @@ class l implements cg, va {
         return stackIn_9_0;
     }
 
-    private final void b(vg param0) {
+    private final void b(vg param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

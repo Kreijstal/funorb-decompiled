@@ -5,7 +5,7 @@ final class jt extends rqa {
     static int field_p;
     static vla field_o;
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

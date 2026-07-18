@@ -209,7 +209,7 @@ final class bf {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_v = null;
         field_S = null;
         field_h = null;
@@ -580,8 +580,7 @@ final class bf {
                   } else {
                     L6: {
                       if (0 == (1 & ((bf) this).field_e)) {
-                        int discarded$1 = 1;
-                        ((bf) this).field_f = gm.a(((bf) this).field_f, fb.field_c[((bf) this).field_Q], g.field_s[((bf) this).field_Q], ff.field_Q[((bf) this).field_Q][((bf) this).field_E], fk.field_t[((bf) this).field_Q]);
+                        ((bf) this).field_f = gm.a(((bf) this).field_f, fb.field_c[((bf) this).field_Q], g.field_s[((bf) this).field_Q], ff.field_Q[((bf) this).field_Q][((bf) this).field_E], fk.field_t[((bf) this).field_Q], true);
                         break L6;
                       } else {
                         break L6;
@@ -1655,8 +1654,7 @@ final class bf {
                       }
                     }
                     var5 = new java.net.URL(param1.getCodeBase(), var4);
-                    int discarded$2 = 4767999;
-                    param1.getAppletContext().showDocument(kk.a(var5, param1), "_self");
+                    param1.getAppletContext().showDocument(kk.a(var5, param1, 4767999), "_self");
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -2428,7 +2426,7 @@ final class bf {
         }
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, byte param1) {
         ae.field_ib.setTime(new Date(param0));
         int var3 = ae.field_ib.get(7);
         int var4 = ae.field_ib.get(5);

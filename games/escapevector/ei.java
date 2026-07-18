@@ -11,7 +11,7 @@ final class ei extends hg {
     byte[] field_h;
     static boolean field_i;
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         return hc.a(false, oc.d((byte) -110));
     }
 
@@ -165,7 +165,7 @@ final class ei extends hg {
         return (vj) (Object) stackIn_6_0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_m = null;
         field_k = null;
         field_l = null;

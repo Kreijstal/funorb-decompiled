@@ -12,8 +12,7 @@ final class jn implements Iterator {
 
     final static void a(int param0) {
         L0: {
-          int discarded$81 = -95;
-          spb.a();
+          spb.a((byte) -95);
           if (null != igb.field_a) {
             kl.a(igb.field_a, param0 ^ 92);
             break L0;
@@ -23,12 +22,9 @@ final class jn implements Iterator {
         }
         if (param0 == 1) {
           nmb.d(-87);
-          int discarded$82 = 14194;
-          nf.b();
-          int discarded$83 = 16928;
-          oga.a();
-          int discarded$84 = 215;
-          if (ap.e()) {
+          nf.b(14194);
+          oga.a(16928);
+          if (ap.e(215)) {
             dpa.field_p.h(24335, 1);
             lnb.b(0, 127);
             ifb.l(-125);
@@ -40,12 +36,9 @@ final class jn implements Iterator {
         } else {
           jn.a(121);
           nmb.d(-87);
-          int discarded$85 = 14194;
-          nf.b();
-          int discarded$86 = 16928;
-          oga.a();
-          int discarded$87 = 215;
-          if (!ap.e()) {
+          nf.b(14194);
+          oga.a(16928);
+          if (!ap.e(215)) {
             ifb.l(-125);
             return;
           } else {
@@ -57,7 +50,7 @@ final class jn implements Iterator {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
     }

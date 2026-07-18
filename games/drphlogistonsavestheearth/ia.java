@@ -6,7 +6,7 @@ final class ia {
     static gk field_a;
     static String field_b;
 
-    final static void a() {
+    final static void a(byte param0) {
         ml var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -54,7 +54,7 @@ final class ia {
         throw new IllegalStateException();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }

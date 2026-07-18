@@ -443,7 +443,7 @@ final class rv {
         eob.field_p = li.a(91, var2 * var4, var2 * var5);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
@@ -466,7 +466,7 @@ final class rv {
         }
     }
 
-    final static tpa a(boolean param0) {
+    final static tpa a(boolean param0, int param1) {
         tpa var2 = new tpa(true);
         var2.field_c = param0 ? true : false;
         return var2;

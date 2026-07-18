@@ -295,7 +295,7 @@ final class kq extends cr {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_Rb = null;
         field_Vb = null;
         field_Kb = null;

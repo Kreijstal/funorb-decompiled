@@ -13,7 +13,7 @@ final class fwa {
     private km field_d;
     private ds field_c;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_g = null;
     }

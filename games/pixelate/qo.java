@@ -20,7 +20,7 @@ final class qo extends mg {
     static String field_x;
     static java.security.SecureRandom field_y;
 
-    final static String e() {
+    final static String e(int param0) {
         return vi.field_o.h(5);
     }
 
@@ -129,7 +129,7 @@ final class qo extends mg {
         return stackIn_13_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_t = null;
         field_y = null;
         field_v = null;

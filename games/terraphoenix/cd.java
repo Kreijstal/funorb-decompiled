@@ -6,7 +6,7 @@ final class cd {
         Object discarded$0 = netscape.javascript.JSObject.getWindow(param0).eval(param2);
     }
 
-    final static Object a(java.applet.Applet param0, String param1, Object[] param2) throws Throwable {
+    final static Object a(java.applet.Applet param0, String param1, Object[] param2, int param3) throws Throwable {
         return netscape.javascript.JSObject.getWindow(param0).call(param1, param2);
     }
 

@@ -25,7 +25,7 @@ final class bj extends f implements bp {
         field_H = null;
     }
 
-    final static void k() {
+    final static void k(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

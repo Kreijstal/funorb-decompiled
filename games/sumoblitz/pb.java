@@ -10,7 +10,7 @@ abstract class pb {
     int field_g;
     int field_e;
 
-    final static cq a(int param0, int param1, int param2, int param3, wi param4) {
+    final static cq a(int param0, int param1, int param2, int param3, wi param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         cq var7 = null;
@@ -88,11 +88,11 @@ abstract class pb {
         return stackIn_5_0;
     }
 
-    final static ts[] a() {
+    final static ts[] a(int param0) {
         return new ts[]{go.field_n, ov.field_i, sj.field_b, wj.field_h, lm.field_a, f.field_t, rf.field_e, pj.field_n, vd.field_b, qo.field_b, ea.field_a, js.field_G, ic.field_a, uc.field_d};
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
     }
 

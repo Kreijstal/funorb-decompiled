@@ -274,8 +274,7 @@ final class ad extends ia {
             }
             cd.field_l.e();
             var1.d(0, 0);
-            int discarded$0 = 1;
-            id.a();
+            id.a(true);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "ad.H(" + -32 + ')');
         }

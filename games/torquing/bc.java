@@ -6,11 +6,11 @@ abstract class bc {
 
     abstract void a(fj param0, byte param1);
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             ol.a("", true, param0);
             gq.a(25530, param0);

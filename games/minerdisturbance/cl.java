@@ -17,7 +17,7 @@ final class cl extends kn implements wg, sh {
     static String field_M;
     private hc field_Q;
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1, int param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -198,7 +198,7 @@ final class cl extends kn implements wg, sh {
         }
     }
 
-    public static void o() {
+    public static void o(int param0) {
         field_M = null;
     }
 
@@ -723,7 +723,7 @@ final class cl extends kn implements wg, sh {
         return stackIn_11_0 != 0;
     }
 
-    final static void p() {
+    final static void p(int param0) {
         int var1 = 0;
         if (ee.field_J <= 32) {
             fc.a(0, (byte) 44);
@@ -737,8 +737,7 @@ final class cl extends kn implements wg, sh {
     }
 
     final static void q(int param0) {
-        int discarded$4 = -4440;
-        pj.a(u.b() < mk.b(45) ? true : false, (byte) -119);
+        pj.a(u.b(-4440) < mk.b(45) ? true : false, (byte) -119);
         if (param0 > -59) {
             field_I = 80;
         }
@@ -818,13 +817,12 @@ final class cl extends kn implements wg, sh {
                       } else {
                         L5: {
                           var7 = param1.charAt(var6);
-                          int discarded$2 = 96;
-                          if (wj.a((char) var7)) {
+                          if (wj.a((char) var7, 96)) {
                             var8 = ha.a(242, (char) var7);
                             if (0 == var8) {
                               break L5;
                             } else {
-                              StringBuilder discarded$3 = var5.append((char) var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               break L5;
                             }
                           } else {
@@ -914,8 +912,7 @@ final class cl extends kn implements wg, sh {
                       break L1;
                     } else {
                       if (!((cl) this).field_O) {
-                        int discarded$49 = -6145;
-                        nm.a();
+                        nm.a(-6145);
                         break L1;
                       } else {
                         hk.c(-121);

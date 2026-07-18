@@ -5,7 +5,7 @@ final class rd {
     static qf field_b;
     static String field_a;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return true;
     }
 
@@ -46,7 +46,7 @@ final class rd {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

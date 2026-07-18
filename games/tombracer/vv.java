@@ -91,7 +91,7 @@ final class vv extends wv {
         super.a(param0, param1);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         int var1 = 0;
         field_q = null;
     }

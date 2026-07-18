@@ -70,8 +70,7 @@ final class wa {
                 break L1;
               }
             }
-            int discarded$2 = -9;
-            stackOut_2_0 = ju.a(var4_int, var5, param2);
+            stackOut_2_0 = ju.a(var4_int, var5, param2, (byte) -9);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -158,7 +157,7 @@ final class wa {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         int var1 = -64;
@@ -172,9 +171,7 @@ final class wa {
         iw.a(-118, var2);
         on.d(54, 54, 51, 255);
         on.d(54, 54, 43, 0);
-        int discarded$0 = 124;
-        int discarded$1 = 0;
-        ts.a(param1);
+        ts.a(param1, 0, 124);
         ta.e(117);
         ot var3 = new ot(54, 54);
         iw.a(-92, (ut) (Object) var3);

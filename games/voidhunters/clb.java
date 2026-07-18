@@ -8,7 +8,7 @@ final class clb {
         throw new IllegalStateException();
     }
 
-    final static ij a() {
+    final static ij a(int param0) {
         ij var1 = new ij();
         var1.b(-10258, (ksa) (Object) new skb("lo", new Class[0], "Say hello"));
         var1.b(-10258, (ksa) (Object) new ogb("set_lag", new Class[4], (String) null));

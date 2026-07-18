@@ -5,7 +5,7 @@ final class mr {
     static String field_a;
     static int[] field_b;
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -82,7 +82,7 @@ final class mr {
         return stackIn_18_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

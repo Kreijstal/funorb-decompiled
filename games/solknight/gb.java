@@ -577,8 +577,7 @@ class gb extends gg {
         if (!(var4 != 0)) {
             return "";
         }
-        int discarded$2 = 160;
-        return vd.a(((gb) this).field_l, var3, var4);
+        return vd.a(((gb) this).field_l, var3, var4, 160);
     }
 
     final int c(byte param0) {
@@ -881,8 +880,7 @@ class gb extends gg {
         if (0 == var3) {
             return "";
         }
-        int discarded$1 = 160;
-        return vd.a(((gb) this).field_l, var2, var3);
+        return vd.a(((gb) this).field_l, var2, var3, 160);
     }
 
     final void b(int param0, boolean param1) {
@@ -959,7 +957,7 @@ class gb extends gg {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_k = null;
         field_h = null;
         field_i = null;
@@ -1106,8 +1104,7 @@ class gb extends gg {
 
     gb(int param0) {
         ((gb) this).field_m = 0;
-        int discarded$0 = -1;
-        ((gb) this).field_l = fl.a(param0);
+        ((gb) this).field_l = fl.a(param0, -1);
     }
 
     gb(byte[] param0) {

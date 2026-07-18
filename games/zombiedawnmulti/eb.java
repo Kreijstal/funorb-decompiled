@@ -82,7 +82,7 @@ final class eb {
         return stackIn_7_0 != 0;
     }
 
-    final static ja[] a() {
+    final static ja[] a(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;

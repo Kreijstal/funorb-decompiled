@@ -14,7 +14,7 @@ final class o extends ql {
     static boolean field_e;
     private v field_k;
 
-    public static void g() {
+    public static void g(int param0) {
         field_n = null;
         field_l = null;
         field_g = null;

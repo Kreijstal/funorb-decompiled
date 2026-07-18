@@ -79,7 +79,7 @@ final class jo implements ntb, ofa, iu {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_a = null;
     }
@@ -149,24 +149,24 @@ final class jo implements ntb, ofa, iu {
           L0: {
             if (param1) {
               var3 = (jo) param0;
-              if (var3.field_h > var3.field_h) {
+              if (var3.field_h > ((jo) this).field_h) {
                 stackOut_19_0 = -1;
                 stackIn_20_0 = stackOut_19_0;
                 return stackIn_20_0;
               } else {
-                if (var3.field_h < var3.field_h) {
+                if (var3.field_h < ((jo) this).field_h) {
                   stackOut_17_0 = 1;
                   stackIn_18_0 = stackOut_17_0;
                   return stackIn_18_0;
                 } else {
-                  if (var3.field_b >= var3.field_b) {
-                    if (var3.field_b >= var3.field_b) {
-                      if (var3.field_f < var3.field_f) {
+                  if (((jo) this).field_b >= var3.field_b) {
+                    if (var3.field_b >= ((jo) this).field_b) {
+                      if (((jo) this).field_f < var3.field_f) {
                         stackOut_15_0 = -1;
                         stackIn_16_0 = stackOut_15_0;
                         return stackIn_16_0;
                       } else {
-                        if (var3.field_f <= var3.field_f) {
+                        if (((jo) this).field_f <= var3.field_f) {
                           stackOut_21_0 = 0;
                           stackIn_22_0 = stackOut_21_0;
                           break L0;
@@ -260,8 +260,7 @@ final class jo implements ntb, ofa, iu {
             L2: {
               var5 = (jo) (Object) param0;
               var4 = 0;
-              int discarded$1 = 0;
-              if (!ikb.a(var5.field_d, var5.field_d)) {
+              if (!ikb.a(((jo) this).field_d, var5.field_d, false)) {
                 break L2;
               } else {
                 var4 = 1;
@@ -270,8 +269,8 @@ final class jo implements ntb, ofa, iu {
               }
             }
             L3: {
-              if (var5.field_h != var5.field_h) {
-                System.out.println("int gridx has changed. before=" + var5.field_h + ", now=" + var5.field_h);
+              if (((jo) this).field_h != var5.field_h) {
+                System.out.println("int gridx has changed. before=" + var5.field_h + ", now=" + ((jo) this).field_h);
                 var4 = 1;
                 break L3;
               } else {
@@ -279,20 +278,20 @@ final class jo implements ntb, ofa, iu {
               }
             }
             L4: {
-              if (var5.field_b != var5.field_b) {
+              if (((jo) this).field_b != var5.field_b) {
                 var4 = 1;
-                System.out.println("int gridy has changed. before=" + var5.field_b + ", now=" + var5.field_b);
+                System.out.println("int gridy has changed. before=" + var5.field_b + ", now=" + ((jo) this).field_b);
                 break L4;
               } else {
                 break L4;
               }
             }
             L5: {
-              if (var5.field_f == var5.field_f) {
+              if (var5.field_f == ((jo) this).field_f) {
                 break L5;
               } else {
                 var4 = 1;
-                System.out.println("int type has changed. before=" + var5.field_f + ", now=" + var5.field_f);
+                System.out.println("int type has changed. before=" + var5.field_f + ", now=" + ((jo) this).field_f);
                 break L5;
               }
             }
@@ -340,19 +339,19 @@ final class jo implements ntb, ofa, iu {
 
     public final void b(byte param0, tv param1) {
         jo var3 = (jo) (Object) param1;
-        if (var3.field_c == var3.field_c) {
+        if (((jo) this).field_c == var3.field_c) {
             return;
         }
         try {
-            var3.field_c = var3.field_c;
-            var3.field_d = dob.a(var3.field_d, (byte) -55, var3.field_d);
-            var3.field_b = var3.field_b;
-            var3.field_h = var3.field_h;
+            var3.field_c = ((jo) this).field_c;
+            var3.field_d = dob.a(var3.field_d, (byte) -55, ((jo) this).field_d);
+            var3.field_b = ((jo) this).field_b;
+            var3.field_h = ((jo) this).field_h;
             if (param0 <= 54) {
                 Object var4 = null;
                 ((jo) this).b((faa) null, 31);
             }
-            var3.field_f = var3.field_f;
+            var3.field_f = ((jo) this).field_f;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "jo.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -396,10 +395,8 @@ final class jo implements ntb, ofa, iu {
                 ((jo) this).field_d = null;
             }
             ((jo) this).field_d = wkb.a((byte) 37, ((jo) this).field_d, param0, 8);
-            int discarded$0 = 20;
-            ((jo) this).field_h = uwa.a(8, param0);
-            int discarded$1 = 20;
-            ((jo) this).field_b = uwa.a(8, param0);
+            ((jo) this).field_h = uwa.a(8, param0, (byte) 20);
+            ((jo) this).field_b = uwa.a(8, param0, (byte) 20);
             ((jo) this).field_f = param0.i(0, 2);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "jo.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -435,17 +432,16 @@ final class jo implements ntb, ofa, iu {
               L2: {
                 var3 = (jo) (Object) param1;
                 var4 = 11 % ((22 - param0) / 59);
-                int discarded$9 = 28;
-                if (wpb.a(var3.field_d, var3.field_d)) {
+                if (wpb.a(var3.field_d, ((jo) this).field_d, (byte) 28)) {
                   break L2;
                 } else {
-                  if (var3.field_h != var3.field_h) {
+                  if (((jo) this).field_h != var3.field_h) {
                     break L2;
                   } else {
-                    if (var3.field_b != var3.field_b) {
+                    if (((jo) this).field_b != var3.field_b) {
                       break L2;
                     } else {
-                      if (var3.field_f == var3.field_f) {
+                      if (((jo) this).field_f == var3.field_f) {
                         stackOut_6_0 = 0;
                         stackIn_7_0 = stackOut_6_0;
                         break L1;

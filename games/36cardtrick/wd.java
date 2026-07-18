@@ -16,7 +16,7 @@ final class wd {
         field_e = null;
     }
 
-    final static String b() {
+    final static String b(int param0) {
         int var1 = 22;
         return pk.field_a;
     }
@@ -695,10 +695,9 @@ final class wd {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (cd.field_e != 10) {
-          int discarded$4 = 1;
-          if (c.b()) {
+          if (c.b(true)) {
             sg.field_b = true;
             return;
           } else {

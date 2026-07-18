@@ -20,33 +20,27 @@ final class da {
         if (param7 > param2) {
           if (param7 >= param4) {
             if (param2 < param4) {
-              int discarded$6 = 112;
-              mb.a(param7, param6, param4, param2, param1, fn.field_h, param5, param0);
+              mb.a(param7, param6, param4, param2, param1, fn.field_h, param5, param0, (byte) 112);
               return;
             } else {
-              int discarded$7 = 112;
-              mb.a(param7, param6, param2, param4, param0, fn.field_h, param5, param1);
+              mb.a(param7, param6, param2, param4, param0, fn.field_h, param5, param1, (byte) 112);
               return;
             }
           } else {
-            int discarded$8 = 112;
-            mb.a(param4, param6, param7, param2, param1, fn.field_h, param0, param5);
+            mb.a(param4, param6, param7, param2, param1, fn.field_h, param0, param5, (byte) 112);
             return;
           }
         } else {
           if (param4 <= param2) {
             if (param4 > param7) {
-              int discarded$9 = 112;
-              mb.a(param2, param6, param4, param7, param5, fn.field_h, param1, param0);
+              mb.a(param2, param6, param4, param7, param5, fn.field_h, param1, param0, (byte) 112);
               return;
             } else {
-              int discarded$10 = 112;
-              mb.a(param2, param6, param7, param4, param0, fn.field_h, param1, param5);
+              mb.a(param2, param6, param7, param4, param0, fn.field_h, param1, param5, (byte) 112);
               return;
             }
           } else {
-            int discarded$11 = 112;
-            mb.a(param4, param6, param2, param7, param5, fn.field_h, param0, param1);
+            mb.a(param4, param6, param2, param7, param5, fn.field_h, param0, param1, (byte) 112);
             return;
           }
         }
@@ -91,7 +85,7 @@ final class da {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
         field_g = null;
         field_a = null;

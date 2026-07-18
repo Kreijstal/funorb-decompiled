@@ -70,7 +70,7 @@ final class bh {
         return 0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_e = null;
     }

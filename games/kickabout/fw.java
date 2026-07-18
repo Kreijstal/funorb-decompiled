@@ -65,8 +65,7 @@ final class fw extends ta {
           L0: {
             var4_int = param0.b(param1, -1);
             var5 = param0.a((byte) -70, param3, var4_int);
-            int discarded$2 = 2;
-            stackOut_2_0 = aw.a(var5, var4_int, param0);
+            stackOut_2_0 = aw.a(var5, var4_int, param0, 2);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -181,10 +180,8 @@ final class fw extends ta {
         int stackOut_11_1 = 0;
         var7 = Kickabout.field_G;
         super.a(0, param1, param2);
-        int discarded$4 = 3231;
-        ((fw) this).field_F = gf.a(nt.field_yb, param0, tk.field_Ib);
-        int discarded$5 = 3231;
-        ((fw) this).field_I = gf.a(nt.field_yb, 1, tk.field_Ib);
+        ((fw) this).field_F = gf.a(nt.field_yb, param0, tk.field_Ib, 3231);
+        ((fw) this).field_I = gf.a(nt.field_yb, 1, tk.field_Ib, 3231);
         cf.field_Gb.field_jb = new tf();
         var4 = 0;
         L0: while (true) {
@@ -271,7 +268,7 @@ final class fw extends ta {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_H = null;
         int var1 = -1;
     }
@@ -324,8 +321,7 @@ final class fw extends ta {
         if (param1 <= 99) {
             ((fw) this).field_I = true;
         }
-        int discarded$0 = -12452;
-        ig.b(((fw) this).field_j);
+        ig.b(((fw) this).field_j, -12452);
     }
 
     final void a(byte param0, boolean param1) {
@@ -350,8 +346,7 @@ final class fw extends ta {
                   break L2;
                 } else {
                   if (var3_ref_jt.field_Ab.field_sb != 0) {
-                    int discarded$1 = 125;
-                    cb.a(var3_ref_jt);
+                    cb.a(var3_ref_jt, (byte) 125);
                     break L1;
                   } else {
                     break L2;
@@ -380,7 +375,7 @@ final class fw extends ta {
         }
     }
 
-    final static int h() {
+    final static int h(byte param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;

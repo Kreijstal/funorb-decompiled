@@ -8,7 +8,7 @@ final class ul implements kg {
     static String field_e;
     static kh[] field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 102;
         field_b = null;
         field_e = null;

@@ -10,11 +10,11 @@ final class rc {
     static String field_a;
     static vh field_b;
 
-    final static String b() {
+    final static String b(boolean param0) {
         return th.field_g;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_b = null;
         field_g = null;

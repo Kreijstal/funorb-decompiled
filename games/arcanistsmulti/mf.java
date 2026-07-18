@@ -12,7 +12,8 @@ final class mf {
     static String field_h;
 
     final static wa a(int param0, String param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         wa var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -20,21 +21,21 @@ final class mf {
         CharSequence var7 = null;
         CharSequence var8 = null;
         wa stackIn_17_0 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        Object stackIn_22_0 = null;
+        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        Object stackIn_23_0 = null;
+        RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         wa stackOut_16_0 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
-        Object stackOut_22_0 = null;
+        RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
         String stackOut_22_2 = null;
-        Object stackOut_21_0 = null;
+        RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
@@ -42,11 +43,11 @@ final class mf {
           if (uc.field_c != null) {
             L0: {
               var7 = (CharSequence) (Object) param1;
-              var2 = (Object) (Object) gk.a(var7, -13);
+              var2 = gk.a(var7, -13);
               if (var2 != null) {
                 break L0;
               } else {
-                var2 = (Object) (Object) var7;
+                var2 = param1;
                 break L0;
               }
             }
@@ -59,7 +60,7 @@ final class mf {
                 break L1;
               }
             }
-            var3 = (wa) (Object) uc.field_c.a((long)((String) var2).hashCode(), (byte) -64);
+            var3 = (wa) (Object) uc.field_c.a((long)var2.hashCode(), (byte) -64);
             L2: while (true) {
               if (var3 != null) {
                 L3: {
@@ -72,7 +73,7 @@ final class mf {
                     break L3;
                   }
                 }
-                if (var4.equals(var2)) {
+                if (var4.equals((Object) (Object) var2)) {
                   stackOut_16_0 = (wa) var3;
                   stackIn_17_0 = stackOut_16_0;
                   return stackIn_17_0;
@@ -90,15 +91,15 @@ final class mf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_20_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_20_0 = (RuntimeException) var2_ref;
             stackOut_20_1 = new StringBuilder().append("mf.C(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_22_0 = stackIn_22_0;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
               stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
@@ -106,7 +107,7 @@ final class mf {
               stackIn_23_2 = stackOut_22_2;
               break L4;
             } else {
-              stackOut_21_0 = stackIn_21_0;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;

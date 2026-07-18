@@ -22,8 +22,7 @@ abstract class bb extends bj {
         int stackOut_11_0 = 0;
         if (param0 == -13907) {
           L0: {
-            int discarded$2 = -1;
-            var2 = this.k();
+            var2 = this.k(-1);
             var3 = var2 - ((bb) this).field_N;
             if (0 < var3) {
               ((bb) this).field_N = ((bb) this).field_N + (8 + var3 + -1) / 8;
@@ -387,7 +386,7 @@ abstract class bb extends bj {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_P = null;
         field_L = null;
         field_R = null;
@@ -410,7 +409,7 @@ abstract class bb extends bj {
 
     abstract void b(int param0, int param1, byte param2);
 
-    private final int k() {
+    private final int k(int param0) {
         int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -547,8 +546,7 @@ abstract class bb extends bj {
         L0: {
           L1: {
             var2 = -106 / ((param0 - 7) / 55);
-            int discarded$2 = -1;
-            ((bb) this).field_N = this.k();
+            ((bb) this).field_N = this.k(-1);
             if (((bb) this).field_N != 0) {
               break L1;
             } else {

@@ -50,7 +50,7 @@ final class ga implements Iterator {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

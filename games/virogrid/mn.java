@@ -8,7 +8,7 @@ final class mn {
     static String field_b;
     static String[] field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_d = null;

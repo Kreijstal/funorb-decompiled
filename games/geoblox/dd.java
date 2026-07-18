@@ -12,7 +12,7 @@ abstract class dd extends ee {
     static String field_F;
     static String[] field_E;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return cg.b(true);
     }
 
@@ -110,7 +110,7 @@ abstract class dd extends ee {
         }
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
@@ -278,7 +278,7 @@ abstract class dd extends ee {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_J = null;
         field_F = null;
         field_G = null;
@@ -312,8 +312,7 @@ abstract class dd extends ee {
                   vb.c();
                   ((dd) this).b(0, 20, 0);
                   super.a(-param0 - ((dd) this).field_v, -param1 - ((dd) this).field_m, (byte) 104, param3);
-                  int discarded$4 = 1;
-                  id.a();
+                  id.a(true);
                   oi.field_b.d(param0 + ((dd) this).field_v, ((dd) this).field_m + param1, ((dd) this).field_H);
                   return;
                 } else {
@@ -323,8 +322,7 @@ abstract class dd extends ee {
                   vb.c();
                   ((dd) this).b(0, 20, 0);
                   super.a(-param0 - ((dd) this).field_v, -param1 - ((dd) this).field_m, (byte) 104, param3);
-                  int discarded$5 = 1;
-                  id.a();
+                  id.a(true);
                   oi.field_b.d(param0 + ((dd) this).field_v, ((dd) this).field_m + param1, ((dd) this).field_H);
                   return;
                 }
@@ -335,8 +333,7 @@ abstract class dd extends ee {
                 vb.c();
                 ((dd) this).b(0, 20, 0);
                 super.a(-param0 - ((dd) this).field_v, -param1 - ((dd) this).field_m, (byte) 104, param3);
-                int discarded$6 = 1;
-                id.a();
+                id.a(true);
                 oi.field_b.d(param0 + ((dd) this).field_v, ((dd) this).field_m + param1, ((dd) this).field_H);
                 return;
               }
@@ -347,8 +344,7 @@ abstract class dd extends ee {
               vb.c();
               ((dd) this).b(0, 20, 0);
               super.a(-param0 - ((dd) this).field_v, -param1 - ((dd) this).field_m, (byte) 104, param3);
-              int discarded$7 = 1;
-              id.a();
+              id.a(true);
               oi.field_b.d(param0 + ((dd) this).field_v, ((dd) this).field_m + param1, ((dd) this).field_H);
               return;
             }

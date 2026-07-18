@@ -271,7 +271,7 @@ final class lh extends od {
         return var5;
     }
 
-    public static void p() {
+    public static void p(int param0) {
         field_l = null;
         field_p = null;
         field_n = null;

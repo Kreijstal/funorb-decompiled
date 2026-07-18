@@ -11,8 +11,7 @@ final class po {
         var9 = -78 % ((-51 - param0) / 33);
         var8 = cq.field_u[param6];
         if (9 == var8) {
-          int discarded$1 = -103;
-          oo.a(param4, param2, param5, param7, param3, param1);
+          oo.a(param4, param2, param5, param7, param3, param1, (byte) -103);
           ac.field_k[ls.a(sr.a(1 + param7, param1 + -1, 2, (byte) -108), 1, sr.a(param7, -1 + param1, 2, (byte) -109), sr.a(param7 - -1, param1, 2, (byte) -94), -57) + 180].b(param3, param2, param4, param5);
           ac.field_k[ls.a(sr.a(-1 + param7, param1 + -1, 2, (byte) -113), 1, sr.a(param7, param1 + -1, 2, (byte) -116), sr.a(param7 - 1, param1, 2, (byte) -126), -63) + 181].b(param3, param2, param4, param5);
           ac.field_k[182 - -ls.a(sr.a(param7 - -1, 1 + param1, 2, (byte) -124), 1, sr.a(param7, param1 - -1, 2, (byte) -127), sr.a(param7 + 1, param1, 2, (byte) -122), -94)].b(param3, param2, param4, param5);
@@ -23,7 +22,7 @@ final class po {
         }
     }
 
-    final static sc a(bv param0) {
+    final static sc a(bv param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         sc var3 = null;
@@ -88,7 +87,7 @@ final class po {
         return stackIn_3_0;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0, int param1, int param2) {
         int var3 = 0;
         Object var4 = null;
         int stackIn_3_0 = 0;

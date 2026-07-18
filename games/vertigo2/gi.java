@@ -13,7 +13,7 @@ final class gi extends ah {
     static nj field_v;
     static int field_u;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_q = null;
         field_t = null;
         field_p = null;
@@ -22,7 +22,7 @@ final class gi extends ah {
         field_v = null;
     }
 
-    final static boolean a(CharSequence param0, char param1) {
+    final static boolean a(CharSequence param0, char param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
@@ -61,8 +61,7 @@ final class gi extends ah {
               if (param0 != null) {
                 var3_int = param0.length();
                 if (var3_int < 12) {
-                  int discarded$6 = -96;
-                  if (!jq.a(param1)) {
+                  if (!jq.a(param1, -96)) {
                     stackOut_16_0 = 1;
                     stackIn_17_0 = stackOut_16_0;
                     break L0;

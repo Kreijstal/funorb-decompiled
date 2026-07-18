@@ -13,7 +13,7 @@ final class aj extends jh {
     static int field_J;
     private int field_D;
 
-    final static void a() {
+    final static void a(int param0) {
         od.b(128, 17);
     }
 

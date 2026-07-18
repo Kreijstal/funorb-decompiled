@@ -9,7 +9,7 @@ final class nl {
     static jp field_e;
     static jp field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_f = null;
@@ -17,7 +17,7 @@ final class nl {
         field_b = null;
     }
 
-    final static boolean a(int[] param0) {
+    final static boolean a(int[] param0, byte param1) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         pg var4_ref_pg = null;

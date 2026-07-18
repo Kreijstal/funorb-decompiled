@@ -30,7 +30,7 @@ class dk extends am {
         return param0 & param1;
     }
 
-    final static void a(cl param0) {
+    final static void a(cl param0, int param1, int param2) {
         en var3 = null;
         try {
             var3 = s.field_b;

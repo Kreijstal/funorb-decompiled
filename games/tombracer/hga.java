@@ -15,8 +15,7 @@ class hga extends vpa {
         }
         try {
             if (!(!param4)) {
-                int discarded$0 = 1;
-                bl.a(param0.field_m, param3 + param0.field_n, param0.field_p, param1 - -param0.field_i);
+                bl.a(param0.field_m, param3 + param0.field_n, param0.field_p, param1 - -param0.field_i, 1);
             }
             super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
@@ -24,7 +23,7 @@ class hga extends vpa {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_o = null;
         field_n = null;
         int var1 = 1;

@@ -11,7 +11,7 @@ final class bq {
     static String field_f;
     static jp[][] field_e;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_f = null;
         field_c = null;
@@ -20,25 +20,25 @@ final class bq {
     }
 
     final static mf a(int param0, int param1, boolean param2, int param3, boolean param4) {
-        int discarded$0 = 1;
-        return go.a(param4, param3, false, param1, param2);
+        return go.a(param4, param3, false, param1, param2, true);
     }
 
-    final static km a(int param0) {
+    final static km a(int param0, int param1) {
         return pg.field_k[param0];
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0, int param1, byte param2) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         String[] var10 = null;
         String[] var11 = null;
+        String var12 = null;
+        String var13 = null;
         int stackIn_65_0 = 0;
         int stackIn_68_0 = 0;
         String[] stackIn_74_0 = null;
@@ -454,9 +454,8 @@ final class bq {
                         break L24;
                       } else {
                         L27: {
-                          var6_ref_String = var11[var5];
-                          int discarded$4 = 0;
-                          var7 = hm.a(false, var6_ref_String);
+                          var13 = var11[var5];
+                          var7 = hm.a(false, var13, 0);
                           if (var3_int >= var7) {
                             break L27;
                           } else {
@@ -469,9 +468,8 @@ final class bq {
                     }
                   } else {
                     L28: {
-                      var6_ref_String = var10[var5];
-                      int discarded$5 = 0;
-                      var7 = hm.a(false, var6_ref_String);
+                      var12 = var10[var5];
+                      var7 = hm.a(false, var12, 0);
                       if (var7 <= var3_int) {
                         break L28;
                       } else {
@@ -512,8 +510,7 @@ final class bq {
                     L32: {
                       var6 = BrickABrac.field_K[var4];
                       if (var6 >= 0) {
-                        int discarded$6 = 0;
-                        var7 = hm.a(true, qh.field_i[var4]);
+                        var7 = hm.a(true, qh.field_i[var4], 0);
                         var8 = wi.field_k - (var7 >> 1);
                         var5 = var5 + kn.field_y;
                         ce.field_a[var4] = new int[4];
@@ -569,8 +566,7 @@ final class bq {
               }
             }
             L35: {
-              int discarded$7 = 0;
-              var5 = hm.a(stackIn_90_0 != 0, qh.field_i[var4]);
+              var5 = hm.a(stackIn_90_0 != 0, qh.field_i[var4], 0);
               if (var5 <= var3_int) {
                 break L35;
               } else {

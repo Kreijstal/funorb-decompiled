@@ -36,8 +36,7 @@ final class og {
             var2 = -57 / ((53 - param0) / 43);
             if (~ea.field_h != ~((og) this).field_m) {
               if (ob.field_H == 2) {
-                int discarded$12 = -153798488;
-                if (ll.a(((og) this).field_h)) {
+                if (ll.a(((og) this).field_h, -153798488)) {
                   return 1;
                 } else {
                   return 0;
@@ -53,8 +52,7 @@ final class og {
               var2 = -57 / ((53 - param0) / 43);
               if (~ea.field_h != ~((og) this).field_m) {
                 if (ob.field_H == 2) {
-                  int discarded$13 = -153798488;
-                  if (ll.a(((og) this).field_h)) {
+                  if (ll.a(((og) this).field_h, -153798488)) {
                     return 1;
                   } else {
                     return 0;

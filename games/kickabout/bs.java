@@ -9,7 +9,7 @@ final class bs extends RuntimeException {
     static int field_f;
     static String field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         id.field_s.a(true, -(ui.field_t ? 40 + (2 + (oe.field_f - -2)) : 0) + mc.field_d.field_q, 0, 0, 18);
         ck.field_c.a(true, oe.field_f + 42, -40 + (-2 + -oe.field_f + mc.field_d.field_q), 0, 18);
         bf.field_u.a(2, 118, mc.field_d.field_mb + -20, 20, 0, mc.field_d.field_q, oe.field_f);

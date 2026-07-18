@@ -206,8 +206,7 @@ abstract class ed {
                     }
                   }
                 } else {
-                  int discarded$1 = 19406;
-                  wh.a(10L);
+                  wh.a(10L, 19406);
                   continue L1;
                 }
               }
@@ -343,8 +342,7 @@ abstract class ed {
                     return (java.awt.Frame) (Object) stackIn_22_0;
                   }
                 } else {
-                  int discarded$1 = 19406;
-                  wh.a(10L);
+                  wh.a(10L, 19406);
                   continue L4;
                 }
               }

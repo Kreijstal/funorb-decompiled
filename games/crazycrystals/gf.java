@@ -8,7 +8,7 @@ final class gf {
     static int field_a;
     private static String field_z;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_c = null;

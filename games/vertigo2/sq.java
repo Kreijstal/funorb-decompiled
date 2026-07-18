@@ -17,7 +17,7 @@ final class sq {
         throw new IllegalStateException();
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         wj.field_c = new String[kq.field_Jb];
         wj.field_c[16] = g.field_b;
         wj.field_c[21] = mg.field_L;

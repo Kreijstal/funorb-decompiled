@@ -69,8 +69,7 @@ final class ql extends oh {
                               stackIn_17_0 = (sq) (Object) stackOut_16_0;
                               break L4;
                             } else {
-                              int discarded$1 = -21502;
-                              stackOut_15_0 = n.a(var5);
+                              stackOut_15_0 = n.a(var5, -21502);
                               stackIn_17_0 = stackOut_15_0;
                               break L4;
                             }
@@ -329,7 +328,7 @@ final class ql extends oh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_p = null;
         field_o = null;
         field_n = null;

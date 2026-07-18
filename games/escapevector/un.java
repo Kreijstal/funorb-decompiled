@@ -43,13 +43,11 @@ final class un extends re {
                 break L1;
               } else {
                 var4 = null;
-                int discarded$6 = un.a((CharSequence) null, 116, 'ﾤ');
+                int discarded$2 = un.a((CharSequence) null, 116, 'ﾤ');
                 break L1;
               }
             }
-            int discarded$7 = 53;
-            int discarded$8 = 42;
-            stackOut_2_0 = kh.a(param1.field_l.length());
+            stackOut_2_0 = kh.a(param1.field_l.length(), '*', (byte) 53);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -158,7 +156,7 @@ final class un extends re {
                 if (-1 != param4.indexOf("<br>")) {
                   break L1;
                 } else {
-                  args[0] = (String) (Object) args;
+                  args[0] = param4;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;
@@ -318,15 +316,15 @@ final class un extends re {
         return stackIn_24_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_t = null;
     }
 
-    final static long e() {
+    final static long e(int param0) {
         return -sl.field_a + td.b(128);
     }
 
-    final static int a(ih param0) {
+    final static int a(ih param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

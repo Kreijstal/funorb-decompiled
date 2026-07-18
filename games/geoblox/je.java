@@ -8,7 +8,7 @@ final class je extends hf {
     hf field_f;
     static sk[] field_h;
 
-    final static void c() {
+    final static void c(byte param0) {
         p var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -44,9 +44,7 @@ final class je extends hf {
                   if (var1 == null) {
                     break L2;
                   } else {
-                    int discarded$26 = 4;
-                    int discarded$27 = -56;
-                    sj.a(var1);
+                    sj.a(var1, -56, 4);
                     continue L3;
                   }
                 }
@@ -61,12 +59,9 @@ final class je extends hf {
         }
     }
 
-    final static rh a(int param0, boolean param1, boolean param2) {
+    final static rh a(int param0, boolean param1, boolean param2, boolean param3, byte param4) {
         int var5 = -55;
-        int discarded$0 = 0;
-        int discarded$1 = 1;
-        int discarded$2 = 1;
-        return am.a(-128, 1, param2);
+        return am.a(-128, 1, param2, 1, true, false);
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
@@ -147,7 +142,7 @@ final class je extends hf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_h = null;
     }

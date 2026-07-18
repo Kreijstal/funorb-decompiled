@@ -7,7 +7,7 @@ final class sb {
     static vh field_a;
     static int field_b;
 
-    final static int a(float param0) {
+    final static int a(float param0, boolean param1) {
         return j.a(3, param0, (byte) 126);
     }
 
@@ -67,7 +67,7 @@ final class sb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
     }

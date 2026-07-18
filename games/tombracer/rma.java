@@ -18,12 +18,12 @@ final class rma {
         }
     }
 
-    final static String a() {
+    final static String a(int param0) {
         int var1 = -3;
         return qla.a(true, "\\\\contentfs\\mgcontent_v4\\WIP\\tombracer\\src\\freelevels\\banner.trlev");
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }

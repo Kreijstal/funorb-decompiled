@@ -5,11 +5,11 @@ final class lh {
     static nh field_b;
     static int field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;

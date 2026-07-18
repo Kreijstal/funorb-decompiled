@@ -74,7 +74,7 @@ abstract class gca extends bw {
         return stackIn_1_0;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         iv.b(false);
         hb.a(gi.field_b[0].field_n, gba.field_Bb, he.field_l, rg.field_h, -103, rj.field_j);
     }

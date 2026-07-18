@@ -38,8 +38,7 @@ final class nc {
         try {
           L0: {
             var10 = (CharSequence) (Object) param1;
-            int discarded$4 = 124;
-            var3_int = ld.a(param2, var10);
+            var3_int = ld.a(param2, var10, 124);
             var4 = new String[var3_int - -1];
             var5 = 0;
             var6 = 0;
@@ -54,9 +53,9 @@ final class nc {
                 var8 = var6;
                 L2: while (true) {
                   if (param2 == param1.charAt(var8)) {
-                    int incrementValue$5 = var5;
+                    int incrementValue$2 = var5;
                     var5++;
-                    var4[incrementValue$5] = param1.substring(var6, var8);
+                    var4[incrementValue$2] = param1.substring(var6, var8);
                     var6 = var8 + 1;
                     var7++;
                     continue L1;
@@ -101,17 +100,16 @@ final class nc {
         return stackIn_10_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (!(ei.field_R)) {
             throw new IllegalStateException();
         }
         wd.field_b = true;
-        int discarded$0 = -126;
-        nb.a(false);
+        nb.a(false, (byte) -126);
         q.field_Jb = 0;
     }
 
-    final static void a(ji param0) {
+    final static void a(ji param0, int param1, int param2) {
         uc var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -168,7 +166,7 @@ final class nc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;

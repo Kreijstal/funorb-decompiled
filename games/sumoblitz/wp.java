@@ -220,7 +220,7 @@ class wp extends pk {
         ((wp) this).field_x = true;
     }
 
-    final static f a(fr param0, int param1, int param2, byte[] param3) {
+    final static f a(fr param0, int param1, int param2, byte[] param3, boolean param4, int param5, int param6, int param7) {
         RuntimeException var8 = null;
         f stackIn_5_0 = null;
         f stackIn_8_0 = null;

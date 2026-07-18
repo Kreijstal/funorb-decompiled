@@ -4,11 +4,11 @@
 final class re extends dr {
     static String field_E;
 
-    final static boolean a() {
-        return (hf.field_a & 1) != 0;
+    final static boolean a(int param0, byte param1) {
+        return (hf.field_a & 1) != 0 ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wk[] param4) {
+    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int param5) {
         try {
             param4[0].f(param1, param0, 128);
             param4[1].d(param4[1].field_y + param1, param0, -(param4[2].field_y << 1) + param3, param4[2].field_v, 128);
@@ -43,8 +43,7 @@ final class re extends dr {
         try {
           L0: {
             if (param0 == -24872) {
-              int discarded$2 = -62;
-              stackOut_3_0 = new nd((Object) (Object) vv.a());
+              stackOut_3_0 = new nd((Object) (Object) vv.a((byte) -62));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -86,7 +85,7 @@ final class re extends dr {
         return stackIn_4_0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_E = null;
     }
 

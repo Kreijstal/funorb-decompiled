@@ -262,7 +262,7 @@ final class kc extends RuntimeException {
         return stackIn_12_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_e = null;
         field_d = null;

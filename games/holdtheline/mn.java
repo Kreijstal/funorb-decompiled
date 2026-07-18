@@ -6,7 +6,7 @@ final class mn {
     static hj field_c;
     static int field_b;
 
-    final static void a(String param0, java.applet.Applet param1) {
+    final static void a(String param0, java.applet.Applet param1, int param2) {
         try {
             String var3 = null;
             String var4 = null;
@@ -20,8 +20,7 @@ final class mn {
                     var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                 }
                 eo.a(param1, -31645, "document.cookie=\"" + var5 + "\"");
-                int discarded$0 = 49;
-                bb.a(param1);
+                bb.a(param1, (byte) 49);
             } catch (RuntimeException runtimeException) {
                 throw kk.a((Throwable) (Object) runtimeException, "mn.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + -1 + ')');
             }
@@ -32,7 +31,7 @@ final class mn {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
     }
 

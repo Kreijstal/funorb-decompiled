@@ -82,8 +82,7 @@ final class gva implements mb {
                 var5 = param2.c(true);
                 var6 = param2.i(0);
                 var7 = param2.e(true);
-                int discarded$1 = 35;
-                cr.a(var4_array, var7, var5, var6);
+                cr.a(var4_array, var7, var5, var6, (byte) 35);
                 var8 = var4_array[0];
                 var9 = var4_array[1];
                 var10 = var4_array[2];
@@ -485,8 +484,7 @@ final class gva implements mb {
             var6 = param2.b(52);
             var8 = -126 % ((param1 - -50) / 56);
             var7 = param2.b(false);
-            int discarded$3 = 1;
-            oq.a(-(var6 / 2) + var4_int, var5 + -(var7 / 2), 0, 64, var6 / 2 + var4_int, 8965375, var7 / 2 + var5);
+            oq.a(-(var6 / 2) + var4_int, var5 + -(var7 / 2), 0, 64, var6 / 2 + var4_int, 8965375, var7 / 2 + var5, true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -622,8 +620,7 @@ final class gva implements mb {
                 var5 = param2.b((byte) 57);
                 var6 = param2.c((byte) 93);
                 var7 = param2.e((byte) -98);
-                int discarded$1 = 35;
-                cr.a(var4_array, var7, var5, var6);
+                cr.a(var4_array, var7, var5, var6, (byte) 35);
                 var8 = var4_array[0];
                 var9 = var4_array[1];
                 if (var8 != -1) {
@@ -1089,9 +1086,9 @@ final class gva implements mb {
                       }
                     }
                     L21: {
-                      var14 = this.a(-1 + param5, var7_int, param4, -1 + param3, -94) ? 1 : 0;
+                      var14 = this.a(-1 + param5, var7_int, param4, -1 + param3, param0 + -17861) ? 1 : 0;
                       var15 = this.a(1 + param5, var7_int, param4, param3 + -1, 116) ? 1 : 0;
-                      var16 = this.a(1 + param5, var7_int, param4, 1 + param3, 92) ? 1 : 0;
+                      var16 = this.a(1 + param5, var7_int, param4, 1 + param3, param0 ^ 17723) ? 1 : 0;
                       var17 = this.a(-1 + param5, var7_int, param4, 1 + param3, 87) ? 1 : 0;
                       var18 = 2;
                       if (var14 != 0) {
@@ -1154,15 +1151,23 @@ final class gva implements mb {
               param2.g(-23801);
               break L1;
             }
-            param2.g((byte) -94);
+            L25: {
+              param2.g((byte) -94);
+              if (param0 == 17767) {
+                break L25;
+              } else {
+                ((gva) this).a((iq) null, -59, (lk) null);
+                break L25;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L25: {
+          L26: {
             var7 = decompiledCaughtException;
             stackOut_117_0 = (RuntimeException) var7;
-            stackOut_117_1 = new StringBuilder().append("gva.H(").append(17767).append(',');
+            stackOut_117_1 = new StringBuilder().append("gva.H(").append(param0).append(',');
             stackIn_120_0 = stackOut_117_0;
             stackIn_120_1 = stackOut_117_1;
             stackIn_118_0 = stackOut_117_0;
@@ -1174,7 +1179,7 @@ final class gva implements mb {
               stackIn_121_0 = stackOut_120_0;
               stackIn_121_1 = stackOut_120_1;
               stackIn_121_2 = stackOut_120_2;
-              break L25;
+              break L26;
             } else {
               stackOut_118_0 = (RuntimeException) (Object) stackIn_118_0;
               stackOut_118_1 = (StringBuilder) (Object) stackIn_118_1;
@@ -1182,10 +1187,10 @@ final class gva implements mb {
               stackIn_121_0 = stackOut_118_0;
               stackIn_121_1 = stackOut_118_1;
               stackIn_121_2 = stackOut_118_2;
-              break L25;
+              break L26;
             }
           }
-          L26: {
+          L27: {
             stackOut_121_0 = (RuntimeException) (Object) stackIn_121_0;
             stackOut_121_1 = ((StringBuilder) (Object) stackIn_121_1).append(stackIn_121_2).append(',');
             stackIn_124_0 = stackOut_121_0;
@@ -1199,7 +1204,7 @@ final class gva implements mb {
               stackIn_125_0 = stackOut_124_0;
               stackIn_125_1 = stackOut_124_1;
               stackIn_125_2 = stackOut_124_2;
-              break L26;
+              break L27;
             } else {
               stackOut_122_0 = (RuntimeException) (Object) stackIn_122_0;
               stackOut_122_1 = (StringBuilder) (Object) stackIn_122_1;
@@ -1207,10 +1212,10 @@ final class gva implements mb {
               stackIn_125_0 = stackOut_122_0;
               stackIn_125_1 = stackOut_122_1;
               stackIn_125_2 = stackOut_122_2;
-              break L26;
+              break L27;
             }
           }
-          L27: {
+          L28: {
             stackOut_125_0 = (RuntimeException) (Object) stackIn_125_0;
             stackOut_125_1 = ((StringBuilder) (Object) stackIn_125_1).append(stackIn_125_2).append(',').append(param3).append(',');
             stackIn_128_0 = stackOut_125_0;
@@ -1224,7 +1229,7 @@ final class gva implements mb {
               stackIn_129_0 = stackOut_128_0;
               stackIn_129_1 = stackOut_128_1;
               stackIn_129_2 = stackOut_128_2;
-              break L27;
+              break L28;
             } else {
               stackOut_126_0 = (RuntimeException) (Object) stackIn_126_0;
               stackOut_126_1 = (StringBuilder) (Object) stackIn_126_1;
@@ -1232,7 +1237,7 @@ final class gva implements mb {
               stackIn_129_0 = stackOut_126_0;
               stackIn_129_1 = stackOut_126_1;
               stackIn_129_2 = stackOut_126_2;
-              break L27;
+              break L28;
             }
           }
           throw tba.a((Throwable) (Object) stackIn_129_0, stackIn_129_2 + ',' + param5 + ')');
@@ -1546,35 +1551,38 @@ final class gva implements mb {
         String stackOut_12_2 = null;
         try {
           L0: {
-            L1: {
-              var4_int = param2.c(-71);
-              var5 = ((gva) this).field_a;
-              int discarded$2 = 35;
-              cr.a(var5, param2.e(true), param2.c(true), param2.i(0));
-              var6 = var5[0];
-              var7 = var5[1];
-              var8 = (float)param2.e(0) / (float)param2.b(true);
-              var9 = (int)(255.0f - 255.0f * var8);
-              if (era.field_g != null) {
-                var10 = param2.a(false);
-                var11 = var4_int >> 16;
-                var12 = 8 + era.field_g.c(var10, var11);
-                var13 = 8 + era.field_g.a(var10, var11, 0);
-                rba.a(var9 / 2, var13, 0, var12, (byte) 114, var7 - var13 / 2, var6 + -(var12 / 2));
-                int discarded$3 = dh.a(kn.field_p, var9, 1, 0, var6 + -(var11 / 2), var11, param2.d(115), -(var11 / 2) + var7, 0, 29870, 1, var11, var10);
-                break L1;
-              } else {
-                break L1;
+            if (param0 == -14066) {
+              L1: {
+                var4_int = param2.c(-71);
+                var5 = ((gva) this).field_a;
+                cr.a(var5, param2.e(true), param2.c(true), param2.i(0), (byte) 35);
+                var6 = var5[0];
+                var7 = var5[1];
+                var8 = (float)param2.e(param0 + 14066) / (float)param2.b(true);
+                var9 = (int)(255.0f - 255.0f * var8);
+                if (era.field_g != null) {
+                  var10 = param2.a(false);
+                  var11 = var4_int >> 16;
+                  var12 = 8 + era.field_g.c(var10, var11);
+                  var13 = 8 + era.field_g.a(var10, var11, 0);
+                  rba.a(var9 / 2, var13, 0, var12, (byte) 114, var7 - var13 / 2, var6 + -(var12 / 2));
+                  int discarded$1 = dh.a(kn.field_p, var9, 1, 0, var6 + -(var11 / 2), var11, param2.d(115), -(var11 / 2) + var7, 0, 29870, 1, var11, var10);
+                  break L1;
+                } else {
+                  break L1;
+                }
               }
+              break L0;
+            } else {
+              return;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("gva.C(").append(-14066).append(',');
+            stackOut_7_1 = new StringBuilder().append("gva.C(").append(param0).append(',');
             stackIn_10_0 = stackOut_7_0;
             stackIn_10_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -1686,8 +1694,7 @@ final class gva implements mb {
                 if (var5 != 0) {
                   break L3;
                 } else {
-                  int discarded$2 = 1;
-                  oq.a(-(var4_int / 2) + var6, var7 - var4_int / 2, 0, 128, var4_int / 2 + var6, 14544639, var7 - -(var4_int / 2));
+                  oq.a(-(var4_int / 2) + var6, var7 - var4_int / 2, 0, 128, var4_int / 2 + var6, 14544639, var7 - -(var4_int / 2), true);
                   if (!TombRacer.field_G) {
                     break L2;
                   } else {
@@ -1696,8 +1703,7 @@ final class gva implements mb {
                 }
               }
               if (var5 == 1) {
-                int discarded$3 = 1;
-                oq.a(-(var4_int / 2) + var6, -(var4_int / 2) + var7, 0, 192, var6 + var4_int / 2, 5623039, var4_int / 2 + var7);
+                oq.a(-(var4_int / 2) + var6, -(var4_int / 2) + var7, 0, 192, var6 + var4_int / 2, 5623039, var4_int / 2 + var7, true);
                 break L2;
               } else {
                 break L2;
@@ -1763,8 +1769,8 @@ final class gva implements mb {
     }
 
     private final void a(la param0, int param1, int param2, int param3, int param4, int param5) {
+        RuntimeException runtimeException = null;
         tqa var7 = null;
-        RuntimeException var7_ref = null;
         int var8 = 0;
         int var9 = 0;
         pca var10 = null;
@@ -1793,70 +1799,74 @@ final class gva implements mb {
         try {
           L0: {
             var7 = param0.f((byte) 93);
-            var8 = 0;
-            L1: while (true) {
-              stackOut_4_0 = ~param1;
-              stackIn_5_0 = stackOut_4_0;
-              L2: while (true) {
-                L3: {
-                  L4: {
-                    if (stackIn_5_0 > ~var8) {
-                      break L4;
-                    } else {
-                      if (var11 != 0) {
-                        break L3;
+            if (param3 == 2048) {
+              var8 = param4;
+              L1: while (true) {
+                stackOut_4_0 = ~param1;
+                stackIn_5_0 = stackOut_4_0;
+                L2: while (true) {
+                  L3: {
+                    L4: {
+                      if (stackIn_5_0 > ~var8) {
+                        break L4;
                       } else {
-                        var9 = 0;
-                        L5: while (true) {
-                          L6: {
-                            if (param5 < var9) {
-                              break L6;
-                            } else {
-                              var10 = var7.a(104, var8, var9);
-                              stackOut_9_0 = var10.b((byte) -100) instanceof mba;
-                              stackIn_5_0 = stackOut_9_0 ? 1 : 0;
-                              stackIn_10_0 = stackOut_9_0;
-                              if (var11 != 0) {
-                                continue L2;
+                        if (var11 != 0) {
+                          break L3;
+                        } else {
+                          var9 = param2;
+                          L5: while (true) {
+                            L6: {
+                              if (param5 < var9) {
+                                break L6;
                               } else {
-                                L7: {
-                                  if (!stackIn_10_0) {
-                                    break L7;
-                                  } else {
-                                    this.a(17767, var10, (mba) (Object) var10.b((byte) -128), var9, var7, var8);
-                                    break L7;
-                                  }
-                                }
-                                var9++;
-                                if (var11 == 0) {
-                                  continue L5;
+                                var10 = var7.a(104, var8, var9);
+                                stackOut_9_0 = var10.b((byte) -100) instanceof mba;
+                                stackIn_5_0 = stackOut_9_0 ? 1 : 0;
+                                stackIn_10_0 = stackOut_9_0;
+                                if (var11 != 0) {
+                                  continue L2;
                                 } else {
-                                  break L6;
+                                  L7: {
+                                    if (!stackIn_10_0) {
+                                      break L7;
+                                    } else {
+                                      this.a(17767, var10, (mba) (Object) var10.b((byte) -128), var9, var7, var8);
+                                      break L7;
+                                    }
+                                  }
+                                  var9++;
+                                  if (var11 == 0) {
+                                    continue L5;
+                                  } else {
+                                    break L6;
+                                  }
                                 }
                               }
                             }
-                          }
-                          var8++;
-                          if (var11 == 0) {
-                            continue L1;
-                          } else {
-                            break L4;
+                            var8++;
+                            if (var11 == 0) {
+                              continue L1;
+                            } else {
+                              break L4;
+                            }
                           }
                         }
                       }
                     }
+                    break L3;
                   }
-                  break L3;
+                  break L0;
                 }
-                break L0;
               }
+            } else {
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
-            var7_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var7_ref;
+            runtimeException = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) runtimeException;
             stackOut_16_1 = new StringBuilder().append("gva.B(");
             stackIn_19_0 = stackOut_16_0;
             stackIn_19_1 = stackOut_16_1;
@@ -1880,7 +1890,7 @@ final class gva implements mb {
               break L8;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ',' + 0 + ',' + 2048 + ',' + 0 + ',' + param5 + ')');
+          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -25,7 +25,7 @@ final class tg {
     static String field_h;
     int field_n;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_j = null;
         field_l = null;
@@ -159,8 +159,7 @@ final class tg {
         String stackOut_12_2 = null;
         try {
           L0: {
-            int discarded$9 = 500;
-            if (cf.a(param1, param4, param0, param2)) {
+            if (cf.a(param1, param4, param0, param2, 500)) {
               L1: {
                 if (param2 == 1) {
                   param2 = 0;

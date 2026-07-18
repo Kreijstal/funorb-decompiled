@@ -141,9 +141,7 @@ final class fk extends bca {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    int discarded$8 = 0;
-                    int discarded$9 = 6;
-                    qna.b();
+                    qna.b(6, 0);
                     var2 = us.field_e.c(0);
                     continue L2;
                   }
@@ -175,7 +173,7 @@ final class fk extends bca {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         int var1 = 52;
         field_t = null;
         field_s = null;

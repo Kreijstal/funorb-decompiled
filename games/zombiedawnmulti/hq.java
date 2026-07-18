@@ -189,7 +189,7 @@ class hq implements nl, rk {
         }
     }
 
-    private final void c(cf param0) {
+    private final void c(cf param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -585,8 +585,7 @@ class hq implements nl, rk {
                   var13 = var11;
                   L3: while (true) {
                     if (var12 < var13) {
-                      int discarded$1 = 1;
-                      ql.a();
+                      ql.a(true);
                       break L1;
                     } else {
                       L4: {
@@ -897,8 +896,7 @@ class hq implements nl, rk {
                 var12 = stackIn_6_0 - -Math.min(stackIn_6_1, Math.min(stackIn_6_2, stackIn_6_3));
                 nm.a(param2 + param0.field_y, param0.field_w + param4 - -param0.field_i, (byte) 105, param0.field_n + (param2 + param0.field_y), param0.field_i + param4);
                 ra.field_o.a(var12, var10, var11, ((hq) this).field_h, (byte) 100, var10);
-                int discarded$1 = 1;
-                ql.a();
+                ql.a(true);
                 break L2;
               }
             }
@@ -1191,7 +1189,7 @@ class hq implements nl, rk {
             L2: {
               var10 = this.a(-95, param5);
               if (((hq) this).field_l) {
-                int discarded$2 = ((hq) this).field_j.a(((hq) this).d(param5, -9327), this.a(param6, param5, 15921, param7), this.a(param4, param2, 105, param5), var9_int, var10, param1, param0, ((hq) this).field_d, ((hq) this).field_a, ((hq) this).field_f);
+                int discarded$1 = ((hq) this).field_j.a(((hq) this).d(param5, -9327), this.a(param6, param5, 15921, param7), this.a(param4, param2, 105, param5), var9_int, var10, param1, param0, ((hq) this).field_d, ((hq) this).field_a, ((hq) this).field_f);
                 break L2;
               } else {
                 L3: {
@@ -1246,8 +1244,7 @@ class hq implements nl, rk {
                 break L2;
               }
             }
-            int discarded$3 = 1;
-            ql.a();
+            ql.a(true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1382,8 +1379,7 @@ class hq implements nl, rk {
             }
             L2: {
               if (!((hq) this).field_l) {
-                int discarded$2 = -126;
-                this.c(param0);
+                this.c(param0, -126);
                 break L2;
               } else {
                 ((sp) (Object) param0.field_k).a(((hq) this).d(param0, -9327), ((hq) this).field_d, this.a(-117, param0), ((hq) this).field_f, (byte) -30, ((hq) this).field_a, ((hq) this).a(param0, true), ((hq) this).field_j);

@@ -21,14 +21,13 @@ final class mk extends vd implements nk, qk, kn {
     mc field_J;
 
     private final boolean k(int param0) {
-        int discarded$0 = 1;
-        if (!(this.c())) {
+        if (!(this.c(true))) {
             return false;
         }
         int var2 = -1;
         try {
             if (param0 != -12037) {
-                boolean discarded$1 = this.k(105);
+                boolean discarded$0 = this.k(105);
             }
             var2 = Integer.parseInt(((mk) this).field_F.field_n);
         } catch (NumberFormatException numberFormatException) {
@@ -60,14 +59,13 @@ final class mk extends vd implements nk, qk, kn {
             var6_int = -37 / ((-63 - param4) / 52);
             if (param3 != ((mk) this).field_R) {
               if (((mk) this).field_S == param3) {
-                boolean discarded$4 = this.k(-12037);
+                boolean discarded$2 = this.k(-12037);
                 break L0;
               } else {
                 return;
               }
             } else {
-              int discarded$5 = -126;
-              mn.a();
+              mn.a((byte) -126);
               return;
             }
           }
@@ -252,11 +250,11 @@ final class mk extends vd implements nk, qk, kn {
         return stackIn_3_0;
     }
 
-    private final String j() {
+    private final String j(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final String b() {
+    private final String b(boolean param0) {
         return "</col></u>";
     }
 
@@ -545,7 +543,7 @@ final class mk extends vd implements nk, qk, kn {
         return stackIn_4_0;
     }
 
-    private final boolean c() {
+    private final boolean c(boolean param0) {
         if (this.a((byte) -118, (sk) (Object) ((mk) this).field_P)) {
           if (this.a((byte) -114, (sk) (Object) ((mk) this).field_M)) {
             if (this.a((byte) -96, (sk) (Object) ((mk) this).field_N)) {
@@ -610,19 +608,14 @@ final class mk extends vd implements nk, qk, kn {
         km dupTemp$1 = new km(10000536);
         ((mk) this).field_U.field_h = (nn) (Object) dupTemp$1;
         ((mk) this).field_E.field_h = (nn) (Object) dupTemp$1;
-        int discarded$2 = 0;
-        int discarded$3 = 1;
         String var2 = vg.a(new String[2], 26, bj.field_e);
         int var3 = 20;
-        int discarded$4 = 170;
-        var3 = var3 + this.a(ic.field_o, (ag) (Object) ((mk) this).field_M, -99, var3);
+        var3 = var3 + this.a(ic.field_o, (ag) (Object) ((mk) this).field_M, -99, var3, 170);
         var3 = var3 + (5 + this.a(170, var3, 3, "", wj.field_K, 20, (ag) (Object) ((mk) this).field_N));
-        int discarded$5 = 170;
-        var3 = var3 + this.a(qh.field_x, (ag) (Object) ((mk) this).field_E, -124, var3);
+        var3 = var3 + this.a(qh.field_x, (ag) (Object) ((mk) this).field_E, -124, var3, 170);
         var3 = var3 + (5 + this.a(he.field_w, 170, var3, (ag) (Object) ((mk) this).field_U, 20, um.field_h));
         var3 = var3 + (this.a(vg.field_f, 170, var3, (ag) (Object) ((mk) this).field_P, 20, ua.field_a) + 5);
-        int discarded$6 = 170;
-        var3 = var3 + this.a((ag) (Object) ((mk) this).field_F, 120, gg.field_E, var3);
+        var3 = var3 + this.a((ag) (Object) ((mk) this).field_F, 120, gg.field_E, var3, 170);
         nh var4 = new nh(46, var3, ((mk) this).field_s + -90, 25, (ag) (Object) ((mk) this).field_G, true, ((mk) this).field_s + -120, 5, jn.field_G, 11579568, hm.field_o);
         ((mk) this).a(51448, (ag) (Object) var4);
         var3 = var3 + var4.field_x;
@@ -750,8 +743,7 @@ final class mk extends vd implements nk, qk, kn {
     final void a(ag param0, int param1, int param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 1;
-            ((mk) this).field_S.field_D = this.c();
+            ((mk) this).field_S.field_D = this.c(true);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "mk.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -903,7 +895,7 @@ final class mk extends vd implements nk, qk, kn {
         return stackIn_3_0;
     }
 
-    private final int a(ag param0, int param1, String param2, int param3) {
+    private final int a(ag param0, int param1, String param2, int param3, int param4) {
         nh var6 = null;
         RuntimeException var6_ref = null;
         wj var7 = null;
@@ -1155,7 +1147,7 @@ final class mk extends vd implements nk, qk, kn {
         return stackIn_1_0;
     }
 
-    private final int a(String param0, ag param1, int param2, int param3) {
+    private final int a(String param0, ag param1, int param2, int param3, int param4) {
         nh var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;

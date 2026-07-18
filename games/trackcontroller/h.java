@@ -851,7 +851,7 @@ abstract class h {
                 if (param3.indexOf("<br>") != -1) {
                   break L1;
                 } else {
-                  param4[0] = (String) (Object) param4;
+                  param4[0] = param3;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;

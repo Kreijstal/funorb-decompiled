@@ -25,7 +25,7 @@ abstract class ra extends kna {
 
     abstract boolean C(int param0);
 
-    public static void B() {
+    public static void B(int param0) {
         field_G = null;
         field_F = null;
         int var1 = 0;
@@ -327,7 +327,7 @@ abstract class ra extends kna {
         }
     }
 
-    final static String r() {
+    final static String r(byte param0) {
         if (!(fna.field_k != null)) {
             return "";
         }

@@ -11,7 +11,7 @@ final class sg extends l {
     static int field_n;
     static float field_i;
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = Virogrid.field_F ? 1 : 0;
@@ -44,7 +44,7 @@ final class sg extends l {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         field_m = null;
         field_g = null;

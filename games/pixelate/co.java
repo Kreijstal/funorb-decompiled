@@ -49,7 +49,7 @@ final class co {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -465,8 +465,7 @@ final class co {
         ((co) this).field_l = wp.field_c;
         ((co) this).field_s.a(((co) this).field_q, 126, ((co) this).field_x);
         wl.field_i = param0 ? true : false;
-        int discarded$0 = 0;
-        mk var2 = wo.a(mc.field_k, 150, ((co) this).field_x, 0, ((co) this).field_q);
+        mk var2 = wo.a(mc.field_k, 150, ((co) this).field_x, 0, ((co) this).field_q, 0);
         if (!(var2 != null)) {
             ((co) this).b(89);
         }
@@ -500,16 +499,15 @@ final class co {
             }
           }
           if (((co) this).field_c) {
-            int fieldTemp$2 = ((co) this).field_m - 1;
+            int fieldTemp$1 = ((co) this).field_m - 1;
             ((co) this).field_m = ((co) this).field_m - 1;
-            if (fieldTemp$2 <= 0) {
+            if (fieldTemp$1 <= 0) {
               ((co) this).field_m = ((co) this).field_o;
               if (ri.field_h < ((co) this).field_j) {
                 ((co) this).field_c = false;
                 return;
               } else {
-                int discarded$3 = -117;
-                this.a();
+                this.a(-117);
                 var2 = -110 / ((-61 - param0) / 38);
                 return;
               }

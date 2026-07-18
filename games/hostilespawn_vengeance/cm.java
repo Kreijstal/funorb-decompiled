@@ -15,7 +15,7 @@ final class cm {
         return var4;
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -31,8 +31,7 @@ final class cm {
                   if (ca.field_a <= 0) {
                     break L2;
                   } else {
-                    int discarded$2 = 0;
-                    if (wa.b()) {
+                    if (wa.b(0)) {
                       break L2;
                     } else {
                       break L1;
@@ -64,7 +63,7 @@ final class cm {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
     }

@@ -133,7 +133,7 @@ final class si implements pf {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_q = null;
         field_n = null;
         field_p = null;
@@ -162,11 +162,10 @@ final class si implements pf {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         mk.field_O.a(-8456);
         if (!jl.field_c.e(-3145)) {
-            int discarded$0 = 1;
-            return to.d();
+            return to.d(true);
         }
         return 0;
     }

@@ -30,7 +30,7 @@ final class ac implements gd {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_e = null;
         field_b = null;

@@ -538,7 +538,7 @@ final class hm {
         field_b = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -679,8 +679,7 @@ final class hm {
                     }
                   }
                 } else {
-                  int discarded$1 = 0;
-                  bl.a((Throwable) null, (byte) 65, "A1: " + em.b());
+                  bl.a((Throwable) null, (byte) 65, "A1: " + em.b(false));
                   r.a(-28036);
                   break L1;
                 }

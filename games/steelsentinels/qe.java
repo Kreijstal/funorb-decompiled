@@ -10,7 +10,7 @@ final class qe {
     static wk field_g;
     static String field_b;
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) wc.field_i);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) wc.field_i);
@@ -20,7 +20,7 @@ final class qe {
         }
     }
 
-    final static void a(ak param0) {
+    final static void a(ak param0, int param1, int param2, int param3) {
         try {
             tk.field_p = param0;
             on.field_n = 8;
@@ -30,7 +30,7 @@ final class qe {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_d = null;
         field_g = null;
@@ -277,7 +277,7 @@ final class qe {
         return stackIn_39_0;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         if (param1 < 2) {
             if (param0 >= 5) {
                 return 1;

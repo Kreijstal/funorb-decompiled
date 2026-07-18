@@ -83,13 +83,13 @@ final class ue extends fa {
         return ka.field_W != null ? true : false;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
         field_t = null;
         field_q = null;
     }
 
-    final static void b() {
+    final static void b(int param0, byte param1) {
         fa var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

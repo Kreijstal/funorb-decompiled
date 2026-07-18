@@ -299,8 +299,7 @@ abstract class rb implements n {
           L0: {
             if (param0 != 0) {
               var3 = new ne();
-              int discarded$2 = -24721;
-              no.a(param2, (uo) (Object) var3, param0);
+              no.a(param2, (uo) (Object) var3, param0, -24721);
               var3.j(-78);
               var4 = 72;
               stackOut_3_0 = (ne) var3;
@@ -345,7 +344,7 @@ abstract class rb implements n {
         return stackIn_4_0;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -435,8 +434,7 @@ abstract class rb implements n {
                         L5: while (true) {
                           if (var18 >= 3) {
                             ou.a(var17, true, true, false, false, pd.field_a, mn.field_t);
-                            int discarded$1 = 120;
-                            fp.a(var13, var17, var9, var8, var12, var7, var14);
+                            fp.a(var13, var17, var9, var8, var12, var7, var14, (byte) 120);
                             var15++;
                             continue L3;
                           } else {
@@ -693,7 +691,7 @@ abstract class rb implements n {
         }
     }
 
-    final static boolean a(int param0, int[] param1) {
+    final static boolean a(int param0, int[] param1, int param2) {
         return (param1[param0 >> 5] & 1 << (param0 & 31)) != 0;
     }
 
@@ -710,7 +708,7 @@ abstract class rb implements n {
         return ((rb) this).b((byte) -71);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_b = null;
         field_c = null;
     }

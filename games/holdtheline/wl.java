@@ -173,7 +173,7 @@ final class wl {
         return stackIn_30_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
         field_b = null;

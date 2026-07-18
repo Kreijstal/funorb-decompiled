@@ -523,14 +523,14 @@ final class ub extends ie {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void o() {
+    public static void o(int param0) {
         field_xb = null;
         field_ub = null;
         field_tb = null;
         field_vb = null;
     }
 
-    final static void n() {
+    final static void n(int param0) {
         if (ee.field_b) {
             fh.b(31706);
         }
@@ -538,8 +538,7 @@ final class ub extends ie {
 
     final static void m(int param0) {
         int var1 = -122 / ((param0 - -60) / 48);
-        int discarded$0 = -128;
-        rl.b();
+        rl.b((byte) -128);
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int[] param4, int param5, int param6, int param7, int param8, int param9) {

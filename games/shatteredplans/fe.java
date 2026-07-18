@@ -19,7 +19,7 @@ final class fe extends vd {
     static qr field_w;
     static int field_J;
 
-    public static void g() {
+    public static void g(int param0) {
         field_w = null;
         field_v = null;
         field_C = null;
@@ -47,7 +47,7 @@ final class fe extends vd {
         }
     }
 
-    final static void f() {
+    final static void f(int param0) {
         mg.field_C = false;
         el.field_b = false;
         qj.a((byte) -127, -1);
@@ -65,7 +65,7 @@ final class fe extends vd {
         }
     }
 
-    final static void a(boolean param0, byte[] param1, byte[] param2, int param3, int[] param4, String[] param5, int param6, bc param7, bc param8, String[][] param9, bc param10, bi[][] param11, String[] param12, bi[][] param13, String[][] param14, nk[] param15, int param16, int[] param17, String[] param18) {
+    final static void a(boolean param0, byte[] param1, byte[] param2, int param3, int[] param4, String[] param5, int param6, bc param7, bc param8, String[][] param9, bc param10, bi[][] param11, String[] param12, bi[][] param13, String[][] param14, nk[] param15, int param16, int[] param17, String[] param18, int param19) {
         RuntimeException var20 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -300,10 +300,8 @@ final class fe extends vd {
             tb.a(param6, param4, param9, param14, param8, param18, param12, param11, 1, param13, param3, param5, param1, -7966, param2);
             ak.a(param7, (byte) -81, param0, param8);
             ir.l(1062);
-            int discarded$2 = -83;
-            in.a();
-            int discarded$3 = 1;
-            te.a();
+            in.a((byte) -83);
+            te.a(true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

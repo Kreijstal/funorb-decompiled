@@ -402,7 +402,7 @@ abstract class in {
         return ((in) this).a((byte) -125, param0);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         int var1 = 0;
         field_d = null;

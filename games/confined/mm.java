@@ -588,7 +588,7 @@ final class mm extends ah {
         }
     }
 
-    final static void a(int param0, int param1, nf[] param2, nf[] param3, nf[] param4, int param5, byte param6, int param7, int param8, int param9, int param10, int param11, ok param12, int param13, ok param14) {
+    final static void a(int param0, int param1, nf[] param2, nf[] param3, nf[] param4, int param5, byte param6, int param7, int param8, int param9, int param10, int param11, ok param12, int param13, ok param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         int var21_int = 0;
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
@@ -669,10 +669,7 @@ final class mm extends ah {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$3 = 20;
-            int discarded$4 = 16777215;
-            int discarded$5 = 240;
-            ai.a(param12, new ji(param3), 16, 30, 4243584, 20, 9805732, 480, new ji(param2), 16, 50, 20, -78, new ji(param4), 0, 320, 5, param14);
+            ai.a(param12, new ji(param3), 16, 30, 4243584, 20, 9805732, 480, new ji(param2), 16, 50, 20, -78, new ji(param4), 0, 320, 5, param14, 240, 16777215, 20);
             var21_int = 0;
             break L0;
           }

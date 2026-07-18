@@ -13,7 +13,7 @@ final class jm extends ae {
     private int field_q;
     static String field_p;
 
-    final static void d() {
+    final static void d(byte param0) {
         oo.i(4, 4, 0, 0, oo.field_b, oo.field_l);
     }
 
@@ -81,7 +81,7 @@ final class jm extends ae {
         ((jm) this).field_j = param5;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int stackIn_9_0 = 0;
         int stackOut_8_0 = 0;

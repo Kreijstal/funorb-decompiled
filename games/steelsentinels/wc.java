@@ -422,7 +422,7 @@ final class wc implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a(mg param0) {
+    final static void a(mg param0, int param1) {
         try {
             qf.field_c.a((gh) (Object) param0, 126);
         } catch (RuntimeException runtimeException) {
@@ -612,7 +612,7 @@ final class wc implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         hh.field_a = null;
         vc.field_f = null;
         te.field_f = null;

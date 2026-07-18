@@ -350,7 +350,7 @@ final class hl extends hfa {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_H = null;
         field_E = null;
         field_C = null;

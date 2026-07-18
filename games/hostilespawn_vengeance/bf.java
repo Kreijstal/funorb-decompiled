@@ -50,14 +50,13 @@ final class bf {
               } else {
                 L2: while (true) {
                   if (((bf) this).field_e >= 64) {
-                    int discarded$4 = -1;
-                    this.b();
+                    this.b((byte) -1);
                     ((bf) this).field_e = 0;
                     break L1;
                   } else {
-                    int fieldTemp$5 = ((bf) this).field_e;
+                    int fieldTemp$2 = ((bf) this).field_e;
                     ((bf) this).field_e = ((bf) this).field_e + 1;
-                    ((bf) this).field_i[fieldTemp$5] = (byte) 0;
+                    ((bf) this).field_i[fieldTemp$2] = (byte) 0;
                     continue L2;
                   }
                 }
@@ -66,8 +65,7 @@ final class bf {
             L3: while (true) {
               if (((bf) this).field_e >= 32) {
                 kf.a(((bf) this).field_a, 0, ((bf) this).field_i, 32, 32);
-                int discarded$6 = -1;
-                this.b();
+                this.b((byte) -1);
                 if (param2 == -6) {
                   var4_int = 0;
                   var5 = param1;
@@ -93,9 +91,9 @@ final class bf {
                   return;
                 }
               } else {
-                int fieldTemp$7 = ((bf) this).field_e;
+                int fieldTemp$3 = ((bf) this).field_e;
                 ((bf) this).field_e = ((bf) this).field_e + 1;
-                ((bf) this).field_i[fieldTemp$7] = (byte) 0;
+                ((bf) this).field_i[fieldTemp$3] = (byte) 0;
                 continue L3;
               }
             }
@@ -149,7 +147,7 @@ final class bf {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -258,7 +256,7 @@ final class bf {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_f = null;
         field_d = null;
@@ -393,8 +391,7 @@ final class bf {
                             if (512 != ((bf) this).field_b) {
                               break L5;
                             } else {
-                              int discarded$2 = -1;
-                              this.b();
+                              this.b((byte) -1);
                               ((bf) this).field_e = 0;
                               ((bf) this).field_b = 0;
                               break L5;
@@ -420,8 +417,7 @@ final class bf {
                               if (((bf) this).field_b != 512) {
                                 break L7;
                               } else {
-                                int discarded$3 = -1;
-                                this.b();
+                                this.b((byte) -1);
                                 ((bf) this).field_e = 0;
                                 ((bf) this).field_b = 0;
                                 break L7;

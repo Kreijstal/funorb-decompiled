@@ -16,7 +16,7 @@ final class nh {
     static String field_m;
     byte[] field_g;
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -162,7 +162,7 @@ final class nh {
         }
     }
 
-    final static gd a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static gd a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         gd var8 = new gd(param4, param2, param3, param1, param0, param5);
         int var9 = 0;
         rh.field_r.a((wf) (Object) var8, -107);
@@ -170,7 +170,7 @@ final class nh {
         return var8;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_j = null;
         field_h = null;
@@ -178,7 +178,7 @@ final class nh {
         int var1 = 0;
     }
 
-    final static rj b() {
+    final static rj b(int param0) {
         try {
             Throwable var1 = null;
             rj stackIn_1_0 = null;

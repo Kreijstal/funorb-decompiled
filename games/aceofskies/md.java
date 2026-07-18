@@ -997,7 +997,7 @@ final class md extends o {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_s = null;
     }
 

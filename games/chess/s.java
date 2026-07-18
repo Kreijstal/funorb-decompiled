@@ -19,7 +19,7 @@ final class s extends ma implements wl, mj {
         ((uh) (Object) ((s) this).field_L.a(-82)).h(-85);
     }
 
-    private final boolean i() {
+    private final boolean i(int param0) {
         if (this.a((byte) 84, (ee) (Object) ((s) this).field_L)) {
             return true;
         }
@@ -30,7 +30,7 @@ final class s extends ma implements wl, mj {
         return param0 | param1;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_S = null;
         field_M = null;
         field_R = null;
@@ -204,7 +204,7 @@ final class s extends ma implements wl, mj {
         return stackIn_11_0;
     }
 
-    private final int a(String param0, String param1, mf param2) {
+    private final int a(String param0, String param1, mf param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         ea var9 = null;
         kg var10 = null;
@@ -356,8 +356,7 @@ final class s extends ma implements wl, mj {
                 ((s) this).field_L = null;
             }
             super.a(param0, -14, param2, param3);
-            int discarded$0 = 0;
-            ((s) this).field_N.field_H = this.i();
+            ((s) this).field_N.field_H = this.i(0);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "s.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -994,8 +993,7 @@ final class s extends ma implements wl, mj {
                 } else {
                   if (var12.field_Gb.field_L == 0) {
                     if (0 == var12.field_Ub.field_L) {
-                      int discarded$1 = 0;
-                      da.a(var12, ag.field_f, 0, 0, re.field_m, param1);
+                      da.a(var12, ag.field_f, 0, 0, re.field_m, param1, false);
                       break L29;
                     } else {
                       fd.a(11, -109, var12.field_Yb);
@@ -1335,14 +1333,13 @@ final class s extends ma implements wl, mj {
 
     private final void h(int param0) {
         int var2 = 7 % ((param0 - -8) / 57);
-        int discarded$0 = 0;
-        if (!this.i()) {
+        if (!this.i(0)) {
             return;
         }
         sf.a(-122, ((s) this).field_L.field_v);
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -1575,11 +1572,7 @@ final class s extends ma implements wl, mj {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$8 = 3;
-            int discarded$9 = 35;
-            int discarded$10 = 170;
-            int discarded$11 = 70;
-            stackOut_0_0 = this.a(param4, param5, param1);
+            stackOut_0_0 = this.a(param4, param5, param1, 70, 170, 35, 3);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

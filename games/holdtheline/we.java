@@ -33,7 +33,7 @@ final class we extends hl {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         field_p = null;
         field_t = null;
@@ -68,8 +68,7 @@ final class we extends hl {
                 if (param1.equals((Object) (Object) fj.field_o.b((byte) 66))) {
                   break L1;
                 } else {
-                  int discarded$2 = -7079;
-                  fj.field_o = qn.a(param1);
+                  fj.field_o = qn.a(param1, -7079);
                   break L1;
                 }
               }

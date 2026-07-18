@@ -187,7 +187,7 @@ final class ne extends ug {
         return var2.toString();
     }
 
-    final static tg a() {
+    final static tg a(boolean param0) {
         int var4_int = 0;
         int var5 = Bounce.field_N;
         int var1 = ih.field_V[0] * qh.field_i[0];
@@ -197,8 +197,7 @@ final class ne extends ug {
             var3[var4_int] = he.field_k[da.b(255, (int) var2[var4_int])];
         }
         tg var4 = new tg(se.field_C, fk.field_e, cl.field_n[0], ae.field_c[0], ih.field_V[0], qh.field_i[0], var3);
-        int discarded$0 = 122;
-        vb.a();
+        vb.a((byte) 122);
         return var4;
     }
 
@@ -282,7 +281,7 @@ final class ne extends ug {
         }
     }
 
-    final static boolean a(CharSequence param0, boolean param1) {
+    final static boolean a(CharSequence param0, boolean param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -337,8 +336,7 @@ final class ne extends ug {
                     break L1;
                   } else {
                     L2: {
-                      int discarded$25 = 0;
-                      var4 = ce.a(param0);
+                      var4 = ce.a(param0, 0);
                       if (var4 == null) {
                         break L2;
                       } else {
@@ -346,12 +344,10 @@ final class ne extends ug {
                           break L2;
                         } else {
                           L3: {
-                            int discarded$26 = 0;
-                            if (f.a(var4.charAt(0))) {
+                            if (f.a(var4.charAt(0), false)) {
                               break L3;
                             } else {
-                              int discarded$27 = 0;
-                              if (f.a(var4.charAt(-1 + var4.length()))) {
+                              if (f.a(var4.charAt(-1 + var4.length()), false)) {
                                 break L3;
                               } else {
                                 var5 = 0;
@@ -370,8 +366,7 @@ final class ne extends ug {
                                   } else {
                                     L5: {
                                       var7 = param0.charAt(var6);
-                                      int discarded$28 = 0;
-                                      if (f.a((char) var7)) {
+                                      if (f.a((char) var7, false)) {
                                         var5++;
                                         break L5;
                                       } else {
@@ -449,12 +444,11 @@ final class ne extends ug {
         return stackIn_34_0 != 0;
     }
 
-    final static ve f() {
-        int discarded$0 = 112;
-        return new ve(bb.a(-112), ck.g());
+    final static ve f(int param0) {
+        return new ve(bb.a(-112), ck.g((byte) 112));
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_q = null;
         field_v = null;
         field_m = null;

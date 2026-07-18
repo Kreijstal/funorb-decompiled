@@ -32,7 +32,7 @@ final class eb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_g = null;
     }
@@ -166,7 +166,7 @@ final class eb {
         }
     }
 
-    final static int a(int param0) {
+    final static int a(int param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = Geoblox.field_C;

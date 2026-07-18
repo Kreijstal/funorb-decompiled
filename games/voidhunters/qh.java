@@ -126,17 +126,15 @@ final class qh extends iw implements oo {
             var2.field_q = (wwa) (Object) new bob(web.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((qh) this).b(-18756, var2);
             if (fda.e((byte) 90)) {
-                int discarded$0 = 125;
-                ((qh) this).field_K = this.a((sba) this, kg.field_s);
+                ((qh) this).field_K = this.a((sba) this, kg.field_s, 125);
             }
-            int discarded$1 = 125;
-            ((qh) this).field_M = this.a((sba) this, wm.field_b);
+            ((qh) this).field_M = this.a((sba) this, wm.field_b, 125);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "qh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final htb a(sba param0, String param1) {
+    private final htb a(sba param0, String param1, int param2) {
         htb var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -273,8 +271,7 @@ final class qh extends iw implements oo {
                   break L1;
                 }
               } else {
-                int discarded$3 = 0;
-                gnb.a();
+                gnb.a(0);
                 this.m((byte) -10);
                 break L1;
               }

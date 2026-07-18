@@ -11,7 +11,7 @@ final class gm {
     static of field_h;
     static String field_e;
 
-    final static void a(boolean param0, byte param1, oh[] param2, int param3, oh[] param4, int param5, int param6, jb param7, int param8, String param9, boolean param10, int param11, int param12, int param13) {
+    final static void a(boolean param0, byte param1, oh[] param2, int param3, oh[] param4, int param5, int param6, jb param7, int param8, String param9, boolean param10, int param11, int param12, int param13, int param14) {
         RuntimeException var15 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -77,8 +77,7 @@ final class gm {
         try {
           L0: {
             bo.a(240, 320, fl.field_b, 8, -1, param7, ng.field_D, param11, new ve(param2), nm.field_o, uj.field_w, param11, new ve(param4), 8, param7, 2, wa.field_d, param8, param8, bm.field_n);
-            int discarded$2 = -1381732671;
-            je.a(true, param13, param9, param10);
+            je.a(true, param13, param9, param10, -1381732671);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -188,7 +187,7 @@ final class gm {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_h = null;
         field_a = null;

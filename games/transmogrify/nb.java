@@ -103,7 +103,7 @@ final class nb {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$2 = param1.k(16, 1522829539);
+                  int discarded$1 = param1.k(16, 1522829539);
                   var5.field_N = lb.a(var5.field_N, 256, 16, param1);
                   var5.field_H = lb.a(var5.field_H, 256, 16, param1);
                   var5.field_h = lb.a(var5.field_h, 256, 16, param1);
@@ -124,8 +124,7 @@ final class nb {
                 if (!w.a(-1, param1)) {
                   break L4;
                 } else {
-                  int discarded$3 = 16;
-                  var5.field_y = dj.a(-39, param1, var5.field_y);
+                  var5.field_y = dj.a(-39, param1, var5.field_y, 16);
                   var6 = 0;
                   var7 = 0;
                   L5: while (true) {

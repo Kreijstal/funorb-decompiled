@@ -30,7 +30,7 @@ final class ql {
         }
     }
 
-    final static sf a(String param0) {
+    final static sf a(String param0, boolean param1) {
         RuntimeException var2 = null;
         sf stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -99,7 +99,7 @@ final class ql {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         if (oa.field_c == null) {
             return false;
         }
@@ -109,7 +109,7 @@ final class ql {
         return true;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         int var1 = 0;
         field_a = null;
         field_b = null;

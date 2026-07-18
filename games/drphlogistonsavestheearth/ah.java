@@ -46,8 +46,7 @@ final class ah extends pj implements fh, ke {
         if (param0 != 10000536) {
             return;
         }
-        int discarded$0 = 737797090;
-        if (!(this.j())) {
+        if (!(this.j(737797090))) {
             return;
         }
         jk.a(1, ((ah) this).field_M.field_p);
@@ -59,8 +58,7 @@ final class ah extends pj implements fh, ke {
             if (param3 > -127) {
                 field_K = 14;
             }
-            int discarded$0 = 737797090;
-            ((ah) this).field_P.field_E = this.j();
+            ((ah) this).field_P.field_E = this.j(737797090);
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) (Object) runtimeException, "ah.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -366,7 +364,7 @@ final class ah extends pj implements fh, ke {
         }
     }
 
-    private final boolean a(ud param0) {
+    private final boolean a(ud param0, int param1) {
         qi var3 = null;
         RuntimeException var3_ref = null;
         vh var4 = null;
@@ -600,7 +598,7 @@ final class ah extends pj implements fh, ke {
         field_L = null;
     }
 
-    final static void a(vk param0, int param1) {
+    final static void a(vk param0, int param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -890,9 +888,8 @@ final class ah extends pj implements fh, ke {
         return stackIn_3_0;
     }
 
-    private final boolean j() {
-        int discarded$0 = 11;
-        if (this.a((ud) (Object) ((ah) this).field_M)) {
+    private final boolean j(int param0) {
+        if (this.a((ud) (Object) ((ah) this).field_M, 11)) {
             return true;
         }
         return false;

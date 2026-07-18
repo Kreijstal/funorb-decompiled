@@ -47,7 +47,7 @@ final class gj {
         uc.a(3);
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (!hk.c(0)) {
             return false;
         }
@@ -57,7 +57,7 @@ final class gj {
         return true;
     }
 
-    final static oo b() {
+    final static oo b(int param0) {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         oo var2 = null;

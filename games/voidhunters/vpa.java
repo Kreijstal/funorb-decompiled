@@ -273,9 +273,9 @@ final class vpa implements ntb {
           L0: {
             L1: {
               var3 = (vpa) (Object) param0;
-              boolean discarded$2 = tja.a((ntb[]) (Object) var3.field_a, 1, (ntb[]) (Object) var3.field_a, false, 5547);
+              boolean discarded$2 = tja.a((ntb[]) (Object) var3.field_a, 1, (ntb[]) (Object) ((vpa) this).field_a, false, 5547);
               var4 = 0;
-              if (dn.a((tv[]) (Object) var3.field_a, false, 1, (tv[]) (Object) var3.field_a, -5)) {
+              if (dn.a((tv[]) (Object) var3.field_a, false, 1, (tv[]) (Object) ((vpa) this).field_a, -5)) {
                 var4 = 1;
                 System.out.println("Mission[] missions has changed. ");
                 break L1;
@@ -332,8 +332,7 @@ final class vpa implements ntb {
             return;
         }
         try {
-            int discarded$0 = 0;
-            var3.field_a = (hkb[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) var3.field_a, 1, fi.field_p);
+            var3.field_a = (hkb[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) ((vpa) this).field_a, 1, fi.field_p, false);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "vpa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

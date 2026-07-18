@@ -131,11 +131,11 @@ final class rl extends r {
         this(j.field_C, param0);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_t = null;
     }
 
-    final static String a(CharSequence[] param0, int param1, int param2) {
+    final static String a(CharSequence[] param0, int param1, int param2, boolean param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -429,8 +429,7 @@ final class rl extends r {
         try {
           L0: {
             var3_int = 64 % ((-48 - param0) / 42);
-            int discarded$2 = 42;
-            stackOut_0_0 = vf.a(4, param1.field_r.length());
+            stackOut_0_0 = vf.a(4, param1.field_r.length(), '*');
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -467,13 +466,11 @@ final class rl extends r {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         int var1 = qf.m(-32749);
-        int discarded$0 = -111;
-        int var2 = v.g();
+        int var2 = v.g((byte) -111);
         ij.field_f.a((byte) -115, qe.field_E - dh.field_k, var2 + (dh.field_k << 1), cb.field_i + -eg.field_d, var1 - -(eg.field_d << 1));
-        int discarded$1 = -100;
-        sj.a();
+        sj.a((byte) -100);
     }
 
     static {

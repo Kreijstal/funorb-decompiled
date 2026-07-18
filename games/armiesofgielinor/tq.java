@@ -7,7 +7,7 @@ final class tq {
     static String field_d;
     static int field_b;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, boolean param1) {
         al.a(-47, param0);
         wc.a(param0, true);
     }
@@ -32,7 +32,7 @@ final class tq {
         }
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, int param1) {
         bv var2 = vl.field_n;
         var2.h(32161, param0);
         var2.b(1, 1);
@@ -94,7 +94,7 @@ final class tq {
         return new wk[]{var10, var11, var10, var9, (wk) var14, var9, var12, var13, var12};
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
     }
 

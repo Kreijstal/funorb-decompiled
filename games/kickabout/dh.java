@@ -64,17 +64,9 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
         if (param0 > -124) {
           var3 = null;
           dh.a(81, 114, (iw) null, 122, 17);
-          int discarded$16 = 1;
-          int discarded$17 = 0;
-          int discarded$18 = 0;
-          int discarded$19 = 1;
-          return uj.a(param1, (byte) -58);
+          return uj.a(param1, (byte) -58, 1, false, false, true);
         } else {
-          int discarded$20 = 1;
-          int discarded$21 = 0;
-          int discarded$22 = 0;
-          int discarded$23 = 1;
-          return uj.a(param1, (byte) -58);
+          return uj.a(param1, (byte) -58, 1, false, false, true);
         }
     }
 
@@ -94,7 +86,7 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
         return ((dh) this).field_f == param0;
     }
 
-    final static int a(up param0) {
+    final static int a(up param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
@@ -118,10 +110,8 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             L1: {
-              int discarded$8 = -576054046;
-              var2_int = gp.a(param0) / 10;
-              int discarded$9 = -576054046;
-              if (gp.a(param0) <= 0) {
+              var2_int = gp.a(param0, -576054046) / 10;
+              if (gp.a(param0, -576054046) <= 0) {
                 break L1;
               } else {
                 if (var2_int != 0) {
@@ -228,7 +218,7 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
         return stackIn_1_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
         field_m = null;
         field_i = null;
@@ -267,11 +257,11 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
     dh() {
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         tf.field_f = false;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         ht.a(true, (byte) 89);
     }
 

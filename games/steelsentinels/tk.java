@@ -226,7 +226,7 @@ final class tk extends ia {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_t = null;
         field_p = null;
         field_r = null;

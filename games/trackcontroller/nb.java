@@ -89,7 +89,7 @@ final class nb extends wh {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
@@ -107,8 +107,7 @@ final class nb extends wh {
               break L0;
             } else {
               this.a(((nb) this).field_o, 0, ((nb) this).field_B, ((nb) this).field_z);
-              int discarded$2 = -17313;
-              this.e();
+              this.e(-17313);
               return;
             }
           }
@@ -165,8 +164,7 @@ final class nb extends wh {
                         return;
                       } else {
                         ((nb) this).a(((nb) this).field_o, 14526, ((nb) this).field_z);
-                        int discarded$3 = -17313;
-                        this.e();
+                        this.e(-17313);
                         return;
                       }
                     }
@@ -525,8 +523,8 @@ final class nb extends wh {
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
-        RuntimeException var4 = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         long var5 = 0L;
         int var7 = 0;
         int var8 = 0;
@@ -562,8 +560,7 @@ final class nb extends wh {
                       var7 = (int)((-1L + ((long)var4_int + (-((nb) this).field_C + ((nb) this).field_H))) / (long)var4_int);
                       ((nb) this).field_C = ((nb) this).field_C + (long)var4_int * (long)var7;
                       ((nb) this).field_G.a(param0, param1, var7);
-                      int discarded$1 = -17313;
-                      this.e();
+                      this.e(-17313);
                       param2 = param2 - var7;
                       param1 = param1 + var7;
                       if (((nb) this).field_P.a()) {
@@ -633,8 +630,7 @@ final class nb extends wh {
                 ((nb) this).field_C = ((nb) this).field_C + (long)var5 * (long)var2;
                 param0 = param0 - var5;
                 ((nb) this).field_G.d(var5);
-                int discarded$41 = -17313;
-                this.e();
+                this.e(-17313);
                 if (!((nb) this).field_P.a()) {
                   break L0;
                 } else {
@@ -1123,8 +1119,7 @@ final class nb extends wh {
               var8.field_q = 0;
               if (0 != ((nb) this).field_R[param3]) {
                 L4: {
-                  int discarded$2 = 105;
-                  var8.field_l = bh.a(var7, this.a(var8, (byte) 117), 0, this.b(var8));
+                  var8.field_l = bh.a(var7, this.a(var8, (byte) 117), 0, this.b(var8, (byte) 105));
                   stackOut_14_0 = this;
                   stackOut_14_1 = 0;
                   stackIn_16_0 = stackOut_14_0;
@@ -1152,8 +1147,7 @@ final class nb extends wh {
                 ((nb) this).a(stackIn_17_1 != 0, stackIn_17_2 != 0, var8);
                 break L3;
               } else {
-                int discarded$3 = 105;
-                var8.field_l = bh.a(var7, this.a(var8, (byte) 119), this.a(var8, 3), this.b(var8));
+                var8.field_l = bh.a(var7, this.a(var8, (byte) 119), this.a(var8, 3), this.b(var8, (byte) 105));
                 break L3;
               }
             }
@@ -1418,8 +1412,7 @@ final class nb extends wh {
             }
             if (var8 == 0) {
               L17: {
-                int discarded$1 = 105;
-                param4.field_l.a(param4.field_w, this.a(param4, param3 ^ 2), this.b(param4));
+                param4.field_l.a(param4.field_w, this.a(param4, param3 ^ 2), this.b(param4, (byte) 105));
                 if (param3 == 1) {
                   break L17;
                 } else {
@@ -1754,7 +1747,7 @@ final class nb extends wh {
         }
     }
 
-    final static void a(String param0, boolean param1) {
+    final static void a(String param0, boolean param1, int param2) {
         try {
             gh.field_k = true;
             pc.field_h = param1 ? true : false;
@@ -1957,7 +1950,7 @@ final class nb extends wh {
         }
     }
 
-    private final int b(ha param0) {
+    private final int b(ha param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;

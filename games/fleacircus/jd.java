@@ -347,7 +347,7 @@ final class jd {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_q = null;
         field_g = null;
         field_o = null;
@@ -497,7 +497,7 @@ final class jd {
         }
     }
 
-    final static void a(boolean param0, int param1, byte param2, wk param3) {
+    final static void a(boolean param0, int param1, byte param2, wk param3, int param4) {
         try {
             hh.field_b.a(param3, 1000000, -524289, false, 1048576, 256);
             int var5_int = 0;

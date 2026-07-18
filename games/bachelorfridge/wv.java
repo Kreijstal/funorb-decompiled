@@ -95,14 +95,10 @@ final class wv extends pu {
                 var16 = var17;
                 var14 = var16;
                 var11 = var14;
-                int discarded$4 = -16306;
-                var11[0] = vc.a(var2_int, 10);
-                int discarded$5 = -16306;
-                var11[1] = vc.a(var2_int, 11);
-                int discarded$6 = -16306;
-                var11[2] = vc.a(var2_int, 12);
-                int discarded$7 = -16306;
-                var11[3] = vc.a(var2_int, 13);
+                var11[0] = vc.a(var2_int, 10, -16306);
+                var11[1] = vc.a(var2_int, 11, -16306);
+                var11[2] = vc.a(var2_int, 12, -16306);
+                var11[3] = vc.a(var2_int, 13, -16306);
                 ob.a(var4, var10, var18, var9, var7, (byte) 22, var7, var5, uma.field_P[var3], var15);
                 var2_int++;
                 continue L1;

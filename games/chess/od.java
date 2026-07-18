@@ -17,10 +17,10 @@ final class od extends fb {
 
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
-            java.net.URL var2 = null;
-            Throwable var2_ref = null;
-            RuntimeException var2_ref2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
+            java.net.URL var4 = null;
             RuntimeException stackIn_5_0 = null;
             StringBuilder stackIn_5_1 = null;
             RuntimeException stackIn_6_0 = null;
@@ -41,21 +41,20 @@ final class od extends fb {
               L0: {
                 try {
                   L1: {
-                    var2 = param1.getCodeBase();
-                    int discarded$7 = -87;
-                    var3 = rh.a(var2, param1).getFile();
+                    var4 = param1.getCodeBase();
+                    var3 = rh.a(var4, param1, (byte) -87).getFile();
+                    Object discarded$6 = u.a(param1, true, new Object[2], "updatelinks");
+                    Object discarded$7 = u.a(param1, true, new Object[2], "updatelinks");
                     Object discarded$8 = u.a(param1, true, new Object[2], "updatelinks");
                     Object discarded$9 = u.a(param1, true, new Object[2], "updatelinks");
                     Object discarded$10 = u.a(param1, true, new Object[2], "updatelinks");
                     Object discarded$11 = u.a(param1, true, new Object[2], "updatelinks");
-                    Object discarded$12 = u.a(param1, true, new Object[2], "updatelinks");
-                    Object discarded$13 = u.a(param1, true, new Object[2], "updatelinks");
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   L2: {
-                    var2_ref = decompiledCaughtException;
+                    var2 = decompiledCaughtException;
                     break L2;
                   }
                 }
@@ -64,8 +63,8 @@ final class od extends fb {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_4_0 = (RuntimeException) var2_ref2;
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_4_0 = (RuntimeException) var2_ref;
                 stackOut_4_1 = new StringBuilder().append("od.A(").append(false).append(',');
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
@@ -205,11 +204,11 @@ final class od extends fb {
         return stackIn_16_0 != 0;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return wc.field_E;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_O = null;
         field_X = null;
         field_N = null;

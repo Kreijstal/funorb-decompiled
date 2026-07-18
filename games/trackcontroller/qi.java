@@ -544,8 +544,7 @@ final class qi {
                   }
                 }
               }
-              int discarded$1 = 75;
-              sa.j();
+              sa.j(75);
               break L1;
             }
             var66 = new int[param7.field_l];
@@ -812,7 +811,7 @@ final class qi {
         return (qi) this;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             if (!(pl.field_b == null)) {
                 try {
@@ -835,15 +834,14 @@ final class qi {
         return (qi) this;
     }
 
-    final static bl[] c() {
+    final static bl[] c(int param0) {
         return new bl[]{rd.field_o, field_f, oi.field_a};
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         try {
             bf.a((byte) -26, param0);
-            int discarded$0 = -16257;
-            nb.a(rk.field_Z, false);
+            nb.a(rk.field_Z, false, -16257);
         } catch (RuntimeException runtimeException) {
             throw sl.a((Throwable) (Object) runtimeException, "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
@@ -1155,7 +1153,7 @@ final class qi {
         }
     }
 
-    final static qj[] a() {
+    final static qj[] a(int param0, int param1, byte param2, int param3, int param4) {
         return g.a(0, 1, 1, 0, 0, 65793, 1, 3, -119);
     }
 

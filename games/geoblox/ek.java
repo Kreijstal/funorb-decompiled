@@ -4,7 +4,7 @@
 final class ek {
     static na[] field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

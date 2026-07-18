@@ -14,47 +14,137 @@ final class gf {
     static bd field_a;
 
     final static String a(byte param0) {
+        RuntimeException var1 = null;
+        String var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        int var5 = HostileSpawn.field_I ? 1 : 0;
-        String var1 = "(" + bj.field_f + " " + ae.field_u + " " + ne.field_o + ") " + wa.field_k;
-        if (jd.field_q <= 0) {
-        } else {
-            var1 = var1 + ":";
-            for (var2 = 0; var2 < jd.field_q; var2++) {
-                var1 = var1 + ' ';
-                var3 = 255 & sc.field_g.field_n[var2];
-                var4 = var3 >> 4;
-                if (var4 < 10) {
-                    var4 += 48;
+        int var5 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_7_1 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_23_1 = 0;
+        Object stackIn_25_0 = null;
+        String stackIn_27_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        int stackOut_6_1 = 0;
+        byte stackOut_22_0 = 0;
+        int stackOut_22_1 = 0;
+        String stackOut_26_0 = null;
+        Object stackOut_24_0 = null;
+        var5 = HostileSpawn.field_I ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                var1_ref = "(" + bj.field_f + " " + ae.field_u + " " + ne.field_o + ") " + wa.field_k;
+                if (jd.field_q > 0) {
+                  var1_ref = var1_ref + ":";
+                  var2 = 0;
+                  L3: while (true) {
+                    if (~var2 <= ~jd.field_q) {
+                      break L2;
+                    } else {
+                      var1_ref = var1_ref + ' ';
+                      var3 = 255 & sc.field_g.field_n[var2];
+                      var4 = var3 >> 1569148036;
+                      stackOut_6_0 = var4;
+                      stackOut_6_1 = 10;
+                      stackIn_23_0 = stackOut_6_0;
+                      stackIn_23_1 = stackOut_6_1;
+                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_7_1 = stackOut_6_1;
+                      if (var5 != 0) {
+                        break L1;
+                      } else {
+                        L4: {
+                          L5: {
+                            if (stackIn_7_0 >= stackIn_7_1) {
+                              break L5;
+                            } else {
+                              var4 += 48;
+                              if (var5 == 0) {
+                                break L4;
+                              } else {
+                                break L5;
+                              }
+                            }
+                          }
+                          var4 += 55;
+                          break L4;
+                        }
+                        L6: {
+                          L7: {
+                            var3 = var3 & 15;
+                            if (var3 < 10) {
+                              break L7;
+                            } else {
+                              var3 += 55;
+                              if (var5 == 0) {
+                                break L6;
+                              } else {
+                                break L7;
+                              }
+                            }
+                          }
+                          var3 += 48;
+                          break L6;
+                        }
+                        var1_ref = var1_ref + (char)var4;
+                        var1_ref = var1_ref + (char)var3;
+                        var2++;
+                        if (var5 == 0) {
+                          continue L3;
+                        } else {
+                          break L2;
+                        }
+                      }
+                    }
+                  }
                 } else {
-                    var4 += 55;
+                  break L2;
                 }
-                var3 = var3 & 15;
-                if (var3 >= 10) {
-                    var3 += 55;
-                } else {
-                    var3 += 48;
-                }
-                var1 = var1 + (char)var4;
-                var1 = var1 + (char)var3;
+              }
+              stackOut_22_0 = param0;
+              stackOut_22_1 = -121;
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              break L1;
             }
+            if (stackIn_23_0 < stackIn_23_1) {
+              stackOut_26_0 = (String) var1_ref;
+              stackIn_27_0 = stackOut_26_0;
+              break L0;
+            } else {
+              stackOut_24_0 = null;
+              stackIn_25_0 = stackOut_24_0;
+              return (String) (Object) stackIn_25_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wg.a((Throwable) (Object) var1, "gf.A(" + param0 + ')');
         }
-        if (param0 >= -121) {
-            return null;
-        }
-        return var1;
+        return stackIn_27_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_g = null;
         field_d = null;
         field_a = null;
         field_c = null;
         field_f = null;
-        field_e = null;
+        if (param0 != -105) {
+            return;
+        }
+        try {
+            field_e = null;
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "gf.B(" + param0 + ')');
+        }
     }
 
     static {

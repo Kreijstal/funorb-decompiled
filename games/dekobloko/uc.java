@@ -10,7 +10,7 @@ final class uc {
     static String field_f;
     static String field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_b = null;
         field_c = null;
@@ -29,11 +29,11 @@ final class uc {
         cg.a(param0, 91);
     }
 
-    final static void a(int param0, boolean param1, boolean param2) {
+    final static void a(int param0, boolean param1, boolean param2, int param3) {
         si.a(kf.field_O, param2, nk.field_b, hn.field_a, 180, (byte) -41, 320);
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, ve param6) {
+    final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, ve param6, boolean param7) {
         RuntimeException var8 = null;
         int var8_int = 0;
         qd[] var8_array = null;
@@ -302,8 +302,7 @@ final class uc {
                                 break L19;
                               }
                             }
-                            int discarded$2 = 0;
-                            uc.a(param0, param1, 1 + param2, param3, param4, param5, param6);
+                            uc.a(param0, param1, 1 + param2, param3, param4, param5, param6, false);
                             if (!ve.field_ac) {
                               var11++;
                               continue L18;
@@ -397,8 +396,7 @@ final class uc {
                     }
                     L27: {
                       if (var12 != 0) {
-                        int discarded$3 = 0;
-                        uc.a(param0, param1, param2 - -1, param3, param4, param5, param6);
+                        uc.a(param0, param1, param2 - -1, param3, param4, param5, param6, false);
                         var10_int = 1;
                         break L27;
                       } else {

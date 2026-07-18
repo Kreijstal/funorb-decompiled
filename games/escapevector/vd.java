@@ -161,7 +161,7 @@ final class vd {
         return stackIn_13_0;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         byte[] var4 = this.a(false);
         byte[] var2 = var4;
         if (var4 == null) {
@@ -171,7 +171,7 @@ final class vd {
         ca.a(1, 6, var3);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_g = null;
         field_d = null;
         field_f = null;
@@ -229,8 +229,7 @@ final class vd {
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;
             } else {
-              int discarded$2 = 0;
-              var7 = this.a(param3, param0, var5_int);
+              var7 = this.a(param3, param0, var5_int, 0);
               var8 = this.a(0, param2, param3, var7);
               stackOut_6_0 = (BitSet) var8;
               stackIn_7_0 = stackOut_6_0;
@@ -299,7 +298,7 @@ final class vd {
         return ge.a(1, 65793, 1, 1, 0, (byte) 33, 0, 0, 3);
     }
 
-    private final BitSet a(int param0, DataInputStream param1, int param2) throws IOException {
+    private final BitSet a(int param0, DataInputStream param1, int param2, int param3) throws IOException {
         BitSet var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -376,7 +375,7 @@ final class vd {
         return stackIn_5_0;
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         ((vd) this).field_j = pc.a(2513, 2);
         ((vd) this).field_b = new BitSet(((vd) this).field_j);
     }
@@ -594,7 +593,7 @@ final class vd {
         return stackIn_12_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         dl.field_a = false;
         int discarded$0 = om.field_g.e(0);
@@ -853,8 +852,7 @@ final class vd {
         }
         try {
             param2.set(param1);
-            int discarded$0 = -61;
-            this.e();
+            this.e((byte) -61);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "vd.M(" + -1 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -1160,8 +1158,7 @@ final class vd {
     }
 
     vd() {
-        int discarded$0 = -106;
-        this.b();
+        this.b((byte) -106);
         this.a(127);
         ((vd) this).field_k = false;
     }

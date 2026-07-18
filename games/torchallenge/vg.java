@@ -90,7 +90,7 @@ final class vg {
         this.a(param2);
     }
 
-    final static void a(int param0, int param1, ka param2, int param3, int param4) {
+    final static void a(int param0, int param1, ka param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
@@ -317,7 +317,7 @@ final class vg {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
     }
 

@@ -23,7 +23,7 @@ final class uh {
     boolean field_d;
     int field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
     }
 

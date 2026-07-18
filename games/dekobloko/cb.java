@@ -185,7 +185,7 @@ final class cb {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         if (!cd.a(8192)) {
             return false;
         }
@@ -270,7 +270,7 @@ final class cb {
         }
     }
 
-    final static void a(hl param0) {
+    final static void a(hl param0, boolean param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -536,9 +536,9 @@ final class cb {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1) {
-        RuntimeException var3 = null;
+    final static boolean a(boolean param0, CharSequence param1, int param2) {
         int var3_int = 0;
+        RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -585,8 +585,7 @@ final class cb {
                     break L1;
                   } else {
                     L2: {
-                      int discarded$4 = 2;
-                      var4 = kf.a(param1);
+                      var4 = kf.a(param1, (byte) 2);
                       if (var4 == null) {
                         break L2;
                       } else {
@@ -594,12 +593,10 @@ final class cb {
                           break L2;
                         } else {
                           L3: {
-                            int discarded$5 = 32;
-                            if (ug.a(var4.charAt(0))) {
+                            if (ug.a(var4.charAt(0), 32)) {
                               break L3;
                             } else {
-                              int discarded$6 = 32;
-                              if (ug.a(var4.charAt(var4.length() + -1))) {
+                              if (ug.a(var4.charAt(var4.length() + -1), 32)) {
                                 break L3;
                               } else {
                                 var5 = 0;
@@ -616,8 +613,7 @@ final class cb {
                                   } else {
                                     L5: {
                                       var7 = param1.charAt(var6);
-                                      int discarded$7 = 32;
-                                      if (!ug.a((char) var7)) {
+                                      if (!ug.a((char) var7, 32)) {
                                         var5 = 0;
                                         break L5;
                                       } else {
@@ -704,7 +700,7 @@ final class cb {
         ((cb) this).field_b = param0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var2 = 0;
         L0: {
           var2 = client.field_A ? 1 : 0;

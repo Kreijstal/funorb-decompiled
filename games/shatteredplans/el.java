@@ -67,7 +67,7 @@ final class el {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
     }
 

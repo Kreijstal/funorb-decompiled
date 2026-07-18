@@ -75,14 +75,14 @@ final class rr extends at {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         if (((rr) this).field_l != null) {
             id.a(97, ((rr) this).field_l);
             return;
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_x = null;
         field_r = null;
     }
@@ -240,14 +240,13 @@ final class rr extends at {
           } else {
             var3 = je.a(rt.field_a[20], 256, 128);
             var3.d(-1);
-            int discarded$8 = -36;
-            ((rr) this).field_l = tw.a(var3);
+            ((rr) this).field_l = tw.a(var3, (byte) -36);
             break L0;
           }
         }
-        int fieldTemp$9 = ((rr) this).field_w + 1;
+        int fieldTemp$2 = ((rr) this).field_w + 1;
         ((rr) this).field_w = ((rr) this).field_w + 1;
-        if (((rr) this).field_s > fieldTemp$9) {
+        if (((rr) this).field_s > fieldTemp$2) {
           L1: {
             if (((rr) this).field_w == -15) {
               jja.a(192, -1, 1);
@@ -259,18 +258,16 @@ final class rr extends at {
           if (((rr) this).field_w != 0) {
             return false;
           } else {
-            int discarded$10 = 95;
-            this.d();
+            this.d((byte) 95);
             return false;
           }
         } else {
-          int discarded$11 = -119;
-          this.e();
+          this.e(-119);
           return true;
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         ((rr) this).field_o.a(((rr) this).field_v, ((rr) this).field_n, ((rr) this).field_o.field_B.field_l.a(-27449, ((rr) this).field_j), 0);
         oia var2 = new oia(((rr) this).field_j, ((rr) this).field_v, ((rr) this).field_n);
         ((kj) (Object) var2).a(0);

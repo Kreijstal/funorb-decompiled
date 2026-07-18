@@ -15,7 +15,7 @@ final class fg extends pg {
     ba[] field_n;
     byte[] field_j;
 
-    final static String a(String param0) {
+    final static String a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_6_0 = null;

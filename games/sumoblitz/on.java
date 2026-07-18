@@ -1459,7 +1459,7 @@ final class on extends aw {
               L1: {
                 L2: {
                   ((on) this).field_Yc = param0;
-                  boolean discarded$5 = ((on) this).field_Yc.b();
+                  boolean discarded$3 = ((on) this).field_Yc.b();
                   ((on) this).field_Wc = jaggl.OpenGL.glGetString(7936).toLowerCase();
                   ((on) this).field_Rc = jaggl.OpenGL.glGetString(7937).toLowerCase();
                   if (((on) this).field_Wc.indexOf("microsoft") != -1) {
@@ -1470,8 +1470,7 @@ final class on extends aw {
                     } else {
                       if (-1 == ((on) this).field_Wc.indexOf("mesa")) {
                         var20 = jaggl.OpenGL.glGetString(7938);
-                        int discarded$6 = -27224;
-                        var9 = cn.a(' ', var20.replace('.', ' '));
+                        var9 = cn.a(' ', var20.replace('.', ' '), -27224);
                         if (var9.length < 2) {
                           throw new RuntimeException("");
                         } else {
@@ -1497,7 +1496,7 @@ final class on extends aw {
                                   L4: {
                                     ((on) this).field_bc = 8;
                                     ((on) this).field_Nc = ((on) this).field_Yc.a("GL_ARB_vertex_buffer_object");
-                                    boolean discarded$7 = ((on) this).field_Yc.a("GL_ARB_multisample");
+                                    boolean discarded$4 = ((on) this).field_Yc.a("GL_ARB_multisample");
                                     ((on) this).field_bd = ((on) this).field_Yc.a("GL_ARB_texture_rectangle");
                                     ((on) this).field_W = ((on) this).field_Yc.a("GL_ARB_texture_cube_map");
                                     ((on) this).field_Ic = ((on) this).field_Yc.a("GL_ARB_texture_non_power_of_two");
@@ -1505,7 +1504,7 @@ final class on extends aw {
                                     ((on) this).field_Jc = ((on) this).field_Yc.a("GL_ARB_vertex_shader");
                                     ((on) this).field_Ac = ((on) this).field_Yc.a("GL_ARB_vertex_program");
                                     ((on) this).field_Mc = ((on) this).field_Yc.a("GL_ARB_fragment_shader");
-                                    boolean discarded$8 = ((on) this).field_Yc.a("GL_ARB_fragment_program");
+                                    boolean discarded$5 = ((on) this).field_Yc.a("GL_ARB_fragment_program");
                                     ((on) this).field_Hc = new int[((on) this).field_cc];
                                     stackOut_18_0 = this;
                                     stackIn_20_0 = stackOut_18_0;
@@ -1532,8 +1531,7 @@ final class on extends aw {
                                       var11_int = 0;
                                       var12 = 0;
                                       var13 = 0;
-                                      int discarded$9 = -27224;
-                                      var14_array = cn.a(' ', ((on) this).field_Rc.replace('/', ' '));
+                                      var14_array = cn.a(' ', ((on) this).field_Rc.replace('/', ' '), -27224);
                                       var15 = 0;
                                       L6: while (true) {
                                         L7: {
@@ -1858,8 +1856,7 @@ final class on extends aw {
           L0: {
             L1: {
               if (param1 != lf.field_c) {
-                int discarded$2 = -116;
-                var3_int = ka.a(param1);
+                var3_int = ka.a(param1, -116);
                 jaggl.OpenGL.glTexGeni(8192, 9472, var3_int);
                 jaggl.OpenGL.glEnable(3168);
                 jaggl.OpenGL.glTexGeni(8193, 9472, var3_int);
@@ -2406,8 +2403,7 @@ final class on extends aw {
     }
 
     final void x(int param0) {
-        int discarded$0 = 68;
-        this.t();
+        this.t((byte) 68);
         if (param0 != 0) {
             ((on) this).field_Gc = null;
         }
@@ -2904,8 +2900,7 @@ final class on extends aw {
         if (param0 != -26911) {
             ((on) this).field_Wc = null;
         }
-        int discarded$0 = 68;
-        this.t();
+        this.t((byte) 68);
     }
 
     final void o(int param0) {
@@ -2968,7 +2963,7 @@ final class on extends aw {
         jaggl.OpenGL.glDepthMask(stackIn_6_0 != 0);
     }
 
-    private final void t() {
+    private final void t(byte param0) {
         int var3 = Sumoblitz.field_L ? 1 : 0;
         if (((on) this).field_Dc) {
             jaggl.OpenGL.glPopMatrix();

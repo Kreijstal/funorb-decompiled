@@ -626,8 +626,7 @@ class dl extends lh implements lm {
         if (param1 > -71) {
             field_N = null;
         }
-        int discarded$0 = 45;
-        this.f();
+        this.f((byte) 45);
     }
 
     final boolean b(lh param0, int param1) {
@@ -745,7 +744,7 @@ class dl extends lh implements lm {
         return stackIn_19_0 != 0;
     }
 
-    final static al g() {
+    final static al g(byte param0) {
         return (al) (Object) new gl();
     }
 
@@ -1235,8 +1234,7 @@ class dl extends lh implements lm {
         String stackOut_14_2 = null;
         try {
           L0: {
-            int discarded$11 = -21;
-            if (vk.a(param0, param1, param4, param3)) {
+            if (vk.a(param0, param1, param4, param3, -21)) {
               L1: {
                 if (param3 != 1) {
                   break L1;
@@ -1251,8 +1249,7 @@ class dl extends lh implements lm {
               bk.field_U = ui.a(1, var7);
               ti.field_p = param0;
               if (param2 < -113) {
-                int discarded$12 = -90;
-                var6 = um.a(ea.field_f, fb.field_l, pg.field_u, param1);
+                var6 = um.a(ea.field_f, fb.field_l, pg.field_u, param1, -90);
                 pa.a(12105, var6);
                 stackOut_8_0 = 1;
                 stackIn_9_0 = stackOut_8_0;
@@ -1493,7 +1490,7 @@ class dl extends lh implements lm {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         int var4 = SteelSentinels.field_G;
         jc var2 = new jc(((dl) this).field_K);
         lh var3 = (lh) (Object) var2.b(2);

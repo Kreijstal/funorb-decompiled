@@ -328,8 +328,7 @@ final class ii {
               }
             } else {
               L6: {
-                int discarded$2 = 17945;
-                this.j();
+                this.j(17945);
                 stackOut_3_0 = (hq) var7;
                 stackOut_3_1 = gb.field_f[0];
                 stackOut_3_2 = gb.field_f[1];
@@ -434,8 +433,7 @@ final class ii {
               break L9;
             }
           }
-          int discarded$3 = -25528;
-          la.a(ti.field_t, 13, false);
+          la.a(ti.field_t, 13, false, -25528);
           return;
         } else {
           return;
@@ -458,7 +456,7 @@ final class ii {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         uh var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -608,7 +606,7 @@ final class ii {
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         ((ii) this).field_a.a(false, nf.field_a);
         ((ii) this).field_a.field_v[1] = fo.field_g;
         ((ii) this).field_a.field_v[0] = sl.field_k;
@@ -655,8 +653,7 @@ final class ii {
           if (!param3) {
             break L3;
           } else {
-            int discarded$1 = 1;
-            this.a();
+            this.a(true);
             break L3;
           }
         }
@@ -887,8 +884,7 @@ final class ii {
                 break L0;
               } else {
                 if (!((ii) this).field_d[0].i(-121)) {
-                  int discarded$23 = 1;
-                  this.a();
+                  this.a(true);
                   return;
                 } else {
                   break L0;
@@ -902,8 +898,7 @@ final class ii {
           if (!param1) {
             break L1;
           } else {
-            int discarded$24 = 114;
-            this.i();
+            this.i(114);
             break L1;
           }
         }
@@ -917,8 +912,7 @@ final class ii {
               if (oa.field_j != 2) {
                 break L2;
               } else {
-                int discarded$25 = -1;
-                this.d();
+                this.d(-1);
                 break L2;
               }
             } else {
@@ -959,16 +953,14 @@ final class ii {
         ((ii) this).field_A.d(param0 + -16778);
     }
 
-    private final void j() {
+    private final void j(int param0) {
         int var2 = ((ii) this).field_a.field_v[0];
         if (null == wh.field_p) {
             if (var2 > 0) {
                 if (!((ii) this).field_l) {
                     wh.field_p = new rh(0, 65535, ln.field_n, mj.field_j, ra.field_a, uh.field_r, new int[1]);
                     if (!(jg.a((byte) 120))) {
-                        int discarded$0 = 3;
-                        int discarded$1 = 1;
-                        md.a(wh.field_p);
+                        md.a(wh.field_p, true, 3);
                     }
                 }
             }
@@ -1435,7 +1427,7 @@ final class ii {
                                           var5 = 0;
                                           L4: while (true) {
                                             if (~var5 <= ~var4_ref_uh__.length) {
-                                              boolean discarded$3 = ((ii) this).field_a.field_d.a((byte) -125);
+                                              boolean discarded$1 = ((ii) this).field_a.field_d.a((byte) -125);
                                               if (((ii) this).field_a.field_d.field_l.length != ((ii) this).field_a.field_d.field_d) {
                                                 break L0;
                                               } else {
@@ -1615,8 +1607,7 @@ final class ii {
                       }
                     }
                   }
-                  int discarded$4 = 0;
-                  jd.a();
+                  jd.a(0);
                   break L19;
                 } else {
                   break L19;
@@ -1707,8 +1698,7 @@ final class ii {
               break L25;
             }
           }
-          int discarded$5 = -25528;
-          la.a(stackIn_10_0, var5, false);
+          la.a(stackIn_10_0, var5, false, -25528);
           return;
         }
     }
@@ -1812,7 +1802,7 @@ final class ii {
         }
     }
 
-    private final void i() {
+    private final void i(int param0) {
         L0: {
           ra.field_a = ra.field_a + 7;
           ap.field_f = ap.field_f + sb.field_a;
@@ -1866,10 +1856,7 @@ final class ii {
         try {
             kf.field_q = param2;
             int var5_int = 55 / ((2 - param3) / 55);
-            int discarded$0 = 240;
-            int discarded$1 = 15;
-            int discarded$2 = 27;
-            ch.a(param0, param4, 5, param1, ab.field_c, 320, rk.field_e.field_w, 10, bi.field_g, true, (jl) (Object) rk.field_e, rk.field_e.field_z + rk.field_e.field_w);
+            ch.a(param0, param4, 5, param1, ab.field_c, 320, rk.field_e.field_w, 10, bi.field_g, true, (jl) (Object) rk.field_e, rk.field_e.field_z + rk.field_e.field_w, (byte) 27, 15, 240);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ii.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -1901,8 +1888,7 @@ final class ii {
             var3 = 0;
             L1: while (true) {
               if (var3 >= var6.length) {
-                int discarded$1 = -1;
-                this.d();
+                this.d(-1);
                 break L0;
               } else {
                 var4 = var6[var3];
@@ -1943,7 +1929,7 @@ final class ii {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_k = null;
         field_y = null;
         field_c = null;
@@ -2372,8 +2358,7 @@ final class ii {
           break L0;
         }
         L2: {
-          int discarded$3 = 5;
-          wb.b();
+          wb.b(5);
           if (null == aa.field_p) {
             break L2;
           } else {
@@ -2412,7 +2397,7 @@ final class ii {
               break L4;
             } else {
               var7 = null;
-              fl discarded$4 = ii.a((byte) 95, (String) null);
+              fl discarded$1 = ii.a((byte) 95, (String) null);
               break L4;
             }
           }
@@ -2459,8 +2444,7 @@ final class ii {
                   } else {
                     var8.a(-20791, var3.field_f, true);
                     gb.field_f[2] = gb.field_f[2] + 1;
-                    int discarded$5 = -117;
-                    kl.a();
+                    kl.a((byte) -117);
                     break L9;
                   }
                 }
@@ -3004,10 +2988,7 @@ final class ii {
                   if (jg.a((byte) 95)) {
                     break L9;
                   } else {
-                    int discarded$3 = 0;
-                    int discarded$4 = 10;
-                    int discarded$5 = 1;
-                    aa.field_p = g.a(3, (byte) -97);
+                    aa.field_p = g.a(3, (byte) -97, 1, 10, 0);
                     break L9;
                   }
                 }

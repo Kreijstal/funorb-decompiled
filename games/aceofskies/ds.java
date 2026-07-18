@@ -6,7 +6,7 @@ final class ds extends wf {
     int field_g;
     static eo field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
     }
 

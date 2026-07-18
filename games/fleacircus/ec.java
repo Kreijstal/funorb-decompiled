@@ -13,14 +13,14 @@ final class ec implements Runnable {
     static String field_e;
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_a = null;
         field_e = null;
     }
 
-    final static void a(ih param0) {
+    final static void a(ih param0, boolean param1) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -315,7 +315,7 @@ final class ec implements Runnable {
         }
     }
 
-    final static void a(hg param0) {
+    final static void a(hg param0, byte param1, int param2) {
         ih var3 = ud.field_b;
         var3.e(8, 7);
         try {

@@ -42,8 +42,7 @@ final class bc extends hi {
         try {
           L0: {
             var4 = (CharSequence) (Object) param0;
-            int discarded$11 = 5408;
-            if (!dk.a(var4)) {
+            if (!dk.a(var4, 5408)) {
               stackOut_2_0 = vh.field_h;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -53,8 +52,7 @@ final class bc extends hi {
                   break L1;
                 } else {
                   L2: {
-                    int discarded$12 = 1;
-                    var3 = lf.a(param0);
+                    var3 = lf.a(param0, true);
                     if (var3 == null) {
                       break L2;
                     } else {
@@ -169,8 +167,7 @@ final class bc extends hi {
                 if (param1.equals((Object) (Object) ((bc) this).field_p)) {
                   break L2;
                 } else {
-                  int discarded$2 = 1;
-                  var4 = lf.a(param1);
+                  var4 = lf.a(param1, true);
                   if (var4 != null) {
                     if (var4.field_e == null) {
                       ((bc) this).field_n = var4.field_f;
@@ -230,7 +227,7 @@ final class bc extends hi {
         return stackIn_15_0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_t = null;
         field_s = null;
         field_o = null;

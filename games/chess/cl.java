@@ -15,7 +15,7 @@ final class cl {
         pi.field_c.a(param1, -1730123902);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         if (bc.field_b < 70) {
           rf.b(80, 10 + bc.field_b);

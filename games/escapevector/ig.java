@@ -22,7 +22,7 @@ final class ig {
     private dk[] field_b;
     private int field_m;
 
-    private final String a(int param0, int param1, String param2) {
+    private final String a(int param0, int param1, String param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -221,8 +221,7 @@ final class ig {
                 var10 = new int[]{1};
             }
             var11 = var9.length;
-            int discarded$0 = -17;
-            var16 = vl.a(10, 5, var11);
+            var16 = vl.a(10, 5, var11, (byte) -17);
             ((ig) this).field_q = na.a(var8, var5, var7, var6, param3, var9, var10, false, var16);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "ig.S(" + -12 + ',' + 5 + ',' + 10 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -247,7 +246,7 @@ final class ig {
         ((ig) this).field_o = true;
     }
 
-    private final void a(int param0, int param1, ih param2) {
+    private final void a(int param0, int param1, ih param2, int param3) {
         int[] var5 = null;
         RuntimeException var5_ref = null;
         String[] var6 = null;
@@ -282,8 +281,7 @@ final class ig {
             var9 = 89;
             var10 = 402;
             var11 = var6.length;
-            int discarded$2 = -17;
-            var12 = vl.a(10, 3, var11);
+            var12 = vl.a(10, 3, var11, (byte) -17);
             ((ig) this).field_b = na.a(var10, var5, var9, var8, param2, var6, var7, false, var12);
             break L0;
           }
@@ -344,8 +342,7 @@ final class ig {
             break L0;
           }
         }
-        int discarded$2 = 6620;
-        this.c();
+        this.c(6620);
         if (!di.field_d.b((byte) -18)) {
           return false;
         } else {
@@ -362,8 +359,7 @@ final class ig {
                     break L2;
                   } else {
                     var6 = ua.field_c.a(29386, ((ig) this).field_a);
-                    int discarded$3 = 1;
-                    if (!this.a(var6, var3)) {
+                    if (!this.a(var6, var3, true)) {
                       return false;
                     } else {
                       break L2;
@@ -565,7 +561,7 @@ final class ig {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         this.a(1);
         if (null == ((ig) this).field_r) {
             return;
@@ -591,7 +587,7 @@ final class ig {
         var17.b(var16, false, var15, 0);
     }
 
-    private final void i() {
+    private final void i(int param0) {
         int var2 = ((ig) this).field_a == 3 ? 1 : 0;
         int var3 = je.a(false, ((ig) this).field_a);
         ((ig) this).field_p = var3;
@@ -615,7 +611,7 @@ final class ig {
         ((ig) this).field_e = fieldTemp$3;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var5 = 0;
@@ -794,7 +790,7 @@ final class ig {
         return stackIn_8_0;
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean a(int param0, int param1, boolean param2) {
         int var4 = ua.field_c.b(((ig) this).field_a, 0);
         if (!(var4 != 0)) {
             return param1 <= param0 ? true : false;
@@ -891,7 +887,7 @@ final class ig {
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         Object var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -913,10 +909,8 @@ final class ig {
                   var3 = 1536 * qm.field_c / 64;
                   var4 = 100;
                   var5 = di.field_d.field_h;
-                  int discarded$6 = 3;
-                  this.a(((ig) this).field_j, var3, var4);
-                  int discarded$7 = 3;
-                  this.a(((ig) this).field_q, var3, var4);
+                  this.a(((ig) this).field_j, var3, var4, 3);
+                  this.a(((ig) this).field_q, var3, var4, 3);
                   var4 = 102;
                   if (((ig) this).field_d == null) {
                     break L2;
@@ -943,8 +937,7 @@ final class ig {
                     }
                   }
                 }
-                int discarded$8 = 3;
-                this.a(((ig) this).field_b, var3, var4);
+                this.a(((ig) this).field_b, var3, var4, 3);
                 break L1;
               }
             }
@@ -1019,31 +1012,27 @@ final class ig {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var2 = ((ig) this).field_a == 3 ? 1 : 0;
         ih var3 = fh.field_g;
-        int discarded$0 = -30234;
-        this.i();
+        this.i(-30234);
         int var4 = ua.field_c.a(29386, ((ig) this).field_a);
         if (!(var2 != 0)) {
             ((ig) this).field_d = tm.c(10, var4, ((ig) this).field_a);
         }
         int var5 = 10;
-        this.a((byte) 51, var3);
+        this.a((byte) 51, var3, var5);
         int var6 = 3;
         if (var2 == 0) {
-            this.a(var6, -9079, var3);
+            this.a(var6, -9079, var3, var5);
         }
         var6 = 5;
         this.a((byte) -12, var6, var5, var3);
-        int discarded$5 = 0;
-        fi.a(((ig) this).field_j);
+        fi.a(((ig) this).field_j, 0);
         if (var2 == 0) {
-            int discarded$6 = 0;
-            fi.a(((ig) this).field_b);
+            fi.a(((ig) this).field_b, 0);
         }
-        int discarded$7 = 0;
-        fi.a(((ig) this).field_q);
+        fi.a(((ig) this).field_q, 0);
     }
 
     final void e(int param0) {
@@ -1054,8 +1043,7 @@ final class ig {
         if (null != ((ig) this).field_k) {
             ((ig) this).field_k.d(3, 79);
         }
-        int discarded$0 = 0;
-        this.d();
+        this.d(0);
         fk.a(404, 3162160, param0 ^ 115, 0, 6324320, 76, param0, var2, 430);
         int var3 = je.a(false, ((ig) this).field_a);
         int var4 = di.field_d.field_h;
@@ -1068,8 +1056,7 @@ final class ig {
         }
         this.a(((ig) this).field_b, 104);
         this.a(((ig) this).field_q, param0 + -85);
-        int discarded$1 = 120;
-        this.a();
+        this.a((byte) 120);
         this.b(true, var4);
         this.a(var3, (byte) -59, var5 != 0);
         pb.a(param0 + 1);
@@ -1105,15 +1092,14 @@ final class ig {
             break L0;
           }
         }
-        int discarded$2 = 0;
-        this.f();
+        this.f(0);
         var6 = di.field_d;
         var3 = var6.field_h;
         var4 = je.a(false, ((ig) this).field_a);
         L1: while (true) {
           if (!pn.p(-113)) {
             var6.a(((ig) this).a(ng.field_ob, 12089, sf.field_c), (byte) 126, ((ig) this).a(bj.field_y, 12089, dh.field_d));
-            boolean discarded$3 = this.a(true, -89);
+            boolean discarded$1 = this.a(true, -89);
             this.c((byte) 86);
             this.g(param0 ^ -2493);
             return;
@@ -1367,7 +1353,7 @@ final class ig {
         var2.field_L = false;
     }
 
-    private final void a(byte param0, ih param1) {
+    private final void a(byte param0, ih param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -1386,7 +1372,6 @@ final class ig {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        String var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -1394,6 +1379,7 @@ final class ig {
         dk var26 = null;
         int var27 = 0;
         String var28 = null;
+        String var29 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -1445,11 +1431,9 @@ final class ig {
                           break L4;
                         } else {
                           L5: {
-                            var21 = ce.a((byte) 127, ((ig) this).field_a, var18);
-                            int discarded$2 = 0;
-                            var28 = this.a(var18, var16, var21);
-                            int discarded$3 = 1;
-                            var22 = this.a(var16, var18) ? 1 : 0;
+                            var28 = ce.a((byte) 127, ((ig) this).field_a, var18);
+                            var29 = this.a(var18, var16, var28, false);
+                            var22 = this.a(var16, var18, true) ? 1 : 0;
                             var23 = var18;
                             if (0 <= var23) {
                               break L5;
@@ -1460,7 +1444,7 @@ final class ig {
                           }
                           var24 = 1 + var18;
                           var25 = this.a((byte) -71, var22 != 0);
-                          var26 = new dk(var4_int, var23, var24, var28, var11, var25, 10, param1);
+                          var26 = new dk(var4_int, var23, var24, var29, var11, var25, 10, param1);
                           var26.b((byte) -48, var8, var5);
                           var26.a(var6, 0, var10);
                           ((ig) this).field_j[var18 + -var15] = var26;
@@ -1516,7 +1500,7 @@ final class ig {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1579,7 +1563,7 @@ final class ig {
         }
     }
 
-    private final void a(dk[] param0, int param1, int param2) {
+    private final void a(dk[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object var6 = null;
@@ -1679,8 +1663,7 @@ final class ig {
         ((ig) this).field_m = 0;
         ((ig) this).field_h = param1;
         ((ig) this).field_a = param0;
-        int discarded$0 = 62;
-        this.b();
+        this.b((byte) 62);
         this.k(-32044);
         this.b(-4);
     }

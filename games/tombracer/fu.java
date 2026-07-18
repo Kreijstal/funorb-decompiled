@@ -67,8 +67,7 @@ final class fu extends dg {
           L0: {
             L1: {
               if (((fu) this).field_u == 0) {
-                int discarded$1 = 0;
-                via.a(df.field_J[17], ((fu) this).field_m, ((fu) this).field_q, param3 + 1572864, param2, param1, 111);
+                via.a(df.field_J[17], ((fu) this).field_m, ((fu) this).field_q, param3 + 1572864, param2, param1, 111, 0);
                 break L1;
               } else {
                 if (((fu) this).field_u == 1) {
@@ -116,7 +115,7 @@ final class fu extends dg {
 
     final static void a(int param0, int param1, boolean param2) {
         int var3 = 0;
-        CharSequence var6 = null;
+        CharSequence var7 = null;
         Object var5 = null;
         String var4 = null;
         if (null != bl.field_a) {
@@ -129,8 +128,8 @@ final class fu extends dg {
                             if (bl.field_a.field_r.charAt(0) == 91) {
                                 var4 = bl.field_a.field_r;
                             } else {
-                                var6 = (CharSequence) (Object) bl.field_a.field_r;
-                                var4 = jd.a(1, var6);
+                                var7 = (CharSequence) (Object) bl.field_a.field_r;
+                                var4 = jd.a(1, var7);
                             }
                             var5 = null;
                             if (!(cn.field_k != 0)) {
@@ -146,8 +145,8 @@ final class fu extends dg {
                                 var5 = (Object) (Object) kc.a(var4, param1, false, var4);
                             }
                             if (!(var5 == null)) {
-                                int discarded$0 = 2;
-                                gu.a(0, true, var4, (String) var5, (String) null);
+                                Object var6 = null;
+                                gu.a(0, true, var4, (String) var5, (String) null, 2);
                             }
                         }
                     }
@@ -271,7 +270,7 @@ final class fu extends dg {
         }
     }
 
-    public static void n() {
+    public static void n(byte param0) {
         field_t = null;
     }
 

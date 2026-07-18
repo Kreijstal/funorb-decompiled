@@ -48,8 +48,7 @@ final class g extends mg {
             var4 = param0.toLowerCase();
             if (param1) {
               if (var4.length() != 0) {
-                int discarded$6 = -4;
-                if (wg.a(var4, var3)) {
+                if (wg.a(var4, var3, (byte) -4)) {
                   if (!this.b(126, param0)) {
                     stackOut_12_0 = qk.field_g;
                     stackIn_13_0 = stackOut_12_0;
@@ -176,8 +175,7 @@ final class g extends mg {
                             stackIn_27_0 = stackOut_26_0;
                             return stackIn_27_0;
                           } else {
-                            int discarded$6 = 95;
-                            if (gb.a(var5, var6)) {
+                            if (gb.a(var5, var6, 95)) {
                               stackOut_30_0 = tj.field_w;
                               stackIn_31_0 = stackOut_30_0;
                               break L0;
@@ -250,7 +248,7 @@ final class g extends mg {
         return stackIn_31_0;
     }
 
-    final static ak b() {
+    final static ak b(boolean param0) {
         return ma.field_z.field_Fb;
     }
 
@@ -823,7 +821,7 @@ final class g extends mg {
         }
     }
 
-    final static ue a(int param0, byte param1) {
+    final static ue a(int param0, byte param1, int param2, int param3, int param4) {
         ue var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -850,7 +848,7 @@ final class g extends mg {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_r = null;
         field_q = null;
         field_s = null;

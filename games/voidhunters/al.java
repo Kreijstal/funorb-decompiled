@@ -10,7 +10,7 @@ final class al implements hf {
     int[] field_e;
     int field_d;
 
-    final static void a() {
+    final static void a(int param0) {
         kca.field_a = qga.field_b.a(-1);
         CharSequence var2 = (CharSequence) (Object) kca.field_a;
         ffb.field_e = jwa.a(false, var2);

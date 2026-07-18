@@ -177,7 +177,7 @@ final class je {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         lsa var1 = (lsa) (Object) vfa.field_p.d(0);
         if (var1 == null) {
             ifb.l(-116);

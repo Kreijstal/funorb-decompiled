@@ -20,7 +20,7 @@ final class of {
         return param1 < 6144 ? -vd.field_B[-param1 + 6144] : vd.field_B[-6144 + param1];
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_d = null;
         field_c = null;

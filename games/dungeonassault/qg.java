@@ -548,8 +548,7 @@ final class qg implements Runnable {
         if (param0 >= -68) {
             return null;
         }
-        int discarded$0 = 1;
-        return this.a(false, param2, param1);
+        return this.a(false, param2, param1, 1);
     }
 
     final void a(byte param0) {
@@ -712,7 +711,7 @@ final class qg implements Runnable {
         return this.a(0, (Object) (Object) new Object[3], 6, 8, 0);
     }
 
-    private final pn a(boolean param0, String param1, int param2) {
+    private final pn a(boolean param0, String param1, int param2, int param3) {
         return this.a(param2, (Object) (Object) param1, 6, 1, 0);
     }
 

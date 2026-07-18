@@ -123,7 +123,7 @@ class df extends ng {
         }
     }
 
-    final static int c() {
+    final static int c(byte param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -720,11 +720,11 @@ class df extends ng {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_P = null;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -753,9 +753,7 @@ class df extends ng {
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
-            int discarded$13 = -125;
-            int discarded$14 = 0;
-            if (bk.a(param0)) {
+            if (bk.a(param0, false, (byte) -125)) {
               var3_int = 0;
               L1: while (true) {
                 if (var3_int >= param0.length()) {

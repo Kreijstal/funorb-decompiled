@@ -121,7 +121,7 @@ final class mq extends wf {
         return stackIn_13_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_i = null;
         field_e = null;

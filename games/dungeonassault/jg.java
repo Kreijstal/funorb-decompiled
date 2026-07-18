@@ -104,7 +104,7 @@ final class jg {
         }
     }
 
-    final static ba[] b() {
+    final static ba[] b(byte param0) {
         return new ba[]{ba.field_e, gg.field_c, rl.field_j};
     }
 
@@ -128,7 +128,7 @@ final class jg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_c = null;

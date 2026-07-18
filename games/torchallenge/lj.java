@@ -406,7 +406,7 @@ final class lj {
         return false;
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         if (!(mf.field_a != null)) {
             return "";
         }
@@ -997,9 +997,7 @@ final class lj {
                           break L9;
                         }
                       }
-                      int discarded$2 = 0;
-                      int discarded$3 = 0;
-                      throw oj.a((Throwable) (Object) stackIn_35_0, (stackIn_35_2 != 0) + " " + param3 + " " + param2.length + " " + k.a(var9_array, param2.length) + " " + k.a(var9_array, -2 + param2.length) + " " + ((lj) this).field_l.field_t[param3] + " " + ((lj) this).field_l.field_k);
+                      throw oj.a((Throwable) (Object) stackIn_35_0, (stackIn_35_2 != 0) + " " + param3 + " " + param2.length + " " + k.a(var9_array, param2.length, 0) + " " + k.a(var9_array, -2 + param2.length, 0) + " " + ((lj) this).field_l.field_t[param3] + " " + ((lj) this).field_l.field_k);
                     }
                     L10: {
                       if (!((lj) this).field_i) {

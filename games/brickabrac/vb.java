@@ -95,7 +95,7 @@ class vb extends d {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         ep var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -259,8 +259,7 @@ class vb extends d {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              int discarded$3 = 81;
-              this.f();
+              this.f((byte) 81);
               if (((vb) this).field_n == 1) {
                 L2: {
                   if (!(((vb) this).field_l instanceof qe)) {
@@ -332,7 +331,7 @@ class vb extends d {
         }
     }
 
-    private final void m() {
+    private final void m(int param0) {
         try {
             Exception var2 = null;
             String var2_ref = null;
@@ -456,7 +455,7 @@ class vb extends d {
         }
     }
 
-    private final void l() {
+    private final void l(int param0) {
         String var2 = this.a((byte) -108);
         if (!(var2.length() <= 0)) {
             java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.a((byte) -124)), (java.awt.datatransfer.ClipboardOwner) null);
@@ -470,7 +469,7 @@ class vb extends d {
         }
     }
 
-    private final void j() {
+    private final void j(int param0) {
         if (((vb) this).field_i instanceof hf) {
             ((hf) (Object) ((vb) this).field_i).a((vb) this, -40);
         }
@@ -485,7 +484,7 @@ class vb extends d {
         }
     }
 
-    private final int d() {
+    private final int d(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = BrickABrac.field_J ? 1 : 0;
@@ -543,7 +542,7 @@ class vb extends d {
         }
     }
 
-    final static void k() {
+    final static void k(int param0) {
         if (!(ol.field_s)) {
             throw new IllegalStateException();
         }
@@ -668,9 +667,9 @@ class vb extends d {
                           L7: {
                             if (~((vb) this).field_T <= ~((vb) this).field_A.length()) {
                               ((vb) this).field_A = ((vb) this).field_A + param3;
-                              int dupTemp$5 = ((vb) this).field_A.length();
-                              ((vb) this).field_T = dupTemp$5;
-                              ((vb) this).field_L = dupTemp$5;
+                              int dupTemp$1 = ((vb) this).field_A.length();
+                              ((vb) this).field_T = dupTemp$1;
+                              ((vb) this).field_L = dupTemp$1;
                               break L7;
                             } else {
                               ((vb) this).field_A = ((vb) this).field_A.substring(0, ((vb) this).field_T) + param3 + ((vb) this).field_A.substring(((vb) this).field_T, ((vb) this).field_A.length());
@@ -765,8 +764,7 @@ class vb extends d {
                                         break L11;
                                       } else {
                                         if (66 == param0) {
-                                          int discarded$6 = 0;
-                                          this.l();
+                                          this.l(0);
                                           stackOut_58_0 = 1;
                                           stackIn_59_0 = stackOut_58_0;
                                           return stackIn_59_0 != 0;
@@ -781,16 +779,14 @@ class vb extends d {
                                       if (67 != param0) {
                                         break L8;
                                       } else {
-                                        int discarded$7 = 32;
-                                        this.m();
+                                        this.m(32);
                                         stackOut_56_0 = 1;
                                         stackIn_57_0 = stackOut_56_0;
                                         return stackIn_57_0 != 0;
                                       }
                                     }
                                   } else {
-                                    int discarded$8 = -66;
-                                    this.j();
+                                    this.j(-66);
                                     stackOut_46_0 = 1;
                                     stackIn_47_0 = stackOut_46_0;
                                     return stackIn_47_0 != 0;
@@ -816,9 +812,8 @@ class vb extends d {
                                   stackIn_38_1 = stackOut_37_1;
                                   break L12;
                                 } else {
-                                  int discarded$9 = 0;
                                   stackOut_36_0 = this;
-                                  stackOut_36_1 = this.d();
+                                  stackOut_36_1 = this.d(false);
                                   stackIn_38_0 = stackOut_36_0;
                                   stackIn_38_1 = stackOut_36_1;
                                   break L12;
@@ -902,8 +897,7 @@ class vb extends d {
     }
 
     private final void g(byte param0) {
-        int discarded$0 = 0;
-        this.l();
+        this.l(0);
         this.h(-118);
     }
 
@@ -998,8 +992,7 @@ class vb extends d {
                     break L3;
                   } else {
                     L4: {
-                      int discarded$1 = 0;
-                      ((vb) this).field_L = this.d();
+                      ((vb) this).field_L = this.d(false);
                       ((vb) this).field_T = this.h((byte) 103);
                       if (((vb) this).field_T <= 0) {
                         break L4;

@@ -38,7 +38,7 @@ final class ub {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         od var1 = null;
         int var2 = TombRacer.field_G ? 1 : 0;
         try {
@@ -139,7 +139,7 @@ final class ub {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_i = null;
         field_g = null;

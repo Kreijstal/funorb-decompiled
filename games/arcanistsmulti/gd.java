@@ -374,15 +374,11 @@ final class gd extends ob {
           L0: {
             ve.a(0, param17, param0, param1, param10);
             gf.a((byte) 72, param17);
-            int discarded$4 = 2;
-            nn.a(param8, param19, 3, param2, 6, param9, param4, param11, param17, param18, param5, param16, 1, param13);
-            int discarded$5 = -103;
-            hg.a(param7, true, param17);
+            nn.a(param8, param19, 3, param2, 6, param9, param4, param11, param17, param18, param5, param16, 1, param13, 2);
+            hg.a(param7, true, param17, (byte) -103);
             tc.a((byte) 6);
-            int discarded$6 = -85;
-            ik.a();
-            int discarded$7 = 0;
-            r.a();
+            ik.a((byte) -85);
+            r.a(false);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -784,7 +780,7 @@ final class gd extends ob {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_pb = null;
         field_mb = null;
         field_qb = null;

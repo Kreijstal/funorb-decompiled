@@ -177,7 +177,7 @@ final class uv implements wwa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_a = null;
     }

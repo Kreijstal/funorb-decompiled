@@ -10,7 +10,7 @@ final class t {
     static byte[] field_b;
     static wk[] field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_c = null;
@@ -18,7 +18,7 @@ final class t {
         field_b = null;
     }
 
-    final static int a(String param0, String[] param1) {
+    final static int a(String param0, String[] param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

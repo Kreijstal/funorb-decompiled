@@ -313,7 +313,7 @@ final class rn extends rd {
         return (mg) (Object) stackIn_11_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_r = null;
         field_j = null;
         field_o = null;
@@ -327,7 +327,7 @@ final class rn extends rd {
         ((rn) this).field_m = 0;
     }
 
-    final static String d() {
+    final static String d(int param0) {
         if (eq.field_j < 2) {
             return hd.field_b;
         }

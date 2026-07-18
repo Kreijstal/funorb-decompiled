@@ -48,7 +48,7 @@ final class fi {
         return ((fi) this).field_a == 103 ? true : false;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -381,8 +381,7 @@ final class fi {
         String stackOut_5_2 = null;
         try {
           if (nb.a(param3, param1, (byte) 126, param0)) {
-            int discarded$2 = 91;
-            return df.a();
+            return df.a((byte) 91);
           } else {
             return null;
           }

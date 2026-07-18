@@ -173,8 +173,7 @@ abstract class e extends wb {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    int discarded$5 = 16;
-                                    field_t = pl.a((byte) -71, var7);
+                                    field_t = pl.a((byte) -71, var7, 16);
                                     break L1;
                                   }
                                 } else {
@@ -187,8 +186,7 @@ abstract class e extends wb {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              int discarded$6 = 16;
-                              field_D = pl.a((byte) -100, var6);
+                              field_D = pl.a((byte) -100, var6, 16);
                               break L1;
                             }
                           } else {
@@ -201,8 +199,7 @@ abstract class e extends wb {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        int discarded$7 = 16;
-                        field_I = pl.a((byte) -61, var5);
+                        field_I = pl.a((byte) -61, var5, 16);
                         break L1;
                       }
                     } else {
@@ -211,8 +208,7 @@ abstract class e extends wb {
                     }
                   } else {
                     var4 = (CharSequence) (Object) param0.substring(6);
-                    int discarded$8 = 0;
-                    field_F = fm.a(var4);
+                    field_F = fm.a(var4, false);
                     break L1;
                   }
                 } else {
@@ -221,8 +217,7 @@ abstract class e extends wb {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                int discarded$9 = 16;
-                field_E = pl.a((byte) -95, var3);
+                field_E = pl.a((byte) -95, var3, 16);
                 break L1;
               }
             }
@@ -362,8 +357,7 @@ abstract class e extends wb {
                                         L2: {
                                           L3: {
                                             var13 = (CharSequence) (Object) var9_ref_String.substring(4);
-                                            int discarded$2 = 0;
-                                            var10 = fm.a(var13);
+                                            var10 = fm.a(var13, false);
                                             var11_ref_ah = ((e) this).field_o[var10];
                                             if (((e) this).field_s == null) {
                                               stackOut_25_0 = var11_ref_ah.field_i;
@@ -437,8 +431,7 @@ abstract class e extends wb {
               }
               if (var4 == -1) {
                 L6: {
-                  int discarded$3 = 4290;
-                  var8 = (char)(ij.a((char) var8) & 255);
+                  var8 = (char)(ij.a((char) var8, 4290) & 255);
                   if (((e) this).field_r == null) {
                     break L6;
                   } else {
@@ -552,8 +545,7 @@ abstract class e extends wb {
     }
 
     final int a(char param0) {
-        int discarded$0 = 4290;
-        return ((e) this).field_u[ij.a(param0) & 255];
+        return ((e) this).field_u[ij.a(param0, 4290) & 255];
     }
 
     private final void a(int param0, int param1, int param2) {
@@ -770,8 +762,7 @@ abstract class e extends wb {
                                         try {
                                           L2: {
                                             var10 = (CharSequence) (Object) var8.substring(4);
-                                            int discarded$2 = 0;
-                                            var9_int = fm.a(var10);
+                                            var9_int = fm.a(var10, false);
                                             var4 = var4 + ((e) this).field_o[var9_int].field_j;
                                             var3 = 0;
                                             var6++;
@@ -827,8 +818,7 @@ abstract class e extends wb {
                 }
                 if (var2 == -1) {
                   L4: {
-                    int discarded$3 = 4290;
-                    var7 = (char)(ij.a((char) var7) & 255);
+                    var7 = (char)(ij.a((char) var7, 4290) & 255);
                     var4 = var4 + ((e) this).field_u[var7];
                     if (((e) this).field_r == null) {
                       break L4;
@@ -1211,8 +1201,7 @@ abstract class e extends wb {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          int discarded$8 = 32;
-          StringBuilder discarded$9 = gi.a(field_B, -18340, 0);
+          StringBuilder discarded$5 = gi.a(field_B, -18340, 0, ' ');
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -1248,9 +1237,9 @@ abstract class e extends wb {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$10 = field_B.append('<');
-                        StringBuilder discarded$11 = field_B.append(var15);
-                        StringBuilder discarded$12 = field_B.append('>');
+                        StringBuilder discarded$6 = field_B.append('<');
+                        StringBuilder discarded$7 = field_B.append(var15);
+                        StringBuilder discarded$8 = field_B.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1266,8 +1255,7 @@ abstract class e extends wb {
                                             try {
                                               L4: {
                                                 var18 = (CharSequence) (Object) var15.substring(4);
-                                                int discarded$13 = 0;
-                                                var16_int = fm.a(var18);
+                                                var16_int = fm.a(var18, false);
                                                 var4 = var4 + ((e) this).field_o[var16_int].field_j;
                                                 var10 = 0;
                                                 break L4;
@@ -1438,9 +1426,8 @@ abstract class e extends wb {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$14 = field_B.append((char) var14);
-                        int discarded$15 = 4290;
-                        var14 = (char)(ij.a((char) var14) & 255);
+                        StringBuilder discarded$9 = field_B.append((char) var14);
+                        var14 = (char)(ij.a((char) var14, 4290) & 255);
                         var4 = var4 + ((e) this).field_u[var14];
                         if (((e) this).field_r == null) {
                           break L15;

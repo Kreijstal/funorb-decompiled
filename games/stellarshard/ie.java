@@ -23,8 +23,7 @@ abstract class ie extends ah {
         var2 = stellarshard.field_B;
         try {
           L0: {
-            int discarded$14 = 0;
-            if (!sf.b()) {
+            if (!sf.b(false)) {
               L1: {
                 if (pd.field_f == null) {
                   break L1;
@@ -40,13 +39,13 @@ abstract class ie extends ah {
               }
               return;
             } else {
-              boolean discarded$15 = dg.field_z.a(true, (byte) -128, li.field_d, af.field_q);
+              boolean discarded$7 = dg.field_z.a(true, (byte) -128, li.field_d, af.field_q);
               dg.field_z.f((byte) -127);
               L2: while (true) {
                 if (!qh.c(119)) {
                   break L0;
                 } else {
-                  boolean discarded$16 = dg.field_z.a(gi.field_f, uc.field_b, true);
+                  boolean discarded$8 = dg.field_z.a(gi.field_f, uc.field_b, true);
                   continue L2;
                 }
               }

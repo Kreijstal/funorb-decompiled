@@ -54,8 +54,7 @@ final class qc {
               try {
                 L0: {
                   var3 = new java.net.URL(param0.getCodeBase(), param2);
-                  int discarded$2 = 0;
-                  var3 = ag.a(param0, var3);
+                  var3 = ag.a(param0, var3, false);
                   mg.a(true, param0, var3.toString(), true);
                   break L0;
                 }
@@ -128,7 +127,7 @@ final class qc {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             Exception var1 = null;
             Throwable decompiledCaughtException = null;

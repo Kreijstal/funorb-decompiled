@@ -400,8 +400,7 @@ abstract class lm extends pa {
         if (param0) {
             ((lm) this).q(-67);
         }
-        int discarded$0 = -18812;
-        int var2 = this.l();
+        int var2 = this.l(-18812);
         if (var2 == -1) {
             return false;
         }
@@ -416,7 +415,7 @@ abstract class lm extends pa {
         return true;
     }
 
-    private final boolean m() {
+    private final boolean m(int param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -469,7 +468,7 @@ abstract class lm extends pa {
         }
     }
 
-    private final int l() {
+    private final int l(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -488,8 +487,7 @@ abstract class lm extends pa {
             stackIn_3_0 = stackOut_2_0;
             break L0;
           } else {
-            int discarded$2 = -7;
-            stackOut_1_0 = this.m();
+            stackOut_1_0 = this.m(-7);
             stackIn_3_0 = stackOut_1_0 ? 1 : 0;
             break L0;
           }
@@ -572,8 +570,7 @@ abstract class lm extends pa {
                         var7 = (ek) (Object) var6.a(false);
                         L9: while (true) {
                           if (var7 != null) {
-                            int discarded$3 = 2;
-                            this.a(var2 != 0, var7, var3);
+                            this.a(var2 != 0, var7, var3, 2);
                             var7 = (ek) (Object) var6.c(-1);
                             continue L9;
                           } else {
@@ -907,7 +904,7 @@ abstract class lm extends pa {
         }
     }
 
-    private final void a(boolean param0, ek param1, int param2) {
+    private final void a(boolean param0, ek param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -1356,7 +1353,7 @@ abstract class lm extends pa {
         return n.field_i;
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_ob = null;
         field_eb = null;
         field_fb = null;

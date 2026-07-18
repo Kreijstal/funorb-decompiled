@@ -118,7 +118,7 @@ final class nl extends oa {
         return stackIn_16_0 != 0;
     }
 
-    final static boolean g() {
+    final static boolean g(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -187,7 +187,7 @@ final class nl extends oa {
         return stackIn_15_0 != 0;
     }
 
-    final static void a(int param0, byte[] param1) {
+    final static void a(int param0, byte[] param1, boolean param2, int param3, int param4, byte param5) {
         int var7 = 0;
         int var8 = 0;
         kj var6 = mm.field_g;
@@ -207,7 +207,7 @@ final class nl extends oa {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_db = null;
         field_V = null;
         field_Z = null;
@@ -483,7 +483,7 @@ final class nl extends oa {
         }
     }
 
-    final static String a(String param0, int param1) {
+    final static String a(String param0, int param1, boolean param2) {
         RuntimeException var3 = null;
         int var5 = 0;
         int var6 = 0;

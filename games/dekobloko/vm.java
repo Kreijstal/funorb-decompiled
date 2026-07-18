@@ -70,8 +70,7 @@ final class vm extends bh {
               pk.field_r = param4;
               var6_int = -49 / ((-60 - param3) / 43);
               var8 = (CharSequence) (Object) param2;
-              int discarded$2 = 2;
-              cf.field_c = kf.a(var8);
+              cf.field_c = kf.a(var8, (byte) 2);
               fm.field_d = param1;
               var7 = wa.a(param0, ad.field_q, (byte) -127, fj.field_d, rd.field_e);
               be.a((byte) 120, var7);
@@ -142,7 +141,7 @@ final class vm extends bh {
         return stackIn_7_0 != 0;
     }
 
-    final static void a(cc param0, int param1, int param2) {
+    final static void a(cc param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -223,8 +222,7 @@ final class vm extends bh {
                         if (wh.field_c != 80) {
                           break L1;
                         } else {
-                          int discarded$26 = 2;
-                          if (!ql.a()) {
+                          if (!ql.a(2)) {
                             break L1;
                           } else {
                             jg.field_i = true;
@@ -238,20 +236,13 @@ final class vm extends bh {
                 }
               }
             }
-            int discarded$27 = 13;
-            int discarded$28 = 102;
-            int discarded$29 = 15;
-            return tl.b();
+            return tl.b(15, 102, 13);
           } else {
-            int discarded$30 = 2;
-            if (!ql.a()) {
+            if (!ql.a(2)) {
               return false;
             } else {
               L2: {
-                int discarded$31 = 13;
-                int discarded$32 = 1;
-                int discarded$33 = 12;
-                if (!nm.a()) {
+                if (!nm.a(12, 1, 13)) {
                   stackOut_42_0 = 0;
                   stackIn_43_0 = stackOut_42_0;
                   break L2;
@@ -280,8 +271,7 @@ final class vm extends bh {
               }
               L5: {
                 if (13 == wh.field_c) {
-                  int discarded$34 = 94;
-                  qk.a();
+                  qk.a((byte) 94);
                   jg.field_i = false;
                   var5 = 1;
                   break L5;
@@ -311,8 +301,7 @@ final class vm extends bh {
                           if (wh.field_c != 80) {
                             break L7;
                           } else {
-                            int discarded$35 = 2;
-                            if (!ql.a()) {
+                            if (!ql.a(2)) {
                               break L7;
                             } else {
                               jg.field_i = true;
@@ -324,32 +313,19 @@ final class vm extends bh {
                       }
                     }
                   }
-                  int discarded$36 = 13;
-                  int discarded$37 = 102;
-                  int discarded$38 = 15;
-                  return tl.b();
+                  return tl.b(15, 102, 13);
                 } else {
-                  int discarded$39 = 13;
-                  int discarded$40 = 102;
-                  int discarded$41 = 15;
-                  return tl.b();
+                  return tl.b(15, 102, 13);
                 }
               } else {
-                int discarded$42 = 13;
-                int discarded$43 = 102;
-                int discarded$44 = 15;
-                return tl.b();
+                return tl.b(15, 102, 13);
               }
             } else {
-              int discarded$45 = 2;
-              if (!ql.a()) {
+              if (!ql.a(2)) {
                 return false;
               } else {
                 L8: {
-                  int discarded$46 = 13;
-                  int discarded$47 = 1;
-                  int discarded$48 = 12;
-                  if (!nm.a()) {
+                  if (!nm.a(12, 1, 13)) {
                     stackOut_8_0 = 0;
                     stackIn_9_0 = stackOut_8_0;
                     break L8;
@@ -365,8 +341,7 @@ final class vm extends bh {
                     jg.field_i = false;
                     var5 = 1;
                     if (13 == wh.field_c) {
-                      int discarded$49 = 94;
-                      qk.a();
+                      qk.a((byte) 94);
                       jg.field_i = false;
                       var5 = 1;
                       break L9;
@@ -381,8 +356,7 @@ final class vm extends bh {
                       jg.field_i = false;
                       var5 = 1;
                       if (13 == wh.field_c) {
-                        int discarded$50 = 94;
-                        qk.a();
+                        qk.a((byte) 94);
                         jg.field_i = false;
                         var5 = 1;
                         break L10;
@@ -394,8 +368,7 @@ final class vm extends bh {
                   } else {
                     L11: {
                       if (13 == wh.field_c) {
-                        int discarded$51 = 94;
-                        qk.a();
+                        qk.a((byte) 94);
                         jg.field_i = false;
                         var5 = 1;
                         break L11;
@@ -412,7 +385,7 @@ final class vm extends bh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_u = null;
         field_p = null;
         field_x = null;
@@ -427,7 +400,7 @@ final class vm extends bh {
         }
     }
 
-    final static String c() {
+    final static String c(int param0) {
         return hl.field_a;
     }
 

@@ -8,7 +8,7 @@ abstract class oj {
     static int field_b;
     static String field_a;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
@@ -96,8 +96,7 @@ abstract class oj {
     }
 
     final static void a(int param0, byte param1) {
-        int discarded$4 = -1;
-        int discarded$7 = gb.a();
+        int discarded$3 = gb.a(-1);
         if (param1 >= -89) {
             oj.a(70);
         }

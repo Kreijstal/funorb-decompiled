@@ -14,9 +14,8 @@ final class lc {
         field_a = null;
     }
 
-    final static void a() {
-        int discarded$0 = 112;
-        e.a();
+    final static void a(int param0) {
+        e.a((byte) 112);
         gh.a(4, 31888);
     }
 
@@ -137,7 +136,7 @@ final class lc {
         return stackIn_11_0 != 0;
     }
 
-    final static void a(int param0, int param1, vg param2, int param3, vg param4) {
+    final static void a(int param0, int param1, vg param2, int param3, vg param4, int param5) {
         e.field_i = 2;
         a.field_o = 6;
         try {

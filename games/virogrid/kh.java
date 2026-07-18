@@ -12,7 +12,7 @@ final class kh {
     static km field_g;
     static km field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_e = null;
         field_f = null;
@@ -185,7 +185,7 @@ final class kh {
         }
     }
 
-    final static void a(km param0, int param1) {
+    final static void a(km param0, int param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -468,11 +468,10 @@ final class kh {
 
     final static void a(int param0, int param1, int param2, int param3, e param4, byte param5, mg[] param6, int param7, int param8, int param9, int param10, mg[] param11, int param12, e param13, boolean param14) {
         try {
-            int discarded$0 = 0;
-            ok.a(param0, 480, jl.field_E, -100, param3, param9, en.field_Kb, param2, param10, param13, param1, (mg[]) null, 0, param8, param7, ti.field_b, param11, param4, param6, param12);
+            Object var16 = null;
+            ok.a(param0, 480, jl.field_E, -100, param3, param9, en.field_Kb, param2, param10, param13, param1, (mg[]) null, 0, param8, param7, ti.field_b, param11, param4, param6, param12, 0);
             int var15_int = 0;
-            int discarded$1 = -1502464351;
-            ti.a(param14);
+            ti.a(param14, -1502464351);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "kh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + -59 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + (param13 != null ? "{...}" : "null") + ',' + param14 + ')');
         }
@@ -481,7 +480,7 @@ final class kh {
     final static gh a(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         gh var4 = null;
         String var5 = null;
         int var6 = 0;
@@ -511,15 +510,15 @@ final class kh {
             L0: {
               var2_int = 0 % ((param0 - -51) / 62);
               var7 = (CharSequence) (Object) param1;
-              var3 = (Object) (Object) c.a(var7, true);
+              var3 = c.a(var7, true);
               if (var3 == null) {
-                var3 = (Object) (Object) var7;
+                var3 = param1;
                 break L0;
               } else {
                 break L0;
               }
             }
-            var4 = (gh) (Object) ie.field_a.a((long)((String) var3).hashCode(), (byte) 96);
+            var4 = (gh) (Object) ie.field_a.a((long)var3.hashCode(), (byte) 96);
             L1: while (true) {
               if (var4 != null) {
                 L2: {
@@ -532,7 +531,7 @@ final class kh {
                     break L2;
                   }
                 }
-                if (var5.equals(var3)) {
+                if (var5.equals((Object) (Object) var3)) {
                   stackOut_15_0 = (gh) var4;
                   stackIn_16_0 = stackOut_15_0;
                   return stackIn_16_0;

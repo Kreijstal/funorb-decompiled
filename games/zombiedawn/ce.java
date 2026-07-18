@@ -14,7 +14,7 @@ class ce extends nb {
     ce() {
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_r = null;
         field_v = null;
         field_t = null;

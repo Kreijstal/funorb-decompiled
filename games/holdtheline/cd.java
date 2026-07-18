@@ -34,7 +34,7 @@ final class cd {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -67,7 +67,7 @@ final class cd {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_f = null;
         field_c = null;
@@ -273,8 +273,7 @@ final class cd {
                   var6 = 0;
                   L1: while (true) {
                     if (var4.length <= var6) {
-                      int discarded$2 = 124;
-                      stackOut_19_0 = qg.a(var3[-1 + var3.length]);
+                      stackOut_19_0 = qg.a(var3[-1 + var3.length], 124);
                       stackIn_20_0 = stackOut_19_0;
                       break L0;
                     } else {

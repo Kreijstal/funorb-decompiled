@@ -635,8 +635,7 @@ final class ea {
               L0: {
                 L1: {
                   if (fe.field_k.startsWith("win")) {
-                    int discarded$8 = 2117267440;
-                    if (ca.a(param3)) {
+                    if (ca.a(param3, 2117267440)) {
                       return;
                     } else {
                       break L1;
@@ -715,7 +714,7 @@ final class ea {
         }
     }
 
-    final static mi a(byte[] param0) {
+    final static mi a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;
         Object stackIn_4_0 = null;
@@ -782,7 +781,7 @@ final class ea {
         return (mi) (Object) stackIn_4_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 41;
         field_n = null;
     }

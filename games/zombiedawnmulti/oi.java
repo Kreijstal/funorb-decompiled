@@ -14,15 +14,14 @@ final class oi {
     String field_d;
     static String field_e;
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         fb.a(17, 115);
     }
 
     final static void a(String param0, boolean param1, byte param2, boolean param3) {
         try {
-            int discarded$0 = -1;
-            al.j();
+            al.j(-1);
             nb.field_a.h(-92);
             b.field_c = new qm(fa.field_Ib, (String) null, ch.field_e, param1, param3);
             wj.field_i = new ub(nb.field_a, (cf) (Object) b.field_c);
@@ -33,7 +32,7 @@ final class oi {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
         field_a = null;
         field_e = null;

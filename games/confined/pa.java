@@ -228,7 +228,7 @@ final class pa {
         return true;
     }
 
-    final static String a(java.applet.Applet param0) {
+    final static String a(java.applet.Applet param0, int param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
@@ -448,7 +448,7 @@ final class pa {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         int var1 = -5;
         field_d = null;

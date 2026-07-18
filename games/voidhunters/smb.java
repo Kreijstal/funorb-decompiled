@@ -92,15 +92,14 @@ final class smb extends le {
     }
 
     final void c(byte param0) {
-        int discarded$0 = -32307;
-        this.d();
+        this.d(-32307);
         if (param0 >= -35) {
             Object var3 = null;
             smb.a((int[]) null, 127, -20, (byte) 126, (int[]) null);
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;

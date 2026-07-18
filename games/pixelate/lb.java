@@ -25,7 +25,7 @@ abstract class lb extends tn {
         return this.a(param1 ^ 96, param0, true);
     }
 
-    private final void m() {
+    private final void m(int param0) {
         h.field_P[1] = true;
     }
 
@@ -56,9 +56,7 @@ abstract class lb extends tn {
                   break L0;
                 } else {
                   L1: {
-                    int discarded$8 = 108;
-                    int discarded$9 = 100;
-                    var5_int = uj.a((byte) -127, lj.a(), km.e());
+                    var5_int = uj.a((byte) -127, lj.a((byte) 108), km.e(100));
                     if (var5_int == -1) {
                       break L1;
                     } else {
@@ -81,8 +79,7 @@ abstract class lb extends tn {
                 if (var4 != 2) {
                   break L2;
                 } else {
-                  int discarded$10 = 8192;
-                  var5_int = dn.a(wc.d(param0), (byte) 5, ((lb) this).field_t, am.a(-13565), vi.b((byte) 127), pd.k(0), eg.f());
+                  var5_int = dn.a(wc.d(param0), (byte) 5, ((lb) this).field_t, am.a(-13565), vi.b((byte) 127), pd.k(0), eg.f(8192));
                   if (-1 == var5_int) {
                     break L2;
                   } else {
@@ -105,8 +102,7 @@ abstract class lb extends tn {
                         break L4;
                       } else {
                         mj.field_b = -1;
-                        int discarded$11 = 68;
-                        op.g();
+                        op.g((byte) 68);
                         break L4;
                       }
                     }
@@ -115,8 +111,7 @@ abstract class lb extends tn {
                     ol.field_o = false;
                     break L3;
                   } else {
-                    int discarded$12 = 8192;
-                    var5_int = mi.a(((lb) this).field_A, (byte) 28, am.a(-13565), ((lb) this).field_t, false, eg.f());
+                    var5_int = mi.a(((lb) this).field_A, (byte) 28, am.a(-13565), ((lb) this).field_t, false, eg.f(8192));
                     if (-1 != var5_int) {
                       if (0 == var5_int) {
                         ff.field_d = vn.field_b;
@@ -138,8 +133,7 @@ abstract class lb extends tn {
               L5: {
                 if (var4 == 4) {
                   if (uj.field_Lb) {
-                    int discarded$13 = 22770;
-                    vi.a(ao.a(param0 ^ 13867));
+                    vi.a(ao.a(param0 ^ 13867), 22770);
                     break L5;
                   } else {
                     el.field_b = 10;
@@ -180,8 +174,7 @@ abstract class lb extends tn {
               }
               L9: {
                 if (var4 == 8) {
-                  int discarded$14 = 22770;
-                  vi.a(ao.a(13867));
+                  vi.a(ao.a(13867), 22770);
                   break L9;
                 } else {
                   break L9;
@@ -207,8 +200,7 @@ abstract class lb extends tn {
                 if (var4 != 11) {
                   break L12;
                 } else {
-                  int discarded$15 = 3279;
-                  vf.a(ao.a(13867));
+                  vf.a(ao.a(13867), 3279);
                   break L12;
                 }
               }
@@ -352,10 +344,8 @@ abstract class lb extends tn {
           }
         }
         L2: {
-          int discarded$15 = 85;
-          re.a();
-          int discarded$16 = -118;
-          cm.e();
+          re.a((byte) 85);
+          cm.e(-118);
           if (bd.a(true)) {
             break L2;
           } else {
@@ -378,17 +368,14 @@ abstract class lb extends tn {
         L4: {
           if (ol.b(true)) {
             L5: {
-              int discarded$17 = 1;
-              var3 = pf.a() * 1200;
+              var3 = pf.a(true) * 1200;
               if (((lb) this).field_F) {
                 break L5;
               } else {
-                int discarded$18 = -115;
-                if (~il.a() >= ~var3) {
+                if (~il.a(-115) >= ~var3) {
                   break L4;
                 } else {
-                  int discarded$19 = 13428;
-                  if (var3 < ql.g()) {
+                  if (var3 < ql.g(13428)) {
                     break L5;
                   } else {
                     break L4;
@@ -400,8 +387,7 @@ abstract class lb extends tn {
             na.a(true);
             to.g((byte) 81);
             gp.a(true, hm.field_c, 2);
-            int discarded$20 = 0;
-            fe.a();
+            fe.a(false);
             ol.field_o = true;
             mc.field_q = 15000L + hm.a(64);
             break L4;
@@ -559,8 +545,7 @@ abstract class lb extends tn {
             } else {
               if (mj.field_b != 0) {
                 mj.field_b = -1;
-                int discarded$21 = 68;
-                op.g();
+                op.g((byte) 68);
                 break L12;
               } else {
                 break L12;
@@ -604,12 +589,9 @@ abstract class lb extends tn {
                 break L18;
               }
             }
-            int discarded$22 = 1;
-            wk.field_j = vm.a(true, (byte) 22, false, wg.field_e);
-            int discarded$23 = 1;
-            io.field_g = vm.a(true, (byte) 22, false, lo.field_Hb);
-            int discarded$24 = 1;
-            qo.field_u = vm.a(true, (byte) 22, false, wn.field_r);
+            wk.field_j = vm.a(true, (byte) 22, false, wg.field_e, 1);
+            io.field_g = vm.a(true, (byte) 22, false, lo.field_Hb, 1);
+            qo.field_u = vm.a(true, (byte) 22, false, wn.field_r, 1);
             qn.field_l = wk.field_j;
             dg.field_d = io.field_g;
             hf.field_q = 2;
@@ -658,16 +640,13 @@ abstract class lb extends tn {
             if (!gf.a(io.field_g, -123, wk.field_j, qo.field_u)) {
               break L21;
             } else {
-              int discarded$25 = -91;
-              if (!pe.a(qo.field_u)) {
+              if (!pe.a(qo.field_u, (byte) -91)) {
                 break L21;
               } else {
                 L22: {
                   L23: {
-                    int discarded$26 = 24;
-                    gg.c();
-                    int discarded$27 = 119;
-                    rn.a();
+                    gg.c((byte) 24);
+                    rn.a((byte) 119);
                     ad.field_r = mk.field_c;
                     sd.field_I = false;
                     hn.a(io.field_g, param0 + 27848, wk.field_j, qo.field_u, uj.field_Lb);
@@ -739,10 +718,8 @@ abstract class lb extends tn {
                   if (null != kp.field_t) {
                     break L27;
                   } else {
-                    int discarded$28 = -58;
-                    kp.field_t = vp.d();
-                    int discarded$29 = 0;
-                    hn.field_a = te.n();
+                    kp.field_t = vp.d((byte) -58);
+                    hn.field_a = te.n(0);
                     break L27;
                   }
                 }
@@ -883,20 +860,16 @@ abstract class lb extends tn {
         pf.b(wo.field_d, -31383);
         l.a(false, wo.field_d, 5000, ((lb) this).field_v, ((lb) this).field_u, ((lb) this).field_s, ((lb) this).field_w, param0, 5000, param1, ((lb) this).field_y, ((lb) this).field_q, ((lb) this).field_B, mc.field_k);
         rp.a(((lb) this).field_u, param0, wo.field_d, ((lb) this).field_y, mc.field_k, ((lb) this).field_q, ((lb) this).field_w, -21462, ((lb) this).field_B);
-        int discarded$0 = 31171;
-        qf.a();
-        int discarded$1 = 71;
-        gp.field_Lb = bl.a();
+        qf.a(31171);
+        gp.field_Lb = bl.a(71);
         he.a(0, ec.field_u);
         wg.field_e = param6;
         wn.field_r = param5;
         il.field_f = param7;
         lo.field_Hb = param3;
         ro.field_c = param2;
-        int discarded$2 = -2;
-        this.n();
-        int discarded$3 = 0;
-        an.a();
+        this.n(-2);
+        an.a(0);
     }
 
     final void h(int param0) {
@@ -922,20 +895,17 @@ abstract class lb extends tn {
                   L1: {
                     if (var2 != 1) {
                       if (var2 == 2) {
-                        int discarded$8 = 0;
-                        ef.b();
+                        ef.b(false);
                         break L1;
                       } else {
                         if (var2 != 3) {
                           if (var2 == 4) {
-                            int discarded$9 = -84;
-                            wh.e();
+                            wh.e(-84);
                             break L1;
                           } else {
                             if (var2 != 5) {
                               if (var2 == 6) {
-                                int discarded$10 = -123;
-                                io.b();
+                                io.b(-123);
                                 break L1;
                               } else {
                                 if (var2 == 7) {
@@ -952,8 +922,7 @@ abstract class lb extends tn {
                                             break L2;
                                           } else {
                                             if (13 == var2) {
-                                              int discarded$11 = -123;
-                                              ee.b();
+                                              ee.b(-123);
                                               break L1;
                                             } else {
                                               if (var2 != 17) {
@@ -985,12 +954,10 @@ abstract class lb extends tn {
                                         }
                                       }
                                       var3 = uj.a(stackIn_33_0 != 0, (byte) 122);
-                                      int discarded$12 = 64;
-                                      fq.a(var3);
+                                      fq.a(var3, (byte) 64);
                                       break L1;
                                     } else {
-                                      int discarded$13 = 16711935;
-                                      nk.a();
+                                      nk.a(16711935);
                                       break L1;
                                     }
                                   } else {
@@ -1000,8 +967,7 @@ abstract class lb extends tn {
                                 }
                               }
                             } else {
-                              int discarded$14 = 107;
-                              ki.a();
+                              ki.a(107);
                               break L1;
                             }
                           }
@@ -1011,8 +977,7 @@ abstract class lb extends tn {
                         }
                       }
                     } else {
-                      int discarded$15 = -14439;
-                      ef.a();
+                      ef.a(-14439);
                       break L1;
                     }
                   }
@@ -1038,14 +1003,13 @@ abstract class lb extends tn {
         } else {
             if (hf.field_q < 10) {
             } else {
-                int discarded$6 = 22452;
-                if (!dm.q()) {
+                if (!dm.q(22452)) {
                     pb.b(124);
                 } else {
                     if (el.field_b != 0) {
                         a.a((byte) -104, lp.field_i);
                     } else {
-                        int discarded$7 = this.a(0, false, false);
+                        int discarded$2 = this.a(0, false, false);
                     }
                 }
             }
@@ -1215,7 +1179,7 @@ abstract class lb extends tn {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_C = null;
         field_r = null;
         field_x = null;
@@ -1229,7 +1193,7 @@ abstract class lb extends tn {
         }
     }
 
-    private final void n() {
+    private final void n(int param0) {
         wd.field_d[17] = -1;
         wd.field_d[18] = 1;
         wd.field_d[10] = -1;
@@ -1249,13 +1213,11 @@ abstract class lb extends tn {
     }
 
     private final void i(int param0) {
-        int discarded$0 = 480;
-        String var2 = qo.e();
+        String var2 = qo.e(480);
         if (param0 != 21037) {
             ((lb) this).a(false, false, true, true, true, false, -110);
         }
-        int discarded$1 = 1;
-        gj.a(var2, ao.a(param0 ^ 25606));
+        gj.a(var2, ao.a(param0 ^ 25606), true);
     }
 
     final int j(int param0) {
@@ -1270,8 +1232,7 @@ abstract class lb extends tn {
         }
         L1: {
           L2: {
-            int discarded$16 = -85;
-            var2 = this.l();
+            var2 = this.l(-85);
             if (0 == var2) {
               break L2;
             } else {
@@ -1302,9 +1263,7 @@ abstract class lb extends tn {
             if (!h.field_P[3]) {
               break L5;
             } else {
-              int discarded$17 = 42;
-              int discarded$18 = 4;
-              ue.b();
+              ue.b(4, (byte) 42);
               break L5;
             }
           }
@@ -1320,25 +1279,20 @@ abstract class lb extends tn {
             if (!h.field_P[5]) {
               break L7;
             } else {
-              int discarded$19 = 7;
-              int discarded$20 = 6;
-              bo.a();
+              bo.a(6, 7);
               break L7;
             }
           }
           L8: {
             if (h.field_P[6]) {
-              int discarded$21 = 7;
-              int discarded$22 = -116;
-              ag.a();
+              ag.a((byte) -116, 7);
               break L8;
             } else {
               break L8;
             }
           }
           if (h.field_P[8]) {
-            int discarded$23 = 1;
-            nn.a();
+            nn.a(true);
             break L1;
           } else {
             break L1;
@@ -1347,44 +1301,37 @@ abstract class lb extends tn {
         return var2;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         int var2 = 60;
         h.field_P[5] = true;
     }
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, boolean param4, boolean param5, int param6) {
-        int discarded$0 = 1;
-        int discarded$1 = -53;
-        this.a();
+        this.a((byte) -53, true);
         if (param4) {
-            int discarded$2 = 1;
-            this.m();
+            this.m(1);
         }
         if (param3) {
-            int discarded$3 = 17;
-            this.g();
+            this.g(17);
         }
         if (param5) {
-            int discarded$4 = 61;
-            this.k();
+            this.k(61);
         }
         if (param1) {
-            int discarded$5 = 107;
-            this.e();
+            this.e((byte) 107);
         }
         if (param0) {
             this.o(126);
         }
         if (param2) {
-            int discarded$6 = -103;
-            this.f();
+            this.f((byte) -103);
         }
         if (param6 > -30) {
             ((lb) this).field_s = -38L;
         }
     }
 
-    private final int l() {
+    private final int l(int param0) {
         int var2 = 0;
         if (!((lb) this).field_c) {
           if (!uh.a((byte) -59)) {
@@ -1393,8 +1340,7 @@ abstract class lb extends tn {
             if (ol.field_o) {
               return -1;
             } else {
-              int discarded$2 = 8192;
-              var2 = mi.a(((lb) this).field_A, (byte) 91, am.a(-13565), ((lb) this).field_t, true, eg.f());
+              var2 = mi.a(((lb) this).field_A, (byte) 91, am.a(-13565), ((lb) this).field_t, true, eg.f(8192));
               if (-1 == var2) {
                 return -1;
               } else {
@@ -1442,13 +1388,13 @@ abstract class lb extends tn {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         h.field_P[11] = true;
         h.field_P[12] = true;
         h.field_P[13] = true;
     }
 
-    private final void k() {
+    private final void k(int param0) {
         h.field_P[4] = true;
     }
 
@@ -1522,8 +1468,7 @@ abstract class lb extends tn {
             var4_int = param0.a(127, param2);
             var6 = 95 % ((param1 - -53) / 49);
             var5 = param0.a((byte) -126, param3, var4_int);
-            int discarded$2 = 18;
-            stackOut_0_0 = ff.a(param0, var5, var4_int);
+            stackOut_0_0 = ff.a(param0, var5, var4_int, (byte) 18);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -1666,7 +1611,7 @@ abstract class lb extends tn {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         h.field_P[2] = true;
         int var2 = -1;
     }
@@ -1674,7 +1619,7 @@ abstract class lb extends tn {
     protected lb() {
     }
 
-    private final void a() {
+    private final void a(byte param0, boolean param1) {
         h.field_P[7] = true;
         h.field_P[16] = true;
         h.field_P[17] = true;

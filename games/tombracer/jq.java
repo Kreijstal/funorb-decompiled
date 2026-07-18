@@ -4,7 +4,7 @@
 final class jq extends ob {
     static jea field_o;
 
-    final static void c() {
+    final static void c(byte param0) {
         int var1 = 0;
         vaa.field_b = bva.b((byte) -107);
         gp.field_h = 0;
@@ -188,7 +188,7 @@ final class jq extends ob {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_o = null;
     }
 

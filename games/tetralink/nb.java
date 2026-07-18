@@ -91,10 +91,8 @@ abstract class nb extends ld {
             L1: while (true) {
               if (var7 >= var4) {
                 ac.field_c.c(((nb) this).field_F + (param2 + -90), 10 + param0);
-                int discarded$2 = -125;
-                gh.a(-10 + ((nb) this).field_F, param2 + 5, param0 + 35, hn.field_O);
-                int discarded$3 = -125;
-                gh.a(((nb) this).field_F, param2, ((nb) this).field_u + (param0 + -22), mc.field_i);
+                gh.a(-10 + ((nb) this).field_F, param2 + 5, param0 + 35, hn.field_O, -125);
+                gh.a(((nb) this).field_F, param2, ((nb) this).field_u + (param0 + -22), mc.field_i, -125);
                 var4 = -79 + ((nb) this).field_u;
                 var5 = 169;
                 var6 = 127;
@@ -212,7 +210,7 @@ abstract class nb extends ld {
         }
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_V = null;
         field_W = null;
         field_T = null;

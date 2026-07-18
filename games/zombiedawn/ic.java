@@ -51,7 +51,7 @@ final class ic extends tb implements mi {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_S = null;
         field_T = null;
         field_Q = null;
@@ -359,7 +359,7 @@ final class ic extends tb implements mi {
         }
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_5_0 = 0;

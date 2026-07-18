@@ -129,7 +129,7 @@ final class la extends be {
         super(param0);
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_p = null;
         field_q = null;
     }

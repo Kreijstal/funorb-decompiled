@@ -161,7 +161,7 @@ final class ww extends rqa {
         return stackIn_3_0;
     }
 
-    final static void a(Object[] param0, int param1, Object[] param2) {
+    final static void a(Object[] param0, int param1, Object[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

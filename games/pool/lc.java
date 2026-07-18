@@ -14,7 +14,7 @@ final class lc extends fe {
     static String field_R;
     static lr field_O;
 
-    final static void a(boolean param0, String param1, int param2, int param3, long param4) {
+    final static void a(boolean param0, String param1, int param2, int param3, long param4, int param5) {
         int var7_int = 0;
         try {
             ej.field_j.b(false, 14);
@@ -41,7 +41,7 @@ final class lc extends fe {
         return null;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_P = null;
         field_Q = null;
         field_T = null;

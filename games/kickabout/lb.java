@@ -56,7 +56,7 @@ class lb extends wi {
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, int param2) {
         int stackIn_6_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_5_0 = 0;
@@ -138,8 +138,7 @@ class lb extends wi {
 
     final static void a(int param0, String param1) {
         int var2_int = 0;
-        int discarded$5 = 15137;
-        if (!(cq.e())) {
+        if (!(cq.e(15137))) {
             return;
         }
         try {
@@ -237,7 +236,7 @@ class lb extends wi {
         }
     }
 
-    final static ak a(gm param0) {
+    final static ak a(gm param0, int param1) {
         ak var2 = null;
         RuntimeException var2_ref = null;
         ak stackIn_1_0 = null;

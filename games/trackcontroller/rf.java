@@ -8,7 +8,7 @@ final class rf {
     static String field_d;
     static fj field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_e = null;
@@ -51,7 +51,7 @@ final class rf {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         int var1 = 70;
         if (null == tk.field_u) {
             return false;
@@ -70,7 +70,7 @@ final class rf {
         vl.field_H = 0;
     }
 
-    final static ji[] a(uf param0) {
+    final static ji[] a(uf param0, boolean param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         ji[] var4 = null;
@@ -145,8 +145,7 @@ final class rf {
                     return stackIn_10_0;
                   }
                 } else {
-                  int discarded$1 = 0;
-                  wl.a(10L);
+                  wl.a(10L, false);
                   continue L1;
                 }
               }

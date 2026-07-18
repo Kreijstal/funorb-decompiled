@@ -402,7 +402,7 @@ final class fw extends bw {
         ((fw) this).field_g = param1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_h = null;
         field_f = null;

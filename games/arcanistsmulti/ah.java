@@ -9,17 +9,16 @@ final class ah {
     static int[] field_f;
     static String field_d;
 
-    final static void a(qb[] param0, int param1, int param2, int param3, qb[] param4, dj param5, int param6, int param7, int param8, int param9) {
+    final static void a(qb[] param0, int param1, int param2, int param3, qb[] param4, dj param5, int param6, int param7, int param8, int param9, int param10) {
         try {
             int var11_int = 0;
-            int discarded$0 = -11;
-            fk.d();
+            fk.d(-11);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ah.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 8 + ',' + 8 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + 2 + ',' + param9 + ',' + -97 + ')');
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_e = null;
         field_d = null;

@@ -249,13 +249,13 @@ class kf extends w {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_z = null;
         field_A = null;
         field_y = null;
     }
 
-    final static boolean d() {
+    final static boolean d(boolean param0) {
         pd var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -347,23 +347,20 @@ class kf extends w {
         return ((kf) this).field_B;
     }
 
-    final static void f() {
-        int discarded$0 = 115;
-        nb.field_z = hh.a();
+    final static void f(int param0) {
+        nb.field_z = hh.a((byte) 115);
         ug.field_A = new eg();
-        int discarded$1 = 37;
-        jd.a(true, true);
+        jd.a(true, true, 37);
     }
 
-    final static int g() {
+    final static int g(int param0) {
         return uk.field_V;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         og.field_c = ig.field_a.c(false);
         CharSequence var2 = (CharSequence) (Object) og.field_c;
-        int discarded$0 = -48;
-        cb.field_t = ck.a(var2);
+        cb.field_t = ck.a(var2, (byte) -48);
     }
 
     kf(String param0, rd param1, vd param2) {

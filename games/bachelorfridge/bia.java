@@ -10,7 +10,7 @@ class bia extends bw {
     bia() {
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 10;
         field_i = null;
         field_h = null;

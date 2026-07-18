@@ -7,14 +7,14 @@ abstract class qc extends oh {
     static String field_h;
     static dl[] field_f;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         if (ph.field_E == null) {
             dq.a(-32056, param0);
         } else {
             q.a(false);
         }
-        int discarded$0 = -83;
-        qc.a(9, -14, -108, (dl[]) null, -100, -14);
+        Object var3 = null;
+        qc.a(9, -14, -108, (dl[]) null, -100, -14, -83);
     }
 
     public static void c(byte param0) {
@@ -126,7 +126,7 @@ abstract class qc extends oh {
         return param1 ? 16 : 2;
     }
 
-    final static void a(int param0, int param1, int param2, dl[] param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, dl[] param3, int param4, int param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;

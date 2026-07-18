@@ -9,7 +9,7 @@ final class nh extends me {
     private int[] field_o;
     static int field_p;
 
-    final static void a(java.applet.Applet param0, int param1, int param2, byte param3, String[] param4) {
+    final static void a(java.applet.Applet param0, int param1, int param2, byte param3, String[] param4, int param5) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -493,7 +493,7 @@ final class nh extends me {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_l = null;
     }
 

@@ -27,7 +27,7 @@ final class qb {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -164,7 +164,7 @@ final class qb {
         return stackIn_26_0;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         na.field_f = 20000000L;
     }
 

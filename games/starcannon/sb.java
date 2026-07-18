@@ -82,7 +82,7 @@ final class sb implements Runnable {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_n = null;
         field_o = null;
         field_p = null;
@@ -213,7 +213,7 @@ final class sb implements Runnable {
         return ((sb) this).field_d.read();
     }
 
-    final static kl[] a(ia param0) {
+    final static kl[] a(ia param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -599,7 +599,7 @@ final class sb implements Runnable {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1) {
         qa.field_a.a(param0, false);
     }
 
@@ -728,9 +728,7 @@ final class sb implements Runnable {
         if (param4 < 100) {
             field_g = null;
         }
-        int discarded$0 = 1;
-        int discarded$1 = 0;
-        return ri.a(true, false, 1, param3);
+        return ri.a(true, false, 1, param3, false, true);
     }
 
     private sb(java.net.Socket param0, ka param1, int param2) throws IOException {

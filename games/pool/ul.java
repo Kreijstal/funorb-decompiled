@@ -15,7 +15,7 @@ final class ul extends tm {
         field_l = null;
     }
 
-    final static void i() {
+    final static void i(int param0) {
         ea.field_z = false;
         hr.field_y = 0 == kn.field_e.g(-83) ? true : false;
     }

@@ -16,7 +16,7 @@ final class nc implements Iterator {
     static String field_a;
     private im field_f;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_c = null;
         field_e = null;
@@ -82,7 +82,7 @@ final class nc implements Iterator {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((nc) this).field_d = null;
         int var2 = -67;
         ((nc) this).field_k = ((nc) this).field_f.field_j[0].field_h;
@@ -101,8 +101,7 @@ final class nc implements Iterator {
         ((nc) this).field_d = null;
         try {
             ((nc) this).field_f = param0;
-            int discarded$0 = 127;
-            this.a();
+            this.a((byte) 127);
         } catch (RuntimeException runtimeException) {
             throw kk.a((Throwable) (Object) runtimeException, "nc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

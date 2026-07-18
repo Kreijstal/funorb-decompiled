@@ -13,7 +13,7 @@ final class ll extends lk {
         return j.field_V;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_p = null;
         field_o = null;
     }

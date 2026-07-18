@@ -315,8 +315,7 @@ final class ij {
             }
             L2: {
               L3: {
-                int discarded$2 = -1;
-                var3 = oa.a(param0);
+                var3 = oa.a(param0, -1);
                 if (param1.indexOf(param0) != -1) {
                   break L3;
                 } else {

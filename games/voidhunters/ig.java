@@ -83,9 +83,7 @@ final class ig extends rqa {
             param1 = param1 + (-param1 + uh.field_p) * var3 / var2;
         }
         hca.field_o.a(icb.field_o, 123, 640, param1, 120);
-        int discarded$0 = 0;
-        int discarded$1 = 5;
-        hp.a(640, uh.field_p + -24, qs.field_c, false, hi.field_a);
+        hp.a(640, uh.field_p + -24, qs.field_c, false, hi.field_a, 5, 0);
     }
 
     static {

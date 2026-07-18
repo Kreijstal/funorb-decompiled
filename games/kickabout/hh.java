@@ -109,8 +109,7 @@ final class hh {
                           }
                           break L6;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = au.a(var6, var5, param0, var4);
+                          int discarded$1 = au.a(var17, var5, param0, var4, 9);
                           break L6;
                         }
                       }
@@ -193,7 +192,7 @@ final class hh {
         throw new IllegalStateException();
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         if (10 > vj.field_c) {
             return false;
         }

@@ -133,7 +133,7 @@ final class ua extends ki implements ka {
         return stackIn_10_0 != 0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_I = null;
         int var1 = 0;
         field_F = null;
@@ -488,8 +488,7 @@ final class ua extends ki implements ka {
           L0: {
             if (param1 != null) {
               var2 = new ol(param1, ph.field_h, qf.field_d, sa.field_l, uj.field_b, ig.field_H, jc.field_c);
-              int discarded$2 = -97;
-              og.a();
+              og.a((byte) -97);
               stackOut_3_0 = (ol) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -615,10 +614,8 @@ final class ua extends ki implements ka {
         }
     }
 
-    final static mb h() {
-        int discarded$0 = -1;
-        int discarded$1 = 71;
-        return new mb(sg.b(), he.a());
+    final static mb h(int param0) {
+        return new mb(sg.b(-1), he.a(71));
     }
 
     ua(ge param0) {

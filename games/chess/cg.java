@@ -6,7 +6,7 @@ final class cg {
     static byte[][] field_b;
     static sn field_c;
 
-    final static int a(vg param0, vg param1) {
+    final static int a(vg param0, vg param1, boolean param2) {
         RuntimeException var3 = null;
         Object var4 = null;
         int stackIn_1_0 = 0;
@@ -409,7 +409,7 @@ final class cg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
     }

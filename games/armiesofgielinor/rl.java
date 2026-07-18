@@ -263,7 +263,7 @@ final class rl extends oj {
         return var3;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_C = null;
         field_y = null;
         field_z = null;

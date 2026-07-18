@@ -13,7 +13,7 @@ final class ol extends g {
     static String field_Hb;
     private g field_Eb;
 
-    public static void g() {
+    public static void g(int param0) {
         field_Hb = null;
         field_Lb = null;
         field_Kb = null;

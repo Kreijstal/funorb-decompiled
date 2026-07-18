@@ -5,12 +5,12 @@ final class ne {
     static java.applet.Applet field_b;
     static char[] field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static boolean a(int param0, CharSequence param1) {
+    final static boolean a(int param0, CharSequence param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -180,7 +180,7 @@ final class ne {
         return stackIn_37_0 != 0;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -209,9 +209,7 @@ final class ne {
         var4 = HoldTheLine.field_D;
         try {
           L0: {
-            int discarded$24 = 0;
-            int discarded$25 = 0;
-            if (!ra.a(param0)) {
+            if (!ra.a(param0, false, false)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
@@ -304,7 +302,7 @@ final class ne {
                 break L0;
               } else {
                 var4 = null;
-                byte[] discarded$4 = ne.a(24, (Object) null, true);
+                byte[] discarded$2 = ne.a(24, (Object) null, true);
                 break L0;
               }
             }
@@ -315,8 +313,7 @@ final class ne {
                 stackIn_11_0 = stackOut_10_0;
                 return stackIn_11_0;
               } else {
-                int discarded$5 = -69;
-                stackOut_8_0 = sj.a(var3);
+                stackOut_8_0 = sj.a(var3, (byte) -69);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               }

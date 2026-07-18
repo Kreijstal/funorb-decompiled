@@ -95,7 +95,7 @@ final class wj extends tc {
         return stackIn_7_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             Exception var1 = null;
             int decompiledRegionSelector0 = 0;

@@ -419,7 +419,7 @@ class t extends we {
         }
     }
 
-    final static void i() {
+    final static void i(int param0) {
         me var1 = null;
         int var2 = 0;
         hb var3 = null;
@@ -439,7 +439,7 @@ class t extends we {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_v = null;
         field_z = null;
         field_y = null;

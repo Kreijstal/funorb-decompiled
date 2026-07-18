@@ -13,7 +13,7 @@ final class ik {
     static nh field_b;
     static String field_h;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_h = null;
         field_b = null;
@@ -750,7 +750,7 @@ final class ik {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -774,8 +774,7 @@ final class ik {
         try {
           L0: {
             L1: {
-              int discarded$11 = 67;
-              if (null == pa.a(param0)) {
+              if (null == pa.a(param0, (byte) 67)) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L1;

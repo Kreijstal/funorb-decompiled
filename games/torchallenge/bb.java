@@ -16,11 +16,11 @@ final class bb implements Runnable {
     static int[][] field_k;
     static int field_c;
 
-    final static String a() {
+    final static String a(int param0) {
         return id.field_b.b(false);
     }
 
-    final static lj a(int param0, boolean param1, int param2, byte param3) {
+    final static lj a(int param0, boolean param1, int param2, byte param3, boolean param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;
@@ -32,9 +32,7 @@ final class bb implements Runnable {
               if (param3 > 91) {
                 break L0;
               } else {
-                int discarded$6 = 0;
-                int discarded$7 = 0;
-                lj discarded$8 = bb.a(70, true, 52, (byte) -68);
+                lj discarded$2 = bb.a(70, true, 52, (byte) -68, false, false);
                 break L0;
               }
             }
@@ -95,7 +93,7 @@ final class bb implements Runnable {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1) {
         if (!(param0)) {
             o.a(7, true);
         }
@@ -127,7 +125,7 @@ final class bb implements Runnable {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_k = null;
         field_g = null;
         field_j = null;

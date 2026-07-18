@@ -85,7 +85,7 @@ final class gd {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_b = null;
         field_h = null;

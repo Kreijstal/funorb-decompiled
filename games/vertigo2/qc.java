@@ -93,7 +93,7 @@ abstract class qc extends gp {
 
     abstract boolean i(int param0);
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

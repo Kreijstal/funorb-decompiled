@@ -8,7 +8,7 @@ abstract class hm {
 
     abstract long a(byte param0);
 
-    final static r a() {
+    final static r a(int param0) {
         return hd.field_g;
     }
 
@@ -113,7 +113,7 @@ abstract class hm {
         return stackIn_11_0 != 0;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         Object var2 = null;
         nd.a((byte) 40, de.field_sb, (String) null);
     }

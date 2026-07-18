@@ -26,14 +26,13 @@ abstract class hf implements kf {
         }
     }
 
-    final static String b() {
+    final static String b(int param0) {
         String var1 = "";
         if (null != j.field_e) {
             var1 = j.field_e.a(32);
         }
         if (!(0 != var1.length())) {
-            int discarded$0 = 10367;
-            var1 = ka.c();
+            var1 = ka.c(10367);
         }
         if (!(0 != var1.length())) {
             var1 = pg.field_c;

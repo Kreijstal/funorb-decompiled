@@ -181,8 +181,7 @@ final class bb implements uk {
           L0: {
             var9 = new nf(5, 65530, param3, param1, param8, param2, param5);
             wb.field_f.b(-113, (gg) (Object) var9);
-            int discarded$2 = 80;
-            ea.a(3, var9);
+            ea.a(3, var9, (byte) 80);
             stackOut_2_0 = (nf) var9;
             stackIn_3_0 = stackOut_2_0;
             break L0;

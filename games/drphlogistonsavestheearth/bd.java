@@ -166,7 +166,7 @@ abstract class bd extends pj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_T = null;
         field_S = null;
         field_P = null;

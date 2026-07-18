@@ -12,7 +12,7 @@ final class ua {
     static li field_a;
     static String field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_a = null;
         field_c = null;

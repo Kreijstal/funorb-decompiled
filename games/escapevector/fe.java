@@ -70,8 +70,7 @@ final class fe {
                                 } else {
                                   if (pc.field_e.a(0, "pump32")) {
                                     ia.field_z = bf.a(ck.field_x, 54, "frame", "members_expansion_screen");
-                                    int discarded$6 = 1;
-                                    ml.field_c = fe.a("members_expansion_screen", ck.field_x, "arrow");
+                                    ml.field_c = fe.a("members_expansion_screen", ck.field_x, "arrow", true);
                                     ac.field_c = oi.a(4, pc.field_e, "arialish12", "", ck.field_x);
                                     mn.field_h = ac.a("", -73, ck.field_x, "pump32", pc.field_e);
                                     wf.field_e = p.a((byte) 8, "benefit_orbs", ck.field_x, "members_expansion_screen");
@@ -92,8 +91,7 @@ final class fe {
                     }
                   }
                 }
-                int discarded$7 = 87;
-                this.b();
+                this.b((byte) 87);
                 if (null != ia.field_z) {
                   L4: {
                     ((fe) this).field_h.e(376, 339);
@@ -151,11 +149,11 @@ final class fe {
                   }
                   L6: {
                     ((fe) this).field_c.e(16, 302);
-                    int discarded$8 = ac.field_c.a(((fe) this).field_d[((fe) this).field_i], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+                    int discarded$4 = ac.field_c.a(((fe) this).field_d[((fe) this).field_i], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
                     wf.field_e.e(30, 330);
-                    int discarded$9 = ac.field_c.a(lb.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$10 = ac.field_c.a(lb.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$11 = ac.field_c.a(lb.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$5 = ac.field_c.a(lb.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$6 = ac.field_c.a(lb.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$7 = ac.field_c.a(lb.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
                     ee.field_c.e(508 + (127 + -ee.field_c.field_A) / 2, 315);
                     if (((fe) this).field_a.field_h == 0) {
                       om.field_a[0].e(508, 299);
@@ -369,9 +367,7 @@ final class fe {
               }
               if (param1) {
                 L11: {
-                  int discarded$2 = -16311;
-                  int discarded$3 = -16311;
-                  ((fe) this).field_a.a(this.a(sf.field_c, ng.field_ob), (byte) 122, this.a(dh.field_d, bj.field_y));
+                  ((fe) this).field_a.a(this.a(sf.field_c, ng.field_ob, -16311), (byte) 122, this.a(dh.field_d, bj.field_y, -16311));
                   var4 = 0;
                   if (((fe) this).field_a.b((byte) -18)) {
                     L12: {
@@ -446,7 +442,7 @@ final class fe {
         return 0;
     }
 
-    final static ed a(String param0, mf param1, String param2) {
+    final static ed a(String param0, mf param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -502,8 +498,7 @@ final class fe {
           L0: {
             var4_int = param1.b(-1, param0);
             var5 = param1.a(var4_int, param2, true);
-            int discarded$2 = 9;
-            stackOut_0_0 = ul.a(var4_int, var5, param1);
+            stackOut_0_0 = ul.a(var4_int, var5, param1, (byte) 9);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -590,7 +585,7 @@ final class fe {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ol.field_E = new bf();
         rd.field_c.a((hm) (Object) ol.field_E, 30);
     }
@@ -637,11 +632,10 @@ final class fe {
         ((fe) this).field_m = 0;
         ((fe) this).field_i = 0;
         ((fe) this).field_e = 0;
-        int discarded$0 = -16311;
-        ((fe) this).field_a.a(105, param0, this.a(dh.field_d, bj.field_y), -1);
+        ((fe) this).field_a.a(105, param0, this.a(dh.field_d, bj.field_y, -16311), -1);
     }
 
-    private final void a(boolean param0, String[] param1, te[] param2, java.applet.Applet param3, String param4) {
+    private final void a(boolean param0, String[] param1, te[] param2, java.applet.Applet param3, String param4, int param5) {
         RuntimeException runtimeException = null;
         String var7 = null;
         RuntimeException stackIn_11_0 = null;
@@ -849,7 +843,7 @@ final class fe {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var2 = 0;
         int var3 = 0;
         ed var5 = null;
@@ -922,8 +916,7 @@ final class fe {
     }
 
     final static void a(int param0) {
-        int discarded$0 = 3161;
-        fc.a();
+        fc.a(3161);
         int var1 = 0;
         ni.field_F = true;
         eb.field_H = true;
@@ -931,7 +924,7 @@ final class fe {
         uf.a((byte) 119, fl.field_h, false);
     }
 
-    private final int a(int param0, int param1) {
+    private final int a(int param0, int param1, int param2) {
         if (ia.field_z == null) {
             return -1;
         }
@@ -961,8 +954,7 @@ final class fe {
         ((fe) this).field_e = 0;
         ((fe) this).field_m = 0;
         try {
-            int discarded$0 = 13439;
-            this.a(true, param3, param2, param0, param1);
+            this.a(true, param3, param2, param0, param1, 13439);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "fe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

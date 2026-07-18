@@ -205,8 +205,7 @@ abstract class si extends rc implements oh {
             if (var6 == 80) {
               L2: {
                 if (fh.field_d[81]) {
-                  int discarded$3 = -125;
-                  stackOut_10_0 = this.a(param3);
+                  stackOut_10_0 = this.a(param3, -125);
                   stackIn_11_0 = stackOut_10_0;
                   break L2;
                 } else {
@@ -278,7 +277,7 @@ abstract class si extends rc implements oh {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_F = null;
         field_D = null;
         field_C = null;
@@ -1004,7 +1003,7 @@ abstract class si extends rc implements oh {
         }
     }
 
-    private final boolean a(rc param0) {
+    private final boolean a(rc param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;

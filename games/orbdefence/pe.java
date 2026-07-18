@@ -89,8 +89,7 @@ abstract class pe {
                     break L2;
                   }
                 }
-                int discarded$2 = 98;
-                ae.a(var3_ref);
+                ae.a(var3_ref, 98);
                 var7 = hg.a(var3_ref, "%3a", ":", (byte) -36);
                 var8 = hg.a(var7, "%40", "@", (byte) -67);
                 var9 = hg.a(var8, "%26", "&", (byte) -61);
@@ -149,7 +148,7 @@ abstract class pe {
                     if (var4.field_a != 0) {
                       if (var4.field_a == 1) {
                         var5 = (DataInputStream) var4.field_g;
-                        int discarded$3 = var5.read();
+                        int discarded$1 = var5.read();
                         var5.close();
                         break L0;
                       } else {

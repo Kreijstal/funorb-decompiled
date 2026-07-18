@@ -18,8 +18,7 @@ final class mg extends at {
         int fieldTemp$0 = ((mg) this).field_n - 1;
         ((mg) this).field_n = ((mg) this).field_n - 1;
         if (!(fieldTemp$0 > 0)) {
-            int discarded$1 = -56;
-            this.d();
+            this.d((byte) -56);
             return true;
         }
         int var2 = ((mg) this).field_n * (320 * (50 - ((mg) this).field_n)) / 2500;
@@ -28,7 +27,7 @@ final class mg extends at {
         return false;
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         ((mg) this).field_j.field_k = 0;
     }
 
@@ -40,7 +39,7 @@ final class mg extends at {
         return var2;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_p = null;
         int var1 = -53;
         field_o = null;

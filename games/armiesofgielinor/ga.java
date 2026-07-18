@@ -167,7 +167,7 @@ final class ga {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         int var1 = 34;
         field_i = null;
         field_d = null;

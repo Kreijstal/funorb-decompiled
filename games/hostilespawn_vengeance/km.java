@@ -170,7 +170,7 @@ final class km extends sd {
         field_A = null;
     }
 
-    final static void a(String param0, boolean param1, float param2) {
+    final static void a(String param0, boolean param1, float param2, byte param3) {
         try {
             if (null == hj.field_t) {
                 hj.field_t = new pe(im.field_e, se.field_g);

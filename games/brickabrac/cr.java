@@ -21,8 +21,7 @@ final class cr extends oc {
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        int discarded$0 = -1847795903;
-        this.g();
+        this.g(-1847795903);
     }
 
     cr(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -171,16 +170,15 @@ final class cr extends oc {
         ((cr) this).field_F = param0;
         ((cr) this).field_I = 8355711 & param1 >> 1;
         ((cr) this).field_E = param1;
-        int discarded$0 = -1847795903;
-        this.g();
+        this.g(-1847795903);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_D = null;
         field_N = null;
     }
 
-    private final void g() {
+    private final void g(int param0) {
         ((cr) this).field_P = new jp[]{this.a(((cr) this).field_E, (byte) -41, ((cr) this).field_F), this.a(((cr) this).field_I, (byte) 107, ((cr) this).field_M)};
         ((cr) this).field_G = this.a(16711422);
         ((cr) this).field_O = ((cr) this).field_G.c();
@@ -365,7 +363,7 @@ final class cr extends oc {
         }
     }
 
-    final static jp[] a(String param0, mf param1, String param2) {
+    final static jp[] a(String param0, mf param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

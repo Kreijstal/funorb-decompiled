@@ -173,7 +173,7 @@ final class hr {
         }
     }
 
-    private final void b(int param0, int param1) {
+    private final void b(int param0, int param1, byte param2) {
         if (!(param0 != -1)) {
             ro.field_ob.field_b = param1;
             ro.field_ob.b((byte) 36);
@@ -197,9 +197,8 @@ final class hr {
           this.a(-298276720);
           if (param5) {
             L0: {
-              boolean discarded$3 = ((hr) this).a(85, true, -47, -102, 19, false);
-              int discarded$4 = -39;
-              this.b(param0, param2);
+              boolean discarded$1 = ((hr) this).a(85, true, -47, -102, 19, false);
+              this.b(param0, param2, (byte) -39);
               if (param3 != -1) {
                 ((hr) this).field_j = param3;
                 break L0;
@@ -217,8 +216,7 @@ final class hr {
             return var7 != 0;
           } else {
             L2: {
-              int discarded$5 = -39;
-              this.b(param0, param2);
+              this.b(param0, param2, (byte) -39);
               if (param3 != -1) {
                 ((hr) this).field_j = param3;
                 break L2;
@@ -238,7 +236,7 @@ final class hr {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((hr) this).field_l = true;
         qb var2 = pg.a(((hr) this).field_f, 176, false, ((hr) this).field_c);
         if (var2 == null) {
@@ -284,8 +282,7 @@ final class hr {
                       }
                     } else {
                       L1: {
-                        int discarded$16 = 72;
-                        this.a();
+                        this.a((byte) 72);
                         if (param0 == -23162) {
                           break L1;
                         } else {
@@ -308,8 +305,7 @@ final class hr {
                         }
                       } else {
                         L2: {
-                          int discarded$17 = 72;
-                          this.a();
+                          this.a((byte) 72);
                           if (param0 == -23162) {
                             break L2;
                           } else {
@@ -329,8 +325,7 @@ final class hr {
                             return;
                           }
                         } else {
-                          int discarded$18 = 72;
-                          this.a();
+                          this.a((byte) 72);
                           if (param0 != -23162) {
                             ((hr) this).field_l = true;
                             return;
@@ -350,8 +345,7 @@ final class hr {
                           }
                         } else {
                           L3: {
-                            int discarded$19 = 72;
-                            this.a();
+                            this.a((byte) 72);
                             if (param0 == -23162) {
                               break L3;
                             } else {
@@ -378,8 +372,7 @@ final class hr {
                         }
                       } else {
                         L4: {
-                          int discarded$20 = 72;
-                          this.a();
+                          this.a((byte) 72);
                           if (param0 == -23162) {
                             break L4;
                           } else {
@@ -396,8 +389,7 @@ final class hr {
                         if (var3 == 0) {
                           break L5;
                         } else {
-                          int discarded$21 = 72;
-                          this.a();
+                          this.a((byte) 72);
                           break L5;
                         }
                       }
@@ -418,8 +410,7 @@ final class hr {
                       if (var3 == 0) {
                         break L7;
                       } else {
-                        int discarded$22 = 72;
-                        this.a();
+                        this.a((byte) 72);
                         break L7;
                       }
                     }
@@ -440,8 +431,7 @@ final class hr {
                     if (var3 == 0) {
                       break L9;
                     } else {
-                      int discarded$23 = 72;
-                      this.a();
+                      this.a((byte) 72);
                       break L9;
                     }
                   }
@@ -458,51 +448,29 @@ final class hr {
               }
             } else {
               if (((hr) this).field_f == -1) {
-                L11: {
-                  var3 = 1;
-                  ((hr) this).field_f = 0;
-                  if (var3 == 0) {
-                    break L11;
-                  } else {
-                    int discarded$24 = 72;
-                    this.a();
-                    break L11;
-                  }
-                }
-                L12: {
+                var3 = 1;
+                ((hr) this).field_f = 0;
+                if (var3 != 0) {
+                  this.a((byte) 72);
                   if (param0 == -23162) {
-                    break L12;
+                    return;
                   } else {
                     ((hr) this).field_l = true;
-                    break L12;
-                  }
-                }
-                return;
-              } else {
-                if (0 > ((hr) this).field_f) {
-                  var3 = 1;
-                  ((hr) this).field_f = 0;
-                  if (var3 != 0) {
-                    int discarded$25 = 72;
-                    this.a();
-                    if (param0 == -23162) {
-                      return;
-                    } else {
-                      ((hr) this).field_l = true;
-                      return;
-                    }
-                  } else {
-                    L13: {
-                      if (param0 == -23162) {
-                        break L13;
-                      } else {
-                        ((hr) this).field_l = true;
-                        break L13;
-                      }
-                    }
                     return;
                   }
                 } else {
+                  L11: {
+                    if (param0 == -23162) {
+                      break L11;
+                    } else {
+                      ((hr) this).field_l = true;
+                      break L11;
+                    }
+                  }
+                  return;
+                }
+              } else {
+                if (0 <= ((hr) this).field_f) {
                   if (9 > ((hr) this).field_f) {
                     if (var3 == 0) {
                       if (param0 != -23162) {
@@ -512,40 +480,58 @@ final class hr {
                         return;
                       }
                     } else {
-                      L14: {
-                        int discarded$26 = 72;
-                        this.a();
+                      L12: {
+                        this.a((byte) 72);
                         if (param0 == -23162) {
-                          break L14;
+                          break L12;
                         } else {
                           ((hr) this).field_l = true;
-                          break L14;
+                          break L12;
                         }
                       }
                       return;
                     }
                   } else {
-                    L15: {
+                    L13: {
                       var3 = 1;
                       ((hr) this).field_f = 0;
                       if (var3 == 0) {
-                        break L15;
+                        break L13;
                       } else {
-                        int discarded$27 = 72;
-                        this.a();
-                        break L15;
+                        this.a((byte) 72);
+                        break L13;
                       }
                     }
-                    L16: {
+                    L14: {
                       if (param0 == -23162) {
-                        break L16;
+                        break L14;
                       } else {
                         ((hr) this).field_l = true;
-                        break L16;
+                        break L14;
                       }
                     }
                     return;
                   }
+                } else {
+                  L15: {
+                    var3 = 1;
+                    ((hr) this).field_f = 0;
+                    if (var3 == 0) {
+                      break L15;
+                    } else {
+                      this.a((byte) 72);
+                      break L15;
+                    }
+                  }
+                  L16: {
+                    if (param0 == -23162) {
+                      break L16;
+                    } else {
+                      ((hr) this).field_l = true;
+                      break L16;
+                    }
+                  }
+                  return;
                 }
               }
             }
@@ -564,8 +550,7 @@ final class hr {
               return;
             }
           } else {
-            int discarded$28 = 72;
-            this.a();
+            this.a((byte) 72);
             if (param0 == -23162) {
               return;
             } else {
@@ -585,8 +570,7 @@ final class hr {
                 return;
               }
             } else {
-              int discarded$29 = 72;
-              this.a();
+              this.a((byte) 72);
               if (param0 == -23162) {
                 return;
               } else {
@@ -604,8 +588,7 @@ final class hr {
                   return;
                 }
               } else {
-                int discarded$30 = 72;
-                this.a();
+                this.a((byte) 72);
                 if (param0 == -23162) {
                   return;
                 } else {
@@ -624,8 +607,7 @@ final class hr {
                   return;
                 }
               } else {
-                int discarded$31 = 72;
-                this.a();
+                this.a((byte) 72);
                 if (param0 == -23162) {
                   return;
                 } else {
@@ -804,10 +786,8 @@ final class hr {
 
     private final void a(int param0) {
         int var2 = ((hr) this).field_g.field_i >> 16;
-        int discarded$0 = 1;
-        wp var3 = we.a(var2);
-        int discarded$1 = -34;
-        io.a(var3);
+        wp var3 = we.a(var2, true);
+        io.a(var3, (byte) -34);
     }
 
     final void a(int param0, int param1, byte param2) {

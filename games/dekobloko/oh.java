@@ -211,7 +211,7 @@ final class oh implements Runnable {
         }
     }
 
-    final static byte[] a(String param0) {
+    final static byte[] a(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -330,7 +330,7 @@ final class oh implements Runnable {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_e = null;
         field_c = null;
         field_d = null;
@@ -338,7 +338,7 @@ final class oh implements Runnable {
         field_i = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
     }
 
     protected final void finalize() {

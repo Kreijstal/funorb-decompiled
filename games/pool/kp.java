@@ -18,7 +18,7 @@ final class kp {
     static int field_m;
     static eg field_h;
 
-    final static void a(rk param0) {
+    final static void a(rk param0, byte param1) {
         try {
             int var2_int = 0;
             Pool.field_J = param0;
@@ -27,7 +27,7 @@ final class kp {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_i = null;
         int var1 = 1;

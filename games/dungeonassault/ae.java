@@ -49,7 +49,7 @@ final class ae {
         return ((ae) this).field_d == 102 ? true : false;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_e = null;
         field_c = null;
@@ -199,17 +199,18 @@ final class ae {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         String[] var10 = null;
         String[] var11 = null;
+        String var12 = null;
+        String var13 = null;
         int stackIn_31_0 = 0;
         int stackIn_34_0 = 0;
         String[] stackIn_40_0 = null;
@@ -400,8 +401,7 @@ final class ae {
                   }
                 }
               } else {
-                int discarded$6 = 30496;
-                var3_int = og.a(n.field_c, (byte) 125, qj.field_e, wa.field_l, jk.a(new String[1], ef.field_b));
+                var3_int = og.a(n.field_c, (byte) 125, qj.field_e, wa.field_l, jk.a(new String[1], ef.field_b, 30496));
                 var4 = -1;
                 var5 = 0;
                 L10: while (true) {
@@ -426,8 +426,7 @@ final class ae {
                     cp.field_Q = new String[-1 + (-var4 + var3_int)];
                     cj.a((Object[]) (Object) qj.field_e, var4 - -1, (Object[]) (Object) cp.field_Q, 0, var3_int - var4 - 1);
                     var4 = -1;
-                    int discarded$7 = 30496;
-                    var3_int = og.a(n.field_c, (byte) 84, qj.field_e, wa.field_l, jk.a(new String[1], bn.field_i));
+                    var3_int = og.a(n.field_c, (byte) 84, qj.field_e, wa.field_l, jk.a(new String[1], bn.field_i, 30496));
                     var5 = 0;
                     L12: while (true) {
                       L13: {
@@ -629,9 +628,8 @@ final class ae {
                         break L24;
                       } else {
                         L27: {
-                          var6_ref_String = var11[var5];
-                          int discarded$8 = -30633;
-                          var7 = og.a(false, var6_ref_String);
+                          var13 = var11[var5];
+                          var7 = og.a(false, var13, -30633);
                           if (~var3_int > ~var7) {
                             var3_int = var7;
                             break L27;
@@ -645,9 +643,8 @@ final class ae {
                     }
                   } else {
                     L28: {
-                      var6_ref_String = var10[var5];
-                      int discarded$9 = -30633;
-                      var7 = og.a(false, var6_ref_String);
+                      var12 = var10[var5];
+                      var7 = og.a(false, var12, -30633);
                       if (~var7 < ~var3_int) {
                         var3_int = var7;
                         break L28;
@@ -687,8 +684,7 @@ final class ae {
                     L32: {
                       var6 = to.field_c[var4];
                       if (0 <= var6) {
-                        int discarded$10 = -30633;
-                        var7 = og.a(true, go.field_A[var4]);
+                        var7 = og.a(true, go.field_A[var4], -30633);
                         var8 = -(var7 >> 1) + vo.field_r;
                         var5 = var5 + ci.field_j;
                         dg.field_L[var4] = new int[4];
@@ -744,8 +740,7 @@ final class ae {
               }
             }
             L35: {
-              int discarded$11 = -30633;
-              var5 = og.a(stackIn_90_0 != 0, go.field_A[var4]);
+              var5 = og.a(stackIn_90_0 != 0, go.field_A[var4], -30633);
               if (~var5 < ~var3_int) {
                 var3_int = var5;
                 break L35;

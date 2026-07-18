@@ -8,7 +8,7 @@ class im extends ms {
     static wk field_y;
     static boolean field_w;
 
-    final static int a(om param0) {
+    final static int a(om param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -99,7 +99,7 @@ class im extends ms {
     im() {
     }
 
-    final static int a(int param0, byte[] param1, int param2) {
+    final static int a(int param0, byte[] param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

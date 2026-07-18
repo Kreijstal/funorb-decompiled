@@ -29,8 +29,7 @@ final class bl extends hl {
         field_Nb = null;
         field_Ub = null;
         if (param0 < 115) {
-            int discarded$0 = 1;
-            hl discarded$1 = bl.d();
+            hl discarded$0 = bl.d(true);
         }
         field_Ob = null;
         field_Lb = null;
@@ -293,11 +292,9 @@ final class bl extends hl {
             vg.a((byte) 53, param18);
             em.a(param9, 1, param5, param8, param1, param2, param0, param18, param6, param10, 109, param7, param15, param13, param12);
             r.a(param18, param3, true, param11);
-            int discarded$2 = 24657;
-            ma.c();
+            ma.c(24657);
             pd.b(false);
-            int discarded$3 = 0;
-            ch.a();
+            ch.a(false);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1048,7 +1045,7 @@ final class bl extends hl {
         var19.field_R = var8;
     }
 
-    final static hl d() {
+    final static hl d(boolean param0) {
         return pj.field_f.field_Kb;
     }
 

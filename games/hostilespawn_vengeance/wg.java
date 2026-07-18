@@ -11,13 +11,11 @@ final class wg extends dg implements qk {
 
     public final void a(int param0, int param1, int param2, ph param3, byte param4) {
         if (!(!((wg) this).field_wb)) {
-            int discarded$0 = 0;
-            pc.a(false, true);
+            pc.a(false, true, false);
             return;
         }
         try {
-            int discarded$1 = -25;
-            ul.e();
+            ul.e((byte) -25);
             ((wg) this).g((byte) -5);
             int var6_int = 22 % ((param4 - -63) / 52);
         } catch (RuntimeException runtimeException) {
@@ -172,7 +170,7 @@ final class wg extends dg implements qk {
         return var2;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_zb = null;
     }
 

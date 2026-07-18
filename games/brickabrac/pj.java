@@ -12,32 +12,62 @@ abstract class pj implements ia {
     static int field_a;
 
     public final String a(int param0) {
-        int var2 = 0;
-        var2 = -4 / ((-23 - param0) / 56);
-        if (!((pj) this).a((byte) -119)) {
-          if (~ue.a(false) > ~(350L + ((pj) this).field_f)) {
-            return null;
-          } else {
-            return ((pj) this).b(28600);
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        Object stackIn_2_0 = null;
+        Object stackIn_5_0 = null;
+        String stackIn_7_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_6_0 = null;
+        Object stackOut_4_0 = null;
+        Object stackOut_1_0 = null;
+        try {
+          L0: {
+            var2_int = -4 / ((-23 - param0) / 56);
+            if (!((pj) this).a((byte) -119)) {
+              if (~ue.a(false) <= ~(350L + ((pj) this).field_f)) {
+                stackOut_6_0 = ((pj) this).b(28600);
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                stackOut_4_0 = null;
+                stackIn_5_0 = stackOut_4_0;
+                return (String) (Object) stackIn_5_0;
+              }
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (String) (Object) stackIn_2_0;
+            }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw qb.a((Throwable) (Object) var2, "pj.K(" + param0 + ')');
         }
+        return stackIn_7_0;
     }
 
     public final void a(boolean param0) {
-        ((pj) this).field_f = ue.a(param0);
+        try {
+            ((pj) this).field_f = ue.a(param0);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "pj.P(" + param0 + ')');
+        }
     }
 
     public static void d(int param0) {
-        field_c = null;
-        field_e = null;
-        field_b = null;
-        field_d = null;
-        if (param0 == 31366) {
-            return;
+        try {
+            field_c = null;
+            field_e = null;
+            field_b = null;
+            field_d = null;
+            if (param0 != 31366) {
+                pj.d(-12);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "pj.N(" + param0 + ')');
         }
-        pj.d(-12);
     }
 
     abstract qh c(int param0);
@@ -45,59 +75,86 @@ abstract class pj implements ia {
     abstract String b(int param0);
 
     public final qh b(byte param0) {
-        if (!((pj) this).a((byte) -44)) {
+        RuntimeException var2 = null;
+        qh stackIn_2_0 = null;
+        qh stackIn_8_0 = null;
+        qh stackIn_10_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        qh stackOut_9_0 = null;
+        qh stackOut_7_0 = null;
+        qh stackOut_1_0 = null;
+        try {
           L0: {
-            if (param0 == -31) {
-              break L0;
+            if (!((pj) this).a((byte) -44)) {
+              L1: {
+                if (param0 == -31) {
+                  break L1;
+                } else {
+                  pj.d(100);
+                  break L1;
+                }
+              }
+              if (ue.a(false) >= ((pj) this).field_f - -350L) {
+                stackOut_9_0 = ((pj) this).c(4);
+                stackIn_10_0 = stackOut_9_0;
+                break L0;
+              } else {
+                stackOut_7_0 = m.field_c;
+                stackIn_8_0 = stackOut_7_0;
+                return stackIn_8_0;
+              }
             } else {
-              pj.d(100);
-              break L0;
+              stackOut_1_0 = uo.field_f;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
             }
           }
-          if (ue.a(false) < ((pj) this).field_f - -350L) {
-            return m.field_c;
-          } else {
-            return ((pj) this).c(4);
-          }
-        } else {
-          return uo.field_f;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw qb.a((Throwable) (Object) var2, "pj.M(" + param0 + ')');
         }
+        return stackIn_10_0;
     }
 
-    final static Class a(String param0) throws ClassNotFoundException {
+    final static Class a(String param0, boolean param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_4_0 = null;
         Class stackIn_9_0 = null;
         Class stackIn_14_0 = null;
         Class stackIn_19_0 = null;
-        Class stackIn_27_0 = null;
-        Class stackIn_30_0 = null;
-        Class stackIn_35_0 = null;
-        Class stackIn_39_0 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
+        Object stackIn_22_0 = null;
+        Class stackIn_28_0 = null;
+        Class stackIn_31_0 = null;
+        Class stackIn_37_0 = null;
+        Class stackIn_42_0 = null;
+        Class stackIn_44_0 = null;
+        RuntimeException stackIn_46_0 = null;
+        StringBuilder stackIn_46_1 = null;
+        RuntimeException stackIn_48_0 = null;
+        StringBuilder stackIn_48_1 = null;
+        RuntimeException stackIn_49_0 = null;
+        StringBuilder stackIn_49_1 = null;
+        String stackIn_49_2 = null;
         RuntimeException decompiledCaughtException = null;
         Class stackOut_3_0 = null;
         Class stackOut_8_0 = null;
         Class stackOut_13_0 = null;
         Class stackOut_18_0 = null;
-        Class stackOut_26_0 = null;
-        Class stackOut_34_0 = null;
-        Class stackOut_38_0 = null;
-        Class stackOut_29_0 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
+        Class stackOut_27_0 = null;
+        Class stackOut_36_0 = null;
+        Class stackOut_41_0 = null;
+        Class stackOut_43_0 = null;
+        Class stackOut_30_0 = null;
+        Object stackOut_21_0 = null;
+        RuntimeException stackOut_45_0 = null;
+        StringBuilder stackOut_45_1 = null;
+        RuntimeException stackOut_48_0 = null;
+        StringBuilder stackOut_48_1 = null;
+        String stackOut_48_2 = null;
+        RuntimeException stackOut_46_0 = null;
+        StringBuilder stackOut_46_1 = null;
+        String stackOut_46_2 = null;
         try {
           L0: {
             if (param0.equals((Object) (Object) "B")) {
@@ -120,30 +177,38 @@ abstract class pj implements ia {
                     stackIn_19_0 = stackOut_18_0;
                     return stackIn_19_0;
                   } else {
-                    if (param0.equals((Object) (Object) "Z")) {
-                      stackOut_26_0 = Boolean.TYPE;
-                      stackIn_27_0 = stackOut_26_0;
-                      return stackIn_27_0;
-                    } else {
-                      if (!param0.equals((Object) (Object) "F")) {
-                        if (param0.equals((Object) (Object) "D")) {
-                          stackOut_34_0 = Double.TYPE;
-                          stackIn_35_0 = stackOut_34_0;
-                          return stackIn_35_0;
-                        } else {
-                          if (param0.equals((Object) (Object) "C")) {
-                            stackOut_38_0 = Character.TYPE;
-                            stackIn_39_0 = stackOut_38_0;
-                            break L0;
-                          } else {
-                            return Class.forName(param0);
-                          }
-                        }
+                    if (param1) {
+                      if (param0.equals((Object) (Object) "Z")) {
+                        stackOut_27_0 = Boolean.TYPE;
+                        stackIn_28_0 = stackOut_27_0;
+                        return stackIn_28_0;
                       } else {
-                        stackOut_29_0 = Float.TYPE;
-                        stackIn_30_0 = stackOut_29_0;
-                        return stackIn_30_0;
+                        if (!param0.equals((Object) (Object) "F")) {
+                          if (param0.equals((Object) (Object) "D")) {
+                            stackOut_36_0 = Double.TYPE;
+                            stackIn_37_0 = stackOut_36_0;
+                            return stackIn_37_0;
+                          } else {
+                            if (param0.equals((Object) (Object) "C")) {
+                              stackOut_41_0 = Character.TYPE;
+                              stackIn_42_0 = stackOut_41_0;
+                              return stackIn_42_0;
+                            } else {
+                              stackOut_43_0 = Class.forName(param0);
+                              stackIn_44_0 = stackOut_43_0;
+                              break L0;
+                            }
+                          }
+                        } else {
+                          stackOut_30_0 = Float.TYPE;
+                          stackIn_31_0 = stackOut_30_0;
+                          return stackIn_31_0;
+                        }
                       }
+                    } else {
+                      stackOut_21_0 = null;
+                      stackIn_22_0 = stackOut_21_0;
+                      return (Class) (Object) stackIn_22_0;
                     }
                   }
                 }
@@ -154,33 +219,33 @@ abstract class pj implements ia {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_40_0 = (RuntimeException) var2;
-            stackOut_40_1 = new StringBuilder().append("pj.J(");
-            stackIn_43_0 = stackOut_40_0;
-            stackIn_43_1 = stackOut_40_1;
-            stackIn_41_0 = stackOut_40_0;
-            stackIn_41_1 = stackOut_40_1;
+            stackOut_45_0 = (RuntimeException) var2;
+            stackOut_45_1 = new StringBuilder().append("pj.J(");
+            stackIn_48_0 = stackOut_45_0;
+            stackIn_48_1 = stackOut_45_1;
+            stackIn_46_0 = stackOut_45_0;
+            stackIn_46_1 = stackOut_45_1;
             if (param0 == null) {
-              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
+              stackOut_48_0 = (RuntimeException) (Object) stackIn_48_0;
+              stackOut_48_1 = (StringBuilder) (Object) stackIn_48_1;
+              stackOut_48_2 = "null";
+              stackIn_49_0 = stackOut_48_0;
+              stackIn_49_1 = stackOut_48_1;
+              stackIn_49_2 = stackOut_48_2;
               break L1;
             } else {
-              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
-              stackOut_41_2 = "{...}";
-              stackIn_44_0 = stackOut_41_0;
-              stackIn_44_1 = stackOut_41_1;
-              stackIn_44_2 = stackOut_41_2;
+              stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
+              stackOut_46_1 = (StringBuilder) (Object) stackIn_46_1;
+              stackOut_46_2 = "{...}";
+              stackIn_49_0 = stackOut_46_0;
+              stackIn_49_1 = stackOut_46_1;
+              stackIn_49_2 = stackOut_46_2;
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + ',' + true + ')');
+          throw qb.a((Throwable) (Object) stackIn_49_0, stackIn_49_2 + ',' + param1 + ')');
         }
-        return stackIn_39_0;
+        return stackIn_44_0;
     }
 
     static {

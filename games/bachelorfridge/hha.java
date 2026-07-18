@@ -61,7 +61,7 @@ final class hha extends ana {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
     }
 
     hha(gj param0, mna param1) {
@@ -84,8 +84,7 @@ final class hha extends ana {
             }
             return false;
         }
-        int discarded$1 = 1532;
-        this.f();
+        this.f(1532);
         return true;
     }
 
@@ -127,8 +126,7 @@ final class hha extends ana {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              int discarded$2 = -67;
-              var3 = gh.c();
+              var3 = gh.c((byte) -67);
               var4 = 0;
               L1: while (true) {
                 if (var4 >= var3.length) {
@@ -182,7 +180,7 @@ final class hha extends ana {
         return stackIn_13_0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_z = null;
         field_v = null;
         field_w = null;

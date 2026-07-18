@@ -29,7 +29,7 @@ final class cj {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

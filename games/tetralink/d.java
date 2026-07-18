@@ -276,7 +276,7 @@ abstract class d implements vm {
         }
     }
 
-    final static boolean c() {
+    final static boolean c(byte param0) {
         return null != sj.field_g || hi.field_a;
     }
 

@@ -321,7 +321,7 @@ final class gm extends nl {
                 break L1;
               } else {
                 var12 = null;
-                cn discarded$3 = gm.a((sj) null, -89, (String) null, (sj) null, (String) null);
+                cn discarded$2 = gm.a((sj) null, -89, (String) null, (sj) null, (String) null);
                 break L1;
               }
             }
@@ -417,8 +417,7 @@ final class gm extends nl {
                     break L6;
                   }
                 }
-                int discarded$4 = 1;
-                var7 = ad.a(dh.a(param3.field_Eb), 26300);
+                var7 = ad.a(dh.a(param3.field_Eb, true), 26300);
                 var8 = Math.max(param2.field_F - -15, 66 + (param2.field_F + -(pb.field_C.a(var7) >> 1)));
                 pb.field_C.a(var7, var8, param2.field_T + 51, 16777215, -1);
                 if (param1) {
@@ -430,7 +429,7 @@ final class gm extends nl {
                   break L2;
                 }
               } else {
-                int discarded$5 = pb.field_C.a(pn.field_A, param2.field_F - -18, 40 + param2.field_T, param2.field_q + -36, param2.field_mb + -50, 11184810, -1, 1, 0, 16);
+                int discarded$3 = pb.field_C.a(pn.field_A, param2.field_F - -18, 40 + param2.field_T, param2.field_q + -36, param2.field_mb + -50, 11184810, -1, 1, 0, 16);
                 break L2;
               }
             }
@@ -945,8 +944,7 @@ final class gm extends nl {
                 js.field_d.a((gn) (Object) var3, 3);
                 break L1;
               } else {
-                int discarded$3 = 0;
-                ge.a(var3);
+                ge.a(var3, false);
                 break L1;
               }
             }
@@ -1891,18 +1889,13 @@ final class gm extends nl {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, boolean param11) {
+    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, boolean param11, int param12, int param13) {
         sn.field_e = null;
         ma.b(true);
-        int discarded$0 = 14;
-        int discarded$1 = 13;
-        int discarded$2 = 0;
-        param11 = in.a(15, 50, 11, param11);
+        param11 = in.a(15, 50, 11, param11, 0, 13, 14);
         ud.a(false, 16777215, param9, param8, param10, true, 11, param11, 16777215, param2);
         sb.a(param9, false, param8);
-        int discarded$3 = -103;
-        int discarded$4 = 0;
-        jo.a(param11, param8);
+        jo.a(param11, param8, 0, -103);
     }
 
     final void g(byte param0) {
@@ -1961,7 +1954,7 @@ final class gm extends nl {
         }
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_fb = null;
         field_Q = null;
         field_lb = null;

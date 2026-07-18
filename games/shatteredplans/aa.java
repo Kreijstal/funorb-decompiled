@@ -163,7 +163,7 @@ final class aa extends f implements op, bp, dl {
         }
     }
 
-    private final String k() {
+    private final String k(int param0) {
         return "</col></u>";
     }
 
@@ -418,7 +418,7 @@ final class aa extends f implements op, bp, dl {
         return stackIn_13_0 != 0;
     }
 
-    private final int a(String param0, int param1, vg param2, int param3) {
+    private final int a(String param0, int param1, vg param2, int param3, int param4) {
         pg var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
@@ -637,20 +637,14 @@ final class aa extends f implements op, bp, dl {
         ce dupTemp$1 = new ce(10000536);
         ((aa) this).field_H.field_p = (iq) (Object) dupTemp$1;
         ((aa) this).field_J.field_p = (iq) (Object) dupTemp$1;
-        int discarded$2 = -63;
-        int discarded$3 = 15;
         String var2 = re.a(bo.field_Y, 4371, new String[2]);
         int var3 = 20;
-        int discarded$4 = 170;
-        var3 = var3 + this.a(on.field_i, 21760, (vg) (Object) ((aa) this).field_F, var3);
+        var3 = var3 + this.a(on.field_i, 21760, (vg) (Object) ((aa) this).field_F, var3, 170);
         var3 = var3 + (5 + this.a(127, 170, var3, (vg) (Object) ((aa) this).field_M, "", ec.field_u, 20));
-        int discarded$5 = 170;
-        var3 = var3 + this.a(co.field_t, 21760, (vg) (Object) ((aa) this).field_J, var3);
+        var3 = var3 + this.a(co.field_t, 21760, (vg) (Object) ((aa) this).field_J, var3, 170);
         var3 = var3 + (5 + this.a(170, ab.field_a, var3, (byte) -127, (vg) (Object) ((aa) this).field_H, qq.field_l));
         var3 = var3 + (this.a(170, rf.field_m, var3, (byte) -128, (vg) (Object) ((aa) this).field_Q, tr.field_zb) - -5);
-        int discarded$6 = 170;
-        int discarded$7 = -123;
-        var3 = var3 + this.a(vl.field_m, (vg) (Object) ((aa) this).field_L, var3);
+        var3 = var3 + this.a(vl.field_m, (vg) (Object) ((aa) this).field_L, var3, (byte) -123, 170);
         pg var4 = new pg(46, var3, -90 + ((aa) this).field_x, 25, (vg) (Object) ((aa) this).field_K, true, -120 + ((aa) this).field_x, 5, mf.field_x, 11579568, fe.field_E);
         ((aa) this).b((byte) -71, (vg) (Object) var4);
         var3 = var3 + var4.field_n;
@@ -824,7 +818,7 @@ final class aa extends f implements op, bp, dl {
         return stackIn_4_0;
     }
 
-    private final boolean d() {
+    private final boolean d(boolean param0) {
         if (!(this.m(72))) {
             return false;
         }
@@ -833,8 +827,7 @@ final class aa extends f implements op, bp, dl {
             var2 = Integer.parseInt(((aa) this).field_L.field_s);
         } catch (NumberFormatException numberFormatException) {
         }
-        int discarded$0 = -13037;
-        return cg.a(((aa) this).field_F.field_s, ((aa) this).field_K.field_z, ((aa) this).field_Q.field_s, var2, ((aa) this).field_J.field_s, (aa) this);
+        return cg.a(((aa) this).field_F.field_s, ((aa) this).field_K.field_z, ((aa) this).field_Q.field_s, var2, ((aa) this).field_J.field_s, (aa) this, -13037);
     }
 
     public final void a(int param0) {
@@ -1219,7 +1212,7 @@ final class aa extends f implements op, bp, dl {
         return stackIn_12_0;
     }
 
-    private final int a(String param0, vg param1, int param2) {
+    private final int a(String param0, vg param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
         hl var7 = null;
         int var8 = 0;
@@ -1327,7 +1320,7 @@ final class aa extends f implements op, bp, dl {
         return stackIn_1_0;
     }
 
-    private final String l() {
+    private final String l(int param0) {
         int var2 = 86;
         return "<u=2164A2><col=2164A2>";
     }
@@ -1390,8 +1383,7 @@ final class aa extends f implements op, bp, dl {
                 if (param0 != ((aa) this).field_E) {
                   break L1;
                 } else {
-                  int discarded$4 = 0;
-                  boolean discarded$5 = this.d();
+                  boolean discarded$2 = this.d(false);
                   break L1;
                 }
               }

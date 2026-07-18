@@ -104,7 +104,7 @@ final class vkb extends rqa {
         return stackIn_3_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         double var1_double = 0.0;
         int var3 = 0;

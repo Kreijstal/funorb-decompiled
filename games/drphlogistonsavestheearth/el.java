@@ -49,7 +49,7 @@ final class el extends jf {
         }
     }
 
-    final static hj a(String param0, int param1) {
+    final static hj a(String param0, int param1, byte param2) {
         ka var3 = null;
         RuntimeException var3_ref = null;
         ka stackIn_1_0 = null;
@@ -112,7 +112,7 @@ final class el extends jf {
         return (hj) (Object) stackIn_1_0;
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_sb = null;
         field_vb = null;
         field_ub = null;

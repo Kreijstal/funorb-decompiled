@@ -15,8 +15,7 @@ final class fn {
             param1 = false;
         }
         lf.a(-1, param1);
-        int discarded$0 = 100;
-        kb.f();
+        kb.f((byte) 100);
     }
 
     final static a a(int param0, int param1, int param2, int param3, int param4, jk param5) {
@@ -170,7 +169,7 @@ final class fn {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_e = null;
         field_d = null;

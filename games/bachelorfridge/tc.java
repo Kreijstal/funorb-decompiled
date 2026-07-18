@@ -11,7 +11,7 @@ final class tc {
     private int field_a;
     private int field_f;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean a(int param0, int param1, int param2, boolean param3) {
         if (!(!hl.field_I)) {
             return ao.field_d.a(dla.field_j, (byte) 7, gf.field_k);
         }
@@ -121,7 +121,7 @@ final class tc {
         return (tc) this;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -206,8 +206,7 @@ final class tc {
                       if (var17_int >= gaa.field_i.length) {
                         var23[var16] = -2147483648;
                         var17 = gaa.field_i[var16];
-                        int discarded$2 = 11259;
-                        rda.a(var16);
+                        rda.a(var16, 11259);
                         var18 = 0;
                         L5: while (true) {
                           if (3 <= var18) {
@@ -238,8 +237,7 @@ final class tc {
               } else {
                 var4_ref_ma = gaa.field_i[var3];
                 var4_ref_ma.b(108);
-                int discarded$3 = 11259;
-                rda.a(var3);
+                rda.a(var3, 11259);
                 var5 = var4_ref_ma.field_u - -var4_ref_ma.field_A >> 1;
                 var6 = var4_ref_ma.field_B + var4_ref_ma.field_G >> 1;
                 var7 = var4_ref_ma.field_I + var4_ref_ma.field_q >> 1;
@@ -358,8 +356,7 @@ final class tc {
                     case 5: {
                         try {
                             var2 = "tuhstatbut";
-                            int discarded$2 = 64;
-                            var3 = (String) ac.a(param1, "getcookies");
+                            var3 = (String) ac.a(param1, "getcookies", (byte) 64);
                             var4 = fda.a(-1, ';', var3);
                             var5 = 0;
                             statePc = 6;

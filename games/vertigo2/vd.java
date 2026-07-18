@@ -104,7 +104,7 @@ final class vd {
         }
     }
 
-    final static void a(ed param0) {
+    final static void a(ed param0, int param1) {
         int var2_int = 0;
         try {
             br.field_U = param0.a((byte) -11) << 5;
@@ -125,7 +125,7 @@ final class vd {
         }
     }
 
-    final static er[] a() {
+    final static er[] a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;

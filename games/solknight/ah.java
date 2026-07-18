@@ -80,7 +80,7 @@ final class ah {
         }
     }
 
-    final static void a(o param0) {
+    final static void a(o param0, boolean param1) {
         try {
             dc.field_j = param0;
         } catch (RuntimeException runtimeException) {
@@ -88,7 +88,7 @@ final class ah {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_i = null;
         field_a = null;
@@ -148,16 +148,14 @@ final class ah {
             if (param1 == 7) {
               return;
             } else {
-              int discarded$6 = 1;
-              ah.b();
+              ah.b(true);
               return;
             }
           } else {
             if (param1 == 7) {
               return;
             } else {
-              int discarded$7 = 1;
-              ah.b();
+              ah.b(true);
               return;
             }
           }
@@ -361,8 +359,7 @@ final class ah {
                   if (param1 == 7) {
                     break L26;
                   } else {
-                    int discarded$8 = 1;
-                    ah.b();
+                    ah.b(true);
                     break L26;
                   }
                 }
@@ -505,8 +502,7 @@ final class ah {
               if (param1 == 7) {
                 return;
               } else {
-                int discarded$9 = 1;
-                ah.b();
+                ah.b(true);
                 return;
               }
             } else {
@@ -528,8 +524,7 @@ final class ah {
               }
               td.field_e[var4 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-wd.field_c + rj.field_b));
               if (param1 != 7) {
-                int discarded$10 = 1;
-                ah.b();
+                ah.b(true);
                 return;
               } else {
                 return;
@@ -607,8 +602,7 @@ final class ah {
             }
             td.field_e[var4 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-wd.field_c + rj.field_b));
             if (param1 != 7) {
-              int discarded$11 = 1;
-              ah.b();
+              ah.b(true);
               return;
             } else {
               return;
@@ -733,7 +727,7 @@ final class ah {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         if (lk.field_e > 0) {
           if (!oa.field_n) {
             if (bi.field_b != null) {

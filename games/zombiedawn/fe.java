@@ -98,7 +98,7 @@ final class fe extends hp implements oa, hh {
         return stackIn_11_0 != 0;
     }
 
-    final static v b() {
+    final static v b(boolean param0) {
         v var1 = new v(gl.field_F, kd.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], vj.field_m[0], j.field_a);
         no.f((byte) -36);
         return var1;
@@ -133,7 +133,6 @@ final class fe extends hp implements oa, hh {
             ((fe) this).field_N = param0;
             ((fe) this).field_K = new an(jb.field_c, (sk) null);
             ((fe) this).field_K.field_h = (io) (Object) new vm();
-            int discarded$1 = 125;
             var7 = s.a(1938762664, dn.field_J, new String[2]);
             var3 = 20;
             var4 = new vf(ia.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_e.field_I, -1, 2147483647, true);
@@ -335,7 +334,7 @@ final class fe extends hp implements oa, hh {
         }
     }
 
-    private final String e() {
+    private final String e(byte param0) {
         return "</col></u>";
     }
 
@@ -344,7 +343,7 @@ final class fe extends hp implements oa, hh {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_F = null;
         field_G = null;
         field_L = null;

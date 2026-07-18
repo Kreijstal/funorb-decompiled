@@ -14,7 +14,7 @@ final class f {
     static int field_c;
     static vn field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_i = null;
         field_e = null;

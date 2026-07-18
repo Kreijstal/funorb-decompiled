@@ -309,21 +309,18 @@ final class ue extends vd implements pc, lja, uja {
           if (param3 >= 12) {
             if (param0 != 0) {
               if (param0 == 1) {
-                int discarded$6 = 12;
-                ffa.a("privacy.ws");
+                ffa.a("privacy.ws", 12);
                 return;
               } else {
                 if (param0 == 2) {
-                  int discarded$7 = 12;
-                  ffa.a("conduct.ws");
+                  ffa.a("conduct.ws", 12);
                   return;
                 } else {
                   return;
                 }
               }
             } else {
-              int discarded$8 = 12;
-              ffa.a("terms.ws");
+              ffa.a("terms.ws", 12);
               return;
             }
           } else {
@@ -398,14 +395,11 @@ final class ue extends vd implements pc, lja, uja {
         cm dupTemp$1 = new cm(10000536);
         ((ue) this).field_F.field_f = (qda) (Object) dupTemp$1;
         ((ue) this).field_G.field_f = (qda) (Object) dupTemp$1;
-        int discarded$2 = -81;
         String var2 = lga.a(true, new String[2], cka.field_x);
         int var3 = 20;
-        int discarded$3 = 120;
-        var3 = var3 + this.a(var3, 170, ua.field_a, (wj) (Object) ((ue) this).field_I);
+        var3 = var3 + this.a(var3, 170, ua.field_a, (wj) (Object) ((ue) this).field_I, 120);
         var3 = var3 + (5 + this.a((wj) (Object) ((ue) this).field_K, "", var3, 20, 170, (byte) -14, rm.field_b));
-        int discarded$4 = 120;
-        var3 = var3 + this.a(var3, 170, mp.field_r, (wj) (Object) ((ue) this).field_G);
+        var3 = var3 + this.a(var3, 170, mp.field_r, (wj) (Object) ((ue) this).field_G, 120);
         var3 = var3 + (this.a(-20199, var3, (wj) (Object) ((ue) this).field_F, ug.field_m, hm.field_a, 170) - -5);
         var3 = var3 + (this.a(-20199, var3, (wj) (Object) ((ue) this).field_C, saa.field_u, gp.field_v, 170) + 5);
         var3 = var3 + this.a(vr.field_h, var3, 170, (byte) -32, (wj) (Object) ((ue) this).field_D);
@@ -435,7 +429,7 @@ final class ue extends vd implements pc, lja, uja {
         ((ue) this).a(0, var6 + var3 + 55, (byte) 59, 496, 0);
     }
 
-    private final String l() {
+    private final String l(int param0) {
         int var2 = 0;
         return "<u=2164A2><col=2164A2>";
     }
@@ -628,7 +622,7 @@ final class ue extends vd implements pc, lja, uja {
                 break L1;
               } else {
                 var7 = null;
-                boolean discarded$6 = ((ue) this).a(65, 76, 'ￜ', (wj) null);
+                boolean discarded$4 = ((ue) this).a(65, 76, 'ￜ', (wj) null);
                 break L1;
               }
             }
@@ -639,8 +633,7 @@ final class ue extends vd implements pc, lja, uja {
               if (param1 != ((ue) this).field_L) {
                 break L0;
               } else {
-                int discarded$7 = -11199;
-                boolean discarded$8 = this.j();
+                boolean discarded$5 = this.j(-11199);
                 return;
               }
             }
@@ -683,8 +676,7 @@ final class ue extends vd implements pc, lja, uja {
         }
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 0;
-            ((ue) this).field_L.field_z = this.k();
+            ((ue) this).field_L.field_z = this.k(0);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "ue.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -769,7 +761,7 @@ final class ue extends vd implements pc, lja, uja {
         return stackIn_10_0;
     }
 
-    private final int a(int param0, int param1, String param2, wj param3) {
+    private final int a(int param0, int param1, String param2, wj param3, int param4) {
         ge var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
@@ -871,9 +863,8 @@ final class ue extends vd implements pc, lja, uja {
         return stackIn_1_0;
     }
 
-    private final boolean j() {
-        int discarded$0 = 0;
-        if (!this.k()) {
+    private final boolean j(int param0) {
+        if (!this.k(0)) {
             return false;
         }
         int var2 = -1;
@@ -983,7 +974,7 @@ final class ue extends vd implements pc, lja, uja {
         return stackIn_16_0 != 0;
     }
 
-    private final boolean k() {
+    private final boolean k(int param0) {
         if (this.a(25323, (mca) (Object) ((ue) this).field_C)) {
           if (this.a(25323, (mca) (Object) ((ue) this).field_I)) {
             if (this.a(25323, (mca) (Object) ((ue) this).field_K)) {

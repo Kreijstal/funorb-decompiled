@@ -11,7 +11,7 @@ final class cf {
     static String[] field_b;
     static boolean field_f;
 
-    final static bd a(String param0, String param1) {
+    final static bd a(String param0, String param1, byte param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -59,8 +59,7 @@ final class cf {
                 break L1;
               } else {
                 var7 = (CharSequence) (Object) param0;
-                int discarded$2 = 0;
-                var4_long = be.a(var7);
+                var4_long = be.a(var7, false);
                 break L1;
               }
             }
@@ -126,7 +125,7 @@ final class cf {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_d = null;
         field_c = null;

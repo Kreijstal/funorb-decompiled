@@ -4,21 +4,18 @@
 final class ss {
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
     final static void a(al param0, byte param1, ki param2, int param3) {
         try {
             gi.field_i = vm.a(-32) * param3 / 1000;
-            int discarded$0 = 100;
-            ak.a(param2);
+            ak.a(param2, 100);
             wq.a(false, param2);
-            int discarded$1 = -84;
-            lq.a(param2);
+            lq.a(param2, -84);
             qt.b(true);
-            int discarded$2 = -90;
-            rw.a();
+            rw.a((byte) -90);
             td.field_u = 0 - gi.field_i;
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) (Object) runtimeException, "ss.C(" + (param0 != null ? "{...}" : "null") + ',' + 127 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

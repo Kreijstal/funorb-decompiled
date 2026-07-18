@@ -15,7 +15,7 @@ final class wm extends gn {
     int field_M;
     static String field_T;
 
-    public static void h() {
+    public static void h(byte param0) {
         field_P = null;
         field_S = null;
         field_Q = null;
@@ -44,7 +44,7 @@ final class wm extends gn {
         return ((wm) this).field_O;
     }
 
-    final static ul a(int param0, int param1, boolean param2, boolean param3, int param4) {
+    final static ul a(int param0, int param1, boolean param2, boolean param3, int param4, boolean param5) {
         try {
             int var6_int = 0;
             IOException var6 = null;

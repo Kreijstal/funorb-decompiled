@@ -203,7 +203,7 @@ abstract class ha extends dl implements qn {
         super(param0, param1, param2, param3, param4);
     }
 
-    final static String a(java.applet.Applet param0, String param1) {
+    final static String a(java.applet.Applet param0, String param1, int param2) {
         try {
             String var3 = null;
             Throwable var3_ref = null;
@@ -497,7 +497,7 @@ abstract class ha extends dl implements qn {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_R = null;
         field_T = null;
         field_S = null;
@@ -505,7 +505,7 @@ abstract class ha extends dl implements qn {
         field_Q = null;
     }
 
-    final static void a(int param0, int param1, byte param2, mi param3, int param4, wk param5) {
+    final static void a(int param0, int param1, byte param2, mi param3, int param4, wk param5, int param6, int param7, int param8, int param9, int param10) {
         try {
             pa.field_b = 80;
             ij.field_W = 40;

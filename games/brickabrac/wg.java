@@ -73,8 +73,7 @@ final class wg extends java.awt.Canvas implements java.awt.event.FocusListener {
           L0: {
             var7 = new m(param5);
             var8 = new m(param3);
-            int discarded$2 = 4;
-            stackOut_0_0 = wl.a(param0, param2, param4, var7, param6, var8);
+            stackOut_0_0 = wl.a(param0, param2, param4, var7, param6, var8, 4);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -164,13 +163,12 @@ final class wg extends java.awt.Canvas implements java.awt.event.FocusListener {
     final static int a(boolean param0) {
         dp.field_v.a(77);
         if (!vd.field_f.b(72)) {
-            int discarded$0 = -1;
-            return sm.b();
+            return sm.b(-1);
         }
         return 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_d = null;
@@ -299,7 +297,7 @@ final class wg extends java.awt.Canvas implements java.awt.event.FocusListener {
                 gp.field_d.a(param3, -15211);
                 if (null != vd.field_a) {
                   if (um.field_e) {
-                    boolean discarded$2 = vd.field_a.a(gp.field_d.field_db, gp.field_d.field_Eb, 116, param3);
+                    boolean discarded$1 = vd.field_a.a(gp.field_d.field_db, gp.field_d.field_Eb, 116, param3);
                     break L3;
                   } else {
                     vd.field_a = null;
@@ -329,8 +327,7 @@ final class wg extends java.awt.Canvas implements java.awt.event.FocusListener {
                       break L6;
                     }
                   }
-                  int discarded$3 = -9235;
-                  var8 = pn.c();
+                  var8 = pn.c(-9235);
                   if (var8 != null) {
                     ep.field_e = var8;
                     break L0;

@@ -143,7 +143,7 @@ final class rk extends bc {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_e = null;
         field_d = null;
     }

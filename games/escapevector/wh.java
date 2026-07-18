@@ -16,8 +16,8 @@ final class wh extends pg {
     final void a(wl param0, String param1, int param2, int param3, byte param4) {
         RuntimeException var6 = null;
         Object var7 = null;
-        vl var8 = null;
         vl var9 = null;
+        vl var10 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -56,7 +56,7 @@ final class wh extends pg {
                 break L1;
               } else {
                 var7 = null;
-                vl discarded$2 = this.a((String) null, 107, 116, (wl) null);
+                vl discarded$1 = this.a((String) null, 107, 116, (wl) null);
                 break L1;
               }
             }
@@ -91,12 +91,11 @@ final class wh extends pg {
               ((wh) this).field_n = true;
               ((wh) this).field_g = param1;
               ((wh) this).field_i = param0;
-              var8 = this.a(param1, param3, 116, param0);
-              var9 = var8;
-              var9.field_b[0] = -param0.b(param1) + param2;
-              var8.field_b[param1.length()] = param2;
-              int discarded$3 = 0;
-              vi.a(0, param1, var9, param0);
+              var9 = this.a(param1, param3, 116, param0);
+              var10 = var9;
+              var10.field_b[0] = -param0.b(param1) + param2;
+              var10.field_b[param1.length()] = param2;
+              vi.a(0, param1, var10, param0, false);
               break L0;
             }
           }
@@ -512,8 +511,7 @@ final class wh extends pg {
                           break L9;
                         }
                       }
-                      int discarded$1 = 0;
-                      vi.a(stackIn_40_0, var14, var15, param2);
+                      vi.a(stackIn_40_0, var14, var15, param2, false);
                       break L8;
                     }
                   }
@@ -609,14 +607,13 @@ final class wh extends pg {
             var8 = var7;
             var7.field_b[0] = param2;
             var8.field_b[param0.length()] = param2 - -param4.b(param0);
-            int discarded$0 = 0;
-            vi.a(param1, param0, var8, param4);
+            vi.a(param1, param0, var8, param4, false);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "wh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_p = null;
         field_j = null;
     }
@@ -647,8 +644,7 @@ final class wh extends pg {
             var7 = param2.b(param0);
             var8.field_b[0] = -(var7 >> 1) + param1;
             var8.field_b[param0.length()] = (var7 >> 1) + param1;
-            int discarded$0 = 0;
-            vi.a(0, param0, var8, param2);
+            vi.a(0, param0, var8, param2, false);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "wh.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

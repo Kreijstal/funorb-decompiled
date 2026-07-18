@@ -1177,7 +1177,7 @@ final class io extends sg {
         }
     }
 
-    final static void a(java.awt.Color param0, String param1, boolean param2, int param3) {
+    final static void a(java.awt.Color param0, String param1, boolean param2, int param3, int param4) {
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;

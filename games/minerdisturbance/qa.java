@@ -16,12 +16,11 @@ final class qa {
     final static sl a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
         sl var8 = new sl(param2, param6, param3, param0, param7, param1);
         tc.field_v.a((byte) -98, (pi) (Object) var8);
-        int discarded$0 = 4;
-        fg.a((byte) 5, var8);
+        fg.a((byte) 5, var8, 4);
         return var8;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;
@@ -49,8 +48,7 @@ final class qa {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_2_0 = fl.a((byte) 93, param1);
+            stackOut_2_0 = fl.a((byte) 93, param1, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

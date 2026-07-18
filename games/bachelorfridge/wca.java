@@ -955,7 +955,7 @@ final class wca {
               } else {
                 if (this.getClass() == param0.getClass()) {
                   var2 = (wca) param0;
-                  if (var2.field_b != var2.field_b) {
+                  if (((wca) this).field_b != var2.field_b) {
                     stackOut_12_0 = 0;
                     stackIn_13_0 = stackOut_12_0;
                     break L0;

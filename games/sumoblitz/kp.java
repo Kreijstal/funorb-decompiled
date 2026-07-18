@@ -78,8 +78,7 @@ final class kp {
                             if (param0.field_r[param3][var6] != param2.field_s) {
                               break L3;
                             } else {
-                              int discarded$12 = -25;
-                              if (!ea.a(param0.field_o[param3][var6])) {
+                              if (!ea.a(param0.field_o[param3][var6], (byte) -25)) {
                                 break L3;
                               } else {
                                 var7 = 0;
@@ -171,11 +170,11 @@ final class kp {
         return stackIn_20_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
-    final static void a(int param0, id param1) {
+    final static void a(int param0, id param1, int param2) {
         try {
             ow.field_f.a((ms) (Object) param1, (byte) 39);
             km.a((byte) 69, 3, param1);

@@ -146,7 +146,7 @@ final class ra {
         }
     }
 
-    final static void a(int param0, int param1, mi param2, int param3, int param4, byte param5, String param6) {
+    final static void a(int param0, int param1, mi param2, int param3, int param4, byte param5, String param6, int param7) {
         wk[] var8 = null;
         RuntimeException var8_ref = null;
         RuntimeException stackIn_5_0 = null;

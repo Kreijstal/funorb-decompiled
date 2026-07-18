@@ -63,8 +63,7 @@ final class oc extends kl {
             this.d(126);
         }
         if (((oc) this).field_C == 115) {
-            int discarded$0 = 1;
-            this.d();
+            this.d(true);
         }
         ((oc) this).field_p.a((byte) 109, 20);
     }
@@ -108,8 +107,7 @@ final class oc extends kl {
             return;
         }
         if (((oc) this).field_x) {
-            int discarded$0 = 1;
-            t.a(1024, dd.field_B, false);
+            t.a(1024, dd.field_B, false, true);
         }
         if (((oc) this).field_x) {
             qh.a(-13716, (rj) (Object) ((oc) this).field_z, 10);
@@ -486,7 +484,7 @@ final class oc extends kl {
         }
     }
 
-    private final void d() {
+    private final void d(boolean param0) {
         L0: {
           if (!((oc) this).field_x) {
             if (((oc) this).field_n.field_n.field_g != null) {

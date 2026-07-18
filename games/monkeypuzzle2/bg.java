@@ -191,20 +191,17 @@ final class bg extends ua implements u, ql, sh {
                 if (param0 != 0) {
                   if (param0 != 1) {
                     if (2 == param0) {
-                      int discarded$14 = 0;
-                      wc.a("conduct.ws");
+                      wc.a("conduct.ws", false);
                       break L1;
                     } else {
                       break L1;
                     }
                   } else {
-                    int discarded$15 = 0;
-                    wc.a("privacy.ws");
+                    wc.a("privacy.ws", false);
                     break L1;
                   }
                 } else {
-                  int discarded$16 = 0;
-                  wc.a("terms.ws");
+                  wc.a("terms.ws", false);
                   break L1;
                 }
               }
@@ -1132,8 +1129,7 @@ final class bg extends ua implements u, ql, sh {
                 } else {
                   L2: {
                     var3 = param1.charAt(var2_int);
-                    int discarded$5 = 0;
-                    if (uc.a((char) var3)) {
+                    if (uc.a((char) var3, false)) {
                       break L2;
                     } else {
                       if (re.a(param0 ^ -4843, (char) var3)) {
@@ -1400,8 +1396,6 @@ final class bg extends ua implements u, ql, sh {
         ve dupTemp$1 = new ve(10000536);
         ((bg) this).field_J.field_h = (ml) (Object) dupTemp$1;
         ((bg) this).field_H.field_h = (ml) (Object) dupTemp$1;
-        int discarded$2 = -95;
-        int discarded$3 = 0;
         String var2 = gg.a(new String[2], uk.field_p, true);
         int var3 = 20;
         var3 = var3 + this.a(-107, be.field_e, (we) (Object) ((bg) this).field_D, 170, var3);
@@ -1469,8 +1463,7 @@ final class bg extends ua implements u, ql, sh {
             L2: {
               if (param4 != ((bg) this).field_K) {
                 if (param4 == ((bg) this).field_z) {
-                  int discarded$4 = 104;
-                  boolean discarded$5 = this.d();
+                  boolean discarded$2 = this.d((byte) 104);
                   break L2;
                 } else {
                   break L2;
@@ -1703,7 +1696,7 @@ final class bg extends ua implements u, ql, sh {
         return stackIn_1_0;
     }
 
-    private final boolean l() {
+    private final boolean l(int param0) {
         if (this.a(-59, (ag) (Object) ((bg) this).field_N)) {
           if (this.a(-110, (ag) (Object) ((bg) this).field_D)) {
             if (this.a(-22, (ag) (Object) ((bg) this).field_I)) {
@@ -1731,9 +1724,8 @@ final class bg extends ua implements u, ql, sh {
         }
     }
 
-    private final boolean d() {
-        int discarded$0 = -2706;
-        if (!(this.l())) {
+    private final boolean d(byte param0) {
+        if (!(this.l(-2706))) {
             return false;
         }
         int var2 = -1;
@@ -1744,11 +1736,11 @@ final class bg extends ua implements u, ql, sh {
         return kh.a(((bg) this).field_H.field_s, 71, ((bg) this).field_O.field_u, ((bg) this).field_N.field_s, var2, (bg) this, ((bg) this).field_D.field_s);
     }
 
-    private final String b() {
+    private final String b(boolean param0) {
         return "</col></u>";
     }
 
-    private final String e() {
+    private final String e(byte param0) {
         int var2 = 60;
         return "<u=2164A2><col=2164A2>";
     }
@@ -1759,8 +1751,7 @@ final class bg extends ua implements u, ql, sh {
         }
         try {
             super.a(param0, param1, param2, (byte) -23);
-            int discarded$0 = -2706;
-            ((bg) this).field_z.field_w = this.l();
+            ((bg) this).field_z.field_w = this.l(-2706);
         } catch (RuntimeException runtimeException) {
             throw la.a((Throwable) (Object) runtimeException, "bg.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

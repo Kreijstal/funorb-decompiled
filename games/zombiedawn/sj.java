@@ -30,9 +30,7 @@ final class sj {
         try {
           L0: {
             var2_int = -53 / ((-39 - param0) / 62);
-            int discarded$4 = 1;
-            int discarded$5 = -123;
-            stackOut_0_0 = ki.a(10, param1);
+            stackOut_0_0 = ki.a(10, param1, -123, true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -69,7 +67,7 @@ final class sj {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (null == rn.field_b) {
             throw new IllegalStateException("NGR");
         }

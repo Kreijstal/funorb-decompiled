@@ -21,7 +21,7 @@ final class tc implements Iterable {
         field_b = null;
     }
 
-    final static bm a(int param0, vj param1, int param2, vj param3) {
+    final static bm a(int param0, vj param1, int param2, vj param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         bm stackIn_5_0 = null;
@@ -60,8 +60,7 @@ final class tc implements Iterable {
         String stackOut_10_2 = null;
         try {
           L0: {
-            int discarded$7 = -98;
-            if (fl.a(param0, param1, param2)) {
+            if (fl.a(param0, param1, param2, (byte) -98)) {
               stackOut_4_0 = af.a(119, param3.a(param2, param0, (byte) 35));
               stackIn_5_0 = stackOut_4_0;
               break L0;
@@ -129,7 +128,7 @@ final class tc implements Iterable {
         return stackIn_5_0;
     }
 
-    final static u a(long param0, String param1, String param2) {
+    final static u a(long param0, String param1, String param2, int param3, boolean param4) {
         RuntimeException var6 = null;
         ll stackIn_4_0 = null;
         dd stackIn_6_0 = null;
@@ -243,7 +242,7 @@ final class tc implements Iterable {
         return (u) (Object) stackIn_6_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         int var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {

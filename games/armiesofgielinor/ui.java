@@ -30,7 +30,7 @@ final class ui {
         }
     }
 
-    final static ca a(bv param0, int param1) {
+    final static ca a(bv param0, int param1, int param2) {
         ca var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -58,8 +58,7 @@ final class ui {
           L0: {
             if (0 != param1) {
               var3 = new ca();
-              int discarded$2 = -24721;
-              no.a(param0, (uo) (Object) var3, param1);
+              no.a(param0, (uo) (Object) var3, param1, -24721);
               var4 = 0;
               stackOut_3_0 = (ca) var3;
               stackIn_4_0 = stackOut_3_0;
@@ -118,7 +117,7 @@ final class ui {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_e = null;
         field_a = null;
         field_k = null;

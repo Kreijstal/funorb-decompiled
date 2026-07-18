@@ -16,7 +16,7 @@ abstract class ti {
         return gl.field_b[param0 & 2047];
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_b = null;
         field_g = null;

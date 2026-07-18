@@ -71,7 +71,7 @@ final class oi {
         ((oi) this).field_h[param2] = param1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_g = null;
         field_d = null;
@@ -105,8 +105,7 @@ final class oi {
     }
 
     final static void a(int param0) {
-        int discarded$0 = -11451;
-        hi.field_b = gg.b();
+        hi.field_b = gg.b(-11451);
         wg.field_j = new kj();
         if (param0 != -2) {
             oi.a(-67);
@@ -141,7 +140,7 @@ final class oi {
         throw new Error();
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

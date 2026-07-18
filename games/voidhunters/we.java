@@ -4,7 +4,7 @@
 final class we extends rqa {
     static float[] field_o;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
     }
 

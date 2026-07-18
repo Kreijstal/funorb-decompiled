@@ -16,7 +16,7 @@ final class cm {
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
     }
 
     static {

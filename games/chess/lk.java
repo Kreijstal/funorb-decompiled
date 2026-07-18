@@ -20,7 +20,7 @@ final class lk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_c = null;
         field_b = null;
@@ -173,8 +173,7 @@ final class lk {
           if (null == pi.field_d) {
             if (!ve.k(-105)) {
               if (null == pj.field_h) {
-                int discarded$4 = 7;
-                if (jj.b()) {
+                if (jj.b(7)) {
                   return true;
                 } else {
                   return false;

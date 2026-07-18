@@ -8,13 +8,13 @@ final class po {
     static String field_d;
     static cr field_a;
 
-    final static void b() {
+    final static void b(byte param0) {
         hr.field_C.a(110, -(!db.field_S ? 0 : 40 + (2 + re.field_k + 2)) + im.field_j.field_Fb, 18, 0, 0);
         rk.field_v.a(103, 42 - -re.field_k, 18, 0, -40 + (-2 + (-re.field_k + im.field_j.field_Fb)));
         ja.field_f.a(20, 2, re.field_k, im.field_j.field_db + -20, 0, im.field_j.field_Fb, 3124);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;

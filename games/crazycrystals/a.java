@@ -465,7 +465,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, vc param5, int param6, int param7, vc param8, int param9, int param10, int param11, hj param12, hj param13, int param14, hj param15, int param16, int param17, int param18, int param19) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, vc param5, int param6, int param7, vc param8, int param9, int param10, int param11, hj param12, hj param13, int param14, hj param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -546,8 +546,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
         try {
           L0: {
             sl.a(param5, param8, 107, param18);
-            int discarded$1 = -16;
-            mo.a(20, 17, 15, 26);
+            mo.a(20, 17, 15, 26, (byte) -16);
             mh.a(param7, -20, 240);
             f.a(20, param15, 5, param13, 0, (byte) 104);
             u.a(param6, param12, 250, param9);
@@ -757,7 +756,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         int var2 = 0;
         L0: {
@@ -771,25 +770,20 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
             var1 = kl.field_V;
             if (var1 <= 0) {
               sp.field_a.i((byte) -78);
-              int discarded$221 = 3;
-              rf.a();
+              rf.a(3);
               break L0;
             } else {
               if (var1 != 1) {
                 sd.field_T = ci.a(new String[1], gh.field_t, 3);
-                int discarded$222 = -55;
-                sd.field_T = dk.a(new CharSequence[3]);
+                sd.field_T = dk.a(new CharSequence[3], (byte) -55);
                 sp.field_a.i((byte) -78);
-                int discarded$223 = 3;
-                rf.a();
+                rf.a(3);
                 break L0;
               } else {
                 sd.field_T = va.field_a;
-                int discarded$224 = -55;
-                sd.field_T = dk.a(new CharSequence[3]);
+                sd.field_T = dk.a(new CharSequence[3], (byte) -55);
                 sp.field_a.i((byte) -78);
-                int discarded$225 = 3;
-                rf.a();
+                rf.a(3);
                 break L0;
               }
             }

@@ -98,15 +98,13 @@ class wa extends n implements sg {
           if (param0 == 77) {
             if (!((wa) this).field_tb) {
               if (((wa) this).field_ob) {
-                int discarded$8 = 0;
-                al.c();
+                al.c(false);
                 return;
               } else {
                 return;
               }
             } else {
-              int discarded$9 = -118;
-              n.g();
+              n.g((byte) -118);
               return;
             }
           } else {
@@ -115,13 +113,11 @@ class wa extends n implements sg {
               if (!((wa) this).field_ob) {
                 return;
               } else {
-                int discarded$10 = 0;
-                al.c();
+                al.c(false);
                 return;
               }
             } else {
-              int discarded$11 = -118;
-              n.g();
+              n.g((byte) -118);
               return;
             }
           }
@@ -181,8 +177,7 @@ class wa extends n implements sg {
             ((wa) this).o(77);
             return;
           } else {
-            int discarded$2 = 43;
-            ob.a("tochangedisplayname.ws", gi.b(12476));
+            ob.a("tochangedisplayname.ws", gi.b(12476), (byte) 43);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -217,7 +212,7 @@ class wa extends n implements sg {
         }
     }
 
-    public static void n() {
+    public static void n(int param0) {
         int var1 = -46;
         field_pb = null;
         field_qb = null;

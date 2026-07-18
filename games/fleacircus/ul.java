@@ -36,11 +36,10 @@ final class ul extends gj implements nk, da {
         super.b(param0, param1, param2, param3);
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         L0: {
           L1: {
-            int discarded$4 = 39;
-            if (o.c()) {
+            if (o.c((byte) 39)) {
               break L1;
             } else {
               if (((ul) this).field_H.field_i.length() <= 0) {
@@ -160,7 +159,7 @@ final class ul extends gj implements nk, da {
           L0: {
             L1: {
               if (param1 == ((ul) this).field_H) {
-                boolean discarded$4 = ((ul) this).field_J.a((qa) this, -123);
+                boolean discarded$2 = ((ul) this).field_J.a((qa) this, -123);
                 break L1;
               } else {
                 break L1;
@@ -170,8 +169,7 @@ final class ul extends gj implements nk, da {
               if (((ul) this).field_J != param1) {
                 break L2;
               } else {
-                int discarded$5 = -32;
-                this.e();
+                this.e((byte) -32);
                 break L2;
               }
             }
@@ -392,19 +390,16 @@ final class ul extends gj implements nk, da {
                           break L1;
                         }
                       } else {
-                        int discarded$9 = -124;
-                        vi.c();
+                        vi.c((byte) -124);
                         break L1;
                       }
                     }
                   } else {
-                    int discarded$10 = 0;
-                    oh.d();
+                    oh.d(false);
                     break L1;
                   }
                 } else {
-                  int discarded$11 = -32;
-                  this.e();
+                  this.e((byte) -32);
                   break L1;
                 }
               }

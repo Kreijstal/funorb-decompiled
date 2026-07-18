@@ -23,21 +23,19 @@ final class ft extends bw {
           ng.field_e = new sna(0L, (sna) null);
           ng.field_e.a(-1, (sna) (Object) lia.field_j.field_a);
           ng.field_e.a(-1, mc.field_g);
-          int discarded$2 = -6;
-          kf.a();
+          kf.a((byte) -6);
           return;
         } else {
           lia.field_j = new lm(cja.field_r, kt.field_m);
           ng.field_e = new sna(0L, (sna) null);
           ng.field_e.a(-1, (sna) (Object) lia.field_j.field_a);
           ng.field_e.a(-1, mc.field_g);
-          int discarded$3 = -6;
-          kf.a();
+          kf.a((byte) -6);
           return;
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         if (!qo.field_c) {
             throw new IllegalStateException();
         }
@@ -47,7 +45,7 @@ final class ft extends bw {
         jv.field_j = 0;
     }
 
-    private final void a(lu param0) {
+    private final void a(lu param0, int param1) {
         RuntimeException var3 = null;
         Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
@@ -128,7 +126,7 @@ final class ft extends bw {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_h = null;
         int var1 = 81;
     }
@@ -172,8 +170,7 @@ final class ft extends bw {
 
     ft(lu param0) {
         try {
-            int discarded$0 = -26011;
-            this.a(param0);
+            this.a(param0, -26011);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "ft.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

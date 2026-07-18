@@ -147,7 +147,7 @@ final class en {
         return var4.a(param0, (byte) -100);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
         field_a = null;
@@ -437,9 +437,7 @@ final class en {
         }
         int var2 = 95 / ((-79 - param0) / 45);
         if (!(null != ((en) this).field_m)) {
-            int discarded$0 = 126;
-            int discarded$1 = 4;
-            ((en) this).field_m = tg.b();
+            ((en) this).field_m = tg.b(4, 126);
             ((en) this).field_c = false;
             ((en) this).field_h = false;
         }
@@ -565,7 +563,7 @@ final class en {
         return true;
     }
 
-    final static Class a(String param0) throws ClassNotFoundException {
+    final static Class a(String param0, byte param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_3_0 = null;
         Class stackIn_6_0 = null;
@@ -741,7 +739,7 @@ final class en {
         var9.a(param1, false, var7, var8);
     }
 
-    private final void a(int[] param0) {
+    private final void a(int[] param0, int param1) {
         int[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -933,8 +931,7 @@ final class en {
             nk.b(param2, -128);
             if (param0 == 54) {
               L2: {
-                int discarded$2 = 126;
-                var8 = pl.d();
+                var8 = pl.d(126);
                 var7 = var8;
                 var6 = var7;
                 if (var6 == null) {
@@ -999,8 +996,7 @@ final class en {
         }
         if (!((en) this).field_m.field_g) {
             this.a((byte) -82, ((en) this).field_m.field_i);
-            int discarded$0 = -20915;
-            this.a(((en) this).field_m.field_i);
+            this.a(((en) this).field_m.field_i, -20915);
             ((en) this).field_c = false;
             ((en) this).field_m = null;
             ((en) this).field_h = true;
@@ -1011,7 +1007,7 @@ final class en {
         }
     }
 
-    final static void a(mf param0) {
+    final static void a(mf param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
@@ -1034,41 +1030,24 @@ final class en {
           L0: {
             var2_int = 5;
             if (param0.a(0, da.field_d[var2_int])) {
-              int discarded$17 = 1;
-              sl.field_b[var2_int][0] = fe.a("tutorial", param0, "layer0");
+              sl.field_b[var2_int][0] = fe.a("tutorial", param0, "layer0", true);
               uj.field_a = sl.field_b[var2_int][0];
-              int discarded$18 = 1;
-              sl.field_b[var2_int][2] = fe.a("tutorial", param0, "layer2");
-              int discarded$19 = 1;
-              uf.field_e = fe.a("tutorial", param0, "edge_exit_left");
-              int discarded$20 = 1;
-              wa.field_b = fe.a("tutorial", param0, "edge_exit_right");
-              int discarded$21 = 1;
-              dg.field_r = fe.a("tutorial", param0, "edge_inner_bottom");
-              int discarded$22 = 1;
-              ej.field_e = fe.a("tutorial", param0, "edge_inner_bottom_left");
-              int discarded$23 = 1;
-              q.field_G = fe.a("tutorial", param0, "edge_inner_bottom_right");
-              int discarded$24 = 1;
-              n.field_l = fe.a("tutorial", param0, "edge_inner_left");
-              int discarded$25 = 1;
-              cj.field_a = fe.a("tutorial", param0, "edge_inner_right");
-              int discarded$26 = 1;
-              mj.field_f = fe.a("tutorial", param0, "edge_inner_top");
-              int discarded$27 = 1;
-              bf.field_T = fe.a("tutorial", param0, "edge_inner_top_left");
-              int discarded$28 = 1;
-              kn.field_h = fe.a("tutorial", param0, "edge_inner_top_right");
-              int discarded$29 = 1;
-              wa.field_e = fe.a("tutorial", param0, "edge_outer");
-              int discarded$30 = 1;
-              qf.field_d = fe.a("tutorial", param0, "exitbg");
-              int discarded$31 = 1;
-              c.field_n = fe.a("tutorial", param0, "panel");
-              int discarded$32 = 1;
-              gm.field_a = fe.a("tutorial", param0, "platform");
-              int discarded$33 = 1;
-              tk.field_a[var2_int] = fe.a("tutorial", param0, "texture");
+              sl.field_b[var2_int][2] = fe.a("tutorial", param0, "layer2", true);
+              uf.field_e = fe.a("tutorial", param0, "edge_exit_left", true);
+              wa.field_b = fe.a("tutorial", param0, "edge_exit_right", true);
+              dg.field_r = fe.a("tutorial", param0, "edge_inner_bottom", true);
+              ej.field_e = fe.a("tutorial", param0, "edge_inner_bottom_left", true);
+              q.field_G = fe.a("tutorial", param0, "edge_inner_bottom_right", true);
+              n.field_l = fe.a("tutorial", param0, "edge_inner_left", true);
+              cj.field_a = fe.a("tutorial", param0, "edge_inner_right", true);
+              mj.field_f = fe.a("tutorial", param0, "edge_inner_top", true);
+              bf.field_T = fe.a("tutorial", param0, "edge_inner_top_left", true);
+              kn.field_h = fe.a("tutorial", param0, "edge_inner_top_right", true);
+              wa.field_e = fe.a("tutorial", param0, "edge_outer", true);
+              qf.field_d = fe.a("tutorial", param0, "exitbg", true);
+              c.field_n = fe.a("tutorial", param0, "panel", true);
+              gm.field_a = fe.a("tutorial", param0, "platform", true);
+              tk.field_a[var2_int] = fe.a("tutorial", param0, "texture", true);
               fa.field_c[var2_int] = true;
               break L0;
             } else {
@@ -1212,7 +1191,7 @@ final class en {
         return null;
     }
 
-    private final boolean c() {
+    private final boolean c(byte param0) {
         return null != ((en) this).field_m;
     }
 
@@ -1695,8 +1674,7 @@ final class en {
         int var3 = 0;
         L0: {
           var3 = EscapeVector.field_A;
-          int discarded$9 = -123;
-          if (this.c()) {
+          if (this.c((byte) -123)) {
             ((en) this).e(-19636);
             break L0;
           } else {
@@ -1707,16 +1685,14 @@ final class en {
           L1: while (true) {
             var2 = (qd) (Object) ((en) this).field_f.c(-20245);
             if (var2 != null) {
-              int discarded$10 = 1;
-              int discarded$11 = 4;
-              sc.a(var2);
+              sc.a(var2, 4, 1);
               continue L1;
             } else {
               L2: {
                 if (param0 == -32464) {
                   break L2;
                 } else {
-                  ci discarded$12 = this.b(22, true);
+                  ci discarded$1 = this.b(22, true);
                   break L2;
                 }
               }

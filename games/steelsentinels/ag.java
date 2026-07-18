@@ -14,7 +14,7 @@ class ag extends cn {
         this(tj.field_e, param0);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_t = null;
         field_o = null;
         field_p = null;
@@ -32,7 +32,7 @@ class ag extends cn {
         }
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2) {
+    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         var4 = 0;
         if (param0) {

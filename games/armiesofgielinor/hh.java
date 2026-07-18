@@ -14,7 +14,7 @@ final class hh {
     private int field_g;
     static wk field_f;
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_i = null;
         field_j = null;
@@ -114,7 +114,7 @@ final class hh {
         ((hh) this).field_g = ((hh) this).field_b + ((hh) this).field_h >> 1;
     }
 
-    final static String a(CharSequence[] param0, int param1, int param2) {
+    final static String a(CharSequence[] param0, int param1, int param2, int param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;

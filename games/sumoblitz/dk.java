@@ -14,7 +14,7 @@ final class dk {
         return (540800 & param0) != 0;
     }
 
-    final static ns a() {
+    final static ns a(byte param0) {
         try {
             Throwable var1 = null;
             ns stackIn_1_0 = null;

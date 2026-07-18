@@ -127,7 +127,7 @@ final class rl {
         }
     }
 
-    final static int b() {
+    final static int b(byte param0) {
         we.field_j.a(false);
         if (!oh.field_h.c((byte) 124)) {
             return ai.a(2);

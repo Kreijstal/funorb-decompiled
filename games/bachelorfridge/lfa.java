@@ -15,7 +15,7 @@ final class lfa extends k {
     private int field_r;
     static int field_o;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_s = null;
         field_l = null;
         field_u = null;
@@ -53,7 +53,7 @@ final class lfa extends k {
         return stackIn_4_0 != 0;
     }
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         Object var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -366,8 +366,7 @@ final class lfa extends k {
                 }
               }
             }
-            int discarded$2 = 17035;
-            baa.e();
+            baa.e(17035);
             hba.a(true, wha.field_a);
             gs.field_f = null;
             var1_int = ig.field_m.b(16711935);
@@ -399,8 +398,7 @@ final class lfa extends k {
                         if (~var12 <= ~var11_int) {
                           break L17;
                         } else {
-                          int discarded$3 = 255;
-                          var15[var12] = gka.a((lu) (Object) ig.field_m);
+                          var15[var12] = gka.a((lu) (Object) ig.field_m, 255);
                           var12++;
                           continue L18;
                         }

@@ -71,7 +71,7 @@ final class ti extends df implements vb {
         return stackIn_7_0 != 0;
     }
 
-    private final void i() {
+    private final void i(int param0) {
         if (!((ti) this).j(2)) {
           return;
         } else {
@@ -164,8 +164,7 @@ final class ti extends df implements vb {
                                       break L1;
                                     } else {
                                       var6 = ((ti) this).field_D + param2;
-                                      int discarded$6 = -86;
-                                      this.a(var6);
+                                      this.a(var6, -86);
                                       stackOut_49_0 = 1;
                                       stackIn_50_0 = stackOut_49_0;
                                       return stackIn_50_0 != 0;
@@ -178,8 +177,7 @@ final class ti extends df implements vb {
                                     this.g(-83);
                                     break L4;
                                   } else {
-                                    int discarded$7 = 0;
-                                    this.i();
+                                    this.i(0);
                                     break L4;
                                   }
                                 }
@@ -226,8 +224,7 @@ final class ti extends df implements vb {
                             break L8;
                           }
                         }
-                        int discarded$8 = 11149;
-                        this.h();
+                        this.h(11149);
                         stackOut_33_0 = 1;
                         stackIn_34_0 = stackOut_33_0;
                         return stackIn_34_0 != 0;
@@ -269,8 +266,7 @@ final class ti extends df implements vb {
                       break L12;
                     }
                   }
-                  int discarded$9 = 11149;
-                  this.h();
+                  this.h(11149);
                   stackOut_19_0 = 1;
                   stackIn_20_0 = stackOut_19_0;
                   return stackIn_20_0 != 0;
@@ -282,13 +278,12 @@ final class ti extends df implements vb {
                 if (param1 <= -120) {
                   break L13;
                 } else {
-                  boolean discarded$10 = ((ti) this).d(59);
+                  boolean discarded$1 = ((ti) this).d(59);
                   break L13;
                 }
               }
               if (param3 == 80) {
-                int discarded$11 = 0;
-                this.i();
+                this.i(0);
                 stackOut_55_0 = 0;
                 stackIn_56_0 = stackOut_55_0;
                 return stackIn_56_0 != 0;
@@ -362,7 +357,7 @@ final class ti extends df implements vb {
                 break L1;
               } else {
                 var7 = null;
-                boolean discarded$5 = ((ti) this).a(-2, (qm) null);
+                boolean discarded$2 = ((ti) this).a(-2, (qm) null);
                 break L1;
               }
             }
@@ -371,8 +366,7 @@ final class ti extends df implements vb {
                 this.g(-107);
                 break L2;
               } else {
-                int discarded$6 = 0;
-                this.i();
+                this.i(0);
                 break L2;
               }
             }
@@ -578,7 +572,7 @@ final class ti extends df implements vb {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, int param1) {
         if (((ti) this).field_P.field_W == null) {
             return;
         }
@@ -588,15 +582,14 @@ final class ti extends df implements vb {
         }
         try {
             ((ti) this).field_P.field_Y = var3_int;
-            int discarded$0 = 11149;
-            this.h();
+            this.h(11149);
             ((ti) this).field_D = param0;
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ti.P(" + (param0 != null ? "{...}" : "null") + ',' + -86 + ')');
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(ce.field_g == null)) {
             return;
         }
@@ -630,7 +623,7 @@ final class ti extends df implements vb {
         ce.field_g[25] = ab.field_q;
     }
 
-    private final void h() {
+    private final void h(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -837,8 +830,7 @@ final class ti extends df implements vb {
                 break L1;
               }
             }
-            int discarded$2 = 68;
-            stackOut_2_0 = sc.a(kd.a(param2, 100, param1));
+            stackOut_2_0 = sc.a(kd.a(param2, 100, param1), (byte) 68);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -908,14 +900,12 @@ final class ti extends df implements vb {
         ((ti) this).field_P.a(var2, 0, ((ti) this).field_v, 0, -50);
         ((ti) this).field_H = new sl(0, 0, 0, 0, (pf) (Object) new eb(), (qm) (Object) ((ti) this).field_P, (pf) null);
         if (!(var4 == 0)) {
-            int discarded$0 = -15438;
-            ((ti) this).field_H.a(true, 1, rd.b());
+            ((ti) this).field_H.a(true, 1, rd.b(-15438));
         }
         ((ti) this).field_H.a(((ti) this).field_k - ((ti) this).field_K, ((ti) this).field_K, ((ti) this).field_v, 0, -114);
         ((ti) this).field_G = true;
         ((ti) this).c(-90, (qm) (Object) ((ti) this).field_H);
-        int discarded$1 = 11149;
-        this.h();
+        this.h(11149);
         if (param0 >= -38) {
             ((ti) this).field_D = null;
         }
@@ -1091,7 +1081,7 @@ final class ti extends df implements vb {
         return stackIn_1_0;
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_F = null;
         field_M = null;
         field_I = null;

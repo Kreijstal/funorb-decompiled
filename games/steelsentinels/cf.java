@@ -195,7 +195,7 @@ final class cf extends ck {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_v = null;
         field_s = null;
         field_A = null;

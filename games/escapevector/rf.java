@@ -5,7 +5,7 @@ final class rf {
     static boolean field_b;
     static int field_a;
 
-    final static fn a(int param0) {
+    final static fn a(int param0, int param1) {
         if (dj.field_d == null) {
             return null;
         }
@@ -24,7 +24,7 @@ final class rf {
         return dj.field_d[3];
     }
 
-    final static void a(fd param0, int param1, int param2, int param3, fd param4) {
+    final static void a(fd param0, int param1, int param2, int param3, fd param4, int param5) {
         hn.field_s = 0;
         gf.field_e = param4;
         fe.field_k = 0;

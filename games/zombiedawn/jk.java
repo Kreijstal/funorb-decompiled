@@ -153,8 +153,7 @@ final class jk {
     }
 
     final static void a(boolean param0, boolean param1) {
-        int discarded$7 = -80;
-        if (!we.o()) {
+        if (!we.o((byte) -80)) {
           return;
         } else {
           L0: {
@@ -526,7 +525,7 @@ final class jk {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_g = null;
         field_h = null;
     }

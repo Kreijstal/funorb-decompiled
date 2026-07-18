@@ -82,7 +82,7 @@ final class db extends wk {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -104,8 +104,7 @@ final class db extends wk {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = vd.a((byte) 88, param0);
+            stackOut_0_0 = vd.a((byte) 88, param0, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -142,7 +141,7 @@ final class db extends wk {
         return stackIn_1_0;
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_T = null;
         field_O = null;
     }

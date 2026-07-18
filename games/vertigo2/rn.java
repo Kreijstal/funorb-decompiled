@@ -15,7 +15,7 @@ final class rn extends jg {
     static r field_u;
     int field_A;
 
-    private final void d() {
+    private final void d(int param0) {
         int var3 = 0;
         var3 = Vertigo2.field_L ? 1 : 0;
         if (-5 != ((rn) this).field_A) {
@@ -37,7 +37,7 @@ final class rn extends jg {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_z = null;
         field_y = null;
         field_w = null;
@@ -61,8 +61,7 @@ final class rn extends jg {
         ((rn) this).field_A = param4;
         ((rn) this).field_C = true;
         ((rn) this).field_t = param5;
-        int discarded$0 = -23269;
-        this.d();
+        this.d(-23269);
     }
 
     final void a(rn param0, int param1) {
@@ -1075,8 +1074,7 @@ final class rn extends jg {
                 Object var3 = null;
                 rn.a(9, (si) null);
             }
-            int discarded$0 = 4;
-            bm.a(param1, true);
+            bm.a(param1, true, 4);
         } catch (RuntimeException runtimeException) {
             throw wn.a((Throwable) (Object) runtimeException, "rn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

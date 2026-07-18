@@ -237,8 +237,7 @@ final class ai implements Iterable {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$2 = -1;
-          jf.d();
+          jf.d(-1);
           na.field_d.e((byte) 16);
           af.field_r = new la(va.field_a, (String) null, gk.field_a, param3, param0);
           sf.field_f = new pg(na.field_d, (rj) (Object) af.field_r);
@@ -328,7 +327,7 @@ final class ai implements Iterable {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_g = null;
         field_a = null;

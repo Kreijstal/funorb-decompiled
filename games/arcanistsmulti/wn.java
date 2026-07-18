@@ -96,7 +96,7 @@ abstract class wn extends qm implements a {
         return stackIn_6_0 != 0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_z = null;
         field_x = null;
         field_A = null;
@@ -207,9 +207,7 @@ abstract class wn extends qm implements a {
                           fd.field_e = ci.a(false, (String) null, -95, fk.field_k, param5);
                           break L3;
                         } else {
-                          int discarded$11 = 0;
-                          int discarded$12 = -128;
-                          fd.field_e = cf.a(param3, param5);
+                          fd.field_e = cf.a(param3, param5, (byte) -128, false);
                           break L3;
                         }
                       }
@@ -272,8 +270,7 @@ abstract class wn extends qm implements a {
                           } else {
                             if (var6_int != 1) {
                               if (var6_int == 8) {
-                                int discarded$13 = 0;
-                                ka.b();
+                                ka.b(false);
                                 bb.field_h = false;
                                 stackOut_33_0 = var6_int;
                                 stackIn_34_0 = stackOut_33_0;
@@ -312,8 +309,7 @@ abstract class wn extends qm implements a {
                           var6_ref = df.field_z.g(103);
                           var7 = df.field_z.e((byte) -94);
                           if ((1 & var7) != 0) {
-                            int discarded$14 = -69;
-                            j.b();
+                            j.b(-69);
                             break L9;
                           } else {
                             break L9;
@@ -381,9 +377,9 @@ abstract class wn extends qm implements a {
                         L15: {
                           ag.field_E = stackIn_58_0 != 0;
                           if (fl.field_a) {
-                            int discarded$15 = df.field_z.e((byte) 110);
+                            int discarded$4 = df.field_z.e((byte) 110);
                             ne.field_g = df.field_z.e((byte) -115);
-                            int discarded$16 = df.field_z.d(-10674);
+                            int discarded$5 = df.field_z.d(-10674);
                             wd.field_d = df.field_z.n(-98);
                             ra.field_f = new byte[wd.field_d];
                             var8 = 0;
@@ -423,8 +419,7 @@ abstract class wn extends qm implements a {
                           if (var6_ref == null) {
                             break L18;
                           } else {
-                            int discarded$17 = 0;
-                            jf.a(var6_ref, cd.e(108));
+                            jf.a(var6_ref, cd.e(108), 0);
                             break L18;
                           }
                         }
@@ -438,7 +433,7 @@ abstract class wn extends qm implements a {
                               } else {
                                 try {
                                   L21: {
-                                    Object discarded$18 = ei.a(cd.e(125), 108, "unzap");
+                                    Object discarded$6 = ei.a(cd.e(125), 108, "unzap");
                                     break L21;
                                   }
                                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -454,8 +449,7 @@ abstract class wn extends qm implements a {
                           }
                           try {
                             L23: {
-                              int discarded$19 = 29424;
-                              Object discarded$20 = ei.a("zap", cd.e(113), (byte) 114, new Object[1]);
+                              Object discarded$7 = ei.a("zap", cd.e(113), (byte) 114, new Object[1]);
                               break L23;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -500,8 +494,7 @@ abstract class wn extends qm implements a {
                     } else {
                       if (pn.b(-12564)) {
                         L28: {
-                          int discarded$21 = 0;
-                          ka.b();
+                          ka.b(false);
                           if (7 != on.field_g) {
                             break L28;
                           } else {
@@ -914,7 +907,7 @@ abstract class wn extends qm implements a {
         return ((wn) this).field_B == null ? 0 : ((wn) this).field_B.c(0);
     }
 
-    private final boolean a(qm param0) {
+    private final boolean a(qm param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -1199,7 +1192,7 @@ abstract class wn extends qm implements a {
               if (param1 <= -120) {
                 break L2;
               } else {
-                String discarded$5 = ((wn) this).b(false);
+                String discarded$2 = ((wn) this).b(false);
                 break L2;
               }
             }
@@ -1207,8 +1200,7 @@ abstract class wn extends qm implements a {
             if (var5_int == 80) {
               L3: {
                 if (ri.field_b[81]) {
-                  int discarded$6 = 0;
-                  stackOut_12_0 = this.a(param0);
+                  stackOut_12_0 = this.a(param0, 0);
                   stackIn_13_0 = stackOut_12_0;
                   break L3;
                 } else {

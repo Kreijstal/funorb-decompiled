@@ -47,7 +47,7 @@ final class cp extends ev {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_j = null;
         field_n = null;

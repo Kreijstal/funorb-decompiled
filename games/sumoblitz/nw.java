@@ -20,7 +20,7 @@ final class nw extends g {
         return (param2 - param1) * param3 + param1;
     }
 
-    private final java.net.Socket a(String param0, int param1, String param2) throws IOException {
+    private final java.net.Socket a(String param0, int param1, String param2, byte param3) throws IOException {
         RuntimeException var5 = null;
         OutputStream var6 = null;
         BufferedReader var7 = null;
@@ -329,8 +329,7 @@ final class nw extends g {
                       break L3;
                     }
                   }
-                  int discarded$1 = 105;
-                  stackOut_14_0 = this.a((String) var5, var4_ref.getPort(), var4_ref.getHostName());
+                  stackOut_14_0 = this.a((String) var5, var4_ref.getPort(), var4_ref.getHostName(), (byte) 105);
                   stackIn_15_0 = stackOut_14_0;
                   return stackIn_15_0;
                 }

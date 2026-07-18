@@ -7,7 +7,7 @@ final class ne {
     static String field_d;
     static bi field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 20;
         field_b = null;
         field_a = null;

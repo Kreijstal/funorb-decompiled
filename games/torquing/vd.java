@@ -162,7 +162,7 @@ final class vd {
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -194,14 +194,12 @@ final class vd {
                 if (var2 != 1) {
                   if (2 != var2) {
                     nn.a("A1: " + me.a(-1), (Throwable) null, -9958);
-                    int discarded$4 = 1;
-                    ih.b();
+                    ih.b(true);
                     break L1;
                   } else {
                     var16_ref = (nh) (Object) to.field_q.b(0);
                     if (var16_ref == null) {
-                      int discarded$5 = 1;
-                      ih.b();
+                      ih.b(true);
                       return;
                     } else {
                       var16_ref.field_r = kb.a((byte) -91);
@@ -217,8 +215,7 @@ final class vd {
                     var12.f(0);
                     break L1;
                   } else {
-                    int discarded$6 = 1;
-                    ih.b();
+                    ih.b(true);
                     return;
                   }
                 }
@@ -244,8 +241,7 @@ final class vd {
                       var15.f(0);
                       break L1;
                     } else {
-                      int discarded$7 = 1;
-                      ih.b();
+                      ih.b(true);
                       return;
                     }
                   } else {
@@ -265,7 +261,7 @@ final class vd {
         }
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String a(int param0, CharSequence param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

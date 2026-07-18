@@ -26,8 +26,7 @@ class c extends qm {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.l(121);
-                int discarded$1 = 32240;
-                this.a(var2);
+                this.a(var2, 32240);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -44,7 +43,7 @@ class c extends qm {
         }
     }
 
-    private final int k() {
+    private final int k(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -88,7 +87,7 @@ class c extends qm {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
@@ -168,9 +167,8 @@ class c extends qm {
         }
     }
 
-    private final void r() {
-        int discarded$0 = 0;
-        this.e();
+    private final void r(int param0) {
+        this.e(false);
         this.l(126);
     }
 
@@ -195,7 +193,7 @@ class c extends qm {
         ti.field_E.a(0, -120 + t.field_d + -4, 438 * var3 / var2 + var1 + 202, 256, 438);
     }
 
-    private final String a() {
+    private final String a(byte param0) {
         int var2 = ((c) this).field_S >= ((c) this).field_ab ? ((c) this).field_ab : ((c) this).field_S;
         int var3 = ((c) this).field_ab <= ((c) this).field_S ? ((c) this).field_S : ((c) this).field_ab;
         return ((c) this).field_q.substring(var2, var3);
@@ -326,9 +324,9 @@ class c extends qm {
                             break L6;
                           } else {
                             ((c) this).field_q = ((c) this).field_q + param3;
-                            int dupTemp$6 = ((c) this).field_q.length();
-                            ((c) this).field_ab = dupTemp$6;
-                            ((c) this).field_S = dupTemp$6;
+                            int dupTemp$1 = ((c) this).field_q.length();
+                            ((c) this).field_ab = dupTemp$1;
+                            ((c) this).field_S = dupTemp$1;
                             break L6;
                           }
                         }
@@ -380,9 +378,8 @@ class c extends qm {
                                   stackIn_57_1 = stackOut_56_1;
                                   break L8;
                                 } else {
-                                  int discarded$7 = -5782;
                                   stackOut_55_0 = this;
-                                  stackOut_55_1 = this.k();
+                                  stackOut_55_1 = this.k(-5782);
                                   stackIn_57_0 = stackOut_55_0;
                                   stackIn_57_1 = stackOut_55_1;
                                   break L8;
@@ -397,8 +394,7 @@ class c extends qm {
                             if (param0 != 102) {
                               if (param0 != 103) {
                                 if (param0 == 84) {
-                                  int discarded$8 = -126;
-                                  this.d();
+                                  this.d((byte) -126);
                                   stackOut_51_0 = 1;
                                   stackIn_52_0 = stackOut_51_0;
                                   return stackIn_52_0 != 0;
@@ -408,8 +404,7 @@ class c extends qm {
                                       break L9;
                                     } else {
                                       if (param0 == 65) {
-                                        int discarded$9 = -1;
-                                        this.r();
+                                        this.r(-1);
                                         stackOut_49_0 = 1;
                                         stackIn_50_0 = stackOut_49_0;
                                         return stackIn_50_0 != 0;
@@ -425,8 +420,7 @@ class c extends qm {
                                       if (param0 != 66) {
                                         break L10;
                                       } else {
-                                        int discarded$10 = 0;
-                                        this.e();
+                                        this.e(false);
                                         stackOut_43_0 = 1;
                                         stackIn_44_0 = stackOut_43_0;
                                         return stackIn_44_0 != 0;
@@ -472,9 +466,8 @@ class c extends qm {
                                 stackIn_28_1 = stackOut_27_1;
                                 break L11;
                               } else {
-                                int discarded$11 = 0;
                                 stackOut_26_0 = this;
-                                stackOut_26_1 = this.c();
+                                stackOut_26_1 = this.c(false);
                                 stackIn_28_0 = stackOut_26_0;
                                 stackIn_28_1 = stackOut_26_1;
                                 break L11;
@@ -572,7 +565,7 @@ class c extends qm {
         ((c) this).n(1392153825);
     }
 
-    private final void q() {
+    private final void q(int param0) {
         kd var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -654,7 +647,7 @@ class c extends qm {
         var2 = 96 / ((param0 - 64) / 46);
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         if (!(!(((c) this).field_n instanceof hi))) {
             ((hi) (Object) ((c) this).field_n).a((c) this, 4);
         }
@@ -756,10 +749,8 @@ class c extends qm {
                     break L3;
                   } else {
                     L4: {
-                      int discarded$2 = 0;
-                      ((c) this).field_S = this.c();
-                      int discarded$3 = -5782;
-                      ((c) this).field_ab = this.k();
+                      ((c) this).field_S = this.c(false);
+                      ((c) this).field_ab = this.k(-5782);
                       if (((c) this).field_ab <= 0) {
                         break L4;
                       } else {
@@ -817,12 +808,10 @@ class c extends qm {
         return stackIn_18_0 != 0;
     }
 
-    private final void e() {
-        int discarded$0 = 11;
-        String var2 = this.a();
+    private final void e(boolean param0) {
+        String var2 = this.a((byte) 11);
         if (0 < var2.length()) {
-            int discarded$1 = 11;
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.a()), (java.awt.datatransfer.ClipboardOwner) null);
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.a((byte) 11)), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
@@ -923,9 +912,9 @@ class c extends qm {
     }
 
     void a(int param0, int param1, int param2, ng param3) {
-        RuntimeException var5 = null;
+        af var5 = null;
+        RuntimeException var5_ref = null;
         int var6 = 0;
-        af var7 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -946,15 +935,14 @@ class c extends qm {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              int discarded$3 = -117;
-              this.q();
+              this.q(-117);
               if (((c) this).field_k == 1) {
                 L2: {
                   if (!(((c) this).field_y instanceof af)) {
                     break L2;
                   } else {
-                    var7 = (af) (Object) ((c) this).field_y;
-                    var6 = var7.a(param1, param2, param0 ^ 40, uf.field_d, bg.field_k, (ng) this);
+                    var5 = (af) (Object) ((c) this).field_y;
+                    var6 = var5.a(param1, param2, param0 ^ 40, uf.field_d, bg.field_k, (ng) this);
                     if (var6 == -1) {
                       break L2;
                     } else {
@@ -990,8 +978,8 @@ class c extends qm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var5;
+            var5_ref = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var5_ref;
             stackOut_12_1 = new StringBuilder().append("c.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
@@ -1019,7 +1007,7 @@ class c extends qm {
         }
     }
 
-    private final int c() {
+    private final int c(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = Pixelate.field_H ? 1 : 0;

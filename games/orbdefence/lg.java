@@ -39,8 +39,7 @@ final class lg {
               pg.field_c.b(og.field_n[1], -1);
               pg.field_c.b(og.field_n[2], -1);
               pg.field_c.b(og.field_n[3], -1);
-              int discarded$1 = 0;
-              kb.a(pg.field_c);
+              kb.a(pg.field_c, false);
               pg.field_c.b((byte) -60, param1);
               param2.a(pg.field_c, 27557);
               uk.field_b.field_i = 0;
@@ -166,7 +165,7 @@ final class lg {
         int var3 = 0;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return ed.field_b.a(0);
     }
 

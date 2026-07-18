@@ -61,7 +61,7 @@ final class wi {
         }
     }
 
-    final static cd a(String[] args) {
+    final static cd a(String[] args, int param1) {
         cd var2 = null;
         RuntimeException var2_ref = null;
         cd stackIn_1_0 = null;
@@ -164,8 +164,7 @@ final class wi {
                     break L1;
                   } else {
                     var3 = (CharSequence) (Object) param1;
-                    int discarded$2 = 2;
-                    if (!cf.field_c.equals((Object) (Object) kf.a(var3))) {
+                    if (!cf.field_c.equals((Object) (Object) kf.a(var3, (byte) 2))) {
                       break L1;
                     } else {
                       var2_int = 82 / ((-50 - param0) / 34);
@@ -214,7 +213,7 @@ final class wi {
         return stackIn_11_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

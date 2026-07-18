@@ -45,7 +45,7 @@ final class ia {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
     }
 
     public static void a(int param0) {
@@ -54,7 +54,7 @@ final class ia {
         field_o = null;
     }
 
-    final static String a(String param0, String param1, String param2) {
+    final static String a(String param0, String param1, String param2, byte param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

@@ -25,7 +25,7 @@ final class id {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -40,15 +40,13 @@ final class id {
           if (var1 > 0) {
             if (1 == var1) {
               bm.field_a = gi.field_d;
-              int discarded$2 = -123;
-              bm.field_a = wb.a(new CharSequence[3]);
+              bm.field_a = wb.a(new CharSequence[3], (byte) -123);
               oj.field_q.q(4210752);
               o.d(-1);
               return;
             } else {
               bm.field_a = t.a(-415993727, new String[1], cd.field_x);
-              int discarded$3 = -123;
-              bm.field_a = wb.a(new CharSequence[3]);
+              bm.field_a = wb.a(new CharSequence[3], (byte) -123);
               oj.field_q.q(4210752);
               o.d(-1);
               return;
@@ -64,7 +62,7 @@ final class id {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         if (ji.field_b != -ol.field_h) {
           if (ji.field_b == -ol.field_h + 250) {
             field_b = 78;

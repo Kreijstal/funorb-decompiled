@@ -19,7 +19,7 @@ final class ff implements Runnable {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_a = null;
     }
@@ -323,8 +323,7 @@ final class ff implements Runnable {
                         var2.c();
                     }
                 }
-                int discarded$0 = 0;
-                em.a(10L);
+                em.a(10L, false);
                 em.a((Object) null, (byte) -101, ((ff) this).field_b);
             }
         } catch (Exception exception) {

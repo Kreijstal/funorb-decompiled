@@ -395,7 +395,7 @@ final class uc extends lc implements rc {
             sg.field_a = (tj) (Object) eg.a(param2, "arezzo14", 122, param0, "commonui");
             ne.field_v = (tj) (Object) eg.a(param2, "arezzo14bold", 117, param0, "commonui");
             var17 = new tg(param3.b("button.gif", "", 124), (java.awt.Component) (Object) ch.field_h);
-            we discarded$2 = s.a(param0, "dropdown", 28576, "commonui");
+            we discarded$1 = s.a(param0, "dropdown", 28576, "commonui");
             var5 = ff.a("screen_options", param0, (byte) 124, "commonui");
             nh.field_R = new we[4];
             ga.field_d = new we[4];
@@ -418,8 +418,7 @@ final class uc extends lc implements rc {
                 L2: while (true) {
                   if (var9 >= 3) {
                     var9 = var17.field_q;
-                    int discarded$3 = 1;
-                    wa.a();
+                    wa.a(true);
                     var17.d();
                     na.f(0, 0, na.field_e, na.field_k);
                     var15 = new tg(var9, var9);

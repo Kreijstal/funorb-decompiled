@@ -85,8 +85,7 @@ final class h {
                     } else {
                       if (param0.charAt(var5) == 62) {
                         var5++;
-                        int discarded$5 = 125;
-                        var8 = pf.a((CharSequence) (Object) var7_ref_String);
+                        var8 = pf.a((CharSequence) (Object) var7_ref_String, (byte) 125);
                         var4 = var4 + (param2[var8].length() - (var5 - var6_int));
                         continue L1;
                       } else {
@@ -102,7 +101,7 @@ final class h {
                 L4: while (true) {
                   var8 = param0.indexOf("<%", var5);
                   if (var8 < 0) {
-                    StringBuilder discarded$6 = var6.append(param0.substring(var7));
+                    StringBuilder discarded$3 = var6.append(param0.substring(var7));
                     stackOut_24_0 = var6.toString();
                     stackIn_25_0 = stackOut_24_0;
                     break L0;
@@ -130,11 +129,10 @@ final class h {
                         } else {
                           if (param0.charAt(var5) == 62) {
                             var5++;
-                            int discarded$7 = 125;
-                            var10 = pf.a((CharSequence) (Object) var9);
-                            StringBuilder discarded$8 = var6.append(param0.substring(var7, var8));
+                            var10 = pf.a((CharSequence) (Object) var9, (byte) 125);
+                            StringBuilder discarded$4 = var6.append(param0.substring(var7, var8));
                             var7 = var5;
-                            StringBuilder discarded$9 = var6.append(param2[var10]);
+                            StringBuilder discarded$5 = var6.append(param2[var10]);
                             continue L4;
                           } else {
                             continue L4;
@@ -205,7 +203,7 @@ final class h {
         return stackIn_25_0;
     }
 
-    final static boolean a(ka param0) {
+    final static boolean a(ka param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -334,8 +332,7 @@ final class h {
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_3_0 = wf.a(var4_long, (String) var6, -79, param0);
+            stackOut_3_0 = wf.a(var4_long, (String) var6, -79, param0, false);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
@@ -397,7 +394,7 @@ final class h {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -418,17 +415,13 @@ final class h {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    int discarded$8 = 6;
-                    int discarded$9 = 1;
-                    ff.a();
+                    ff.a(1, 6);
                     var2 = gg.field_b.b((byte) 103);
                     continue L2;
                   }
                 }
               } else {
-                int discarded$10 = 6;
-                int discarded$11 = -30;
-                nh.a(var4);
+                nh.a(var4, (byte) -30, 6);
                 var4 = (le) (Object) fg.field_G.b((byte) -32);
                 continue L1;
               }

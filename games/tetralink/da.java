@@ -349,8 +349,7 @@ final class da {
         try {
           L0: {
             L1: {
-              int discarded$6 = 250;
-              me.a((java.awt.Component) (Object) param1);
+              me.a((java.awt.Component) (Object) param1, 250);
               sd.a((java.awt.Component) (Object) param1, 33);
               if (null == qf.field_k) {
                 break L1;

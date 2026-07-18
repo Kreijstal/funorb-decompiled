@@ -754,8 +754,8 @@ final class mk {
                       if (var12.field_bc != null) {
                         var31 += 2;
                         var37 = new StringBuilder(64);
-                        StringBuilder discarded$5 = var37.append(tj.field_W);
-                        StringBuilder discarded$6 = var37.append(var12.field_bc[0]);
+                        StringBuilder discarded$4 = var37.append(tj.field_W);
+                        StringBuilder discarded$5 = var37.append(var12.field_bc[0]);
                         var38_int = 1;
                         L37: while (true) {
                           if (var38_int >= var12.field_mc) {
@@ -766,8 +766,8 @@ final class mk {
                             var31 = var31 + var39 * ad.field_x;
                             break L36;
                           } else {
-                            StringBuilder discarded$7 = var37.append(", ");
-                            StringBuilder discarded$8 = var37.append(var12.field_bc[var38_int]);
+                            StringBuilder discarded$6 = var37.append(", ");
+                            StringBuilder discarded$7 = var37.append(var12.field_bc[var38_int]);
                             var38_int++;
                             continue L37;
                           }
@@ -797,8 +797,7 @@ final class mk {
                   }
                 }
                 L39: {
-                  int discarded$9 = 1;
-                  var33 = ub.a(var32, var12.field_Fc);
+                  var33 = ub.a(var32, var12.field_Fc, true);
                   var34 = var33;
                   var34 = var33;
                   if (var33 == null) {
@@ -1006,7 +1005,7 @@ final class mk {
         }
     }
 
-    final static void a(vh param0, int param1, vh param2, int param3, byte[] param4, int param5, int param6, vh param7) {
+    final static void a(vh param0, int param1, vh param2, int param3, byte[] param4, int param5, int param6, vh param7, int param8, int param9) {
         RuntimeException var10 = null;
         int var10_int = 0;
         int var11 = 0;
@@ -1243,7 +1242,7 @@ final class mk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

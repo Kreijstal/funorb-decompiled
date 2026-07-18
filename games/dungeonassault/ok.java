@@ -89,7 +89,7 @@ class ok extends ko {
                 } else {
                   var4.field_O = true;
                   var4.e(30509);
-                  var4 = (ok) (Object) var4.field_F.g(20);
+                  var4 = (ok) (Object) ((ok) this).field_F.g(20);
                   continue L1;
                 }
               }
@@ -109,7 +109,7 @@ class ok extends ko {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6, boolean param7, boolean param8, int param9) {
+    private final void a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6, boolean param7, boolean param8, int param9, int param10) {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -428,7 +428,7 @@ class ok extends ko {
                     if (0 != ((ok) this).field_lb) {
                       if (((ok) this).field_lb != 1) {
                         if (2 != ((ok) this).field_lb) {
-                          int discarded$3 = ((ok) this).field_y.a(var27, var21 + (((ok) this).field_xb + ((ok) this).field_zb), var22 + ((ok) this).field_ub, -(2 * ((ok) this).field_xb) + ((ok) this).field_ob, ((ok) this).field_B, var18, -1, ((ok) this).field_J, ((ok) this).field_lb, ((ok) this).field_vb, ((ok) this).field_Bb);
+                          int discarded$2 = ((ok) this).field_y.a(var27, var21 + (((ok) this).field_xb + ((ok) this).field_zb), var22 + ((ok) this).field_ub, -(2 * ((ok) this).field_xb) + ((ok) this).field_ob, ((ok) this).field_B, var18, -1, ((ok) this).field_J, ((ok) this).field_lb, ((ok) this).field_vb, ((ok) this).field_Bb);
                           break L26;
                         } else {
                           ((ok) this).field_y.c(var27, -(2 * ((ok) this).field_xb) + (((ok) this).field_ob + (var21 + ((ok) this).field_xb)) + ((ok) this).field_zb, ((ok) this).field_y.field_H + (((ok) this).field_ub + var22), var18, -1, ((ok) this).field_J);
@@ -447,7 +447,7 @@ class ok extends ko {
                   }
                 }
               }
-              int discarded$4 = ((ok) this).field_y.a(var27, var21 + ((ok) this).field_zb - -((ok) this).field_xb, var22 + ((ok) this).field_ub, ((ok) this).field_ob - 2 * ((ok) this).field_xb, ((ok) this).field_B, var18, -1, ((ok) this).field_J, ((ok) this).field_lb, ((ok) this).field_vb, ((ok) this).field_Bb);
+              int discarded$3 = ((ok) this).field_y.a(var27, var21 + ((ok) this).field_zb - -((ok) this).field_xb, var22 + ((ok) this).field_ub, ((ok) this).field_ob - 2 * ((ok) this).field_xb, ((ok) this).field_B, var18, -1, ((ok) this).field_J, ((ok) this).field_lb, ((ok) this).field_vb, ((ok) this).field_Bb);
               break L26;
             }
           }
@@ -461,9 +461,8 @@ class ok extends ko {
               if (var23_ref == null) {
                 break L30;
               } else {
-                int discarded$5 = 0;
-                var23_ref.a(var23_ref.field_zb - -var19, var23_ref.field_B, var20 + var23_ref.field_ub, param3, param4, param5, param6, param7, var23_ref.field_A, var23_ref.field_ob);
-                var23_ref = (ok) (Object) var23_ref.field_F.a(4);
+                var23_ref.a(((ok) this).field_zb - -var19, ((ok) this).field_B, var20 + ((ok) this).field_ub, param3, param4, param5, param6, param7, ((ok) this).field_A, ((ok) this).field_ob, 0);
+                var23_ref = (ok) (Object) ((ok) this).field_F.a(4);
                 continue L31;
               }
             }
@@ -546,8 +545,7 @@ class ok extends ko {
         if (param1 < 59) {
             ok.f(124);
         }
-        int discarded$0 = 0;
-        this.a(0, gf.field_c, 0, false, true, false, param0, false, false, gf.field_i);
+        this.a(0, gf.field_c, 0, false, true, false, param0, false, false, gf.field_i, 0);
     }
 
     private final void a(byte param0, ok param1) {
@@ -961,7 +959,7 @@ class ok extends ko {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
+        ok var13 = null;
         int var14 = 0;
         Object stackIn_25_0 = null;
         Object stackIn_26_0 = null;
@@ -994,7 +992,6 @@ class ok extends ko {
         Object stackOut_35_0 = null;
         int stackOut_35_1 = 0;
         L0: {
-          var13 = null;
           var14 = DungeonAssault.field_K;
           if (((ok) this).field_sb <= 0) {
             var7 = ((ok) this).field_sb >> 2;
@@ -1189,13 +1186,13 @@ class ok extends ko {
         L11: {
           ((ok) this).field_hb = stackIn_36_1 != 0;
           if (null != ((ok) this).field_F) {
-            var13 = (Object) (Object) (ok) (Object) ((ok) this).field_F.d(-14205);
+            var13 = (ok) (Object) ((ok) this).field_F.d(-14205);
             L12: while (true) {
               if (var13 == null) {
                 break L11;
               } else {
-                ((ok) var13).a(((ok) var13).field_B, ((ok) var13).field_zb, 7183, ((ok) var13).field_ub, param4, ((ok) var13).field_ob);
-                var13 = (Object) (Object) (ok) (Object) ((ok) var13).field_F.g(20);
+                var13.a(((ok) this).field_B, ((ok) this).field_zb, 7183, ((ok) this).field_ub, param4, ((ok) this).field_ob);
+                var13 = (ok) (Object) ((ok) this).field_F.g(20);
                 continue L12;
               }
             }
@@ -1204,7 +1201,7 @@ class ok extends ko {
           }
         }
         L13: {
-          if (((ok) var13).field_V) {
+          if (((ok) this).field_V) {
             im.field_a = true;
             break L13;
           } else {
@@ -1221,16 +1218,16 @@ class ok extends ko {
         }
         L15: {
           gf.e(var8, var9, var10, var11);
-          if (((ok) var13).field_I == 0) {
+          if (((ok) this).field_I == 0) {
             break L15;
           } else {
-            if (!((ok) var13).field_bb) {
+            if (!((ok) this).field_bb) {
               break L15;
             } else {
               L16: {
-                ((ok) this).field_gb = -param1 + -((ok) var13).field_db + hj.field_S;
-                ((ok) this).field_D = -param3 + (eh.field_h - ((ok) var13).field_N);
-                if (0 > ((ok) var13).field_gb) {
+                ((ok) this).field_gb = -param1 + -((ok) this).field_db + hj.field_S;
+                ((ok) this).field_D = -param3 + (eh.field_h - ((ok) this).field_N);
+                if (0 > ((ok) this).field_gb) {
                   ((ok) this).field_gb = 0;
                   break L16;
                 } else {
@@ -1238,7 +1235,7 @@ class ok extends ko {
                 }
               }
               L17: {
-                if (((ok) var13).field_D < 0) {
+                if (((ok) this).field_D < 0) {
                   ((ok) this).field_D = 0;
                   break L17;
                 } else {
@@ -1246,25 +1243,25 @@ class ok extends ko {
                 }
               }
               L18: {
-                if (-((ok) var13).field_ob + param5 < ((ok) var13).field_gb) {
-                  ((ok) this).field_gb = -((ok) var13).field_ob + param5;
+                if (-((ok) this).field_ob + param5 < ((ok) this).field_gb) {
+                  ((ok) this).field_gb = -((ok) this).field_ob + param5;
                   break L18;
                 } else {
                   break L18;
                 }
               }
               L19: {
-                if (-((ok) var13).field_B + param0 >= ((ok) var13).field_D) {
+                if (-((ok) this).field_B + param0 >= ((ok) this).field_D) {
                   break L19;
                 } else {
-                  ((ok) this).field_D = param0 - ((ok) var13).field_B;
+                  ((ok) this).field_D = param0 - ((ok) this).field_B;
                   break L19;
                 }
               }
               ((ok) this).field_sb = 0;
               ((ok) this).field_pb = 0;
-              ((ok) this).field_zb = ((ok) var13).field_gb + param1;
-              ((ok) this).field_ub = ((ok) var13).field_D + param3;
+              ((ok) this).field_zb = ((ok) this).field_gb + param1;
+              ((ok) this).field_ub = ((ok) this).field_D + param3;
               break L15;
             }
           }

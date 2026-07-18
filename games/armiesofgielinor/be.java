@@ -24,8 +24,8 @@ final class be extends bd {
         try {
             ((be) this).field_C = param1.a(bw.field_m[((be) this).field_t][1], ((be) this).field_B, ((be) this).field_G, 0, ((be) this).field_m, bw.field_m[((be) this).field_t][2]);
             if (param0 != 64) {
-                int discarded$0 = 0;
-                String discarded$1 = be.a(-2, (CharSequence) null);
+                Object var4 = null;
+                String discarded$0 = be.a(-2, (CharSequence) null, false);
             }
             param1.field_l.a((byte) -119, (tc) (Object) new mb(((be) this).field_t, ((be) this).field_G, ((be) this).field_B, ((be) this).field_C, ((be) this).field_m));
         } catch (RuntimeException runtimeException) {
@@ -33,7 +33,7 @@ final class be extends bd {
         }
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String a(int param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -88,8 +88,7 @@ final class be extends bd {
                     break L1;
                   } else {
                     L2: {
-                      int discarded$2 = 0;
-                      var4 = k.a(param1);
+                      var4 = k.a(param1, false);
                       if (var4 == null) {
                         break L2;
                       } else {

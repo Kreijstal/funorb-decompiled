@@ -25,7 +25,7 @@ final class sj {
     private int field_b;
     int field_v;
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -439,7 +439,7 @@ final class sj {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
@@ -448,8 +448,7 @@ final class sj {
             var2 = "tuhstatbut";
             var3 = "rvnadlm";
             var4 = -1L;
-            int discarded$0 = -2;
-            sb.a(var2, var3, param0, var4);
+            sb.a(var2, var3, param0, var4, (byte) -2);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "sj.A(" + (param0 != null ? "{...}" : "null") + ',' + 20298 + ')');
         }
@@ -590,7 +589,7 @@ final class sj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_d = null;
         field_k = null;
@@ -609,16 +608,14 @@ final class sj {
                 if (64 != param2.length) {
                     throw new RuntimeException();
                 }
-                int discarded$0 = 0;
-                ((sj) this).field_s = ug.a(param0, param0.length, 0);
+                ((sj) this).field_s = ug.a(param0, param0.length, 0, false);
                 for (var4_int = 0; var4_int < 64; var4_int++) {
                     if (param2[var4_int] != ((sj) this).field_s[var4_int]) {
                         throw new RuntimeException();
                     }
                 }
             }
-            int discarded$1 = 117;
-            this.a(param0);
+            this.a(param0, 117);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

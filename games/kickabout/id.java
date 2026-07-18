@@ -20,7 +20,7 @@ final class id extends qv {
         return dupTemp$0;
     }
 
-    private final void a(id param0, boolean param1) {
+    private final void a(id param0, boolean param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         hf var5 = null;
@@ -167,8 +167,7 @@ final class id extends qv {
         String stackOut_18_2 = null;
         try {
           L0: {
-            int discarded$6 = 121;
-            if (ws.a(param2)) {
+            if (ws.a(param2, (byte) 121)) {
               if (param1 == null) {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;
@@ -399,7 +398,7 @@ final class id extends qv {
             gf.field_a = (hu) (Object) gm.a(param1, 10, "arezzo14", param3, "commonui");
             fj.field_b = (hu) (Object) gm.a(param1, 10, "arezzo14bold", param3, "commonui");
             var17 = new ut(param0.a("", "button.gif", 34), (java.awt.Component) (Object) ic.field_d);
-            kg discarded$2 = fw.a(param3, "commonui", true, "dropdown");
+            kg discarded$1 = fw.a(param3, "commonui", true, "dropdown");
             var5 = jo.a(param3, 17369, "commonui", "screen_options");
             dw.field_d = new kg[4];
             tj.field_f = new kg[4];
@@ -422,8 +421,7 @@ final class id extends qv {
                 L2: while (true) {
                   if (var9 >= 3) {
                     var9 = var17.field_w;
-                    int discarded$3 = -12974;
-                    tr.d();
+                    tr.d(-12974);
                     var17.e();
                     on.b(0, 0, on.field_g, on.field_f);
                     var15 = new ut(var9, var9);
@@ -714,7 +712,7 @@ final class id extends qv {
         var1.a(-13136);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_r = null;
         field_s = null;
         field_y = null;
@@ -725,8 +723,7 @@ final class id extends qv {
     id(id param0, boolean param1) {
         this();
         try {
-            int discarded$0 = -116;
-            param0.a((id) this, param1);
+            param0.a((id) this, param1, -116);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "id.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

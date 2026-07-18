@@ -31,8 +31,7 @@ abstract class eq extends wf {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$4 = -15;
-                    ae.a(var5, param1);
+                    ae.a(var5, param1, (byte) -15);
                     var5 = (oh) (Object) fg.field_r.b((byte) 103);
                     continue L3;
                   }
@@ -68,7 +67,7 @@ abstract class eq extends wf {
 
     abstract void a(byte param0);
 
-    public static void d() {
+    public static void d(int param0) {
         field_e = null;
     }
 

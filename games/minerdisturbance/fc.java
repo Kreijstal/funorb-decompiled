@@ -131,7 +131,7 @@ final class fc extends al {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         int var1 = 0;
         if (oc.field_f > 32) {
             var1 = oc.field_f % 32;

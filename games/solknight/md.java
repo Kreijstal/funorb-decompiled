@@ -79,14 +79,14 @@ final class md extends sk {
         return ((md) this).field_u;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_s = null;
         field_v = null;
         int var1 = -12;
         field_t = null;
     }
 
-    final static o[] a() {
+    final static o[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9 = 0;
         o[] var10 = null;
         o[] var11_ref_o__ = null;

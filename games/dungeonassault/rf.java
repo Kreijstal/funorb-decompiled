@@ -40,8 +40,7 @@ abstract class rf extends ii {
             gf.a();
             ((rf) this).a(0, 0, false);
             super.a(param0, -param1 + -((rf) this).field_q, param2, -((rf) this).field_v + -param3);
-            int discarded$2 = 1;
-            ti.c();
+            ti.c(true);
             np.field_F.d(param1 + ((rf) this).field_q, param3 + ((rf) this).field_v, ((rf) this).field_U);
             return;
           } else {
@@ -89,8 +88,7 @@ abstract class rf extends ii {
           L0: {
             if (kk.a(param2, 1, param3, param0)) {
               if (param1 == -71) {
-                int discarded$2 = -89;
-                stackOut_6_0 = vl.d();
+                stackOut_6_0 = vl.d(-89);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
@@ -156,12 +154,10 @@ abstract class rf extends ii {
         q var1 = var4;
         var4.field_i[1] = 65793;
         for (var2 = 0; var2 < 6; var2++) {
-            int discarded$0 = 1;
-            og.a(var2 * 2 + 1, (byte) -75, 10 + -var2, var1, 5 - var2);
+            og.a(var2 * 2 + 1, (byte) -75, 10 + -var2, var1, 5 - var2, (byte) 1);
         }
         for (var2 = 6; var2 < 11; var2++) {
-            int discarded$1 = 1;
-            og.a(3, (byte) -78, -var2 + 10, var1, 4);
+            og.a(3, (byte) -78, -var2 + 10, var1, 4, (byte) 1);
         }
         return var1;
     }

@@ -86,8 +86,7 @@ final class gk {
                   }
                 }
               }
-              int discarded$2 = -1;
-              ua.field_b = pg.a(param3, param1);
+              ua.field_b = pg.a(param3, param1, -1);
               return;
             }
           }
@@ -148,7 +147,7 @@ final class gk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         int var1 = -27;
     }

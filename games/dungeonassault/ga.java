@@ -13,7 +13,7 @@ final class ga extends ip {
     static cn field_r;
     private boolean field_s;
 
-    public static void d() {
+    public static void d(byte param0) {
         field_r = null;
         field_o = null;
     }

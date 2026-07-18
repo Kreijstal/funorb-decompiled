@@ -531,17 +531,16 @@ final class fba implements ntb, ofa {
                       if (var12 != null) {
                         L4: {
                           if (sl.field_c.length <= var9) {
-                            int discarded$4 = -16;
-                            this.b();
+                            this.b((byte) -16);
                             break L4;
                           } else {
                             break L4;
                           }
                         }
                         sl.field_c[var9] = ppb.field_b;
-                        int incrementValue$5 = var9;
+                        int incrementValue$2 = var9;
                         var9++;
-                        kpb.field_s[incrementValue$5] = var12;
+                        kpb.field_s[incrementValue$2] = var12;
                         break L3;
                       } else {
                         break L3;
@@ -622,9 +621,9 @@ final class fba implements ntb, ofa {
           L0: {
             L1: {
               var3 = (fba) (Object) param0;
-              boolean discarded$3 = tja.a((ntb[]) (Object) var3.field_a, 1, (ntb[]) (Object) var3.field_a, false, 5547);
+              boolean discarded$3 = tja.a((ntb[]) (Object) var3.field_a, 1, (ntb[]) (Object) ((fba) this).field_a, false, 5547);
               var4 = 0;
-              if (!dn.a((tv[]) (Object) var3.field_a, false, 1, (tv[]) (Object) var3.field_a, -99)) {
+              if (!dn.a((tv[]) (Object) var3.field_a, false, 1, (tv[]) (Object) ((fba) this).field_a, -99)) {
                 break L1;
               } else {
                 var4 = 1;
@@ -843,7 +842,7 @@ final class fba implements ntb, ofa {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = VoidHunters.field_G;
@@ -862,22 +861,21 @@ final class fba implements ntb, ofa {
 
     public final void b(byte param0, tv param1) {
         fba var3 = (fba) (Object) param1;
-        if (!(var3.field_b != var3.field_b)) {
+        if (!(var3.field_b != ((fba) this).field_b)) {
             return;
         }
         try {
             if (param0 < 54) {
                 field_c = null;
             }
-            var3.field_b = var3.field_b;
-            int discarded$0 = 0;
-            var3.field_a = (cda[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) var3.field_a, 1, mjb.field_c);
+            var3.field_b = ((fba) this).field_b;
+            var3.field_a = (cda[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) ((fba) this).field_a, 1, mjb.field_c, false);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "fba.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((fba) this).field_a = new cda[1023];
     }
 
@@ -1165,8 +1163,7 @@ final class fba implements ntb, ofa {
     fba() {
         ((fba) this).field_b = 0;
         this.a(-15536);
-        int discarded$0 = -10;
-        this.a();
+        this.a((byte) -10);
     }
 
     private final void a(int param0, jo param1, int param2) {

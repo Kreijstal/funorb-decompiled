@@ -26,13 +26,13 @@ final class pi {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         rd.a(4, -66);
     }
 
-    final static vl a(fs param0) {
-        RuntimeException var3 = null;
+    final static vl a(fs param0, boolean param1, int param2) {
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         jn var5 = null;
         int var6 = 0;
@@ -89,8 +89,8 @@ final class pi {
                   var9 = param0.e(-31302);
                   var10 = param0.c(true);
                   var11 = param0.c(true);
-                  int discarded$3 = param0.c(true);
-                  int discarded$4 = param0.c(true);
+                  int discarded$10 = param0.c(true);
+                  int discarded$11 = param0.c(true);
                   var12 = 0;
                   if (var3_int > 2) {
                     var12 = param0.c(true);
@@ -100,8 +100,7 @@ final class pi {
                   }
                 }
                 L4: {
-                  int discarded$5 = -113;
-                  var13 = cq.a(var12, var10 >> 8, var11 >> 8, var9);
+                  var13 = cq.a(var12, var10 >> 8, var11 >> 8, var9, (byte) -113);
                   if (var9 != 2) {
                     break L4;
                   } else {

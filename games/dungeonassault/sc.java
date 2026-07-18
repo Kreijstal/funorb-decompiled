@@ -18,7 +18,7 @@ final class sc extends ch {
         return of.field_p;
     }
 
-    final static String a(int param0, ec param1) {
+    final static String a(int param0, ec param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;

@@ -7,12 +7,12 @@ final class lh {
     static int field_c;
     static int field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static void a(java.applet.Applet param0, String param1) {
+    final static void a(java.applet.Applet param0, String param1, boolean param2) {
         try {
             String var3 = null;
             Throwable var3_ref = null;

@@ -25,13 +25,13 @@ class tk extends lg {
         }
     }
 
-    private final void j() {
+    private final void j(int param0) {
         if (((tk) this).field_t instanceof wm) {
             ((wm) (Object) ((tk) this).field_t).a((tk) this, (byte) -124);
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         uj var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -582,7 +582,7 @@ class tk extends lg {
         }
     }
 
-    private final String n() {
+    private final String n(int param0) {
         int var2 = ((tk) this).field_G > ((tk) this).field_C ? ((tk) this).field_C : ((tk) this).field_G;
         int var3 = ((tk) this).field_C >= ((tk) this).field_G ? ((tk) this).field_C : ((tk) this).field_G;
         return ((tk) this).field_m.substring(var2, var3);
@@ -625,8 +625,7 @@ class tk extends lg {
         int var6 = 0;
         try {
             super.a(124, param1, param2, param3);
-            int discarded$0 = 1;
-            this.a();
+            this.a(true);
             if (((tk) this).field_l == 1) {
                 if (!(!(((tk) this).field_q instanceof fe))) {
                     var5 = (fe) (Object) ((tk) this).field_q;
@@ -773,9 +772,9 @@ class tk extends lg {
                             break L5;
                           } else {
                             ((tk) this).field_m = ((tk) this).field_m + param2;
-                            int dupTemp$2 = ((tk) this).field_m.length();
-                            ((tk) this).field_G = dupTemp$2;
-                            ((tk) this).field_C = dupTemp$2;
+                            int dupTemp$1 = ((tk) this).field_m.length();
+                            ((tk) this).field_G = dupTemp$1;
+                            ((tk) this).field_C = dupTemp$1;
                             break L5;
                           }
                         }
@@ -896,8 +895,7 @@ class tk extends lg {
                                     }
                                   }
                                 } else {
-                                  int discarded$3 = 123;
-                                  this.j();
+                                  this.j(123);
                                   stackOut_32_0 = 1;
                                   stackIn_33_0 = stackOut_32_0;
                                   return stackIn_33_0 != 0;
@@ -1020,11 +1018,9 @@ class tk extends lg {
               return;
             } else {
               L0: {
-                int discarded$4 = 1;
-                var2 = this.n();
+                var2 = this.n(1);
                 if (0 < var2.length()) {
-                  int discarded$5 = 1;
-                  java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.n()), (java.awt.datatransfer.ClipboardOwner) null);
+                  java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.n(1)), (java.awt.datatransfer.ClipboardOwner) null);
                   break L0;
                 } else {
                   break L0;

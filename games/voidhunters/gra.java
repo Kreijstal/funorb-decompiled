@@ -5,7 +5,7 @@ final class gra extends rqa {
     static String field_p;
     static int field_o;
 
-    public static void e() {
+    public static void e(byte param0) {
         int var1 = 116;
         field_p = null;
     }
@@ -78,7 +78,7 @@ final class gra extends rqa {
         return stackIn_3_0;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1, byte param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -251,7 +251,7 @@ final class gra extends rqa {
         super(param0, param1, param2);
     }
 
-    final static phb a(asb param0, String param1, String param2) {
+    final static phb a(asb param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -307,8 +307,7 @@ final class gra extends rqa {
           L0: {
             var4_int = param0.b(param2, -124);
             var5 = param0.a(true, var4_int, param1);
-            int discarded$2 = 2;
-            stackOut_0_0 = ofb.a(var4_int, var5, param0);
+            stackOut_0_0 = ofb.a(var4_int, var5, param0, 2);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

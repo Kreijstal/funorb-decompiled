@@ -13,12 +13,12 @@ final class ha {
         field_d = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         fp.field_H = dj.field_e.field_H.field_u + 300;
         ac.field_t = -300;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

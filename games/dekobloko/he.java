@@ -296,8 +296,7 @@ final class he extends kf implements qh, vn {
             }
             L13: {
               var8 = ua.field_G;
-              int discarded$3 = -10314;
-              var9 = jb.a(se.h(25144));
+              var9 = jb.a(se.h(25144), -10314);
               if (var9 != ah.field_f) {
                 if (var9 != ge.field_g) {
                   break L13;
@@ -311,13 +310,13 @@ final class he extends kf implements qh, vn {
               }
             }
             L14: {
-              de dupTemp$4 = new de(10, ((he) this).field_D, ((he) this).field_t - 20, 25, (ce) (Object) ((he) this).field_bb, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$4;
-              ((he) this).b((ce) (Object) dupTemp$4, (byte) -55);
+              de dupTemp$2 = new de(10, ((he) this).field_D, ((he) this).field_t - 20, 25, (ce) (Object) ((he) this).field_bb, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$2;
+              ((he) this).b((ce) (Object) dupTemp$2, (byte) -55);
               ((he) this).field_D = ((he) this).field_D + (((ce) (Object) var12).field_y + 5);
-              de dupTemp$5 = new de(10, ((he) this).field_D, -20 + ((he) this).field_t, 25, (ce) (Object) ((he) this).field_cb, false, 80, 3, var7, 16777215, ch.field_d);
-              var13 = dupTemp$5;
-              ((he) this).b((ce) (Object) dupTemp$5, (byte) -55);
+              de dupTemp$3 = new de(10, ((he) this).field_D, -20 + ((he) this).field_t, 25, (ce) (Object) ((he) this).field_cb, false, 80, 3, var7, 16777215, ch.field_d);
+              var13 = dupTemp$3;
+              ((he) this).b((ce) (Object) dupTemp$3, (byte) -55);
               ((he) this).field_U.field_v = (kg) this;
               ((he) this).field_D = ((he) this).field_D + (5 + ((ce) (Object) var13).field_y);
               if (((he) this).field_ib == null) {
@@ -835,8 +834,7 @@ final class he extends kf implements qh, vn {
                   } else {
                     ge.field_f.field_Hb = false;
                     ge.field_f.field_Rb.field_Rb.field_Y = wf.field_m;
-                    int discarded$1 = 1;
-                    gk.a(ge.field_f.field_Sb);
+                    gk.a(ge.field_f.field_Sb, true);
                     break L2;
                   }
                 }
@@ -1140,8 +1138,7 @@ final class he extends kf implements qh, vn {
             L1: {
               L2: {
                 param0 = jm.a('_', param0, "", -1);
-                int discarded$2 = -1;
-                var3 = oa.a(param0);
+                var3 = oa.a(param0, -1);
                 var4 = -17 % ((58 - param1) / 55);
                 if (param2.indexOf(param0) != 0) {
                   break L2;
@@ -1424,8 +1421,7 @@ final class he extends kf implements qh, vn {
             L1: {
               if (param2 != ((he) this).field_U) {
                 if (param2 == ((he) this).field_ib) {
-                  int discarded$700 = 0;
-                  ha.e();
+                  ha.e(0);
                   break L1;
                 } else {
                   if (param2 != ((he) this).field_X) {
@@ -1436,12 +1432,10 @@ final class he extends kf implements qh, vn {
                       break L1;
                     } else {
                       if (((he) this).field_W) {
-                        int discarded$701 = -73;
-                        t.k();
+                        t.k((byte) -73);
                         break L1;
                       } else {
-                        int discarded$702 = 8927;
-                        lg.a();
+                        lg.a(8927);
                         break L1;
                       }
                     }
@@ -1456,7 +1450,7 @@ final class he extends kf implements qh, vn {
               if (param0 == 67) {
                 break L2;
               } else {
-                String discarded$703 = ((he) this).j(-21);
+                String discarded$1 = ((he) this).j(-21);
                 break L2;
               }
             }
@@ -1498,7 +1492,7 @@ final class he extends kf implements qh, vn {
         tf.field_gb.a(1141039778, param0);
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_hb = null;
         field_Y = null;
         field_V = null;

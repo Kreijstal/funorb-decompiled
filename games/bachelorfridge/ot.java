@@ -91,7 +91,7 @@ class ot extends iga {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
     }
 

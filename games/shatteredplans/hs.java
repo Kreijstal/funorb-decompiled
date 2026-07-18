@@ -30,8 +30,7 @@ class hs implements fo {
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
             og.a(-119, ((hs) this).field_f, ((hs) this).field_c, ((hs) this).field_b);
-            int discarded$0 = 0;
-            var3_int = nn.a(param0.field_e);
+            var3_int = nn.a(param0.field_e, 0);
             vf.a(((hs) this).field_c, var3_int, (int)(200.0 * rh.field_d / 2.0), true, param0.field_e, param0.field_j, ((hs) this).field_f);
             var8 = param0.field_e;
             for (var5 = 0; var8.length > var5; var5++) {
@@ -55,7 +54,7 @@ class hs implements fo {
         }
     }
 
-    private final void c(l param0) {
+    private final void c(l param0, int param1) {
         ln[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -349,7 +348,7 @@ class hs implements fo {
         }
     }
 
-    final static void a(sl param0) {
+    final static void a(sl param0, byte param1) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -690,8 +689,7 @@ class hs implements fo {
             var6 = 127 % ((param0 - -67) / 44);
             this.a((byte) 95, var15, var16, var8);
             this.a((byte) -108, var8);
-            int discarded$1 = 5;
-            this.c(var8);
+            this.c(var8, 5);
             return var8;
           } else {
             var4[var6] = var5[((hs) this).field_a + var6];
@@ -703,12 +701,9 @@ class hs implements fo {
 
     private final void a(byte param0, int[] param1, int[] param2, l param3) throws jn {
         try {
-            int discarded$0 = 4;
-            this.a(param1, param3);
-            int discarded$1 = 0;
-            this.a(param3, param2);
-            int discarded$2 = 3;
-            this.b(param3);
+            this.a(param1, param3, 4);
+            this.a(param3, param2, 0);
+            this.b(param3, 3);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "hs.BA(" + 95 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -729,8 +724,7 @@ class hs implements fo {
 
     final static void a(java.awt.Canvas param0, byte param1) {
         try {
-            int discarded$6 = 18014;
-            ae.a((java.awt.Component) (Object) param0);
+            ae.a((java.awt.Component) (Object) param0, 18014);
             sb.a((byte) 89, (java.awt.Component) (Object) param0);
             if (!(aj.field_b == null)) {
                 aj.field_b.a((java.awt.Component) (Object) param0, 120);
@@ -970,7 +964,7 @@ class hs implements fo {
         }
     }
 
-    private final void a(l param0, int[] param1) {
+    private final void a(l param0, int[] param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         ln var5 = null;
@@ -1213,7 +1207,7 @@ class hs implements fo {
         }
     }
 
-    private final void a(int[] param0, l param1) throws jn {
+    private final void a(int[] param0, l param1, int param2) throws jn {
         int var4_int = 0;
         int var5 = 0;
         ln var6 = null;
@@ -1312,8 +1306,7 @@ class hs implements fo {
                         var11_int = 0;
                         L4: while (true) {
                           if (var11_int >= 4) {
-                            int discarded$2 = 3718;
-                            var24 = nf.a(param3.field_c[param2[var8_int]]);
+                            var24 = nf.a(param3.field_c[param2[var8_int]], 3718);
                             var22 = var24;
                             var20 = var22;
                             var18 = var20;
@@ -1437,8 +1430,8 @@ class hs implements fo {
                           }
                         }
                       } else {
-                        int dupTemp$3 = qf.a((byte) 61, 4, param3.field_j);
-                        var9_ref_int__[dupTemp$3] = var9_ref_int__[dupTemp$3] + 1;
+                        int dupTemp$1 = qf.a((byte) 61, 4, param3.field_j);
+                        var9_ref_int__[dupTemp$1] = var9_ref_int__[dupTemp$1] + 1;
                         var10++;
                         continue L3;
                       }
@@ -1509,7 +1502,7 @@ class hs implements fo {
         }
     }
 
-    private final void b(l param0) {
+    private final void b(l param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         ln var5 = null;
@@ -2227,7 +2220,7 @@ class hs implements fo {
         return stackIn_63_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         field_j = null;
         field_g = null;

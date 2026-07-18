@@ -140,7 +140,7 @@ final class md {
         bf.field_h.c(param2);
     }
 
-    final static boolean f() {
+    final static boolean f(int param0) {
         return null == cm.field_R ? rj.field_o : true;
     }
 

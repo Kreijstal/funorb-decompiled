@@ -14,7 +14,7 @@ abstract class db extends ec {
     static int field_o;
     int field_s;
 
-    final static void a(jd param0) {
+    final static void a(jd param0, byte param1) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -395,8 +395,7 @@ abstract class db extends ec {
                       return;
                     }
                   } else {
-                    int discarded$1 = 1;
-                    hi.a((Throwable) null, "A1: " + oc.a(false));
+                    hi.a((Throwable) null, "A1: " + oc.a(false), 1);
                     je.a(false);
                     break L1;
                   }
@@ -443,9 +442,7 @@ abstract class db extends ec {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$8 = 46;
-                int discarded$9 = 7;
-                dc.a(var4);
+                dc.a(var4, 7, (byte) 46);
                 var4 = (dj) (Object) sa.field_n.b(-46);
                 continue L1;
               }
@@ -458,7 +455,7 @@ abstract class db extends ec {
         }
     }
 
-    final static char a(byte param0) {
+    final static char a(byte param0, boolean param1) {
         int var3 = 0;
         int var2 = 255 & param0;
         if (!(0 != var2)) {

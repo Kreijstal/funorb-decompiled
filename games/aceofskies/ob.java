@@ -37,8 +37,7 @@ final class ob {
         String stackOut_12_2 = null;
         try {
           if (1 == ((ob) this).field_a.a((byte) 127)) {
-            int discarded$4 = 1452176260;
-            stackOut_2_0 = this.a(0, param0, param1);
+            stackOut_2_0 = this.a(0, param0, param1, 1452176260);
             stackIn_3_0 = stackOut_2_0;
             return stackIn_3_0;
           } else {
@@ -51,8 +50,7 @@ final class ob {
                 return (al) (Object) stackIn_9_0;
               }
             } else {
-              int discarded$5 = 1452176260;
-              stackOut_5_0 = this.a(param0, 0, param1);
+              stackOut_5_0 = this.a(param0, 0, param1, 1452176260);
               stackIn_6_0 = stackOut_5_0;
               return stackIn_6_0;
             }
@@ -89,12 +87,12 @@ final class ob {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_c = null;
     }
 
-    private final al a(int param0, int param1, int[] param2) {
+    private final al a(int param0, int param1, int[] param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -201,7 +199,7 @@ final class ob {
         return stackIn_19_0;
     }
 
-    final static String a(String param0) {
+    final static String a(String param0, byte param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -280,7 +278,7 @@ final class ob {
         return stackIn_9_0;
     }
 
-    private final al a(int param0, int[] param1, int param2) {
+    private final al a(int param0, int[] param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -416,16 +414,14 @@ final class ob {
               }
             }
             if (((ob) this).field_h.b(param1, 27912) == 1) {
-              int discarded$4 = -58;
-              stackOut_7_0 = this.a(0, param0, param1);
+              stackOut_7_0 = this.a(0, param0, param1, -58);
               stackIn_8_0 = stackOut_7_0;
               return stackIn_8_0;
             } else {
               throw new RuntimeException();
             }
           } else {
-            int discarded$5 = -58;
-            stackOut_1_0 = this.a(param1, param0, 0);
+            stackOut_1_0 = this.a(param1, param0, 0, -58);
             stackIn_2_0 = stackOut_1_0;
             return stackIn_2_0;
           }

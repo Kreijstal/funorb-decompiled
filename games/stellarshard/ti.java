@@ -2594,7 +2594,7 @@ final class ti {
         field_j = null;
     }
 
-    final static void b(int param0, int param1, int param2) {
+    final static void b(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;

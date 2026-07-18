@@ -104,7 +104,7 @@ final class pb {
         return stackIn_16_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_a = null;
         field_c = null;

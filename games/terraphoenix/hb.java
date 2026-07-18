@@ -342,7 +342,7 @@ class hb extends nb {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_h = null;
         field_m = null;
         field_p = null;

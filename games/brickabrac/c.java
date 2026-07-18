@@ -17,7 +17,7 @@ final class c {
     static jp field_e;
     static String field_n;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_j = null;
         field_d = null;
         field_m = null;
@@ -128,8 +128,7 @@ final class c {
                 ke.field_e.field_S = 1;
                 ke.field_e.field_V = vo.field_C.field_V;
                 if (0 < pe.field_j) {
-                  int discarded$19 = -76;
-                  n.a(param2, param8, param3);
+                  n.a(param2, param8, param3, (byte) -76);
                   break L2;
                 } else {
                   break L2;
@@ -148,9 +147,7 @@ final class c {
                   fo.field_b.field_Qb.field_Mb = null;
                   vn.field_A.field_eb = true;
                   ka.a(param4, fo.field_b, param2, param0, -108);
-                  int discarded$20 = -114;
-                  int discarded$21 = 16777215;
-                  um.a(param6, param9, param4, param0, param2);
+                  um.a(param6, param9, param4, param0, param2, 16777215, (byte) -114);
                   ka.a(param4, vp.field_u, param2, param0, 121);
                   an.field_h = an.field_h + 1;
                   return;
@@ -158,9 +155,7 @@ final class c {
                   fo.field_b.field_Qb.field_Mb = wg.field_d;
                   vn.field_A.field_eb = false;
                   jh.a(true, fo.field_b.field_Rb);
-                  int discarded$22 = -114;
-                  int discarded$23 = 16777215;
-                  um.a(param6, param9, param4, param0, param2);
+                  um.a(param6, param9, param4, param0, param2, 16777215, (byte) -114);
                   ka.a(param4, vp.field_u, param2, param0, 121);
                   an.field_h = an.field_h + 1;
                   return;
@@ -169,9 +164,7 @@ final class c {
                 fo.field_b.field_Qb.field_Mb = null;
                 vn.field_A.field_eb = true;
                 ka.a(param4, fo.field_b, param2, param0, -108);
-                int discarded$24 = -114;
-                int discarded$25 = 16777215;
-                um.a(param6, param9, param4, param0, param2);
+                um.a(param6, param9, param4, param0, param2, 16777215, (byte) -114);
                 ka.a(param4, vp.field_u, param2, param0, 121);
                 an.field_h = an.field_h + 1;
                 return;
@@ -191,8 +184,7 @@ final class c {
                 ke.field_e.field_S = 1;
                 ke.field_e.field_V = vo.field_C.field_V;
                 if (0 < pe.field_j) {
-                  int discarded$26 = -76;
-                  n.a(param2, param8, param3);
+                  n.a(param2, param8, param3, (byte) -76);
                   break L5;
                 } else {
                   break L5;
@@ -226,9 +218,7 @@ final class c {
                 ka.a(param4, fo.field_b, param2, param0, -108);
                 break L7;
               }
-              int discarded$27 = -114;
-              int discarded$28 = 16777215;
-              um.a(param6, param9, param4, param0, param2);
+              um.a(param6, param9, param4, param0, param2, 16777215, (byte) -114);
               ka.a(param4, vp.field_u, param2, param0, 121);
               an.field_h = an.field_h + 1;
               return;
@@ -271,8 +261,7 @@ final class c {
                 ke.field_e.field_S = 1;
                 ke.field_e.field_V = vo.field_C.field_V;
                 if (0 < pe.field_j) {
-                  int discarded$29 = -76;
-                  n.a(param2, param8, param3);
+                  n.a(param2, param8, param3, (byte) -76);
                   break L11;
                 } else {
                   break L11;
@@ -306,9 +295,7 @@ final class c {
                 ka.a(param4, fo.field_b, param2, param0, -108);
                 break L13;
               }
-              int discarded$30 = -114;
-              int discarded$31 = 16777215;
-              um.a(param6, param9, param4, param0, param2);
+              um.a(param6, param9, param4, param0, param2, 16777215, (byte) -114);
               ka.a(param4, vp.field_u, param2, param0, 121);
               an.field_h = an.field_h + 1;
               return;
@@ -327,8 +314,7 @@ final class c {
                 ke.field_e.field_S = 1;
                 ke.field_e.field_V = vo.field_C.field_V;
                 if (0 < pe.field_j) {
-                  int discarded$32 = -76;
-                  n.a(param2, param8, param3);
+                  n.a(param2, param8, param3, (byte) -76);
                   break L16;
                 } else {
                   break L16;
@@ -362,9 +348,7 @@ final class c {
                 ka.a(param4, fo.field_b, param2, param0, -108);
                 break L18;
               }
-              int discarded$33 = -114;
-              int discarded$34 = 16777215;
-              um.a(param6, param9, param4, param0, param2);
+              um.a(param6, param9, param4, param0, param2, 16777215, (byte) -114);
               ka.a(param4, vp.field_u, param2, param0, 121);
               an.field_h = an.field_h + 1;
               return;
@@ -385,8 +369,7 @@ final class c {
             ke.field_e.field_S = 1;
             ke.field_e.field_V = vo.field_C.field_V;
             if (0 < pe.field_j) {
-              int discarded$35 = -76;
-              n.a(param2, param8, param3);
+              n.a(param2, param8, param3, (byte) -76);
               break L21;
             } else {
               break L21;
@@ -420,9 +403,7 @@ final class c {
             ka.a(param4, fo.field_b, param2, param0, -108);
             break L23;
           }
-          int discarded$36 = -114;
-          int discarded$37 = 16777215;
-          um.a(param6, param9, param4, param0, param2);
+          um.a(param6, param9, param4, param0, param2, 16777215, (byte) -114);
           ka.a(param4, vp.field_u, param2, param0, 121);
           an.field_h = an.field_h + 1;
           return;

@@ -66,8 +66,7 @@ final class hd {
         try {
           L0: {
             L1: {
-              int discarded$5 = -2;
-              var17 = new mg(nf.a(param1));
+              var17 = new mg(nf.a(param1, -2));
               var4 = var17.b((byte) 90);
               if (var4 < 5) {
                 break L1;
@@ -129,9 +128,9 @@ final class hd {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$6 = var8 + var17.d(true);
-                            var8 = dupTemp$6;
-                            ((hd) this).field_c[var10] = dupTemp$6;
+                            int dupTemp$4 = var8 + var17.d(true);
+                            var8 = dupTemp$4;
+                            ((hd) this).field_c[var10] = dupTemp$4;
                             if (((hd) this).field_c[var10] <= var9) {
                               break L8;
                             } else {
@@ -149,9 +148,9 @@ final class hd {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$7 = var8 + var17.j(98203176);
-                            var8 = dupTemp$7;
-                            ((hd) this).field_c[var10] = dupTemp$7;
+                            int dupTemp$5 = var8 + var17.j(98203176);
+                            var8 = dupTemp$5;
+                            ((hd) this).field_c[var10] = dupTemp$5;
                             if (var9 >= ((hd) this).field_c[var10]) {
                               break L10;
                             } else {
@@ -260,10 +259,10 @@ final class hd {
                                           continue L21;
                                         } else {
                                           L24: {
-                                            int dupTemp$8 = var8 + var17.d(true);
-                                            var8 = dupTemp$8;
-                                            ((hd) this).field_f[var11][var14] = dupTemp$8;
-                                            var15 = dupTemp$8;
+                                            int dupTemp$6 = var8 + var17.d(true);
+                                            var8 = dupTemp$6;
+                                            ((hd) this).field_f[var11][var14] = dupTemp$6;
+                                            var15 = dupTemp$6;
                                             if (var13 >= var15) {
                                               break L24;
                                             } else {
@@ -312,10 +311,10 @@ final class hd {
                                           continue L26;
                                         } else {
                                           L29: {
-                                            int dupTemp$9 = var8 + var17.j(98203176);
-                                            var8 = dupTemp$9;
-                                            ((hd) this).field_f[var11][var14] = dupTemp$9;
-                                            var15 = dupTemp$9;
+                                            int dupTemp$7 = var8 + var17.j(98203176);
+                                            var8 = dupTemp$7;
+                                            ((hd) this).field_f[var11][var14] = dupTemp$7;
+                                            var15 = dupTemp$7;
                                             if (var13 >= var15) {
                                               break L29;
                                             } else {

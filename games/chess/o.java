@@ -20,8 +20,7 @@ class o {
     }
 
     final static ci b(byte param0) {
-        int discarded$0 = -1;
-        return db.j();
+        return db.j(-1);
     }
 
     final boolean b(int param0) {

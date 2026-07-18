@@ -149,7 +149,7 @@ abstract class kk extends rg {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         s.field_c[16].a(dj.field_m, true);
         s.field_c[15].a(ua.field_t, true);
         s.field_c[17].a(ml.field_k, true);
@@ -169,13 +169,14 @@ abstract class kk extends rg {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         String[] var10 = null;
         String[] var11 = null;
+        String var12 = null;
+        String var13 = null;
         int stackIn_51_0 = 0;
         int stackIn_54_0 = 0;
         String[] stackIn_60_0 = null;
@@ -235,8 +236,7 @@ abstract class kk extends rg {
           lk.field_o = true;
           oa.field_h = param2;
           if (oa.field_h == 0) {
-            int discarded$12 = 0;
-            var3_int = rg.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f);
+            var3_int = rg.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f, 0);
             var4 = 3 + var3_int;
             bm.field_c = new int[var4];
             dq.field_j = new String[var4];
@@ -269,8 +269,7 @@ abstract class kk extends rg {
             }
           } else {
             if (oa.field_h == 1) {
-              int discarded$13 = 0;
-              var3_int = rg.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f);
+              var3_int = rg.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f, 0);
               var4 = 2 + var3_int;
               dq.field_j = new String[var4];
               bm.field_c = new int[var4];
@@ -300,8 +299,7 @@ abstract class kk extends rg {
               }
             } else {
               if (oa.field_h == 2) {
-                int discarded$14 = 0;
-                var3_int = rg.a(wj.field_T, ih.field_c, nr.a(new String[1], -1, rl.field_g), dq.field_f);
+                var3_int = rg.a(wj.field_T, ih.field_c, nr.a(new String[1], -1, rl.field_g), dq.field_f, 0);
                 var4 = -1;
                 var5 = 0;
                 L5: while (true) {
@@ -326,8 +324,7 @@ abstract class kk extends rg {
                     rq.field_H = new String[-1 + var3_int + -var4];
                     qn.a((Object[]) (Object) ih.field_c, 1 + var4, (Object[]) (Object) rq.field_H, 0, -var4 + var3_int - 1);
                     var4 = -1;
-                    int discarded$15 = 0;
-                    var3_int = rg.a(wj.field_T, ih.field_c, nr.a(new String[1], -1, cf.field_j), dq.field_f);
+                    var3_int = rg.a(wj.field_T, ih.field_c, nr.a(new String[1], -1, cf.field_j), dq.field_f, 0);
                     var5 = 0;
                     L7: while (true) {
                       L8: {
@@ -477,12 +474,10 @@ abstract class kk extends rg {
                 if (oa.field_h == 3) {
                   L16: {
                     if (lg.field_s.field_k) {
-                      int discarded$16 = 0;
-                      var3_int = rg.a(wj.field_T, ih.field_c, ih.field_b, dq.field_f);
+                      var3_int = rg.a(wj.field_T, ih.field_c, ih.field_b, dq.field_f, 0);
                       break L16;
                     } else {
-                      int discarded$17 = 0;
-                      var3_int = rg.a(wj.field_T, ih.field_c, lc.field_T, dq.field_f);
+                      var3_int = rg.a(wj.field_T, ih.field_c, lc.field_T, dq.field_f, 0);
                       break L16;
                     }
                   }
@@ -518,8 +513,7 @@ abstract class kk extends rg {
                     if (oa.field_h != 5) {
                       throw new IllegalArgumentException();
                     } else {
-                      int discarded$18 = 0;
-                      var3_int = rg.a(wj.field_T, ih.field_c, de.field_c, dq.field_f);
+                      var3_int = rg.a(wj.field_T, ih.field_c, de.field_c, dq.field_f, 0);
                       var4 = 3 + var3_int;
                       bm.field_c = new int[var4];
                       dq.field_j = new String[var4];
@@ -552,8 +546,7 @@ abstract class kk extends rg {
                       }
                     }
                   } else {
-                    int discarded$19 = 0;
-                    var3_int = rg.a(wj.field_T, ih.field_c, wh.field_i, dq.field_f);
+                    var3_int = rg.a(wj.field_T, ih.field_c, wh.field_i, dq.field_f, 0);
                     var4 = 2 - -var3_int;
                     bm.field_c = new int[var4];
                     dq.field_j = new String[var4];
@@ -607,9 +600,8 @@ abstract class kk extends rg {
                         break L24;
                       } else {
                         L27: {
-                          var6_ref_String = var11[var5];
-                          int discarded$20 = 0;
-                          var7 = ch.a(var6_ref_String, false);
+                          var13 = var11[var5];
+                          var7 = ch.a(var13, false, false);
                           if (~var7 < ~var3_int) {
                             var3_int = var7;
                             break L27;
@@ -623,9 +615,8 @@ abstract class kk extends rg {
                     }
                   } else {
                     L28: {
-                      var6_ref_String = var10[var5];
-                      int discarded$21 = 0;
-                      var7 = ch.a(var6_ref_String, false);
+                      var12 = var10[var5];
+                      var7 = ch.a(var12, false, false);
                       if (~var3_int <= ~var7) {
                         break L28;
                       } else {
@@ -665,8 +656,7 @@ abstract class kk extends rg {
                     L32: {
                       var6 = bm.field_c[var4];
                       if (var6 >= 0) {
-                        int discarded$22 = 0;
-                        var7 = ch.a(dq.field_j[var4], true);
+                        var7 = ch.a(dq.field_j[var4], true, false);
                         var8 = nn.field_c + -(var7 >> 1);
                         var5 = var5 + qi.field_e;
                         ra.field_b[var4] = new int[4];
@@ -729,8 +719,7 @@ abstract class kk extends rg {
               }
             }
             L35: {
-              int discarded$23 = 0;
-              var5 = ch.a(stackIn_89_0, stackIn_89_1 != 0);
+              var5 = ch.a(stackIn_89_0, stackIn_89_1 != 0, false);
               if (~var3_int <= ~var5) {
                 break L35;
               } else {

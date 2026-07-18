@@ -113,7 +113,7 @@ final class se extends mg {
         }
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_n = null;
     }
 
@@ -201,8 +201,7 @@ final class se extends mg {
                       break L4;
                     } else {
                       var3_int = 0;
-                      int discarded$2 = -108;
-                      dc.a();
+                      dc.a((byte) -108);
                       break L4;
                     }
                   }

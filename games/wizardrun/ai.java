@@ -15,7 +15,7 @@ final class ai extends wl {
     int field_o;
     static String field_r;
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_s = null;
         field_r = null;

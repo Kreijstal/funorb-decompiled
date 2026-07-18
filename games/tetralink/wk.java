@@ -127,7 +127,7 @@ final class wk {
         field_a = null;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, byte param2) {
         pf var5 = null;
         String var6_ref_String = null;
         int var6 = 0;
@@ -144,16 +144,14 @@ final class wk {
             var7 = li.field_o;
             var5.field_j.a(0, var7, -18, 0, var6);
         }
-        int discarded$0 = -64;
-        ko.a(param0, param1);
+        ko.a(param0, param1, (byte) -64);
     }
 
     final static int a(int param0, boolean param1, int param2, int param3) {
         if (param0 != 15658734) {
             return 0;
         }
-        int discarded$0 = -47;
-        return bh.h();
+        return bh.h((byte) -47);
     }
 
     private final void a(int param0, String param1, int param2, int param3) {
@@ -538,7 +536,7 @@ final class wk {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return ug.o(-102) || mb.field_C <= 0;
     }
 

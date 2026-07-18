@@ -36,8 +36,7 @@ class li {
         int var4 = 0;
         ve[] var5 = null;
         var4 = Vertigo2.field_L ? 1 : 0;
-        int discarded$2 = -15922;
-        var5 = k.a();
+        var5 = k.a(-15922);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -64,7 +63,7 @@ class li {
         return false;
     }
 
-    final static int a(int param0, boolean param1, CharSequence param2) {
+    final static int a(int param0, boolean param1, CharSequence param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

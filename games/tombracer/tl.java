@@ -180,7 +180,7 @@ final class tl extends nv implements ut {
         return 21;
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_n = null;
         field_p = null;
         field_q = null;

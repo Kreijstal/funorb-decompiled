@@ -4,12 +4,12 @@
 final class kr {
     static String[] field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         int var1 = 87;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -95,14 +95,9 @@ final class kr {
         }
     }
 
-    final static void a(byte param0, boolean param1, eab param2, java.awt.Component param3, dra param4) {
+    final static void a(byte param0, boolean param1, eab param2, java.awt.Component param3, dra param4, int param5) {
         try {
-            int discarded$0 = 22050;
-            int discarded$1 = 21;
-            int discarded$2 = 1024;
-            int discarded$3 = 22050;
-            int discarded$4 = 1;
-            vda.a(param2, param4, param3);
+            vda.a(param2, param4, param3, true, 22050, 1024, (byte) 21, 22050);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "kr.C(" + -32 + ',' + true + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + 22050 + ')');
         }

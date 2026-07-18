@@ -23,7 +23,7 @@ final class qe {
         field_j = null;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -70,7 +70,7 @@ final class qe {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -99,8 +99,7 @@ final class qe {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    int discarded$1 = -38;
-                    this.a();
+                    this.a((byte) -38);
                     ((qe) this).field_d = 256;
                     return;
                   } else {
@@ -229,13 +228,12 @@ final class qe {
             ((qe) this).field_e = -7;
         }
         if (((qe) this).field_d == 0) {
-            int discarded$0 = -38;
-            this.a();
+            this.a((byte) -38);
             ((qe) this).field_d = 256;
         }
-        int fieldTemp$1 = ((qe) this).field_d - 1;
+        int fieldTemp$0 = ((qe) this).field_d - 1;
         ((qe) this).field_d = ((qe) this).field_d - 1;
-        return ((qe) this).field_i[fieldTemp$1];
+        return ((qe) this).field_i[fieldTemp$0];
     }
 
     final static void a(int param0, fa param1) {
@@ -341,8 +339,7 @@ final class qe {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((qe) this).field_i[var2_int] = param0[var2_int];
             }
-            int discarded$0 = -1;
-            this.b();
+            this.b(-1);
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) (Object) runtimeException, "qe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -7,7 +7,7 @@ final class bja extends jm {
     static byte[] field_o;
     static String field_p;
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_n = null;
         field_m = null;
@@ -203,7 +203,6 @@ final class bja extends jm {
 
     final static void a(kv param0, int param1, int param2) {
         RuntimeException var3 = null;
-        ee var3_ref = null;
         kv var4 = null;
         kv var5 = null;
         kv[] var6 = null;
@@ -211,7 +210,8 @@ final class bja extends jm {
         int var8 = 0;
         int var10 = 0;
         int var11 = 0;
-        int[] var15 = null;
+        ee var12 = null;
+        int[] var16 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -231,11 +231,10 @@ final class bja extends jm {
         var11 = BachelorFridge.field_y;
         try {
           L0: {
-            var3_ref = ch.a(wha.field_a, param1 ^ -7, "basic", "fridge_rust");
+            var12 = ch.a(wha.field_a, param1 ^ -7, "basic", "fridge_rust");
             var4 = wfa.a("fridge_drips", wha.field_a, "basic", (byte) -107);
             var5 = wfa.a("fridge_muck", wha.field_a, "basic", (byte) -107);
-            int discarded$1 = 27;
-            ld.a(gla.field_j, var4, var5, var3_ref, param2, param0);
+            ld.a(gla.field_j, var4, var5, var12, param2, param0, (byte) 27);
             if (param1 == 6) {
               L1: {
                 if (300 > ep.field_m) {
@@ -243,11 +242,11 @@ final class bja extends jm {
                   var6 = gw.a("basic", "freezer_dirty", wha.field_a, param1 + -68);
                   var7 = dg.field_i;
                   var8 = dg.field_c;
-                  var15 = dg.field_e;
+                  var16 = dg.field_e;
                   var10 = 0;
                   L2: while (true) {
                     if (kaa.field_l.length <= var10) {
-                      dg.a(var15, var7, var8);
+                      dg.a(var16, var7, var8);
                       break L1;
                     } else {
                       kaa.field_l[var10].g();

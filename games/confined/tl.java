@@ -16,7 +16,7 @@ final class tl {
     static int field_f;
     static double[][] field_a;
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, boolean param5, df param6, int param7, boolean param8, long param9, int param10, int param11, int param12) {
+    final static void a(int param0, String param1, int param2, int param3, int param4, boolean param5, df param6, int param7, boolean param8, long param9, int param10, int param11, int param12, int param13) {
         try {
             IOException var15 = null;
             RuntimeException var15_ref = null;
@@ -191,7 +191,7 @@ final class tl {
         return ci.field_b;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_d = null;

@@ -179,7 +179,7 @@ final class qh {
         ((qh) this).field_f = false;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         Object var2 = null;
         int var2_int = 0;
@@ -573,7 +573,7 @@ final class qh {
         return stackIn_1_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_E = null;
         field_D = null;
         field_j = null;

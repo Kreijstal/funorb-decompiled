@@ -7,7 +7,7 @@ final class p {
     static int[] field_d;
     static String field_c;
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -258,6 +258,7 @@ final class p {
         RuntimeException var4 = null;
         String[] var4_array = null;
         int var5 = 0;
+        Object var6 = null;
         int stackIn_10_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
@@ -323,8 +324,8 @@ final class p {
                   }
                 }
                 w.field_c = hj.a((byte) stackIn_12_0, stackIn_12_1 != 0);
-                int discarded$3 = 1;
-                wh.a((String[]) null);
+                var6 = null;
+                wh.a((String[]) null, true);
                 break L1;
               } else {
                 L3: {
@@ -333,10 +334,8 @@ final class p {
                   } else {
                     if (105 >= param2) {
                       var4_array = param3;
-                      int discarded$4 = 1;
-                      wh.a(var4_array);
-                      int discarded$5 = 1;
-                      w.field_c = jj.a(param3);
+                      wh.a(var4_array, true);
+                      w.field_c = jj.a(param3, true);
                       break L1;
                     } else {
                       break L3;
@@ -406,7 +405,7 @@ final class p {
         }
     }
 
-    final static Object a(byte[] param0, byte param1) {
+    final static Object a(byte[] param0, byte param1, boolean param2) {
         ab var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;

@@ -6,7 +6,7 @@ final class gla extends nu {
     private java.nio.ByteBuffer field_i;
     static boolean field_k;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
     }
 

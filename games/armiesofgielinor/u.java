@@ -96,8 +96,7 @@ final class u extends tc {
                       }
                     }
                     if (var2 != 4) {
-                      int discarded$6 = 0;
-                      af.a((Throwable) null, -66, "F1: " + cm.b());
+                      af.a((Throwable) null, -66, "F1: " + cm.b(false));
                       dj.a((byte) -125);
                       break L0;
                     } else {
@@ -136,8 +135,7 @@ final class u extends tc {
                   if (null == var6) {
                     var6 = lg.a(var5, (byte) -34);
                     if (null != var6) {
-                      int discarded$7 = 0;
-                      nh.field_K.a(-1, (long)k.a((CharSequence) (Object) var4_ref_String).hashCode(), (ms) (Object) var6);
+                      nh.field_K.a(-1, (long)k.a((CharSequence) (Object) var4_ref_String, false).hashCode(), (ms) (Object) var6);
                       break L6;
                     } else {
                       break L6;
@@ -149,11 +147,10 @@ final class u extends tc {
                 L7: {
                   if (var6 == null) {
                     var6 = new hl();
-                    int discarded$8 = 0;
-                    nh.field_K.a(-1, (long)k.a((CharSequence) (Object) var4_ref_String).hashCode(), (ms) (Object) var6);
-                    int fieldTemp$9 = dj.field_a;
+                    nh.field_K.a(-1, (long)k.a((CharSequence) (Object) var4_ref_String, false).hashCode(), (ms) (Object) var6);
+                    int fieldTemp$2 = dj.field_a;
                     dj.field_a = dj.field_a + 1;
-                    var6.field_Ob = fieldTemp$9;
+                    var6.field_Ob = fieldTemp$2;
                     wh.field_c.a((byte) -119, (tc) (Object) var6);
                     break L7;
                   } else {
@@ -263,8 +260,7 @@ final class u extends tc {
               L18: {
                 var6 = db.a(var4_ref_String, -124);
                 var7 = var1_ref.g(1);
-                int discarded$10 = 0;
-                var8 = k.a((CharSequence) (Object) var4_ref_String);
+                var8 = k.a((CharSequence) (Object) var4_ref_String, false);
                 if (null == var8) {
                   var8 = var4_ref_String;
                   break L18;
@@ -289,9 +285,9 @@ final class u extends tc {
                 if (null == var6) {
                   var6 = new hl();
                   bk.field_a.a(-1, (long)var8.hashCode(), (ms) (Object) var6);
-                  int fieldTemp$11 = vg.field_p;
+                  int fieldTemp$3 = vg.field_p;
                   vg.field_p = vg.field_p + 1;
-                  var6.field_Ob = fieldTemp$11;
+                  var6.field_Ob = fieldTemp$3;
                   ot.field_E.a((byte) -119, (tc) (Object) var6);
                   break L20;
                 } else {

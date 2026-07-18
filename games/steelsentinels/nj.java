@@ -15,7 +15,7 @@ final class nj extends dl implements cg, ae {
     private fg field_R;
     static String field_P;
 
-    private final String j() {
+    private final String j(int param0) {
         int var2 = -26;
         return "</col></u>";
     }
@@ -24,8 +24,7 @@ final class nj extends dl implements cg, ae {
         if (param0 >= -81) {
             return null;
         }
-        int discarded$0 = 111;
-        return fk.b();
+        return fk.b((byte) 111);
     }
 
     final static boolean a(String param0, int param1, String param2) {
@@ -202,8 +201,6 @@ final class nj extends dl implements cg, ae {
             ((nj) this).field_R = param0;
             ((nj) this).field_W = new oa(ah.field_Sb, (tn) null);
             ((nj) this).field_W.field_p = (qk) (Object) new kh();
-            int discarded$2 = 0;
-            int discarded$3 = -114;
             var7 = db.a(si.field_w, -39, new String[2]);
             var3 = 20;
             var4 = new cn(tj.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, tj.field_e.field_G, -1, 2147483647, true);
@@ -353,7 +350,7 @@ final class nj extends dl implements cg, ae {
         return stackIn_10_0 != 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_T = null;
         field_U = null;
         field_P = null;
@@ -444,8 +441,7 @@ final class nj extends dl implements cg, ae {
     public final void a(int param0, byte param1, int param2, oa param3, int param4) {
         try {
             if (!(param3 != ((nj) this).field_W)) {
-                int discarded$0 = 0;
-                lc.a();
+                lc.a(0);
                 ((nj) this).field_R.m(126);
             }
             int var6_int = 92 % ((-85 - param1) / 36);
@@ -454,12 +450,12 @@ final class nj extends dl implements cg, ae {
         }
     }
 
-    final static void h() {
+    final static void h(byte param0) {
         da.field_b = new vi();
         ci.field_a.c((lh) (Object) da.field_b, -22908735);
     }
 
-    private final String i() {
+    private final String i(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 

@@ -848,8 +848,7 @@ final class ma extends kl implements vb {
                     break L3;
                   } else {
                     var5_int = ((ma) this).field_Z;
-                    int discarded$1 = 0;
-                    this.f();
+                    this.f(0);
                     if (var5_int == ((ma) this).field_Z) {
                       break L3;
                     } else {
@@ -1212,7 +1211,7 @@ final class ma extends kl implements vb {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         int var2 = null != ((ma) this).field_O ? ((ma) this).field_O.field_n + ((ma) this).field_O.field_v : ((ma) this).field_cb.field_n;
         int var3 = ((ma) this).field_H == null ? ((ma) this).field_cb.field_v + (((ma) this).field_cb.field_n + -((ma) this).field_db.field_v) : -((ma) this).field_db.field_v + ((ma) this).field_H.field_n;
         this.b(1, var2 >= var3 ? 0 : (((ma) this).field_db.field_n - var2 << 16) / (var3 + -var2));
@@ -1589,7 +1588,7 @@ final class ma extends kl implements vb {
         this.g(-1844589680);
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_S = null;
         field_P = null;
         field_I = null;
@@ -1739,7 +1738,7 @@ final class ma extends kl implements vb {
         ((ma) this).field_db.field_j = (((ma) this).field_L * (-var3 + var4) >> 16) + var3;
     }
 
-    final static void i() {
+    final static void i(int param0) {
         dk.a(true, 14067);
     }
 

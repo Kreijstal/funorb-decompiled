@@ -234,7 +234,7 @@ abstract class en {
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -246,8 +246,7 @@ abstract class en {
         }
         for (var3 = 0; var3 < 255; var3++) {
             var4 = 255 + -var3;
-            int discarded$0 = -96;
-            var5 = fi.a(var4, var2);
+            var5 = fi.a(var4, var2, (byte) -96);
             var6 = ((en) this).field_f[var5];
             ((en) this).field_f[var5] = ((en) this).field_f[var4];
             ((en) this).field_f[var4 - -256] = (short) var6;
@@ -307,7 +306,7 @@ abstract class en {
         field_h = null;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = Sumoblitz.field_L ? 1 : 0;
         ((en) this).field_c = new short[((en) this).field_g];
@@ -330,10 +329,8 @@ abstract class en {
         ((en) this).field_g = param1;
         ((en) this).field_i = param4;
         ((en) this).field_e = param0;
-        int discarded$0 = 99;
-        this.a();
-        int discarded$1 = 0;
-        this.c();
+        this.a((byte) 99);
+        this.c(0);
     }
 
     static {

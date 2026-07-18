@@ -8,7 +8,7 @@ final class cl {
     static int field_b;
     static int[] field_d;
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -69,8 +69,7 @@ final class cl {
             } else {
               if (var2 != 1) {
                 if (var2 != 2) {
-                  int discarded$1 = 1;
-                  ud.a("A1: " + ak.a(), (Throwable) null, 0);
+                  ud.a("A1: " + ak.a(true), (Throwable) null, 0);
                   k.c(-28354);
                   return;
                 } else {

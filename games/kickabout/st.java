@@ -30,7 +30,7 @@ final class st extends iq {
         }
     }
 
-    final static int[] c() {
+    final static int[] c(int param0) {
         return new int[8];
     }
 
@@ -169,8 +169,7 @@ final class st extends iq {
                 Object var7 = null;
                 st.a((nu) null, -19, 117);
             }
-            int discarded$0 = -1942293368;
-            is.a(param3, param1, var9, 0);
+            is.a(param3, param1, var9, 0, -1942293368);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "st.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -457,8 +456,7 @@ final class st extends iq {
                             break L9;
                           }
                         }
-                        int discarded$1 = -1942293368;
-                        is.a(stackIn_41_0, stackIn_41_1, stackIn_41_2, stackIn_41_3);
+                        is.a(stackIn_41_0, stackIn_41_1, stackIn_41_2, stackIn_41_3, -1942293368);
                         break L8;
                       }
                     }
@@ -531,8 +529,8 @@ final class st extends iq {
     }
 
     final void a(byte param0, String param1, int param2, int param3, hu param4) {
-        qj var7 = null;
         qj var8 = null;
+        qj var9 = null;
         if (param1 == null) {
             ((st) this).field_c = null;
             return;
@@ -556,12 +554,11 @@ final class st extends iq {
             return;
         }
         try {
-            var7 = this.a(param2, true, param4, param1);
-            var8 = var7;
-            var8.field_b[0] = -param4.a(param1) + param3;
-            var7.field_b[param1.length()] = param3;
-            int discarded$0 = -1942293368;
-            is.a(param4, param1, var8, 0);
+            var8 = this.a(param2, true, param4, param1);
+            var9 = var8;
+            var9.field_b[0] = -param4.a(param1) + param3;
+            var9.field_b[param1.length()] = param3;
+            is.a(param4, param1, var9, 0, -1942293368);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "st.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -602,8 +599,7 @@ final class st extends iq {
             var7 = param2.a(param3);
             var8.field_b[0] = param1 + -(var7 >> 1);
             var8.field_b[param3.length()] = (var7 >> 1) + param1;
-            int discarded$0 = -1942293368;
-            is.a(param2, param3, var8, 0);
+            is.a(param2, param3, var8, 0, -1942293368);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "st.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

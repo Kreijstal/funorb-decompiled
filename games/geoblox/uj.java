@@ -12,7 +12,7 @@ final class uj {
         return ~(param1 & -param1) == ~param1;
     }
 
-    final static boolean a(ja param0, float param1) {
+    final static boolean a(ja param0, float param1, int param2) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -71,7 +71,7 @@ final class uj {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
         field_c = null;

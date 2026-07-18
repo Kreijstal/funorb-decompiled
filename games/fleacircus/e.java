@@ -21,7 +21,7 @@ class e implements ch, eg {
     static int field_b;
     static int field_e;
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, boolean param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -48,9 +48,7 @@ class e implements ch, eg {
         String stackOut_14_2 = null;
         var5 = fleas.field_A ? 1 : 0;
         try {
-          int discarded$4 = 124;
-          int discarded$5 = 0;
-          var3 = fi.a(param0);
+          var3 = fi.a(param0, false, (byte) 124);
           if (var3 == null) {
             var4 = 0;
             L0: while (true) {
@@ -353,7 +351,7 @@ class e implements ch, eg {
         return stackIn_3_0;
     }
 
-    private final void a(qa param0, int param1, int param2) {
+    private final void a(qa param0, int param1, int param2, byte param3) {
         try {
             this.a(0, param1, 120, param0, 0, param2, ((e) this).field_a, ((e) this).field_f);
         } catch (RuntimeException runtimeException) {
@@ -1034,8 +1032,7 @@ class e implements ch, eg {
             return;
         }
         try {
-            int discarded$0 = -34;
-            this.a(param3, param1, param4);
+            this.a(param3, param1, param4, (byte) -34);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) (Object) runtimeException, "e.B(" + -59 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -1400,7 +1397,7 @@ class e implements ch, eg {
         return stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
     }
 

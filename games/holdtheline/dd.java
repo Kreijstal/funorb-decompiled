@@ -528,8 +528,7 @@ final class dd extends wd {
     }
 
     final qm a(float param0, boolean param1) {
-        int discarded$0 = 1;
-        float var3 = (float)this.b(param0);
+        float var3 = (float)this.b(param0, true);
         float var4 = (float)((dd) this).field_R.field_h + param0 * (float)(((dd) this).field_P.field_h + -((dd) this).field_R.field_h) + ((dd) this).field_D * var3;
         if (param1) {
             field_H = null;
@@ -545,11 +544,11 @@ final class dd extends wd {
         return ((dd) this).g(-1);
     }
 
-    private final int b(float param0) {
+    private final int b(float param0, boolean param1) {
         return (int)((float)((dd) this).field_I + this.e(param0, 124) * (float)(-((dd) this).field_I + ((dd) this).field_C));
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_H = null;
         field_E = null;
     }

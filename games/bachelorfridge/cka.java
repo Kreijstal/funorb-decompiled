@@ -7,7 +7,7 @@ final class cka extends ana {
     static String field_x;
     static String field_w;
 
-    private final void f() {
+    private final void f(byte param0) {
         pp var3 = null;
         ad var4 = null;
         int var5 = 0;
@@ -61,7 +61,7 @@ final class cka extends ana {
         }
     }
 
-    private final void e() {
+    private final void e(byte param0) {
     }
 
     final boolean c(byte param0) {
@@ -69,15 +69,13 @@ final class cka extends ana {
         ((cka) this).field_l = ((cka) this).field_l - 1;
         if (!(-1 < fieldTemp$0)) {
             if (-26 == ((cka) this).field_l) {
-                int discarded$1 = -109;
-                this.f();
+                this.f((byte) -109);
                 return false;
             }
             return false;
         }
         int var2 = 125 % ((71 - param0) / 47);
-        int discarded$2 = 107;
-        this.e();
+        this.e((byte) 107);
         return true;
     }
 

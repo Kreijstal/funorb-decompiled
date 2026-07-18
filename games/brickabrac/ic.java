@@ -88,7 +88,7 @@ final class ic {
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

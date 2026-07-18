@@ -118,13 +118,12 @@ final class ea {
         return stackIn_3_0;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         nh.field_a.d(72);
         if (kb.field_b.a((byte) 80)) {
             return 0;
         }
-        int discarded$0 = 0;
-        return pc.e();
+        return pc.e(0);
     }
 
     final void a(boolean param0) throws IOException {
@@ -186,8 +185,7 @@ final class ea {
                 break L1;
               }
             }
-            int discarded$2 = -101;
-            stackOut_2_0 = wd.a(false, param0);
+            stackOut_2_0 = wd.a(false, param0, (byte) -101);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

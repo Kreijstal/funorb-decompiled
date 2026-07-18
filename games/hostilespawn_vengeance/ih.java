@@ -405,7 +405,7 @@ final class ih extends ej {
         ((ih) this).field_r = (byte)(int)(Math.random() * 255.0 + 1.0);
     }
 
-    private final void g() {
+    private final void g(int param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -479,8 +479,7 @@ final class ih extends ej {
                   }
                 }
                 ((ih) this).field_t = (td) param2;
-                int discarded$1 = 24;
-                this.g();
+                this.g(24);
                 this.a((byte) 47, param0);
                 ((ih) this).field_p = null;
                 ((ih) this).field_i.field_i = 0;

@@ -37,8 +37,7 @@ final class af {
           L0: {
             if (param0 <= -31) {
               dn.a(2, (java.awt.Component) (Object) param1);
-              int discarded$8 = 4;
-              rk.a((java.awt.Component) (Object) param1);
+              rk.a((java.awt.Component) (Object) param1, 4);
               if (null != sb.field_d) {
                 sb.field_d.b(22055, (java.awt.Component) (Object) param1);
                 break L0;
@@ -81,11 +80,11 @@ final class af {
         }
     }
 
-    final static long b() {
+    final static long b(int param0) {
         return hc.a(-9986) - fa.field_l;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_h = null;
         field_a = null;
@@ -178,8 +177,7 @@ final class af {
               var8 = new b(tm.field_l, param2);
               var7 = var8;
               tm.field_l.a(0, (fi) (Object) var8);
-              int discarded$8 = 0;
-              if (oj.j()) {
+              if (oj.j(0)) {
                 var8.l(-107);
                 stackOut_10_0 = 1;
                 stackIn_11_0 = stackOut_10_0;

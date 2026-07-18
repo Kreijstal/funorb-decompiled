@@ -1115,8 +1115,7 @@ abstract class da {
                 L2: {
                   if (param1.startsWith("col=")) {
                     var5 = (CharSequence) (Object) param1.substring(4);
-                    int discarded$5 = 16;
-                    gqb.field_a = -16777216 & gqb.field_a | tib.a(-596, var5) & 16777215;
+                    gqb.field_a = -16777216 & gqb.field_a | tib.a(-596, var5, 16) & 16777215;
                     break L2;
                   } else {
                     if (param1.equals((Object) (Object) "/col")) {
@@ -1130,8 +1129,7 @@ abstract class da {
                 L3: {
                   if (param1.startsWith("argb=")) {
                     var9 = (CharSequence) (Object) param1.substring(5);
-                    int discarded$6 = 16;
-                    gqb.field_a = tib.a(-596, var9);
+                    gqb.field_a = tib.a(-596, var9, 16);
                     break L3;
                   } else {
                     if (!param1.equals((Object) (Object) "/argb")) {
@@ -1150,8 +1148,7 @@ abstract class da {
                                   if (!param1.equalsIgnoreCase("shad=-1")) {
                                     if (param1.startsWith("shad=")) {
                                       var8 = (CharSequence) (Object) param1.substring(5);
-                                      int discarded$7 = 16;
-                                      gba.field_q = -16777216 & gqb.field_a | tib.a(-596, var8);
+                                      gba.field_q = -16777216 & gqb.field_a | tib.a(-596, var8, 16);
                                       break L3;
                                     } else {
                                       if (!param1.equals((Object) (Object) "shad")) {
@@ -1182,8 +1179,7 @@ abstract class da {
                               }
                             } else {
                               var7 = (CharSequence) (Object) param1.substring(2);
-                              int discarded$8 = 16;
-                              vq.field_v = -16777216 & gqb.field_a | tib.a(-596, var7);
+                              vq.field_v = -16777216 & gqb.field_a | tib.a(-596, var7, 16);
                               break L3;
                             }
                           }
@@ -1193,8 +1189,7 @@ abstract class da {
                         }
                       } else {
                         var6 = (CharSequence) (Object) param1.substring(4);
-                        int discarded$9 = 16;
-                        wob.field_p = gqb.field_a & -16777216 | tib.a(-596, var6);
+                        wob.field_p = gqb.field_a & -16777216 | tib.a(-596, var6, 16);
                         break L3;
                       }
                     } else {

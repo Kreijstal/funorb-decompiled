@@ -53,12 +53,10 @@ final class lo {
               } else {
                 L2: {
                   var3 = param0.charAt(var2_int);
-                  int discarded$14 = -14;
-                  if (ep.a((char) var3)) {
+                  if (ep.a((char) var3, (byte) -14)) {
                     break L2;
                   } else {
-                    int discarded$15 = 48;
-                    if (!ag.a((char) var3)) {
+                    if (!ag.a((char) var3, 48)) {
                       stackOut_6_0 = 1;
                       stackIn_7_0 = stackOut_6_0;
                       return stackIn_7_0 != 0;

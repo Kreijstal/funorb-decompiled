@@ -5,7 +5,7 @@ final class wi {
     static String field_b;
     static boolean field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 

@@ -210,10 +210,9 @@ final class vd {
                 return 1;
               } else {
                 if (vk.field_a == 2) {
-                  int discarded$6 = 89;
-                  if (!v.a(((vd) this).field_i)) {
+                  if (!v.a(((vd) this).field_i, (byte) 89)) {
                     if (param0 <= 113) {
-                      int discarded$7 = vd.a(-69);
+                      int discarded$4 = vd.a(-69);
                       return 0;
                     } else {
                       return 0;
@@ -223,7 +222,7 @@ final class vd {
                   }
                 } else {
                   if (param0 <= 113) {
-                    int discarded$8 = vd.a(-69);
+                    int discarded$5 = vd.a(-69);
                     return 0;
                   } else {
                     return 0;
@@ -238,10 +237,9 @@ final class vd {
               return 1;
             } else {
               if (vk.field_a == 2) {
-                int discarded$9 = 89;
-                if (!v.a(((vd) this).field_i)) {
+                if (!v.a(((vd) this).field_i, (byte) 89)) {
                   if (param0 <= 113) {
-                    int discarded$10 = vd.a(-69);
+                    int discarded$6 = vd.a(-69);
                     return 0;
                   } else {
                     return 0;
@@ -251,7 +249,7 @@ final class vd {
                 }
               } else {
                 if (param0 <= 113) {
-                  int discarded$11 = vd.a(-69);
+                  int discarded$7 = vd.a(-69);
                   return 0;
                 } else {
                   return 0;

@@ -12,7 +12,7 @@ final class mk extends ai {
         super(param0, param1);
     }
 
-    final static void a(String param0, boolean param1, float param2) {
+    final static void a(String param0, boolean param1, float param2, int param3) {
         try {
             if (ui.field_c == null) {
                 ui.field_c = new jj(vg.field_Z, cb.field_b);
@@ -26,7 +26,7 @@ final class mk extends ai {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_n = null;
         field_m = null;
         field_k = null;
@@ -37,7 +37,7 @@ final class mk extends ai {
         return vd.field_c;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         ud var1 = (ud) (Object) m.field_d.b((byte) 87);
         if (var1 == null) {
             var1 = new ud();

@@ -11,7 +11,7 @@ final class tr {
     private dd field_b;
     private cn field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_d = null;
         field_e = null;

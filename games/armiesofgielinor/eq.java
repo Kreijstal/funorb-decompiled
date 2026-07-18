@@ -152,7 +152,7 @@ final class eq extends af {
         return pt.field_db;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_n = null;
         field_m = null;
         field_h = null;

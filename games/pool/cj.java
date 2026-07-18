@@ -903,8 +903,7 @@ final class cj extends vc {
 
     final void d(boolean param0) {
         super.d(param0);
-        int discarded$0 = 90;
-        pr.c();
+        pr.c((byte) 90);
     }
 
     final void c(int param0, di param1) {
@@ -1013,15 +1012,15 @@ final class cj extends vc {
           var9 = ((cj) this).field_H;
           if (var9 != 1) {
             if (var9 == 2) {
-              int fieldTemp$14 = kj.field_m - 150;
+              int fieldTemp$13 = kj.field_m - 150;
               kj.field_m = kj.field_m - 150;
-              this.a(ck.field_Y, fieldTemp$14, (byte) 103, ((cj) this).field_O[var4], 0, hf.field_a);
+              this.a(ck.field_Y, fieldTemp$13, (byte) 103, ((cj) this).field_O[var4], 0, hf.field_a);
               break L2;
             } else {
               if (3 == var9) {
-                int fieldTemp$15 = kj.field_m - 170;
+                int fieldTemp$14 = kj.field_m - 170;
                 kj.field_m = kj.field_m - 170;
-                this.a(ck.field_Y, fieldTemp$15, (byte) 124, ((cj) this).field_O[var2], 0, hf.field_a);
+                this.a(ck.field_Y, fieldTemp$14, (byte) 124, ((cj) this).field_O[var2], 0, hf.field_a);
                 break L2;
               } else {
                 if (4 != var9) {
@@ -1029,22 +1028,22 @@ final class cj extends vc {
                     if (6 != var9) {
                       if (var9 != 7) {
                         if (8 == var9) {
-                          int fieldTemp$16 = kj.field_m - 45;
+                          int fieldTemp$15 = kj.field_m - 45;
                           kj.field_m = kj.field_m - 45;
-                          this.a(ck.field_Y, fieldTemp$16, (byte) 111, ((cj) this).field_O[var4], 800, hf.field_a + 600);
+                          this.a(ck.field_Y, fieldTemp$15, (byte) 111, ((cj) this).field_O[var4], 800, hf.field_a + 600);
                           break L2;
                         } else {
                           if (var9 == 9) {
-                            int fieldTemp$17 = kj.field_m - 130;
+                            int fieldTemp$16 = kj.field_m - 130;
                             kj.field_m = kj.field_m - 130;
-                            this.a(ck.field_Y, fieldTemp$17, (byte) 110, ((cj) this).field_O[var3], 968, -700 + hf.field_a);
+                            this.a(ck.field_Y, fieldTemp$16, (byte) 110, ((cj) this).field_O[var3], 968, -700 + hf.field_a);
                             break L2;
                           } else {
                             if (var9 != 10) {
                               if (var9 == 11) {
-                                int fieldTemp$18 = kj.field_m - 80;
+                                int fieldTemp$17 = kj.field_m - 80;
                                 kj.field_m = kj.field_m - 80;
-                                this.a(ck.field_Y, fieldTemp$18, (byte) 109, ((cj) this).field_O[var2], 0, hf.field_a);
+                                this.a(ck.field_Y, fieldTemp$17, (byte) 109, ((cj) this).field_O[var2], 0, hf.field_a);
                                 break L2;
                               } else {
                                 if (12 == var9) {
@@ -1055,15 +1054,15 @@ final class cj extends vc {
                                   break L2;
                                 } else {
                                   if (var9 == 13) {
-                                    int fieldTemp$19 = kj.field_m - 200;
+                                    int fieldTemp$18 = kj.field_m - 200;
                                     kj.field_m = kj.field_m - 200;
-                                    this.a(ck.field_Y, fieldTemp$19, (byte) 125, ((cj) this).field_O[var4], 0, hf.field_a + -200);
+                                    this.a(ck.field_Y, fieldTemp$18, (byte) 125, ((cj) this).field_O[var4], 0, hf.field_a + -200);
                                     break L2;
                                   } else {
                                     if (var9 == 14) {
-                                      int fieldTemp$20 = kj.field_m - 125;
+                                      int fieldTemp$19 = kj.field_m - 125;
                                       kj.field_m = kj.field_m - 125;
-                                      this.a(ck.field_Y, fieldTemp$20, (byte) 98, ((cj) this).field_O[var6], 0, hf.field_a);
+                                      this.a(ck.field_Y, fieldTemp$19, (byte) 98, ((cj) this).field_O[var6], 0, hf.field_a);
                                       ((cj) this).field_l = mn.field_d;
                                       break L2;
                                     } else {
@@ -1072,8 +1071,7 @@ final class cj extends vc {
                                         break L2;
                                       } else {
                                         if (var9 == 16) {
-                                          int discarded$21 = -16;
-                                          this.o();
+                                          this.o(-16);
                                           break L2;
                                         } else {
                                           break L2;
@@ -1084,35 +1082,35 @@ final class cj extends vc {
                                 }
                               }
                             } else {
-                              int fieldTemp$22 = kj.field_m - 170;
+                              int fieldTemp$20 = kj.field_m - 170;
                               kj.field_m = kj.field_m - 170;
-                              this.a(ck.field_Y, fieldTemp$22, (byte) 71, ((cj) this).field_O[var6], 0, hf.field_a + -700);
+                              this.a(ck.field_Y, fieldTemp$20, (byte) 71, ((cj) this).field_O[var6], 0, hf.field_a + -700);
                               break L2;
                             }
                           }
                         }
                       } else {
-                        int fieldTemp$23 = kj.field_m - 170;
+                        int fieldTemp$21 = kj.field_m - 170;
                         kj.field_m = kj.field_m - 170;
-                        this.a(ck.field_Y, fieldTemp$23, (byte) 80, ((cj) this).field_O[var6], 0, hf.field_a);
+                        this.a(ck.field_Y, fieldTemp$21, (byte) 80, ((cj) this).field_O[var6], 0, hf.field_a);
                         break L2;
                       }
                     } else {
-                      int fieldTemp$24 = kj.field_m - 170;
+                      int fieldTemp$22 = kj.field_m - 170;
                       kj.field_m = kj.field_m - 170;
-                      this.a(ck.field_Y, fieldTemp$24, (byte) 107, ((cj) this).field_O[var5], 0, hf.field_a);
+                      this.a(ck.field_Y, fieldTemp$22, (byte) 107, ((cj) this).field_O[var5], 0, hf.field_a);
                       break L2;
                     }
                   } else {
-                    int fieldTemp$25 = kj.field_m - 50;
+                    int fieldTemp$23 = kj.field_m - 50;
                     kj.field_m = kj.field_m - 50;
-                    this.a(ck.field_Y, fieldTemp$25, (byte) 108, ((cj) this).field_O[var3], 0, hf.field_a + -50);
+                    this.a(ck.field_Y, fieldTemp$23, (byte) 108, ((cj) this).field_O[var3], 0, hf.field_a + -50);
                     break L2;
                   }
                 } else {
-                  int fieldTemp$26 = kj.field_m - 100;
+                  int fieldTemp$24 = kj.field_m - 100;
                   kj.field_m = kj.field_m - 100;
-                  this.a(ck.field_Y, fieldTemp$26, (byte) 109, ((cj) this).field_O[var6], 0, hf.field_a - -500);
+                  this.a(ck.field_Y, fieldTemp$24, (byte) 109, ((cj) this).field_O[var6], 0, hf.field_a - -500);
                   break L2;
                 }
               }
@@ -1127,7 +1125,7 @@ final class cj extends vc {
             break L3;
           } else {
             var11 = null;
-            StringBuilder discarded$27 = cj.a('', -105, -71, (StringBuilder) null);
+            StringBuilder discarded$25 = cj.a('', -105, -71, (StringBuilder) null);
             break L3;
           }
         }
@@ -1140,7 +1138,7 @@ final class cj extends vc {
         return var3;
     }
 
-    final static boolean e() {
+    final static boolean e(byte param0) {
         return ~ve.field_m == ~em.field_L.field_Zb;
     }
 
@@ -1255,7 +1253,7 @@ final class cj extends vc {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_U = null;
         field_fb = null;
         field_ob = null;
@@ -1365,10 +1363,8 @@ final class cj extends vc {
               var16 = var28;
               var13 = var16;
               var5_ref_int__ = var13;
-              int discarded$10 = 1;
-              oh.field_d[0] = var42[0] - sb.a(288.0f) >> 2;
-              int discarded$11 = 1;
-              oh.field_d[1] = var42[1] + -sb.a(144.0f) >> 2;
+              oh.field_d[0] = var42[0] - sb.a(288.0f, true) >> 2;
+              oh.field_d[1] = var42[1] + -sb.a(144.0f, true) >> 2;
               oh.field_d[2] = var42[2] >> 2;
               if (var5_ref_int__ != oh.field_d) {
                 oh.field_d[9] = var42[9];
@@ -1392,10 +1388,8 @@ final class cj extends vc {
               var17 = var29;
               var14 = var17;
               var5_ref_int__ = var14;
-              int discarded$12 = 1;
-              gr.field_w[0] = var43[0] - sb.a(288.0f) >> 4;
-              int discarded$13 = 1;
-              gr.field_w[1] = var43[1] - sb.a(144.0f) >> 4;
+              gr.field_w[0] = var43[0] - sb.a(288.0f, true) >> 4;
+              gr.field_w[1] = var43[1] - sb.a(144.0f, true) >> 4;
               gr.field_w[2] = var43[2] >> 4;
               if (gr.field_w != var5_ref_int__) {
                 gr.field_w[7] = var43[7];
@@ -1425,15 +1419,9 @@ final class cj extends vc {
                 kf.a(gf.field_d, (byte) -104, pa.field_L, ph.field_g, hl.field_n);
                 kf.a(cn.field_d, (byte) -104, pa.field_L, ph.field_g, oa.field_e);
                 kf.a(wn.field_j, (byte) -104, pa.field_L, ph.field_g, ue.field_a);
-                int discarded$14 = 9291;
-                this.a(param1);
-                int discarded$15 = 0;
-                pr.a(gr.field_w);
-                int discarded$16 = -86;
-                int discarded$17 = 256;
-                int discarded$18 = 3;
-                int discarded$19 = 256;
-                this.a();
+                this.a(param1, 9291);
+                pr.a(gr.field_w, false);
+                this.a(256, 3, 256, (byte) -86);
                 var6 = fb.field_b;
                 var5 = ln.field_u.length + -1;
                 L4: while (true) {
@@ -1725,22 +1713,20 @@ final class cj extends vc {
         }
     }
 
-    private final void a() {
+    private final void a(int param0, int param1, int param2, byte param3) {
         if (fo.field_c[3][0][0] != fo.field_c[3][1][1]) {
-            int discarded$0 = 256;
-            cj.a(fo.field_c[3][0][1], fo.field_c[3][1][1], 13421772, 0);
+            cj.a(fo.field_c[3][0][1], fo.field_c[3][1][1], 13421772, 0, 256);
         }
         int var5 = 0;
         if (fo.field_c[3][1][0] != fo.field_c[3][2][1]) {
-            int discarded$1 = 256;
-            cj.a(fo.field_c[3][1][1], fo.field_c[3][2][1], 13421772, 256);
+            cj.a(fo.field_c[3][1][1], fo.field_c[3][2][1], 13421772, 256, 256);
         }
         if (fo.field_c[3][3][1] != fo.field_c[3][2][0]) {
             qh.c(0, fo.field_c[3][2][1], qh.field_l, fo.field_c[3][3][1] + -fo.field_c[3][2][1], 13421772, 256);
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3) {
+    private final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var8 = 0;
         int var5 = 256 - param3;
         int var6 = qh.field_j - qh.field_b;
@@ -1878,8 +1864,7 @@ final class cj extends vc {
                         } else {
                           var6 = 63 - -(var5 * 192 / sg.field_K);
                           var7 = 128;
-                          int discarded$1 = 0;
-                          dn.field_m[var5] = tq.a(md.a(var7, md.a(var7 << 16, var7 << 8)), var6);
+                          dn.field_m[var5] = tq.a(md.a(var7, md.a(var7 << 16, var7 << 8)), var6, false);
                           ah.field_e[var5] = new so();
                           ah.field_e[var5].a((byte) -112, var3[var5]);
                           ck.field_Y[var5].b((byte) -52, (ma) (Object) new pm(ah.field_e[var5]));
@@ -1930,7 +1915,7 @@ final class cj extends vc {
         ((cj) this).field_v = 5609813;
     }
 
-    private final void a(uf param0) {
+    private final void a(uf param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -2290,7 +2275,7 @@ final class cj extends vc {
         }
     }
 
-    private final void o() {
+    private final void o(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

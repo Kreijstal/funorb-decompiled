@@ -188,13 +188,13 @@ final class pq {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         gl.field_k = true;
         aj.field_j = 15000L + gk.a(56);
         return hn.field_w == 11 ? true : false;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         pe.field_r = false;
         hj.field_b = id.field_f.h(-11) == 0 ? true : false;
     }

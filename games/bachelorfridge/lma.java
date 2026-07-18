@@ -9,7 +9,7 @@ final class lma extends ana {
     static int field_x;
     private bea field_w;
 
-    private final void e() {
+    private final void e(int param0) {
         int var2 = 0;
     }
 
@@ -30,7 +30,7 @@ final class lma extends ana {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         hd var2 = null;
         op var3 = null;
         int var4 = 0;
@@ -82,7 +82,7 @@ final class lma extends ana {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_y = null;
         field_A = null;
         field_z = null;
@@ -100,15 +100,13 @@ final class lma extends ana {
         ((lma) this).field_l = ((lma) this).field_l - 1;
         if (!(0 > fieldTemp$0)) {
             if (((lma) this).field_l == 25) {
-                int discarded$1 = 0;
-                this.f();
+                this.f(0);
                 this.d(6);
                 return false;
             }
             return false;
         }
-        int discarded$2 = 118;
-        this.e();
+        this.e(118);
         return true;
     }
 

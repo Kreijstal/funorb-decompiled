@@ -375,7 +375,7 @@ final class qc extends hk {
           var14 = TrackController.field_F ? 1 : 0;
           var2 = -56 / ((param0 - -2) / 36);
           if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
-            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           } else {
             break L0;
@@ -482,7 +482,7 @@ final class qc extends hk {
           var7 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
           return ((qc) this).b(0);
         }
-        boolean discarded$4 = var4.addAll((Collection) (Object) var5);
+        boolean discarded$3 = var4.addAll((Collection) (Object) var5);
         var7_array = var4.toArray();
         var8 = null;
         var9_array = var7_array;
@@ -499,8 +499,7 @@ final class qc extends hk {
             var12 = (java.net.Proxy) var11;
             try {
               L6: {
-                int discarded$5 = 66;
-                var13_ref2 = this.a(var12);
+                var13_ref2 = this.a(var12, (byte) 66);
                 if (var13_ref2 != null) {
                   stackOut_21_0 = (java.net.Socket) var13_ref2;
                   stackIn_22_0 = stackOut_21_0;
@@ -560,7 +559,7 @@ final class qc extends hk {
         ra.field_v = param0;
     }
 
-    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;

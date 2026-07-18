@@ -151,8 +151,8 @@ final class ej extends ag {
     }
 
     final static ii[] a(byte param0, ci param1, String param2, String param3) {
-        RuntimeException var4 = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         ii[] stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -204,7 +204,15 @@ final class ej extends ag {
         String stackOut_14_2 = null;
         try {
           L0: {
-            var4_int = param1.b(65, param3);
+            L1: {
+              if (param0 == -43) {
+                break L1;
+              } else {
+                field_k = false;
+                break L1;
+              }
+            }
+            var4_int = param1.b(param0 + 108, param3);
             var5 = param1.a(-1, param2, var4_int);
             stackOut_3_0 = hj.a(param1, (byte) -62, var5, var4_int);
             stackIn_4_0 = stackOut_3_0;
@@ -212,10 +220,10 @@ final class ej extends ag {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("ej.N(").append(-43).append(',');
+            stackOut_5_1 = new StringBuilder().append("ej.N(").append(param0).append(',');
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -227,7 +235,7 @@ final class ej extends ag {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L1;
+              break L2;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -235,10 +243,10 @@ final class ej extends ag {
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
               stackIn_9_2 = stackOut_6_2;
-              break L1;
+              break L2;
             }
           }
-          L2: {
+          L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_12_0 = stackOut_9_0;
@@ -252,7 +260,7 @@ final class ej extends ag {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L2;
+              break L3;
             } else {
               stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
               stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
@@ -260,10 +268,10 @@ final class ej extends ag {
               stackIn_13_0 = stackOut_10_0;
               stackIn_13_1 = stackOut_10_1;
               stackIn_13_2 = stackOut_10_2;
-              break L2;
+              break L3;
             }
           }
-          L3: {
+          L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
             stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_16_0 = stackOut_13_0;
@@ -277,7 +285,7 @@ final class ej extends ag {
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
-              break L3;
+              break L4;
             } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
@@ -285,7 +293,7 @@ final class ej extends ag {
               stackIn_17_0 = stackOut_14_0;
               stackIn_17_1 = stackOut_14_1;
               stackIn_17_2 = stackOut_14_2;
-              break L3;
+              break L4;
             }
           }
           throw ch.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
@@ -347,16 +355,24 @@ final class ej extends ag {
         String stackOut_6_2 = null;
         try {
           L0: {
-            stackOut_3_0 = bg.a(16, true, param2, (byte) 126);
+            L1: {
+              if (param0 == -1) {
+                break L1;
+              } else {
+                field_n = true;
+                break L1;
+              }
+            }
+            stackOut_3_0 = bg.a(param1, true, param2, (byte) 126);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("ej.M(").append(-1).append(',').append(16).append(',');
+            stackOut_5_1 = new StringBuilder().append("ej.M(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -368,7 +384,7 @@ final class ej extends ag {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L1;
+              break L2;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -376,7 +392,7 @@ final class ej extends ag {
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
               stackIn_9_2 = stackOut_6_2;
-              break L1;
+              break L2;
             }
           }
           throw ch.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
@@ -426,7 +442,7 @@ final class ej extends ag {
         try {
           L0: {
             L1: {
-              if (0 == (((ej) this).field_o.field_v[param1.field_u] & 4)) {
+              if (param0 == (((ej) this).field_o.field_v[param1.field_u] & 4)) {
                 break L1;
               } else {
                 if (param1.field_p < 0) {
@@ -506,7 +522,7 @@ final class ej extends ag {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var4;
-            stackOut_27_1 = new StringBuilder().append("ej.I(").append(0).append(',');
+            stackOut_27_1 = new StringBuilder().append("ej.I(").append(param0).append(',');
             stackIn_30_0 = stackOut_27_0;
             stackIn_30_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -595,7 +611,7 @@ final class ej extends ag {
         try {
           L0: {
             L1: {
-              if ((4 & ((ej) this).field_o.field_v[param3.field_u]) == 0) {
+              if ((4 & ((ej) this).field_o.field_v[param3.field_u]) == param2) {
                 break L1;
               } else {
                 if (param3.field_p >= 0) {
@@ -748,7 +764,7 @@ final class ej extends ag {
           }
           L13: {
             stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-            stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',').append(0).append(',');
+            stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',').append(param2).append(',');
             stackIn_42_0 = stackOut_39_0;
             stackIn_42_1 = stackOut_39_1;
             stackIn_40_0 = stackOut_39_0;
@@ -884,14 +900,22 @@ final class ej extends ag {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            field_p = null;
+            L1: {
+              field_p = null;
+              if (!param0) {
+                break L1;
+              } else {
+                field_k = false;
+                break L1;
+              }
+            }
             field_l = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1, "ej.L(" + false + ')');
+          throw ch.a((Throwable) (Object) var1, "ej.L(" + param0 + ')');
         }
     }
 
@@ -1132,7 +1156,7 @@ final class ej extends ag {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        int stackIn_13_0 = 0;
+        boolean stackIn_13_0 = false;
         int stackIn_34_0 = 0;
         int stackIn_36_0 = 0;
         int stackIn_37_0 = 0;
@@ -1150,7 +1174,7 @@ final class ej extends ag {
         StringBuilder stackIn_72_1 = null;
         String stackIn_72_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
+        boolean stackOut_12_0 = false;
         int stackOut_33_0 = 0;
         int stackOut_36_0 = 0;
         int stackOut_36_1 = 0;
@@ -1188,26 +1212,34 @@ final class ej extends ag {
                 }
               }
             }
-            ug.field_h = 0;
+            L2: {
+              ug.field_h = 0;
+              if (param1 <= -122) {
+                break L2;
+              } else {
+                field_p = null;
+                break L2;
+              }
+            }
             var8 = 0;
-            L2: while (true) {
-              L3: {
-                L4: {
+            L3: while (true) {
+              L4: {
+                L5: {
                   if (~var8 <= ~param2.field_C) {
-                    break L4;
+                    break L5;
                   } else {
                     var9 = param2.field_o[var8];
                     var10 = param2.field_s[var8];
                     var11 = param2.field_G[var8];
-                    stackOut_12_0 = 0;
-                    stackIn_57_0 = stackOut_12_0;
+                    stackOut_12_0 = param3;
+                    stackIn_57_0 = stackOut_12_0 ? 1 : 0;
                     stackIn_13_0 = stackOut_12_0;
                     if (var19 != 0) {
-                      break L3;
+                      break L4;
                     } else {
-                      L5: {
-                        L6: {
-                          if (stackIn_13_0 != 0) {
+                      L6: {
+                        L7: {
+                          if (stackIn_13_0) {
                             var12 = sg.field_a[var9];
                             var13 = d.field_a[var9];
                             var14 = -var12 + sg.field_a[var10];
@@ -1215,55 +1247,55 @@ final class ej extends ag {
                             var16 = d.field_a[var10] - var13;
                             var17 = d.field_a[var11] + -var13;
                             if (-(var15 * var16) + var17 * var14 < 0) {
-                              break L6;
+                              break L7;
                             } else {
                               if (var19 == 0) {
-                                break L5;
-                              } else {
                                 break L6;
+                              } else {
+                                break L7;
                               }
                             }
                           } else {
-                            break L6;
-                          }
-                        }
-                        L7: {
-                          var12 = nd.field_l[var9];
-                          if (var12 != -2147483648) {
                             break L7;
-                          } else {
-                            if (var19 == 0) {
-                              break L5;
-                            } else {
-                              break L7;
-                            }
                           }
                         }
                         L8: {
-                          var13 = nd.field_l[var10];
-                          if (-2147483648 != var13) {
+                          var12 = nd.field_l[var9];
+                          if (var12 != -2147483648) {
                             break L8;
                           } else {
                             if (var19 == 0) {
-                              break L5;
+                              break L6;
                             } else {
                               break L8;
                             }
                           }
                         }
                         L9: {
-                          var14 = nd.field_l[var11];
-                          if (-2147483648 != var14) {
+                          var13 = nd.field_l[var10];
+                          if (-2147483648 != var13) {
                             break L9;
                           } else {
                             if (var19 == 0) {
-                              break L5;
+                              break L6;
                             } else {
                               break L9;
                             }
                           }
                         }
                         L10: {
+                          var14 = nd.field_l[var11];
+                          if (-2147483648 != var14) {
+                            break L10;
+                          } else {
+                            if (var19 == 0) {
+                              break L6;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                        L11: {
                           var15 = -var6 + (var13 + var12 - -var14);
                           stackOut_33_0 = -1 + mh.field_b.length;
                           stackIn_36_0 = stackOut_33_0;
@@ -1273,22 +1305,22 @@ final class ej extends ag {
                             stackOut_36_1 = var15 >> var7;
                             stackIn_37_0 = stackOut_36_0;
                             stackIn_37_1 = stackOut_36_1;
-                            break L10;
+                            break L11;
                           } else {
                             stackOut_34_0 = stackIn_34_0;
                             stackOut_34_1 = var15 << -var7;
                             stackIn_37_0 = stackOut_34_0;
                             stackIn_37_1 = stackOut_34_1;
-                            break L10;
+                            break L11;
                           }
                         }
                         var16 = stackIn_37_0 - stackIn_37_1;
                         var17 = mh.field_b[var16];
-                        L11: while (true) {
-                          L12: {
-                            L13: {
+                        L12: while (true) {
+                          L13: {
+                            L14: {
                               if (0 == var17 >> 4) {
-                                break L13;
+                                break L14;
                               } else {
                                 var16--;
                                 stackOut_39_0 = 0;
@@ -1298,25 +1330,25 @@ final class ej extends ag {
                                 stackIn_40_0 = stackOut_39_0;
                                 stackIn_40_1 = stackOut_39_1;
                                 if (var19 != 0) {
-                                  break L12;
+                                  break L13;
                                 } else {
-                                  L14: {
+                                  L15: {
                                     if (stackIn_40_0 <= stackIn_40_1) {
-                                      break L14;
+                                      break L15;
                                     } else {
                                       System.err.println("Out of range!");
                                       if (var19 == 0) {
-                                        break L5;
+                                        break L6;
                                       } else {
-                                        break L14;
+                                        break L15;
                                       }
                                     }
                                   }
                                   var17 = mh.field_b[var16];
                                   if (var19 == 0) {
-                                    continue L11;
+                                    continue L12;
                                   } else {
-                                    break L13;
+                                    break L14;
                                   }
                                 }
                               }
@@ -1325,65 +1357,65 @@ final class ej extends ag {
                             stackOut_47_1 = var16 << 4;
                             stackIn_48_0 = stackOut_47_0;
                             stackIn_48_1 = stackOut_47_1;
-                            break L12;
+                            break L13;
                           }
-                          L15: {
+                          L16: {
                             var18 = stackIn_48_0 + stackIn_48_1;
                             i.field_b[var18] = var8;
                             mh.field_b[var16] = var17 + 1;
                             if (param2.field_w <= 0) {
-                              break L15;
+                              break L16;
                             } else {
                               if (param2.field_y == null) {
-                                break L15;
+                                break L16;
                               } else {
                                 ca.field_c[param2.field_y[var8]] = ca.field_c[param2.field_y[var8]] + 1;
-                                break L15;
+                                break L16;
                               }
                             }
                           }
                           ug.field_h = ug.field_h + 1;
-                          break L5;
+                          break L6;
                         }
                       }
                       var8++;
                       if (var19 == 0) {
-                        continue L2;
+                        continue L3;
                       } else {
-                        break L4;
+                        break L5;
                       }
                     }
                   }
                 }
                 stackOut_56_0 = -1;
                 stackIn_57_0 = stackOut_56_0;
-                break L3;
+                break L4;
               }
-              L16: {
-                L17: {
+              L17: {
+                L18: {
                   if (stackIn_57_0 <= ~param2.field_w) {
-                    break L17;
+                    break L18;
                   } else {
                     if (null == param2.field_y) {
-                      break L17;
+                      break L18;
                     } else {
                       var8 = 0;
                       var9 = 0;
-                      L18: while (true) {
+                      L19: while (true) {
                         if (var9 >= ca.field_c.length) {
-                          break L17;
+                          break L18;
                         } else {
                           var10 = ca.field_c[var9];
                           ca.field_c[var9] = var8;
                           var8 = var8 + var10;
                           var9++;
                           if (var19 != 0) {
-                            break L16;
+                            break L17;
                           } else {
                             if (var19 == 0) {
-                              continue L18;
+                              continue L19;
                             } else {
-                              break L17;
+                              break L18;
                             }
                           }
                         }
@@ -1391,17 +1423,17 @@ final class ej extends ag {
                     }
                   }
                 }
-                break L16;
+                break L17;
               }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L19: {
+          L20: {
             var5 = decompiledCaughtException;
             stackOut_68_0 = (RuntimeException) var5;
-            stackOut_68_1 = new StringBuilder().append("ej.B(").append(param0).append(',').append(-128).append(',');
+            stackOut_68_1 = new StringBuilder().append("ej.B(").append(param0).append(',').append(param1).append(',');
             stackIn_71_0 = stackOut_68_0;
             stackIn_71_1 = stackOut_68_1;
             stackIn_69_0 = stackOut_68_0;
@@ -1413,7 +1445,7 @@ final class ej extends ag {
               stackIn_72_0 = stackOut_71_0;
               stackIn_72_1 = stackOut_71_1;
               stackIn_72_2 = stackOut_71_2;
-              break L19;
+              break L20;
             } else {
               stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
               stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
@@ -1421,10 +1453,10 @@ final class ej extends ag {
               stackIn_72_0 = stackOut_69_0;
               stackIn_72_1 = stackOut_69_1;
               stackIn_72_2 = stackOut_69_2;
-              break L19;
+              break L20;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + ',' + false + ',' + param4 + ')');
+          throw ch.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1500,19 +1532,27 @@ final class ej extends ag {
         String stackOut_10_2 = null;
         try {
           L0: {
-            cd.field_f = param5;
-            ee.field_D = 2;
-            vh.field_m = 16;
-            jl.field_o = 8;
+            L1: {
+              cd.field_f = param5;
+              ee.field_D = param3;
+              if (param1 >= 105) {
+                break L1;
+              } else {
+                ii[] discarded$2 = ej.a((byte) 62, (ci) null, (String) null, (String) null);
+                break L1;
+              }
+            }
+            vh.field_m = param0;
+            jl.field_o = param2;
             gl.field_B = param4;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var6 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6;
-            stackOut_5_1 = new StringBuilder().append("ej.F(").append(16).append(',').append(108).append(',').append(8).append(',').append(2).append(',');
+            stackOut_5_1 = new StringBuilder().append("ej.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -1524,7 +1564,7 @@ final class ej extends ag {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L1;
+              break L2;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -1532,10 +1572,10 @@ final class ej extends ag {
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
               stackIn_9_2 = stackOut_6_2;
-              break L1;
+              break L2;
             }
           }
-          L2: {
+          L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_12_0 = stackOut_9_0;
@@ -1549,7 +1589,7 @@ final class ej extends ag {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L2;
+              break L3;
             } else {
               stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
               stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
@@ -1557,7 +1597,7 @@ final class ej extends ag {
               stackIn_13_0 = stackOut_10_0;
               stackIn_13_1 = stackOut_10_1;
               stackIn_13_2 = stackOut_10_2;
-              break L2;
+              break L3;
             }
           }
           throw ch.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');

@@ -14,7 +14,7 @@ abstract class ie {
 
     abstract long a(int param0);
 
-    final static void a(ck[] param0, mm param1, ck[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, mm param12, ck[] param13) {
+    final static void a(ck[] param0, mm param1, ck[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, mm param12, ck[] param13, int param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException var20 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -229,7 +229,7 @@ abstract class ie {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_a = null;

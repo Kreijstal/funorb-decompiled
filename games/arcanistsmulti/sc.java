@@ -319,13 +319,13 @@ final class sc extends ej {
         }
     }
 
-    private final static void c() {
+    private final static void c(boolean param0) {
         q.a(pg.field_c, false, be.field_l, mf.field_d, am.field_c);
     }
 
     final static void a(boolean param0, boolean param1, boolean param2) {
-        int discarded$0 = 0;
-        j.a(param2, (String) null, param0);
+        Object var4 = null;
+        j.a(param2, (String) null, param0, false);
     }
 
     final static String a(byte param0, byte[] param1) {
@@ -1127,8 +1127,7 @@ final class sc extends ej {
                 } else {
                   pn.field_c = new qb(param2 / 2, param1 / 2);
                   pn.field_c.a();
-                  int discarded$5 = 0;
-                  ql.a(param2, param1);
+                  ql.a(param2, param1, 0);
                   ce.field_m.a(true);
                   uh.a(pn.field_c, param0);
                   return;
@@ -1140,8 +1139,7 @@ final class sc extends ej {
                 } else {
                   pn.field_c = new qb(param2 / 2, param1 / 2);
                   pn.field_c.a();
-                  int discarded$6 = 0;
-                  ql.a(param2, param1);
+                  ql.a(param2, param1, 0);
                   ce.field_m.a(true);
                   uh.a(pn.field_c, param0);
                   return;
@@ -1164,8 +1162,7 @@ final class sc extends ej {
                 } else {
                   pn.field_c = new qb(param2 / 2, param1 / 2);
                   pn.field_c.a();
-                  int discarded$7 = 0;
-                  ql.a(param2, param1);
+                  ql.a(param2, param1, 0);
                   ce.field_m.a(true);
                   uh.a(pn.field_c, param0);
                   return;
@@ -1177,8 +1174,7 @@ final class sc extends ej {
                 } else {
                   pn.field_c = new qb(param2 / 2, param1 / 2);
                   pn.field_c.a();
-                  int discarded$8 = 0;
-                  ql.a(param2, param1);
+                  ql.a(param2, param1, 0);
                   ce.field_m.a(true);
                   uh.a(pn.field_c, param0);
                   return;
@@ -1192,8 +1188,7 @@ final class sc extends ej {
             } else {
               pn.field_c = new qb(param2 / 2, param1 / 2);
               pn.field_c.a();
-              int discarded$9 = 0;
-              ql.a(param2, param1);
+              ql.a(param2, param1, 0);
               ce.field_m.a(true);
               uh.a(pn.field_c, param0);
               return;
@@ -1205,8 +1200,7 @@ final class sc extends ej {
     }
 
     sc(pd param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (pf) (Object) cc.b());
-        int discarded$0 = -65;
+        super(param1, (pf) (Object) cc.b((byte) -65));
         try {
             ((sc) this).field_J = param0;
             ((sc) this).field_ab = param1;
@@ -1216,7 +1210,7 @@ final class sc extends ej {
         }
     }
 
-    final static fk a(kd param0) {
+    final static fk a(kd param0, byte param1) {
         fk var2 = null;
         RuntimeException var2_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -1339,12 +1333,11 @@ final class sc extends ej {
         return stackIn_4_0 != 0;
     }
 
-    final static void i() {
-        int discarded$0 = 1;
-        sc.c();
+    final static void i(byte param0) {
+        sc.c(true);
     }
 
-    final static int h() {
+    final static int h(byte param0) {
         return qc.field_a;
     }
 

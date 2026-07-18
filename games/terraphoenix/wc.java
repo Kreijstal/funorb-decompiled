@@ -691,7 +691,7 @@ abstract class wc extends vh {
         }
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, int param1) {
         ab.field_l.setTime(new Date(param0));
         int var3 = ab.field_l.get(7);
         int var4 = ab.field_l.get(5);
@@ -707,7 +707,7 @@ abstract class wc extends vh {
         ((wc) this).field_q = param0;
     }
 
-    final static int c() {
+    final static int c(int param0) {
         i.field_a.a(0);
         if (!jg.field_kb.c(true)) {
             return ga.a(-108);

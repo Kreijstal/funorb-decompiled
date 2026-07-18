@@ -9,7 +9,7 @@ final class tj {
     static int field_c;
     static String field_d;
 
-    final static void a() {
+    final static void a(int param0) {
         hc.a(17, 0);
     }
 

@@ -11,7 +11,7 @@ final class g extends java.awt.Canvas {
     static rk field_g;
     static String[] field_b;
 
-    final static pm a(byte[] param0) {
+    final static pm a(byte[] param0, int param1) {
         pm var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -38,8 +38,7 @@ final class g extends java.awt.Canvas {
           L0: {
             if (param0 != null) {
               var2 = new pm(param0, be.field_a, a.field_c, wm.field_b, b.field_c, uh.field_r, vk.field_d);
-              int discarded$2 = 4210752;
-              ch.k();
+              ch.k(4210752);
               stackOut_3_0 = (pm) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -106,15 +105,14 @@ final class g extends java.awt.Canvas {
         field_d = null;
     }
 
-    final static lm a() {
+    final static lm a(byte param0, int param1) {
         int var6 = 0;
         int var7 = Chess.field_G;
         lm var2 = new lm(22050, 33);
         double var3 = 6.283185307179586 / (double)33;
         byte[] var5 = var2.field_m;
         for (var6 = 32; var6 >= 0; var6--) {
-            int discarded$0 = 2278;
-            var5[var6] = (byte)(int)(mn.a((double)var6 * var3) * 127.0);
+            var5[var6] = (byte)(int)(mn.a((double)var6 * var3, 2278) * 127.0);
         }
         return var2;
     }
@@ -168,8 +166,7 @@ final class g extends java.awt.Canvas {
         String stackOut_27_2 = null;
         try {
           L0: {
-            int discarded$16 = -29;
-            if (ah.a(param2)) {
+            if (ah.a(param2, (byte) -29)) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
@@ -177,8 +174,7 @@ final class g extends java.awt.Canvas {
               if (!pd.a(param2, (byte) 94)) {
                 if (!gl.a(0, param2)) {
                   if (0 != param1.length()) {
-                    int discarded$17 = 0;
-                    if (!ml.a(param1, param2)) {
+                    if (!ml.a(param1, param2, 0)) {
                       if (!ma.a(param1, -123, param2)) {
                         if (oc.a(param2, -122, param1)) {
                           stackOut_21_0 = 0;

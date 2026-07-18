@@ -6,7 +6,7 @@ final class th {
     static ko[] field_b;
     static int field_a;
 
-    final static boolean a(js param0) {
+    final static boolean a(js param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -84,7 +84,7 @@ final class th {
         return stackIn_11_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 

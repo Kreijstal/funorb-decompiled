@@ -35,22 +35,22 @@ final class v {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
-        RuntimeException stackIn_50_0 = null;
-        StringBuilder stackIn_50_1 = null;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
         RuntimeException stackIn_52_0 = null;
         StringBuilder stackIn_52_1 = null;
-        String stackIn_52_2 = null;
+        RuntimeException stackIn_53_0 = null;
+        StringBuilder stackIn_53_1 = null;
+        String stackIn_53_2 = null;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_49_0 = null;
-        StringBuilder stackOut_49_1 = null;
+        RuntimeException stackOut_50_0 = null;
+        StringBuilder stackOut_50_1 = null;
+        RuntimeException stackOut_52_0 = null;
+        StringBuilder stackOut_52_1 = null;
+        String stackOut_52_2 = null;
         RuntimeException stackOut_51_0 = null;
         StringBuilder stackOut_51_1 = null;
         String stackOut_51_2 = null;
-        RuntimeException stackOut_50_0 = null;
-        StringBuilder stackOut_50_1 = null;
-        String stackOut_50_2 = null;
         var10 = BachelorFridge.field_y;
         try {
           L0: {
@@ -66,35 +66,32 @@ final class v {
               if (-1L == ((v) this).field_e) {
                 break L2;
               } else {
-                L3: {
-                  if (~((v) this).field_e < ~((v) this).field_g) {
-                    break L3;
+                if (~((v) this).field_e >= ~((v) this).field_g) {
+                  if (((v) this).field_g <= (long)((v) this).field_j + ((v) this).field_e) {
+                    break L2;
                   } else {
-                    if (((v) this).field_g <= (long)((v) this).field_j + ((v) this).field_e) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
+                    this.b((byte) 50);
+                    break L2;
                   }
+                } else {
+                  this.b((byte) 50);
+                  break L2;
                 }
-                int discarded$2 = 50;
-                this.b();
-                break L2;
+              }
+            }
+            L3: {
+              if (param0 < -52) {
+                break L3;
+              } else {
+                break L3;
               }
             }
             L4: {
-              if (param0 < -52) {
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            L5: {
               if (((v) this).field_e == -1L) {
-                break L5;
+                break L4;
               } else {
                 if (~(((v) this).field_e + (long)((v) this).field_a.length) <= ~(((v) this).field_g + (long)param3)) {
-                  break L5;
+                  break L4;
                 } else {
                   var5_int = (int)(-((v) this).field_g - -((v) this).field_e + (long)((v) this).field_a.length);
                   bl.a(param2, param1, ((v) this).field_a, (int)(-((v) this).field_e + ((v) this).field_g), var5_int);
@@ -102,92 +99,91 @@ final class v {
                   ((v) this).field_g = ((v) this).field_g + (long)var5_int;
                   param1 = param1 + var5_int;
                   ((v) this).field_j = ((v) this).field_a.length;
-                  int discarded$3 = 50;
-                  this.b();
-                  break L5;
+                  this.b((byte) 50);
+                  break L4;
                 }
               }
             }
             if (param3 > ((v) this).field_a.length) {
-              L6: {
+              L5: {
                 if (~((v) this).field_b == ~((v) this).field_g) {
-                  break L6;
+                  break L5;
                 } else {
                   ((v) this).field_k.a(((v) this).field_g, false);
                   ((v) this).field_b = ((v) this).field_g;
+                  break L5;
+                }
+              }
+              L6: {
+                ((v) this).field_k.a(param1, param3, param2, (byte) 124);
+                ((v) this).field_b = ((v) this).field_b + (long)param3;
+                if (~((v) this).field_b >= ~((v) this).field_l) {
+                  break L6;
+                } else {
+                  ((v) this).field_l = ((v) this).field_b;
                   break L6;
                 }
               }
               L7: {
-                ((v) this).field_k.a(param1, param3, param2, (byte) 124);
-                ((v) this).field_b = ((v) this).field_b + (long)param3;
-                if (~((v) this).field_b >= ~((v) this).field_l) {
-                  break L7;
-                } else {
-                  ((v) this).field_l = ((v) this).field_b;
-                  break L7;
-                }
-              }
-              L8: {
-                L9: {
+                L8: {
                   var5_long = -1L;
                   if (((v) this).field_c > ((v) this).field_g) {
-                    break L9;
+                    break L8;
                   } else {
                     if (((v) this).field_g >= ((v) this).field_c + (long)((v) this).field_f) {
-                      break L9;
+                      break L8;
                     } else {
                       var5_long = ((v) this).field_g;
-                      break L8;
+                      break L7;
                     }
                   }
                 }
                 if (~((v) this).field_c > ~((v) this).field_g) {
-                  break L8;
+                  break L7;
                 } else {
                   if ((long)param3 + ((v) this).field_g > ((v) this).field_c) {
                     var5_long = ((v) this).field_c;
-                    break L8;
+                    break L7;
                   } else {
-                    break L8;
+                    break L7;
                   }
                 }
               }
-              L10: {
-                L11: {
+              L9: {
+                L10: {
                   var7 = -1L;
                   if (~(((v) this).field_g - -(long)param3) >= ~((v) this).field_c) {
-                    break L11;
+                    break L10;
                   } else {
                     if (((v) this).field_c + (long)((v) this).field_f < ((v) this).field_g + (long)param3) {
-                      break L11;
+                      break L10;
                     } else {
                       var7 = (long)param3 + ((v) this).field_g;
-                      break L10;
+                      break L9;
                     }
                   }
                 }
                 if (~((v) this).field_g <= ~(((v) this).field_c - -(long)((v) this).field_f)) {
-                  break L10;
+                  break L9;
                 } else {
                   if ((long)param3 + ((v) this).field_g >= ((v) this).field_c - -(long)((v) this).field_f) {
                     var7 = (long)((v) this).field_f + ((v) this).field_c;
-                    break L10;
+                    break L9;
                   } else {
-                    break L10;
+                    break L9;
                   }
                 }
               }
-              L12: {
+              L11: {
                 if (-1L >= var5_long) {
-                  break L12;
+                  break L11;
                 } else {
                   if (~var7 < ~var5_long) {
                     var9 = (int)(var7 + -var5_long);
                     bl.a(param2, (int)((long)param1 + var5_long + -((v) this).field_g), ((v) this).field_h, (int)(var5_long + -((v) this).field_c), var9);
-                    break L12;
+                    break L11;
                   } else {
-                    break L12;
+                    break L11;
                   }
                 }
               }
@@ -197,22 +193,22 @@ final class v {
               if (0 >= param3) {
                 break L0;
               } else {
-                L13: {
+                L12: {
                   if (((v) this).field_e != -1L) {
-                    break L13;
+                    break L12;
                   } else {
                     ((v) this).field_e = ((v) this).field_g;
-                    break L13;
+                    break L12;
                   }
                 }
-                L14: {
+                L13: {
                   bl.a(param2, param1, ((v) this).field_a, (int)(((v) this).field_g - ((v) this).field_e), param3);
                   ((v) this).field_g = ((v) this).field_g + (long)param3;
                   if (~(((v) this).field_g + -((v) this).field_e) >= ~(long)((v) this).field_j) {
-                    break L14;
+                    break L13;
                   } else {
                     ((v) this).field_j = (int)(((v) this).field_g + -((v) this).field_e);
-                    break L14;
+                    break L13;
                   }
                 }
                 return;
@@ -226,37 +222,37 @@ final class v {
           throw var5;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L15: {
+          L14: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_49_0 = (RuntimeException) var5_ref;
-            stackOut_49_1 = new StringBuilder().append("v.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_51_0 = stackOut_49_0;
-            stackIn_51_1 = stackOut_49_1;
-            stackIn_50_0 = stackOut_49_0;
-            stackIn_50_1 = stackOut_49_1;
+            stackOut_50_0 = (RuntimeException) var5_ref;
+            stackOut_50_1 = new StringBuilder().append("v.C(").append(param0).append(',').append(param1).append(',');
+            stackIn_52_0 = stackOut_50_0;
+            stackIn_52_1 = stackOut_50_1;
+            stackIn_51_0 = stackOut_50_0;
+            stackIn_51_1 = stackOut_50_1;
             if (param2 == null) {
+              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
+              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_2 = "null";
+              stackIn_53_0 = stackOut_52_0;
+              stackIn_53_1 = stackOut_52_1;
+              stackIn_53_2 = stackOut_52_2;
+              break L14;
+            } else {
               stackOut_51_0 = (RuntimeException) (Object) stackIn_51_0;
               stackOut_51_1 = (StringBuilder) (Object) stackIn_51_1;
-              stackOut_51_2 = "null";
-              stackIn_52_0 = stackOut_51_0;
-              stackIn_52_1 = stackOut_51_1;
-              stackIn_52_2 = stackOut_51_2;
-              break L15;
-            } else {
-              stackOut_50_0 = (RuntimeException) (Object) stackIn_50_0;
-              stackOut_50_1 = (StringBuilder) (Object) stackIn_50_1;
-              stackOut_50_2 = "{...}";
-              stackIn_52_0 = stackOut_50_0;
-              stackIn_52_1 = stackOut_50_1;
-              stackIn_52_2 = stackOut_50_2;
-              break L15;
+              stackOut_51_2 = "{...}";
+              stackIn_53_0 = stackOut_51_0;
+              stackIn_53_1 = stackOut_51_1;
+              stackIn_53_2 = stackOut_51_2;
+              break L14;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + ',' + param3 + ')');
+          throw pe.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + ',' + param3 + ')');
         }
     }
 
-    private final void b() throws IOException {
+    private final void b(byte param0) throws IOException {
         long var2 = 0L;
         long var4 = 0L;
         int var6 = 0;
@@ -432,8 +428,7 @@ final class v {
 
     final void d(int param0) throws IOException {
         int var2 = 108 / ((-72 - param0) / 38);
-        int discarded$0 = 50;
-        this.b();
+        this.b((byte) 50);
         ((v) this).field_k.a(true);
     }
 

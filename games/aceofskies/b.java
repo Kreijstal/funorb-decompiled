@@ -102,8 +102,7 @@ final class b {
               stackIn_7_0 = stackOut_5_0;
               break L0;
             } else {
-              int discarded$3 = 1;
-              if (!cn.b()) {
+              if (!cn.b(true)) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
@@ -121,11 +120,9 @@ final class b {
     final static int a(int param0, byte param1, boolean param2, int param3) {
         if (param1 != 72) {
             b.a((byte) 89);
-            int discarded$0 = 92;
-            return de.a();
+            return de.a((byte) 92);
         }
-        int discarded$1 = 92;
-        return de.a();
+        return de.a((byte) 92);
     }
 
     static {

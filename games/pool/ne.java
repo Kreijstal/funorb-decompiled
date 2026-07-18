@@ -114,7 +114,7 @@ final class ne extends ig {
         return stackIn_10_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_u = null;
         field_r = null;
         field_t = null;

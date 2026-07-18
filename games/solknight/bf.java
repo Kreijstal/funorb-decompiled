@@ -19,7 +19,7 @@ final class bf {
     private int field_n;
     static oc field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_m = null;
         field_i = null;
         field_b = null;
@@ -380,7 +380,7 @@ final class bf {
         return (bf) this;
     }
 
-    final static int b() {
+    final static int b(byte param0) {
         return -pk.field_ab + dh.field_h;
     }
 
@@ -532,8 +532,7 @@ final class bf {
         try {
           L0: {
             L1: {
-              int discarded$3 = 2;
-              uj.a(param4.field_t, param4.field_x, param2 + param4.field_m, ((bf) this).field_j, param1 - -param4.field_j);
+              uj.a(param4.field_t, param4.field_x, param2 + param4.field_m, ((bf) this).field_j, param1 - -param4.field_j, 2);
               if (null != ((bf) this).field_k) {
                 L2: {
                   var6_int = param2 + (param4.field_m + ((bf) this).field_l);
@@ -722,7 +721,7 @@ final class bf {
                         break L9;
                       }
                     }
-                    int discarded$4 = ((mg) (Object) stackIn_25_0).a(stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_25_8, param3.field_g, param3.field_b, param3.field_f);
+                    int discarded$2 = ((mg) (Object) stackIn_25_0).a(stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_25_8, param3.field_g, param3.field_b, param3.field_f);
                     break L6;
                   } else {
                     break L6;
@@ -733,7 +732,7 @@ final class bf {
             if (param0 > 45) {
               break L0;
             } else {
-              bf discarded$5 = ((bf) this).a(-35, 3);
+              bf discarded$3 = ((bf) this).a(-35, 3);
               return;
             }
           }

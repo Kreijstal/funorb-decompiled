@@ -6,11 +6,10 @@ final class ic {
     static String field_a;
 
     final static void a(int param0, boolean param1) {
-        int discarded$0 = 92;
-        int discarded$1 = de.a();
+        int discarded$0 = de.a((byte) 92);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -32,11 +31,10 @@ final class ic {
             break L0;
           }
         }
-        int discarded$2 = -120;
-        ic.a();
+        ic.a((byte) -120);
     }
 
-    final static w a(String param0) {
+    final static w a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

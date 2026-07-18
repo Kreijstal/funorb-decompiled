@@ -9,7 +9,7 @@ final class qb extends am {
     static String field_m;
     static int field_i;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_m = null;
     }
 

@@ -92,8 +92,7 @@ final class hk {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int discarded$0 = 140;
-        hk.a(field_l, 0, 0 * field_j, 4, 0, 540, field_j - 540);
+        hk.a(field_l, 0, 0 * field_j, 4, 0, 540, field_j - 540, 140);
         hk.a(field_l, 0, 0 * field_j, 4, 0, 140, field_j - 540, 0, 540);
     }
 
@@ -205,7 +204,7 @@ final class hk {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;

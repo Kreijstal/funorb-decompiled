@@ -137,7 +137,7 @@ abstract class js {
         field_f = null;
     }
 
-    final static void a(String param0, int param1, bu param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(String param0, int param1, bu param2, int param3, int param4, int param5, int param6, int param7, boolean param8) {
         try {
             hf.field_e = param2;
             tk.field_yb = param0;
@@ -257,8 +257,7 @@ abstract class js {
                     or.field_d.field_n = 0;
                     or.field_d.a(108, 14);
                     or.field_d.a(124, vq.field_h.a((byte) -104).field_a);
-                    int discarded$13 = 0;
-                    c.a(-1);
+                    c.a(-1, false);
                     un.field_c = uk.field_c;
                     break L2;
                   } else {
@@ -319,8 +318,7 @@ abstract class js {
                             break L8;
                           } else {
                             if (8 == var6_int) {
-                              int discarded$14 = -116;
-                              lr.b();
+                              lr.b((byte) -116);
                               vu.field_Db = false;
                               stackOut_31_0 = var6_int;
                               stackIn_32_0 = stackOut_31_0;
@@ -347,8 +345,7 @@ abstract class js {
                   if (bm.field_H != un.field_c) {
                     break L9;
                   } else {
-                    int discarded$15 = 180;
-                    if (!ps.a()) {
+                    if (!ps.a(180)) {
                       break L9;
                     } else {
                       L10: {
@@ -360,8 +357,7 @@ abstract class js {
                         var11 = un.field_e.a(true);
                         var7 = un.field_e.h((byte) -106);
                         if ((1 & var7) != 0) {
-                          int discarded$16 = 114;
-                          um.a();
+                          um.a((byte) 114);
                           break L10;
                         } else {
                           break L10;
@@ -426,9 +422,9 @@ abstract class js {
                           }
                           ib.field_E = stackIn_62_0 != 0;
                           if (it.field_n) {
-                            int discarded$17 = un.field_e.h((byte) -118);
+                            int discarded$6 = un.field_e.h((byte) -118);
                             vp.field_h = un.field_e.h((byte) -124);
-                            int discarded$18 = un.field_e.k(4);
+                            int discarded$7 = un.field_e.k(4);
                             field_e = un.field_e.a((byte) 81);
                             nt.field_yb = new byte[field_e];
                             var8 = 0;
@@ -458,9 +454,9 @@ abstract class js {
                           }
                           ib.field_E = stackIn_43_0 != 0;
                           if (it.field_n) {
-                            int discarded$19 = un.field_e.h((byte) -118);
+                            int discarded$8 = un.field_e.h((byte) -118);
                             vp.field_h = un.field_e.h((byte) -124);
-                            int discarded$20 = un.field_e.k(4);
+                            int discarded$9 = un.field_e.k(4);
                             field_e = un.field_e.a((byte) 81);
                             nt.field_yb = new byte[field_e];
                             var8 = 0;
@@ -513,7 +509,7 @@ abstract class js {
                             if (!fc.field_f) {
                               try {
                                 L24: {
-                                  Object discarded$21 = mm.a(30858, "unzap", so.a(-110));
+                                  Object discarded$10 = mm.a(30858, "unzap", so.a(-110));
                                   break L24;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -531,8 +527,7 @@ abstract class js {
                         }
                         try {
                           L26: {
-                            int discarded$22 = 25449;
-                            Object discarded$23 = mm.a(new Object[1], so.a(-122), "zap");
+                            Object discarded$11 = mm.a(new Object[1], so.a(-122), "zap", 25449);
                             break L26;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -573,13 +568,11 @@ abstract class js {
                   if (wv.field_fb != un.field_c) {
                     break L30;
                   } else {
-                    int discarded$24 = 180;
-                    if (!ps.a()) {
+                    if (!ps.a(180)) {
                       break L30;
                     } else {
                       L31: {
-                        int discarded$25 = -116;
-                        lr.b();
+                        lr.b((byte) -116);
                         if (so.field_b != 7) {
                           break L31;
                         } else {
@@ -714,8 +707,7 @@ abstract class js {
             }
             try {
                 var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-                int discarded$1 = 3;
-                param1.getAppletContext().showDocument(qr.a(param1, var2), "_top");
+                param1.getAppletContext().showDocument(qr.a(param1, var2, 3), "_top");
             } catch (Exception exception) {
                 exception.printStackTrace();
             }

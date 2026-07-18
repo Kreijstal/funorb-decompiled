@@ -7,11 +7,11 @@ final class vh {
     static String field_b;
     static String field_a;
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         ta.field_a = 20000000L;
     }
 
-    final static void a(gb param0) {
+    final static void a(gb param0, int param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;

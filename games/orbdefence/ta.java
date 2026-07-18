@@ -507,7 +507,7 @@ class ta extends pj implements c {
         return stackIn_6_0;
     }
 
-    final static void j() {
+    final static void j(int param0) {
         hj var1 = null;
         hj var2 = null;
         int var3 = 0;
@@ -526,8 +526,7 @@ class ta extends pj implements c {
             }
             jc.field_k.d();
             var1.d(0, 0);
-            int discarded$0 = -105;
-            oc.g();
+            oc.g((byte) -105);
         } catch (RuntimeException runtimeException) {
             throw dd.a((Throwable) (Object) runtimeException, "ta.EA(" + 0 + ')');
         }
@@ -775,7 +774,7 @@ class ta extends pj implements c {
         }
     }
 
-    final static void a(int param0, wd param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, wd param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
         RuntimeException var8 = null;
         int[] var8_array = null;
         int var13 = 0;
@@ -884,8 +883,7 @@ class ta extends pj implements c {
                   }
                 }
               }
-              int discarded$1 = 88;
-              fg.b();
+              fg.b((byte) 88);
               break L1;
             }
             var66 = new int[param1.field_w];

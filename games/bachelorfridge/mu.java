@@ -16,7 +16,7 @@ final class mu {
     static String field_m;
     static int[] field_l;
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_d = null;
         field_b = null;
@@ -119,7 +119,7 @@ final class mu {
         ((mu) this).field_g = 0;
     }
 
-    private final int a(lu param0) {
+    private final int a(lu param0, boolean param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4_int = 0;
@@ -153,11 +153,11 @@ final class mu {
             if (iha.field_j < var3_int) {
               throw new RuntimeException("Profile version too recent! " + var3_int + " > " + iha.field_j);
             } else {
-              int discarded$14 = param0.f(-122);
-              int discarded$15 = param0.f(-122);
+              int discarded$12 = param0.f(-122);
+              int discarded$13 = param0.f(-122);
               ((mu) this).field_a = param0.f(-81);
-              int discarded$16 = param0.f(-90);
-              int discarded$17 = param0.f(-53);
+              int discarded$14 = param0.f(-90);
+              int discarded$15 = param0.f(-53);
               ((mu) this).field_c = param0.b(16711935);
               ((mu) this).field_e = gca.a(0, param0);
               ((mu) this).field_i = new rk[50];
@@ -174,15 +174,14 @@ final class mu {
                           break L3;
                         } else {
                           if (var4_int < 3) {
-                            int discarded$18 = param0.f(99);
+                            int discarded$16 = param0.f(99);
                             break L3;
                           } else {
                             break L3;
                           }
                         }
                       }
-                      int discarded$19 = 255;
-                      rk discarded$20 = gka.a(param0);
+                      rk discarded$17 = gka.a(param0, 255);
                       break L2;
                     }
                   }
@@ -195,12 +194,12 @@ final class mu {
                       L5: {
                         ((mu) this).field_f = rd.a(true, param0);
                         if (var3_int >= 2) {
-                          int discarded$21 = param0.f((byte) 97);
-                          int discarded$22 = param0.f((byte) 111);
-                          int discarded$23 = param0.f((byte) -16);
-                          int discarded$24 = param0.f((byte) -123);
-                          int discarded$25 = param0.f((byte) -123);
-                          int discarded$26 = param0.f((byte) -20);
+                          int discarded$18 = param0.f((byte) 97);
+                          int discarded$19 = param0.f((byte) 111);
+                          int discarded$20 = param0.f((byte) -16);
+                          int discarded$21 = param0.f((byte) -123);
+                          int discarded$22 = param0.f((byte) -123);
+                          int discarded$23 = param0.f((byte) -20);
                           break L5;
                         } else {
                           break L5;
@@ -257,8 +256,7 @@ final class mu {
                     }
                   }
                 } else {
-                  int discarded$27 = 255;
-                  ((mu) this).field_i[var4_int] = gka.a(param0);
+                  ((mu) this).field_i[var4_int] = gka.a(param0, 255);
                   var4_int++;
                   continue L1;
                 }
@@ -306,8 +304,7 @@ final class mu {
     mu(lu param0) {
         ((mu) this).field_i = new rk[50];
         try {
-            int discarded$0 = 0;
-            int discarded$1 = this.a(param0);
+            int discarded$0 = this.a(param0, false);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "mu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

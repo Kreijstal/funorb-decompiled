@@ -8,7 +8,7 @@ final class gi {
     static int field_c;
     static boolean field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_e = null;
         field_a = null;
@@ -47,8 +47,7 @@ final class gi {
               re.field_G.f(uh.field_d[1], 613003928);
               re.field_G.f(uh.field_d[2], 613003928);
               re.field_G.f(uh.field_d[3], 613003928);
-              int discarded$2 = -18;
-              u.a(re.field_G);
+              u.a(re.field_G, -18);
               re.field_G.b(-1947079288, param4);
               param1.a(4, re.field_G);
               n.field_b.field_m = 0;
@@ -99,8 +98,7 @@ final class gi {
             }
             L6: {
               n.field_b.b((byte) 11, var6);
-              int discarded$3 = 102;
-              var7 = fb.a(jg.f(1));
+              var7 = fb.a(jg.f(1), (byte) 102);
               if (var7 == null) {
                 var7 = "";
                 break L6;

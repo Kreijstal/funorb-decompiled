@@ -12,9 +12,8 @@ final class jg implements Runnable {
     static String field_g;
     volatile boolean field_a;
 
-    final static void a() {
-        int discarded$0 = 108;
-        qq.field_I = ks.c();
+    final static void a(int param0) {
+        qq.field_I = ks.c(108);
         le.field_e = new tc();
         wa.a((byte) -50, true, true);
     }
@@ -102,7 +101,7 @@ final class jg implements Runnable {
         }
     }
 
-    final static dc a(vr param0, String[] param1, int param2) {
+    final static dc a(vr param0, String[] param1, int param2, int param3, int param4) {
         try {
             dc var5 = null;
             RuntimeException var5_ref = null;
@@ -406,7 +405,7 @@ final class jg implements Runnable {
         return stackIn_8_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_f = null;
         field_e = null;

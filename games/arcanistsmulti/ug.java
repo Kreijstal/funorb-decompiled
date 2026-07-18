@@ -235,17 +235,15 @@ final class ug {
         }
     }
 
-    final static void a(int param0, m param1, eg param2) {
+    final static void a(int param0, m param1, eg param2, int param3) {
         try {
             sn.field_G = param0 * gm.b(-2) / 1000;
             ed.a((byte) -17, param2);
             ArcanistsMulti.a(param2, (byte) -80);
             int var4_int = 0;
             fl.a(-2389, param2);
-            int discarded$0 = 5968;
-            tm.a();
-            int discarded$1 = 0;
-            h.j();
+            tm.a(5968);
+            h.j(0);
             gi.field_a = -sn.field_G;
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ug.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + 121 + ')');
@@ -305,7 +303,7 @@ final class ug {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -479,8 +477,7 @@ final class ug {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((ug) this).field_e[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 126;
-            this.a();
+            this.a((byte) 126);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ug.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

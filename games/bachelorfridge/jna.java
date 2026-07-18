@@ -43,8 +43,7 @@ final class jna extends bw {
             }
             L2: {
               if (lna.field_q) {
-                int discarded$13 = 20;
-                qfa.a(param0, param6, param7, (byte) -115, param6, param4, param5, param1);
+                qfa.a(param0, param6, param7, (byte) -115, param6, param4, param5, param1, 20);
                 bi.field_h.a(19842, param3);
                 if (!param3) {
                   break L2;

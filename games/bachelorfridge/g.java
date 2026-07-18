@@ -6,13 +6,13 @@ final class g extends bw {
     byte[] field_h;
     static po field_f;
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = 0;
         field_f = null;
         field_g = null;
     }
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, byte param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

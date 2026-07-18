@@ -13,7 +13,7 @@ final class lb extends gg {
     int[] field_p;
     private static String field_z;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
     }
 

@@ -15,7 +15,7 @@ final class na extends hl {
     static String field_o;
     static int[] field_r;
 
-    final static void a(int param0, ih param1) {
+    final static void a(int param0, ih param1, byte param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

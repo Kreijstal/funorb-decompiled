@@ -72,7 +72,7 @@ final class oc extends li {
         }
     }
 
-    final static java.awt.Frame a(int param0, int param1, int param2, jj param3, int param4) {
+    final static java.awt.Frame a(int param0, int param1, int param2, jj param3, int param4, int param5) {
         RuntimeException var6 = null;
         cl[] var6_array = null;
         int var7_int = 0;
@@ -217,7 +217,7 @@ final class oc extends li {
         return (java.awt.Frame) (Object) stackIn_32_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_x = null;
         field_v = null;
         field_s = null;

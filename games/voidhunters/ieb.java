@@ -4,7 +4,7 @@
 final class ieb extends rqa {
     static int[] field_o;
 
-    final static void f() {
+    final static void f(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -217,8 +217,7 @@ final class ieb extends rqa {
         }
         msa.field_s = brb.f((byte) 62);
         klb.field_r = new ida();
-        int discarded$0 = 0;
-        rga.a(true, true);
+        rga.a(true, true, false);
     }
 
     final static int a(int param0, int param1) {
@@ -285,7 +284,7 @@ final class ieb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

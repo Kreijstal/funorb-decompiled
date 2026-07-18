@@ -12,7 +12,7 @@ abstract class pf {
 
     abstract void a(byte[] param0, int param1);
 
-    final static void a(int param0, dl param1) {
+    final static void a(int param0, dl param1, byte param2) {
         ml var4 = null;
         try {
             int var3_int = 84;
@@ -26,14 +26,14 @@ abstract class pf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_d = null;
         field_b = null;
     }
 
-    final static void a(iw param0) {
+    final static void a(iw param0, int param1) {
         int var2_int = 0;
         try {
             pl.field_d = param0.a((byte) 81) << 5;

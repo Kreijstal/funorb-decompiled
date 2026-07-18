@@ -18,11 +18,11 @@ final class oa extends hn implements hi, mb {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_h = null;
     }
 
-    final static String a(Throwable param0) throws IOException {
+    final static String a(Throwable param0, byte param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;

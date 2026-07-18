@@ -254,7 +254,7 @@ final class ta {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         if (mc.field_k != -tf.field_c) {
           if (250 - tf.field_c != mc.field_k) {
             mc.field_k = mc.field_k + 1;
@@ -283,7 +283,7 @@ final class ta {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_b = null;
         field_d = null;
     }

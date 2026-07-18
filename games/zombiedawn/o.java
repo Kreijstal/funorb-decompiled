@@ -20,7 +20,7 @@ final class o {
     static vn[] field_d;
     static String field_n;
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -348,8 +348,7 @@ final class o {
         }
         if (((o) this).field_a.d(param0 ^ -3772)) {
             if (((o) this).field_a.field_d == 0) {
-                int discarded$0 = 1;
-                this.c();
+                this.c(1);
                 return 3;
             }
             if (((o) this).field_a.field_d == 1) {
@@ -625,10 +624,8 @@ final class o {
                                     nl.field_r = gf.a(nl.field_t, "arrow", 8, "members_expansion_screen");
                                     tc.field_r = gb.a("", -1, ge.field_b, "arialish12", nl.field_t);
                                     ui.field_b = ra.a(ge.field_b, "pump32", "", 0, nl.field_t);
-                                    int discarded$7 = 1;
-                                    ck.field_i = bn.a("benefit_orbs", nl.field_t, "members_expansion_screen");
-                                    int discarded$8 = 1;
-                                    bb.field_c = bn.a("button_text", nl.field_t, "members_expansion_screen");
+                                    ck.field_i = bn.a("benefit_orbs", nl.field_t, "members_expansion_screen", 1);
+                                    bb.field_c = bn.a("button_text", nl.field_t, "members_expansion_screen", 1);
                                     ng.field_c = df.a((byte) 24, "members_expansion_screen", "button_highlights", nl.field_t);
                                     nl.field_t = null;
                                     ge.field_b = null;
@@ -645,8 +642,7 @@ final class o {
                     }
                   }
                 }
-                int discarded$9 = -127;
-                this.a();
+                this.a((byte) -127);
                 if (null != li.field_i) {
                   L4: {
                     ((o) this).field_p.b(376, 339);
@@ -704,11 +700,11 @@ final class o {
                   }
                   L6: {
                     ((o) this).field_g.b(16, 302);
-                    int discarded$10 = tc.field_r.a(((o) this).field_k[((o) this).field_c], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+                    int discarded$4 = tc.field_r.a(((o) this).field_k[((o) this).field_c], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
                     ck.field_i.b(30, 330);
-                    int discarded$11 = tc.field_r.a(dl.field_a[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$12 = tc.field_r.a(dl.field_a[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$13 = tc.field_r.a(dl.field_a[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$5 = tc.field_r.a(dl.field_a[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$6 = tc.field_r.a(dl.field_a[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$7 = tc.field_r.a(dl.field_a[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
                     bb.field_c.b(508 + (127 + -bb.field_c.field_r) / 2, 315);
                     if (((o) this).field_a.field_d == 0) {
                       ng.field_c[0].b(508, 299);
@@ -749,10 +745,9 @@ final class o {
         field_d = null;
     }
 
-    private final void c() {
+    private final void c(int param0) {
         try {
-            int discarded$0 = 124;
-            hi.a(hc.a(0));
+            hi.a(hc.a(0), 124);
         } catch (Exception exception) {
             exception.printStackTrace();
         }
@@ -1016,8 +1011,7 @@ final class o {
                   }
                 }
                 if (var4 != 0) {
-                  int discarded$1 = 1;
-                  this.c();
+                  this.c(1);
                   return 3;
                 } else {
                   return 0;
@@ -1042,8 +1036,7 @@ final class o {
         int var11 = 0;
         int var12 = ZombieDawn.field_J;
         try {
-            int discarded$3 = 1584;
-            hk.i();
+            hk.i(1584);
             if (param0 != -1) {
                 ((o) this).field_p = null;
             }
@@ -1051,7 +1044,7 @@ final class o {
                 bi.f(param3, var9_int, param2, var9_int + 1);
                 var10 = var9_int * param6.length / param4;
                 var11 = param6[param6.length + (-var10 + -1)];
-                int discarded$4 = param5.a(param7, param3, param1, param2, param4, var11, -1, 1, 1, 0);
+                int discarded$0 = param5.a(param7, param3, param1, param2, param4, var11, -1, 1, 1, 0);
             }
             pa.a(-21189);
         } catch (RuntimeException runtimeException) {

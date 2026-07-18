@@ -440,9 +440,7 @@ final class bc {
           }
         }
         L4: {
-          int discarded$2 = 14;
-          int discarded$3 = 11;
-          dj.a(stackIn_14_0, stackIn_14_1, (byte) stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_14_5, stackIn_14_6 != 0, stackIn_14_7 != 0, stackIn_14_8 != 0, stackIn_14_9 != 0);
+          dj.a(stackIn_14_0, stackIn_14_1, (byte) stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_14_5, stackIn_14_6 != 0, stackIn_14_7 != 0, stackIn_14_8 != 0, stackIn_14_9 != 0, 11, 14);
           if (param1 < -101) {
             break L4;
           } else {
@@ -470,7 +468,7 @@ final class bc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }

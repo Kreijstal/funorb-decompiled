@@ -45,7 +45,7 @@ final class bj {
                   break L3;
                 } else {
                   if (cd.field_a) {
-                    boolean discarded$3 = bk.field_e.a(oj.field_a.field_eb, param0, oj.field_a.field_z, false);
+                    boolean discarded$1 = bk.field_e.a(oj.field_a.field_eb, param0, oj.field_a.field_z, false);
                     break L3;
                   } else {
                     bk.field_e = null;
@@ -65,8 +65,7 @@ final class bj {
                     }
                   }
                   L6: {
-                    int discarded$4 = 0;
-                    var9 = r.a(fn.field_Q, param3, qe.field_d);
+                    var9 = r.a(fn.field_Q, param3, qe.field_d, 0);
                     if (var9 != null) {
                       n.a((byte) 111, var9);
                       break L6;
@@ -75,8 +74,7 @@ final class bj {
                     }
                   }
                   L7: {
-                    int discarded$5 = -62;
-                    var8 = fh.b();
+                    var8 = fh.b((byte) -62);
                     if (var8 != null) {
                       re.field_P = var8;
                       break L7;
@@ -112,7 +110,7 @@ final class bj {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         int var2 = 0;
         L0: {
@@ -163,13 +161,10 @@ final class bj {
 
     final static void a(int param0, boolean param1, int param2, boolean param3, int param4, int param5, int param6, boolean param7, int param8, int param9, int param10, int param11, boolean param12, boolean param13) {
         re.field_P = null;
-        int discarded$0 = 90;
-        oc.b();
-        int discarded$1 = 0;
-        param1 = qh.a(15, 11, (byte) -30, 14, 13, param1);
+        oc.b((byte) 90);
+        param1 = qh.a(15, 11, (byte) -30, 14, 13, param1, 0);
         li.a(-70, 16777215, 16777215, param4, false, param7, param13, param12, 11, param1);
-        int discarded$2 = -61;
-        wk.a(param4, param12);
+        wk.a(param4, param12, (byte) -61);
         bj.a(param1, 0, false, param4);
     }
 
@@ -187,8 +182,7 @@ final class bj {
         int var4 = 0;
         db[] var5 = null;
         var4 = TetraLink.field_J;
-        int discarded$2 = 104;
-        var5 = cc.b();
+        var5 = cc.b(104);
         var2 = var5;
         var3 = 0;
         L0: while (true) {

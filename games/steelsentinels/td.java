@@ -738,7 +738,7 @@ final class td extends gh {
         return stackIn_6_0 != 0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_Xb = null;
         field_ec = null;
         field_Vb = null;

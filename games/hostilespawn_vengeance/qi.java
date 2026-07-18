@@ -42,12 +42,11 @@ final class qi extends vd implements qk {
                 if (param1 > 112) {
                   break L1;
                 } else {
-                  jj discarded$4 = qi.a(true, true);
+                  jj discarded$2 = qi.a(true, true);
                   break L1;
                 }
               }
-              int discarded$5 = -123;
-              stackOut_5_0 = he.c();
+              stackOut_5_0 = he.c(-123);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

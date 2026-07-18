@@ -89,12 +89,11 @@ final class hq {
               if (param0 == 22531) {
                 break L1;
               } else {
-                boolean discarded$4 = hq.a((byte) -59);
+                boolean discarded$2 = hq.a((byte) -59);
                 break L1;
               }
             }
-            int discarded$5 = 1;
-            stackOut_2_0 = wr.a(param1, param2, 1 << param3, param3, 1 << param1);
+            stackOut_2_0 = wr.a(param1, param2, 1 << param3, param3, 1 << param1, 1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

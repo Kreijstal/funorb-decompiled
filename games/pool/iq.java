@@ -17,7 +17,7 @@ abstract class iq {
 
     abstract void a(java.awt.Graphics param0, int param1, int param2, int param3);
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_l = null;

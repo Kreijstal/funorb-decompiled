@@ -7,7 +7,7 @@ final class pp {
     static double field_d;
     static int field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         int var1 = -30;
     }
@@ -295,7 +295,7 @@ final class pp {
         return fe.a(oa.field_g, -13671, 26) || ko.a(0, (byte) -127);
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;

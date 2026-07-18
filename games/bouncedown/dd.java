@@ -31,8 +31,7 @@ final class dd implements Runnable {
                     var1_int = 0;
                     L3: while (true) {
                       if (var1_int >= 2) {
-                        int discarded$2 = 19406;
-                        wh.a(10L);
+                        wh.a(10L, 19406);
                         pg.a((byte) -86, (Object) null, ((dd) this).field_d);
                         continue L2;
                       } else {

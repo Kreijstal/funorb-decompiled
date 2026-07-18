@@ -17,8 +17,7 @@ final class t extends am {
             return false;
         }
         if (kh.field_U[param1] == 3) {
-            int discarded$3 = 119;
-            if (f.a()) {
+            if (f.a((byte) 119)) {
                 eh.field_c.a(sf.field_V[36], 100, uh.field_i);
             }
         }
@@ -42,20 +41,20 @@ final class t extends am {
         return true;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         field_l = null;
         field_j = null;
         field_i = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         qg.field_r = sc.field_g.o(32);
         CharSequence var2 = (CharSequence) (Object) qg.field_r;
         se.field_c = mf.a(false, var2);
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         double var1_double = 0.0;
         double var3 = 0.0;

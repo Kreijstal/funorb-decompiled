@@ -378,13 +378,12 @@ final class hk extends kb {
     }
 
     final long a(int param0) {
-        int discarded$0 = 0;
-        ((hk) this).field_m = ((hk) this).field_m + this.a();
+        ((hk) this).field_m = ((hk) this).field_m + this.a(false);
         if (((hk) this).field_m < ((hk) this).field_p) {
             return (((hk) this).field_p - ((hk) this).field_m) / 1000000L;
         }
         if (param0 != 31) {
-            java.applet.Applet discarded$1 = hk.d(-46);
+            java.applet.Applet discarded$0 = hk.d(-46);
         }
         return 0L;
     }
@@ -395,8 +394,7 @@ final class hk extends kb {
         field_q = null;
         field_r = null;
         if (param0 != 122) {
-            int discarded$0 = -66;
-            hk.c();
+            hk.c(-66);
         }
         field_t = null;
     }
@@ -422,9 +420,8 @@ final class hk extends kb {
         return (java.applet.Applet) (Object) ni.field_ib;
     }
 
-    final static void c() {
-        int discarded$0 = 27;
-        int var1 = ml.b();
+    final static void c(int param0) {
+        int var1 = ml.b(27);
     }
 
     final static g a(di param0, byte param1, int param2) {
@@ -529,7 +526,7 @@ final class hk extends kb {
         return false;
     }
 
-    private final long a() {
+    private final long a(boolean param0) {
         int var8 = 0;
         int var9 = Pool.field_O;
         long var2 = System.nanoTime();

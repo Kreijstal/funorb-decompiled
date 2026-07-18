@@ -128,14 +128,13 @@ final class kj extends ne {
             }
             hg.field_r.a(param1, param0, param3, (byte) 45);
             gf.a();
-            int discarded$0 = -106;
-            un.a(true);
+            un.a(true, (byte) -106);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "kj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + -2958 + ',' + param3 + ')');
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_p = null;
         field_o = null;

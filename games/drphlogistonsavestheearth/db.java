@@ -18,7 +18,7 @@ final class db {
         ((db) this).field_c = param0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_e = null;
         field_f = null;

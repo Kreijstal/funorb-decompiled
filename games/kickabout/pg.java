@@ -21,7 +21,7 @@ final class pg {
         bq.a(93, param1);
     }
 
-    final static int a() {
+    final static int a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -188,7 +188,7 @@ final class pg {
         return fp.field_u;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_d = null;
         field_c = null;

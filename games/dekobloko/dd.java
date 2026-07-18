@@ -59,24 +59,20 @@ abstract class dd {
         try {
           L0: {
             var7 = (CharSequence) (Object) param0;
-            int discarded$4 = -70;
-            if (dc.a(var7)) {
-              int discarded$5 = 1;
-              if (!k.a(param0)) {
+            if (dc.a(var7, (byte) -70)) {
+              if (!k.a(param0, true)) {
                 if (jj.field_b != 2) {
                   stackOut_8_0 = qe.field_h;
                   stackIn_9_0 = stackOut_8_0;
                   return stackIn_9_0;
                 } else {
-                  int discarded$6 = -118;
-                  if (ik.a(param0)) {
+                  if (ik.a(param0, (byte) -118)) {
                     stackOut_12_0 = cm.a((byte) 114, ph.field_Bb, new String[1]);
                     stackIn_13_0 = stackOut_12_0;
                     return stackIn_13_0;
                   } else {
                     if (ed.field_g < 100) {
-                      int discarded$7 = 3;
-                      if (qe.a(param0)) {
+                      if (qe.a(param0, 3)) {
                         stackOut_19_0 = cm.a((byte) 116, nn.field_b, new String[1]);
                         stackIn_20_0 = stackOut_19_0;
                         return stackIn_20_0;
@@ -208,8 +204,7 @@ abstract class dd {
                       break L4;
                     } else {
                       var3_int = 0;
-                      int discarded$4 = -31842;
-                      si.d();
+                      si.d(-31842);
                       break L4;
                     }
                   }
@@ -260,7 +255,7 @@ abstract class dd {
               break L0;
             } else {
               var4 = null;
-              String discarded$5 = dd.b((String) null, 52, 86);
+              String discarded$2 = dd.b((String) null, 52, 86);
               return;
             }
           }
@@ -369,12 +364,12 @@ abstract class dd {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0, boolean param1, byte param2) {
         Object var4 = null;
         rb.a(param0, (byte) -85, (String) null, param1);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_k = null;
         field_m = null;
         field_a = null;

@@ -8,7 +8,7 @@ final class av extends jt {
     static il field_B;
     static int[] field_C;
 
-    final static void a(fs param0) {
+    final static void a(fs param0, boolean param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;

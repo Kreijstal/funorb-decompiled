@@ -57,7 +57,7 @@ final class mc {
                 break L1;
               } else {
                 var9 = null;
-                byte[] discarded$3 = mc.a((byte[]) null, 98);
+                byte[] discarded$2 = mc.a((byte[]) null, 98);
                 break L1;
               }
             }
@@ -111,8 +111,7 @@ final class mc {
                           }
                           break L6;
                         } else {
-                          int discarded$4 = 9;
-                          int discarded$5 = bb.a(var6, var5, param0, var4);
+                          int discarded$3 = bb.a(var18, var5, param0, var4, 9);
                           break L6;
                         }
                       }
@@ -170,7 +169,7 @@ final class mc {
         return stackIn_23_0;
     }
 
-    final static boolean a(int param0, boolean param1) {
+    final static boolean a(int param0, boolean param1, boolean param2, int param3, int param4, int param5, int param6) {
         if (!(!ag.c(-117))) {
             hd.a(13, (byte) -116, 15, param1);
             if (md.field_e != null) {
@@ -179,17 +178,14 @@ final class mc {
                     param1 = false;
                 }
             }
-            int discarded$0 = 13;
-            qg.a(7377, param1);
-            int discarded$1 = 14;
-            int discarded$2 = -121;
-            te.a(param1);
+            qg.a(7377, param1, 13);
+            te.a(param1, -121, 14);
             param1 = false;
         }
         return param1;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_b = null;
         field_e = null;

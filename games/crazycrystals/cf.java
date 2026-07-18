@@ -17,8 +17,7 @@ final class cf {
         int var4 = 0;
         sj[] var5 = null;
         var4 = CrazyCrystals.field_B;
-        int discarded$2 = 58;
-        var5 = rp.a();
+        var5 = rp.a(58);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -35,7 +34,7 @@ final class cf {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_g = null;
         field_e = null;

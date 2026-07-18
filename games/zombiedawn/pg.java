@@ -354,7 +354,7 @@ final class pg extends al {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -411,7 +411,7 @@ final class pg extends al {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_r = null;
         field_t = null;
         field_n = null;
@@ -424,14 +424,13 @@ final class pg extends al {
         return ((pg) this).field_m + (((pg) this).field_s + vh.field_b);
     }
 
-    final static void c() {
+    final static void c(int param0) {
         re.a((byte) -71);
         if (null != cj.field_d) {
             fa.a((byte) -46, cj.field_d);
         }
         fc.o((byte) -101);
-        int discarded$8 = -2;
-        jo.x();
+        jo.x(-2);
         hg.c(0);
         if (!(!lb.m(-83))) {
             dp.field_e.j(11, 1);

@@ -137,15 +137,15 @@ final class ll implements Runnable {
     }
 
     final void b(int param0) {
-        InterruptedException var2 = null;
-        Object var2_ref = null;
+        Object var2 = null;
+        InterruptedException var2_ref = null;
         Throwable var3 = null;
         int var4 = 0;
         Throwable decompiledCaughtException = null;
         var4 = MinerDisturbance.field_ab;
         if (!((ll) this).field_l) {
-          var2_ref = this;
-          synchronized (var2_ref) {
+          var2 = this;
+          synchronized (var2) {
             L0: {
               L1: {
                 ((ll) this).field_l = true;
@@ -171,7 +171,7 @@ final class ll implements Runnable {
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
-                    var2 = (InterruptedException) (Object) decompiledCaughtException;
+                    var2_ref = (InterruptedException) (Object) decompiledCaughtException;
                     ((ll) this).field_b = null;
                     return;
                   }
@@ -182,8 +182,7 @@ final class ll implements Runnable {
                   return;
                 }
               } else {
-                int discarded$3 = -10309;
-                gf.a(1L);
+                gf.a(1L, -10309);
                 continue L2;
               }
             }
@@ -354,7 +353,7 @@ final class ll implements Runnable {
         return ke.a(param1, -21937, sb.field_t);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -382,7 +381,7 @@ final class ll implements Runnable {
         return ((ll) this).field_i.available();
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_a = null;
     }

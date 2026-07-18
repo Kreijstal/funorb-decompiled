@@ -18,7 +18,7 @@ final class fl extends k {
         ad.field_j = -1;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         jp var1 = null;
         jp var3 = null;
         int var4 = 0;
@@ -77,8 +77,7 @@ final class fl extends k {
         try {
           L0: {
             var5 = (CharSequence) (Object) param1;
-            int discarded$4 = -106;
-            var3 = th.a(var5);
+            var3 = th.a(var5, -106);
             if (var3 != null) {
               stackOut_2_0 = (String) var3;
               stackIn_3_0 = stackOut_2_0;
@@ -88,8 +87,7 @@ final class fl extends k {
                 if (param1.equals((Object) (Object) ((fl) this).field_k)) {
                   break L1;
                 } else {
-                  int discarded$5 = 0;
-                  var4_ref_oh = qc.a(param1);
+                  var4_ref_oh = qc.a(param1, 0);
                   if (var4_ref_oh != null) {
                     if (null == var4_ref_oh.field_g) {
                       ((fl) this).field_n = var4_ref_oh.field_c;
@@ -150,7 +148,7 @@ final class fl extends k {
         return stackIn_15_0;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         fp.field_A.setLength(0);
         ng.field_b = 0;
     }
@@ -160,7 +158,7 @@ final class fl extends k {
         ((fl) this).field_n = false;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_m = null;
     }
 
@@ -206,8 +204,7 @@ final class fl extends k {
               L2: {
                 if (!param0.equals((Object) (Object) ((fl) this).field_k)) {
                   L3: {
-                    int discarded$2 = 0;
-                    var3 = qc.a(param0);
+                    var3 = qc.a(param0, 0);
                     if (var3 == null) {
                       break L3;
                     } else {
@@ -278,7 +275,7 @@ final class fl extends k {
         return stackIn_16_0;
     }
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

@@ -7,7 +7,7 @@ final class tv extends oha {
     static sna field_o;
     static String field_m;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_m = null;
         field_p = null;
         field_o = null;

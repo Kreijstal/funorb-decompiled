@@ -11,9 +11,8 @@ final class vk {
     static ig field_a;
     static String[] field_b;
 
-    final static void a(boolean param0) {
-        int discarded$0 = 66;
-        dd.a(param0, false);
+    final static void a(boolean param0, int param1) {
+        dd.a(param0, false, (byte) 66);
     }
 
     final static void a(int param0, byte param1, ck[] param2, int param3, int param4, int param5) {
@@ -357,7 +356,7 @@ final class vk {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -547,7 +546,7 @@ final class vk {
         }
     }
 
-    final static String a(String param0, int param1) {
+    final static String a(String param0, int param1, boolean param2) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -718,7 +717,7 @@ final class vk {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_e = null;

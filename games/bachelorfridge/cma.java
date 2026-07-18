@@ -64,13 +64,13 @@ final class cma extends ana {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_y = null;
         field_v = null;
         field_x = null;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         ad var5 = null;
         int var6 = BachelorFridge.field_y;
         aga var7 = ((cma) this).field_w.field_l.a(44, ((cma) this).field_q.field_h);
@@ -187,8 +187,7 @@ final class cma extends ana {
         if (!(fieldTemp$0 < 0)) {
             if (((cma) this).field_l == 25) {
                 this.e(-128);
-                int discarded$1 = 35;
-                this.e();
+                this.e((byte) 35);
             }
             return false;
         }

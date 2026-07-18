@@ -7,7 +7,7 @@ final class nh {
     static int[] field_a;
     static int field_b;
 
-    final static ae c() {
+    final static ae c(byte param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -50,7 +50,7 @@ final class nh {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = rk.field_e.g(16711680);
         int var2 = rk.field_e.g(16777215);
         int var3 = rk.field_e.field_R[0].length;
@@ -69,7 +69,7 @@ final class nh {
         rk.field_e.field_R[3][var2] = 4473924;
     }
 
-    final static long a(CharSequence param0) {
+    final static long a(CharSequence param0, int param1) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;

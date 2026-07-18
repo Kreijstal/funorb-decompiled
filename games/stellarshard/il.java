@@ -146,31 +146,14 @@ final class il extends vg {
         super(param0, param1);
     }
 
-    final static boolean e() {
-        int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        if (eg.field_d >= 10) {
-          if (cg.field_a) {
+    final static boolean e(int param0) {
+        if (eg.field_d < 10) {
             return false;
-          } else {
-            L0: {
-              int discarded$6 = 12871;
-              if (ih.b()) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
-                break L0;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L0;
-              }
-            }
-            return stackIn_6_0 != 0;
-          }
-        } else {
-          return false;
         }
+        if (cg.field_a) {
+            return false;
+        }
+        return !ih.b(12871) ? true : false;
     }
 
     public static void d(int param0) {

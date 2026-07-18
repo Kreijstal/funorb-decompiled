@@ -600,10 +600,7 @@ final class am {
             L2: {
               var5 = stackIn_7_0;
               if (var5 == 0) {
-                int discarded$6 = -1;
-                int discarded$7 = 0;
-                int discarded$8 = 0;
-                hn.a(false, 380, -420, ((am) this).field_s.field_e, -390, 0, -140, 180);
+                hn.a(false, 380, -420, ((am) this).field_s.field_e, -390, 0, -140, 180, 0, 0, -1);
                 break L2;
               } else {
                 if (!param2.d(-2)) {
@@ -767,9 +764,9 @@ final class am {
                                 break L15;
                               } else {
                                 ((am) this).field_j[var11] = ((am) this).field_c[var14].a(var6, var7, 0, var8);
-                                int incrementValue$9 = var11;
+                                int incrementValue$3 = var11;
                                 var11++;
-                                ((am) this).field_a[incrementValue$9] = (bg) (Object) ((am) this).field_c[var14];
+                                ((am) this).field_a[incrementValue$3] = (bg) (Object) ((am) this).field_c[var14];
                                 if (var10 != 0) {
                                   break L15;
                                 } else {
@@ -1032,9 +1029,9 @@ final class am {
                         }
                       } else {
                         ((am) this).field_j[var11] = var13[var14].a(var7, -113, var6, var8);
-                        int incrementValue$10 = var11;
+                        int incrementValue$4 = var11;
                         var11++;
-                        ((am) this).field_a[incrementValue$10] = (bg) (Object) var13[var14];
+                        ((am) this).field_a[incrementValue$4] = (bg) (Object) var13[var14];
                         var14--;
                         continue L13;
                       }
@@ -1043,9 +1040,9 @@ final class am {
                     L33: {
                       if (var12[var13_int] != null) {
                         ((am) this).field_j[var11] = var12[var13_int].a(var7, -128, var6, var8);
-                        int incrementValue$11 = var11;
+                        int incrementValue$5 = var11;
                         var11++;
-                        ((am) this).field_a[incrementValue$11] = (bg) (Object) var12[var13_int];
+                        ((am) this).field_a[incrementValue$5] = (bg) (Object) var12[var13_int];
                         break L33;
                       } else {
                         break L33;
@@ -1659,18 +1656,12 @@ final class am {
                       break L8;
                     }
                   }
-                  int discarded$13 = -1;
-                  int discarded$14 = 0;
-                  int discarded$15 = 0;
-                  hn.a(stackIn_13_0 != 0, 180, -120, ((am) this).field_s.field_e, -270, -80, -140, 180);
+                  hn.a(stackIn_13_0 != 0, 180, -120, ((am) this).field_s.field_e, -270, -80, -140, 180, 0, 0, -1);
                   break L3;
                 }
               }
             }
-            int discarded$16 = -1;
-            int discarded$17 = 0;
-            int discarded$18 = 0;
-            hn.a(false, param4.field_f[0].field_E, -420, ((am) this).field_s.field_e, -270, -64, -140, param4.field_f[0].field_y);
+            hn.a(false, param4.field_f[0].field_E, -420, ((am) this).field_s.field_e, -270, -64, -140, param4.field_f[0].field_y, 0, 0, -1);
             break L3;
           }
         }
@@ -1856,9 +1847,9 @@ final class am {
                                   break L25;
                                 } else {
                                   ((am) this).field_j[var19] = ((am) this).field_c[var22].a(var14, var15, 0, var16);
-                                  int incrementValue$19 = var19;
+                                  int incrementValue$7 = var19;
                                   var19++;
-                                  ((am) this).field_a[incrementValue$19] = (bg) (Object) ((am) this).field_c[var22];
+                                  ((am) this).field_a[incrementValue$7] = (bg) (Object) ((am) this).field_c[var22];
                                   var22++;
                                   continue L27;
                                 }
@@ -1874,9 +1865,9 @@ final class am {
                                   break L25;
                                 } else {
                                   ((am) this).field_j[var19] = ((am) this).field_c[var22].a(var14, var15, 0, var16);
-                                  int incrementValue$20 = var19;
+                                  int incrementValue$8 = var19;
                                   var19++;
-                                  ((am) this).field_a[incrementValue$20] = (bg) (Object) ((am) this).field_c[var22];
+                                  ((am) this).field_a[incrementValue$8] = (bg) (Object) ((am) this).field_c[var22];
                                   var22++;
                                   continue L28;
                                 }
@@ -2801,8 +2792,8 @@ final class am {
                                                 } else {
                                                   if (param7 == 0) {
                                                     rq.a(190, 210, 282, 20, 64, 150);
-                                                    int discarded$21 = tk.field_c.a(tq.field_c, 40, 292, 200, 160, 16777215, -1, 0, 0, va.field_s.field_c + va.field_s.field_j);
-                                                    int discarded$22 = tk.field_c.a(vl.field_g, 50, 294, 160, 160, 16777215, -1, 2, 0, va.field_s.field_c + va.field_s.field_j);
+                                                    int discarded$9 = tk.field_c.a(tq.field_c, 40, 292, 200, 160, 16777215, -1, 0, 0, va.field_s.field_c + va.field_s.field_j);
+                                                    int discarded$10 = tk.field_c.a(vl.field_g, 50, 294, 160, 160, 16777215, -1, 2, 0, va.field_s.field_c + va.field_s.field_j);
                                                     break L91;
                                                   } else {
                                                     break L91;
@@ -2903,9 +2894,9 @@ final class am {
                                 break L97;
                               } else {
                                 ((am) this).field_j[var19] = var23_ref_hi__[var24].a((byte) -127, var15, var14, var16);
-                                int incrementValue$23 = var19;
+                                int incrementValue$11 = var19;
                                 var19++;
-                                ((am) this).field_a[incrementValue$23] = (bg) (Object) var23_ref_hi__[var24];
+                                ((am) this).field_a[incrementValue$11] = (bg) (Object) var23_ref_hi__[var24];
                                 var24++;
                                 continue L98;
                               }
@@ -2920,9 +2911,9 @@ final class am {
                     L99: {
                       if (var18 < var21[var22].field_s) {
                         ((am) this).field_j[var19] = var21[var22].a(var15, -104, var14, var16);
-                        int incrementValue$24 = var19;
+                        int incrementValue$12 = var19;
                         var19++;
-                        ((am) this).field_a[incrementValue$24] = (bg) (Object) var21[var22];
+                        ((am) this).field_a[incrementValue$12] = (bg) (Object) var21[var22];
                         break L99;
                       } else {
                         break L99;
@@ -2941,9 +2932,9 @@ final class am {
                       break L100;
                     } else {
                       ((am) this).field_j[var19] = var20[var21_int].a(var15, -112, var14, var16);
-                      int incrementValue$25 = var19;
+                      int incrementValue$13 = var19;
                       var19++;
-                      ((am) this).field_a[incrementValue$25] = (bg) (Object) var20[var21_int];
+                      ((am) this).field_a[incrementValue$13] = (bg) (Object) var20[var21_int];
                       break L100;
                     }
                   }
@@ -3234,10 +3225,7 @@ final class am {
             L3: {
               var6 = stackIn_5_0;
               if (var6 == 0) {
-                int discarded$6 = -1;
-                int discarded$7 = 0;
-                int discarded$8 = 0;
-                hn.a(false, 380, -420, ((am) this).field_s.field_e, -390, 0, -140, 180);
+                hn.a(false, 380, -420, ((am) this).field_s.field_e, -390, 0, -140, 180, 0, 0, -1);
                 break L3;
               } else {
                 if (!param2.d(-2)) {
@@ -3410,9 +3398,9 @@ final class am {
                                 break L18;
                               } else {
                                 ((am) this).field_j[var13] = ((am) this).field_c[var16].a(var7, var8, 0, var9);
-                                int incrementValue$9 = var13;
+                                int incrementValue$3 = var13;
                                 var13++;
-                                ((am) this).field_a[incrementValue$9] = (bg) (Object) ((am) this).field_c[var16];
+                                ((am) this).field_a[incrementValue$3] = (bg) (Object) ((am) this).field_c[var16];
                                 if (var12 == 0) {
                                   var16++;
                                   continue L19;
@@ -3674,9 +3662,9 @@ final class am {
                         break L0;
                       } else {
                         ((am) this).field_j[var13] = var15[var16].a(var8, -128, var7, var9);
-                        int incrementValue$10 = var13;
+                        int incrementValue$4 = var13;
                         var13++;
-                        ((am) this).field_a[incrementValue$10] = (bg) (Object) var15[var16];
+                        ((am) this).field_a[incrementValue$4] = (bg) (Object) var15[var16];
                         var16--;
                         continue L16;
                       }
@@ -3685,9 +3673,9 @@ final class am {
                     L37: {
                       if (var14[var15_int] != null) {
                         ((am) this).field_j[var13] = var14[var15_int].a(var8, -116, var7, var9);
-                        int incrementValue$11 = var13;
+                        int incrementValue$5 = var13;
                         var13++;
-                        ((am) this).field_a[incrementValue$11] = (bg) (Object) var14[var15_int];
+                        ((am) this).field_a[incrementValue$5] = (bg) (Object) var14[var15_int];
                         break L37;
                       } else {
                         break L37;
@@ -3736,7 +3724,7 @@ final class am {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_m = null;
         field_e = null;
         field_o = null;

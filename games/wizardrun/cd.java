@@ -26,7 +26,7 @@ final class cd implements Runnable {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -113,7 +113,7 @@ final class cd implements Runnable {
         }
     }
 
-    final static int a() {
+    final static int a(int param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -308,8 +308,7 @@ final class cd implements Runnable {
                     return stackIn_10_0;
                   }
                 } else {
-                  int discarded$2 = 0;
-                  tg.a(10L);
+                  tg.a(10L, false);
                   continue L1;
                 }
               }
@@ -379,8 +378,7 @@ final class cd implements Runnable {
               var4.field_o = (long)param1;
               var4.field_x = 3;
               var4.field_r = false;
-              int discarded$2 = -1;
-              this.a(var4);
+              this.a(var4, -1);
               stackOut_3_0 = (sk) var4;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -469,8 +467,7 @@ final class cd implements Runnable {
             var5.field_A = param2;
             var6 = -115 % ((param0 - -68) / 43);
             var5.field_r = false;
-            int discarded$2 = -1;
-            this.a(var5);
+            this.a(var5, -1);
             stackOut_0_0 = (sk) var5;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -638,7 +635,7 @@ final class cd implements Runnable {
         return stackIn_16_0;
     }
 
-    private final void a(sk param0) {
+    private final void a(sk param0, int param1) {
         synchronized (((cd) this).field_f) {
             ((cd) this).field_f.a((rk) (Object) param0, 14);
             ((cd) this).field_b = ((cd) this).field_b + 1;
@@ -739,8 +736,7 @@ final class cd implements Runnable {
         try {
             var2 = param0.a((byte) -98, (Runnable) this, 5);
             while (var2.field_a == 0) {
-                int discarded$0 = 0;
-                tg.a(10L);
+                tg.a(10L, false);
             }
             if (var2.field_a == 2) {
                 throw new RuntimeException();

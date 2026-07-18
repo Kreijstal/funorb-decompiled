@@ -10,7 +10,7 @@ final class i extends im implements ng {
     static vn field_N;
     static pk field_Q;
 
-    public static void m() {
+    public static void m(int param0) {
         field_Q = null;
         field_P = null;
         field_N = null;
@@ -62,8 +62,7 @@ final class i extends im implements ng {
                 if (bl.field_b == param1) {
                   ((i) this).field_o = ((i) this).field_o + 10;
                   var3 = (Object) (Object) wj.field_j;
-                  int discarded$25 = -116;
-                  if (!nh.a()) {
+                  if (!nh.a(-116)) {
                     break L1;
                   } else {
                     ((i) this).field_o = ((i) this).field_o + 20;
@@ -171,8 +170,7 @@ final class i extends im implements ng {
           L0: {
             L1: {
               if (((i) this).field_O == param1) {
-                int discarded$4 = 1;
-                this.b();
+                this.b(true);
                 break L1;
               } else {
                 break L1;
@@ -183,7 +181,7 @@ final class i extends im implements ng {
                 break L2;
               } else {
                 var7 = null;
-                lg discarded$5 = this.a((ca) null, false, (String) null);
+                lg discarded$2 = this.a((ca) null, false, (String) null);
                 break L2;
               }
             }
@@ -254,7 +252,7 @@ final class i extends im implements ng {
         return var2.field_v;
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         if (!((i) this).field_D) {
             return;
         }

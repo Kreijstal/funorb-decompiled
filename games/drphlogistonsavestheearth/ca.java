@@ -47,7 +47,7 @@ abstract class ca extends bd {
         }
     }
 
-    final static String a(Throwable param0) throws IOException {
+    final static String a(Throwable param0, byte param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;
@@ -150,11 +150,11 @@ abstract class ca extends bd {
         }
     }
 
-    final static String b() {
+    final static String b(boolean param0) {
         return dh.field_N.b((byte) -102);
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_V = null;
         field_bb = null;
         field_Y = null;

@@ -28,7 +28,7 @@ final class cp {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 65;
         field_a = null;
         field_b = null;

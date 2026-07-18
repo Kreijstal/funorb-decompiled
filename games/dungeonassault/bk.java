@@ -39,7 +39,7 @@ final class bk implements Runnable {
         return null;
     }
 
-    final static int a() {
+    final static int a(int param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -297,8 +297,7 @@ final class bk implements Runnable {
             break L12;
           }
         }
-        int discarded$1 = 84;
-        pj.field_e = vf.a(var5 * var2, var2 * var4);
+        pj.field_e = vf.a(var5 * var2, var2 * var4, (byte) 84);
     }
 
     public final void run() {
@@ -316,11 +315,11 @@ final class bk implements Runnable {
                     }
                 }
                 pj.a(0, 10L);
-                int discarded$0 = -32;
-                ho.a(((bk) this).field_h, (Object) null);
+                Object var5 = null;
+                ho.a(((bk) this).field_h, (Object) null, (byte) -32);
             }
         } catch (Exception exception) {
-            Object var5 = null;
+            Object var6 = null;
             sm.a((Throwable) (Object) exception, 1, (String) null);
         } finally {
             ((bk) this).field_d = false;

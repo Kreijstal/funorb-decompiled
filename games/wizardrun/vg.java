@@ -60,8 +60,7 @@ final class vg extends rg implements qd {
                 } else {
                   ((vg) this).field_n = ((vg) this).field_n + 10;
                   var3 = (Object) (Object) ib.field_b;
-                  int discarded$69 = 0;
-                  if (!ql.a()) {
+                  if (!ql.a(false)) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) ad.field_c;
@@ -160,8 +159,7 @@ final class vg extends rg implements qd {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            stackOut_0_0 = il.a(16, (byte) -22, param2);
+            stackOut_0_0 = il.a(16, (byte) -22, param2, true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -298,13 +296,12 @@ final class vg extends rg implements qd {
                 break L1;
               } else {
                 var7 = null;
-                pl discarded$4 = this.a(-124, (ce) null, (String) null);
+                pl discarded$2 = this.a(-124, (ce) null, (String) null);
                 break L1;
               }
             }
             if (((vg) this).field_V == param1) {
-              int discarded$5 = 30;
-              this.l();
+              this.l(30);
               break L0;
             } else {
               return;
@@ -342,7 +339,7 @@ final class vg extends rg implements qd {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_U = null;
         field_W = null;
     }
@@ -406,8 +403,7 @@ final class vg extends rg implements qd {
             if (param0 == 15) {
               var4_int = param2.b(param0 + -16, param3);
               var5 = param2.a(var4_int, param1, -11986);
-              int discarded$2 = 104;
-              stackOut_3_0 = se.a(var4_int, param2, var5);
+              stackOut_3_0 = se.a(var4_int, param2, var5, 104);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -499,7 +495,7 @@ final class vg extends rg implements qd {
         return stackIn_4_0;
     }
 
-    private final void l() {
+    private final void l(int param0) {
         if (!(((vg) this).field_H)) {
             return;
         }

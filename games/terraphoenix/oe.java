@@ -59,7 +59,7 @@ final class oe {
         }
     }
 
-    final static String a(boolean param0, byte param1, boolean param2) {
+    final static String a(boolean param0, byte param1, boolean param2, boolean param3) {
         int var4 = 0;
         var4 = 0;
         if (!param2) {
@@ -94,7 +94,7 @@ final class oe {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
         int var1 = 20;

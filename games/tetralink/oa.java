@@ -40,8 +40,7 @@ final class oa extends mc {
         try {
           L0: {
             if (param0 <= -95) {
-              int discarded$5 = 1;
-              mn.a((java.awt.Component) (Object) param1);
+              mn.a((java.awt.Component) (Object) param1, true);
               vb.a(-51, (java.awt.Component) (Object) param1);
               if (null != qf.field_k) {
                 qf.field_k.a(0, (java.awt.Component) (Object) param1);
@@ -85,7 +84,7 @@ final class oa extends mc {
         }
     }
 
-    final static int a(int param0, double param1) {
+    final static int a(int param0, double param1, byte param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -102,7 +101,7 @@ final class oa extends mc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
         field_v = null;
         field_x = null;
@@ -120,7 +119,7 @@ final class oa extends mc {
         throw new Error();
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;

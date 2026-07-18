@@ -93,7 +93,7 @@ final class md extends gj {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_q = null;
         field_v = null;
         field_u = null;

@@ -212,7 +212,7 @@ abstract class pg {
         return stackIn_16_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_c = null;
         field_f = null;

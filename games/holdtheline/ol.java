@@ -64,7 +64,7 @@ final class ol {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return ra.field_Z.a(-42);
     }
 
@@ -157,7 +157,7 @@ final class ol {
         }
     }
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         if (pj.b((byte) 87)) {
             return false;
         }

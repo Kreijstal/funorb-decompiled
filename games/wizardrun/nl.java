@@ -38,7 +38,7 @@ abstract class nl extends rk {
         ((nl) this).a(var6, var7, param2, param1, param0, param4);
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

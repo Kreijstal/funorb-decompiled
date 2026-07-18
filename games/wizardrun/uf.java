@@ -77,7 +77,7 @@ final class uf {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
     }

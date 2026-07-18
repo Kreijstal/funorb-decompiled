@@ -37,7 +37,7 @@ final class pf {
         }
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         return (int)(1000000000L / wa.field_b);
     }
 
@@ -155,7 +155,7 @@ final class pf {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_m = null;
         field_f = null;
@@ -780,7 +780,7 @@ final class pf {
         return ((pf) this).field_g == 96 ? true : false;
     }
 
-    final static jk[] a(pc param0) {
+    final static jk[] a(pc param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -824,20 +824,19 @@ final class pf {
                   break L0;
                 } else {
                   L2: {
-                    int discarded$21 = -32;
-                    if (!tj.a(param0)) {
+                    if (!tj.a(param0, -32)) {
                       var6 = param0.c(wg.a(var5 - 1, 15598), (byte) -34);
                       var4[var5] = var4[var6];
                       break L2;
                     } else {
                       var6_ref_jk = new jk();
-                      int discarded$22 = param0.c(24, (byte) -34);
-                      int discarded$23 = param0.c(24, (byte) -34);
+                      int discarded$12 = param0.c(24, (byte) -34);
+                      int discarded$13 = param0.c(24, (byte) -34);
                       var6_ref_jk.field_b = param0.c(24, (byte) -34);
-                      int discarded$24 = param0.c(9, (byte) -34);
-                      int discarded$25 = param0.c(12, (byte) -34);
-                      int discarded$26 = param0.c(12, (byte) -34);
-                      int discarded$27 = param0.c(12, (byte) -34);
+                      int discarded$14 = param0.c(9, (byte) -34);
+                      int discarded$15 = param0.c(12, (byte) -34);
+                      int discarded$16 = param0.c(12, (byte) -34);
+                      int discarded$17 = param0.c(12, (byte) -34);
                       var4[var5] = var6_ref_jk;
                       break L2;
                     }
@@ -1989,8 +1988,7 @@ final class pf {
             return true;
           }
         } else {
-          int discarded$13 = 1;
-          int discarded$14 = pf.a();
+          int discarded$6 = pf.a(true);
           if (((pf) this).field_k == 0) {
             if (((pf) this).field_g == 84) {
               return true;

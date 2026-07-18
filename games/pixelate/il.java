@@ -11,7 +11,7 @@ final class il {
     static int field_e;
     static int field_f;
 
-    final static int a() {
+    final static int a(int param0) {
         return ia.field_i;
     }
 

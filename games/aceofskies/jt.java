@@ -152,7 +152,7 @@ final class jt extends rf {
         }
     }
 
-    private final void a(int param0, hk param1, int param2) {
+    private final void a(int param0, hk param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -523,7 +523,7 @@ final class jt extends rf {
         }
     }
 
-    final static void a(String param0, String param1, long param2, java.applet.Applet param3) {
+    final static void a(String param0, String param1, long param2, java.applet.Applet param3, int param4) {
         try {
             Throwable var6 = null;
             RuntimeException var6_ref = null;
@@ -773,8 +773,7 @@ final class jt extends rf {
                         break L2;
                       } else {
                         ((jt) this).field_n.a(false, -2029711608, param4);
-                        int discarded$6 = 30121;
-                        this.a(param5, ((jt) this).field_n, param3);
+                        this.a(param5, ((jt) this).field_n, param3, 30121);
                         break L2;
                       }
                     } else {
@@ -791,8 +790,7 @@ final class jt extends rf {
                         break L2;
                       } else {
                         ((jt) this).field_p.a(false, -2029711608, param4);
-                        int discarded$7 = 30121;
-                        this.a(param5, ((jt) this).field_p, param3);
+                        this.a(param5, ((jt) this).field_p, param3, 30121);
                         break L2;
                       }
                     }
@@ -823,14 +821,12 @@ final class jt extends rf {
               ((jt) this).field_m = stackIn_20_1 != 0;
               if (param4 == ((jt) this).field_v) {
                 ((jt) this).field_u = param1;
-                int discarded$8 = 30121;
-                this.a(param5, ((jt) this).field_n, param3);
+                this.a(param5, ((jt) this).field_n, param3, 30121);
                 return;
               } else {
                 if (((jt) this).field_r == param4) {
                   ((jt) this).field_u = -param1;
-                  int discarded$9 = 30121;
-                  this.a(param5, ((jt) this).field_p, param3);
+                  this.a(param5, ((jt) this).field_p, param3, 30121);
                   return;
                 } else {
                   L6: {
@@ -892,8 +888,7 @@ final class jt extends rf {
                             }
                           }
                           ((hk) (Object) stackIn_52_0).a(stackIn_52_1 != 0, -2029711608, param4);
-                          int discarded$10 = 30121;
-                          this.a(param5, ((jt) this).field_n, param3);
+                          this.a(param5, ((jt) this).field_n, param3, 30121);
                           break L10;
                         }
                       }
@@ -932,8 +927,7 @@ final class jt extends rf {
                             }
                           }
                           ((hk) (Object) stackIn_43_0).a(stackIn_43_1 != 0, -2029711608, param4);
-                          int discarded$11 = 30121;
-                          this.a(param5, ((jt) this).field_p, param3);
+                          this.a(param5, ((jt) this).field_p, param3, 30121);
                           break L13;
                         }
                       }

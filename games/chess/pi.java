@@ -7,7 +7,7 @@ final class pi {
     static dh field_d;
     static String field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         pg var3 = null;
@@ -58,18 +58,17 @@ final class pi {
                     var6_int = 1;
                     L4: while (true) {
                       if (var6_int >= var4) {
-                        int discarded$3 = 127;
-                        ek.a(var5, var4);
+                        ek.a(var5, var4, (byte) 127);
                         var6_int = 0;
                         L5: while (true) {
                           if (var4 <= var6_int) {
                             pd.b(var5, -109);
-                            String[][] dupTemp$4 = new String[2][var5];
-                            var3.field_t = dupTemp$4;
-                            var6 = dupTemp$4;
-                            int[][] dupTemp$5 = new int[2][var5 * 4];
-                            var3.field_j = dupTemp$5;
-                            var7 = dupTemp$5;
+                            String[][] dupTemp$2 = new String[2][var5];
+                            var3.field_t = dupTemp$2;
+                            var6 = dupTemp$2;
+                            int[][] dupTemp$3 = new int[2][var5 * 4];
+                            var3.field_j = dupTemp$3;
+                            var7 = dupTemp$3;
                             var8 = ed.field_b;
                             var9 = 0;
                             var10 = 0;
@@ -246,7 +245,7 @@ final class pi {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;

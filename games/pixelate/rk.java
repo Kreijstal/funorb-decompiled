@@ -8,7 +8,7 @@ final class rk {
     int field_c;
     static char field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
     }
 

@@ -232,8 +232,7 @@ final class kk extends lk {
               }
               L2: {
                 var5 = (CharSequence) (Object) param1;
-                int discarded$2 = 125;
-                var3_int = pf.a(var5);
+                var3_int = pf.a(var5, (byte) 125);
                 if (0 >= var3_int) {
                   break L2;
                 } else {

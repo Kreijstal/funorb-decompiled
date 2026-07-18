@@ -8,14 +8,14 @@ final class li extends fc {
     bh field_j;
     static boolean field_i;
 
-    final static String d() {
+    final static String d(int param0) {
         if (ue.field_a == null) {
             return "";
         }
         return ue.field_a;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
         int var1 = 0;
     }

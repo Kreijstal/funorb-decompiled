@@ -70,7 +70,7 @@ final class kl implements Iterable {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_c = null;
     }
@@ -93,7 +93,7 @@ final class kl implements Iterable {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (7500 > jd.field_r) {
           return;
         } else {

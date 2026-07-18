@@ -114,7 +114,7 @@ final class jf {
         return stackIn_1_0;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         ii var1 = (ii) (Object) fr.field_M.a(127);
         if (!(var1 != null)) {
             var1 = new ii();
@@ -124,7 +124,8 @@ final class jf {
     }
 
     final static mp a(int param0, String param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         mp var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -132,21 +133,21 @@ final class jf {
         CharSequence var7 = null;
         CharSequence var8 = null;
         mp stackIn_16_0 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        Object stackIn_22_0 = null;
+        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         mp stackOut_15_0 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
-        Object stackOut_21_0 = null;
+        RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
         var5 = BrickABrac.field_J ? 1 : 0;
@@ -154,11 +155,11 @@ final class jf {
           if (tf.field_d != null) {
             L0: {
               var7 = (CharSequence) (Object) param1;
-              var2 = (Object) (Object) gb.a(var7, 85);
+              var2 = gb.a(var7, 85);
               if (var2 != null) {
                 break L0;
               } else {
-                var2 = (Object) (Object) var7;
+                var2 = param1;
                 break L0;
               }
             }
@@ -171,7 +172,7 @@ final class jf {
                 break L1;
               }
             }
-            var3 = (mp) (Object) tf.field_d.a((long)((String) var2).hashCode(), -1);
+            var3 = (mp) (Object) tf.field_d.a((long)var2.hashCode(), -1);
             L2: while (true) {
               if (var3 != null) {
                 L3: {
@@ -184,7 +185,7 @@ final class jf {
                     break L3;
                   }
                 }
-                if (!var4.equals(var2)) {
+                if (!var4.equals((Object) (Object) var2)) {
                   var3 = (mp) (Object) tf.field_d.a((byte) -43);
                   continue L2;
                 } else {
@@ -202,15 +203,15 @@ final class jf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_19_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var2_ref;
             stackOut_19_1 = new StringBuilder().append("jf.A(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_21_0 = stackIn_21_0;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
@@ -218,7 +219,7 @@ final class jf {
               stackIn_22_2 = stackOut_21_2;
               break L4;
             } else {
-              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
@@ -313,7 +314,7 @@ final class jf {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_c = null;
         field_k = null;

@@ -6,7 +6,7 @@ final class in {
     static String field_a;
     static String field_b;
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -107,8 +107,7 @@ final class in {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = va.a(var6, var5_int, param0, var4);
+                          int discarded$1 = va.a(var16, var5_int, param0, var4, 9);
                           break L5;
                         }
                       }
@@ -162,8 +161,7 @@ final class in {
         int var4 = 0;
         bg[] var5 = null;
         var4 = MinerDisturbance.field_ab;
-        int discarded$2 = -5596;
-        var5 = pm.b();
+        var5 = pm.b(-5596);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -189,7 +187,7 @@ final class in {
         field_c = null;
     }
 
-    final static String a(CharSequence[] param0) {
+    final static String a(CharSequence[] param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -211,9 +209,7 @@ final class in {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 0;
-            stackOut_0_0 = kl.a(param0, param0.length);
+            stackOut_0_0 = kl.a(param0, param0.length, 0, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

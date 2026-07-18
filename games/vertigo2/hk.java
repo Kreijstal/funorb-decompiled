@@ -258,11 +258,11 @@ final class hk extends da {
         ((hk) this).field_p = false;
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         return jp.field_o;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_o = null;
         field_r = null;
         field_q = null;

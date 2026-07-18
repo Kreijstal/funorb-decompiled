@@ -456,8 +456,7 @@ final class md extends sg implements hh {
         if (param0 == 2634) {
           if (((md) this).field_H) {
             if (!((md) this).field_rb) {
-              int discarded$9 = -107;
-              var2 = ij.h();
+              var2 = ij.h(-107);
               if (var2 == null) {
                 return super.j(param0);
               } else {
@@ -472,11 +471,10 @@ final class md extends sg implements hh {
           }
         } else {
           var3 = null;
-          int discarded$10 = md.a(-115, (byte[]) null, 111);
+          int discarded$5 = md.a(-115, (byte[]) null, 111);
           if (((md) this).field_H) {
             if (!((md) this).field_rb) {
-              int discarded$11 = -107;
-              var2 = ij.h();
+              var2 = ij.h(-107);
               if (var2 == null) {
                 return super.j(param0);
               } else {

@@ -286,7 +286,7 @@ final class lua implements ntb, ofa {
           L0: {
             var4 = 75 % ((param0 - 22) / 59);
             var3 = (lua) (Object) param1;
-            stackOut_0_0 = dn.a((tv[]) (Object) var3.field_b, false, 1, (tv[]) (Object) var3.field_b, -78);
+            stackOut_0_0 = dn.a((tv[]) (Object) var3.field_b, false, 1, (tv[]) (Object) ((lua) this).field_b, -78);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -328,13 +328,12 @@ final class lua implements ntb, ofa {
             return;
         }
         lua var3 = (lua) (Object) param1;
-        if (var3.field_a == var3.field_a) {
+        if (var3.field_a == ((lua) this).field_a) {
             return;
         }
         try {
-            var3.field_a = var3.field_a;
-            int discarded$0 = 0;
-            var3.field_b = (qob[]) (Object) sqb.a((tv[]) (Object) var3.field_b, (tv[]) (Object) var3.field_b, 1, rma.field_c);
+            var3.field_a = ((lua) this).field_a;
+            var3.field_b = (qob[]) (Object) sqb.a((tv[]) (Object) var3.field_b, (tv[]) (Object) ((lua) this).field_b, 1, rma.field_c, false);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "lua.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

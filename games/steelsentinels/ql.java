@@ -132,7 +132,7 @@ final class ql extends gh {
         this(param0, (gh) (Object) param1, param1.field_Xb.field_Tb, param1.field_Xb.field_Sb, param1.field_bc, param2, param3);
     }
 
-    final static void j() {
+    final static void j(int param0) {
         kc.field_A = false;
         de.field_d = false;
         hc.a(-1, 0);
@@ -140,7 +140,7 @@ final class ql extends gh {
         cb.field_j = mm.field_e;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_Vb = null;
         field_ac = null;
         field_Yb = null;
@@ -166,7 +166,7 @@ final class ql extends gh {
         ((ql) this).field_Sb.field_Lb = param1;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         gi.field_o.a(0, 0, 18, 0, fl.field_c.field_zb - (rm.field_p ? 2 + ua.field_G + 42 : 0));
         uj.field_j.a(0, 0, 18, -2 + (fl.field_c.field_zb + -ua.field_G - 40), 42 + ua.field_G);
         mj.field_Sb.a(fl.field_c.field_zb, -2048, ua.field_G, -20 + fl.field_c.field_Lb, 2, 0, 20);

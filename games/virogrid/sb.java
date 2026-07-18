@@ -17,7 +17,7 @@ final class sb implements Runnable {
         return kh.a(1, 0, (byte) -105, 0, 0, 3, 1, 65793, 1);
     }
 
-    final static void a(String param0, String param1, java.applet.Applet param2, long param3) {
+    final static void a(String param0, String param1, java.applet.Applet param2, long param3, byte param4) {
         try {
             Throwable var6 = null;
             RuntimeException var6_ref = null;
@@ -227,7 +227,8 @@ final class sb implements Runnable {
             Exception var2_ref = null;
             Throwable var4 = null;
             int var5 = 0;
-            bl var6 = null;
+            Object var6 = null;
+            bl var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var5 = Virogrid.field_F ? 1 : 0;
@@ -238,8 +239,8 @@ final class sb implements Runnable {
                 var2 = (Object) (Object) ((sb) this).field_h;
                 synchronized (var2) {
                   L1: {
-                    var6 = (bl) (Object) ((sb) this).field_h.a((byte) -103);
-                    if (var6 != null) {
+                    var7 = (bl) (Object) ((sb) this).field_h.a((byte) -103);
+                    if (var7 != null) {
                       ((sb) this).field_e = ((sb) this).field_e - 1;
                       decompiledRegionSelector0 = 1;
                       break L1;
@@ -261,14 +262,14 @@ final class sb implements Runnable {
                   try {
                     L4: {
                       L5: {
-                        if (var6.field_E == 2) {
-                          boolean discarded$2 = var6.field_I.a(var6.field_C, (int)var6.field_j, var6.field_C.length, (byte) -45);
+                        if (var7.field_E == 2) {
+                          boolean discarded$1 = var7.field_I.a(var7.field_C, (int)var7.field_j, var7.field_C.length, (byte) -45);
                           break L5;
                         } else {
-                          if (var6.field_E != 3) {
+                          if (var7.field_E != 3) {
                             break L5;
                           } else {
-                            var6.field_C = var6.field_I.a((int)var6.field_j, -54);
+                            var7.field_C = var7.field_I.a((int)var7.field_j, -54);
                             break L5;
                           }
                         }
@@ -279,12 +280,12 @@ final class sb implements Runnable {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     L6: {
                       var2_ref = (Exception) (Object) decompiledCaughtException;
-                      int discarded$3 = 1;
-                      en.a((String) null, (Throwable) (Object) var2_ref);
+                      var6 = null;
+                      en.a((String) null, (Throwable) (Object) var2_ref, 1);
                       break L6;
                     }
                   }
-                  var6.field_t = false;
+                  var7.field_t = false;
                   continue L0;
                 }
               }
@@ -409,7 +410,7 @@ final class sb implements Runnable {
         return stackIn_18_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -420,33 +421,33 @@ final class sb implements Runnable {
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
-        hg var9 = null;
-        int[] var10 = null;
+        hg var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         int[] var13 = null;
+        int[] var14 = null;
         RuntimeException decompiledCaughtException = null;
         var8 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
             L1: {
-              var9 = sh.field_qb;
-              var2 = var9.g(11132);
-              var3 = var9.g(11132);
+              var10 = sh.field_qb;
+              var2 = var10.g(11132);
+              var3 = var10.g(11132);
               if (var2 == 0) {
                 var4 = (tm) (Object) bj.field_o.a((byte) -64);
                 if (var4 != null) {
                   L2: {
-                    var5 = -var9.field_l + ba.field_a;
-                    var13 = var4.field_p;
+                    var5 = -var10.field_l + ba.field_a;
+                    var14 = var4.field_p;
+                    var13 = var14;
                     var12 = var13;
                     var11 = var12;
-                    var10 = var11;
-                    var6 = var10;
-                    if (var13.length << 2 >= var5) {
+                    var6 = var11;
+                    if (var14.length << 2 >= var5) {
                       break L2;
                     } else {
-                      var5 = var13.length << 2;
+                      var5 = var14.length << 2;
                       break L2;
                     }
                   }
@@ -456,7 +457,7 @@ final class sb implements Runnable {
                       var4.a(false);
                       break L1;
                     } else {
-                      var6[var7 >> 2] = var6[var7 >> 2] + (var9.g(jd.a(-61, -11073)) << (rb.a(var7, 3) << 8));
+                      var6[var7 >> 2] = var6[var7 >> 2] + (var10.g(jd.a(-61, -11073)) << (rb.a(var7, 3) << 8));
                       var7++;
                       continue L3;
                     }
@@ -467,7 +468,7 @@ final class sb implements Runnable {
                 }
               } else {
                 if (var2 == 1) {
-                  var4_int = var9.d(123);
+                  var4_int = var10.d(123);
                   var5_ref_da = (da) (Object) aj.field_m.a((byte) -105);
                   L4: while (true) {
                     L5: {
@@ -498,9 +499,7 @@ final class sb implements Runnable {
                     }
                   }
                 } else {
-                  int discarded$2 = 1;
-                  int discarded$3 = 1;
-                  en.a("LR1: " + rg.a(), (Throwable) null);
+                  en.a("LR1: " + rg.a(true), (Throwable) null, 1);
                   tn.a(false);
                   break L1;
                 }
@@ -643,8 +642,7 @@ final class sb implements Runnable {
             var5.field_E = 2;
             var5.field_I = param0;
             var5.field_w = false;
-            int discarded$2 = 0;
-            this.a(var5);
+            this.a(var5, 0);
             stackOut_0_0 = (bl) var5;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -718,14 +716,14 @@ final class sb implements Runnable {
         var3.a((byte) -121, param0);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;
         field_c = null;
     }
 
-    private final void a(bl param0) {
+    private final void a(bl param0, int param1) {
         Object var3 = null;
         RuntimeException var3_ref = null;
         Throwable var4 = null;
@@ -819,7 +817,7 @@ final class sb implements Runnable {
                 break L1;
               } else {
                 var5 = null;
-                bl discarded$4 = ((sb) this).a((byte) -92, 49, (gl) null);
+                bl discarded$2 = ((sb) this).a((byte) -92, 49, (gl) null);
                 break L1;
               }
             }
@@ -828,8 +826,7 @@ final class sb implements Runnable {
             var4.field_E = 3;
             var4.field_j = (long)param1;
             var4.field_w = false;
-            int discarded$5 = 0;
-            this.a(var4);
+            this.a(var4, 0);
             stackOut_2_0 = (bl) var4;
             stackIn_3_0 = stackOut_2_0;
             break L0;

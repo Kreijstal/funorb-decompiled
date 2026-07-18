@@ -55,7 +55,7 @@ final class de extends v implements pn, pi {
         }
     }
 
-    private final boolean a(wk param0) {
+    private final boolean a(wk param0, byte param1) {
         ia var3 = null;
         RuntimeException var3_ref = null;
         fd var4 = null;
@@ -157,8 +157,7 @@ final class de extends v implements pn, pi {
               ji.a((byte) -124);
               return;
             } else {
-              int discarded$34 = 1;
-              nl.field_c = sd.a(h.field_c, new String[1]);
+              nl.field_c = sd.a(h.field_c, new String[1], true);
               nl.field_c = jj.a((byte) -54, new CharSequence[3]);
               sb.field_c.h((byte) -57);
               ji.a((byte) -124);
@@ -403,16 +402,13 @@ final class de extends v implements pn, pi {
     }
 
     private final void i(int param0) {
-        int discarded$6 = -22485;
-        if (this.h()) {
+        if (this.h(-22485)) {
           if (param0 != 200) {
             field_L = 46;
-            int discarded$7 = -115;
-            jb.a(((de) this).field_F.field_q);
+            jb.a(((de) this).field_F.field_q, -115);
             return;
           } else {
-            int discarded$8 = -115;
-            jb.a(((de) this).field_F.field_q);
+            jb.a(((de) this).field_F.field_q, -115);
             return;
           }
         } else {
@@ -631,9 +627,8 @@ final class de extends v implements pn, pi {
         return stackIn_7_0;
     }
 
-    private final boolean h() {
-        int discarded$0 = 104;
-        if (!this.a((wk) (Object) ((de) this).field_F)) {
+    private final boolean h(int param0) {
+        if (!this.a((wk) (Object) ((de) this).field_F, (byte) 104)) {
             return false;
         }
         return true;
@@ -642,8 +637,7 @@ final class de extends v implements pn, pi {
     final void a(int param0, n param1, int param2, byte param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = -22485;
-            ((de) this).field_M.field_D = this.h();
+            ((de) this).field_M.field_D = this.h(-22485);
         } catch (RuntimeException runtimeException) {
             throw kk.a((Throwable) (Object) runtimeException, "de.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

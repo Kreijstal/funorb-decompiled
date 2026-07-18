@@ -6,7 +6,7 @@ final class e {
     static int[] field_b;
     static ki[] field_a;
 
-    final static boolean a(boolean param0, int param1, int param2) {
+    final static boolean a(boolean param0, int param1, int param2, byte param3) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -146,8 +146,7 @@ final class e {
             var4 = stackIn_17_0;
             mb.field_e.a(-8212, (ug) (Object) new he(param2));
             if (var4 != 0) {
-              int discarded$2 = 8192;
-              ke.b();
+              ke.b(8192);
               em.field_C.a(-8212, (ug) (Object) new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
               return;
             } else {
@@ -174,8 +173,7 @@ final class e {
             var4 = stackIn_10_0;
             mb.field_e.a(-8212, (ug) (Object) new he(param2));
             if (var4 != 0) {
-              int discarded$3 = 8192;
-              ke.b();
+              ke.b(8192);
               em.field_C.a(-8212, (ug) (Object) new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
               return;
             } else {
@@ -391,7 +389,7 @@ final class e {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;

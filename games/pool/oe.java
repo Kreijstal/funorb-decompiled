@@ -12,7 +12,7 @@ abstract class oe extends ch {
     static String field_O;
     static String field_N;
 
-    public static void h() {
+    public static void h(int param0) {
         field_N = null;
         field_O = null;
         field_U = null;
@@ -31,8 +31,7 @@ abstract class oe extends ch {
     final static void a(boolean param0, int param1) {
         ff.a(0, param0);
         if (!(null == kk.field_B)) {
-            int discarded$0 = 1259627265;
-            pp.a(kk.field_B);
+            pp.a(kk.field_B, 1259627265);
         }
     }
 
@@ -123,7 +122,7 @@ abstract class oe extends ch {
         }
     }
 
-    final static int a(bf[] param0, int param1, pq[] param2, int[][] param3) {
+    final static int a(bf[] param0, int param1, pq[] param2, int[][] param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -228,8 +227,7 @@ abstract class oe extends ch {
                             }
                           }
                           var9 = param2[var7.field_i];
-                          int discarded$2 = 105;
-                          ok.a(var7.field_u, var8, var9);
+                          ok.a(var7.field_u, var8, var9, (byte) 105);
                           if (var8.field_q != null) {
                             var8.field_q.a(param2, (int) var7.field_i, -5);
                             break L3;
@@ -326,8 +324,7 @@ abstract class oe extends ch {
                         if (param2[var7_int].field_s) {
                           if (param2[var6].field_v != 0) {
                             L14: {
-                              int discarded$3 = -1;
-                              var8_int = no.a(param2[var7_int].field_t, param2[var6].field_w, param2[var7_int].field_I, param2[var7_int].field_w, param2[var6].field_I, param2[var7_int].field_k, param2[var6].field_t, param2[var7_int].field_g, 8, param2[var6].field_g, param2[var6].field_k);
+                              var8_int = no.a(param2[var7_int].field_t, param2[var6].field_w, param2[var7_int].field_I, param2[var7_int].field_w, param2[var6].field_I, param2[var7_int].field_k, param2[var6].field_t, param2[var7_int].field_g, 8, param2[var6].field_g, param2[var6].field_k, -1);
                               if (param1 >= var8_int) {
                                 break L14;
                               } else {

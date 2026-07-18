@@ -23,14 +23,14 @@ final class ni {
         }
     }
 
-    final static va a() {
+    final static va a(boolean param0) {
         if (!(ek.field_F != null)) {
             ek.field_F = new va(bl.field_N, 20, 0, 0, 0, 11579568, -1, 0, 0, bl.field_N.field_z, -1, 2147483647, true);
         }
         return ek.field_F;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_b = null;
         field_d = null;
         field_c = null;

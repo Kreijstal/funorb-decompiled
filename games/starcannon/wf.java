@@ -5,7 +5,7 @@ final class wf extends rf {
     static long field_f;
     int field_g;
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -26,8 +26,7 @@ final class wf extends rf {
         try {
           L0: {
             jk.a(false, (java.awt.Component) (Object) param0);
-            int discarded$9 = -64;
-            wk.a((java.awt.Component) (Object) param0);
+            wk.a((java.awt.Component) (Object) param0, (byte) -64);
             if (null == qj.field_eb) {
               break L0;
             } else {
@@ -71,7 +70,7 @@ final class wf extends rf {
         ((wf) this).field_g = param0;
     }
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         return ie.field_x == jl.field_a;
     }
 

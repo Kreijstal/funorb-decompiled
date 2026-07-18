@@ -5,7 +5,7 @@ final class ql {
     static int[] field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }
@@ -37,13 +37,12 @@ final class ql {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            var8 = kl.a(param5, -3, param2, param4, 0);
+            var8 = kl.a(param5, -3, param2, param4, 0, 0);
             var6 = var8;
             if (var8 != null) {
               var7 = new dg();
               var7.field_f = var8;
-              java.awt.Component discarded$5 = var7.field_f.add((java.awt.Component) (Object) var7);
+              java.awt.Component discarded$2 = var7.field_f.add((java.awt.Component) (Object) var7);
               var7.setBounds(0, 0, param4, param5);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();

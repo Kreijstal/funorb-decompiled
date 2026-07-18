@@ -11,7 +11,7 @@ abstract class kn {
     int[] field_d;
     static int field_e;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_f = null;
     }
@@ -27,7 +27,7 @@ abstract class kn {
 
     abstract void a(java.awt.Component param0, byte param1, int param2, int param3);
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         RuntimeException var10 = null;
         int var10_int = 0;
         int var11 = 0;

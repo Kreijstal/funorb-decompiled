@@ -99,7 +99,7 @@ final class ak {
                   if (param0 <= -37) {
                     break L2;
                   } else {
-                    boolean discarded$4 = ak.a(69);
+                    boolean discarded$2 = ak.a(69);
                     break L2;
                   }
                 }
@@ -159,8 +159,7 @@ final class ak {
           if (null == hd.field_s) {
             if (!vb.e(param0 + -34020)) {
               if (null == mm.field_y) {
-                int discarded$8 = 66;
-                if (d.c()) {
+                if (d.c((byte) 66)) {
                   return true;
                 } else {
                   return false;
@@ -181,8 +180,7 @@ final class ak {
           if (null == hd.field_s) {
             if (!vb.e(param0 + -34020)) {
               if (null == mm.field_y) {
-                int discarded$9 = 66;
-                if (d.c()) {
+                if (d.c((byte) 66)) {
                   return true;
                 } else {
                   return false;

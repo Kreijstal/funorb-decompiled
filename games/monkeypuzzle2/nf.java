@@ -343,7 +343,7 @@ abstract class nf extends rh {
         ((nf) this).field_H = ((nf) this).field_p;
     }
 
-    final static void n() {
+    final static void n(int param0) {
         int var1 = pf.a((byte) 97, 3);
         cj.a((byte) 105, ke.field_h[28 + var1]);
     }
@@ -740,7 +740,7 @@ abstract class nf extends rh {
         return super.b(false);
     }
 
-    public static void o() {
+    public static void o(int param0) {
         field_F = null;
         field_E = null;
     }

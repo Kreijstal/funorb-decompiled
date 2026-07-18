@@ -38,18 +38,12 @@ final class wf {
                   break L1;
                 }
               }
-              int discarded$17 = 109;
-              int discarded$18 = 0;
-              vg.a(ul.k(0), var4 != 0, ib.a(), m.field_k);
+              vg.a(ul.k(0), var4 != 0, ib.a((byte) 109), m.field_k, false);
               break L0;
             } else {
-              int discarded$19 = 27;
-              if (!hl.a()) {
+              if (!hl.a((byte) 27)) {
                 fn.d();
-                int discarded$20 = 240;
-                int discarded$21 = 320;
-                int discarded$22 = 256;
-                jf.a();
+                jf.a(256, 320, 240);
                 ll.a(0, 0, param1, -96);
                 return;
               } else {
@@ -58,8 +52,7 @@ final class wf {
                   ll.a(0, 0, param1, -115);
                   return;
                 } else {
-                  int discarded$23 = 0;
-                  wb.a(param1);
+                  wb.a(param1, 0);
                   return;
                 }
               }

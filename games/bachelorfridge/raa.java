@@ -554,7 +554,7 @@ final class raa extends hfa {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_I = null;
     }
 

@@ -24,7 +24,7 @@ final class gd extends hl {
     static int[] field_Zb;
     String field_Yb;
 
-    public static void h() {
+    public static void h(int param0) {
         field_Zb = null;
         field_ec = null;
     }
@@ -223,7 +223,7 @@ final class gd extends hl {
         }
     }
 
-    final static oh[] e() {
+    final static oh[] e(byte param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;

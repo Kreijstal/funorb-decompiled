@@ -12,7 +12,7 @@ final class ol {
     static String field_c;
     static String field_b;
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -125,7 +125,7 @@ final class ol {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_f = null;
         field_c = null;

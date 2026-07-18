@@ -110,7 +110,7 @@ final class tb {
         this(param0, param1, param0.a(param1, false, param2));
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_j = null;
         field_h = null;
@@ -351,13 +351,10 @@ final class tb {
         }
         tb.a(false, (String) null, -3L);
         if (param1 % 10L != 0L) {
-            int discarded$1 = -568127903;
-            uj.a(param1);
+            uj.a(param1, -568127903);
         } else {
-            int discarded$2 = -568127903;
-            uj.a(-1L + param1);
-            int discarded$3 = -568127903;
-            uj.a(1L);
+            uj.a(-1L + param1, -568127903);
+            uj.a(1L, -568127903);
         }
     }
 

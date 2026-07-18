@@ -18,7 +18,7 @@ final class q implements Iterable {
     static String field_k;
     ck[] field_j;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_f = null;
         field_m = null;

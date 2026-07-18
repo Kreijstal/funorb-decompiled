@@ -18,7 +18,7 @@ final class nk {
     static volatile int field_l;
     static boolean field_i;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_j = null;
@@ -170,7 +170,7 @@ final class nk {
         return ((nk) this).b(-81);
     }
 
-    final static void a(w param0, w param1, int param2, int param3, int param4, w param5, byte[] param6, int param7, int param8) {
+    final static void a(w param0, w param1, int param2, int param3, int param4, w param5, byte[] param6, int param7, int param8, int param9) {
         RuntimeException var10 = null;
         int var10_int = 0;
         int var11 = 0;
@@ -490,8 +490,7 @@ final class nk {
               L1: {
                 var8 = new wj(ah.field_c, param2);
                 ah.field_c.a((byte) -123, (ce) (Object) var8);
-                int discarded$16 = -40;
-                if (!dg.b()) {
+                if (!dg.b(-40)) {
                   L2: {
                     ve.field_Gc = param0;
                     ea.field_x = null;

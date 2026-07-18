@@ -31,7 +31,7 @@ final class mc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_e = null;
         field_d = null;
@@ -292,8 +292,7 @@ final class mc {
           } else {
             L2: {
               L3: {
-                int discarded$4 = 1;
-                if (!ig.b()) {
+                if (!ig.b(true)) {
                   break L3;
                 } else {
                   if (param0.field_lc) {
@@ -323,8 +322,7 @@ final class mc {
                   if (var6 >= 5) {
                     L8: {
                       if (qa.field_v[0][2].field_Kb) {
-                        int discarded$5 = 1;
-                        if (!ig.b()) {
+                        if (!ig.b(true)) {
                           sl.field_g = cm.a((byte) 82, bh.field_h, new String[1]);
                           break L8;
                         } else {
@@ -1087,8 +1085,7 @@ final class mc {
                             L63: while (true) {
                               if (var7 <= var17_int) {
                                 L64: {
-                                  int discarded$6 = 0;
-                                  uc.a(-1, param1, -1, 0, var9, var7, param0);
+                                  uc.a(-1, param1, -1, 0, var9, var7, param0, false);
                                   if (2 > te.field_p) {
                                     break L64;
                                   } else {
@@ -1368,8 +1365,7 @@ final class mc {
                               break L80;
                             } else {
                               var21 = (Object) (Object) ("<col=A00000>" + (String) var21);
-                              int discarded$7 = 0;
-                              var33 = j.a("<br>", (String) var21, "<br><col=A00000>");
+                              var33 = j.a("<br>", (String) var21, "<br><col=A00000>", 0);
                               if (var20 != null) {
                                 var20 = (Object) (Object) ((String) var20 + "<br>" + var33);
                                 break L80;

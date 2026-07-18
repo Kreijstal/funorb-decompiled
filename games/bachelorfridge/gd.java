@@ -14,7 +14,7 @@ final class gd extends pu {
         return -var3 + (param2 - -var3) / param0;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, kv param4, int param5, int param6, int param7, po param8) {
+    final static void a(int param0, int param1, int param2, byte param3, kv param4, int param5, int param6, int param7, po param8, int param9, int param10) {
         try {
             ou.field_b = -2400;
             cga.field_p = 2;
@@ -29,7 +29,7 @@ final class gd extends pu {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_n = null;
         field_o = null;
     }

@@ -632,7 +632,7 @@ final class tg {
             nj.field_f = new hl[5];
             fh.field_f = new hl[5];
             og.field_o = new hl[5];
-            var18 = 0;
+            var18 = param0;
             L1: while (true) {
               L2: {
                 L3: {
@@ -746,7 +746,7 @@ final class tg {
           L11: {
             var12 = decompiledCaughtException;
             stackOut_35_0 = (RuntimeException) var12;
-            stackOut_35_1 = new StringBuilder().append("tg.C(").append(0).append(',');
+            stackOut_35_1 = new StringBuilder().append("tg.C(").append(param0).append(',');
             stackIn_38_0 = stackOut_35_0;
             stackIn_38_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;

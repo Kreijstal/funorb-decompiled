@@ -12,7 +12,7 @@ final class fi extends ml {
     static ga field_y;
     byte field_D;
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -148,7 +148,7 @@ final class fi extends ml {
         return stackIn_20_0;
     }
 
-    final static void f() {
+    final static void f(int param0) {
         try {
             if (ub.field_t != null) {
                 try {
@@ -165,7 +165,7 @@ final class fi extends ml {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_y = null;
         int var1 = 0;
         field_v = null;

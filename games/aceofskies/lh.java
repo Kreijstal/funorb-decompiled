@@ -8,7 +8,7 @@ final class lh {
         throw new IllegalStateException();
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return null != jf.field_a ? true : im.field_e;
     }
 

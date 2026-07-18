@@ -20,7 +20,7 @@ final class ra {
         field_h = null;
     }
 
-    final static tf[] a() {
+    final static tf[] a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8) {
         int var9 = 0;
         tf[] var10 = null;
         tf[] var11_ref_tf__ = null;
@@ -146,7 +146,7 @@ final class ra {
         return qp.a(true, fp.field_e, fp.field_d);
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void a(int param0, int param1, boolean param2, int param3) {
         if (!(un.field_l)) {
             return;
         }

@@ -152,7 +152,7 @@ final class p {
         return stackIn_1_0;
     }
 
-    final static char a(char param0) {
+    final static char a(char param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = OrbDefence.field_D ? 1 : 0;
@@ -397,7 +397,7 @@ final class p {
         return true;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         int var1 = 0;
         field_e = null;

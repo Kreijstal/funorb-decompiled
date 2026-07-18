@@ -344,11 +344,10 @@ class qc extends hf {
                 throw new IllegalArgumentException("");
             }
             var4 = (CharSequence) (Object) param0;
-            int discarded$0 = 98;
-            ((qc) this).field_f = ((qc) this).field_f + hi.a(var4, ((qc) this).field_j, param1, param0.length(), ((qc) this).field_f);
-            int fieldTemp$1 = ((qc) this).field_f;
+            ((qc) this).field_f = ((qc) this).field_f + hi.a(var4, ((qc) this).field_j, param1, param0.length(), ((qc) this).field_f, 98);
+            int fieldTemp$0 = ((qc) this).field_f;
             ((qc) this).field_f = ((qc) this).field_f + 1;
-            ((qc) this).field_j[fieldTemp$1] = (byte) 0;
+            ((qc) this).field_j[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "qc.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -365,7 +364,7 @@ class qc extends hf {
         return ((qc) this).e((byte) 125);
     }
 
-    final static void a(float param0, String param1, boolean param2) {
+    final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
             if (vg.field_i == null) {
                 vg.field_i = new rl(kd.field_e, ff.field_d);
@@ -518,7 +517,7 @@ class qc extends hf {
         return var3;
     }
 
-    final static byte a(char param0) {
+    final static byte a(char param0, boolean param1) {
         int var2 = 0;
         L0: {
           L1: {
@@ -990,7 +989,7 @@ class qc extends hf {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_h = null;
         field_g = null;
     }
@@ -1100,11 +1099,10 @@ class qc extends hf {
             ((qc) this).field_f = ((qc) this).field_f + 1;
             ((qc) this).field_j[fieldTemp$0] = (byte) 0;
             var4 = (CharSequence) (Object) param0;
-            int discarded$1 = 98;
-            ((qc) this).field_f = ((qc) this).field_f + hi.a(var4, ((qc) this).field_j, 0, param0.length(), ((qc) this).field_f);
-            int fieldTemp$2 = ((qc) this).field_f;
+            ((qc) this).field_f = ((qc) this).field_f + hi.a(var4, ((qc) this).field_j, 0, param0.length(), ((qc) this).field_f, 98);
+            int fieldTemp$1 = ((qc) this).field_f;
             ((qc) this).field_f = ((qc) this).field_f + 1;
-            ((qc) this).field_j[fieldTemp$2] = (byte) 0;
+            ((qc) this).field_j[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "qc.VA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

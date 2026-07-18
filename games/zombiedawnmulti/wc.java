@@ -22,7 +22,7 @@ final class wc extends id {
         return var2.field_m;
     }
 
-    final static void i() {
+    final static void i(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         dm var3 = null;
@@ -89,7 +89,7 @@ final class wc extends id {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_H = null;
         field_M = null;
         field_K = null;

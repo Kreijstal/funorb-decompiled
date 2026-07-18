@@ -5,7 +5,7 @@ final class ta {
     static gn field_a;
     static String field_b;
 
-    final static ql a(int param0, int param1, gn param2, gn param3) {
+    final static ql a(int param0, int param1, gn param2, gn param3, int param4) {
         RuntimeException var5 = null;
         ql stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -108,12 +108,12 @@ final class ta {
         return stackIn_4_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_b = null;
     }
 
-    final static tn a() {
+    final static tn a(byte param0) {
         return sj.a(1, 19923);
     }
 
@@ -238,7 +238,7 @@ final class ta {
         }
     }
 
-    final static String a(int param0, th param1) {
+    final static String a(int param0, th param1, boolean param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;

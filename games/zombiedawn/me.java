@@ -15,7 +15,7 @@ final class me extends wo {
         ((me) this).field_Eb = -72 + (so.c(144) + param0);
     }
 
-    public static void x() {
+    public static void x(int param0) {
         field_Fb = null;
         field_Cb = null;
         field_Hb = null;

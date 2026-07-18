@@ -8,8 +8,7 @@ final class efa extends td {
         if (!param0) {
             sna discarded$0 = efa.c(false);
         }
-        int discarded$1 = -15;
-        return ok.f();
+        return ok.f((byte) -15);
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, ht param4, int param5, java.awt.Component param6, jp param7) {

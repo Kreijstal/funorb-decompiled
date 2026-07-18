@@ -88,8 +88,7 @@ final class oi {
             } else {
               var8 = new dm(wa.field_c, param0);
               wa.field_c.b(-6183, (ng) (Object) var8);
-              int discarded$16 = -96;
-              if (!og.a()) {
+              if (!og.a((byte) -96)) {
                 L1: {
                   tm.field_X = rj.field_F;
                   v.field_b = null;
@@ -225,7 +224,7 @@ final class oi {
         return stackIn_11_0 != 0;
     }
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, byte param2) {
         try {
             gf.a(param1, false, 32, param0);
         } catch (RuntimeException runtimeException) {

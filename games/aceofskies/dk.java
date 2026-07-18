@@ -508,8 +508,7 @@ final class dk implements Runnable {
         try {
             var2 = param0.a(5, 1048576, (Runnable) this);
             while (var2.field_a == 0) {
-                int discarded$0 = 0;
-                wf.a(10L);
+                wf.a(10L, false);
             }
             if (var2.field_a == 2) {
                 throw new RuntimeException();

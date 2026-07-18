@@ -57,13 +57,13 @@ final class lo {
         }
     }
 
-    private final void a(long param0) {
+    private final void a(long param0, byte param1) {
         qc var4 = (qc) (Object) ((lo) this).field_f.a(param0, (byte) 32);
         int var5 = 2;
         this.a(var4, 118);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 47;
         field_j = null;
         field_a = null;
@@ -80,8 +80,7 @@ final class lo {
             if (!(param1 <= ((lo) this).field_h)) {
                 throw new IllegalStateException();
             }
-            int discarded$0 = 126;
-            this.a(param3);
+            this.a(param3, (byte) 126);
             ((lo) this).field_c = ((lo) this).field_c - param1;
             while (((lo) this).field_c < 0) {
                 var9 = (qc) (Object) ((lo) this).field_e.a(param0 ^ -66);

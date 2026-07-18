@@ -217,16 +217,14 @@ class ai extends em {
                       qf.field_c.a(var14, (byte) 45);
                       qf.field_c.a(var8, (byte) 105);
                       var15 = (CharSequence) (Object) param1;
-                      int discarded$5 = 23617;
-                      qf.field_c.a(ka.a(var15), (byte) 75);
+                      qf.field_c.a(ka.a(var15, 23617), (byte) 75);
                       qf.field_c.c(param0, 8);
                       qf.field_c.f(114, param4);
                       qf.field_c.f(117, var9);
                       vh.field_a.f(101, 18);
                       vh.field_a.field_n = vh.field_a.field_n + 2;
                       var10 = vh.field_a.field_n;
-                      int discarded$6 = 59;
-                      var11_ref_String = pa.a(ii.b(false));
+                      var11_ref_String = pa.a(ii.b(false), 59);
                       if (var11_ref_String != null) {
                         break L7;
                       } else {
@@ -269,8 +267,7 @@ class ai extends em {
                   }
                   if (248 != var9) {
                     if (99 == var9) {
-                      int discarded$7 = -30316;
-                      boolean discarded$8 = jj.a(lb.c(), (byte) 16);
+                      boolean discarded$1 = jj.a(lb.c(-30316), (byte) 16);
                       ca.field_o = new Boolean(qe.a((byte) -73, (kg) (Object) e.field_c));
                       e.field_c.field_n = 0;
                       break L8;
@@ -333,8 +330,7 @@ class ai extends em {
                     if (Confined.field_F == 255) {
                       var9_ref_String = e.field_c.e((byte) 102);
                       if (var9_ref_String != null) {
-                        int discarded$9 = -1;
-                        qc.a(var9_ref_String, ii.b(false));
+                        qc.a(var9_ref_String, ii.b(false), -1);
                         break L13;
                       } else {
                         break L13;
@@ -474,7 +470,7 @@ class ai extends em {
         return stackIn_65_0;
     }
 
-    final static void a(ok param0, ji param1, int param2, int param3, int param4, int param5, int param6, int param7, ji param8, int param9, int param10, int param11, int param12, ji param13, int param14, int param15, int param16, ok param17) {
+    final static void a(ok param0, ji param1, int param2, int param3, int param4, int param5, int param6, int param7, ji param8, int param9, int param10, int param11, int param12, ji param13, int param14, int param15, int param16, ok param17, int param18, int param19, int param20) {
         int var21_int = 0;
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
@@ -555,19 +551,13 @@ class ai extends em {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$6 = 2;
-            nl.a(param0, 480, param17);
-            int discarded$7 = 243;
-            ue.a(20, 20, 16, 16);
+            nl.a(param0, 480, param17, 2);
+            ue.a(20, 20, 16, 16, 243);
             ud.a(320, (byte) -12, 240);
             var21_int = 0;
             pb.a(param13, (byte) -71, param8, 5, 50, 0);
             kc.a(13421772, 30, param1, 20);
-            int discarded$8 = 4243584;
-            int discarded$9 = 9805732;
-            int discarded$10 = -18;
-            int discarded$11 = 16777215;
-            am.a();
+            am.a(16777215, (byte) -18, 9805732, 4243584);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -702,7 +692,7 @@ class ai extends em {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
     }
 

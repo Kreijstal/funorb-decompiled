@@ -197,8 +197,7 @@ final class gi extends v implements pi {
                         return;
                       }
                     } else {
-                      int discarded$1 = -6126;
-                      ((gi) this).field_F[var4_int] = ok.a((CharSequence) (Object) param0[var4_int]).replace(' ', ' ');
+                      ((gi) this).field_F[var4_int] = ok.a((CharSequence) (Object) param0[var4_int], -6126).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }

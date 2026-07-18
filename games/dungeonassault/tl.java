@@ -259,7 +259,7 @@ final class tl implements Runnable {
         return ((tl) this).field_j;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_c = null;
         field_e = null;
@@ -445,8 +445,7 @@ final class tl implements Runnable {
                       var3 = var4.getOutputStream();
                       var3.write(17);
                       var5 = (CharSequence) (Object) ("JAGGRAB " + ((tl) this).field_h.getFile() + "\n\n");
-                      int discarded$1 = -14553;
-                      var3.write(n.a(var5));
+                      var3.write(n.a(var5, -14553));
                       ((tl) this).field_o = new DataInputStream(var4.getInputStream());
                       break L7;
                     } else {
@@ -558,7 +557,7 @@ final class tl implements Runnable {
         }
     }
 
-    final static String b() {
+    final static String b(int param0) {
         if (dk.field_c < 2) {
             return to.field_g;
         }

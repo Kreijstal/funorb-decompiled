@@ -13,7 +13,7 @@ final class hf {
     static byte[][] field_b;
     static int field_d;
 
-    final static void a(oh param0, int param1, int param2, int param3, boolean param4, int param5, int param6, oh param7, int param8, int param9, na param10, int param11, int param12, int param13, na param14, int param15, int param16, int param17, na param18) {
+    final static void a(oh param0, int param1, int param2, int param3, boolean param4, int param5, int param6, oh param7, int param8, int param9, na param10, int param11, int param12, int param13, na param14, int param15, int param16, int param17, na param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -249,8 +249,7 @@ final class hf {
               } else {
                 try {
                   L0: {
-                    int discarded$2 = 99;
-                    hf.a();
+                    hf.a(99);
                     var2_int = r.field_i.b(0);
                     if (var2_int <= 0) {
                       L1: {
@@ -522,13 +521,13 @@ final class hf {
         return "" + ((hf) this).field_c;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_f = null;
     }
 
-    private final boolean a(byte[] param0, int param1, int param2, boolean param3) {
+    private final boolean a(byte[] param0, int param1, int param2, boolean param3, boolean param4) {
         try {
             Object var6 = null;
             RuntimeException var6_ref = null;
@@ -930,13 +929,11 @@ final class hf {
                   } else {
                     if (param0 == -1023648016) {
                       L2: {
-                        int discarded$6 = 0;
-                        var6 = this.a(param2, param1, param3, true) ? 1 : 0;
+                        var6 = this.a(param2, param1, param3, true, false) ? 1 : 0;
                         if (var6 != 0) {
                           break L2;
                         } else {
-                          int discarded$7 = 0;
-                          var6 = this.a(param2, param1, param3, false) ? 1 : 0;
+                          var6 = this.a(param2, param1, param3, false, false) ? 1 : 0;
                           break L2;
                         }
                       }

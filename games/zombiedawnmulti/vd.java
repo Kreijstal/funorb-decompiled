@@ -59,8 +59,7 @@ final class vd {
                     break L1;
                   } else {
                     L2: {
-                      int discarded$1 = 0;
-                      var4 = tg.a(param1);
+                      var4 = tg.a(param1, false);
                       if (var4 == null) {
                         break L2;
                       } else {
@@ -173,7 +172,7 @@ final class vd {
         return stackIn_34_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

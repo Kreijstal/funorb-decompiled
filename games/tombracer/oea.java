@@ -9,7 +9,7 @@ final class oea extends vg {
     static String field_g;
     static jea field_i;
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, byte param2) {
         int var3 = 0;
         int stackIn_3_0 = 0;
         int stackOut_2_0 = 0;
@@ -29,8 +29,7 @@ final class oea extends vg {
           if (!ooa.a(param1, param0, -68)) {
             var3 = 0;
             if (0 == (55 & param1)) {
-              int discarded$7 = 13650;
-              if (!vua.e(param0, param1)) {
+              if (!vua.e(param0, param1, 13650)) {
                 return false;
               } else {
                 return true;
@@ -78,7 +77,7 @@ final class oea extends vg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_g = null;
         field_j = null;

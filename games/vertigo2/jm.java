@@ -309,30 +309,26 @@ final class jm extends ji {
         if (((jm) this).field_A != null) {
           if (param0 > -98) {
             field_E = null;
-            int discarded$8 = 2;
-            this.g();
+            this.g(2);
             return;
           } else {
-            int discarded$9 = 2;
-            this.g();
+            this.g(2);
             return;
           }
         } else {
           this.a(1, (byte) 59);
           if (param0 <= -98) {
-            int discarded$10 = 2;
-            this.g();
+            this.g(2);
             return;
           } else {
             field_E = null;
-            int discarded$11 = 2;
-            this.g();
+            this.g(2);
             return;
           }
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_C = null;
         field_H = null;
         field_E = null;
@@ -341,7 +337,7 @@ final class jm extends ji {
         field_B = null;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0, int param1, int param2, int param3) {
         return ch.a(13, (byte) 63, 15, 12);
     }
 
@@ -434,7 +430,7 @@ final class jm extends ji {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -617,12 +613,10 @@ final class jm extends ji {
                         break L1;
                       } else {
                         L2: {
-                          int discarded$24 = -96;
-                          if (jq.a(var4.charAt(0))) {
+                          if (jq.a(var4.charAt(0), -96)) {
                             break L2;
                           } else {
-                            int discarded$25 = -96;
-                            if (jq.a(var4.charAt(-1 + var4.length()))) {
+                            if (jq.a(var4.charAt(-1 + var4.length()), -96)) {
                               break L2;
                             } else {
                               var5 = 0;
@@ -639,8 +633,7 @@ final class jm extends ji {
                                 } else {
                                   L4: {
                                     var7 = param0.charAt(var6);
-                                    int discarded$26 = -96;
-                                    if (!jq.a((char) var7)) {
+                                    if (!jq.a((char) var7, -96)) {
                                       var5 = 0;
                                       break L4;
                                     } else {

@@ -418,33 +418,27 @@ final class dd extends kj {
         if (param14 <= param6) {
           if (param6 >= param5) {
             if (param14 >= param5) {
-              int discarded$6 = 1551567504;
-              ke.a(param9, param15, param14, param0, param3, param11, param7, param13, param8, ul.field_b, param12, param1, param6, param4, param5, param2);
+              ke.a(param9, param15, param14, param0, param3, param11, param7, param13, param8, ul.field_b, param12, param1, param6, param4, param5, param2, 1551567504);
               return;
             } else {
-              int discarded$7 = 1551567504;
-              ke.a(param7, param15, param5, param0, param3, param8, param9, param4, param11, ul.field_b, param2, param1, param6, param13, param14, param12);
+              ke.a(param7, param15, param5, param0, param3, param8, param9, param4, param11, ul.field_b, param2, param1, param6, param13, param14, param12, 1551567504);
               return;
             }
           } else {
-            int discarded$8 = 1551567504;
-            ke.a(param15, param7, param6, param13, param11, param8, param9, param4, param3, ul.field_b, param2, param12, param5, param0, param14, param1);
+            ke.a(param15, param7, param6, param13, param11, param8, param9, param4, param3, ul.field_b, param2, param12, param5, param0, param14, param1, 1551567504);
             return;
           }
         } else {
           if (param5 <= param14) {
             if (param5 > param6) {
-              int discarded$9 = 1551567504;
-              ke.a(param7, param9, param5, param4, param8, param3, param15, param0, param11, ul.field_b, param1, param2, param14, param13, param6, param12);
+              ke.a(param7, param9, param5, param4, param8, param3, param15, param0, param11, ul.field_b, param1, param2, param14, param13, param6, param12, 1551567504);
               return;
             } else {
-              int discarded$10 = 1551567504;
-              ke.a(param15, param9, param6, param4, param8, param11, param7, param13, param3, ul.field_b, param12, param2, param14, param0, param5, param1);
+              ke.a(param15, param9, param6, param4, param8, param11, param7, param13, param3, ul.field_b, param12, param2, param14, param0, param5, param1, 1551567504);
               return;
             }
           } else {
-            int discarded$11 = 1551567504;
-            ke.a(param9, param7, param14, param13, param11, param3, param15, param0, param8, ul.field_b, param1, param12, param5, param4, param6, param2);
+            ke.a(param9, param7, param14, param13, param11, param3, param15, param0, param8, ul.field_b, param1, param12, param5, param4, param6, param2, 1551567504);
             return;
           }
         }

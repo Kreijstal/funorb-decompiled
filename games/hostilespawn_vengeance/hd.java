@@ -18,7 +18,7 @@ final class hd extends hi {
         }
     }
 
-    final static void a(gb param0) {
+    final static void a(gb param0, boolean param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -113,7 +113,7 @@ final class hd extends hi {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_q = null;
         field_r = null;
     }
@@ -289,7 +289,7 @@ final class hd extends hi {
                                   break L13;
                                 }
                               }
-                              boolean discarded$6 = mb.field_s.b(var14, (byte) 112);
+                              boolean discarded$1 = mb.field_s.b(var14, (byte) 112);
                               break L6;
                             }
                           }
@@ -829,8 +829,7 @@ final class hd extends hi {
                                       }
                                     }
                                   }
-                                  int discarded$7 = 1;
-                                  tk.a(3, jc.field_c, 28);
+                                  tk.a(3, jc.field_c, 28, true);
                                   var39.field_n = true;
                                   break L33;
                                 } else {
@@ -910,8 +909,7 @@ final class hd extends hi {
                                                                                       } else {
                                                                                         if (var26 != 132) {
                                                                                           if (20 == var26) {
-                                                                                            int discarded$8 = 0;
-                                                                                            sj.a(var9, var39, var4, var16);
+                                                                                            sj.a(var48, var39, var4, var16, 0);
                                                                                             break L33;
                                                                                           } else {
                                                                                             if (21 == var26) {
@@ -976,8 +974,7 @@ final class hd extends hi {
                                                                                                                               }
                                                                                                                             }
                                                                                                                           }
-                                                                                                                          int discarded$9 = 19;
-                                                                                                                          lc.a(var39);
+                                                                                                                          lc.a(var39, 19);
                                                                                                                           break L33;
                                                                                                                         }
                                                                                                                       } else {
@@ -989,8 +986,7 @@ final class hd extends hi {
                                                                                                                             var26 = 0;
                                                                                                                             L62: while (true) {
                                                                                                                               if (var26 >= 10) {
-                                                                                                                                int discarded$10 = 1;
-                                                                                                                                tk.a(3, jc.field_c, 32);
+                                                                                                                                tk.a(3, jc.field_c, 32, true);
                                                                                                                                 jh.a(uh.field_i * 3 / 2, (byte) 118, 47, jc.field_c, 3);
                                                                                                                                 break L33;
                                                                                                                               } else {
@@ -1090,8 +1086,7 @@ final class hd extends hi {
                                                                         vh.a(var5, 5, var39);
                                                                         break L33;
                                                                       } else {
-                                                                        int discarded$11 = 0;
-                                                                        u.a(param1, var40, var13);
+                                                                        u.a(param1, var40, var13, 0);
                                                                         break L33;
                                                                       }
                                                                     }
@@ -1563,7 +1558,7 @@ final class hd extends hi {
         return stackIn_7_0;
     }
 
-    final static void a(int param0, int param1, oj param2, int param3) {
+    final static void a(int param0, int param1, oj param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         double var7_double = 0.0;
@@ -1596,7 +1591,7 @@ final class hd extends hi {
             break L0;
           } else {
             if (!dl.field_l) {
-              boolean[] discarded$7 = param2.field_l.a(param2.field_t, param2.field_K, param2.field_j, false, ln.field_a);
+              boolean[] discarded$5 = param2.field_l.a(param2.field_t, param2.field_K, param2.field_j, false, ln.field_a);
               param2.b((byte) 117);
               param2.field_t = param2.field_t - 1;
               break L0;
@@ -1681,7 +1676,7 @@ final class hd extends hi {
                   break L6;
                 } else {
                   param2.field_c = param2.field_c - 128.0;
-                  boolean[] discarded$8 = param2.b(-27757, je.field_a[1], ln.field_a);
+                  boolean[] discarded$6 = param2.b(-27757, je.field_a[1], ln.field_a);
                   param2.field_c = param2.field_c + 128.0;
                   break L6;
                 }
@@ -2243,8 +2238,7 @@ final class hd extends hi {
                     if (!re.field_l) {
                       break L47;
                     } else {
-                      int discarded$9 = 192;
-                      wk.b();
+                      wk.b(192);
                       break L47;
                     }
                   }
@@ -2320,13 +2314,13 @@ final class hd extends hi {
             L51: {
               if (1 != pf.field_o) {
                 if (pf.field_o == 2) {
-                  boolean discarded$10 = t.a(-128, 1, ri.field_h);
+                  boolean discarded$7 = t.a(-128, 1, ri.field_h);
                   break L51;
                 } else {
                   break L51;
                 }
               } else {
-                boolean discarded$11 = t.a(35, 0, ri.field_h);
+                boolean discarded$8 = t.a(35, 0, ri.field_h);
                 break L51;
               }
             }
@@ -2577,8 +2571,7 @@ final class hd extends hi {
             if (var6 == 3) {
               break L64;
             } else {
-              int discarded$12 = 119;
-              boolean discarded$13 = f.a();
+              boolean discarded$9 = f.a((byte) 119);
               eh.field_c.a(sf.field_V[36], 100, uh.field_i);
               break L64;
             }

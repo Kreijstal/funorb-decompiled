@@ -17,8 +17,7 @@ final class g {
                 break L0;
               }
             }
-            int discarded$4 = 11199;
-            dg.a();
+            dg.a(11199);
             return;
           } else {
             L1: {
@@ -29,8 +28,7 @@ final class g {
                 break L1;
               }
             }
-            int discarded$5 = 11199;
-            dg.a();
+            dg.a(11199);
             return;
           }
         } else {
@@ -44,8 +42,7 @@ final class g {
                 break L2;
               }
             }
-            int discarded$6 = 11199;
-            dg.a();
+            dg.a(11199);
             return;
           } else {
             L3: {
@@ -57,14 +54,13 @@ final class g {
                 break L3;
               }
             }
-            int discarded$7 = 11199;
-            dg.a();
+            dg.a(11199);
             return;
           }
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }

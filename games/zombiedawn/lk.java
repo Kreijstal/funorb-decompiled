@@ -15,11 +15,11 @@ final class lk extends pm {
         pn.a(false, (byte) -55, param0);
     }
 
-    final static ln e() {
+    final static ln e(int param0) {
         return (ln) (Object) new ab();
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         field_j = null;
     }

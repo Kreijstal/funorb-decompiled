@@ -1109,7 +1109,7 @@ final class om extends hl {
                   if (param11 == null) {
                     break L6;
                   } else {
-                    StringBuilder discarded$3 = ((om) this).field_Kb.append(param11);
+                    StringBuilder discarded$1 = ((om) this).field_Kb.append(param11);
                     break L6;
                   }
                 }
@@ -1249,8 +1249,7 @@ final class om extends hl {
                     var23 = 13 + var19 + 13;
                     var24 = var17 + (var22 + 34);
                     var25 = eo.a(var23, (byte) 97, param0, param2);
-                    int discarded$4 = -8748;
-                    var26 = mh.a(param3, param1, var24);
+                    var26 = mh.a(param3, param1, var24, -8748);
                     ((om) this).a((byte) -85, var23, var26, var24, var25);
                     break L0;
                   } else {
@@ -1320,8 +1319,7 @@ final class om extends hl {
             var18 = 13 + (var15_int + 13);
             var19 = 34 - -var16;
             var20 = eo.a(var18, (byte) 89, param0, param2);
-            int discarded$5 = -8748;
-            var21 = mh.a(param3, param1, var19);
+            var21 = mh.a(param3, param1, var19, -8748);
             ((om) this).a((byte) -116, var18, var21, var19, var20);
             break L0;
           }
@@ -1704,7 +1702,7 @@ final class om extends hl {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         if (!Character.isISOControl(param0)) {
           if (!ka.a(65, param0)) {
             L0: {
@@ -1735,7 +1733,7 @@ final class om extends hl {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_Xb = null;
         field_Yb = null;
         field_Zb = null;

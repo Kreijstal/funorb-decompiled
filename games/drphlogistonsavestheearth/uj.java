@@ -6,7 +6,7 @@ final class uj extends gi {
     static ge field_h;
     static qe field_j;
 
-    public static void d() {
+    public static void d(int param0) {
         field_h = null;
         field_j = null;
         field_i = null;

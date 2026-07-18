@@ -12,7 +12,7 @@ final class ak {
     static int field_d;
     static String field_i;
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, byte param2) {
         if (!(c.field_i != null)) {
             return -1;
         }
@@ -80,7 +80,7 @@ final class ak {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_b = null;
         field_a = null;

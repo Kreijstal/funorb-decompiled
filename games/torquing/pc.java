@@ -276,7 +276,7 @@ class pc implements el, fe {
         }
     }
 
-    private final int c(gm param0) {
+    private final int c(gm param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -394,9 +394,8 @@ class pc implements el, fe {
                   var9 = var14.a(param2, (byte) -125);
                   var10 = this.a(var9, param0, 2, param1);
                   var11 = ((pc) this).a(param1, param4, -72) + Math.max(0, var8.field_c);
-                  int discarded$1 = 8557;
                   stackOut_2_0 = ((pc) this).a(param1, param4, -108);
-                  stackOut_2_1 = this.c(param1);
+                  stackOut_2_1 = this.c(param1, 8557);
                   stackOut_2_2 = var8.field_a;
                   stackIn_4_0 = stackOut_2_0;
                   stackIn_4_1 = stackOut_2_1;
@@ -629,8 +628,7 @@ class pc implements el, fe {
         try {
           L0: {
             var4_int = 88 % ((22 - param2) / 43);
-            int discarded$2 = 0;
-            stackOut_0_0 = this.a((byte) -123, param0, param1);
+            stackOut_0_0 = this.a((byte) -123, param0, param1, 0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -702,8 +700,7 @@ class pc implements el, fe {
               }
               L2: {
                 if (((pc) this).field_l) {
-                  int discarded$2 = 8557;
-                  ((cm) (Object) param1.field_u).a(((pc) this).field_a, ((pc) this).field_m, (byte) 26, this.c(param1), ((pc) this).b(param1, -1), ((pc) this).c((byte) 65, param1), ((pc) this).field_f, ((pc) this).field_g);
+                  ((cm) (Object) param1.field_u).a(((pc) this).field_a, ((pc) this).field_m, (byte) 26, this.c(param1, 8557), ((pc) this).b(param1, -1), ((pc) this).c((byte) 65, param1), ((pc) this).field_f, ((pc) this).field_g);
                   break L2;
                 } else {
                   this.a(false, param1);
@@ -869,8 +866,7 @@ class pc implements el, fe {
             L1: {
               ld.a(param1.field_p + (param1.field_w + param2), param2 - -param1.field_w, param5 - -param1.field_k - -param1.field_o, param1.field_k + param5, (byte) -105);
               var9_int = ((pc) this).b(param1, -1);
-              int discarded$6 = 8557;
-              var10 = this.c(param1);
+              var10 = this.c(param1, 8557);
               if (!((pc) this).field_l) {
                 L2: {
                   var12 = ((pc) this).field_g;
@@ -908,13 +904,11 @@ class pc implements el, fe {
                         if (var12 != 2) {
                           break L1;
                         } else {
-                          int discarded$7 = 0;
-                          ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(0, param2, 2, param1) - -var9_int, this.a((byte) 72, param1, param5) + var11, param3, param7);
+                          ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(0, param2, 2, param1) - -var9_int, this.a((byte) 72, param1, param5, 0) + var11, param3, param7);
                           break L1;
                         }
                       } else {
-                        int discarded$8 = 0;
-                        ((pc) this).field_m.c(((pc) this).c((byte) 65, param1), (var9_int >> 1) + this.a(0, param2, 2, param1), this.a((byte) 113, param1, param5) - -var11, param3, param7);
+                        ((pc) this).field_m.c(((pc) this).c((byte) 65, param1), (var9_int >> 1) + this.a(0, param2, 2, param1), this.a((byte) 113, param1, param5, 0) - -var11, param3, param7);
                         break L1;
                       }
                     } else {
@@ -922,12 +916,10 @@ class pc implements el, fe {
                     }
                   }
                 }
-                int discarded$9 = 0;
-                ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(0, param2, 2, param1), var11 + this.a((byte) 88, param1, param5), param3, param7);
+                ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(0, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, 0), param3, param7);
                 break L1;
               } else {
-                int discarded$10 = 0;
-                int discarded$11 = ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(0, param2, 2, param1), this.a((byte) 78, param1, param5), var9_int, var10, param3, param7, ((pc) this).field_f, ((pc) this).field_g, ((pc) this).field_a);
+                int discarded$1 = ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(0, param2, 2, param1), this.a((byte) 78, param1, param5, 0), var9_int, var10, param3, param7, ((pc) this).field_f, ((pc) this).field_g, ((pc) this).field_a);
                 break L1;
               }
             }
@@ -1313,7 +1305,7 @@ class pc implements el, fe {
         }
     }
 
-    private final int a(byte param0, gm param1, int param2) {
+    private final int a(byte param0, gm param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
@@ -1548,8 +1540,7 @@ class pc implements el, fe {
             }
             L2: {
               var3_int = ((pc) this).b(param1, -1);
-              int discarded$1 = 8557;
-              var4 = this.c(param1);
+              var4 = this.c(param1, 8557);
               var6 = ((pc) this).field_g;
               if (var6 == 0) {
                 var5 = ((pc) this).field_m.field_x;

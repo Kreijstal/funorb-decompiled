@@ -15,7 +15,7 @@ final class o {
     private int field_e;
     static String field_d;
 
-    final static void d() {
+    final static void d(int param0) {
         int var1_int = 0;
         int var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -32,7 +32,7 @@ final class o {
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -84,13 +84,12 @@ final class o {
             field_b = -115;
         }
         if (((o) this).field_k == 0) {
-            int discarded$0 = 2;
-            this.c();
+            this.c(2);
             ((o) this).field_k = 256;
         }
-        int fieldTemp$1 = ((o) this).field_k - 1;
+        int fieldTemp$0 = ((o) this).field_k - 1;
         ((o) this).field_k = ((o) this).field_k - 1;
-        return ((o) this).field_g[fieldTemp$1];
+        return ((o) this).field_g[fieldTemp$0];
     }
 
     public static void b(int param0) {
@@ -102,7 +101,7 @@ final class o {
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -131,10 +130,8 @@ final class o {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    int discarded$2 = 104;
-                    this.c();
-                    int discarded$3 = 2;
-                    this.c();
+                    this.c(104);
+                    this.c(2);
                     ((o) this).field_k = 256;
                     return;
                   } else {
@@ -266,14 +263,13 @@ final class o {
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 ((o) this).field_g[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 0;
-            this.a();
+            this.a(false);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "o.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(u param0) {
+    final static void a(u param0, int param1, int param2) {
         ga var3 = ma.field_a;
         var3.b((byte) -35, 5);
         var3.a(-54, 2);

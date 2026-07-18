@@ -101,7 +101,7 @@ final class opb extends rqa {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_p = null;
     }
 

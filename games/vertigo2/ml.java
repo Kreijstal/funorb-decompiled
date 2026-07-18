@@ -32,7 +32,7 @@ class ml extends va {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6 = 0;
         L0: {
           L1: {
@@ -61,7 +61,7 @@ class ml extends va {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_x = null;
         field_u = null;
         field_t = null;
@@ -130,7 +130,7 @@ class ml extends va {
         return new er[]{null, null, null, (er) var10, var9, (er) var11, null, null, null};
     }
 
-    final static void a(mi param0) {
+    final static void a(mi param0, byte param1) {
         Object var2 = null;
         RuntimeException var2_ref = null;
         oc var2_ref2 = null;

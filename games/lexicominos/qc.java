@@ -17,7 +17,7 @@ final class qc {
         je.field_a = 1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_c = null;

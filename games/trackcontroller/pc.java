@@ -436,7 +436,7 @@ final class pc {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_t = null;
     }
 
@@ -451,8 +451,7 @@ final class pc {
                 if (64 != param2.length) {
                     throw new RuntimeException();
                 }
-                int discarded$0 = -6196;
-                ((pc) this).field_j = cf.a(0, param0, param0.length);
+                ((pc) this).field_j = cf.a(0, param0, param0.length, -6196);
                 for (var4_int = 0; var4_int < 64; var4_int++) {
                     if (((pc) this).field_j[var4_int] != param2[var4_int]) {
                         throw new RuntimeException();

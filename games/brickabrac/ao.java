@@ -12,7 +12,7 @@ final class ao extends nm {
     private Object[] field_i;
     private int field_m;
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_o = null;
         field_q = null;

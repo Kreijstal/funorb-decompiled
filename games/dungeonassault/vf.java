@@ -12,12 +12,10 @@ abstract class vf extends ll {
 
     abstract byte[] b(boolean param0);
 
-    final static int[] a(int param0, int param1) {
-        int discarded$0 = 51;
-        int var3 = oj.a(param1);
+    final static int[] a(int param0, int param1, byte param2) {
+        int var3 = oj.a(param1, (byte) 51);
         int var4 = jg.a(8191, param1);
-        int discarded$1 = 51;
-        int var5 = oj.a(param0);
+        int var5 = oj.a(param0, (byte) 51);
         int var6 = jg.a(8191, param0);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var6 * (long)var3 >> 16);
@@ -26,7 +24,7 @@ abstract class vf extends ll {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -103,24 +101,18 @@ abstract class vf extends ll {
               ic.a(13, 27029, "whirling_blades");
               ic.a(35, 27029, "tripwire_bell");
               ic.a(36, 27029, "glass");
-              int discarded$6 = -1998;
-              k.field_c = tp.a(kf.field_p, "laugh", "skull");
-              int discarded$7 = -1998;
-              hf.field_ib = tp.a(kf.field_p, "tumble", "dice");
+              k.field_c = tp.a(kf.field_p, "laugh", "skull", -1998);
+              hf.field_ib = tp.a(kf.field_p, "tumble", "dice", -1998);
               rg.field_M = new eh[4];
               var2 = 0;
               L1: while (true) {
                 if (var2 >= 4) {
-                  int discarded$8 = -1998;
-                  bo.field_Lb = tp.a(kf.field_p, "eye_open", "dragon");
-                  int discarded$9 = -1998;
-                  ce.field_v = tp.a(kf.field_p, "victory", "dragon");
-                  int discarded$10 = -1998;
-                  kf.field_j = tp.a(kf.field_p, "defeat", "dragon");
+                  bo.field_Lb = tp.a(kf.field_p, "eye_open", "dragon", -1998);
+                  ce.field_v = tp.a(kf.field_p, "victory", "dragon", -1998);
+                  kf.field_j = tp.a(kf.field_p, "defeat", "dragon", -1998);
                   break L0;
                 } else {
-                  int discarded$11 = -1998;
-                  rg.field_M[var2] = tp.a(kf.field_p, "idle" + (1 + var2), "dragon");
+                  rg.field_M[var2] = tp.a(kf.field_p, "idle" + (1 + var2), "dragon", -1998);
                   var2++;
                   continue L1;
                 }
@@ -143,7 +135,7 @@ abstract class vf extends ll {
 
     abstract int d(byte param0);
 
-    public static void d() {
+    public static void d(int param0) {
         field_y = null;
         field_A = null;
     }

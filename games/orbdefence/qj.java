@@ -10,7 +10,7 @@ final class qj {
     int field_b;
     boolean field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_g = null;
     }

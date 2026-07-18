@@ -165,32 +165,32 @@ final class hnb extends iw implements oo {
         htb stackIn_4_0 = null;
         htb stackIn_5_0 = null;
         int stackIn_5_1 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         htb stackOut_2_0 = null;
         htb stackOut_4_0 = null;
         int stackOut_4_1 = 0;
         htb stackOut_3_0 = null;
         int stackOut_3_1 = 0;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         try {
           L0: {
             ((hnb) this).field_V = param1;
             L1: {
-              boolean discarded$164 = param1.a(0, (shb) this);
+              boolean discarded$3 = param1.a(0, (shb) this);
               var3 = this.m((byte) 62);
               stackOut_2_0 = ((hnb) this).field_W;
               stackIn_4_0 = stackOut_2_0;
@@ -210,14 +210,10 @@ final class hnb extends iw implements oo {
               }
             }
             L2: {
-              L3: {
-                stackIn_5_0.field_x = stackIn_5_1 != 0;
-                if (param1 != ((hnb) this).field_L) {
-                  break L3;
-                } else {
-                  if (var3 != param1) {
-                    break L3;
-                  } else {
+              stackIn_5_0.field_x = stackIn_5_1 != 0;
+              if (param1 == ((hnb) this).field_L) {
+                if (var3 == param1) {
+                  L3: {
                     if (((hnb) this).field_P != null) {
                       L4: {
                         var4 = ((hnb) this).field_P.a(0);
@@ -225,26 +221,30 @@ final class hnb extends iw implements oo {
                         if (efb.field_b.field_q != var5.field_c) {
                           break L4;
                         } else {
-                          if (efb.field_b.field_e == var5.field_a) {
-                            break L3;
-                          } else {
+                          if (efb.field_b.field_e != var5.field_a) {
                             break L4;
+                          } else {
+                            this.g(-99);
+                            break L2;
                           }
                         }
                       }
                       ((hnb) this).field_W.field_x = true;
                       break L3;
                     } else {
-                      int discarded$165 = -99;
-                      this.g();
-                      break L2;
+                      break L3;
                     }
                   }
+                  this.g(-99);
+                  break L2;
+                } else {
+                  this.g(-99);
+                  break L2;
                 }
+              } else {
+                this.g(-99);
+                break L2;
               }
-              int discarded$166 = -99;
-              this.g();
-              break L2;
             }
             break L0;
           }
@@ -252,31 +252,31 @@ final class hnb extends iw implements oo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var3_ref;
-            stackOut_15_1 = new StringBuilder().append("hnb.T(").append(true).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackOut_18_0 = (RuntimeException) var3_ref;
+            stackOut_18_1 = new StringBuilder().append("hnb.T(").append(true).append(',');
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
     }
 
@@ -401,8 +401,7 @@ final class hnb extends iw implements oo {
         try {
           L0: {
             L1: {
-              int discarded$2 = -30334;
-              ((hnb) this).field_N = dtb.a(bm.field_o);
+              ((hnb) this).field_N = dtb.a(bm.field_o, -30334);
               if (0 >= ((hnb) this).field_N.length) {
                 break L1;
               } else {
@@ -426,9 +425,9 @@ final class hnb extends iw implements oo {
                               if (null == var3_ref_fm__[var5]) {
                                 break L5;
                               } else {
-                                int incrementValue$3 = var4;
+                                int incrementValue$1 = var4;
                                 var4++;
-                                ((hnb) this).field_N[incrementValue$3] = var3_ref_fm__[var5];
+                                ((hnb) this).field_N[incrementValue$1] = var3_ref_fm__[var5];
                                 break L5;
                               }
                             }
@@ -971,7 +970,7 @@ final class hnb extends iw implements oo {
         return stackIn_3_0;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_U = null;
         field_X = null;
     }
@@ -1501,7 +1500,7 @@ final class hnb extends iw implements oo {
         return ((hnb) this).field_O;
     }
 
-    private final void g() {
+    private final void g(int param0) {
         int var3 = 0;
         htb var4 = null;
         int var5 = VoidHunters.field_G;
@@ -1520,8 +1519,7 @@ final class hnb extends iw implements oo {
           var3 = VoidHunters.field_G;
           if (((hnb) this).field_V != ((hnb) this).field_O) {
             if (((hnb) this).field_R == ((hnb) this).field_V) {
-              int discarded$20 = -95;
-              spb.a();
+              spb.a((byte) -95);
               uga.d(-10128);
               break L0;
             } else {
@@ -1548,10 +1546,8 @@ final class hnb extends iw implements oo {
               }
             }
           } else {
-            int discarded$21 = -95;
-            spb.a();
-            int discarded$22 = 0;
-            cf.d();
+            spb.a((byte) -95);
+            cf.d(0);
             break L0;
           }
         }

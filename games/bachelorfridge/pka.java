@@ -60,7 +60,7 @@ final class pka implements qda {
             }
             L3: {
               var6_int = stackIn_6_0;
-              int discarded$3 = ((pka) this).field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param0 - -param1.field_s, param3 + param1.field_v, param1.field_p, param1.field_q, var6_int, -1, ((pka) this).field_d, ((pka) this).field_e, ((pka) this).field_c.field_u + ((pka) this).field_c.field_B);
+              int discarded$2 = ((pka) this).field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param0 - -param1.field_s, param3 + param1.field_v, param1.field_p, param1.field_q, var6_int, -1, ((pka) this).field_d, ((pka) this).field_e, ((pka) this).field_c.field_u + ((pka) this).field_c.field_B);
               if (param1.e(1023)) {
                 L4: {
                   var7 = ((pka) this).field_c.a(param1.field_w);
@@ -92,8 +92,7 @@ final class pka implements qda {
                     break L5;
                   }
                 }
-                int discarded$4 = 0;
-                uv.a(var7 + 4, var10 - -2, var8, var9 + -2);
+                uv.a(var7 + 4, var10 - -2, var8, var9 + -2, false);
                 break L3;
               } else {
                 break L3;
@@ -103,7 +102,7 @@ final class pka implements qda {
               break L0;
             } else {
               var12 = null;
-              nga discarded$5 = pka.a((lu) null, true);
+              nga discarded$3 = pka.a((lu) null, true);
               return;
             }
           }
@@ -206,7 +205,7 @@ final class pka implements qda {
         return stackIn_3_0;
     }
 
-    final static void a(kia param0, boolean param1) {
+    final static void a(kia param0, boolean param1, byte param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -225,8 +224,7 @@ final class pka implements qda {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$2 = 256;
-          hda.a(-1, param0, param1);
+          hda.a(-1, param0, param1, 256);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -260,7 +258,7 @@ final class pka implements qda {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

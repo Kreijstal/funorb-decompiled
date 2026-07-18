@@ -215,8 +215,7 @@ final class qc extends nb implements dm {
                 } else {
                   var3 = (Object) (Object) am.field_c;
                   ((qc) this).field_u = ((qc) this).field_u + 10;
-                  int discarded$69 = 0;
-                  if (!jo.b()) {
+                  if (!jo.b(0)) {
                     break L1;
                   } else {
                     ((qc) this).field_u = ((qc) this).field_u + 20;
@@ -317,8 +316,7 @@ final class qc extends nb implements dm {
               if (((qc) this).field_Y != param1) {
                 break L1;
               } else {
-                int discarded$2 = -113;
-                this.f();
+                this.f((byte) -113);
                 break L1;
               }
             }
@@ -364,7 +362,7 @@ final class qc extends nb implements dm {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         if (!(((qc) this).field_K)) {
             return;
         }

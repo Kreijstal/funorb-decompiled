@@ -7,10 +7,9 @@ final class ka implements fg {
     static boolean field_b;
     static int field_a;
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, byte param2) {
         et.field_b = true;
-        int discarded$3 = 0;
-        if (vl.a()) {
+        if (vl.a(false)) {
             return;
         }
         si.field_k = param1;
@@ -71,7 +70,7 @@ final class ka implements fg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
     }

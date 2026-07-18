@@ -49,12 +49,11 @@ final class kj {
         pj.field_b = param0 ^ -1422590333;
     }
 
-    final static void a() {
-        int discarded$0 = 0;
-        mk.a(false, aa.field_e);
+    final static void a(byte param0) {
+        mk.a(false, aa.field_e, 0);
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         L0: {
           if (-1 != rj.field_d) {
             break L0;

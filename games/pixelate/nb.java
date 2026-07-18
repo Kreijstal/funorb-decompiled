@@ -56,7 +56,7 @@ final class nb implements Iterator {
         ((nb) this).field_e = null;
     }
 
-    final static void a(int param0, tf[] param1) {
+    final static void a(int param0, tf[] param1, byte param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;

@@ -23,7 +23,7 @@ final class ff {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_a = null;
         field_b = null;
@@ -265,11 +265,9 @@ final class ff {
         if (param0 <= 25) {
           var5 = null;
           ff.a((byte) -74, (oo) null);
-          int discarded$4 = 123;
-          return qa.a(param3, param1, 1, param2);
+          return qa.a(param3, param1, 1, param2, (byte) 123);
         } else {
-          int discarded$5 = 123;
-          return qa.a(param3, param1, 1, param2);
+          return qa.a(param3, param1, 1, param2, (byte) 123);
         }
     }
 
@@ -309,8 +307,7 @@ final class ff {
         try {
           ge.field_g = param3;
           vh.field_o = param1;
-          int discarded$2 = -1;
-          jn.a(bj.field_qb, param0);
+          jn.a(bj.field_qb, param0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

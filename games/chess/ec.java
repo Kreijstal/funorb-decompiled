@@ -12,14 +12,13 @@ final class ec extends dm {
     static String field_f;
     static String field_g;
 
-    final static String e() {
+    final static String e(byte param0) {
         String var1 = "";
         if (!(null == um.field_b)) {
             var1 = um.field_b.i((byte) 52);
         }
         if (var1.length() == 0) {
-            int discarded$0 = -84;
-            var1 = am.b();
+            var1 = am.b((byte) -84);
         }
         if (!(var1.length() != 0)) {
             var1 = ql.field_e;
@@ -27,7 +26,7 @@ final class ec extends dm {
         return var1;
     }
 
-    final static int c() {
+    final static int c(byte param0) {
         un var1 = null;
         int var2 = 0;
         int stackIn_3_0 = 0;
@@ -49,7 +48,7 @@ final class ec extends dm {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_i = null;
         field_e = null;
         field_f = null;

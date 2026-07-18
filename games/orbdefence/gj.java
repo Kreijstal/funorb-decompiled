@@ -20,14 +20,13 @@ final class gj extends ca {
         field_f = null;
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return null != od.field_f;
     }
 
     final static void a(ki param0, byte param1, ki param2, boolean param3, ki param4) {
         try {
-            int discarded$0 = 113;
-            bd.field_u = hg.a("");
+            bd.field_u = hg.a("", (byte) 113);
             bd.field_u.a(false, (byte) -114);
             int var5_int = 57;
             dj.a(param2, (byte) 122, param4, param0);
@@ -41,8 +40,7 @@ final class gj extends ca {
 
     final static void a(int param0, lj param1, boolean param2, int param3, java.awt.Component param4, be param5) {
         try {
-            int discarded$0 = 1;
-            fg.a(22050, 1024, 22050, param4, param5, true, param1);
+            fg.a(22050, 1024, 22050, param4, param5, true, param1, true);
         } catch (RuntimeException runtimeException) {
             throw dd.a((Throwable) (Object) runtimeException, "gj.B(" + 22050 + ',' + (param1 != null ? "{...}" : "null") + ',' + true + ',' + 1024 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

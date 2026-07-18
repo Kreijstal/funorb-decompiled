@@ -138,7 +138,7 @@ final class ku extends bca {
         return (at) (Object) stackIn_4_0;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

@@ -33,7 +33,7 @@ final class aj implements uj {
         kd.field_i = true;
     }
 
-    final static Boolean a() {
+    final static Boolean a(int param0) {
         int var2 = 0;
         Boolean var1 = mf.field_a;
         mf.field_a = null;

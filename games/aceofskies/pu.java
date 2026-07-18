@@ -30,22 +30,19 @@ final class pu {
           L0: {
             L1: {
               if (bl.field_c >= 10) {
-                int discarded$14 = -5;
-                if (uk.a()) {
+                if (uk.a((byte) -5)) {
                   if (ob.field_d != 0) {
                     hj.a(param1, -12);
                     break L1;
                   } else {
                     ul.a(param2, false, -7395);
-                    int discarded$15 = 0;
-                    ps.a(0, false, param1);
+                    ps.a(0, false, param1, 0);
                     break L1;
                   }
                 } else {
                   vp.a();
                   qa.a(240, (byte) -4, 320);
-                  int discarded$16 = 0;
-                  ps.a(0, false, param1);
+                  ps.a(0, false, param1, 0);
                   break L1;
                 }
               } else {
@@ -59,9 +56,7 @@ final class pu {
                     break L2;
                   }
                 }
-                int discarded$17 = -115;
-                int discarded$18 = 68;
-                oj.a(qn.b(), g.field_h, 140, nk.a(), var3_int != 0);
+                oj.a(qn.b(-115), g.field_h, 140, nk.a((byte) 68), var3_int != 0);
                 break L1;
               }
             }
@@ -99,7 +94,7 @@ final class pu {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

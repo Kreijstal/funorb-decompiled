@@ -9,7 +9,7 @@ final class oi {
         field_a = null;
     }
 
-    final static sm a() {
+    final static sm a(byte param0) {
         sm var1 = new sm(fm.field_E, rh.field_d, fj.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], pn.field_b[0], cq.field_y);
         go.b(0);
         return var1;

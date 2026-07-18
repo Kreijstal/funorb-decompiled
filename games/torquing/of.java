@@ -163,11 +163,10 @@ final class of {
         if (param1 != -6) {
             ((of) this).field_N = null;
         }
-        int discarded$0 = 32;
-        this.c();
+        this.c((byte) 32);
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         ((of) this).field_y = false;
     }
 
@@ -180,11 +179,10 @@ final class of {
             ((of) this).field_j[var7] = (short)(((of) this).field_j[var7] * param2 / param0);
             ((of) this).field_d[var7] = (short)(((of) this).field_d[var7] * param1 / param0);
         }
-        int discarded$0 = 32;
-        this.c();
+        this.c((byte) 32);
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         hb.field_x.c((gm) (Object) new fm(), 33);
     }
 

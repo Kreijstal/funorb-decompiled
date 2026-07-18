@@ -120,7 +120,7 @@ final class kf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_a = null;
     }

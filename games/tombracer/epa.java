@@ -180,7 +180,7 @@ final class epa extends wv {
         }
     }
 
-    final static en d() {
+    final static en d(byte param0) {
         return kva.field_n;
     }
 

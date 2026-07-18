@@ -115,8 +115,6 @@ final class md extends kf implements rl, vn {
             ((md) this).field_W = param0;
             ((md) this).field_V = new ek(fa.field_o, (kg) null);
             ((md) this).field_V.field_p = (gl) (Object) new fk();
-            int discarded$2 = 60;
-            int discarded$3 = 57;
             var7 = cm.a((byte) 118, i.field_a, new String[2]);
             var3 = 20;
             var4 = new a(hh.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, hh.field_e.field_R, -1, 2147483647, true);
@@ -169,7 +167,7 @@ final class md extends kf implements rl, vn {
         }
     }
 
-    final static String a(int param0, String param1) {
+    final static String a(int param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         int var5 = 0;
         int var6 = 0;
@@ -205,8 +203,7 @@ final class md extends kf implements rl, vn {
         try {
           L0: {
             var10 = (CharSequence) (Object) param1;
-            int discarded$7 = -70;
-            if (dc.a(var10)) {
+            if (dc.a(var10, (byte) -70)) {
               if (2 != jj.field_b) {
                 stackOut_6_0 = kl.field_x;
                 stackIn_7_0 = stackOut_6_0;
@@ -218,7 +215,7 @@ final class md extends kf implements rl, vn {
                   stackIn_11_0 = stackOut_10_0;
                   return stackIn_11_0;
                 } else {
-                  bh discarded$8 = qi.field_S.a(64, (bh) (Object) var8);
+                  bh discarded$2 = qi.field_S.a(64, (bh) (Object) var8);
                   L1: while (true) {
                     var7 = (wb) (Object) qi.field_S.d(true);
                     if (var7 == null) {
@@ -281,7 +278,7 @@ final class md extends kf implements rl, vn {
         return (String) (Object) stackIn_16_0;
     }
 
-    private final String g() {
+    private final String g(byte param0) {
         return "</col></u>";
     }
 
@@ -399,8 +396,7 @@ final class md extends kf implements rl, vn {
               }
             }
             if (param2 == ((md) this).field_V) {
-              int discarded$2 = -51;
-              in.c();
+              in.c((byte) -51);
               ((md) this).field_W.n(69);
               break L0;
             } else {
@@ -447,11 +443,11 @@ final class md extends kf implements rl, vn {
         var3.d(-1, param2);
     }
 
-    private final String h() {
+    private final String h(byte param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_S = null;
         field_U = null;
         field_X = null;

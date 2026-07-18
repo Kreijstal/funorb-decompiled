@@ -9,7 +9,7 @@ final class qa implements be {
     static String field_f;
     static km field_d;
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         hg var2 = gk.field_g;
         var2.g(11, 8);
         var2.a(1, 99);

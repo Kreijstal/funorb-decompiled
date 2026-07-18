@@ -14,7 +14,7 @@ final class ak extends jb {
     int field_h;
     static int field_m;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
     }
 

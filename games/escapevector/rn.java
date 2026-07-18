@@ -19,7 +19,7 @@ final class rn extends RuntimeException {
         field_d = null;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (pg.field_c == null) {
             return false;
         }
@@ -85,8 +85,7 @@ final class rn extends RuntimeException {
                   var5 = param1;
                   L1: while (true) {
                     if (~var4.length >= ~var5) {
-                      int discarded$2 = 0;
-                      stackOut_17_0 = co.a(var3[var3.length - 1]);
+                      stackOut_17_0 = co.a(var3[var3.length - 1], 0);
                       stackIn_18_0 = stackOut_17_0;
                       break L0;
                     } else {

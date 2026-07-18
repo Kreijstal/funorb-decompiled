@@ -10,7 +10,7 @@ final class be extends ob {
     private static int field_H;
     static vh field_L;
 
-    final static void a(ge param0) {
+    final static void a(ge param0, int param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;
@@ -139,7 +139,7 @@ final class be extends ob {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_J = null;
         field_L = null;
         field_K = null;

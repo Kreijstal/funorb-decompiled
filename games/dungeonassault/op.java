@@ -219,8 +219,7 @@ final class op {
                       ta.field_c.a(2, var14);
                       ta.field_c.a(2, var8);
                       var15 = (CharSequence) (Object) param4;
-                      int discarded$3 = -1;
-                      ta.field_c.a(2, qf.a(var15));
+                      ta.field_c.a(2, qf.a(var15, -1));
                       ta.field_c.i(param1, -86);
                       ta.field_c.a(6, param2);
                       ta.field_c.a(6, var9);
@@ -338,9 +337,8 @@ final class op {
                     return stackIn_34_0;
                   } else {
                     if (99 == var9) {
-                      boolean discarded$4 = oi.a(-12929, la.a(23940));
-                      int discarded$5 = -127;
-                      fj.field_e = new Boolean(fm.a((ec) (Object) ra.field_c));
+                      boolean discarded$1 = oi.a(-12929, la.a(23940));
+                      fj.field_e = new Boolean(fm.a((ec) (Object) ra.field_c, -127));
                       ra.field_c.field_o = 0;
                       break L9;
                     } else {

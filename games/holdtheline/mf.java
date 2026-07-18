@@ -5,7 +5,7 @@ final class mf {
     static String field_b;
     private String field_a;
 
-    final static void a(gn param0) {
+    final static void a(gn param0, int param1) {
         sn var2 = null;
         try {
             sn.b(param0.a("", false, "headers.packvorbis"));
@@ -254,7 +254,7 @@ final class mf {
         throw new IllegalStateException();
     }
 
-    final static boolean a(int param0, boolean param1, int param2) {
+    final static boolean a(int param0, boolean param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         int stackIn_37_0 = 0;

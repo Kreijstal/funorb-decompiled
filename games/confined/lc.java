@@ -39,7 +39,7 @@ final class lc {
     private int[][] field_k;
     private double[][] field_o;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_J = null;
         field_l = null;
     }
@@ -130,7 +130,7 @@ final class lc {
         return false;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -152,8 +152,7 @@ final class lc {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_2_0 = ck.a(false, param0);
+            stackOut_2_0 = ck.a(false, param0, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -222,7 +221,7 @@ final class lc {
               if (param0) {
                 break L1;
               } else {
-                in discarded$7 = lc.b((byte) -58);
+                in discarded$2 = lc.b((byte) -58);
                 break L1;
               }
             }
@@ -238,8 +237,7 @@ final class lc {
                   if (ih.a(param0, (char) var3)) {
                     break L3;
                   } else {
-                    int discarded$8 = -58;
-                    if (hc.a((char) var3)) {
+                    if (hc.a((char) var3, -58)) {
                       break L3;
                     } else {
                       stackOut_7_0 = 1;
@@ -914,9 +912,8 @@ final class lc {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
-        int discarded$0 = 128;
-        mk.b();
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
+        mk.b(128);
         fn.f(param0, param3, param1, param2);
     }
 

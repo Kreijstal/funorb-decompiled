@@ -212,7 +212,7 @@ final class oo extends se {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         return ne.field_d;
     }
 

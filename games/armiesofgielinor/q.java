@@ -19,10 +19,8 @@ final class q extends oj {
 
     final static void a(boolean param0, String param1) {
         try {
-            int discarded$0 = -65;
-            fp.a(param1);
-            int discarded$1 = -1;
-            af.a(false, lo.field_o);
+            fp.a(param1, (byte) -65);
+            af.a(false, lo.field_o, -1);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "q.D(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

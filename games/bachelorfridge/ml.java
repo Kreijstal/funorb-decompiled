@@ -4,7 +4,7 @@
 final class ml {
     static ee field_a;
 
-    final static void a(lu param0) {
+    final static void a(lu param0, int param1) {
         int var2_int = 0;
         try {
             gk.field_b = param0.e((byte) 93) << 5;
@@ -25,7 +25,7 @@ final class ml {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 26;
         field_a = null;
     }

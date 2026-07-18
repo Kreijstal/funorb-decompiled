@@ -39,7 +39,7 @@ final class uj {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (null == ag.field_D) {
           ag.field_D = new String[46];
           ag.field_D[5] = gg.field_l;
@@ -105,7 +105,7 @@ final class uj {
         }
     }
 
-    final static short[] a(byte param0, short[] param1, pi param2) {
+    final static short[] a(byte param0, short[] param1, pi param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -502,7 +502,7 @@ final class uj {
         }
     }
 
-    final static byte[] a(CharSequence param0) {
+    final static byte[] a(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;

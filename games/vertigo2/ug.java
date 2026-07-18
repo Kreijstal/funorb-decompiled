@@ -33,7 +33,7 @@ abstract class ug {
         }
     }
 
-    final static wp a(String param0) {
+    final static wp a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -89,8 +89,7 @@ abstract class ug {
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      int discarded$2 = 1;
-                      var7 = pe.a(var6);
+                      var7 = pe.a(var6, true);
                       if (var7 == null) {
                         var5++;
                         continue L1;
@@ -147,9 +146,7 @@ abstract class ug {
     }
 
     final static r a(int param0, boolean param1, boolean param2, boolean param3, int param4) {
-        int discarded$0 = 1;
-        int discarded$1 = 0;
-        return vo.a(false, 124, 1, param0);
+        return vo.a(false, 124, 1, param0, false, true);
     }
 
     public static void c(int param0) {
@@ -159,7 +156,7 @@ abstract class ug {
         }
     }
 
-    final static gd a(ed param0) {
+    final static gd a(ed param0, int param1) {
         RuntimeException var2 = null;
         gd stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

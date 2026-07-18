@@ -124,8 +124,7 @@ final class bi {
                   }
                 }
               }
-              int discarded$1 = 1;
-              ek.b();
+              ek.b(1);
               break L1;
             }
             var66 = new int[param4.field_b];

@@ -123,8 +123,7 @@ final class ho extends gd {
           L0: {
             if (param1 > 52) {
               L1: {
-                int discarded$8 = -128;
-                if (pg.a(param0) != null) {
+                if (pg.a(param0, (byte) -128) != null) {
                   stackOut_5_0 = 0;
                   stackIn_6_0 = stackOut_5_0;
                   break L1;

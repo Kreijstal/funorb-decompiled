@@ -90,7 +90,7 @@ final class p implements eb {
         return stackIn_3_0;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         if (!(null == sa.field_f)) {
             if (!(!sa.field_f.b((byte) -52, param0))) {
                 sa.field_f = null;
@@ -534,7 +534,7 @@ final class p implements eb {
         return stackIn_4_0;
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 0;
         int[] var3 = null;
         if (null == ((p) this).field_l) {
@@ -699,7 +699,7 @@ final class p implements eb {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_k = null;
         field_c = null;
         field_n = null;
@@ -1017,7 +1017,7 @@ final class p implements eb {
         return stackIn_5_0 != 0;
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1174,10 +1174,8 @@ final class p implements eb {
         try {
             ((p) this).field_j = param0;
             ((p) this).field_l = param1;
-            int discarded$0 = 126;
-            this.c();
-            int discarded$1 = 16775;
-            this.a();
+            this.c(126);
+            this.a(16775);
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "p.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -13,8 +13,7 @@ final class dk extends rj {
     private int field_d;
 
     final long a(int param0) {
-        int discarded$0 = -5378;
-        ((dk) this).field_f = ((dk) this).field_f + this.d();
+        ((dk) this).field_f = ((dk) this).field_f + this.d(-5378);
         if (param0 <= 114) {
             return 98L;
         }
@@ -24,7 +23,7 @@ final class dk extends rj {
         return 0L;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_l = null;
         field_h = null;
     }
@@ -85,7 +84,7 @@ final class dk extends rj {
         }
     }
 
-    private final long d() {
+    private final long d(int param0) {
         int var8 = 0;
         int var9 = SolKnight.field_L ? 1 : 0;
         long var2 = System.nanoTime();

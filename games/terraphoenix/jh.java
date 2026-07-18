@@ -13,7 +13,7 @@ final class jh extends uf {
     static String field_k;
     static String field_h;
 
-    public static void d() {
+    public static void d(byte param0) {
         field_o = null;
         field_h = null;
         field_l = null;
@@ -34,7 +34,7 @@ final class jh extends uf {
         ok.field_h = true;
     }
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         vi var4 = null;

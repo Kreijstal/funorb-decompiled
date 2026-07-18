@@ -33,7 +33,7 @@ abstract class c {
         vd.a(640, 0, -14561, 0, 0, param2);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_c = null;
         field_d = null;

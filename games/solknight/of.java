@@ -12,7 +12,7 @@ final class of {
     static long field_e;
     static o field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_b = null;
         field_d = null;

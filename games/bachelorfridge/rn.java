@@ -158,7 +158,7 @@ final class rn extends bca {
         return var2 * var4 >> 12;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_v = null;
         field_t = null;
         field_s = null;

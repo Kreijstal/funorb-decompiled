@@ -12,21 +12,19 @@ final class pj implements fc {
             fd.a(param0, -1);
             ci.a((byte) -116, param0);
             ub.a((byte) -32, param0);
-            int discarded$0 = 255;
-            rj.a();
-            int discarded$1 = 0;
-            ta.c();
+            rj.a(255);
+            ta.c(0);
             oa.field_a = -fe.field_i;
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) (Object) runtimeException, "pj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + false + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return ij.field_a;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         q.field_N.a(0, 0, -56);
     }
 
@@ -82,8 +80,7 @@ final class pj implements fc {
               if (!param1.e(1)) {
                 break L2;
               } else {
-                int discarded$1 = 14677;
-                ck.a(2 + var6_int, param1.field_m + -4, -4 + param1.field_k, 2 + var7);
+                ck.a(2 + var6_int, param1.field_m + -4, -4 + param1.field_k, 2 + var7, 14677);
                 break L2;
               }
             }

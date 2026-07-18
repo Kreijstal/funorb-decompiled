@@ -18,13 +18,13 @@ final class il implements Iterator {
         return var2;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((il) this).field_b = 1;
         ((il) this).field_c = ((il) this).field_g.field_b[0].field_d;
         ((il) this).field_d = null;
     }
 
-    final static uh a(int param0, int param1, int param2, int param3) {
+    final static uh a(int param0, int param1, int param2, int param3, int param4) {
         uh var5 = null;
         int var6 = 0;
         uh var7 = null;
@@ -108,7 +108,7 @@ final class il implements Iterator {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_e = null;
         field_f = null;
@@ -126,8 +126,7 @@ final class il implements Iterator {
         ((il) this).field_d = null;
         try {
             ((il) this).field_g = param0;
-            int discarded$0 = 64;
-            this.a();
+            this.a((byte) 64);
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "il.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

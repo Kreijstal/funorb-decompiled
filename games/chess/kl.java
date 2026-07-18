@@ -173,7 +173,7 @@ final class kl {
         return null;
     }
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -292,7 +292,7 @@ final class kl {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_l = null;
         field_h = null;

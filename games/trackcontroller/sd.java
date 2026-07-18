@@ -590,8 +590,7 @@ final class sd implements Runnable {
               } else {
                 L3: {
                   var3 = param0.charAt(var2_int);
-                  int discarded$5 = 122;
-                  if (rj.a((char) var3)) {
+                  if (rj.a((char) var3, 122)) {
                     break L3;
                   } else {
                     if (!hd.a(-124, (char) var3)) {
@@ -641,7 +640,7 @@ final class sd implements Runnable {
         return stackIn_12_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
     }
@@ -654,8 +653,7 @@ final class sd implements Runnable {
         try {
             var2 = param0.a(5, (Runnable) this, 94);
             while (var2.field_f == 0) {
-                int discarded$0 = 0;
-                wl.a(10L);
+                wl.a(10L, false);
             }
             if (var2.field_f == 2) {
                 throw new RuntimeException();

@@ -428,8 +428,7 @@ final class nh extends bb {
         int var4 = 0;
         bh[] var5 = null;
         var4 = wizardrun.field_H;
-        int discarded$2 = 109;
-        var5 = od.b();
+        var5 = od.b(109);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -636,7 +635,7 @@ final class nh extends bb {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_p = null;
         field_o = null;
         field_q = null;

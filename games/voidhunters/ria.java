@@ -142,7 +142,7 @@ final class ria extends rqa {
         }
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         if (!(!uga.field_d)) {
             dma.e(dma.field_d, dma.field_c, -dma.field_d + dma.field_a, -dma.field_c + dma.field_f);
             tra.field_o.b(false, -111);

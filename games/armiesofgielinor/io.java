@@ -19,7 +19,7 @@ final class io extends tc {
     static wk[] field_m;
     sn[] field_y;
 
-    final static void a(wp param0) {
+    final static void a(wp param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -74,7 +74,7 @@ final class io extends tc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_p = null;
         field_z = null;
         field_o = null;

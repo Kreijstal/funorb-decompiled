@@ -17,8 +17,7 @@ final class mj extends jm {
     mj(mj param0, boolean param1) {
         this();
         try {
-            int discarded$0 = 126;
-            param0.a(param1, (mj) this);
+            param0.a(param1, (mj) this, 126);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "mj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -126,7 +125,7 @@ final class mj extends jm {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_z = null;
         field_v = null;
@@ -297,7 +296,7 @@ final class mj extends jm {
         }
     }
 
-    private final void a(boolean param0, mj param1) {
+    private final void a(boolean param0, mj param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         vc var5 = null;

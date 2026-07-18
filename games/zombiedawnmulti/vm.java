@@ -16,7 +16,7 @@ final class vm extends al implements in {
         return (dm) (Object) kp.field_o.a(param0, -22877);
     }
 
-    private final void l() {
+    private final void l(int param0) {
         if (!((vm) this).field_R) {
             return;
         }
@@ -25,8 +25,7 @@ final class vm extends al implements in {
 
     final static void d(int param0, int param1, int param2) {
         int var3 = -36 / ((param0 - 11) / 62);
-        int discarded$0 = 0;
-        wp.a(param2, param1, 255);
+        wp.a(param2, param1, 255, 0);
     }
 
     vm(vk param0, db param1) {
@@ -299,8 +298,7 @@ final class vm extends al implements in {
                 if (((vm) this).field_kb != param2) {
                   break L1;
                 } else {
-                  int discarded$2 = 0;
-                  this.l();
+                  this.l(0);
                   break L1;
                 }
               }
@@ -349,8 +347,7 @@ final class vm extends al implements in {
                 vm.a((String) null, -13, (String) null, (String) null, -118, 91);
             }
             var6 = new ka(param4, param0, param1, param2, param3);
-            int discarded$0 = 83;
-            vk.a(var6);
+            vk.a(var6, (byte) 83);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "vm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

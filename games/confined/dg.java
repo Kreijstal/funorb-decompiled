@@ -42,7 +42,7 @@ final class dg extends rk {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_n = null;
         field_p = null;
     }

@@ -101,7 +101,7 @@ final class ika {
         return stackIn_3_0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -128,36 +128,29 @@ final class ika {
                 if ((1 & param1) == 0) {
                   break L1;
                 } else {
-                  int discarded$24 = 1;
-                  ce.a(true, 16777215, 52, "" + var9, param2);
+                  ce.a(true, 16777215, 52, "" + var9, param2, true);
                   param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
-                  int discarded$25 = 1;
-                  ce.a(true, 16777215, 52, "" + var10, param2);
+                  ce.a(true, 16777215, 52, "" + var10, param2, true);
                   param2 = param2 + (jha.field_g.a("" + var10) + 5);
                   break L1;
                 }
               }
               return;
             } else {
-              int discarded$26 = 1;
-              ce.a(true, 16777215, 52, "" + var11, param2);
+              ce.a(true, 16777215, 52, "" + var11, param2, true);
               param2 = param2 + (jha.field_g.a("" + var11) + 5);
-              int discarded$27 = 1;
-              ce.a(true, 16777215, 52, "" + var12, param2);
+              ce.a(true, 16777215, 52, "" + var12, param2, true);
               param2 = param2 + (2 + (jha.field_g.a("" + var11) - -3));
               if ((param1 & 32) == 0) {
                 L2: {
-                  int discarded$28 = 1;
-                  ce.a(true, 16777215, 52, ":", param2);
+                  ce.a(true, 16777215, 52, ":", param2, true);
                   param2 = param2 + (jha.field_g.a(":") + 3);
                   if ((1 & param1) == 0) {
                     break L2;
                   } else {
-                    int discarded$29 = 1;
-                    ce.a(true, 16777215, 52, "" + var9, param2);
+                    ce.a(true, 16777215, 52, "" + var9, param2, true);
                     param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
-                    int discarded$30 = 1;
-                    ce.a(true, 16777215, 52, "" + var10, param2);
+                    ce.a(true, 16777215, 52, "" + var10, param2, true);
                     param2 = param2 + (jha.field_g.a("" + var10) + 5);
                     break L2;
                   }
@@ -166,17 +159,14 @@ final class ika {
               } else {
                 if (0 == (param6 & 1)) {
                   L3: {
-                    int discarded$31 = 1;
-                    ce.a(true, 16777215, 52, ":", param2);
+                    ce.a(true, 16777215, 52, ":", param2, true);
                     param2 = param2 + (jha.field_g.a(":") + 3);
                     if ((1 & param1) == 0) {
                       break L3;
                     } else {
-                      int discarded$32 = 1;
-                      ce.a(true, 16777215, 52, "" + var9, param2);
+                      ce.a(true, 16777215, 52, "" + var9, param2, true);
                       param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
-                      int discarded$33 = 1;
-                      ce.a(true, 16777215, 52, "" + var10, param2);
+                      ce.a(true, 16777215, 52, "" + var10, param2, true);
                       param2 = param2 + (jha.field_g.a("" + var10) + 5);
                       break L3;
                     }
@@ -188,11 +178,9 @@ final class ika {
                     if ((1 & param1) == 0) {
                       break L4;
                     } else {
-                      int discarded$34 = 1;
-                      ce.a(true, 16777215, 52, "" + var9, param2);
+                      ce.a(true, 16777215, 52, "" + var9, param2, true);
                       param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
-                      int discarded$35 = 1;
-                      ce.a(true, 16777215, 52, "" + var10, param2);
+                      ce.a(true, 16777215, 52, "" + var10, param2, true);
                       param2 = param2 + (jha.field_g.a("" + var10) + 5);
                       break L4;
                     }
@@ -210,36 +198,29 @@ final class ika {
                 if ((1 & param1) == 0) {
                   break L5;
                 } else {
-                  int discarded$36 = 1;
-                  ce.a(true, 16777215, 52, "" + var9, param2);
+                  ce.a(true, 16777215, 52, "" + var9, param2, true);
                   param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
-                  int discarded$37 = 1;
-                  ce.a(true, 16777215, 52, "" + var10, param2);
+                  ce.a(true, 16777215, 52, "" + var10, param2, true);
                   param2 = param2 + (jha.field_g.a("" + var10) + 5);
                   break L5;
                 }
               }
               return;
             } else {
-              int discarded$38 = 1;
-              ce.a(true, 16777215, 52, "" + var11, param2);
+              ce.a(true, 16777215, 52, "" + var11, param2, true);
               param2 = param2 + (jha.field_g.a("" + var11) + 5);
-              int discarded$39 = 1;
-              ce.a(true, 16777215, 52, "" + var12, param2);
+              ce.a(true, 16777215, 52, "" + var12, param2, true);
               param2 = param2 + (2 + (jha.field_g.a("" + var11) - -3));
               if ((param1 & 32) == 0) {
-                int discarded$40 = 1;
-                ce.a(true, 16777215, 52, ":", param2);
+                ce.a(true, 16777215, 52, ":", param2, true);
                 L6: {
                   param2 = param2 + (jha.field_g.a(":") + 3);
                   if ((1 & param1) == 0) {
                     break L6;
                   } else {
-                    int discarded$41 = 1;
-                    ce.a(true, 16777215, 52, "" + var9, param2);
+                    ce.a(true, 16777215, 52, "" + var9, param2, true);
                     param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
-                    int discarded$42 = 1;
-                    ce.a(true, 16777215, 52, "" + var10, param2);
+                    ce.a(true, 16777215, 52, "" + var10, param2, true);
                     param2 = param2 + (jha.field_g.a("" + var10) + 5);
                     break L6;
                   }
@@ -247,18 +228,15 @@ final class ika {
                 return;
               } else {
                 if (0 == (param6 & 1)) {
-                  int discarded$43 = 1;
-                  ce.a(true, 16777215, 52, ":", param2);
+                  ce.a(true, 16777215, 52, ":", param2, true);
                   L7: {
                     param2 = param2 + (jha.field_g.a(":") + 3);
                     if ((1 & param1) == 0) {
                       break L7;
                     } else {
-                      int discarded$44 = 1;
-                      ce.a(true, 16777215, 52, "" + var9, param2);
+                      ce.a(true, 16777215, 52, "" + var9, param2, true);
                       param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
-                      int discarded$45 = 1;
-                      ce.a(true, 16777215, 52, "" + var10, param2);
+                      ce.a(true, 16777215, 52, "" + var10, param2, true);
                       param2 = param2 + (jha.field_g.a("" + var10) + 5);
                       break L7;
                     }
@@ -270,11 +248,9 @@ final class ika {
                     if ((1 & param1) == 0) {
                       break L8;
                     } else {
-                      int discarded$46 = 1;
-                      ce.a(true, 16777215, 52, "" + var9, param2);
+                      ce.a(true, 16777215, 52, "" + var9, param2, true);
                       param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
-                      int discarded$47 = 1;
-                      ce.a(true, 16777215, 52, "" + var10, param2);
+                      ce.a(true, 16777215, 52, "" + var10, param2, true);
                       param2 = param2 + (jha.field_g.a("" + var10) + 5);
                       break L8;
                     }
@@ -301,21 +277,20 @@ final class ika {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 
     private ika(lu param0) {
         ((ika) this).field_b = new eaa();
         try {
-            int discarded$0 = 0;
-            this.a(param0);
+            this.a(param0, 0);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "ika.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(lu param0) {
+    private final void a(lu param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

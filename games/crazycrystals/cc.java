@@ -7,14 +7,14 @@ final class cc {
     static sj field_c;
     static String field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_b = null;
         field_a = null;
     }
 
-    final static void a(int param0, java.applet.Applet param1, byte param2, int param3, String[] param4) {
+    final static void a(int param0, java.applet.Applet param1, byte param2, int param3, String[] param4, int param5) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;

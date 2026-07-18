@@ -6,19 +6,19 @@ final class rl {
     static String[] field_b;
     static String field_c;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         rf.field_r = true;
         ah.field_z = 15000L + ll.a(1000);
         return q.field_Jb == 11 ? true : false;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

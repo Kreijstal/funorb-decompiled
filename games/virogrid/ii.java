@@ -11,13 +11,12 @@ final class ii {
     static int field_b;
     static km field_d;
 
-    final static void b() {
+    final static void b(byte param0) {
         vi.b((byte) -123);
         co.field_d = true;
         kb.field_c = true;
         tm.field_l.a((byte) 76);
-        int discarded$0 = 0;
-        gk.a(false, jm.field_a);
+        gk.a(false, jm.field_a, false);
     }
 
     final int a(int param0, int param1, int param2, int param3, byte[] param4, byte[] param5) {
@@ -673,7 +672,7 @@ final class ii {
         return stackIn_33_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_d = null;
     }
@@ -879,7 +878,7 @@ final class ii {
         }
     }
 
-    final static int a(uh param0, uh param1) {
+    final static int a(uh param0, uh param1, int param2) {
         RuntimeException var3 = null;
         Object var4 = null;
         int stackIn_1_0 = 0;

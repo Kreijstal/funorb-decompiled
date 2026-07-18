@@ -19,14 +19,11 @@ final class ab {
     final static void a(pf param0, boolean param1, int param2, hl param3) {
         try {
             tc.field_p = param2 * ea.f((byte) -106) / 1000;
-            int discarded$0 = 23987;
-            hj.a(param0);
+            hj.a(param0, 23987);
             ae.a(36, param0);
-            int discarded$1 = 3;
-            k.a(param0);
+            k.a(param0, 3);
             lk.e(25536);
-            int discarded$2 = -84;
-            th.a();
+            th.a((byte) -84);
             ni.field_d = 0 - tc.field_p;
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "ab.B(" + (param0 != null ? "{...}" : "null") + ',' + true + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

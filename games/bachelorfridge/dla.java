@@ -82,12 +82,12 @@ final class dla extends bf {
         }
     }
 
-    final static void b() {
-        int discarded$0 = 9;
-        rt.a(sc.field_n, (String) null);
+    final static void b(int param0) {
+        Object var2 = null;
+        rt.a(sc.field_n, (String) null, 9);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_l = null;
         field_m = null;

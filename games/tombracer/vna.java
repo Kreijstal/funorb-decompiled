@@ -948,11 +948,19 @@ final class vna {
         return stackIn_7_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
+            L1: {
+              if (param0 > 87) {
+                break L1;
+              } else {
+                field_c = null;
+                break L1;
+              }
+            }
             field_d = null;
             field_c = null;
             field_a = null;
@@ -961,7 +969,7 @@ final class vna {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "vna.G(" + 91 + ')');
+          throw tba.a((Throwable) (Object) var1, "vna.G(" + param0 + ')');
         }
     }
 

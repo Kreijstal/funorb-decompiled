@@ -10,7 +10,7 @@ final class ke {
     private boolean field_d;
     static String field_b;
 
-    final static void a(String param0, int param1, String[] param2) {
+    final static void a(String param0, int param1, String[] param2, byte param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int stackIn_5_0 = 0;
@@ -56,8 +56,7 @@ final class ke {
               return;
             } else {
               if (param1 <= 105) {
-                int discarded$4 = 57;
-                sf.field_B = jo.a(param2);
+                sf.field_B = jo.a(param2, 57);
                 return;
               } else {
                 sf.field_B = gg.a(param1, true, param0);
@@ -76,8 +75,7 @@ final class ke {
                 break L0;
               }
             }
-            int discarded$5 = -30914;
-            sf.field_B = ta.a(stackIn_5_0 != 0);
+            sf.field_B = ta.a(stackIn_5_0 != 0, -30914);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -137,7 +135,7 @@ final class ke {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             Exception var1 = null;
             Throwable decompiledCaughtException = null;

@@ -353,7 +353,7 @@ class fw extends kb {
         return stackIn_9_0 != 0;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_H = null;
         field_J = null;
         field_F = null;

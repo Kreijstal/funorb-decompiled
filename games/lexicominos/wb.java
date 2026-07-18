@@ -38,7 +38,7 @@ abstract class wb {
         field_g = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = Lexicominos.field_L ? 1 : 0;
@@ -51,22 +51,18 @@ abstract class wb {
               jj.field_d = oj.field_d;
               jj.field_d = ef.a(new CharSequence[3], 0);
               jj.field_a.g(true);
-              int discarded$16 = 113;
-              vg.a();
+              vg.a(113);
               return;
             } else {
-              int discarded$17 = 0;
-              jj.field_d = da.a(new String[1], mc.field_m);
+              jj.field_d = da.a(new String[1], mc.field_m, false);
               jj.field_d = ef.a(new CharSequence[3], 0);
               jj.field_a.g(true);
-              int discarded$18 = 113;
-              vg.a();
+              vg.a(113);
               return;
             }
           } else {
             jj.field_a.g(true);
-            int discarded$19 = 113;
-            vg.a();
+            vg.a(113);
             return;
           }
         } else {
@@ -77,7 +73,7 @@ abstract class wb {
 
     abstract void c(int param0);
 
-    final static db[] a(int param0, int param1, int param2, int param3) {
+    final static db[] a(int param0, int param1, int param2, int param3, int param4) {
         db[] var6 = new db[9];
         db[] var5 = var6;
         db dupTemp$0 = gf.a((byte) -76, 1, param0);

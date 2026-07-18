@@ -323,8 +323,7 @@ final class v extends pj implements ra, ke, fh {
               if (param3 != ((v) this).field_R) {
                 break L0;
               } else {
-                int discarded$4 = -1;
-                boolean discarded$5 = this.k();
+                boolean discarded$2 = this.k(-1);
                 return;
               }
             } else {
@@ -581,7 +580,7 @@ final class v extends pj implements ra, ke, fh {
         return stackIn_14_0 != 0;
     }
 
-    private final boolean k() {
+    private final boolean k(int param0) {
         if (!this.g((byte) -109)) {
             return false;
         }

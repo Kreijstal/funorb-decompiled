@@ -17,7 +17,7 @@ final class hab extends uda {
         ((hab) this).field_d.a(et.field_c, true, asa.field_a);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_e = null;
         field_g = null;
         field_j = null;

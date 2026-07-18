@@ -31,23 +31,17 @@ final class kb {
               }
             }
             if (var4 >= 10) {
-              if (var4 <= -40 + dh.field_j.field_p) {
-                int discarded$6 = 80;
-                int discarded$7 = 0;
-                gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4);
+              if (var4 > -40 + dh.field_j.field_p) {
+                var4 = dh.field_j.field_p + -40;
+                gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
                 return;
               } else {
-                var4 = dh.field_j.field_p + -40;
-                int discarded$8 = 80;
-                int discarded$9 = 0;
-                gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4);
+                gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
                 return;
               }
             } else {
               var4 = 10;
-              int discarded$10 = 80;
-              int discarded$11 = 0;
-              gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4);
+              gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
               return;
             }
           } else {
@@ -58,7 +52,7 @@ final class kb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_a = null;
         field_e = null;
@@ -74,7 +68,7 @@ final class kb {
         throw new IllegalStateException();
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         if (!(te.field_I == null)) {
             return;
         }

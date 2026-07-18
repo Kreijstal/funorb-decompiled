@@ -9,7 +9,7 @@ final class ej {
     static byte[][] field_c;
     static String field_d;
 
-    final static er a() {
+    final static er a(byte param0) {
         int var5_int = 0;
         int var6 = Vertigo2.field_L ? 1 : 0;
         int var1 = 110;

@@ -29,7 +29,7 @@ final class co {
     String field_l;
     um field_n;
 
-    final static boolean a(boolean param0, int param1, int param2) {
+    final static boolean a(boolean param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -214,7 +214,7 @@ final class co {
         return ((co) this).field_t[ns.a(false, ((co) this).field_t.length, li.field_n)];
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_r = null;
         field_p = null;
         field_s = null;
@@ -224,8 +224,7 @@ final class co {
 
     final wk c(byte param0) {
         int var2 = -68 / ((53 - param0) / 32);
-        int discarded$0 = 34;
-        return this.c();
+        return this.c(34);
     }
 
     final static String a(int param0, int param1, int param2, byte[] param3) {
@@ -681,11 +680,10 @@ final class co {
         ((co) this).field_g = null;
     }
 
-    private final wk c() {
+    private final wk c(int param0) {
         byte[] var3 = fd.field_m.a(((co) this).field_x, 78, "");
         byte[] var2 = var3;
-        int discarded$0 = 0;
-        return new wk(var3, (java.awt.Component) (Object) ll.p());
+        return new wk(var3, (java.awt.Component) (Object) ll.p(0));
     }
 
     static {

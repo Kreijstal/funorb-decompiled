@@ -318,7 +318,7 @@ class hv extends fw {
         ((hv) this).a(-128);
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_N = null;
         field_O = null;
         field_R = null;

@@ -136,8 +136,7 @@ abstract class qd {
             Object var3 = null;
             qd.a((byte) -25, (String) null);
         }
-        int discarded$4 = 0;
-        if (!(!vl.a())) {
+        if (!(!vl.a(false))) {
             return;
         }
         try {

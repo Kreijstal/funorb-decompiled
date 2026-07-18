@@ -7,7 +7,7 @@ final class ph {
     static String field_a;
     static int field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_a = null;
@@ -66,8 +66,7 @@ final class ph {
         try {
           L0: {
             if (!bg.a(4826, param2)) {
-              int discarded$8 = 0;
-              if (sg.a(param2)) {
+              if (sg.a(param2, false)) {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0 != 0;

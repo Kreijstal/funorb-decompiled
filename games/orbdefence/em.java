@@ -11,7 +11,7 @@ final class em extends hi {
     static int field_o;
     static int field_q;
 
-    final static void c() {
+    final static void c(byte param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -34,10 +34,7 @@ final class em extends hi {
         }
         li.field_a.d();
         try {
-            int discarded$0 = 3;
-            int discarded$1 = 0;
-            int discarded$2 = 3;
-            hm.a(cg.field_d.field_v);
+            hm.a(cg.field_d.field_v, 3, 0, 3);
             cb.field_a.a(-40);
             li.field_a.e(0, 0, 640, 480, ef.field_k);
         } catch (RuntimeException runtimeException) {
@@ -45,7 +42,7 @@ final class em extends hi {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         if (!n.b((byte) 118)) {
           if (!pc.field_cb) {
             L0: {
@@ -111,8 +108,7 @@ final class em extends hi {
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
               } else {
-                int discarded$11 = -1;
-                if (!kk.a(var3, var4)) {
+                if (!kk.a(var3, var4, -1)) {
                   stackOut_9_0 = vh.field_h;
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
@@ -165,15 +161,14 @@ final class em extends hi {
         return stackIn_14_0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_s = null;
     }
 
     final static void a(int param0, java.awt.Canvas param1) {
         try {
             if (hi.field_k == 11) {
-                int discarded$0 = 32;
-                md.c();
+                md.c(32);
             }
             ih.a(tl.field_e, 0, q.field_b, mf.field_d);
             kg.a(0, (byte) -83, 0, param1);
@@ -359,8 +354,7 @@ final class em extends hi {
                 }
               }
               var5 = var4;
-              int discarded$8 = 51;
-              if (mm.a(var5)) {
+              if (mm.a(var5, (byte) 51)) {
                 stackOut_7_0 = sg.field_F;
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;

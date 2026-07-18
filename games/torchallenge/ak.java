@@ -39,15 +39,14 @@ final class ak implements Iterable {
         var2 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
-            int discarded$19 = 0;
-            if (we.b()) {
-              boolean discarded$20 = TorChallenge.field_H.a(e.field_m, false, qa.field_b, true);
+            if (we.b(false)) {
+              boolean discarded$15 = TorChallenge.field_H.a(e.field_m, false, qa.field_b, true);
               TorChallenge.field_H.j(-86);
               L1: while (true) {
                 if (!kj.e((byte) -124)) {
                   break L0;
                 } else {
-                  boolean discarded$21 = TorChallenge.field_H.a(di.field_m, b.field_J, -58);
+                  boolean discarded$16 = TorChallenge.field_H.a(di.field_m, b.field_J, -58);
                   continue L1;
                 }
               }
@@ -174,7 +173,7 @@ final class ak implements Iterable {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_c = null;
         field_b = null;
@@ -207,7 +206,7 @@ final class ak implements Iterable {
         }
     }
 
-    final static java.awt.Container b() {
+    final static java.awt.Container b(int param0) {
         if (!(gi.field_b == null)) {
             return (java.awt.Container) (Object) gi.field_b;
         }

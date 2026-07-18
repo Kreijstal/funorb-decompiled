@@ -4,7 +4,7 @@
 final class rd extends rqa {
     static ij field_o;
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 
@@ -79,7 +79,7 @@ final class rd extends rqa {
         super(param0, param1, param2);
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;

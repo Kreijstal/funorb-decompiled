@@ -30,7 +30,7 @@ final class un {
         }
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return 1900 + new Date().getYear();
     }
 

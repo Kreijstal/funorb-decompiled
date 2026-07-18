@@ -233,7 +233,7 @@ final class im extends vh {
         return stackIn_13_0 != 0;
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_Vb = null;
         field_Ub = null;
         field_cc = null;

@@ -9,11 +9,11 @@ final class bb {
     static vi field_f;
     static ji field_e;
 
-    final static String b() {
+    final static String b(byte param0) {
         return sc.field_g.o(32);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_b = null;
         field_f = null;

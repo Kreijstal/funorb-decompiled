@@ -268,117 +268,173 @@ class uqb extends ksa implements ntb {
         uqb var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        int stackIn_8_0 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_7_1 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_4_0 = 0;
         int stackOut_6_0 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        int stackOut_6_1 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_5_1 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_11_0 = 0;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
               L2: {
                 var3 = (uqb) (Object) param1;
                 var4 = 72 % ((22 - param0) / 59);
-                if (var3.field_e != var3.field_e) {
+                if (var3.field_e != ((uqb) this).field_e) {
                   break L2;
                 } else {
-                  pwa discarded$2 = var3.field_d;
                   L3: {
-                    if (null == var3.field_d) {
+                    if (((uqb) this).field_d != null) {
+                      stackOut_3_0 = 0;
+                      stackIn_4_0 = stackOut_3_0;
                       break L3;
                     } else {
-                      if (!var3.field_d.a((byte) 121, (tv) (Object) var3.field_d)) {
-                        break L3;
-                      } else {
-                        break L2;
-                      }
+                      stackOut_2_0 = 1;
+                      stackIn_4_0 = stackOut_2_0;
+                      break L3;
                     }
                   }
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
-                  break L1;
+                  L4: {
+                    stackOut_4_0 = stackIn_4_0;
+                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_5_0 = stackOut_4_0;
+                    if (var3.field_d != null) {
+                      stackOut_6_0 = stackIn_6_0;
+                      stackOut_6_1 = 0;
+                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_7_1 = stackOut_6_1;
+                      break L4;
+                    } else {
+                      stackOut_5_0 = stackIn_5_0;
+                      stackOut_5_1 = 1;
+                      stackIn_7_0 = stackOut_5_0;
+                      stackIn_7_1 = stackOut_5_1;
+                      break L4;
+                    }
+                  }
+                  if ((stackIn_7_0 ^ stackIn_7_1) != 0) {
+                    break L2;
+                  } else {
+                    L5: {
+                      if (null == ((uqb) this).field_d) {
+                        break L5;
+                      } else {
+                        if (!((uqb) this).field_d.a((byte) 121, (tv) (Object) var3.field_d)) {
+                          break L5;
+                        } else {
+                          break L2;
+                        }
+                      }
+                    }
+                    stackOut_12_0 = 0;
+                    stackIn_13_0 = stackOut_12_0;
+                    break L1;
+                  }
                 }
               }
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackOut_11_0 = 1;
+              stackIn_13_0 = stackOut_11_0;
               break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L6: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3_ref;
-            stackOut_9_1 = new StringBuilder().append("uqb.C(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackOut_14_0 = (RuntimeException) var3_ref;
+            stackOut_14_1 = new StringBuilder().append("uqb.C(").append(param0).append(',');
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L4;
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L6;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L4;
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
-        return stackIn_8_0 != 0;
+        return stackIn_13_0 != 0;
     }
 
     public void a(tv param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         uqb var5 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_20_2 = null;
+        int stackIn_10_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_13_1 = 0;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        int stackOut_9_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_12_1 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_11_1 = 0;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         try {
           L0: {
             L1: {
               var5 = (uqb) (Object) param0;
               var4 = 0;
-              if (var5.field_e != var5.field_e) {
-                iva.a(-6940, "int tick has changed. before=" + var5.field_e + ", now=" + var5.field_e);
+              if (((uqb) this).field_e != var5.field_e) {
+                iva.a(-6940, "int tick has changed. before=" + var5.field_e + ", now=" + ((uqb) this).field_e);
                 var4 = 1;
                 break L1;
               } else {
@@ -386,30 +442,65 @@ class uqb extends ksa implements ntb {
               }
             }
             L2: {
-              if (var5.field_d == null) {
+              if (((uqb) this).field_d == null) {
                 break L2;
               } else {
                 if (null != var5.field_d) {
-                  var5.field_d.a((tv) (Object) var5.field_d, -70);
+                  ((uqb) this).field_d.a((tv) (Object) var5.field_d, -70);
                   break L2;
                 } else {
                   break L2;
                 }
               }
             }
-            pwa discarded$2 = var5.field_d;
             L3: {
-              if (var5.field_d == null) {
+              if (null != ((uqb) this).field_d) {
+                stackOut_9_0 = 0;
+                stackIn_10_0 = stackOut_9_0;
                 break L3;
               } else {
-                if (var5.field_d.a((byte) 108, (tv) (Object) var5.field_d)) {
-                  var4 = 1;
-                  iva.a(-6940, "CarouselSystemMessage system_message has changed. before=" + (Object) (Object) var5.field_d + ", now=" + (Object) (Object) var5.field_d);
-                  break L3;
+                stackOut_8_0 = 1;
+                stackIn_10_0 = stackOut_8_0;
+                break L3;
+              }
+            }
+            L4: {
+              stackOut_10_0 = stackIn_10_0;
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_11_0 = stackOut_10_0;
+              if (var5.field_d != null) {
+                stackOut_12_0 = stackIn_12_0;
+                stackOut_12_1 = 0;
+                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_1 = stackOut_12_1;
+                break L4;
+              } else {
+                stackOut_11_0 = stackIn_11_0;
+                stackOut_11_1 = 1;
+                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_1 = stackOut_11_1;
+                break L4;
+              }
+            }
+            L5: {
+              L6: {
+                if ((stackIn_13_0 ^ stackIn_13_1) != 0) {
+                  break L6;
                 } else {
-                  break L3;
+                  if (((uqb) this).field_d == null) {
+                    break L5;
+                  } else {
+                    if (((uqb) this).field_d.a((byte) 108, (tv) (Object) var5.field_d)) {
+                      break L6;
+                    } else {
+                      break L5;
+                    }
+                  }
                 }
               }
+              var4 = 1;
+              iva.a(-6940, "CarouselSystemMessage system_message has changed. before=" + (Object) (Object) var5.field_d + ", now=" + (Object) (Object) ((uqb) this).field_d);
+              break L5;
             }
             if (var4 != 0) {
               tfb.a((byte) -78, "This instance of CarouselEvent has changed");
@@ -420,33 +511,33 @@ class uqb extends ksa implements ntb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L7: {
             var3 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var3;
-            stackOut_17_1 = new StringBuilder().append("uqb.F(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackOut_22_0 = (RuntimeException) var3;
+            stackOut_22_1 = new StringBuilder().append("uqb.F(");
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
-              break L4;
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L7;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
-              break L4;
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + -22 + ')');
+          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + -22 + ')');
         }
     }
 
@@ -485,15 +576,15 @@ class uqb extends ksa implements ntb {
           L0: {
             var4 = (uqb) (Object) param1;
             var3 = var4;
-            var4.field_e = var4.field_e;
+            var4.field_e = ((uqb) this).field_e;
             if (param0 >= 54) {
-              if (var4.field_d != null) {
+              if (((uqb) this).field_d != null) {
                 L1: {
                   L2: {
                     if (null == var3.field_d) {
                       break L2;
                     } else {
-                      if (((Object) (Object) var3.field_d).getClass() != ((Object) (Object) var4.field_d).getClass()) {
+                      if (((Object) (Object) var3.field_d).getClass() != ((Object) (Object) ((uqb) this).field_d).getClass()) {
                         break L2;
                       } else {
                         break L1;
@@ -503,7 +594,7 @@ class uqb extends ksa implements ntb {
                   var3.field_d = new pwa();
                   break L1;
                 }
-                var4.field_d.b((byte) 121, (tv) (Object) var3.field_d);
+                ((uqb) this).field_d.b((byte) 121, (tv) (Object) var3.field_d);
                 break L0;
               } else {
                 var4.field_d = null;

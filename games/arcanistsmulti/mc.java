@@ -11,7 +11,7 @@ final class mc {
         kb.a(param3, param0, -32507, param1);
     }
 
-    final static kc a() {
+    final static kc a(byte param0) {
         return ee.field_g.field_Cb;
     }
 

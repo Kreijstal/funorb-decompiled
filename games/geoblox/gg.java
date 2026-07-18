@@ -102,7 +102,7 @@ final class gg {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_c = null;
@@ -130,8 +130,7 @@ final class gg {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 96;
-            stackOut_2_0 = mj.a(0, param1.length, param1);
+            stackOut_2_0 = mj.a(0, param1.length, param1, (byte) 96);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

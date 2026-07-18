@@ -8,7 +8,7 @@ final class mf {
     static int field_d;
     static td field_c;
 
-    final static tk a(int param0, java.awt.Component param1, int param2) {
+    final static tk a(int param0, java.awt.Component param1, int param2, int param3) {
         try {
             Class var4 = null;
             Throwable var4_ref = null;
@@ -109,8 +109,7 @@ final class mf {
         String stackOut_7_2 = null;
         try {
           L0: {
-            int discarded$5 = 69;
-            qc.a((java.awt.Component) (Object) param1);
+            qc.a((java.awt.Component) (Object) param1, (byte) 69);
             oi.a((java.awt.Component) (Object) param1, 0);
             if (null != qj.field_eb) {
               qj.field_eb.a(205, (java.awt.Component) (Object) param1);
@@ -163,13 +162,12 @@ final class mf {
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(ai.field_c)) {
             throw new IllegalStateException();
         }
         sh.field_t = true;
-        int discarded$0 = 0;
-        ma.a(false);
+        ma.a(false, 0);
         bl.field_a = 0;
     }
 

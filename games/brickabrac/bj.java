@@ -341,7 +341,7 @@ abstract class bj extends jc {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_P = null;
         field_V = null;
         field_T = null;

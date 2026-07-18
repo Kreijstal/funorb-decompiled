@@ -99,8 +99,7 @@ final class rb {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$4 = -22;
-                oj.a(param0, var4);
+                oj.a(param0, var4, -22);
                 var4 = (vf) (Object) r.field_d.d(8192);
                 continue L2;
               }
@@ -113,7 +112,7 @@ final class rb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

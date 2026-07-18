@@ -6,7 +6,7 @@ final class el {
     static int[][] field_b;
     static int field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_c = null;
     }

@@ -19,11 +19,9 @@ final class bl implements qk {
     static String field_f;
     static int[] field_m;
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9, boolean param10) {
+    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
         int var12 = -29;
-        int discarded$0 = 16777215;
-        int discarded$1 = 14;
-        oh.a(16777215, 11, param2, 15, param3, (byte) -125, 0, param1, true, param6, param10, param8);
+        oh.a(16777215, 11, param2, 15, param3, (byte) -125, 0, param1, true, param6, param10, param8, 14, 16777215);
     }
 
     public final void a(int param0, lh param1, byte param2, boolean param3, int param4) {
@@ -311,7 +309,7 @@ final class bl implements qk {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_j = null;
         field_b = null;

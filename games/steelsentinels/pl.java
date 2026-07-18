@@ -42,8 +42,7 @@ final class pl extends ch implements ae {
             return;
         }
         try {
-            int discarded$0 = 1;
-            ue.a(((pl) this).field_Z.j(-97), ((pl) this).field_Z.h((byte) 18), ((pl) this).field_Z.k(14879));
+            ue.a(((pl) this).field_Z.j(-97), ((pl) this).field_Z.h((byte) 18), ((pl) this).field_Z.k(14879), true);
             int var6_int = 10 / ((param1 - -85) / 36);
         } catch (RuntimeException runtimeException) {
             throw ci.a((Throwable) (Object) runtimeException, "pl.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -55,11 +54,10 @@ final class pl extends ch implements ae {
             return (java.awt.Container) (Object) vd.field_c;
         }
         int var1 = -117 / ((13 - param0) / 50);
-        int discarded$0 = -21;
-        return (java.awt.Container) (Object) wl.d();
+        return (java.awt.Container) (Object) wl.d((byte) -21);
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_X = null;
         field_ab = null;
         field_V = null;
@@ -70,7 +68,7 @@ final class pl extends ch implements ae {
         field_U = null;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0, boolean param1, int param2, byte param3) {
         RuntimeException var4 = null;
         gh var5 = null;
         gh var6 = null;
@@ -599,9 +597,7 @@ final class pl extends ch implements ae {
               if (ni.field_a != null) {
                 L28: {
                   if (mn.field_E.field_Eb != 0) {
-                    int discarded$4 = -80;
-                    int discarded$5 = 11;
-                    nm.a();
+                    nm.a(11, (byte) -80);
                     break L28;
                   } else {
                     break L28;
@@ -613,9 +609,7 @@ final class pl extends ch implements ae {
                       b.a(-107, 11);
                       break L29;
                     } else {
-                      int discarded$6 = 11;
-                      int discarded$7 = 12;
-                      ml.a();
+                      ml.a((byte) 12, 11);
                       break L29;
                     }
                   } else {
@@ -647,7 +641,7 @@ final class pl extends ch implements ae {
         ((pl) this).e((byte) 50);
     }
 
-    final static gh d() {
+    final static gh d(boolean param0) {
         return gl.field_t.field_Ub;
     }
 

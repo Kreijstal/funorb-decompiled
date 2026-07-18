@@ -92,8 +92,7 @@ abstract class sk {
                   stackIn_13_0 = stackOut_12_0;
                   break L0;
                 } else {
-                  int discarded$15 = -123;
-                  if (!b.a(param2.charAt(var3_int))) {
+                  if (!b.a(param2.charAt(var3_int), (byte) -123)) {
                     stackOut_9_0 = 0;
                     stackIn_10_0 = stackOut_9_0;
                     return stackIn_10_0 != 0;

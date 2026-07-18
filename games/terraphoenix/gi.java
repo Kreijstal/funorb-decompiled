@@ -648,14 +648,12 @@ final class gi {
                             break L11;
                           }
                         }
-                        int discarded$8 = -29593;
-                        gi discarded$9 = this.a(var11, false);
-                        int discarded$10 = -29593;
-                        gi discarded$11 = this.a(((gi) this).field_u.a(120, var7, ((gi) this).field_x, var6 + 1), false);
-                        gi discarded$12 = this.a((byte) 94, false, ((gi) this).field_u.a(83, var7, ((gi) this).field_x, var6));
-                        gi discarded$13 = this.a((byte) 94, false, ((gi) this).field_u.a(126, 1 + var7, ((gi) this).field_x, var6));
-                        gi discarded$14 = this.a(var7, var6, ((gi) this).field_x, (byte) -20);
-                        gi discarded$15 = this.a(var7, var6, 1 + ((gi) this).field_x, (byte) -124);
+                        gi discarded$6 = this.a(var11, false, -29593);
+                        gi discarded$7 = this.a(((gi) this).field_u.a(120, var7, ((gi) this).field_x, var6 + 1), false, -29593);
+                        gi discarded$8 = this.a((byte) 94, false, ((gi) this).field_u.a(83, var7, ((gi) this).field_x, var6));
+                        gi discarded$9 = this.a((byte) 94, false, ((gi) this).field_u.a(126, 1 + var7, ((gi) this).field_x, var6));
+                        gi discarded$10 = this.a(var7, var6, ((gi) this).field_x, (byte) -20);
+                        gi discarded$11 = this.a(var7, var6, 1 + ((gi) this).field_x, (byte) -124);
                         if (var11 != null) {
                           if (var11.field_h != null) {
                             if (0 < var11.field_h.field_P) {
@@ -776,7 +774,7 @@ final class gi {
               if (param0 == 11) {
                 break L0;
               } else {
-                gi discarded$5 = ((gi) this).a((byte) -35);
+                gi discarded$1 = ((gi) this).a((byte) -35);
                 break L0;
               }
             }
@@ -1077,8 +1075,7 @@ final class gi {
                             } else {
                               if (50.0 > ((gi) this).field_t) {
                                 ((gi) this).field_y = -50.0;
-                                int discarded$6 = -29593;
-                                return this.a(var4, true);
+                                return this.a(var4, true, -29593);
                               } else {
                                 break L28;
                               }
@@ -1089,8 +1086,7 @@ final class gi {
                           break L27;
                         } else {
                           ((gi) this).field_y = -50.0;
-                          int discarded$7 = -29593;
-                          return this.a(var4, true);
+                          return this.a(var4, true, -29593);
                         }
                       }
                     }
@@ -1100,8 +1096,7 @@ final class gi {
                       } else {
                         if ((4 & var4.field_e) == 4) {
                           ((gi) this).field_y = 50.0;
-                          int discarded$8 = -29593;
-                          return this.a(((gi) this).field_u.a(-61, ((gi) this).field_m, ((gi) this).field_x, 1 + ((gi) this).field_c), true);
+                          return this.a(((gi) this).field_u.a(-61, ((gi) this).field_m, ((gi) this).field_x, 1 + ((gi) this).field_c), true, -29593);
                         } else {
                           L30: {
                             if (64 != (64 & var4.field_e)) {
@@ -1111,8 +1106,7 @@ final class gi {
                                 break L30;
                               } else {
                                 ((gi) this).field_y = 50.0;
-                                int discarded$9 = -29593;
-                                return this.a(((gi) this).field_u.a(-62, ((gi) this).field_m, ((gi) this).field_x, 1 + ((gi) this).field_c), true);
+                                return this.a(((gi) this).field_u.a(-62, ((gi) this).field_m, ((gi) this).field_x, 1 + ((gi) this).field_c), true, -29593);
                               }
                             }
                           }
@@ -1538,13 +1532,10 @@ final class gi {
             return;
         }
         if (0L != param1 % 10L) {
-            int discarded$1 = 0;
-            te.a(param1);
+            te.a(param1, 0);
         } else {
-            int discarded$2 = 0;
-            te.a(-1L + param1);
-            int discarded$3 = 0;
-            te.a(1L);
+            te.a(-1L + param1, 0);
+            te.a(1L, 0);
         }
         if (param0 >= -25) {
             field_r = null;
@@ -1659,14 +1650,14 @@ final class gi {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_r = null;
         field_q = null;
         field_j = null;
         field_l = null;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -1735,16 +1726,16 @@ final class gi {
                         var9_int = 1;
                         L5: while (true) {
                           if (var6 <= var9_int) {
-                            String[][] dupTemp$7 = new String[3][var7];
-                            var5.field_p = dupTemp$7;
-                            var9 = dupTemp$7;
+                            String[][] dupTemp$6 = new String[3][var7];
+                            var5.field_p = dupTemp$6;
+                            var9 = dupTemp$6;
                             var10 = new String[3][var7];
-                            long[][] dupTemp$8 = new long[3][var7];
-                            var5.field_l = dupTemp$8;
-                            var11 = dupTemp$8;
-                            int[][] dupTemp$9 = new int[3][var8 * var7];
-                            var5.field_q = dupTemp$9;
-                            var12 = dupTemp$9;
+                            long[][] dupTemp$7 = new long[3][var7];
+                            var5.field_l = dupTemp$7;
+                            var11 = dupTemp$7;
+                            int[][] dupTemp$8 = new int[3][var8 * var7];
+                            var5.field_q = dupTemp$8;
+                            var12 = dupTemp$8;
                             var13 = 0;
                             var14 = 0;
                             var15 = 0;
@@ -1775,9 +1766,9 @@ final class gi {
                                         if (var26 >= var8) {
                                           break L7;
                                         } else {
-                                          int incrementValue$10 = var16;
+                                          int incrementValue$9 = var16;
                                           var16++;
-                                          var12[0][incrementValue$10] = var28.f((byte) -107);
+                                          var12[0][incrementValue$9] = var28.f((byte) -107);
                                           var26++;
                                           continue L8;
                                         }
@@ -1799,9 +1790,9 @@ final class gi {
                                           if (var8 <= var26) {
                                             break L9;
                                           } else {
-                                            int incrementValue$11 = var17;
+                                            int incrementValue$10 = var17;
                                             var17++;
-                                            var12[1][incrementValue$11] = var28.f((byte) -107);
+                                            var12[1][incrementValue$10] = var28.f((byte) -107);
                                             var26++;
                                             continue L10;
                                           }
@@ -1827,9 +1818,9 @@ final class gi {
                                           if (var8 <= var26) {
                                             break L11;
                                           } else {
-                                            int incrementValue$12 = var18;
+                                            int incrementValue$11 = var18;
                                             var18++;
-                                            var12[2][incrementValue$12] = var28.f((byte) -107);
+                                            var12[2][incrementValue$11] = var28.f((byte) -107);
                                             var26++;
                                             continue L12;
                                           }
@@ -1874,8 +1865,7 @@ final class gi {
                 }
               } else {
                 if (var2 != 1) {
-                  int discarded$13 = -15465;
-                  bd.a((Throwable) null, "HS1: " + r.i(), -60);
+                  bd.a((Throwable) null, "HS1: " + r.i(-15465), -60);
                   gb.g(-17464);
                   break L1;
                 } else {
@@ -1916,7 +1906,7 @@ final class gi {
         }
     }
 
-    private final gi a(dl param0, boolean param1) {
+    private final gi a(dl param0, boolean param1, int param2) {
         RuntimeException var4 = null;
         Object stackIn_5_0 = null;
         Object stackIn_39_0 = null;
@@ -2291,7 +2281,7 @@ final class gi {
         this.a((byte) -6, true);
     }
 
-    final static void a(fa param0, fa param1, fa param2) {
+    final static void a(fa param0, fa param1, fa param2, int param3) {
         RuntimeException var4 = null;
         bg[] var5 = null;
         bg[][] var6 = null;
@@ -2369,7 +2359,7 @@ final class gi {
             qk.field_e = (pk) (Object) ec.a("commonui", 8192, param1, param0, "arezzo14");
             be.field_x = (pk) (Object) ec.a("commonui", 8192, param1, param0, "arezzo14bold");
             var17 = new ci(param2.a("button.gif", "", -21653), (java.awt.Component) (Object) ae.field_G);
-            bg discarded$2 = qb.a("dropdown", (byte) -36, "commonui", param0);
+            bg discarded$1 = qb.a("dropdown", (byte) -36, "commonui", param0);
             var5 = lf.a(true, "commonui", "screen_options", param0);
             hk.field_d = new bg[4];
             ng.field_u = new bg[4];
@@ -2417,8 +2407,7 @@ final class gi {
                         var9++;
                         continue L2;
                       } else {
-                        int discarded$3 = 0;
-                        var14[var11_int] = lf.a(var21[var11_int], var5[var9]);
+                        var14[var11_int] = lf.a(var21[var11_int], var5[var9], 0);
                         var11_int++;
                         continue L3;
                       }

@@ -116,8 +116,7 @@ final class ug extends bh {
                   }
                 }
               }
-              int discarded$1 = 2;
-              kh.a();
+              kh.a(2);
               break L1;
             }
             var66 = new int[param0.field_D];
@@ -368,7 +367,7 @@ final class ug extends bh {
         }
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -398,8 +397,7 @@ final class ug extends bh {
         var5 = client.field_A ? 1 : 0;
         try {
           L0: {
-            int discarded$11 = 4564;
-            if (!cb.a(false, param0)) {
+            if (!cb.a(false, param0, 4564)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
@@ -457,7 +455,7 @@ final class ug extends bh {
         return stackIn_13_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
         field_n = null;
     }
@@ -466,7 +464,7 @@ final class ug extends bh {
         throw new Error();
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;

@@ -241,8 +241,7 @@ final class ig extends ki implements ka {
               if (param3 != ((ig) this).field_F) {
                 if (param3 != ((ig) this).field_E) {
                   if (((ig) this).field_G == param3) {
-                    int discarded$2 = 4;
-                    qk.f();
+                    qk.f(4);
                     break L1;
                   } else {
                     break L1;

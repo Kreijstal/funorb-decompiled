@@ -46,15 +46,14 @@ final class nn {
         }
     }
 
-    final static void a(eg param0) {
+    final static void a(eg param0, boolean param1) {
         int[] var3 = null;
         try {
             var3 = param0.field_q;
             int[] var2 = var3;
             param0.field_q = param0.field_g;
             param0.field_g = var3;
-            int discarded$0 = 38;
-            jf.a(param0);
+            jf.a(param0, (byte) 38);
             param0.a();
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "nn.A(" + (param0 != null ? "{...}" : "null") + ',' + true + ')');
@@ -137,13 +136,11 @@ final class nn {
                       var7 = var9 + "; Discard;";
                       break L1;
                     } else {
-                      int discarded$2 = 0;
-                      var7 = var9 + "; Expires=" + hn.a(rl.a((byte) -120) - -(param0 * 1000L)) + "; Max-Age=" + param0;
+                      var7 = var9 + "; Expires=" + hn.a(rl.a((byte) -120) - -(param0 * 1000L), false) + "; Max-Age=" + param0;
                       break L1;
                     }
                   }
-                  int discarded$3 = 35;
-                  mo.a("document.cookie=\"" + var7 + "\"", param2);
+                  mo.a("document.cookie=\"" + var7 + "\"", param2, (byte) 35);
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -239,7 +236,7 @@ final class nn {
         }
     }
 
-    final static id b() {
+    final static id b(int param0) {
         try {
             Throwable var1 = null;
             id stackIn_2_0 = null;

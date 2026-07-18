@@ -180,7 +180,7 @@ final class mn extends le {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = ZombieDawn.field_J;
@@ -253,8 +253,7 @@ final class mn extends le {
                   }
                 }
                 if (((mn) this).field_o <= 0) {
-                  int discarded$1 = 0;
-                  this.a();
+                  this.a(0);
                   ((mn) this).b(-27598);
                   return true;
                 } else {
@@ -542,8 +541,7 @@ final class mn extends le {
             }
             var3 = var2.field_w;
             var4 = var2.field_t;
-            int discarded$0 = 1584;
-            hk.i();
+            hk.i(1584);
             kh.field_a = new vn(var3, 3 * var4 / 4);
             kh.field_a.a();
             var2.e(0, 0);

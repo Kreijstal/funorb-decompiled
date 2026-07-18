@@ -536,8 +536,7 @@ class qt extends js {
                 ((qt) this).field_j = -((qt) this).field_j;
                 break L1;
               } else {
-                int discarded$3 = -4;
-                ((qt) this).field_j = wr.field_f + -po.a((js) this);
+                ((qt) this).field_j = wr.field_f + -po.a((js) this, -4);
                 break L1;
               }
             }

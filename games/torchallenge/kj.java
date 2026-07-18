@@ -182,8 +182,7 @@ class kj extends ee implements gk {
             L1: {
               if (((kj) this).a(param0, param1, -125, param2)) {
                 ((kj) this).a(param2, 127, param0, param1);
-                int discarded$2 = 127;
-                this.a(param0, param2, param1);
+                this.a(param0, param2, param1, 127);
                 break L1;
               } else {
                 break L1;
@@ -526,7 +525,7 @@ class kj extends ee implements gk {
         }
     }
 
-    private final void a(Hashtable param0, StringBuilder param1, int param2) {
+    private final void a(Hashtable param0, StringBuilder param1, int param2, int param3) {
         nj var5 = null;
         RuntimeException var5_ref = null;
         ee var6 = null;

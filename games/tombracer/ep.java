@@ -1567,11 +1567,10 @@ final class ep extends c implements fo, ffa, t {
     public final void a(int param0, int param1, int param2) {
         ((ep) this).field_z.field_u.a((ffa) this, (byte) 98);
         this.a(param1, param0, (byte) 114);
-        int discarded$4 = -99;
-        this.g();
+        this.g((byte) -99);
         ((ep) this).field_t.field_g = null;
         if (param2 != 2) {
-          int discarded$5 = ((ep) this).d(107);
+          int discarded$2 = ((ep) this).d(107);
           ((ep) this).field_z.field_u.b((ffa) this, param2 + 7071);
           return;
         } else {
@@ -1867,8 +1866,7 @@ final class ep extends c implements fo, ffa, t {
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
         L0: {
-          int discarded$1 = -99;
-          this.g();
+          this.g((byte) -99);
           ((ep) this).field_q.a(param0 + 87);
           if (param1) {
             if (this.f((byte) -118)) {
@@ -2671,8 +2669,7 @@ final class ep extends c implements fo, ffa, t {
         try {
           L0: {
             if (!((ep) this).field_l) {
-              int discarded$15 = 2;
-              if (eha.a(((ep) this).field_o, param1, ((ep) this).field_K, ((ep) this).field_o, param2, ((ep) this).field_u) >= 0) {
+              if (eha.a(((ep) this).field_o, param1, ((ep) this).field_K, ((ep) this).field_o, param2, ((ep) this).field_u, 2) >= 0) {
                 stackOut_6_0 = this.b(115, param0);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
@@ -2890,7 +2887,7 @@ final class ep extends c implements fo, ffa, t {
         return stackIn_4_0 != 0;
     }
 
-    private final void g() {
+    private final void g(byte param0) {
     }
 
     ep() {

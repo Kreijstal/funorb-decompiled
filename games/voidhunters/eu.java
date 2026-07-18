@@ -15,7 +15,7 @@ final class eu extends ev {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         if (qmb.field_q < 10) {
             return false;
         }
@@ -66,7 +66,7 @@ final class eu extends ev {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         field_h = null;
     }

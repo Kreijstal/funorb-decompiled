@@ -228,9 +228,9 @@ final class na {
             ((na) this).field_k = 15658734;
             var4.field_o = 15658734;
             ((na) this).field_f = 15658734;
-            gm discarded$11 = var4.a(0, true).a(15658734, true).a(false, pm.a(7829367, 8947848, (byte) -117, 10066329));
-            gm discarded$12 = var4.a(1, true).a(false, pm.a(13421772, 11184810, (byte) -117, 10066329));
-            gm discarded$13 = var4.a(3, true).a(false, pm.a(10066329, 8947848, (byte) -117, 7829367)).b(1, 16802).a((byte) 92, 1);
+            gm discarded$10 = var4.a(0, true).a(15658734, true).a(false, pm.a(7829367, 8947848, (byte) -117, 10066329));
+            gm discarded$11 = var4.a(1, true).a(false, pm.a(13421772, 11184810, (byte) -117, 10066329));
+            gm discarded$12 = var4.a(3, true).a(false, pm.a(10066329, 8947848, (byte) -117, 7829367)).b(1, 16802).a((byte) 92, 1);
             var5 = new bd[9];
             var16 = new gk(32, 32);
             var18 = var16;
@@ -239,23 +239,22 @@ final class na {
               if (var7_int >= var18.field_D.length) {
                 L2: {
                   var5[4] = (bd) (Object) var18;
-                  gm discarded$14 = var4.a(4, true).a((byte) -37, true).a(false, var5);
-                  int discarded$15 = 0;
-                  gm discarded$16 = var4.a(5, true).a(false, uk.a(65793, 0, (byte) 127, 0)).a((byte) -128, true).a(-1, true);
+                  gm discarded$13 = var4.a(4, true).a((byte) -37, true).a(false, var5);
+                  gm discarded$14 = var4.a(5, true).a(false, uk.a(65793, 0, (byte) 127, 0, 0)).a((byte) -128, true).a(-1, true);
                   ((na) this).field_e = (nn) (Object) var4;
                   var6 = new ha(var4, true);
                   var6.field_k = 0;
                   var7 = new ha(var4, true);
                   var7.field_k = 0;
                   var7.a(false, en.h(-71, 8947848));
-                  gm discarded$17 = var7.a(1, true).a(false, en.h(-96, 11184810)).a(2236962, true);
+                  gm discarded$15 = var7.a(1, true).a(false, en.h(-96, 11184810)).a(2236962, true);
                   ((na) this).field_n = (nn) (Object) new rf(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                  ra discarded$18 = new ra(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                  h discarded$19 = new h(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                  ra discarded$16 = new ra(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                  h discarded$17 = new h(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
                   var8 = new ha();
                   var17.a(-80, (cn) (Object) var8);
-                  gm discarded$20 = var8.a(0, true).a(false, pm.a(10066329, 15658734, (byte) -117, 7829367)).a(1118481, true).a(-2147483648, -1);
-                  gm discarded$21 = var8.a(4, true).a((byte) -52, true).a(false, var5);
+                  gm discarded$18 = var8.a(0, true).a(false, pm.a(10066329, 15658734, (byte) -117, 7829367)).a(1118481, true).a(-2147483648, -1);
+                  gm discarded$19 = var8.a(4, true).a((byte) -52, true).a(false, var5);
                   ((na) this).field_j = (nn) (Object) var8;
                   var9 = new bd[9];
                   var9[4] = new bd(2, 1);
@@ -327,7 +326,7 @@ final class na {
         }
     }
 
-    private final void a(int param0, int param1, String param2) {
+    private final void a(int param0, int param1, String param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -429,8 +428,7 @@ final class na {
             if (((na) this).field_m) {
                 this.a(0, param2, param0, param1);
             } else {
-                int discarded$0 = -54;
-                this.a(param0, param2, param1);
+                this.a(param0, param2, param1, (byte) -54);
             }
             int var5_int = 125 / ((-59 - param3) / 39);
         } catch (RuntimeException runtimeException) {

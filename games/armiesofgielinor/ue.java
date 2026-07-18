@@ -108,8 +108,7 @@ final class ue {
                     }
                   }
                 }
-                int discarded$2 = 111;
-                this.d();
+                this.d((byte) 111);
                 break L2;
               }
             }
@@ -126,8 +125,7 @@ final class ue {
                   ((ue) this).field_h = ((ue) this).field_h + (long)var5_int;
                   param0 = param0 - var5_int;
                   ((ue) this).field_c = ((ue) this).field_b.length;
-                  int discarded$3 = 111;
-                  this.d();
+                  this.d((byte) 111);
                   break L4;
                 }
               }
@@ -330,8 +328,7 @@ final class ue {
         try {
           L0: {
             if (kp.a(false, param1, param0, param4)) {
-              int discarded$2 = 0;
-              stackOut_5_0 = lq.a(param2.a((byte) 103, param4, param1));
+              stackOut_5_0 = lq.a(param2.a((byte) 103, param4, param1), 0);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -417,8 +414,7 @@ final class ue {
         if (param0 != 81) {
             ((ue) this).field_c = 28;
         }
-        int discarded$0 = 111;
-        this.d();
+        this.d((byte) 111);
         ((ue) this).field_j.b(param0 + 702);
     }
 
@@ -529,8 +525,7 @@ final class ue {
                     break L4;
                   } else {
                     L6: {
-                      int discarded$2 = -42;
-                      this.e();
+                      this.e((byte) -42);
                       var9_int = param3;
                       if (((ue) this).field_d >= var9_int) {
                         break L6;
@@ -569,9 +564,9 @@ final class ue {
                           if (param0 >= var9_int) {
                             break L8;
                           } else {
-                            int incrementValue$3 = param0;
+                            int incrementValue$1 = param0;
                             param0++;
-                            param1[incrementValue$3] = (byte) 0;
+                            param1[incrementValue$1] = (byte) 0;
                             param3--;
                             ((ue) this).field_h = ((ue) this).field_h + 1L;
                             continue L10;
@@ -715,7 +710,7 @@ final class ue {
         ((ue) this).field_h = param1;
     }
 
-    private final void e() throws IOException {
+    private final void e(byte param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -760,16 +755,15 @@ final class ue {
     }
 
     final static void a(byte param0) {
-        int discarded$0 = 5;
-        t.field_c = kv.k();
+        t.field_c = kv.k(5);
         if (param0 < 78) {
-            wk[] discarded$1 = ue.a(59, -15, 35, -65);
+            wk[] discarded$0 = ue.a(59, -15, 35, -65);
         }
         ee.field_v = new gk();
         ci.h((byte) 74);
     }
 
-    private final void d() throws IOException {
+    private final void d(byte param0) throws IOException {
         long var2 = 0L;
         long var4 = 0L;
         int var6 = 0;

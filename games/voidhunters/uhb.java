@@ -249,7 +249,7 @@ final class uhb extends rqa {
         }
     }
 
-    final static asb a(int param0, int param1, int param2) {
+    final static asb a(int param0, int param1, int param2, boolean param3, boolean param4) {
         RuntimeException var5 = null;
         asb stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -264,14 +264,14 @@ final class uhb extends rqa {
                 break L1;
               }
             }
-            stackOut_3_0 = mla.a(true, false, -120, false, param1, 1);
+            stackOut_3_0 = mla.a(param3, param4, -120, false, param1, param0);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var5, "uhb.E(" + 1 + ',' + param1 + ',' + param2 + ',' + true + ',' + false + ')');
+          throw rta.a((Throwable) (Object) var5, "uhb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
         return stackIn_4_0;
     }
@@ -294,7 +294,7 @@ final class uhb extends rqa {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        int stackIn_11_0 = 0;
+        boolean stackIn_11_0 = false;
         int stackIn_23_0 = 0;
         int stackIn_25_0 = 0;
         int stackIn_26_0 = 0;
@@ -312,7 +312,7 @@ final class uhb extends rqa {
         StringBuilder stackIn_61_1 = null;
         String stackIn_61_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
+        boolean stackOut_10_0 = false;
         int stackOut_22_0 = 0;
         int stackOut_25_0 = 0;
         int stackOut_25_1 = 0;
@@ -337,8 +337,7 @@ final class uhb extends rqa {
             L1: {
               var5_int = ieb.a((param4 + -param1) * 3, -128);
               var6 = 3 * param1;
-              int discarded$1 = -19689;
-              am.a();
+              am.a(-19689);
               var7 = var5_int + -10;
               var8 = -120 % ((-38 - param2) / 49);
               if (0 >= param3.field_z) {
@@ -363,15 +362,15 @@ final class uhb extends rqa {
                     var10 = param3.field_w[var9];
                     var11 = param3.field_N[var9];
                     var12 = param3.field_D[var9];
-                    stackOut_10_0 = 0;
-                    stackIn_46_0 = stackOut_10_0;
+                    stackOut_10_0 = param0;
+                    stackIn_46_0 = stackOut_10_0 ? 1 : 0;
                     stackIn_11_0 = stackOut_10_0;
                     if (var20 != 0) {
                       break L3;
                     } else {
                       L5: {
                         L6: {
-                          if (stackIn_11_0 != 0) {
+                          if (stackIn_11_0) {
                             var13 = cl.field_b[var10];
                             var14 = lr.field_o[var10];
                             var15 = cl.field_b[var11] + -var13;
@@ -544,7 +543,7 @@ final class uhb extends rqa {
           L16: {
             var5 = decompiledCaughtException;
             stackOut_57_0 = (RuntimeException) var5;
-            stackOut_57_1 = new StringBuilder().append("uhb.C(").append(false).append(',').append(param1).append(',').append(param2).append(',');
+            stackOut_57_1 = new StringBuilder().append("uhb.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_60_0 = stackOut_57_0;
             stackIn_60_1 = stackOut_57_1;
             stackIn_58_0 = stackOut_57_0;

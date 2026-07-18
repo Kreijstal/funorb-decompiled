@@ -308,7 +308,7 @@ final class bp extends rqa {
         return stackIn_4_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -384,8 +384,7 @@ final class bp extends rqa {
         L0: {
           wjb.field_p = dma.field_j;
           gp.field_p = dma.field_g;
-          int discarded$1 = 1;
-          moa.a();
+          moa.a(true);
           lc.field_b.a(0, -83, -40 + (tb.field_a.field_G + -2), 0, tb.field_a.field_hb);
           nna.field_v.a(0, -17, lw.field_i.field_hb, 0, nna.field_w);
           var1 = nna.field_w - -2;

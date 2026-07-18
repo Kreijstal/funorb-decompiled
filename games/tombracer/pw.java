@@ -120,7 +120,7 @@ final class pw extends fqa {
         return false;
     }
 
-    final static void C() {
+    final static void C(int param0) {
         if (-gpa.field_b != tl.field_r) {
             if (tl.field_r != 250 - gpa.field_b) {
             }

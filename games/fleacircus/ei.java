@@ -1811,7 +1811,7 @@ final class ei extends sh {
         this.b(-1, param1);
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_H = null;
         field_N = null;
         field_v = null;

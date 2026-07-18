@@ -159,23 +159,15 @@ final class wa extends cn {
               }
             }
             kc.field_x[2] = new wk[6];
-            int discarded$8 = 0;
-            kc.field_x[2][0] = rl.a(param2, "basic", "ct_foreground_01");
-            int discarded$9 = 0;
-            kc.field_x[2][1] = rl.a(param2, "basic", "ct_foreground_02");
-            int discarded$10 = 0;
-            kc.field_x[2][2] = rl.a(param2, "basic", "ct_foreground_03");
-            int discarded$11 = 0;
-            kc.field_x[2][3] = rl.a(param2, "basic", "ct_foreground_04");
-            int discarded$12 = 0;
-            kc.field_x[2][4] = rl.a(param2, "basic", "ct_foreground_05");
-            int discarded$13 = 0;
-            kc.field_x[2][5] = rl.a(param2, "basic", "ct_foreground_06");
+            kc.field_x[2][0] = rl.a(param2, "basic", "ct_foreground_01", false);
+            kc.field_x[2][1] = rl.a(param2, "basic", "ct_foreground_02", false);
+            kc.field_x[2][2] = rl.a(param2, "basic", "ct_foreground_03", false);
+            kc.field_x[2][3] = rl.a(param2, "basic", "ct_foreground_04", false);
+            kc.field_x[2][4] = rl.a(param2, "basic", "ct_foreground_05", false);
+            kc.field_x[2][5] = rl.a(param2, "basic", "ct_foreground_06", false);
             kc.field_x[4] = new wk[2];
-            int discarded$14 = 0;
-            kc.field_x[4][0] = rl.a(param2, "basic", "starcruiser_base");
-            int discarded$15 = 0;
-            kc.field_x[4][1] = rl.a(param2, "basic", "starcruiser_top");
+            kc.field_x[4][0] = rl.a(param2, "basic", "starcruiser_base", false);
+            kc.field_x[4][1] = rl.a(param2, "basic", "starcruiser_top", false);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -235,7 +227,7 @@ final class wa extends cn {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_o = null;
     }
 
@@ -418,7 +410,7 @@ final class wa extends cn {
         return qm.a((byte) -31, bk.field_U, ti.field_p);
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         if (null == g.field_l) {
             return "";
         }
@@ -765,8 +757,7 @@ final class wa extends cn {
     final static fm b(int param0, int param1) {
         int var3 = 0;
         int var4 = SteelSentinels.field_G;
-        int discarded$0 = 0;
-        fm[] var5 = gb.b();
+        fm[] var5 = gb.b(false);
         fm[] var2 = var5;
         for (var3 = 0; var3 < var5.length; var3++) {
             if (!(param0 != var5[var3].field_c)) {

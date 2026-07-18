@@ -1096,8 +1096,7 @@ final class bh extends ela {
         try {
           L0: {
             if (param1 == 0) {
-              int discarded$2 = -62;
-              stackOut_3_0 = new bfa((Object) (Object) rua.a((String) param0[0].field_d));
+              stackOut_3_0 = new bfa((Object) (Object) rua.a((String) param0[0].field_d, -62));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

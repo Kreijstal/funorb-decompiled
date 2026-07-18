@@ -13,20 +13,17 @@ class ff extends qa {
     final static void f(int param0) {
         int var1 = 0;
         int var2 = 0;
-        int discarded$3 = -42;
-        var1 = bl.c();
+        var1 = bl.c(-42);
         if (param0 != -4604) {
           field_t = null;
           var2 = ii.b((byte) -126);
           qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << 1) + var1, var2 - -(ic.field_g << 1), 12018);
-          int discarded$4 = -125;
-          up.b();
+          up.b(-125);
           return;
         } else {
           var2 = ii.b((byte) -126);
           qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << 1) + var1, var2 - -(ic.field_g << 1), 12018);
-          int discarded$5 = -125;
-          up.b();
+          up.b(-125);
           return;
         }
     }
@@ -84,7 +81,7 @@ class ff extends qa {
     protected ff() {
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         vg var4 = null;
@@ -110,7 +107,7 @@ class ff extends qa {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_q = null;
         field_u = null;
         field_t = null;

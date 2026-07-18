@@ -14,7 +14,7 @@ abstract class bl extends kf {
     static char[] field_Z;
     static String field_X;
 
-    private final int a() {
+    private final int a(int param0) {
         return !((bl) this).field_S ? 0 : (Object) (Object) ((bl) this).field_ab.g((byte) -83) == this ? 256 : 0;
     }
 
@@ -719,8 +719,7 @@ abstract class bl extends kf {
           }
         }
         var2 = stackIn_3_0 + (stackIn_3_1 - -(ga.a(188, 0, var2, kb.field_e, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -127, 0, param0 + 110) * 16));
-        int discarded$1 = -22981;
-        vk.a(nf.field_e, param0 + 190, 3, gi.field_c, kk.field_n, var2);
+        vk.a(nf.field_e, param0 + 190, 3, gi.field_c, kk.field_n, var2, -22981);
         hk.g(309 - -param0, 117, 242, 263172);
         hk.g(310 - -param0, 117, 242, 6316128);
         fl.a(130, 256, 16694016, hg.field_d, 320 + param0, (mm) (Object) w.field_kb);
@@ -738,8 +737,7 @@ abstract class bl extends kf {
         int stackOut_4_0 = 0;
         int stackOut_5_0 = 0;
         L0: {
-          int discarded$2 = -10604;
-          ((bl) this).field_V = this.a();
+          ((bl) this).field_V = this.a(-10604);
           if (param0 >= 77) {
             break L0;
           } else {
@@ -775,8 +773,7 @@ abstract class bl extends kf {
         int stackOut_11_0 = 0;
         int stackOut_12_0 = 0;
         L0: {
-          int discarded$2 = -10604;
-          var2 = this.a();
+          var2 = this.a(-10604);
           var3 = var2 - ((bl) this).field_V;
           if (param0 > 15) {
             break L0;
@@ -828,14 +825,13 @@ abstract class bl extends kf {
 
     abstract void b(int param0, int param1, int param2);
 
-    final static void g() {
+    final static void g(byte param0) {
         bf.field_x = bg.a(true);
         ah.field_c = new ka();
-        int discarded$0 = 66;
-        dd.a(true, true);
+        dd.a(true, true, (byte) 66);
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_Y = null;
         field_U = null;
         field_W = null;

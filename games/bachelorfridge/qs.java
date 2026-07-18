@@ -120,12 +120,12 @@ final class qs extends pu {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_m = null;
         field_l = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int var2 = BachelorFridge.field_y;
         if (lfa.field_q > 0) {
             lfa.field_q = lfa.field_q - 1;
@@ -139,8 +139,7 @@ final class qs extends pu {
             }
         }
         if (lfa.field_q > 0) {
-            int discarded$0 = 199;
-            pm.f();
+            pm.f(199);
         }
         if (ld.field_p > 0) {
             dna.c(ld.field_p, false);

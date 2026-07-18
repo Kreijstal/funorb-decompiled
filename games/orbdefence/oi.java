@@ -18,8 +18,7 @@ final class oi {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
-            int discarded$2 = -1;
-            this.a(param0);
+            this.a(param0, -1);
             if (param4 == 0) {
               var6 = ((oi) this).field_a.getRefreshRate();
               var7 = ((oi) this).field_b.getDisplayModes();
@@ -77,7 +76,7 @@ final class oi {
         }
     }
 
-    private final void a(java.awt.Frame param0) {
+    private final void a(java.awt.Frame param0, int param1) {
         ((oi) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 
@@ -139,8 +138,7 @@ final class oi {
             }
             ((oi) this).field_a = null;
         }
-        int discarded$0 = -1;
-        this.a((java.awt.Frame) null);
+        this.a((java.awt.Frame) null, -1);
     }
 
     @SuppressWarnings("unchecked")

@@ -206,7 +206,7 @@ abstract class qc extends qa {
 
     abstract byte[] e(int param0);
 
-    final static void a(br param0, br param1) {
+    final static void a(br param0, br param1, int param2) {
         try {
             if (param0.field_b != null) {
                 param0.a(true);

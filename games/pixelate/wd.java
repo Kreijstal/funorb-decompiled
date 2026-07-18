@@ -241,7 +241,7 @@ final class wd {
         }
     }
 
-    final static void a(ak param0) {
+    final static void a(ak param0, boolean param1) {
         ak var4 = null;
         ak var5 = null;
         int var3 = Pixelate.field_H ? 1 : 0;

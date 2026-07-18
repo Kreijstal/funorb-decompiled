@@ -105,8 +105,7 @@ final class fg extends ae {
             qf.field_g = param2;
             va.field_a = 2;
             var5 = (CharSequence) (Object) param2;
-            int discarded$0 = 0;
-            ql.field_a = tg.a(var5);
+            ql.field_a = tg.a(var5, false);
             jj.field_M = param1;
             lp.a((byte) 69);
         } catch (RuntimeException runtimeException) {

@@ -15,7 +15,7 @@ final class cf extends hd {
     private String field_Eb;
     private String field_zb;
 
-    public static void a() {
+    public static void a(int param0) {
         field_Cb = null;
         int var1 = 0;
         field_Ib = null;
@@ -139,7 +139,7 @@ final class cf extends hd {
         return stackIn_16_0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 0;
         qa.field_E.a(true, 640, 5, 0, param5);
         if (null != dr.field_g) {

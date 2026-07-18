@@ -19,7 +19,7 @@ final class vh extends d {
     int field_O;
     static String field_M;
 
-    public static void a() {
+    public static void a(int param0) {
         field_V = null;
         field_M = null;
         field_N = null;
@@ -137,7 +137,7 @@ final class vh extends d {
         return stackIn_16_0 != 0;
     }
 
-    final static int h() {
+    final static int h(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -150,8 +150,7 @@ final class vh extends d {
           L0: {
             var1_int = 0;
             L1: while (true) {
-              int discarded$7 = 5;
-              if (!jl.a()) {
+              if (!jl.a((byte) 5)) {
                 L2: {
                   fi.field_r.a(aj.a(0, po.field_a, pq.field_k), 27479, aj.a(0, qo.field_O, tb.field_fb));
                   if (!fi.field_r.a((byte) 113)) {

@@ -10,7 +10,7 @@ abstract class im extends hd {
     im() {
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_Bb = null;
         field_zb = null;
     }
@@ -25,20 +25,19 @@ abstract class im extends hd {
 
     abstract void c(int param0, boolean param1);
 
-    final static void h() {
+    final static void h(int param0) {
         java.awt.Canvas var1 = null;
         if (!(!dr.field_a)) {
             dr.field_a = false;
-            int discarded$0 = 64;
-            var1 = ln.l();
-            wu discarded$1 = oo.field_c.a((byte) 53, us.field_j, wt.field_x, (java.awt.Component) (Object) var1);
-            wu discarded$2 = oo.field_c.a(-118, (java.awt.Component) (Object) var1, true);
+            var1 = ln.l(64);
+            wu discarded$0 = oo.field_c.a((byte) 53, us.field_j, wt.field_x, (java.awt.Component) (Object) var1);
+            wu discarded$1 = oo.field_c.a(-118, (java.awt.Component) (Object) var1, true);
             n.field_m = us.field_j;
             el.field_A = wt.field_x;
         }
     }
 
-    final static int a(byte param0, CharSequence param1) {
+    final static int a(byte param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -141,8 +140,7 @@ abstract class im extends hd {
               try {
                 if (param1 >= 70) {
                   var3 = new java.net.URL(param0.getCodeBase(), param2);
-                  int discarded$2 = 3;
-                  var3 = qr.a(param0, var3);
+                  var3 = qr.a(param0, var3, 3);
                   bv.a(0, var3.toString(), true, param0);
                   return;
                 } else {

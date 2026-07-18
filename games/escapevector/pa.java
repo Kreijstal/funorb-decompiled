@@ -14,7 +14,7 @@ final class pa {
         ff.field_e = 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }

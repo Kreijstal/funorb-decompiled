@@ -6,7 +6,7 @@ final class kna extends bw {
     static String[] field_g;
     int field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_g = null;
     }

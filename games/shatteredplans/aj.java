@@ -9,7 +9,7 @@ final class aj {
     static pf field_a;
     static int[] field_d;
 
-    final static StringBuilder a(StringBuilder param0, int param1, int param2) {
+    final static StringBuilder a(StringBuilder param0, int param1, int param2, char param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -328,7 +328,7 @@ final class aj {
         return stackIn_9_0 != 0;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, boolean param1) {
         System.out.println("Error: " + nf.a("%0a", param0, (byte) 82, "\n"));
     }
 
@@ -446,7 +446,7 @@ final class aj {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
         field_a = null;

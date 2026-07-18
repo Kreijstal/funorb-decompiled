@@ -237,7 +237,7 @@ final class dq extends l implements java.awt.image.ImageProducer, java.awt.image
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         field_k = null;
         field_j = null;

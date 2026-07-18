@@ -89,8 +89,7 @@ abstract class ua implements ot {
           L0: {
             L1: {
               if (((ua) this).field_b == 0) {
-                int discarded$4 = 0;
-                this.d();
+                this.d(0);
                 if (((ua) this).field_c > 0) {
                   L2: {
                     jaggl.OpenGL.glBindBufferARB(((ua) this).field_k, ((ua) this).field_c);
@@ -171,7 +170,7 @@ abstract class ua implements ot {
             }
             if (param1 != 2) {
               var5 = null;
-              jaclib.memory.Buffer discarded$5 = ((ua) this).a(true, 66, (jaggl.MapBuffer) null);
+              jaclib.memory.Buffer discarded$2 = ((ua) this).a(true, 66, (jaggl.MapBuffer) null);
               stackOut_21_0 = null;
               stackIn_22_0 = stackOut_21_0;
               break L0;
@@ -234,10 +233,8 @@ abstract class ua implements ot {
           L0: {
             kf.field_u = param1;
             im.field_b = new jn();
-            int discarded$4 = -96;
-            up.field_a = fi.a(640, he.field_o) << 8;
-            int discarded$5 = -96;
-            cv.field_E = fi.a(480, he.field_o) << 8;
+            up.field_a = fi.a(640, he.field_o, (byte) -96) << 8;
+            cv.field_E = fi.a(480, he.field_o, (byte) -96) << 8;
             sr.d(22030);
             break L0;
           }
@@ -273,7 +270,7 @@ abstract class ua implements ot {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         if (((ua) this).field_c >= 0) {
             return;
         }
@@ -304,7 +301,7 @@ abstract class ua implements ot {
         return ((ua) this).field_c == 0 ? ((ua) this).field_m.c() : 0L;
     }
 
-    final static void f() {
+    final static void f(int param0) {
         if (!(null != vv.field_b)) {
             throw new IllegalStateException("NGR");
         }
@@ -393,8 +390,7 @@ abstract class ua implements ot {
 
     void a(byte param0, int param1) {
         if (param1 > ((ua) this).field_e) {
-            int discarded$0 = 0;
-            this.d();
+            this.d(0);
             if (((ua) this).field_c > 0) {
                 jaggl.OpenGL.glBindBufferARB(((ua) this).field_k, ((ua) this).field_c);
                 jaggl.OpenGL.glBufferDataARBub(((ua) this).field_k, param1, (byte[]) null, 0, ((ua) this).field_j ? 35040 : 35044);

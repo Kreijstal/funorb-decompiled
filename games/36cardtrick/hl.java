@@ -613,8 +613,7 @@ class hl extends lk {
           L0: {
             var4_int = 57 / (param1 / 50);
             if (tc.a(param3, param2, 25479, param0)) {
-              int discarded$2 = 111;
-              stackOut_3_0 = pf.a();
+              stackOut_3_0 = pf.a(111);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

@@ -11,13 +11,13 @@ final class sa extends gg {
     static int field_m;
     static int[] field_l;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 1;
         field_n = null;
         field_l = null;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;

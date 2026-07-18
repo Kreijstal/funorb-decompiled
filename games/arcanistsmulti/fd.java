@@ -13,7 +13,7 @@ final class fd {
     static int[] field_h;
     static qb field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_j = null;
         field_f = null;
@@ -45,8 +45,7 @@ final class fd {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 29424;
-            stackOut_0_0 = rl.a(param1.field_d);
+            stackOut_0_0 = rl.a(param1.field_d, 29424);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

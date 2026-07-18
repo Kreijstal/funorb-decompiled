@@ -25,9 +25,8 @@ abstract class hb extends tk {
         }
     }
 
-    final static void g() {
-        int discarded$0 = 1;
-        bd.a(4);
+    final static void g(int param0) {
+        bd.a(4, true);
     }
 
     public static void a(byte param0) {

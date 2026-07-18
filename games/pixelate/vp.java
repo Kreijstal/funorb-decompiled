@@ -89,7 +89,7 @@ final class vp extends ak {
         }
     }
 
-    final static vj d() {
+    final static vj d(byte param0) {
         return wi.field_d;
     }
 

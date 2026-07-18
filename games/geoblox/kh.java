@@ -11,7 +11,7 @@ final class kh implements Runnable {
     volatile boolean field_f;
     static long field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_h = null;
     }
@@ -68,8 +68,8 @@ final class kh implements Runnable {
                 wj.a(((kh) this).field_b, (byte) 116, (Object) null);
             }
         } catch (Exception exception) {
-            int discarded$0 = 125;
-            gi.a((Throwable) (Object) exception, (String) null);
+            Object var6 = null;
+            gi.a((Throwable) (Object) exception, (String) null, (byte) 125);
         } finally {
             ((kh) this).field_c = false;
         }

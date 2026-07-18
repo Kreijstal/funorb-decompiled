@@ -254,8 +254,7 @@ class an extends ga {
           L0: {
             if (param2 > 118) {
               if (ph.a(param0, 31043, param1, param3)) {
-                int discarded$2 = 43;
-                stackOut_6_0 = dn.f();
+                stackOut_6_0 = dn.f((byte) 43);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {

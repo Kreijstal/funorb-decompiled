@@ -11,10 +11,8 @@ final class ac extends al {
     static boolean field_r;
     static ll field_q;
 
-    private final void a() {
-        int discarded$0 = 2;
-        int discarded$1 = 0;
-        this.b();
+    private final void a(byte param0, int param1) {
+        this.b(false, 2);
     }
 
     final void b(int param0, int param1, int param2) {
@@ -62,9 +60,7 @@ final class ac extends al {
                   }
                 }
               }
-              int discarded$4 = 4;
-              int discarded$5 = 0;
-              this.a();
+              this.a((byte) 0, 4);
               break L0;
             } else {
               break L0;
@@ -888,7 +884,7 @@ final class ac extends al {
         }
     }
 
-    final static void a(ec param0, boolean param1, java.awt.Component param2, rj param3) {
+    final static void a(ec param0, boolean param1, java.awt.Component param2, rj param3, int param4, int param5) {
         RuntimeException var6 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -938,10 +934,7 @@ final class ac extends al {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$6 = -112;
-            int discarded$7 = 1;
-            int discarded$8 = 22050;
-            wn.a(22050, param3, 1024, param2, param0);
+            wn.a(22050, param3, 1024, param2, param0, 22050, true, -112);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1106,7 +1099,7 @@ final class ac extends al {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         if (vk.field_b != null) {
           return;
         } else {
@@ -1159,7 +1152,7 @@ final class ac extends al {
         }
     }
 
-    private final void b() {
+    private final void b(boolean param0, int param1) {
         int var3 = 0;
         int var4 = ZombieDawn.field_J;
         bn.field_i = -1;

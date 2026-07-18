@@ -20,7 +20,7 @@ final class qk extends IOException {
         return param0 ^ param1;
     }
 
-    final static nh a(String param0, vj param1, String param2) {
+    final static nh a(String param0, vj param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -173,7 +173,7 @@ final class qk extends IOException {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
         field_d = null;
@@ -182,7 +182,7 @@ final class qk extends IOException {
         field_g = null;
     }
 
-    final static m a() {
+    final static m a(int param0) {
         return (m) (Object) new bk();
     }
 

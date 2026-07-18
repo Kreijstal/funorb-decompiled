@@ -7,8 +7,7 @@ final class pr {
     private static String[] field_b;
 
     final static boolean a(int param0, int param1, int param2) {
-        int discarded$0 = 0;
-        return uk.a(param2, (byte) -128, param0) & foa.a(param0, param2);
+        return uk.a(param2, (byte) -128, param0) & foa.a(param0, param2, 0);
     }
 
     protected final void finalize() throws Throwable {
@@ -28,7 +27,7 @@ final class pr {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

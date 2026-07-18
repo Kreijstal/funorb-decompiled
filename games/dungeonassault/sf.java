@@ -13,9 +13,9 @@ final class sf implements cl {
     static int field_g;
     private pj field_j;
 
-    final static void d() {
+    final static void d(int param0) {
+        RuntimeException runtimeException = null;
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -46,15 +46,20 @@ final class sf implements cl {
                     }
                   }
                 }
-                break L2;
+                if (param0 == 3) {
+                  break L2;
+                } else {
+                  field_b = null;
+                  break L2;
+                }
               }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var1, "sf.L(" + 3 + ')');
+          runtimeException = decompiledCaughtException;
+          throw vk.a((Throwable) (Object) runtimeException, "sf.L(" + param0 + ')');
         }
     }
 
@@ -175,9 +180,9 @@ final class sf implements cl {
 
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
-            Exception var2 = null;
-            RuntimeException var2_ref = null;
-            java.net.URL var2_ref2 = null;
+            java.net.URL var2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_9_0 = null;
@@ -196,28 +201,32 @@ final class sf implements cl {
             String stackOut_7_2 = null;
             try {
               L0: {
-                try {
-                  L1: {
-                    var2_ref2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-                    param1.getAppletContext().showDocument(j.a((byte) 124, var2_ref2, param1), "_top");
-                    break L1;
+                if (!param0) {
+                  try {
+                    L1: {
+                      var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
+                      param1.getAppletContext().showDocument(j.a((byte) 124, var2, param1), "_top");
+                      break L1;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L2: {
+                      var2_ref = (Exception) (Object) decompiledCaughtException;
+                      var2_ref.printStackTrace();
+                      break L2;
+                    }
                   }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
-                    var2 = (Exception) (Object) decompiledCaughtException;
-                    var2.printStackTrace();
-                    break L2;
-                  }
+                  break L0;
+                } else {
+                  return;
                 }
-                break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref;
-                stackOut_6_1 = new StringBuilder().append("sf.O(").append(false).append(',');
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_1 = new StringBuilder().append("sf.O(").append(param0).append(',');
                 stackIn_9_0 = stackOut_6_0;
                 stackIn_9_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -267,11 +276,19 @@ final class sf implements cl {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
+            L1: {
+              if (param0 == 114) {
+                break L1;
+              } else {
+                field_b = null;
+                break L1;
+              }
+            }
             field_e = null;
             field_i = null;
             field_c = null;
@@ -281,7 +298,7 @@ final class sf implements cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var1, "sf.N(" + 114 + ')');
+          throw vk.a((Throwable) (Object) var1, "sf.N(" + param0 + ')');
         }
     }
 

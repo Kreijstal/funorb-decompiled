@@ -4,14 +4,13 @@
 final class jh {
     static int field_a;
 
-    final static void a() {
-        int discarded$0 = -1461;
-        lb.field_O = le.a();
+    final static void a(int param0) {
+        lb.field_O = le.a(-1461);
         gl.field_E = new vl();
         nk.a(true, 41, true);
     }
 
-    final static int a(oh param0, String param1, int param2) {
+    final static int a(oh param0, String param1, int param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

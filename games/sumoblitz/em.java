@@ -14,7 +14,7 @@ abstract class em extends pt {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
     }
 

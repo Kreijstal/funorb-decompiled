@@ -78,7 +78,7 @@ final class wh extends ul implements j {
         return ((wh) this).field_db;
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_fb = null;
         field_cb = null;
         field_ab = null;

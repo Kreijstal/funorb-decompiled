@@ -90,7 +90,7 @@ final class cd {
         return stackIn_3_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -98,8 +98,7 @@ final class cd {
         var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
-            int discarded$38 = -93;
-            if (!vh.c()) {
+            if (!vh.c((byte) -93)) {
               L1: {
                 if (null == ba.field_f) {
                   break L1;
@@ -116,14 +115,13 @@ final class cd {
               return;
             } else {
               var1_int = -63;
-              boolean discarded$39 = si.field_o.a(mb.field_a, mb.field_d, true, true);
+              boolean discarded$15 = si.field_o.a(mb.field_a, mb.field_d, true, true);
               si.field_o.l(-43);
               L2: while (true) {
-                int discarded$40 = -1;
-                if (!ba.a()) {
+                if (!ba.a(-1)) {
                   break L0;
                 } else {
-                  boolean discarded$41 = si.field_o.a(oa.field_H, 121, rd.field_p);
+                  boolean discarded$16 = si.field_o.a(oa.field_H, 121, rd.field_p);
                   continue L2;
                 }
               }
@@ -144,7 +142,7 @@ final class cd {
         ch.field_d = di.field_a;
     }
 
-    final static void a(hl param0) {
+    final static void a(hl param0, byte param1) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         hl var3 = null;
@@ -214,8 +212,7 @@ final class cd {
                   break L5;
                 }
               }
-              int discarded$2 = 6191;
-              qh.a(param0);
+              qh.a(param0, 6191);
               break L0;
             } else {
               return;

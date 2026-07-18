@@ -4,7 +4,7 @@
 final class lq {
     static int field_a;
 
-    final static boolean a(java.applet.Applet param0) {
+    final static boolean a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Throwable var2_ref = null;

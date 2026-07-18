@@ -8,14 +8,11 @@ final class vj {
     static String field_c;
     static String[] field_b;
 
-    final static void a() {
-        int discarded$0 = 1;
-        int var1 = pf.b();
-        int discarded$1 = 113;
-        int var2 = al.a();
+    final static void a(byte param0) {
+        int var1 = pf.b(1);
+        int var2 = al.a((byte) 113);
         hh.field_u.a(var1 + (rb.field_cb << 1), -rb.field_cb + sc.field_g, false, -wg.field_h + fb.field_k, (wg.field_h << 1) + var2);
-        int discarded$2 = -107;
-        ne.a();
+        ne.a((byte) -107);
     }
 
     public static void a(int param0) {

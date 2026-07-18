@@ -18,7 +18,7 @@ final class rf extends ta implements ff, ai, bf {
     private oc field_J;
     private oc field_B;
 
-    private final String d() {
+    private final String d(byte param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -205,19 +205,14 @@ final class rf extends ta implements ff, ai, bf {
         eg dupTemp$1 = new eg(10000536);
         ((rf) this).field_J.field_j = (td) (Object) dupTemp$1;
         ((rf) this).field_D.field_j = (td) (Object) dupTemp$1;
-        int discarded$2 = 105;
-        int discarded$3 = -128;
         String var2 = t.a(-415993727, new String[2], nb.field_n);
         int var3 = 20;
         var3 = var3 + this.a(var3, (pj) (Object) ((rf) this).field_O, 170, (byte) -82, ef.field_h);
         var3 = var3 + (this.a(20, var3, "", 170, a.field_u, (byte) -81, (pj) (Object) ((rf) this).field_G) - -5);
         var3 = var3 + this.a(var3, (pj) (Object) ((rf) this).field_D, 170, (byte) -82, hi.field_h);
-        int discarded$4 = 0;
-        var3 = var3 + (this.a(170, var3, pf.field_c, lm.field_b, (pj) (Object) ((rf) this).field_J) - -5);
-        int discarded$5 = 0;
-        var3 = var3 + (this.a(170, var3, bh.field_a, ja.field_b, (pj) (Object) ((rf) this).field_B) - -5);
-        int discarded$6 = 25;
-        var3 = var3 + this.a(var3, 170, pi.field_c, (pj) (Object) ((rf) this).field_E);
+        var3 = var3 + (this.a(170, var3, pf.field_c, lm.field_b, (pj) (Object) ((rf) this).field_J, false) - -5);
+        var3 = var3 + (this.a(170, var3, bh.field_a, ja.field_b, (pj) (Object) ((rf) this).field_B, false) - -5);
+        var3 = var3 + this.a(var3, 170, pi.field_c, (pj) (Object) ((rf) this).field_E, 25);
         h var4 = new h(46, var3, -90 + ((rf) this).field_m, 25, (pj) (Object) ((rf) this).field_P, true, ((rf) this).field_m - 120, 5, pc.field_bb, 11579568, rh.field_d);
         ((rf) this).a((pj) (Object) var4, (byte) 74);
         var3 = var3 + var4.field_r;
@@ -244,7 +239,7 @@ final class rf extends ta implements ff, ai, bf {
         ((rf) this).a(0, 0, var6 + var3 + 55, (byte) -90, 496);
     }
 
-    private final String e() {
+    private final String e(byte param0) {
         int var2 = 0;
         return "</col></u>";
     }
@@ -399,7 +394,7 @@ final class rf extends ta implements ff, ai, bf {
         }
     }
 
-    private final int a(int param0, int param1, String param2, pj param3) {
+    private final int a(int param0, int param1, String param2, pj param3, int param4) {
         h var6 = null;
         RuntimeException var6_ref = null;
         jf var7 = null;
@@ -575,8 +570,7 @@ final class rf extends ta implements ff, ai, bf {
     }
 
     private final boolean e(boolean param0) {
-        int discarded$0 = 20;
-        if (!this.k()) {
+        if (!this.k(20)) {
             return false;
         }
         int var2 = -1;
@@ -587,7 +581,7 @@ final class rf extends ta implements ff, ai, bf {
         return ie.a(var2, -10031, ((rf) this).field_B.field_l, ((rf) this).field_O.field_l, (rf) this, ((rf) this).field_P.field_D, ((rf) this).field_D.field_l);
     }
 
-    private final int a(int param0, int param1, String param2, String param3, pj param4) {
+    private final int a(int param0, int param1, String param2, String param3, pj param4, boolean param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -737,14 +731,13 @@ final class rf extends ta implements ff, ai, bf {
     final void a(byte param0, pj param1, int param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 20;
-            ((rf) this).field_K.field_F = this.k();
+            ((rf) this).field_K.field_F = this.k(20);
         } catch (RuntimeException runtimeException) {
             throw dd.a((Throwable) (Object) runtimeException, "rf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final boolean k() {
+    private final boolean k(int param0) {
         if (this.a((ib) (Object) ((rf) this).field_B, -94)) {
           if (this.a((ib) (Object) ((rf) this).field_O, 93)) {
             if (this.a((ib) (Object) ((rf) this).field_G, 47)) {

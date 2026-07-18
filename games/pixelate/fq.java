@@ -8,7 +8,7 @@ final class fq extends de {
     static String field_p;
     static int field_q;
 
-    public static void f() {
+    public static void f(byte param0) {
         field_p = null;
         field_o = null;
     }
@@ -220,7 +220,7 @@ final class fq extends de {
         super.a((byte) stackIn_7_1, stackIn_7_2, param1, param2);
     }
 
-    final static void a(aa param0) {
+    final static void a(aa param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         aa var3 = null;
@@ -347,16 +347,14 @@ final class fq extends de {
     }
 
     final void c(byte param0) {
-        int discarded$6 = -25528;
-        la.a(((fq) this).field_l, nc.field_a, false);
+        la.a(((fq) this).field_l, nc.field_a, false, -25528);
         if (param0 >= -13) {
             field_q = -93;
         }
     }
 
     final static void g(byte param0) {
-        int discarded$4 = -7624;
-        ql.a(ao.a(13867));
+        ql.a(ao.a(13867), -7624);
         if (param0 >= -46) {
             fq.g((byte) -70);
         }
@@ -396,10 +394,7 @@ final class fq extends de {
           } else {
             L1: {
               if (aa.field_p == null) {
-                int discarded$4 = 0;
-                int discarded$5 = 10;
-                int discarded$6 = 1;
-                aa.field_p = g.a(3, (byte) 103);
+                aa.field_p = g.a(3, (byte) 103, 1, 10, 0);
                 break L1;
               } else {
                 break L1;
@@ -415,8 +410,7 @@ final class fq extends de {
                 var2 = wo.field_a;
                 var5 = var4.field_r[of.field_a];
                 var20 = var4.field_l[of.field_a];
-                int discarded$7 = -7402;
-                var7 = ge.a(wh.field_p, var4, of.field_a);
+                var7 = ge.a(wh.field_p, var4, of.field_a, -7402);
                 var8 = 16777215;
                 var9 = 0;
                 var10 = 16711680;

@@ -315,7 +315,7 @@ abstract class de {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -390,7 +390,7 @@ abstract class de {
         var2 = 22;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_c = null;
         field_b = null;
         field_e = null;
@@ -536,8 +536,7 @@ abstract class de {
                 break L1;
               } else {
                 if (!jg.a((byte) 84)) {
-                  int discarded$1 = 81;
-                  this.a();
+                  this.a((byte) 81);
                   break L0;
                 } else {
                   break L1;
@@ -1170,7 +1169,7 @@ abstract class de {
           if (!((de) this).field_g.a(51)) {
             break L0;
           } else {
-            pp discarded$23 = mc.a(128, -120);
+            pp discarded$2 = mc.a(128, -120);
             break L0;
           }
         }
@@ -1187,8 +1186,7 @@ abstract class de {
                         break L2;
                       } else {
                         var6 = param2 ? 1 : 0;
-                        int discarded$24 = -25528;
-                        la.a(ti.field_t, 16, var6 != 0);
+                        la.a(ti.field_t, 16, var6 != 0, -25528);
                         break L1;
                       }
                     } else {
@@ -1196,8 +1194,7 @@ abstract class de {
                         if (((de) this).field_g.a(38)) {
                           if (!jg.a((byte) 66)) {
                             var6 = param2 ? 1 : 0;
-                            int discarded$25 = -25528;
-                            la.a(ti.field_t, -4, var6 != 0);
+                            la.a(ti.field_t, -4, var6 != 0, -25528);
                             break L1;
                           } else {
                             ii.a(param2, 0, -4, (byte) 91, te.field_Ib);
@@ -1221,8 +1218,7 @@ abstract class de {
                                 break L3;
                               }
                             }
-                            int discarded$26 = -25528;
-                            la.a(stackIn_74_0, -1, var6 != 0);
+                            la.a(stackIn_74_0, -1, var6 != 0, -25528);
                             break L1;
                           } else {
                             break L1;
@@ -1231,8 +1227,7 @@ abstract class de {
                           if (var6 == 7) {
                             if (((de) this).field_g.a(91)) {
                               var6 = param2 ? 1 : 0;
-                              int discarded$27 = -25528;
-                              la.a(ti.field_t, 0, var6 != 0);
+                              la.a(ti.field_t, 0, var6 != 0, -25528);
                               break L1;
                             } else {
                               break L1;
@@ -1268,8 +1263,7 @@ abstract class de {
                                       break L2;
                                     } else {
                                       var6 = param2 ? 1 : 0;
-                                      int discarded$28 = -25528;
-                                      la.a(ti.field_t, 8, var6 != 0);
+                                      la.a(ti.field_t, 8, var6 != 0, -25528);
                                       break L1;
                                     }
                                   } else {
@@ -1277,8 +1271,7 @@ abstract class de {
                                       if (((de) this).field_g.a(45)) {
                                         ((fk) (Object) oc.field_H[7]).a(2, 1, param2);
                                         var6 = param2 ? 1 : 0;
-                                        int discarded$29 = -25528;
-                                        la.a(ti.field_t, 7, var6 != 0);
+                                        la.a(ti.field_t, 7, var6 != 0, -25528);
                                         break L1;
                                       } else {
                                         break L1;
@@ -1290,8 +1283,7 @@ abstract class de {
                                             if (((de) this).field_g.a(62)) {
                                               if (((de) this).field_l != 9) {
                                                 var6 = param2 ? 1 : 0;
-                                                int discarded$30 = -25528;
-                                                la.a(ti.field_t, 5, var6 != 0);
+                                                la.a(ti.field_t, 5, var6 != 0, -25528);
                                                 break L1;
                                               } else {
                                                 L4: {
@@ -1306,8 +1298,7 @@ abstract class de {
                                                     break L4;
                                                   }
                                                 }
-                                                int discarded$31 = -25528;
-                                                la.a(stackIn_105_0, 5, var6 != 0);
+                                                la.a(stackIn_105_0, 5, var6 != 0, -25528);
                                                 break L1;
                                               }
                                             } else {
@@ -1372,8 +1363,7 @@ abstract class de {
                                                     break L8;
                                                   } else {
                                                     var5 = 1;
-                                                    int discarded$32 = 99;
-                                                    sn.e();
+                                                    sn.e(99);
                                                     break L8;
                                                   }
                                                 }
@@ -1384,8 +1374,7 @@ abstract class de {
                                                 } else {
                                                   if (ia.field_h < 256) {
                                                     var5 = 1;
-                                                    int discarded$33 = 32;
-                                                    tj.i();
+                                                    tj.i(32);
                                                     break L9;
                                                   } else {
                                                     break L9;
@@ -1406,7 +1395,7 @@ abstract class de {
                                                     }
                                                   }
                                                 }
-                                                pp discarded$34 = mc.a(128, -124);
+                                                pp discarded$3 = mc.a(128, -124);
                                                 nk.field_i = pa.field_b - -20;
                                                 break L1;
                                               }
@@ -1435,8 +1424,7 @@ abstract class de {
                                                           L11: {
                                                             if (md.field_Y) {
                                                               var6 = param2 ? 1 : 0;
-                                                              int discarded$35 = -25528;
-                                                              la.a(ti.field_t, -5, var6 != 0);
+                                                              la.a(ti.field_t, -5, var6 != 0, -25528);
                                                               break L11;
                                                             } else {
                                                               break L11;
@@ -1614,8 +1602,7 @@ abstract class de {
                                                             break L15;
                                                           }
                                                         }
-                                                        int discarded$36 = -25528;
-                                                        la.a(stackIn_162_0, -1, var6 != 0);
+                                                        la.a(stackIn_162_0, -1, var6 != 0, -25528);
                                                         break L1;
                                                       } else {
                                                         break L1;
@@ -1670,16 +1657,14 @@ abstract class de {
                                                 }
                                                 L19: {
                                                   if (((de) this).field_g.e(-97)) {
-                                                    int discarded$37 = -65;
-                                                    fc.a();
+                                                    fc.a((byte) -65);
                                                     break L19;
                                                   } else {
                                                     break L19;
                                                   }
                                                 }
                                                 if (((de) this).field_g.c(102)) {
-                                                  int discarded$38 = -4767;
-                                                  eg.e();
+                                                  eg.e(-4767);
                                                   break L1;
                                                 } else {
                                                   break L1;
@@ -1690,8 +1675,7 @@ abstract class de {
                                         } else {
                                           if (((de) this).field_g.a(26)) {
                                             var6 = param2 ? 1 : 0;
-                                            int discarded$39 = -25528;
-                                            la.a(ti.field_t, 6, var6 != 0);
+                                            la.a(ti.field_t, 6, var6 != 0, -25528);
                                             break L1;
                                           } else {
                                             break L1;
@@ -1703,8 +1687,7 @@ abstract class de {
                                         } else {
                                           var6 = nc.field_a;
                                           var7_int = param2 ? 1 : 0;
-                                          int discarded$40 = -25528;
-                                          la.a(ti.field_t, var6, var7_int != 0);
+                                          la.a(ti.field_t, var6, var7_int != 0, -25528);
                                           break L1;
                                         }
                                       }
@@ -1715,8 +1698,7 @@ abstract class de {
                             } else {
                               if (((de) this).field_g.a(84)) {
                                 var6 = param2 ? 1 : 0;
-                                int discarded$41 = -25528;
-                                la.a(ti.field_t, 12, var6 != 0);
+                                la.a(ti.field_t, 12, var6 != 0, -25528);
                                 ce.field_a = true;
                                 break L1;
                               } else {
@@ -1744,8 +1726,7 @@ abstract class de {
                         break L20;
                       }
                     }
-                    int discarded$42 = -25528;
-                    la.a(stackIn_61_0, -3, var6 != 0);
+                    la.a(stackIn_61_0, -3, var6 != 0, -25528);
                     break L1;
                   } else {
                     break L1;
@@ -1755,8 +1736,7 @@ abstract class de {
                 if (((de) this).field_g.a(6)) {
                   ((op) (Object) oc.field_H[17]).f(76);
                   var6 = param2 ? 1 : 0;
-                  int discarded$43 = -25528;
-                  la.a(ti.field_t, 17, var6 != 0);
+                  la.a(ti.field_t, 17, var6 != 0, -25528);
                   break L1;
                 } else {
                   break L1;
@@ -1767,8 +1747,7 @@ abstract class de {
                 break L1;
               } else {
                 L21: {
-                  int discarded$44 = -101;
-                  em.a();
+                  em.a((byte) -101);
                   var6 = param2 ? 1 : 0;
                   if (gq.d(117)) {
                     stackOut_51_0 = 12;
@@ -1780,8 +1759,7 @@ abstract class de {
                     break L21;
                   }
                 }
-                int discarded$45 = -25528;
-                la.a(stackIn_52_0, -3, var6 != 0);
+                la.a(stackIn_52_0, -3, var6 != 0, -25528);
                 break L1;
               }
             }

@@ -386,7 +386,7 @@ final class ce extends ec {
                 break L0;
               } else {
                 var3 = null;
-                rm[] discarded$6 = ce.a(47, -49, (eh) null, -99);
+                rm[] discarded$4 = ce.a(47, -49, (eh) null, -99);
                 break L0;
               }
             }
@@ -401,9 +401,9 @@ final class ce extends ec {
             if (td.field_b.field_a == 0) {
               return false;
             } else {
-              long dupTemp$7 = hc.a(-9986);
-              ud.field_a = dupTemp$7;
-              fa.field_l = dupTemp$7;
+              long dupTemp$5 = hc.a(-9986);
+              ud.field_a = dupTemp$5;
+              fa.field_l = dupTemp$5;
               if (td.field_b.field_a == 1) {
                 try {
                   L2: {
@@ -427,8 +427,7 @@ final class ce extends ec {
                     md.field_b = stackIn_13_0;
                     ug.field_a = ul.field_c;
                     var6.field_l = 0;
-                    int discarded$8 = 12;
-                    hj.a(m.field_m, (jc) (Object) gk.field_g, wc.field_m, oj.field_Yb);
+                    hj.a(m.field_m, (jc) (Object) gk.field_g, wc.field_m, oj.field_Yb, 12);
                     al.b(-1, -1);
                     break L2;
                   }
@@ -454,7 +453,7 @@ final class ce extends ec {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_H = null;
     }
 
@@ -480,8 +479,7 @@ final class ce extends ec {
         String stackOut_8_2 = null;
         try {
           if (param0 == -1979) {
-            int discarded$7 = 109;
-            if (hn.a(param2, param3, param1)) {
+            if (hn.a(param2, param3, param1, (byte) 109)) {
               return um.e((byte) 71);
             } else {
               return null;
@@ -684,8 +682,7 @@ final class ce extends ec {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = -101;
-            stackOut_0_0 = co.a(false, param1);
+            stackOut_0_0 = co.a(false, param1, (byte) -101);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -763,11 +760,9 @@ final class ce extends ec {
         }
         L1: {
           nm.d(param0 ^ 13628);
-          int discarded$38 = 1;
-          lh.a();
+          lh.a(true);
           kh.a(0);
-          int discarded$39 = 121;
-          if (bg.f()) {
+          if (bg.f((byte) 121)) {
             gk.field_g.g(1, 8);
             al.b(-1, 0);
             break L1;

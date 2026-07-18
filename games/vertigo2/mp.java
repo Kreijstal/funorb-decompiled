@@ -10,7 +10,7 @@ final class mp {
     static int field_d;
     static int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_g = null;
         field_a = null;
@@ -55,8 +55,7 @@ final class mp {
             if (var3 != 0) {
               return false;
             } else {
-              int discarded$8 = -10;
-              g.a();
+              g.a((byte) -10);
               return true;
             }
           } else {
@@ -80,8 +79,7 @@ final class mp {
                   }
                   if (nm.field_E == 2) {
                     L3: {
-                      int discarded$9 = -6390;
-                      if (mf.b()) {
+                      if (mf.b(-6390)) {
                         var4 = null;
                         tf.a(nm.field_E, qi.field_b, -84, (String) null, 15, ap.field_c);
                         break L3;
@@ -95,8 +93,7 @@ final class mp {
                       return false;
                     } else {
                       L4: {
-                        int discarded$10 = -6390;
-                        if (mf.b()) {
+                        if (mf.b(-6390)) {
                           var4 = null;
                           tf.a(nm.field_E, qi.field_b, -84, (String) null, 15, ap.field_c);
                           break L4;
@@ -128,8 +125,7 @@ final class mp {
               if (var3 != 0) {
                 return false;
               } else {
-                int discarded$11 = -10;
-                g.a();
+                g.a((byte) -10);
                 return true;
               }
             } else {
@@ -141,8 +137,7 @@ final class mp {
                     } else {
                       if (nm.field_E == 2) {
                         L5: {
-                          int discarded$12 = -6390;
-                          if (mf.b()) {
+                          if (mf.b(-6390)) {
                             var4 = null;
                             tf.a(nm.field_E, qi.field_b, -84, (String) null, 15, ap.field_c);
                             break L5;
@@ -156,8 +151,7 @@ final class mp {
                           return false;
                         } else {
                           L6: {
-                            int discarded$13 = -6390;
-                            if (mf.b()) {
+                            if (mf.b(-6390)) {
                               var4 = null;
                               tf.a(nm.field_E, qi.field_b, -84, (String) null, 15, ap.field_c);
                               break L6;
@@ -172,8 +166,7 @@ final class mp {
                   } else {
                     if (nm.field_E == 2) {
                       L7: {
-                        int discarded$14 = -6390;
-                        if (mf.b()) {
+                        if (mf.b(-6390)) {
                           var4 = null;
                           tf.a(nm.field_E, qi.field_b, -84, (String) null, 15, ap.field_c);
                           break L7;
@@ -187,8 +180,7 @@ final class mp {
                         return false;
                       } else {
                         L8: {
-                          int discarded$15 = -6390;
-                          if (mf.b()) {
+                          if (mf.b(-6390)) {
                             var4 = null;
                             tf.a(nm.field_E, qi.field_b, -84, (String) null, 15, ap.field_c);
                             break L8;

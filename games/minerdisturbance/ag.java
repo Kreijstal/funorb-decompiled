@@ -76,8 +76,7 @@ final class ag {
                           if (!ok.field_b.e((byte) 119)) {
                             break L4;
                           } else {
-                            int discarded$1 = 0;
-                            if (!bl.g()) {
+                            if (!bl.g(0)) {
                               break L4;
                             } else {
                               if (ja.field_u <= 150) {
@@ -110,7 +109,7 @@ final class ag {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
         field_d = null;

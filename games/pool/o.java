@@ -53,7 +53,7 @@ class o extends rg {
         }
     }
 
-    final static String a(char param0, String param1, String param2) {
+    final static String a(char param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

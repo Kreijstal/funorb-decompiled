@@ -23,12 +23,11 @@ final class mg {
     }
 
     final static void a(int param0) {
-        int discarded$0 = 105;
-        nf.field_M = mi.c();
+        nf.field_M = mi.c((byte) 105);
         nb.field_a = new f();
         wa.a(true, true, 30);
         if (param0 >= -53) {
-            int discarded$1 = mg.a(true, 123, -100, 21);
+            int discarded$0 = mg.a(true, 123, -100, 21);
         }
     }
 
@@ -170,7 +169,7 @@ final class mg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }

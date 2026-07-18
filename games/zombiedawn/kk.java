@@ -46,7 +46,7 @@ final class kk extends le {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_j = null;
         field_i = null;
         field_m = null;

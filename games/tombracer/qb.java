@@ -302,7 +302,7 @@ final class qb extends be {
           if (Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
             break L0;
           } else {
-            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           }
         }
@@ -407,7 +407,7 @@ final class qb extends be {
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
           return ((qb) this).a((byte) 112);
         }
-        boolean discarded$4 = var3.addAll((Collection) (Object) var4);
+        boolean discarded$3 = var3.addAll((Collection) (Object) var4);
         var6_array = var3.toArray();
         var7 = null;
         var8_array = var6_array;
@@ -428,8 +428,7 @@ final class qb extends be {
             var11 = (java.net.Proxy) var10;
             try {
               L6: {
-                int discarded$5 = 443;
-                var12_ref2 = this.a(var11);
+                var12_ref2 = this.a(var11, 443);
                 if (var12_ref2 != null) {
                   stackOut_20_0 = (java.net.Socket) var12_ref2;
                   stackIn_21_0 = stackOut_20_0;
@@ -468,7 +467,7 @@ final class qb extends be {
         }
     }
 
-    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0, int param1) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;

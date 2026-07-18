@@ -11,7 +11,7 @@ final class fh extends wd {
     int field_D;
     int field_K;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_B = null;
         field_C = null;
     }

@@ -19,13 +19,13 @@ final class ek extends ee {
     private int field_H;
     static eg field_G;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_G = null;
         field_K = null;
         field_C = null;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         da var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -108,8 +108,7 @@ final class ek extends ee {
                   }
                 }
                 L3: {
-                  int discarded$3 = -9;
-                  ie.b();
+                  ie.b((byte) -9);
                   if (qg.field_a > ((ek) this).field_O.field_u + param0) {
                     break L3;
                   } else {
@@ -117,8 +116,7 @@ final class ek extends ee {
                     param2.g(-((ek) this).field_F, 0);
                     param2.g(-((ek) this).field_F + ((ek) this).field_Q * 2, 0);
                     ((ek) this).field_N.c(0, 0);
-                    int discarded$4 = -9;
-                    ie.b();
+                    ie.b((byte) -9);
                     ((ek) this).field_E.g(param0, param3);
                     break L3;
                   }
@@ -132,8 +130,7 @@ final class ek extends ee {
                         param2.g(-var7, 0);
                         param2.g(2 * ((ek) this).field_Q - var7, 0);
                         ((ek) this).field_O.c(0, 0);
-                        int discarded$5 = -9;
-                        ie.b();
+                        ie.b((byte) -9);
                         ((ek) this).field_E.g(-((ek) this).field_O.field_u + var5_int, param3);
                         break L4;
                       } else {
@@ -208,8 +205,7 @@ final class ek extends ee {
                 qg.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
             }
         }
-        int discarded$0 = -9;
-        ie.b();
+        ie.b((byte) -9);
         return var3;
     }
 
@@ -299,7 +295,7 @@ final class ek extends ee {
         }
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -356,7 +352,7 @@ final class ek extends ee {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         fk.a(true, 4);
     }
 
@@ -411,8 +407,7 @@ final class ek extends ee {
         if (((ek) this).field_A < 65536) {
             bc.a(var6 + ((ek) this).field_l, var5 + (((ek) this).field_p * ((ek) this).field_A >> 16), var6, var5 - -((ek) this).field_p, 1);
             this.a(var5, 13470, ((ek) this).field_B[1], var6);
-            int discarded$0 = -9;
-            ie.b();
+            ie.b((byte) -9);
         }
     }
 
@@ -449,8 +444,7 @@ final class ek extends ee {
         var6 = 0;
         L0: while (true) {
           if (((ek) this).field_l <= var6) {
-            int discarded$1 = -9;
-            ie.b();
+            ie.b((byte) -9);
             return var14;
           } else {
             L1: {

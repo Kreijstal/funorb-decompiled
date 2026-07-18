@@ -24,25 +24,25 @@ final class ro extends kb {
         int var5 = 0;
         int var6 = 0;
         int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        int stackIn_14_0 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
+        int stackOut_13_0 = 0;
         int stackOut_2_0 = 0;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -52,16 +52,18 @@ final class ro extends kb {
               var5 = 0;
               L1: while (true) {
                 if (var4 <= var5) {
-                  stackOut_10_0 = var3_int;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackOut_13_0 = var3_int;
+                  stackIn_14_0 = stackOut_13_0;
                   break L0;
                 } else {
                   L2: {
                     if (param1 != param2.charAt(var5)) {
                       var5++;
+                      var5++;
                       break L2;
                     } else {
                       var3_int++;
+                      var5++;
                       break L2;
                     }
                   }
@@ -79,33 +81,33 @@ final class ro extends kb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("ro.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_15_0 = (RuntimeException) var3;
+            stackOut_15_1 = new StringBuilder().append("ro.C(").append(param0).append(',').append(param1).append(',');
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
               break L3;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw fa.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
-        return stackIn_11_0;
+        return stackIn_14_0;
     }
 
     final void a(k param0, byte param1) {
@@ -251,8 +253,7 @@ final class ro extends kb {
                         }
                       }
                       L8: {
-                        int discarded$1 = -105;
-                        param0.a(108, this.a(var3_ref));
+                        param0.a(108, this.a(var3_ref, (byte) -105));
                         param0.a(110, var3_ref.field_x);
                         param0.a(var3_ref.e((byte) -112), (byte) -67);
                         param0.a(var3_ref.g(1829947600), (byte) -95);
@@ -328,7 +329,7 @@ final class ro extends kb {
         }
     }
 
-    private final int a(ek param0) {
+    private final int a(ek param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -411,7 +412,7 @@ final class ro extends kb {
         return stackIn_10_0;
     }
 
-    final static int c() {
+    final static int c(byte param0) {
         return (li.field_C << 4) + ((qe.field_g << 2) - -ba.field_q);
     }
 

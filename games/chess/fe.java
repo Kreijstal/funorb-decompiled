@@ -460,8 +460,7 @@ final class fe {
                   if (!jk.field_c.startsWith("win")) {
                     break L1;
                   } else {
-                    int discarded$6 = 0;
-                    if (!ek.a(param0)) {
+                    if (!ek.a(param0, false)) {
                       break L1;
                     } else {
                       return;

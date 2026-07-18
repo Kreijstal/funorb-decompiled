@@ -15,7 +15,7 @@ final class bo {
     static int[] field_c;
     static long field_e;
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         fa var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

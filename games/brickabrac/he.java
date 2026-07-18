@@ -384,7 +384,7 @@ final class he extends ib implements en {
         return stackIn_10_0 != 0;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -548,8 +548,7 @@ final class he extends ib implements en {
                 break L2;
               } else {
                 if (((he) this).field_I == param4) {
-                  int discarded$5 = -1;
-                  fr.d();
+                  fr.d(-1);
                   break L2;
                 } else {
                   if (param4 != ((he) this).field_J) {
@@ -595,7 +594,7 @@ final class he extends ib implements en {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_H = null;
         field_L = null;
     }

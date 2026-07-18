@@ -12,13 +12,11 @@ abstract class jb {
 
     abstract void a(java.awt.Component param0, byte param1);
 
-    final static int[] a(int param0, int param1) {
+    final static int[] a(int param0, int param1, int param2) {
         int var3 = bk.a((byte) 92, param1);
-        int discarded$0 = 1;
-        int var4 = im.a(param1);
+        int var4 = im.a(param1, true);
         int var5 = bk.a((byte) 92, param0);
-        int discarded$1 = 1;
-        int var6 = im.a(param0);
+        int var6 = im.a(param0, true);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         int var9 = (int)((long)var4 * (long)var5 >> 16);
@@ -116,7 +114,7 @@ abstract class jb {
         field_e = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ji var1 = (ji) (Object) vc.field_d.d(9272);
         if (!(var1 != null)) {
             gb.g(-17464);

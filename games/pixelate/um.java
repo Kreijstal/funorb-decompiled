@@ -202,8 +202,7 @@ final class um extends fa {
         try {
           L0: {
             if (rk.a(param4, false, param0, param2)) {
-              int discarded$2 = -17;
-              stackOut_3_0 = kf.a(param1.a(param2, param4, true));
+              stackOut_3_0 = kf.a(param1.a(param2, param4, true), -17);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

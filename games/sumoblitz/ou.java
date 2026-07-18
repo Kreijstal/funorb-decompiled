@@ -20,9 +20,8 @@ final class ou extends na {
         }
     }
 
-    final static void d() {
-        int discarded$2 = 9;
-        if (!vs.b()) {
+    final static void d(byte param0) {
+        if (!vs.b((byte) 9)) {
             if (!nt.field_r) {
                 if (!(nq.field_g != null)) {
                     nq.field_g = ew.a((byte) -92, 4);
@@ -36,7 +35,7 @@ final class ou extends na {
             }
         }
         if (null == ah.field_g) {
-            boolean discarded$3 = ki.b(6);
+            boolean discarded$0 = ki.b(6);
         }
     }
 
@@ -186,8 +185,7 @@ final class ou extends na {
         try {
           L0: {
             var4 = (CharSequence) (Object) param1;
-            int discarded$9 = 53;
-            if (!gr.a(var4)) {
+            if (!gr.a(var4, (byte) 53)) {
               stackOut_2_0 = qr.field_e;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -493,8 +491,7 @@ final class ou extends na {
                   }
                 }
               } else {
-                int discarded$2 = -128;
-                var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ic.a(qo.field_c, new String[1]));
+                var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ic.a(qo.field_c, new String[1], (byte) -128));
                 var4 = -1;
                 var5 = 0;
                 L10: while (true) {
@@ -519,8 +516,7 @@ final class ou extends na {
                     uw.field_c = new String[-1 + -var4 + var3_int];
                     la.a((Object[]) (Object) mb.field_c, var4 + 1, (Object[]) (Object) uw.field_c, 0, -var4 + (var3_int - 1));
                     var4 = -1;
-                    int discarded$3 = -128;
-                    var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ic.a(lq.field_a, new String[1]));
+                    var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ic.a(lq.field_a, new String[1], (byte) -128));
                     var5 = 0;
                     L12: while (true) {
                       L13: {

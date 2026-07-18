@@ -24,7 +24,7 @@ final class sm extends gn {
         field_o = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         ml var2 = null;
@@ -52,8 +52,7 @@ final class sm extends gn {
             if (0 == var3) {
               var5 = (dl) (Object) ru.field_M.g(24009);
               if (var5 == null) {
-                int discarded$4 = -116;
-                lr.b();
+                lr.b((byte) -116);
                 return;
               } else {
                 L1: {
@@ -84,10 +83,8 @@ final class sm extends gn {
               }
             } else {
               if (var3 != 1) {
-                int discarded$5 = 0;
-                bd.a("LR1: " + tr.b(), (Throwable) null, 1);
-                int discarded$6 = -116;
-                lr.b();
+                bd.a("LR1: " + tr.b(0), (Throwable) null, 1);
+                lr.b((byte) -116);
                 return;
               } else {
                 var5_int = var2.e(85);
@@ -116,8 +113,7 @@ final class sm extends gn {
                     var6_ref_hr.c((byte) -109);
                     return;
                   } else {
-                    int discarded$7 = -116;
-                    lr.b();
+                    lr.b((byte) -116);
                     return;
                   }
                 }

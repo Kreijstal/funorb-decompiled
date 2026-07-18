@@ -16,7 +16,7 @@ final class tl {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(int param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

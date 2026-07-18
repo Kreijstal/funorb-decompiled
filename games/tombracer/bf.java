@@ -11,7 +11,7 @@ final class bf implements jca {
     private ita field_h;
     int field_d;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_b = null;
     }

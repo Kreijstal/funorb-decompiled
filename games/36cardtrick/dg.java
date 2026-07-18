@@ -203,7 +203,7 @@ class dg extends hl {
         field_H = null;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return hh.field_g == ei.field_d;
     }
 

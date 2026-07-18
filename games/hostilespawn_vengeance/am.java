@@ -343,8 +343,7 @@ class am {
             L4: {
               r.field_a = 0;
               if (ha.field_t == 1) {
-                int discarded$2 = 0;
-                ue.a(250);
+                ue.a(250, false);
                 var3 = 1;
                 var4_int = 0;
                 L5: while (true) {
@@ -403,8 +402,7 @@ class am {
               }
             }
             L10: {
-              int discarded$3 = 0;
-              ue.a(250);
+              ue.a(250, false);
               if (param1 > 89) {
                 break L10;
               } else {

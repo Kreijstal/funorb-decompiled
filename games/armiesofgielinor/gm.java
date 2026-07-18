@@ -14,7 +14,7 @@ final class gm implements lv {
     static int field_i;
     static String field_g;
 
-    final static d a(byte[] param0) {
+    final static d a(byte[] param0, int param1) {
         d var2 = null;
         RuntimeException var2_ref = null;
         d stackIn_4_0 = null;
@@ -80,7 +80,7 @@ final class gm implements lv {
         return stackIn_4_0;
     }
 
-    final static int f() {
+    final static int f(int param0) {
         return (va.field_D << 2) + (ol.field_B << 4) - -cd.field_c;
     }
 
@@ -226,7 +226,7 @@ final class gm implements lv {
         return stackIn_27_0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_a = null;
         field_b = null;
         field_h = null;
@@ -305,8 +305,7 @@ final class gm implements lv {
                     }
                   }
                 } else {
-                  int discarded$6 = 0;
-                  af.a((Throwable) null, 76, "HS1: " + cm.b());
+                  af.a((Throwable) null, 76, "HS1: " + cm.b(false));
                   dj.a((byte) -127);
                   break L2;
                 }
@@ -343,14 +342,14 @@ final class gm implements lv {
                         var8_int = 1;
                         L8: while (true) {
                           if (var8_int >= var5) {
-                            String[][] dupTemp$7 = new String[3][var6];
-                            var4.field_s = dupTemp$7;
-                            var8 = dupTemp$7;
+                            String[][] dupTemp$5 = new String[3][var6];
+                            var4.field_s = dupTemp$5;
+                            var8 = dupTemp$5;
                             var9 = new String[3][var6];
                             var31 = new long[3][var6];
-                            int[][] dupTemp$8 = new int[3][var7 * var6];
-                            var4.field_m = dupTemp$8;
-                            var11 = dupTemp$8;
+                            int[][] dupTemp$6 = new int[3][var7 * var6];
+                            var4.field_m = dupTemp$6;
+                            var11 = dupTemp$6;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -381,9 +380,9 @@ final class gm implements lv {
                                         if (var7 <= var25) {
                                           break L10;
                                         } else {
-                                          int incrementValue$9 = var15;
+                                          int incrementValue$7 = var15;
                                           var15++;
-                                          var11[0][incrementValue$9] = var27.i(1);
+                                          var11[0][incrementValue$7] = var27.i(1);
                                           var25++;
                                           continue L11;
                                         }
@@ -407,9 +406,9 @@ final class gm implements lv {
                                           if (var7 <= var25) {
                                             break L12;
                                           } else {
-                                            int incrementValue$10 = var16;
+                                            int incrementValue$8 = var16;
                                             var16++;
-                                            var11[1][incrementValue$10] = var27.i(kf.b(param0, 8));
+                                            var11[1][incrementValue$8] = var27.i(kf.b(param0, 8));
                                             var25++;
                                             continue L13;
                                           }
@@ -437,9 +436,9 @@ final class gm implements lv {
                                           if (var7 <= var25) {
                                             break L14;
                                           } else {
-                                            int incrementValue$11 = var17;
+                                            int incrementValue$9 = var17;
                                             var17++;
-                                            var11[2][incrementValue$11] = var27.i(param0 + -8);
+                                            var11[2][incrementValue$9] = var27.i(param0 + -8);
                                             var25++;
                                             continue L15;
                                           }

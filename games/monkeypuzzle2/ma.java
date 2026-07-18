@@ -280,7 +280,7 @@ final class ma {
         }
     }
 
-    final static String a(boolean param0, byte param1, boolean param2) {
+    final static String a(boolean param0, byte param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (!(!param2)) {
             var4 += 4;
@@ -435,7 +435,7 @@ final class ma {
         return stackIn_3_0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -742,7 +742,7 @@ final class ma {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -798,7 +798,7 @@ final class ma {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_d = null;
         field_b = null;

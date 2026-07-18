@@ -12,7 +12,7 @@ final class kg extends pm {
     static int field_i;
     static int field_k;
 
-    public static void d() {
+    public static void d(int param0) {
         field_g = null;
     }
 
@@ -78,16 +78,14 @@ final class kg extends pm {
                 }
                 if (!cj.a((byte) 15, var5)) {
                   if (!tb.a(-10723, var5)) {
-                    int discarded$9 = 1;
-                    if (this.b(param0)) {
+                    if (this.b(param0, 1)) {
                       stackOut_17_0 = dl.field_e;
                       stackIn_18_0 = stackOut_17_0;
                       return stackIn_18_0;
                     } else {
                       if (var6.length() > 0) {
                         if (!lf.a(var6, var5, -7235)) {
-                          int discarded$10 = 0;
-                          if (!ic.a(var5, var6)) {
+                          if (!ic.a(var5, var6, 0)) {
                             if (!t.a(var5, (byte) 96, var6)) {
                               stackOut_31_0 = ci.field_a;
                               stackIn_32_0 = stackOut_31_0;
@@ -163,7 +161,7 @@ final class kg extends pm {
         return stackIn_32_0;
     }
 
-    private final boolean b(String param0) {
+    private final boolean b(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -312,8 +310,7 @@ final class kg extends pm {
             if (var4.length() != 0) {
               if (param1 == 2) {
                 if (on.a((byte) -23, var4, var3)) {
-                  int discarded$2 = 1;
-                  if (this.b(param0)) {
+                  if (this.b(param0, 1)) {
                     stackOut_11_0 = uc.field_b;
                     stackIn_12_0 = stackOut_11_0;
                     break L0;
@@ -374,8 +371,7 @@ final class kg extends pm {
     }
 
     private static void $cfr$clinit() {
-        int discarded$0 = 14821;
-        field_g = ae.a();
+        field_g = ae.a(14821);
         field_l = false;
     }
 }

@@ -9,11 +9,11 @@ final class ki {
     static bd field_e;
     static String field_d;
 
-    final static void a() {
+    final static void a(int param0) {
         g.a((byte) 2, 17);
     }
 
-    final static void a(boolean param0, int param1, String param2, java.awt.Color param3) {
+    final static void a(boolean param0, int param1, String param2, java.awt.Color param3, byte param4) {
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6_ref_Exception = null;

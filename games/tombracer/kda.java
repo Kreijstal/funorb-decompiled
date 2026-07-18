@@ -201,8 +201,7 @@ final class kda extends eo {
               var10 = param0.b(param1 ^ 13611);
               var11 = (sf) (Object) param0;
               var11.c(-3);
-              int discarded$1 = 5126;
-              jaggl.OpenGL.glDrawElements(var8_int, var9, lr.a(var10), var11.b(true) - -(long)(param3 * var10.field_e));
+              jaggl.OpenGL.glDrawElements(var8_int, var9, lr.a(var10, 5126), var11.b(true) - -(long)(param3 * var10.field_e));
               if (param1 == -19394) {
                 break L2;
               } else {
@@ -1655,7 +1654,7 @@ final class kda extends eo {
         this.i(param0);
     }
 
-    public static void T() {
+    public static void T(int param0) {
         field_cd = null;
         field_gd = null;
     }
@@ -2490,8 +2489,7 @@ final class kda extends eo {
           L0: {
             L1: {
               if (param0 != kga.field_o) {
-                int discarded$2 = 0;
-                var3_int = dk.a(param0);
+                var3_int = dk.a(param0, 0);
                 jaggl.OpenGL.glTexGeni(8192, 9472, var3_int);
                 jaggl.OpenGL.glEnable(3168);
                 jaggl.OpenGL.glTexGeni(8193, 9472, var3_int);
@@ -2828,7 +2826,7 @@ final class kda extends eo {
               L1: {
                 L2: {
                   ((kda) this).field_Mc = param0;
-                  boolean discarded$8 = ((kda) this).field_Mc.a();
+                  boolean discarded$3 = ((kda) this).field_Mc.a();
                   ((kda) this).field_Nc = jaggl.OpenGL.glGetString(7936).toLowerCase();
                   ((kda) this).field_jd = jaggl.OpenGL.glGetString(7937).toLowerCase();
                   if (((kda) this).field_Nc.indexOf("microsoft") != 0) {
@@ -2843,10 +2841,8 @@ final class kda extends eo {
                         if (2 <= var9.length) {
                           try {
                             L3: {
-                              int discarded$9 = 70;
-                              var10_int = jb.a((CharSequence) (Object) var9[0]);
-                              int discarded$10 = 70;
-                              var11_int = jb.a((CharSequence) (Object) var9[1]);
+                              var10_int = jb.a((CharSequence) (Object) var9[0], (byte) 70);
+                              var11_int = jb.a((CharSequence) (Object) var9[1], (byte) 70);
                               ((kda) this).field_md = var10_int * 10 + var11_int;
                               break L3;
                             }
@@ -2865,7 +2861,7 @@ final class kda extends eo {
                                   L4: {
                                     ((kda) this).field_e = 8;
                                     ((kda) this).field_fd = ((kda) this).field_Mc.a("GL_ARB_vertex_buffer_object");
-                                    boolean discarded$11 = ((kda) this).field_Mc.a("GL_ARB_multisample");
+                                    boolean discarded$4 = ((kda) this).field_Mc.a("GL_ARB_multisample");
                                     ((kda) this).field_sd = ((kda) this).field_Mc.a("GL_ARB_texture_rectangle");
                                     ((kda) this).field_Ob = ((kda) this).field_Mc.a("GL_ARB_texture_cube_map");
                                     ((kda) this).field_Wc = ((kda) this).field_Mc.a("GL_ARB_texture_non_power_of_two");
@@ -2873,7 +2869,7 @@ final class kda extends eo {
                                     ((kda) this).field_Uc = ((kda) this).field_Mc.a("GL_ARB_vertex_shader");
                                     ((kda) this).field_qd = ((kda) this).field_Mc.a("GL_ARB_vertex_program");
                                     ((kda) this).field_Pc = ((kda) this).field_Mc.a("GL_ARB_fragment_shader");
-                                    boolean discarded$12 = ((kda) this).field_Mc.a("GL_ARB_fragment_program");
+                                    boolean discarded$5 = ((kda) this).field_Mc.a("GL_ARB_fragment_program");
                                     ((kda) this).field_Sc = new int[((kda) this).field_Vb];
                                     stackOut_18_0 = this;
                                     stackIn_20_0 = stackOut_18_0;
@@ -2924,8 +2920,7 @@ final class kda extends eo {
                                                           break L10;
                                                         } else {
                                                           var31 = (CharSequence) (Object) var21_ref.substring(1, 3);
-                                                          int discarded$13 = -3;
-                                                          if (!sqa.a(var31)) {
+                                                          if (!sqa.a(var31, -3)) {
                                                             break L10;
                                                           } else {
                                                             var13 = 1;
@@ -2949,13 +2944,11 @@ final class kda extends eo {
                                                         break L9;
                                                       } else {
                                                         var32 = (CharSequence) (Object) var16_ref.substring(0, 4);
-                                                        int discarded$14 = -3;
-                                                        if (!sqa.a(var32)) {
+                                                        if (!sqa.a(var32, -3)) {
                                                           break L9;
                                                         } else {
                                                           var33 = (CharSequence) (Object) var16_ref.substring(0, 4);
-                                                          int discarded$15 = 70;
-                                                          var11_int = jb.a(var33);
+                                                          var11_int = jb.a(var33, (byte) 70);
                                                           decompiledRegionSelector0 = 1;
                                                           break L8;
                                                         }
@@ -3349,8 +3342,7 @@ final class kda extends eo {
         try {
           L0: {
             L1: {
-              int discarded$19 = 1;
-              jaggl.OpenGL.glTexEnvi(8960, param1 + 34176, bma.a(param0));
+              jaggl.OpenGL.glTexEnvi(8960, param1 + 34176, bma.a(param0, true));
               if (param2 == -6219) {
                 break L1;
               } else {
@@ -3467,8 +3459,7 @@ final class kda extends eo {
             if (param1 != 15802) {
                 ((kda) this).N(120);
             }
-            int discarded$14 = 1;
-            jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, bma.a(param0));
+            jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, bma.a(param0, true));
             jaggl.OpenGL.glTexEnvi(8960, 34200 - -param3, !param2 ? 770 : 771);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "kda.AC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

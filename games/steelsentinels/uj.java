@@ -245,7 +245,7 @@ final class uj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_h = null;
         field_g = null;
@@ -566,7 +566,7 @@ final class uj {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (vn.field_h != -vc.field_c) {
             if (250 + -vc.field_c != vn.field_h) {
             }

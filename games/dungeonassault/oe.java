@@ -55,8 +55,7 @@ final class oe extends ne {
                   if (!qg.field_n.startsWith("win")) {
                     break L1;
                   } else {
-                    int discarded$8 = -38;
-                    if (ji.a(param3)) {
+                    if (ji.a(param3, -38)) {
                       return;
                     } else {
                       break L1;
@@ -138,7 +137,7 @@ final class oe extends ne {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_p = null;
     }

@@ -85,7 +85,7 @@ final class lh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_m = null;
         field_b = null;
         field_a = null;
@@ -152,8 +152,7 @@ final class lh {
                   }
                 }
               } else {
-                int discarded$1 = -111;
-                vn.field_c[var4] = s.a(var9);
+                vn.field_c[var4] = s.a(var9, (byte) -111);
                 var4++;
                 continue L1;
               }

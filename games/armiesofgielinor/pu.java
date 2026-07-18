@@ -63,7 +63,7 @@ final class pu {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         of var3 = null;
@@ -252,7 +252,7 @@ final class pu {
         this.c(8);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         bv var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -263,14 +263,13 @@ final class pu {
           L0: {
             var1 = vl.field_n;
             L1: while (true) {
-              int discarded$9 = -17211;
-              if (!g.a()) {
+              if (!g.a(-17211)) {
                 break L0;
               } else {
                 var1.h(32161, 8);
-                int fieldTemp$10 = var1.field_q + 1;
+                int fieldTemp$5 = var1.field_q + 1;
                 var1.field_q = var1.field_q + 1;
-                var2 = fieldTemp$10;
+                var2 = fieldTemp$5;
                 fg.a(0, var1);
                 vl.field_n.e(-var2 + var1.field_q, 5930);
                 continue L1;

@@ -79,7 +79,7 @@ final class pi extends wf {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
     }
 

@@ -22,7 +22,7 @@ final class ng {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 113;
         field_a = null;
     }

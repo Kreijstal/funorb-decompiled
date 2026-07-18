@@ -23,7 +23,7 @@ final class vu extends fw {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_Q = null;
         field_O = null;
         field_P = null;
@@ -32,11 +32,11 @@ final class vu extends fw {
         field_M = null;
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         return field_M.field_dc == oh.field_H;
     }
 
-    final static boolean j() {
+    final static boolean j(int param0) {
         return wq.a(dj.field_e, wm.field_b, (byte) -116);
     }
 
@@ -49,7 +49,7 @@ final class vu extends fw {
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final static void a(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;

@@ -103,14 +103,14 @@ final class hj {
         return gf.field_Z == gb.field_i;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_n = null;
         field_o = null;
         field_p = null;
         field_e = null;
     }
 
-    final static af a() {
+    final static af a(byte param0) {
         if (null == la.field_i) {
           la.field_i = new af(jh.field_g, 20, 0, 0, 0, 11579568, -1, 0, 0, jh.field_g.field_F, -1, 2147483647, true);
           return la.field_i;

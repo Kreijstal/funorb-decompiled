@@ -69,8 +69,7 @@ final class qh extends hk {
             }
             var4_int = 23 * param2 >> 2;
             if (vj.field_a[var4_int] == null) {
-              int discarded$1 = 0;
-              td.a((float)param1, oi.field_b);
+              td.a((float)param1, oi.field_b, false);
               fe.field_g.a(-124);
               L2: while (true) {
                 if (var4_int >= 23 * (1 + param2) >> 2) {
@@ -278,7 +277,7 @@ final class qh extends hk {
         int var2 = -9 / ((param0 - 29) / 42);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_o = null;
         field_g = null;
         field_h = null;

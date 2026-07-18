@@ -6,12 +6,12 @@ final class le {
     static String field_b;
     static long field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
 
-    final static String b() {
+    final static String b(int param0) {
         if (!(fc.field_a >= 2)) {
             return ee.field_a;
         }

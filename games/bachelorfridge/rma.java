@@ -9,22 +9,13 @@ abstract class rma {
     int field_b;
     static String field_c;
 
-    final static kv[] a() {
-        int discarded$0 = 1;
-        int discarded$1 = 0;
-        int discarded$2 = 1;
-        int discarded$3 = 0;
-        int discarded$4 = 1;
-        int discarded$5 = 65793;
-        int discarded$6 = 0;
-        int discarded$7 = 5;
-        int discarded$8 = 3;
-        return ec.a();
+    final static kv[] a(int param0, int param1, int param2, int param3, int param4) {
+        return ec.a(3, 5, 0, 65793, 1, 0, 1, 0, 1);
     }
 
     abstract java.net.Socket a(byte param0) throws IOException;
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_d = null;
     }

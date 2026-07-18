@@ -8,7 +8,7 @@ abstract class rva extends ae implements tpa {
     static jpa field_v;
     ae[] field_w;
 
-    private final ae a() {
+    private final ae a(int param0) {
         ae[] var2 = null;
         int var3 = 0;
         ae var4 = null;
@@ -798,8 +798,7 @@ abstract class rva extends ae implements tpa {
         if (param0 != -34) {
             ((rva) this).a((byte) 29);
         }
-        int discarded$0 = -49;
-        return this.a() != null ? true : false;
+        return this.a(-49) != null ? true : false;
     }
 
     final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {

@@ -342,7 +342,7 @@ final class bl {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_v = null;
         field_j = null;
         field_e = null;

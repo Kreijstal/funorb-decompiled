@@ -13,11 +13,10 @@ final class fl {
             }
             ((fl) this).field_b = null;
         }
-        int discarded$0 = 1;
-        this.a((java.awt.Frame) null);
+        this.a((java.awt.Frame) null, true);
     }
 
-    private final void a(java.awt.Frame param0) {
+    private final void a(java.awt.Frame param0, boolean param1) {
         ((fl) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 
@@ -32,8 +31,7 @@ final class fl {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
-            int discarded$2 = 1;
-            this.a(param0);
+            this.a(param0, true);
             if (param4 != 0) {
               break L0;
             } else {

@@ -20,14 +20,13 @@ final class qf extends ida {
             var6.field_s.field_s = param2;
             super.a(param2, param4, 27230);
             ((qf) this).field_n = -50;
-            int discarded$0 = -3670;
-            this.a(param1, param3);
+            this.a(param1, param3, -3670);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "qf.I(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    private final void a(aga param0, boolean param1) {
+    private final void a(aga param0, boolean param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_12_0 = null;
@@ -125,9 +124,9 @@ final class qf extends ida {
         var6 = BachelorFridge.field_y;
         var7 = ((qf) this).field_p.a(-27449, ((qf) this).field_s);
         var3 = -27 % ((71 - param0) / 47);
-        int fieldTemp$5 = ((qf) this).field_n + 1;
+        int fieldTemp$1 = ((qf) this).field_n + 1;
         ((qf) this).field_n = ((qf) this).field_n + 1;
-        if (fieldTemp$5 < 0) {
+        if (fieldTemp$1 < 0) {
           return false;
         } else {
           L0: {
@@ -139,8 +138,7 @@ final class qf extends ida {
               } else {
                 var4_ref_je = je.a(rt.field_a[32], 256, 256);
                 var4_ref_je.d(-1);
-                int discarded$6 = -36;
-                ((qf) this).field_u = tw.a(var4_ref_je);
+                ((qf) this).field_u = tw.a(var4_ref_je, (byte) -36);
                 break L0;
               }
             }
@@ -181,8 +179,7 @@ final class qf extends ida {
                   return false;
                 }
               } else {
-                int discarded$7 = 1;
-                this.c();
+                this.c(true);
                 return true;
               }
             } else {
@@ -212,8 +209,7 @@ final class qf extends ida {
                   return false;
                 }
               } else {
-                int discarded$8 = 1;
-                this.c();
+                this.c(true);
                 return true;
               }
             }
@@ -244,15 +240,14 @@ final class qf extends ida {
                 return false;
               }
             } else {
-              int discarded$9 = 1;
-              this.c();
+              this.c(true);
               return true;
             }
           }
         }
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         ad var2 = null;
         ad var3 = null;
         L0: {
@@ -444,14 +439,14 @@ final class qf extends ida {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_A = null;
         field_w = null;
         field_x = null;
         field_y = null;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         kr var2 = null;

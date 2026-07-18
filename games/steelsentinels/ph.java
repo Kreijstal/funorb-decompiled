@@ -9,7 +9,7 @@ final class ph {
     static String field_f;
     static na[] field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_b = null;
         field_f = null;
@@ -18,7 +18,7 @@ final class ph {
         field_c = null;
     }
 
-    final static void a(na param0) {
+    final static void a(na param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -184,7 +184,7 @@ final class ph {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         if (ve.field_a == null) {
             return false;
         }

@@ -11,7 +11,7 @@ final class ld extends im {
     static String field_k;
     static String field_o;
 
-    final static m a() {
+    final static m a(boolean param0) {
         return pc.field_e;
     }
 
@@ -43,7 +43,7 @@ final class ld extends im {
         tc.field_A = null;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_o = null;
         field_n = null;
         field_j = null;
@@ -53,7 +53,7 @@ final class ld extends im {
         int var1 = -71;
     }
 
-    final static void a(cm param0) {
+    final static void a(cm param0, int param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

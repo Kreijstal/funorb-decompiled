@@ -33,8 +33,7 @@ final class vn extends no {
         int var4 = 0;
         th[] var5 = null;
         var4 = BrickABrac.field_J ? 1 : 0;
-        int discarded$2 = 0;
-        var5 = lq.b();
+        var5 = lq.b(0);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -130,7 +129,7 @@ final class vn extends no {
         return new int[8];
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_F = null;
         field_w = null;
         field_G = null;

@@ -161,8 +161,7 @@ final class wj extends ph {
               break L3;
             }
             var14.b(112, 144, var14.field_u << 4, var14.field_r << 4, -((wj) this).field_M << 10, 4096);
-            int discarded$1 = 0;
-            eh.b();
+            eh.b(false);
             ng.field_s.c(-var14.field_u + var5, var6 - var14.field_r, 256);
             break L1;
           }
@@ -255,7 +254,7 @@ final class wj extends ph {
         return new String(var6);
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_L = null;
         field_G = null;
         field_N = null;
@@ -932,8 +931,7 @@ final class wj extends ph {
                   }
                 } else {
                   L38: {
-                    int discarded$4 = 2;
-                    pc.a();
+                    pc.a(2);
                     var13_int = -25 + var8;
                     var14 = var8 + 25;
                     var15_int = -30 + var7;
@@ -1390,8 +1388,7 @@ final class wj extends ph {
                               if (jh.field_ab != 1) {
                                 break L72;
                               } else {
-                                int discarded$5 = 1;
-                                ja.a((byte) -127, pe.field_ab);
+                                ja.a((byte) -127, pe.field_ab, true);
                                 break L72;
                               }
                             }
@@ -1612,7 +1609,7 @@ final class wj extends ph {
                           break L83;
                         }
                       }
-                      boolean discarded$6 = t.a(stackIn_180_0, stackIn_180_1, var17);
+                      boolean discarded$2 = t.a(stackIn_180_0, stackIn_180_1, var17);
                       break L81;
                     } else {
                       break L82;
@@ -1624,7 +1621,7 @@ final class wj extends ph {
                   break L81;
                 } else {
                   if (var17 < 8) {
-                    boolean discarded$7 = t.a(38, 1, var17);
+                    boolean discarded$3 = t.a(38, 1, var17);
                     break L81;
                   } else {
                     break L81;

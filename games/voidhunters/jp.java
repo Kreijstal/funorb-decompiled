@@ -71,8 +71,7 @@ final class jp extends pf {
             if (param0 == -111) {
               L1: {
                 if (meb.field_d != param1) {
-                  int discarded$2 = 9216;
-                  var3_int = gm.a(param1);
+                  var3_int = gm.a(param1, 9216);
                   jaggl.OpenGL.glTexGeni(8192, 9472, var3_int);
                   jaggl.OpenGL.glEnable(3168);
                   jaggl.OpenGL.glTexGeni(8193, 9472, var3_int);
@@ -386,7 +385,7 @@ final class jp extends pf {
         return false;
     }
 
-    public static void K() {
+    public static void K(int param0) {
         field_Jc = null;
     }
 
@@ -581,12 +580,10 @@ final class jp extends pf {
                   break L1;
                 } else {
                   L2: {
-                    int discarded$8 = -95;
-                    if (!bd.a(param0)) {
+                    if (!bd.a(param0, (byte) -95)) {
                       break L2;
                     } else {
-                      int discarded$9 = -95;
-                      if (bd.a(param3)) {
+                      if (bd.a(param3, (byte) -95)) {
                         break L1;
                       } else {
                         break L2;
@@ -931,8 +928,7 @@ final class jp extends pf {
         try {
           L0: {
             L1: {
-              int discarded$19 = 0;
-              jaggl.OpenGL.glTexEnvi(8960, param4 + 34176, qg.a(param3));
+              jaggl.OpenGL.glTexEnvi(8960, param4 + 34176, qg.a(param3, false));
               if (param1 == -21115) {
                 break L1;
               } else {
@@ -1103,8 +1099,7 @@ final class jp extends pf {
         try {
           L0: {
             L1: {
-              int discarded$16 = 0;
-              jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, qg.a(param2));
+              jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, qg.a(param2, false));
               stackOut_0_0 = 8960;
               stackOut_0_1 = param3 + 34200;
               stackIn_2_0 = stackOut_0_0;
@@ -1348,7 +1343,7 @@ final class jp extends pf {
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
-    final static float[] a(float[] param0, int param1) {
+    final static float[] a(float[] param0, int param1, int param2) {
         float[] var3 = null;
         RuntimeException var3_ref = null;
         float[] var4 = null;
@@ -1742,12 +1737,10 @@ final class jp extends pf {
                 break L2;
               } else {
                 L3: {
-                  int discarded$6 = -95;
-                  if (!bd.a(param7)) {
+                  if (!bd.a(param7, (byte) -95)) {
                     break L3;
                   } else {
-                    int discarded$7 = -95;
-                    if (!bd.a(param4)) {
+                    if (!bd.a(param4, (byte) -95)) {
                       break L3;
                     } else {
                       break L2;
@@ -2185,7 +2178,7 @@ final class jp extends pf {
               if (param7 == 11) {
                 break L1;
               } else {
-                hdb discarded$3 = ((jp) this).a(true, 116, (int[][]) null, -28);
+                hdb discarded$2 = ((jp) this).a(true, 116, (int[][]) null, -28);
                 break L1;
               }
             }
@@ -2194,12 +2187,10 @@ final class jp extends pf {
                 break L2;
               } else {
                 L3: {
-                  int discarded$4 = -95;
-                  if (!bd.a(param4)) {
+                  if (!bd.a(param4, (byte) -95)) {
                     break L3;
                   } else {
-                    int discarded$5 = -95;
-                    if (!bd.a(param5)) {
+                    if (!bd.a(param5, (byte) -95)) {
                       break L3;
                     } else {
                       break L2;
@@ -2879,12 +2870,10 @@ final class jp extends pf {
                   break L1;
                 } else {
                   L2: {
-                    int discarded$8 = -95;
-                    if (!bd.a(param1)) {
+                    if (!bd.a(param1, (byte) -95)) {
                       break L2;
                     } else {
-                      int discarded$9 = -95;
-                      if (bd.a(param2)) {
+                      if (bd.a(param2, (byte) -95)) {
                         break L1;
                       } else {
                         break L2;

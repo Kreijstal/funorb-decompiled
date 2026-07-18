@@ -399,35 +399,33 @@ final class ac extends tm {
               L1: {
                 ((ac) this).field_a = new eg[16];
                 ((ac) this).field_a[0] = ((ac) this).g(-930305852);
-                eg dupTemp$4 = eg.a(param0, "", "balls/ball_killer_red");
-                ((ac) this).field_a[15] = dupTemp$4;
-                ((ac) this).field_a[14] = dupTemp$4;
-                ((ac) this).field_a[13] = dupTemp$4;
-                ((ac) this).field_a[12] = dupTemp$4;
-                ((ac) this).field_a[11] = dupTemp$4;
-                ((ac) this).field_a[10] = dupTemp$4;
-                ((ac) this).field_a[9] = dupTemp$4;
-                ((ac) this).field_a[7] = dupTemp$4;
-                ((ac) this).field_a[6] = dupTemp$4;
-                ((ac) this).field_a[5] = dupTemp$4;
-                ((ac) this).field_a[4] = dupTemp$4;
-                ((ac) this).field_a[3] = dupTemp$4;
-                ((ac) this).field_a[2] = dupTemp$4;
-                ((ac) this).field_a[1] = dupTemp$4;
+                eg dupTemp$2 = eg.a(param0, "", "balls/ball_killer_red");
+                ((ac) this).field_a[15] = dupTemp$2;
+                ((ac) this).field_a[14] = dupTemp$2;
+                ((ac) this).field_a[13] = dupTemp$2;
+                ((ac) this).field_a[12] = dupTemp$2;
+                ((ac) this).field_a[11] = dupTemp$2;
+                ((ac) this).field_a[10] = dupTemp$2;
+                ((ac) this).field_a[9] = dupTemp$2;
+                ((ac) this).field_a[7] = dupTemp$2;
+                ((ac) this).field_a[6] = dupTemp$2;
+                ((ac) this).field_a[5] = dupTemp$2;
+                ((ac) this).field_a[4] = dupTemp$2;
+                ((ac) this).field_a[3] = dupTemp$2;
+                ((ac) this).field_a[2] = dupTemp$2;
+                ((ac) this).field_a[1] = dupTemp$2;
                 ((ac) this).field_a[8] = eg.a(param0, "", "balls/ball_killer_black");
                 if (param1 == 117) {
                   break L1;
                 } else {
-                  boolean discarded$5 = ((ac) this).c(40);
+                  boolean discarded$3 = ((ac) this).c(40);
                   break L1;
                 }
               }
               ((ac) this).field_a[1].a(8, 8, 8, 4);
               ((ac) this).field_a[8].a(8, 8, 8, 4);
-              int discarded$6 = 0;
-              li.a(((ac) this).field_a[1]);
-              int discarded$7 = 0;
-              li.a(((ac) this).field_a[8]);
+              li.a(((ac) this).field_a[1], 0);
+              li.a(((ac) this).field_a[8], 0);
               break L0;
             } else {
               return;

@@ -6,7 +6,7 @@ final class aj {
     static String field_b;
     static jp[][] field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -15,15 +15,13 @@ final class aj {
     final static mf a(int param0, boolean param1) {
         if (!param1) {
           field_b = null;
-          int discarded$4 = 1;
-          return go.a(false, param0, false, 1, true);
+          return go.a(false, param0, false, 1, true, true);
         } else {
-          int discarded$5 = 1;
-          return go.a(false, param0, false, 1, true);
+          return go.a(false, param0, false, 1, true, true);
         }
     }
 
-    final static mh a() {
+    final static mh a(int param0) {
         return rl.field_e.field_Rb;
     }
 

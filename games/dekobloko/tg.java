@@ -12,7 +12,7 @@ final class tg implements gl {
     static w field_h;
     static int field_e;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_g = null;
         field_i = null;
@@ -72,8 +72,7 @@ final class tg implements gl {
             if (param3 < -60) {
               break L0;
             } else {
-              int discarded$1 = 0;
-              tg.a();
+              tg.a(false);
               return;
             }
           }

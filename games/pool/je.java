@@ -24,7 +24,7 @@ final class je {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         if (fk.field_gb == null) {
             return false;
         }
@@ -34,13 +34,13 @@ final class je {
         return true;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;
     }
 
-    final static void a(int param0, int param1, boolean param2, byte[] param3) {
+    final static void a(int param0, int param1, boolean param2, byte[] param3, int param4, boolean param5) {
         oq var6 = null;
         int var7 = 0;
         int var8 = 0;

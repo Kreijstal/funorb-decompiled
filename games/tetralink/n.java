@@ -35,7 +35,7 @@ final class n extends gn implements dm {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_U = null;
         field_R = null;
         field_L = null;
@@ -202,8 +202,7 @@ final class n extends gn implements dm {
                         }
                       }
                     } else {
-                      int discarded$1 = 43;
-                      ((n) this).field_V[var4_int] = p.a((CharSequence) (Object) param1[var4_int]).replace(' ', ' ');
+                      ((n) this).field_V[var4_int] = p.a((CharSequence) (Object) param1[var4_int], (byte) 43).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }

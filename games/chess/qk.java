@@ -17,7 +17,7 @@ final class qk implements Runnable {
     private jk field_g;
     static km field_k;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_k = null;
     }

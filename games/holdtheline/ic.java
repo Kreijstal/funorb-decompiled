@@ -12,7 +12,7 @@ final class ic {
     static kd field_d;
     static int[] field_f;
 
-    final static void a(int param0, vn param1, vn param2) {
+    final static void a(int param0, vn param1, vn param2, int param3, int param4, int param5) {
         pg.field_G = 0;
         qm.field_e = param2;
         try {
@@ -24,12 +24,12 @@ final class ic {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         kc.field_e = null;
         i.field_i = null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_f = null;
         field_d = null;

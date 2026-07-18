@@ -15,7 +15,7 @@ final class bf extends gd {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void m() {
+    public static void m(byte param0) {
         field_zb = null;
         field_Ab = null;
         field_Bb = null;
@@ -39,8 +39,7 @@ final class bf extends gd {
         var5.field_w = 1;
         var5.field_C = 1;
         je.field_w.a(3, (ck) (Object) var5);
-        int discarded$0 = -2864;
-        ma.a(3, var5);
+        ma.a(3, var5, -2864);
         return var5;
     }
 
@@ -434,8 +433,7 @@ final class bf extends gd {
         mg.field_Ub = new gh(0L, (gh) null);
         mg.field_Ub.a((gh) (Object) sn.field_f.field_d, param0 + -734);
         mg.field_Ub.a(sg.field_i, 120);
-        int discarded$0 = 0;
-        vl.d();
+        vl.d(0);
     }
 
     final void c(lh param0, int param1) {

@@ -253,7 +253,7 @@ class rh extends al {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;

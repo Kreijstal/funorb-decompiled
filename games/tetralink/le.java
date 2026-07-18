@@ -379,7 +379,7 @@ final class le extends hl {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_Lb = null;
         int var1 = 0;
         field_Vb = null;
@@ -500,8 +500,7 @@ final class le extends hl {
               this.e(144, 0);
               ((le) this).field_Zb = param0;
               ((le) this).field_Yb = ((le) this).field_Pb[((le) this).field_Zb];
-              int discarded$586 = 123;
-              ba.a(((le) this).field_Yb);
+              ba.a(((le) this).field_Yb, 123);
               ((le) this).field_Yb.e(144, 12);
               break L0;
             } else {
@@ -531,16 +530,12 @@ final class le extends hl {
                 var8 = null;
                 eo.a(-3, var5, param1, ka.field_m, sf.field_d, (String) null);
                 pf.a(ka.field_m, sf.field_d, var5, vj.field_o, (byte) 88);
-                int discarded$587 = 42;
-                go.c();
-                int discarded$588 = 45;
-                kj.a();
+                go.c((byte) 42);
+                kj.a((byte) 45);
                 break L0;
               } else {
-                int discarded$589 = -119;
-                cm.a();
-                int discarded$590 = 42;
-                go.c();
+                cm.a((byte) -119);
+                go.c((byte) 42);
                 break L0;
               }
             }
@@ -680,8 +675,7 @@ final class le extends hl {
         if (((le) this).field_Yb == null) {
             if ((Object) (Object) gl.field_o == this) {
                 if (!(var4 == 0)) {
-                    int discarded$0 = 42;
-                    go.c();
+                    go.c((byte) 42);
                     return true;
                 }
             }

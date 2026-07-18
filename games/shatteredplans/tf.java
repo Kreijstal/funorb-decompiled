@@ -22,7 +22,7 @@ final class tf implements iq {
     static int[] field_a;
     private int field_q;
 
-    final static ks a(String param0) {
+    final static ks a(String param0, int param1) {
         RuntimeException var2 = null;
         ks stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -44,13 +44,21 @@ final class tf implements iq {
         String stackOut_6_2 = null;
         try {
           L0: {
+            L1: {
+              if (param1 == -12179) {
+                break L1;
+              } else {
+                tf.a(true);
+                break L1;
+              }
+            }
             stackOut_3_0 = new ks(param0);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
             stackOut_5_1 = new StringBuilder().append("tf.B(");
@@ -65,7 +73,7 @@ final class tf implements iq {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L1;
+              break L2;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -73,10 +81,10 @@ final class tf implements iq {
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
               stackIn_9_2 = stackOut_6_2;
-              break L1;
+              break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -12179 + ')');
+          throw r.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -90,14 +98,22 @@ final class tf implements iq {
         try {
           L0: {
             L1: {
+              if (param0) {
+                break L1;
+              } else {
+                tf.a(true);
+                break L1;
+              }
+            }
+            L2: {
               if (param1 < 2) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
-                break L1;
+                break L2;
               } else {
                 stackOut_4_0 = 1;
                 stackIn_7_0 = stackOut_4_0;
-                break L1;
+                break L2;
               }
             }
             break L0;
@@ -105,7 +121,7 @@ final class tf implements iq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var2, "tf.A(" + true + ',' + param1 + ')');
+          throw r.a((Throwable) (Object) var2, "tf.A(" + param0 + ',' + param1 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -115,22 +131,30 @@ final class tf implements iq {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            field_c = null;
-            field_b = null;
-            field_j = null;
-            field_a = null;
+            L1: {
+              field_c = null;
+              field_b = null;
+              field_j = null;
+              field_a = null;
+              if (!param0) {
+                break L1;
+              } else {
+                field_l = null;
+                break L1;
+              }
+            }
             field_l = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "tf.C(" + false + ')');
+          throw r.a((Throwable) (Object) var1, "tf.C(" + param0 + ')');
         }
     }
 
     final static void a(int param0, nq param1, int param2, nq param3) {
-        RuntimeException var4 = null;
+        RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -164,19 +188,23 @@ final class tf implements iq {
         String stackOut_9_2 = null;
         try {
           L0: {
-            ql.field_n = param1;
-            um.field_c = param3;
-            fp.field_c = param2;
-            eg.b(gf.field_b / 2, gf.field_k / 2, 0);
-            id.a(param3.field_K - -param3.field_q, param3.field_K, 26883, param1.field_K, param1.field_q + param1.field_K);
-            break L0;
+            if (param0 < -10) {
+              ql.field_n = param1;
+              um.field_c = param3;
+              fp.field_c = param2;
+              eg.b(gf.field_b / 2, gf.field_k / 2, 0);
+              id.a(param3.field_K - -param3.field_q, param3.field_K, 26883, param1.field_K, param1.field_q + param1.field_K);
+              break L0;
+            } else {
+              return;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
-            var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
-            stackOut_4_1 = new StringBuilder().append("tf.F(").append(-86).append(',');
+            runtimeException = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) runtimeException;
+            stackOut_4_1 = new StringBuilder().append("tf.F(").append(param0).append(',');
             stackIn_7_0 = stackOut_4_0;
             stackIn_7_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -228,7 +256,7 @@ final class tf implements iq {
         }
     }
 
-    final static wa a() {
+    final static wa a(byte param0) {
         RuntimeException var1 = null;
         wa var1_ref = null;
         int var2 = 0;
@@ -248,7 +276,7 @@ final class tf implements iq {
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_2_1 = 0;
-        int stackOut_12_0 = 0;
+        byte stackOut_12_0 = 0;
         int stackOut_12_1 = 0;
         Object stackOut_10_0 = null;
         int stackOut_20_0 = 0;
@@ -291,7 +319,7 @@ final class tf implements iq {
                   }
                 }
                 if (null != rd.field_g) {
-                  stackOut_12_0 = -92;
+                  stackOut_12_0 = param0;
                   stackOut_12_1 = -92;
                   stackIn_13_0 = stackOut_12_0;
                   stackIn_13_1 = stackOut_12_1;
@@ -388,7 +416,7 @@ final class tf implements iq {
                             } else {
                               var1_ref = rd.field_g;
                               rd.field_g = null;
-                              var1_ref.b(17);
+                              var1_ref.b(param0 + 109);
                               stackOut_44_0 = (wa) var1_ref;
                               stackIn_45_0 = stackOut_44_0;
                               return stackIn_45_0;
@@ -424,7 +452,7 @@ final class tf implements iq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "tf.D(" + -92 + ')');
+          throw r.a((Throwable) (Object) var1, "tf.D(" + param0 + ')');
         }
         return stackIn_52_0;
     }

@@ -15,7 +15,7 @@ final class fd extends li {
         ((fd) this).field_r = param0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_t = null;
         field_o = null;
         field_s = null;

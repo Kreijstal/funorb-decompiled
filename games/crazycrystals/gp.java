@@ -4,7 +4,7 @@
 final class gp {
     static int field_a;
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, byte param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -26,8 +26,7 @@ final class gp {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            stackOut_2_0 = ud.a(param0, 16, (byte) -78);
+            stackOut_2_0 = ud.a(param0, 16, (byte) -78, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

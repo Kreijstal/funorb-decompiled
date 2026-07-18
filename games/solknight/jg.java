@@ -36,8 +36,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$4 = -24045;
-                    fi.a(var5, 3);
+                    fi.a(var5, 3, -24045);
                     var5 = (sd) (Object) r.field_b.b(-119);
                     continue L2;
                   }
@@ -79,7 +78,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void update(java.awt.Graphics param0) {
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -117,8 +116,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
                 if (var2_int >= var3) {
                   break L1;
                 } else {
-                  int discarded$3 = 1;
-                  if (!ck.a(param0.charAt(var2_int))) {
+                  if (!ck.a(param0.charAt(var2_int), true)) {
                     break L1;
                   } else {
                     var2_int++;
@@ -131,8 +129,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
                   if (var2_int >= var3) {
                     break L3;
                   } else {
-                    int discarded$4 = 1;
-                    if (!ck.a(param0.charAt(var3 - 1))) {
+                    if (!ck.a(param0.charAt(var3 - 1), true)) {
                       break L3;
                     } else {
                       var3--;
@@ -160,7 +157,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
                             if (var8 == 0) {
                               break L5;
                             } else {
-                              StringBuilder discarded$5 = var5.append((char) var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               break L5;
                             }
                           } else {
@@ -216,9 +213,8 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static void a() {
-        int discarded$0 = 255;
-        fb.a();
+    final static void a(byte param0) {
+        fb.a(255);
     }
 
     jg() {

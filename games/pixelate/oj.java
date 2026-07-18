@@ -21,7 +21,7 @@ final class oj extends jg implements vo {
         }
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_R = null;
         field_N = null;
         field_P = null;

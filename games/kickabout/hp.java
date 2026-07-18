@@ -6,12 +6,12 @@ final class hp {
     static boolean field_b;
     static String field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         ov.field_b = 0;
         la.a(true);
     }

@@ -550,8 +550,7 @@ final class fn {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int discarded$0 = 140;
-        fn.a(field_h, 0, 0 * field_g, 4, 0, 540, field_g - 540);
+        fn.a(field_h, 0, 0 * field_g, 4, 0, 540, field_g - 540, 140);
         fn.a(field_h, 0, 0 * field_g, 4, 0, 140, field_g - 540, 0, 540);
     }
 
@@ -1053,7 +1052,7 @@ final class fn {
         }
     }
 
-    final static void g(int param0, int param1, int param2) {
+    final static void g(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1728,7 +1727,7 @@ final class fn {
         fn.d(param0 + param2 - 1, param1, param3, param4);
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;

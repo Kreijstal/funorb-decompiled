@@ -13,8 +13,10 @@ final class oa extends mh {
     static ki field_Sb;
     static String field_Tb;
 
-    final static void a(String[] args, jp[][] param1, int param2, String[][] param3, byte[] param4, mf param5, jp[][] param6, mf param7, boolean param8, int param9, int[] param10, String[][] param11, mf param12, byte[] param13) {
+    final static void a(String[] args, jp[][] param1, int param2, String[][] param3, byte[] param4, mf param5, jp[][] param6, mf param7, boolean param8, int param9, int[] param10, String[][] param11, mf param12, byte[] param13, int param14) {
         RuntimeException var15 = null;
+        Object var16 = null;
+        Object var17 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
@@ -183,8 +185,9 @@ final class oa extends mh {
         String stackOut_33_2 = null;
         try {
           L0: {
-            int discarded$1 = 1;
-            og.a(args, (tp[]) null, param13, param6, param4, param10, 1, param1, param12, 1, param5, param3, param7, 2, (int[]) null, param11);
+            var17 = null;
+            var16 = null;
+            og.a(args, (tp[]) null, param13, param6, param4, param10, 1, param1, param12, 1, param5, param3, param7, 2, (int[]) null, param11, true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -523,7 +526,7 @@ final class oa extends mh {
         this.a(param3, param0, -117);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Sb = null;
         field_Pb = null;
         field_Tb = null;

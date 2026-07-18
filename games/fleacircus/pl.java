@@ -1242,7 +1242,7 @@ final class pl {
         return ((pl) this).field_j == 102 ? true : false;
     }
 
-    final static boolean a(rh param0, rh param1, rh param2) {
+    final static boolean a(rh param0, rh param1, rh param2, boolean param3) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
@@ -1643,7 +1643,7 @@ final class pl {
         }
     }
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -1758,8 +1758,7 @@ final class pl {
         gb.a(si.field_R);
         int var3 = ni.field_j * 2 % 16;
         gb.a(var3 + param2, param0 - 4, 16 + (param2 + var3), 16 + param0);
-        int discarded$0 = 13421632;
-        gb.h(var3 + param2, 4 + param0, 8);
+        gb.h(var3 + param2, 4 + param0, 8, 13421632);
         gb.b(si.field_R);
     }
 

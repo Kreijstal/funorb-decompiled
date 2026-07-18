@@ -118,8 +118,7 @@ final class ha extends cn {
     final static void a(byte param0, String param1) {
         try {
             int var2_int = -13;
-            int discarded$0 = 91;
-            hj.a(param1);
+            hj.a(param1, 91);
             qa.a(false, (byte) -62, jj.field_i);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "ha.W(" + 126 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -284,14 +283,13 @@ final class ha extends cn {
             km.a((byte) var10, var7, var5, ni.field_c, var9, var6, (byte) var11, 112, var4_int, var16, var8);
             var17 = (int)((double)var8 / 1.0);
             var18 = (int)((double)var9 / 1.2);
-            int discarded$0 = 9233;
-            bh.a((byte) var10, wk.field_d, (byte) var11, var17, var4_int, var5, var7, var18, var16, var6);
+            bh.a((byte) var10, wk.field_d, (byte) var11, var17, var4_int, var5, var7, var18, var16, var6, 9233);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "ha.HA(" + param0 + ',' + -10454 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -560,8 +558,7 @@ final class ha extends cn {
             }
             L2: {
               var11 = (ph) (Object) stackIn_3_0;
-              int discarded$3 = 1;
-              sf.a(param1 + param3.field_v + param3.field_s, param3.field_m + param0, param3.field_x + param0 - -param3.field_m, param1 - -param3.field_v);
+              sf.a(param1 + param3.field_v + param3.field_s, param3.field_m + param0, param3.field_x + param0 - -param3.field_m, param1 - -param3.field_v, true);
               if (var11 == null) {
                 break L2;
               } else {
@@ -651,8 +648,7 @@ final class ha extends cn {
                 break L8;
               }
             }
-            int discarded$4 = 0;
-            eh.b();
+            eh.b(false);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

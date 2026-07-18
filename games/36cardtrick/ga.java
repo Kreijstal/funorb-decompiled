@@ -15,7 +15,7 @@ final class ga implements Runnable {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_b = null;
     }
 

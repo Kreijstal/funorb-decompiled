@@ -278,15 +278,13 @@ final class hc {
         }
     }
 
-    final static void a(pf param0, pf param1, pf param2, boolean param3) {
+    final static void a(pf param0, pf param1, pf param2, boolean param3, byte param4) {
         try {
             al.field_f = de.a("", -47);
             al.field_f.a(false, true);
-            int discarded$0 = -108;
-            fh.a(param0, param2, param1);
+            fh.a(param0, param2, param1, (byte) -108);
             int var5_int = 0;
-            int discarded$1 = 4;
-            pe.b();
+            pe.b(4);
             el.field_E = ok.field_a;
             o.field_l = ok.field_a;
         } catch (RuntimeException runtimeException) {
@@ -421,12 +419,9 @@ final class hc {
             ((hc) this).field_q = -1;
             var4.field_n = 15658734;
             ((hc) this).field_e = 3;
-            int discarded$14 = -17768;
-            db discarded$15 = var4.a((byte) 119, 0).a(param0 ^ -2, 15658734).a((byte) 102, cj.a(7829367, 10066329, 8947848));
-            int discarded$16 = -17768;
-            db discarded$17 = var4.a((byte) 10, 1).a((byte) 104, cj.a(13421772, 10066329, 11184810));
-            int discarded$18 = -17768;
-            db discarded$19 = var4.a((byte) 115, 3).a((byte) 100, cj.a(10066329, 7829367, 8947848)).a(1, false).b(-2147483648, 1);
+            db discarded$10 = var4.a((byte) 119, 0).a(param0 ^ -2, 15658734).a((byte) 102, cj.a(7829367, 10066329, 8947848, -17768));
+            db discarded$11 = var4.a((byte) 10, 1).a((byte) 104, cj.a(13421772, 10066329, 11184810, -17768));
+            db discarded$12 = var4.a((byte) 115, 3).a((byte) 100, cj.a(10066329, 7829367, 8947848, -17768)).a(1, false).b(-2147483648, 1);
             var5 = new pb[9];
             var16 = new jc(32, 32);
             var18 = var16;
@@ -434,23 +429,22 @@ final class hc {
             L1: while (true) {
               if (var18.field_z.length <= var7_int) {
                 var5[4] = (pb) (Object) var18;
-                db discarded$20 = var4.a((byte) 116, 4).a((byte) 126, true).a((byte) 120, var5);
-                db discarded$21 = var4.a((byte) -113, 5).a((byte) 120, di.a(0, 0, 0, 65793, (byte) -80)).a((byte) 124, true).a(-1, -1);
+                db discarded$13 = var4.a((byte) 116, 4).a((byte) 126, true).a((byte) 120, var5);
+                db discarded$14 = var4.a((byte) -113, 5).a((byte) 120, di.a(0, 0, 0, 65793, (byte) -80)).a((byte) 124, true).a(-1, -1);
                 ((hc) this).field_b = (uk) (Object) var4;
                 var6 = new tc(var4, true);
                 var6.field_h = 0;
                 var7 = new tc(var4, true);
                 var7.field_h = 0;
                 var7.a(-74, he.a((byte) -121, 8947848));
-                db discarded$22 = var7.a((byte) 120, 1).a((byte) 89, he.a((byte) -120, 11184810)).a(-1, 2236962);
+                db discarded$15 = var7.a((byte) 120, 1).a((byte) 89, he.a((byte) -120, 11184810)).a(-1, 2236962);
                 ((hc) this).field_j = (uk) (Object) new bb(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                hh discarded$23 = new hh(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                df discarded$24 = new df(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                hh discarded$16 = new hh(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                df discarded$17 = new df(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new tc();
                 var17.a((id) (Object) var8, (byte) -34);
-                int discarded$25 = -17768;
-                db discarded$26 = var8.a((byte) -104, 0).a((byte) 108, cj.a(10066329, 7829367, 15658734)).a(-1, 1118481).a(false, -1);
-                db discarded$27 = var8.a((byte) 115, 4).a((byte) 124, true).a((byte) 110, var5);
+                db discarded$18 = var8.a((byte) -104, 0).a((byte) 108, cj.a(10066329, 7829367, 15658734, -17768)).a(-1, 1118481).a(false, -1);
+                db discarded$19 = var8.a((byte) 115, 4).a((byte) 124, true).a((byte) 110, var5);
                 ((hc) this).field_d = (uk) (Object) var8;
                 var9 = new pb[9];
                 var9[4] = new pb(2, 1);

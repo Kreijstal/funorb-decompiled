@@ -148,7 +148,7 @@ final class ea {
         return var2;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         ii var2 = hh.field_p;
         var2.a(true, 4);
         var2.a(1, (byte) 65);
@@ -174,7 +174,7 @@ final class ea {
         return var2;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_c = null;
     }
@@ -260,12 +260,12 @@ final class ea {
         return stackIn_7_0;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         tb.field_p.field_l = 0;
         tb.field_p.field_d = 0;
     }
 
-    final static ie a(byte[] param0) {
+    final static ie a(byte[] param0, byte param1) {
         ie var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -292,8 +292,7 @@ final class ea {
           L0: {
             if (param0 != null) {
               var2 = new ie(param0, cl.field_n, ae.field_c, ih.field_V, qh.field_i, ph.field_c);
-              int discarded$2 = 122;
-              vb.a();
+              vb.a((byte) 122);
               stackOut_3_0 = (ie) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;

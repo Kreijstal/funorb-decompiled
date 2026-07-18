@@ -90,7 +90,7 @@ final class bs extends bw {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         RuntimeException var1 = null;
         int[] var1_array = null;
         int var3 = 0;
@@ -118,9 +118,7 @@ final class bs extends bw {
                   break L1;
                 } else {
                   if (null == vla.field_x) {
-                    int discarded$2 = 4;
-                    int discarded$3 = -68;
-                    vla.field_x = cn.a();
+                    vla.field_x = cn.a((byte) -68, 4);
                     break L1;
                   } else {
                     break L1;

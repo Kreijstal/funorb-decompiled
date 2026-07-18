@@ -11,7 +11,7 @@ final class la {
     static int field_d;
     static java.applet.Applet field_g;
 
-    private final int c() {
+    private final int c(byte param0) {
         int var3 = 0;
         int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var2 = aw.field_j[((la) this).field_f].length;
@@ -23,7 +23,7 @@ final class la {
         return 0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
         field_e = null;
     }
@@ -33,7 +33,7 @@ final class la {
         hf.field_c = true;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         int[] var6 = null;
         int var2 = 0;
         int var3 = 0;
@@ -75,7 +75,7 @@ final class la {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0, int param1, int param2) {
         tg var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
@@ -99,10 +99,8 @@ final class la {
         if (param0 < 68) {
             this.a(91);
         }
-        int discarded$0 = 1;
-        wp var3 = we.a(var2);
-        int discarded$1 = -34;
-        io.a(var3);
+        wp var3 = we.a(var2, true);
+        io.a(var3, (byte) -34);
     }
 
     private final void a(byte param0, int param1) {
@@ -155,8 +153,7 @@ final class la {
           } else {
             L4: {
               if (aw.field_j[((la) this).field_f][((la) this).field_b][0] < 0) {
-                int discarded$2 = 82;
-                ((la) this).field_b = this.c();
+                ((la) this).field_b = this.c((byte) 82);
                 break L4;
               } else {
                 break L4;
@@ -203,7 +200,7 @@ final class la {
         this.c(0);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

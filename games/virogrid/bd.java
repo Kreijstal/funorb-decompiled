@@ -8,7 +8,7 @@ final class bd {
     static String[] field_a;
     static km field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_a = null;
@@ -34,8 +34,7 @@ final class bd {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          int discarded$7 = 109;
-          if (hn.a(param3, param1, param0)) {
+          if (hn.a(param3, param1, param0, (byte) 109)) {
             return bk.a(35);
           } else {
             return null;

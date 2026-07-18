@@ -10,17 +10,14 @@ final class je extends ec {
     static String[] field_B;
     static String field_H;
 
-    final static uh h() {
-        int discarded$0 = -52;
-        String var1 = ne.a();
+    final static uh h(boolean param0) {
+        String var1 = ne.a((byte) -52);
         if (var1 != null) {
             if (0 <= var1.indexOf('@')) {
                 var1 = "";
             }
         }
-        int discarded$1 = -52;
-        int discarded$2 = 16;
-        return new uh(ne.a(), db.b());
+        return new uh(ne.a((byte) -52), db.b(16));
     }
 
     public je() {
@@ -130,7 +127,7 @@ final class je extends ec {
         }
     }
 
-    final static void f() {
+    final static void f(int param0) {
         int var1 = (-640 + eb.field_f) / 2;
         int var2 = ve.field_t * ve.field_t;
         int var3 = var2 + -(kh.field_d * kh.field_d);

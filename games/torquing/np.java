@@ -21,7 +21,7 @@ final class np extends ha {
         }
     }
 
-    private final long b() {
+    private final long b(byte param0) {
         int var8 = 0;
         int var9 = Torquing.field_u;
         long var2 = System.nanoTime();
@@ -178,7 +178,7 @@ final class np extends ha {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         int stackIn_4_0 = 0;
@@ -350,8 +350,7 @@ final class np extends ha {
         if (param0 != 20520) {
             ((np) this).field_j = 53;
         }
-        int discarded$0 = 103;
-        ((np) this).field_i = ((np) this).field_i + this.b();
+        ((np) this).field_i = ((np) this).field_i + this.b((byte) 103);
         if (!(((np) this).field_i >= ((np) this).field_h)) {
             return (-((np) this).field_i + ((np) this).field_h) / 1000000L;
         }

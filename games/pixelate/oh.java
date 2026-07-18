@@ -188,7 +188,7 @@ final class oh {
         return stackIn_16_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_d = null;
     }
@@ -415,8 +415,7 @@ final class oh {
 
     final static void a(int param0, int param1, boolean param2, int param3, byte param4, java.awt.Component param5, cb param6, vi param7) {
         try {
-            int discarded$0 = 10;
-            mm.a(param1, param2);
+            mm.a(param1, param2, 10);
             to.field_t = mm.a(param6, param5, 0, param3);
             ib.field_h = mm.a(param6, param5, 1, 1024);
             wi.field_d = new vj();

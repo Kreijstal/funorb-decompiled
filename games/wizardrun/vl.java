@@ -21,7 +21,7 @@ final class vl implements bf {
     private int field_c;
     private int field_m;
 
-    final static String a() {
+    final static String a(int param0) {
         return nk.field_N.d(0);
     }
 
@@ -161,7 +161,7 @@ final class vl implements bf {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         if (param0 < 48) {
             return false;
         }

@@ -92,7 +92,7 @@ final class mo {
         return true;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_s = null;
         field_l = null;

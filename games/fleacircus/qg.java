@@ -9,7 +9,7 @@ final class qg {
     static ke field_f;
     static oc field_e;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_a = null;
         field_d = null;
@@ -50,7 +50,7 @@ final class qg {
         return stackIn_7_0 != 0;
     }
 
-    final static void a(String param0, java.applet.Applet param1) {
+    final static void a(String param0, java.applet.Applet param1, int param2) {
         try {
             java.net.URL var3 = null;
             try {

@@ -82,7 +82,7 @@ class kb {
         return g.a(param1, param0, ((kb) this).b((byte) -81, 59, param2), ((kb) this).b((byte) -92, 56, param2));
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_p = null;
         field_B = null;
         field_E = null;
@@ -513,8 +513,7 @@ class kb {
             if (param3 == null) {
                 var8.a(param0, (byte) -71);
             } else {
-                int discarded$0 = -31746;
-                int discarded$1 = ae.a((k) (Object) var8, param3);
+                int discarded$0 = ae.a((k) (Object) var8, param3, -31746);
             }
             var8.e(41, var8.field_j + -var7);
         } catch (RuntimeException runtimeException) {

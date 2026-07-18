@@ -42,8 +42,7 @@ final class lf {
           L0: {
             L1: {
               var2_int = 82 / ((54 - param1) / 32);
-              int discarded$11 = 40;
-              if (null == tr.a(param0)) {
+              if (null == tr.a(param0, (byte) 40)) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -88,14 +87,13 @@ final class lf {
         return stackIn_3_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
     }
 
     final static void a(int param0) {
-        int discarded$2 = -117;
-        nb.field_i = qa.h();
+        nb.field_i = qa.h(-117);
         wd.field_l = new se();
         if (param0 >= -59) {
           lf.a(-98);

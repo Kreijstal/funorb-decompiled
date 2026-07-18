@@ -6,12 +6,12 @@ final class r extends fc {
     static bc field_i;
     static int field_j;
 
-    public static void d() {
+    public static void d(int param0) {
         field_i = null;
         field_k = null;
     }
 
-    final static void f() {
+    final static void f(int param0) {
         gl.field_E.l(24910);
         if (ib.field_e == null) {
             ib.field_e = new rk(gl.field_E, tk.field_r);
@@ -23,11 +23,11 @@ final class r extends fc {
         throw new Error();
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         return !sa.field_Q.b((byte) 92);
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -183,8 +183,7 @@ final class r extends fc {
         try {
           L0: {
             L1: {
-              int discarded$6 = 103;
-              j.a((java.awt.Component) (Object) param1);
+              j.a((java.awt.Component) (Object) param1, 103);
               fb.a(-113, (java.awt.Component) (Object) param1);
               if (null == rd.field_l) {
                 break L1;
@@ -227,7 +226,7 @@ final class r extends fc {
         }
     }
 
-    final static int e() {
+    final static int e(int param0) {
         return kk.field_h;
     }
 

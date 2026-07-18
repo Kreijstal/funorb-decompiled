@@ -34,14 +34,13 @@ final class f {
         var4 = Bounce.field_N;
         try {
           L0: {
-            int discarded$8 = -33;
-            if (ne.a(param1, param2)) {
+            if (ne.a(param1, param2, (byte) -33)) {
               L1: {
                 if (param0 > 94) {
                   break L1;
                 } else {
                   var5 = null;
-                  boolean discarded$9 = f.a((byte) -52, (CharSequence) null, true);
+                  boolean discarded$2 = f.a((byte) -52, (CharSequence) null, true);
                   break L1;
                 }
               }
@@ -197,7 +196,7 @@ final class f {
         field_a = null;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         int stackIn_7_0 = 0;
         int stackOut_5_0 = 0;
         if (param0 != 160) {

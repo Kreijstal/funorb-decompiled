@@ -38,7 +38,7 @@ final class pr {
         return ((pr) this).field_a;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
@@ -205,7 +205,7 @@ final class pr {
         ((pr) this).field_d = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;

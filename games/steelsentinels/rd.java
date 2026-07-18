@@ -31,8 +31,7 @@ final class rd {
         try {
           L0: {
             if (wa.a((byte) 30, param3, param2, param1)) {
-              int discarded$2 = -71;
-              stackOut_3_0 = ij.i();
+              stackOut_3_0 = ij.i(-71);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -79,7 +78,7 @@ final class rd {
         field_c = null;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return hb.field_b + -hl.field_q;
     }
 

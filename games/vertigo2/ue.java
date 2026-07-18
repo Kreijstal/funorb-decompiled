@@ -14,7 +14,7 @@ final class ue extends cj implements cm, ij {
     static int field_O;
     static er field_N;
 
-    private final String a() {
+    private final String a(byte param0) {
         return "</col></u>";
     }
 
@@ -96,8 +96,7 @@ final class ue extends cj implements cm, ij {
             param1 = param1 + (-param1 + ce.field_b) * var3 / var2;
         }
         td.field_c.a(91, 640, 120, param1, ml.field_w);
-        int discarded$0 = 5;
-        rg.a(640, r.field_j, 0, -24 + ce.field_b, param0 + -4880, ia.field_G);
+        rg.a(640, r.field_j, 0, -24 + ce.field_b, param0 + -4880, ia.field_G, 5);
     }
 
     ue(oe param0) {
@@ -129,7 +128,6 @@ final class ue extends cj implements cm, ij {
             ((ue) this).field_E = param0;
             ((ue) this).field_P = new d(vi.field_x, (uf) null);
             ((ue) this).field_P.field_B = (ur) (Object) new vo();
-            int discarded$1 = -88;
             var7 = Vertigo2.a(new String[2], hi.field_n, -127);
             var3 = 20;
             var4 = new va(qc.field_x, 0, 0, 0, 0, 16777215, -1, 3, 0, qc.field_x.field_z, -1, 2147483647, true);
@@ -295,21 +293,18 @@ final class ue extends cj implements cm, ij {
               L1: {
                 if (0 != param1) {
                   if (param1 == 1) {
-                    int discarded$25 = 12;
-                    se.a("privacy.ws");
+                    se.a("privacy.ws", 12);
                     break L1;
                   } else {
                     if (param1 == 2) {
-                      int discarded$26 = 12;
-                      se.a("conduct.ws");
+                      se.a("conduct.ws", 12);
                       break L1;
                     } else {
                       break L1;
                     }
                   }
                 } else {
-                  int discarded$27 = 12;
-                  se.a("terms.ws");
+                  se.a("terms.ws", 12);
                   break L1;
                 }
               }
@@ -350,7 +345,7 @@ final class ue extends cj implements cm, ij {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_F = null;
         field_H = null;
         field_J = null;

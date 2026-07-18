@@ -15,7 +15,7 @@ final class cf extends ki {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_eb = null;
         field_fb = null;
     }

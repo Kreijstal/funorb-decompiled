@@ -31,7 +31,7 @@ final class nf {
         field_d = null;
     }
 
-    final static la a(int param0, int param1, ec param2, int param3, boolean param4) {
+    final static la a(int param0, int param1, ec param2, int param3, boolean param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         la var7 = null;

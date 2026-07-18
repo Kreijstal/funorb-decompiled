@@ -6,7 +6,7 @@ final class o {
     static String[] field_a;
     static bg[] field_c;
 
-    final static void a(int param0, int param1, int param2, pk param3) {
+    final static void a(int param0, int param1, int param2, pk param3, int param4, int param5) {
         RuntimeException var6 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -90,8 +90,7 @@ final class o {
                   }
                 }
               } else {
-                int discarded$2 = 0;
-                mh.a(var4, param0);
+                mh.a(var4, param0, 0);
                 var4 = (fb) (Object) hd.field_p.e((byte) -119);
                 continue L1;
               }
@@ -104,7 +103,7 @@ final class o {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }

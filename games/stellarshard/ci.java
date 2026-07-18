@@ -7,7 +7,7 @@ abstract class ci {
     static String[] field_a;
     static String field_c;
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;
@@ -32,7 +32,7 @@ abstract class ci {
 
     abstract int a(boolean param0, long param1);
 
-    final static String a(String param0, char param1, String param2) {
+    final static String a(String param0, char param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -175,7 +175,7 @@ abstract class ci {
         return stackIn_11_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

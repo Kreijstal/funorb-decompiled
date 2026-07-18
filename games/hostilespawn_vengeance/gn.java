@@ -235,15 +235,14 @@ final class gn {
         }
         ((gn) this).field_h.a((byte) -125, ((gn) this).field_p, ((gn) this).field_s);
         ih.field_s = false;
-        int discarded$1 = 0;
-        ue var2 = jg.a(((gn) this).field_s, (byte) -61, gf.field_b, 0, ((gn) this).field_p);
+        ue var2 = jg.a(((gn) this).field_s, (byte) -61, gf.field_b, 0, ((gn) this).field_p, 0);
         if (var2 == null) {
             ((gn) this).c(115);
         }
         return var2;
     }
 
-    final static ll a(String param0) {
+    final static ll a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -431,8 +430,7 @@ final class gn {
                           if (var12 != 0) {
                             if (var12 != 1) {
                               if (var12 == 2) {
-                                int discarded$3 = 0;
-                                pf.a(var14.field_D);
+                                pf.a(var14.field_D, false);
                                 wk.field_b[var10.field_h].a(true, 128, (int)var10.field_c, param1, param4);
                                 var14.a();
                                 wk.field_b[var10.field_h].a(true, 128, (int)var10.field_c, 32, 32);
@@ -484,8 +482,7 @@ final class gn {
                                 break L2;
                               }
                             } else {
-                              int discarded$4 = 0;
-                              pf.a(var14.field_D);
+                              pf.a(var14.field_D, false);
                               hh.field_a[var10.field_h].a(true, 128, (int)var10.field_c, param1, param4);
                               var14.a();
                               hh.field_a[var10.field_h].a(true, 128, (int)var10.field_c, 32, 32);
@@ -535,8 +532,7 @@ final class gn {
                               }
                             }
                           } else {
-                            int discarded$5 = 0;
-                            pf.a(var14.field_D);
+                            pf.a(var14.field_D, false);
                             qa.field_g[var10.field_h - -1].a(true, 128, (int)var10.field_c, param1, param4);
                             var14.a();
                             qa.field_g[1 + var10.field_h].a(true, 128, (int)var10.field_c, 32, 32);

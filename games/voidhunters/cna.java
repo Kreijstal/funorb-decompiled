@@ -8,7 +8,7 @@ final class cna extends llb {
     llb field_yb;
     static int[] field_zb;
 
-    public static void h() {
+    public static void h(int param0) {
         field_zb = null;
         field_xb = null;
         field_wb = null;

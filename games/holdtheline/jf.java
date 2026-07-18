@@ -26,7 +26,7 @@ abstract class jf {
         }
     }
 
-    final static boolean a(in param0, qm param1, int param2, int param3, in param4, int param5, int param6, qm param7) {
+    final static boolean a(in param0, qm param1, int param2, int param3, in param4, int param5, int param6, qm param7, int param8) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -370,7 +370,7 @@ abstract class jf {
 
     abstract int a(byte param0);
 
-    final static short[] a(short[] param0, int param1, da param2) {
+    final static short[] a(short[] param0, int param1, da param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -527,13 +527,13 @@ abstract class jf {
         return stackIn_16_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_a = null;
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (rc.field_c.length > kn.field_a) {
             int fieldTemp$1 = kn.field_a;
             kn.field_a = kn.field_a + 1;

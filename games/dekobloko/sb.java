@@ -11,7 +11,7 @@ final class sb extends bh {
     static String field_n;
     static String field_p;
 
-    public static void a() {
+    public static void a(int param0) {
         field_u = null;
         field_p = null;
         field_t = null;
@@ -19,7 +19,7 @@ final class sb extends bh {
         field_n = null;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         RuntimeException var1 = null;
         tj var1_ref = null;
         ve var1_ref2 = null;
@@ -115,7 +115,7 @@ final class sb extends bh {
         }
     }
 
-    final static fm a(long param0, String param1, boolean param2, String param3) {
+    final static fm a(long param0, String param1, boolean param2, String param3, int param4) {
         RuntimeException var6 = null;
         qa stackIn_4_0 = null;
         ob stackIn_6_0 = null;

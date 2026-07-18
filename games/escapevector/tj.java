@@ -37,8 +37,7 @@ final class tj extends hg {
     private final int g(int param0) {
         int var2 = 0;
         int var4 = EscapeVector.field_A;
-        int discarded$0 = 67;
-        int var3 = this.a();
+        int var3 = this.a((byte) 67);
         if (((tj) this).field_l) {
             var2 = -(var3 / 2) + 626;
         } else {
@@ -492,12 +491,9 @@ final class tj extends hg {
         int stackOut_62_0 = 0;
         int stackOut_61_0 = 0;
         var15 = EscapeVector.field_A;
-        int discarded$3 = 80;
-        this.h();
-        int discarded$4 = 401;
-        this.e();
-        int discarded$5 = 67;
-        var2 = this.a();
+        this.h(80);
+        this.e(401);
+        var2 = this.a((byte) 67);
         var3 = 43 + -((tj) this).field_s;
         if (param0 >= 57) {
           L0: {
@@ -1413,7 +1409,7 @@ final class tj extends hg {
         return 12288 * var2 / 640 + 2048;
     }
 
-    private final void k() {
+    private final void k(int param0) {
         if (-81 == ((tj) this).field_v) {
             rk.field_e.a(bm.field_a, 100, 3072 * qm.field_c / 64, 10240);
         }
@@ -1793,8 +1789,7 @@ final class tj extends hg {
                         break L3;
                       } else {
                         if (80 > ((tj) this).field_v) {
-                          int discarded$10 = -21;
-                          this.d();
+                          this.d((byte) -21);
                           break L3;
                         } else {
                           break L3;
@@ -1832,8 +1827,7 @@ final class tj extends hg {
                           if (((tj) this).field_A != null) {
                             break L4;
                           } else {
-                            int discarded$11 = 111;
-                            ((tj) this).field_A = hl.c(en.field_d, 100, qm.field_c * 768 / 64, this.g());
+                            ((tj) this).field_A = hl.c(en.field_d, 100, qm.field_c * 768 / 64, this.g((byte) 111));
                             ((tj) this).field_A.h(-1);
                             rk.field_e.a((wg) (Object) ((tj) this).field_A);
                             break L4;
@@ -1939,8 +1933,7 @@ final class tj extends hg {
                           return;
                         } else {
                           if (((tj) this).field_v > 0) {
-                            int discarded$12 = 108;
-                            this.k();
+                            this.k(108);
                             break L11;
                           } else {
                             this.i(2048);
@@ -1966,8 +1959,7 @@ final class tj extends hg {
                           }
                         } else {
                           if (20 > ((tj) this).field_p) {
-                            int discarded$13 = 100;
-                            this.f();
+                            this.f(100);
                             break L14;
                           } else {
                             if (((tj) this).field_p >= 30) {
@@ -1976,8 +1968,7 @@ final class tj extends hg {
                               if (!this.a((byte) 125, ((tj) this).field_o)) {
                                 break L14;
                               } else {
-                                int discarded$14 = 100;
-                                this.f();
+                                this.f(100);
                                 break L14;
                               }
                             }
@@ -2000,9 +1991,9 @@ final class tj extends hg {
                           if (((tj) this).field_t <= 0) {
                             break L15;
                           } else {
-                            int fieldTemp$15 = ((tj) this).field_t - 1;
+                            int fieldTemp$2 = ((tj) this).field_t - 1;
                             ((tj) this).field_t = ((tj) this).field_t - 1;
-                            if (fieldTemp$15 == 0) {
+                            if (fieldTemp$2 == 0) {
                               if (((tj) this).field_C <= ((tj) this).field_B) {
                                 ((tj) this).field_E = ((tj) this).field_E + 1;
                                 if (~((tj) this).field_g.length >= ~((tj) this).field_E) {
@@ -2044,8 +2035,7 @@ final class tj extends hg {
                                       } else {
                                         if (var3.regionMatches(((tj) this).field_j, "<title>", 0, "<title>".length())) {
                                           ((tj) this).field_j = ((tj) this).field_j + "<title>".length();
-                                          int discarded$16 = -21;
-                                          this.d();
+                                          this.d((byte) -21);
                                           continue L16;
                                         } else {
                                           break L17;
@@ -2061,9 +2051,9 @@ final class tj extends hg {
                                       break L18;
                                     } else {
                                       L19: {
-                                        int fieldTemp$17 = ((tj) this).field_j;
+                                        int fieldTemp$3 = ((tj) this).field_j;
                                         ((tj) this).field_j = ((tj) this).field_j + 1;
-                                        var4 = var3.charAt(fieldTemp$17);
+                                        var4 = var3.charAt(fieldTemp$3);
                                         if (var4 != 60) {
                                           break L19;
                                         } else {
@@ -2083,8 +2073,7 @@ final class tj extends hg {
                                         ((tj) this).field_u.e(ie.field_q / 200, 0);
                                         break L18;
                                       } else {
-                                        int discarded$18 = 111;
-                                        ((tj) this).field_u.a(ie.field_q / 200, 3072 * qm.field_c / 64, this.g());
+                                        ((tj) this).field_u.a(ie.field_q / 200, 3072 * qm.field_c / 64, this.g((byte) 111));
                                         break L18;
                                       }
                                     }
@@ -2115,8 +2104,7 @@ final class tj extends hg {
                   }
                   L20: {
                     if (((tj) this).field_A != null) {
-                      int discarded$19 = 111;
-                      ((tj) this).field_A.a(ie.field_q / 200, 768 * qm.field_c / 64, this.g());
+                      ((tj) this).field_A.a(ie.field_q / 200, 768 * qm.field_c / 64, this.g((byte) 111));
                       break L20;
                     } else {
                       break L20;
@@ -2170,7 +2158,7 @@ final class tj extends hg {
         }
     }
 
-    private final int g() {
+    private final int g(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -2209,8 +2197,7 @@ final class tj extends hg {
             var2 = stackIn_10_0;
             break L1;
           } else {
-            int discarded$8 = 67;
-            var6 = this.a();
+            var6 = this.a((byte) 67);
             var7 = fh.field_g.b(var8);
             var2 = (640 - var7) / 2;
             if (1 != var3) {
@@ -2230,7 +2217,7 @@ final class tj extends hg {
         return var2 * 12288 / 640 + 2048;
     }
 
-    private final int a() {
+    private final int a(byte param0) {
         int var2 = 40;
         int var3 = fh.field_g.b(ig.field_c) - -9;
         if (var2 < var3) {
@@ -2243,7 +2230,7 @@ final class tj extends hg {
         return var2;
     }
 
-    private final void e() {
+    private final void e(int param0) {
         int var4 = 0;
         int var5 = 0;
         int var2 = 0;
@@ -2263,7 +2250,7 @@ final class tj extends hg {
         qj.a(-1276284702, ((tj) this).field_F, var4, var3, var6, var5, ((tj) this).field_p, var2);
     }
 
-    private final void h() {
+    private final void h(int param0) {
         ed var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -2343,7 +2330,7 @@ final class tj extends hg {
         ik.field_p = true;
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         if (((tj) this).field_v == 0) {
             rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 6144);
         }
@@ -2569,8 +2556,7 @@ final class tj extends hg {
               if (null != ((tj) this).field_z[param0]) {
                 break L1;
               } else {
-                int discarded$2 = 1;
-                ((tj) this).field_z[param0] = fe.a(param3, fi.field_j, param2);
+                ((tj) this).field_z[param0] = fe.a(param3, fi.field_j, param2, true);
                 if (((tj) this).field_z[param0] == null) {
                   stackOut_3_0 = 0;
                   stackIn_4_0 = stackOut_3_0;
@@ -2643,7 +2629,7 @@ final class tj extends hg {
         return stackIn_8_0 != 0;
     }
 
-    private final void f() {
+    private final void f(int param0) {
         if (!(((tj) this).field_p != 0)) {
             rk.field_e.a(si.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
         }
@@ -2669,8 +2655,7 @@ final class tj extends hg {
         int var4 = 0;
         int var5 = 0;
         L0: {
-          int discarded$2 = 67;
-          var4 = this.a();
+          var4 = this.a((byte) 67);
           var5 = -104 % ((param0 - -17) / 56);
           if (((tj) this).field_l) {
             if (param1 < 626 + -var4) {

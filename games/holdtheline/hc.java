@@ -12,8 +12,7 @@ final class hc {
         hj var5 = null;
         try {
             var5 = new hj(param1.field_o, param1.field_v);
-            int discarded$2 = 32381;
-            ok.a();
+            ok.a(32381);
             var5.f();
             param1.e(0, 0, 1);
             if (param2 > -41) {
@@ -27,7 +26,7 @@ final class hc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_a = null;

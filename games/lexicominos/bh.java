@@ -4,7 +4,7 @@
 final class bh extends nl {
     private java.nio.ByteBuffer field_d;
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         cg var3 = null;
@@ -121,8 +121,7 @@ final class bh extends nl {
         try {
           L0: {
             if (param2 <= -68) {
-              int discarded$11 = -1;
-              if (!bb.a(param1, param0)) {
+              if (!bb.a(param1, param0, -1)) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0 != 0;

@@ -480,7 +480,7 @@ final class jp extends ak {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_j = null;
         field_k = null;
     }
@@ -531,14 +531,12 @@ final class jp extends ak {
                 break L1;
               }
             }
-            int discarded$6 = qv.field_k.a(100, param0 << 24 | 5023231, 0, 200, 220, (int[]) null, (hr[]) null, 40, -1, 0, 0, param2 + -6432, ps.field_b.toUpperCase() + " " + il.field_a + "<br>" + tj.field_l.toUpperCase() + " " + dp.b(jk.field_a, param2 + -21265), (aa) null, 1, 1);
-            int discarded$7 = uq.field_a.a(100, -1, 0, 200, 220, (int[]) null, (hr[]) null, 40, -1, 0, 0, -8787, ps.field_b.toUpperCase() + " " + il.field_a + "<br>" + tj.field_l.toUpperCase() + " " + dp.b(jk.field_a, -23620), (aa) null, 1, 1);
-            int discarded$8 = gt.field_db.a(200, 5023231 | param0 << 24, 0, 300, 170, (int[]) null, (hr[]) null, 118, -1, 0, 0, -8787, wh.field_r, (aa) null, 1, 0);
-            int discarded$9 = bq.field_c.a(200, -1, 0, 300, 170, (int[]) null, (hr[]) null, 118, -1, 0, 0, param2 ^ 11104, wh.field_r, (aa) null, 1, 0);
-            int discarded$10 = -128;
-            qv.field_k.a(ic.a(ar.field_M, new String[1]).toUpperCase(), param0 << 24 | 5023231, -1, 180, 320, 0);
-            int discarded$11 = -128;
-            uq.field_a.a(ic.a(ar.field_M, new String[1]).toUpperCase(), -1, -1, 180, 320, 0);
+            int discarded$4 = qv.field_k.a(100, param0 << 24 | 5023231, 0, 200, 220, (int[]) null, (hr[]) null, 40, -1, 0, 0, param2 + -6432, ps.field_b.toUpperCase() + " " + il.field_a + "<br>" + tj.field_l.toUpperCase() + " " + dp.b(jk.field_a, param2 + -21265), (aa) null, 1, 1);
+            int discarded$5 = uq.field_a.a(100, -1, 0, 200, 220, (int[]) null, (hr[]) null, 40, -1, 0, 0, -8787, ps.field_b.toUpperCase() + " " + il.field_a + "<br>" + tj.field_l.toUpperCase() + " " + dp.b(jk.field_a, -23620), (aa) null, 1, 1);
+            int discarded$6 = gt.field_db.a(200, 5023231 | param0 << 24, 0, 300, 170, (int[]) null, (hr[]) null, 118, -1, 0, 0, -8787, wh.field_r, (aa) null, 1, 0);
+            int discarded$7 = bq.field_c.a(200, -1, 0, 300, 170, (int[]) null, (hr[]) null, 118, -1, 0, 0, param2 ^ 11104, wh.field_r, (aa) null, 1, 0);
+            qv.field_k.a(ic.a(ar.field_M, new String[1], (byte) -128).toUpperCase(), param0 << 24 | 5023231, -1, 180, 320, 0);
+            uq.field_a.a(ic.a(ar.field_M, new String[1], (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
             var4_int = 140;
             var5 = 0;
             L2: while (true) {

@@ -37,8 +37,7 @@ final class ir extends tm {
                 break L1;
               }
             }
-            int discarded$2 = 1;
-            stackOut_2_0 = new li(mi.a());
+            stackOut_2_0 = new li(mi.a(true));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -89,32 +88,28 @@ final class ir extends tm {
           if (gs.field_b) {
             on.g(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
             ni.field_l.field_b.a(122, param0);
-            int discarded$4 = -93;
-            gp.a(param0);
+            gp.a(param0, (byte) -93);
             return;
           } else {
-            int discarded$5 = -93;
-            gp.a(param0);
+            gp.a(param0, (byte) -93);
             return;
           }
         } else {
           ir.a(false, 111);
           ti.a(63, param0);
           if (!gs.field_b) {
-            int discarded$6 = -93;
-            gp.a(param0);
+            gp.a(param0, (byte) -93);
             return;
           } else {
             on.g(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
             ni.field_l.field_b.a(122, param0);
-            int discarded$7 = -93;
-            gp.a(param0);
+            gp.a(param0, (byte) -93);
             return;
           }
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_A = null;
         field_C = null;
         field_B = null;

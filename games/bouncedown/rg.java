@@ -10,12 +10,12 @@ final class rg {
     String field_c;
     boolean field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_e = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         ta.a((byte) -118, vi.b(0));
     }
 
@@ -53,8 +53,7 @@ final class rg {
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
         try {
-          int discarded$2 = 0;
-          d.a(param2, false, param1);
+          d.a(param2, false, param1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

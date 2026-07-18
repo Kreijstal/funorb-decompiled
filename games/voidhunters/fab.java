@@ -16,8 +16,7 @@ final class fab {
         try {
             var2_ref = (kc) (Object) beb.a(param1, 6429, jpa.field_c);
         } catch (Exception exception) {
-            int discarded$0 = -88;
-            var4 = ila.a(param1);
+            var4 = ila.a(param1, -88);
             var2_ref = new kc();
             eg.e((byte) -69);
             gna.a((Throwable) (Object) exception, "Gamedata is corrupted - " + var4, 0);
@@ -224,7 +223,7 @@ final class fab {
         return stackIn_1_0;
     }
 
-    private final void a(java.awt.Canvas param0) {
+    private final void a(java.awt.Canvas param0, byte param1) {
         Object var3 = null;
         fs[] var4 = null;
         int var5 = 0;
@@ -443,8 +442,7 @@ final class fab {
                 }
                 case 17: {
                     try {
-                        int discarded$10 = 1;
-                        var7_int = ada.a("hw3d");
+                        var7_int = ada.a("hw3d", true);
                         if (var7_int == -1) {
                             statePc = 19;
                         } else {
@@ -507,8 +505,7 @@ final class fab {
                 }
                 case 23: {
                     try {
-                        int discarded$11 = 1;
-                        var8_int = ada.a("jaclib");
+                        var8_int = ada.a("jaclib", true);
                         if (-1 != var8_int) {
                             statePc = 25;
                         } else {
@@ -561,8 +558,7 @@ final class fab {
                 }
                 case 28: {
                     try {
-                        int discarded$12 = 1;
-                        var9 = ada.a("jaggl");
+                        var9 = ada.a("jaggl", true);
                         if (-1 == var9) {
                             statePc = 30;
                         } else {
@@ -652,8 +648,7 @@ final class fab {
                 }
                 case 37: {
                     try {
-                        int discarded$13 = 1;
-                        var7_int = ada.a("jaclib");
+                        var7_int = ada.a("jaclib", true);
                         if (var7_int != -1) {
                             statePc = 39;
                         } else {
@@ -706,8 +701,7 @@ final class fab {
                 }
                 case 42: {
                     try {
-                        int discarded$14 = 1;
-                        var8_int = ada.a("jaggl");
+                        var8_int = ada.a("jaggl", true);
                         if (var8_int == -1) {
                             statePc = 44;
                         } else {
@@ -787,8 +781,7 @@ final class fab {
                 }
                 case 50: {
                     try {
-                        int discarded$15 = 1;
-                        var7_int = ada.a("jaclib");
+                        var7_int = ada.a("jaclib", true);
                         if (var7_int == -1) {
                             statePc = 52;
                         } else {
@@ -851,8 +844,7 @@ final class fab {
                 }
                 case 56: {
                     try {
-                        int discarded$16 = 1;
-                        var8_int = ada.a("jagdx");
+                        var8_int = ada.a("jagdx", true);
                         if (-1 == var8_int) {
                             statePc = 58;
                         } else {
@@ -915,8 +907,7 @@ final class fab {
                 }
                 case 62: {
                     try {
-                        int discarded$17 = 1;
-                        var9 = ada.a("hw3d");
+                        var9 = ada.a("hw3d", true);
                         if (var9 != -1) {
                             statePc = 64;
                         } else {
@@ -986,8 +977,7 @@ final class fab {
                 }
                 case 69: {
                     try {
-                        int discarded$18 = 1;
-                        var7_int = ada.a("jaclib");
+                        var7_int = ada.a("jaclib", true);
                         if (-1 == var7_int) {
                             statePc = 71;
                         } else {
@@ -1050,8 +1040,7 @@ final class fab {
                 }
                 case 75: {
                     try {
-                        int discarded$19 = 1;
-                        var8_int = ada.a("sw3d");
+                        var8_int = ada.a("sw3d", true);
                         if (var8_int == -1) {
                             statePc = 77;
                         } else {
@@ -1891,8 +1880,7 @@ final class fab {
     }
 
     fab(d param0, fs[] param1) {
-        this(g.a(0), qc.b(), param0, bm.field_o, param1);
-        int discarded$0 = 0;
+        this(g.a(0), qc.b(0), param0, bm.field_o, param1);
     }
 
     private fab(asb param0, asb param1, d param2, eab param3, fs[] param4) {
@@ -1957,8 +1945,7 @@ final class fab {
                   }
                 }
               }
-              int discarded$2 = -119;
-              this.a(param1);
+              this.a(param1, (byte) -119);
               break L2;
             }
             L4: {

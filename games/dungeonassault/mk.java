@@ -122,7 +122,7 @@ final class mk extends ne {
         return stackIn_17_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_j = null;
         field_i = null;
     }
@@ -135,7 +135,7 @@ final class mk extends ne {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean a(boolean param0, CharSequence param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;

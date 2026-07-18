@@ -118,18 +118,18 @@ final class jr implements Runnable {
                     }
                 }
                 um.a(true, 10L);
-                int discarded$0 = -29785;
-                e.a(((jr) this).field_c, (Object) null);
+                Object var5 = null;
+                e.a(((jr) this).field_c, (Object) null, -29785);
             }
         } catch (Exception exception) {
-            Object var5 = null;
+            Object var6 = null;
             ke.a((Throwable) (Object) exception, (String) null, 0);
         } finally {
             ((jr) this).field_b = false;
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         li var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -238,8 +238,7 @@ final class jr implements Runnable {
         L0: {
           qg.field_G = bi.field_e;
           om.field_D = bi.field_j;
-          int discarded$2 = 202;
-          km.i();
+          km.i(202);
           qo.field_D.a(0, 14017, ca.field_h.field_Fb, 0, -2 + (-40 + ca.field_h.field_db));
           bf.field_c.a(86, il.field_k.field_Fb, r.field_f, 0, 0);
           var1 = 2 + r.field_f;
@@ -322,8 +321,7 @@ final class jr implements Runnable {
         }
         L2: {
           ((cr) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, 0);
-          int discarded$3 = -52;
-          po.b();
+          po.b((byte) -52);
           vb.field_j.a(123, ca.field_h.field_Fb, 40, ca.field_h.field_db + -40, 0);
           qn.field_s.a(121, ud.field_A.field_Fb, 30, 0, 0);
           ja.field_b.a(115, ud.field_A.field_Fb, -30 + (-2 + ud.field_A.field_db + -40), 30, 0);

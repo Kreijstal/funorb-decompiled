@@ -24,18 +24,17 @@ final class op {
             return;
         }
         try {
-            int discarded$0 = -1;
-            var7 = jp.a(var2_int, 12, var5);
+            var7 = jp.a(var2_int, 12, var5, -1);
             var8 = pd.a(var6, 0, var3, 20);
             qn.b(var7, var8, var5, var6, 0);
             qn.f(1 + var7, var8 + 1, var5 - 2, -2 + var6, 16777088);
-            int discarded$1 = eq.field_h.field_Z.a(param1, 3 + var7, -eq.field_h.field_Z.field_H + is.field_b + (var8 + 1), 500, 1000, 0, -1, 0, 0, jn.field_d);
+            int discarded$0 = eq.field_h.field_Z.a(param1, 3 + var7, -eq.field_h.field_Z.field_H + is.field_b + (var8 + 1), 500, 1000, 0, -1, 0, 0, jn.field_d);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "op.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, int param1, nr param2, nr param3) {
+    final static void a(int param0, int param1, nr param2, nr param3, int param4, int param5) {
         try {
             df.field_E = 8;
             ar.field_w = 2;
@@ -48,7 +47,7 @@ final class op {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, boolean param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         rs var4 = null;
@@ -71,8 +70,7 @@ final class op {
                   }
                 }
               } else {
-                int discarded$2 = 105;
-                tc.a(5, var4);
+                tc.a(5, var4, (byte) 105);
                 var4 = (rs) (Object) gg.field_F.a((byte) 123);
                 continue L1;
               }
@@ -151,8 +149,7 @@ final class op {
                       }
                     }
                     if (dj.field_a < 200) {
-                      int discarded$1 = -3404;
-                      if (!si.a(param1)) {
+                      if (!si.a(param1, -3404)) {
                         var5 = vl.field_n;
                         var5.h(32161, param2);
                         var5.field_q = var5.field_q + 1;

@@ -41,8 +41,7 @@ final class pm extends l {
           L0: {
             if (param1 != null) {
               var2 = new v(param1, el.field_w, mb.field_bb, db.field_k, gb.field_F, lj.field_j);
-              int discarded$2 = -28;
-              pe.b();
+              pe.b((byte) -28);
               stackOut_3_0 = (v) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -83,7 +82,7 @@ final class pm extends l {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_s = null;
         field_q = null;
         field_g = null;
@@ -94,7 +93,7 @@ final class pm extends l {
         field_n = null;
     }
 
-    final static void a(eh param0) {
+    final static void a(eh param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -128,8 +127,7 @@ final class pm extends l {
             var10 = var8;
             var3 = var10.g(11132);
             var10.j(8);
-            int discarded$1 = 9;
-            td.field_e = fj.a(var10);
+            td.field_e = fj.a(var10, 9);
             ph.field_n = new wm[var3];
             kh.field_f = new int[var3][];
             var4 = 94;

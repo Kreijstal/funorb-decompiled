@@ -43,8 +43,7 @@ final class wq {
                 return (Object) (Object) stackIn_6_0;
               } else {
                 if (param1 < -124) {
-                  int discarded$2 = 0;
-                  stackOut_10_0 = ck.a(param2);
+                  stackOut_10_0 = ck.a(param2, false);
                   stackIn_11_0 = stackOut_10_0;
                   break L0;
                 } else {
@@ -90,7 +89,7 @@ final class wq {
         return (Object) (Object) stackIn_11_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         int var1 = 68;
     }

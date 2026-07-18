@@ -30,8 +30,7 @@ final class hv {
         String stackOut_8_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            var2 = bg.a((byte) 116, jc.a(param1));
+            var2 = bg.a((byte) 116, jc.a(param1, false));
             L1: {
               if (var2 == null) {
                 var2 = "";
@@ -323,18 +322,17 @@ final class hv {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_d = null;
         field_c = null;
     }
 
-    final static void a(hu param0) {
+    final static void a(hu param0, int param1) {
         try {
             cq.field_e = param0;
-            int discarded$0 = 17475;
-            ae.field_D = h.a();
+            ae.field_D = h.a(17475);
             js.field_d = new tf();
             bk.field_c = new gv[6];
         } catch (RuntimeException runtimeException) {

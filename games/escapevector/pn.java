@@ -235,13 +235,13 @@ class pn extends fj implements qb {
         ((pn) this).a((hm) (Object) var2, 30);
     }
 
-    public static void q() {
+    public static void q(int param0) {
         field_nb = null;
         field_qb = null;
         field_pb = null;
     }
 
-    final static byte[][][] a(int[] param0, mf param1, byte[][][] param2, mf param3) {
+    final static byte[][][] a(int[] param0, mf param1, byte[][][] param2, mf param3, byte param4) {
         RuntimeException var5 = null;
         byte[][][] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -308,8 +308,7 @@ class pn extends fj implements qb {
         String stackOut_14_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_2_0 = sl.a(param1, param3, param0, param2, 2);
+            stackOut_2_0 = sl.a(param1, param3, param0, param2, 2, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -570,13 +569,11 @@ class pn extends fj implements qb {
               if (!((pn) this).field_lb) {
                 return;
               } else {
-                int discarded$4 = 0;
-                eb.k();
+                eb.k(0);
                 return;
               }
             } else {
-              int discarded$5 = 0;
-              jj.a();
+              jj.a(0);
               return;
             }
           } else {

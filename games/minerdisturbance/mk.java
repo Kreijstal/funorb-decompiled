@@ -17,7 +17,7 @@ final class mk implements ad {
     private int field_l;
     private we field_n;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -46;
         field_b = null;
     }
@@ -153,7 +153,7 @@ final class mk implements ad {
         return hb.field_b;
     }
 
-    final static void a(boolean param0, wh param1) {
+    final static void a(boolean param0, wh param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -172,9 +172,7 @@ final class mk implements ad {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$4 = 0;
-          int discarded$5 = 256;
-          ke.a(param1, param0);
+          ke.a(param1, param0, 256, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

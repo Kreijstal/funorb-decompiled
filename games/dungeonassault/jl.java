@@ -9,7 +9,7 @@ final class jl {
     static String field_b;
     static int field_d;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -152,7 +152,7 @@ final class jl {
         return stackIn_3_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
         field_a = null;

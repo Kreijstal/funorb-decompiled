@@ -19,7 +19,7 @@ final class aja extends pv {
         }
     }
 
-    final static boolean e() {
+    final static boolean e(int param0) {
         if (!gja.b(-16103)) {
             return false;
         }
@@ -29,7 +29,7 @@ final class aja extends pv {
         return true;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_l = null;
         int var1 = 0;
         field_p = null;
@@ -39,53 +39,47 @@ final class aja extends pv {
     private final void c(int param0) {
     }
 
-    private final int c() {
+    private final int c(byte param0) {
         return ((aja) this).field_n + (int)((double)((aja) this).field_g * ((aja) this).field_j);
     }
 
     final boolean b(boolean param0) {
-        int fieldTemp$8 = ((aja) this).field_g + 1;
+        int fieldTemp$2 = ((aja) this).field_g + 1;
         ((aja) this).field_g = ((aja) this).field_g + 1;
-        if (fieldTemp$8 <= this.d(124)) {
+        if (fieldTemp$2 <= this.d(124)) {
           if (param0) {
             if (((aja) this).field_g == 1) {
               if (((aja) this).field_k >= 0) {
                 ((aja) this).field_f.field_u = ((aja) this).field_f.field_u + 1;
                 ((aja) this).field_f.field_v.a((byte) 49, ((aja) this).field_f.field_g.field_o.field_b, 15);
-                int discarded$9 = -92;
-                ((aja) this).field_f.field_n = this.c();
+                ((aja) this).field_f.field_n = this.c((byte) -92);
                 return false;
               } else {
                 ((aja) this).field_f.field_u = ((aja) this).field_f.field_u - 1;
                 ((aja) this).field_f.field_v.a((byte) 49, ((aja) this).field_f.field_g.field_o.field_b, 15);
-                int discarded$10 = -92;
-                ((aja) this).field_f.field_n = this.c();
+                ((aja) this).field_f.field_n = this.c((byte) -92);
                 return false;
               }
             } else {
-              int discarded$11 = -92;
-              ((aja) this).field_f.field_n = this.c();
+              ((aja) this).field_f.field_n = this.c((byte) -92);
               return false;
             }
           } else {
-            int discarded$12 = this.d(-44);
+            int discarded$3 = this.d(-44);
             if (((aja) this).field_g == 1) {
               if (((aja) this).field_k >= 0) {
                 ((aja) this).field_f.field_u = ((aja) this).field_f.field_u + 1;
                 ((aja) this).field_f.field_v.a((byte) 49, ((aja) this).field_f.field_g.field_o.field_b, 15);
-                int discarded$13 = -92;
-                ((aja) this).field_f.field_n = this.c();
+                ((aja) this).field_f.field_n = this.c((byte) -92);
                 return false;
               } else {
                 ((aja) this).field_f.field_u = ((aja) this).field_f.field_u - 1;
                 ((aja) this).field_f.field_v.a((byte) 49, ((aja) this).field_f.field_g.field_o.field_b, 15);
-                int discarded$14 = -92;
-                ((aja) this).field_f.field_n = this.c();
+                ((aja) this).field_f.field_n = this.c((byte) -92);
                 return false;
               }
             } else {
-              int discarded$15 = -92;
-              ((aja) this).field_f.field_n = this.c();
+              ((aja) this).field_f.field_n = this.c((byte) -92);
               return false;
             }
           }

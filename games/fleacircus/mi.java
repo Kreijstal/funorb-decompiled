@@ -43,7 +43,7 @@ final class mi extends lh {
         ((mi) this).field_n = param3;
     }
 
-    final static jd c() {
+    final static jd c(byte param0) {
         if (!(null != ll.field_n)) {
             ll.field_n = new jd();
             ll.field_n.a(ug.field_e, true);
@@ -83,8 +83,7 @@ final class mi extends lh {
           L0: {
             L1: {
               if (null != hh.field_b) {
-                int discarded$3 = 256;
-                jd.a(true, 1048576, (byte) 102, param3);
+                jd.a(true, 1048576, (byte) 102, param3, 256);
                 break L1;
               } else {
                 break L1;

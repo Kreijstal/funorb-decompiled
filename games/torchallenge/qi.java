@@ -94,8 +94,7 @@ final class qi {
             var3 = 1;
         }
         if (!(var3 == 0)) {
-            int discarded$0 = -7756;
-            ob.a(var2, var1);
+            ob.a(var2, var1, -7756);
         }
     }
 
@@ -175,13 +174,12 @@ final class qi {
                 break L1;
               } else {
                 var7 = null;
-                qj discarded$4 = qi.a((lj) null, (String) null, (lj) null, (String) null, 9);
+                qj discarded$2 = qi.a((lj) null, (String) null, (lj) null, (String) null, 9);
                 break L1;
               }
             }
             var6 = param2.a(var5_int, param3, (byte) 123);
-            int discarded$5 = 69;
-            stackOut_2_0 = dg.a(var5_int, param2, var6, param0);
+            stackOut_2_0 = dg.a(var5_int, param2, var6, param0, (byte) 69);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -293,7 +291,7 @@ final class qi {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_f = null;
         field_a = null;

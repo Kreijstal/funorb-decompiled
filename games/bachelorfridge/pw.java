@@ -237,20 +237,18 @@ final class pw extends ana {
         if (!(fieldTemp$0 < 0)) {
             if (((pw) this).field_l == 25) {
                 ((pw) this).field_q.field_s.field_F = 0;
-                int discarded$1 = -85;
-                this.e();
+                this.e((byte) -85);
                 this.e(-1);
                 return false;
             }
             return false;
         }
-        int discarded$2 = 61;
-        this.f();
+        this.f((byte) 61);
         int var2 = -95 % ((71 - param0) / 47);
         return true;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -357,7 +355,7 @@ final class pw extends ana {
         field_w = null;
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         int var2 = 0;
     }
 

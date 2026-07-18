@@ -25,11 +25,11 @@ final class f {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return !im.field_b.b(36);
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         if (null == nl.field_g) {
           return -1;
         } else {

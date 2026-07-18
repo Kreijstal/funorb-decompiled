@@ -169,7 +169,7 @@ final class ud implements io {
         }
     }
 
-    final static v a(v param0, int[] param1) {
+    final static v a(v param0, int[] param1, int param2) {
         v var3 = null;
         RuntimeException var3_ref = null;
         v stackIn_1_0 = null;
@@ -278,7 +278,7 @@ final class ud implements io {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
     }

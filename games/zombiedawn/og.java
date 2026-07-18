@@ -24,7 +24,7 @@ final class og extends pj {
         return ((og) this).field_w.field_h;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -210,7 +210,7 @@ final class og extends pj {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_z = null;
         field_y = null;
         field_x = null;

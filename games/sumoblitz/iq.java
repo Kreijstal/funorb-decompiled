@@ -30,8 +30,7 @@ final class iq {
           if (param0 != null) {
             if (param0 instanceof byte[]) {
               var4 = (byte[]) param0;
-              int discarded$2 = 53;
-              stackOut_5_0 = ad.a(var4, 32768, param3);
+              stackOut_5_0 = ad.a(var4, 32768, param3, (byte) 53);
               stackIn_6_0 = stackOut_5_0;
               return stackIn_6_0;
             } else {

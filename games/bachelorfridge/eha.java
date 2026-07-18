@@ -9,7 +9,7 @@ final class eha extends td {
     static String field_p;
     static int[] field_q;
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -145,8 +145,7 @@ final class eha extends td {
                     L2: {
                       var5 = param1.getCodeBase();
                       var3 = ow.a(var5, (byte) -105, param1).getFile();
-                      int discarded$12 = 73;
-                      Object discarded$13 = ac.a(param1, "updatelinks", new Object[2]);
+                      Object discarded$6 = ac.a(param1, "updatelinks", new Object[2], (byte) 73);
                       if (param0 <= -102) {
                         break L2;
                       } else {
@@ -155,16 +154,11 @@ final class eha extends td {
                         break L2;
                       }
                     }
-                    int discarded$14 = 73;
-                    Object discarded$15 = ac.a(param1, "updatelinks", new Object[2]);
-                    int discarded$16 = 73;
-                    Object discarded$17 = ac.a(param1, "updatelinks", new Object[2]);
-                    int discarded$18 = 73;
-                    Object discarded$19 = ac.a(param1, "updatelinks", new Object[2]);
-                    int discarded$20 = 73;
-                    Object discarded$21 = ac.a(param1, "updatelinks", new Object[2]);
-                    int discarded$22 = 73;
-                    Object discarded$23 = ac.a(param1, "updatelinks", new Object[2]);
+                    Object discarded$7 = ac.a(param1, "updatelinks", new Object[2], (byte) 73);
+                    Object discarded$8 = ac.a(param1, "updatelinks", new Object[2], (byte) 73);
+                    Object discarded$9 = ac.a(param1, "updatelinks", new Object[2], (byte) 73);
+                    Object discarded$10 = ac.a(param1, "updatelinks", new Object[2], (byte) 73);
+                    Object discarded$11 = ac.a(param1, "updatelinks", new Object[2], (byte) 73);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -297,7 +291,7 @@ final class eha extends td {
         return stackIn_5_0 != 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_s = null;
         field_q = null;
         field_p = null;

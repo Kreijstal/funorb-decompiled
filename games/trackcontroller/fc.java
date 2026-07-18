@@ -24,8 +24,7 @@ class fc {
                 if (ge.field_D) {
                   break L1;
                 } else {
-                  int discarded$2 = 3100;
-                  if (gh.a()) {
+                  if (gh.a(3100)) {
                     break L1;
                   } else {
                     stackOut_5_0 = 1;
@@ -55,7 +54,7 @@ class fc {
         return true;
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2) {
+    final static String a(boolean param0, boolean param1, boolean param2, int param3) {
         int var4 = 0;
         if (!(!param1)) {
             var4 += 4;

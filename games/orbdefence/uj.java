@@ -82,19 +82,15 @@ final class uj implements Runnable {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         lb.a(true);
         if (!(null == tf.field_f)) {
             hl.a(tf.field_f, 106);
         }
-        int discarded$12 = -82;
-        fd.b();
-        int discarded$28 = -100;
-        km.b();
-        int discarded$39 = 109;
-        af.a();
-        int discarded$45 = -36;
-        if (uj.a()) {
+        fd.b(-82);
+        km.b(-100);
+        af.a(109);
+        if (uj.a((byte) -36)) {
             uk.field_b.i(1, -53);
             bh.a(0, -1);
         }
@@ -175,7 +171,7 @@ final class uj implements Runnable {
         return (java.applet.Applet) (Object) aj.field_b;
     }
 
-    final static boolean a(int[] param0) {
+    final static boolean a(int[] param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         long var3 = 0L;
@@ -374,7 +370,7 @@ final class uj implements Runnable {
         }
     }
 
-    private final static boolean a() {
+    private final static boolean a(byte param0) {
         return p.field_d != null && dh.field_bb.a((byte) 74);
     }
 

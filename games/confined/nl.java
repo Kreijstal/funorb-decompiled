@@ -53,8 +53,7 @@ final class nl {
                   } else {
                     var3 = param1.substring(0, var2_int);
                     var4 = param1.substring(var2_int + 1);
-                    int discarded$2 = 1;
-                    var5 = ll.a(var3);
+                    var5 = ll.a(var3, true);
                     if (var5 == null) {
                       stackOut_12_0 = ll.a((byte) 57, var4);
                       stackIn_13_0 = stackOut_12_0;
@@ -111,7 +110,7 @@ final class nl {
         return param0 | param1;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -216,14 +215,13 @@ final class nl {
         }
     }
 
-    final static void a(ok param0, int param1, ok param2) {
+    final static void a(ok param0, int param1, ok param2, int param3) {
         try {
             dn.field_f = param2;
             wg.field_a = 480;
             rn.field_e = param0;
             ud.a(fn.field_g / 2, (byte) -12, fn.field_l / 2);
-            int discarded$0 = 243;
-            ue.a(param0.field_D + param0.field_y, param2.field_y - -param2.field_D, param2.field_y, param0.field_y);
+            ue.a(param0.field_D + param0.field_y, param2.field_y - -param2.field_D, param2.field_y, param0.field_y, 243);
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "nl.C(" + (param0 != null ? "{...}" : "null") + ',' + 480 + ',' + (param2 != null ? "{...}" : "null") + ',' + 2 + ')');
         }

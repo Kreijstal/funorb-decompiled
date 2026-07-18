@@ -30,13 +30,12 @@ final class dpa extends rqa {
         try {
           L0: {
             L1: {
-              int discarded$6 = -66;
-              wva.b();
+              wva.b((byte) -66);
               if (param1 <= -119) {
                 break L1;
               } else {
                 var4 = null;
-                nc discarded$7 = ((dpa) this).a((nc[]) null, 30);
+                nc discarded$2 = ((dpa) this).a((nc[]) null, 30);
                 break L1;
               }
             }
@@ -77,7 +76,7 @@ final class dpa extends rqa {
         return stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_o = null;
         field_q = null;
         field_p = null;

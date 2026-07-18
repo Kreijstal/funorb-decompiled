@@ -7,7 +7,7 @@ class bi extends ah {
     static String field_t;
     static nf field_u;
 
-    public static void e() {
+    public static void e(int param0) {
         field_s = null;
         field_u = null;
         field_t = null;
@@ -16,7 +16,7 @@ class bi extends ah {
     bi() {
     }
 
-    final static String a(java.applet.Applet param0, String param1) {
+    final static String a(java.applet.Applet param0, String param1, int param2) {
         try {
             String var3 = null;
             Throwable var3_ref = null;
@@ -70,10 +70,8 @@ class bi extends ah {
                     }
                     case 1: {
                         try {
-                            int discarded$4 = 78;
-                            var3 = (String) sh.a("getcookies", param0);
-                            int discarded$5 = 10287;
-                            var4 = qj.a(';', var3);
+                            var3 = (String) sh.a("getcookies", param0, (byte) 78);
+                            var4 = qj.a(';', var3, 10287);
                             var5 = 0;
                             statePc = 2;
                             continue stateLoop;

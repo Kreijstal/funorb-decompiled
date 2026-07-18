@@ -136,7 +136,7 @@ final class el implements Iterable {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1 = -92;
         return -pk.field_o + qp.field_d;
     }

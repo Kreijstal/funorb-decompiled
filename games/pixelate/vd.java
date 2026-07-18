@@ -190,7 +190,7 @@ final class vd {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         int var1 = 0;
@@ -200,8 +200,7 @@ final class vd {
 
     final static void a(boolean param0, int param1, int param2, byte param3) {
         a.a(param0, 99);
-        int discarded$0 = -32268;
-        ra.a(13, 15, param0);
+        ra.a(13, 15, param0, -32268);
     }
 
     final static void a(boolean param0) {

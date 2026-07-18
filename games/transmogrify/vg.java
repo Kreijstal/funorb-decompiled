@@ -13,7 +13,7 @@ final class vg {
     private int field_f;
     private int field_i;
 
-    private final int f(int param0) {
+    private final int f(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -66,7 +66,7 @@ final class vg {
         }
     }
 
-    private final void e(int param0) {
+    private final void e(int param0, int param1) {
         int var7 = Transmogrify.field_A ? 1 : 0;
         String[] var8 = new String[16];
         String[] var3 = var8;
@@ -160,7 +160,7 @@ final class vg {
         return true;
     }
 
-    private final int a(int param0) {
+    private final int a(int param0, byte param1) {
         if (((vg) this).field_i == 2) {
             if (!qj.b((byte) 80)) {
                 if (param0 < 3) {
@@ -305,7 +305,7 @@ final class vg {
                 if (!qj.b((byte) 95)) {
                   break L3;
                 } else {
-                  int discarded$4 = wf.field_d.a(tj.field_t, 283, var5, 310, 1000, 0, -1, 1, 0, var9);
+                  int discarded$2 = wf.field_d.a(tj.field_t, 283, var5, 310, 1000, 0, -1, 1, 0, var9);
                   break L3;
                 }
               }
@@ -314,9 +314,7 @@ final class vg {
           } else {
             L10: {
               L11: {
-                int discarded$5 = 0;
-                int discarded$6 = 0;
-                if (wl.a()) {
+                if (wl.a(false, 0)) {
                   break L11;
                 } else {
                   if (var9 != 15) {
@@ -398,9 +396,9 @@ final class vg {
                   break L15;
                 }
               }
-              int incrementValue$7 = var7;
+              int incrementValue$3 = var7;
               var7++;
-              if (incrementValue$7 != 7) {
+              if (incrementValue$3 != 7) {
                 var4 += 40;
                 break L10;
               } else {
@@ -525,7 +523,7 @@ final class vg {
                   if (var4 == 0) {
                     break L6;
                   } else {
-                    od discarded$26 = vk.a((byte) 105, dg.field_d[0]);
+                    od discarded$24 = vk.a((byte) 105, dg.field_d[0]);
                     sh.field_c = null;
                     rh.field_t = null;
                     rc.a(true, (byte) -13);
@@ -548,7 +546,7 @@ final class vg {
                         if (!((vg) this).field_j.f(-9112)) {
                           break L6;
                         } else {
-                          od discarded$27 = vk.a((byte) 127, dg.field_d[0]);
+                          od discarded$25 = vk.a((byte) 127, dg.field_d[0]);
                           qf.field_d = 0;
                           break L5;
                         }
@@ -601,15 +599,13 @@ final class vg {
                                       if (!((vg) this).field_j.c(true)) {
                                         break L11;
                                       } else {
-                                        int discarded$28 = -127;
-                                        qj.e();
+                                        qj.e(-127);
                                         break L11;
                                       }
                                     }
                                     L12: {
                                       if (((vg) this).field_j.c((byte) -72)) {
-                                        int discarded$29 = -125;
-                                        lf.a();
+                                        lf.a((byte) -125);
                                         var7 = 1;
                                         break L12;
                                       } else {
@@ -640,7 +636,7 @@ final class vg {
                                     }
                                     lj.field_u.j(0);
                                     lj.field_u.k(255);
-                                    od discarded$30 = ic.a(lj.field_u, 4);
+                                    od discarded$26 = ic.a(lj.field_u, 4);
                                     break L5;
                                   } else {
                                     if (13 != var9) {
@@ -648,7 +644,7 @@ final class vg {
                                         if (!((vg) this).field_j.f(-9112)) {
                                           break L6;
                                         } else {
-                                          od discarded$31 = vk.a((byte) 83, dg.field_d[0]);
+                                          od discarded$27 = vk.a((byte) 83, dg.field_d[0]);
                                           if (null == ub.field_c) {
                                             var9 = param0 ? 1 : 0;
                                             dj.a(true, var9 != 0);
@@ -663,7 +659,7 @@ final class vg {
                                           if (((vg) this).field_j.f(-9112)) {
                                             L15: {
                                               L16: {
-                                                od discarded$32 = vk.a((byte) 120, dg.field_d[0]);
+                                                od discarded$28 = vk.a((byte) 120, dg.field_d[0]);
                                                 if (hc.field_u != 0) {
                                                   break L16;
                                                 } else {
@@ -703,7 +699,7 @@ final class vg {
                                             if (8 != var9) {
                                               if (var9 == 9) {
                                                 if (((vg) this).field_j.f(-9112)) {
-                                                  od discarded$33 = vk.a((byte) 88, dg.field_d[0]);
+                                                  od discarded$29 = vk.a((byte) 88, dg.field_d[0]);
                                                   ck.field_y = 1;
                                                   break L5;
                                                 } else {
@@ -712,7 +708,7 @@ final class vg {
                                               } else {
                                                 if (var9 == 10) {
                                                   if (((vg) this).field_j.f(-9112)) {
-                                                    od discarded$34 = vk.a((byte) 105, dg.field_d[0]);
+                                                    od discarded$30 = vk.a((byte) 105, dg.field_d[0]);
                                                     ck.field_y = 2;
                                                     break L5;
                                                   } else {
@@ -725,7 +721,7 @@ final class vg {
                                                         break L6;
                                                       } else {
                                                         if (this.a(param1, false)) {
-                                                          od discarded$35 = vk.a((byte) 105, dg.field_d[0]);
+                                                          od discarded$31 = vk.a((byte) 105, dg.field_d[0]);
                                                           ra.field_a = ra.field_a - 1;
                                                           if (ra.field_a == 0) {
                                                             ((vg) this).field_j.field_d = 2;
@@ -743,7 +739,7 @@ final class vg {
                                                           break L6;
                                                         } else {
                                                           if (this.a(param1, false)) {
-                                                            od discarded$36 = vk.a((byte) 127, dg.field_d[0]);
+                                                            od discarded$32 = vk.a((byte) 127, dg.field_d[0]);
                                                             ra.field_a = ra.field_a + 1;
                                                             if (-1 + db.field_b.length == ra.field_a) {
                                                               L18: {
@@ -774,12 +770,12 @@ final class vg {
                                                           } else {
                                                             L19: {
                                                               if (((vg) this).field_j.d(104)) {
-                                                                od discarded$37 = vk.a((byte) 120, dg.field_d[0]);
+                                                                od discarded$33 = vk.a((byte) 120, dg.field_d[0]);
                                                                 L20: while (true) {
                                                                   L21: {
-                                                                    int fieldTemp$38 = am.field_n + 1;
+                                                                    int fieldTemp$34 = am.field_n + 1;
                                                                     am.field_n = am.field_n + 1;
-                                                                    if (~fieldTemp$38 == ~we.field_l.length) {
+                                                                    if (~fieldTemp$34 == ~we.field_l.length) {
                                                                       am.field_n = 0;
                                                                       break L21;
                                                                     } else {
@@ -797,12 +793,12 @@ final class vg {
                                                               }
                                                             }
                                                             if (((vg) this).field_j.a((byte) -112)) {
-                                                              od discarded$39 = vk.a((byte) 113, dg.field_d[0]);
+                                                              od discarded$35 = vk.a((byte) 113, dg.field_d[0]);
                                                               L22: while (true) {
                                                                 L23: {
-                                                                  int fieldTemp$40 = am.field_n - 1;
+                                                                  int fieldTemp$36 = am.field_n - 1;
                                                                   am.field_n = am.field_n - 1;
-                                                                  if (fieldTemp$40 >= 0) {
+                                                                  if (fieldTemp$36 >= 0) {
                                                                     break L23;
                                                                   } else {
                                                                     am.field_n = -1 + we.field_l.length;
@@ -821,7 +817,7 @@ final class vg {
                                                           }
                                                         } else {
                                                           if (((vg) this).field_j.f(-9112)) {
-                                                            od discarded$41 = vk.a((byte) 106, dg.field_d[0]);
+                                                            od discarded$37 = vk.a((byte) 106, dg.field_d[0]);
                                                             vl.a((byte) 93, ha.b(125));
                                                             break L5;
                                                           } else {
@@ -833,7 +829,7 @@ final class vg {
                                                   } else {
                                                     if (((vg) this).field_j.f(-9112)) {
                                                       L24: {
-                                                        od discarded$42 = vk.a((byte) 92, dg.field_d[0]);
+                                                        od discarded$38 = vk.a((byte) 92, dg.field_d[0]);
                                                         if (4 == ((vg) this).field_i) {
                                                           break L24;
                                                         } else {
@@ -859,7 +855,7 @@ final class vg {
                                               }
                                             } else {
                                               if (((vg) this).field_j.f(-9112)) {
-                                                od discarded$43 = vk.a((byte) 92, dg.field_d[0]);
+                                                od discarded$39 = vk.a((byte) 92, dg.field_d[0]);
                                                 ck.field_y = 0;
                                                 break L5;
                                               } else {
@@ -868,7 +864,7 @@ final class vg {
                                             }
                                           } else {
                                             if (((vg) this).field_j.f(-9112)) {
-                                              od discarded$44 = vk.a((byte) 127, dg.field_d[0]);
+                                              od discarded$40 = vk.a((byte) 127, dg.field_d[0]);
                                               wc.field_d = 0;
                                               qf.field_d = 0;
                                               break L5;
@@ -943,7 +939,7 @@ final class vg {
                                   }
                                 } else {
                                   if (((vg) this).field_j.f(-9112)) {
-                                    od discarded$45 = vk.a((byte) 91, dg.field_d[0]);
+                                    od discarded$41 = vk.a((byte) 91, dg.field_d[0]);
                                     qf.field_d = 2;
                                     break L5;
                                   } else {
@@ -952,7 +948,7 @@ final class vg {
                                 }
                               } else {
                                 if (((vg) this).field_j.f(-9112)) {
-                                  od discarded$46 = vk.a((byte) 125, dg.field_d[0]);
+                                  od discarded$42 = vk.a((byte) 125, dg.field_d[0]);
                                   qf.field_d = wc.field_d;
                                   break L5;
                                 } else {
@@ -961,7 +957,7 @@ final class vg {
                               }
                             } else {
                               if (((vg) this).field_j.f(-9112)) {
-                                od discarded$47 = vk.a((byte) 110, dg.field_d[0]);
+                                od discarded$43 = vk.a((byte) 110, dg.field_d[0]);
                                 wc.field_d = ((vg) this).field_i;
                                 qf.field_d = 3;
                                 ra.field_a = 0;
@@ -972,7 +968,7 @@ final class vg {
                             }
                           } else {
                             if (((vg) this).field_j.f(-9112)) {
-                              od discarded$48 = vk.a((byte) 120, dg.field_d[0]);
+                              od discarded$44 = vk.a((byte) 120, dg.field_d[0]);
                               qf.field_d = 4;
                               break L5;
                             } else {
@@ -981,7 +977,7 @@ final class vg {
                           }
                         } else {
                           if (((vg) this).field_j.f(-9112)) {
-                            od discarded$49 = vk.a((byte) 89, dg.field_d[0]);
+                            od discarded$45 = vk.a((byte) 89, dg.field_d[0]);
                             qf.field_d = 0;
                             break L5;
                           } else {
@@ -996,7 +992,7 @@ final class vg {
                 }
                 if (((vg) this).field_j.f(-9112)) {
                   if (var4 != 0) {
-                    od discarded$50 = vk.a((byte) 112, dg.field_d[0]);
+                    od discarded$46 = vk.a((byte) 112, dg.field_d[0]);
                     wc.field_d = 0;
                     qf.field_d = -1;
                     break L5;
@@ -1012,7 +1008,7 @@ final class vg {
                 if (var4 == 0) {
                   break L6;
                 } else {
-                  od discarded$51 = vk.a((byte) 91, dg.field_d[0]);
+                  od discarded$47 = vk.a((byte) 91, dg.field_d[0]);
                   sh.field_c = null;
                   rh.field_t = null;
                   rc.a(false, (byte) -13);
@@ -1102,8 +1098,7 @@ final class vg {
             return;
           } else {
             if (13 != ch.field_d) {
-              int discarded$1 = -120;
-              this.b();
+              this.b((byte) -120);
               if (((vg) this).field_j.field_d == -1) {
                 continue L0;
               } else {
@@ -1134,7 +1129,7 @@ final class vg {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean a(boolean param0, CharSequence param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -1287,7 +1282,7 @@ final class vg {
         return stackIn_32_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_g = null;
         field_a = null;
@@ -1296,13 +1291,11 @@ final class vg {
     private final int a(int param0, int param1) {
         if (((vg) this).field_i == 2) {
             if (!(qj.b((byte) 94))) {
-                int discarded$0 = 123;
-                return 180 + this.a(param0);
+                return 180 + this.a(param0, (byte) 123);
             }
         }
         if (!(((vg) this).field_i != 3)) {
-            int discarded$1 = 123;
-            return this.a(param0) + 180;
+            return this.a(param0, (byte) 123) + 180;
         }
         return fd.field_c[((vg) this).field_i];
     }
@@ -1565,8 +1558,7 @@ final class vg {
           rk.field_r[((vg) this).field_i].f(0, param1);
           if (((vg) this).field_i != 2) {
             if (3 == ((vg) this).field_i) {
-              int discarded$5 = -92;
-              this.e(param1);
+              this.e(param1, -92);
               break L0;
             } else {
               if (4 == ((vg) this).field_i) {
@@ -1579,7 +1571,7 @@ final class vg {
                       var3 = 130 + param1;
                       var4 = 4 + wf.field_d.field_t + wf.field_d.field_D;
                       var5 = var4 * wf.field_d.b(sd.field_Q, 341);
-                      int discarded$6 = wf.field_d.a(sd.field_Q, 150, var3, 341, var5, 0, -1, 1, 0, var4);
+                      int discarded$4 = wf.field_d.a(sd.field_Q, 150, var3, 341, var5, 0, -1, 1, 0, var4);
                       var3 = var3 + var5;
                       stackOut_8_0 = 1;
                       stackIn_10_0 = stackOut_8_0;
@@ -1633,7 +1625,7 @@ final class vg {
                     L3: {
                       var8 = aj.a(stackIn_14_0 != 0, stackIn_14_1 != 0, stackIn_14_2 != 0, stackIn_14_3 != 0);
                       var5 = var4 * wf.field_d.b(var8, 341);
-                      int discarded$7 = wf.field_d.a(var8, 150, var3, 341, var5, 0, -1, 1, 0, var4);
+                      int discarded$5 = wf.field_d.a(var8, 150, var3, 341, var5, 0, -1, 1, 0, var4);
                       var3 = var3 + var5;
                       var3 = var3 + (jk.field_x.a(true) + var4);
                       stackOut_14_0 = -85;
@@ -1695,7 +1687,7 @@ final class vg {
                     L5: {
                       var9 = gd.a((byte) stackIn_20_0, stackIn_20_1 != 0, stackIn_20_2 != 0, stackIn_20_3 != 0);
                       var5 = var4 * wf.field_d.b(var9, 341);
-                      int discarded$8 = wf.field_d.a(var9, 150, var3, 341, var5, 0, -1, 1, 0, var4);
+                      int discarded$6 = wf.field_d.a(var9, 150, var3, 341, var5, 0, -1, 1, 0, var4);
                       var3 = var3 + var5;
                       var3 = var3 + jk.field_x.a(true);
                       stackOut_20_0 = 0;
@@ -1749,7 +1741,7 @@ final class vg {
                     }
                     var10 = we.a(stackIn_26_0 != 0, stackIn_26_1 != 0, stackIn_26_2, stackIn_26_3 != 0);
                     var5 = wf.field_d.b(var10, 341) * var4;
-                    int discarded$9 = wf.field_d.a(var10, 150, var3, 341, var5, 0, -1, 1, 0, var4);
+                    int discarded$7 = wf.field_d.a(var10, 150, var3, 341, var5, 0, -1, 1, 0, var4);
                     break L0;
                   } else {
                     break L0;
@@ -1806,7 +1798,7 @@ final class vg {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var3 = 0;
         L0: {
           var3 = Transmogrify.field_A ? 1 : 0;
@@ -1970,11 +1962,9 @@ final class vg {
               return 99;
             }
           } else {
-            int discarded$10 = 206;
-            var5 = this.f(var4);
+            var5 = this.f(var4, 206);
             if (this.a(var4, false)) {
-              int discarded$11 = 123;
-              if (param0 >= this.a(var4)) {
+              if (param0 >= this.a(var4, (byte) 123)) {
                 if (param0 < this.a(var4, 180)) {
                   if (var5 <= param2) {
                     if (var5 + this.b(param1 ^ 1476, var4) > param2) {
@@ -2152,10 +2142,8 @@ final class vg {
         int stackOut_36_0 = 0;
         L0: {
           var16 = Transmogrify.field_A ? 1 : 0;
-          int discarded$2 = 206;
-          var5 = param2 + this.f(param3);
-          int discarded$3 = 123;
-          var6 = this.a(param3);
+          var5 = param2 + this.f(param3, 206);
+          var6 = this.a(param3, (byte) 123);
           var7 = this.a(param3, 180);
           var8 = fd.field_h[((vg) this).field_i][param3];
           var9 = de.field_c[var8];

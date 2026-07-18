@@ -28,7 +28,7 @@ abstract class oa {
         return new java.net.Socket(((oa) this).field_d, ((oa) this).field_e);
     }
 
-    final static java.awt.Container a() {
+    final static java.awt.Container a(byte param0) {
         int var1 = 0;
         if (!(null == i.field_h)) {
             return (java.awt.Container) (Object) i.field_h;

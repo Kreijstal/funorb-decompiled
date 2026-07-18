@@ -10,7 +10,7 @@ final class na {
         field_c = null;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1 = 48;
         return ae.field_a;
     }

@@ -701,7 +701,7 @@ final class pe extends hn implements wm, ng {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_J = null;
         field_E = null;
         field_M = null;
@@ -863,8 +863,7 @@ final class pe extends hn implements wm, ng {
     private final void a(byte param0) {
         L0: {
           L1: {
-            int discarded$6 = 0;
-            if (vg.d()) {
+            if (vg.d(0)) {
               break L1;
             } else {
               if (((pe) this).field_C.field_m.length() <= 0) {
@@ -885,7 +884,7 @@ final class pe extends hn implements wm, ng {
           if (param0 >= 120) {
             break L2;
           } else {
-            boolean discarded$7 = ((pe) this).a(99, (gm) null, 'ﾠ', 63);
+            boolean discarded$2 = ((pe) this).a(99, (gm) null, 'ﾠ', 63);
             break L2;
           }
         }
@@ -1124,25 +1123,21 @@ final class pe extends hn implements wm, ng {
                 break L2;
               } else {
                 if (param1 == ((pe) this).field_D) {
-                  int discarded$498 = 11;
-                  m.a();
+                  m.a(11);
                   break L2;
                 } else {
                   if (((pe) this).field_B != param1) {
                     break L2;
                   } else {
                     if (((pe) this).field_G) {
-                      int discarded$499 = 2;
-                      aj.a();
+                      aj.a(2);
                       break L2;
                     } else {
                       if (!((pe) this).field_F) {
-                        int discarded$500 = -110;
-                        ka.a();
+                        ka.a((byte) -110);
                         break L2;
                       } else {
-                        int discarded$501 = 105;
-                        of.b();
+                        of.b((byte) 105);
                         break L2;
                       }
                     }

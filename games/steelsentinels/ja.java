@@ -39,7 +39,7 @@ final class ja {
         }
     }
 
-    final static wk b(int param0) {
+    final static wk b(int param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = SteelSentinels.field_G;
@@ -139,7 +139,7 @@ final class ja {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_g = null;
         field_h = null;

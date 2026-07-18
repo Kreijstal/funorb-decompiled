@@ -227,7 +227,7 @@ abstract class da {
         return stackIn_6_0;
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, int param1) {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -267,18 +267,14 @@ abstract class da {
                     }
                   } else {
                     var5 = (CharSequence) (Object) param0.substring(4);
-                    int discarded$10 = 16;
-                    int discarded$11 = 4;
-                    qg.field_c = -16777216 & qg.field_c | 16777215 & np.a(var5);
+                    qg.field_c = -16777216 & qg.field_c | 16777215 & np.a(var5, 4, 16);
                     break L2;
                   }
                 }
                 L3: {
                   if (param0.startsWith("argb=")) {
                     var9 = (CharSequence) (Object) param0.substring(5);
-                    int discarded$12 = 16;
-                    int discarded$13 = 4;
-                    qg.field_c = np.a(var9);
+                    qg.field_c = np.a(var9, 4, 16);
                     break L3;
                   } else {
                     if (param0.equals((Object) (Object) "/argb")) {
@@ -287,9 +283,7 @@ abstract class da {
                     } else {
                       if (param0.startsWith("str=")) {
                         var8 = (CharSequence) (Object) param0.substring(4);
-                        int discarded$14 = 16;
-                        int discarded$15 = 4;
-                        rs.field_t = qg.field_c & -16777216 | np.a(var8);
+                        rs.field_t = qg.field_c & -16777216 | np.a(var8, 4, 16);
                         break L3;
                       } else {
                         if (param0.equals((Object) (Object) "str")) {
@@ -302,9 +296,7 @@ abstract class da {
                           } else {
                             if (param0.startsWith("u=")) {
                               var7 = (CharSequence) (Object) param0.substring(2);
-                              int discarded$16 = 16;
-                              int discarded$17 = 4;
-                              rb.field_h = qg.field_c & -16777216 | np.a(var7);
+                              rb.field_h = qg.field_c & -16777216 | np.a(var7, 4, 16);
                               break L3;
                             } else {
                               if (param0.equals((Object) (Object) "u")) {
@@ -318,9 +310,7 @@ abstract class da {
                                   if (!param0.equalsIgnoreCase("shad=-1")) {
                                     if (param0.startsWith("shad=")) {
                                       var6 = (CharSequence) (Object) param0.substring(5);
-                                      int discarded$18 = 16;
-                                      int discarded$19 = 4;
-                                      es.field_c = qg.field_c & -16777216 | np.a(var6);
+                                      es.field_c = qg.field_c & -16777216 | np.a(var6, 4, 16);
                                       break L3;
                                     } else {
                                       if (!param0.equals((Object) (Object) "shad")) {
@@ -748,7 +738,7 @@ abstract class da {
         return stackIn_46_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
@@ -907,8 +897,7 @@ abstract class da {
                                               L4: {
                                                 L5: {
                                                   var21 = (CharSequence) (Object) var15.substring(4);
-                                                  int discarded$2 = 38;
-                                                  var16_int = td.a(var21);
+                                                  var16_int = td.a(var21, (byte) 38);
                                                   var17 = param1[var16_int];
                                                   if (param5 != null) {
                                                     stackOut_23_0 = param5[var16_int];
@@ -943,8 +932,7 @@ abstract class da {
                                             }
                                             break L2;
                                           } else {
-                                            int discarded$3 = -16777216;
-                                            this.a(var15);
+                                            this.a(var15, -16777216);
                                             break L2;
                                           }
                                         } else {

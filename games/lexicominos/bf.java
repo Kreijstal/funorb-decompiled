@@ -10,7 +10,7 @@ final class bf {
     private bg field_c;
     static String field_f;
 
-    final static void b() {
+    final static void b(byte param0) {
         Object var1 = null;
         int var2 = 0;
         Throwable var3 = null;
@@ -97,7 +97,7 @@ final class bf {
         }
     }
 
-    final static jb a(int[] param0, jb param1) {
+    final static jb a(int[] param0, jb param1, int param2) {
         jb var3 = null;
         RuntimeException var3_ref = null;
         jb stackIn_1_0 = null;
@@ -286,8 +286,7 @@ final class bf {
             if (((bf) this).field_e < 1) {
                 throw new IllegalStateException();
             }
-            int discarded$0 = 111;
-            this.b(param0);
+            this.b(param0, 111);
             ((bf) this).field_d = ((bf) this).field_d - 1;
             while (((bf) this).field_d < 0) {
                 var6 = (rh) (Object) ((bf) this).field_c.b((byte) 112);
@@ -302,7 +301,7 @@ final class bf {
         }
     }
 
-    private final void b(long param0) {
+    private final void b(long param0, int param1) {
         rh var4 = (rh) (Object) ((bf) this).field_b.a((byte) 42, param0);
         this.a(var4, (byte) 9);
     }
@@ -311,7 +310,7 @@ final class bf {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_f = null;
     }

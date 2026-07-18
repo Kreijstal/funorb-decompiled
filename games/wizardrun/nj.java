@@ -76,8 +76,7 @@ final class nj extends wl {
                       break L4;
                     } else {
                       var3_int = 0;
-                      int discarded$2 = -3870;
-                      ie.a();
+                      ie.a(-3870);
                       break L4;
                     }
                   }

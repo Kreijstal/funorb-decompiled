@@ -8,7 +8,7 @@ final class ue extends da {
     int field_k;
     static String field_l;
 
-    final static void a(tc param0, int param1) {
+    final static void a(tc param0, int param1, int param2) {
         pa var3 = null;
         try {
             var3 = dk.field_s;
@@ -236,14 +236,14 @@ final class ue extends da {
         return stackIn_11_0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = 0;
         field_l = null;
         field_i = null;
         field_j = null;
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int a(int param0, int param1, int param2, int param3, byte param4) {
         int var5 = -wb.field_p.field_o + param0;
         int var6 = param2 - wb.field_p.field_H;
         if (!(var5 >= 0)) {
@@ -270,7 +270,7 @@ final class ue extends da {
         throw new Error();
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

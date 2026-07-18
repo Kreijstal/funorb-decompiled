@@ -10,7 +10,7 @@ final class cj {
     static int field_d;
     static int[] field_g;
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 65;
         qj.field_i = tc.field_C + " <b>" + ln.field_R + "</b> " + li.field_G + " <b>" + ki.field_t + "</b> " + we.field_d + "<br>" + "<br>" + p.field_f;
     }
@@ -124,8 +124,7 @@ final class cj {
                   }
                 }
               }
-              int discarded$1 = 91;
-              ol.a();
+              ol.a((byte) 91);
               break L1;
             }
             var66 = new int[param4.field_A];
@@ -387,7 +386,7 @@ final class cj {
         field_e = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (oj.field_i) {
             de.b(de.field_i, de.field_c, de.field_h + -de.field_i, de.field_k + -de.field_c);
             co.field_f.a(false, true);
@@ -623,8 +622,7 @@ final class cj {
                   if (var9 == 248) {
                     df.a(1, cd.e(125));
                     me.field_E = fo.field_c;
-                    int discarded$7 = 0;
-                    ka.b();
+                    ka.b(false);
                     bb.field_h = false;
                     stackOut_33_0 = var9;
                     stackIn_34_0 = stackOut_33_0;
@@ -636,10 +634,8 @@ final class cj {
                       on.field_g = var9;
                       break L8;
                     } else {
-                      int discarded$8 = 88;
-                      boolean discarded$9 = pe.a((byte) -86, oi.b());
-                      int discarded$10 = -2;
-                      kj.field_e = new Boolean(jo.a((wk) (Object) df.field_z));
+                      boolean discarded$1 = pe.a((byte) -86, oi.b(88));
+                      kj.field_e = new Boolean(jo.a((wk) (Object) df.field_z, -2));
                       df.field_z.field_g = 0;
                       break L8;
                     }
@@ -666,8 +662,7 @@ final class cj {
                     var12 = 0;
                     L11: while (true) {
                       if (var11 <= var12) {
-                        int discarded$11 = 0;
-                        ka.b();
+                        ka.b(false);
                         bb.field_h = false;
                         stackOut_42_0 = var11 + 100;
                         stackIn_43_0 = stackOut_42_0;
@@ -698,16 +693,14 @@ final class cj {
                     } else {
                       var9_ref_String = df.field_z.g(-112);
                       if (var9_ref_String != null) {
-                        int discarded$12 = 0;
-                        jf.a(var9_ref_String, cd.e(110));
+                        jf.a(var9_ref_String, cd.e(110), 0);
                         break L13;
                       } else {
                         break L13;
                       }
                     }
                   }
-                  int discarded$13 = 0;
-                  ka.b();
+                  ka.b(false);
                   bb.field_h = false;
                   stackOut_51_0 = on.field_g;
                   stackIn_52_0 = stackOut_51_0;

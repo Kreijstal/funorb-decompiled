@@ -117,8 +117,7 @@ final class se {
                 var3 = var10.e(false);
                 if (var2 != 0) {
                   if (var2 != 1) {
-                    int discarded$1 = 1;
-                    ud.a("LR1: " + ak.a(), (Throwable) null, 0);
+                    ud.a("LR1: " + ak.a(true), (Throwable) null, 0);
                     k.c(-28354);
                     break L1;
                   } else {
@@ -200,7 +199,7 @@ final class se {
         }
     }
 
-    final static void a(int param0, java.awt.Color param1, String param2, boolean param3) {
+    final static void a(int param0, java.awt.Color param1, String param2, boolean param3, byte param4) {
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
@@ -389,7 +388,7 @@ final class se {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_a = null;
         field_e = null;

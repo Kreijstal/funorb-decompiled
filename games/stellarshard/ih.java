@@ -60,7 +60,7 @@ final class ih {
         qd.field_j.requestFocus();
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         if (null == ob.field_b) {
             return false;
         }

@@ -70,8 +70,7 @@ final class da {
     final static void a(int param0) {
         mv.field_d = mg.field_e.g(1);
         CharSequence var2 = (CharSequence) (Object) mv.field_d;
-        int discarded$0 = 0;
-        ft.field_p = k.a(var2);
+        ft.field_p = k.a(var2, false);
     }
 
     final static boolean a(int param0, java.applet.Applet param1) {
@@ -428,8 +427,7 @@ final class da {
               } else {
                 var7 = var6;
                 var8 = jj.a((byte) 103, var7, param2, param0);
-                int discarded$2 = 118;
-                var9 = t.a(var8, param3);
+                var9 = t.a(var8, param3, (byte) 118);
                 aw.field_j[param4][param0][var7] = var9;
                 var6++;
                 continue L1;
@@ -505,17 +503,16 @@ final class da {
     }
 
     final static void b(int param0) {
-        int discarded$0 = 5;
-        t.field_c = kv.k();
+        t.field_c = kv.k(5);
         rl.field_C = new gk();
         if (param0 != -2) {
             Object var2 = null;
-            boolean discarded$1 = da.a(43, (java.applet.Applet) null);
+            boolean discarded$0 = da.a(43, (java.applet.Applet) null);
         }
         td.a(true, true, param0 + 25);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -573,8 +570,7 @@ final class da {
                 }
               } else {
                 if (1 != var2) {
-                  int discarded$1 = 0;
-                  af.a((Throwable) null, 70, "LR1: " + cm.b());
+                  af.a((Throwable) null, 70, "LR1: " + cm.b(false));
                   dj.a((byte) -127);
                   break L1;
                 } else {

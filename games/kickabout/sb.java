@@ -11,7 +11,7 @@ final class sb {
     private String field_f;
     private int field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         int var1 = -18;
         field_b = null;
@@ -38,7 +38,7 @@ final class sb {
         ug.a(param2, 2, param0);
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, byte param4) {
         nr.field_j = param1;
         jl.field_d = param2;
         lk.field_g = param0;

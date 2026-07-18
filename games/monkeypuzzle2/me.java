@@ -13,7 +13,7 @@ final class me extends ug {
     static String field_l;
     static int[] field_j;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_i = null;
         field_l = null;
         field_j = null;

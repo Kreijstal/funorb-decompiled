@@ -16,8 +16,7 @@ final class vm extends le {
 
     final void c(byte param0) {
         ((vm) this).field_j = ihb.a((byte) 36, ((vm) this).field_l);
-        int discarded$0 = 30866;
-        this.d();
+        this.d(30866);
         if (param0 > -35) {
             Object var3 = null;
             ((vm) this).a(-21, 74, (ds) null);
@@ -36,7 +35,7 @@ final class vm extends le {
         ((vm) this).field_p = 5;
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var3 = 0;
         int var4 = VoidHunters.field_G;
         Random var5 = new Random((long)((vm) this).field_l);

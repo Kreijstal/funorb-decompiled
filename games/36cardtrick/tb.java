@@ -121,7 +121,7 @@ final class tb implements ci {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         qb var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -140,17 +140,13 @@ final class tb implements ci {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    int discarded$12 = 4;
-                    int discarded$13 = 1;
-                    fl.b();
+                    fl.b(1, 4);
                     var2 = ue.field_b.b((byte) -104);
                     continue L2;
                   }
                 }
               } else {
-                int discarded$14 = 21719;
-                int discarded$15 = 4;
-                ke.a(var5);
+                ke.a(var5, 4, 21719);
                 var5 = (dh) (Object) vb.field_c.b((byte) -104);
                 continue L1;
               }
@@ -163,7 +159,7 @@ final class tb implements ci {
         }
     }
 
-    final static ff a(String param0, String param1, byte param2) {
+    final static ff a(String param0, String param1, byte param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -286,9 +282,10 @@ final class tb implements ci {
     }
 
     public static void a(int param0) {
+        Object var2 = null;
         if (param0 != 128) {
-          int discarded$4 = 0;
-          ff discarded$5 = tb.a((String) null, (String) null, (byte) -86);
+          var2 = null;
+          ff discarded$2 = tb.a((String) null, (String) null, (byte) -86, false);
           field_e = null;
           field_b = null;
           field_h = null;

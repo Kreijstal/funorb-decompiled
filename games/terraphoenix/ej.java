@@ -36,7 +36,7 @@ class ej extends eb {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_R = null;
         field_N = null;
         field_M = null;
@@ -50,7 +50,7 @@ class ej extends eb {
         return fg.field_e;
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
@@ -147,7 +147,7 @@ class ej extends eb {
         }
     }
 
-    private final void n() {
+    private final void n(int param0) {
         if (((ej) this).field_r instanceof pa) {
             ((pa) (Object) ((ej) this).field_r).a((ej) this, false);
             return;
@@ -166,7 +166,7 @@ class ej extends eb {
         }
     }
 
-    private final void j() {
+    private final void j(byte param0) {
         ld var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -260,7 +260,7 @@ class ej extends eb {
         return ((ej) this).field_o.substring(var2, var3);
     }
 
-    private final int o() {
+    private final int o(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -408,8 +408,7 @@ class ej extends eb {
         try {
           L0: {
             super.a(param0, param1, param2, 86);
-            int discarded$2 = 105;
-            this.j();
+            this.j((byte) 105);
             if (((ej) this).field_j == 1) {
               L1: {
                 if (!(((ej) this).field_l instanceof w)) {
@@ -538,7 +537,7 @@ class ej extends eb {
         }
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -549,8 +548,7 @@ class ej extends eb {
                 var3 = 0;
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.i((byte) -91);
-                int discarded$1 = -3;
-                this.a(var2);
+                this.a(var2, (byte) -3);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -605,11 +603,9 @@ class ej extends eb {
                 String discarded$0 = ej.g((byte) -119);
             }
             if (!(11 != q.field_Jb)) {
-                int discarded$1 = 54;
-                ta.a();
+                ta.a(54);
             }
-            int discarded$2 = 101;
-            pg.a(ed.field_d, da.field_f, ad.field_e);
+            pg.a(ed.field_d, da.field_f, ad.field_e, 101);
             ia.a(0, param1, 0, (byte) 116);
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) (Object) runtimeException, "ej.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -723,10 +719,8 @@ class ej extends eb {
                     ((ej) this).field_O = stackIn_9_1 != 0;
                     if (((ej) this).field_O) {
                       L5: {
-                        int discarded$2 = -1;
-                        ((ej) this).field_T = this.l();
-                        int discarded$3 = 1;
-                        ((ej) this).field_K = this.o();
+                        ((ej) this).field_T = this.l(-1);
+                        ((ej) this).field_K = this.o(1);
                         if (((ej) this).field_K <= 0) {
                           break L5;
                         } else {
@@ -796,7 +790,7 @@ class ej extends eb {
         return stackIn_22_0 != 0;
     }
 
-    private final int l() {
+    private final int l(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = Terraphoenix.field_V;
@@ -959,9 +953,9 @@ class ej extends eb {
                             break L6;
                           } else {
                             ((ej) this).field_o = ((ej) this).field_o + param0;
-                            int dupTemp$5 = ((ej) this).field_o.length();
-                            ((ej) this).field_K = dupTemp$5;
-                            ((ej) this).field_T = dupTemp$5;
+                            int dupTemp$1 = ((ej) this).field_o.length();
+                            ((ej) this).field_K = dupTemp$1;
+                            ((ej) this).field_T = dupTemp$1;
                             break L6;
                           }
                         }
@@ -1008,10 +1002,9 @@ class ej extends eb {
                                 stackIn_65_0 = stackOut_64_0;
                                 stackIn_65_1 = stackOut_64_1;
                                 if (bh.field_e[82]) {
-                                  int discarded$6 = 1;
                                   stackOut_66_0 = this;
                                   stackOut_66_1 = stackIn_66_1;
-                                  stackOut_66_2 = this.o();
+                                  stackOut_66_2 = this.o(1);
                                   stackIn_67_0 = stackOut_66_0;
                                   stackIn_67_1 = stackOut_66_1;
                                   stackIn_67_2 = stackOut_66_2;
@@ -1074,16 +1067,14 @@ class ej extends eb {
                                     if (67 != param3) {
                                       break L7;
                                     } else {
-                                      int discarded$7 = -85;
-                                      this.h();
+                                      this.h((byte) -85);
                                       stackOut_57_0 = 1;
                                       stackIn_58_0 = stackOut_57_0;
                                       return stackIn_58_0 != 0;
                                     }
                                   }
                                 } else {
-                                  int discarded$8 = -79;
-                                  this.n();
+                                  this.n(-79);
                                   stackOut_46_0 = 1;
                                   stackIn_47_0 = stackOut_46_0;
                                   return stackIn_47_0 != 0;
@@ -1114,10 +1105,9 @@ class ej extends eb {
                                 stackIn_38_2 = stackOut_37_2;
                                 break L11;
                               } else {
-                                int discarded$9 = -1;
                                 stackOut_36_0 = this;
                                 stackOut_36_1 = stackIn_36_1;
-                                stackOut_36_2 = this.l();
+                                stackOut_36_2 = this.l(-1);
                                 stackIn_38_0 = stackOut_36_0;
                                 stackIn_38_1 = stackOut_36_1;
                                 stackIn_38_2 = stackOut_36_2;

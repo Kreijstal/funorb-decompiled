@@ -41,7 +41,7 @@ class sd extends df {
         return (ln) (Object) ((sd) this).field_s.h(43);
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_y = null;
         field_t = null;
     }

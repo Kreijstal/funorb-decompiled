@@ -152,7 +152,7 @@ final class aj extends fc {
         return stackIn_15_0 != 0;
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         return ne.field_a.g(0);
     }
 

@@ -16,7 +16,7 @@ final class ec {
         return param0 & param1;
     }
 
-    final static byte[] a(int param0, kj param1, byte[] param2) {
+    final static byte[] a(int param0, kj param1, byte[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -182,7 +182,7 @@ final class ec {
         var4.b((byte) 105, -var5 + var4.field_p);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_f = null;
         field_b = null;
@@ -192,7 +192,7 @@ final class ec {
         field_e = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         String[] stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         String[] stackIn_5_0 = null;
@@ -489,15 +489,13 @@ final class ec {
     }
 
     final static void a(byte param0) {
-        int discarded$0 = -78;
-        int var1 = rd.a();
+        int var1 = rd.a((byte) -78);
         if (param0 >= -60) {
             field_d = null;
         }
         int var2 = al.a(0);
         gl.field_l.a((ok.field_c << 1) + var1, -15203, -ok.field_c + hl.field_q, var2 + (cl.field_b << 1), -cl.field_b + lk.field_W);
-        int discarded$1 = 118;
-        rg.a();
+        rg.a(118);
     }
 
     final static wk[] a(byte param0, String param1, cm param2, String param3) {

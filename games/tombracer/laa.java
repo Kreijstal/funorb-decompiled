@@ -223,7 +223,7 @@ final class laa extends b implements tsa {
         }
     }
 
-    final static int a(int param0, int param1, byte[] param2, int param3, CharSequence param4) {
+    final static int a(int param0, int param1, byte[] param2, int param3, CharSequence param4, byte param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

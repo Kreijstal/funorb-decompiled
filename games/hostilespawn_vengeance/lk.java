@@ -43,8 +43,7 @@ final class lk extends vd implements cd, qk {
         int var2 = 0;
         L0: {
           L1: {
-            int discarded$8 = -86;
-            if (gi.b()) {
+            if (gi.b((byte) -86)) {
               break L1;
             } else {
               if (((lk) this).field_O.field_n.length() <= 0) {
@@ -58,8 +57,7 @@ final class lk extends vd implements cd, qk {
               }
             }
           }
-          int discarded$9 = -125;
-          r.a(((lk) this).field_O.field_n, ((lk) this).field_L.field_n);
+          r.a(((lk) this).field_O.field_n, ((lk) this).field_L.field_n, -125);
           break L0;
         }
         var2 = -47 / ((29 - param0) / 34);
@@ -99,17 +97,14 @@ final class lk extends vd implements cd, qk {
                     break L1;
                   } else {
                     if (((lk) this).field_G) {
-                      int discarded$443 = -1;
-                      ki.a();
+                      ki.a(-1);
                       break L1;
                     } else {
                       if (!((lk) this).field_J) {
-                        int discarded$444 = -1;
-                        vc.a();
+                        vc.a((byte) -1);
                         break L1;
                       } else {
-                        int discarded$445 = -126;
-                        mn.a();
+                        mn.a((byte) -126);
                         break L1;
                       }
                     }
@@ -896,8 +891,7 @@ final class lk extends vd implements cd, qk {
             }
             L13: {
               var8 = jg.field_b;
-              int discarded$3 = -116;
-              var9 = qj.a(bn.c(-1));
+              var9 = qj.a(bn.c(-1), (byte) -116);
               if (ub.field_b != var9) {
                 if (var9 != wh.field_c) {
                   break L13;
@@ -911,13 +905,13 @@ final class lk extends vd implements cd, qk {
               }
             }
             L14: {
-              nh dupTemp$4 = new nh(10, ((lk) this).field_m, ((lk) this).field_s + -20, 25, (ag) (Object) ((lk) this).field_O, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$4;
-              ((lk) this).a(51448, (ag) (Object) dupTemp$4);
+              nh dupTemp$2 = new nh(10, ((lk) this).field_m, ((lk) this).field_s + -20, 25, (ag) (Object) ((lk) this).field_O, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$2;
+              ((lk) this).a(51448, (ag) (Object) dupTemp$2);
               ((lk) this).field_m = ((lk) this).field_m + (((ag) (Object) var12).field_x - -5);
-              nh dupTemp$5 = new nh(10, ((lk) this).field_m, -20 + ((lk) this).field_s, 25, (ag) (Object) ((lk) this).field_L, false, 80, 3, var7, 16777215, qh.field_x);
-              var13 = dupTemp$5;
-              ((lk) this).a(51448, (ag) (Object) dupTemp$5);
+              nh dupTemp$3 = new nh(10, ((lk) this).field_m, -20 + ((lk) this).field_s, 25, (ag) (Object) ((lk) this).field_L, false, 80, 3, var7, 16777215, qh.field_x);
+              var13 = dupTemp$3;
+              ((lk) this).a(51448, (ag) (Object) dupTemp$3);
               ((lk) this).field_m = ((lk) this).field_m + (((ag) (Object) var13).field_x - -5);
               ((lk) this).field_K.field_p = (mh) this;
               if (null == ((lk) this).field_P) {

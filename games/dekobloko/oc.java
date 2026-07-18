@@ -39,7 +39,7 @@ final class oc {
         }
     }
 
-    final static ij[] a() {
+    final static ij[] a(byte param0) {
         return new ij[]{ah.field_f, ge.field_g, hn.field_c};
     }
 

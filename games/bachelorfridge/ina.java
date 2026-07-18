@@ -38,7 +38,7 @@ final class ina extends bi {
         return hp.a(param0, (byte) -102, nga.field_i);
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_n = null;
         field_o = null;
         field_s = null;
@@ -52,15 +52,14 @@ final class ina extends bi {
 
     final void l(int param0) {
         ((ina) this).i(-12988);
-        int discarded$0 = 0;
-        j.a(rc.field_k, 40, 16760896, true, 320);
+        j.a(rc.field_k, 40, 16760896, true, 320, false);
         dg.a(40, 60, 342, 335, 20, 0, 80);
         dg.a(390, 60, 210, 335, 20, 0, 80);
         dg.a(399, 69, 192, 136, 11, 0, 80);
         this.e(true);
         this.p(param0 + -2);
         ((ina) this).c(true);
-        int discarded$19 = fn.field_n.a(kw.field_m, 89, 340, 250, 100, 10, -1, 1, 0, 12);
+        int discarded$18 = fn.field_n.a(kw.field_m, 89, 340, 250, 100, 10, -1, 1, 0, 12);
         if (param0 != 9) {
             ((ina) this).field_m = null;
         }
@@ -454,8 +453,7 @@ final class ina extends bi {
           if (1 != lf.field_c) {
             break L0;
           } else {
-            int discarded$4 = 1;
-            cq discarded$5 = ol.a(kea.field_r[0]);
+            cq discarded$2 = ol.a(kea.field_r[0], true);
             var2 = this.a((byte) -123, nfa.field_a, jc.field_r);
             if (((ina) this).field_t == var2) {
               ((ina) this).field_t = -1;

@@ -45,7 +45,7 @@ final class dd extends oe implements java.awt.image.ImageProducer, java.awt.imag
         String stackOut_9_2 = null;
         try {
           L0: {
-            var6 = v.a(param5, 0, 0, 80, param1, param3);
+            var6 = v.a(param5, param4, param0, 80, param1, param3);
             if (null != var6) {
               var7 = new ad();
               var7.field_d = var6;
@@ -73,7 +73,7 @@ final class dd extends oe implements java.awt.image.ImageProducer, java.awt.imag
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var6_ref;
-            stackOut_8_1 = new StringBuilder().append("dd.G(").append(0).append(',');
+            stackOut_8_1 = new StringBuilder().append("dd.G(").append(param0).append(',');
             stackIn_11_0 = stackOut_8_0;
             stackIn_11_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -96,7 +96,7 @@ final class dd extends oe implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ',' + param3 + ',' + 0 + ',' + param5 + ')');
+          throw oj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_7_0;
     }
@@ -190,45 +190,49 @@ final class dd extends oe implements java.awt.image.ImageProducer, java.awt.imag
               }
             }
             rk.field_p[bb.field_c] = param0;
-            L3: {
-              ea.field_a[bb.field_c] = param5;
-              cb.field_e[bb.field_c] = param4;
-              var6_int = param4 + (param0 - -param5);
-              if (var6_int == 0) {
-                stackOut_12_0 = 0;
-                stackIn_13_0 = stackOut_12_0;
-                break L3;
-              } else {
-                stackOut_10_0 = param0 * 1000 / var6_int;
-                stackIn_13_0 = stackOut_10_0;
-                break L3;
+            if (param2 == 27715) {
+              L3: {
+                ea.field_a[bb.field_c] = param5;
+                cb.field_e[bb.field_c] = param4;
+                var6_int = param4 + (param0 - -param5);
+                if (var6_int == 0) {
+                  stackOut_12_0 = 0;
+                  stackIn_13_0 = stackOut_12_0;
+                  break L3;
+                } else {
+                  stackOut_10_0 = param0 * 1000 / var6_int;
+                  stackIn_13_0 = stackOut_10_0;
+                  break L3;
+                }
               }
-            }
-            L4: {
-              var7 = stackIn_13_0;
-              bj.field_b[bb.field_c] = var7;
-              if (~var7 <= ~pi.field_e) {
-                break L4;
-              } else {
-                pi.field_e = var7;
-                break L4;
+              L4: {
+                var7 = stackIn_13_0;
+                bj.field_b[bb.field_c] = var7;
+                if (~var7 <= ~pi.field_e) {
+                  break L4;
+                } else {
+                  pi.field_e = var7;
+                  break L4;
+                }
               }
-            }
-            L5: {
-              bb.field_c = bb.field_c + 1;
-              if (~v.field_Z > ~var7) {
-                v.field_Z = var7;
-                break L5;
-              } else {
-                break L5;
+              L5: {
+                bb.field_c = bb.field_c + 1;
+                if (~v.field_Z > ~var7) {
+                  v.field_Z = var7;
+                  break L5;
+                } else {
+                  break L5;
+                }
               }
+              break L0;
+            } else {
+              return;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var6, "dd.B(" + param0 + ',' + param1 + ',' + 27715 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oj.a((Throwable) (Object) var6, "dd.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -476,8 +480,7 @@ final class dd extends oe implements java.awt.image.ImageProducer, java.awt.imag
                     vk.field_i = null;
                     hk.field_b = false;
                     var3 = 124 % ((param0 - 72) / 47);
-                    int discarded$4 = 71;
-                    bj.a();
+                    bj.a((byte) 71);
                     if (gh.field_x) {
                       break L4;
                     } else {
@@ -505,8 +508,7 @@ final class dd extends oe implements java.awt.image.ImageProducer, java.awt.imag
                     if (ea.field_e < 1) {
                       break L3;
                     } else {
-                      int discarded$5 = -17;
-                      bb.a(var1_int != 0);
+                      bb.a(var1_int != 0, (byte) -17);
                       break L3;
                     }
                   }
@@ -545,8 +547,7 @@ final class dd extends oe implements java.awt.image.ImageProducer, java.awt.imag
                   if (null != fj.field_m) {
                     break L8;
                   } else {
-                    int discarded$6 = -7668;
-                    uf.c();
+                    uf.c(-7668);
                     break L8;
                   }
                 }
@@ -644,8 +645,7 @@ final class dd extends oe implements java.awt.image.ImageProducer, java.awt.imag
                   }
                   L20: {
                     if (null == fj.field_m) {
-                      int discarded$7 = -7668;
-                      uf.c();
+                      uf.c(-7668);
                       break L20;
                     } else {
                       break L20;
@@ -702,25 +702,33 @@ final class dd extends oe implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            field_q = null;
-            field_o = null;
-            field_r = null;
-            field_n = null;
-            field_l = null;
-            field_p = null;
-            field_t = null;
+            L1: {
+              field_q = null;
+              field_o = null;
+              field_r = null;
+              field_n = null;
+              field_l = null;
+              field_p = null;
+              field_t = null;
+              if (param0 == 15752) {
+                break L1;
+              } else {
+                dd.c(-123);
+                break L1;
+              }
+            }
             field_m = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "dd.F(" + 15752 + ')');
+          throw oj.a((Throwable) (Object) var1, "dd.F(" + param0 + ')');
         }
     }
 

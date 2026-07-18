@@ -181,8 +181,7 @@ final class no {
                               break L9;
                             }
                           }
-                          int discarded$1 = -1;
-                          qj.a(ol.field_g);
+                          qj.a(ol.field_g, -1);
                           break L0;
                         } else {
                           var22 = var21[var6];
@@ -333,25 +332,18 @@ final class no {
                     break L2;
                   }
                 }
-                int discarded$49 = 120;
-                ge.a(vj.g(), ei.a(82), var3_int != 0, 0, po.field_h);
+                ge.a(vj.g((byte) 120), ei.a(82), var3_int != 0, 0, po.field_h);
                 break L1;
               } else {
-                int discarded$50 = 250;
-                if (!or.a()) {
+                if (!or.a(250)) {
                   gf.b();
-                  int discarded$51 = 320;
-                  int discarded$52 = 28318;
-                  int discarded$53 = 240;
-                  sn.a();
-                  int discarded$54 = 0;
-                  mc.a(47, 0, param2);
+                  sn.a(240, 28318, 320);
+                  mc.a(47, 0, param2, 0);
                   break L1;
                 } else {
                   if (gm.field_i == 0) {
                     gr.a(false, param0, 0);
-                    int discarded$55 = 0;
-                    mc.a(64, 0, param2);
+                    mc.a(64, 0, param2, 0);
                     break L1;
                   } else {
                     pa.a(9242, param2);
@@ -394,7 +386,7 @@ final class no {
         }
     }
 
-    final static void a(nf param0) {
+    final static void a(nf param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -485,7 +477,7 @@ final class no {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_a = null;

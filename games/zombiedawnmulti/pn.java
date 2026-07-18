@@ -20,7 +20,7 @@ final class pn {
         field_a = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -110,7 +110,7 @@ final class pn {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         nh.field_m = false;
         sh.field_L = s.field_e.g(31365) == 0 ? true : false;
     }

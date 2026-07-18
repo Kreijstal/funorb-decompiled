@@ -12,7 +12,7 @@ final class em {
     static hd field_d;
     private int field_g;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_d = null;
         field_c = null;
     }

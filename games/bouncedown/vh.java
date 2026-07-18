@@ -306,7 +306,7 @@ final class vh {
         }
     }
 
-    final static int a(boolean param0, String param1) {
+    final static int a(boolean param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -722,7 +722,7 @@ final class vh {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_g = null;
     }
@@ -785,8 +785,7 @@ final class vh {
             var6 = 122 % ((param2 - 59) / 46);
             var4_int = param0.a(param1, false);
             var5 = param0.a(var4_int, param3, 95);
-            int discarded$2 = 0;
-            stackOut_0_0 = kf.a(var4_int, var5, param0);
+            stackOut_0_0 = kf.a(var4_int, var5, param0, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -873,7 +872,7 @@ final class vh {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
     }
 
     final static boolean a(int param0, byte param1) {

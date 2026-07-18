@@ -289,7 +289,7 @@ final class jf extends mg {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_M = null;
         field_N = null;
         field_G = null;

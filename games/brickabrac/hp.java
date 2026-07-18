@@ -29,7 +29,7 @@ final class hp extends nm {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_l = null;
         field_k = null;

@@ -83,7 +83,7 @@ final class gf {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_q = null;
     }
 
@@ -161,8 +161,7 @@ final class gf {
                         try {
                             var2 = "tuhstatbut";
                             var3 = (String) oa.a(true, param1, "getcookies");
-                            int discarded$2 = -125;
-                            var4 = dc.a(var3, ';');
+                            var4 = dc.a(var3, ';', (byte) -125);
                             var5 = 0;
                             statePc = 5;
                             continue stateLoop;

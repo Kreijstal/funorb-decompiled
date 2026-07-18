@@ -565,40 +565,26 @@ abstract class oj extends tc {
             var2_int = param1.g(-113, 8);
             if (var2_int <= 0) {
               L1: {
-                int discarded$23 = -2;
-                var3 = vq.a(param1) ? 1 : 0;
+                var3 = vq.a(param1, -2) ? 1 : 0;
                 var5 = 1 / ((param0 - 61) / 50);
-                int discarded$24 = -2;
-                var4 = vq.a(param1) ? 1 : 0;
+                var4 = vq.a(param1, -2) ? 1 : 0;
                 var6 = new pu();
                 var6.field_O = (short)param1.g(61, 16);
-                int discarded$25 = 10064;
-                var6.field_z = to.a(var6.field_z, 16, param1);
-                int discarded$26 = 10064;
-                var6.field_y = to.a(var6.field_y, 16, param1);
-                int discarded$27 = 10064;
-                var6.field_o = to.a(var6.field_o, 16, param1);
+                var6.field_z = to.a(var6.field_z, 16, param1, 10064);
+                var6.field_y = to.a(var6.field_y, 16, param1, 10064);
+                var6.field_o = to.a(var6.field_o, 16, param1, 10064);
                 var6.field_q = (short)param1.g(107, 16);
-                int discarded$28 = 10064;
-                var6.field_c = to.a(var6.field_c, 16, param1);
-                int discarded$29 = 10064;
-                var6.field_j = to.a(var6.field_j, 16, param1);
-                int discarded$30 = 10064;
-                var6.field_e = to.a(var6.field_e, 16, param1);
+                var6.field_c = to.a(var6.field_c, 16, param1, 10064);
+                var6.field_j = to.a(var6.field_j, 16, param1, 10064);
+                var6.field_e = to.a(var6.field_e, 16, param1, 10064);
                 if (var3 != 0) {
                   var6.field_t = (short)param1.g(-100, 16);
-                  int discarded$31 = 10064;
-                  var6.field_l = to.a(var6.field_l, 16, param1);
-                  int discarded$32 = 10064;
-                  var6.field_f = to.a(var6.field_f, 16, param1);
-                  int discarded$33 = 10064;
-                  var6.field_x = to.a(var6.field_x, 16, param1);
-                  int discarded$34 = 10064;
-                  var6.field_w = to.a(var6.field_w, 16, param1);
-                  int discarded$35 = 10064;
-                  var6.field_Q = to.a(var6.field_Q, 16, param1);
-                  int discarded$36 = 10064;
-                  var6.field_d = to.a(var6.field_d, 16, param1);
+                  var6.field_l = to.a(var6.field_l, 16, param1, 10064);
+                  var6.field_f = to.a(var6.field_f, 16, param1, 10064);
+                  var6.field_x = to.a(var6.field_x, 16, param1, 10064);
+                  var6.field_w = to.a(var6.field_w, 16, param1, 10064);
+                  var6.field_Q = to.a(var6.field_Q, 16, param1, 10064);
+                  var6.field_d = to.a(var6.field_d, 16, param1, 10064);
                   break L1;
                 } else {
                   break L1;
@@ -606,35 +592,27 @@ abstract class oj extends tc {
               }
               L2: {
                 if (var4 != 0) {
-                  int discarded$37 = param1.g(-102, 16);
-                  int discarded$38 = 10064;
-                  var6.field_r = to.a(var6.field_r, 16, param1);
-                  int discarded$39 = 10064;
-                  var6.field_s = to.a(var6.field_s, 16, param1);
-                  int discarded$40 = 10064;
-                  var6.field_A = to.a(var6.field_A, 16, param1);
-                  int discarded$41 = 10064;
-                  var6.field_i = to.a(var6.field_i, 16, param1);
-                  int discarded$42 = 10064;
-                  var6.field_b = to.a(var6.field_b, 16, param1);
+                  int discarded$1 = param1.g(-102, 16);
+                  var6.field_r = to.a(var6.field_r, 16, param1, 10064);
+                  var6.field_s = to.a(var6.field_s, 16, param1, 10064);
+                  var6.field_A = to.a(var6.field_A, 16, param1, 10064);
+                  var6.field_i = to.a(var6.field_i, 16, param1, 10064);
+                  var6.field_b = to.a(var6.field_b, 16, param1, 10064);
                   break L2;
                 } else {
                   break L2;
                 }
               }
               L3: {
-                int discarded$43 = -2;
-                if (vq.a(param1)) {
-                  int discarded$44 = 10064;
-                  var6.field_u = to.a(var6.field_u, 16, param1);
+                if (vq.a(param1, -2)) {
+                  var6.field_u = to.a(var6.field_u, 16, param1, 10064);
                   break L3;
                 } else {
                   break L3;
                 }
               }
               L4: {
-                int discarded$45 = -2;
-                if (vq.a(param1)) {
+                if (vq.a(param1, -2)) {
                   var6.field_K = kd.a(16, param1, var6.field_K, (byte) -122);
                   var7 = 0;
                   var8 = 0;

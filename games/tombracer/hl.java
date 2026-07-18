@@ -488,7 +488,7 @@ abstract class hl implements mta {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_i = null;
         int var1 = 35;
         field_c = null;

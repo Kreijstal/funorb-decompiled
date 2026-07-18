@@ -12,11 +12,11 @@ final class sg {
     int field_h;
 
     final static void a(int param0) {
-        int discarded$0 = 33;
-        aj.a((String) null, mk.field_S);
+        Object var2 = null;
+        aj.a((String) null, mk.field_S, (byte) 33);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
     }
@@ -281,7 +281,7 @@ final class sg {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         n.field_b.a(false, (iq) (Object) new qm());
     }
 

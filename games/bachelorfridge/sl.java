@@ -330,7 +330,7 @@ final class sl extends pp {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_k = null;
         int var1 = 0;
         field_j = null;

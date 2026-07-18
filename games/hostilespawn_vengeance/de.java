@@ -13,7 +13,7 @@ final class de extends am {
     static bd field_o;
     int field_l;
 
-    final static void c() {
+    final static void c(int param0) {
         eh.field_e = false;
         li.field_o = false;
         g.a((byte) 104, -1);
@@ -21,7 +21,7 @@ final class de extends am {
         ki.field_f = e.field_q;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_o = null;
         field_i = null;
         field_k = null;

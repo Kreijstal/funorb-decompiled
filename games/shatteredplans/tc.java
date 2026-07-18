@@ -66,12 +66,10 @@ final class tc extends qs {
         }
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         if (!hg.field_r) {
             if (!(ur.field_zb != null)) {
-                int discarded$0 = 4;
-                int discarded$1 = 88;
-                ur.field_zb = vs.a();
+                ur.field_zb = vs.a((byte) 88, 4);
             }
         }
         if (!h.field_q) {
@@ -80,11 +78,9 @@ final class tc extends qs {
             }
             if (!(!js.field_c.field_l)) {
                 if (!(js.field_c.field_o == null)) {
-                    int discarded$2 = 30;
-                    gg.a(js.field_c.field_o);
+                    gg.a(js.field_c.field_o, (byte) 30);
                 }
-                int discarded$8 = -69;
-                ta.b();
+                ta.b((byte) -69);
                 if (!(de.field_j != -1)) {
                     de.field_j = uc.field_A;
                 }
@@ -574,8 +570,7 @@ final class tc extends qs {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 13;
-            ql.a((byte) 50, qk.a(param1));
+            ql.a((byte) 50, qk.a(param1, 13));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -620,7 +615,7 @@ final class tc extends qs {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -711,8 +706,7 @@ final class tc extends qs {
         L0: {
           el.field_c = gf.field_k;
           kh.field_Mb = gf.field_b;
-          int discarded$2 = 438;
-          nj.a();
+          nj.a(438);
           bc.field_g.a(0, ia.field_j.field_mb + -42, (byte) 95, ia.field_j.field_K, 0);
           nm.field_c.a(cp.field_a.field_K, cr.field_c, (byte) 76, 0, 0);
           var1 = cr.field_c - -2;
@@ -788,8 +782,7 @@ final class tc extends qs {
         }
         L2: {
           ((qr) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, (byte) stackIn_6_3, stackIn_6_4, 0);
-          int discarded$3 = 18;
-          p.d();
+          p.d(18);
           vm.field_Ab.a(ia.field_j.field_K, 40, (byte) 41, -40 + ia.field_j.field_mb, 0);
           sg.field_zb.a(se.field_i.field_K, 30, (byte) 72, 0, 0);
           qf.field_e.a(se.field_i.field_K, -40 + se.field_i.field_mb + -32, (byte) 48, 30, 0);

@@ -9,7 +9,7 @@ final class wk {
     static String field_c;
     static pj field_b;
 
-    final static int a(int param0, CharSequence param1) {
+    final static int a(int param0, CharSequence param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -31,8 +31,7 @@ final class wk {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            stackOut_2_0 = wk.a(90, 16, param1);
+            stackOut_2_0 = wk.a(90, 16, param1, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -69,7 +68,7 @@ final class wk {
         return stackIn_3_0;
     }
 
-    final static int a(int param0, int param1, CharSequence param2) {
+    final static int a(int param0, int param1, CharSequence param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -242,7 +241,7 @@ final class wk {
         return stackIn_38_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_e = null;
         field_c = null;

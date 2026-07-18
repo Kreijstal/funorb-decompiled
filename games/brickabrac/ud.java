@@ -188,9 +188,7 @@ final class ud extends km {
                       }
                     }
                   }
-                  int discarded$2 = 85;
-                  int discarded$3 = 385;
-                  this.a(178, 243 - 2 * var2, 210);
+                  this.a(178, 243 - 2 * var2, 210, 385, (byte) 85);
                   break L3;
                 }
                 L5: {
@@ -330,8 +328,7 @@ final class ud extends km {
         L0: while (true) {
           if (((ud) this).field_F.length <= var3) {
             ((ud) this).field_z.c((byte) -78);
-            int discarded$2 = 10792131;
-            int discarded$3 = td.a(((ud) this).field_F, ((ud) this).field_A.field_j[param1], ((ud) this).field_r, ((ud) this).field_z, ((ud) this).field_s);
+            int discarded$1 = td.a(((ud) this).field_F, ((ud) this).field_A.field_j[param1], ((ud) this).field_r, ((ud) this).field_z, ((ud) this).field_s, 10792131);
             cg.a(((ud) this).field_F, (byte) 35, ((ud) this).field_z, false);
             ((ud) this).field_I = 122880;
             ((ud) this).field_u = 163840;
@@ -451,8 +448,7 @@ final class ud extends km {
                 if (o.field_e == null) {
                   break L3;
                 } else {
-                  int discarded$3 = 2;
-                  if (null == ac.a(param0)) {
+                  if (null == ac.a(param0, 2)) {
                     break L3;
                   } else {
                     stackOut_7_0 = 1;
@@ -514,10 +510,9 @@ final class ud extends km {
         return true;
     }
 
-    final static tp c() {
+    final static tp c(boolean param0) {
         tp var1 = new tp(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], cn.field_a[0], qp.field_c);
-        int discarded$0 = 96;
-        ee.d();
+        ee.d((byte) 96);
         return var1;
     }
 
@@ -528,7 +523,7 @@ final class ud extends km {
         return ((ud) this).field_p - -32;
     }
 
-    final static String d() {
+    final static String d(boolean param0) {
         if (jm.field_f == ik.field_g) {
             return td.field_w;
         }
@@ -666,7 +661,7 @@ final class ud extends km {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_t = null;
         field_x = null;
         int var1 = 0;
@@ -679,7 +674,7 @@ final class ud extends km {
         ((ud) this).a(bm.field_f, 0);
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void a(int param0, int param1, int param2, int param3, byte param4) {
         int var8 = 0;
         on var9 = null;
         int var10 = BrickABrac.field_J ? 1 : 0;

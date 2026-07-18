@@ -261,7 +261,7 @@ final class skb extends rqa {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
         field_o = null;
         field_p = null;

@@ -6,11 +6,11 @@ final class us {
     static int field_c;
     static String[] field_b;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return oi.field_c.a((byte) 14);
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         return null != jl.field_b;
     }
 

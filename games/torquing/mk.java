@@ -6,15 +6,14 @@ final class mk {
     static int[] field_c;
     static kn field_b;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         if (10 > op.field_i) {
             return false;
         }
         if (kb.field_h) {
             return false;
         }
-        int discarded$4 = 16158;
-        return !oo.a() ? true : false;
+        return !oo.a(16158) ? true : false;
     }
 
     final static void a(boolean param0) {

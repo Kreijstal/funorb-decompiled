@@ -9,7 +9,7 @@ final class fh {
     static int field_d;
     int field_a;
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -145,8 +145,7 @@ final class fh {
               }
             }
             if (var2 != null) {
-              int discarded$2 = 1;
-              he.a((o) (Object) param1, (o) (Object) var2);
+              he.a((o) (Object) param1, (o) (Object) var2, true);
               return;
             } else {
               nk.field_t.a((o) (Object) param1, (byte) 125);

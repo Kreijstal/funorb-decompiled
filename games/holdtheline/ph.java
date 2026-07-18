@@ -348,8 +348,7 @@ final class ph {
                         var10 = var12;
                         var6 = var10;
                         if (var3 == 1) {
-                          int discarded$2 = 9;
-                          int discarded$3 = bh.a(var6, var5_int, param1, var4);
+                          int discarded$1 = bh.a(var16, var5_int, param1, var4, 9);
                           break L5;
                         } else {
                           var7 = (Object) (Object) pc.field_n;

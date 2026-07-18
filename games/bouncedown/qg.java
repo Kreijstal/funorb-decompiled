@@ -6,7 +6,7 @@ final class qg extends ai {
     static mf field_g;
     int field_h;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
     }
 

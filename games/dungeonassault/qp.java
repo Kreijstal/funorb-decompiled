@@ -31,8 +31,7 @@ final class qp {
             }
             ((qp) this).field_g.write(param2, param0, param3);
             if (param1 < 36) {
-                int discarded$0 = 1;
-                cn discarded$1 = qp.a();
+                cn discarded$0 = qp.a(true);
             }
             ((qp) this).field_b = ((qp) this).field_b + (long)param3;
         } catch (RuntimeException runtimeException) {
@@ -40,7 +39,7 @@ final class qp {
         }
     }
 
-    final static cn a() {
+    final static cn a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -181,7 +180,7 @@ final class qp {
         return stackIn_6_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_c = null;
         field_f = null;
@@ -195,7 +194,7 @@ final class qp {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a(byte param0, int param1, boolean param2) {
         if (param1 != -1) {
             bf.field_f[param1].a(true);
         } else {

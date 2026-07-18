@@ -46,7 +46,7 @@ final class el extends cm {
         return ((el) this).field_A;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         uk.a(false, 4);
         int var1 = 0;
     }

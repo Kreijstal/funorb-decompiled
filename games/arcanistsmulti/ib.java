@@ -10,7 +10,7 @@ class ib extends jm {
     static int field_u;
     static String field_p;
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         lj.field_k = param2;
         u.field_l = param1;
         tm.field_b = param3;
@@ -28,7 +28,7 @@ class ib extends jm {
         this(ia.field_c, param0);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_p = null;
         field_q = null;
         field_s = null;

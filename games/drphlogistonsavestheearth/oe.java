@@ -7,7 +7,7 @@ final class oe {
     static Boolean field_a;
     static int field_b;
 
-    final static void b() {
+    final static void b(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -25,7 +25,7 @@ final class oe {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_c = null;
         field_a = null;

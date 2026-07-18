@@ -80,7 +80,7 @@ final class ce extends vja {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_u = null;
         field_w = null;
     }
@@ -152,7 +152,7 @@ final class ce extends vja {
         return (at) (Object) stackIn_4_0;
     }
 
-    final static void a(boolean param0, int param1, int param2, String param3, int param4) {
+    final static void a(boolean param0, int param1, int param2, String param3, int param4, boolean param5) {
         int[] var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -181,8 +181,7 @@ final class ce extends vja {
         String stackOut_12_2 = null;
         try {
           L0: {
-            int discarded$2 = 3685;
-            k.c();
+            k.c(3685);
             var14 = dg.field_e;
             var13 = var14;
             var12 = var13;
@@ -354,7 +353,7 @@ final class ce extends vja {
         }
     }
 
-    final static void a(vr param0) {
+    final static void a(vr param0, int param1) {
         int var2_int = 0;
         ika var3 = null;
         int var4 = 0;
@@ -392,6 +391,7 @@ final class ce extends vja {
 
     final void a(byte param0, lu param1) {
         RuntimeException var3 = null;
+        Object var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -414,8 +414,8 @@ final class ce extends vja {
               if (param0 < -12) {
                 break L1;
               } else {
-                int discarded$2 = 1;
-                ce.a(false, -33, 20, (String) null, -110);
+                var4 = null;
+                ce.a(false, -33, 20, (String) null, -110, true);
                 break L1;
               }
             }

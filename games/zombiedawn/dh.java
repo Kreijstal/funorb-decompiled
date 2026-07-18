@@ -31,8 +31,7 @@ abstract class dh {
                   sl.a((byte) 47);
                   if (hp.field_C) {
                     hp.field_C = false;
-                    int discarded$10 = 0;
-                    cn.a(false);
+                    cn.a(false, false);
                     rc.field_p = bb.field_f;
                     return;
                   } else {
@@ -47,8 +46,7 @@ abstract class dh {
                     return;
                   } else {
                     hp.field_C = false;
-                    int discarded$11 = 0;
-                    cn.a(false);
+                    cn.a(false, false);
                     rc.field_p = bb.field_f;
                     return;
                   }
@@ -59,9 +57,9 @@ abstract class dh {
               }
             } else {
               if (bb.field_f == rc.field_p) {
-                int fieldTemp$12 = ln.field_b;
+                int fieldTemp$4 = ln.field_b;
                 ln.field_b = ln.field_b - 1;
-                if (0 < fieldTemp$12) {
+                if (0 < fieldTemp$4) {
                   return;
                 } else {
                   rc.field_p = rc.field_x;
@@ -72,16 +70,15 @@ abstract class dh {
               }
             }
           } else {
-            int fieldTemp$13 = ln.field_b;
+            int fieldTemp$5 = ln.field_b;
             ln.field_b = ln.field_b + 1;
-            if (fieldTemp$13 >= 16) {
+            if (fieldTemp$5 >= 16) {
               if (sc.field_a) {
                 td.a(112);
                 rc.field_p = bg.field_k;
                 return;
               } else {
-                int discarded$14 = 0;
-                cc.d();
+                cc.d(0);
                 rc.field_p = bg.field_k;
                 return;
               }
@@ -97,8 +94,7 @@ abstract class dh {
                   sl.a((byte) 47);
                   if (hp.field_C) {
                     hp.field_C = false;
-                    int discarded$15 = 0;
-                    cn.a(false);
+                    cn.a(false, false);
                     rc.field_p = bb.field_f;
                     return;
                   } else {
@@ -113,8 +109,7 @@ abstract class dh {
                     return;
                   } else {
                     hp.field_C = false;
-                    int discarded$16 = 0;
-                    cn.a(false);
+                    cn.a(false, false);
                     rc.field_p = bb.field_f;
                     return;
                   }
@@ -125,9 +120,9 @@ abstract class dh {
               }
             } else {
               if (bb.field_f == rc.field_p) {
-                int fieldTemp$17 = ln.field_b;
+                int fieldTemp$6 = ln.field_b;
                 ln.field_b = ln.field_b - 1;
-                if (0 < fieldTemp$17) {
+                if (0 < fieldTemp$6) {
                   return;
                 } else {
                   rc.field_p = rc.field_x;
@@ -138,16 +133,15 @@ abstract class dh {
               }
             }
           } else {
-            int fieldTemp$18 = ln.field_b;
+            int fieldTemp$7 = ln.field_b;
             ln.field_b = ln.field_b + 1;
-            if (fieldTemp$18 >= 16) {
+            if (fieldTemp$7 >= 16) {
               if (sc.field_a) {
                 td.a(112);
                 rc.field_p = bg.field_k;
                 return;
               } else {
-                int discarded$19 = 0;
-                cc.d();
+                cc.d(0);
                 rc.field_p = bg.field_k;
                 return;
               }
@@ -158,7 +152,7 @@ abstract class dh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_g = null;
     }

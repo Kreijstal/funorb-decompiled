@@ -128,7 +128,6 @@ final class kh extends vk implements dc, ga, qk {
         sh dupTemp$1 = new sh(10000536);
         ((kh) this).field_G.field_o = (de) (Object) dupTemp$1;
         ((kh) this).field_L.field_o = (de) (Object) dupTemp$1;
-        int discarded$2 = 0;
         String var2 = fb.a(nd.field_l, -111, new String[2]);
         int var3 = 20;
         var3 = var3 + this.a(170, ff.field_q, false, var3, (uj) (Object) ((kh) this).field_z);
@@ -136,9 +135,7 @@ final class kh extends vk implements dc, ga, qk {
         var3 = var3 + this.a(170, tj.field_y, false, var3, (uj) (Object) ((kh) this).field_L);
         var3 = var3 + (5 + this.a((uj) (Object) ((kh) this).field_G, 170, sk.field_a, 37, mc.field_d, var3));
         var3 = var3 + (this.a((uj) (Object) ((kh) this).field_J, 170, tg.field_w, 119, d.field_c, var3) - -5);
-        int discarded$3 = 170;
-        int discarded$4 = -113;
-        var3 = var3 + this.a(var3, (uj) (Object) ((kh) this).field_K, lj.field_f);
+        var3 = var3 + this.a(var3, (uj) (Object) ((kh) this).field_K, lj.field_f, -113, 170);
         ad var4 = new ad(46, var3, ((kh) this).field_i - 90, 25, (uj) (Object) ((kh) this).field_D, true, -120 + ((kh) this).field_i, 5, nb.field_b, 11579568, hc.field_d);
         ((kh) this).a(true, (uj) (Object) var4);
         var3 = var3 + var4.field_f;
@@ -430,15 +427,13 @@ final class kh extends vk implements dc, ga, qk {
             }
             L2: {
               if (((kh) this).field_I == param0) {
-                int discarded$6 = 11;
-                ob.b();
+                ob.b(11);
                 break L2;
               } else {
                 if (param0 != ((kh) this).field_M) {
                   break L2;
                 } else {
-                  int discarded$7 = -1;
-                  boolean discarded$8 = this.i();
+                  boolean discarded$2 = this.i(-1);
                   break L2;
                 }
               }
@@ -484,7 +479,7 @@ final class kh extends vk implements dc, ga, qk {
         }
     }
 
-    private final int a(int param0, uj param1, String param2) {
+    private final int a(int param0, uj param1, String param2, int param3, int param4) {
         RuntimeException var6 = null;
         jg var7 = null;
         int var8 = 0;
@@ -822,7 +817,7 @@ final class kh extends vk implements dc, ga, qk {
         return false;
     }
 
-    private final String j() {
+    private final String j(int param0) {
         return "</col></u>";
     }
 
@@ -967,7 +962,7 @@ final class kh extends vk implements dc, ga, qk {
         return stackIn_1_0;
     }
 
-    private final boolean i() {
+    private final boolean i(int param0) {
         if (!this.k(-1)) {
             return false;
         }
@@ -1525,7 +1520,7 @@ final class kh extends vk implements dc, ga, qk {
         return stackIn_11_0 != 0;
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_y = null;
     }
 

@@ -115,7 +115,7 @@ final class gf {
         return stackIn_1_0;
     }
 
-    final static void a(java.applet.Applet param0, String param1) {
+    final static void a(java.applet.Applet param0, String param1, int param2) {
         try {
             java.net.URL var3 = null;
             Exception var3_ref = null;
@@ -225,7 +225,7 @@ final class gf {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

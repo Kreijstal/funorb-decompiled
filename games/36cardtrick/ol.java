@@ -6,7 +6,7 @@ final class ol extends jc implements qh {
     private hl field_Y;
     static int field_X;
 
-    final static wb[] a(int param0, qk param1, int param2) {
+    final static wb[] a(int param0, qk param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -26,8 +26,7 @@ final class ol extends jc implements qh {
         String stackOut_5_2 = null;
         try {
           if (tc.a(param0, param2, 25479, param1)) {
-            int discarded$2 = 3343272;
-            return hc.a();
+            return hc.a(3343272);
           } else {
             return null;
           }
@@ -89,8 +88,7 @@ final class ol extends jc implements qh {
               if (((ol) this).field_Y != param3) {
                 break L1;
               } else {
-                int discarded$2 = 0;
-                this.r();
+                this.r(0);
                 break L1;
               }
             }
@@ -367,7 +365,7 @@ final class ol extends jc implements qh {
         }
     }
 
-    private final void r() {
+    private final void r(int param0) {
         if (!(((ol) this).field_E)) {
             return;
         }

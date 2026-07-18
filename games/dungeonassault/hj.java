@@ -124,11 +124,10 @@ final class hj extends gd {
 
     final static cn[] a(int param0, int param1, byte param2, int param3, int param4) {
         int var5 = 6 / ((param2 - 62) / 33);
-        int discarded$0 = 1;
-        return ba.a(param0, 3, -102, param3, param4, 1, 1, param1);
+        return ba.a(param0, 3, -102, param3, param4, 1, 1, param1, 1);
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_ab = null;
         field_Z = null;
         field_U = null;
@@ -140,7 +139,7 @@ final class hj extends gd {
         field_Q = null;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         fe.field_k = new md();
         int var1 = 29;
     }

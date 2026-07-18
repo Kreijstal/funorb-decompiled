@@ -364,8 +364,8 @@ final class b extends pi {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
+                                    int discarded$3 = b.f(16);
                                     int discarded$4 = b.f(16);
-                                    int discarded$5 = b.f(16);
                                     field_U[var6] = b.f(8);
                                     var6++;
                                     continue L6;
@@ -390,7 +390,7 @@ final class b extends pi {
                       }
                     }
                   } else {
-                    int discarded$6 = b.f(16);
+                    int discarded$5 = b.f(16);
                     var3++;
                     continue L2;
                   }
@@ -430,8 +430,7 @@ final class b extends pi {
                     L11: while (true) {
                       if (var9_int >= var5) {
                         var9 = new int[var5];
-                        int discarded$7 = -31479;
-                        var10 = d.a(var5 - 1);
+                        var10 = d.a(var5 - 1, -31479);
                         var11 = 0;
                         L12: while (true) {
                           if (var11 >= var5) {
@@ -645,9 +644,8 @@ final class b extends pi {
         int stackOut_109_1 = 0;
         L0: {
           b.a(((b) this).field_t[param0], 0);
-          int discarded$3 = b.c();
-          int discarded$4 = -31479;
-          var2 = b.f(d.a(field_U.length - 1));
+          int discarded$1 = b.c();
+          var2 = b.f(d.a(field_U.length - 1, -31479));
           var3 = field_S[var2] ? 1 : 0;
           if (var3 == 0) {
             stackOut_2_0 = field_r;
@@ -838,8 +836,7 @@ final class b extends pi {
                             var25 = 0;
                             L19: while (true) {
                               if (var25 >= var19) {
-                                int discarded$5 = -31479;
-                                var25 = d.a(var4 - 1);
+                                var25 = d.a(var4 - 1, -31479);
                                 var26 = 0;
                                 L20: while (true) {
                                   if (var26 >= var25 - 3) {

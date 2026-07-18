@@ -40,7 +40,7 @@ final class ld extends cj {
         }
     }
 
-    final static void a(jh param0, boolean param1) {
+    final static void a(jh param0, boolean param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -2038,8 +2038,7 @@ final class ld extends cj {
         try {
           L0: {
             L1: {
-              int discarded$2 = 26;
-              var2 = mc.a(cq.a(0, param1));
+              var2 = mc.a(cq.a(0, param1), (byte) 26);
               if (var2 == null) {
                 var2 = "";
                 break L1;
@@ -2263,7 +2262,7 @@ final class ld extends cj {
         return var2 != 0;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Lb = null;
         field_Rb = null;
         field_Ub = null;
@@ -2299,8 +2298,7 @@ final class ld extends cj {
               break L1;
             } else {
               if (((ld) this).field_Qb[param1] == -1) {
-                int discarded$8 = 4024;
-                qd.c();
+                qd.c(4024);
                 fh.b(31706);
                 break L1;
               } else {
@@ -2426,10 +2424,9 @@ final class ld extends cj {
         }
     }
 
-    final static void j() {
+    final static void j(int param0) {
         q.b(72);
-        int discarded$0 = 10;
-        bc.b();
+        bc.b(10);
         bk.field_i = null;
         fh.b(31706);
     }

@@ -13,7 +13,7 @@ final class og extends gj implements dc, da {
         return "</col></u>";
     }
 
-    private final String a() {
+    private final String a(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -42,8 +42,7 @@ final class og extends gj implements dc, da {
                 if (param4 != ((og) this).field_G) {
                   break L1;
                 } else {
-                  int discarded$2 = 255;
-                  ih.l();
+                  ih.l(255);
                   ((og) this).field_F.n(-22645);
                   break L1;
                 }
@@ -537,7 +536,6 @@ final class og extends gj implements dc, da {
             ((og) this).field_F = param0;
             ((og) this).field_G = new bb(ee.field_k, (kd) null);
             ((og) this).field_G.field_p = (ch) (Object) new ri();
-            int discarded$1 = -115;
             var7 = db.a(oh.field_jb, new String[2], true);
             var3 = 20;
             var4 = new e(ug.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ug.field_e.field_H, -1, 2147483647, true);

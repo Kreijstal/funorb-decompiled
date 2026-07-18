@@ -352,7 +352,7 @@ final class na extends nm {
         return param1 < 0 ? param0 : (int)((double)param0 * Math.sqrt((double)(16384 - param1) * 0.0001220703125) + 0.5);
     }
 
-    final static na a(lm param0) {
+    final static na a(lm param0, int param1, int param2) {
         if (param0.field_m != null) {
           if (param0.field_m.length == 0) {
             return null;

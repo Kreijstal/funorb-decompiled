@@ -569,7 +569,7 @@ final class pb extends l {
         ((pb) this).field_g = param2;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_m = null;
         int var1 = -1;
         field_k = null;

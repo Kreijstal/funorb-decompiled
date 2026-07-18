@@ -573,12 +573,10 @@ final class sj implements Runnable {
             Object var5 = null;
             le discarded$0 = ((sj) this).a(true, (byte) -21, (java.awt.Component) null);
         }
-        int discarded$1 = -123;
-        int discarded$2 = 0;
-        return this.a(param1, param0);
+        return this.a(param1, param0, false, (byte) -123);
     }
 
-    private final le a(int param0, String param1) {
+    private final le a(int param0, String param1, boolean param2, byte param3) {
         return this.a(1, param0, false, (Object) (Object) param1, 0);
     }
 

@@ -9,7 +9,7 @@ final class q {
     static int field_c;
     static int[] field_b;
 
-    final static String b() {
+    final static String b(byte param0) {
         if (!(pf.field_d >= 2)) {
             return aj.field_d;
         }
@@ -53,7 +53,7 @@ final class q {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -111,8 +111,7 @@ final class q {
                 }
               } else {
                 if (var2 != 1) {
-                  int discarded$1 = 0;
-                  bl.a((Throwable) null, (byte) 59, "LR1: " + em.b());
+                  bl.a((Throwable) null, (byte) 59, "LR1: " + em.b(false));
                   r.a(-28036);
                   break L1;
                 } else {

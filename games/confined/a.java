@@ -4,12 +4,12 @@
 final class a {
     static String field_a;
 
-    final static void a() {
+    final static void a(byte param0) {
         om.field_s.field_a = 0;
         om.field_s.field_e = 0;
     }
 
-    final static vj a(String param0) {
+    final static vj a(String param0, int param1) {
         RuntimeException var2 = null;
         vj stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -77,8 +77,7 @@ final class a {
               mf.field_f = null;
               tl.field_g = true;
               if (tl.field_g) {
-                int discarded$6 = -124;
-                tg.a();
+                tg.a((byte) -124);
                 a.a(false);
                 return;
               } else {
@@ -87,8 +86,7 @@ final class a {
               }
             } else {
               if (tl.field_g) {
-                int discarded$7 = -124;
-                tg.a();
+                tg.a((byte) -124);
                 a.a(false);
                 return;
               } else {
@@ -98,9 +96,7 @@ final class a {
             }
           } else {
             L0: {
-              int discarded$8 = 4;
-              int discarded$9 = -108;
-              mf.field_f = ij.a();
+              mf.field_f = ij.a(-108, 4);
               if (mf.field_f.field_o) {
                 oj.field_B = oj.field_B & ~mf.field_f.field_s;
                 i.field_o = i.field_o | mf.field_f.field_s;
@@ -115,8 +111,7 @@ final class a {
               a.a(false);
               return;
             } else {
-              int discarded$10 = -124;
-              tg.a();
+              tg.a((byte) -124);
               a.a(false);
               return;
             }
@@ -126,15 +121,14 @@ final class a {
             a.a(false);
             return;
           } else {
-            int discarded$11 = -124;
-            tg.a();
+            tg.a((byte) -124);
             a.a(false);
             return;
           }
         }
     }
 
-    final static bm a(mi param0, int param1, int param2) {
+    final static bm a(mi param0, int param1, int param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;

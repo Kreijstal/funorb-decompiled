@@ -15,7 +15,7 @@ abstract class ha {
 
     abstract void e();
 
-    private final static ha a(java.awt.Canvas param0, int param1, d param2, int param3) {
+    private final static ha a(java.awt.Canvas param0, int param1, d param2, int param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         oa stackIn_1_0 = null;
@@ -190,8 +190,7 @@ abstract class ha {
         try {
           if (param2 != 0) {
             if (2 == param2) {
-              int discarded$2 = -64;
-              stackOut_5_0 = ha.a(param3, param6, param7, param0);
+              stackOut_5_0 = ha.a(param3, param6, param7, param0, (byte) -64);
               stackIn_6_0 = stackOut_5_0;
               return stackIn_6_0;
             } else {
@@ -414,7 +413,7 @@ abstract class ha {
 
     abstract void T(int param0, int param1, int param2, int param3);
 
-    final static void a(ap param0, byte param1, boolean param2) {
+    final static void a(ap param0, byte param1, boolean param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object var5 = null;

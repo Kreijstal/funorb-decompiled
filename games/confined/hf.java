@@ -372,7 +372,7 @@ abstract class hf extends ee {
         }
     }
 
-    final static boolean l() {
+    final static boolean l(int param0) {
         return na.field_S == wh.field_fb;
     }
 

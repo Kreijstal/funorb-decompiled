@@ -8,7 +8,7 @@ final class be extends oh {
     static String field_i;
     byte[] field_j;
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -241,7 +241,7 @@ final class be extends oh {
         }
     }
 
-    final static void a(qr param0, int param1, qr param2, int param3, int param4, byte param5, int param6, qr param7, byte[] param8) {
+    final static void a(qr param0, int param1, qr param2, int param3, int param4, byte param5, int param6, qr param7, byte[] param8, int param9) {
         RuntimeException var10 = null;
         int var10_int = 0;
         int var11 = 0;
@@ -478,7 +478,7 @@ final class be extends oh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_i = null;
     }

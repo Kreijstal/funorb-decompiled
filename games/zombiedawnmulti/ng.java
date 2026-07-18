@@ -22,7 +22,7 @@ abstract class ng {
         return var9;
     }
 
-    final static boolean a(int param0, boolean param1, CharSequence param2) {
+    final static boolean a(int param0, boolean param1, CharSequence param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

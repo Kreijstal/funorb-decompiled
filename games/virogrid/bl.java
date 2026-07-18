@@ -33,18 +33,18 @@ final class bl extends nb {
         return ((bl) this).field_C;
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_D = null;
         field_A = null;
         field_G = null;
         field_H = null;
     }
 
-    final static int f() {
+    final static int f(int param0) {
         return 1;
     }
 
-    final static void a(int param0, int param1, java.math.BigInteger param2, jc param3, byte[] param4, java.math.BigInteger param5) {
+    final static void a(int param0, int param1, java.math.BigInteger param2, jc param3, byte[] param4, java.math.BigInteger param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;

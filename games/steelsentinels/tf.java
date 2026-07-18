@@ -16,162 +16,332 @@ final class tf {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        int stackIn_10_0 = 0;
+        int stackIn_10_1 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_12_1 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_19_1 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_37_0 = 0;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_43_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        int stackOut_9_0 = 0;
+        int stackOut_9_1 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_10_1 = 0;
+        byte stackOut_18_0 = 0;
+        int stackOut_18_1 = 0;
+        int stackOut_23_0 = 0;
+        int stackOut_36_0 = 0;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        String stackOut_42_2 = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        String stackOut_40_2 = null;
         var5 = SteelSentinels.field_G;
         try {
           L0: {
             var2_int = 0;
             L1: while (true) {
-              if (var2_int >= 3) {
-                var2_int = 0;
-                L2: while (true) {
-                  if (var2_int >= uc.field_a) {
-                    int dupTemp$4 = param0.a((byte) 58);
-                    uf.field_a[dupTemp$4] = uf.field_a[dupTemp$4] + 1;
-                    if (param1 < -103) {
-                      var2_int = 0;
-                      var3 = 0;
-                      L3: while (true) {
-                        if (uc.field_a <= var3) {
-                          uc.field_a = var2_int;
-                          int fieldTemp$5 = uc.field_a;
-                          uc.field_a = uc.field_a + 1;
-                          ph.field_e[fieldTemp$5] = param0;
-                          break L0;
-                        } else {
-                          L4: {
-                            L5: {
-                              if (ph.field_e[var3].field_k == param0.field_k) {
-                                var4 = ph.field_e[var3].a((byte) 58);
-                                if (cj.field_h >= uf.field_a[var4]) {
-                                  break L5;
-                                } else {
-                                  uf.field_a[var4] = uf.field_a[var4] - 1;
-                                  break L4;
-                                }
-                              } else {
-                                break L5;
-                              }
-                            }
-                            int incrementValue$6 = var2_int;
-                            var2_int++;
-                            ph.field_e[incrementValue$6] = ph.field_e[var3];
-                            break L4;
-                          }
-                          var3++;
-                          continue L3;
-                        }
-                      }
-                    } else {
-                      return;
-                    }
+              L2: {
+                L3: {
+                  if (var2_int >= 3) {
+                    break L3;
                   } else {
-                    L6: {
-                      if (param0.field_k == ph.field_e[var2_int].field_k) {
-                        int dupTemp$7 = ph.field_e[var2_int].a((byte) 58);
-                        uf.field_a[dupTemp$7] = uf.field_a[dupTemp$7] + 1;
-                        break L6;
+                    uf.field_a[var2_int] = 0;
+                    var2_int++;
+                    if (var5 != 0) {
+                      break L2;
+                    } else {
+                      if (var5 == 0) {
+                        continue L1;
                       } else {
-                        break L6;
+                        break L3;
                       }
                     }
-                    var2_int++;
-                    continue L2;
                   }
                 }
-              } else {
-                uf.field_a[var2_int] = 0;
-                var2_int++;
-                continue L1;
+                var2_int = 0;
+                break L2;
+              }
+              L4: while (true) {
+                L5: {
+                  L6: {
+                    if (~var2_int <= ~uc.field_a) {
+                      break L6;
+                    } else {
+                      stackOut_9_0 = param0.field_k;
+                      stackOut_9_1 = ph.field_e[var2_int].field_k;
+                      stackIn_19_0 = stackOut_9_0;
+                      stackIn_19_1 = stackOut_9_1;
+                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_1 = stackOut_9_1;
+                      if (var5 != 0) {
+                        break L5;
+                      } else {
+                        stackOut_10_0 = stackIn_10_0;
+                        stackOut_10_1 = stackIn_10_1;
+                        stackIn_12_0 = stackOut_10_0;
+                        stackIn_12_1 = stackOut_10_1;
+                        L7: {
+                          if (stackIn_12_0 == stackIn_12_1) {
+                            int dupTemp$4 = ph.field_e[var2_int].a((byte) 58);
+                            uf.field_a[dupTemp$4] = uf.field_a[dupTemp$4] + 1;
+                            break L7;
+                          } else {
+                            break L7;
+                          }
+                        }
+                        var2_int++;
+                        if (var5 == 0) {
+                          continue L4;
+                        } else {
+                          break L6;
+                        }
+                      }
+                    }
+                  }
+                  int dupTemp$5 = param0.a((byte) 58);
+                  uf.field_a[dupTemp$5] = uf.field_a[dupTemp$5] + 1;
+                  stackOut_18_0 = param1;
+                  stackOut_18_1 = -103;
+                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_1 = stackOut_18_1;
+                  break L5;
+                }
+                if (stackIn_19_0 < stackIn_19_1) {
+                  var2_int = 0;
+                  var3 = 0;
+                  L8: while (true) {
+                    L9: {
+                      L10: {
+                        if (uc.field_a <= var3) {
+                          break L10;
+                        } else {
+                          stackOut_23_0 = ph.field_e[var3].field_k;
+                          stackIn_37_0 = stackOut_23_0;
+                          stackIn_24_0 = stackOut_23_0;
+                          if (var5 != 0) {
+                            break L9;
+                          } else {
+                            L11: {
+                              L12: {
+                                if (stackIn_24_0 == param0.field_k) {
+                                  var4 = ph.field_e[var3].a((byte) 58);
+                                  if (cj.field_h >= uf.field_a[var4]) {
+                                    break L12;
+                                  } else {
+                                    uf.field_a[var4] = uf.field_a[var4] - 1;
+                                    if (var5 == 0) {
+                                      break L11;
+                                    } else {
+                                      break L12;
+                                    }
+                                  }
+                                } else {
+                                  break L12;
+                                }
+                              }
+                              int incrementValue$6 = var2_int;
+                              var2_int++;
+                              ph.field_e[incrementValue$6] = ph.field_e[var3];
+                              break L11;
+                            }
+                            var3++;
+                            if (var5 == 0) {
+                              continue L8;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                      }
+                      stackOut_36_0 = var2_int;
+                      stackIn_37_0 = stackOut_36_0;
+                      break L9;
+                    }
+                    uc.field_a = stackIn_37_0;
+                    int fieldTemp$7 = uc.field_a;
+                    uc.field_a = uc.field_a + 1;
+                    ph.field_e[fieldTemp$7] = param0;
+                    break L0;
+                  }
+                } else {
+                  return;
+                }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L13: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("tf.C(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_39_0 = (RuntimeException) var2;
+            stackOut_39_1 = new StringBuilder().append("tf.C(");
+            stackIn_42_0 = stackOut_39_0;
+            stackIn_42_1 = stackOut_39_1;
+            stackIn_40_0 = stackOut_39_0;
+            stackIn_40_1 = stackOut_39_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L7;
+              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
+              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_2 = "null";
+              stackIn_43_0 = stackOut_42_0;
+              stackIn_43_1 = stackOut_42_1;
+              stackIn_43_2 = stackOut_42_2;
+              break L13;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
-              break L7;
+              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
+              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_2 = "{...}";
+              stackIn_43_0 = stackOut_40_0;
+              stackIn_43_1 = stackOut_40_1;
+              stackIn_43_2 = stackOut_40_2;
+              break L13;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ')');
+          throw ci.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, boolean param1) {
-        if (null != qf.field_e) {
-            pb.f(pb.field_i, pb.field_l, -pb.field_i + pb.field_b, pb.field_d - pb.field_l);
-            qf.field_e.a(param1, (byte) 127);
+        RuntimeException var2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            L1: {
+              if (null == qf.field_e) {
+                break L1;
+              } else {
+                pb.f(pb.field_i, pb.field_l, -pb.field_i + pb.field_b, pb.field_d - pb.field_l);
+                qf.field_e.a(param1, (byte) 127);
+                break L1;
+              }
+            }
+            L2: {
+              if (param0 == 0) {
+                break L2;
+              } else {
+                field_a = null;
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ci.a((Throwable) (Object) var2, "tf.D(" + param0 + ',' + param1 + ')');
         }
-        field_a = null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_g = null;
-        field_a = null;
-        field_f = null;
-        field_d = null;
+        if (param0 != 26) {
+            return;
+        }
+        try {
+            field_a = null;
+            field_f = null;
+            field_d = null;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "tf.B(" + param0 + ')');
+        }
     }
 
     final static boolean a(int param0, char param1) {
-        if (param1 >= 32) {
-            if (!(param1 > 126)) {
-                return true;
-            }
-        }
-        if (param1 >= 160) {
-            if (param1 <= 255) {
-                return true;
-            }
-        }
-        if (param1 != 8364) {
-            if (338 != param1) {
-                if (8212 != param1) {
-                    if (param1 != 339) {
-                        if (param1 != 376) {
-                            return false;
-                        }
-                    }
+        RuntimeException var2 = null;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_33_0 = 0;
+        int stackIn_35_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_34_0 = 0;
+        int stackOut_32_0 = 0;
+        int stackOut_9_0 = 0;
+        try {
+          L0: {
+            L1: {
+              if (param1 < 32) {
+                break L1;
+              } else {
+                if (param1 <= 126) {
+                  stackOut_6_0 = 1;
+                  stackIn_7_0 = stackOut_6_0;
+                  return stackIn_7_0 != 0;
+                } else {
+                  break L1;
                 }
+              }
             }
+            if (param0 == 2459) {
+              L2: {
+                if (param1 < 160) {
+                  break L2;
+                } else {
+                  if (param1 > 255) {
+                    break L2;
+                  } else {
+                    stackOut_15_0 = 1;
+                    stackIn_16_0 = stackOut_15_0;
+                    return stackIn_16_0 != 0;
+                  }
+                }
+              }
+              L3: {
+                if (param1 == 8364) {
+                  break L3;
+                } else {
+                  if (338 == param1) {
+                    break L3;
+                  } else {
+                    if (8212 == param1) {
+                      break L3;
+                    } else {
+                      if (param1 == 339) {
+                        break L3;
+                      } else {
+                        if (param1 == 376) {
+                          break L3;
+                        } else {
+                          stackOut_34_0 = 0;
+                          stackIn_35_0 = stackOut_34_0;
+                          break L0;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              stackOut_32_0 = 1;
+              stackIn_33_0 = stackOut_32_0;
+              return stackIn_33_0 != 0;
+            } else {
+              stackOut_9_0 = 0;
+              stackIn_10_0 = stackOut_9_0;
+              return stackIn_10_0 != 0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ci.a((Throwable) (Object) var2, "tf.A(" + param0 + ',' + param1 + ')');
         }
-        return true;
+        return stackIn_35_0 != 0;
     }
 
     static {

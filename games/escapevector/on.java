@@ -10,7 +10,7 @@ final class on {
     static String field_d;
     static String[] field_f;
 
-    final static void a(mf param0) {
+    final static void a(mf param0, int param1) {
         in var2 = null;
         try {
             in.a(param0.a(-4, "", "headers.packvorbis"));
@@ -21,7 +21,7 @@ final class on {
         }
     }
 
-    final static int a(dk[] param0) {
+    final static int a(dk[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         dk[] var3 = null;
@@ -115,14 +115,14 @@ final class on {
         return stackIn_11_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         return param0 >= 48 && param0 <= 57;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_g = null;

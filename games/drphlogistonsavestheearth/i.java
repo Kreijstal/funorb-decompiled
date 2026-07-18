@@ -8,12 +8,12 @@ final class i {
     static int field_a;
     static int[] field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
     }
 
-    final static void a(od param0, od param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    final static void a(od param0, od param1, java.math.BigInteger param2, java.math.BigInteger param3, int param4) {
         try {
             hb.a(param1.field_h, param3, param2, (byte) -41, param1.field_j, 0, param0);
         } catch (RuntimeException runtimeException) {
@@ -44,8 +44,7 @@ final class i {
                   }
                 }
               } else {
-                int discarded$2 = 4;
-                hl.a(var4, 122);
+                hl.a(var4, 122, 4);
                 var4 = (je) (Object) aa.field_e.e(0);
                 continue L1;
               }

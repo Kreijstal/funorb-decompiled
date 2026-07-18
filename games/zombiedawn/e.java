@@ -237,7 +237,7 @@ final class e extends hp implements hh {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_S = null;
         field_I = null;
         field_G = null;

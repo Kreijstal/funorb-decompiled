@@ -36,19 +36,19 @@ final class lb extends ld {
         }
     }
 
-    final static boolean g() {
+    final static boolean g(byte param0) {
         rh.field_f = true;
         kj.field_I = je.a(1) - -15000L;
         return fj.field_i == 11 ? true : false;
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_T = null;
         field_W = null;
         field_V = null;
     }
 
-    final static boolean b(java.applet.Applet param0) {
+    final static boolean b(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -132,8 +132,7 @@ final class lb extends ld {
                         try {
                             var2 = "tuhstatbut";
                             var3 = (String) fd.a(param0, "getcookies", (byte) 94);
-                            int discarded$2 = 1;
-                            var4 = b.a(var3, ';');
+                            var4 = b.a(var3, ';', true);
                             var5 = 0;
                             statePc = 6;
                             continue stateLoop;

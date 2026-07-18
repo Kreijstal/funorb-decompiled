@@ -34,8 +34,7 @@ final class dr extends ah {
         super.d(-104);
         if (-1 != ((dr) this).field_T) {
           if ((((dr) this).field_r - 100) % 250 == 0) {
-            int discarded$20 = 0;
-            oc.a(uj.a(((dr) this).field_T, ((dr) this).field_C - ((dr) this).field_E, 0, (byte) 84, ((dr) this).field_z + -((dr) this).field_A));
+            oc.a(uj.a(((dr) this).field_T, ((dr) this).field_C - ((dr) this).field_E, 0, (byte) 84, ((dr) this).field_z + -((dr) this).field_A), false);
             if (param0 >= -55) {
               dr.c(true);
               return;

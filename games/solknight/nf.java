@@ -55,8 +55,7 @@ final class nf extends ld implements ka {
                 if (param1 == ne.field_i) {
                   var3 = (Object) (Object) ak.field_c;
                   ((nf) this).field_x = ((nf) this).field_x + 10;
-                  int discarded$25 = -108;
-                  if (!pe.a()) {
+                  if (!pe.a((byte) -108)) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) nc.field_b;
@@ -172,7 +171,7 @@ final class nf extends ld implements ka {
         }
     }
 
-    private final void m() {
+    private final void m(int param0) {
         if (!(((nf) this).field_J)) {
             return;
         }
@@ -269,8 +268,7 @@ final class nf extends ld implements ka {
               var8 = new jk(u.field_b, param4);
               var7 = var8;
               u.field_b.b((rc) (Object) var8, -113);
-              int discarded$8 = -1;
-              if (rb.a()) {
+              if (rb.a(-1)) {
                 var8.h((byte) -63);
                 stackOut_11_0 = 1;
                 stackIn_12_0 = stackOut_11_0;
@@ -432,13 +430,12 @@ final class nf extends ld implements ka {
                 break L1;
               } else {
                 var7 = null;
-                boolean discarded$4 = nf.a(120, false, (String) null, (String) null, (rf) null, (String) null, (byte) -93);
+                boolean discarded$2 = nf.a(120, false, (String) null, (String) null, (rf) null, (String) null, (byte) -93);
                 break L1;
               }
             }
             if (param3 == ((nf) this).field_T) {
-              int discarded$5 = -124;
-              this.m();
+              this.m(-124);
               break L0;
             } else {
               return;

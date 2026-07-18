@@ -15,7 +15,7 @@ final class dc extends tc {
     int[] field_t;
     int field_q;
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.removeMouseListener((java.awt.event.MouseListener) (Object) lf.field_q);
             param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) lf.field_q);
@@ -26,13 +26,13 @@ final class dc extends tc {
         }
     }
 
-    final static wd a(boolean param0) {
+    final static wd a(boolean param0, boolean param1) {
         wd var2 = new wd(true);
         var2.field_h = param0 ? true : false;
         return var2;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_s = null;
         field_l = null;
         field_n = null;

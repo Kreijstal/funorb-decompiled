@@ -8,7 +8,7 @@ final class ek {
     static String field_c;
     static String field_e;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         int var1 = -32;
         return kg.a((byte) 104);
     }

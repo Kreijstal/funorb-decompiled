@@ -16,7 +16,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
     static String field_k;
     static java.awt.Font field_s;
 
-    final static void a() {
+    final static void a(int param0, int param1, int param2, boolean param3) {
         wm.field_l = 0;
         gn.field_a = 1;
         wa.field_c = 0;
@@ -45,7 +45,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         ((wf) this).field_r.imageComplete(2);
     }
 
-    final static w c() {
+    final static w c(int param0) {
         int var1 = 0;
         return k.field_b.field_Sb;
     }
@@ -87,7 +87,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_s = null;
         field_o = null;
         field_p = null;
@@ -162,7 +162,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -226,7 +226,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         return true;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

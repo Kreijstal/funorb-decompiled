@@ -12,7 +12,7 @@ abstract class aj {
     static int field_d;
     static String field_g;
 
-    final static String b() {
+    final static String b(int param0) {
         if (!(qg.field_r != null)) {
             return "";
         }
@@ -152,7 +152,7 @@ abstract class aj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
     }
 

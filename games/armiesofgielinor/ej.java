@@ -771,8 +771,7 @@ final class ej extends tc implements mm {
                           if (((ej) this).field_t != 0) {
                             break L11;
                           } else {
-                            int discarded$4 = 0;
-                            this.a(((ej) this).field_p);
+                            this.a(((ej) this).field_p, 0);
                             ((ej) this).field_S = null;
                             ((ej) this).field_M = (cl) (Object) ((ej) this).field_p.e((byte) 127);
                             break L11;
@@ -797,20 +796,17 @@ final class ej extends tc implements mm {
                                 }
                               }
                             } else {
-                              int discarded$5 = -24236;
-                              this.e();
+                              this.e(-24236);
                               break L1;
                             }
                           } else {
-                            int discarded$6 = 0;
-                            this.i();
+                            this.i(0);
                             break L1;
                           }
                         }
                       }
                     } else {
-                      int discarded$7 = -25523;
-                      this.g();
+                      this.g(-25523);
                       break L1;
                     }
                   }
@@ -868,8 +864,7 @@ final class ej extends tc implements mm {
           return;
         } else {
           L1: {
-            int discarded$2 = 23;
-            this.a(param1, ((ej) this).field_L);
+            this.a(param1, ((ej) this).field_L, 23);
             if (param0 <= -89) {
               break L1;
             } else {
@@ -1236,7 +1231,7 @@ final class ej extends tc implements mm {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         cl var2 = null;
         cl var3 = null;
         if (null != ((ej) this).field_M) {
@@ -1625,7 +1620,7 @@ final class ej extends tc implements mm {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         jd var2 = null;
         L0: {
           var2 = ((ej) this).field_D.c(((ej) this).field_y, true, ((ej) this).field_E);
@@ -1827,7 +1822,7 @@ final class ej extends tc implements mm {
         }
     }
 
-    final static int a(bv param0) {
+    final static int a(bv param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
@@ -1850,11 +1845,7 @@ final class ej extends tc implements mm {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$8 = 20;
-            int discarded$9 = 30;
-            int discarded$10 = 14;
-            int discarded$11 = 4;
-            var2_int = de.a(-108, param0);
+            var2_int = de.a(-108, param0, 4, 14, 30, 20);
             stackOut_0_0 = var2_int;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -1964,7 +1955,7 @@ final class ej extends tc implements mm {
         }
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void a(boolean param0, int param1, int param2) {
         int var13 = 0;
         var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (((ej) this).field_D == null) {
@@ -2297,7 +2288,7 @@ final class ej extends tc implements mm {
         }
     }
 
-    private final void a(at param0) {
+    private final void a(at param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Object var4 = null;
@@ -2394,7 +2385,7 @@ final class ej extends tc implements mm {
         this.a(0, -14092, param2, param0, 1);
     }
 
-    private final void i() {
+    private final void i(int param0) {
         float var3 = 0.0f;
         double var4 = 0.0;
         double var6 = 0.0;
@@ -2813,8 +2804,7 @@ final class ej extends tc implements mm {
           }
         }
         if (hf.field_c) {
-          int discarded$10 = -1;
-          if (os.e()) {
+          if (os.e(-1)) {
             L2: {
               if (!ro.b(param3, (byte) -59, param0)) {
                 stackOut_21_0 = 0;
@@ -2872,8 +2862,7 @@ final class ej extends tc implements mm {
                     if (80 != rs.field_q) {
                       return false;
                     } else {
-                      int discarded$11 = -1;
-                      if (os.e()) {
+                      if (os.e(-1)) {
                         hf.field_c = true;
                         return true;
                       } else {
@@ -2887,8 +2876,7 @@ final class ej extends tc implements mm {
               }
             }
           }
-          int discarded$12 = 0;
-          return cd.a(param0, param1);
+          return cd.a(param0, param1, false);
         }
     }
 
@@ -3080,10 +3068,9 @@ final class ej extends tc implements mm {
             ((ej) this).field_D = param0;
             ((ej) this).field_z = param1;
             ((ej) this).field_P = new float[62];
-            int discarded$3 = ns.a(false, 3, li.field_n);
+            int discarded$2 = ns.a(false, 3, li.field_n);
             ((ej) this).field_D.field_k.a((byte) -119, (tc) this);
-            int discarded$4 = 117;
-            aj.a(((ej) this).field_P);
+            aj.a(((ej) this).field_P, 117);
             ((ej) this).field_u = param3;
             var5_int = 0;
             var6 = (jd) (Object) ((ej) this).field_D.field_t[((ej) this).field_z].e((byte) 104);
@@ -3109,7 +3096,7 @@ final class ej extends tc implements mm {
                     ((ej) this).field_F = (sm) (Object) new ge((ej) this);
                     break L0;
                   } else {
-                    cl discarded$5 = this.b(var6, (byte) -68);
+                    cl discarded$3 = this.b(var6, (byte) -68);
                     var6 = (jd) (Object) ((ej) this).field_D.field_t[((ej) this).field_z].a((byte) 123);
                     continue L2;
                   }

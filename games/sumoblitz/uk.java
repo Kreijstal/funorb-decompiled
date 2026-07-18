@@ -17,7 +17,7 @@ final class uk extends gt implements ai {
         }
     }
 
-    public static void g() {
+    public static void g(boolean param0) {
         field_lb = null;
     }
 

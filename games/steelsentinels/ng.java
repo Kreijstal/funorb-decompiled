@@ -71,8 +71,7 @@ final class ng {
             L1: while (true) {
               if (var2 >= 2) {
                 L2: {
-                  int discarded$6 = -117;
-                  this.d();
+                  this.d((byte) -117);
                   if (null == pa.field_a) {
                     break L2;
                   } else {
@@ -99,8 +98,7 @@ final class ng {
                                 } else {
                                   if (rj.field_d.a("pump32", (byte) 90)) {
                                     ol.field_Wb = gl.a(pa.field_a, (byte) 85, "members_expansion_screen", "frame");
-                                    int discarded$7 = 0;
-                                    di.field_f = rl.a(pa.field_a, "members_expansion_screen", "arrow");
+                                    di.field_f = rl.a(pa.field_a, "members_expansion_screen", "arrow", false);
                                     lg.field_g = vd.a(rj.field_d, "arialish12", pa.field_a, -1, "");
                                     n.field_w = be.a(pa.field_a, rj.field_d, (byte) -69, "", "pump32");
                                     qe.field_g = dn.a("members_expansion_screen", -42, "benefit_orbs", pa.field_a);
@@ -179,11 +177,11 @@ final class ng {
                   }
                   L5: {
                     ((ng) this).field_t.a(16, 302);
-                    int discarded$8 = lg.field_g.a(((ng) this).field_d[((ng) this).field_q], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+                    int discarded$4 = lg.field_g.a(((ng) this).field_d[((ng) this).field_q], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
                     qe.field_g.a(30, 330);
-                    int discarded$9 = lg.field_g.a(fe.field_A[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$10 = lg.field_g.a(fe.field_A[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$11 = lg.field_g.a(fe.field_A[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$5 = lg.field_g.a(fe.field_A[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$6 = lg.field_g.a(fe.field_A[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$7 = lg.field_g.a(fe.field_A[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
                     rc.field_d.a(508 + (-rc.field_d.field_z + 127) / 2, 315);
                     if (param0) {
                       break L5;
@@ -240,7 +238,7 @@ final class ng {
               if (param0 == 4540749) {
                 break L1;
               } else {
-                int discarded$2 = this.a(-88, 19, (byte) -107);
+                int discarded$1 = this.a(-88, 19, (byte) -107);
                 break L1;
               }
             }
@@ -442,8 +440,7 @@ final class ng {
                     if (!dl.f(22759)) {
                       break L15;
                     } else {
-                      int discarded$3 = 103;
-                      var5 = this.c();
+                      var5 = this.c((byte) 103);
                       if (var5 != 0) {
                         return var5;
                       } else {
@@ -472,7 +469,7 @@ final class ng {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         field_r = null;
         int var1 = 0;
@@ -488,12 +485,8 @@ final class ng {
         wk var5 = null;
         String var6 = null;
         String var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
+        int[] var16 = null;
+        int[] var17 = null;
         if (null != ((ng) this).field_u) {
           return;
         } else {
@@ -505,37 +498,27 @@ final class ng {
               if (param0 >= 86) {
                 break L0;
               } else {
-                int discarded$7 = ((ng) this).a(-93, false);
+                int discarded$1 = ((ng) this).a(-93, false);
                 break L0;
               }
             }
             var2 = 16448250;
             var3 = 10068666;
-            int discarded$8 = -104;
-            var13 = gd.b(var2, var3);
-            var12 = var13;
-            var11 = var12;
-            var10 = var11;
-            var8 = var10;
-            this.a(0, var13, 622, 0, ((ng) this).field_l, 47, (mi) (Object) n.field_w, (byte) -27);
+            var16 = gd.b(var2, var3, (byte) -104);
+            this.a(0, var16, 622, 0, ((ng) this).field_l, 47, (mi) (Object) n.field_w, (byte) -27);
             tk.f((byte) 118);
             ((ng) this).field_t = new wk(475, 24);
-            int discarded$9 = 259;
-            this.a(24, 0.75f, ((ng) this).field_t, 0, 475, lb.field_Yb, -4, (mi) (Object) n.field_w, var8);
-            int discarded$10 = -104;
-            var9 = gd.b(526344, 526344);
+            this.a(24, 0.75f, ((ng) this).field_t, 0, 475, lb.field_Yb, -4, (mi) (Object) n.field_w, var16, 259);
+            var17 = gd.b(526344, 526344, (byte) -104);
             var5 = new wk(121, 122);
             q.a(var5, (byte) -117);
             pb.e(0, 0, var5.field_A, var5.field_F / 2, 16180917, 16306250);
             pb.e(0, var5.field_F / 2, var5.field_A, var5.field_F, 16306250, 15568919);
             var6 = cl.field_d;
             var7 = eb.field_t;
-            int discarded$11 = 259;
-            this.a(var5.field_F, 0.5f, var5, 0, var5.field_A, var6, -16, (mi) (Object) n.field_w, var9);
-            int discarded$12 = 259;
-            this.a(var5.field_F, 0.5f, var5, 0, var5.field_A, var7, 20, (mi) (Object) n.field_w, var9);
-            int discarded$13 = 259;
-            this.a(var5.field_F / 3, 0.699999988079071f, var5, 0, var5.field_A, cm.field_m[((ng) this).field_g], 12 + (var5.field_F / 2 + -n.field_w.field_G), (mi) (Object) n.field_w, var9);
+            this.a(var5.field_F, 0.5f, var5, 0, var5.field_A, var6, -16, (mi) (Object) n.field_w, var17, 259);
+            this.a(var5.field_F, 0.5f, var5, 0, var5.field_A, var7, 20, (mi) (Object) n.field_w, var17, 259);
+            this.a(var5.field_F / 3, 0.699999988079071f, var5, 0, var5.field_A, cm.field_m[((ng) this).field_g], 12 + (var5.field_F / 2 + -n.field_w.field_G), (mi) (Object) n.field_w, var17, 259);
             tk.f((byte) 118);
             ((ng) this).field_a = new wk(121, 122);
             q.a(((ng) this).field_a, (byte) -75);
@@ -548,7 +531,7 @@ final class ng {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         gk var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -842,7 +825,7 @@ final class ng {
         }
     }
 
-    private final void a(int param0, float param1, wk param2, int param3, int param4, String param5, int param6, mi param7, int[] param8) {
+    private final void a(int param0, float param1, wk param2, int param3, int param4, String param5, int param6, mi param7, int[] param8, int param9) {
         int var11_int = 0;
         RuntimeException var11 = null;
         int var12 = 0;
@@ -1029,7 +1012,7 @@ final class ng {
         }
     }
 
-    private final int c() {
+    private final int c(byte param0) {
         ((ng) this).field_n.a(true);
         if (((ng) this).field_n.c(0)) {
             if (!(((ng) this).field_n.field_e != 0)) {
@@ -1048,9 +1031,7 @@ final class ng {
 
     private final void a(int param0) {
         try {
-            int discarded$0 = -21;
-            int discarded$1 = 9268;
-            re.a(wl.d());
+            re.a(wl.d((byte) -21), 9268);
         } catch (Exception exception) {
             exception.printStackTrace();
         }

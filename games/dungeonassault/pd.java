@@ -26,7 +26,7 @@ final class pd extends rj {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_B = null;
         field_G = null;
         field_A = null;
@@ -99,7 +99,7 @@ final class pd extends rj {
         ((pd) this).field_C = param2;
     }
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -120,8 +120,7 @@ final class pd extends rj {
         try {
           L0: {
             L1: {
-              int discarded$12 = -1;
-              ud.a((java.awt.Component) (Object) param0);
+              ud.a((java.awt.Component) (Object) param0, -1);
               gn.a((byte) 127, (java.awt.Component) (Object) param0);
               if (bn.field_j != null) {
                 bn.field_j.a(false, (java.awt.Component) (Object) param0);
@@ -195,10 +194,8 @@ final class pd extends rj {
         var7 = DungeonAssault.field_K;
         var4 = param0 + ((pd) this).field_t;
         var5 = ((pd) this).field_i + param2;
-        int discarded$5 = 99;
-        bp.a(var5, hm.field_q, var4);
-        int discarded$6 = 99;
-        bp.a(((pd) this).field_F + var5 - -10, qf.field_f, var4);
+        bp.a(var5, hm.field_q, var4, (byte) 99);
+        bp.a(((pd) this).field_F + var5 - -10, qf.field_f, var4, (byte) 99);
         var6 = 0;
         L0: while (true) {
           if (var6 >= 7) {
@@ -226,10 +223,8 @@ final class pd extends rj {
                           }
                           var6 = stackIn_19_0;
                           gf.e(var4 + 4, var6 + var5 + 5, qh.field_q.field_y + (4 + var4), qh.field_q.field_v / 2 + (var6 + 10) + (var5 + 5));
-                          int discarded$7 = 99;
-                          bp.a(10 + var5 + var6, ji.field_G, var4 - -4);
-                          int discarded$8 = 99;
-                          bp.a(var5 - (-10 - var6) + -23, ji.field_G, 4 + var4);
+                          bp.a(10 + var5 + var6, ji.field_G, var4 - -4, (byte) 99);
+                          bp.a(var5 - (-10 - var6) + -23, ji.field_G, 4 + var4, (byte) 99);
                           gf.b();
                           qh.field_q.c(var4 - -4, var6 + var5 + 10, qh.field_q.field_y, qh.field_q.field_v / 2);
                           break L3;
@@ -246,8 +241,7 @@ final class pd extends rj {
                             }
                           }
                           var6 = stackIn_15_0;
-                          int discarded$9 = 99;
-                          bp.a(var6 + (10 + var5), ji.field_G, 4 + var4);
+                          bp.a(var6 + (10 + var5), ji.field_G, 4 + var4, (byte) 99);
                           qh.field_q.h(var4 + 4, var6 + 10 + var5);
                           break L3;
                         }

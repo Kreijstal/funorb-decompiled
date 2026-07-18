@@ -5,7 +5,7 @@ final class vj {
     private int[] field_a;
     static String field_b;
 
-    final static kl a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
+    final static kl a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7) {
         kl var8 = new kl(param5, param6, param3, param4, param0, param1);
         nl.field_e.b(-127, (gg) (Object) var8);
         ca.a(4, var8, (byte) -70);
@@ -132,7 +132,7 @@ final class vj {
         return !al.field_f.a(true);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 
@@ -146,7 +146,7 @@ final class vj {
         return true;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

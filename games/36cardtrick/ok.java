@@ -6,7 +6,7 @@ final class ok {
     static char[] field_a;
     static int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

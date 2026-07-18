@@ -4,7 +4,7 @@
 final class ah extends rqa {
     static int[] field_o;
 
-    final static void e() {
+    final static void e(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -50,7 +50,7 @@ final class ah extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 
@@ -129,9 +129,7 @@ final class ah extends rqa {
         if (0 < hcb.field_o) {
           if (null == efb.field_b) {
             L0: {
-              int discarded$2 = 0;
-              int discarded$3 = 0;
-              psb.field_b = ob.a(0, bm.field_o, 640, 480);
+              psb.field_b = ob.a(0, bm.field_o, 640, 480, 0, 0);
               if (psb.field_b != null) {
                 var2 = 2;
                 qa.a((byte) 77, (java.awt.Canvas) (Object) psb.field_b);

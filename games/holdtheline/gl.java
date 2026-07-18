@@ -6,7 +6,7 @@ final class gl {
     static String field_c;
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
     }
@@ -104,7 +104,7 @@ final class gl {
         }
     }
 
-    final static boolean a(da param0) {
+    final static boolean a(da param0, byte param1) {
         return param0.h(1, 7) == 1;
     }
 

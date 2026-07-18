@@ -80,8 +80,7 @@ final class jf {
                         break L3;
                       }
                     }
-                    int discarded$1 = 123;
-                    ll.a(param2, "document.cookie=\"" + var5 + "\"");
+                    ll.a(param2, "document.cookie=\"" + var5 + "\"", (byte) 123);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -156,7 +155,7 @@ final class jf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;
@@ -164,13 +163,13 @@ final class jf {
         field_e = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         int var3 = 1;
         int var4 = -1 + param0 & param1 >> 31;
         return (param1 - -(param1 >>> 31)) % param0 + var4;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         bh.field_j = false;
         hm.field_p = null;
         el.field_d = null;

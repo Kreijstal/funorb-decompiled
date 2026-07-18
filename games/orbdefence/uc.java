@@ -64,8 +64,7 @@ final class uc extends wj {
           L0: {
             var4_int = param2.a(param1, 0);
             var5 = param2.a(param3, 5187, var4_int);
-            int discarded$2 = 26052;
-            stackOut_0_0 = e.a(var4_int, var5, param2);
+            stackOut_0_0 = e.a(var4_int, var5, param2, 26052);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -177,7 +176,7 @@ final class uc extends wj {
         return ((uc) this).field_u;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_q = null;
         field_r = null;
     }

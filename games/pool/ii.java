@@ -9,7 +9,7 @@ final class ii {
     static String field_f;
     static String field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_f = null;
         field_e = null;
@@ -248,7 +248,8 @@ final class ii {
         int var3 = 0;
         String var4 = null;
         Object var5 = null;
-        CharSequence var6 = null;
+        Object var6 = null;
+        CharSequence var7 = null;
         L0: {
           if (null != sm.field_C) {
             var3 = sm.field_C.a(param2, (byte) -83);
@@ -263,8 +264,8 @@ final class ii {
                     if (!sm.field_C.field_nb.equals((Object) (Object) "")) {
                       L2: {
                         if (sm.field_C.field_nb.charAt(0) != 91) {
-                          var6 = (CharSequence) (Object) sm.field_C.field_nb;
-                          var4 = hq.a(85, var6);
+                          var7 = (CharSequence) (Object) sm.field_C.field_nb;
+                          var4 = hq.a(85, var7);
                           break L2;
                         } else {
                           var4 = sm.field_C.field_nb;
@@ -305,8 +306,8 @@ final class ii {
                         }
                       }
                       if (var5 != null) {
-                        int discarded$2 = 1;
-                        jh.a(0, (String) var5, (String) null, 2, var4);
+                        var6 = null;
+                        jh.a(0, (String) var5, (String) null, 2, var4, true);
                         break L1;
                       } else {
                         break L1;

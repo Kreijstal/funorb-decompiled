@@ -7,7 +7,7 @@ final class dka {
     static String field_c;
     static String field_d;
 
-    final static qaa a() {
+    final static qaa a(byte param0) {
         try {
             Throwable var1 = null;
             qaa stackIn_2_0 = null;
@@ -32,7 +32,7 @@ final class dka {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_c = null;
         field_d = null;

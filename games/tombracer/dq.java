@@ -12,7 +12,7 @@ final class dq extends vg {
         ((dq) this).field_i = param0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_f = null;
     }

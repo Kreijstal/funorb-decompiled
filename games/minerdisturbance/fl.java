@@ -127,7 +127,7 @@ final class fl implements ad {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_j = null;
         field_h = null;
@@ -136,11 +136,11 @@ final class fl implements ad {
 
     final static void a(byte param0) {
         int var1 = -104 % ((param0 - -15) / 41);
-        int discarded$0 = -1;
-        ed.a((String) null, "");
+        Object var2 = null;
+        ed.a((String) null, "", -1);
     }
 
-    final static String a(byte param0, CharSequence param1) {
+    final static String a(byte param0, CharSequence param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -170,8 +170,7 @@ final class fl implements ad {
         var5 = MinerDisturbance.field_ab;
         try {
           L0: {
-            int discarded$2 = 0;
-            var3 = qh.a(false, param1);
+            var3 = qh.a(false, param1, false);
             if (var3 == null) {
               var4 = 0;
               L1: while (true) {

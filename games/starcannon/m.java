@@ -9,7 +9,7 @@ final class m {
     static hl field_a;
     static re field_f;
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;

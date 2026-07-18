@@ -93,8 +93,7 @@ final class bg extends q {
         try {
           L0: {
             L1: {
-              int discarded$3 = 70;
-              um.a(param9, param7, param8);
+              um.a(param9, param7, param8, 70);
               nb.a(param1, -89, param18, param19, param0);
               cl.a(-101, param20, param15);
               if (param11 >= 100) {
@@ -105,10 +104,8 @@ final class bg extends q {
                 break L1;
               }
             }
-            int discarded$4 = 1;
-            eg.a(param17, param3, param13, param10, param2);
-            int discarded$5 = -58;
-            on.a(param16, param4, param12);
+            eg.a(param17, param3, param13, param10, param2, true);
+            on.a(param16, param4, param12, (byte) -58);
             bh.a(param6, (byte) 23, param14, param5);
             break L0;
           }

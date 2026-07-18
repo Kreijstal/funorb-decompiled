@@ -60,15 +60,14 @@ final class ei extends ug implements el {
         }
     }
 
-    final static void n() {
+    final static void n(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Confined.field_J ? 1 : 0;
         try {
           L0: {
-            int discarded$22 = 6;
-            if (!hm.f()) {
+            if (!hm.f((byte) 6)) {
               L1: {
                 if (null == dn.field_d) {
                   break L1;
@@ -84,13 +83,13 @@ final class ei extends ug implements el {
               }
               return;
             } else {
-              boolean discarded$23 = ie.field_b.a(true, true, pe.field_m, qe.field_Q);
+              boolean discarded$15 = ie.field_b.a(true, true, pe.field_m, qe.field_Q);
               ie.field_b.i((byte) 52);
               L2: while (true) {
                 if (!nm.e((byte) -96)) {
                   break L0;
                 } else {
-                  boolean discarded$24 = ie.field_b.a((byte) 101, ad.field_h, gk.field_r);
+                  boolean discarded$16 = ie.field_b.a((byte) 101, ad.field_h, gk.field_r);
                   continue L2;
                 }
               }
@@ -103,7 +102,7 @@ final class ei extends ug implements el {
         }
     }
 
-    final static void h() {
+    final static void h(byte param0) {
         he.field_f = -1;
         vf.field_o = null;
         sa.field_R = false;
@@ -154,8 +153,7 @@ final class ei extends ug implements el {
                 if (wl.field_f == param1) {
                   var3 = (Object) (Object) sf.field_s;
                   ((ei) this).field_z = ((ei) this).field_z + 10;
-                  int discarded$5 = -14;
-                  if (!kj.a()) {
+                  if (!kj.a((byte) -14)) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) v.field_Cb;
@@ -361,7 +359,7 @@ final class ei extends ug implements el {
         return stackIn_3_0;
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_ob = null;
         field_nb = null;
         int var1 = -69;
@@ -413,8 +411,7 @@ final class ei extends ug implements el {
             if (((ei) this).field_hb != param3) {
               break L0;
             } else {
-              int discarded$2 = 1;
-              this.c();
+              this.c(true);
               return;
             }
           }
@@ -450,7 +447,7 @@ final class ei extends ug implements el {
         }
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         if (!(((ei) this).field_H)) {
             return;
         }

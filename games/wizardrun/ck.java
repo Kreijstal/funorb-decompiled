@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ck {
-    final static void a(java.applet.Applet param0, String[] param1) {
+    final static void a(java.applet.Applet param0, String[] param1, int param2, int param3, int param4, int param5) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -147,18 +147,14 @@ final class ck {
         }
     }
 
-    final static void a() {
-        int discarded$80 = 60;
-        di.a();
+    final static void a(byte param0) {
+        di.a((byte) 60);
         if (wizardrun.field_G != null) {
           L0: {
-            int discarded$81 = 8053;
-            ka.a(wizardrun.field_G);
+            ka.a(wizardrun.field_G, 8053);
             td.b(4);
-            int discarded$82 = -104;
-            wh.b();
-            int discarded$83 = 1;
-            jl.b();
+            wh.b((byte) -104);
+            jl.b(1);
             if (ne.b(22845)) {
               n.field_b.c((byte) 88, 1);
               id.a((byte) -67, 0);
@@ -172,10 +168,8 @@ final class ck {
         } else {
           L1: {
             td.b(4);
-            int discarded$84 = -104;
-            wh.b();
-            int discarded$85 = 1;
-            jl.b();
+            wh.b((byte) -104);
+            jl.b(1);
             if (ne.b(22845)) {
               n.field_b.c((byte) 88, 1);
               id.a((byte) -67, 0);

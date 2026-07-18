@@ -22,7 +22,7 @@ final class hc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_e = null;
@@ -33,13 +33,14 @@ final class hc {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         String[] var10 = null;
         String[] var11 = null;
+        String var12 = null;
+        String var13 = null;
         int stackIn_63_0 = 0;
         int stackIn_66_0 = 0;
         String[] stackIn_72_0 = null;
@@ -101,8 +102,7 @@ final class hc {
           if (te.field_M != 0) {
             if (te.field_M != 1) {
               if (te.field_M == 2) {
-                int discarded$6 = -63;
-                var3_int = bk.a((byte) 3, bb.a(ef.field_f, new String[1]), ke.field_H, si.field_A, w.field_c);
+                var3_int = bk.a((byte) 3, bb.a(ef.field_f, new String[1], -63), ke.field_H, si.field_A, w.field_c);
                 var4 = -1;
                 var5 = 0;
                 L1: while (true) {
@@ -124,8 +124,7 @@ final class hc {
                     fk.a((Object[]) (Object) w.field_c, 0, (Object[]) (Object) ak.field_b, 0, var4);
                     qc.field_h = new String[-1 + (var3_int - var4)];
                     fk.a((Object[]) (Object) w.field_c, var4 - -1, (Object[]) (Object) qc.field_h, 0, -var4 + (var3_int + -1));
-                    int discarded$7 = -63;
-                    var3_int = bk.a((byte) 3, bb.a(ff.field_f, new String[1]), ke.field_H, si.field_A, w.field_c);
+                    var3_int = bk.a((byte) 3, bb.a(ff.field_f, new String[1], -63), ke.field_H, si.field_A, w.field_c);
                     var4 = -1;
                     var5 = 0;
                     L3: while (true) {
@@ -160,7 +159,7 @@ final class hc {
                         }
                         L6: {
                           var5 = stackIn_63_0;
-                          if (qa.field_o.length > qc.field_h.length) {
+                          if (~qa.field_o.length < ~qc.field_h.length) {
                             stackOut_65_0 = qa.field_o.length;
                             stackIn_66_0 = stackOut_65_0;
                             break L6;
@@ -176,7 +175,7 @@ final class hc {
                         vc.field_d = new String[var7];
                         var8 = 0;
                         L7: while (true) {
-                          if (var8 >= var7) {
+                          if (~var8 <= ~var7) {
                             oa.field_l[1] = 0;
                             vc.field_d[0] = si.field_D;
                             fl.field_b = new int[2];
@@ -190,12 +189,12 @@ final class hc {
                             vc.field_d[3] = qk.field_j;
                             var8 = 0;
                             L8: while (true) {
-                              if (var5 <= var8) {
+                              if (~var5 >= ~var8) {
                                 vc.field_d[6 - -var5] = null;
                                 oa.field_l[6 - -var5] = -2;
                                 var8 = 0;
                                 L9: while (true) {
-                                  if (var8 >= var6) {
+                                  if (~var8 <= ~var6) {
                                     fg.field_f = je.a(1);
                                     break L0;
                                   } else {
@@ -290,7 +289,7 @@ final class hc {
                   oa.field_l = new int[var4];
                   var5 = 0;
                   L13: while (true) {
-                    if (var5 >= var4) {
+                    if (~var5 <= ~var4) {
                       fl.field_b = new int[1];
                       var5 = 0;
                       L14: while (true) {
@@ -356,7 +355,7 @@ final class hc {
                           fl.field_b = new int[2];
                           var5 = 0;
                           L18: while (true) {
-                            if (var5 >= var3_int) {
+                            if (~var5 <= ~var3_int) {
                               vc.field_d[var4 + -3] = "";
                               vc.field_d[var4 - 2] = fg.field_c;
                               oa.field_l[var4 - 2] = 0;
@@ -455,17 +454,16 @@ final class hc {
                 var10 = ak.field_b;
                 var5 = 0;
                 L25: while (true) {
-                  if (var10.length <= var5) {
+                  if (~var10.length >= ~var5) {
                     var11 = qc.field_h;
                     var5 = 0;
                     L26: while (true) {
-                      if (var11.length <= var5) {
+                      if (~var11.length >= ~var5) {
                         break L24;
                       } else {
                         L27: {
-                          var6_ref_String = var11[var5];
-                          int discarded$8 = 99;
-                          var7 = fa.a(var6_ref_String, false);
+                          var13 = var11[var5];
+                          var7 = fa.a(var13, false, (byte) 99);
                           if (var7 > var3_int) {
                             var3_int = var7;
                             break L27;
@@ -479,10 +477,9 @@ final class hc {
                     }
                   } else {
                     L28: {
-                      var6_ref_String = var10[var5];
-                      int discarded$9 = 99;
-                      var7 = fa.a(var6_ref_String, false);
-                      if (var3_int < var7) {
+                      var12 = var10[var5];
+                      var7 = fa.a(var12, false, (byte) 99);
+                      if (~var3_int > ~var7) {
                         var3_int = var7;
                         break L28;
                       } else {
@@ -502,13 +499,13 @@ final class hc {
             v.field_d = (g.field_l - -vg.field_N << 1) * bc.field_K.field_g;
             var4 = 0;
             L29: while (true) {
-              if (vc.field_d.length <= var4) {
+              if (~vc.field_d.length >= ~var4) {
                 th.field_J = -(v.field_d >> 1) + vk.field_m;
                 og.field_j = new int[vc.field_d.length][];
                 var4 = 0;
                 var5 = th.field_J;
                 L30: while (true) {
-                  if (var4 >= vc.field_d.length) {
+                  if (~var4 <= ~vc.field_d.length) {
                     L31: {
                       if (te.field_M == 2) {
                         bc.field_K.a(param0, -1, -1, 125);
@@ -526,8 +523,7 @@ final class hc {
                         var5 = var5 + uc.field_i;
                         break L32;
                       } else {
-                        int discarded$10 = 99;
-                        var7 = fa.a(vc.field_d[var4], true);
+                        var7 = fa.a(vc.field_d[var4], true, (byte) 99);
                         var5 = var5 + vg.field_N;
                         var8 = -(var7 >> 1) + sb.field_d;
                         og.field_j[var4] = new int[4];
@@ -587,9 +583,8 @@ final class hc {
               }
             }
             L35: {
-              int discarded$11 = 99;
-              var5 = fa.a(stackIn_87_0, stackIn_87_1 != 0);
-              if (var5 > var3_int) {
+              var5 = fa.a(stackIn_87_0, stackIn_87_1 != 0, (byte) 99);
+              if (~var5 < ~var3_int) {
                 var3_int = var5;
                 break L35;
               } else {

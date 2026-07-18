@@ -114,7 +114,7 @@ final class ik {
         dj.a(wd.field_c, 22);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_g = null;
         field_f = null;
@@ -149,7 +149,7 @@ final class ik {
         return 200 * (-1 + param1) * param1;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         return g.a(-3805, param0) != null;
     }
 

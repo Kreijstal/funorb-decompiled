@@ -247,8 +247,7 @@ final class kn extends rqa {
                 break L1;
               }
             }
-            int discarded$2 = 1;
-            stackOut_2_0 = qlb.a(param0, param1, param3, param2, false);
+            stackOut_2_0 = qlb.a(param0, param1, param3, param2, false, 1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

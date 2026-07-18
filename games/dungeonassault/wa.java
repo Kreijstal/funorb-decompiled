@@ -85,7 +85,7 @@ final class wa {
         return ((wa) this).a(4318);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
         field_m = null;
         field_j = null;

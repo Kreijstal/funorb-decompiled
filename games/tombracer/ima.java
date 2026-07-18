@@ -7,7 +7,7 @@ final class ima {
     int[] field_c;
     float[][] field_b;
 
-    final static String a(String param0) {
+    final static String a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_8_0 = null;

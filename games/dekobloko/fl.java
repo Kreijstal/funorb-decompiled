@@ -9,7 +9,7 @@ final class fl {
     static w field_b;
     static String field_e;
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         if (48 > param0) {
             return false;
         }
@@ -230,7 +230,7 @@ final class fl {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return om.field_d;
     }
 

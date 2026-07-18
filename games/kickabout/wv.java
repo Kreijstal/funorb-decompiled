@@ -151,8 +151,7 @@ class wv extends mu implements vh {
               if (!((wv) this).field_db) {
                 break L0;
               } else {
-                int discarded$2 = -3;
-                vr.c();
+                vr.c(-3);
                 break L0;
               }
             }

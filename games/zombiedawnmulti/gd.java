@@ -57,7 +57,7 @@ final class gd extends gq {
         }
     }
 
-    final static bm a(byte[] param0) {
+    final static bm a(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -97,8 +97,7 @@ final class gd extends gq {
             var6 = 1;
             L1: while (true) {
               if (var6 >= param0.length / 4) {
-                int discarded$2 = 7;
-                stackOut_6_0 = ij.a(var5);
+                stackOut_6_0 = ij.a(var5, 7);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
@@ -581,15 +580,11 @@ final class gd extends gq {
               var7.field_l = -1;
               var7.field_q = 0;
               if (((gd) this).field_y[param3] == 0) {
-                int discarded$4 = -916428895;
-                int discarded$5 = 81682502;
-                var7.field_C = uj.a(var6, this.b(var7), this.a((byte) 92, var7), this.a(var7));
+                var7.field_C = uj.a(var6, this.b(var7, -916428895), this.a((byte) 92, var7), this.a(var7, 81682502));
                 break L3;
               } else {
                 L4: {
-                  int discarded$6 = -916428895;
-                  int discarded$7 = 81682502;
-                  var7.field_C = uj.a(var6, this.b(var7), 0, this.a(var7));
+                  var7.field_C = uj.a(var6, this.b(var7, -916428895), 0, this.a(var7, 81682502));
                   stackOut_15_0 = this;
                   stackIn_17_0 = stackOut_15_0;
                   stackIn_16_0 = stackOut_15_0;
@@ -785,7 +780,7 @@ final class gd extends gq {
         return stackIn_16_0;
     }
 
-    private final int b(mb param0) {
+    private final int b(mb param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         nj var4 = null;
@@ -978,8 +973,7 @@ final class gd extends gq {
     }
 
     final synchronized void g(int param0) {
-        int discarded$0 = -82;
-        this.b(true);
+        this.b(true, -82);
         if (param0 != 2) {
             field_B = -55;
         }
@@ -1000,7 +994,7 @@ final class gd extends gq {
         return (gq) (Object) ((gd) this).field_P;
     }
 
-    private final synchronized void b(boolean param0) {
+    private final synchronized void b(boolean param0, int param1) {
         ((gd) this).field_p.f();
         ((gd) this).field_s = null;
         this.b(-1, param0);
@@ -1018,7 +1012,7 @@ final class gd extends gq {
         this.c(param0, 16532, param2);
     }
 
-    private final int a(mb param0) {
+    private final int a(mb param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -1193,8 +1187,7 @@ final class gd extends gq {
                     if (var10 != null) {
                       break L6;
                     } else {
-                      int discarded$1 = 15;
-                      var10 = r.a(param4, var9);
+                      var10 = r.a(param4, var9, (byte) 15);
                       if (var10 == null) {
                         var6_int = 0;
                         break L5;
@@ -1372,8 +1365,7 @@ final class gd extends gq {
     private final synchronized void a(boolean param0, int param1, ug param2, boolean param3) {
         int var6 = 0;
         int var7 = ZombieDawnMulti.field_E ? 1 : 0;
-        int discarded$0 = -82;
-        this.b(param0);
+        this.b(param0, -82);
         ((gd) this).field_p.a(param2.field_g);
         ((gd) this).field_L = param3 ? true : false;
         ((gd) this).field_A = 0L;
@@ -2074,8 +2066,7 @@ final class gd extends gq {
               }
             }
             L6: {
-              int discarded$2 = -916428895;
-              param0.field_C.i(this.b(param0));
+              param0.field_C.i(this.b(param0, -916428895));
               var7 = param0.field_h;
               var11 = 98 % ((param4 - -44) / 58);
               param0.field_s = param0.field_s + var7.field_k;
@@ -2236,8 +2227,7 @@ final class gd extends gq {
               stackIn_62_0 = stackOut_61_0;
               return stackIn_62_0 != 0;
             } else {
-              int discarded$3 = 81682502;
-              param0.field_C.a(param0.field_D, this.a((byte) 92, param0), this.a(param0));
+              param0.field_C.a(param0.field_D, this.a((byte) 92, param0), this.a(param0, 81682502));
               stackOut_63_0 = 0;
               stackIn_64_0 = stackOut_63_0;
               break L0;

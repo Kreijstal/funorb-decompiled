@@ -55,13 +55,13 @@ final class jv {
         return stackIn_14_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_e = null;
     }
 
-    final static te a(sn param0, int param1, int param2) {
+    final static te a(sn param0, int param1, int param2, byte param3) {
         RuntimeException var4 = null;
         te stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

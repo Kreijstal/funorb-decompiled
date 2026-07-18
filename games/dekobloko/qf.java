@@ -39,8 +39,7 @@ final class qf extends ba implements qh, tn {
             } else {
               if (var4 <= var5 - 3) {
                 if (param0 == -5520) {
-                  int discarded$13 = 52;
-                  if (!un.a(var4, var3, var2_int)) {
+                  if (!un.a(var4, var3, var2_int, (byte) 52)) {
                     stackOut_12_0 = vm.field_u;
                     stackIn_13_0 = stackOut_12_0;
                     decompiledRegionSelector0 = 1;
@@ -106,8 +105,7 @@ final class qf extends ba implements qh, tn {
                 break L2;
               } else {
                 if (var4 <= var5 - 3) {
-                  int discarded$8 = 52;
-                  if (!un.a(var4, var3, var2_int)) {
+                  if (!un.a(var4, var3, var2_int, (byte) 52)) {
                     decompiledRegionSelector0 = 0;
                     break L0;
                   } else {
@@ -313,7 +311,7 @@ final class qf extends ba implements qh, tn {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -350,12 +348,10 @@ final class qf extends ba implements qh, tn {
               } else {
                 L2: {
                   var3 = param0.charAt(var2_int);
-                  int discarded$14 = -24380;
-                  if (v.a((char) var3)) {
+                  if (v.a((char) var3, -24380)) {
                     break L2;
                   } else {
-                    int discarded$15 = 23;
-                    if (!fl.a((char) var3)) {
+                    if (!fl.a((char) var3, (byte) 23)) {
                       stackOut_6_0 = 1;
                       stackIn_7_0 = stackOut_6_0;
                       return stackIn_7_0 != 0;
@@ -402,7 +398,7 @@ final class qf extends ba implements qh, tn {
         return stackIn_10_0 != 0;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         String var1 = null;
         if (!vb.field_Z) {
           throw new IllegalStateException();
@@ -441,10 +437,11 @@ final class qf extends ba implements qh, tn {
         }
     }
 
-    final static void a(String param0, String[] param1, int param2) {
+    final static void a(String param0, String[] param1, int param2, int param3) {
         String[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
+        Object var6 = null;
         int stackIn_3_0 = 0;
         int stackIn_4_0 = 0;
         int stackIn_5_0 = 0;
@@ -498,10 +495,8 @@ final class qf extends ba implements qh, tn {
                 return;
               } else {
                 var4 = param1;
-                int discarded$6 = 0;
-                gf.a(var4);
-                int discarded$7 = -3;
-                je.field_b = wi.a(param1);
+                gf.a(var4, false);
+                je.field_b = wi.a(param1, -3);
                 return;
               }
             }
@@ -525,8 +520,8 @@ final class qf extends ba implements qh, tn {
               }
             }
             je.field_b = bn.a(stackIn_5_0 != 0, stackIn_5_1 != 0);
-            int discarded$8 = 0;
-            gf.a((String[]) null);
+            var6 = null;
+            gf.a((String[]) null, false);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

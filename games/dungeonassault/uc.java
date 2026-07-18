@@ -21,7 +21,7 @@ final class uc extends lm {
     private int field_G;
     private cn field_T;
 
-    private final cn b() {
+    private final cn b(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -41,8 +41,7 @@ final class uc extends lm {
                 gf.a(var5, var4, var8 << 8 | var8 | var8 << 16);
             }
         }
-        int discarded$0 = 1;
-        ti.c();
+        ti.c(true);
         return var3;
     }
 
@@ -70,8 +69,7 @@ final class uc extends lm {
         var6 = 0;
         L0: while (true) {
           if (var6 >= ((uc) this).field_s) {
-            int discarded$1 = 1;
-            ti.c();
+            ti.c(true);
             var6 = 87 / ((15 - param1) / 57);
             return var14;
           } else {
@@ -142,15 +140,13 @@ final class uc extends lm {
         try {
           L0: {
             var5_int = param2 + ((uc) this).field_x;
-            int discarded$4 = 0;
-            d.a(((uc) this).field_D.field_y + param2, ((uc) this).field_s + param1, var5_int - ((uc) this).field_D.field_y, param1);
+            d.a(((uc) this).field_D.field_y + param2, ((uc) this).field_s + param1, var5_int - ((uc) this).field_D.field_y, param1, false);
             var6 = param2 - ((uc) this).field_O;
             var7 = -26 / ((-35 - param0) / 41);
             L1: while (true) {
               if (var5_int <= var6) {
                 L2: {
-                  int discarded$5 = 1;
-                  ti.c();
+                  ti.c(true);
                   if (gf.field_j > param2 - -((uc) this).field_D.field_y) {
                     break L2;
                   } else {
@@ -158,8 +154,7 @@ final class uc extends lm {
                     param3.h(-((uc) this).field_O, 0);
                     param3.h(-((uc) this).field_O + 2 * ((uc) this).field_B, 0);
                     ((uc) this).field_T.d(0, 0);
-                    int discarded$6 = 1;
-                    ti.c();
+                    ti.c(true);
                     ((uc) this).field_P.h(param2, param1);
                     break L2;
                   }
@@ -173,8 +168,7 @@ final class uc extends lm {
                         param3.h(-var7, 0);
                         param3.h(2 * ((uc) this).field_B + -var7, 0);
                         ((uc) this).field_D.d(0, 0);
-                        int discarded$7 = 1;
-                        ti.c();
+                        ti.c(true);
                         ((uc) this).field_P.h(var5_int - ((uc) this).field_D.field_y, param1);
                         break L3;
                       } else {
@@ -236,7 +230,7 @@ final class uc extends lm {
         this.a(param0 ^ -370091864);
     }
 
-    final static void a(int param0, int param1, int param2, cn param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, cn param3, int param4, int param5, int param6, boolean param7) {
         RuntimeException var8 = null;
         int var10 = 0;
         int var11 = 0;
@@ -536,11 +530,9 @@ final class uc extends lm {
         int var6 = param3 - -((uc) this).field_v;
         this.a(param2 ^ -97, var6, var5, ((uc) this).field_M[param2]);
         if (!(((uc) this).field_S >= 65536)) {
-            int discarded$0 = 0;
-            d.a(var5 - -(((uc) this).field_x * ((uc) this).field_S >> 16), var6 + ((uc) this).field_s, ((uc) this).field_x + var5, var6);
+            d.a(var5 - -(((uc) this).field_x * ((uc) this).field_S >> 16), var6 + ((uc) this).field_s, ((uc) this).field_x + var5, var6, false);
             this.a(-99, var6, var5, ((uc) this).field_M[1]);
-            int discarded$1 = 1;
-            ti.c();
+            ti.c(true);
         }
     }
 
@@ -616,8 +608,7 @@ final class uc extends lm {
             field_Q = null;
         }
         ((uc) this).field_M = new cn[]{this.b(((uc) this).field_G, -123, ((uc) this).field_F), this.b(((uc) this).field_H, -88, ((uc) this).field_J)};
-        int discarded$0 = 1;
-        ((uc) this).field_D = this.b();
+        ((uc) this).field_D = this.b(true);
         ((uc) this).field_T = ((uc) this).field_D.b();
         ((uc) this).field_P = new cn(((uc) this).field_s >> 1, ((uc) this).field_s);
     }

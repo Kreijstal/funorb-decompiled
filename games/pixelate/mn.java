@@ -10,7 +10,7 @@ final class mn {
     static String field_f;
     static int field_e;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_a = null;
         field_f = null;

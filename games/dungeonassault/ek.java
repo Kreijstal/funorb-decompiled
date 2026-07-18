@@ -23,7 +23,7 @@ final class ek extends java.awt.Canvas implements java.awt.event.FocusListener {
         return var4;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_h = null;
         field_d = null;

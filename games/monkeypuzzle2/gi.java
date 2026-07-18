@@ -35,7 +35,7 @@ final class gi {
         return param0 ^ param1;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
         field_e = null;
         field_l = null;
@@ -103,7 +103,7 @@ final class gi {
                 }
                 L2: {
                   if (var4 != 0) {
-                    int discarded$2 = param1.f(8, 16);
+                    int discarded$1 = param1.f(8, 16);
                     var5.field_m = nf.a(false, param1, 16, var5.field_m);
                     var5.field_h = nf.a(false, param1, 16, var5.field_h);
                     var5.field_a = nf.a(false, param1, 16, var5.field_a);
@@ -126,8 +126,7 @@ final class gi {
                   if (!vg.a(75, param1)) {
                     break L4;
                   } else {
-                    int discarded$3 = 99;
-                    var5.field_N = kk.a(16, param1, var5.field_N);
+                    var5.field_N = kk.a(16, param1, var5.field_N, (byte) 99);
                     var6 = 0;
                     var7 = 0;
                     L5: while (true) {
@@ -229,14 +228,13 @@ final class gi {
               if (((gi) this).field_d > 32) {
                 L2: while (true) {
                   if (((gi) this).field_d >= 64) {
-                    int discarded$4 = 16;
-                    this.a();
+                    this.a(16);
                     ((gi) this).field_d = 0;
                     break L1;
                   } else {
-                    int fieldTemp$5 = ((gi) this).field_d;
+                    int fieldTemp$2 = ((gi) this).field_d;
                     ((gi) this).field_d = ((gi) this).field_d + 1;
-                    ((gi) this).field_h[fieldTemp$5] = (byte) 0;
+                    ((gi) this).field_h[fieldTemp$2] = (byte) 0;
                     continue L2;
                   }
                 }
@@ -247,8 +245,7 @@ final class gi {
             L3: while (true) {
               if (32 <= ((gi) this).field_d) {
                 gl.a(((gi) this).field_i, 0, ((gi) this).field_h, 32, 32);
-                int discarded$6 = 16;
-                this.a();
+                this.a(16);
                 var4_int = 0;
                 if (param1 == -70) {
                   var5 = param0;
@@ -274,9 +271,9 @@ final class gi {
                   return;
                 }
               } else {
-                int fieldTemp$7 = ((gi) this).field_d;
+                int fieldTemp$3 = ((gi) this).field_d;
                 ((gi) this).field_d = ((gi) this).field_d + 1;
-                ((gi) this).field_h[fieldTemp$7] = (byte) 0;
+                ((gi) this).field_h[fieldTemp$3] = (byte) 0;
                 continue L3;
               }
             }
@@ -467,8 +464,7 @@ final class gi {
                             if (((gi) this).field_g != 512) {
                               break L5;
                             } else {
-                              int discarded$2 = 16;
-                              this.a();
+                              this.a(16);
                               ((gi) this).field_g = 0;
                               ((gi) this).field_d = 0;
                               break L5;
@@ -497,8 +493,7 @@ final class gi {
                               ((gi) this).field_d = ((gi) this).field_d + 1;
                               ((gi) this).field_g = ((gi) this).field_g + (8 - var7);
                               if (512 == ((gi) this).field_g) {
-                                int discarded$3 = 16;
-                                this.a();
+                                this.a(16);
                                 ((gi) this).field_d = 0;
                                 ((gi) this).field_g = 0;
                                 break L7;
@@ -562,7 +557,7 @@ final class gi {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

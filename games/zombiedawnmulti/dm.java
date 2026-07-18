@@ -257,7 +257,7 @@ final class dm extends cj {
         return stackIn_3_0;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Rb = null;
         field_Ib = null;
         field_ac = null;
@@ -274,8 +274,7 @@ final class dm extends cj {
             ((dm) this).field_Lb = param1;
             ((dm) this).field_ec = param2;
             var6 = (CharSequence) (Object) ((dm) this).field_Jb;
-            int discarded$0 = 0;
-            String discarded$1 = tg.a(var6);
+            String discarded$0 = tg.a(var6, false);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "dm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -290,8 +289,7 @@ final class dm extends cj {
                 ((dm) this).field_Kb = -111L;
             }
             var5 = (CharSequence) (Object) ((dm) this).field_Jb;
-            int discarded$0 = 0;
-            String discarded$1 = tg.a(var5);
+            String discarded$0 = tg.a(var5, false);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "dm.BA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

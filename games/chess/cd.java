@@ -192,7 +192,7 @@ final class cd extends pk {
         return param0 & param1;
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var3 = 0;
         Object stackIn_10_0 = null;
         Object stackIn_11_0 = null;
@@ -398,8 +398,7 @@ final class cd extends pk {
             re.field_u.e();
             var2.d(0, -v.field_i.field_t);
             re.field_u.field_r = v.field_i.field_t;
-            int discarded$0 = 28773;
-            fd.a();
+            fd.a(28773);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "cd.K(" + 127 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -414,7 +413,7 @@ final class cd extends pk {
         field_x = null;
     }
 
-    final static void a(int param0, byte[] param1, boolean param2, int param3, int param4) {
+    final static void a(int param0, byte[] param1, boolean param2, int param3, int param4, int param5) {
         nk var6 = null;
         int var7 = 0;
         int var9 = 0;
@@ -437,41 +436,11 @@ final class cd extends pk {
     }
 
     final void b(int param0) {
-        Object stackIn_1_0 = null;
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        L0: {
-          int discarded$2 = 34;
-          this.d();
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
-          if (wh.field_f != 1) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            break L0;
-          } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            break L0;
-          }
-        }
-        ((cd) this).field_u = stackIn_3_1 != 0;
+        this.d((byte) 34);
+        ((cd) this).field_u = wh.field_f == 1 ? true : false;
         if (param0 > -70) {
-          cd.a(18);
-          return;
-        } else {
-          return;
+            cd.a(18);
+            return;
         }
     }
 

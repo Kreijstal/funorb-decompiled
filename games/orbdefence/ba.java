@@ -21,7 +21,7 @@ final class ba {
         return var1;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -89,7 +89,7 @@ final class ba {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_g = null;
         field_e = null;

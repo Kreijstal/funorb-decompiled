@@ -13,7 +13,7 @@ final class fi extends lh {
     static String field_l;
     static String[] field_o;
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, boolean param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;

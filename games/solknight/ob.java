@@ -19,7 +19,7 @@ final class ob extends gg {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_m = null;
     }
 

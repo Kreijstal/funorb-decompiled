@@ -85,7 +85,7 @@ final class og extends rk implements jl {
         }
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_gb = null;
         field_hb = null;
     }

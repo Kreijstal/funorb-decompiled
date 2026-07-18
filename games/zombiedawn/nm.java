@@ -9,7 +9,7 @@ final class nm {
     static boolean field_a;
     static int field_f;
 
-    final static void a() {
+    final static void a(int param0) {
         nn var1 = (nn) (Object) ro.field_a.b((byte) 26);
         if (!(var1 != null)) {
             p.a(1);
@@ -23,11 +23,11 @@ final class nm {
         var1.b(-27598);
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return true;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
     }
 

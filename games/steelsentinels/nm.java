@@ -99,8 +99,7 @@ final class nm extends ia {
     }
 
     final static void a(String param0, boolean param1, boolean param2, int param3) {
-        int discarded$3 = -29713;
-        ql.j();
+        ql.j(-29713);
         if (param3 != 12) {
             return;
         }
@@ -199,7 +198,7 @@ final class nm extends ia {
         return stackIn_9_0;
     }
 
-    final static void a() {
+    final static void a(int param0, byte param1) {
         kj var2 = mm.field_g;
         var2.a(11, (byte) -117);
         var2.a((byte) 109, 1);
@@ -238,8 +237,7 @@ final class nm extends ia {
             if (((nm) this).field_x.a(param0, param1) != fa.field_d) {
               L1: {
                 if (!param0.equals((Object) (Object) ((nm) this).field_u)) {
-                  int discarded$2 = -98;
-                  var3 = ri.a(param0);
+                  var3 = ri.a(param0, -98);
                   if (!var3.a((byte) -72)) {
                     stackOut_7_0 = ma.field_Y;
                     stackIn_8_0 = stackOut_7_0;
@@ -304,7 +302,7 @@ final class nm extends ia {
         return stackIn_13_0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_o = null;
         field_t = null;
         field_q = null;

@@ -12,7 +12,7 @@ final class pf {
     private String field_b;
     static int field_i;
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_e = null;
         field_f = null;

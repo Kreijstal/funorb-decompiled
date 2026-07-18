@@ -5,7 +5,7 @@ final class pua extends hq {
     static apa field_c;
     private static String[] field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_d = null;
     }

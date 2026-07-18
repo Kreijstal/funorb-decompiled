@@ -5,7 +5,7 @@ final class en {
     static String[] field_a;
     static int[] field_b;
 
-    final static byte[] a() {
+    final static byte[] a(byte param0) {
         ld var1 = new ld(10);
         var1.c(2, 25564);
         aa.field_j.b(27437, var1);

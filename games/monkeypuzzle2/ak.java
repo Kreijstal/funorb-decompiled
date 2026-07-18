@@ -343,7 +343,7 @@ final class ak extends a {
         return stackIn_17_0 != 0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_u = null;
         field_t = null;
     }

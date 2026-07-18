@@ -96,7 +96,7 @@ final class ba extends rg {
         return stackIn_3_0 != 0;
     }
 
-    final static ck h() {
+    final static ck h(byte param0) {
         try {
             Throwable var1 = null;
             ck stackIn_1_0 = null;
@@ -176,41 +176,33 @@ final class ba extends rg {
                 if (jg.field_g != null) {
                   if (jg.field_g.field_u >= var9) {
                     if (var10 <= jg.field_g.field_w) {
-                      int discarded$27 = -8409;
-                      vm.a(jg.field_g);
+                      vm.a(jg.field_g, -8409);
                       fn.d();
                       var22.a(112, 144, var22.field_t << 4, var22.field_x << 4, -((ba) this).field_R << 10, 4096);
-                      int discarded$28 = 0;
-                      ib.b();
+                      ib.b(false);
                       jg.field_g.c(var5 + -var22.field_t, -var22.field_x + var6, 256);
                       return;
                     } else {
                       jg.field_g = new nf(var9, var10);
-                      int discarded$29 = -8409;
-                      vm.a(jg.field_g);
+                      vm.a(jg.field_g, -8409);
                       var22.a(112, 144, var22.field_t << 4, var22.field_x << 4, -((ba) this).field_R << 10, 4096);
-                      int discarded$30 = 0;
-                      ib.b();
+                      ib.b(false);
                       jg.field_g.c(var5 + -var22.field_t, -var22.field_x + var6, 256);
                       return;
                     }
                   } else {
                     jg.field_g = new nf(var9, var10);
-                    int discarded$31 = -8409;
-                    vm.a(jg.field_g);
+                    vm.a(jg.field_g, -8409);
                     var22.a(112, 144, var22.field_t << 4, var22.field_x << 4, -((ba) this).field_R << 10, 4096);
-                    int discarded$32 = 0;
-                    ib.b();
+                    ib.b(false);
                     jg.field_g.c(var5 + -var22.field_t, -var22.field_x + var6, 256);
                     return;
                   }
                 } else {
                   jg.field_g = new nf(var9, var10);
-                  int discarded$33 = -8409;
-                  vm.a(jg.field_g);
+                  vm.a(jg.field_g, -8409);
                   var22.a(112, 144, var22.field_t << 4, var22.field_x << 4, -((ba) this).field_R << 10, 4096);
-                  int discarded$34 = 0;
-                  ib.b();
+                  ib.b(false);
                   jg.field_g.c(var5 + -var22.field_t, -var22.field_x + var6, 256);
                   return;
                 }
@@ -222,41 +214,33 @@ final class ba extends rg {
               if (jg.field_g != null) {
                 if (jg.field_g.field_u >= var9) {
                   if (var10 <= jg.field_g.field_w) {
-                    int discarded$35 = -8409;
-                    vm.a(jg.field_g);
+                    vm.a(jg.field_g, -8409);
                     fn.d();
                     var22.a(112, 144, var22.field_t << 4, var22.field_x << 4, -((ba) this).field_R << 10, 4096);
-                    int discarded$36 = 0;
-                    ib.b();
+                    ib.b(false);
                     jg.field_g.c(var5 + -var22.field_t, -var22.field_x + var6, 256);
                     return;
                   } else {
                     jg.field_g = new nf(var9, var10);
-                    int discarded$37 = -8409;
-                    vm.a(jg.field_g);
+                    vm.a(jg.field_g, -8409);
                     var22.a(112, 144, var22.field_t << 4, var22.field_x << 4, -((ba) this).field_R << 10, 4096);
-                    int discarded$38 = 0;
-                    ib.b();
+                    ib.b(false);
                     jg.field_g.c(var5 + -var22.field_t, -var22.field_x + var6, 256);
                     return;
                   }
                 } else {
                   jg.field_g = new nf(var9, var10);
-                  int discarded$39 = -8409;
-                  vm.a(jg.field_g);
+                  vm.a(jg.field_g, -8409);
                   var22.a(112, 144, var22.field_t << 4, var22.field_x << 4, -((ba) this).field_R << 10, 4096);
-                  int discarded$40 = 0;
-                  ib.b();
+                  ib.b(false);
                   jg.field_g.c(var5 + -var22.field_t, -var22.field_x + var6, 256);
                   return;
                 }
               } else {
                 jg.field_g = new nf(var9, var10);
-                int discarded$41 = -8409;
-                vm.a(jg.field_g);
+                vm.a(jg.field_g, -8409);
                 var22.a(112, 144, var22.field_t << 4, var22.field_x << 4, -((ba) this).field_R << 10, 4096);
-                int discarded$42 = 0;
-                ib.b();
+                ib.b(false);
                 jg.field_g.c(var5 + -var22.field_t, -var22.field_x + var6, 256);
                 return;
               }
@@ -289,41 +273,33 @@ final class ba extends rg {
                 if (jg.field_g != null) {
                   if (jg.field_g.field_u >= var9) {
                     if (var10 <= jg.field_g.field_w) {
-                      int discarded$43 = -8409;
-                      vm.a(jg.field_g);
+                      vm.a(jg.field_g, -8409);
                       fn.d();
                       var16.a(112, 144, var16.field_t << 4, var16.field_x << 4, -((ba) this).field_R << 10, 4096);
-                      int discarded$44 = 0;
-                      ib.b();
+                      ib.b(false);
                       jg.field_g.c(var5 + -var16.field_t, -var16.field_x + var6, 256);
                       return;
                     } else {
                       jg.field_g = new nf(var9, var10);
-                      int discarded$45 = -8409;
-                      vm.a(jg.field_g);
+                      vm.a(jg.field_g, -8409);
                       var16.a(112, 144, var16.field_t << 4, var16.field_x << 4, -((ba) this).field_R << 10, 4096);
-                      int discarded$46 = 0;
-                      ib.b();
+                      ib.b(false);
                       jg.field_g.c(var5 + -var16.field_t, -var16.field_x + var6, 256);
                       return;
                     }
                   } else {
                     jg.field_g = new nf(var9, var10);
-                    int discarded$47 = -8409;
-                    vm.a(jg.field_g);
+                    vm.a(jg.field_g, -8409);
                     var16.a(112, 144, var16.field_t << 4, var16.field_x << 4, -((ba) this).field_R << 10, 4096);
-                    int discarded$48 = 0;
-                    ib.b();
+                    ib.b(false);
                     jg.field_g.c(var5 + -var16.field_t, -var16.field_x + var6, 256);
                     return;
                   }
                 } else {
                   jg.field_g = new nf(var9, var10);
-                  int discarded$49 = -8409;
-                  vm.a(jg.field_g);
+                  vm.a(jg.field_g, -8409);
                   var16.a(112, 144, var16.field_t << 4, var16.field_x << 4, -((ba) this).field_R << 10, 4096);
-                  int discarded$50 = 0;
-                  ib.b();
+                  ib.b(false);
                   jg.field_g.c(var5 + -var16.field_t, -var16.field_x + var6, 256);
                   return;
                 }
@@ -343,8 +319,7 @@ final class ba extends rg {
                       if (var10 > jg.field_g.field_w) {
                         break L1;
                       } else {
-                        int discarded$51 = -8409;
-                        vm.a(jg.field_g);
+                        vm.a(jg.field_g, -8409);
                         fn.d();
                         break L0;
                       }
@@ -352,13 +327,11 @@ final class ba extends rg {
                   }
                 }
                 jg.field_g = new nf(var9, var10);
-                int discarded$52 = -8409;
-                vm.a(jg.field_g);
+                vm.a(jg.field_g, -8409);
                 break L0;
               }
               var15.a(112, 144, var15.field_t << 4, var15.field_x << 4, -((ba) this).field_R << 10, 4096);
-              int discarded$53 = 0;
-              ib.b();
+              ib.b(false);
               jg.field_g.c(var5 + -var15.field_t, -var15.field_x + var6, 256);
               return;
             }

@@ -19,14 +19,14 @@ final class bo {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_b = null;
         field_d = null;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;

@@ -67,8 +67,7 @@ final class eca {
               var8 = (CharSequence) (Object) param4;
               mn.field_n = jd.a(1, var8);
               ica.field_b = param2;
-              int discarded$2 = 0;
-              var7 = sa.a(oka.field_w, uka.field_M, tg.field_c, param3);
+              var7 = sa.a(oka.field_w, uka.field_M, tg.field_c, param3, false);
               asa.a(-124, var7);
               stackOut_7_0 = 1;
               stackIn_8_0 = stackOut_7_0;
@@ -133,7 +132,7 @@ final class eca {
         return stackIn_8_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
     }

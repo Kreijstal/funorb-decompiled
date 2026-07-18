@@ -9,8 +9,7 @@ final class aa {
         if (!(null == fj.field_u)) {
             c.a(true, fj.field_u);
             fj.field_u = null;
-            int discarded$0 = -4258;
-            am.g();
+            am.g(-4258);
         }
         ka.field_N = cc.a(1, -14245);
         gj.field_a = cc.a(2, -14245);
@@ -36,11 +35,9 @@ final class aa {
         dg.field_n.a((byte) -6, mn.field_b, uc.field_cb, ug.field_bb);
     }
 
-    final static bn a() {
+    final static bn a(byte param0) {
         int var1 = 0;
-        int discarded$0 = 1;
-        int discarded$1 = -69;
-        return new bn(qj.a(), fa.a());
+        return new bn(qj.a(1), fa.a((byte) -69));
     }
 
     public static void a(int param0) {

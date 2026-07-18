@@ -318,7 +318,7 @@ class db extends qm {
         ((db) this).a(param1, (byte) 28, param2, param0, ((af) (Object) ((db) this).field_y).a((ng) this, 4592));
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -348,7 +348,7 @@ class db extends qm {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_T = null;
         field_S = null;
         field_N = null;

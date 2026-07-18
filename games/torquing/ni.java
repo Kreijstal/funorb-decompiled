@@ -439,8 +439,7 @@ final class ni extends q {
                     }
                     L3: {
                       if (param3 >= 0L) {
-                        int discarded$1 = -2;
-                        var7 = var10 + "; Expires=" + ka.a(param3 * 1000L + km.b(-1)) + "; Max-Age=" + param3;
+                        var7 = var10 + "; Expires=" + ka.a(param3 * 1000L + km.b(-1), -2) + "; Max-Age=" + param3;
                         break L3;
                       } else {
                         var7 = var10 + "; Discard;";
@@ -552,8 +551,7 @@ final class ni extends q {
         int var4 = 0;
         k[] var5 = null;
         var4 = Torquing.field_u;
-        int discarded$2 = 0;
-        var5 = vc.c();
+        var5 = vc.c(0);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -570,7 +568,7 @@ final class ni extends q {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
     }
 

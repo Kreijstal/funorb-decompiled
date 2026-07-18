@@ -12,7 +12,7 @@ final class ee extends aj implements df {
     static String field_C;
     static String field_y;
 
-    public static void l() {
+    public static void l(int param0) {
         field_y = null;
         field_C = null;
     }

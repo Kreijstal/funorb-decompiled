@@ -81,7 +81,7 @@ final class bk extends IOException {
         super(param0);
     }
 
-    final static fh a(int param0, java.awt.Component param1, int param2) {
+    final static fh a(int param0, java.awt.Component param1, int param2, boolean param3) {
         try {
             Class var4 = null;
             Throwable var4_ref = null;
@@ -391,7 +391,7 @@ final class bk extends IOException {
         return stackIn_23_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_f = null;
         field_c = null;

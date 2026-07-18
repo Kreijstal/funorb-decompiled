@@ -563,7 +563,7 @@ final class jm {
         return null;
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         if (!(od.field_I != ti.field_b)) {
             return fj.field_Sb;
         }

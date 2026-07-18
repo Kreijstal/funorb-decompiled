@@ -288,8 +288,7 @@ final class pn extends dk {
                   }
                 }
                 ((pn) this).field_B = (el) param2;
-                int discarded$1 = 0;
-                this.b();
+                this.b(false);
                 this.a(param1, -13919);
                 ((pn) this).field_n.field_l = 0;
                 ((pn) this).field_d = null;
@@ -756,7 +755,7 @@ final class pn extends dk {
     public pn() {
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;

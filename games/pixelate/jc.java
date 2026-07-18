@@ -65,8 +65,7 @@ final class jc implements eb {
             L2: {
               var6_int = param0.field_z + param3;
               var7 = param2 - -param0.field_p;
-              int discarded$1 = -51;
-              kk.a(var6_int, param0.field_C, var7, param0.field_E);
+              kk.a(var6_int, param0.field_C, var7, param0.field_E, (byte) -51);
               var8 = ha.field_g[1];
               if (!(param0 instanceof qm)) {
                 break L2;
@@ -118,7 +117,7 @@ final class jc implements eb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_e = null;
         field_a = null;

@@ -66,8 +66,7 @@ final class rd extends wj {
               if (param2 == 0) {
                 break L1;
               } else {
-                int discarded$2 = 0;
-                rd.c();
+                rd.c(false);
                 break L1;
               }
             }
@@ -160,11 +159,11 @@ final class rd extends wj {
         return stackIn_3_0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_o = null;
     }
 
-    final static ai a(int param0, ad param1, int param2) {
+    final static ai a(int param0, ad param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         ai stackIn_5_0 = null;
@@ -188,10 +187,8 @@ final class rd extends wj {
         String stackOut_7_2 = null;
         try {
           L0: {
-            int discarded$9 = -3;
-            if (wg.a(param2, param0, param1)) {
-              int discarded$10 = 15090;
-              stackOut_4_0 = ee.k();
+            if (wg.a(param2, param0, param1, -3)) {
+              stackOut_4_0 = ee.k(15090);
               stackIn_5_0 = stackOut_4_0;
               break L0;
             } else {
@@ -347,7 +344,7 @@ final class rd extends wj {
         return stackIn_13_0;
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
         Object var3 = null;

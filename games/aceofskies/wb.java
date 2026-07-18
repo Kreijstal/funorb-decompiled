@@ -122,7 +122,7 @@ final class wb {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -312,7 +312,7 @@ final class wb {
         }
     }
 
-    final static fn a(boolean param0, String param1, String param2, long param3) {
+    final static fn a(boolean param0, String param1, String param2, long param3, boolean param4) {
         RuntimeException var6 = null;
         ki stackIn_3_0 = null;
         ko stackIn_5_0 = null;
@@ -440,7 +440,7 @@ final class wb {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_i = null;
         field_b = null;
     }

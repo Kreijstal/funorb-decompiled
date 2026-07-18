@@ -15,7 +15,7 @@ final class ed {
     private int field_l;
     static long field_j;
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -44,8 +44,7 @@ final class ed {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    int discarded$1 = -26;
-                    this.c();
+                    this.c(-26);
                     ((ed) this).field_l = 256;
                     return;
                   } else {
@@ -172,16 +171,15 @@ final class ed {
     final int d(int param0) {
         int var2 = -24 % ((param0 - 75) / 51);
         if (((ed) this).field_l == 0) {
-            int discarded$0 = -26;
-            this.c();
+            this.c(-26);
             ((ed) this).field_l = 256;
         }
-        int fieldTemp$1 = ((ed) this).field_l - 1;
+        int fieldTemp$0 = ((ed) this).field_l - 1;
         ((ed) this).field_l = ((ed) this).field_l - 1;
-        return ((ed) this).field_g[fieldTemp$1];
+        return ((ed) this).field_g[fieldTemp$0];
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_i = null;
     }
@@ -200,8 +198,7 @@ final class ed {
                   if (pg.field_p != null) {
                     break L2;
                   } else {
-                    int discarded$2 = -86;
-                    fd.a();
+                    fd.a((byte) -86);
                     break L2;
                   }
                 }
@@ -238,8 +235,7 @@ final class ed {
                 if (ok.field_a == null) {
                   break L4;
                 } else {
-                  int discarded$3 = 127;
-                  ri.f();
+                  ri.f(127);
                   break L4;
                 }
               }
@@ -410,14 +406,13 @@ final class ed {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((ed) this).field_g[var2_int] = param0[var2_int];
             }
-            int discarded$0 = -82;
-            this.b();
+            this.b(-82);
         } catch (RuntimeException runtimeException) {
             throw oj.a((Throwable) (Object) runtimeException, "ed.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

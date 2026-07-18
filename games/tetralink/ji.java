@@ -253,7 +253,7 @@ final class ji extends hl {
         ((ji) this).a(param2, param5, param7, 2);
     }
 
-    final static void a(ah param0) {
+    final static void a(ah param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -355,8 +355,7 @@ final class ji extends hl {
         if (!(null == hd.field_s)) {
             hd.field_s.a(param1, 15163);
         }
-        int discarded$4 = -123;
-        uf.a(param1);
+        uf.a(param1, -123);
         if (null != mm.field_y) {
             mm.field_y.a(param1, 256);
         }
@@ -379,7 +378,7 @@ final class ji extends hl {
         field_Lb = null;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         gb var1 = null;
         int var2 = TetraLink.field_J;
         try {

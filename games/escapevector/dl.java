@@ -17,7 +17,7 @@ final class dl {
         int var2 = 108 % ((param0 - 69) / 38);
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         un.field_u = false;
         ei.field_j = 0;
         ni.field_O = -1;
@@ -137,7 +137,7 @@ final class dl {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
     }
 

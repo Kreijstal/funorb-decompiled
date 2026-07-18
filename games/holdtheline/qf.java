@@ -163,8 +163,7 @@ final class qf extends gd {
                       } else {
                         L5: {
                           var15 = (gj) (Object) param5;
-                          int discarded$1 = -6218;
-                          var10_int = i.a(var15, var14);
+                          var10_int = i.a(var15, var14, -6218);
                           if (var10_int >= 1) {
                             var11 = var14.b(mm.field_d, -7517) + (float)param4;
                             var12 = var15.b(lk.field_b, -7517) + (float)param6;
@@ -516,11 +515,11 @@ final class qf extends gd {
         return stackIn_12_0;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         ja.a(-1848651292, en.a(95));
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_k = null;
         field_i = null;
     }
@@ -662,8 +661,7 @@ final class qf extends gd {
                             if (!param2.field_p) {
                               break L2;
                             } else {
-                              int discarded$1 = 7527;
-                              stackOut_16_0 = jf.a(param1.field_w, param1.field_A, param2.field_i, param1.field_k, param2.field_w, param2.field_k, param1.field_i, param2.field_A);
+                              stackOut_16_0 = jf.a(param1.field_w, param1.field_A, param2.field_i, param1.field_k, param2.field_w, param2.field_k, param1.field_i, param2.field_A, 7527);
                               stackIn_17_0 = stackOut_16_0;
                               return stackIn_17_0;
                             }

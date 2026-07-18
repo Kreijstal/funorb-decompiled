@@ -431,10 +431,8 @@ final class eg extends tk {
                   }
                 }
                 ((eg) this).field_u = (pm) param0;
-                int discarded$2 = 0;
-                this.g();
-                int discarded$3 = -50;
-                this.a(param1);
+                this.g(0);
+                this.a(param1, (byte) -50);
                 ((eg) this).field_h = null;
                 ((eg) this).field_i.field_u = 0;
                 L4: while (true) {
@@ -593,7 +591,7 @@ final class eg extends tk {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -653,7 +651,7 @@ final class eg extends tk {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void a(boolean param0, byte param1) {
         try {
             IOException iOException = null;
             Exception var4 = null;

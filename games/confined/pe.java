@@ -8,7 +8,7 @@ final class pe extends rk {
     static int field_q;
     static int field_m;
 
-    final static void a(ok param0, sd param1, String param2, int param3) {
+    final static void a(ok param0, sd param1, String param2, int param3, int param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -344,7 +344,7 @@ final class pe extends rk {
         throw new Error();
     }
 
-    final static boolean a(int[] param0) {
+    final static boolean a(int[] param0, int param1) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         hc var4_ref_hc = null;

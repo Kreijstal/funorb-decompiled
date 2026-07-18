@@ -28,20 +28,17 @@ final class wc implements Iterator {
         ((wc) this).field_i = null;
     }
 
-    final static aj a() {
-        int discarded$0 = -56;
-        String var1 = lb.d();
+    final static aj a(byte param0) {
+        String var1 = lb.d((byte) -56);
         if (var1 != null) {
             if (0 <= var1.indexOf('@')) {
                 var1 = "";
             }
         }
-        int discarded$1 = -56;
-        int discarded$2 = 20;
-        return new aj(lb.d(), uk.f());
+        return new aj(lb.d((byte) -56), uk.f(20));
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -95,7 +92,7 @@ final class wc implements Iterator {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_e = null;
         field_g = null;

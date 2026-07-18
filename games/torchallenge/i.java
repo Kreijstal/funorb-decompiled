@@ -12,7 +12,7 @@ final class i extends ma {
     static long field_q;
     static int field_r;
 
-    public static void g() {
+    public static void g(int param0) {
         field_p = null;
     }
 
@@ -171,8 +171,7 @@ final class i extends ma {
           L0: {
             if (param1 == -24) {
               var5 = (CharSequence) (Object) param0;
-              int discarded$2 = 0;
-              var3 = id.a(var5);
+              var3 = id.a(var5, false);
               if (var3 != null) {
                 stackOut_5_0 = (String) var3;
                 stackIn_6_0 = stackOut_5_0;

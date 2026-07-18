@@ -576,7 +576,7 @@ abstract class lj extends dk {
         }
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

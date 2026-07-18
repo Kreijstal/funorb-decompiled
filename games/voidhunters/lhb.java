@@ -227,7 +227,7 @@ final class lhb implements dja {
         return (tv) (Object) new mqb();
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
     }
 

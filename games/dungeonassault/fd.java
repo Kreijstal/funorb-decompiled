@@ -6,7 +6,7 @@ final class fd {
     static String field_a;
     int field_c;
 
-    final static gj b() {
+    final static gj b(byte param0) {
         return (gj) (Object) new fg();
     }
 
@@ -32,7 +32,7 @@ final class fd {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }

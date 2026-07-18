@@ -16,7 +16,7 @@ final class ug implements dh {
     static String field_m;
     static uf field_b;
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

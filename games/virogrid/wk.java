@@ -7,12 +7,11 @@ final class wk extends fd implements fc, ta {
     private tg field_G;
     private tg field_E;
 
-    private final void a() {
+    private final void a(int param0) {
         if (!(this.e((byte) 97))) {
             return;
         }
-        int discarded$0 = -124;
-        ca.a(((wk) this).field_D.field_n);
+        ca.a(((wk) this).field_D.field_n, (byte) -124);
     }
 
     private final boolean e(byte param0) {
@@ -356,13 +355,11 @@ final class wk extends fd implements fc, ta {
         try {
           if (param0 == 12085) {
             if (((wk) this).field_G == param1) {
-              int discarded$4 = 256;
-              pj.a();
+              pj.a(256);
               return;
             } else {
               if (((wk) this).field_E == param1) {
-                int discarded$5 = 55;
-                this.a();
+                this.a(55);
                 return;
               } else {
                 return;

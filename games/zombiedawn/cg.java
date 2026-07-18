@@ -74,7 +74,7 @@ final class cg {
         return stackIn_13_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_h = null;
         field_d = null;

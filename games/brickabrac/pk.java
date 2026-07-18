@@ -11,7 +11,7 @@ final class pk {
     static mh field_h;
     String field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_g = null;
         field_e = null;
@@ -48,19 +48,13 @@ final class pk {
                 return;
               } else {
                 lf.a(param2, -71, false);
-                int discarded$18 = 0;
-                int discarded$19 = 14209;
-                int discarded$20 = 0;
-                ck.a(param1);
+                ck.a(param1, 0, 14209, 0);
                 return;
               }
             } else {
               lb.d();
               dg.a(false, 240, 320);
-              int discarded$21 = 0;
-              int discarded$22 = 14209;
-              int discarded$23 = 0;
-              ck.a(param1);
+              ck.a(param1, 0, 14209, 0);
               return;
             }
           } else {
@@ -74,10 +68,7 @@ final class pk {
                 break L0;
               }
             }
-            int discarded$24 = 103;
-            int discarded$25 = 0;
-            int discarded$26 = 0;
-            po.a(da.d(), sb.field_f, oj.b(), var3_int != 0);
+            po.a(da.d((byte) 103), sb.field_f, oj.b(false), var3_int != 0, 0);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

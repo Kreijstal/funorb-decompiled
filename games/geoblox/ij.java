@@ -182,8 +182,7 @@ final class ij extends oe implements pl {
                 if (param1 == ei.field_hb) {
                   var3 = (Object) (Object) k.field_b;
                   ((ij) this).field_h = ((ij) this).field_h + 10;
-                  int discarded$25 = 1;
-                  if (!nb.a()) {
+                  if (!nb.a(true)) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) ad.field_n;
@@ -268,7 +267,7 @@ final class ij extends oe implements pl {
         }
     }
 
-    private final void j() {
+    private final void j(byte param0) {
         if (!(((ij) this).field_I)) {
             return;
         }
@@ -298,8 +297,7 @@ final class ij extends oe implements pl {
           L0: {
             L1: {
               if (param4 == ((ij) this).field_bb) {
-                int discarded$2 = 122;
-                this.j();
+                this.j((byte) 122);
                 break L1;
               } else {
                 break L1;
@@ -344,7 +342,7 @@ final class ij extends oe implements pl {
         }
     }
 
-    final static void h() {
+    final static void h(byte param0) {
         int var1 = 0;
         int var2 = 0;
         if (el.field_o.field_x) {

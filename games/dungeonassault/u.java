@@ -136,8 +136,7 @@ final class u extends gd {
               ((u) this).field_Q = param2;
               var19 = ((u) this).field_Q.field_F;
               var4_ref = var19;
-              int discarded$2 = 918;
-              var5 = ib.a(((u) this).field_Q);
+              var5 = ib.a(((u) this).field_Q, 918);
               var6 = jn.a(var19, new int[2], -78, (se) (Object) db.field_v);
               var7 = var6.length * db.field_v.field_H - -la.field_b.field_H - -42;
               if (0 >= pb.field_G) {
@@ -189,8 +188,7 @@ final class u extends gd {
                   var14 = var14 + (la.field_b.field_H - -2);
                   if (var8 == 0) {
                     if (var9 == 0) {
-                      int discarded$3 = 30496;
-                      la.field_b.b(jk.a(new String[1], n.field_a), 52, var14, 12632256, -1);
+                      la.field_b.b(jk.a(new String[1], n.field_a, 30496), 52, var14, 12632256, -1);
                       break L4;
                     } else {
                       la.field_b.b(be.field_q, 52, var14, 16711680, -1);
@@ -492,8 +490,7 @@ final class u extends gd {
         try {
           L0: {
             var6_int = 106 % ((-21 - param1) / 43);
-            int discarded$2 = 0;
-            stackOut_0_0 = ia.a(param5, param0, an.a(param4, (byte) -109, param3, param2));
+            stackOut_0_0 = ia.a(param5, param0, an.a(param4, (byte) -109, param3, param2), 0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -555,7 +552,7 @@ final class u extends gd {
         return stackIn_1_0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_R = null;
         field_S = null;
         field_T = null;

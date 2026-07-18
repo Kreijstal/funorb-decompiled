@@ -7,7 +7,7 @@ class cc extends aj {
     static String[] field_v;
     static km field_w;
 
-    final static lc[] a() {
+    final static lc[] a(byte param0) {
         return new lc[]{pm.field_q, dn.field_d, db.field_z, pn.field_z, gf.field_z, na.field_Fb, af.field_l, ud.field_c, lm.field_i, ji.field_b, dk.field_s, oj.field_Xb, vl.field_f, oe.field_e};
     }
 
@@ -80,8 +80,7 @@ class cc extends aj {
     }
 
     final static int a(int param0, int param1, boolean param2, boolean param3) {
-        int discarded$0 = 3938;
-        return sn.h();
+        return sn.h(3938);
     }
 
     cc(int param0) {

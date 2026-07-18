@@ -79,7 +79,7 @@ final class cha extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         int var1 = 11;
         field_r = null;
         field_q = null;

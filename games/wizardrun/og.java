@@ -215,9 +215,9 @@ class og extends pl {
                           L5: {
                             if (((og) this).field_L >= ((og) this).field_k.length()) {
                               ((og) this).field_k = ((og) this).field_k + param0;
-                              int dupTemp$4 = ((og) this).field_k.length();
-                              ((og) this).field_L = dupTemp$4;
-                              ((og) this).field_J = dupTemp$4;
+                              int dupTemp$1 = ((og) this).field_k.length();
+                              ((og) this).field_L = dupTemp$1;
+                              ((og) this).field_J = dupTemp$1;
                               break L5;
                             } else {
                               ((og) this).field_k = ((og) this).field_k.substring(0, ((og) this).field_L) + param0 + ((og) this).field_k.substring(((og) this).field_L, ((og) this).field_k.length());
@@ -254,10 +254,9 @@ class og extends pl {
                                   stackIn_69_0 = stackOut_68_0;
                                   stackIn_69_1 = stackOut_68_1;
                                   if (hi.field_p[82]) {
-                                    int discarded$5 = 31823;
                                     stackOut_70_0 = this;
                                     stackOut_70_1 = stackIn_70_1;
-                                    stackOut_70_2 = this.d();
+                                    stackOut_70_2 = this.d(31823);
                                     stackIn_71_0 = stackOut_70_0;
                                     stackIn_71_1 = stackOut_70_1;
                                     stackIn_71_2 = stackOut_70_2;
@@ -292,8 +291,7 @@ class og extends pl {
                                           break L8;
                                         } else {
                                           if (param1 == 65) {
-                                            int discarded$6 = 75;
-                                            this.j();
+                                            this.j((byte) 75);
                                             stackOut_63_0 = 1;
                                             stackIn_64_0 = stackOut_63_0;
                                             return stackIn_64_0 != 0;
@@ -320,8 +318,7 @@ class og extends pl {
                                         break L6;
                                       } else {
                                         if (param1 == 67) {
-                                          int discarded$7 = 126;
-                                          this.h();
+                                          this.h((byte) 126);
                                           stackOut_61_0 = 1;
                                           stackIn_62_0 = stackOut_61_0;
                                           return stackIn_62_0 != 0;
@@ -464,7 +461,7 @@ class og extends pl {
         return stackIn_76_0 != 0;
     }
 
-    private final void b(String param0) {
+    private final void b(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
@@ -747,8 +744,7 @@ class og extends pl {
                       break L4;
                     } else {
                       L5: {
-                        int discarded$1 = 31823;
-                        ((og) this).field_J = this.d();
+                        ((og) this).field_J = this.d(31823);
                         ((og) this).field_L = this.g((byte) 113);
                         if (((og) this).field_L <= 0) {
                           break L5;
@@ -918,7 +914,7 @@ class og extends pl {
         }
     }
 
-    public static void k() {
+    public static void k(byte param0) {
         field_S = null;
         field_G = null;
         field_N = null;
@@ -926,7 +922,7 @@ class og extends pl {
         field_P = null;
     }
 
-    private final int d() {
+    private final int d(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = wizardrun.field_H;
@@ -966,7 +962,7 @@ class og extends pl {
         }
     }
 
-    private final String f() {
+    private final String f(int param0) {
         int var2 = ((og) this).field_L > ((og) this).field_J ? ((og) this).field_J : ((og) this).field_L;
         int var3 = ((og) this).field_L > ((og) this).field_J ? ((og) this).field_L : ((og) this).field_J;
         return ((og) this).field_k.substring(var2, var3);
@@ -1041,11 +1037,9 @@ class og extends pl {
     }
 
     private final void f(boolean param0) {
-        int discarded$0 = -12938;
-        String var2 = this.f();
+        String var2 = this.f(-12938);
         if (!(var2.length() <= 0)) {
-            int discarded$1 = -12938;
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.f()), (java.awt.datatransfer.ClipboardOwner) null);
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.f(-12938)), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
@@ -1151,7 +1145,7 @@ class og extends pl {
         var2 = 47 / ((param0 - -20) / 43);
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -1160,8 +1154,7 @@ class og extends pl {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.g(-125);
-                int discarded$1 = 84;
-                this.b(var2);
+                this.b(var2, 84);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -1178,7 +1171,7 @@ class og extends pl {
         }
     }
 
-    private final void j() {
+    private final void j(byte param0) {
         this.f(false);
         this.g(-70);
     }

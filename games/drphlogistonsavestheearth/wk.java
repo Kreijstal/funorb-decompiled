@@ -15,7 +15,7 @@ final class wk extends gi {
         s.field_a.a(param1 * 128 / 80, (byte) -13);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_m = null;
         field_h = null;
         field_l = null;

@@ -9,18 +9,17 @@ class cj extends he {
     cj() {
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_k = null;
         field_l = null;
         field_m = null;
     }
 
-    final static void a(qk param0, boolean param1, qk param2, qk param3) {
+    final static void a(qk param0, boolean param1, qk param2, qk param3, int param4) {
         try {
             wh.field_a = nk.a(false, "");
             wh.field_a.a(16511, false);
-            int discarded$0 = -25188;
-            ca.a(param2, param3, param0);
+            ca.a(param2, param3, param0, -25188);
             we.a(0);
             jc.field_P = tj.field_F;
             ei.field_d = tj.field_F;

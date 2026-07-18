@@ -31,18 +31,16 @@ final class l extends ff {
         return sk.field_y[var4];
     }
 
-    final static kl a(int param0, int param1, boolean param2, int param3) {
+    final static kl a(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param1 != -1784753947) {
             field_M = null;
         }
-        int discarded$0 = 1;
-        return sc.a(param0, 12000, param3, false, param2);
+        return sc.a(param0, 12000, param3, false, param2, true);
     }
 
     public static void a(byte param0) {
         if (param0 <= 59) {
-            int discarded$0 = 1;
-            kl discarded$1 = l.a(-35, -95, true, 66);
+            kl discarded$0 = l.a(-35, -95, true, 66, true);
         }
         field_M = null;
         field_S = null;
@@ -53,8 +51,7 @@ final class l extends ff {
     }
 
     l(dk param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (bf) (Object) ml.a());
-        int discarded$0 = -87;
+        super(param1, (bf) (Object) ml.a((byte) -87));
         try {
             ((l) this).field_L = param1;
             ((l) this).field_T = param0;
@@ -271,8 +268,7 @@ final class l extends ff {
                   if (var12 > ((l) this).field_R.field_p) {
                     break L6;
                   } else {
-                    int discarded$3 = 0;
-                    ud.a(((l) this).field_R);
+                    ud.a(((l) this).field_R, false);
                     ed.d();
                     break L5;
                   }
@@ -280,13 +276,11 @@ final class l extends ff {
               }
             }
             ((l) this).field_R = new o(var11, var12);
-            int discarded$4 = 0;
-            ud.a(((l) this).field_R);
+            ud.a(((l) this).field_R, false);
             break L5;
           }
           var16.b(112, 144, var16.field_x << 4, var16.field_s << 4, -((l) this).field_U << 10, 4096);
-          int discarded$5 = 4;
-          bb.b();
+          bb.b(4);
           ((l) this).field_R.a(-(var16.field_x >> 1) + var9, -var16.field_s + var10, 256);
           break L3;
         }

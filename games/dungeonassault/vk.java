@@ -118,11 +118,11 @@ final class vk {
         return (vk) (Object) stackIn_10_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         d.field_f = false;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_h = null;
     }

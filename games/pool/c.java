@@ -181,7 +181,7 @@ final class c {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -243,9 +243,7 @@ final class c {
               var13 = var12;
               var14 = -var11;
               var15 = rf.a(aj.a(var13, false, var13) + aj.a(var14, false, var14), -128);
-              int discarded$2 = 0;
-              int discarded$3 = 0;
-              if (0L < od.a((long)var13, (long)param10) - -od.a((long)var14, (long)param4)) {
+              if (0L < od.a((long)var13, (long)param10, false) - -od.a((long)var14, (long)param4, false)) {
                 param9 = param9 - lh.a(var15, (byte) -73, (long)(var13 * 8));
                 param3 = param3 - lh.a(var15, (byte) -90, (long)(var14 * 8));
                 break L1;
@@ -288,7 +286,7 @@ final class c {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_c = null;

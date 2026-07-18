@@ -11,7 +11,7 @@ final class kc {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         Object var2 = null;
         int var2_int = 0;

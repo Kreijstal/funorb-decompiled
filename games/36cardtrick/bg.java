@@ -9,8 +9,7 @@ final class bg extends af implements qh {
     private boolean field_ub;
 
     final void f(byte param0) {
-        int discarded$0 = 117;
-        this.a(nc.a(248, 0, pa.field_N), true);
+        this.a(nc.a(248, 0, pa.field_N), true, (byte) 117);
         if (param0 != -42) {
             Object var3 = null;
             bg.a((java.awt.Canvas) null, (byte) 92);
@@ -41,8 +40,7 @@ final class bg extends af implements qh {
         try {
           L0: {
             var2_int = -70 / ((-65 - param0) / 59);
-            int discarded$2 = 1;
-            stackOut_0_0 = rl.a(param1, 0, param1.length);
+            stackOut_0_0 = rl.a(param1, 0, param1.length, true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -93,7 +91,7 @@ final class bg extends af implements qh {
         }
     }
 
-    private final void a(nk param0, boolean param1) {
+    private final void a(nk param0, boolean param1, byte param2) {
         RuntimeException var4 = null;
         String var4_ref = null;
         ui var5 = null;
@@ -233,7 +231,7 @@ final class bg extends af implements qh {
         }
     }
 
-    public static void u() {
+    public static void u(int param0) {
         field_tb = null;
     }
 
@@ -258,8 +256,7 @@ final class bg extends af implements qh {
         try {
           L0: {
             pk.a((byte) -107, (java.awt.Component) (Object) param0);
-            int discarded$8 = 0;
-            d.a((java.awt.Component) (Object) param0);
+            d.a((java.awt.Component) (Object) param0, 0);
             if (param1 < -52) {
               L1: {
                 if (Main.field_V == null) {
@@ -311,13 +308,11 @@ final class bg extends af implements qh {
         if (param0) {
           if (((bg) this).field_E) {
             if (!((bg) this).field_sb) {
-              int discarded$8 = -86;
-              var2 = qd.b();
+              var2 = qd.b(-86);
               if (var2 == null) {
                 return super.a(true);
               } else {
-                int discarded$9 = 117;
-                this.a(var2, false);
+                this.a(var2, false, (byte) 117);
                 return super.a(true);
               }
             } else {
@@ -330,13 +325,11 @@ final class bg extends af implements qh {
           ((bg) this).field_ub = true;
           if (((bg) this).field_E) {
             if (!((bg) this).field_sb) {
-              int discarded$10 = -86;
-              var2 = qd.b();
+              var2 = qd.b(-86);
               if (var2 == null) {
                 return super.a(true);
               } else {
-                int discarded$11 = 117;
-                this.a(var2, false);
+                this.a(var2, false, (byte) 117);
                 return super.a(true);
               }
             } else {
@@ -348,7 +341,7 @@ final class bg extends af implements qh {
         }
     }
 
-    final static de[] v() {
+    final static de[] v(int param0) {
         int var1 = 5;
         return new de[]{uh.field_n, eb.field_l, c.field_k, kg.field_b, qe.field_H, qe.field_J, nf.field_d, qi.field_A, rc.field_g, lh.field_a, ra.field_a, vk.field_e, dg.field_G, jl.field_g};
     }

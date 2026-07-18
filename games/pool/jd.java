@@ -64,15 +64,13 @@ final class jd {
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
                 } else {
-                  int discarded$14 = 24552;
-                  if (!ia.a(param1)) {
+                  if (!ia.a(param1, 24552)) {
                     if (gi.field_t >= 100) {
                       stackOut_16_0 = ci.field_a;
                       stackIn_17_0 = stackOut_16_0;
                       return stackIn_17_0;
                     } else {
-                      int discarded$15 = -1;
-                      if (lq.a(param1)) {
+                      if (lq.a(param1, -1)) {
                         stackOut_20_0 = nr.a(new String[1], -1, gf.field_f);
                         stackIn_21_0 = stackOut_20_0;
                         return stackIn_21_0;
@@ -135,7 +133,7 @@ final class jd {
         return (String) (Object) stackIn_23_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_i = null;
         field_j = null;
@@ -218,20 +216,18 @@ final class jd {
               return stackIn_3_0 != 0;
             } else {
               if (!bm.a(param2, -106)) {
-                int discarded$15 = 28350;
-                if (!gh.a(param2)) {
+                if (!gh.a(param2, 28350)) {
                   L1: {
                     if (param0 < -24) {
                       break L1;
                     } else {
                       var4 = null;
-                      boolean discarded$16 = jd.a((byte) 61, (String) null, (String) null);
+                      boolean discarded$2 = jd.a((byte) 61, (String) null, (String) null);
                       break L1;
                     }
                   }
                   if (0 != param1.length()) {
-                    int discarded$17 = 17924;
-                    if (!hq.a(param2, param1)) {
+                    if (!hq.a(param2, param1, 17924)) {
                       if (!co.a(param1, (byte) -111, param2)) {
                         if (!wg.a(23138, param1, param2)) {
                           stackOut_24_0 = 1;
@@ -353,8 +349,7 @@ final class jd {
             d.a(param1, -23109);
             var2 = new int[]{3, 1, 1};
             ie.a(-2656, var2, param1);
-            int discarded$2 = 1;
-            stackOut_0_0 = cm.a(param1, var2);
+            stackOut_0_0 = cm.a(param1, var2, true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

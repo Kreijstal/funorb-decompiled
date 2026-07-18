@@ -8,7 +8,7 @@ final class ef extends o {
     static jc field_n;
     static String field_m;
 
-    final static void a(pf param0) {
+    final static void a(pf param0, int param1) {
         if (!(wf.field_R != param0)) {
             return;
         }
@@ -29,7 +29,7 @@ final class ef extends o {
         ((ef) this).field_k = param0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
         field_j = null;
         field_l = null;

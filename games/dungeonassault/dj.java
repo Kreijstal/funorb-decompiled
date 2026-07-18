@@ -527,7 +527,7 @@ final class dj {
         }
     }
 
-    final static String a(byte[] param0) {
+    final static String a(byte[] param0, boolean param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;

@@ -14,7 +14,7 @@ final class vo {
         }
     }
 
-    final static void a(bc param0, bc param1) {
+    final static void a(bc param0, bc param1, int param2) {
         try {
             mj.field_Sb = new io(param1, param0);
             qf discarded$0 = gg.a(128, 153, "shatteredplans_menu_open");

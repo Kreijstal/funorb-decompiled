@@ -191,7 +191,7 @@ final class me extends df implements vb {
         ((me) this).field_S = var4;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_O = null;
         field_L = null;
         field_E = null;
@@ -204,12 +204,11 @@ final class me extends df implements vb {
 
     private final static ll a(int param0) {
         ll var1 = new ll(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], ln.field_I[0], ph.field_c);
-        int discarded$0 = -18229;
-        dk.a();
+        dk.a(-18229);
         return var1;
     }
 
-    final static eg a(int param0, boolean param1, int param2, boolean param3, int param4) {
+    final static eg a(int param0, boolean param1, int param2, boolean param3, int param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;

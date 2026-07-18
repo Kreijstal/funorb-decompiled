@@ -11,8 +11,7 @@ final class tea extends mf implements lja {
         eq var2 = null;
         if (((tea) this).field_C) {
           if (!((tea) this).field_nb) {
-            int discarded$2 = 94;
-            var2 = nea.f();
+            var2 = nea.f((byte) 94);
             if (var2 == null) {
               if (param0 > -32) {
                 return false;
@@ -77,8 +76,7 @@ final class tea extends mf implements lja {
                       if (param1) {
                         break L2;
                       } else {
-                        int discarded$3 = -103;
-                        sa.c();
+                        sa.c(-103);
                         break L2;
                       }
                     }
@@ -109,7 +107,7 @@ final class tea extends mf implements lja {
                   ((tea) this).e((wj) (Object) new ar((tea) this), 33);
                   return;
                 } else {
-                  hf discarded$4 = var5.a((pl) this, tj.field_a, 19528);
+                  hf discarded$2 = var5.a((pl) this, tj.field_a, 19528);
                   break L3;
                 }
               } else {
@@ -124,7 +122,7 @@ final class tea extends mf implements lja {
                       break L4;
                     }
                   } else {
-                    hf discarded$5 = var5.a((pl) this, tj.field_a, 19528);
+                    hf discarded$3 = var5.a((pl) this, tj.field_a, 19528);
                     break L4;
                   }
                 }
@@ -184,7 +182,7 @@ final class tea extends mf implements lja {
         this.a(-12331, true, wu.a(248, (byte) 80, lda.field_b));
     }
 
-    public static void q() {
+    public static void q(int param0) {
         field_lb = null;
     }
 
@@ -266,7 +264,7 @@ final class tea extends mf implements lja {
         }
     }
 
-    final static int a(CharSequence param0, char param1) {
+    final static int a(CharSequence param0, char param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

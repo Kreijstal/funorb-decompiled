@@ -12,7 +12,7 @@ final class kh {
     static int[][] field_h;
     static jp field_b;
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
         field_i = null;
         field_d = null;

@@ -209,7 +209,7 @@ final class sk {
         return stackIn_1_0;
     }
 
-    final static short[] a(byte param0, int param1, short[] param2) {
+    final static short[] a(byte param0, int param1, short[] param2, short param3) {
         short[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

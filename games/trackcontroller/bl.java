@@ -298,7 +298,7 @@ final class bl {
         throw new IllegalStateException();
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;

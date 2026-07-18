@@ -92,7 +92,7 @@ final class bm extends jj {
         }
     }
 
-    final static short[] a(short[] param0, byte param1, pc param2) {
+    final static short[] a(short[] param0, byte param1, pc param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -256,7 +256,7 @@ final class bm extends jj {
         return param0 < param2 ? param0 : param2;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_u = null;
         field_r = null;
         field_t = null;

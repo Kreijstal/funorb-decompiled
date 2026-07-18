@@ -7,7 +7,7 @@ final class qn extends kj {
     static kv field_g;
     static String field_h;
 
-    final static void a(int param0, nc param1) {
+    final static void a(int param0, nc param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;

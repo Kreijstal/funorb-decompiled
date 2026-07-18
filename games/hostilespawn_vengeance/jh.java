@@ -10,7 +10,7 @@ final class jh extends wb implements qk {
     static bd[][] field_eb;
     static int field_fb;
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         cl var4 = null;
@@ -23,9 +23,7 @@ final class jh extends wb implements qk {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$8 = 10;
-                int discarded$9 = 2;
-                dk.a(var4);
+                dk.a(var4, 2, 10);
                 var4 = (cl) (Object) ne.field_q.a(12684);
                 continue L1;
               }
@@ -109,7 +107,7 @@ final class jh extends wb implements qk {
         return stackIn_1_0;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_cb = null;
         field_eb = null;
         field_bb = null;
@@ -118,8 +116,7 @@ final class jh extends wb implements qk {
     public final void a(int param0, int param1, int param2, ph param3, byte param4) {
         try {
             if (((jh) this).field_gb == param3) {
-                int discarded$0 = -86;
-                this.f();
+                this.f((byte) -86);
             }
             int var6_int = 64 % ((-63 - param4) / 52);
         } catch (RuntimeException runtimeException) {
@@ -429,7 +426,7 @@ final class jh extends wb implements qk {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         if (!((jh) this).field_F) {
             return;
         }
@@ -530,7 +527,7 @@ final class jh extends wb implements qk {
         }
     }
 
-    private final ph a(mh param0, String param1) {
+    private final ph a(mh param0, String param1, byte param2) {
         ph var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -709,8 +706,7 @@ final class jh extends wb implements qk {
             var4.field_m = 50;
             var4.field_h = (nn) (Object) new cn(jn.field_G, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((jh) this).a(51448, var4);
-            int discarded$1 = 50;
-            ((jh) this).field_gb = this.a((mh) this, gi.field_n);
+            ((jh) this).field_gb = this.a((mh) this, gi.field_n, (byte) 50);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

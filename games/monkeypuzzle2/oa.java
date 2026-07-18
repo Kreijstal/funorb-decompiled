@@ -10,7 +10,7 @@ final class oa extends jk {
     static String field_F;
     static boolean field_I;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_J = null;
         field_E = null;
         field_D = null;
@@ -401,7 +401,7 @@ final class oa extends jk {
         }
     }
 
-    final static void j() {
+    final static void j(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         Object var2 = null;

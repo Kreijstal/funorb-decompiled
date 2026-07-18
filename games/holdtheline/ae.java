@@ -99,7 +99,7 @@ final class ae {
         }
     }
 
-    final static String a(CharSequence[] param0, byte param1, int param2) {
+    final static String a(CharSequence[] param0, byte param1, int param2, int param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -234,7 +234,7 @@ final class ae {
         return stackIn_25_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_c = null;

@@ -11,8 +11,7 @@ final class gr extends sp implements ij {
     public final void a(int param0, d param1, byte param2, int param3, int param4) {
         try {
             if (((gr) this).field_X == param1) {
-                int discarded$0 = 19447;
-                this.m();
+                this.m(19447);
             }
             int var6_int = -23 % ((-63 - param2) / 51);
         } catch (RuntimeException runtimeException) {
@@ -71,8 +70,7 @@ final class gr extends sp implements ij {
                 } else {
                   var3 = (Object) (Object) lh.field_a;
                   ((gr) this).field_s = ((gr) this).field_s + 10;
-                  int discarded$3 = -101;
-                  if (!ui.c()) {
+                  if (!ui.c(-101)) {
                     break L1;
                   } else {
                     ((gr) this).field_s = ((gr) this).field_s + 20;
@@ -240,7 +238,7 @@ final class gr extends sp implements ij {
         }
     }
 
-    private final void m() {
+    private final void m(int param0) {
         if (!((gr) this).field_I) {
             return;
         }

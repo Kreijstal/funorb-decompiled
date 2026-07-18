@@ -4,7 +4,7 @@
 final class hd {
     static r field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
@@ -305,7 +305,7 @@ final class hd {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

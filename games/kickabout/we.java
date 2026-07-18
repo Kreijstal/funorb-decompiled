@@ -100,7 +100,7 @@ final class we {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0, boolean param1, byte param2, int param3) {
         hd stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         hd stackIn_3_0 = null;

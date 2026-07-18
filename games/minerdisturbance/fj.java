@@ -252,8 +252,7 @@ class fj {
                       field_b = null;
                       break L0;
                     } else {
-                      int discarded$1 = -10309;
-                      gf.a(50L);
+                      gf.a(50L, -10309);
                       continue L2;
                     }
                   }

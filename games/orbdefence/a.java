@@ -410,7 +410,7 @@ final class a extends ge {
         ((a) this).field_h = (byte)(int)(1.0 + Math.random() * 255.0);
     }
 
-    final static rg a(int param0, String param1) {
+    final static rg a(int param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         md var4 = null;
@@ -475,7 +475,7 @@ final class a extends ge {
         return (rg) (Object) stackIn_1_0;
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -501,7 +501,7 @@ final class a extends ge {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_v = null;
         field_s = null;
         field_u = null;
@@ -583,7 +583,7 @@ final class a extends ge {
         }
     }
 
-    final static db[] a(be param0) {
+    final static db[] a(be param0, int param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         db[] var4 = null;
@@ -756,8 +756,7 @@ final class a extends ge {
                   }
                 }
                 ((a) this).field_q = (cb) param0;
-                int discarded$1 = -103;
-                this.b();
+                this.b((byte) -103);
                 this.a(-54, param2);
                 ((a) this).field_a = null;
                 ((a) this).field_m.field_i = 0;

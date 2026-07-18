@@ -45,8 +45,7 @@ final class rh {
             L2: while (true) {
               if (var2 == null) {
                 L3: {
-                  int discarded$1 = 14;
-                  wc.a(var1_float);
+                  wc.a(var1_float, (byte) 14);
                   if (10000.0f > var1_float) {
                     jc.a(0, false);
                     break L3;
@@ -124,13 +123,12 @@ final class rh {
 
     private final synchronized void a(int param0, int param1) {
         if (!((rh) this).field_h) {
-            int discarded$1 = 0;
-            ((rh) this).field_f[param0] = hf.a(-105, ((rh) this).field_g.b(4, param0));
+            ((rh) this).field_f[param0] = hf.a(-105, ((rh) this).field_g.b(4, param0), false);
         } else {
             ((rh) this).field_f[param0] = (Object) (Object) ((rh) this).field_g.b(4, param0);
         }
         if (param1 >= -103) {
-            boolean discarded$2 = this.b(((int[]) ((rh) this).field_f[5])[9], 37);
+            boolean discarded$0 = this.b(((int[]) ((rh) this).field_f[5])[9], 37);
         }
     }
 
@@ -715,8 +713,7 @@ final class rh {
                     }
                     try {
                       L8: {
-                        int discarded$3 = -1;
-                        var49 = v.a(var9_array);
+                        var49 = v.a(var9_array, -1);
                         var42 = var49;
                         var35 = var42;
                         var26 = var35;
@@ -777,8 +774,7 @@ final class rh {
                           var7[var11] = (Object) (Object) var49;
                           break L11;
                         } else {
-                          int discarded$4 = 0;
-                          var7[var11] = hf.a(-113, var22);
+                          var7[var11] = hf.a(-113, var49, false);
                           break L11;
                         }
                       } else {
@@ -923,8 +919,7 @@ final class rh {
                                               var7[var18] = (Object) (Object) var52[var17];
                                               break L26;
                                             } else {
-                                              int discarded$5 = 0;
-                                              var7[var18] = hf.a(-122, var52[var17]);
+                                              var7[var18] = hf.a(-122, var52[var17], false);
                                               break L26;
                                             }
                                           }

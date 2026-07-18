@@ -37,8 +37,7 @@ final class wd extends ik {
     }
 
     final void a(boolean param0, int param1, int param2) {
-        int discarded$0 = 0;
-        il.a(((wd) this).field_c, param0, ((wd) this).field_d, ((wd) this).field_a, ((wd) this).field_b);
+        il.a(((wd) this).field_c, param0, ((wd) this).field_d, ((wd) this).field_a, ((wd) this).field_b, false);
         this.a(0, ((wd) this).field_d, param2 + 1, ((wd) this).field_a + -1);
         this.a(0, ((wd) this).field_d, 2, param2 + ((wd) this).field_a);
         this.a(0, ((wd) this).field_d - 1, 2, ((wd) this).field_a);
@@ -46,7 +45,7 @@ final class wd extends ik {
         this.a(param1, ((wd) this).field_d, param2 + 1, ((wd) this).field_a);
     }
 
-    final static long d() {
+    final static long d(int param0) {
         return -wg.field_y + lo.a((byte) 82);
     }
 

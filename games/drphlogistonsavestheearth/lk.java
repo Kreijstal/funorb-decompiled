@@ -11,16 +11,12 @@ class lk extends u {
     static String field_l;
     private String field_h;
 
-    final static int[] c() {
+    final static int[] c(byte param0) {
         return new int[8];
     }
 
-    final static vj a(boolean param0, boolean param1, int param2) {
-        int discarded$0 = 1;
-        int discarded$1 = 1;
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        return na.a(true, param2);
+    final static vj a(boolean param0, boolean param1, int param2, int param3, int param4) {
+        return na.a(true, param2, false, false, true, 1);
     }
 
     db b(byte param0) {
@@ -30,12 +26,12 @@ class lk extends u {
         return si.field_A;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         qg.a(true, bg.field_q, ol.field_j, (byte) -11);
         hl.field_b = true;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_n = null;
         field_i = null;
@@ -43,7 +39,7 @@ class lk extends u {
         field_m = null;
     }
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;

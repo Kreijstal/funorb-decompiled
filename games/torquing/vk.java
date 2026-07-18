@@ -318,8 +318,7 @@ final class vk extends am {
         if (param0 < 123) {
             return;
         }
-        int discarded$0 = 14837;
-        ie.a();
+        ie.a(14837);
     }
 
     final void a(fj param0, int param1, int param2) {

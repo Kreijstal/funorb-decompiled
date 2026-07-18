@@ -97,7 +97,7 @@ final class ve {
         throw new IllegalStateException();
     }
 
-    final static void a(byte param0, uh param1, String param2) {
+    final static void a(byte param0, uh param1, String param2, boolean param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -240,22 +240,17 @@ final class ve {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static boolean a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
         if (!(!tf.a((byte) 45))) {
-            int discarded$10 = 74;
-            int discarded$12 = 13;
-            ol.a(15, param4);
+            ol.a(15, param4, 13, 74);
             if (un.field_Lb != null) {
                 if (un.field_Lb.a(11, param4, 13, 0, 2)) {
                     param4 = false;
                     ql.i(113);
                 }
             }
-            int discarded$13 = 13;
-            int discarded$14 = -73;
-            mh.a(param4);
-            int discarded$15 = 14;
-            pp.a(-88, param4);
+            mh.a(param4, (byte) -73, 13);
+            pp.a(-88, param4, 14);
             param4 = false;
         }
         return param4;

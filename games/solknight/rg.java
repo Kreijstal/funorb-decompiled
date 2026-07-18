@@ -122,7 +122,7 @@ final class rg {
         }
     }
 
-    final static ug a(String param0, int param1) {
+    final static ug a(String param0, int param1, int param2) {
         qk var3 = null;
         RuntimeException var3_ref = null;
         qk stackIn_1_0 = null;
@@ -185,7 +185,7 @@ final class rg {
         return (ug) (Object) stackIn_1_0;
     }
 
-    final static void a(o[] param0) {
+    final static void a(o[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
@@ -253,7 +253,7 @@ final class rg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_e = null;
         field_d = null;

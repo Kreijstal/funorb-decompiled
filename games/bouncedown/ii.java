@@ -12,7 +12,7 @@ final class ii extends wi {
         ((ii) this).field_m = ((ii) this).field_h * param0;
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_n = null;
         field_l = null;
     }
@@ -30,7 +30,7 @@ final class ii extends wi {
         }
     }
 
-    final static void n() {
+    final static void n(int param0) {
         lg.field_b = new gh();
         ed.field_c.a(10768, (lk) (Object) lg.field_b);
     }

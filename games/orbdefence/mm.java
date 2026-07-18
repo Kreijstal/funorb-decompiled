@@ -7,7 +7,7 @@ final class mm extends kj {
     static String field_E;
     static vg field_A;
 
-    public static void k() {
+    public static void k(int param0) {
         field_B = null;
         field_E = null;
         field_A = null;
@@ -22,7 +22,7 @@ final class mm extends kj {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;

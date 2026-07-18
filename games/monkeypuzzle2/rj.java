@@ -173,9 +173,9 @@ class rj extends t {
                         L5: {
                           if (((rj) this).field_E >= ((rj) this).field_s.length()) {
                             ((rj) this).field_s = ((rj) this).field_s + param1;
-                            int dupTemp$5 = ((rj) this).field_s.length();
-                            ((rj) this).field_E = dupTemp$5;
-                            ((rj) this).field_D = dupTemp$5;
+                            int dupTemp$1 = ((rj) this).field_s.length();
+                            ((rj) this).field_E = dupTemp$1;
+                            ((rj) this).field_D = dupTemp$1;
                             break L5;
                           } else {
                             ((rj) this).field_s = ((rj) this).field_s.substring(0, ((rj) this).field_E) + param1 + ((rj) this).field_s.substring(((rj) this).field_E, ((rj) this).field_s.length());
@@ -213,9 +213,8 @@ class rj extends t {
                                   stackIn_68_1 = stackOut_67_1;
                                   break L7;
                                 } else {
-                                  int discarded$6 = -1;
                                   stackOut_66_0 = this;
-                                  stackOut_66_1 = this.l();
+                                  stackOut_66_1 = this.l(-1);
                                   stackIn_68_0 = stackOut_66_0;
                                   stackIn_68_1 = stackOut_66_1;
                                   break L7;
@@ -243,8 +242,7 @@ class rj extends t {
                                         break L8;
                                       } else {
                                         if (param2 == 65) {
-                                          int discarded$7 = -121;
-                                          this.c();
+                                          this.c((byte) -121);
                                           stackOut_59_0 = 1;
                                           stackIn_60_0 = stackOut_59_0;
                                           return stackIn_60_0 != 0;
@@ -260,8 +258,7 @@ class rj extends t {
                                         if (param2 != 66) {
                                           break L9;
                                         } else {
-                                          int discarded$8 = 1;
-                                          this.b();
+                                          this.b(true);
                                           stackOut_53_0 = 1;
                                           stackIn_54_0 = stackOut_53_0;
                                           return stackIn_54_0 != 0;
@@ -281,8 +278,7 @@ class rj extends t {
                                       }
                                     }
                                   } else {
-                                    int discarded$9 = -118;
-                                    this.d();
+                                    this.d((byte) -118);
                                     stackOut_46_0 = 1;
                                     stackIn_47_0 = stackOut_46_0;
                                     return stackIn_47_0 != 0;
@@ -438,14 +434,14 @@ class rj extends t {
         }
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         String var2 = this.p(18587);
         if (0 < var2.length()) {
             java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.p(18587)), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    public static void o() {
+    public static void o(int param0) {
         field_B = null;
         field_H = null;
     }
@@ -554,8 +550,7 @@ class rj extends t {
           L0: {
             L1: {
               super.a(param0, param1, param2, (byte) -98);
-              int discarded$2 = 95;
-              this.k();
+              this.k(95);
               if (((rj) this).field_t != 1) {
                 break L1;
               } else {
@@ -627,7 +622,7 @@ class rj extends t {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean a(boolean param0, CharSequence param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -656,9 +651,7 @@ class rj extends t {
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
-            int discarded$13 = 0;
-            int discarded$14 = 20558;
-            if (bi.a(param1)) {
+            if (bi.a(param1, 20558, false)) {
               var3_int = 0;
               L1: while (true) {
                 if (param1.length() <= var3_int) {
@@ -1048,7 +1041,7 @@ class rj extends t {
         }
     }
 
-    private final int l() {
+    private final int l(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -1071,9 +1064,8 @@ class rj extends t {
         }
     }
 
-    private final void c() {
-        int discarded$0 = 1;
-        this.b();
+    private final void c(byte param0) {
+        this.b(true);
         int var2 = 0;
         this.a(false);
     }
@@ -1170,8 +1162,7 @@ class rj extends t {
                       break L4;
                     } else {
                       L5: {
-                        int discarded$1 = -1;
-                        ((rj) this).field_D = this.l();
+                        ((rj) this).field_D = this.l(-1);
                         ((rj) this).field_E = this.n(param3 ^ 592);
                         if (((rj) this).field_E <= 0) {
                           break L5;
@@ -1241,14 +1232,14 @@ class rj extends t {
         return stackIn_21_0 != 0;
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         if (((rj) this).field_o instanceof vc) {
             ((vc) (Object) ((rj) this).field_o).a(-88, (rj) this);
             return;
         }
     }
 
-    private final void k() {
+    private final void k(int param0) {
         aa var3 = null;
         int var4 = 0;
         int var5 = 0;

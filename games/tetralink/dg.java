@@ -24,7 +24,7 @@ final class dg {
         return ma.field_g;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_l = null;
         field_d = null;
@@ -521,7 +521,7 @@ final class dg {
         return (dg) this;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -551,18 +551,15 @@ final class dg {
                 if (var2 != 1) {
                   if (2 != var2) {
                     fk.a(-93, (Throwable) null, "A1: " + hc.a(false));
-                    int discarded$6 = 0;
-                    mk.a();
+                    mk.a(false);
                     break L1;
                   } else {
                     var15 = (cf) (Object) sf.field_a.c(false);
                     if (var15 == null) {
-                      int discarded$7 = 0;
-                      mk.a();
+                      mk.a(false);
                       return;
                     } else {
-                      int discarded$8 = -7990;
-                      var15.field_u = lh.h();
+                      var15.field_u = lh.h(-7990);
                       var15.field_t = var15.field_u[0];
                       var15.field_s = true;
                       var15.b(false);
@@ -575,14 +572,12 @@ final class dg {
                     var11.b(false);
                     break L1;
                   } else {
-                    int discarded$9 = 0;
-                    mk.a();
+                    mk.a(false);
                     return;
                   }
                 }
               } else {
-                int discarded$10 = -7990;
-                var10 = lh.h();
+                var10 = lh.h(-7990);
                 var18 = var10;
                 var17 = var18;
                 var16 = var17;
@@ -603,8 +598,7 @@ final class dg {
                       var14.b(false);
                       break L1;
                     } else {
-                      int discarded$11 = 0;
-                      mk.a();
+                      mk.a(false);
                       return;
                     }
                   } else {
@@ -854,7 +848,7 @@ final class dg {
         ((dg) this).field_c = -1;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1) {
         if (!(!ak.a(3058))) {
             param0 = false;
         }
@@ -891,7 +885,7 @@ final class dg {
         }
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2) {
+    final static void a(boolean param0, boolean param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         hl var5 = null;
         hl var6 = null;
@@ -1437,9 +1431,7 @@ final class dg {
                     break L29;
                   } else {
                     if (!kl.field_a) {
-                      int discarded$2 = 11;
-                      int discarded$3 = 0;
-                      l.a();
+                      l.a(0, 11);
                       break L29;
                     } else {
                       oi.a((byte) 126, 11);

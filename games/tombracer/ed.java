@@ -360,7 +360,7 @@ final class ed {
         }
     }
 
-    final static mi a(cr param0) throws jj {
+    final static mi a(cr param0, int param1) throws jj {
         RuntimeException var2 = null;
         mi var4 = null;
         mi var5 = null;
@@ -415,8 +415,7 @@ final class ed {
                             } else {
                               if (param0.c((byte) -127).field_p != rs.field_a) {
                                 param0.field_c = param0.field_c - 1;
-                                int discarded$1 = -31733;
-                                var4.field_i.b((byte) -127, (vg) (Object) ed.a(param0));
+                                var4.field_i.b((byte) -127, (vg) (Object) ed.a(param0, -31733));
                                 if (param0.a((byte) 125)) {
                                   throw new jj(var4.field_h);
                                 } else {

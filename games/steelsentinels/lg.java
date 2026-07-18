@@ -333,7 +333,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
                         if (var2_ref != null) {
                           try {
                             L17: {
-                              Object discarded$6 = var2_ref.invoke(var1, new Object[1]);
+                              Object discarded$1 = var2_ref.invoke(var1, new Object[1]);
                               break L17;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -348,14 +348,11 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
                           break L16;
                         }
                       }
-                      int discarded$7 = 98;
-                      im.b();
+                      im.b((byte) 98);
                       ((lg) this).a(false);
-                      int discarded$8 = -113;
-                      sb.field_bb = qf.a(li.field_A, na.field_i, (java.awt.Component) (Object) sl.field_n);
+                      sb.field_bb = qf.a(li.field_A, na.field_i, (java.awt.Component) (Object) sl.field_n, (byte) -113);
                       ((lg) this).b(26689);
-                      int discarded$9 = 3;
-                      gd.field_qb = dl.g();
+                      gd.field_qb = dl.g((byte) 3);
                       L19: while (true) {
                         L20: {
                           L21: {
@@ -388,8 +385,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
                               if (~var3 <= ~di.field_a) {
                                 break L24;
                               } else {
-                                int discarded$10 = 0;
-                                this.d();
+                                this.d(0);
                                 var3++;
                                 if (var5 != 0) {
                                   break L23;
@@ -402,8 +398,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
                                 }
                               }
                             }
-                            int discarded$11 = -7035;
-                            this.f();
+                            this.f(-7035);
                             le.a((Object) (Object) sl.field_n, 50, hb.field_i);
                             break L23;
                           }
@@ -857,7 +852,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         long var4 = 0L;
@@ -879,45 +874,49 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
                 }
               }
             }
-            L2: {
-              cm.field_g = 1 + cm.field_g & 31;
-              int fieldTemp$1 = ml.field_a;
-              ml.field_a = ml.field_a + 1;
-              if (fieldTemp$1 <= 50) {
-                break L2;
-              } else {
-                L3: {
-                  dd.field_e = true;
-                  ml.field_a = ml.field_a - 50;
-                  sl.field_n.setSize(na.field_i, li.field_A);
-                  sl.field_n.setVisible(true);
-                  if (vd.field_c == null) {
-                    break L3;
-                  } else {
-                    if (gh.field_N != null) {
+            if (param0 == -7035) {
+              L2: {
+                cm.field_g = 1 + cm.field_g & 31;
+                int fieldTemp$2 = ml.field_a;
+                ml.field_a = ml.field_a + 1;
+                if (fieldTemp$2 <= 50) {
+                  break L2;
+                } else {
+                  L3: {
+                    dd.field_e = true;
+                    ml.field_a = ml.field_a - 50;
+                    sl.field_n.setSize(na.field_i, li.field_A);
+                    sl.field_n.setVisible(true);
+                    if (vd.field_c == null) {
                       break L3;
                     } else {
-                      var6 = vd.field_c.getInsets();
-                      sl.field_n.setLocation(kf.field_p + var6.left, var6.top + ij.field_X);
-                      if (SteelSentinels.field_G == 0) {
-                        break L2;
-                      } else {
+                      if (gh.field_N != null) {
                         break L3;
+                      } else {
+                        var6 = vd.field_c.getInsets();
+                        sl.field_n.setLocation(kf.field_p + var6.left, var6.top + ij.field_X);
+                        if (SteelSentinels.field_G == 0) {
+                          break L2;
+                        } else {
+                          break L3;
+                        }
                       }
                     }
                   }
+                  sl.field_n.setLocation(kf.field_p, ij.field_X);
+                  break L2;
                 }
-                sl.field_n.setLocation(kf.field_p, ij.field_X);
-                break L2;
               }
+              ((lg) this).a((byte) 112);
+              break L0;
+            } else {
+              return;
             }
-            ((lg) this).a((byte) 112);
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2, "lg.AA(" + -7035 + ')');
+          throw ci.a((Throwable) (Object) var2, "lg.AA(" + param0 + ')');
         }
     }
 
@@ -1103,7 +1102,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         RuntimeException runtimeException = null;
         long var2_long = 0L;
         long var4 = 0L;
@@ -1116,7 +1115,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
               var2_long = mm.a(-111);
               var4 = hg.field_c[ah.field_Wb];
               hg.field_c[ah.field_Wb] = var2_long;
-              if (var4 == 0L) {
+              if (var4 == (long)param0) {
                 break L1;
               } else {
                 if (var4 < var2_long) {
@@ -1140,7 +1139,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw ci.a((Throwable) (Object) runtimeException, "lg.IA(" + 0 + ')');
+          throw ci.a((Throwable) (Object) runtimeException, "lg.IA(" + param0 + ')');
         }
     }
 
@@ -1639,8 +1638,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
                     System.out.println("error_game_" + param0);
                     try {
                       L1: {
-                        int discarded$2 = -21;
-                        Object discarded$3 = hn.a(wl.d(), (byte) -96, "loggedout");
+                        Object discarded$1 = hn.a(wl.d((byte) -21), (byte) -96, "loggedout");
                         break L1;
                       }
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -1803,11 +1801,10 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
                     dd.field_d = param5;
                     kf.field_p = 0;
                     km.field_m = (lg) this;
-                    int discarded$2 = -21;
-                    ug.field_O = wl.d();
-                    pn dupTemp$3 = new pn(param2, param4, param6, true);
-                    hb.field_i = dupTemp$3;
-                    ug.field_M = dupTemp$3;
+                    ug.field_O = wl.d((byte) -21);
+                    pn dupTemp$1 = new pn(param2, param4, param6, true);
+                    hb.field_i = dupTemp$1;
+                    ug.field_M = dupTemp$1;
                     var9_ref = hb.field_i.a(2, 1, (Runnable) this);
                     L1: while (true) {
                       L2: {

@@ -462,8 +462,7 @@ final class pd extends th {
                 }
                 L4: {
                   ((pd) this).field_s = (fl) param0;
-                  int discarded$1 = 0;
-                  this.c();
+                  this.c(false);
                   this.a(false, param1);
                   if (param2 <= -73) {
                     break L4;
@@ -561,11 +560,10 @@ final class pd extends th {
         hn.field_P = new hl(0L, (hl) null);
         hn.field_P.a((byte) -92, (hl) (Object) gg.field_j.field_g);
         hn.field_P.a((byte) 68, gg.field_i);
-        int discarded$0 = 5;
-        db.a();
+        db.a(5);
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;

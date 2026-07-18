@@ -131,7 +131,7 @@ final class wk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_g = null;
@@ -147,7 +147,7 @@ final class wk {
         return var2;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         oj var2 = null;
         int var3 = 0;

@@ -112,8 +112,7 @@ final class vq extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           L0: {
             L1: {
-              int discarded$3 = 0;
-              dq.a(param0, ((vq) this).field_c);
+              dq.a(param0, ((vq) this).field_c, 0);
               if (param1 == 9) {
                 break L1;
               } else {
@@ -156,7 +155,7 @@ final class vq extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_i = null;
         field_f = null;

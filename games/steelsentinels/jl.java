@@ -48,7 +48,7 @@ final class jl {
         field_s = null;
     }
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, int param1) {
         RuntimeException var3 = null;
         gi var3_ref = null;
         int var4 = 0;
@@ -87,8 +87,7 @@ final class jl {
         try {
           L0: {
             L1: {
-              int discarded$3 = 127;
-              var17 = new gi(ln.a(param0));
+              var17 = new gi(ln.a(param0, (byte) 127));
               var3_ref = var17;
               var4 = var17.f((byte) -66);
               if (5 > var4) {
@@ -151,9 +150,9 @@ final class jl {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$4 = var8 + var17.c((byte) -60);
-                            var8 = dupTemp$4;
-                            ((jl) this).field_h[var10] = dupTemp$4;
+                            int dupTemp$2 = var8 + var17.c((byte) -60);
+                            var8 = dupTemp$2;
+                            ((jl) this).field_h[var10] = dupTemp$2;
                             if (((jl) this).field_h[var10] <= var9) {
                               break L8;
                             } else {
@@ -172,9 +171,9 @@ final class jl {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$5 = var8 + var17.c(true);
-                            var8 = dupTemp$5;
-                            ((jl) this).field_h[var10] = dupTemp$5;
+                            int dupTemp$3 = var8 + var17.c(true);
+                            var8 = dupTemp$3;
+                            ((jl) this).field_h[var10] = dupTemp$3;
                             if (((jl) this).field_h[var10] <= var9) {
                               break L10;
                             } else {
@@ -312,8 +311,7 @@ final class jl {
                     }
                 }
             }
-            int discarded$0 = 70;
-            this.a(param0);
+            this.a(param0, 70);
         } catch (RuntimeException runtimeException) {
             throw ci.a((Throwable) (Object) runtimeException, "jl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

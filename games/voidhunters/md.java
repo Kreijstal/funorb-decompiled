@@ -5,7 +5,7 @@ final class md extends le {
     static ij field_j;
     private ev[] field_i;
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         ik var4 = null;
@@ -22,9 +22,7 @@ final class md extends le {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$8 = 5;
-                    int discarded$9 = -60;
-                    eva.a(var5);
+                    eva.a(var5, -60, 5);
                     var5 = (br) (Object) ca.field_p.a((byte) 112);
                     continue L2;
                   }
@@ -177,8 +175,7 @@ final class md extends le {
                               break L4;
                             } else {
                               if (3 == var6) {
-                                int discarded$1 = -87;
-                                ((md) this).field_i[var4_int] = (ev) (Object) uea.a(param2);
+                                ((md) this).field_i[var4_int] = (ev) (Object) uea.a(param2, -87);
                                 break L4;
                               } else {
                                 break L4;

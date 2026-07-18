@@ -41,7 +41,7 @@ final class n {
         return (n) this;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_k = null;
         field_h = null;
         field_c = null;
@@ -576,7 +576,7 @@ final class n {
         return (n) this;
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         if (null == da.field_a) {
             return false;
         }

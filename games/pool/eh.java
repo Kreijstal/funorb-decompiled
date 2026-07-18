@@ -19,20 +19,17 @@ final class eh extends ma {
     static int[] field_p;
     static int[] field_w;
 
-    final static ke c() {
-        int discarded$0 = 0;
-        String var1 = sa.a();
+    final static ke c(int param0) {
+        String var1 = sa.a(false);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }
-        int discarded$1 = 0;
-        int discarded$2 = 0;
-        return new ke(sa.a(), sp.h());
+        return new ke(sa.a(false), sp.h(0));
     }
 
-    final static void a() {
+    final static void a(int param0, boolean param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         oj var4 = null;

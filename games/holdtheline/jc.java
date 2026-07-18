@@ -11,7 +11,7 @@ final class jc {
     static String field_a;
     static String field_d;
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_5_0 = 0;

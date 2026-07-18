@@ -57,7 +57,7 @@ final class br extends ob {
         }
     }
 
-    final static void f() {
+    final static void f(int param0) {
         lh.field_c = new nf();
         tn.field_n.d((ei) (Object) lh.field_c, 30);
     }
@@ -68,7 +68,7 @@ final class br extends ob {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_K = null;
         field_J = null;
         field_M = null;
@@ -100,10 +100,7 @@ final class br extends ob {
           return;
         } else {
           var4 = oe.field_O;
-          int discarded$3 = 39;
-          int discarded$4 = 0;
-          int discarded$5 = 1;
-          var4 = var4 + " " + o.a('#', "<br><br>", nr.a(new String[1], -1, n.a(var2 != 0, var3 != 0)));
+          var4 = var4 + " " + o.a('#', "<br><br>", nr.a(new String[1], -1, n.a(var2 != 0, var3 != 0, false, (byte) 39)), 1);
           ((br) this).a((lr) (Object) sa.field_h, new int[1], 140, -16097, var4, 280, 15658734);
           ((br) this).b(140, false);
           return;

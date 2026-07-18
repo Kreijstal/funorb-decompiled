@@ -74,7 +74,7 @@ final class dn extends pa {
         field_G = null;
     }
 
-    final static void a(am param0) {
+    final static void a(am param0, int param1) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -382,7 +382,7 @@ final class dn extends pa {
         }
     }
 
-    final static vn[] f() {
+    final static vn[] f(byte param0) {
         vn[] var1 = null;
         int var2 = 0;
         int var3 = 0;

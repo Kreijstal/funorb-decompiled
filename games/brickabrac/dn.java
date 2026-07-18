@@ -572,7 +572,7 @@ final class dn extends h {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_J = null;
         field_N = null;
         field_K = null;

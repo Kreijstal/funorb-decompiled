@@ -13,7 +13,7 @@ final class vl extends ck {
     int field_w;
     int field_u;
 
-    final static void d() {
+    final static void d(int param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -121,8 +121,7 @@ final class vl extends ck {
         }
         L2: {
           ((gh) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, -stackIn_6_3 + ea.field_l.field_Lb, 0, ea.field_l.field_zb);
-          int discarded$1 = 1;
-          ql.b();
+          ql.b(true);
           sg.field_i.a(0, -40 + mg.field_Ub.field_Lb, 40, 0, mg.field_Ub.field_zb);
           qi.field_c.a(0, 0, 30, 0, pc.field_q.field_zb);
           q.field_d.a(0, 30, -40 + pc.field_q.field_Lb - 32, 0, pc.field_q.field_zb);
@@ -157,11 +156,11 @@ final class vl extends ck {
         uc.field_j.a(0, -40 + pc.field_q.field_Lb, 40, var3, -var3 + pc.field_q.field_zb);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_x = null;
     }
 
-    final static ca a(cm param0, int param1) {
+    final static ca a(cm param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -228,7 +227,7 @@ final class vl extends ck {
         return stackIn_4_0;
     }
 
-    final static void a(cm param0, cm param1, boolean param2) {
+    final static void a(cm param0, cm param1, boolean param2, int param3) {
         try {
             wn.a(jl.field_s, ei.field_o, qb.field_K, uh.field_j, param2, 127, (mi) (Object) nh.field_d, dj.field_b, kj.field_H, nc.field_n, gh.field_ib, bd.field_f);
             dh.field_y = cf.a("chatfilter", "lobby", (byte) -62, param0);

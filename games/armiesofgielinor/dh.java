@@ -25,22 +25,19 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
             ((dh) this).field_a = param0;
             ((dh) this).field_o = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
             ((dh) this).field_h = param2.createImage((java.awt.image.ImageProducer) this);
-            int discarded$0 = 0;
-            this.a();
+            this.a(false);
+            boolean discarded$0 = param2.prepareImage(((dh) this).field_h, (java.awt.image.ImageObserver) this);
+            this.a(false);
             boolean discarded$1 = param2.prepareImage(((dh) this).field_h, (java.awt.image.ImageObserver) this);
-            int discarded$2 = 0;
-            this.a();
-            boolean discarded$3 = param2.prepareImage(((dh) this).field_h, (java.awt.image.ImageObserver) this);
-            int discarded$4 = 0;
-            this.a();
-            boolean discarded$5 = param2.prepareImage(((dh) this).field_h, (java.awt.image.ImageObserver) this);
+            this.a(false);
+            boolean discarded$2 = param2.prepareImage(((dh) this).field_h, (java.awt.image.ImageObserver) this);
             ((dh) this).a(5605);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "dh.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         tb.field_e = null;
     }
 
@@ -156,7 +153,7 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_i = null;
         field_n = null;
         field_k = null;
@@ -168,7 +165,7 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
         return param0 == ((dh) this).field_m;
     }
 
-    final static fo a(String param0) {
+    final static fo a(String param0, byte param1) {
         RuntimeException var2 = null;
         fo stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -269,9 +266,8 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             L1: {
-              int discarded$5 = 0;
-              this.a();
-              boolean discarded$6 = param1.drawImage(((dh) this).field_h, param3, param2, (java.awt.image.ImageObserver) this);
+              this.a(false);
+              boolean discarded$3 = param1.drawImage(((dh) this).field_h, param3, param2, (java.awt.image.ImageObserver) this);
               if (param0 == 255) {
                 break L1;
               } else {
@@ -373,7 +369,7 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
         return stackIn_1_0 != 0;
     }
 
-    private final synchronized void a() {
+    private final synchronized void a(boolean param0) {
         if (!(((dh) this).field_m != null)) {
             return;
         }

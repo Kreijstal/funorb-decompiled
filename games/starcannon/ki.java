@@ -2336,7 +2336,7 @@ final class ki {
         ki.f(param0 + param2 - 1, param1, param3, param4);
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -2589,8 +2589,7 @@ final class ki {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int discarded$0 = 140;
-        ki.a(field_a, 0, 0 * field_j, 4, 0, 540, field_j - 540);
+        ki.a(field_a, 0, 0 * field_j, 4, 0, 540, field_j - 540, 140);
         ki.a(field_a, 0, 0 * field_j, 4, 0, 140, field_j - 540, 0, 540);
     }
 

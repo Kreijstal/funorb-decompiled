@@ -152,7 +152,7 @@ final class pk {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         ((pk) this).field_f = false;
     }
 
@@ -234,8 +234,7 @@ final class pk {
         if (param2) {
             ((pk) this).a(-72, 18, true, -78);
         }
-        int discarded$0 = 2933;
-        this.b();
+        this.b(2933);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -428,8 +427,7 @@ final class pk {
             ((pk) this).field_I[var6] = (short)(((pk) this).field_I[var6] * param1 / param3);
             ((pk) this).field_g[var6] = (short)(((pk) this).field_g[var6] * param0 / param3);
         }
-        int discarded$0 = 2933;
-        this.b();
+        this.b(2933);
         if (param2 <= 44) {
             pk.a(-33);
         }

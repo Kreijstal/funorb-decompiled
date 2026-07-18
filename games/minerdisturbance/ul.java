@@ -380,7 +380,7 @@ final class ul {
         return stackIn_67_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
     }
 

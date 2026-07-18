@@ -60,12 +60,12 @@ final class qg {
         return var2;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static r a(int param0, int param1, int param2, md param3) {
+    final static r a(int param0, int param1, int param2, md param3, byte param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         r var7 = null;
@@ -92,13 +92,12 @@ final class qg {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$4 = 480;
-            var8 = pd.a(0, 0, param3, 640, 0);
+            var8 = pd.a(0, 0, param3, 640, 0, 480);
             var6 = var8;
             if (var8 != null) {
               var7 = new r();
               var7.field_c = var8;
-              java.awt.Component discarded$5 = var7.field_c.add((java.awt.Component) (Object) var7);
+              java.awt.Component discarded$2 = var7.field_c.add((java.awt.Component) (Object) var7);
               var7.setBounds(0, 0, 640, 480);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();

@@ -66,8 +66,7 @@ final class ef {
           L0: {
             var5_int = -1;
             if (kk.a(param2, 1, param1, param3)) {
-              int discarded$2 = 18118;
-              stackOut_3_0 = rj.a(param4.b(5, param1, param3));
+              stackOut_3_0 = rj.a(param4.b(5, param1, param3), 18118);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -138,7 +137,7 @@ final class ef {
         throw new IllegalStateException();
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         if (sp.field_c == null) {
             return false;
         }
@@ -290,7 +289,7 @@ final class ef {
         return stackIn_29_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_g = null;
         field_b = null;

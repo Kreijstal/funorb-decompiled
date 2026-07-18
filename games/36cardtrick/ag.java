@@ -212,8 +212,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         if (!(null == pc.field_a)) {
             pc.field_a.s(2);
         }
-        int discarded$0 = 23;
-        String var1 = hh.b();
+        String var1 = hh.b((byte) 23);
         i.field_a = new ak(var1, (String) null, true, false, false);
         sd.field_c.b((lk) (Object) vb.field_h, (byte) -71);
         vb.field_h.c((lk) (Object) i.field_a, (byte) 33);
@@ -389,7 +388,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
         field_g = null;

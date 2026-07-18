@@ -11,27 +11,24 @@ final class of {
         vg.field_f = 320;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }
 
     final static void a(int param0) {
         if (param0 != uj.field_d) {
-          int discarded$8 = 105;
-          if (a.a()) {
+          if (a.a(105)) {
             rg.field_h = true;
             return;
           } else {
-            int discarded$9 = 29;
-            va.a();
+            va.a(29);
             uj.field_d = 11;
             rg.field_h = true;
             return;
           }
         } else {
-          int discarded$10 = 29;
-          va.a();
+          va.a(29);
           uj.field_d = 11;
           rg.field_h = true;
           return;

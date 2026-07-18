@@ -163,15 +163,14 @@ final class hb {
                             break L6;
                           } else {
                             var5 = (DataInputStream) var4.field_e;
-                            int discarded$2 = var5.read();
+                            int discarded$1 = var5.read();
                             var5.close();
                             break L6;
                           }
                         }
                         break L0;
                       } else {
-                        int discarded$3 = 0;
-                        wl.a(1L);
+                        wl.a(1L, false);
                         continue L5;
                       }
                     }
@@ -406,7 +405,7 @@ final class hb {
         }
     }
 
-    private final void a(long param0) {
+    private final void a(long param0, int param1) {
         vh var4 = (vh) (Object) ((hb) this).field_e.a(param0, 20);
         this.a((byte) -108, var4);
     }
@@ -437,8 +436,7 @@ final class hb {
             if (((hb) this).field_b < 1) {
               throw new IllegalStateException();
             } else {
-              int discarded$2 = -89;
-              this.a(param2);
+              this.a(param2, -89);
               ((hb) this).field_g = ((hb) this).field_g - 1;
               L1: while (true) {
                 if (((hb) this).field_g >= 0) {
@@ -487,7 +485,7 @@ final class hb {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_d = null;
         field_i = null;

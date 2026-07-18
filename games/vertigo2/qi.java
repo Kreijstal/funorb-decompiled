@@ -30,7 +30,7 @@ final class qi extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_b = null;
         field_d = null;

@@ -9,8 +9,7 @@ final class gh {
     static co field_a;
 
     final static void b(int param0) {
-        int discarded$0 = 35;
-        ah.field_c = sa.a();
+        ah.field_c = sa.a((byte) 35);
         dc.field_a = new ln();
         ea.a(true, (byte) 126, true);
         if (param0 != 1) {
@@ -103,7 +102,7 @@ final class gh {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

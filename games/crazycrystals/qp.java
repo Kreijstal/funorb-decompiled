@@ -349,14 +349,13 @@ final class qp extends jb {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         pl.e(-119);
         qd.field_q = true;
         int var1 = 1;
         ne.field_d = true;
         qe.field_g.g((byte) -122);
-        int discarded$0 = -13;
-        ke.a(gg.field_b, false);
+        ke.a(gg.field_b, false, -13);
     }
 
     static {

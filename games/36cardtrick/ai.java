@@ -9,7 +9,7 @@ final class ai extends cg {
     static int[] field_j;
     static int field_m;
 
-    public static void g() {
+    public static void g(int param0) {
         field_l = null;
         int var1 = -1;
         field_k = null;

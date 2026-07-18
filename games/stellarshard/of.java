@@ -321,7 +321,7 @@ final class of extends dg {
         }
     }
 
-    final static String i() {
+    final static String i(int param0) {
         if (!(wf.field_b != null)) {
             return "";
         }

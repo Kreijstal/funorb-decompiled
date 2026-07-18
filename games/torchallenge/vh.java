@@ -248,7 +248,7 @@ final class vh {
         return stackIn_38_0;
     }
 
-    final static rh a(ge[] param0, int param1, int param2, byte[] param3) {
+    final static rh a(ge[] param0, int param1, int param2, byte[] param3, int param4, int param5) {
         RuntimeException var6 = null;
         int[] var6_array = null;
         int[] var7 = null;
@@ -528,7 +528,7 @@ final class vh {
         return ((vh) this).field_f;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
         field_d = null;
         field_g = null;

@@ -8,7 +8,7 @@ abstract class bg {
     static boolean field_a;
     static qb field_e;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_d = null;
         field_b = null;
@@ -128,8 +128,7 @@ abstract class bg {
         if (nm.field_h != -1) {
           if (param1 == nm.field_h) {
             nm.field_h = param1;
-            int discarded$4 = 112;
-            boolean discarded$5 = lc.a();
+            boolean discarded$2 = lc.a((byte) 112);
             he.field_e.b((byte) -76, 66);
             he.field_e.f(param1, (byte) -78);
             if (2 <= qf.field_d) {
@@ -153,8 +152,7 @@ abstract class bg {
           }
         } else {
           nm.field_h = param1;
-          int discarded$6 = 112;
-          boolean discarded$7 = lc.a();
+          boolean discarded$3 = lc.a((byte) 112);
           he.field_e.b((byte) -76, 66);
           he.field_e.f(param1, (byte) -78);
           if (2 <= qf.field_d) {
@@ -176,7 +174,7 @@ abstract class bg {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1) {
         n.field_g.a(param0, true);
         cn var2 = ln.field_U;
         if (var2 != null) {

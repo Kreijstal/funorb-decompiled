@@ -9,7 +9,7 @@ final class rl {
     private int field_b;
     static String field_a;
 
-    final static void c() {
+    final static void c(int param0) {
         e.field_S.j(-636330975);
         if (!(vi.field_c != null)) {
             vi.field_c = new sa(e.field_S, ed.field_c);
@@ -240,7 +240,7 @@ final class rl {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         int var1 = -20;
     }

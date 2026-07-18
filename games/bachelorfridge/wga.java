@@ -144,7 +144,7 @@ final class wga extends bca {
         super(param0, param1);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_r = null;
         int var1 = 0;
         field_q = null;

@@ -17,7 +17,7 @@ final class dj {
     static int field_g;
     private static String field_z;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_h = null;
         field_j = null;

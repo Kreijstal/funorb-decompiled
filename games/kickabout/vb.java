@@ -90,7 +90,7 @@ final class vb {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_i = null;
         field_l = null;

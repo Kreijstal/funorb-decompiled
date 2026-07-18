@@ -18,7 +18,7 @@ final class pm extends ne {
         field_o = null;
     }
 
-    final static nl a() {
+    final static nl a(byte param0) {
         try {
             Throwable var1 = null;
             nl stackIn_2_0 = null;

@@ -7,7 +7,7 @@ final class rj {
     static aj field_b;
     int field_d;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
     }
 

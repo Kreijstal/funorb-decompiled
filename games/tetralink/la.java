@@ -213,7 +213,7 @@ final class la extends jd {
         return var4;
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, boolean param1) {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
@@ -294,8 +294,7 @@ final class la extends jd {
                 if (param0.equals((Object) (Object) oa.field_y.a((byte) 72))) {
                   break L1;
                 } else {
-                  int discarded$2 = 14781;
-                  oa.field_y = il.a(param0);
+                  oa.field_y = il.a(param0, 14781);
                   break L1;
                 }
               }
@@ -359,7 +358,7 @@ final class la extends jd {
     la() {
     }
 
-    final static void d() {
+    final static void d(int param0) {
         if (cd.field_c == null) {
           co.field_p = new String[11];
           co.field_p[7] = am.field_d;

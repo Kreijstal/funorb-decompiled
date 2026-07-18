@@ -122,13 +122,13 @@ final class tp implements iq {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_e = null;
         field_k = null;
     }
 
-    final static nk[] a(String param0, bc param1, String param2) {
+    final static nk[] a(String param0, bc param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

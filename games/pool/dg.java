@@ -13,7 +13,7 @@ final class dg extends gr {
     static int[] field_T;
     static String field_P;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_T = null;
         field_M = null;
         field_L = null;

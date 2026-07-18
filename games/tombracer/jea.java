@@ -61,7 +61,7 @@ class jea extends um {
     private int field_kb;
     private int field_mb;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_nb = null;
     }
 
@@ -575,7 +575,7 @@ class jea extends um {
             while (var4 != null) {
                 var4.field_Q = true;
                 var4.a(-10966);
-                var4 = (jea) (Object) var4.field_J.a(-1);
+                var4 = (jea) (Object) ((jea) this).field_J.a(-1);
             }
         }
         if (param0 != -10966) {
@@ -663,7 +663,7 @@ class jea extends um {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
+        jea var13 = null;
         int var14 = 0;
         Object stackIn_25_0 = null;
         Object stackIn_26_0 = null;
@@ -696,7 +696,6 @@ class jea extends um {
         Object stackOut_37_0 = null;
         int stackOut_37_1 = 0;
         L0: {
-          var13 = null;
           var14 = TombRacer.field_G ? 1 : 0;
           if (((jea) this).field_Y > 0) {
             var7 = -(-((jea) this).field_Y >> 2);
@@ -894,13 +893,13 @@ class jea extends um {
         L12: {
           ((jea) this).field_o = stackIn_38_1 != 0;
           if (((jea) this).field_J != null) {
-            var13 = (Object) (Object) (jea) (Object) ((jea) this).field_J.b(3);
+            var13 = (jea) (Object) ((jea) this).field_J.b(3);
             L13: while (true) {
               if (var13 == null) {
                 break L12;
               } else {
-                ((jea) var13).a(-1, param1, ((jea) var13).field_t, ((jea) var13).field_G, ((jea) var13).field_q, ((jea) var13).field_A);
-                var13 = (Object) (Object) (jea) (Object) ((jea) var13).field_J.a(-1);
+                var13.a(-1, param1, ((jea) this).field_t, ((jea) this).field_G, ((jea) this).field_q, ((jea) this).field_A);
+                var13 = (jea) (Object) ((jea) this).field_J.a(-1);
                 continue L13;
               }
             }
@@ -909,7 +908,7 @@ class jea extends um {
           }
         }
         L14: {
-          if (!((jea) var13).field_pb) {
+          if (!((jea) this).field_pb) {
             break L14;
           } else {
             ula.field_w = true;
@@ -926,14 +925,14 @@ class jea extends um {
         }
         L16: {
           bea.b(var8, var9, var10, var11);
-          if (0 == ((jea) var13).field_E) {
+          if (0 == ((jea) this).field_E) {
             break L16;
           } else {
-            if (((jea) var13).field_F) {
+            if (((jea) this).field_F) {
               L17: {
-                ((jea) this).field_qb = -param4 + jba.field_j - ((jea) var13).field_p;
-                ((jea) this).field_T = -param5 + -((jea) var13).field_kb + sta.field_B;
-                if (((jea) var13).field_qb < 0) {
+                ((jea) this).field_qb = -param4 + jba.field_j - ((jea) this).field_p;
+                ((jea) this).field_T = -param5 + -((jea) this).field_kb + sta.field_B;
+                if (((jea) this).field_qb < 0) {
                   ((jea) this).field_qb = 0;
                   break L17;
                 } else {
@@ -941,15 +940,15 @@ class jea extends um {
                 }
               }
               L18: {
-                if (-((jea) var13).field_G + param3 < ((jea) var13).field_qb) {
-                  ((jea) this).field_qb = param3 - ((jea) var13).field_G;
+                if (-((jea) this).field_G + param3 < ((jea) this).field_qb) {
+                  ((jea) this).field_qb = param3 - ((jea) this).field_G;
                   break L18;
                 } else {
                   break L18;
                 }
               }
               L19: {
-                if (0 > ((jea) var13).field_T) {
+                if (0 > ((jea) this).field_T) {
                   ((jea) this).field_T = 0;
                   break L19;
                 } else {
@@ -958,16 +957,16 @@ class jea extends um {
               }
               L20: {
                 ((jea) this).field_K = 0;
-                ((jea) this).field_q = param4 + ((jea) var13).field_qb;
-                if (((jea) var13).field_T <= param2 + -((jea) var13).field_t) {
+                ((jea) this).field_q = param4 + ((jea) this).field_qb;
+                if (((jea) this).field_T <= param2 + -((jea) this).field_t) {
                   break L20;
                 } else {
-                  ((jea) this).field_T = -((jea) var13).field_t + param2;
+                  ((jea) this).field_T = -((jea) this).field_t + param2;
                   break L20;
                 }
               }
               ((jea) this).field_Y = 0;
-              ((jea) this).field_A = ((jea) var13).field_T + param5;
+              ((jea) this).field_A = ((jea) this).field_T + param5;
               break L16;
             } else {
               break L16;
@@ -1349,8 +1348,8 @@ class jea extends um {
               if (var23_ref == null) {
                 break L30;
               } else {
-                var23_ref.a(param0, 0, var23_ref.field_t, param3, param4, param5, param6, var19 + var23_ref.field_q, var23_ref.field_A - -var20, var23_ref.field_L, var23_ref.field_G);
-                var23_ref = (jea) (Object) var23_ref.field_J.e(108);
+                var23_ref.a(param0, 0, ((jea) this).field_t, param3, param4, param5, param6, var19 + ((jea) this).field_q, ((jea) this).field_A - -var20, ((jea) this).field_L, ((jea) this).field_G);
+                var23_ref = (jea) (Object) ((jea) this).field_J.e(108);
                 continue L31;
               }
             }
@@ -1414,8 +1413,7 @@ class jea extends um {
             L1: {
               L2: {
                 param2 = dfa.a('_', "", param2, 0);
-                int discarded$2 = 0;
-                var3 = hua.a(param2);
+                var3 = hua.a(param2, 0);
                 if (param1.indexOf(param2) != -1) {
                   break L2;
                 } else {

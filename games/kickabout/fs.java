@@ -93,7 +93,7 @@ final class fs {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, ml param7, int param8) {
+    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, ml param7, int param8, int param9) {
         int var10_int = 0;
         RuntimeException var10 = null;
         int var11 = 0;
@@ -326,7 +326,7 @@ final class fs {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (up.field_p != -qt.field_l) {
           if (up.field_p == -qt.field_l + 250) {
             up.field_p = up.field_p + 1;

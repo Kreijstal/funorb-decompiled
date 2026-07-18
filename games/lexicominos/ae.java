@@ -69,11 +69,10 @@ final class ae extends kf {
         if (param0 != 0) {
             return true;
         }
-        int discarded$0 = 1;
-        return pb.c();
+        return pb.c(true);
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_J = null;
         field_E = null;
         field_M = null;

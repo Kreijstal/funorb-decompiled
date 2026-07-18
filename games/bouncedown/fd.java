@@ -6,7 +6,7 @@ class fd extends ug {
     static tg[] field_n;
     static String field_o;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_o = null;
         field_n = null;
         field_m = null;
@@ -30,14 +30,13 @@ class fd extends ug {
     fd() {
     }
 
-    final static String c() {
+    final static String c(byte param0) {
         String var1 = "";
         if (null != vk.field_c) {
             var1 = vk.field_c.a(0);
         }
         if (-1 == var1.length()) {
-            int discarded$0 = 44;
-            var1 = bj.j();
+            var1 = bj.j(44);
         }
         if (-1 == var1.length()) {
             var1 = wk.field_H;

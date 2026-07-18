@@ -264,7 +264,7 @@ final class ql extends af {
         return dupTemp$0;
     }
 
-    private final void a(ql param0, boolean param1) {
+    private final void a(ql param0, boolean param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         bf var5 = null;
@@ -461,7 +461,7 @@ final class ql extends af {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_r = null;
         field_q = null;
         field_p = null;
@@ -478,7 +478,7 @@ final class ql extends af {
         var1.a(36);
     }
 
-    final static void d() {
+    final static void d(int param0) {
         u.field_b.j(1);
         if (!(pc.field_b != null)) {
             pc.field_b = new lb(u.field_b, v.field_a);
@@ -505,8 +505,7 @@ final class ql extends af {
     ql(ql param0, boolean param1) {
         this();
         try {
-            int discarded$0 = 30089;
-            param0.a((ql) this, param1);
+            param0.a((ql) this, param1, 30089);
         } catch (RuntimeException runtimeException) {
             throw fc.a((Throwable) (Object) runtimeException, "ql.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

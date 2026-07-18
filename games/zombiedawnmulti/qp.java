@@ -12,7 +12,7 @@ final class qp extends un {
     static ja[] field_u;
     static ef field_w;
 
-    public static void h() {
+    public static void h(int param0) {
         field_s = null;
         field_r = null;
         field_u = null;

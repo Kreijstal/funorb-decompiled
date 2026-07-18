@@ -102,7 +102,7 @@ final class ki extends rl {
         super(param0);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_x = null;
         field_s = null;
         field_v = null;
@@ -190,7 +190,7 @@ final class ki extends rl {
         return stackIn_6_0;
     }
 
-    final static hg e() {
+    final static hg e(byte param0) {
         return (hg) (Object) new lj();
     }
 

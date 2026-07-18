@@ -139,7 +139,7 @@ final class be {
         }
     }
 
-    private final void a() throws IOException {
+    private final void a(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -306,8 +306,7 @@ final class be {
                 } else {
                   if (param2 > 0) {
                     L6: {
-                      int discarded$2 = -29960;
-                      this.a();
+                      this.a(-29960);
                       var9_int = param2;
                       if (((be) this).field_c >= var9_int) {
                         break L6;
@@ -347,9 +346,9 @@ final class be {
                             break L8;
                           } else {
                             param2--;
-                            int incrementValue$3 = param0;
+                            int incrementValue$1 = param0;
                             param0++;
-                            param1[incrementValue$3] = (byte) 0;
+                            param1[incrementValue$1] = (byte) 0;
                             ((be) this).field_h = ((be) this).field_h + 1L;
                             continue L10;
                           }

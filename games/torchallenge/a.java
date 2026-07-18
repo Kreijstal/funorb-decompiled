@@ -8,7 +8,7 @@ final class a {
     static String field_b;
     static int[][][][] field_d;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_e = null;
         field_d = null;

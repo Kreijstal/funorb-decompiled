@@ -28,7 +28,7 @@ final class nk {
         return ue.field_e;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_h = null;
     }

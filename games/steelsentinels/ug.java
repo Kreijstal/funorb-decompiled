@@ -18,11 +18,11 @@ abstract class ug extends lh implements lm {
     final static void a(int param0, boolean param1, int param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
-        na var4_ref = null;
         gh var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
+        na var9 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = SteelSentinels.field_G;
         try {
@@ -54,7 +54,7 @@ abstract class ug extends lh implements lm {
                   break L3;
                 } else {
                   if (fj.field_e) {
-                    boolean discarded$2 = ve.field_b.a((byte) 108, param1, qc.field_V.field_cb, qc.field_V.field_Rb);
+                    boolean discarded$1 = ve.field_b.a((byte) 108, param1, qc.field_V.field_cb, qc.field_V.field_Rb);
                     break L3;
                   } else {
                     ve.field_b = null;
@@ -74,12 +74,11 @@ abstract class ug extends lh implements lm {
                     }
                   }
                   L6: {
-                    var4_ref = ea.a(param3, da.field_g, 85, db.field_b);
-                    if (var4_ref == null) {
+                    var9 = ea.a(param3, da.field_g, 85, db.field_b);
+                    if (var9 == null) {
                       break L6;
                     } else {
-                      int discarded$3 = -1;
-                      ph.a(var4_ref);
+                      ph.a(var9, -1);
                       break L6;
                     }
                   }
@@ -222,7 +221,7 @@ abstract class ug extends lh implements lm {
         return stackIn_8_0 != 0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_O = null;
         field_N = null;
         field_L = null;

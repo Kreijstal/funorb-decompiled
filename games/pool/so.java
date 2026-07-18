@@ -977,8 +977,7 @@ final class so {
             var13 = new int[]{var9, var9, var10, var10, var9, var9, var10, var10, var9, var9, var10, var10, var9, var9, var10, var10, var9, var10, var9, var10, var9, var10, var9, var10};
             var14 = new int[]{6697779, 6710886, 6710886, 6710886, 3368499, 6710886, 6710886, 6710886, 3355494, 6710886, 6710886, 6710886};
             hd.a(24, 0, true, var11, var13, var12, param2);
-            int discarded$2 = 56;
-            qg.a(var13, 0, param0, var12, 24, var11);
+            qg.a(var13, 0, param0, var12, 24, var11, (byte) 56);
             var15 = 0;
             L2: while (true) {
               if (var15 >= 24) {
@@ -994,7 +993,7 @@ final class so {
                       } else {
                         L4: {
                           var18 = null;
-                          byte discarded$3 = ic.a(var12, var15, var11, (int[]) null, var13, 4);
+                          byte discarded$1 = ic.a(var12, var15, var11, (int[]) null, var13, 4);
                           if (var13[var15] != 0) {
                             break L4;
                           } else {

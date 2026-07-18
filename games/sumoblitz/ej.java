@@ -129,8 +129,7 @@ final class ej extends rq {
                           var6 = su.a(35633, param0, param1.a("environment_mapped_water_v", "gl", -1), -124);
                           var4_ref = var6;
                           var5 = su.a(35632, param0, param1.a("environment_mapped_water_f", "gl", -1), -115);
-                          int discarded$1 = 109;
-                          ((ej) this).field_j = ht.a(new qj[2], param0);
+                          ((ej) this).field_j = ht.a(new qj[2], param0, (byte) 109);
                           stackOut_5_0 = this;
                           stackIn_8_0 = stackOut_5_0;
                           stackIn_6_0 = stackOut_5_0;

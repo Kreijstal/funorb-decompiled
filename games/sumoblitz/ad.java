@@ -8,7 +8,7 @@ final class ad extends za {
     static int[] field_q;
     static mm field_p;
 
-    final static void c() {
+    final static void c(byte param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -139,7 +139,7 @@ final class ad extends za {
         }
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2) {
+    final static byte[] a(byte[] param0, int param1, int param2, byte param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -203,13 +203,13 @@ final class ad extends za {
         return stackIn_1_0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_q = null;
         field_p = null;
         field_n = null;
     }
 
-    final static ne e() {
+    final static ne e(int param0) {
         ne var1 = new ne(vf.field_d, li.field_u, er.field_h[0], av.field_C[0], vg.field_k[0], we.field_B[0], ag.field_d[0], iv.field_l);
         tl.a((byte) -20);
         return var1;
@@ -266,8 +266,7 @@ final class ad extends za {
                 break L0;
               }
             }
-            int discarded$2 = 14296;
-            hh.a(true, bp.g(), bf.field_a, var4 != 0, dn.b(102));
+            hh.a(true, bp.g(14296), bf.field_a, var4 != 0, dn.b(102));
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

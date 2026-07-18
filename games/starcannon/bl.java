@@ -6,7 +6,7 @@ final class bl {
     static String field_c;
     static jc field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
     }

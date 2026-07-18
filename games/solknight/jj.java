@@ -404,7 +404,7 @@ class jj extends ma {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_I = null;
         field_x = null;
         field_Y = null;

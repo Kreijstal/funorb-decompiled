@@ -66,8 +66,7 @@ final class jf extends en {
           L0: {
             if (param3 == 41) {
               if (kk.a(param1, 1, param2, param0)) {
-                int discarded$2 = 86;
-                stackOut_6_0 = ff.a();
+                stackOut_6_0 = ff.a((byte) 86);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {

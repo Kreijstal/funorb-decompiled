@@ -7,7 +7,7 @@ final class dl {
     static nf[] field_d;
     static String[] field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -442,7 +442,7 @@ final class dl {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) tf.field_p);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) tf.field_p);

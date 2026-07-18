@@ -28,8 +28,7 @@ abstract class lr extends rg {
     private static int field_E;
 
     final int a(char param0) {
-        int discarded$0 = 1;
-        return ((lr) this).field_B[vi.a(param0) & 255];
+        return ((lr) this).field_B[vi.a(param0, true) & 255];
     }
 
     final static String a(lr param0, String param1, int param2) {
@@ -277,7 +276,7 @@ abstract class lr extends rg {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$6 = cj.a(' ', 0, -2790, field_z);
+          StringBuilder discarded$5 = cj.a(' ', 0, -2790, field_z);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -313,9 +312,9 @@ abstract class lr extends rg {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$7 = field_z.append('<');
-                        StringBuilder discarded$8 = field_z.append(var15);
-                        StringBuilder discarded$9 = field_z.append('>');
+                        StringBuilder discarded$6 = field_z.append('<');
+                        StringBuilder discarded$7 = field_z.append(var15);
+                        StringBuilder discarded$8 = field_z.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -502,9 +501,8 @@ abstract class lr extends rg {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$10 = field_z.append((char) var14);
-                        int discarded$11 = 1;
-                        var14 = (char)(vi.a((char) var14) & 255);
+                        StringBuilder discarded$9 = field_z.append((char) var14);
+                        var14 = (char)(vi.a((char) var14, true) & 255);
                         var4 = var4 + ((lr) this).field_B[var14];
                         if (((lr) this).field_N == null) {
                           break L15;
@@ -692,8 +690,7 @@ abstract class lr extends rg {
               }
               if (var4 == -1) {
                 L2: {
-                  int discarded$1 = 1;
-                  var8 = (char)(vi.a((char) var8) & 255);
+                  var8 = (char)(vi.a((char) var8, true) & 255);
                   var9 = ((lr) this).field_H[var8];
                   var10 = ((lr) this).field_B[var8];
                   var11 = ((lr) this).field_A[var8];
@@ -878,8 +875,7 @@ abstract class lr extends rg {
                 }
                 if (var2 == -1) {
                   L4: {
-                    int discarded$1 = 1;
-                    var7 = (char)(vi.a((char) var7) & 255);
+                    var7 = (char)(vi.a((char) var7, true) & 255);
                     var4 = var4 + ((lr) this).field_B[var7];
                     if (((lr) this).field_N == null) {
                       break L4;
@@ -1040,8 +1036,7 @@ abstract class lr extends rg {
               }
               if (var4 == -1) {
                 L6: {
-                  int discarded$1 = 1;
-                  var8 = (char)(vi.a((char) var8) & 255);
+                  var8 = (char)(vi.a((char) var8, true) & 255);
                   if (((lr) this).field_N == null) {
                     break L6;
                   } else {
@@ -1384,8 +1379,7 @@ abstract class lr extends rg {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    int discarded$4 = 30377;
-                                    field_M = el.a(16, var7);
+                                    field_M = el.a(16, var7, 30377);
                                     break L1;
                                   }
                                 } else {
@@ -1398,8 +1392,7 @@ abstract class lr extends rg {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              int discarded$5 = 30377;
-                              field_F = el.a(16, var6);
+                              field_F = el.a(16, var6, 30377);
                               break L1;
                             }
                           } else {
@@ -1412,8 +1405,7 @@ abstract class lr extends rg {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        int discarded$6 = 30377;
-                        field_J = el.a(16, var5);
+                        field_J = el.a(16, var5, 30377);
                         break L1;
                       }
                     } else {
@@ -1431,8 +1423,7 @@ abstract class lr extends rg {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                int discarded$7 = 30377;
-                field_I = el.a(16, var3);
+                field_I = el.a(16, var3, 30377);
                 break L1;
               }
             }

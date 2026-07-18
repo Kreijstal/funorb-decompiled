@@ -13,7 +13,7 @@ final class qr {
     static String field_g;
     static hd[] field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -67,7 +67,7 @@ final class qr {
         }
     }
 
-    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1) {
+    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, int param2) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_10_0 = null;
@@ -113,6 +113,8 @@ final class qr {
               } else {
                 if (!wk.field_b.equals((Object) (Object) param0.getParameter("settings"))) {
                   var3 = (Object) (Object) wk.field_b;
+                  var4 = var3;
+                  var4 = var3;
                   break L1;
                 } else {
                   break L1;
@@ -131,8 +133,7 @@ final class qr {
                 }
               }
             }
-            int discarded$2 = 0;
-            stackOut_9_0 = rt.a(param1, (String) var4, -1, (String) var3);
+            stackOut_9_0 = rt.a(param1, (String) var4, -1, (String) var3, false);
             stackIn_10_0 = stackOut_9_0;
             break L0;
           }

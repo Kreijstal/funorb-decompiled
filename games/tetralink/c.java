@@ -564,7 +564,7 @@ final class c {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_o = null;
         field_m = null;
@@ -669,11 +669,9 @@ final class c {
         int stackOut_7_4 = 0;
         L0: {
           var6 = TetraLink.field_J;
-          int discarded$6 = 0;
-          nl.a(bl.field_Lb, (byte) -127);
+          nl.a(bl.field_Lb, (byte) -127, 0);
           if (!wk.field_i.field_n) {
-            int discarded$7 = 0;
-            nl.a(rh.field_M, (byte) -122);
+            nl.a(rh.field_M, (byte) -122, 0);
             break L0;
           } else {
             break L0;
@@ -717,9 +715,7 @@ final class c {
             L2: {
               ((cl) (Object) stackIn_30_0).a(stackIn_30_1 != 0, stackIn_30_2, stackIn_30_3);
               if (param3 != -1) {
-                int discarded$8 = 0;
-                int discarded$9 = 0;
-                pn.a(param3, 256, 16769381);
+                pn.a(param3, 256, 16769381, false, false);
                 break L2;
               } else {
                 break L2;
@@ -729,9 +725,7 @@ final class c {
               rh.field_M.c();
               kk.field_X[param4].a(false, param0, 1);
               if (-1 != param3) {
-                int discarded$10 = 0;
-                int discarded$11 = 0;
-                pn.a(param3, 256, 16769381);
+                pn.a(param3, 256, 16769381, false, false);
                 fh.a(true);
                 return;
               } else {

@@ -8,7 +8,7 @@ final class en {
     static String field_c;
     static String field_b;
 
-    final static void a() {
+    final static void a(boolean param0) {
         mg.field_N = new nj();
     }
 

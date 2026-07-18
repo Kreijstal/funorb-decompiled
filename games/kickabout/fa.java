@@ -59,8 +59,7 @@ final class fa extends gn {
         try {
           L0: {
             if (cu.a(param2, param3, param0, 122)) {
-              int discarded$2 = 78;
-              stackOut_5_0 = ub.i();
+              stackOut_5_0 = ub.i((byte) 78);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

@@ -37,7 +37,7 @@ final class rk extends wd {
         }
     }
 
-    final static void r() {
+    final static void r(int param0) {
         RuntimeException var1 = null;
         ra[] var2 = null;
         int var3 = 0;
@@ -171,7 +171,7 @@ final class rk extends wd {
         }
     }
 
-    public static void t() {
+    public static void t(int param0) {
         field_bb = null;
         field_Z = null;
         field_T = null;
@@ -206,7 +206,7 @@ final class rk extends wd {
         }
     }
 
-    final static int s() {
+    final static int s(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -223,8 +223,7 @@ final class rk extends wd {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              int discarded$4 = 127;
-              if (!mh.e()) {
+              if (!mh.e(127)) {
                 L2: {
                   vi.field_f.a(-123, mg.b(fg.field_a, 0, kf.field_b), mg.b(wg.field_e, 0, db.field_X));
                   if (vi.field_f.d(0)) {
@@ -245,13 +244,11 @@ final class rk extends wd {
                       } else {
                         var3 = ac.field_c[vi.field_f.field_e];
                         if (var3 == 2) {
-                          int discarded$5 = -2532;
-                          vh.h();
+                          vh.h(-2532);
                           break L3;
                         } else {
                           if (var3 == 5) {
-                            int discarded$6 = -2532;
-                            vh.h();
+                            vh.h(-2532);
                             break L3;
                           } else {
                             break L3;
@@ -266,8 +263,7 @@ final class rk extends wd {
                     if (2 == di.field_h) {
                       break L3;
                     } else {
-                      int discarded$7 = -2532;
-                      vh.h();
+                      vh.h(-2532);
                       break L3;
                     }
                   }

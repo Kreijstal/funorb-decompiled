@@ -12,7 +12,7 @@ final class ie {
     static int[][] field_a;
     static jg field_f;
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0, int param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -529,7 +529,7 @@ final class ie {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_c = null;
         field_b = null;
@@ -539,14 +539,14 @@ final class ie {
         field_d = null;
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void a(int param0, boolean param1, int param2, int param3) {
         rg.a(tk.field_i, kj.field_j, 180, param1, param2 + 21166, ad.field_x, 320);
         if (param2 != -17156) {
             field_b = null;
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0, boolean param1, int param2, int param3) {
         vh stackIn_4_0 = null;
         vh stackIn_5_0 = null;
         vh stackIn_6_0 = null;
@@ -776,9 +776,7 @@ final class ie {
                 }
               }
             }
-            int discarded$4 = 100;
-            int discarded$5 = 11;
-            rb.c();
+            rb.c(11, 100);
             break L8;
           }
         }
@@ -798,9 +796,7 @@ final class ie {
                 }
               }
             }
-            int discarded$6 = 0;
-            int discarded$7 = 0;
-            je.a(11, cr.field_l, true, tq.field_u);
+            je.a(11, cr.field_l, true, tq.field_u, 0, false);
             break L11;
           }
         }

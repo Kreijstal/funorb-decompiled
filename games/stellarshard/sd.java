@@ -62,8 +62,7 @@ final class sd {
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
               } else {
-                int discarded$2 = 10287;
-                var3 = qj.a('.', param1);
+                var3 = qj.a('.', param1, 10287);
                 if (var3.length >= 2) {
                   L1: {
                     var4 = var3;
@@ -135,15 +134,14 @@ final class sd {
         return stackIn_22_0;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((sd) this).field_h = ((sd) this).field_h + ((sd) this).field_g;
         ((sd) this).field_f = ((sd) this).field_f + ((sd) this).field_a;
     }
 
     final sd a(int param0) {
         L0: {
-          int discarded$1 = 107;
-          this.a();
+          this.a((byte) 107);
           ((sd) this).field_a = ((sd) this).field_a - 0.1;
           if (((sd) this).field_h >= 64.0) {
             break L0;

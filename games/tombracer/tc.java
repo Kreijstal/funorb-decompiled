@@ -126,7 +126,7 @@ class tc extends lu {
         return stackIn_8_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_f = null;
     }
@@ -143,7 +143,7 @@ class tc extends lu {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         if (null == qda.field_b) {
           if (hka.field_b != null) {
             L0: {
@@ -157,8 +157,7 @@ class tc extends lu {
                 break L0;
               }
             }
-            int discarded$4 = -91;
-            hs.a(param0);
+            hs.a(param0, (byte) -91);
             return;
           } else {
             L1: {
@@ -171,8 +170,7 @@ class tc extends lu {
                 break L1;
               }
             }
-            int discarded$5 = -91;
-            hs.a(param0);
+            hs.a(param0, (byte) -91);
             return;
           }
         } else {
@@ -188,8 +186,7 @@ class tc extends lu {
                 break L2;
               }
             }
-            int discarded$6 = -91;
-            hs.a(param0);
+            hs.a(param0, (byte) -91);
             return;
           } else {
             L3: {
@@ -203,8 +200,7 @@ class tc extends lu {
                 break L3;
               }
             }
-            int discarded$7 = -91;
-            hs.a(param0);
+            hs.a(param0, (byte) -91);
             return;
           }
         }

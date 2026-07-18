@@ -37,9 +37,9 @@ final class au extends aa {
                 break L0;
               } else {
                 if (ub.field_c == nn.field_c) {
-                  int fieldTemp$27 = lpa.field_o;
+                  int fieldTemp$18 = lpa.field_o;
                   lpa.field_o = lpa.field_o - 1;
-                  if (fieldTemp$27 > 0) {
+                  if (fieldTemp$18 > 0) {
                     break L0;
                   } else {
                     ub.field_c = ub.field_h;
@@ -50,15 +50,14 @@ final class au extends aa {
                 }
               }
             } else {
-              int fieldTemp$28 = lpa.field_o;
+              int fieldTemp$19 = lpa.field_o;
               lpa.field_o = lpa.field_o + 1;
-              if (fieldTemp$28 < 16) {
+              if (fieldTemp$19 < 16) {
                 break L0;
               } else {
                 L3: {
                   if (!dd.field_a) {
-                    int discarded$29 = 1;
-                    tta.e();
+                    tta.e(true);
                     break L3;
                   } else {
                     pg.b(param0);
@@ -106,8 +105,7 @@ final class au extends aa {
                 if (var2 == 1) {
                   var13 = (cga) (Object) aba.field_a.f(-80);
                   if (var13 == null) {
-                    int discarded$6 = 60;
-                    dea.a();
+                    dea.a(60);
                     return;
                   } else {
                     var13.p(35);
@@ -116,27 +114,23 @@ final class au extends aa {
                 } else {
                   if (var2 != 2) {
                     ssa.a("A1: " + kk.a(32), (byte) 116, (Throwable) null);
-                    int discarded$7 = 60;
-                    dea.a();
+                    dea.a(60);
                     break L1;
                   } else {
                     var15 = (bna) (Object) tca.field_N.f(-80);
                     if (var15 != null) {
-                      int discarded$8 = 1;
-                      var15.field_f = fqa.e();
+                      var15.field_f = fqa.e(true);
                       var15.field_g = true;
                       var15.p(42);
                       break L1;
                     } else {
-                      int discarded$9 = 60;
-                      dea.a();
+                      dea.a(60);
                       return;
                     }
                   }
                 }
               } else {
-                int discarded$10 = 1;
-                var11 = fqa.e();
+                var11 = fqa.e(true);
                 var3 = var11;
                 var10 = var11;
                 var4 = var10;
@@ -152,8 +146,7 @@ final class au extends aa {
                       var12.p(83);
                       break L1;
                     } else {
-                      int discarded$11 = 60;
-                      dea.a();
+                      dea.a(60);
                       return;
                     }
                   } else {

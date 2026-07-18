@@ -447,7 +447,7 @@ final class un {
         return stackIn_13_0;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean a(int param0, int param1, int param2, byte param3) {
         L0: {
           if (0 > param1) {
             break L0;
@@ -514,7 +514,7 @@ final class un {
                   break L1;
                 } else {
                   var9 = null;
-                  vg discarded$20 = un.a(36, (uf) null);
+                  vg discarded$2 = un.a(36, (uf) null);
                   break L1;
                 }
               }
@@ -522,33 +522,21 @@ final class un {
                 var4 = wg.a(param1, (byte) -112) ? 1 : 0;
                 var5 = new vg();
                 var5.field_l = (short)param1.a(16, (byte) 103);
-                int discarded$21 = 16;
-                var5.field_J = v.a(param1, true, var5.field_J);
-                int discarded$22 = 16;
-                var5.field_o = v.a(param1, true, var5.field_o);
-                int discarded$23 = 16;
-                var5.field_e = v.a(param1, true, var5.field_e);
+                var5.field_J = v.a(param1, true, var5.field_J, 16);
+                var5.field_o = v.a(param1, true, var5.field_o, 16);
+                var5.field_e = v.a(param1, true, var5.field_e, 16);
                 var5.field_L = (short)param1.a(16, (byte) 55);
-                int discarded$24 = 16;
-                var5.field_M = v.a(param1, true, var5.field_M);
-                int discarded$25 = 16;
-                var5.field_c = v.a(param1, true, var5.field_c);
-                int discarded$26 = 16;
-                var5.field_A = v.a(param1, true, var5.field_A);
+                var5.field_M = v.a(param1, true, var5.field_M, 16);
+                var5.field_c = v.a(param1, true, var5.field_c, 16);
+                var5.field_A = v.a(param1, true, var5.field_A, 16);
                 if (var3 != 0) {
                   var5.field_D = (short)param1.a(16, (byte) 90);
-                  int discarded$27 = 16;
-                  var5.field_k = v.a(param1, true, var5.field_k);
-                  int discarded$28 = 16;
-                  var5.field_u = v.a(param1, true, var5.field_u);
-                  int discarded$29 = 16;
-                  var5.field_O = v.a(param1, true, var5.field_O);
-                  int discarded$30 = 16;
-                  var5.field_F = v.a(param1, true, var5.field_F);
-                  int discarded$31 = 16;
-                  var5.field_t = v.a(param1, true, var5.field_t);
-                  int discarded$32 = 16;
-                  var5.field_r = v.a(param1, true, var5.field_r);
+                  var5.field_k = v.a(param1, true, var5.field_k, 16);
+                  var5.field_u = v.a(param1, true, var5.field_u, 16);
+                  var5.field_O = v.a(param1, true, var5.field_O, 16);
+                  var5.field_F = v.a(param1, true, var5.field_F, 16);
+                  var5.field_t = v.a(param1, true, var5.field_t, 16);
+                  var5.field_r = v.a(param1, true, var5.field_r, 16);
                   break L2;
                 } else {
                   break L2;
@@ -556,17 +544,12 @@ final class un {
               }
               L3: {
                 if (var4 != 0) {
-                  int discarded$33 = param1.a(16, (byte) 125);
-                  int discarded$34 = 16;
-                  var5.field_y = v.a(param1, true, var5.field_y);
-                  int discarded$35 = 16;
-                  var5.field_z = v.a(param1, true, var5.field_z);
-                  int discarded$36 = 16;
-                  var5.field_C = v.a(param1, true, var5.field_C);
-                  int discarded$37 = 16;
-                  var5.field_N = v.a(param1, true, var5.field_N);
-                  int discarded$38 = 16;
-                  var5.field_P = v.a(param1, true, var5.field_P);
+                  int discarded$3 = param1.a(16, (byte) 125);
+                  var5.field_y = v.a(param1, true, var5.field_y, 16);
+                  var5.field_z = v.a(param1, true, var5.field_z, 16);
+                  var5.field_C = v.a(param1, true, var5.field_C, 16);
+                  var5.field_N = v.a(param1, true, var5.field_N, 16);
+                  var5.field_P = v.a(param1, true, var5.field_P, 16);
                   break L3;
                 } else {
                   break L3;
@@ -574,8 +557,7 @@ final class un {
               }
               L4: {
                 if (wg.a(param1, (byte) -123)) {
-                  int discarded$39 = 16;
-                  var5.field_j = v.a(param1, true, var5.field_j);
+                  var5.field_j = v.a(param1, true, var5.field_j, 16);
                   break L4;
                 } else {
                   break L4;
@@ -650,7 +632,7 @@ final class un {
         return stackIn_26_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;

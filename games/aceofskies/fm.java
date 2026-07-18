@@ -152,14 +152,12 @@ final class fm extends sk {
                 return;
             }
             nk.field_g.a(116, (wf) (Object) new iq(-1));
-            int discarded$0 = 1;
-            si.c();
+            si.c(true);
             return;
         }
         if (param2 == 6) {
             nk.field_g.a(116, (wf) (Object) new iq(-1));
-            int discarded$1 = 1;
-            si.c();
+            si.c(true);
             return;
         }
     }

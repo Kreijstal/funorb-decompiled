@@ -143,7 +143,7 @@ class pe extends ub implements bg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_z = null;
         field_y = null;
         field_C = null;
@@ -1140,7 +1140,7 @@ class pe extends ub implements bg {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         int var4 = wizardrun.field_H;
         pf var2 = new pf(((pe) this).field_A);
         ub var3 = (ub) (Object) var2.a((byte) 31);
@@ -1373,8 +1373,7 @@ class pe extends ub implements bg {
         if (param0 < 108) {
             boolean discarded$0 = ((pe) this).d((byte) 109);
         }
-        int discarded$1 = 1;
-        this.f();
+        this.f(1);
     }
 
     final int e(byte param0) {

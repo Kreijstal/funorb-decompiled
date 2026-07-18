@@ -31,7 +31,7 @@ final class ok extends ci {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_Ib = null;
         field_Lb = null;
         field_Eb = null;

@@ -16,7 +16,7 @@ final class gg extends nm {
     static String field_m;
     static jp[] field_p;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_o = null;
         field_t = null;

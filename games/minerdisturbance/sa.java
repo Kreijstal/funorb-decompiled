@@ -20,7 +20,7 @@ final class sa extends pi {
         return 255 & param0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_t = null;
         field_r = null;
     }

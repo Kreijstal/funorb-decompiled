@@ -87,7 +87,7 @@ final class gq extends go {
         super(param0, param1);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_l = null;
         field_m = null;
     }

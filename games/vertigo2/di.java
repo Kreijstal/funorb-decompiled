@@ -7,7 +7,7 @@ final class di extends ji {
     static String field_y;
     private int field_z;
 
-    final static jp a(mi param0) {
+    final static jp a(mi param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -42,10 +42,8 @@ final class di extends ji {
               throw new IllegalStateException("" + var2_int);
             } else {
               L1: {
-                int discarded$5 = -31980;
-                var3 = id.a(param0) ? 1 : 0;
-                int discarded$6 = -31980;
-                var4 = id.a(param0) ? 1 : 0;
+                var3 = id.a(param0, -31980) ? 1 : 0;
+                var4 = id.a(param0, -31980) ? 1 : 0;
                 var5 = new jp();
                 var5.field_F = (short)param0.c((byte) -96, 16);
                 var5.field_I = ee.a(param0, -126, 16, var5.field_I);
@@ -72,7 +70,7 @@ final class di extends ji {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$7 = param0.c((byte) -94, 16);
+                  int discarded$1 = param0.c((byte) -94, 16);
                   var5.field_N = ee.a(param0, -65, 16, var5.field_N);
                   var5.field_d = ee.a(param0, -55, 16, var5.field_d);
                   var5.field_Q = ee.a(param0, -117, 16, var5.field_Q);
@@ -82,8 +80,7 @@ final class di extends ji {
                 }
               }
               L3: {
-                int discarded$8 = -31980;
-                if (!id.a(param0)) {
+                if (!id.a(param0, -31980)) {
                   break L3;
                 } else {
                   var5.field_J = ee.a(param0, -42, 16, var5.field_J);
@@ -91,8 +88,7 @@ final class di extends ji {
                 }
               }
               L4: {
-                int discarded$9 = -31980;
-                if (!id.a(param0)) {
+                if (!id.a(param0, -31980)) {
                   break L4;
                 } else {
                   var5.field_x = oe.a(12635, var5.field_x, 16, param0);

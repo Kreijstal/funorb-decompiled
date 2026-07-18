@@ -80,8 +80,7 @@ final class lk extends gn {
             }
             stackIn_3_0.field_n = stackIn_3_1;
             param3.field_j = 0;
-            int discarded$2 = 27;
-            param3.field_z = -hf.a(param0, param1);
+            param3.field_z = -hf.a(param0, param1, 27);
             var7 = param1.field_P[param0][-param3.field_z];
             var5 = var7.field_w;
             var6 = var7.field_M;
@@ -176,7 +175,7 @@ final class lk extends gn {
         RuntimeException var3_ref = null;
         int var3_int = 0;
         int var4 = 0;
-        Object var5 = null;
+        lk var5 = null;
         int var6 = 0;
         li[] var7 = null;
         li[] var8 = null;
@@ -224,7 +223,6 @@ final class lk extends gn {
         RuntimeException stackOut_45_0 = null;
         StringBuilder stackOut_45_1 = null;
         String stackOut_45_2 = null;
-        var5 = null;
         var6 = Kickabout.field_G;
         try {
           if (((lk) this).field_k == vu.field_Ab) {
@@ -249,38 +247,38 @@ final class lk extends gn {
             var7 = new li[((tf) (Object) stackIn_6_0).a(stackIn_6_1 != 0)];
             var8 = var7;
             var4 = 0;
-            var5 = (Object) (Object) (lk) (Object) ((lk) this).field_j.g(24009);
+            var5 = (lk) (Object) ((lk) this).field_j.g(24009);
             L1: while (true) {
               if (var5 == null) {
-                stackOut_9_0 = lo.a(var8, false, param1, ((lk) var5).field_h);
+                stackOut_9_0 = lo.a(var8, false, param1, ((lk) this).field_h);
                 stackIn_10_0 = stackOut_9_0;
                 return stackIn_10_0;
               } else {
                 int incrementValue$1 = var4;
                 var4++;
-                var7[incrementValue$1] = ((lk) var5).a(true, param1);
-                var5 = (Object) (Object) (lk) (Object) ((lk) var5).field_j.c(33);
+                var7[incrementValue$1] = var5.a(true, param1);
+                var5 = (lk) (Object) ((lk) this).field_j.c(33);
                 continue L1;
               }
             }
           } else {
-            if (((lk) var5).field_k != pv.field_H) {
-              if (((lk) var5).field_k == ra.field_N) {
-                stackOut_26_0 = new li(((lk) var5).field_h.equals((Object) (Object) "true"));
+            if (((lk) this).field_k != pv.field_H) {
+              if (((lk) this).field_k == ra.field_N) {
+                stackOut_26_0 = new li(((lk) this).field_h.equals((Object) (Object) "true"));
                 stackIn_27_0 = stackOut_26_0;
                 return stackIn_27_0;
               } else {
                 if (param0) {
-                  if (((lk) var5).field_k != v.field_d) {
-                    if (rb.field_Mb == ((lk) var5).field_k) {
-                      stackOut_39_0 = new li((Object) (Object) ((lk) var5).field_h.substring(1, -1 + ((lk) var5).field_h.length()));
+                  if (((lk) this).field_k != v.field_d) {
+                    if (rb.field_Mb == ((lk) this).field_k) {
+                      stackOut_39_0 = new li((Object) (Object) ((lk) this).field_h.substring(1, -1 + ((lk) this).field_h.length()));
                       stackIn_40_0 = stackOut_39_0;
                       return stackIn_40_0;
                     } else {
                       throw new IllegalArgumentException();
                     }
                   } else {
-                    var9 = ((lk) var5).field_h.substring(1, ((lk) var5).field_h.length() - 1);
+                    var9 = ((lk) this).field_h.substring(1, ((lk) this).field_h.length() - 1);
                     if (var9.length() != 1) {
                       throw new dw("Invalid char value: " + var9);
                     } else {
@@ -296,24 +294,24 @@ final class lk extends gn {
                 }
               }
             } else {
-              var3_int = Character.toLowerCase(((lk) var5).field_h.charAt(((lk) var5).field_h.length() - 1));
+              var3_int = Character.toLowerCase(((lk) this).field_h.charAt(((lk) this).field_h.length() - 1));
               if (var3_int == 102) {
-                stackOut_14_0 = new li(Float.valueOf(((lk) var5).field_h).floatValue());
+                stackOut_14_0 = new li(Float.valueOf(((lk) this).field_h).floatValue());
                 stackIn_15_0 = stackOut_14_0;
                 return stackIn_15_0;
               } else {
                 if (108 != var3_int) {
-                  if (-1 == ((lk) var5).field_h.indexOf('.')) {
-                    stackOut_22_0 = new li(Integer.parseInt(((lk) var5).field_h));
+                  if (-1 == ((lk) this).field_h.indexOf('.')) {
+                    stackOut_22_0 = new li(Integer.parseInt(((lk) this).field_h));
                     stackIn_23_0 = stackOut_22_0;
                     return stackIn_23_0;
                   } else {
-                    stackOut_20_0 = new li(Double.valueOf(((lk) var5).field_h).doubleValue());
+                    stackOut_20_0 = new li(Double.valueOf(((lk) this).field_h).doubleValue());
                     stackIn_21_0 = stackOut_20_0;
                     return stackIn_21_0;
                   }
                 } else {
-                  stackOut_17_0 = new li(Long.parseLong(((lk) var5).field_h.substring(0, -1 + ((lk) var5).field_h.length())));
+                  stackOut_17_0 = new li(Long.parseLong(((lk) this).field_h.substring(0, -1 + ((lk) this).field_h.length())));
                   stackIn_18_0 = stackOut_17_0;
                   return stackIn_18_0;
                 }
@@ -323,7 +321,7 @@ final class lk extends gn {
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (NumberFormatException) (Object) decompiledCaughtException;
-          throw new dw("NumberFormatException on: " + ((lk) var5).field_h);
+          throw new dw("NumberFormatException on: " + ((lk) this).field_h);
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           L2: {

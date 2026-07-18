@@ -35,7 +35,7 @@ final class ii extends q {
         }
     }
 
-    final static void a(java.awt.Canvas param0, boolean param1) {
+    final static void a(java.awt.Canvas param0, boolean param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -69,8 +69,7 @@ final class ii extends q {
                   break L1;
                 }
               }
-              int discarded$2 = 49;
-              sc.a(kg.a(), rd.field_A, var3_int != 0, (byte) 21, ro.b(-126));
+              sc.a(kg.a((byte) 49), rd.field_A, var3_int != 0, (byte) 21, ro.b(-126));
               break L0;
             } else {
               if (!pl.b(-109)) {

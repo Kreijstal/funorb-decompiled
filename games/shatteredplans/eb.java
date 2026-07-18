@@ -9,7 +9,7 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
     static int[] field_a;
     volatile boolean field_c;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_f = null;
         field_e = null;
@@ -161,7 +161,7 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

@@ -144,7 +144,7 @@ final class j {
         ((j) this).field_g = param1 ? true : false;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -199,7 +199,7 @@ final class j {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_f = null;
         field_d = null;

@@ -10,7 +10,7 @@ abstract class vd {
 
     abstract void a(float param0, int[] param1, int param2, int[] param3, byte param4);
 
-    final static int[] c() {
+    final static int[] c(int param0) {
         return new int[8];
     }
 
@@ -81,7 +81,7 @@ abstract class vd {
         return stackIn_6_0;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.setFocusTraversalKeysEnabled(false);
             param0.addKeyListener((java.awt.event.KeyListener) (Object) tf.field_n);

@@ -8,7 +8,7 @@ final class ol extends hk {
     private int field_E;
     static String field_I;
 
-    final static void a(int param0, p param1) {
+    final static void a(int param0, p param1, int param2) {
         pk var5 = fj.field_q;
         var5.a(4, (byte) -88);
         var5.field_f = var5.field_f + 1;
@@ -28,7 +28,7 @@ final class ol extends hk {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_I = null;
     }
 

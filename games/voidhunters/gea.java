@@ -190,8 +190,7 @@ abstract class gea extends iw {
             return;
           } else {
             ((gea) this).c(((gea) this).field_K.field_h + 12, -1860440319, ((gea) this).field_K.field_f + (((gea) this).field_O + 12));
-            int discarded$2 = 71;
-            this.a(((gea) this).field_K);
+            this.a(((gea) this).field_K, (byte) 71);
             ((gea) this).field_L.field_v = 256;
             ((gea) this).field_N = null;
             super.e(param0);
@@ -286,8 +285,7 @@ abstract class gea extends iw {
         } else {
           ((gea) this).field_Q = 0;
           ((gea) this).field_N = kk.field_o;
-          int discarded$2 = 71;
-          this.a(((gea) this).field_K);
+          this.a(((gea) this).field_K, (byte) 71);
           ((gea) this).field_K = null;
           if (param0 != 15435) {
             ((gea) this).field_M = 66;
@@ -300,7 +298,7 @@ abstract class gea extends iw {
         }
     }
 
-    private final void a(shb param0) {
+    private final void a(shb param0, byte param1) {
         try {
             if (!(null == ((gea) this).field_L)) {
                 ((gea) this).field_L.b(-3846);
@@ -325,8 +323,7 @@ abstract class gea extends iw {
             ((gea) this).field_J = param3;
             ((gea) this).field_P = param3;
             ((gea) this).field_O = param2;
-            int discarded$0 = 71;
-            this.a(param1);
+            this.a(param1, (byte) 71);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "gea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

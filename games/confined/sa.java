@@ -764,7 +764,7 @@ abstract class sa extends ee {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         em.field_a = 20;
         gd.field_u = 4;
     }
@@ -843,8 +843,7 @@ abstract class sa extends ee {
     private static void $cfr$clinit() {
         field_W = "Others have tried#and failed.#If you succeed, your reward#will be#immeasurable.";
         field_V = new byte[65536];
-        int discarded$0 = -128;
-        lj.a(field_V, 0, 65536);
+        lj.a(field_V, 0, 65536, (byte) -128);
         field_R = false;
     }
 }

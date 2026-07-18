@@ -341,11 +341,9 @@ abstract class ah extends lm {
                   break L19;
                 }
               }
-              int discarded$2 = -77;
-              var10 = uc.a(var8_ref_aa);
+              var10 = uc.a(var8_ref_aa, -77);
               var11 = var10 + jl.b(var8_ref_aa.field_g);
-              int discarded$3 = 0;
-              var12 = lc.a(var8_ref_aa);
+              var12 = lc.a(var8_ref_aa, false);
               var8_ref_aa.field_q = new ak(0L, oi.field_e, var11);
               var8_ref_aa.field_q.field_y = ((16711423 & oi.field_e.field_y) >> 1) + (var12 - (var12 >> 1 & 8355711));
               var8_ref_aa.field_q.field_N = var12;
@@ -359,7 +357,7 @@ abstract class ah extends lm {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, byte param1) {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;

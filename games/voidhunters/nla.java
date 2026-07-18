@@ -339,8 +339,7 @@ public final class nla extends pf {
 
     final void a(jra param0, int param1, int param2, int param3) {
         int var5 = 31 % ((param3 - -4) / 32);
-        int discarded$0 = 1;
-        int discarded$1 = ((nla) this).field_Mc.DrawPrimitive(nla.a(param0), param1, param2);
+        int discarded$0 = ((nla) this).field_Mc.DrawPrimitive(nla.a(param0, 1), param1, param2);
     }
 
     final void a(int param0, jagdx.IDirect3DVertexShader param1) {
@@ -917,7 +916,7 @@ public final class nla extends pf {
         ((nla) this).field_Qc = false;
     }
 
-    private final static int a(jra param0) {
+    private final static int a(jra param0, int param1) {
         if (param0 == tu.field_b) {
           return 2;
         } else {
@@ -945,7 +944,7 @@ public final class nla extends pf {
         }
     }
 
-    private final boolean K() {
+    private final boolean K(int param0) {
         int var4 = 0;
         int var2 = ((nla) this).field_Mc.TestCooperativeLevel();
         if (var2 != 0) {
@@ -983,15 +982,14 @@ public final class nla extends pf {
 
     final void a(int param0, int param1) throws jkb {
         L0: {
-          int discarded$23 = ((nla) this).field_Mc.EndScene();
+          int discarded$19 = ((nla) this).field_Mc.EndScene();
           if (!((nla) this).field_Uc.a((byte) -72)) {
-            int fieldTemp$24 = ((nla) this).field_Gc + 1;
+            int fieldTemp$20 = ((nla) this).field_Gc + 1;
             ((nla) this).field_Gc = ((nla) this).field_Gc + 1;
-            if (fieldTemp$24 > 50) {
+            if (fieldTemp$20 > 50) {
               throw new jkb();
             } else {
-              int discarded$25 = 60;
-              boolean discarded$26 = this.K();
+              boolean discarded$21 = this.K(60);
               break L0;
             }
           } else {
@@ -999,13 +997,12 @@ public final class nla extends pf {
             if (!jagdx.hea.a(((nla) this).field_Uc.a(false, 0), (byte) 54)) {
               break L0;
             } else {
-              int discarded$27 = 60;
-              boolean discarded$28 = this.K();
+              boolean discarded$22 = this.K(60);
               break L0;
             }
           }
         }
-        int discarded$29 = ((nla) this).field_Mc.BeginScene();
+        int discarded$23 = ((nla) this).field_Mc.BeginScene();
     }
 
     final hdb a(boolean param0, int param1, int[][] param2, int param3) {

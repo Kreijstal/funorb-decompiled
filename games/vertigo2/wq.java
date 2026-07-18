@@ -49,7 +49,7 @@ final class wq extends oh {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_I = null;
         field_K = null;
         field_M = null;
@@ -57,7 +57,7 @@ final class wq extends oh {
         field_L = null;
     }
 
-    final static void i() {
+    final static void i(int param0) {
         p.a(-33);
         rh.b(-14, 4);
     }

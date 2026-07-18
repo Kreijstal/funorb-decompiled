@@ -171,7 +171,7 @@ abstract class qe extends mi implements bo {
         return ((qe) this).a(((qe) this).field_g.field_n, true);
     }
 
-    final static int g() {
+    final static int g(int param0) {
         if (dj.field_n >= 2) {
           if (ih.field_c != 0) {
             if (sj.field_l != null) {

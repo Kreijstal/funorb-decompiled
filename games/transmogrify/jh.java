@@ -51,7 +51,7 @@ final class jh extends ue {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -502,7 +502,7 @@ final class jh extends ue {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_n = null;
         field_g = null;
         field_h = null;

@@ -70,7 +70,7 @@ final class wr extends hs implements he {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         int stackIn_6_0 = 0;
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;

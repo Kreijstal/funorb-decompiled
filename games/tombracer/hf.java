@@ -24,7 +24,7 @@ final class hf implements ac, gs {
         gqa.a(0, -83584144, param3, param4, rl.field_t[6], param2);
     }
 
-    private final boolean b() {
+    private final boolean b(int param0) {
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
@@ -71,8 +71,7 @@ final class hf implements ac, gs {
             boolean discarded$0 = hf.a(2, 'ﾇ');
         }
         rpa.a(3, true, param2, 192, wga.field_a[((hf) this).field_i], param0);
-        int discarded$1 = 0;
-        pa.a(3, param0, wga.field_a[((hf) this).field_i], param2);
+        pa.a(3, param0, wga.field_a[((hf) this).field_i], param2, false);
     }
 
     public final void f(int param0) {
@@ -143,8 +142,7 @@ final class hf implements ac, gs {
                     if (((hf) this).field_f == 1) {
                       break L1;
                     } else {
-                      int discarded$2 = 83;
-                      if (!this.b()) {
+                      if (!this.b(83)) {
                         stackOut_8_0 = 0;
                         stackIn_9_0 = stackOut_8_0;
                         break L0;
@@ -385,12 +383,11 @@ final class hf implements ac, gs {
                       } else {
                         if (((hf) this).field_g == 0) {
                           L3: {
-                            int discarded$8 = 62;
-                            if (!this.f()) {
-                              fla discarded$9 = var2.a(new fm(70, ((hf) this).b((byte) -122), ((hf) this).c((byte) 93), ((hf) this).e((byte) -87)), param0 ^ -21487);
+                            if (!this.f((byte) 62)) {
+                              fla discarded$7 = var2.a(new fm(70, ((hf) this).b((byte) -122), ((hf) this).c((byte) 93), ((hf) this).e((byte) -87)), param0 ^ -21487);
                               break L3;
                             } else {
-                              fla discarded$10 = var2.a(new fm(69, ((hf) this).b((byte) 116), ((hf) this).c((byte) 121), ((hf) this).e((byte) -105)), param0 ^ -21487);
+                              fla discarded$8 = var2.a(new fm(69, ((hf) this).b((byte) 116), ((hf) this).c((byte) 121), ((hf) this).e((byte) -105)), param0 ^ -21487);
                               break L3;
                             }
                           }
@@ -477,20 +474,20 @@ final class hf implements ac, gs {
                             if (((hf) this).field_k != 3) {
                               break L4;
                             } else {
-                              fla discarded$11 = var2.a(new fm(74, ((hf) this).b((byte) 70), ((hf) this).c((byte) 111), ((hf) this).e((byte) -96)), -58);
+                              fla discarded$9 = var2.a(new fm(74, ((hf) this).b((byte) 70), ((hf) this).c((byte) 111), ((hf) this).e((byte) -96)), -58);
                               break L4;
                             }
                           } else {
-                            fla discarded$12 = var2.a(new fm(71, ((hf) this).b((byte) -98), ((hf) this).c((byte) 98), ((hf) this).e((byte) -127)), -58);
+                            fla discarded$10 = var2.a(new fm(71, ((hf) this).b((byte) -98), ((hf) this).c((byte) 98), ((hf) this).e((byte) -127)), -58);
                             break L4;
                           }
                         } else {
                           L8: {
                             if (((hf) this).field_m) {
-                              fla discarded$13 = var2.a(new fm(72, ((hf) this).b((byte) -119), ((hf) this).c((byte) 120), ((hf) this).e((byte) -116)), -58);
+                              fla discarded$11 = var2.a(new fm(72, ((hf) this).b((byte) -119), ((hf) this).c((byte) 120), ((hf) this).e((byte) -116)), -58);
                               break L8;
                             } else {
-                              fla discarded$14 = var2.a(new fm(73, ((hf) this).b((byte) -102), ((hf) this).c((byte) 96), ((hf) this).e((byte) -114)), -58);
+                              fla discarded$12 = var2.a(new fm(73, ((hf) this).b((byte) -102), ((hf) this).c((byte) 96), ((hf) this).e((byte) -114)), -58);
                               break L8;
                             }
                           }
@@ -547,7 +544,7 @@ final class hf implements ac, gs {
                       break L11;
                     } else {
                       if (((hf) this).field_p.j(-1)) {
-                        fla discarded$15 = var2.a(new fm(79, ((hf) this).b((byte) 77), ((hf) this).c((byte) 114), ((hf) this).e((byte) -123)), -58);
+                        fla discarded$13 = var2.a(new fm(79, ((hf) this).b((byte) 77), ((hf) this).c((byte) 114), ((hf) this).e((byte) -123)), -58);
                         ((hf) this).field_o = true;
                         break L11;
                       } else {
@@ -598,7 +595,7 @@ final class hf implements ac, gs {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -866,8 +863,7 @@ final class hf implements ac, gs {
                                         if (10 != var10) {
                                           if (var10 == 12) {
                                             L9: {
-                                              int discarded$8 = 62;
-                                              if (this.f()) {
+                                              if (this.f((byte) 62)) {
                                                 var9.a(-107, new fm(85, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                 break L9;
                                               } else {
@@ -882,8 +878,7 @@ final class hf implements ac, gs {
                                               if (14 == var10) {
                                                 L10: {
                                                   var9.a(-128, new fm(78, ((hf) this).field_p.d(3), ((hf) this).field_p.e(param0 + 9622), ((hf) this).field_p.g((byte) 115)));
-                                                  int discarded$9 = 62;
-                                                  if (!this.f()) {
+                                                  if (!this.f((byte) 62)) {
                                                     var9.a(-116, new fm(88, ((hf) this).field_p.d(3), ((hf) this).field_p.e(param0 ^ 9642), ((hf) this).field_p.g((byte) 115)));
                                                     break L10;
                                                   } else {
@@ -897,8 +892,7 @@ final class hf implements ac, gs {
                                                 if (16 == var10) {
                                                   L11: {
                                                     var9.a(-106, new fm(84, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
-                                                    int discarded$10 = 62;
-                                                    if (this.f()) {
+                                                    if (this.f((byte) 62)) {
                                                       var9.a(-105, new fm(87, ((hf) this).field_p.d(param0 + -23), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                       break L11;
                                                     } else {
@@ -913,8 +907,7 @@ final class hf implements ac, gs {
                                                     if (var10 != 20) {
                                                       if (var10 == 21) {
                                                         L12: {
-                                                          int discarded$11 = 62;
-                                                          if (!this.f()) {
+                                                          if (!this.f((byte) 62)) {
                                                             var9.a(param0 + -148, new fm(88, ((hf) this).field_p.d(3), ((hf) this).field_p.e(param0 + 9622), ((hf) this).field_p.g((byte) 115)));
                                                             break L12;
                                                           } else {
@@ -948,8 +941,7 @@ final class hf implements ac, gs {
                                                         } else {
                                                           var9.a(-124, new fm(82, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                           var4 = 35;
-                                                          int discarded$12 = 62;
-                                                          if (!this.f()) {
+                                                          if (!this.f((byte) 62)) {
                                                             var9.a(-115, new fm(88, ((hf) this).field_p.d(param0 + -23), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                             break L1;
                                                           } else {
@@ -961,8 +953,7 @@ final class hf implements ac, gs {
                                                     } else {
                                                       L13: {
                                                         var9.a(-98, new fm(78, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
-                                                        int discarded$13 = 62;
-                                                        if (!this.f()) {
+                                                        if (!this.f((byte) 62)) {
                                                           var9.a(-91, new fm(88, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                           break L13;
                                                         } else {
@@ -976,8 +967,7 @@ final class hf implements ac, gs {
                                                   } else {
                                                     var9.a(-122, new fm(80, ((hf) this).field_p.d(param0 + -23), ((hf) this).field_p.e(param0 ^ 9642), ((hf) this).field_p.g((byte) 115)));
                                                     var4 = 22;
-                                                    int discarded$14 = 62;
-                                                    if (this.f()) {
+                                                    if (this.f((byte) 62)) {
                                                       var9.a(-118, new fm(87, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                       break L1;
                                                     } else {
@@ -990,8 +980,7 @@ final class hf implements ac, gs {
                                             } else {
                                               L14: {
                                                 var9.a(-103, new fm(83, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
-                                                int discarded$15 = 62;
-                                                if (this.f()) {
+                                                if (this.f((byte) 62)) {
                                                   var9.a(param0 + -143, new fm(87, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                   break L14;
                                                 } else {
@@ -1080,7 +1069,7 @@ final class hf implements ac, gs {
         }
     }
 
-    private final boolean f() {
+    private final boolean f(byte param0) {
         int stackIn_12_0 = 0;
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;

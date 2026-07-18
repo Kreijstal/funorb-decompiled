@@ -296,7 +296,7 @@ class tu extends eha {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_e = null;
         field_d = null;
     }
@@ -659,8 +659,7 @@ class tu extends eha {
                     if (this.a(param1, (byte) 74, var8)) {
                       break L3;
                     } else {
-                      int discarded$2 = 0;
-                      var9 = ll.a(param1.q((byte) -82));
+                      var9 = ll.a(param1.q((byte) -82), 0);
                       if (var9 < 0) {
                         break L3;
                       } else {
@@ -690,9 +689,9 @@ class tu extends eha {
                     iqa.field_c.a(0, var9_ref_jha);
                     var10 = param0.F(-7991);
                     if (var10 > 0) {
-                      jha dupTemp$3 = ab.a(-96, gl.a((byte) 82, bca.field_c, new String[1]));
-                      var12 = dupTemp$3;
-                      var9_ref_jha = dupTemp$3;
+                      jha dupTemp$1 = ab.a(-96, gl.a((byte) 82, bca.field_c, new String[1]));
+                      var12 = dupTemp$1;
+                      var9_ref_jha = dupTemp$1;
                       iqa.field_c.a(3, 0, var12);
                       break L6;
                     } else {

@@ -375,7 +375,7 @@ final class ji extends uf {
         }
     }
 
-    final static StringBuilder a(char param0, StringBuilder param1) {
+    final static StringBuilder a(char param0, StringBuilder param1, byte param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

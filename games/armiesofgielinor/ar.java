@@ -735,7 +735,7 @@ final class ar extends ms {
         return var2.toString();
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_v = null;
         field_x = null;
         field_y = null;

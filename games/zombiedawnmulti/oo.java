@@ -326,11 +326,9 @@ final class oo {
           var23 = param1 + var7 - var16;
           var24 = param1 + var7 + var15;
           ep.a(var17, var18, var19);
-          int discarded$2 = 16711680;
-          ep.a(var21, var22, var23, var17, var18, var19);
+          ep.a(var21, var22, var23, var17, var18, var19, 16711680);
           ep.a(var17, var19, var20);
-          int discarded$3 = 16711680;
-          ep.a(var21, var23, var24, var17, var19, var20);
+          ep.a(var21, var23, var24, var17, var19, var20, 16711680);
           return;
         } else {
           return;

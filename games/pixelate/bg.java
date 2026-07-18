@@ -100,7 +100,7 @@ abstract class bg {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_d = null;
         field_l = null;
@@ -142,8 +142,7 @@ abstract class bg {
                 break L1;
               } else {
                 var4 = (CharSequence) (Object) var3;
-                int discarded$3 = -29667;
-                if (nh.a(var4) == 0L) {
+                if (nh.a(var4, -29667) == 0L) {
                   break L1;
                 } else {
                   decompiledRegionSelector0 = 1;
@@ -191,7 +190,7 @@ abstract class bg {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         oa.field_j = 2;
     }
 
@@ -223,10 +222,8 @@ abstract class bg {
           t.b(var6, param2, -(2 * ui.field_f.field_A) + param3, 0);
           t.b(var6, 25 + param2 - 1, param3 - 2 * ui.field_f.field_A, 0);
           var8 = ((bg) this).field_e >> 16;
-          int discarded$60 = 0;
-          mh.a(param2, gd.field_h[param1], var8 - hp.field_Gb.field_A);
-          int discarded$61 = 0;
-          mh.a(param2, gd.field_h[param1], var8);
+          mh.a(param2, gd.field_h[param1], var8 - hp.field_Gb.field_A, 0);
+          mh.a(param2, gd.field_h[param1], var8, 0);
           t.a(bf.field_r);
           t.f(0, 0, 320, 480);
           ec.field_q.a(var5 - -2, param2, 128);

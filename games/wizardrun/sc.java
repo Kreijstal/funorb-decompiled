@@ -12,14 +12,14 @@ final class sc extends wl {
     static jk field_m;
     static String field_l;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
         field_i = null;
         field_o = null;
         field_m = null;
     }
 
-    final static kl a(int param0, int param1, int param2, boolean param3, boolean param4) {
+    final static kl a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;

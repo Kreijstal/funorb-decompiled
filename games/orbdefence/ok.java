@@ -10,12 +10,12 @@ final class ok {
     static dj[] field_a;
     static int field_f;
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 2;
         field_a = null;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return (int)(1000000000L / vc.field_j);
     }
 
@@ -98,8 +98,7 @@ final class ok {
         StringBuilder stackOut_15_1 = null;
         String stackOut_15_2 = null;
         try {
-          int discarded$1 = 6;
-          gg.a(param9, param12, 8, param18, 0, 6, 0, param19, param20, param16, param6, 240, new pf(param11), 480, param10, new pf(param3), -90, new pf(param15), 320, param13);
+          gg.a(param9, param12, 8, param18, 0, 6, 0, param19, param20, param16, param6, 240, new pf(param11), 480, param10, new pf(param3), -90, new pf(param15), 320, param13, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -23,8 +23,7 @@ final class ri {
         ce.field_m = null;
         Object var4 = null;
         de.a((int[]) null, 0, 0);
-        int discarded$0 = -123;
-        ce.field_m = se.a(param0, (java.awt.Component) (Object) on.field_c, param2);
+        ce.field_m = se.a(param0, (java.awt.Component) (Object) on.field_c, param2, (byte) -123);
         ce.field_m.a(true);
         ho.a((byte) 51, param2 / 2, param0 / 2);
         nl.b(param0, 19129, param2);
@@ -50,7 +49,7 @@ final class ri {
         return fj.field_j == 11 ? true : false;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_e = null;
         field_g = null;

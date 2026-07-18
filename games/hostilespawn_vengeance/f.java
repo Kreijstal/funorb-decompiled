@@ -9,7 +9,7 @@ final class f implements nn {
     static String field_c;
     static bd field_b;
 
-    final static void a(int param0, int param1, p param2) {
+    final static void a(int param0, int param1, p param2, int param3) {
         try {
             dn.a(param2.field_e / 2, uf.field_e, uf.field_d, param0, -1, param1);
         } catch (RuntimeException runtimeException) {
@@ -17,7 +17,7 @@ final class f implements nn {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -25,8 +25,8 @@ final class f implements nn {
     }
 
     public final void a(int param0, int param1, int param2, ag param3, boolean param4) {
-        RuntimeException var6 = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         bd var8 = null;
         RuntimeException stackIn_10_0 = null;
@@ -51,8 +51,7 @@ final class f implements nn {
               L1: {
                 var6_int = param3.field_v + param1;
                 var7 = param0 + param3.field_m;
-                int discarded$1 = 0;
-                ij.a(param3.field_x, param3.field_s, var7, var6_int);
+                ij.a(param3.field_x, param3.field_s, var7, var6_int, false);
                 var8 = cf.field_u[1];
                 if (!(param3 instanceof ph)) {
                   break L1;
@@ -110,7 +109,7 @@ final class f implements nn {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         if (rc.field_c == null) {
             return false;
         }

@@ -7,27 +7,34 @@ abstract class wh extends uh {
     static he[] field_u;
     int field_w;
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         RuntimeException var1 = null;
+        int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_3_0 = false;
+        int stackOut_1_0 = 0;
         try {
           L0: {
-            int discarded$1 = 8;
-            stackOut_3_0 = nj.a(nb.a(73));
-            stackIn_4_0 = stackOut_3_0;
-            break L0;
+            if (!param0) {
+              stackOut_3_0 = nj.a(nb.a(73), 8);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 1;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1, "wh.I(" + false + ')');
+          throw ie.a((Throwable) (Object) var1, "wh.I(" + param0 + ')');
         }
         return stackIn_4_0;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -76,16 +83,23 @@ abstract class wh extends uh {
                 }
               }
               ol.field_a.d(true);
-              int discarded$2 = -124;
-              sd.a();
+              sd.a((byte) -124);
               break L1;
+            }
+            L6: {
+              if (param0) {
+                break L6;
+              } else {
+                field_x = null;
+                break L6;
+              }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1, "wh.H(" + true + ')');
+          throw ie.a((Throwable) (Object) var1, "wh.H(" + param0 + ')');
         }
     }
 
@@ -128,7 +142,7 @@ abstract class wh extends uh {
         int stackOut_34_1 = 0;
         int stackOut_42_0 = 0;
         int stackOut_42_1 = 0;
-        int stackOut_52_0 = 0;
+        byte stackOut_52_0 = 0;
         RuntimeException stackOut_67_0 = null;
         StringBuilder stackOut_67_1 = null;
         RuntimeException stackOut_70_0 = null;
@@ -143,15 +157,13 @@ abstract class wh extends uh {
             L1: {
               var5_int = oi.a((param4 + -param0) * 3, (byte) 1);
               var6 = 3 * param0;
-              int discarded$3 = 103;
-              vg.d();
+              vg.d((byte) 103);
               var7 = var5_int - 10;
               if (0 >= param3.field_G) {
                 break L1;
               } else {
                 if (null != param3.field_O) {
-                  int discarded$4 = -2;
-                  ff.a();
+                  ff.a((byte) -2);
                   break L1;
                 } else {
                   break L1;
@@ -314,7 +326,7 @@ abstract class wh extends uh {
                     }
                   }
                 }
-                stackOut_52_0 = 75;
+                stackOut_52_0 = param2;
                 stackIn_53_0 = stackOut_52_0;
                 break L3;
               }
@@ -322,8 +334,7 @@ abstract class wh extends uh {
                 if (stackIn_53_0 > 71) {
                   break L16;
                 } else {
-                  int discarded$5 = 1;
-                  wh.b();
+                  wh.b(true);
                   break L16;
                 }
               }
@@ -369,7 +380,7 @@ abstract class wh extends uh {
           L20: {
             var5 = decompiledCaughtException;
             stackOut_67_0 = (RuntimeException) var5;
-            stackOut_67_1 = new StringBuilder().append("wh.K(").append(param0).append(',').append(param1).append(',').append(75).append(',');
+            stackOut_67_1 = new StringBuilder().append("wh.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_70_0 = stackOut_67_0;
             stackIn_70_1 = stackOut_67_1;
             stackIn_68_0 = stackOut_67_0;
@@ -437,54 +448,62 @@ abstract class wh extends uh {
         try {
           L0: {
             L1: {
-              L2: {
+              if (param2 >= 96) {
+                break L1;
+              } else {
+                field_x = null;
+                break L1;
+              }
+            }
+            L2: {
+              L3: {
                 fk.field_q = wg.field_u;
                 if (255 == param0) {
-                  break L2;
+                  break L3;
                 } else {
-                  L3: {
+                  L4: {
                     if (param0 < 100) {
-                      break L3;
+                      break L4;
                     } else {
                       if (param0 > 105) {
-                        break L3;
+                        break L4;
                       } else {
                         jj.field_d = sa.a((byte) 3, param3);
                         if (var5 == 0) {
-                          break L1;
+                          break L2;
                         } else {
-                          break L3;
+                          break L4;
                         }
                       }
                     }
                   }
                   jj.field_d = kj.a(param0, 4, param1);
                   if (var5 == 0) {
-                    break L1;
-                  } else {
                     break L2;
+                  } else {
+                    break L3;
                   }
                 }
               }
-              L4: {
+              L5: {
                 if (13 <= rd.field_z) {
                   stackOut_22_0 = 0;
                   stackIn_23_0 = stackOut_22_0;
-                  break L4;
+                  break L5;
                 } else {
                   stackOut_20_0 = 1;
                   stackIn_23_0 = stackOut_20_0;
-                  break L4;
+                  break L5;
                 }
               }
               jj.field_d = b.a(stackIn_23_0 != 0, 77);
-              break L1;
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var4 = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var4;
             stackOut_25_1 = new StringBuilder().append("wh.F(").append(param0).append(',');
@@ -499,7 +518,7 @@ abstract class wh extends uh {
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
-              break L5;
+              break L6;
             } else {
               stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
               stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
@@ -507,12 +526,12 @@ abstract class wh extends uh {
               stackIn_29_0 = stackOut_26_0;
               stackIn_29_1 = stackOut_26_1;
               stackIn_29_2 = stackOut_26_2;
-              break L5;
+              break L6;
             }
           }
-          L6: {
+          L7: {
             stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',').append(117).append(',');
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',').append(param2).append(',');
             stackIn_32_0 = stackOut_29_0;
             stackIn_32_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -524,7 +543,7 @@ abstract class wh extends uh {
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
-              break L6;
+              break L7;
             } else {
               stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
               stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
@@ -532,7 +551,7 @@ abstract class wh extends uh {
               stackIn_33_0 = stackOut_30_0;
               stackIn_33_1 = stackOut_30_1;
               stackIn_33_2 = stackOut_30_2;
-              break L6;
+              break L7;
             }
           }
           throw ie.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
@@ -541,20 +560,16 @@ abstract class wh extends uh {
 
     abstract boolean a(byte param0);
 
-    public static void c() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void c(byte param0) {
         try {
-          L0: {
             field_v = null;
             field_u = null;
             field_x = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1, "wh.G(" + -86 + ')');
+            if (param0 != -86) {
+                field_x = null;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "wh.G(" + param0 + ')');
         }
     }
 
@@ -618,11 +633,10 @@ abstract class wh extends uh {
         String stackOut_11_2 = null;
         try {
           L0: {
-            ib.field_f = ug.a("", 0);
+            ib.field_f = ug.a("", param0 ^ param0);
             ib.field_f.a(false, -87);
-            kk.a(88, param3, param1, param2);
-            int discarded$3 = 109;
-            lc.c();
+            kk.a(param0 + 168, param3, param1, param2);
+            lc.c((byte) 109);
             lc.field_h = pj.field_D;
             fk.field_q = pj.field_D;
             break L0;
@@ -632,7 +646,7 @@ abstract class wh extends uh {
           L1: {
             runtimeException = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) runtimeException;
-            stackOut_2_1 = new StringBuilder().append("wh.J(").append(-80).append(',');
+            stackOut_2_1 = new StringBuilder().append("wh.J(").append(param0).append(',');
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

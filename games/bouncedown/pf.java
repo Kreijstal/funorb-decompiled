@@ -25,7 +25,7 @@ final class pf extends ak {
         ((pf) this).field_x = (lk) (Object) ((pf) this).a(false);
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_B = null;
         field_A = null;
         field_D = null;
@@ -227,7 +227,7 @@ final class pf extends ak {
         ((pf) this).field_x = null;
     }
 
-    final static Class a(String param0) throws ClassNotFoundException {
+    final static Class a(String param0, int param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_3_0 = null;
         Class stackIn_7_0 = null;

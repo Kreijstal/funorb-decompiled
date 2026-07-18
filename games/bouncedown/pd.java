@@ -12,8 +12,7 @@ final class pd {
         if (!(null == nk.field_a)) {
             nk.field_a.a(true);
         }
-        int discarded$0 = 61;
-        String var1 = fd.c();
+        String var1 = fd.c((byte) 61);
         vk.field_c = new ci(var1, (String) null, true, false, false);
         q.field_N.b((lk) (Object) ed.field_c, false);
         ed.field_c.a(10768, (lk) (Object) vk.field_c);
@@ -108,7 +107,7 @@ final class pd {
         return stackIn_9_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 102;
         field_b = null;
         field_a = null;

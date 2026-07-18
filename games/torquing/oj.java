@@ -265,9 +265,7 @@ final class oj implements el {
                     L7: {
                       var24 = -1;
                       if ((2 & param0) != 0) {
-                        int discarded$2 = 0;
-                        int discarded$3 = 1;
-                        sd.a(var30);
+                        sd.a(var30, 1, 0);
                         var25 = 415;
                         var26_int = 3680;
                         var27 = param2;

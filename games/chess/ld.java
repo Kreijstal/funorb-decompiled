@@ -57,7 +57,7 @@ final class ld {
         return 2;
     }
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, int param2) {
         try {
             if (!(null == ua.field_d)) {
                 ua.field_d.k((byte) 95);

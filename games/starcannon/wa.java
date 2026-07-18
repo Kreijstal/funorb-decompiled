@@ -208,8 +208,7 @@ final class wa implements de {
                 break L3;
               } else {
                 if (ba.a(6, (CharSequence) (Object) var7)) {
-                  int discarded$1 = 10;
-                  fc.field_c = pd.a((CharSequence) (Object) var7);
+                  fc.field_c = pd.a((CharSequence) (Object) var7, 10);
                   break L3;
                 } else {
                   fc.field_c = 2;
@@ -290,7 +289,7 @@ final class wa implements de {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -339,8 +338,7 @@ final class wa implements de {
                       }
                     }
                     if (var5 == null) {
-                      int discarded$3 = 27;
-                      ec.a();
+                      ec.a((byte) 27);
                       return;
                     } else {
                       var5.b(4);
@@ -349,15 +347,13 @@ final class wa implements de {
                   }
                 } else {
                   hc.a((Throwable) null, "LR1: " + oe.a(59), (byte) 85);
-                  int discarded$4 = 27;
-                  ec.a();
+                  ec.a((byte) 27);
                   break L1;
                 }
               } else {
                 var4_ref_we = (we) (Object) ma.field_h.c(-3905);
                 if (var4_ref_we == null) {
-                  int discarded$5 = 27;
-                  ec.a();
+                  ec.a((byte) 27);
                   return;
                 } else {
                   L5: {

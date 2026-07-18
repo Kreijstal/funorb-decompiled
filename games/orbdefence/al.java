@@ -179,8 +179,7 @@ final class al extends java.awt.Canvas {
                                     if (var17 >= wi.field_c) {
                                       break L10;
                                     } else {
-                                      int discarded$6 = 1;
-                                      mb.a(var18, var17 - -var16, param0, param7);
+                                      mb.a(var18, var17 - -var16, param0, param7, true);
                                       break L10;
                                     }
                                   }
@@ -194,12 +193,10 @@ final class al extends java.awt.Canvas {
                                     }
                                   }
                                   if (var17 >= 0) {
-                                    int discarded$7 = 1;
-                                    mb.a(var18, var17 - -var16, param0, param7);
+                                    mb.a(var18, var17 - -var16, param0, param7, true);
                                     break L10;
                                   } else {
-                                    int discarded$8 = 1;
-                                    mb.a(var18 - -var17, var16, param0, param7);
+                                    mb.a(var18 - -var17, var16, param0, param7, true);
                                     break L10;
                                   }
                                 }
@@ -271,12 +268,10 @@ final class al extends java.awt.Canvas {
                               }
                             }
                             if (var16 < 0) {
-                              int discarded$9 = 1;
-                              mb.a(var16 + var17, var15, param0, param7);
+                              mb.a(var16 + var17, var15, param0, param7, true);
                               break L15;
                             } else {
-                              int discarded$10 = 1;
-                              mb.a(var17, var15 + var16, param0, param7);
+                              mb.a(var17, var15 + var16, param0, param7, true);
                               break L15;
                             }
                           } else {
@@ -284,8 +279,7 @@ final class al extends java.awt.Canvas {
                               break L15;
                             } else {
                               if (var16 < wi.field_c) {
-                                int discarded$11 = 1;
-                                mb.a(var17, var16 - -var15, param0, param7);
+                                mb.a(var17, var16 - -var15, param0, param7, true);
                                 break L15;
                               } else {
                                 break L15;
@@ -342,7 +336,7 @@ final class al extends java.awt.Canvas {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         int var1 = 0;
         field_c = null;
@@ -356,7 +350,7 @@ final class al extends java.awt.Canvas {
         }
     }
 
-    final static ki a(boolean param0, int param1, int param2, int param3, boolean param4) {
+    final static ki a(boolean param0, int param1, int param2, int param3, boolean param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;

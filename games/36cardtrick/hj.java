@@ -213,8 +213,7 @@ final class hj extends cg {
         try {
           L0: {
             var4 = (CharSequence) (Object) param0;
-            int discarded$9 = 28;
-            if (!bi.a(var4)) {
+            if (!bi.a(var4, (byte) 28)) {
               stackOut_2_0 = pe.field_b;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -335,8 +334,7 @@ final class hj extends cg {
               }
             }
             var5 = (CharSequence) (Object) param0;
-            int discarded$2 = 36;
-            var3 = hf.a(var5);
+            var3 = hf.a(var5, (byte) 36);
             if (var3 != null) {
               stackOut_4_0 = (String) var3;
               stackIn_5_0 = stackOut_4_0;

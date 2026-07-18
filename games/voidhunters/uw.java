@@ -58,7 +58,7 @@ final class uw extends uj {
         return false;
     }
 
-    final static im a(qfa param0, int param1, int param2, int param3, int[] param4, int param5) {
+    final static im a(qfa param0, int param1, int param2, int param3, int[] param4, int param5, boolean param6, byte param7) {
         RuntimeException var8 = null;
         im stackIn_8_0 = null;
         im stackIn_10_0 = null;
@@ -104,12 +104,10 @@ final class uw extends uj {
                 break L1;
               } else {
                 L2: {
-                  int discarded$8 = -95;
-                  if (!bd.a(param5)) {
+                  if (!bd.a(param5, (byte) -95)) {
                     break L2;
                   } else {
-                    int discarded$9 = -95;
-                    if (bd.a(param3)) {
+                    if (bd.a(param3, (byte) -95)) {
                       break L1;
                     } else {
                       break L2;

@@ -11,7 +11,7 @@ final class kg extends ca {
     static int field_f;
     static String field_l;
 
-    public static void c() {
+    public static void c(int param0) {
         field_j = null;
         field_l = null;
         field_h = null;
@@ -154,8 +154,7 @@ final class kg extends ca {
           L0: {
             var7 = new ee(param0);
             var8 = new ee(param4);
-            int discarded$2 = -23739;
-            stackOut_0_0 = jk.a(param3, param2, var8, param1, var7, param6);
+            stackOut_0_0 = jk.a(param3, param2, var8, param1, var7, param6, -23739);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

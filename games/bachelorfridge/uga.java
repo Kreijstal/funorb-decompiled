@@ -11,11 +11,11 @@ final class uga extends ana {
     static String field_w;
     static int field_x;
 
-    final static boolean e() {
+    final static boolean e(int param0) {
         return true;
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_A = null;
         field_w = null;
         field_B = null;

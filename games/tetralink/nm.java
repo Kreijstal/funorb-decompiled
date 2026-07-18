@@ -17,7 +17,7 @@ final class nm extends mc {
     static String field_A;
     int[] field_w;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_y = null;
         field_o = null;
         field_n = null;

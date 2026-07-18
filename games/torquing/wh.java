@@ -138,7 +138,7 @@ final class wh extends am {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_t = null;
         field_u = null;
         field_y = null;
@@ -242,7 +242,7 @@ final class wh extends am {
         return var22;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -294,15 +294,13 @@ final class wh extends am {
                       var5.f(0);
                       break L1;
                     } else {
-                      int discarded$3 = 1;
-                      ih.b();
+                      ih.b(true);
                       return;
                     }
                   }
                 } else {
                   nn.a("LR1: " + me.a(-1), (Throwable) null, -9958);
-                  int discarded$4 = 1;
-                  ih.b();
+                  ih.b(true);
                   break L1;
                 }
               } else {
@@ -335,8 +333,7 @@ final class wh extends am {
                     }
                   }
                 } else {
-                  int discarded$5 = 1;
-                  ih.b();
+                  ih.b(true);
                   return;
                 }
               }

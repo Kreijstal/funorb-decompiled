@@ -100,8 +100,7 @@ final class tw {
             var4_int = param3.b(param2, -7768);
             var6 = 86 % ((param0 - 78) / 45);
             var5 = param3.a(true, param1, var4_int);
-            int discarded$2 = 42;
-            stackOut_0_0 = rea.a(param3, var4_int, var5);
+            stackOut_0_0 = rea.a(param3, var4_int, var5, (byte) 42);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -256,7 +255,7 @@ final class tw {
         int var2 = -88 % ((param0 - 32) / 60);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_f = null;
     }

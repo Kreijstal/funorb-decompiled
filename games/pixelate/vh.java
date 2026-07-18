@@ -8,7 +8,7 @@ final class vh {
     static co field_c;
     static String field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -280,7 +280,7 @@ final class vh {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_c = null;
     }

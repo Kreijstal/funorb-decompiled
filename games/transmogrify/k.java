@@ -11,7 +11,7 @@ abstract class k {
     int field_h;
     int field_g;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_a = null;
     }
@@ -20,7 +20,7 @@ abstract class k {
 
     abstract void a(int param0, int param1, int param2);
 
-    final static void b() {
+    final static void b(boolean param0) {
     }
 
     final static void a(int param0, boolean param1, int param2, ti[] param3, int param4) {
@@ -114,7 +114,7 @@ abstract class k {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         if (param0 < 65) {
           if (param0 >= 97) {
             if (param0 <= 122) {

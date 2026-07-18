@@ -6,7 +6,7 @@ final class gb {
     int field_c;
     int field_a;
 
-    final static void a(java.math.BigInteger param0, boolean param1, java.math.BigInteger param2, byte[] param3, n param4, int param5) {
+    final static void a(java.math.BigInteger param0, boolean param1, java.math.BigInteger param2, byte[] param3, n param4, int param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;
@@ -305,20 +305,13 @@ final class gb {
                 break L0;
               }
             }
-            int discarded$19 = -111;
-            int discarded$20 = 1;
-            rh.a((byte) 9, var3_int != 0, wi.field_f, qe.a(), le.b());
+            rh.a((byte) 9, var3_int != 0, wi.field_f, qe.a(-111), le.b(1));
             return;
           } else {
-            int discarded$21 = 3;
-            if (!jf.l()) {
+            if (!jf.l(3)) {
               em.d();
-              int discarded$22 = 20;
-              int discarded$23 = 320;
-              int discarded$24 = 240;
-              ok.a();
-              int discarded$25 = 0;
-              nn.a(param2, 0, -1);
+              ok.a(240, 320, 20);
+              nn.a(param2, 0, -1, 0);
               return;
             } else {
               if (ff.field_e != 0) {
@@ -326,8 +319,7 @@ final class gb {
                 return;
               } else {
                 wc.a(param0, 1983, false);
-                int discarded$26 = 0;
-                nn.a(param2, 0, -1);
+                nn.a(param2, 0, -1, 0);
                 return;
               }
             }
@@ -364,11 +356,11 @@ final class gb {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         if (240 > param0) {
             if (param0 < 280) {
                 return -1;

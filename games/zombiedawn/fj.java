@@ -87,7 +87,7 @@ final class fj extends pm {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_h = null;
         field_i = null;
         field_g = null;

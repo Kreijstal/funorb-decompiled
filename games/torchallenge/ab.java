@@ -56,7 +56,7 @@ final class ab {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_n = null;
         field_e = null;
         field_m = null;

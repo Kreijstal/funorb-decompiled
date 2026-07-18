@@ -39,8 +39,7 @@ final class uc extends ng {
           L0: {
             L1: {
               if (la.field_d != null) {
-                int discarded$3 = 1048576;
-                ac.a(false, param3, param0, param2);
+                ac.a(false, param3, param0, param2, 1048576);
                 break L1;
               } else {
                 break L1;
@@ -118,7 +117,7 @@ final class uc extends ng {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_R = null;
         field_T = null;
     }
@@ -347,7 +346,7 @@ final class uc extends ng {
         return stackIn_15_0 != 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         fe var12 = null;
@@ -366,8 +365,7 @@ final class uc extends ng {
                   ki.field_d = nc.a(var12, 100, var10, var11);
                   ki.field_d.e(-1);
                   ki.field_d.e(0, var12.field_k.length);
-                  int discarded$4 = 6222;
-                  e discarded$5 = we.a(ki.field_d);
+                  e discarded$2 = we.a(ki.field_d, 6222);
                   nj.field_g = var10;
                   lh.field_s = param0;
                   ub.field_n = 25;

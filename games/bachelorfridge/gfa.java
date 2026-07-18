@@ -15,11 +15,8 @@ final class gfa {
     static sna field_f;
     static String field_b;
 
-    final static void a(boolean param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7) {
-        int discarded$0 = 1;
-        int discarded$1 = 0;
-        int discarded$2 = 13;
-        oa.a(16777215, param7, 11, 15, param0, param5, 14, param4, 0, 16777215, param6);
+    final static void a(boolean param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, int param8, boolean param9, int param10, int param11) {
+        oa.a(16777215, param7, 11, 15, param0, param5, 14, param4, 0, 16777215, param6, 13, false, true);
     }
 
     gfa(int param0, int param1) {
@@ -27,7 +24,7 @@ final class gfa {
         ((gfa) this).field_l = param1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_f = null;
         field_k = null;

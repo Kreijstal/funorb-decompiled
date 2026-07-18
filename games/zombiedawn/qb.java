@@ -217,7 +217,7 @@ abstract class qb {
         return (1044493 & 15 * (param0 & 65280)) >> 4 | 16711935 & 15 * (param0 & 16711935) >> 4;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_f = null;
     }

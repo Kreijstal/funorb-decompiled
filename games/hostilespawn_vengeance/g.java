@@ -17,7 +17,7 @@ final class g extends ph {
     int field_L;
     int field_P;
 
-    public static void j() {
+    public static void j(int param0) {
         field_G = null;
         field_M = null;
         field_R = null;
@@ -26,7 +26,7 @@ final class g extends ph {
         field_K = null;
     }
 
-    final static void a(m param0) {
+    final static void a(m param0, int param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -46,8 +46,7 @@ final class g extends ph {
         String stackOut_3_2 = null;
         try {
           wk.field_g.a((am) (Object) param0, 124);
-          int discarded$2 = 1;
-          fj.a(6, param0);
+          fj.a(6, param0, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -230,8 +229,7 @@ final class g extends ph {
             if (param3.a(true)) {
               L1: {
                 if (0 == param4) {
-                  int discarded$1 = 2;
-                  var10 = je.a(param3);
+                  var10 = je.a(param3, 2);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;

@@ -555,7 +555,7 @@ class w extends tj {
         this.d(-14089, param1, param2);
     }
 
-    private final int a(tm param0) {
+    private final int a(tm param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -1061,8 +1061,7 @@ class w extends tj {
               stackIn_65_0 = stackOut_64_0;
               return stackIn_65_0 != 0;
             } else {
-              int discarded$1 = 1;
-              param0.field_A.a(param0.field_u, this.a(param0, (byte) 68), this.a(param0));
+              param0.field_A.a(param0.field_u, this.a(param0, (byte) 68), this.a(param0, true));
               stackOut_66_0 = 0;
               stackIn_67_0 = stackOut_66_0;
               break L0;
@@ -1423,8 +1422,7 @@ class w extends tj {
                 var7.field_C = 0;
                 if (((w) this).field_H[param2] != 0) {
                   L4: {
-                    int discarded$2 = 1;
-                    var7.field_A = b.a(var6, this.a(1, var7), 0, this.a(var7));
+                    var7.field_A = b.a(var6, this.a(1, var7), 0, this.a(var7, true));
                     stackOut_17_0 = this;
                     stackIn_19_0 = stackOut_17_0;
                     stackIn_18_0 = stackOut_17_0;
@@ -1445,8 +1443,7 @@ class w extends tj {
                   ((w) this).a(stackIn_20_1 != 0, var7, -128);
                   break L3;
                 } else {
-                  int discarded$3 = 1;
-                  var7.field_A = b.a(var6, this.a(param0 ^ 34, var7), this.a(var7, (byte) -75), this.a(var7));
+                  var7.field_A = b.a(var6, this.a(param0 ^ 34, var7), this.a(var7, (byte) -75), this.a(var7, true));
                   break L3;
                 }
               }
@@ -1603,9 +1600,8 @@ class w extends tj {
         }
     }
 
-    final static void b(boolean param0) {
-        int discarded$0 = 0;
-        pc.a(param0, false);
+    final static void b(boolean param0, int param1) {
+        pc.a(param0, false, false);
     }
 
     private final void a(int param0, int param1, int param2) {

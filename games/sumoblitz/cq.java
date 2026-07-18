@@ -17,14 +17,14 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void update(java.awt.Graphics param0) {
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
     }
 
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final static nm a(int param0, int param1, int param2, int param3) {
+    final static nm a(int param0, int param1, int param2, int param3, byte param4) {
         return new nm(param3, param1, param2, param0);
     }
 

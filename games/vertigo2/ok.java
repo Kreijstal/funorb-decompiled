@@ -7,19 +7,17 @@ final class ok {
     static int[] field_d;
     static int field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         int var1 = -1;
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5, int param6, int param7, boolean param8, int param9, int param10, boolean param11) {
+    final static void a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5, int param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, int param13) {
         ko.field_S = null;
         hm.g(74);
-        int discarded$0 = 13;
-        int discarded$1 = 0;
-        param11 = ve.a(14, 15, 11, 21911, param11);
+        param11 = ve.a(14, 15, 11, 21911, param11, 0, 13);
         in.a(param8, param3, 16777215, param11, true, 11, param10, 16777215, (byte) -66, param4);
         ho.a(24285, param3, param10);
         ko.a(param11, param10, 0, true);

@@ -102,7 +102,7 @@ final class wq extends k {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         field_m = null;
         int var1 = -79;

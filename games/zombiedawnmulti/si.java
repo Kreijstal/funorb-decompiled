@@ -261,8 +261,7 @@ final class si extends nc {
                                   var9 = 0;
                                   L11: while (true) {
                                     if (var9 >= ((si) this).field_v) {
-                                      int discarded$1 = -61;
-                                      th.b();
+                                      th.b((byte) -61);
                                       break L8;
                                     } else {
                                       var10 = var8 / (((si) this).field_v - var9);
@@ -440,7 +439,7 @@ final class si extends nc {
         }
     }
 
-    private final String e() {
+    private final String e(int param0) {
         int var2 = ((si) this).field_p / 60;
         int var3 = ((si) this).field_p % 60;
         return var2 + ":" + (10 > var3 ? "0" : "") + var3;
@@ -448,8 +447,7 @@ final class si extends nc {
 
     final static void a(boolean param0, boolean param1, ul param2, ul param3, ul param4) {
         try {
-            int discarded$0 = 1;
-            tg.field_g = tg.a("");
+            tg.field_g = tg.a("", true);
             tg.field_g.a(-17853, false);
             qe.a(param4, -8995, param3, param2);
             dg.i(4);
@@ -1066,7 +1064,6 @@ final class si extends nc {
                 L7: {
                   var7 = var7 + (1 + var4);
                   if (!((si) this).field_o) {
-                    int discarded$4 = -95;
                     pb.field_e.a(vl.a(wi.field_o, new String[1], 2), 320, 380, 16556032, var3, var6);
                     break L7;
                   } else {
@@ -1472,10 +1469,10 @@ final class si extends nc {
                                           qh.a(var12, -29990, ll.field_k, 280, var11 * 209 + 91, var6);
                                           var13 = ll.field_k.field_t[var12];
                                           var14 = cr.a(var12, -95);
-                                          int incrementValue$5 = var9;
+                                          int incrementValue$3 = var9;
                                           var9++;
                                           stackOut_126_0 = qp.field_w;
-                                          stackOut_126_1 = eb.a(((si) this).field_r[incrementValue$5], true, true);
+                                          stackOut_126_1 = eb.a(((si) this).field_r[incrementValue$3], true, true);
                                           stackOut_126_2 = 209 * var11 + 166;
                                           stackOut_126_3 = 295;
                                           stackIn_128_0 = stackOut_126_0;
@@ -1555,10 +1552,10 @@ final class si extends nc {
                                       mg.a(var12, var13, (byte) 46, 106, ll.field_k, var6, -28 + ga.field_v[var11]);
                                       var14 = ll.field_k.field_t[var12];
                                       var15 = cr.a(var12, -107);
-                                      int incrementValue$6 = var9;
+                                      int incrementValue$4 = var9;
                                       var9++;
                                       stackOut_103_0 = qp.field_w;
-                                      stackOut_103_1 = eb.a(((si) this).field_r[incrementValue$6], true, true);
+                                      stackOut_103_1 = eb.a(((si) this).field_r[incrementValue$4], true, true);
                                       stackOut_103_2 = ga.field_v[var11] - 50;
                                       stackOut_103_3 = 123;
                                       stackIn_105_0 = stackOut_103_0;
@@ -1601,10 +1598,10 @@ final class si extends nc {
                                         L37: {
                                           var14 = ll.field_k.field_t[var13];
                                           var15 = cr.a(var13, -101);
-                                          int incrementValue$7 = var9;
+                                          int incrementValue$5 = var9;
                                           var9++;
                                           stackOut_110_0 = qp.field_w;
-                                          stackOut_110_1 = eb.a(((si) this).field_r[incrementValue$7], true, true);
+                                          stackOut_110_1 = eb.a(((si) this).field_r[incrementValue$5], true, true);
                                           stackOut_110_2 = -73 + ga.field_v[var11];
                                           stackOut_110_3 = 111;
                                           stackIn_112_0 = stackOut_110_0;
@@ -1710,7 +1707,7 @@ final class si extends nc {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_D = null;
     }
 
@@ -1902,8 +1899,7 @@ final class si extends nc {
         if (0 != (op.field_m.field_j & 1 << fb.field_e.field_M)) {
             we.field_g[42] = ih.field_c;
         } else {
-            int discarded$10 = 1;
-            if (cm.a(op.field_m.field_j) > 0) {
+            if (cm.a(op.field_m.field_j, true) > 0) {
                 we.field_g[42] = ih.field_c;
             } else {
                 we.field_g[42] = u.field_j;

@@ -1539,20 +1539,16 @@ final class ta {
         return stackIn_7_0;
     }
 
-    public static void a() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void a(boolean param0) {
         try {
-          L0: {
             field_f = null;
             field_e = null;
             field_a = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "ta.B(" + false + ')');
+            if (param0) {
+                field_b = -45;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "ta.B(" + param0 + ')');
         }
     }
 

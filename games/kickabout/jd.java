@@ -202,10 +202,9 @@ abstract class jd extends lg implements sv {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, int param2, int param3) {
         po.a(-27, param1);
-        int discarded$0 = 15;
-        jg.a(13, (byte) -26, param1);
+        jg.a(13, (byte) -26, param1, 15);
     }
 
     final String e(int param0) {
@@ -225,7 +224,7 @@ abstract class jd extends lg implements sv {
 
     abstract String a(byte param0, String param1);
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 0;
         field_g = null;
         field_d = null;

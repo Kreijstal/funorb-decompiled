@@ -549,8 +549,7 @@ final class ha extends i {
 
     private static void $cfr$clinit() {
         field_J = "To server list";
-        int discarded$0 = -23091;
-        field_F = st.c();
+        field_F = st.c(-23091);
         field_I = 0;
     }
 }

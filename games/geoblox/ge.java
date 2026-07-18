@@ -17,7 +17,7 @@ final class ge {
     static java.util.zip.CRC32 field_f;
     private long[] field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         int var1 = 0;
         field_f = null;
@@ -284,7 +284,7 @@ final class ge {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_1_0 = false;
@@ -462,7 +462,7 @@ final class ge {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -493,8 +493,7 @@ final class ge {
                       break L2;
                     } else {
                       if (gj.field_s.field_a == 2) {
-                        int discarded$4 = 28625;
-                        stackOut_11_0 = eb.a(-1);
+                        stackOut_11_0 = eb.a(-1, 28625);
                         stackIn_12_0 = stackOut_11_0;
                         return stackIn_12_0;
                       } else {
@@ -532,15 +531,13 @@ final class ge {
                           qh.field_J = qh.field_J + 1;
                           break L4;
                         } else {
-                          int discarded$5 = 28625;
-                          stackOut_24_0 = eb.a(var1_int);
+                          stackOut_24_0 = eb.a(var1_int, 28625);
                           stackIn_25_0 = stackOut_24_0;
                           return stackIn_25_0;
                         }
                       } else {
                         if (oa.a(-12520) > eb.field_b) {
-                          int discarded$6 = 28625;
-                          stackOut_21_0 = eb.a(-2);
+                          stackOut_21_0 = eb.a(-2, 28625);
                           stackIn_22_0 = stackOut_21_0;
                           return stackIn_22_0;
                         } else {
@@ -564,8 +561,7 @@ final class ge {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
-                int discarded$7 = 28625;
-                return eb.a(-3);
+                return eb.a(-3, 28625);
               }
               return stackIn_30_0;
             } else {

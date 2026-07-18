@@ -4,7 +4,7 @@
 final class ua {
     static boolean[] field_a;
 
-    final static void a(sf param0) {
+    final static void a(sf param0, int param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -205,7 +205,7 @@ final class ua {
         return 0.800000011920929f - 0.0015625000232830644f * (float)m.field_l;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

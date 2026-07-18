@@ -112,16 +112,14 @@ final class m {
 
     final bi a(int param0, byte param1, int param2) {
         if (param1 != 76) {
-          bi discarded$6 = ((m) this).a(-124, (byte) -9, -5);
-          int discarded$7 = -117;
-          return this.a(param2, param0, (int[]) null);
+          bi discarded$2 = ((m) this).a(-124, (byte) -9, -5);
+          return this.a(param2, param0, (int[]) null, (byte) -117);
         } else {
-          int discarded$8 = -117;
-          return this.a(param2, param0, (int[]) null);
+          return this.a(param2, param0, (int[]) null, (byte) -117);
         }
     }
 
-    private final bi a(int param0, int param1, int[] param2) {
+    private final bi a(int param0, int param1, int[] param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;

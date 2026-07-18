@@ -389,8 +389,7 @@ final class qe extends pn {
     }
 
     qe(of param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (ur) (Object) ni.a());
-        int discarded$0 = 0;
+        super(param1, (ur) (Object) ni.a(false));
         try {
             ((qe) this).field_ab = param1;
             ((qe) this).field_J = param0;

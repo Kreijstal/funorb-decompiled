@@ -196,7 +196,7 @@ final class al extends ne {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_n = null;
         field_j = null;
         field_o = null;

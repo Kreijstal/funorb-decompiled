@@ -12,7 +12,7 @@ final class lf {
     static dn field_b;
     static int field_g;
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -121,8 +121,7 @@ final class lf {
                 if (0 != si.field_g) {
                   break L9;
                 } else {
-                  int discarded$2 = 112;
-                  vl.d();
+                  vl.d((byte) 112);
                   break L9;
                 }
               }
@@ -140,8 +139,7 @@ final class lf {
                         }
                       }
                     }
-                    int discarded$3 = 3;
-                    mi.a(jh.field_c[0]);
+                    mi.a(jh.field_c[0], 3);
                     break L11;
                   }
                   r.field_b = null;
@@ -186,9 +184,8 @@ final class lf {
         field_i = null;
     }
 
-    final static void b() {
-        int discarded$0 = -74;
-        dg.d();
+    final static void b(int param0) {
+        dg.d((byte) -74);
         jo.a(true);
     }
 

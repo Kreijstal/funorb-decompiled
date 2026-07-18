@@ -4,7 +4,7 @@
 final class ji {
     static int[] field_a;
 
-    final static void a(boolean param0, uc param1, int param2, String param3) {
+    final static void a(boolean param0, uc param1, int param2, String param3, int param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -167,11 +167,11 @@ final class ji {
         }
     }
 
-    final static he[] b() {
+    final static he[] b(int param0) {
         return new he[]{mf.field_u, h.field_l, jf.field_c};
     }
 
-    final static void a(rm param0) {
+    final static void a(rm param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int[] var3_ref_int__ = null;
@@ -536,7 +536,7 @@ final class ji {
         }
     }
 
-    final static dn a() {
+    final static dn a(boolean param0) {
         if (bh.field_a == tp.field_h) {
             throw new IllegalStateException();
         }

@@ -76,7 +76,7 @@ final class psa extends rqa {
         return stackIn_3_0;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         RuntimeException var1 = null;
         double var1_double = 0.0;
         int var3 = 0;
@@ -206,7 +206,7 @@ final class psa extends rqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

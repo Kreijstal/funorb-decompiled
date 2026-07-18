@@ -30,8 +30,7 @@ final class ij extends fh implements java.awt.image.ImageProducer, java.awt.imag
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$4 = 14;
-                nk.a(param1, var4);
+                nk.a(param1, var4, 14);
                 var4 = (mj) (Object) nd.field_b.d(853);
                 continue L2;
               }
@@ -147,7 +146,7 @@ final class ij extends fh implements java.awt.image.ImageProducer, java.awt.imag
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_h = null;
     }
 

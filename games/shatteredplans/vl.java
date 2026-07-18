@@ -376,9 +376,8 @@ final class vl extends hs {
             gn.field_u = (nq) (Object) ri.a("arezzo14", "commonui", param1, param2, (byte) 90);
             sl.field_p = (nq) (Object) ri.a("arezzo14bold", "commonui", param1, param2, (byte) 111);
             var17 = new bi(param3.a(true, "", "button.gif"), (java.awt.Component) (Object) tm.field_i);
-            nk discarded$2 = kf.a("commonui", -108, param1, "dropdown");
-            int discarded$3 = -118;
-            var5 = tp.a("commonui", param1, "screen_options");
+            nk discarded$1 = kf.a("commonui", -108, param1, "dropdown");
+            var5 = tp.a("commonui", param1, "screen_options", (byte) -118);
             hl.field_E = new nk[4];
             mf.field_o = new nk[4];
             qr.field_A = new nk[4];

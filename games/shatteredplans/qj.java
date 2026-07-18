@@ -10,7 +10,7 @@ final class qj {
     static int field_b;
     static String field_d;
 
-    final static void a(sq param0) {
+    final static void a(sq param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -265,7 +265,7 @@ final class qj {
         return stackIn_13_0 != 0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1 = 15;
     }
 
@@ -312,8 +312,7 @@ final class qj {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$2 = 20;
-            var3 = mg.a(param1, param2);
+            var3 = mg.a(param1, param2, 20);
             var4 = param2.f(-20976);
             stackOut_0_0 = new qa(var3, var4);
             stackIn_1_0 = stackOut_0_0;

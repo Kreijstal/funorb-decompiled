@@ -89,8 +89,7 @@ final class id {
 
     final static void a(boolean param0) {
         if (bh.field_t == 10) {
-          int discarded$4 = -17634;
-          re.a();
+          re.a(-17634);
           bh.field_t = 11;
           if (param0) {
             return;
@@ -107,8 +106,7 @@ final class id {
               return;
             }
           } else {
-            int discarded$5 = -17634;
-            re.a();
+            re.a(-17634);
             bh.field_t = 11;
             if (param0) {
               return;
@@ -236,7 +234,7 @@ final class id {
         }
     }
 
-    final static ob a(String param0) {
+    final static ob a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -295,8 +293,7 @@ final class id {
                   var5 = 0;
                   L1: while (true) {
                     if (var4.length <= var5) {
-                      int discarded$2 = -23;
-                      stackOut_20_0 = oa.a(var3[var3.length - 1]);
+                      stackOut_20_0 = oa.a(var3[var3.length - 1], -23);
                       stackIn_21_0 = stackOut_20_0;
                       break L0;
                     } else {
@@ -377,7 +374,7 @@ final class id {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -8;
         field_i = null;
         field_j = null;

@@ -55,7 +55,7 @@ final class hh {
         return stackIn_9_0 != 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_b = null;
         field_d = null;

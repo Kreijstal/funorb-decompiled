@@ -9,7 +9,7 @@ final class wh {
     static fa field_c;
     static nc field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_d = null;
@@ -19,11 +19,9 @@ final class wh {
 
     final static void b(int param0) {
         int var1 = lm.e(0);
-        int discarded$0 = -1;
-        int var2 = ti.a();
+        int var2 = ti.a((byte) -1);
         ne.field_j.a(var1 + (ac.field_a << 1), s.field_g + -ac.field_g, var2 - -(ac.field_g << 1), hg.field_f + -ac.field_a, 5);
-        int discarded$25 = -93;
-        rh.d();
+        rh.d((byte) -93);
         if (param0 <= 99) {
             field_e = null;
         }

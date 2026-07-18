@@ -13,7 +13,7 @@ final class pe {
     static String field_j;
     private int field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -20;
         field_j = null;
         field_e = null;
@@ -34,8 +34,7 @@ final class pe {
         try {
             Object var16 = null;
             aj.a(0, param9, 0, ea.field_b, param3, g.field_n, 480, param7, ec.field_c, param8, param13, param0, param5, (db[]) null, param4, true, param12, param6, param2, param10, param1);
-            int discarded$0 = 2;
-            bl.a(param14);
+            bl.a(param14, 2);
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "pe.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + -98 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
         }
@@ -96,7 +95,7 @@ final class pe {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -257,8 +256,7 @@ final class pe {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((pe) this).field_g[var2_int] = param0[var2_int];
             }
-            int discarded$0 = -24892;
-            this.b();
+            this.b(-24892);
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "pe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

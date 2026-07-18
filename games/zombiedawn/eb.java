@@ -122,7 +122,7 @@ final class eb implements io {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_b = null;
     }

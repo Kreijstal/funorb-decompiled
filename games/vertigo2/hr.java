@@ -11,7 +11,7 @@ final class hr extends ji {
     static int field_D;
     private int[] field_A;
 
-    private final void b() {
+    private final void b(byte param0) {
         int[] var14 = ((hr) this).field_B[0];
         int[] var12 = var14;
         int[] var10 = var12;
@@ -26,7 +26,7 @@ final class hr extends ji {
         ((hr) this).field_A = new int[]{var14[0] + (var14[0] + -var15[0]), var14[1] - var15[1] + var14[1]};
     }
 
-    final static void a() {
+    final static void a(int param0, boolean param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         vi var4 = null;
@@ -43,8 +43,7 @@ final class hr extends ji {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$4 = 108;
-                    mm.a(3, var5);
+                    mm.a(3, var5, (byte) 108);
                     var5 = (s) (Object) wg.field_i.b(125);
                     continue L2;
                   }
@@ -125,7 +124,7 @@ final class hr extends ji {
         return ((hr) this).field_B[param0];
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_z = null;
         field_C = null;
     }
@@ -211,8 +210,7 @@ final class hr extends ji {
     }
 
     final static void a(boolean param0, boolean param1) {
-        int discarded$0 = -77;
-        td.a(param0, true);
+        td.a(param0, true, (byte) -77);
     }
 
     public hr() {
@@ -221,7 +219,7 @@ final class hr extends ji {
         ((hr) this).field_E = 0;
     }
 
-    private final void g() {
+    private final void g(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -419,14 +417,12 @@ final class hr extends ji {
             throw new RuntimeException("Curve operation requires at least two markers");
         }
         if (((hr) this).field_E == 2) {
-            int discarded$0 = 125;
-            this.b();
+            this.b((byte) 125);
         }
         uk.d((byte) 66);
-        int discarded$1 = 1;
-        this.g();
+        this.g(1);
         if (param0 > -98) {
-            String discarded$2 = hr.h(104);
+            String discarded$0 = hr.h(104);
         }
     }
 

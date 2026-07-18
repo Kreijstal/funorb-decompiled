@@ -15,7 +15,7 @@ final class bh extends nl {
         return var2;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_H = null;
         field_M = null;
         field_J = null;
@@ -42,21 +42,19 @@ final class bh extends nl {
             ((bh) this).field_E.a(((bh) this).field_B + param0, param1 - -((bh) this).field_p, (byte) -125, param3);
             return;
         }
-        wk var5 = new wk(((bh) this).field_E.field_l, ((bh) this).field_E.field_w);
+        wk var6 = new wk(((bh) this).field_E.field_l, ((bh) this).field_E.field_w);
         if (param2 >= -82) {
             field_M = null;
-            int discarded$0 = 3;
-            vn.a(var5);
+            vn.a(var6, 3);
             ((bh) this).field_E.a(0, 0, (byte) -86, param3);
             rf.b(-18862);
-            var5.e(((bh) this).field_B + param0, param1 - -((bh) this).field_p, ((bh) this).field_K);
+            var6.e(((bh) this).field_B + param0, param1 - -((bh) this).field_p, ((bh) this).field_K);
             return;
         }
-        int discarded$1 = 3;
-        vn.a(var5);
+        vn.a(var6, 3);
         ((bh) this).field_E.a(0, 0, (byte) -86, param3);
         rf.b(-18862);
-        var5.e(((bh) this).field_B + param0, param1 - -((bh) this).field_p, ((bh) this).field_K);
+        var6.e(((bh) this).field_B + param0, param1 - -((bh) this).field_p, ((bh) this).field_K);
     }
 
     bh(kb param0) {
@@ -70,7 +68,7 @@ final class bh extends nl {
         }
     }
 
-    final static void d() {
+    final static void d(boolean param0) {
         int var1 = (tq.field_c + -640) / 2;
         int var2 = mj.field_c * mj.field_c;
         int var3 = -(gk.field_J * gk.field_J) + var2;

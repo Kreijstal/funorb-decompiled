@@ -198,8 +198,7 @@ class a implements gl, nl {
                 ((ea) (Object) param0.field_n).a(((a) this).b(param0, (byte) 121), ((a) this).field_o, ((a) this).field_z, ((a) this).a(false, param0), this.c(param0, (byte) -128), ((a) this).field_f, 86, ((a) this).field_b);
                 break L2;
               } else {
-                int discarded$5 = 18580;
-                this.c(param0);
+                this.c(param0, 18580);
                 break L2;
               }
             }
@@ -208,7 +207,7 @@ class a implements gl, nl {
                 break L3;
               } else {
                 var4 = null;
-                int discarded$6 = ((a) this).a((byte) -75, (ce) null, 115);
+                int discarded$2 = ((a) this).a((byte) -75, (ce) null, 115);
                 break L3;
               }
             }
@@ -540,13 +539,12 @@ class a implements gl, nl {
         return stackIn_3_0;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, boolean param2) {
         pf var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        int discarded$0 = 99;
-        wb var3 = ma.a(param0, param1);
+        wb var3 = ma.a(param0, param1, (byte) 99);
         if (var3 != null) {
             w.field_H.a(false, 29072);
             var4 = w.field_H;
@@ -1041,7 +1039,7 @@ class a implements gl, nl {
         return stackIn_1_0;
     }
 
-    private final void c(ce param0) {
+    private final void c(ce param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -1615,7 +1613,7 @@ class a implements gl, nl {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_l = null;
         field_x = null;
@@ -1711,7 +1709,7 @@ class a implements gl, nl {
         return stackIn_4_0;
     }
 
-    final static pi b() {
+    final static pi b(int param0) {
         pi var1 = new pi(ed.field_f, i.field_d, sg.field_d[0], fh.field_a[0], tm.field_a[0], hc.field_c[0], tc.field_Nb[0], mb.field_d);
         oa.a(127);
         return var1;
@@ -1720,7 +1718,7 @@ class a implements gl, nl {
     protected a() {
     }
 
-    final static void a(int param0, int param1, ud param2, int param3) {
+    final static void a(int param0, int param1, ud param2, int param3, int param4) {
         int var5_int = 0;
         try {
             var5_int = (int)(0.5 + (double)(256 * param2.field_p) * Math.pow(2.0, 0.0008333333333333334 * (double)param0) / (double)en.field_o);

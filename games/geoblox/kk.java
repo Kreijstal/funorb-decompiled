@@ -11,7 +11,7 @@ final class kk extends ji {
     static String field_v;
     static int[] field_s;
 
-    public static void i() {
+    public static void i(int param0) {
         field_s = null;
         field_v = null;
         field_w = null;
@@ -389,7 +389,7 @@ final class kk extends ji {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean a(boolean param0, CharSequence param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -539,10 +539,7 @@ final class kk extends ji {
     }
 
     final static rh a(int param0, byte param1) {
-        int discarded$0 = 0;
-        int discarded$1 = 1;
-        int discarded$2 = 1;
-        return am.a(-72, param0, false);
+        return am.a(-72, param0, false, 1, true, false);
     }
 
     public kk() {
@@ -596,8 +593,7 @@ final class kk extends ji {
                   }
                 }
                 ((kk) this).field_u = (ba) param0;
-                int discarded$1 = -113;
-                this.b();
+                this.b((byte) -113);
                 this.a(param1, param2);
                 ((kk) this).field_j.field_f = 0;
                 ((kk) this).field_f = null;
@@ -692,7 +688,7 @@ final class kk extends ji {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         try {
             IOException var2 = null;
             Exception var3 = null;

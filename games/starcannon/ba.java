@@ -156,9 +156,7 @@ final class ba {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$4 = 10;
-            int discarded$5 = 1;
-            stackOut_0_0 = we.a((byte) -108, param1);
+            stackOut_0_0 = we.a((byte) -108, param1, true, 10);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -212,7 +210,7 @@ final class ba {
         return param0 ^ param1;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_e = null;
         field_c = null;

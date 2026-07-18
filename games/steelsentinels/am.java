@@ -25,7 +25,7 @@ final class am {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = SteelSentinels.field_G;
@@ -51,8 +51,7 @@ final class am {
               }
             }
             L1: {
-              int discarded$4 = 13539;
-              if (!vi.l()) {
+              if (!vi.l(13539)) {
                 mg.a(ul.field_c, 7411, 1);
                 mg.a(qi.field_f, 7411, 2);
                 mg.a(vb.field_b, 7411, 3);
@@ -75,8 +74,7 @@ final class am {
               }
             }
             L3: {
-              int discarded$5 = 13539;
-              if (!vi.l()) {
+              if (!vi.l(13539)) {
                 mg.a(ul.field_c, 7411, 1);
                 mg.a(qi.field_f, 7411, 2);
                 mg.a(vb.field_b, 7411, 3);
@@ -103,8 +101,7 @@ final class am {
               }
             }
             L5: {
-              int discarded$6 = 13539;
-              if (!vi.l()) {
+              if (!vi.l(13539)) {
                 mg.a(ul.field_c, 7411, 1);
                 mg.a(qi.field_f, 7411, 2);
                 mg.a(vb.field_b, 7411, 3);
@@ -127,8 +124,7 @@ final class am {
               }
             }
             L7: {
-              int discarded$7 = 13539;
-              if (!vi.l()) {
+              if (!vi.l(13539)) {
                 mg.a(ul.field_c, 7411, 1);
                 mg.a(qi.field_f, 7411, 2);
                 mg.a(vb.field_b, 7411, 3);

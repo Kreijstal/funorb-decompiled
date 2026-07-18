@@ -366,7 +366,7 @@ class lk implements kh, pm {
         return stackIn_1_0;
     }
 
-    private final void b(kb param0) {
+    private final void b(kb param0, byte param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -875,8 +875,7 @@ class lk implements kh, pm {
                 ((ak) (Object) param1.field_u).a(((lk) this).d(0, param1), (byte) 30, this.c(-123, param1), ((lk) this).field_k, ((lk) this).field_j, ((lk) this).field_n, ((lk) this).b(85, param1), ((lk) this).field_q);
                 break L3;
               } else {
-                int discarded$3 = 112;
-                this.b(param1);
+                this.b(param1, (byte) 112);
                 break L3;
               }
             }
@@ -1205,7 +1204,7 @@ class lk implements kh, pm {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         int var1 = 2;
@@ -1236,8 +1235,7 @@ class lk implements kh, pm {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$2 = 2;
-          this.a(0, param2, param0, ((lk) this).field_d, 0, ((lk) this).field_b, param3);
+          this.a(0, param2, param0, ((lk) this).field_d, 0, ((lk) this).field_b, param3, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1271,7 +1269,7 @@ class lk implements kh, pm {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, kb param6) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, kb param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -1483,8 +1481,7 @@ class lk implements kh, pm {
           L0: {
             if (param0 >= 70) {
               oq.a(27080, (java.awt.Component) (Object) param1);
-              int discarded$8 = 74;
-              il.a((java.awt.Component) (Object) param1);
+              il.a((java.awt.Component) (Object) param1, (byte) 74);
               if (om.field_I != null) {
                 om.field_I.a(0, (java.awt.Component) (Object) param1);
                 break L0;
@@ -1533,9 +1530,7 @@ class lk implements kh, pm {
     final static void a(hd param0, int param1, nm param2, byte param3, boolean param4, java.awt.Component param5) {
         try {
             int var6_int = -98;
-            int discarded$0 = 22050;
-            int discarded$1 = 22050;
-            ca.a(param5, 1024, param0, true, -115, param2);
+            ca.a(param5, 1024, param0, true, -115, param2, 22050, 22050);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "lk.W(" + (param0 != null ? "{...}" : "null") + ',' + 22050 + ',' + (param2 != null ? "{...}" : "null") + ',' + 68 + ',' + true + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

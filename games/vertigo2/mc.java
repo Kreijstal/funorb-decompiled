@@ -177,7 +177,7 @@ final class mc {
         }
     }
 
-    private final void a(int param0, String param1, int param2) {
+    private final void a(int param0, String param1, int param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -258,7 +258,7 @@ final class mc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_i = null;
     }
@@ -325,9 +325,9 @@ final class mc {
             ((mc) this).field_n = param0;
             ((mc) this).field_l = 3;
             ((mc) this).field_a = 3;
-            e discarded$11 = var4.a(0, 6216).a((byte) -59, 15658734).a(-115, wp.a(10066329, (byte) 75, 7829367, 8947848));
-            e discarded$12 = var4.a(1, 6216).a(param1 + -115, wp.a(10066329, (byte) 120, 13421772, 11184810));
-            e discarded$13 = var4.a(3, 6216).a(-121, wp.a(7829367, (byte) 77, 10066329, 8947848)).c(param1 ^ 32350, 1).a(97, 1);
+            e discarded$10 = var4.a(0, 6216).a((byte) -59, 15658734).a(-115, wp.a(10066329, (byte) 75, 7829367, 8947848));
+            e discarded$11 = var4.a(1, 6216).a(param1 + -115, wp.a(10066329, (byte) 120, 13421772, 11184810));
+            e discarded$12 = var4.a(3, 6216).a(-121, wp.a(7829367, (byte) 77, 10066329, 8947848)).c(param1 ^ 32350, 1).a(97, 1);
             var5 = new er[9];
             var16 = new fe(32, 32);
             var18 = var16;
@@ -335,23 +335,22 @@ final class mc {
             L2: while (true) {
               if (var7_int >= var18.field_F.length) {
                 var5[4] = (er) (Object) var18;
-                e discarded$14 = var4.a(4, 6216).a(true, -107).a(param1 ^ 127, var5);
-                int discarded$15 = 0;
-                e discarded$16 = var4.a(5, 6216).a(-114, gb.a(0, 65793, 0, param1 ^ -28292)).a(true, param1 ^ 90).a((byte) -68, -1);
+                e discarded$13 = var4.a(4, 6216).a(true, -107).a(param1 ^ 127, var5);
+                e discarded$14 = var4.a(5, 6216).a(-114, gb.a(0, 65793, 0, param1 ^ -28292, 0)).a(true, param1 ^ 90).a((byte) -68, -1);
                 ((mc) this).field_p = (ur) (Object) var4;
                 var6 = new mq(var4, true);
                 var6.field_m = 0;
                 var7 = new mq(var4, true);
                 var7.field_m = 0;
                 var7.a(an.a(-105, 8947848), (byte) 62);
-                e discarded$17 = var7.a(1, 6216).a(-124, an.a(-115, 11184810)).a((byte) -105, 2236962);
+                e discarded$15 = var7.a(1, 6216).a(-124, an.a(-115, 11184810)).a((byte) -105, 2236962);
                 ((mc) this).field_g = (ur) (Object) new kn(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                td discarded$18 = new td(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                jo discarded$19 = new jo(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                td discarded$16 = new td(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                jo discarded$17 = new jo(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new mq();
                 var17.a(16777215, (va) (Object) var8);
-                e discarded$20 = var8.a(0, param1 + 6218).a(param1 + -119, wp.a(7829367, (byte) 118, 10066329, 15658734)).a((byte) -57, 1118481).b(-1, -101);
-                e discarded$21 = var8.a(4, 6216).a(true, param1 + -91).a(-117, var5);
+                e discarded$18 = var8.a(0, param1 + 6218).a(param1 + -119, wp.a(7829367, (byte) 118, 10066329, 15658734)).a((byte) -57, 1118481).b(-1, -101);
+                e discarded$19 = var8.a(4, 6216).a(true, param1 + -91).a(-117, var5);
                 ((mc) this).field_c = (ur) (Object) var8;
                 var9 = new er[9];
                 var10 = new er[9];
@@ -461,8 +460,7 @@ final class mc {
           L0: {
             L1: {
               if (!((mc) this).field_k) {
-                int discarded$2 = 116;
-                this.a(param2, param0, param3);
+                this.a(param2, param0, param3, (byte) 116);
                 break L1;
               } else {
                 this.a(param0, param2, (byte) 100, param3);

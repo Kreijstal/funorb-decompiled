@@ -7,7 +7,7 @@ final class il {
     static String field_b;
     static float[] field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_b = null;
         field_d = null;
@@ -41,8 +41,7 @@ final class il {
           L0: {
             var4_int = -115;
             if (qg.a(param2, param3, (byte) -27, param1)) {
-              int discarded$2 = 0;
-              stackOut_3_0 = eg.b();
+              stackOut_3_0 = eg.b(false);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -84,7 +83,7 @@ final class il {
         return stackIn_4_0;
     }
 
-    final static jg a(int param0, int param1, int param2) {
+    final static jg a(int param0, int param1, int param2, int param3, byte param4) {
         jg var5 = null;
         int var6 = 0;
         var6 = HoldTheLine.field_D;

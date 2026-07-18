@@ -21,7 +21,7 @@ final class rq extends tc {
         field_n = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         fg var1 = (fg) (Object) vb.field_q.c((byte) -121);
         if (!(var1 != null)) {
             var1 = new fg();

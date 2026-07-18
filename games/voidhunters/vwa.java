@@ -5,7 +5,7 @@ final class vwa extends rqa {
     static int field_p;
     static String field_o;
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

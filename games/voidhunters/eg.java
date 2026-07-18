@@ -167,7 +167,7 @@ final class eg extends rqa {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
     }
 
@@ -202,14 +202,10 @@ final class eg extends rqa {
         if (param0 > -35) {
             field_o = -50;
         } else {
-            int discarded$0 = 6;
-            int discarded$1 = 64;
-            dnb discarded$2 = jla.a(var2);
+            dnb discarded$0 = jla.a(var20, (byte) 64, 6);
             return;
         }
-        int discarded$3 = 6;
-        int discarded$4 = 64;
-        dnb discarded$5 = jla.a(var2);
+        dnb discarded$1 = jla.a(var20, (byte) 64, 6);
     }
 
     static {

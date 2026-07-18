@@ -337,13 +337,11 @@ final class qi extends mc {
         }
     }
 
-    final static void b() {
-        int discarded$0 = 43;
-        gg.c();
+    final static void b(byte param0) {
+        gg.c((byte) 43);
         rm.a(1731);
         mm.field_y = null;
-        int discarded$1 = 42;
-        go.c();
+        go.c((byte) 42);
     }
 
     final static void a(String param0, int param1, java.applet.Applet param2) {

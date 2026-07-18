@@ -159,7 +159,7 @@ final class ucb {
         return stackIn_1_0;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, int param2) {
         if (!param1) {
             kf.field_a = kf.field_a & ~param0;
             return;

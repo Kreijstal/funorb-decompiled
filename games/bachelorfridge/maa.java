@@ -6,7 +6,7 @@ final class maa extends ana {
     static String field_x;
     static int field_v;
 
-    private final void b() {
+    private final void b(boolean param0) {
         aga var2 = null;
         iv var3 = null;
         int var5 = 0;
@@ -62,8 +62,7 @@ final class maa extends ana {
                 return false;
             }
             jja.a(256, -1, 3);
-            int discarded$1 = 0;
-            this.b();
+            this.b(false);
             return false;
         }
         this.d(15642);

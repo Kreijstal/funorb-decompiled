@@ -6,7 +6,7 @@ final class jc extends mi {
     static int field_I;
     static hi field_H;
 
-    public static void g() {
+    public static void g(byte param0) {
         field_H = null;
     }
 
@@ -31,11 +31,9 @@ final class jc extends mi {
                 return;
               } else {
                 var6 = new o(((jc) this).field_F.field_r, ((jc) this).field_F.field_n);
-                int discarded$2 = 0;
-                ud.a(var6);
+                ud.a(var6, false);
                 ((jc) this).field_F.a(0, 0, param2, 0);
-                int discarded$3 = 4;
-                bb.b();
+                bb.b(4);
                 var6.c(param0 + ((jc) this).field_o, ((jc) this).field_l + param3, ((jc) this).field_G);
                 return;
               }

@@ -206,7 +206,7 @@ final class sk {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean a(boolean param0, CharSequence param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

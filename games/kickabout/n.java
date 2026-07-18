@@ -16,7 +16,7 @@ final class n {
     static int field_d;
     private ui field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_e = null;
         field_j = null;
@@ -1406,7 +1406,7 @@ final class n {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         if (null == mr.field_Z) {
             return false;
         }

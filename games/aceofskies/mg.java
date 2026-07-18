@@ -33,8 +33,7 @@ final class mg {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int discarded$0 = 1;
-        bo var2 = fa.a(param0);
+        bo var2 = fa.a(param0, true);
         int var3 = 40 + (vs.b(-112) + 40);
         if (param1 != 1150039905) {
             return;

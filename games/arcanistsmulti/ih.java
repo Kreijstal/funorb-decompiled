@@ -9,20 +9,20 @@ final class ih {
     static char[] field_c;
     static int field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_c = null;
         field_d = null;
         field_a = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, byte param2) {
         rl.field_m = param0;
         int var3 = 0;
         ln.field_J = param1;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1, int param2, int param3) {
         if (de.field_e < param0 - -param1) {
           if (0 <= -param1 + param0 + param2) {
             return -param1 + (param2 + param0);

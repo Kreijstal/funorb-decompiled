@@ -10,7 +10,7 @@ final class sn {
     static boolean[] field_b;
     private String field_a;
 
-    final static void c() {
+    final static void c(int param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -34,7 +34,7 @@ final class sn {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
     }

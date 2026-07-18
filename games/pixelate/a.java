@@ -101,7 +101,7 @@ final class a extends ch implements vo {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_M = null;
         field_N = null;
         field_L = null;
@@ -275,8 +275,7 @@ final class a extends ch implements vo {
                           }
                         }
                       } else {
-                        int discarded$1 = -1;
-                        ((a) this).field_Q[var4_int] = ng.a((CharSequence) (Object) param1[var4_int]).replace(' ', ' ');
+                        ((a) this).field_Q[var4_int] = ng.a((CharSequence) (Object) param1[var4_int], -1).replace(' ', ' ');
                         var4_int++;
                         continue L2;
                       }
@@ -324,7 +323,7 @@ final class a extends ch implements vo {
         }
     }
 
-    final static void l() {
+    final static void l(int param0) {
         Object var2 = null;
         al.a(nk.field_b, -116, (String) null);
     }

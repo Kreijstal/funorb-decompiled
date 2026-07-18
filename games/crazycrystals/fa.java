@@ -8,7 +8,7 @@ class fa extends mg {
     private String field_l;
     private long field_j;
 
-    final static void a(vc param0, vc param1, boolean param2, boolean param3, int param4, int param5, int param6, int param7, int param8, int param9, dl[] param10, dl[] param11, int param12, int param13, int param14) {
+    final static void a(vc param0, vc param1, boolean param2, boolean param3, int param4, int param5, int param6, int param7, int param8, int param9, dl[] param10, dl[] param11, int param12, int param13, int param14, int param15, int param16) {
         RuntimeException var17 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -72,8 +72,7 @@ class fa extends mg {
         StringBuilder stackOut_12_1 = null;
         String stackOut_12_2 = null;
         try {
-          int discarded$1 = 20;
-          a.a(26, 240, 0, 17, 15, param1, vh.field_f, param14, param0, aj.field_t, jn.field_i, ao.field_e, la.field_a, new hj(param11), 0, new hj(param10), 20, 5, param4, mc.field_s);
+          a.a(26, 240, 0, 17, 15, param1, vh.field_f, param14, param0, aj.field_t, jn.field_i, ao.field_e, la.field_a, new hj(param11), 0, new hj(param10), 20, 5, param4, mc.field_s, 20);
           a.a(126, param13, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -257,7 +256,7 @@ class fa extends mg {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_k = null;
         field_i = null;
         field_m = null;
@@ -275,7 +274,7 @@ class fa extends mg {
         }
     }
 
-    final static void a(boolean param0, boolean param1, String param2) {
+    final static void a(boolean param0, boolean param1, String param2, boolean param3) {
         try {
             pl.e(-125);
             qe.field_g.g((byte) -100);

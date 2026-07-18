@@ -227,7 +227,7 @@ final class cd {
         cl.field_B = null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
         field_c = null;
         field_m = null;

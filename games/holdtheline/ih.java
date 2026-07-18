@@ -27,13 +27,13 @@ final class ih extends hl {
         ge.field_b = param1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_n = null;
         field_j = null;
         field_t = null;
     }
 
-    final static String a(Throwable param0) throws IOException {
+    final static String a(Throwable param0, int param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;
@@ -135,7 +135,7 @@ final class ih extends hl {
         }
     }
 
-    final static String a(int param0) {
+    final static String a(int param0, int param1) {
         int var3 = 0;
         int var4 = HoldTheLine.field_D;
         StringBuilder var2 = new StringBuilder(5);

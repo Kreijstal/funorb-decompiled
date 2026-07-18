@@ -16,11 +16,10 @@ final class ed {
         }
     }
 
-    final static void a(boolean param0, mf param1, mf param2) {
+    final static void a(boolean param0, mf param1, mf param2, byte param3) {
         try {
             ai.a(lp.field_Ab, (dh) (Object) ul.field_m, f.field_a, vo.field_C, im.field_d, wi.field_n, tk.field_t, ad.field_l, (byte) 61, true, ic.field_c, fp.field_u);
-            int discarded$0 = 2;
-            ef.field_b = cr.a("lobby", param1, "chatfilter");
+            ef.field_b = cr.a("lobby", param1, "chatfilter", 2);
             rh.field_e[0] = mc.field_a;
             rh.field_e[2] = sp.field_s;
             rh.field_e[1] = e.field_j;
@@ -164,7 +163,7 @@ final class ed {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_f = null;
         field_c = null;

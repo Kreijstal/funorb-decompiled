@@ -88,11 +88,11 @@ abstract class oh extends pb {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         if (Character.isISOControl(param0)) {
           return false;
         } else {

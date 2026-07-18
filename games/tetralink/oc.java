@@ -34,7 +34,7 @@ final class oc extends mc {
         int var2 = -115 / ((15 - param0) / 40);
     }
 
-    final static void a(java.awt.Canvas param0, boolean param1) {
+    final static void a(java.awt.Canvas param0, boolean param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -67,17 +67,12 @@ final class oc extends mc {
                 break L0;
               }
             }
-            int discarded$10 = -63;
-            int discarded$11 = -31307;
-            rh.a(th.field_e, ai.c(), vi.a(), (byte) 84, var3_int != 0);
+            rh.a(th.field_e, ai.c((byte) -63), vi.a(-31307), (byte) 84, var3_int != 0);
             return;
           } else {
             if (!me.a((byte) -99)) {
               ra.a();
-              int discarded$12 = -109;
-              int discarded$13 = 240;
-              int discarded$14 = 320;
-              ef.a();
+              ef.a(320, 240, -109);
               bo.a(0, 0, param0, -2);
               return;
             } else {
@@ -281,7 +276,7 @@ final class oc extends mc {
         field_w = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         String var2 = null;
         if (null != ll.field_t) {
             var2 = ll.field_t;

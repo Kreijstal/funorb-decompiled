@@ -10,7 +10,7 @@ class lg {
     int field_d;
     private sna field_e;
 
-    final static void c() {
+    final static void c(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

@@ -15,7 +15,7 @@ final class kw extends kj {
     private boolean field_o;
     static String field_n;
 
-    final static void a() {
+    final static void a(boolean param0) {
         gk.field_d = 0;
         lna.field_q = true;
     }
@@ -179,7 +179,7 @@ final class kw extends kj {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_k = null;
         field_g = null;
         field_j = null;

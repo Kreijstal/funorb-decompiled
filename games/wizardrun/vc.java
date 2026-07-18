@@ -139,7 +139,7 @@ final class vc extends pe implements qd {
         int discarded$0 = ((vc) this).field_J.a(((vc) this).field_I, param0 - -((vc) this).field_o - -14, ((vc) this).field_l + (param3 + 10), ((vc) this).field_r - 28, ((vc) this).field_n, 16777215, -1, param1, 0, ((vc) this).field_J.field_M);
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_K = null;
     }
 
@@ -261,8 +261,7 @@ final class vc extends pe implements qd {
                 } else {
                     bh.field_a = di.a(new String[1], (byte) 46, of.field_m);
                 }
-                int discarded$0 = 550;
-                bh.field_a = ol.a(new CharSequence[3]);
+                bh.field_a = ol.a(new CharSequence[3], 550);
             }
             aa.field_lb.l(-27697);
             uh.a((byte) 125);

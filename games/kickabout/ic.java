@@ -154,7 +154,7 @@ final class ic {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_h = null;
         field_c = null;

@@ -37,8 +37,7 @@ final class cj {
                     if (oa.field_q != 2) {
                       break L0;
                     } else {
-                      int discarded$6 = -73;
-                      if (!ch.a(((cj) this).field_i)) {
+                      if (!ch.a(((cj) this).field_i, (byte) -73)) {
                         break L0;
                       } else {
                         return 1;
@@ -50,14 +49,13 @@ final class cj {
                   return 1;
                 }
               } else {
-                int discarded$7 = ((cj) this).b(-36);
+                int discarded$2 = ((cj) this).b(-36);
                 if (((cj) this).field_p != hh.field_d) {
                   L1: {
                     if (oa.field_q != 2) {
                       break L1;
                     } else {
-                      int discarded$8 = -73;
-                      if (!ch.a(((cj) this).field_i)) {
+                      if (!ch.a(((cj) this).field_i, (byte) -73)) {
                         break L1;
                       } else {
                         return 1;
@@ -77,8 +75,7 @@ final class cj {
                   if (oa.field_q != 2) {
                     break L2;
                   } else {
-                    int discarded$9 = -73;
-                    if (!ch.a(((cj) this).field_i)) {
+                    if (!ch.a(((cj) this).field_i, (byte) -73)) {
                       break L2;
                     } else {
                       return 1;
@@ -90,11 +87,10 @@ final class cj {
                 return 1;
               }
             } else {
-              int discarded$10 = ((cj) this).b(-36);
+              int discarded$3 = ((cj) this).b(-36);
               if (((cj) this).field_p != hh.field_d) {
                 if (oa.field_q == 2) {
-                  int discarded$11 = -73;
-                  if (ch.a(((cj) this).field_i)) {
+                  if (ch.a(((cj) this).field_i, (byte) -73)) {
                     return 1;
                   } else {
                     return 0;
@@ -237,7 +233,7 @@ final class cj {
         return stackIn_28_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_s = null;
         field_o = null;
         field_b = null;

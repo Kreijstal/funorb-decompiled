@@ -203,7 +203,7 @@ final class ql {
         return stackIn_10_0;
     }
 
-    final static int[] a(int param0, int param1) {
+    final static int[] a(int param0, int param1, int param2) {
         int var3 = nm.a(param0, (byte) -128);
         int var4 = j.a(param0, -121);
         int var5 = nm.a(param1, (byte) 85);

@@ -4,7 +4,7 @@
 final class hb {
     static char[] field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -200,7 +200,7 @@ final class hb {
         int discarded$1 = ka.a(2);
     }
 
-    final static mj a(sh param0, String param1, String param2, sh param3) {
+    final static mj a(sh param0, String param1, String param2, sh param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

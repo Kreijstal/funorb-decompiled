@@ -21,7 +21,7 @@ class dk implements dh, vc {
     qi field_f;
     int field_e;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_m = null;
     }
 
@@ -208,8 +208,7 @@ class dk implements dh, vc {
                 var13 = stackIn_5_0 - -Math.min(stackIn_5_1, Math.min(stackIn_5_2, stackIn_5_3));
                 td.a(param1.field_k + (param0 + param1.field_x), param1.field_k + param0, param1.field_o + param4 - -param1.field_u, true, param1.field_o + param4);
                 pc.field_b.a(((dk) this).field_a, var12, (byte) -53, var13, var11, var11);
-                int discarded$1 = -10;
-                dm.b();
+                dm.b((byte) -10);
                 break L1;
               } else {
                 break L1;
@@ -249,10 +248,9 @@ class dk implements dh, vc {
         }
     }
 
-    private final void a(int param0, int param1, n param2) {
+    private final void a(int param0, int param1, n param2, byte param3) {
         try {
-            int discarded$0 = 0;
-            this.a(0, param0, ((dk) this).field_k, (byte) -63, param1, ((dk) this).field_c, param2);
+            this.a(0, param0, ((dk) this).field_k, (byte) -63, param1, ((dk) this).field_c, param2, 0);
         } catch (RuntimeException runtimeException) {
             throw kk.a((Throwable) (Object) runtimeException, "dk.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + -53 + ')');
         }
@@ -263,8 +261,7 @@ class dk implements dh, vc {
             return;
         }
         try {
-            int discarded$0 = -53;
-            this.a(param1, param4, param3);
+            this.a(param1, param4, param3, (byte) -53);
         } catch (RuntimeException runtimeException) {
             throw kk.a((Throwable) (Object) runtimeException, "dk.C(" + param0 + ',' + param1 + ',' + -106 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -485,7 +482,7 @@ class dk implements dh, vc {
         return stackIn_1_0;
     }
 
-    private final void a(int param0, int param1, int param2, byte param3, int param4, int param5, n param6) {
+    private final void a(int param0, int param1, int param2, byte param3, int param4, int param5, n param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -567,12 +564,11 @@ class dk implements dh, vc {
                 ((dk) this).field_f.a(((dk) this).a(param6, (byte) 125), this.a((byte) -96, 0, param1, param6), var11 + this.a(0, (byte) 57, param6, param4), param5, param2);
                 break L1;
               } else {
-                int discarded$2 = ((dk) this).field_f.a(((dk) this).a(param6, (byte) -12), this.a((byte) 101, 0, param1, param6), this.a(0, (byte) -114, param6, param4), var9_int, var10, param5, param2, ((dk) this).field_i, ((dk) this).field_d, ((dk) this).field_h);
+                int discarded$1 = ((dk) this).field_f.a(((dk) this).a(param6, (byte) -12), this.a((byte) 101, 0, param1, param6), this.a(0, (byte) -114, param6, param4), var9_int, var10, param5, param2, ((dk) this).field_i, ((dk) this).field_d, ((dk) this).field_h);
                 break L1;
               }
             }
-            int discarded$3 = -10;
-            dm.b();
+            dm.b((byte) -10);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1075,8 +1071,7 @@ class dk implements dh, vc {
                   var12 = var10;
                   L3: while (true) {
                     if (var12 > var11) {
-                      int discarded$1 = -10;
-                      dm.b();
+                      dm.b((byte) -10);
                       break L1;
                     } else {
                       L4: {
@@ -1367,17 +1362,14 @@ class dk implements dh, vc {
         }
     }
 
-    final static io a() {
-        int discarded$0 = 0;
-        String var1 = tn.d();
+    final static io a(int param0) {
+        String var1 = tn.d(0);
         if (var1 != null) {
             if (!(var1.indexOf('@') < 0)) {
                 var1 = "";
             }
         }
-        int discarded$1 = 0;
-        int discarded$2 = 112;
-        return new io(tn.d(), ab.n());
+        return new io(tn.d(0), ab.n(112));
     }
 
     dk(qi param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {

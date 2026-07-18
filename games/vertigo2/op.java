@@ -7,7 +7,7 @@ final class op {
     static String field_b;
     static si field_d;
 
-    final static void a(int param0, int[] param1, int param2, byte[] param3) {
+    final static void a(int param0, int[] param1, int param2, byte[] param3, boolean param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -128,7 +128,7 @@ final class op {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;
@@ -136,10 +136,10 @@ final class op {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            java.net.URL var2 = null;
-            Throwable var2_ref = null;
-            RuntimeException var2_ref2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
+            java.net.URL var4 = null;
             RuntimeException stackIn_5_0 = null;
             StringBuilder stackIn_5_1 = null;
             RuntimeException stackIn_6_0 = null;
@@ -160,21 +160,20 @@ final class op {
               L0: {
                 try {
                   L1: {
-                    var2 = param1.getCodeBase();
-                    int discarded$7 = 0;
-                    var3 = ar.a(param1, var2).getFile();
-                    Object discarded$8 = je.a((byte) 83, "updatelinks", param1, new Object[2]);
-                    Object discarded$9 = je.a((byte) 55, "updatelinks", param1, new Object[2]);
-                    Object discarded$10 = je.a((byte) 120, "updatelinks", param1, new Object[2]);
-                    Object discarded$11 = je.a((byte) -72, "updatelinks", param1, new Object[2]);
-                    Object discarded$12 = je.a((byte) 126, "updatelinks", param1, new Object[2]);
-                    Object discarded$13 = je.a((byte) -117, "updatelinks", param1, new Object[2]);
+                    var4 = param1.getCodeBase();
+                    var3 = ar.a(param1, var4, 0).getFile();
+                    Object discarded$6 = je.a((byte) 83, "updatelinks", param1, new Object[2]);
+                    Object discarded$7 = je.a((byte) 55, "updatelinks", param1, new Object[2]);
+                    Object discarded$8 = je.a((byte) 120, "updatelinks", param1, new Object[2]);
+                    Object discarded$9 = je.a((byte) -72, "updatelinks", param1, new Object[2]);
+                    Object discarded$10 = je.a((byte) 126, "updatelinks", param1, new Object[2]);
+                    Object discarded$11 = je.a((byte) -117, "updatelinks", param1, new Object[2]);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   L2: {
-                    var2_ref = decompiledCaughtException;
+                    var2 = decompiledCaughtException;
                     break L2;
                   }
                 }
@@ -183,8 +182,8 @@ final class op {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_4_0 = (RuntimeException) var2_ref2;
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_4_0 = (RuntimeException) var2_ref;
                 stackOut_4_1 = new StringBuilder().append("op.B(").append(0).append(',');
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;

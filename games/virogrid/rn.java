@@ -33,7 +33,7 @@ abstract class rn {
         field_g = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(!ac.field_e)) {
             df.g(df.field_i, df.field_g, df.field_k + -df.field_i, -df.field_g + df.field_h);
             cm.field_h.a(false, 24960);

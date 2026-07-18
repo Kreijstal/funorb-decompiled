@@ -13,8 +13,7 @@ final class aw extends ana {
             ut.field_m = ida.a("", -203);
             ut.field_m.a(false, 1537025605);
             nm.a(param2, param3, 111, param4);
-            int discarded$0 = 113;
-            nga.b();
+            nga.b((byte) 113);
             ola.field_p = tn.field_a;
             dka.field_G = tn.field_a;
         } catch (RuntimeException runtimeException) {
@@ -22,7 +21,7 @@ final class aw extends ana {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         op var3 = null;
         aga var4 = null;
         int var6 = 0;
@@ -105,10 +104,8 @@ final class aw extends ana {
         ((aw) this).field_l = ((aw) this).field_l - 1;
         if (fieldTemp$0 >= 0) {
             if (((aw) this).field_l == 25) {
-                int discarded$1 = -124;
-                this.f();
-                int discarded$2 = 69;
-                this.g();
+                this.f((byte) -124);
+                this.g((byte) 69);
             }
             return false;
         }
@@ -122,7 +119,7 @@ final class aw extends ana {
         }
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
         aga var6 = ((aw) this).field_z.field_l.a(106, ((aw) this).field_q.field_h);
@@ -142,7 +139,7 @@ final class aw extends ana {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_x = null;
         field_y = null;
         field_v = null;

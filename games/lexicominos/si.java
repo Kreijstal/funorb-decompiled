@@ -150,8 +150,7 @@ abstract class si extends ca {
                 break L1;
               }
             }
-            int discarded$2 = 1;
-            stackOut_2_0 = ti.a(10, param1, 113);
+            stackOut_2_0 = ti.a(10, param1, 113, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -188,7 +187,7 @@ abstract class si extends ca {
         return stackIn_3_0;
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_q = null;
         field_t = null;
         field_u = null;

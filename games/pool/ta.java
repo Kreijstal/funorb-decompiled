@@ -12,7 +12,7 @@ final class ta {
     static int field_f;
     static tq field_g;
 
-    final static void a() {
+    final static void a(byte param0, int param1, int param2, int param3) {
         tm.field_f = 13421772;
         vn.field_c = 4;
         ch.field_H = 3;
@@ -27,7 +27,7 @@ final class ta {
         tn.field_n.d((ei) (Object) tg.field_a, 30);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_a = null;
         field_g = null;
@@ -152,7 +152,7 @@ final class ta {
         return stackIn_10_0;
     }
 
-    final static wc a(boolean param0) {
+    final static wc a(boolean param0, int param1) {
         wc var2 = new wc(true);
         var2.field_e = param0 ? true : false;
         return var2;

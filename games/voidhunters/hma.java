@@ -8,7 +8,7 @@ final class hma {
     private int[] field_c;
     static int[] field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
     }
 

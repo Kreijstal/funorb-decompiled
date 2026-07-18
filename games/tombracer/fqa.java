@@ -131,13 +131,13 @@ abstract class fqa extends kna {
         }
     }
 
-    public static void A() {
+    public static void A(int param0) {
         field_F = null;
     }
 
     abstract int B(int param0);
 
-    final static int[] e() {
+    final static int[] e(boolean param0) {
         return new int[8];
     }
 
@@ -145,8 +145,7 @@ abstract class fqa extends kna {
         if (Character.isISOControl(param1)) {
             return false;
         }
-        int discarded$4 = 11955;
-        if (q.a(param1)) {
+        if (q.a(param1, 11955)) {
             return true;
         }
         return false;

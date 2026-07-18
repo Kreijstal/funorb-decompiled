@@ -10,14 +10,14 @@ final class fb {
     static String field_c;
     static ji field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_e = null;
         field_a = null;
     }
 
-    final static String a(java.applet.Applet param0) {
+    final static String a(java.applet.Applet param0, byte param1) {
         try {
             String var2 = null;
             Throwable var2_ref = null;

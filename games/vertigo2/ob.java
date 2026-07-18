@@ -22,8 +22,7 @@ final class ob extends cj implements ih, ij {
     private final void a(int param0) {
         L0: {
           L1: {
-            int discarded$8 = 6;
-            if (hi.c()) {
+            if (hi.c((byte) 6)) {
               break L1;
             } else {
               if (((ob) this).field_H.field_w.length() <= 0) {
@@ -37,8 +36,7 @@ final class ob extends cj implements ih, ij {
               }
             }
           }
-          int discarded$9 = 26806;
-          la.a(((ob) this).field_H.field_w, ((ob) this).field_O.field_w);
+          la.a(((ob) this).field_H.field_w, ((ob) this).field_O.field_w, 26806);
           break L0;
         }
         L2: {
@@ -252,7 +250,7 @@ final class ob extends cj implements ih, ij {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_M = null;
         field_Q = null;
         field_I = null;
@@ -798,17 +796,14 @@ final class ob extends cj implements ih, ij {
                 if (param1 != ((ob) this).field_K) {
                   if (((ob) this).field_G == param1) {
                     if (((ob) this).field_N) {
-                      int discarded$385 = -128;
-                      rk.h();
+                      rk.h(-128);
                       break L1;
                     } else {
                       if (((ob) this).field_R) {
-                        int discarded$386 = 81;
-                        sg.b();
+                        sg.b((byte) 81);
                         break L1;
                       } else {
-                        int discarded$387 = 1;
-                        oq.a();
+                        oq.a(true);
                         break L1;
                       }
                     }
@@ -816,8 +811,7 @@ final class ob extends cj implements ih, ij {
                     break L1;
                   }
                 } else {
-                  int discarded$388 = -104;
-                  ff.b();
+                  ff.b((byte) -104);
                   break L1;
                 }
               }

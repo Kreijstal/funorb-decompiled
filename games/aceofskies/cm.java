@@ -154,9 +154,8 @@ final class cm extends jm {
         return (java.net.Socket) (Object) stackIn_21_0;
     }
 
-    final static void a(ll param0) {
-        int discarded$0 = -92;
-        qk.a();
+    final static void a(ll param0, int param1) {
+        qk.a((byte) -92);
         try {
             vp.a(param0.field_x, param0.field_v, param0.field_q);
         } catch (RuntimeException runtimeException) {

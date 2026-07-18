@@ -154,8 +154,7 @@ final class emb extends rqa {
                                 break L8;
                               } else {
                                 if (bfb.field_a > var37) {
-                                  int discarded$6 = 1;
-                                  bdb.a(var25, 0, var21, var37 + var36, var38, 0, var29, param4, 0);
+                                  bdb.a(var25, 0, var21, var37 + var36, var38, 0, var29, param4, 0, true);
                                   break L8;
                                 } else {
                                   break L8;
@@ -174,12 +173,10 @@ final class emb extends rqa {
                                 }
                               }
                               if (var37 < 0) {
-                                int discarded$7 = 1;
-                                bdb.a(-(var37 * var40) + var25, var40, var21 - var37 * var39, var36, var37 + var38, var41, -(var41 * var37) + var29, param4, var39);
+                                bdb.a(-(var37 * var40) + var25, var40, var21 - var37 * var39, var36, var37 + var38, var41, -(var41 * var37) + var29, param4, var39, true);
                                 break L8;
                               } else {
-                                int discarded$8 = 1;
-                                bdb.a(var25, var40, var21, var37 - -var36, var38, var41, var29, param4, var39);
+                                bdb.a(var25, var40, var21, var37 - -var36, var38, var41, var29, param4, var39, true);
                                 break L8;
                               }
                             }
@@ -362,12 +359,10 @@ final class emb extends rqa {
                           }
                         }
                         if (var36 < 0) {
-                          int discarded$9 = 1;
-                          bdb.a(var25 + -(var36 * var39), var39, var21 - var36 * var38, var35, var37 - -var36, var40, var29 + -(var36 * var40), param4, var38);
+                          bdb.a(var25 + -(var36 * var39), var39, var21 - var36 * var38, var35, var37 - -var36, var40, var29 + -(var36 * var40), param4, var38, true);
                           break L14;
                         } else {
-                          int discarded$10 = 1;
-                          bdb.a(var25, var39, var21, var36 - -var35, var37, var40, var29, param4, var38);
+                          bdb.a(var25, var39, var21, var36 - -var35, var37, var40, var29, param4, var38, true);
                           break L14;
                         }
                       } else {
@@ -377,8 +372,7 @@ final class emb extends rqa {
                           if (var36 >= bfb.field_a) {
                             break L14;
                           } else {
-                            int discarded$11 = 1;
-                            bdb.a(var25, 0, var21, var36 + var35, var37, 0, var29, param4, 0);
+                            bdb.a(var25, 0, var21, var36 + var35, var37, 0, var29, param4, 0, true);
                             break L14;
                           }
                         }

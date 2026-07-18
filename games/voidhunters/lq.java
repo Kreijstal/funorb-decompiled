@@ -5,7 +5,7 @@ final class lq extends le {
     static dja field_i;
     static String field_j;
 
-    private final int c(int param0, int param1) {
+    private final int c(int param0, int param1, int param2) {
         int var4 = param1 * 57 + param0;
         var4 = var4 << 1 ^ var4;
         return -((2147483647 & 1376312589 + (789221 + var4 * (var4 * 15731)) * var4) / 262144) + 4096;
@@ -31,8 +31,7 @@ final class lq extends le {
         if (((lq) this).field_f.field_e) {
             var4 = sj.field_p[param0];
             for (var5 = 0; var5 < hob.field_d; var5++) {
-                int discarded$1 = 789221;
-                var7[var5] = this.c(grb.field_l[var5], var4) % 4096;
+                var7[var5] = this.c(grb.field_l[var5], var4, 789221) % 4096;
             }
         }
         return var3;

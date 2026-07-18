@@ -371,11 +371,11 @@ final class gnb {
         ((gnb) this).field_e = null;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_f = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(cgb.field_a)) {
             throw new IllegalStateException();
         }

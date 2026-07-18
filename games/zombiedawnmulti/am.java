@@ -6,7 +6,7 @@ final class am {
     static int field_b;
     static String field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 

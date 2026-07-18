@@ -43,13 +43,12 @@ final class sm {
           L2: {
             var4 = (640 - var3) / 2;
             var5 = this.h(-127);
-            int discarded$2 = -98;
-            var6 = this.b();
+            var6 = this.b((byte) -98);
             var7 = var4;
             if (param0 >= 41) {
               break L2;
             } else {
-              int discarded$3 = this.h(101);
+              int discarded$1 = this.h(101);
               break L2;
             }
           }
@@ -88,7 +87,7 @@ final class sm {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -387,8 +386,7 @@ final class sm {
                   if (var12 > 16) {
                     L8: {
                       ks.a(-18166, 16, 2458760, -1, var6, param1);
-                      int discarded$4 = 0;
-                      mh.a(var11, var6 + -16, param1 - -16, 2458760);
+                      mh.a(var11, var6 + -16, param1 - -16, 2458760, false);
                       if (((sm) this).field_a != 7) {
                         stackOut_45_0 = 16;
                         stackIn_46_0 = stackOut_45_0;
@@ -421,8 +419,7 @@ final class sm {
                     }
                     return;
                   } else {
-                    int discarded$5 = 0;
-                    mh.a(-(var12 * 2) + 32 + var11, -var12 + var6, param1 - -var12, 65793);
+                    mh.a(-(var12 * 2) + 32 + var11, -var12 + var6, param1 - -var12, 65793, false);
                     var12++;
                     continue L7;
                   }
@@ -457,8 +454,7 @@ final class sm {
                   if (var14_int > 16) {
                     L13: {
                       ks.a(-18166, 16, 2458760, -1, var6, param1);
-                      int discarded$6 = 0;
-                      mh.a(var13, -16 + var6, 16 + param1, 2458760);
+                      mh.a(var13, -16 + var6, 16 + param1, 2458760, false);
                       var14_int = -12 + ln.field_H[var11];
                       if (var14_int > 0) {
                         var15_ref_String = pe.field_J[var11];
@@ -480,8 +476,7 @@ final class sm {
                     var11++;
                     continue L6;
                   } else {
-                    int discarded$7 = 0;
-                    mh.a(var13, var6 + -var14_int, param1 - -var14_int, 65793);
+                    mh.a(var13, var6 + -var14_int, param1 - -var14_int, 65793, false);
                     var14_int++;
                     continue L12;
                   }
@@ -576,7 +571,7 @@ final class sm {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -786,13 +781,11 @@ final class sm {
                           break L2;
                         }
                       } else {
-                        int discarded$3 = -23;
-                        this.c();
+                        this.c((byte) -23);
                         break L2;
                       }
                     } else {
-                      int discarded$4 = -8;
-                      this.j();
+                      this.j(-8);
                       break L2;
                     }
                   }
@@ -869,8 +862,7 @@ final class sm {
                           break L7;
                         }
                       }
-                      int discarded$5 = 0;
-                      this.a(stackIn_12_1, stackIn_12_2 != 0, var7);
+                      this.a(stackIn_12_1, stackIn_12_2 != 0, var7, false);
                       break L5;
                     }
                   } else {
@@ -939,7 +931,7 @@ final class sm {
         gf.b(kc.field_m);
     }
 
-    private final void a(int param0, boolean param1, int param2) {
+    private final void a(int param0, boolean param1, int param2, boolean param3) {
         int var5 = 0;
         String var6 = null;
         int var7 = 0;
@@ -1279,8 +1271,7 @@ final class sm {
         }
         var4 = this.c(32);
         var5 = this.h(-123);
-        int discarded$2 = -98;
-        var6 = this.b();
+        var6 = this.b((byte) -98);
         if (param1 == -6469) {
           L2: {
             var7 = wm.a(param2, (byte) 99, 128);
@@ -1329,7 +1320,7 @@ final class sm {
         }
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1346,8 +1337,7 @@ final class sm {
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         gf.a(kc.field_m);
         gf.a();
-        int discarded$2 = 1;
-        if (!w.d()) {
+        if (!w.d(true)) {
           L0: {
             if (ri.field_I == null) {
               ri.field_I = kf.a((byte) 85, 0, 7, 10);
@@ -1409,8 +1399,7 @@ final class sm {
                       L4: {
                         var6 = 2805974;
                         var13 = var9[var12];
-                        int discarded$3 = -105;
-                        if (jp.a(var13)) {
+                        if (jp.a(var13, (byte) -105)) {
                           var11 = 1;
                           var6 = 16777215;
                           break L4;
@@ -1483,9 +1472,7 @@ final class sm {
           } else {
             if (oe.field_e) {
               if (ur.field_zb == null) {
-                int discarded$6 = 4;
-                int discarded$7 = 88;
-                ur.field_zb = vs.a();
+                ur.field_zb = vs.a((byte) 88, 4);
                 break L2;
               } else {
                 break L2;
@@ -1539,8 +1526,7 @@ final class sm {
                     }
                   }
                 }
-                int discarded$8 = 0;
-                hd.c();
+                hd.c(false);
                 break L6;
               }
             }
@@ -2593,8 +2579,7 @@ final class sm {
           } else {
             if (!is.field_a) {
               L1: while (true) {
-                int discarded$8 = 55;
-                if (!cc.e()) {
+                if (!cc.e((byte) 55)) {
                   L2: {
                     L3: {
                       if (((sm) this).field_a == 6) {
@@ -2607,21 +2592,18 @@ final class sm {
                         }
                       }
                     }
-                    int discarded$9 = 122;
-                    this.f();
+                    this.f((byte) 122);
                     break L2;
                   }
                   L4: {
                     if (((sm) this).field_a != 8) {
                       break L4;
                     } else {
-                      int discarded$10 = -16084;
-                      this.a();
+                      this.a(-16084);
                       break L4;
                     }
                   }
-                  int discarded$11 = -128;
-                  v.a();
+                  v.a((byte) -128);
                   ((sm) this).field_d.a(param0 ^ -2665, this.a(td.field_P, (byte) -109, nh.field_p), this.a(bb.field_b, (byte) -109, pd.field_k));
                   if (((sm) this).field_d.field_c == -1) {
                     break L0;
@@ -2631,8 +2613,7 @@ final class sm {
                   }
                 } else {
                   if (oq.field_j != 13) {
-                    int discarded$12 = 23;
-                    this.k();
+                    this.k(23);
                     if (((sm) this).field_d.field_c == -1) {
                       continue L1;
                     } else {
@@ -2695,8 +2676,7 @@ final class sm {
               }
             }
           }
-          int discarded$13 = -70;
-          this.d();
+          this.d((byte) -70);
           break L7;
         }
         L9: {
@@ -2712,9 +2692,9 @@ final class sm {
           if (((sm) this).field_a != 10) {
             break L10;
           } else {
-            int fieldTemp$14 = on.field_c + 1;
+            int fieldTemp$2 = on.field_c + 1;
             on.field_c = on.field_c + 1;
-            if (32 < fieldTemp$14) {
+            if (32 < fieldTemp$2) {
               on.field_c = 32;
               break L10;
             } else {
@@ -2726,9 +2706,9 @@ final class sm {
           if (((sm) this).field_a != 5) {
             break L11;
           } else {
-            int fieldTemp$15 = nb.field_a + 1;
+            int fieldTemp$3 = nb.field_a + 1;
             nb.field_a = nb.field_a + 1;
-            if (fieldTemp$15 > 32) {
+            if (fieldTemp$3 > 32) {
               nb.field_a = 32;
               break L11;
             } else {
@@ -2738,7 +2718,7 @@ final class sm {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         qd.field_e = this.d(107, pd.field_k, bb.field_b);
         if (je.field_d == 0) {
@@ -2754,7 +2734,7 @@ final class sm {
         }
     }
 
-    private final int b() {
+    private final int b(byte param0) {
         int var2 = 0;
         int var3 = 0;
         if (vr.field_c != ((sm) this).field_a) {
@@ -2822,8 +2802,7 @@ final class sm {
           break L0;
         }
         var2 = this.c(32);
-        int discarded$2 = -98;
-        var3 = this.b();
+        var3 = this.b((byte) -98);
         var4 = this.h(-121);
         var5 = (-var2 + 640) / 2;
         var6 = var5;
@@ -2850,8 +2829,7 @@ final class sm {
           var9 = ShatteredPlansClient.field_F ? 1 : 0;
           var4 = qg.field_p[((sm) this).field_a][param1];
           if (((sm) this).field_d.d(-1)) {
-            int discarded$5 = -32580;
-            this.b(param1, param0, var4);
+            this.b(param1, param0, var4, -32580);
             break L0;
           } else {
             break L0;
@@ -2967,16 +2945,14 @@ final class sm {
                                                                               if (!((sm) this).field_d.c(-97)) {
                                                                                 break L6;
                                                                               } else {
-                                                                                int discarded$6 = 1;
-                                                                                qs.d();
+                                                                                qs.d(true);
                                                                                 break L6;
                                                                               }
                                                                             }
                                                                             if (!((sm) this).field_d.f(-77)) {
                                                                               break L2;
                                                                             } else {
-                                                                              int discarded$7 = 11615;
-                                                                              jn.a();
+                                                                              jn.a(11615);
                                                                               break L1;
                                                                             }
                                                                           } else {
@@ -3054,8 +3030,7 @@ final class sm {
                                                                             } else {
                                                                               if (tf.field_p < 256) {
                                                                                 var5 = 1;
-                                                                                int discarded$8 = 124;
-                                                                                cc.f();
+                                                                                cc.f((byte) 124);
                                                                                 break L12;
                                                                               } else {
                                                                                 break L12;
@@ -3074,7 +3049,7 @@ final class sm {
                                                                                 }
                                                                               }
                                                                             }
-                                                                            gm discarded$9 = qk.a(qc.field_w, 89);
+                                                                            gm discarded$1 = qk.a(qc.field_w, 89);
                                                                             qg.field_q = 25 + cl.field_n;
                                                                             break L1;
                                                                           } else {
@@ -3142,7 +3117,7 @@ final class sm {
         }
     }
 
-    private final void j() {
+    private final void j(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -3539,7 +3514,7 @@ final class sm {
         return this.b(false) + 65;
     }
 
-    private final void k() {
+    private final void k(int param0) {
         int var2 = 0;
         int var3 = 0;
         int stackIn_4_0 = 0;
@@ -3570,9 +3545,7 @@ final class sm {
           if (2 != oq.field_j) {
             break L2;
           } else {
-            int discarded$11 = 0;
-            int discarded$12 = 1;
-            em.a(us.b());
+            em.a(us.b(0), 1);
             break L2;
           }
         }
@@ -3580,9 +3553,7 @@ final class sm {
           if (oq.field_j != 3) {
             break L3;
           } else {
-            int discarded$13 = 1;
-            int discarded$14 = 1;
-            em.a(dg.g());
+            em.a(dg.g(1), 1);
             break L3;
           }
         }
@@ -3590,15 +3561,13 @@ final class sm {
           if (oq.field_j != 4) {
             break L4;
           } else {
-            int discarded$15 = 1;
-            em.a(mq.c((byte) 67));
+            em.a(mq.c((byte) 67), 1);
             break L4;
           }
         }
         L5: {
           if (vr.field_c == 6) {
-            int discarded$16 = 170;
-            this.e();
+            this.e(170);
             break L5;
           } else {
             if (11 == vr.field_c) {
@@ -3794,7 +3763,7 @@ final class sm {
         ((sm) this).a(0, (byte) 28, false);
     }
 
-    private final void b(int param0, boolean param1, int param2) {
+    private final void b(int param0, boolean param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -3815,8 +3784,7 @@ final class sm {
               break L0;
             } else {
               if (var5 == 1) {
-                int discarded$4 = 1;
-                if (w.d()) {
+                if (w.d(true)) {
                   var5 = 0;
                   uc.a(320, mp.field_b.field_K, mp.field_b.field_K - -mp.field_b.field_q, 240, 8, se.field_a, param1, mr.field_i, (byte) -87, 2, mr.field_i, (nq) (Object) mp.field_b, false, 8, var5);
                   break L0;
@@ -3878,15 +3846,13 @@ final class sm {
                                       } else {
                                         if (var5 == 7) {
                                           if (null != bj.field_K) {
-                                            int discarded$5 = 0;
-                                            ej.c();
+                                            ej.c(0);
                                             break L0;
                                           } else {
                                             var5 = param1 ? 1 : 0;
                                             ne.field_s = false;
                                             m.a(8, 13421772, rm.field_b, 8, mp.field_b.field_K, mr.field_i, 240, mp.field_b.field_K - -mp.field_b.field_q, mr.field_i, 320, (nq) (Object) mp.field_b, (nq) (Object) mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (bi[]) null, es.field_n);
-                                            int discarded$6 = -1;
-                                            fm.a(var5 != 0);
+                                            fm.a(var5 != 0, -1);
                                             break L0;
                                           }
                                         } else {
@@ -4014,8 +3980,7 @@ final class sm {
                                                                       break L4;
                                                                     } else {
                                                                       if (((sm) this).field_a == 11) {
-                                                                        int discarded$7 = 51;
-                                                                        ts.a(kq.f((byte) 126));
+                                                                        ts.a(kq.f((byte) 126), (byte) 51);
                                                                         break L0;
                                                                       } else {
                                                                         break L0;
@@ -4629,7 +4594,7 @@ final class sm {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         int var3 = 0;
         L0: {
           var3 = ShatteredPlansClient.field_F ? 1 : 0;

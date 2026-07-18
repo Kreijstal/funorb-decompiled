@@ -108,8 +108,7 @@ final class bf extends rf {
                                     if (var11 >= 20) {
                                       break L6;
                                     } else {
-                                      int discarded$5 = -4001;
-                                      boolean discarded$6 = v.a(new d(var10.field_d, var10.field_q, sa.field_a[var11], sa.field_a[(var11 + 5) % 20], 65535, 1));
+                                      boolean discarded$3 = v.a(new d(var10.field_d, var10.field_q, sa.field_a[var11], sa.field_a[(var11 + 5) % 20], 65535, 1), -4001);
                                       var11++;
                                       continue L7;
                                     }
@@ -200,9 +199,9 @@ final class bf extends rf {
                   }
                 }
               } else {
-                int fieldTemp$7 = ((bf) this).field_r;
+                int fieldTemp$4 = ((bf) this).field_r;
                 ((bf) this).field_r = ((bf) this).field_r + 1;
-                if (~param5 >= ~fieldTemp$7) {
+                if (~param5 >= ~fieldTemp$4) {
                   break L2;
                 } else {
                   if (((bf) this).field_r % (-qc.field_d + 3) != 0) {
@@ -213,8 +212,7 @@ final class bf extends rf {
                       if (param0 <= var9) {
                         break L2;
                       } else {
-                        int discarded$8 = -4001;
-                        boolean discarded$9 = v.a(new d(-16 + ((bf) this).field_f - -sh.b(-126, 32), ((bf) this).field_u + sh.b(64, 32) + -16, sh.b(-126, 64) + 64, 6));
+                        boolean discarded$5 = v.a(new d(-16 + ((bf) this).field_f - -sh.b(-126, 32), ((bf) this).field_u + sh.b(64, 32) + -16, sh.b(-126, 64) + 64, 6), -4001);
                         var9++;
                         continue L13;
                       }
@@ -430,7 +428,7 @@ final class bf extends rf {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         L0: {
           L1: {
             if (0 != ui.field_p) {
@@ -461,8 +459,7 @@ final class bf extends rf {
     final static int e(int param0) {
         bl.field_b.a((byte) -71);
         if (!(jh.field_b.d((byte) -62))) {
-            int discarded$0 = 125;
-            return ck.a();
+            return ck.a((byte) 125);
         }
         if (param0 != 0) {
             return -127;
@@ -662,18 +659,12 @@ final class bf extends rf {
                   if (((bf) this).field_r >= 128) {
                     break L11;
                   } else {
-                    int discarded$12 = -4001;
-                    boolean discarded$13 = v.a(new d(-16 + ((bf) this).field_f + sh.b(65, 32), -16 + ((bf) this).field_u - -sh.b(50, 32), sh.b(-127, 64) + 64));
-                    int discarded$14 = -4001;
-                    boolean discarded$15 = v.a(new d(-24 + ((bf) this).field_f - -sh.b(-126, 48), ((bf) this).field_u - -sh.b(29, 48) - 24, sh.b(47, 64) + 64));
-                    int discarded$16 = -4001;
-                    boolean discarded$17 = v.a(new d(((bf) this).field_f + sh.b(117, 64) + -32, ((bf) this).field_u + sh.b(29, 64) - 32, sh.b(-30, 64) + 64));
-                    int discarded$18 = -4001;
-                    boolean discarded$19 = v.a(new d(-16 + ((bf) this).field_f - -sh.b(91, 32), 16 + ((bf) this).field_u + sh.b(17, 32), 64 + sh.b(25, 64)));
-                    int discarded$20 = -4001;
-                    boolean discarded$21 = v.a(new d(-24 + (((bf) this).field_f - -sh.b(-128, 48)), -40 + ((bf) this).field_u - -sh.b(-127, 48), 64 - -sh.b(96, 64)));
-                    int discarded$22 = -4001;
-                    boolean discarded$23 = v.a(new d(-16 + (((bf) this).field_f + sh.b(119, 32)), ((bf) this).field_u - -sh.b(-126, 32) + 32, sh.b(19, 64) + 64));
+                    boolean discarded$6 = v.a(new d(-16 + ((bf) this).field_f + sh.b(65, 32), -16 + ((bf) this).field_u - -sh.b(50, 32), sh.b(-127, 64) + 64), -4001);
+                    boolean discarded$7 = v.a(new d(-24 + ((bf) this).field_f - -sh.b(-126, 48), ((bf) this).field_u - -sh.b(29, 48) - 24, sh.b(47, 64) + 64), -4001);
+                    boolean discarded$8 = v.a(new d(((bf) this).field_f + sh.b(117, 64) + -32, ((bf) this).field_u + sh.b(29, 64) - 32, sh.b(-30, 64) + 64), -4001);
+                    boolean discarded$9 = v.a(new d(-16 + ((bf) this).field_f - -sh.b(91, 32), 16 + ((bf) this).field_u + sh.b(17, 32), 64 + sh.b(25, 64)), -4001);
+                    boolean discarded$10 = v.a(new d(-24 + (((bf) this).field_f - -sh.b(-128, 48)), -40 + ((bf) this).field_u - -sh.b(-127, 48), 64 - -sh.b(96, 64)), -4001);
+                    boolean discarded$11 = v.a(new d(-16 + (((bf) this).field_f + sh.b(119, 32)), ((bf) this).field_u - -sh.b(-126, 32) + 32, sh.b(19, 64) + 64), -4001);
                     break L11;
                   }
                 }
@@ -1584,8 +1575,7 @@ final class bf extends rf {
             }
             L2: {
               var10 = new d(((bf) this).field_f - -param8, param0 + ((bf) this).field_u, param4, param5, param1, param7, param6, 0);
-              int discarded$12 = -4001;
-              if (v.a(var10)) {
+              if (v.a(var10, -4001)) {
                 var10.field_a = ((bf) this).field_f;
                 break L2;
               } else {
@@ -1628,8 +1618,7 @@ final class bf extends rf {
 
     final static void a(byte param0, String param1) {
         try {
-            int discarded$0 = 8192;
-            kl.a(param1);
+            kl.a(param1, 8192);
             int var2_int = 81;
             sc.a(false, (byte) 106, bl.field_c);
         } catch (RuntimeException runtimeException) {
@@ -1660,8 +1649,7 @@ final class bf extends rf {
           L0: {
             L1: {
               var11 = new d(param9, -22 + ((bf) this).field_u, 0, -512, param6, 12, param8, 0);
-              int discarded$6 = -4001;
-              if (!v.a(var11)) {
+              if (!v.a(var11, -4001)) {
                 break L1;
               } else {
                 var11.field_a = param9;
@@ -2487,8 +2475,7 @@ final class bf extends rf {
                       }
                     }
                     d.field_b.b(false, var11_ref_String);
-                    int discarded$8 = 0;
-                    fc.a(ck.field_g, (rb) (Object) d.field_b, ed.field_j, gg.field_e);
+                    fc.a(ck.field_g, (rb) (Object) d.field_b, ed.field_j, gg.field_e, 0);
                     d.field_b.a((byte) 88, -var10 + d.field_b.field_g);
                     break L3;
                   } else {
@@ -2550,8 +2537,7 @@ final class bf extends rf {
                     d.field_b.a(16, -58);
                     d.field_b.field_g = d.field_b.field_g + 1;
                     var9 = d.field_b.field_g;
-                    int discarded$9 = 0;
-                    fc.a(ck.field_g, (rb) (Object) d.field_b, ed.field_j, gg.field_e);
+                    fc.a(ck.field_g, (rb) (Object) d.field_b, ed.field_j, gg.field_e, 0);
                     d.field_b.b(d.field_b.field_g - var9, 31700);
                     break L3;
                   }
@@ -2586,8 +2572,7 @@ final class bf extends rf {
                   if (var9 == 248) {
                     mi.a(1048576, ll.b(107));
                     uj.field_r = vk.field_x;
-                    int discarded$10 = 27;
-                    ec.a();
+                    ec.a((byte) 27);
                     eb.field_f = false;
                     stackOut_30_0 = var9;
                     stackIn_31_0 = stackOut_30_0;
@@ -2599,9 +2584,8 @@ final class bf extends rf {
                       vh.field_t = var9;
                       break L8;
                     } else {
-                      boolean discarded$11 = ag.a(124, gd.a(true));
-                      int discarded$12 = 0;
-                      oj.field_g = new Boolean(vf.a((rb) (Object) se.field_p));
+                      boolean discarded$1 = ag.a(124, gd.a(true));
+                      oj.field_g = new Boolean(vf.a((rb) (Object) se.field_p, 0));
                       se.field_p.field_g = 0;
                       break L8;
                     }
@@ -2624,8 +2608,7 @@ final class bf extends rf {
                     var12 = 0;
                     L11: while (true) {
                       if (var12 >= var11) {
-                        int discarded$13 = 27;
-                        ec.a();
+                        ec.a((byte) 27);
                         eb.field_f = false;
                         stackOut_40_0 = var11 + 100;
                         stackIn_41_0 = stackOut_40_0;
@@ -2661,8 +2644,7 @@ final class bf extends rf {
                       break L13;
                     }
                   }
-                  int discarded$14 = 27;
-                  ec.a();
+                  ec.a((byte) 27);
                   eb.field_f = false;
                   stackOut_49_0 = vh.field_t;
                   stackIn_50_0 = stackOut_49_0;
@@ -2676,8 +2658,7 @@ final class bf extends rf {
               if (null == m.field_b) {
                 if (eb.field_f) {
                   L15: {
-                    int discarded$15 = -71;
-                    if (30000L >= kg.b()) {
+                    if (30000L >= kg.b((byte) -71)) {
                       uj.field_r = va.field_o;
                       break L15;
                     } else {
@@ -2787,7 +2768,7 @@ final class bf extends rf {
         return stackIn_61_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_x = null;
         field_y = null;
     }

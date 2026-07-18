@@ -74,8 +74,7 @@ final class ec extends ln {
                 } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-                  int discarded$2 = 21862;
-                  wp.a((Throwable) null, "MGR1: " + param1);
+                  wp.a((Throwable) null, "MGR1: " + param1, 21862);
                   return;
                 }
                 break L0;

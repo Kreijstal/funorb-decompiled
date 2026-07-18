@@ -177,8 +177,7 @@ abstract class wd {
         int stackOut_14_10 = 0;
         int stackOut_14_11 = 0;
         L0: {
-          int discarded$4 = -117;
-          sk.b();
+          sk.b(-117);
           if (param1 < -26) {
             break L0;
           } else {
@@ -407,11 +406,11 @@ abstract class wd {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return qa.field_v;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_b = null;

@@ -15,7 +15,7 @@ final class qa extends ma {
     static int field_r;
     static String field_o;
 
-    final static void a(int[][] param0, bf[] param1, pq[] param2) {
+    final static void a(int[][] param0, bf[] param1, pq[] param2, int param3) {
         pq[] var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -81,10 +81,9 @@ final class qa extends ma {
               if (var6.length <= var5) {
                 var4_int = 0;
                 L2: while (true) {
-                  int discarded$4 = 0;
-                  int dupTemp$5 = oe.a(param1, var4_int, param2, param0);
-                  var4_int = dupTemp$5;
-                  if (dupTemp$5 == -1) {
+                  int dupTemp$2 = oe.a(param1, var4_int, param2, param0, 0);
+                  var4_int = dupTemp$2;
+                  if (dupTemp$2 == -1) {
                     var7 = param2;
                     var4 = var7;
                     var8 = 0;
@@ -198,7 +197,7 @@ final class qa extends ma {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_o = null;
         field_t = null;
         field_m = null;
@@ -254,8 +253,7 @@ final class qa extends ma {
               } else {
                 L2: {
                   var3 = param1.charAt(var2_int);
-                  int discarded$5 = 22987;
-                  if (vq.a((char) var3)) {
+                  if (vq.a((char) var3, 22987)) {
                     break L2;
                   } else {
                     if (kh.a((char) var3, (byte) 120)) {
@@ -306,12 +304,11 @@ final class qa extends ma {
     }
 
     final static void a(byte param0, boolean param1) {
-        int discarded$0 = 80;
-        oa.a(param1);
+        oa.a(param1, (byte) 80);
         hm.a(param1, -19213);
     }
 
-    final static String a(String param0) {
+    final static String a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -384,7 +381,7 @@ final class qa extends ma {
         return stackIn_4_0;
     }
 
-    final static void a(byte param0, int param1, lr param2, String param3) {
+    final static void a(byte param0, int param1, lr param2, String param3, int param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

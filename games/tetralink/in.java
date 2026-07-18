@@ -11,16 +11,16 @@ final class in {
     String field_e;
     int field_f;
 
-    final static void a() {
+    final static void a(int param0) {
         t.a(4, 0);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_g = null;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Exception var2_ref = null;

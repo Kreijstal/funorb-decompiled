@@ -10,7 +10,7 @@ final class ql {
     static boolean field_c;
     static String field_e;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_e = null;
         field_d = null;
@@ -194,7 +194,7 @@ final class ql {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, byte param4) {
         th.field_a = param3;
         ug.field_a = param2;
         qd.field_r = param1;

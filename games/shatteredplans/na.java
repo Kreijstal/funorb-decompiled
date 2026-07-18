@@ -44,7 +44,7 @@ final class na {
     int field_d;
     static int field_F;
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 0;
         field_s = null;
         field_J = null;
@@ -94,13 +94,12 @@ final class na {
           L0: {
             L1: {
               param2 = fr.a(param2, 1, '_', "");
-              int discarded$4 = 1;
-              var3 = dn.a(param2);
+              var3 = dn.a(param2, true);
               if (param1 >= 126) {
                 break L1;
               } else {
                 var4 = null;
-                boolean discarded$5 = na.a((String) null, 75, (String) null);
+                boolean discarded$2 = na.a((String) null, 75, (String) null);
                 break L1;
               }
             }
@@ -182,7 +181,7 @@ final class na {
         return stackIn_7_0 != 0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

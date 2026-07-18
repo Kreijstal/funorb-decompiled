@@ -23,7 +23,7 @@ final class vfa {
     private int field_k;
     boolean field_b;
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -309,9 +309,7 @@ final class vfa {
         if (param0 >= 112) {
           ((vfa) this).field_a.a(65, ((vfa) this).field_q, ((vfa) this).field_e);
           rda.field_q = false;
-          int discarded$8 = 0;
-          int discarded$9 = 0;
-          var2 = ob.a(0, bm.field_o, ((vfa) this).field_q, ((vfa) this).field_e);
+          var2 = ob.a(0, bm.field_o, ((vfa) this).field_q, ((vfa) this).field_e, 0, 0);
           if (var2 == null) {
             ((vfa) this).c(-29674);
             return var2;
@@ -322,9 +320,7 @@ final class vfa {
           vfa.a(false, -4);
           ((vfa) this).field_a.a(65, ((vfa) this).field_q, ((vfa) this).field_e);
           rda.field_q = false;
-          int discarded$10 = 0;
-          int discarded$11 = 0;
-          var2 = ob.a(0, bm.field_o, ((vfa) this).field_q, ((vfa) this).field_e);
+          var2 = ob.a(0, bm.field_o, ((vfa) this).field_q, ((vfa) this).field_e, 0, 0);
           if (var2 != null) {
             return var2;
           } else {
@@ -378,7 +374,7 @@ final class vfa {
         ((vfa) this).field_h = param2;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_d = null;
         field_p = null;
     }
@@ -459,16 +455,15 @@ final class vfa {
           if (0 >= hcb.field_o) {
             ((vfa) this).field_b = false;
             if (((vfa) this).field_b) {
-              int fieldTemp$6 = ((vfa) this).field_k - 1;
+              int fieldTemp$2 = ((vfa) this).field_k - 1;
               ((vfa) this).field_k = ((vfa) this).field_k - 1;
-              if (0 < fieldTemp$6) {
+              if (0 < fieldTemp$2) {
                 return;
               } else {
                 ((vfa) this).field_k = ((vfa) this).field_m;
                 if (param0 == 3908) {
                   if (qob.field_b >= ((vfa) this).field_i) {
-                    int discarded$7 = -17698;
-                    this.b();
+                    this.b(-17698);
                     return;
                   } else {
                     ((vfa) this).field_b = false;
@@ -477,8 +472,7 @@ final class vfa {
                 } else {
                   field_d = null;
                   if (qob.field_b >= ((vfa) this).field_i) {
-                    int discarded$8 = -17698;
-                    this.b();
+                    this.b(-17698);
                     return;
                   } else {
                     ((vfa) this).field_b = false;
@@ -531,16 +525,15 @@ final class vfa {
             }
           } else {
             if (((vfa) this).field_b) {
-              int fieldTemp$9 = ((vfa) this).field_k - 1;
+              int fieldTemp$3 = ((vfa) this).field_k - 1;
               ((vfa) this).field_k = ((vfa) this).field_k - 1;
-              if (0 < fieldTemp$9) {
+              if (0 < fieldTemp$3) {
                 return;
               } else {
                 ((vfa) this).field_k = ((vfa) this).field_m;
                 if (param0 == 3908) {
                   if (qob.field_b >= ((vfa) this).field_i) {
-                    int discarded$10 = -17698;
-                    this.b();
+                    this.b(-17698);
                     return;
                   } else {
                     ((vfa) this).field_b = false;
@@ -549,8 +542,7 @@ final class vfa {
                 } else {
                   field_d = null;
                   if (qob.field_b >= ((vfa) this).field_i) {
-                    int discarded$11 = -17698;
-                    this.b();
+                    this.b(-17698);
                     return;
                   } else {
                     ((vfa) this).field_b = false;

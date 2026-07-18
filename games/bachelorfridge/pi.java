@@ -62,8 +62,7 @@ final class pi extends kj {
                     case 3: {
                         try {
                             var3 = var9 + "settings";
-                            int discarded$2 = 64;
-                            var4 = (String) ac.a(param1, "getcookies");
+                            var4 = (String) ac.a(param1, "getcookies", (byte) 64);
                             var5 = fda.a(-1, ';', var4);
                             var6 = 0;
                             statePc = 4;
@@ -575,7 +574,7 @@ final class pi extends kj {
         fv.a(param0, 65280, 10, ((pi) this).field_g, param2, (byte) -115);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_h = null;
     }
 

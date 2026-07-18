@@ -33,7 +33,7 @@ final class kc extends wf {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;

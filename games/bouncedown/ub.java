@@ -8,7 +8,7 @@ final class ub {
     static String field_e;
     static String field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_d = null;
@@ -24,8 +24,7 @@ final class ub {
             var2 = new tg(param1.b("final_frame.jpg", "", -90), (java.awt.Component) (Object) ch.field_h);
             var3 = var2.field_s;
             var4 = var2.field_q;
-            int discarded$0 = 1;
-            wa.a();
+            wa.a(true);
             jl.field_c = new tg(var3, 3 * var4 / 4);
             jl.field_c.d();
             var2.b(0, 0);

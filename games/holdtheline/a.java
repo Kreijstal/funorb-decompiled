@@ -180,18 +180,12 @@ final class a extends v implements qa, pi, pn {
     }
 
     private final boolean h(int param0) {
-        int discarded$12 = 16777215;
-        if (this.a((wk) (Object) ((a) this).field_G)) {
-          int discarded$13 = 16777215;
-          if (this.a((wk) (Object) ((a) this).field_L)) {
-            int discarded$14 = 16777215;
-            if (this.a((wk) (Object) ((a) this).field_K)) {
-              int discarded$15 = 16777215;
-              if (this.a((wk) (Object) ((a) this).field_T)) {
-                int discarded$16 = 16777215;
-                if (this.a((wk) (Object) ((a) this).field_P)) {
-                  int discarded$17 = 16777215;
-                  if (!this.a((wk) (Object) ((a) this).field_M)) {
+        if (this.a((wk) (Object) ((a) this).field_G, 16777215)) {
+          if (this.a((wk) (Object) ((a) this).field_L, 16777215)) {
+            if (this.a((wk) (Object) ((a) this).field_K, 16777215)) {
+              if (this.a((wk) (Object) ((a) this).field_T, 16777215)) {
+                if (this.a((wk) (Object) ((a) this).field_P, 16777215)) {
+                  if (!this.a((wk) (Object) ((a) this).field_M, 16777215)) {
                     return false;
                   } else {
                     return true;
@@ -312,13 +306,11 @@ final class a extends v implements qa, pi, pn {
           L0: {
             L1: {
               if (((a) this).field_N == param1) {
-                int discarded$11 = 44;
-                og.a();
+                og.a((byte) 44);
                 break L1;
               } else {
                 if (param1 == ((a) this).field_Q) {
-                  int discarded$12 = 90;
-                  boolean discarded$13 = this.h();
+                  boolean discarded$5 = this.h((byte) 90);
                   break L1;
                 } else {
                   break L1;
@@ -410,10 +402,7 @@ final class a extends v implements qa, pi, pn {
         tl dupTemp$1 = new tl(10000536);
         ((a) this).field_P.field_l = (dh) (Object) dupTemp$1;
         ((a) this).field_T.field_l = (dh) (Object) dupTemp$1;
-        int discarded$2 = 0;
-        int discarded$3 = 105;
-        int discarded$4 = 1;
-        String var2 = sd.a(pg.field_F, new String[2]);
+        String var2 = sd.a(pg.field_F, new String[2], true);
         int var3 = 20;
         var3 = var3 + this.a(170, (n) (Object) ((a) this).field_L, 25, var3, cm.field_c);
         var3 = var3 + (5 + this.a("", false, 170, (n) (Object) ((a) this).field_K, ej.field_e, var3, 20));
@@ -447,15 +436,15 @@ final class a extends v implements qa, pi, pn {
         ((a) this).a(0, (byte) 122, 0, var6 + (55 + var3), 496);
     }
 
-    private final String a() {
+    private final String a(boolean param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final String g() {
+    private final String g(byte param0) {
         return "</col></u>";
     }
 
-    private final boolean h() {
+    private final boolean h(byte param0) {
         if (!(this.h(40))) {
             return false;
         }
@@ -467,12 +456,12 @@ final class a extends v implements qa, pi, pn {
         return hl.a(((a) this).field_T.field_q, -23000, ((a) this).field_J.field_B, ((a) this).field_G.field_q, (a) this, ((a) this).field_L.field_q, var2);
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_S = null;
         field_F = null;
     }
 
-    private final boolean a(wk param0) {
+    private final boolean a(wk param0, int param1) {
         ia var3 = null;
         RuntimeException var3_ref = null;
         fd var4 = null;

@@ -5,11 +5,11 @@ final class kp extends rf {
     private java.nio.ByteBuffer field_e;
     static dj field_f;
 
-    final static void a() {
+    final static void a(int param0, byte param1) {
         ea.field_a = 20000000L;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_f = null;
     }
 

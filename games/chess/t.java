@@ -11,7 +11,7 @@ final class t extends ma implements mj {
     private String[] field_O;
     private fb[] field_R;
 
-    final static void a(ln param0, boolean param1, int param2) {
+    final static void a(ln param0, boolean param1, int param2, boolean param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -48,6 +48,7 @@ final class t extends ma implements mj {
         tl[] var30 = null;
         String var31 = null;
         String var32 = null;
+        String var33 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
         tl stackIn_19_0 = null;
@@ -1271,14 +1272,13 @@ final class t extends ma implements mj {
                           }
                           L74: {
                             if (var21 != null) {
-                              var21 = (Object) (Object) ("<col=A00000>" + (String) var21);
-                              int discarded$1 = 107;
-                              var32 = ia.a("<br>", "<br><col=A00000>", (String) var21);
+                              var32 = "<col=A00000>" + (String) var21;
+                              var33 = ia.a("<br>", "<br><col=A00000>", var32, (byte) 107);
                               if (var20 != null) {
-                                var20 = (Object) (Object) ((String) var20 + "<br>" + var32);
+                                var20 = (Object) (Object) ((String) var20 + "<br>" + var33);
                                 break L74;
                               } else {
-                                var20 = (Object) (Object) var32;
+                                var20 = (Object) (Object) var33;
                                 break L74;
                               }
                             } else {
@@ -1640,8 +1640,7 @@ final class t extends ma implements mj {
                         }
                       }
                     } else {
-                      int discarded$1 = -70;
-                      ((t) this).field_O[var4_int] = rl.a((CharSequence) (Object) param0[var4_int]).replace(' ', ' ');
+                      ((t) this).field_O[var4_int] = rl.a((CharSequence) (Object) param0[var4_int], (byte) -70).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }
@@ -1773,7 +1772,7 @@ final class t extends ma implements mj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_P = null;
         field_K = null;
         field_M = null;

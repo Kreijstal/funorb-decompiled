@@ -67,7 +67,7 @@ final class he {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_e = null;
         field_c = null;
@@ -96,8 +96,7 @@ final class he {
         String stackOut_4_2 = null;
         try {
           L0: {
-            int discarded$5 = 57;
-            in.a((java.awt.Component) (Object) param1);
+            in.a((java.awt.Component) (Object) param1, 57);
             tj.a((byte) -128, (java.awt.Component) (Object) param1);
             if (gp.field_Lb == null) {
               break L0;

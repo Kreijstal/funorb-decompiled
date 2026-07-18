@@ -33,7 +33,7 @@ final class fk extends gg {
         field_q = null;
     }
 
-    final static hl d() {
+    final static hl d(int param0) {
         return ok.field_b;
     }
 
@@ -85,8 +85,7 @@ final class fk extends gg {
               if (param3 >= 71) {
                 L0: {
                   if (ej.field_k.startsWith("win")) {
-                    int discarded$8 = -5;
-                    if (li.a(param2)) {
+                    if (li.a(param2, (byte) -5)) {
                       return;
                     } else {
                       break L0;

@@ -12,7 +12,7 @@ final class sf {
     static int field_b;
     static int field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_f = null;
@@ -51,14 +51,12 @@ final class sf {
           L0: {
             var2_int = re.a(param1, 0, (byte) 77);
             if (var2_int == 3) {
-              int discarded$6 = 46;
-              stackOut_14_0 = gd.a(param1);
+              stackOut_14_0 = gd.a(param1, (byte) 46);
               stackIn_15_0 = stackOut_14_0;
               break L0;
             } else {
               if (4 == var2_int) {
-                int discarded$7 = 7;
-                stackOut_12_0 = ij.a(param1);
+                stackOut_12_0 = ij.a(param1, 7);
                 stackIn_13_0 = stackOut_12_0;
                 return (fc) (Object) stackIn_13_0;
               } else {
@@ -73,8 +71,7 @@ final class sf {
                     return (fc) (Object) stackIn_9_0;
                   }
                 } else {
-                  int discarded$8 = 24;
-                  stackOut_5_0 = bo.a(param1);
+                  stackOut_5_0 = bo.a(param1, 24);
                   stackIn_6_0 = stackOut_5_0;
                   return (fc) (Object) stackIn_6_0;
                 }
@@ -264,8 +261,7 @@ final class sf {
         try {
           L0: {
             var3 = (CharSequence) (Object) param1;
-            int discarded$2 = 0;
-            stackOut_2_0 = kf.field_k.equals((Object) (Object) tg.a(var3));
+            stackOut_2_0 = kf.field_k.equals((Object) (Object) tg.a(var3, false));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

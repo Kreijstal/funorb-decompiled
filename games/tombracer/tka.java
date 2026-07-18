@@ -16,7 +16,7 @@ final class tka extends vpa {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_p = null;
         field_q = null;
     }

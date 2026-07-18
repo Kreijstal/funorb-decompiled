@@ -37,8 +37,7 @@ class jj extends t {
               if (((jj) this).field_g) {
                 var5_int = ei.field_a + (-param2 - ((jj) this).field_r);
                 var6 = -((jj) this).field_e + -param1 + p.field_a;
-                int discarded$2 = 2;
-                ((jj) this).field_C = this.b(var6, var5_int);
+                ((jj) this).field_C = this.b(var6, var5_int, 2);
                 break L1;
               } else {
                 break L1;
@@ -78,7 +77,7 @@ class jj extends t {
         }
     }
 
-    final static cj a(String[] args) {
+    final static cj a(String[] args, boolean param1) {
         cj var2 = null;
         RuntimeException var2_ref = null;
         cj stackIn_1_0 = null;
@@ -324,7 +323,7 @@ class jj extends t {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_E = null;
         field_B = null;
     }
@@ -954,7 +953,7 @@ class jj extends t {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         ki var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -1012,7 +1011,7 @@ class jj extends t {
         }
     }
 
-    private final bl b(int param0, int param1) {
+    private final bl b(int param0, int param1, int param2) {
         bl var4 = null;
         bl var5 = null;
         int var6 = 0;
@@ -1062,8 +1061,7 @@ class jj extends t {
         super.b(-102, param1, param2, param3);
         int var5 = -((jj) this).field_r + param1;
         int var6 = param2 - ((jj) this).field_e;
-        int discarded$1 = 2;
-        bl var7 = this.b(var6, var5);
+        bl var7 = this.b(var6, var5, 2);
         if (var7 != null) {
             if (!(((jj) this).field_o == null)) {
                 ((u) (Object) ((jj) this).field_o).a(var7.field_h, -21099, (jj) this, param3);

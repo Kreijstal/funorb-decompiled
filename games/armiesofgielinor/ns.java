@@ -21,7 +21,7 @@ final class ns extends oj {
     static wk field_O;
     static String field_F;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_F = null;
         field_O = null;
         field_K = null;
@@ -278,7 +278,7 @@ final class ns extends oj {
         }
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         if (!(fh.field_i)) {
             throw new IllegalStateException();
         }

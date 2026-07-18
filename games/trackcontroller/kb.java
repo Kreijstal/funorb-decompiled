@@ -15,9 +15,8 @@ final class kb {
             if (!uh.field_b[param2].b(10000536)) {
               return;
             } else {
-              int discarded$4 = 2;
-              fe.a(uh.field_b[param2]);
-              li discarded$5 = da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
+              fe.a(uh.field_b[param2], 2);
+              li discarded$4 = da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
               return;
             }
           } else {
@@ -29,9 +28,8 @@ final class kb {
             if (!uh.field_b[param2].b(10000536)) {
               return;
             } else {
-              int discarded$6 = 2;
-              fe.a(uh.field_b[param2]);
-              li discarded$7 = da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
+              fe.a(uh.field_b[param2], 2);
+              li discarded$5 = da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
               return;
             }
           } else {
@@ -40,7 +38,7 @@ final class kb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_e = null;
         field_a = null;

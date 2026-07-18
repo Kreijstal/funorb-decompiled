@@ -12,7 +12,7 @@ final class hd {
     static int[][] field_f;
     static ka field_b;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -231,7 +231,7 @@ final class hd {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_g = null;
         field_a = null;
@@ -727,7 +727,7 @@ final class hd {
         this(-1, 1000000, 1000000);
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         int var1 = 0;
         return cj.field_d;
     }

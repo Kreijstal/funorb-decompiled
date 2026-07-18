@@ -22,7 +22,7 @@ final class rb extends pg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_m = null;
         field_l = null;
@@ -631,7 +631,7 @@ final class rb extends pg {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -679,22 +679,17 @@ final class rb extends pg {
                   var8.a(true);
                   break L0;
                 } else {
-                  int discarded$6 = 0;
-                  ka.b();
+                  ka.b(false);
                   return;
                 }
               } else {
-                int discarded$7 = 0;
-                ka.b();
+                ka.b(false);
                 return;
               }
             } else {
               if (var2 != 1) {
-                int discarded$8 = -25;
-                int discarded$9 = 20;
-                jh.a((Throwable) null, "A1: " + nn.g());
-                int discarded$10 = 0;
-                ka.b();
+                jh.a((Throwable) null, "A1: " + nn.g((byte) -25), (byte) 20);
+                ka.b(false);
                 return;
               } else {
                 var3 = var9.d(-10674);
@@ -716,8 +711,7 @@ final class rb extends pg {
                     var4_ref_f.a(true);
                     return;
                   } else {
-                    int discarded$11 = 0;
-                    ka.b();
+                    ka.b(false);
                     return;
                   }
                 }

@@ -274,7 +274,7 @@ final class hka extends aba {
         return stackIn_6_0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_g = null;
     }
 

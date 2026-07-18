@@ -29,7 +29,7 @@ final class ec extends gk {
         ((ec) this).field_h = 0L;
     }
 
-    private final long a() {
+    private final long a(boolean param0) {
         int var8 = 0;
         int var9 = Main.field_T;
         long var2 = System.nanoTime();
@@ -456,8 +456,7 @@ final class ec extends gk {
         if (param0 != 0) {
             ((ec) this).b(108);
         }
-        int discarded$0 = 1;
-        ((ec) this).field_n = ((ec) this).field_n + this.a();
+        ((ec) this).field_n = ((ec) this).field_n + this.a(true);
         if (((ec) this).field_g > ((ec) this).field_n) {
             return (((ec) this).field_g - ((ec) this).field_n) / 1000000L;
         }

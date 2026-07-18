@@ -13,7 +13,7 @@ final class cm extends cj {
     static int[] field_j;
     private long field_c;
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -83,14 +83,14 @@ final class cm extends cj {
                         var8_int = 1;
                         L5: while (true) {
                           if (var5 <= var8_int) {
-                            String[][] dupTemp$7 = new String[3][var6];
-                            var4.field_k = dupTemp$7;
-                            var8 = dupTemp$7;
+                            String[][] dupTemp$5 = new String[3][var6];
+                            var4.field_k = dupTemp$5;
+                            var8 = dupTemp$5;
                             var9 = new String[3][var6];
                             var33 = new long[3][var6];
-                            int[][] dupTemp$8 = new int[3][var6 * var7];
-                            var4.field_h = dupTemp$8;
-                            var11 = dupTemp$8;
+                            int[][] dupTemp$6 = new int[3][var6 * var7];
+                            var4.field_h = dupTemp$6;
+                            var11 = dupTemp$6;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -121,9 +121,9 @@ final class cm extends cj {
                                           var12++;
                                           break L7;
                                         } else {
-                                          int incrementValue$9 = var15;
+                                          int incrementValue$7 = var15;
                                           var15++;
-                                          var11[0][incrementValue$9] = var28.a((byte) -76);
+                                          var11[0][incrementValue$7] = var28.a((byte) -76);
                                           var25++;
                                           continue L8;
                                         }
@@ -136,8 +136,7 @@ final class cm extends cj {
                                     if (var21 == null) {
                                       break L9;
                                     } else {
-                                      int discarded$10 = 12;
-                                      if (ge.a(var21)) {
+                                      if (ge.a(var21, (byte) 12)) {
                                         var8[1][var13] = wd.field_f;
                                         var9[1][var13] = null;
                                         var33[1][var13] = var22;
@@ -148,9 +147,9 @@ final class cm extends cj {
                                           if (var25 >= var7) {
                                             break L9;
                                           } else {
-                                            int incrementValue$11 = var16;
+                                            int incrementValue$8 = var16;
                                             var16++;
-                                            var11[1][incrementValue$11] = var28.a((byte) -122);
+                                            var11[1][incrementValue$8] = var28.a((byte) -122);
                                             var25++;
                                             continue L10;
                                           }
@@ -176,9 +175,9 @@ final class cm extends cj {
                                           if (var7 <= var25) {
                                             break L11;
                                           } else {
-                                            int incrementValue$12 = var17;
+                                            int incrementValue$9 = var17;
                                             var17++;
-                                            var11[2][incrementValue$12] = var28.a((byte) -101);
+                                            var11[2][incrementValue$9] = var28.a((byte) -101);
                                             var25++;
                                             continue L12;
                                           }
@@ -245,8 +244,7 @@ final class cm extends cj {
                     }
                   }
                 } else {
-                  int discarded$13 = 125;
-                  gi.a((Throwable) null, "HS1: " + og.e(55));
+                  gi.a((Throwable) null, "HS1: " + og.e(55), (byte) 125);
                   jl.a((byte) -117);
                   break L1;
                 }
@@ -381,7 +379,7 @@ final class cm extends cj {
         }
     }
 
-    private final long d() {
+    private final long d(int param0) {
         int var8 = 0;
         int var9 = Geoblox.field_C;
         long var2 = System.nanoTime();
@@ -404,10 +402,9 @@ final class cm extends cj {
     }
 
     final long a(byte param0) {
-        int discarded$0 = 0;
-        ((cm) this).field_e = ((cm) this).field_e + this.d();
+        ((cm) this).field_e = ((cm) this).field_e + this.d(0);
         if (param0 != -49) {
-            int discarded$1 = ((cm) this).a(false, 97L);
+            int discarded$0 = ((cm) this).a(false, 97L);
         }
         if (~((cm) this).field_c < ~((cm) this).field_e) {
             return (((cm) this).field_c + -((cm) this).field_e) / 1000000L;

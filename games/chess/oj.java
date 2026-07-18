@@ -56,7 +56,7 @@ final class oj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         int var1 = 5;
         field_c = null;
@@ -64,7 +64,7 @@ final class oj {
         field_g = null;
     }
 
-    final static sa a(String param0) {
+    final static sa a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -119,14 +119,12 @@ final class oj {
                   var5 = 0;
                   L1: while (true) {
                     if (var5 >= var4.length) {
-                      int discarded$4 = 0;
-                      stackOut_18_0 = ib.a(var3[var3.length + -1]);
+                      stackOut_18_0 = ib.a(var3[var3.length + -1], false);
                       stackIn_19_0 = stackOut_18_0;
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      int discarded$5 = -55;
-                      var7 = ie.a(var6);
+                      var7 = ie.a(var6, (byte) -55);
                       if (var7 == null) {
                         var5++;
                         continue L1;

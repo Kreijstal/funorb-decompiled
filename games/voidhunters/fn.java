@@ -41,16 +41,24 @@ final class fn extends da {
         int var21 = 0;
         ima var22 = null;
         ima var23 = null;
-        ima var24 = null;
-        byte[] var25 = null;
+        byte[] var24 = null;
+        ima var25 = null;
         byte[] var26 = null;
-        ima var27 = null;
-        byte[] var28 = null;
-        byte[] var29 = null;
+        byte[] var27 = null;
+        int[] var28 = null;
+        ima var29 = null;
         byte[] var30 = null;
         byte[] var31 = null;
         byte[] var32 = null;
-        byte[] var33 = null;
+        int[] var33 = null;
+        byte[] var34 = null;
+        byte[] var35 = null;
+        byte[] var36 = null;
+        int[] var37 = null;
+        byte[] var38 = null;
+        byte[] var39 = null;
+        byte[] var40 = null;
+        int[] var41 = null;
         byte[] stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         byte[] stackIn_18_0 = null;
@@ -74,30 +82,32 @@ final class fn extends da {
             L1: {
               var6 = var5 * 16;
               if (!param3) {
-                var7_ref_int__ = new int[var6 * var6];
+                var41 = new int[var6 * var6];
+                var37 = var41;
+                var33 = var37;
+                var28 = var33;
+                var7_ref_int__ = var28;
                 var8_int = 0;
                 L2: while (true) {
                   if (var8_int >= 256) {
-                    int discarded$13 = 60;
-                    int discarded$14 = 0;
-                    ((fn) this).field_e = uw.a(param0, 0, 0, var6, var7_ref_int__, var6);
+                    ((fn) this).field_e = uw.a(param0, 0, 0, var6, var41, var6, false, (byte) 60);
                     ((fn) this).field_c = false;
                     break L1;
                   } else {
-                    var24 = param2[var8_int];
-                    var10 = var24.field_b;
-                    var32 = var24.field_a;
-                    var30 = var32;
-                    var28 = var30;
-                    var25 = var28;
-                    var11_ref_byte__ = var25;
-                    var33 = var24.field_h;
-                    var31 = var33;
-                    var29 = var31;
-                    var26 = var29;
-                    var12_ref_byte__ = var26;
-                    var13 = var24.field_e;
-                    var14 = var24.field_f;
+                    var25 = param2[var8_int];
+                    var10 = var25.field_b;
+                    var39 = var25.field_a;
+                    var35 = var39;
+                    var31 = var35;
+                    var26 = var31;
+                    var11_ref_byte__ = var26;
+                    var40 = var25.field_h;
+                    var36 = var40;
+                    var32 = var36;
+                    var27 = var32;
+                    var12_ref_byte__ = var27;
+                    var13 = var25.field_e;
+                    var14 = var25.field_f;
                     var15_int = var8_int % 16 * var5;
                     var16_int = var8_int / 16 * var5;
                     var17_int = var16_int * var6 + var15_int;
@@ -113,17 +123,17 @@ final class fn extends da {
                               var19_int++;
                               continue L3;
                             } else {
-                              int incrementValue$15 = var18_int;
+                              int incrementValue$7 = var18_int;
                               var18_int++;
-                              var21 = var12_ref_byte__[incrementValue$15];
-                              if (var12_ref_byte__[incrementValue$15] == 0) {
+                              var21 = var12_ref_byte__[incrementValue$7];
+                              if (var12_ref_byte__[incrementValue$7] == 0) {
                                 var17_int++;
                                 var20_int++;
                                 continue L4;
                               } else {
-                                int incrementValue$16 = var17_int;
+                                int incrementValue$8 = var17_int;
                                 var17_int++;
-                                var7_ref_int__[incrementValue$16] = -16777216 | var10[var21 & 255];
+                                var7_ref_int__[incrementValue$8] = -16777216 | var10[var21 & 255];
                                 var20_int++;
                                 continue L4;
                               }
@@ -145,9 +155,9 @@ final class fn extends da {
                               var19_int++;
                               continue L5;
                             } else {
-                              int incrementValue$17 = var17_int;
+                              int incrementValue$9 = var17_int;
                               var17_int++;
-                              var7_ref_int__[incrementValue$17] = var32[var18_int] << 24 | var10[var33[var18_int] & 255];
+                              var7_ref_int__[incrementValue$9] = var39[var18_int] << 24 | var10[var40[var18_int] & 255];
                               var18_int++;
                               var20_int++;
                               continue L6;
@@ -162,15 +172,15 @@ final class fn extends da {
                   }
                 }
               } else {
-                var7_ref_byte__ = new byte[var6 * var6];
+                var38 = new byte[var6 * var6];
+                var34 = var38;
+                var30 = var34;
+                var24 = var30;
+                var7_ref_byte__ = var24;
                 var8_int = 0;
                 L7: while (true) {
                   if (var8_int >= 256) {
-                    int discarded$18 = 6406;
-                    int discarded$19 = 21989;
-                    int discarded$20 = 0;
-                    int discarded$21 = 6406;
-                    ((fn) this).field_e = kia.a(var6, param0, var6, var7_ref_byte__);
+                    ((fn) this).field_e = kia.a(var6, param0, var6, var38, 6406, false, 21989, 6406);
                     ((fn) this).field_c = true;
                     break L1;
                   } else {
@@ -193,11 +203,11 @@ final class fn extends da {
                               var17_int++;
                               continue L8;
                             } else {
-                              int incrementValue$22 = var14;
+                              int incrementValue$10 = var14;
                               var14++;
-                              int incrementValue$23 = var15_int;
+                              int incrementValue$11 = var15_int;
                               var15_int++;
-                              var7_ref_byte__[incrementValue$22] = var16_ref_byte__[incrementValue$23];
+                              var7_ref_byte__[incrementValue$10] = var16_ref_byte__[incrementValue$11];
                               var18_int++;
                               continue L9;
                             }
@@ -220,17 +230,17 @@ final class fn extends da {
                               continue L10;
                             } else {
                               L12: {
-                                int incrementValue$24 = var14;
+                                int incrementValue$12 = var14;
                                 var14++;
-                                int incrementValue$25 = var15_int;
+                                int incrementValue$13 = var15_int;
                                 var15_int++;
                                 stackOut_16_0 = (byte[]) var7_ref_byte__;
-                                stackOut_16_1 = incrementValue$24;
+                                stackOut_16_1 = incrementValue$12;
                                 stackIn_18_0 = stackOut_16_0;
                                 stackIn_18_1 = stackOut_16_1;
                                 stackIn_17_0 = stackOut_16_0;
                                 stackIn_17_1 = stackOut_16_1;
-                                if (var16_ref_byte__[incrementValue$25] != 0) {
+                                if (var16_ref_byte__[incrementValue$13] != 0) {
                                   stackOut_18_0 = (byte[]) (Object) stackIn_18_0;
                                   stackOut_18_1 = stackIn_18_1;
                                   stackOut_18_2 = -1;
@@ -272,11 +282,11 @@ final class fn extends da {
               if (var9 >= 256) {
                 return;
               } else {
-                var27 = param2[var9];
-                var11 = var27.field_e;
-                var12 = var27.field_f;
-                var13 = var27.field_g;
-                var14 = var27.field_c;
+                var29 = param2[var9];
+                var11 = var29.field_e;
+                var12 = var29.field_f;
+                var13 = var29.field_g;
+                var14 = var29.field_c;
                 var15 = (float)(var9 % 16 * var5);
                 var16 = (float)(var9 / 16 * var5);
                 var17 = var15 * var7;

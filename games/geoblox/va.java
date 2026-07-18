@@ -9,7 +9,7 @@ final class va {
     static int field_a;
     static tf field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_e = null;
         field_c = null;
@@ -32,8 +32,7 @@ final class va {
                     wk.a(param1, "document.cookie=\"" + var5 + "\"", (byte) -92);
                 } catch (Throwable throwable) {
                 }
-                int discarded$0 = 20000000;
-                oj.a(param1);
+                oj.a(param1, 20000000);
             } catch (RuntimeException runtimeException) {
                 throw t.a((Throwable) (Object) runtimeException, "va.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
             }
@@ -51,7 +50,7 @@ final class va {
         return var2;
     }
 
-    final static void a(int param0, byte[] param1, int param2, int[] param3) {
+    final static void a(int param0, byte[] param1, int param2, int[] param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

@@ -12,7 +12,7 @@ final class dn extends kc {
     static String field_Fb;
     static boolean[] field_Ib;
 
-    final static void a(wk param0, na param1, boolean param2) {
+    final static void a(wk param0, na param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -724,8 +724,7 @@ final class dn extends kc {
               jf.field_a.a(hj.field_a[1], (byte) -101);
               jf.field_a.a(hj.field_a[2], (byte) -101);
               jf.field_a.a(hj.field_a[3], (byte) -101);
-              int discarded$1 = 24;
-              i.a(jf.field_a);
+              i.a(jf.field_a, 24);
               jf.field_a.c(param4, (byte) -62);
               param1.a(jf.field_a, param2 + -55);
               he.field_e.field_g = 0;
@@ -846,7 +845,7 @@ final class dn extends kc {
         ((dn) this).field_Eb.a(0, false, ((dn) this).field_I, ((dn) this).field_Cb.field_I, -((dn) this).field_Cb.field_db, param0, ((dn) this).field_Hb.field_I, ((dn) this).field_x - param0);
     }
 
-    final static void a(int param0, int param1, byte[] param2, int param3, int param4) {
+    final static void a(int param0, int param1, byte[] param2, int param3, int param4, boolean param5) {
         ab var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -870,11 +869,9 @@ final class dn extends kc {
     final static kc f(byte param0) {
         if (param0 >= -45) {
             kc discarded$0 = dn.f((byte) 61);
-            int discarded$1 = 111;
-            return na.f();
+            return na.f((byte) 111);
         }
-        int discarded$2 = 111;
-        return na.f();
+        return na.f((byte) 111);
     }
 
     static {

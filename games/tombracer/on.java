@@ -20,7 +20,7 @@ final class on {
         return ((on) this).field_c;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_b = null;
     }
 
@@ -32,7 +32,7 @@ final class on {
         ((on) this).field_c = true;
     }
 
-    final static ha a(java.awt.Canvas param0, d param1, int param2) {
+    final static ha a(java.awt.Canvas param0, d param1, int param2, byte param3) {
         RuntimeException var4 = null;
         cka stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -149,7 +149,7 @@ final class on {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

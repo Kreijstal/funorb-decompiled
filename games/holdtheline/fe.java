@@ -481,7 +481,7 @@ final class fe {
         return stackIn_6_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

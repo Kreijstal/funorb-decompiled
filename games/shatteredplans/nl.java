@@ -7,7 +7,7 @@ final class nl {
     static qr field_b;
     static qr field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_c = null;
@@ -97,8 +97,7 @@ final class nl {
               var6 = new kb(3 * pf.field_a[param3.field_x].field_z / 4, -(rs.field_Cb.field_J / 2) + var11.field_i / 2, -(3 * pf.field_a[param3.field_x].field_z / 4) + 182, param3.field_k, param3.field_t, 16777215, true);
               var11.a((vd) (Object) var6, 8);
               bg.a(-2612, param1.length);
-              int discarded$1 = 0;
-              var7 = new ff(3 * pf.field_a[param3.field_x].field_z / 4, var11.field_i / 2 + rs.field_Cb.field_J / 2 - -3, ne.a(-1));
+              var7 = new ff(3 * pf.field_a[param3.field_x].field_z / 4, var11.field_i / 2 + rs.field_Cb.field_J / 2 - -3, ne.a(-1, false));
               var11.a((vd) (Object) var7, 8);
               param0.field_f[var5][0] = var7;
               var8_int = 1;

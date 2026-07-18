@@ -27,7 +27,7 @@ final class af {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_o = null;
@@ -53,12 +53,11 @@ final class af {
             }
             var1[var2] = new km(cd.field_p, ek.field_a, be.field_a[var2], a.field_c[var2], wm.field_b[var2], b.field_c[var2], var5);
         }
-        int discarded$0 = 4210752;
-        ch.k();
+        ch.k(4210752);
         return var1;
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return me.field_a != null && me.field_a.k(-1);
     }
 

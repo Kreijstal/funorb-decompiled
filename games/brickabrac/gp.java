@@ -97,7 +97,7 @@ final class gp implements Iterable {
         return stackIn_12_0 != 0;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         int stackIn_7_0 = 0;
         int stackOut_5_0 = 0;
         if (null == bm.field_d) {
@@ -158,7 +158,7 @@ final class gp implements Iterable {
         ((gp) this).field_a.field_s = ((gp) this).field_a;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_c = null;
     }
@@ -180,8 +180,7 @@ final class gp implements Iterable {
     }
 
     final static void a(boolean param0, boolean param1) {
-        int discarded$3 = -4858;
-        if (gp.a()) {
+        if (gp.a(-4858)) {
             param0 = false;
         }
         oj.a(param0, (byte) 123);

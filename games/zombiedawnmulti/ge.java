@@ -51,7 +51,7 @@ final class ge extends pa {
         return true;
     }
 
-    public static void r() {
+    public static void r(int param0) {
         field_qb = null;
         field_pb = null;
         field_ib = null;
@@ -274,15 +274,14 @@ final class ge extends pa {
                 break L12;
               }
             }
-            int discarded$17 = -26310;
-            this.n();
+            this.n(-26310);
             this.n((byte) 106);
             break L8;
           } else {
             if (((ge) this).field_Q == 23) {
-              int fieldTemp$18 = ((ge) this).field_Db - 1;
+              int fieldTemp$7 = ((ge) this).field_Db - 1;
               ((ge) this).field_Db = ((ge) this).field_Db - 1;
-              if (fieldTemp$18 <= 0) {
+              if (fieldTemp$7 <= 0) {
                 ((ge) this).a(4, (byte) -89);
                 ((ge) this).field_S = true;
                 break L8;
@@ -310,15 +309,14 @@ final class ge extends pa {
                     if (((ge) this).field_Q != 7) {
                       if (((ge) this).field_Q != 8) {
                         if (((ge) this).field_Q == 22) {
-                          int fieldTemp$19 = ((ge) this).field_Ab - 1;
+                          int fieldTemp$8 = ((ge) this).field_Ab - 1;
                           ((ge) this).field_Ab = ((ge) this).field_Ab - 1;
-                          if (fieldTemp$19 <= 0) {
+                          if (fieldTemp$8 <= 0) {
                             ((ge) this).field_Ab = 35;
                             ((ge) this).field_S = true;
                             ((ge) this).a(4, (byte) -89);
                             this.u(92);
-                            int discarded$20 = 27;
-                            this.o();
+                            this.o((byte) 27);
                             break L8;
                           } else {
                             break L8;
@@ -378,8 +376,7 @@ final class ge extends pa {
                                   }
                                 }
                                 this.u(81);
-                                int discarded$21 = 27;
-                                this.o();
+                                this.o((byte) 27);
                                 break L8;
                               } else {
                                 break L8;
@@ -554,8 +551,7 @@ final class ge extends pa {
                                                   break L26;
                                                 } else {
                                                   if (!((ge) this).field_Cb.f(28113)) {
-                                                    int discarded$22 = 27;
-                                                    this.o();
+                                                    this.o((byte) 27);
                                                     ((ge) this).field_S = true;
                                                     break L26;
                                                   } else {
@@ -624,7 +620,7 @@ final class ge extends pa {
                             break L29;
                           } else {
                             if (hp.a((byte) 63, g.field_a, 3) != 0) {
-                              int discarded$23 = hp.a((byte) 124, g.field_a, 5);
+                              int discarded$9 = hp.a((byte) 124, g.field_a, 5);
                               break L29;
                             } else {
                               L31: {
@@ -632,21 +628,21 @@ final class ge extends pa {
                                   break L31;
                                 } else {
                                   if (!((ge) this).field_tb.k((byte) -7)) {
-                                    int discarded$24 = hp.a((byte) -106, g.field_a, 3);
+                                    int discarded$10 = hp.a((byte) -106, g.field_a, 3);
                                     break L29;
                                   } else {
                                     break L31;
                                   }
                                 }
                               }
-                              int discarded$25 = hp.a((byte) -111, g.field_a, 4);
+                              int discarded$11 = hp.a((byte) -111, g.field_a, 4);
                               break L29;
                             }
                           }
                         }
-                        int fieldTemp$26 = ((ge) this).field_Ab - 1;
+                        int fieldTemp$12 = ((ge) this).field_Ab - 1;
                         ((ge) this).field_Ab = ((ge) this).field_Ab - 1;
-                        if (0 >= fieldTemp$26) {
+                        if (0 >= fieldTemp$12) {
                           ((ge) this).field_A.a(((ge) this).field_gb, (ge) this, -32422, ((ge) this).field_tb);
                           ((ge) this).field_tb.j(18);
                           ((ge) this).field_tb = null;
@@ -694,9 +690,9 @@ final class ge extends pa {
                                   if (((ge) this).field_tb.field_Q == 20) {
                                     break L35;
                                   } else {
-                                    int fieldTemp$27 = ((ge) this).field_fb;
+                                    int fieldTemp$13 = ((ge) this).field_fb;
                                     ((ge) this).field_fb = ((ge) this).field_fb + 1;
-                                    if (fieldTemp$27 > 60) {
+                                    if (fieldTemp$13 > 60) {
                                       break L35;
                                     } else {
                                       L36: {
@@ -722,13 +718,11 @@ final class ge extends pa {
                         ((ge) this).field_tb = null;
                         ((ge) this).a(4, (byte) -89);
                         this.u(-128);
-                        int discarded$28 = 27;
-                        this.o();
+                        this.o((byte) 27);
                         break L34;
                       }
                       ((ge) this).h((byte) 110);
-                      int discarded$29 = -26310;
-                      this.n();
+                      this.n(-26310);
                       break L8;
                     }
                   } else {
@@ -760,8 +754,7 @@ final class ge extends pa {
                       ((ge) this).a(4, (byte) -89);
                       break L38;
                     }
-                    int discarded$30 = -26310;
-                    this.n();
+                    this.n(-26310);
                     this.n((byte) 33);
                     break L8;
                   }
@@ -777,8 +770,7 @@ final class ge extends pa {
                 }
                 L41: {
                   L42: {
-                    int discarded$31 = 92;
-                    this.k();
+                    this.k((byte) 92);
                     ((ge) this).h((byte) 40);
                     if (((ge) this).k(2)) {
                       break L42;
@@ -794,13 +786,11 @@ final class ge extends pa {
                       }
                     }
                   }
-                  int discarded$32 = 27;
-                  this.o();
+                  this.o((byte) 27);
                   break L41;
                 }
                 if (null != ((ge) this).field_A) {
-                  int discarded$33 = -26310;
-                  this.n();
+                  this.n(-26310);
                   this.n((byte) 15);
                   break L8;
                 } else {
@@ -920,8 +910,7 @@ final class ge extends pa {
             }
           }
           this.u(72);
-          int discarded$1 = 27;
-          this.o();
+          this.o((byte) 27);
           break L2;
         }
         if (param0 <= -42) {
@@ -1167,7 +1156,7 @@ final class ge extends pa {
                                   break L5;
                                 } else {
                                   var9 = (ge) (Object) var8;
-                                  if (var9.field_gb == var9.field_gb) {
+                                  if (var9.field_gb == ((ge) this).field_gb) {
                                     break L5;
                                   } else {
                                     if (var9.field_Bb) {
@@ -1195,7 +1184,7 @@ final class ge extends pa {
                                       if (var4 >= 1600) {
                                         break L5;
                                       } else {
-                                        if (-1 == var9.field_A.field_b.a(var9.g(1829947600), -104, var9.e((byte) -112), ((ge) this).g(1829947600), ((ge) this).e((byte) -112))) {
+                                        if (-1 == ((ge) this).field_A.field_b.a(var9.g(1829947600), -104, var9.e((byte) -112), ((ge) this).g(1829947600), ((ge) this).e((byte) -112))) {
                                           break L5;
                                         } else {
                                           L7: {
@@ -1212,7 +1201,7 @@ final class ge extends pa {
                                           L8: {
                                             var10 = var9.field_G - -(var2 << 15);
                                             var11 = (var3 << 15) + var9.field_E;
-                                            if (var9.field_A.field_b.a(var11 >> 16, 126, var10 >> 16, var9.g(1829947600), var9.e((byte) -112)) != -1) {
+                                            if (((ge) this).field_A.field_b.a(var11 >> 16, 126, var10 >> 16, var9.g(1829947600), var9.e((byte) -112)) != -1) {
                                               var9.field_G = var10;
                                               var9.field_E = var11;
                                               break L8;
@@ -1221,9 +1210,9 @@ final class ge extends pa {
                                             }
                                           }
                                           L9: {
-                                            var10 = -(var2 << 15) + var9.field_G;
-                                            var11 = var9.field_E - (var3 << 15);
-                                            if (var9.field_A.field_b.a(var11 >> 16, -72, var10 >> 16, ((ge) this).g(1829947600), ((ge) this).e((byte) -112)) == -1) {
+                                            var10 = -(var2 << 15) + ((ge) this).field_G;
+                                            var11 = ((ge) this).field_E - (var3 << 15);
+                                            if (((ge) this).field_A.field_b.a(var11 >> 16, -72, var10 >> 16, ((ge) this).g(1829947600), ((ge) this).e((byte) -112)) == -1) {
                                               break L9;
                                             } else {
                                               ((ge) this).field_E = var11;
@@ -1231,7 +1220,7 @@ final class ge extends pa {
                                               break L9;
                                             }
                                           }
-                                          var9.field_A.a(-89, var9, (ge) this);
+                                          ((ge) this).field_A.a(-89, var9, (ge) this);
                                           return;
                                         }
                                       }
@@ -1274,8 +1263,7 @@ final class ge extends pa {
               }
             }
             this.u(83);
-            int discarded$2 = 27;
-            this.o();
+            this.o((byte) 27);
             ((ge) this).field_S = true;
             break L0;
           } else {
@@ -1403,8 +1391,7 @@ final class ge extends pa {
                     if (this.c(param0)) {
                       break L2;
                     } else {
-                      int discarded$2 = 27;
-                      this.o();
+                      this.o((byte) 27);
                       break L2;
                     }
                   }
@@ -1446,10 +1433,10 @@ final class ge extends pa {
         }
     }
 
-    private final void k() {
+    private final void k(byte param0) {
     }
 
-    private final void o() {
+    private final void o(byte param0) {
         qk var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -1492,7 +1479,7 @@ final class ge extends pa {
         ((ge) this).a(4, (byte) -89);
     }
 
-    private final void n() {
+    private final void n(int param0) {
         Object var2 = null;
         int var3 = 0;
         int var4 = 0;

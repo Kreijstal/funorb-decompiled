@@ -6,7 +6,7 @@ final class wi {
     static String field_a;
     static String field_b;
 
-    final static wa a(int param0, int param1, wa param2, int param3, int param4, int param5) {
+    final static wa a(int param0, int param1, wa param2, int param3, int param4, int param5, int param6) {
         wa var7 = null;
         RuntimeException var7_ref = null;
         wa stackIn_6_0 = null;
@@ -91,7 +91,7 @@ final class wi {
         }
     }
 
-    final static int a(e param0, e param1) {
+    final static int a(e param0, e param1, int param2) {
         RuntimeException var3 = null;
         Object var4 = null;
         int stackIn_1_0 = 0;

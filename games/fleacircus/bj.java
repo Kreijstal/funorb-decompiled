@@ -17,15 +17,14 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
                 Object var6 = null;
                 ((bj) this).a((java.awt.Component) null, 87, -48, 10);
             }
-            int discarded$0 = -112;
-            this.d();
-            boolean discarded$1 = param0.drawImage(((bj) this).field_b, param2, param1, (java.awt.image.ImageObserver) this);
+            this.d((byte) -112);
+            boolean discarded$0 = param0.drawImage(((bj) this).field_b, param2, param1, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) (Object) runtimeException, "bj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_n = null;
     }
@@ -36,19 +35,16 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
         ((bj) this).field_f = param2;
         ((bj) this).field_j = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
         ((bj) this).field_b = param0.createImage((java.awt.image.ImageProducer) this);
-        int discarded$0 = -112;
-        this.d();
-        boolean discarded$7 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
+        this.d((byte) -112);
+        boolean discarded$6 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
         if (param3 > -72) {
             return;
         }
         try {
-            int discarded$8 = -112;
-            this.d();
-            boolean discarded$9 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
-            int discarded$10 = -112;
-            this.d();
-            boolean discarded$11 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
+            this.d((byte) -112);
+            boolean discarded$7 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
+            this.d((byte) -112);
+            boolean discarded$8 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
             ((bj) this).a((byte) 74);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) (Object) runtimeException, "bj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -75,11 +71,10 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
                 }
               } else {
                 var1.e(8, 8);
-                int fieldTemp$4 = var1.field_i + 1;
+                int fieldTemp$2 = var1.field_i + 1;
                 var1.field_i = var1.field_i + 1;
-                var2 = fieldTemp$4;
-                int discarded$5 = 0;
-                ec.a(var1);
+                var2 = fieldTemp$2;
+                ec.a(var1, false);
                 ud.field_b.c((byte) -80, var1.field_i - var2);
                 continue L1;
               }
@@ -292,7 +287,7 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    private final synchronized void d() {
+    private final synchronized void d(byte param0) {
         if (!(((bj) this).field_k != null)) {
             return;
         }

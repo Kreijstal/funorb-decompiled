@@ -225,7 +225,7 @@ final class qd {
         return stackIn_1_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
         field_c = null;
         field_e = null;

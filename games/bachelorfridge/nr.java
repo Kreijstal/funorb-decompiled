@@ -9,14 +9,13 @@ final class nr extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$4 = ((nr) this).field_l - 1;
+        int fieldTemp$2 = ((nr) this).field_l - 1;
         ((nr) this).field_l = ((nr) this).field_l - 1;
-        if (0 <= fieldTemp$4) {
+        if (0 <= fieldTemp$2) {
           if (((nr) this).field_l != 25) {
             return false;
           } else {
-            int discarded$5 = 121;
-            this.f();
+            this.f(121);
             return false;
           }
         } else {
@@ -67,7 +66,7 @@ final class nr extends ana {
     private final void d(int param0) {
     }
 
-    private final void f() {
+    private final void f(int param0) {
         pp var3 = null;
         ad var4 = null;
         int var5 = 0;
@@ -94,7 +93,7 @@ final class nr extends ana {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_w = null;
         field_v = null;
         field_y = null;

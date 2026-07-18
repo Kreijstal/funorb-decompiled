@@ -186,10 +186,9 @@ final class nl extends aj {
         }
     }
 
-    final static void a(java.math.BigInteger param0, jc param1, jc param2, java.math.BigInteger param3) {
+    final static void a(java.math.BigInteger param0, jc param1, jc param2, java.math.BigInteger param3, int param4) {
         try {
-            int discarded$0 = 0;
-            bl.a(0, param1.field_l, param0, param2, param1.field_g, param3);
+            bl.a(0, param1.field_l, param0, param2, param1.field_g, param3, 0);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "nl.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
@@ -548,7 +547,7 @@ final class nl extends aj {
         return dupTemp$0;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return (qe.field_m << 2) + (ca.field_D << 4) - -el.field_t;
     }
 
@@ -559,18 +558,11 @@ final class nl extends aj {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6, int param7, int param8, int param9, boolean param10, boolean param11) {
+    final static void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6, int param7, int param8, int param9, boolean param10, boolean param11, int param12, int param13) {
         wc.field_g = null;
-        int discarded$0 = 59;
-        qk.b();
-        int discarded$1 = 15;
-        int discarded$2 = 11;
-        int discarded$3 = 14;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        param0 = mc.a(13, param0);
-        int discarded$6 = 16777215;
-        ha.a(11, param10, param11, 104, true, 16777215, param8, param5, param0);
+        qk.b((byte) 59);
+        param0 = mc.a(13, param0, false, 0, 14, 11, 15);
+        ha.a(11, param10, param11, 104, true, 16777215, param8, param5, param0, 16777215);
         eg.a(param8, -98, param10);
         ac.a(param8, -1, 0, param0);
     }

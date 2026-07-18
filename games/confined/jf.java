@@ -32,7 +32,7 @@ abstract class jf {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_c = null;
     }
@@ -191,7 +191,7 @@ abstract class jf {
 
     abstract void a(boolean param0, Object param1, byte param2);
 
-    final static void a() {
+    final static void a(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -221,14 +221,12 @@ abstract class jf {
               break L1;
             }
           }
-          int discarded$3 = -8409;
-          vm.a(mi.field_a);
+          vm.a(mi.field_a, -8409);
           ti.b();
           fn.d();
           of.a(false);
           if (var5 >= 256) {
-            int discarded$4 = 0;
-            ib.b();
+            ib.b(false);
             if (tg.field_H >= 150) {
               ad.field_b.a(var3 - -15, var4 - -10, var5);
               var6 = tg.field_H + -125;
@@ -448,8 +446,7 @@ abstract class jf {
           } else {
             L21: {
               fn.b(0, 0, fn.field_g, fn.field_l, 0, -var5 + 256);
-              int discarded$5 = 0;
-              ib.b();
+              ib.b(false);
               if (tg.field_H >= 150) {
                 ad.field_b.a(var3 - -15, var4 - -10, var5);
                 break L21;

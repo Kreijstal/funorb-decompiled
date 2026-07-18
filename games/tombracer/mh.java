@@ -21,7 +21,7 @@ final class mh extends kna {
         super(param0, param1);
     }
 
-    public static void A() {
+    public static void A(int param0) {
         field_F = null;
         field_K = null;
         field_L = null;
@@ -299,7 +299,7 @@ final class mh extends kna {
         return false;
     }
 
-    final static jea r() {
+    final static jea r(byte param0) {
         return tn.field_n.field_tb;
     }
 

@@ -226,8 +226,7 @@ final class ca {
                             if (~param3.field_j != ~param0.field_f[param2][var6]) {
                               break L3;
                             } else {
-                              int discarded$1 = -6;
-                              if (fd.a(param0.field_e[param2][var6])) {
+                              if (fd.a(param0.field_e[param2][var6], (byte) -6)) {
                                 var7 = 0;
                                 L4: while (true) {
                                   if (var7 >= var4_int) {

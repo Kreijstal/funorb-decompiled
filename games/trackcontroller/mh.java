@@ -205,7 +205,7 @@ final class mh extends fc {
         return stackIn_14_0 != 0;
     }
 
-    final static boolean e() {
+    final static boolean e(int param0) {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
@@ -234,7 +234,7 @@ final class mh extends fc {
         return stackIn_5_0 != 0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
     }
 

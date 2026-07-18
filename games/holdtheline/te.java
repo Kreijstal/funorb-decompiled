@@ -12,12 +12,10 @@ final class te {
     final static void a(boolean param0) {
         if (null != kf.field_U) {
             em.a(-29486, false);
-            int discarded$0 = 1;
-            kd.a(en.a(76));
+            kd.a(en.a(76), true);
             return;
         }
-        int discarded$1 = 1;
-        kd.a(en.a(76));
+        kd.a(en.a(76), true);
     }
 
     final static int a(int param0, byte param1, int param2) {
@@ -135,7 +133,7 @@ final class te {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;

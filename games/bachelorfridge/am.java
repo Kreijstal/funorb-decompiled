@@ -14,7 +14,7 @@ abstract class am extends vf {
     private int field_H;
     private int field_P;
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_Q = null;
         field_R = null;
         field_M = null;

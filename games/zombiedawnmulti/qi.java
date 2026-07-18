@@ -6,7 +6,7 @@ final class qi {
     static ua field_a;
     static long field_c;
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -17,21 +17,21 @@ final class qi {
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
-        ga var9 = null;
-        int[] var10 = null;
+        ga var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         int[] var13 = null;
+        int[] var14 = null;
         RuntimeException decompiledCaughtException = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            var9 = s.field_e;
-            var2 = var9.g(31365);
-            var3 = var9.g(31365);
+            var10 = s.field_e;
+            var2 = var10.g(31365);
+            var3 = var10.g(31365);
             if (var2 != 0) {
               if (var2 == 1) {
-                var4 = var9.h(22219);
+                var4 = var10.h(22219);
                 var5 = (hp) (Object) mh.field_l.c(83);
                 L1: while (true) {
                   L2: {
@@ -62,8 +62,7 @@ final class qi {
                   }
                 }
               } else {
-                int discarded$1 = 0;
-                bd.a("LR1: " + ci.a(0), (Throwable) null);
+                bd.a("LR1: " + ci.a(0), (Throwable) null, false);
                 ak.a((byte) -115);
                 return;
               }
@@ -74,16 +73,16 @@ final class qi {
                 return;
               } else {
                 L4: {
-                  var5_int = -var9.field_j + hd.field_q;
-                  var13 = var4_ref_u.field_h;
+                  var5_int = -var10.field_j + hd.field_q;
+                  var14 = var4_ref_u.field_h;
+                  var13 = var14;
                   var12 = var13;
                   var11 = var12;
-                  var10 = var11;
-                  var6 = var10;
-                  if (var13.length << 2 >= var5_int) {
+                  var6 = var11;
+                  if (var14.length << 2 >= var5_int) {
                     break L4;
                   } else {
-                    var5_int = var13.length << 2;
+                    var5_int = var14.length << 2;
                     break L4;
                   }
                 }
@@ -93,7 +92,7 @@ final class qi {
                     var4_ref_u.a(true);
                     return;
                   } else {
-                    var6[var7 >> 2] = var6[var7 >> 2] + (var9.g(31365) << tq.b(768, var7 << 8));
+                    var6[var7 >> 2] = var6[var7 >> 2] + (var10.g(31365) << tq.b(768, var7 << 8));
                     var7++;
                     continue L5;
                   }
@@ -128,10 +127,8 @@ final class qi {
         String stackOut_4_2 = null;
         try {
           L0: {
-            int discarded$16 = 11;
-            eo.a((java.awt.Component) (Object) param1);
-            int discarded$17 = 127;
-            so.a((java.awt.Component) (Object) param1);
+            eo.a((java.awt.Component) (Object) param1, 11);
+            so.a((java.awt.Component) (Object) param1, 127);
             if (null == ll.field_a) {
               break L0;
             } else {
@@ -175,7 +172,7 @@ final class qi {
         fb.a(4, 102);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_b = null;
     }

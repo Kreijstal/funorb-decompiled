@@ -98,8 +98,7 @@ final class qf extends rqa {
                   }
                 }
               } else {
-                int discarded$2 = 6;
-                nv.a((byte) 88, var4);
+                nv.a((byte) 88, var4, 6);
                 var4 = (dnb) (Object) ahb.field_o.a((byte) 89);
                 continue L1;
               }
@@ -112,7 +111,7 @@ final class qf extends rqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

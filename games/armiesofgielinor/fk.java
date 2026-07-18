@@ -10,7 +10,7 @@ final class fk implements kh {
     static int[][] field_d;
     static String field_e;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_e = null;
         field_a = null;
@@ -518,16 +518,15 @@ final class fk implements kh {
                   break L0;
                 } else {
                   L2: {
-                    int discarded$20 = -2;
-                    if (vq.a(param1)) {
+                    if (vq.a(param1, -2)) {
                       var6 = new bq();
-                      int discarded$21 = param1.g(60, 24);
-                      int discarded$22 = param1.g(-107, 24);
+                      int discarded$12 = param1.g(60, 24);
+                      int discarded$13 = param1.g(-107, 24);
                       var6.field_e = param1.g(-115, 24);
-                      int discarded$23 = param1.g(-115, 9);
-                      int discarded$24 = param1.g(-105, 12);
-                      int discarded$25 = param1.g(44, 12);
-                      int discarded$26 = param1.g(125, 12);
+                      int discarded$14 = param1.g(-115, 9);
+                      int discarded$15 = param1.g(-105, 12);
+                      int discarded$16 = param1.g(44, 12);
+                      int discarded$17 = param1.g(125, 12);
                       var4[var5] = var6;
                       break L2;
                     } else {

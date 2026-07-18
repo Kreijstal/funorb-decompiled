@@ -8,7 +8,7 @@ class lga extends rj {
     private bm field_A;
     private String[] field_C;
 
-    private final bm a(int param0, int param1) {
+    private final bm a(int param0, int param1, byte param2) {
         bm var4 = null;
         bm var5 = null;
         int var6 = 0;
@@ -210,8 +210,7 @@ class lga extends rj {
               if (((lga) this).field_f) {
                 var5_int = -param0 + (jba.field_j + -((lga) this).field_i);
                 var6 = sta.field_B + -param3 - ((lga) this).field_n;
-                int discarded$2 = -20;
-                ((lga) this).field_A = this.a(var6, var5_int);
+                ((lga) this).field_A = this.a(var6, var5_int, (byte) -20);
                 break L1;
               } else {
                 break L1;
@@ -456,8 +455,7 @@ class lga extends rj {
         var5 = param2 - ((lga) this).field_i;
         var6 = -((lga) this).field_n + param0;
         if (param3 <= -40) {
-          int discarded$6 = -20;
-          var7 = this.a(var6, var5);
+          var7 = this.a(var6, var5, (byte) -20);
           if (var7 != null) {
             if (((lga) this).field_h != null) {
               ((tma) (Object) ((lga) this).field_h).a((lga) this, var7.field_h, 30846, param1);
@@ -470,9 +468,8 @@ class lga extends rj {
           }
         } else {
           var8 = null;
-          boolean discarded$7 = ((lga) this).a((ae) null, false);
-          int discarded$8 = -20;
-          var7 = this.a(var6, var5);
+          boolean discarded$2 = ((lga) this).a((ae) null, false);
+          var7 = this.a(var6, var5, (byte) -20);
           if (var7 != null) {
             if (((lga) this).field_h == null) {
               return;
@@ -503,8 +500,7 @@ class lga extends rj {
             var7 = var5.a((ae) this, param0, (byte) 119);
             var8 = var5.a(param1, (ae) this, (byte) -49);
             L0: while (true) {
-              int discarded$1 = 0;
-              nn.a(-2 + (var7 + var6.field_g), -2 + (var8 + var6.field_l), var6.field_i - -2, 2 + var6.field_j);
+              nn.a(-2 + (var7 + var6.field_g), -2 + (var8 + var6.field_l), var6.field_i - -2, 2 + var6.field_j, false);
               var6 = var6.field_k;
               if (var6 != null) {
                 continue L0;
@@ -516,7 +512,7 @@ class lga extends rj {
         }
     }
 
-    final static nma a(uia param0) {
+    final static nma a(uia param0, byte param1) {
         RuntimeException var2 = null;
         nma stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -580,7 +576,7 @@ class lga extends rj {
         ((lga) this).b(18758);
     }
 
-    final static oc a(cn param0, String param1, String param2) {
+    final static oc a(cn param0, String param1, String param2, boolean param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -808,12 +804,12 @@ class lga extends rj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_z = null;
         field_B = null;
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
@@ -831,9 +827,7 @@ class lga extends rj {
           L0: {
             L1: {
               if (null == rla.field_D) {
-                int discarded$4 = 128;
-                int discarded$5 = 4;
-                rla.field_D = cna.a();
+                rla.field_D = cna.a(4, 128);
                 break L1;
               } else {
                 break L1;

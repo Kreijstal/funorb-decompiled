@@ -19,11 +19,11 @@ abstract class rh extends ri {
         return param1 + "/" + db.field_b.length;
     }
 
-    final static tf[] d() {
+    final static tf[] d(int param0) {
         return new tf[]{nf.field_m, og.field_d, oa.field_l, field_u, ef.field_e, gk.field_b, rf.field_db, gk.field_d, gh.field_g, oj.field_m, u.field_c, kb.field_q, ik.field_cb, nj.field_g};
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_s = null;
         field_t = null;
         field_l = null;

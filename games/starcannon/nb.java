@@ -10,7 +10,7 @@ final class nb {
     static int field_g;
     static ka field_e;
 
-    final static void a(ue param0) {
+    final static void a(ue param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -43,8 +43,7 @@ final class nb {
             var10 = var8;
             var3 = var10.j(7909);
             var10.c(true);
-            int discarded$2 = 107;
-            uc.field_d = sb.a(var10);
+            uc.field_d = sb.a(var10, (byte) 107);
             ci.field_g = new lb[var3];
             ck.field_h = new int[var3][];
             var4 = 0;
@@ -68,8 +67,7 @@ final class nb {
                   }
                 }
               } else {
-                int discarded$3 = 102;
-                ci.field_g[var4] = vh.a(var8);
+                ci.field_g[var4] = vh.a(var8, 102);
                 var4++;
                 continue L1;
               }
@@ -107,7 +105,7 @@ final class nb {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         RuntimeException var10 = null;
         int[] var10_array = null;
         int[] var11 = null;
@@ -643,7 +641,7 @@ final class nb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_b = null;
         field_d = null;
@@ -685,7 +683,7 @@ final class nb {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, hl[] param3, int param4) {
+    final static void a(int param0, byte param1, int param2, hl[] param3, int param4, int param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;

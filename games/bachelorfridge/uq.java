@@ -416,8 +416,7 @@ final class uq extends sna {
     }
 
     final static void h(int param0) {
-        int discarded$0 = 17035;
-        baa.e();
+        baa.e(17035);
         hba.a(true, wha.field_a);
         gs.field_f = null;
         int var1 = 3;
@@ -433,7 +432,7 @@ final class uq extends sna {
         op var8 = new op(var1, var2, var3, var4, var5, var6);
         eaa var9 = mg.field_m.field_e.field_m;
         rk[] var10 = new rk[var9.g(param0 + 28716)];
-        int discarded$1 = var9.a((byte) 88, (bw[]) (Object) var10);
+        int discarded$0 = var9.a((byte) 88, (bw[]) (Object) var10);
         gj var11 = new gj(var8, var7, var10, false);
         hp.field_c = 0;
         dj.field_c = var11;
@@ -444,7 +443,7 @@ final class uq extends sna {
         dh.a((byte) 58, var2);
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_zb = null;
     }
 
@@ -871,7 +870,7 @@ final class uq extends sna {
         }
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         mg.field_m = new mu();
         Random discarded$0 = new Random();
         int var1 = 0;

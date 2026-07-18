@@ -80,7 +80,7 @@ final class uc {
         return stackIn_3_0;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return 1;
     }
 
@@ -114,7 +114,7 @@ final class uc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_d = null;
     }

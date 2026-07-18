@@ -54,8 +54,7 @@ final class ol extends rq {
         ((ol) this).field_b.a((byte) 89, 2, true, false, jq.field_a);
         ((ol) this).field_b.a(ta.field_a, 0, true);
         ((ol) this).field_b.g(0, param1 + -20311);
-        int discarded$0 = -86;
-        this.d();
+        this.d(-86);
     }
 
     final void c(boolean param0) {
@@ -170,7 +169,7 @@ final class ol extends rq {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         jagdx.IDirect3DVertexShader var2 = null;
         jagdx.IDirect3DDevice var3 = null;
         int var4 = 0;
@@ -220,19 +219,18 @@ final class ol extends rq {
         if (((ol) this).field_j != var2) {
           ((ol) this).field_j = var2;
           ((ol) this).field_l.a(-116, var2);
-          int discarded$3 = 82;
-          this.e();
+          this.e(82);
           ((ol) this).b(false);
           ((ol) this).a((byte) -72);
           ((ol) this).c((byte) 53);
           ((ol) this).b(121);
           ((ol) this).a(260);
           var6.a(0.0f, field_k, (byte) -86, 0.0f, -1.0f, (float)var4);
-          int discarded$4 = var3.a(12, field_k);
+          int discarded$2 = var3.a(12, field_k);
           return;
         } else {
           var6.a(0.0f, field_k, (byte) -86, 0.0f, -1.0f, (float)var4);
-          int discarded$5 = var3.a(12, field_k);
+          int discarded$3 = var3.a(12, field_k);
           return;
         }
     }
@@ -314,7 +312,7 @@ final class ol extends rq {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         ut var2 = null;
         jagdx.IDirect3DDevice var3 = null;
         ut var4 = null;

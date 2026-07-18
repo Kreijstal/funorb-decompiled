@@ -50,12 +50,10 @@ final class o extends em {
                     break L2;
                   }
                 }
-                int discarded$33 = -81;
-                t.a(var3_int != 0, mg.a(true), tb.b(), 2, qe.field_g);
+                t.a(var3_int != 0, mg.a(true), tb.b((byte) -81), 2, qe.field_g);
                 break L1;
               } else {
-                int discarded$34 = -81;
-                if (!s.a()) {
+                if (!s.a((byte) -81)) {
                   wj.c();
                   ik.a(11755, 320, 240);
                   DrPhlogistonSavesTheEarth.a(0, -103, param2, 0);

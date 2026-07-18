@@ -16,7 +16,7 @@ final class via extends rna implements ntb {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 

@@ -20,7 +20,7 @@ final class eb {
         field_e = null;
     }
 
-    final static void a(String param0, boolean param1, boolean param2) {
+    final static void a(String param0, boolean param1, boolean param2, int param3) {
         cf.a((byte) -107);
         ng.field_c.j(300);
         pi.field_O = new wa(qf.field_c, (String) null, sg.field_a, param1, param2);
@@ -32,7 +32,7 @@ final class eb {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         nl var3 = null;
         int var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
@@ -47,7 +47,7 @@ final class eb {
         }
     }
 
-    final static boolean a(od param0) {
+    final static boolean a(od param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -124,7 +124,7 @@ final class eb {
         return stackIn_6_0 != 0;
     }
 
-    final static fl[] a(bl param0) {
+    final static fl[] a(bl param0, boolean param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         fl[] var4 = null;

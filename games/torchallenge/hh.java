@@ -1103,7 +1103,7 @@ final class hh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         int var1 = 32;
         field_a = null;

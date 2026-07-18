@@ -159,13 +159,13 @@ final class bn {
         return stackIn_16_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 53;
         field_d = null;
         field_b = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         vg.field_Z.g((byte) 127);
         if (ui.field_c == null) {
             ui.field_c = new jj(vg.field_Z, cb.field_b);

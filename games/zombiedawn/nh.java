@@ -85,7 +85,7 @@ final class nh extends hp implements hh {
         return stackIn_3_0;
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_R = null;
         int var1 = -87;
     }
@@ -370,8 +370,7 @@ final class nh extends hp implements hh {
                                       break L1;
                                     } else {
                                       var7 = ((nh) this).field_U + param3;
-                                      int discarded$3 = -89;
-                                      this.a(var7);
+                                      this.a(var7, (byte) -89);
                                       stackOut_49_0 = 1;
                                       stackIn_50_0 = stackOut_49_0;
                                       return stackIn_50_0 != 0;
@@ -431,8 +430,7 @@ final class nh extends hp implements hh {
                             break L8;
                           }
                         }
-                        int discarded$4 = 24;
-                        this.a();
+                        this.a(24);
                         stackOut_33_0 = 1;
                         stackIn_34_0 = stackOut_33_0;
                         return stackIn_34_0 != 0;
@@ -472,8 +470,7 @@ final class nh extends hp implements hh {
                       break L12;
                     }
                   }
-                  int discarded$5 = 24;
-                  this.a();
+                  this.a(24);
                   stackOut_18_0 = 1;
                   stackIn_19_0 = stackOut_18_0;
                   return stackIn_19_0 != 0;
@@ -597,8 +594,7 @@ final class nh extends hp implements hh {
         ((nh) this).field_T.a(-117, 0, 0, ((nh) this).field_i, var2);
         ((nh) this).field_F = new qi(0, 0, 0, 0, (io) (Object) new kh(), (ga) (Object) ((nh) this).field_T, (io) null);
         if (var4 != 0) {
-            int discarded$0 = 6130;
-            ((nh) this).field_F.a(true, (byte) 100, wo.v());
+            ((nh) this).field_F.a(true, (byte) 100, wo.v(6130));
         }
         ((nh) this).field_F.a(-78, ((nh) this).field_M, 0, ((nh) this).field_i, ((nh) this).field_n - ((nh) this).field_M);
         ((nh) this).field_H = true;
@@ -606,8 +602,7 @@ final class nh extends hp implements hh {
             return;
         }
         ((nh) this).a((ga) (Object) ((nh) this).field_F, 10);
-        int discarded$1 = 24;
-        this.a();
+        this.a(24);
     }
 
     final void b(boolean param0) {
@@ -701,7 +696,7 @@ final class nh extends hp implements hh {
         return stackIn_6_0 != 0;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -772,7 +767,7 @@ final class nh extends hp implements hh {
         return stackIn_4_0;
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -847,7 +842,7 @@ final class nh extends hp implements hh {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, byte param1) {
         if (((nh) this).field_T.field_L == null) {
             return;
         }
@@ -858,8 +853,7 @@ final class nh extends hp implements hh {
         }
         try {
             ((nh) this).field_T.field_K = var3_int;
-            int discarded$0 = 24;
-            this.a();
+            this.a(24);
             ((nh) this).field_U = param0;
         } catch (RuntimeException runtimeException) {
             throw sh.a((Throwable) (Object) runtimeException, "nh.E(" + (param0 != null ? "{...}" : "null") + ',' + -89 + ')');

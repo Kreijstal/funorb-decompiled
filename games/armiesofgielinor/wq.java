@@ -299,6 +299,7 @@ final class wq {
     }
 
     final static boolean a(boolean param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+        Object var8 = null;
         L0: {
           if (!jj.b((byte) -73)) {
             break L0;
@@ -310,8 +311,7 @@ final class wq {
               } else {
                 if (tn.field_Z.a(param1, (byte) 103, param4, param5, param0)) {
                   param0 = false;
-                  int discarded$6 = 76;
-                  ot.g();
+                  ot.g(76);
                   break L1;
                 } else {
                   kd.a(param6 ^ -81, param4, param0);
@@ -320,8 +320,8 @@ final class wq {
                   if (param6 == -83) {
                     return param0;
                   } else {
-                    int discarded$7 = 0;
-                    wq.a((String) null);
+                    var8 = null;
+                    wq.a((String) null, false);
                     return param0;
                   }
                 }
@@ -334,19 +334,19 @@ final class wq {
           }
         }
         if (param6 != -83) {
-          int discarded$8 = 0;
-          wq.a((String) null);
+          var8 = null;
+          wq.a((String) null, false);
           return param0;
         } else {
           return param0;
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, boolean param1) {
         System.out.println("Error: " + dv.a(param0, -87, "%0a", "\n"));
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_g = null;
         field_c = null;

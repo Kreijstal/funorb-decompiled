@@ -196,7 +196,7 @@ final class qf extends eo {
         }
     }
 
-    private final long c() {
+    private final long c(int param0) {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;
@@ -269,8 +269,7 @@ final class qf extends eo {
         if (param0 <= 70) {
             return -6L;
         }
-        int discarded$0 = 1;
-        ((qf) this).field_c = ((qf) this).field_c + this.c();
+        ((qf) this).field_c = ((qf) this).field_c + this.c(1);
         if (!(((qf) this).field_g <= ((qf) this).field_c)) {
             return (-((qf) this).field_c + ((qf) this).field_g) / 1000000L;
         }

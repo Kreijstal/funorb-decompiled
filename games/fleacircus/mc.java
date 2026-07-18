@@ -15,7 +15,7 @@ final class mc {
         field_c = null;
     }
 
-    final static void a(dd param0, String param1) {
+    final static void a(dd param0, String param1, int param2) {
         try {
             pa.field_k = param1;
             cd.field_b = param0;
@@ -46,7 +46,7 @@ final class mc {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean a(int param0, byte param1) {
         return ~(-param0 & param0) == ~param0;
     }
 

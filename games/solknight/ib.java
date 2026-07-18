@@ -13,7 +13,7 @@ final class ib extends gg {
     static dh field_l;
     static int field_j;
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
     }
 

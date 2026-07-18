@@ -216,7 +216,7 @@ final class vg {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$3 = b.f(24);
+          int discarded$2 = b.f(24);
           ((vg) this).field_f = b.f(16);
           ((vg) this).field_a = b.f(24);
           ((vg) this).field_e = new int[((vg) this).field_a];
@@ -276,17 +276,16 @@ final class vg {
               if (var2 >= ((vg) this).field_a) {
                 break L1;
               } else {
-                int discarded$4 = -31479;
-                var4_int = b.f(d.a(((vg) this).field_a - var2));
+                var4_int = b.f(d.a(((vg) this).field_a - var2, -31479));
                 var5 = 0;
                 L6: while (true) {
                   if (var5 >= var4_int) {
                     var3_int++;
                     continue L5;
                   } else {
-                    int incrementValue$5 = var2;
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((vg) this).field_e[incrementValue$5] = var3_int;
+                    ((vg) this).field_e[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

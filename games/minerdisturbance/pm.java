@@ -9,13 +9,13 @@ final class pm extends IOException {
     static String field_d;
     static int field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 1;
         field_b = null;
         field_d = null;
     }
 
-    final static bg[] b() {
+    final static bg[] b(int param0) {
         return new bg[]{gk.field_s, kb.field_e, ff.field_a, ab.field_b, tl.field_l, jk.field_jb, qc.field_a, oc.field_i, sj.field_a, qm.field_h, dl.field_e, hd.field_i, dg.field_a, jg.field_l};
     }
 

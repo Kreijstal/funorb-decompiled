@@ -86,7 +86,7 @@ abstract class ko extends ms {
         return ((ko) this).field_q;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_m = null;
     }
 

@@ -19,11 +19,11 @@ final class dca extends ana {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_y = null;
     }
 
-    private final void f() {
+    private final void f(byte param0) {
     }
 
     final boolean c(byte param0) {
@@ -33,9 +33,9 @@ final class dca extends ana {
           if (((dca) this).field_m.a((byte) -106)) {
             return false;
           } else {
-            int fieldTemp$2 = ((dca) this).field_l - 1;
+            int fieldTemp$1 = ((dca) this).field_l - 1;
             ((dca) this).field_l = ((dca) this).field_l - 1;
-            if (fieldTemp$2 >= 0) {
+            if (fieldTemp$1 >= 0) {
               L0: {
                 if (((dca) this).field_z) {
                   break L0;
@@ -50,8 +50,7 @@ final class dca extends ana {
               return false;
             } else {
               var2_int = -97 % ((71 - param0) / 47);
-              int discarded$3 = 68;
-              this.f();
+              this.f((byte) 68);
               return true;
             }
           }
@@ -118,8 +117,7 @@ final class dca extends ana {
             var2_int = param1.b(16711935);
             if (1 != var2_int) {
               if (var2_int == 2) {
-                int discarded$4 = -119;
-                stackOut_48_0 = vha.b(param1);
+                stackOut_48_0 = vha.b(param1, -119);
                 stackIn_49_0 = stackOut_48_0;
                 break L0;
               } else {
@@ -132,8 +130,7 @@ final class dca extends ana {
                         return stackIn_47_0;
                       } else {
                         if (var2_int == 7) {
-                          int discarded$5 = 120;
-                          stackOut_44_0 = ur.a(param1);
+                          stackOut_44_0 = ur.a(param1, (byte) 120);
                           stackIn_45_0 = stackOut_44_0;
                           return stackIn_45_0;
                         } else {
@@ -155,8 +152,7 @@ final class dca extends ana {
                                     return stackIn_39_0;
                                   } else {
                                     if (var2_int == 13) {
-                                      int discarded$6 = -45;
-                                      stackOut_36_0 = wb.a(param1);
+                                      stackOut_36_0 = wb.a(param1, -45);
                                       stackIn_37_0 = stackOut_36_0;
                                       return stackIn_37_0;
                                     } else {
@@ -185,8 +181,7 @@ final class dca extends ana {
                                   }
                                 }
                               } else {
-                                int discarded$7 = -4479;
-                                stackOut_20_0 = eo.a(param1);
+                                stackOut_20_0 = eo.a(param1, -4479);
                                 stackIn_21_0 = stackOut_20_0;
                                 return stackIn_21_0;
                               }

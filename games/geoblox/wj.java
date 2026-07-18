@@ -249,12 +249,11 @@ final class wj extends sh {
         dm var6 = new dm(((wj) this).field_A.field_r, ((wj) this).field_A.field_h);
         Geoblox.a(1, var6);
         ((wj) this).field_A.a(0, 0, (byte) -115, param3);
-        int discarded$0 = 1;
-        id.a();
+        id.a(true);
         var6.d(((wj) this).field_v + param0, ((wj) this).field_m + param1, ((wj) this).field_D);
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_G = null;
         field_B = null;
         field_C = null;
@@ -401,7 +400,7 @@ final class wj extends sh {
         }
     }
 
-    final static dm[] a(String param0, String param1, rh param2) {
+    final static dm[] a(String param0, String param1, rh param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

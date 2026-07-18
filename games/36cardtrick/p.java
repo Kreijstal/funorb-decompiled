@@ -17,8 +17,7 @@ final class p extends cg {
         int var4 = 0;
         de[] var5 = null;
         var4 = Main.field_T;
-        int discarded$2 = 113;
-        var5 = bg.v();
+        var5 = bg.v(113);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -179,8 +178,7 @@ final class p extends cg {
             } else {
               L2: {
                 if (!param0.equals((Object) (Object) ((p) this).field_j)) {
-                  int discarded$2 = -125;
-                  var3 = hg.a(param0);
+                  var3 = hg.a(param0, (byte) -125);
                   if (!var3.a(640)) {
                     stackOut_10_0 = a.field_n;
                     stackIn_11_0 = stackOut_10_0;

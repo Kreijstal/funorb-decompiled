@@ -87,8 +87,7 @@ final class eb {
             if (var5.length != 65) {
               throw new RuntimeException();
             } else {
-              int discarded$1 = 0;
-              var17 = ti.a(5, var10.field_g, var10.field_i + -var16.length + -5);
+              var17 = ti.a(5, var10.field_g, var10.field_i + -var16.length + -5, 0);
               var7 = 0;
               L4: while (true) {
                 if (var7 >= 64) {
@@ -371,7 +370,7 @@ final class eb {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_i = null;
         field_l = null;
         field_c = null;

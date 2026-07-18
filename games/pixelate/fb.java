@@ -8,7 +8,7 @@ final class fb extends ak {
     private ak field_Fb;
     static int field_Hb;
 
-    public static void j() {
+    public static void j(int param0) {
         field_Eb = null;
         field_Gb = null;
     }
@@ -62,9 +62,8 @@ final class fb extends ak {
         }
     }
 
-    final static ak b() {
-        int discarded$0 = 0;
-        return fd.a();
+    final static ak b(byte param0) {
+        return fd.a(0);
     }
 
     private fb(long param0, ak param1, ak param2, String param3) {

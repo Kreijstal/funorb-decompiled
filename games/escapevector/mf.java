@@ -169,8 +169,7 @@ final class mf {
             var4 = 0;
             L0: while (true) {
               if (var4 < param2.length()) {
-                int discarded$15 = -124;
-                if (!fn.a(param2.charAt(var4))) {
+                if (!fn.a(param2.charAt(var4), (byte) -124)) {
                   stackOut_10_0 = s.field_B;
                   stackIn_11_0 = stackOut_10_0;
                   return stackIn_11_0;

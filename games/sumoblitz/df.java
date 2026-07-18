@@ -15,7 +15,7 @@ final class df {
         return kj.field_e;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
     }
 

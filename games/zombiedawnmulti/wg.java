@@ -237,7 +237,7 @@ final class wg {
         }
     }
 
-    final static int c() {
+    final static int c(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -300,14 +300,14 @@ final class wg {
         return stackIn_15_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_d = null;
         field_b = null;
         field_c = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         io.a(8355711, nc.field_e, kc.field_c, wa.field_a, vo.field_m);
     }
 

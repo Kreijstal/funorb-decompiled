@@ -380,7 +380,7 @@ final class dh extends aj implements df {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_B = null;
     }
 

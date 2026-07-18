@@ -7,7 +7,7 @@ final class kg {
     static nh field_c;
     pj field_a;
 
-    final static boolean a(int[] param0) {
+    final static boolean a(int[] param0, byte param1) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         ai var4_ref_ai = null;
@@ -236,7 +236,7 @@ final class kg {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         if (b.field_x >= 2) {
           L0: {
             if (0 == sn.field_i) {
@@ -318,7 +318,7 @@ final class kg {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
     }
 

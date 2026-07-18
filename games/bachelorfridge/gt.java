@@ -18,7 +18,7 @@ final class gt extends k {
     private int field_k;
     private int field_v;
 
-    public static void d() {
+    public static void d(int param0) {
         field_l = null;
         int var1 = -120;
         field_s = null;

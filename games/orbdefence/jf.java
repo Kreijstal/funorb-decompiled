@@ -83,8 +83,7 @@ final class jf extends s {
               break L2;
             }
             var12.b(112, 144, var12.field_s << 4, var12.field_t << 4, -((jf) this).field_G << 10, 4096);
-            int discarded$1 = -105;
-            oc.g();
+            oc.g((byte) -105);
             lj.field_N.e(-var12.field_s + var5, var6 - var12.field_t, 256);
             break L0;
           }
@@ -167,7 +166,7 @@ final class jf extends s {
         }
     }
 
-    final static boolean j() {
+    final static boolean j(int param0) {
         return mb.field_c;
     }
 

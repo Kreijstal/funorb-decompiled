@@ -13,7 +13,7 @@ final class om extends rk {
     int field_n;
     static jf field_s;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_p = null;
         field_s = null;
         field_o = null;
@@ -38,14 +38,13 @@ final class om extends rk {
             var5.field_w = param0;
             var5.field_o = 10;
             na.field_T.a((rk) (Object) var5, (byte) 105);
-            int discarded$2 = 21821;
-            dh.a(3, var5);
+            dh.a(3, var5, 21821);
             return var5;
           }
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         gb.a((byte) -94, ii.b(false));
     }
 

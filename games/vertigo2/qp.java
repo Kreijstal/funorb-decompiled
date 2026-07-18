@@ -282,7 +282,7 @@ final class qp {
         return param0 + 1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_c = null;
         field_h = null;

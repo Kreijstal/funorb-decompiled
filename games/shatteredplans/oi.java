@@ -12,7 +12,7 @@ final class oi {
     static boolean field_f;
     static bi field_d;
 
-    final static void a() {
+    final static void a(boolean param0) {
         k.field_b = false;
     }
 
@@ -40,17 +40,14 @@ final class oi {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            int discarded$8 = 0;
-            ln.field_K = mf.a(param1, "", "starfield");
+            ln.field_K = mf.a(param1, "", "starfield", false);
             mp.field_e = new bi[6];
             var2_int = 0;
             L1: while (true) {
               if (var2_int >= 6) {
                 L2: {
-                  int discarded$9 = 0;
-                  ce.field_v = mf.a(param1, "", "win");
-                  int discarded$10 = 0;
-                  dp.field_s = mf.a(param1, "", "lose");
+                  ce.field_v = mf.a(param1, "", "win", false);
+                  dp.field_s = mf.a(param1, "", "lose", false);
                   if (param0 == -126) {
                     break L2;
                   } else {
@@ -61,8 +58,7 @@ final class oi {
                 }
                 break L0;
               } else {
-                int discarded$11 = 1;
-                mp.field_e[var2_int] = vr.a(param1, var2_int - -1);
+                mp.field_e[var2_int] = vr.a(param1, var2_int - -1, 1);
                 var2_int++;
                 continue L1;
               }

@@ -15,7 +15,7 @@ final class da {
     static byte[] field_b;
     static String field_g;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_b = null;
         field_h = null;
@@ -165,7 +165,7 @@ final class da {
         return new int[8];
     }
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;
@@ -271,9 +271,7 @@ final class da {
           L0: {
             var3 = new n(param2);
             nq.field_s.a((br) (Object) var3, false);
-            int discarded$4 = 6;
-            int discarded$5 = 1;
-            ih.a(var3);
+            ih.a(var3, 1, 6);
             stackOut_0_0 = (n) var3;
             stackIn_1_0 = stackOut_0_0;
             break L0;

@@ -17,7 +17,7 @@ final class bc extends jf implements qn {
     static wk[] field_rb;
     static String field_nb;
 
-    final static void a(String param0, ee param1) {
+    final static void a(String param0, ee param1, byte param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         String[] var4 = null;
@@ -229,8 +229,7 @@ final class bc extends jf implements qn {
             }
             L6: {
               mm.field_g.a((byte) 124, var6);
-              int discarded$2 = -21;
-              var7 = gh.a(-84, wl.d());
+              var7 = gh.a(-84, wl.d((byte) -21));
               if (var7 != null) {
                 break L6;
               } else {
@@ -247,8 +246,7 @@ final class bc extends jf implements qn {
                 break L7;
               }
             }
-            int discarded$3 = 5;
-            qi.a(jd.field_ib, ne.field_y, (gi) (Object) mm.field_g, qe.field_d);
+            qi.a(jd.field_ib, ne.field_y, (gi) (Object) mm.field_g, qe.field_d, 5);
             mm.field_g.c(30, -var5_int + mm.field_g.field_p);
             gj.a(0, -1);
             break L0;
@@ -321,7 +319,7 @@ final class bc extends jf implements qn {
         }
     }
 
-    final static void a(long param0, String param1) {
+    final static void a(long param0, String param1, int param2) {
         CharSequence var5 = null;
         try {
             ib.field_b = 2;
@@ -335,7 +333,7 @@ final class bc extends jf implements qn {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wk param4) {
+    final static void a(int param0, int param1, int param2, int param3, wk param4, int param5, int param6) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -453,7 +451,7 @@ final class bc extends jf implements qn {
         return ((bc) this).field_zb;
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_wb = null;
         field_qb = null;
         field_vb = null;

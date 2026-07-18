@@ -39,9 +39,7 @@ final class gi {
             bi.field_a.field_B[var3] = var5 << 1;
         }
         jj.field_A.e();
-        int discarded$20 = 30603;
-        int discarded$22 = 3;
-        sc.a(3, bi.field_a.field_B);
+        sc.a(3, bi.field_a.field_B, 3, 30603);
         hg.field_y.b(33);
         if (param0 != 4) {
             return;
@@ -53,7 +51,7 @@ final class gi {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_c = null;
         field_b = null;

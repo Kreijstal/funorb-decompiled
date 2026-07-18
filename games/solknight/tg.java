@@ -8,7 +8,7 @@ final class tg extends pj {
     static o field_I;
     static String field_K;
 
-    public static void a() {
+    public static void a(int param0) {
         field_K = null;
         field_I = null;
         field_J = null;
@@ -41,8 +41,7 @@ final class tg extends pj {
         String stackOut_16_2 = null;
         var5 = SolKnight.field_L ? 1 : 0;
         try {
-          int discarded$2 = 0;
-          var3 = uc.a(false, param2);
+          var3 = uc.a(false, param2, 0);
           if (var3 != null) {
             stackOut_5_0 = (String) var3;
             stackIn_6_0 = stackOut_5_0;
@@ -96,7 +95,7 @@ final class tg extends pj {
         }
     }
 
-    final static ce a(String param0) {
+    final static ce a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ce stackIn_4_0 = null;
@@ -126,8 +125,7 @@ final class tg extends pj {
                 if (param0.equals((Object) (Object) td.field_h.b(28903))) {
                   break L1;
                 } else {
-                  int discarded$2 = 0;
-                  td.field_h = hh.a(param0);
+                  td.field_h = hh.a(param0, false);
                   break L1;
                 }
               }

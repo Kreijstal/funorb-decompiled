@@ -111,7 +111,7 @@ final class la {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -130,7 +130,7 @@ final class la {
         return ((la) this).field_c;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

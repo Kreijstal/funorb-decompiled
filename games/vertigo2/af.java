@@ -23,7 +23,7 @@ abstract class af extends cj implements ik {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean a(boolean param0, CharSequence param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -113,7 +113,7 @@ abstract class af extends cj implements ik {
 
     abstract boolean e(boolean param0);
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_G = null;
         field_H = null;
         field_F = null;
@@ -138,7 +138,7 @@ abstract class af extends cj implements ik {
         super(param0, param1, param2, param3, param4);
     }
 
-    final static void a() {
+    final static void a(int param0, int param1, byte param2) {
         kf.field_b = 280;
         ni.field_a = 320;
     }

@@ -42,8 +42,7 @@ abstract class p {
           } else {
             if (fb.field_i.b("world_images", -128)) {
               ra.field_X = si.a(fb.field_i, 33, "world_images", "");
-              int discarded$3 = 32381;
-              ok.a();
+              ok.a(32381);
               mi.field_c = new hj[4];
               var3 = 0;
               L1: while (true) {
@@ -57,8 +56,7 @@ abstract class p {
                       break L0;
                     } else {
                       ih.field_t[var6] = ra.field_X[var6].e();
-                      int discarded$4 = -1;
-                      qm.a(ih.field_t[var6], 128);
+                      qm.a(ih.field_t[var6], 128, -1);
                       var4 = ih.field_t[var6].e();
                       var4.f();
                       kj.field_q.d(17, 0, 84, 84);
@@ -70,8 +68,7 @@ abstract class p {
                   }
                 } else {
                   mi.field_c[var3] = ra.field_X[var3].e();
-                  int discarded$5 = -1;
-                  qm.a(mi.field_c[var3], 64);
+                  qm.a(mi.field_c[var3], 64, -1);
                   mi.field_c[var3].f();
                   rf.field_ab.a(-rf.field_ab.field_s + mi.field_c[var3].field_s >> 1, -rf.field_ab.field_y + mi.field_c[var3].field_y >> 1);
                   var3++;

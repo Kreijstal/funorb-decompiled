@@ -10,7 +10,7 @@ final class uc {
     static ci field_c;
     static int[] field_e;
 
-    final static ci b() {
+    final static ci b(int param0) {
         return ib.field_c.field_Kb;
     }
 
@@ -23,7 +23,7 @@ final class uc {
         field_f = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

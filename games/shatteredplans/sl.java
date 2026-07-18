@@ -151,12 +151,11 @@ final class sl extends ob {
         }
     }
 
-    final static e j() {
-        int discarded$0 = -108;
-        return new e(of.a((byte) 42), bo.q());
+    final static e j(byte param0) {
+        return new e(of.a((byte) 42), bo.q(-108));
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_q = null;
         field_p = null;
         field_m = null;

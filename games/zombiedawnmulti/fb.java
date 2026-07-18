@@ -88,7 +88,7 @@ final class fb {
         }
     }
 
-    final static void a(ob param0) {
+    final static void a(ob param0, byte param1) {
         try {
             param0.field_D = new char[]{'?'};
             int var2_int = 54;

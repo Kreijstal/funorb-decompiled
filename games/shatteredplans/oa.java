@@ -87,7 +87,7 @@ final class oa {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -196,7 +196,7 @@ final class oa {
         return ao.a((byte) 97, param0, param2, 1, param3);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }

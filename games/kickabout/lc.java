@@ -80,8 +80,7 @@ final class lc implements Iterator {
                   }
                   L3: {
                     if (fs.field_b == 2) {
-                      int discarded$1 = 126;
-                      var5 = il.a(var4, 13);
+                      var5 = il.a(var4, 13, (byte) 126);
                       break L3;
                     } else {
                       break L3;
@@ -125,7 +124,7 @@ final class lc implements Iterator {
         return ((lc) this).field_a != ((lc) this).field_c.field_d;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_e = null;
     }

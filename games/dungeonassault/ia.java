@@ -71,7 +71,7 @@ final class ia extends ii implements vg {
                 break L1;
               } else {
                 var8 = null;
-                boolean discarded$4 = ((ia) this).a((lm) null, 'ﾀ', -77, (byte) 92);
+                boolean discarded$2 = ((ia) this).a((lm) null, 'ﾀ', -77, (byte) 92);
                 break L1;
               }
             }
@@ -84,8 +84,7 @@ final class ia extends ii implements vg {
                   return;
                 }
               } else {
-                int discarded$5 = 1;
-                nh.c();
+                nh.c(true);
                 return;
               }
             } else {
@@ -358,7 +357,7 @@ final class ia extends ii implements vg {
         }
     }
 
-    final static String a(int param0, se param1, String param2) {
+    final static String a(int param0, se param1, String param2, int param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         String stackIn_3_0 = null;

@@ -11,7 +11,7 @@ final class mj extends ca {
     static int field_f;
     static im field_m;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_l = null;
         field_k = null;
@@ -19,7 +19,7 @@ final class mj extends ca {
         field_m = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         if (!(vj.a(39))) {
             cc.field_f.b(56);
         }

@@ -19,11 +19,10 @@ final class il {
               break L0;
             }
           }
-          int discarded$12 = 8192;
-          ml.e();
+          ml.e(8192);
           if (param0 < 4) {
             var2 = null;
-            String discarded$13 = il.a((String) null, 'a', 12, (String) null);
+            String discarded$4 = il.a((String) null, 'a', 12, (String) null);
             return;
           } else {
             return;
@@ -38,13 +37,12 @@ final class il {
               break L1;
             }
           }
-          int discarded$14 = 8192;
-          ml.e();
+          ml.e(8192);
           if (param0 >= 4) {
             return;
           } else {
             var2 = null;
-            String discarded$15 = il.a((String) null, 'a', 12, (String) null);
+            String discarded$5 = il.a((String) null, 'a', 12, (String) null);
             return;
           }
         }
@@ -201,7 +199,7 @@ final class il {
         return stackIn_12_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -48;
         field_a = null;
         field_b = null;

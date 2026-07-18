@@ -28,7 +28,7 @@ abstract class va {
         return ((va) this).field_d.a(-29749) + ((va) this).field_k.a(-29749);
     }
 
-    final static String a() {
+    final static String a(boolean param0) {
         if (!ab.field_u) {
           if (kk.field_d >= kg.field_e) {
             if (kk.field_d >= kg.field_e - -wi.field_l) {
@@ -117,7 +117,7 @@ abstract class va {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
         field_f = null;
     }

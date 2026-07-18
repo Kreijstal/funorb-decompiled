@@ -78,7 +78,7 @@ final class sm extends fa {
         return stackIn_4_0;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, int param2) {
         int var3 = 0;
         String var4 = null;
         Object var5 = null;
@@ -122,8 +122,7 @@ final class sm extends fa {
                     }
                     L3: {
                       if (il.field_e == 1) {
-                        int discarded$44 = -106;
-                        var5 = (Object) (Object) ff.a(13, var4);
+                        var5 = (Object) (Object) ff.a(13, var4, (byte) -106);
                         break L3;
                       } else {
                         break L3;
@@ -139,8 +138,7 @@ final class sm extends fa {
                     }
                     L5: {
                       if (il.field_e == 3) {
-                        int discarded$45 = -20867;
-                        var5 = (Object) (Object) aq.a(var4, 13, var4);
+                        var5 = (Object) (Object) aq.a(var4, 13, var4, -20867);
                         break L5;
                       } else {
                         break L5;

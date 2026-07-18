@@ -72,8 +72,7 @@ abstract class il extends od {
                                         try {
                                           L2: {
                                             var10 = (CharSequence) (Object) var8.substring(4);
-                                            int discarded$1 = 70;
-                                            var9_int = jb.a(var10);
+                                            var9_int = jb.a(var10, (byte) 70);
                                             var4 = var4 + ((il) this).field_l[var9_int].field_c;
                                             var3 = 0;
                                             var6++;
@@ -666,8 +665,7 @@ abstract class il extends od {
                                         L2: {
                                           L3: {
                                             var13 = (CharSequence) (Object) var9_ref_String.substring(4);
-                                            int discarded$1 = 70;
-                                            var10 = jb.a(var13);
+                                            var10 = jb.a(var13, (byte) 70);
                                             var11_ref_rka = ((il) this).field_l[var10];
                                             if (((il) this).field_I == null) {
                                               stackOut_25_0 = var11_ref_rka.field_f;
@@ -873,7 +871,7 @@ abstract class il extends od {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$6 = ana.a(0, ' ', -11, field_t);
+          StringBuilder discarded$5 = ana.a(0, ' ', -11, field_t);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -909,9 +907,9 @@ abstract class il extends od {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$7 = field_t.append('<');
-                        StringBuilder discarded$8 = field_t.append(var15);
-                        StringBuilder discarded$9 = field_t.append('>');
+                        StringBuilder discarded$6 = field_t.append('<');
+                        StringBuilder discarded$7 = field_t.append(var15);
+                        StringBuilder discarded$8 = field_t.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -927,8 +925,7 @@ abstract class il extends od {
                                             try {
                                               L4: {
                                                 var18 = (CharSequence) (Object) var15.substring(4);
-                                                int discarded$10 = 70;
-                                                var16_int = jb.a(var18);
+                                                var16_int = jb.a(var18, (byte) 70);
                                                 var4 = var4 + ((il) this).field_l[var16_int].field_c;
                                                 var10 = 0;
                                                 break L4;
@@ -1099,7 +1096,7 @@ abstract class il extends od {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$11 = field_t.append((char) var14);
+                        StringBuilder discarded$9 = field_t.append((char) var14);
                         var14 = (char)(io.a(-377, (char) var14) & 255);
                         var4 = var4 + ((il) this).field_B[var14];
                         if (((il) this).field_F == null) {
@@ -1239,8 +1236,7 @@ abstract class il extends od {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    int discarded$5 = 16;
-                                    field_p = eba.a(var7, -39);
+                                    field_p = eba.a(var7, -39, 16);
                                     break L1;
                                   }
                                 } else {
@@ -1253,8 +1249,7 @@ abstract class il extends od {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              int discarded$6 = 16;
-                              field_q = eba.a(var6, -97);
+                              field_q = eba.a(var6, -97, 16);
                               break L1;
                             }
                           } else {
@@ -1267,8 +1262,7 @@ abstract class il extends od {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        int discarded$7 = 16;
-                        field_o = eba.a(var5, -69);
+                        field_o = eba.a(var5, -69, 16);
                         break L1;
                       }
                     } else {
@@ -1277,8 +1271,7 @@ abstract class il extends od {
                     }
                   } else {
                     var4 = (CharSequence) (Object) param0.substring(6);
-                    int discarded$8 = 70;
-                    field_v = jb.a(var4);
+                    field_v = jb.a(var4, (byte) 70);
                     break L1;
                   }
                 } else {
@@ -1287,8 +1280,7 @@ abstract class il extends od {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                int discarded$9 = 16;
-                field_x = eba.a(var3, -94);
+                field_x = eba.a(var3, -94, 16);
                 break L1;
               }
             }

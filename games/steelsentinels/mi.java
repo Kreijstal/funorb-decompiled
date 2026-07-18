@@ -253,8 +253,7 @@ abstract class mi extends kd {
                 }
                 if (var2 == -1) {
                   L4: {
-                    int discarded$1 = 732;
-                    var7 = (char)(e.a((char) var7) & 255);
+                    var7 = (char)(e.a((char) var7, 732) & 255);
                     var4 = var4 + ((mi) this).field_B[var7];
                     if (((mi) this).field_J == null) {
                       break L4;
@@ -287,8 +286,7 @@ abstract class mi extends kd {
     }
 
     final int a(char param0) {
-        int discarded$0 = 732;
-        return ((mi) this).field_B[e.a(param0) & 255];
+        return ((mi) this).field_B[e.a(param0, 732) & 255];
     }
 
     public static void a() {
@@ -511,8 +509,7 @@ abstract class mi extends kd {
               }
               if (var4 == -1) {
                 L6: {
-                  int discarded$1 = 732;
-                  var8 = (char)(e.a((char) var8) & 255);
+                  var8 = (char)(e.a((char) var8, 732) & 255);
                   if (((mi) this).field_J == null) {
                     break L6;
                   } else {
@@ -975,7 +972,7 @@ abstract class mi extends kd {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$6 = dm.a(' ', 200, field_I, 0);
+          StringBuilder discarded$5 = dm.a(' ', 200, field_I, 0);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -1011,9 +1008,9 @@ abstract class mi extends kd {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$7 = field_I.append('<');
-                        StringBuilder discarded$8 = field_I.append(var15);
-                        StringBuilder discarded$9 = field_I.append('>');
+                        StringBuilder discarded$6 = field_I.append('<');
+                        StringBuilder discarded$7 = field_I.append(var15);
+                        StringBuilder discarded$8 = field_I.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1200,9 +1197,8 @@ abstract class mi extends kd {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$10 = field_I.append((char) var14);
-                        int discarded$11 = 732;
-                        var14 = (char)(e.a((char) var14) & 255);
+                        StringBuilder discarded$9 = field_I.append((char) var14);
+                        var14 = (char)(e.a((char) var14, 732) & 255);
                         var4 = var4 + ((mi) this).field_B[var14];
                         if (((mi) this).field_J == null) {
                           break L15;

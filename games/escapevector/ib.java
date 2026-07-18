@@ -29,7 +29,7 @@ final class ib {
         return null;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_f = null;
     }
@@ -87,7 +87,7 @@ final class ib {
         }
     }
 
-    final static java.awt.Frame a(byte param0, int param1, int param2, lk param3, int param4) {
+    final static java.awt.Frame a(byte param0, int param1, int param2, lk param3, int param4, int param5) {
         RuntimeException var6 = null;
         ja[] var6_array = null;
         int var7_int = 0;
@@ -163,8 +163,7 @@ final class ib {
                       stackIn_29_0 = stackOut_28_0;
                       break L0;
                     } else {
-                      int discarded$1 = 0;
-                      af.a(param3, var7);
+                      af.a(param3, var7, false);
                       stackOut_26_0 = null;
                       stackIn_27_0 = stackOut_26_0;
                       return (java.awt.Frame) (Object) stackIn_27_0;

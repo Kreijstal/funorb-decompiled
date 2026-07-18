@@ -24,7 +24,7 @@ final class g extends tg {
         super(param0, param1, param2);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_p = null;
         field_k = null;
         field_l = null;

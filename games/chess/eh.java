@@ -330,15 +330,13 @@ abstract class eh extends ma {
               ((eh) this).b(-14239, 0, 0);
               if (param2 < -80) {
                 super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                int discarded$12 = 28773;
-                fd.a();
+                fd.a(28773);
                 ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                 return;
               } else {
-                int discarded$13 = this.h(125);
+                int discarded$4 = this.h(125);
                 super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                int discarded$14 = 28773;
-                fd.a();
+                fd.a(28773);
                 ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                 return;
               }
@@ -349,16 +347,14 @@ abstract class eh extends ma {
                 wb.b();
                 ((eh) this).b(-14239, 0, 0);
                 if (param2 >= -80) {
-                  int discarded$15 = this.h(125);
+                  int discarded$5 = this.h(125);
                   super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                  int discarded$16 = 28773;
-                  fd.a();
+                  fd.a(28773);
                   ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                   return;
                 } else {
                   super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                  int discarded$17 = 28773;
-                  fd.a();
+                  fd.a(28773);
                   ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                   return;
                 }
@@ -369,16 +365,14 @@ abstract class eh extends ma {
                   wb.b();
                   ((eh) this).b(-14239, 0, 0);
                   if (param2 >= -80) {
-                    int discarded$18 = this.h(125);
+                    int discarded$6 = this.h(125);
                     super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                    int discarded$19 = 28773;
-                    fd.a();
+                    fd.a(28773);
                     ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                     return;
                   } else {
                     super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                    int discarded$20 = 28773;
-                    fd.a();
+                    fd.a(28773);
                     ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                     return;
                   }
@@ -388,15 +382,13 @@ abstract class eh extends ma {
                   ((eh) this).b(-14239, 0, 0);
                   if (param2 < -80) {
                     super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                    int discarded$21 = 28773;
-                    fd.a();
+                    fd.a(28773);
                     ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                     return;
                   } else {
-                    int discarded$22 = this.h(125);
+                    int discarded$7 = this.h(125);
                     super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                    int discarded$23 = 28773;
-                    fd.a();
+                    fd.a(28773);
                     ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                     return;
                   }
@@ -445,8 +437,7 @@ abstract class eh extends ma {
                 L1: while (true) {
                   var4 = param1.nextInt();
                   if (var3_int > var4) {
-                    int discarded$2 = -40;
-                    stackOut_9_0 = am.a(var4, param2);
+                    stackOut_9_0 = am.a(var4, param2, (byte) -40);
                     stackIn_10_0 = stackOut_9_0;
                     break L0;
                   } else {

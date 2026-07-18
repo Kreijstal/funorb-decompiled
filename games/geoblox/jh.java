@@ -651,8 +651,7 @@ final class jh {
     }
 
     final static void a(java.awt.Component param0, d param1, boolean param2, kj param3, boolean param4, int param5) {
-        int discarded$0 = 10;
-        qk.a(param5, param4);
+        qk.a(param5, param4, 10);
         fj.field_p = qk.a(param1, param0, 0, 22050);
         try {
             oh.field_a = qk.a(param1, param0, 1, 1000);

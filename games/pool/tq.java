@@ -16,7 +16,7 @@ final class tq extends ma {
     int[] field_l;
     static int field_q;
 
-    final static boolean c() {
+    final static boolean c(byte param0) {
         if (!(rg.field_p)) {
             return false;
         }
@@ -26,7 +26,7 @@ final class tq extends ma {
         return false;
     }
 
-    final static int[] a(int param0, int param1) {
+    final static int[] a(int param0, int param1, boolean param2) {
         int var4 = 0;
         dd var5 = new dd(1024, 64);
         dd var3 = var5;
@@ -46,8 +46,7 @@ final class tq extends ma {
         field_v = null;
         field_x = null;
         if (param0 != 0) {
-            int discarded$0 = 0;
-            int[] discarded$1 = tq.a(-16, 85);
+            int[] discarded$0 = tq.a(-16, 85, false);
         }
         field_o = null;
         field_u = null;
@@ -85,7 +84,7 @@ final class tq extends ma {
                 break L1;
               } else {
                 var5 = null;
-                boolean discarded$5 = tq.a(true, -73L, (String) null);
+                boolean discarded$2 = tq.a(true, -73L, (String) null);
                 break L1;
               }
             }
@@ -108,8 +107,7 @@ final class tq extends ma {
                 if (null == em.field_L) {
                   break L4;
                 } else {
-                  int discarded$6 = 0;
-                  if (fn.b(param1) == null) {
+                  if (fn.b(param1, 0) == null) {
                     break L4;
                   } else {
                     stackOut_8_0 = 1;
@@ -175,8 +173,7 @@ final class tq extends ma {
         if (null == ne.field_u) {
             return;
         }
-        int discarded$3 = 0;
-        he.a((java.awt.Canvas) (Object) ne.field_u);
+        he.a((java.awt.Canvas) (Object) ne.field_u, 0);
         if (param0 > -100) {
             return;
         }

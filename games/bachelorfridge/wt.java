@@ -307,7 +307,7 @@ final class wt extends k {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         field_m = null;
         field_n = null;

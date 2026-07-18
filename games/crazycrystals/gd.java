@@ -332,7 +332,7 @@ final class gd extends qc {
         ((gd) this).field_k = 0;
     }
 
-    final static java.awt.Canvas c() {
+    final static java.awt.Canvas c(int param0) {
         return ph.field_E == null ? jd.field_D : (java.awt.Canvas) (Object) ph.field_E;
     }
 

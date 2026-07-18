@@ -341,7 +341,7 @@ final class nr extends tb implements ef {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_o = null;
         field_q = null;
         field_p = null;
@@ -404,7 +404,7 @@ final class nr extends tb implements ef {
         }
     }
 
-    final static boolean a(ed param0) {
+    final static boolean a(ed param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -488,7 +488,7 @@ final class nr extends tb implements ef {
         return ((nr) this).e(param0, -1).field_f & 65535;
     }
 
-    final static er[] a(int param0, int param1, int param2, int param3) {
+    final static er[] a(int param0, int param1, int param2, int param3, int param4) {
         er[] var6 = new er[9];
         er[] var5 = var6;
         er dupTemp$0 = ed.a(param3, 1, false);

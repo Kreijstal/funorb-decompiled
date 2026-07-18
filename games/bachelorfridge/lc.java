@@ -285,7 +285,7 @@ final class lc extends cj {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_l = null;
     }
 
@@ -413,8 +413,7 @@ final class lc extends cj {
 
     final static void b(int param0) {
         if (!(!gm.field_k)) {
-            int discarded$0 = -26;
-            ki.g();
+            ki.g(-26);
         }
     }
 

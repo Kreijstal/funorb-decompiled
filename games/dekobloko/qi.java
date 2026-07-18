@@ -251,10 +251,9 @@ class qi extends ek {
         }
     }
 
-    final static w e() {
+    final static w e(byte param0) {
         int var1 = -48;
-        int discarded$0 = 5;
-        return qa.d();
+        return qa.d(5);
     }
 
     final static void a(float param0, int param1, String param2) {
@@ -310,7 +309,7 @@ class qi extends ek {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_R = null;
         field_S = null;
         field_L = null;

@@ -11,7 +11,7 @@ final class hi {
     static int field_a;
     static int[] field_h;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return null != vg.field_b && vg.field_b.a(67);
     }
 
@@ -60,7 +60,7 @@ final class hi {
         return stackIn_8_0 != 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_e = null;
         field_d = null;

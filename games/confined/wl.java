@@ -120,8 +120,7 @@ final class wl {
                   }
                 }
               }
-              int discarded$1 = -60;
-              wb.a();
+              wb.a(-60);
               break L1;
             }
             var66 = new int[param5.field_g];
@@ -404,7 +403,7 @@ final class wl {
         throw new ArrayIndexOutOfBoundsException(param0);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             if (!(null == bg.field_b)) {
                 try {
@@ -428,7 +427,7 @@ final class wl {
         field_a = null;
     }
 
-    private final int b(int param0) {
+    private final int b(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = Confined.field_J ? 1 : 0;
@@ -472,8 +471,7 @@ final class wl {
     }
 
     private final void c(int param0, int param1) {
-        int discarded$0 = 95;
-        int[] var4 = new int[this.b(param0)];
+        int[] var4 = new int[this.b(param0, 95)];
         int[] var3 = var4;
         if (param1 != -9407) {
             this.c(10, -1);

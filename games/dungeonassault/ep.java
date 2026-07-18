@@ -21,7 +21,7 @@ final class ep extends un {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_g = null;
         int var1 = 0;
@@ -141,8 +141,7 @@ final class ep extends un {
                   }
                 }
               } else {
-                int discarded$2 = 50;
-                g.a(4, var5);
+                g.a(4, var5, (byte) 50);
                 var5 = (ak) (Object) oh.field_j.a(4);
                 continue L1;
               }

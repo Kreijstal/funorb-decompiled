@@ -10,7 +10,7 @@ final class be implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     static pf field_d;
     static he field_g;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_f = null;
         field_e = null;
@@ -553,8 +553,7 @@ final class be implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 if (param2 < 109) {
                     field_b = null;
                 }
-                int discarded$0 = 15;
-                rl.a(param0);
+                rl.a(param0, (byte) 15);
             } catch (RuntimeException runtimeException) {
                 throw ma.a((Throwable) (Object) runtimeException, "be.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
             }

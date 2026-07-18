@@ -9,7 +9,7 @@ final class mg {
     static String field_e;
     private int[] field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
     }
 
@@ -140,7 +140,7 @@ final class mg {
         }
     }
 
-    final static int a(int param0, boolean param1, int param2) {
+    final static int a(int param0, boolean param1, int param2, boolean param3) {
         return wf.a(-1);
     }
 

@@ -15,7 +15,7 @@ final class aa extends ii {
     private long[] field_g;
     private long field_i;
 
-    final static ra b() {
+    final static ra b(int param0, int param1) {
         ra var2 = new ra();
         so.field_j.a((br) (Object) var2, false);
         qo.b(true, 4);
@@ -23,8 +23,7 @@ final class aa extends ii {
     }
 
     final long a(byte param0) {
-        int discarded$0 = 1;
-        ((aa) this).field_k = ((aa) this).field_k + this.d();
+        ((aa) this).field_k = ((aa) this).field_k + this.d(1);
         if (!(~((aa) this).field_k <= ~((aa) this).field_i)) {
             return (((aa) this).field_i + -((aa) this).field_k) / 1000000L;
         }
@@ -40,11 +39,11 @@ final class aa extends ii {
         }
     }
 
-    final static boolean e() {
+    final static boolean e(int param0) {
         return ch.field_e;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_n = null;
         field_p = null;
         field_l = null;
@@ -52,7 +51,7 @@ final class aa extends ii {
         field_j = null;
     }
 
-    private final long d() {
+    private final long d(int param0) {
         int var8 = 0;
         int var9 = ZombieDawnMulti.field_E ? 1 : 0;
         long var2 = System.nanoTime();

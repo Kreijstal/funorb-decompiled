@@ -5,7 +5,7 @@ final class dga {
     static String field_a;
     static String field_b;
 
-    final static void a(uia param0) {
+    final static void a(uia param0, int param1) {
         kc.field_b = param0.d(123) << 5;
         int var2_int = param0.h(255);
         kc.field_b = kc.field_b + (var2_int >> 3);
@@ -220,7 +220,7 @@ final class dga {
         dka.field_b.a(438, -124 + bea.field_a, param1 + -23975, 0, var2 - -202 - -(var4 * 438 / var3));
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

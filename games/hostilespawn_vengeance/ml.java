@@ -9,7 +9,7 @@ final class ml {
         int discarded$0 = jg.a(23);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }
@@ -262,7 +262,7 @@ final class ml {
         return stackIn_3_0;
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -363,8 +363,7 @@ final class ml {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = wf.a(var6, var5_int, param0, var4);
+                          int discarded$1 = wf.a(var16, var5_int, param0, var4, 9);
                           break L5;
                         }
                       }
@@ -553,8 +552,7 @@ final class ml {
                 param5.field_z = 4;
                 param3.field_i = 14;
                 param3.field_e = 1;
-                int discarded$1 = 1;
-                tk.a(1, fg.field_b, 0);
+                tk.a(1, fg.field_b, 0, true);
                 break L4;
               } else {
                 break L4;
@@ -661,19 +659,16 @@ final class ml {
           if (param8 < param0) {
             if (param0 < param6) {
               tg.a(param5, param3, param11, param7, param0, param15, param10, param9, param8, param13, 1299210768, si.field_i, param4, param12, param1, param2, param6);
-              int discarded$6 = -43;
-              ml.a();
+              ml.a((byte) -43);
               break L0;
             } else {
               if (param8 < param6) {
                 tg.a(param9, param3, param11, param7, param6, param10, param15, param5, param8, param1, 1299210768, si.field_i, param12, param4, param13, param2, param0);
-                int discarded$7 = -43;
-                ml.a();
+                ml.a((byte) -43);
                 break L0;
               } else {
                 tg.a(param9, param5, param12, param1, param8, param10, param2, param3, param6, param7, 1299210768, si.field_i, param11, param4, param13, param15, param0);
-                int discarded$8 = -43;
-                ml.a();
+                ml.a((byte) -43);
                 break L0;
               }
             }
@@ -681,19 +676,16 @@ final class ml {
             if (param8 >= param6) {
               if (param6 > param0) {
                 tg.a(param3, param9, param4, param13, param6, param2, param15, param5, param0, param1, 1299210768, si.field_i, param12, param11, param7, param10, param8);
-                int discarded$9 = -43;
-                ml.a();
+                ml.a((byte) -43);
                 break L0;
               } else {
                 tg.a(param3, param5, param12, param1, param0, param2, param10, param9, param6, param13, 1299210768, si.field_i, param4, param11, param7, param15, param8);
-                int discarded$10 = -43;
-                ml.a();
+                ml.a((byte) -43);
                 break L0;
               }
             } else {
               tg.a(param5, param9, param4, param13, param8, param15, param2, param3, param0, param7, 1299210768, si.field_i, param11, param12, param1, param10, param6);
-              int discarded$11 = -43;
-              ml.a();
+              ml.a((byte) -43);
               break L0;
             }
           }

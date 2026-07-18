@@ -16,7 +16,7 @@ final class uh extends vg {
     static String field_i;
     private int[] field_m;
 
-    public static void d() {
+    public static void d(int param0) {
         field_h = null;
         field_k = null;
         field_i = null;
@@ -75,7 +75,8 @@ final class uh extends vg {
     }
 
     final static mu a(String param0, int param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         mu var3 = null;
         int var4 = 0;
         String var5 = null;
@@ -83,21 +84,21 @@ final class uh extends vg {
         CharSequence var7 = null;
         CharSequence var8 = null;
         mu stackIn_14_0 = null;
-        Object stackIn_18_0 = null;
+        RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        Object stackIn_19_0 = null;
+        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         mu stackOut_13_0 = null;
-        Object stackOut_17_0 = null;
+        RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
         String stackOut_19_2 = null;
-        Object stackOut_18_0 = null;
+        RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
         String stackOut_18_2 = null;
         var6 = TombRacer.field_G ? 1 : 0;
@@ -105,15 +106,15 @@ final class uh extends vg {
           if (bla.field_G != null) {
             L0: {
               var7 = (CharSequence) (Object) param0;
-              var2 = (Object) (Object) jd.a(1, var7);
+              var2 = jd.a(1, var7);
               if (var2 != null) {
                 break L0;
               } else {
-                var2 = (Object) (Object) var7;
+                var2 = param0;
                 break L0;
               }
             }
-            var3 = (mu) (Object) bla.field_G.a(-114, (long)((String) var2).hashCode());
+            var3 = (mu) (Object) bla.field_G.a(-114, (long)var2.hashCode());
             var4 = -95 / ((param1 - -46) / 54);
             L1: while (true) {
               if (var3 != null) {
@@ -127,7 +128,7 @@ final class uh extends vg {
                     break L2;
                   }
                 }
-                if (var5.equals(var2)) {
+                if (var5.equals((Object) (Object) var2)) {
                   stackOut_13_0 = (mu) var3;
                   stackIn_14_0 = stackOut_13_0;
                   return stackIn_14_0;
@@ -145,15 +146,15 @@ final class uh extends vg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_17_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var2_ref;
             stackOut_17_1 = new StringBuilder().append("uh.N(");
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
               stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
@@ -161,7 +162,7 @@ final class uh extends vg {
               stackIn_20_2 = stackOut_19_2;
               break L3;
             } else {
-              stackOut_18_0 = stackIn_18_0;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
               stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;

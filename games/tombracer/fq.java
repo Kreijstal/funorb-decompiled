@@ -47,12 +47,12 @@ final class fq {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_e = null;
     }
 
-    final static hea a(byte[] param0) {
+    final static hea a(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         hea var3 = null;
@@ -120,7 +120,7 @@ final class fq {
         return stackIn_4_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         fna.field_k = vc.field_q.e((byte) -76);
         CharSequence var2 = (CharSequence) (Object) fna.field_k;
         tia.field_b = jd.a(1, var2);

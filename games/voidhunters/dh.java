@@ -7,7 +7,7 @@ final class dh extends rqa {
     static String field_q;
     static int field_p;
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1, int param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -74,7 +74,7 @@ final class dh extends rqa {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
         int var1 = 24;
         field_q = null;

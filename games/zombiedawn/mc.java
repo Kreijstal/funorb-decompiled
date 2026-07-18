@@ -47,8 +47,7 @@ final class mc extends pm {
           L0: {
             if (param1 == 2) {
               L1: {
-                int discarded$8 = -103;
-                if (la.a(param0) != null) {
+                if (la.a(param0, (byte) -103) != null) {
                   stackOut_5_0 = 0;
                   stackIn_6_0 = stackOut_5_0;
                   break L1;
@@ -107,7 +106,7 @@ final class mc extends pm {
         return stackIn_10_0;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         return null != hg.a(120, param0);
     }
 

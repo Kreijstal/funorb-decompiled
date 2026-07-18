@@ -583,7 +583,7 @@ final class cl extends vm {
         return ((ji) (Object) du.field_a.a(true, (long)var3.hashCode())).field_h;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_p = null;
         field_o = null;
     }
@@ -664,7 +664,7 @@ final class cl extends vm {
         }
     }
 
-    final static kv[] a(kv[] param0) {
+    final static kv[] a(kv[] param0, boolean param1) {
         kv[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

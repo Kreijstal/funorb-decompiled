@@ -432,7 +432,7 @@ final class ht extends jea {
         return stackIn_75_0 != 0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_Fb = null;
         field_Db = null;
         field_Pb = null;

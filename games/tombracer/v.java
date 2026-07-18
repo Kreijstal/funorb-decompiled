@@ -25,7 +25,7 @@ final class v {
         }
     }
 
-    private final void b(qh param0, kh param1) {
+    private final void b(qh param0, kh param1, int param2) {
         lf var4 = null;
         try {
             var4 = new lf();
@@ -89,7 +89,7 @@ final class v {
         return ((v) this).field_f;
     }
 
-    private final void a(kh param0) {
+    private final void a(kh param0, int param1) {
         RuntimeException runtimeException = null;
         tt var3 = null;
         int var4 = 0;
@@ -443,15 +443,13 @@ final class v {
                       break L6;
                     } else {
                       if (var8.field_G[((v) this).field_d].b(param1 + -1)) {
-                        int discarded$2 = -73;
-                        this.a(var8);
+                        this.a(var8, (byte) -73);
                         break L6;
                       } else {
                         if (!var8.field_G[((v) this).field_d].e(-31170)) {
                           break L6;
                         } else {
-                          int discarded$3 = -73;
-                          this.a(var8);
+                          this.a(var8, (byte) -73);
                           break L6;
                         }
                       }
@@ -739,8 +737,7 @@ final class v {
         try {
           L0: {
             if (77 == param3) {
-              int discarded$3 = 0;
-              this.a(param2);
+              this.a(param2, 0);
               stackOut_35_0 = 1;
               stackIn_36_0 = stackOut_35_0;
               return stackIn_36_0 != 0;
@@ -793,8 +790,7 @@ final class v {
                                   }
                                 }
                               } else {
-                                int discarded$4 = 93;
-                                this.b(param1, param2);
+                                this.b(param1, param2, 93);
                                 stackOut_20_0 = 1;
                                 stackIn_21_0 = stackOut_20_0;
                                 return stackIn_21_0 != 0;
@@ -827,8 +823,7 @@ final class v {
                   return stackIn_6_0 != 0;
                 }
               } else {
-                int discarded$5 = -98;
-                this.a(param1, param2);
+                this.a(param1, param2, (byte) -98);
                 stackOut_2_0 = 1;
                 stackIn_3_0 = stackOut_2_0;
                 return stackIn_3_0 != 0;
@@ -893,7 +888,7 @@ final class v {
         return stackIn_41_0 != 0;
     }
 
-    private final void a(ff param0) {
+    private final void a(ff param0, byte param1) {
         la var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
@@ -1029,7 +1024,7 @@ final class v {
         }
     }
 
-    private final void a(qh param0, kh param1) {
+    private final void a(qh param0, kh param1, byte param2) {
         vca var4 = null;
         try {
             var4 = new vca();

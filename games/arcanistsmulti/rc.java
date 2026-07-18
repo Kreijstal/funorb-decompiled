@@ -90,7 +90,7 @@ final class rc {
         }
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return null != tc.field_A;
     }
 
@@ -382,7 +382,7 @@ final class rc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_o = null;
         field_g = null;

@@ -9,7 +9,7 @@ final class ei {
     private java.util.zip.Inflater field_b;
     static String field_c;
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         dl var2 = null;
@@ -26,11 +26,10 @@ final class ei {
                 break L0;
               } else {
                 var2.g(65, 8);
-                int fieldTemp$10 = var2.field_g + 1;
+                int fieldTemp$5 = var2.field_g + 1;
                 var2.field_g = var2.field_g + 1;
-                var3 = fieldTemp$10;
-                int discarded$11 = 24732;
-                hb.a(var2);
+                var3 = fieldTemp$5;
+                hb.a(var2, 24732);
                 q.field_p.b(var2.field_g + -var3, (byte) 118);
                 continue L1;
               }
@@ -53,7 +52,7 @@ final class ei {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;

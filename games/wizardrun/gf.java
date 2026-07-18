@@ -113,7 +113,7 @@ abstract class gf extends rg {
         return stackIn_15_0 != 0;
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_V = null;
         field_ib = null;
         field_bb = null;
@@ -137,11 +137,10 @@ abstract class gf extends rg {
         }
         ((gf) this).field_fb = 0;
         ((gf) this).field_db = lj.field_c;
-        int discarded$0 = 1;
-        this.a(((gf) this).field_cb);
+        this.a(((gf) this).field_cb, true);
         if (param0 != -8144) {
             Object var3 = null;
-            boolean discarded$1 = ((gf) this).a('ﾭ', 97, (byte) -70, (ub) null);
+            boolean discarded$0 = ((gf) this).a('ﾭ', 97, (byte) -70, (ub) null);
         }
         ((gf) this).field_ab.field_G = 0;
         ((gf) this).field_cb = null;
@@ -155,8 +154,7 @@ abstract class gf extends rg {
         if (!(null == ((gf) this).field_db)) {
             if (((gf) this).field_db != lj.field_c) {
                 ((gf) this).a(6154, ((gf) this).field_cb.field_n + 12 + ((gf) this).field_hb, 12 + ((gf) this).field_cb.field_r);
-                int discarded$0 = 1;
-                this.a(((gf) this).field_cb);
+                this.a(((gf) this).field_cb, true);
             }
             ((gf) this).field_ab.field_G = 256;
             ((gf) this).field_db = null;
@@ -164,7 +162,7 @@ abstract class gf extends rg {
         super.g(param0);
     }
 
-    private final void a(ub param0) {
+    private final void a(ub param0, boolean param1) {
         try {
             if (!(((gf) this).field_ab == null)) {
                 ((gf) this).field_ab.a(false);
@@ -182,7 +180,7 @@ abstract class gf extends rg {
         }
     }
 
-    final static void h() {
+    final static void h(byte param0) {
         if (!(qb.field_p)) {
             throw new IllegalStateException();
         }
@@ -198,8 +196,7 @@ abstract class gf extends rg {
             ((gf) this).field_gb = param3;
             ((gf) this).field_hb = param2;
             ((gf) this).field_Z = param4;
-            int discarded$0 = 1;
-            this.a(param1);
+            this.a(param1, true);
         } catch (RuntimeException runtimeException) {
             throw bd.a((Throwable) (Object) runtimeException, "gf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

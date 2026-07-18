@@ -30,7 +30,7 @@ final class l {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
         field_f = null;
         field_a = null;
@@ -218,7 +218,7 @@ final class l {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return mb.field_b != null || we.field_B;
     }
 

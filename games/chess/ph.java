@@ -79,7 +79,7 @@ class ph extends dm {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_m = null;
         field_f = null;
         field_d = null;
@@ -142,8 +142,7 @@ class ph extends dm {
                     if (param0 != 2) {
                       break L3;
                     } else {
-                      int discarded$3 = 29712;
-                      if (!kn.a(param2, param3)) {
+                      if (!kn.a(param2, param3, 29712)) {
                         break L2;
                       } else {
                         break L3;
@@ -261,8 +260,7 @@ class ph extends dm {
                   break L2;
                 }
               }
-              int discarded$2 = 0;
-              wc.a(bb.field_e, var3_int != 0, jd.b(false), lf.i(120));
+              wc.a(bb.field_e, var3_int != 0, jd.b(false), lf.i(120), false);
               break L0;
             } else {
               if (mk.b((byte) 109)) {

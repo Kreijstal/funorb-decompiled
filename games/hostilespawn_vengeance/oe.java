@@ -50,7 +50,7 @@ final class oe implements Iterator {
         field_g = null;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((oe) this).field_f = null;
         ((oe) this).field_e = 1;
         ((oe) this).field_b = ((oe) this).field_c.field_f[0].field_g;
@@ -121,8 +121,7 @@ final class oe implements Iterator {
         ((oe) this).field_f = null;
         try {
             ((oe) this).field_c = param0;
-            int discarded$0 = 105;
-            this.a();
+            this.a((byte) 105);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "oe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

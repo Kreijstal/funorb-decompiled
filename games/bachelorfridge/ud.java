@@ -5,7 +5,7 @@ final class ud extends td {
     static String field_q;
     static int field_p;
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_q = null;
     }
 

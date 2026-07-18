@@ -47,7 +47,7 @@ final class bh {
         return 0;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return qh.field_f;
     }
 

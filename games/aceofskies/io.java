@@ -22,15 +22,13 @@ final class io {
         super.finalize();
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         fp var5 = null;
         int var4 = AceOfSkies.field_G ? 1 : 0;
         try {
             var5 = (fp) (Object) ks.field_d.d(268435455);
             while (var5 != null) {
-                int discarded$0 = 2;
-                int discarded$1 = 115;
-                po.a(var5);
+                po.a(var5, (byte) 115, 2);
                 var5 = (fp) (Object) ks.field_d.b((byte) 103);
             }
             int var3 = 0;

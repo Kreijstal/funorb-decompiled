@@ -317,7 +317,7 @@ final class sf extends mm implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException runtimeException = null;
         ui var1 = null;
         int var2 = 0;

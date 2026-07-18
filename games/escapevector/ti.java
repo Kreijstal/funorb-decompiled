@@ -4,7 +4,7 @@
 final class ti {
     static int[] field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -91,11 +91,9 @@ final class ti {
             ke.a(param16, 2, 480, param7);
             mm.a(-127, 24, 22, 22, 24);
             rk.a(param0, 320, 11710);
-            int discarded$2 = 0;
-            rf.a(param11, 0, 0, 3, param20);
+            rf.a(param11, 0, 0, 3, param20, 0);
             ma.a(25398, 0, param19, 0);
-            int discarded$3 = -11997;
-            ui.a(param17, param3, param2);
+            ui.a(param17, param3, param2, -11997);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -22,7 +22,7 @@ final class mo extends cj {
         this.a(param0, -17369, param6);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Nb = null;
         field_Hb = null;
         field_Lb = null;
@@ -225,7 +225,7 @@ final class mo extends cj {
         return stackIn_5_0;
     }
 
-    final static void a(int param0, k param1, int param2, int param3) {
+    final static void a(int param0, k param1, int param2, int param3, byte param4) {
         try {
             param1.a(-120, 12);
             param1.a(17, (byte) -56);

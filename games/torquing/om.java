@@ -173,8 +173,7 @@ final class om {
                       var5 = var8;
                       var5 = var8;
                       if (0 != param1.length()) {
-                        int discarded$1 = -2;
-                        var5 = var8 + "; Expires=" + ka.a(94608000000L + km.b(-1)) + "; Max-Age=" + 94608000L;
+                        var5 = var8 + "; Expires=" + ka.a(94608000000L + km.b(-1), -2) + "; Max-Age=" + 94608000L;
                         break L2;
                       } else {
                         var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";

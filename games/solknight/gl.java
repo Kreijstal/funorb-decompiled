@@ -25,7 +25,7 @@ final class gl {
     private int field_t;
     private int field_r;
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -147,13 +147,12 @@ final class gl {
             }
             return;
           } else {
-            int fieldTemp$2 = ((gl) this).field_r - 1;
+            int fieldTemp$1 = ((gl) this).field_r - 1;
             ((gl) this).field_r = ((gl) this).field_r - 1;
-            if (fieldTemp$2 <= 0) {
+            if (fieldTemp$1 <= 0) {
               ((gl) this).field_r = ((gl) this).field_a;
               if (bi.field_a >= ((gl) this).field_j) {
-                int discarded$3 = -110;
-                this.b();
+                this.b(-110);
                 return;
               } else {
                 ((gl) this).field_m = false;
@@ -445,16 +444,14 @@ final class gl {
         ((gl) this).field_p = ec.field_h;
         ((gl) this).field_i.a(param0, ((gl) this).field_n, ((gl) this).field_d);
         jd.field_p = false;
-        int discarded$0 = 0;
-        int discarded$1 = -81;
-        jg var2 = g.a(((gl) this).field_d, 0, wh.field_c, ((gl) this).field_n);
+        jg var2 = g.a(((gl) this).field_d, 0, wh.field_c, ((gl) this).field_n, (byte) -81, 0);
         if (!(var2 != null)) {
             ((gl) this).a(false);
         }
         return var2;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         o var1 = null;
         o var2 = null;
         int var3 = 0;
@@ -469,13 +466,7 @@ final class gl {
             var2 = var1.c();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.d(-2, -2, 16777215);
-                int discarded$0 = 140;
-                int discarded$1 = 540;
-                int discarded$2 = 0;
-                int discarded$3 = 0;
-                int discarded$4 = 4;
-                int discarded$5 = 4;
-                mi.d();
+                mi.d(4, 4, 0, 0, 540, 140);
             }
             tg.field_I.a();
             var1.f(0, 0);
@@ -593,7 +584,7 @@ final class gl {
         return stackIn_3_0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_s = null;
         field_g = null;
     }

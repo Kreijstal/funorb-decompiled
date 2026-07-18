@@ -74,8 +74,7 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 var2_int = param0.getKeyChar();
                 if (var2_int != 0) {
                     if (var2_int != 65535) {
-                        int discarded$4 = 160;
-                        if (ne.a((char) var2_int)) {
+                        if (ne.a((char) var2_int, 160)) {
                             var3 = qh.field_b + 1 & 127;
                             if (!(tg.field_i == var3)) {
                                 ge.field_n[qh.field_b] = -1;
@@ -92,12 +91,12 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_a = null;
     }
 
-    final static void a(int param0, vf param1) {
+    final static void a(int param0, vf param1, int param2) {
         mg var3 = null;
         try {
             var3 = n.field_b;

@@ -20,7 +20,7 @@ final class dl extends si {
         }
     }
 
-    final static nh[] a() {
+    final static nh[] a(byte param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         return n.a(123, 3, 0, 0, 0, 1, 65793, 1, 1);
     }
@@ -335,7 +335,7 @@ final class dl extends si {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_M = null;
         field_I = null;
         field_H = null;

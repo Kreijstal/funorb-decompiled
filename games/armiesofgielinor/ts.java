@@ -152,7 +152,7 @@ final class ts {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         td.field_f = new dg(iw.field_l);
         td.field_f.a(0, 0);
         td.field_f.b(0);

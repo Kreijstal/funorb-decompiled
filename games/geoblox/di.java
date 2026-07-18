@@ -50,7 +50,7 @@ final class di {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -52;
         field_e = null;
         field_c = null;

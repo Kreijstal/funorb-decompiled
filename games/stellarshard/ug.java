@@ -218,7 +218,7 @@ final class ug {
         return stackIn_9_0;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return 1;
     }
 

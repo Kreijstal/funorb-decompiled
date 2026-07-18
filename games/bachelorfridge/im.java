@@ -6,7 +6,7 @@ final class im {
     static String field_a;
     static String field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         int var1 = -48;
         field_c = null;

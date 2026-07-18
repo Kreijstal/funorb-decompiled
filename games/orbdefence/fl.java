@@ -4,7 +4,7 @@
 final class fl {
     static byte[][] field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 5;
         field_a = null;
     }

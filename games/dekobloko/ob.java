@@ -11,11 +11,9 @@ final class ob extends fm {
     static boolean field_k;
     static nk field_i;
 
-    final static jg b() {
+    final static jg b(byte param0) {
         int var1 = 0;
-        int discarded$0 = 116;
-        int discarded$1 = -126;
-        return new jg(f.a(), em.b());
+        return new jg(f.a(116), em.b((byte) -126));
     }
 
     final void a(wl param0, byte param1) {

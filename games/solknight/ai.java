@@ -9,7 +9,7 @@ final class ai {
     static da field_b;
     static String field_c;
 
-    final static void a(int param0, mg param1, int param2, int param3, int param4, int param5, int param6, int param7, o param8) {
+    final static void a(int param0, mg param1, int param2, int param3, int param4, int param5, int param6, int param7, o param8, int param9, int param10) {
         try {
             jj.field_db = 132;
             gf.field_T = 31;
@@ -153,7 +153,7 @@ final class ai {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;

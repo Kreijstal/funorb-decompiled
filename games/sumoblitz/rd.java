@@ -96,7 +96,7 @@ final class rd extends ms {
         return stackIn_8_0;
     }
 
-    final static void a(Object param0, wi param1) {
+    final static void a(Object param0, wi param1, int param2) {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var3_int = 0;

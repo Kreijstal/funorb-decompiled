@@ -217,8 +217,7 @@ final class pja extends vw {
                 break L0;
               } else {
                 if (((pja) this).field_e.field_qd) {
-                  int discarded$2 = 34336;
-                  ((pja) this).field_d = wd.a((byte) -70, ((pja) this).field_e, param1.a("gl", (byte) 123, "transparent_water"));
+                  ((pja) this).field_d = wd.a((byte) -70, ((pja) this).field_e, param1.a("gl", (byte) 123, "transparent_water"), 34336);
                   return;
                 } else {
                   break L0;

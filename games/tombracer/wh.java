@@ -1011,7 +1011,7 @@ final class wh extends nv implements ut {
         ((wh) this).field_u.field_i = ((wh) this).field_g.P(0) << 16;
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_w = null;
         field_y = null;
     }

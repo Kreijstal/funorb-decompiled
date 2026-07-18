@@ -39,16 +39,14 @@ abstract class m implements dp {
           wf.field_x = am.field_g;
           jc.field_e = 0;
           o.field_i = new ae(2);
-          int discarded$4 = 1;
-          o.field_i.a(false, param1, -1, f.a(hj.field_S, eh.field_h));
+          o.field_i.a(false, param1, -1, f.a(hj.field_S, eh.field_h, 1));
           return;
         } else {
           me.field_f = 0;
           wf.field_x = am.field_g;
           jc.field_e = 0;
           o.field_i = new ae(2);
-          int discarded$5 = 1;
-          o.field_i.a(false, param1, -1, f.a(hj.field_S, eh.field_h));
+          o.field_i.a(false, param1, -1, f.a(hj.field_S, eh.field_h, 1));
           return;
         }
     }
@@ -97,7 +95,7 @@ abstract class m implements dp {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1 = 0;
         if (oo.field_d < 224) {
           var1 = oo.field_d % 32;

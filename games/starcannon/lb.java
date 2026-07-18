@@ -47,7 +47,7 @@ final class lb {
     static String field_L;
     int field_k;
 
-    final static String a(ue param0, String param1, String param2) {
+    final static String a(ue param0, String param1, String param2, byte param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;
@@ -264,7 +264,7 @@ final class lb {
                 if (param2.indexOf("<br>") != -1) {
                   break L1;
                 } else {
-                  param1[0] = (String) (Object) param1;
+                  param1[0] = param2;
                   stackOut_2_0 = 1;
                   stackIn_3_0 = stackOut_2_0;
                   return stackIn_3_0;
@@ -703,7 +703,7 @@ final class lb {
         }
     }
 
-    final static hd b() {
+    final static hd b(byte param0) {
         if (null == d.field_l) {
             d.field_l = new hd(nb.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, nb.field_b.field_p, -1, 2147483647, true);
         }
@@ -731,7 +731,7 @@ final class lb {
         ((lb) this).field_H = false;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_l = null;
         field_L = null;

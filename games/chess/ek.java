@@ -11,7 +11,7 @@ abstract class ek {
 
     abstract int a(byte param0);
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, byte param2) {
         if (gb.field_A == null) {
           gb.field_A = new int[2 * param1];
           if (null != hg.field_d) {
@@ -57,7 +57,7 @@ abstract class ek {
 
     abstract void a(java.awt.Component param0, int param1);
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -174,7 +174,7 @@ abstract class ek {
         wb.a(param2 - 10, -10 + param1, 20 + param7 - param2, param4 - param1 - -20, 10, 16777215);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_f = null;
         field_c = null;
         field_e = null;

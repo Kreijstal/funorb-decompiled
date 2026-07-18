@@ -157,8 +157,7 @@ final class u extends br {
     }
 
     final static ul a(int param0, int param1) {
-        int discarded$0 = 0;
-        return wm.a(param1, 1, true, false, 19);
+        return wm.a(param1, 1, true, false, 19, false);
     }
 
     public static void a(int param0) {
@@ -167,7 +166,7 @@ final class u extends br {
         field_j = null;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

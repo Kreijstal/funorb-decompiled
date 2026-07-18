@@ -112,7 +112,7 @@ final class dg extends kj implements tl, sg, tb {
         }
     }
 
-    private final boolean l() {
+    private final boolean l(int param0) {
         if (!this.g((byte) -84)) {
             return false;
         }
@@ -124,7 +124,7 @@ final class dg extends kj implements tl, sg, tb {
         return eb.a(((dg) this).field_Q.field_v, ((dg) this).field_W.field_D, ((dg) this).field_X.field_v, 193, (dg) this, var2, ((dg) this).field_cb.field_v);
     }
 
-    final static qj a(int param0, lj param1, int param2, lj param3) {
+    final static qj a(int param0, lj param1, int param2, lj param3, byte param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
         qj stackIn_6_0 = null;
@@ -231,7 +231,7 @@ final class dg extends kj implements tl, sg, tb {
         return stackIn_6_0;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_bb = null;
         field_J = null;
         field_Y = null;
@@ -512,8 +512,7 @@ final class dg extends kj implements tl, sg, tb {
                 break L1;
               } else {
                 if (param0 == ((dg) this).field_Z) {
-                  int discarded$10 = -1;
-                  boolean discarded$11 = this.l();
+                  boolean discarded$5 = this.l(-1);
                   break L1;
                 } else {
                   break L1;
@@ -562,7 +561,7 @@ final class dg extends kj implements tl, sg, tb {
         }
     }
 
-    private final int a(int param0, ee param1, String param2) {
+    private final int a(int param0, ee param1, String param2, int param3, int param4) {
         bg var6 = null;
         RuntimeException var6_ref = null;
         tk var7 = null;
@@ -668,7 +667,7 @@ final class dg extends kj implements tl, sg, tb {
         return stackIn_1_0;
     }
 
-    final static hb[] j() {
+    final static hb[] j(int param0) {
         return new hb[]{sd.field_e, ee.field_x, ki.field_b};
     }
 
@@ -1048,9 +1047,7 @@ final class dg extends kj implements tl, sg, tb {
         var3 = var3 + this.a((byte) 127, var3, bd.field_n, 170, (ee) (Object) ((dg) this).field_X);
         var3 = var3 + (5 + this.a(false, (ee) (Object) ((dg) this).field_K, var3, ri.field_k, 170, ua.field_b));
         var3 = var3 + (this.a(false, (ee) (Object) ((dg) this).field_Q, var3, pa.field_t, 170, te.field_a) - -5);
-        int discarded$2 = 124;
-        int discarded$3 = 170;
-        var3 = var3 + this.a(var3, (ee) (Object) ((dg) this).field_S, ab.field_m);
+        var3 = var3 + this.a(var3, (ee) (Object) ((dg) this).field_S, ab.field_m, 170, 124);
         bg var4 = new bg(46, var3, ((dg) this).field_p + -90, 25, (ee) (Object) ((dg) this).field_W, true, ((dg) this).field_p + -120, 5, ug.field_f, 11579568, ti.field_a);
         ((dg) this).a(0, (ee) (Object) var4);
         var3 = var3 + var4.field_l;
@@ -1077,7 +1074,7 @@ final class dg extends kj implements tl, sg, tb {
         ((dg) this).a((byte) 122, 0, var3 - (-55 - var6), 496, 0);
     }
 
-    final static void k() {
+    final static void k(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;

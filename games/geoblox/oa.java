@@ -21,7 +21,7 @@ final class oa {
         return rj.field_b + var1;
     }
 
-    final static int a(int param0, CharSequence param1) {
+    final static int a(int param0, CharSequence param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -80,7 +80,7 @@ final class oa {
         return stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_d = null;
         field_e = null;

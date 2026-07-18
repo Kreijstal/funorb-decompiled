@@ -11,7 +11,7 @@ final class pc extends hs {
     static bi field_n;
     static int field_m;
 
-    final static void c() {
+    final static void c(int param0) {
         lg.field_e = null;
         int var1 = 1;
     }
@@ -705,7 +705,7 @@ final class pc extends hs {
         return stackIn_7_0;
     }
 
-    final static String a() {
+    final static String a(boolean param0) {
         return sa.field_a.e(-1);
     }
 
@@ -807,7 +807,7 @@ final class pc extends hs {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_r = null;
         field_n = null;
         field_o = null;

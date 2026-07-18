@@ -11,7 +11,7 @@ final class fg {
     private int field_a;
     static String field_e;
 
-    private final void a(long param0) {
+    private final void a(long param0, int param1) {
         kk var4 = (kk) (Object) ((fg) this).field_g.a(-28010, param0);
         this.a(0, var4);
     }
@@ -96,8 +96,7 @@ final class fg {
             if (1 > ((fg) this).field_a) {
                 throw new IllegalStateException();
             }
-            int discarded$0 = 0;
-            this.a(param3);
+            this.a(param3, 0);
             ((fg) this).field_b = ((fg) this).field_b - 1;
             while (((fg) this).field_b < 0) {
                 var6 = (kk) (Object) ((fg) this).field_h.a(-97);
@@ -297,16 +296,14 @@ final class fg {
                       var5 = var7;
                       var5 = var7;
                       if (param2.length() != 0) {
-                        int discarded$2 = 0;
-                        var5 = var7 + "; Expires=" + hn.a(rl.a((byte) -120) - -94608000000L) + "; Max-Age=" + 94608000L;
+                        var5 = var7 + "; Expires=" + hn.a(rl.a((byte) -120) - -94608000000L, false) + "; Max-Age=" + 94608000L;
                         break L3;
                       } else {
                         var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                         break L3;
                       }
                     }
-                    int discarded$3 = 35;
-                    mo.a("document.cookie=\"" + var5 + "\"", param0);
+                    mo.a("document.cookie=\"" + var5 + "\"", param0, (byte) 35);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -403,7 +400,7 @@ final class fg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_d = null;
         field_f = null;

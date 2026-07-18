@@ -14,7 +14,7 @@ final class mi extends vg {
     static String field_j;
     static int field_f;
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -204,7 +204,7 @@ final class mi extends vg {
         RuntimeException var3_ref = null;
         int var3_int = 0;
         int var4 = 0;
-        Object var5 = null;
+        mi var5 = null;
         int var6 = 0;
         bfa[] var7 = null;
         bfa[] var8 = null;
@@ -241,7 +241,6 @@ final class mi extends vg {
         RuntimeException stackOut_42_0 = null;
         StringBuilder stackOut_42_1 = null;
         String stackOut_42_2 = null;
-        var5 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -256,29 +255,29 @@ final class mi extends vg {
             var7 = new bfa[((mi) this).field_i.a((byte) -16)];
             var8 = var7;
             var4 = 0;
-            var5 = (Object) (Object) (mi) (Object) ((mi) this).field_i.f(-80);
+            var5 = (mi) (Object) ((mi) this).field_i.f(-80);
             L1: while (true) {
               if (var5 == null) {
-                stackOut_8_0 = pc.a(param1, 19, ((mi) var5).field_m, var8);
+                stackOut_8_0 = pc.a(param1, 19, ((mi) this).field_m, var8);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
                 int incrementValue$1 = var4;
                 var4++;
-                var7[incrementValue$1] = ((mi) var5).a(-1, param1);
-                var5 = (Object) (Object) (mi) (Object) ((mi) var5).field_i.e(114);
+                var7[incrementValue$1] = var5.a(-1, param1);
+                var5 = (mi) (Object) ((mi) this).field_i.e(114);
                 continue L1;
               }
             }
           } else {
-            if (dc.field_o != ((mi) var5).field_p) {
-              if (dja.field_r == ((mi) var5).field_p) {
-                stackOut_25_0 = new bfa(((mi) var5).field_m.equals((Object) (Object) "true"));
+            if (dc.field_o != ((mi) this).field_p) {
+              if (dja.field_r == ((mi) this).field_p) {
+                stackOut_25_0 = new bfa(((mi) this).field_m.equals((Object) (Object) "true"));
                 stackIn_26_0 = stackOut_25_0;
                 return stackIn_26_0;
               } else {
-                if (((mi) var5).field_p == nl.field_d) {
-                  var9 = ((mi) var5).field_m.substring(1, ((mi) var5).field_m.length() + -1);
+                if (((mi) this).field_p == nl.field_d) {
+                  var9 = ((mi) this).field_m.substring(1, ((mi) this).field_m.length() + -1);
                   if (var9.length() != 1) {
                     throw new rv("Invalid char value: " + var9);
                   } else {
@@ -287,8 +286,8 @@ final class mi extends vg {
                     return stackIn_33_0;
                   }
                 } else {
-                  if (ma.field_e == ((mi) var5).field_p) {
-                    stackOut_36_0 = new bfa((Object) (Object) ((mi) var5).field_m.substring(1, -1 + ((mi) var5).field_m.length()));
+                  if (ma.field_e == ((mi) this).field_p) {
+                    stackOut_36_0 = new bfa((Object) (Object) ((mi) this).field_m.substring(1, -1 + ((mi) this).field_m.length()));
                     stackIn_37_0 = stackOut_36_0;
                     return stackIn_37_0;
                   } else {
@@ -297,25 +296,25 @@ final class mi extends vg {
                 }
               }
             } else {
-              var3_int = Character.toLowerCase(((mi) var5).field_m.charAt(((mi) var5).field_m.length() - 1));
+              var3_int = Character.toLowerCase(((mi) this).field_m.charAt(((mi) this).field_m.length() - 1));
               if (var3_int != 102) {
                 if (var3_int == 108) {
-                  stackOut_16_0 = new bfa(Long.parseLong(((mi) var5).field_m.substring(0, ((mi) var5).field_m.length() + -1)));
+                  stackOut_16_0 = new bfa(Long.parseLong(((mi) this).field_m.substring(0, ((mi) this).field_m.length() + -1)));
                   stackIn_17_0 = stackOut_16_0;
                   return stackIn_17_0;
                 } else {
-                  if (((mi) var5).field_m.indexOf('.') == -1) {
-                    stackOut_21_0 = new bfa(Integer.parseInt(((mi) var5).field_m));
+                  if (((mi) this).field_m.indexOf('.') == -1) {
+                    stackOut_21_0 = new bfa(Integer.parseInt(((mi) this).field_m));
                     stackIn_22_0 = stackOut_21_0;
                     return stackIn_22_0;
                   } else {
-                    stackOut_19_0 = new bfa(Double.valueOf(((mi) var5).field_m).doubleValue());
+                    stackOut_19_0 = new bfa(Double.valueOf(((mi) this).field_m).doubleValue());
                     stackIn_20_0 = stackOut_19_0;
                     return stackIn_20_0;
                   }
                 }
               } else {
-                stackOut_12_0 = new bfa(Float.valueOf(((mi) var5).field_m).floatValue());
+                stackOut_12_0 = new bfa(Float.valueOf(((mi) this).field_m).floatValue());
                 stackIn_13_0 = stackOut_12_0;
                 return stackIn_13_0;
               }
@@ -324,7 +323,7 @@ final class mi extends vg {
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (NumberFormatException) (Object) decompiledCaughtException;
-          throw new rv("NumberFormatException on: " + ((mi) var5).field_m);
+          throw new rv("NumberFormatException on: " + ((mi) this).field_m);
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           L2: {

@@ -9,7 +9,7 @@ final class mw extends qg {
     private boolean field_f;
     static String field_d;
 
-    final static long e() {
+    final static long e(int param0) {
         return wt.a(false) + -cbb.field_q;
     }
 
@@ -48,7 +48,7 @@ final class mw extends qg {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_d = null;
     }
 

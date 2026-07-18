@@ -9,7 +9,7 @@ final class vi extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a() {
+    final static void a(int param0) {
     }
 
     final nc a(nc[] param0, int param1) {

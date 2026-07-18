@@ -94,14 +94,12 @@ final class i {
         int var1 = 48 % ((param0 - 59) / 57);
     }
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1) {
         try {
             if (!(mh.field_U != 11)) {
-                int discarded$0 = -50;
-                lj.a();
+                lj.a((byte) -50);
             }
-            int discarded$1 = -608757616;
-            dh.a(tk.field_a, ea.field_c, q.field_I);
+            dh.a(tk.field_a, ea.field_c, q.field_I, -608757616);
             qi.a(param0, 0, 0, -25971);
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) (Object) runtimeException, "i.D(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ')');

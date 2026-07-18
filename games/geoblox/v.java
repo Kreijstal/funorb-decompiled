@@ -25,7 +25,7 @@ final class v {
     static gk field_l;
     static long field_r;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_n = null;
         field_m = null;
         field_l = null;
@@ -43,7 +43,7 @@ final class v {
         ((v) this).field_p = param1;
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -125,8 +125,7 @@ final class v {
                         var11 = var13;
                         var6 = var11;
                         if (var3 == 1) {
-                          int discarded$2 = 9;
-                          int discarded$3 = tb.a(var6, var5, param0, var4);
+                          int discarded$1 = tb.a(var17, var5, param0, var4, 9);
                           break L5;
                         } else {
                           var7 = (Object) (Object) sc.field_b;
@@ -727,7 +726,7 @@ final class v {
         throw new Error();
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         return jg.a((byte) -62, param0) != null;
     }
 

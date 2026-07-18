@@ -9,14 +9,14 @@ final class ef extends am {
     static String field_s;
     db[] field_q;
 
-    public static void h() {
+    public static void h(byte param0) {
         int var1 = 0;
         field_p = null;
         field_s = null;
         field_n = null;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -57,8 +57,7 @@ final class ef extends am {
                   stackIn_12_0 = stackOut_11_0;
                   break L0;
                 } else {
-                  int discarded$8 = 121;
-                  if (ws.a(param0.charAt(var2_int))) {
+                  if (ws.a(param0.charAt(var2_int), (byte) 121)) {
                     var2_int++;
                     continue L1;
                   } else {

@@ -107,7 +107,7 @@ final class st {
         return stackIn_16_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_b = null;
     }
@@ -116,7 +116,7 @@ final class st {
         throw new IllegalStateException();
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2) {
+    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         var4 = 0;
         if (param0) {
@@ -143,7 +143,7 @@ final class st {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
     }
 
     static {

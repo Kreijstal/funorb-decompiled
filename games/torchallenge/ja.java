@@ -29,7 +29,7 @@ final class ja {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_e = null;
         int var1 = -45;
@@ -78,12 +78,11 @@ final class ja {
           L0: {
             L1: {
               param2 = df.a(param2, '_', "", (byte) 126);
-              int discarded$4 = 0;
-              var3 = je.a(param2);
+              var3 = je.a(param2, 0);
               if (param1 > 74) {
                 break L1;
               } else {
-                boolean discarded$5 = ja.a((byte) -72, 59);
+                boolean discarded$2 = ja.a((byte) -72, 59);
                 break L1;
               }
             }

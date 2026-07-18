@@ -7,7 +7,7 @@ final class pg {
     static sb field_b;
     static boolean[] field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_d = null;
         field_a = null;
@@ -20,11 +20,9 @@ final class pg {
         if (param0 != 0) {
           return;
         } else {
-          int discarded$4 = -21065;
-          var2 = nd.a();
+          var2 = nd.a(-21065);
           cf.field_g.a(jl.field_a - td.field_a, -gh.field_H + bb.field_b, var1 + (gh.field_H << 1), -21907, var2 + (td.field_a << 1));
-          int discarded$5 = 6;
-          ti.l();
+          ti.l(6);
           return;
         }
     }
@@ -294,8 +292,7 @@ final class pg {
                     if (null == param2.field_e.peekEvent()) {
                       break L2;
                     } else {
-                      int discarded$1 = 19406;
-                      wh.a(1L);
+                      wh.a(1L, 19406);
                       var3_int++;
                       continue L1;
                     }

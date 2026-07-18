@@ -147,8 +147,8 @@ final class qs extends tc {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
+                                    int discarded$3 = qs.a(16);
                                     int discarded$4 = qs.a(16);
-                                    int discarded$5 = qs.a(16);
                                     field_t[var6] = qs.a(8);
                                     var6++;
                                     continue L6;
@@ -173,7 +173,7 @@ final class qs extends tc {
                       }
                     }
                   } else {
-                    int discarded$6 = qs.a(16);
+                    int discarded$5 = qs.a(16);
                     var3++;
                     continue L2;
                   }
@@ -233,8 +233,7 @@ final class qs extends tc {
                               continue L0;
                             }
                           } else {
-                            int discarded$7 = -114;
-                            var9[var11] = qt.a(var11, var10);
+                            var9[var11] = qt.a(var11, var10, (byte) -114);
                             var11++;
                             continue L12;
                           }

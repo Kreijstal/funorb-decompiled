@@ -18,7 +18,7 @@ final class rc {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
     }

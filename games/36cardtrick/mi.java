@@ -13,7 +13,7 @@ class mi extends ff {
         return hc.field_h;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
     }
 

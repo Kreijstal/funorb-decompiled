@@ -22,14 +22,11 @@ final class rj {
         field_g = null;
     }
 
-    final static rh a(int param0, byte param1) {
+    final static rh a(int param0, byte param1, boolean param2, boolean param3, int param4) {
         if (param1 >= -13) {
             return null;
         }
-        int discarded$0 = 0;
-        int discarded$1 = 1;
-        int discarded$2 = 1;
-        return am.a(-90, param0, false);
+        return am.a(-90, param0, false, 1, true, false);
     }
 
     final static boolean a(byte param0, rh param1) {

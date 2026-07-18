@@ -20,15 +20,14 @@ final class fdb extends hbb {
 
     final synchronized void a(kka param0, boolean param1, int param2, boolean param3) {
         try {
-            int discarded$0 = -17;
-            this.f();
+            this.f(-17);
             super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "fdb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         for (var2 = 0; var2 < 16; var2++) {
@@ -43,14 +42,13 @@ final class fdb extends hbb {
         ((fdb) this).field_J = new int[16];
         ((fdb) this).field_R = new int[16];
         try {
-            int discarded$0 = -17;
-            this.f();
+            this.f(-17);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "fdb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2) {
+    final static void a(boolean param0, boolean param1, int param2, byte param3) {
         llb stackIn_4_0 = null;
         llb stackIn_5_0 = null;
         llb stackIn_6_0 = null;
@@ -99,8 +97,7 @@ final class fdb extends hbb {
         llb stackOut_21_0 = null;
         int stackOut_21_1 = 0;
         L0: {
-          int discarded$1 = 1;
-          moa.a();
+          moa.a(true);
           if (0 > tg.field_q) {
             nna.field_v.field_R = null;
             break L0;
@@ -334,8 +331,7 @@ final class fdb extends hbb {
         ((fdb) this).field_Q = 256;
         ((fdb) this).field_J = new int[16];
         ((fdb) this).field_R = new int[16];
-        int discarded$0 = -17;
-        this.f();
+        this.f(-17);
     }
 
     private final synchronized void b(int param0, int param1, int param2, byte param3) {

@@ -24,7 +24,7 @@ final class va extends mc {
         return (int)(1000000000L / mb.field_B);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_n = null;
         field_t = null;
         field_q = null;

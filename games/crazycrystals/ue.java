@@ -79,17 +79,14 @@ abstract class ue {
 
     final static void b(byte param0) {
         int var1 = 92;
-        int discarded$3 = -23;
-        no.e();
+        no.e((byte) -23);
         if (null != jd.field_D) {
             fq.a(-65, jd.field_D);
         }
         vf.a(-1);
-        int discarded$20 = 0;
-        ub.b();
+        ub.b(0);
         ug.a((byte) -127);
-        int discarded$31 = 0;
-        if (!(!b.b())) {
+        if (!(!b.b(0))) {
             tp.field_f.d(8, 1);
             ak.a(0, (byte) -48);
         }

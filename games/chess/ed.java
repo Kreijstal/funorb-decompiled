@@ -18,7 +18,7 @@ final class ed {
         throw new IllegalStateException();
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -104,7 +104,7 @@ final class ed {
         return stackIn_13_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         int var1 = 0;
     }

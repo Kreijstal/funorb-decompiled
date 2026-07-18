@@ -147,7 +147,7 @@ abstract class ta extends l {
         return ((l) var3).a(-2);
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -173,8 +173,7 @@ abstract class ta extends l {
                 try {
                   L1: {
                     var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-                    int discarded$2 = 67;
-                    param0.getAppletContext().showDocument(gh.a(param0, var2), "_top");
+                    param0.getAppletContext().showDocument(gh.a(param0, var2, (byte) 67), "_top");
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {

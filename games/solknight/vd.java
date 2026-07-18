@@ -8,7 +8,7 @@ final class vd {
     static int field_b;
     static int field_c;
 
-    final static byte[] a(String param0) {
+    final static byte[] a(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -140,24 +140,22 @@ final class vd {
         }
         L4: {
           if (1 == qk.field_m) {
-            int discarded$7 = var8.i(-117);
-            String discarded$8 = var8.h(27);
+            int discarded$4 = var8.i(-117);
+            String discarded$5 = var8.h(27);
             break L4;
           } else {
             if (4 != qk.field_m) {
               break L4;
             } else {
-              int discarded$9 = var8.i(-117);
-              String discarded$10 = var8.h(27);
+              int discarded$6 = var8.i(-117);
+              String discarded$7 = var8.h(27);
               break L4;
             }
           }
         }
         L5: {
           if (!param1) {
-            int discarded$11 = 0;
-            int discarded$12 = 80;
-            ek.field_a = a.a((gb) (Object) var8);
+            ek.field_a = a.a((gb) (Object) var8, 80, false);
             qe.field_G = null;
             break L5;
           } else {
@@ -184,8 +182,7 @@ final class vd {
               decompiledCaughtException = decompiledCaughtParameter0;
               L8: {
                 var6 = (Exception) (Object) decompiledCaughtException;
-                int discarded$13 = 1;
-                hi.a((Throwable) (Object) var6, "CC1");
+                hi.a((Throwable) (Object) var6, "CC1", 1);
                 qe.field_G = null;
                 ek.field_a = null;
                 break L8;
@@ -198,7 +195,7 @@ final class vd {
         return new hf(param1);
     }
 
-    final static String a(byte[] param0, int param1, int param2) {
+    final static String a(byte[] param0, int param1, int param2, int param3) {
         char[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -283,7 +280,7 @@ final class vd {
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_d = null;
         field_a = null;

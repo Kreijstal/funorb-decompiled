@@ -52,11 +52,9 @@ final class pd extends lh {
                   if (var2_int != -1) {
                     var3 = param1.substring(0, var2_int);
                     var4 = param1.substring(1 + var2_int);
-                    int discarded$4 = 113;
-                    var5 = jk.a(var3);
+                    var5 = jk.a(var3, (byte) 113);
                     if (var5 == null) {
-                      int discarded$5 = 31592;
-                      stackOut_11_0 = id.a(var4);
+                      stackOut_11_0 = id.a(var4, 31592);
                       stackIn_12_0 = stackOut_11_0;
                       break L0;
                     } else {
@@ -119,7 +117,7 @@ final class pd extends lh {
         field_i = null;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0, boolean param1, int param2) {
         if (param1) {
             gb.g(0, 0, gb.field_d, gb.field_k, 0, 192);
         } else {
@@ -130,7 +128,7 @@ final class pd extends lh {
         kb.a(0, param1);
     }
 
-    final static n a(byte[] param0) {
+    final static n a(byte[] param0, boolean param1) {
         n var2 = null;
         RuntimeException var2_ref = null;
         n stackIn_4_0 = null;
@@ -155,8 +153,7 @@ final class pd extends lh {
           L0: {
             if (param0 != null) {
               var2 = new n(param0, vg.field_I, b.field_b, ij.field_H, ob.field_a, rd.field_d, of.field_d);
-              int discarded$2 = -28210;
-              c.o();
+              c.o(-28210);
               stackOut_3_0 = (n) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;

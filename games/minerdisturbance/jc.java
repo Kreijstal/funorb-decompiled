@@ -379,7 +379,7 @@ abstract class jc extends fe implements rk {
                 if (-1 != param4.indexOf("<br>")) {
                   break L1;
                 } else {
-                  param2[0] = (String) (Object) param2;
+                  param2[0] = param4;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;
@@ -856,7 +856,7 @@ abstract class jc extends fe implements rk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_D = null;
         field_F = null;
         field_G = null;

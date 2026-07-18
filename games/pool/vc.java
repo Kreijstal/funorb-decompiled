@@ -80,8 +80,7 @@ abstract class vc extends oo {
                     continue L1;
                   } else {
                     ln.a(param2[var8][var9], 0, param1[var8][var9]);
-                    int discarded$2 = -37;
-                    nd.a(param1[var8][var9]);
+                    nd.a(param1[var8][var9], (byte) -37);
                     var9++;
                     continue L3;
                   }
@@ -302,8 +301,7 @@ abstract class vc extends oo {
     final static void a(boolean param0, java.awt.Canvas param1) {
         try {
             if (fk.field_ab == 11) {
-                int discarded$0 = -125;
-                bi.b();
+                bi.b(-125);
             }
             a.a(am.field_n, true, uh.field_o, kk.field_w);
             fe.a(0, 0, (byte) -118, param1);
@@ -706,7 +704,7 @@ abstract class vc extends oo {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_J = null;
         field_P = null;
         field_N = null;

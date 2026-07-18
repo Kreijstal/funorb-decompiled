@@ -5,7 +5,7 @@ final class re {
     static String field_b;
     static jpa field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_a = null;
         field_b = null;
@@ -69,8 +69,7 @@ final class re {
         L0: {
           jqa.field_g = bea.field_a;
           ob.field_i = bea.field_g;
-          int discarded$1 = 16;
-          ji.a();
+          ji.a(16);
           oca.field_b.a(0, 0, 20, nra.field_a.field_G, -2 + (-40 + nra.field_a.field_t));
           lva.field_t.a(hk.field_e.field_G, di.field_a, -23776, 0, 0);
           var1 = 2 + di.field_a;

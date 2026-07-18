@@ -219,7 +219,7 @@ final class jg extends dk {
         field_F = null;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
     }
 
     jg(he param0) {

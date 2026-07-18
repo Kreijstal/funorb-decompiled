@@ -13,7 +13,7 @@ final class cb {
     private RandomAccessFile field_h;
     static ue field_c;
 
-    final static byte[] a(String param0) {
+    final static byte[] a(String param0, byte param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -231,7 +231,7 @@ final class cb {
                   if (param0 <= -93) {
                     break L3;
                   } else {
-                    String discarded$4 = cb.b(false);
+                    String discarded$1 = cb.b(false);
                     break L3;
                   }
                 }
@@ -268,8 +268,7 @@ final class cb {
                                       var19[1][1 + 4 * var14] = nf.field_b[var11];
                                       var19[1][2 + 4 * var14] = gj.field_f[var11];
                                       var19[1][4 * var14 - -3] = ab.field_G[var11];
-                                      int discarded$5 = 0;
-                                      if (!mc.a(ef.field_f[var11])) {
+                                      if (!mc.a(ef.field_f[var11], 0)) {
                                         break L9;
                                       } else {
                                         if (nf.field_b[var11] + gj.field_f[var11] - -ab.field_G[var11] != 0) {
@@ -297,8 +296,7 @@ final class cb {
                                   var19[0][1 + var10 * 4] = nf.field_b[var11];
                                   var19[0][2 + 4 * var10] = gj.field_f[var11];
                                   var19[0][4 * var10 - -3] = ab.field_G[var11];
-                                  int discarded$6 = 0;
-                                  if (mc.a(ef.field_f[var11])) {
+                                  if (mc.a(ef.field_f[var11], 0)) {
                                     if (0 == nf.field_b[var11] + (gj.field_f[var11] - -ab.field_G[var11])) {
                                       var6[0][var10] = null;
                                       var10--;
@@ -343,8 +341,7 @@ final class cb {
                 }
                 break L0;
               } else {
-                int discarded$7 = 27;
-                ec.a();
+                ec.a((byte) 27);
                 return;
               }
             }

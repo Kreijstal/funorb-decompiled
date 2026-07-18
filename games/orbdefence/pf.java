@@ -252,8 +252,7 @@ final class pf {
                     break L12;
                   }
                 }
-                int discarded$5 = 0;
-                kg.field_i = dk.a(var4 * var2, var2 * var5);
+                kg.field_i = dk.a(var4 * var2, var2 * var5, false);
                 return;
               }
             }
@@ -364,8 +363,7 @@ final class pf {
               break L24;
             }
           }
-          int discarded$6 = 0;
-          kg.field_i = dk.a(var4 * var2, var2 * var5);
+          kg.field_i = dk.a(var4 * var2, var2 * var5, false);
           return;
         } else {
           L25: {
@@ -461,8 +459,7 @@ final class pf {
                   break L34;
                 }
               }
-              int discarded$7 = 0;
-              kg.field_i = dk.a(var4 * var2, var2 * var5);
+              kg.field_i = dk.a(var4 * var2, var2 * var5, false);
               return;
             } else {
               L35: {
@@ -512,8 +509,7 @@ final class pf {
                   break L39;
                 }
               }
-              int discarded$8 = 0;
-              kg.field_i = dk.a(var4 * var2, var2 * var5);
+              kg.field_i = dk.a(var4 * var2, var2 * var5, false);
               return;
             }
           } else {
@@ -564,8 +560,7 @@ final class pf {
                 break L44;
               }
             }
-            int discarded$9 = 0;
-            kg.field_i = dk.a(var4 * var2, var2 * var5);
+            kg.field_i = dk.a(var4 * var2, var2 * var5, false);
             return;
           }
         }
@@ -579,7 +574,7 @@ final class pf {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         bm.field_e = false;
         sl.field_ab = -1;
         ce.field_c = null;

@@ -147,7 +147,7 @@ final class mp extends td {
         return param0 | param1;
     }
 
-    final static long a(CharSequence param0) {
+    final static long a(CharSequence param0, boolean param1) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;
@@ -281,7 +281,7 @@ final class mp extends td {
         return stackIn_23_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_p = null;
         field_s = null;
         field_q = null;

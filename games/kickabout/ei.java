@@ -17,7 +17,7 @@ final class ei implements gj {
     private int field_j;
     private int field_m;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_f = null;
         field_d = null;
@@ -247,8 +247,7 @@ final class ei implements gj {
                   }
                 }
               }
-              int discarded$1 = 0;
-              or.b();
+              or.b(false);
               break L1;
             }
             var66 = new int[param6.field_k];
@@ -525,7 +524,7 @@ final class ei implements gj {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, boolean param1) {
         er.a((byte) 71, param0);
         if (!(null == sn.field_e)) {
             ar.a(15707, sn.field_e);

@@ -16,7 +16,7 @@ final class om extends ms {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         int var1 = -126;
         field_n = null;
@@ -28,7 +28,7 @@ final class om extends ms {
         return ((om) this).field_o;
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, byte param2) {
         int var3 = 59;
         return em.a(false, param0, param1) & sg.a(param0, param1, 65);
     }

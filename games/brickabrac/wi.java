@@ -262,7 +262,7 @@ final class wi extends dl {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_i = null;
         field_j = null;
         field_h = null;
@@ -627,7 +627,7 @@ final class wi extends dl {
         ((wi) this).field_l = java.net.ProxySelector.getDefault();
     }
 
-    final static int c() {
+    final static int c(int param0) {
         return ge.field_w;
     }
 

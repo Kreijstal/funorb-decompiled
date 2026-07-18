@@ -14,7 +14,7 @@ final class ck extends k {
     static String field_r;
     static long field_q;
 
-    final static void a() {
+    final static void a(int param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         ik var4 = null;

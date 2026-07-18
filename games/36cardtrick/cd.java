@@ -230,7 +230,7 @@ final class cd {
         ((cd) this).field_d.field_h = ((cd) this).field_d;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         int var1 = 0;
         field_g = null;

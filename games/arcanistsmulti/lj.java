@@ -82,8 +82,7 @@ final class lj extends hg {
     }
 
     final long a(byte param0) {
-        int discarded$0 = 10;
-        ((lj) this).field_f = ((lj) this).field_f + this.c();
+        ((lj) this).field_f = ((lj) this).field_f + this.c((byte) 10);
         if (!(~((lj) this).field_i >= ~((lj) this).field_f)) {
             return (-((lj) this).field_f + ((lj) this).field_i) / 1000000L;
         }
@@ -203,8 +202,7 @@ final class lj extends hg {
                         }
                       }
                     }
-                    int discarded$5 = 0;
-                    ql.a(640, 480);
+                    ql.a(640, 480, 0);
                     break L0;
                   }
                 }
@@ -293,8 +291,7 @@ final class lj extends hg {
             gl.a(371, 32, -27327, 576, kf.field_b, 63);
             wm.field_H[var2].a();
             var10.b(0, 0, 128);
-            int discarded$6 = 0;
-            bj.a(var10.field_A);
+            bj.a(var10.field_A, 0);
             var10.a();
             gd.field_mb.c(-(gd.field_mb.field_n / 2) + 320, -5);
             de.d(4, 4, 0, 0, 640, 480);
@@ -315,8 +312,7 @@ final class lj extends hg {
             gl.a(385, 32, -27327, 576, kf.field_b, 63);
             wm.field_H[var2].a();
             var11.b(0, 0, 128);
-            int discarded$7 = 0;
-            bj.a(var11.field_A);
+            bj.a(var11.field_A, 0);
             var11.a();
             gd.field_mb.c(320 + -(gd.field_mb.field_n / 2), -5);
             de.d(4, 4, 0, 0, 640, 480);
@@ -400,8 +396,7 @@ final class lj extends hg {
             break L12;
           }
         }
-        int discarded$8 = 491697968;
-        rk.g();
+        rk.g(491697968);
     }
 
     public static void c(int param0) {
@@ -420,7 +415,7 @@ final class lj extends hg {
         }
     }
 
-    private final long c() {
+    private final long c(byte param0) {
         int var9 = 0;
         int var10 = ArcanistsMulti.field_G ? 1 : 0;
         long var2 = System.nanoTime();

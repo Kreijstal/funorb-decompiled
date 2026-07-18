@@ -91,7 +91,7 @@ final class vk extends rg {
         ((vk) this).field_B = (cf) (Object) ((vk) this).j((byte) -119);
     }
 
-    public static void k() {
+    public static void k(byte param0) {
         field_K = null;
         field_I = null;
         int var1 = -90;
@@ -101,7 +101,7 @@ final class vk extends rg {
         field_L = null;
     }
 
-    final static void a(ka param0) {
+    final static void a(ka param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -305,8 +305,7 @@ final class vk extends rg {
         }
         L1: {
           L2: {
-            int discarded$7 = -107;
-            if (!a.a()) {
+            if (!a.a(-107)) {
               break L2;
             } else {
               if ((8 & wf.field_m) != 0) {
@@ -415,10 +414,8 @@ final class vk extends rg {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          int discarded$9 = -42;
-          if (ud.a(param3, param2, param1)) {
-            int discarded$10 = 33;
-            return eb.a();
+          if (ud.a(param3, param2, param1, (byte) -42)) {
+            return eb.a(33);
           } else {
             return null;
           }

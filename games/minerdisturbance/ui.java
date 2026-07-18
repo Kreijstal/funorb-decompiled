@@ -29,7 +29,7 @@ class ui extends hc {
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         int var8 = MinerDisturbance.field_ab;
         if (!(((ui) this).field_Q)) {
             ((ui) this).field_o = 0;
@@ -82,7 +82,7 @@ class ui extends hc {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
@@ -162,18 +162,16 @@ class ui extends hc {
         }
     }
 
-    private final String p() {
+    private final String p(int param0) {
         int var2 = ((ui) this).field_J > ((ui) this).field_O ? ((ui) this).field_O : ((ui) this).field_J;
         int var3 = ((ui) this).field_O >= ((ui) this).field_J ? ((ui) this).field_O : ((ui) this).field_J;
         return ((ui) this).field_s.substring(var2, var3);
     }
 
     private final void c(byte param0) {
-        int discarded$0 = -19659;
-        String var2 = this.p();
+        String var2 = this.p(-19659);
         if (var2.length() > 0) {
-            int discarded$1 = -19659;
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.p()), (java.awt.datatransfer.ClipboardOwner) null);
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.p(-19659)), (java.awt.datatransfer.ClipboardOwner) null);
         }
         int var3 = -106 % ((67 - param0) / 44);
     }
@@ -484,9 +482,9 @@ class ui extends hc {
                             break L5;
                           } else {
                             ((ui) this).field_s = ((ui) this).field_s + param0;
-                            int dupTemp$2 = ((ui) this).field_s.length();
-                            ((ui) this).field_J = dupTemp$2;
-                            ((ui) this).field_O = dupTemp$2;
+                            int dupTemp$1 = ((ui) this).field_s.length();
+                            ((ui) this).field_J = dupTemp$1;
+                            ((ui) this).field_O = dupTemp$1;
                             break L5;
                           }
                         }
@@ -627,8 +625,7 @@ class ui extends hc {
                                     }
                                   }
                                 } else {
-                                  int discarded$3 = 66;
-                                  this.e();
+                                  this.e((byte) 66);
                                   stackOut_42_0 = 1;
                                   stackIn_43_0 = stackOut_42_0;
                                   return stackIn_43_0 != 0;
@@ -872,7 +869,7 @@ class ui extends hc {
         }
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         if (((ui) this).field_y instanceof wg) {
             ((wg) (Object) ((ui) this).field_y).a((ui) this, -7802);
         }
@@ -911,8 +908,7 @@ class ui extends hc {
           L0: {
             L1: {
               super.a(param0, param1, (byte) 75, param3);
-              int discarded$2 = 0;
-              this.a();
+              this.a(false);
               if (((ui) this).field_w != 1) {
                 break L1;
               } else {
@@ -1024,8 +1020,7 @@ class ui extends hc {
                     break L1;
                   }
                 }
-                int discarded$1 = 0;
-                this.a(var2);
+                this.a(var2, false);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {

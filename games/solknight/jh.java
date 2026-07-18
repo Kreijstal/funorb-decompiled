@@ -10,7 +10,7 @@ final class jh {
     static o field_b;
     static int field_f;
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2_int = 0;
@@ -65,7 +65,7 @@ final class jh {
         }
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -156,8 +156,7 @@ final class jh {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = gi.a(var6, var5, param0, var4);
+                          int discarded$1 = gi.a(var17, var5, param0, var4, 9);
                           break L5;
                         }
                       }
@@ -413,7 +412,7 @@ final class jh {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
         field_g = null;
         int var1 = -126;

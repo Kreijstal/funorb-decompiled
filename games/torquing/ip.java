@@ -39,8 +39,7 @@ final class ip {
                 break L1;
               }
             }
-            int discarded$2 = -98;
-            stackOut_2_0 = ij.a(true, 10, param1);
+            stackOut_2_0 = ij.a(true, 10, param1, -98);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -77,7 +76,7 @@ final class ip {
         return stackIn_3_0;
     }
 
-    final static nh a() {
+    final static nh a(int param0, int param1) {
         int var2 = -59;
         nh var3 = new nh();
         to.field_q.a((byte) 54, (q) (Object) var3);
@@ -85,7 +84,7 @@ final class ip {
         return var3;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         int var1 = 0;
         field_c = null;
         field_b = null;

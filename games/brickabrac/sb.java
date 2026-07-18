@@ -2320,14 +2320,14 @@ final class sb implements vc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_f = null;
         field_c = null;
         field_d = null;
     }
 
-    final static void a(mf param0, mf param1) {
+    final static void a(mf param0, mf param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

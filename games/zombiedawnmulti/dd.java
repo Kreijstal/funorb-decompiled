@@ -25,7 +25,7 @@ final class dd implements dr {
         pm.a(false, param0);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -79,7 +79,7 @@ final class dd implements dr {
         }
     }
 
-    final static boolean a(int[] param0) {
+    final static boolean a(int[] param0, byte param1) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         bb var4_ref_bb = null;

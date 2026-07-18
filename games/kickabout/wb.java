@@ -100,8 +100,7 @@ final class wb extends hs {
                 }
                 L5: {
                   var4_ref_String = stackIn_22_0;
-                  int discarded$1 = 0;
-                  wb.a(var4_ref_String, 302, 46, 316, 88);
+                  wb.a(var4_ref_String, 302, 46, 316, 88, 0);
                   stackOut_22_0 = ((wb) this).field_l;
                   stackIn_24_0 = stackOut_22_0;
                   stackIn_23_0 = stackOut_22_0;
@@ -242,8 +241,7 @@ final class wb extends hs {
                     vg.field_Wb = true;
                     break L1;
                   } else {
-                    int discarded$3 = 0;
-                    hp.b();
+                    hp.b(0);
                     break L1;
                   }
                 } else {
@@ -388,8 +386,7 @@ final class wb extends hs {
                     if (var4_int != param1) {
                       break L3;
                     } else {
-                      int discarded$1 = -64;
-                      this.a(var5);
+                      this.a(var5, (byte) -64);
                       break L3;
                     }
                   }
@@ -482,7 +479,7 @@ final class wb extends hs {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = Kickabout.field_G;
@@ -569,7 +566,7 @@ final class wb extends hs {
         return stackIn_3_0;
     }
 
-    private final void a(hd param0) {
+    private final void a(hd param0, byte param1) {
         hd var5 = null;
         try {
             ((wb) this).field_o = new hd();
@@ -763,7 +760,7 @@ final class wb extends hs {
         }
     }
 
-    final static void a(String param0, int param1, int param2, int param3, int param4) {
+    final static void a(String param0, int param1, int param2, int param3, int param4, int param5) {
         try {
             ul.a(param2, 1, param3, true, (byte) -120, param1, 16, param4, 1, param0);
         } catch (RuntimeException runtimeException) {

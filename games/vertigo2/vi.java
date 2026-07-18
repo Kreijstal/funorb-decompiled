@@ -20,7 +20,7 @@ final class vi extends li {
     static String field_x;
     static String field_B;
 
-    final static void b() {
+    final static void b(byte param0) {
         if (null != ch.field_e) {
             ch.field_e.h(0);
         }
@@ -29,7 +29,7 @@ final class vi extends li {
         }
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, jj param6, int param7) {
+    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, jj param6, int param7, byte param8) {
         il.field_h = param5;
         try {
             rf.field_q = param7;
@@ -47,7 +47,7 @@ final class vi extends li {
         }
     }
 
-    final static String a(byte param0, boolean param1) {
+    final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (!(!param1)) {
             var4 += 4;
@@ -57,7 +57,7 @@ final class vi extends li {
         return eh.field_d[var4];
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_D = null;
         field_x = null;
         field_B = null;

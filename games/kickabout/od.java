@@ -136,7 +136,7 @@ final class od extends sr {
         field_o = null;
     }
 
-    final static void a(int[] param0, int param1, gt[] param2) {
+    final static void a(int[] param0, int param1, gt[] param2, int param3) {
         RuntimeException var4 = null;
         cn var4_ref = null;
         int[] var5 = null;

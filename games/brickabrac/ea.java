@@ -89,7 +89,7 @@ final class ea {
         return stackIn_10_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_h = null;
     }
@@ -120,7 +120,7 @@ final class ea {
         }
     }
 
-    final static java.awt.Container b() {
+    final static java.awt.Container b(int param0) {
         if (null != cb.field_o) {
             return (java.awt.Container) (Object) cb.field_o;
         }

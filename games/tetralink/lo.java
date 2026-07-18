@@ -17,7 +17,7 @@ final class lo {
         }
     }
 
-    final static StringBuilder a(int param0, StringBuilder param1, int param2) {
+    final static StringBuilder a(int param0, StringBuilder param1, int param2, char param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

@@ -11,9 +11,10 @@ final class lt {
     cn field_h;
     static jpa field_a;
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -26,6 +27,7 @@ final class lt {
         int stackOut_3_0 = 0;
         int stackOut_11_0 = 0;
         int stackOut_9_0 = 0;
+        int stackOut_6_0 = 0;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_16_0 = null;
@@ -41,18 +43,24 @@ final class lt {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              L1: {
-                if (param0.toLowerCase().indexOf(gj.field_q.toLowerCase()) < 0) {
-                  stackOut_11_0 = 0;
-                  stackIn_12_0 = stackOut_11_0;
-                  break L1;
-                } else {
-                  stackOut_9_0 = 1;
-                  stackIn_12_0 = stackOut_9_0;
-                  break L1;
+              if (param1 == -1) {
+                L1: {
+                  if (param0.toLowerCase().indexOf(gj.field_q.toLowerCase()) < 0) {
+                    stackOut_11_0 = 0;
+                    stackIn_12_0 = stackOut_11_0;
+                    break L1;
+                  } else {
+                    stackOut_9_0 = 1;
+                    stackIn_12_0 = stackOut_9_0;
+                    break L1;
+                  }
                 }
+                break L0;
+              } else {
+                stackOut_6_0 = 0;
+                stackIn_7_0 = stackOut_6_0;
+                return stackIn_7_0 != 0;
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -83,7 +91,7 @@ final class lt {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + -1 + ')');
+          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ')');
         }
         return stackIn_12_0 != 0;
     }
@@ -92,8 +100,12 @@ final class lt {
         if (param0 >= -13) {
             return;
         }
-        field_a = null;
-        field_f = null;
+        try {
+            field_a = null;
+            field_f = null;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "lt.B(" + param0 + ')');
+        }
     }
 
     static {

@@ -4,7 +4,7 @@
 final class lea extends rqa {
     static qrb field_o;
 
-    final static void a(String param0, int param1, int param2, int param3) {
+    final static void a(String param0, int param1, int param2, int param3, int param4, byte param5) {
         RuntimeException var6 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -130,7 +130,7 @@ final class lea extends rqa {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

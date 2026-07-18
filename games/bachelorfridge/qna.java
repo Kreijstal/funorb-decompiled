@@ -108,14 +108,14 @@ final class qna extends k {
         }
     }
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         pf var2 = sja.field_fb;
         var2.c(6, (byte) 124);
         var2.d(1, 0);
         var2.d(0, 0);
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_l = null;
     }
 

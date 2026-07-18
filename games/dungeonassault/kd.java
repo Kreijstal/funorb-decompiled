@@ -14,31 +14,25 @@ final class kd {
         int var9 = DungeonAssault.field_K;
         if (param3 < param7) {
             if (param7 < param6) {
-                int discarded$0 = 16;
-                ue.a(param3, gf.field_b, param5, param6, param0, param7, param1, param2);
+                ue.a(param3, gf.field_b, param5, param6, param0, param7, param1, param2, 16);
                 return;
             }
             if (param3 < param6) {
-                int discarded$1 = 16;
-                ue.a(param3, gf.field_b, param5, param7, param2, param6, param1, param0);
+                ue.a(param3, gf.field_b, param5, param7, param2, param6, param1, param0, 16);
                 return;
             }
-            int discarded$2 = 16;
-            ue.a(param6, gf.field_b, param5, param7, param1, param3, param2, param0);
+            ue.a(param6, gf.field_b, param5, param7, param1, param3, param2, param0, 16);
             return;
         }
         if (param3 >= param6) {
             if (param6 <= param7) {
-                int discarded$3 = 16;
-                ue.a(param6, gf.field_b, param5, param3, param0, param7, param2, param1);
+                ue.a(param6, gf.field_b, param5, param3, param0, param7, param2, param1, 16);
                 return;
             }
-            int discarded$4 = 16;
-            ue.a(param7, gf.field_b, param5, param3, param2, param6, param0, param1);
+            ue.a(param7, gf.field_b, param5, param3, param2, param6, param0, param1, 16);
             return;
         }
-        int discarded$5 = 16;
-        ue.a(param7, gf.field_b, param5, param6, param1, param3, param0, param2);
+        ue.a(param7, gf.field_b, param5, param6, param1, param3, param0, param2, 16);
     }
 
     final static void a(int param0) {
@@ -182,7 +176,7 @@ final class kd {
         l.a(true, 10, 6, 34, 10, 2, 3, 3000, param0, new int[1][], 70000, true, 5);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_d = null;
         field_e = null;

@@ -139,7 +139,7 @@ final class lo extends jd {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_k = null;
         field_m = null;
         field_j = null;
@@ -373,8 +373,7 @@ final class lo extends jd {
                 break L1;
               } else {
                 var3 = (CharSequence) (Object) var2;
-                int discarded$2 = 0;
-                if (jc.a(var3) != 0L) {
+                if (jc.a(var3, false) != 0L) {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -422,11 +421,11 @@ final class lo extends jd {
         }
     }
 
-    final static he a(long param0) {
+    final static he a(long param0, boolean param1) {
         return (he) (Object) pq.field_N.a(-3611, param0);
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void a(int param0, int param1, int param2, boolean param3, byte param4) {
         int var5 = (int)(nj.a(-62) % 2000L * 100L) / 2000;
         var5 = var5 % 100;
         ut var6 = lt.field_c[var5];
@@ -488,8 +487,7 @@ final class lo extends jd {
             }
             if (var4.length() != 0) {
               var5 = var4;
-              int discarded$8 = 79;
-              if (lg.a(var5)) {
+              if (lg.a(var5, (byte) 79)) {
                 stackOut_7_0 = b.field_M;
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;

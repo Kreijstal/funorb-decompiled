@@ -14,7 +14,7 @@ final class eq extends oh {
     static qh field_k;
     int field_l;
 
-    final static void d() {
+    final static void d(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -56,7 +56,7 @@ final class eq extends oh {
         }
     }
 
-    final static void a(String[] args, sq param1) {
+    final static void a(String[] args, sq param1, int param2) {
         String[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -168,7 +168,7 @@ final class eq extends oh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_o = null;
         field_k = null;

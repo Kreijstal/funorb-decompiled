@@ -12,7 +12,7 @@ final class qh {
     private int field_h;
     static boolean field_i;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = -12;
         field_b = null;
         field_c = null;
@@ -269,8 +269,7 @@ final class qh {
               try {
                 L0: {
                   var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                  int discarded$2 = 0;
-                  param1.getAppletContext().showDocument(of.a(param1, var2), "_top");
+                  param1.getAppletContext().showDocument(of.a(param1, var2, false), "_top");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {

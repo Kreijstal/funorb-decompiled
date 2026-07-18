@@ -17,11 +17,11 @@ abstract class un {
         int var1 = 0;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1) {
         lg.field_w.a(0, 0, 452);
     }
 
-    final static void a(int param0, byte param1, int param2, int param3) {
+    final static void a(int param0, byte param1, int param2, int param3, boolean param4) {
         int var5 = 91 / ((-26 - param1) / 59);
         vd.a(param2, 1, -14561, 1, param0, param3);
     }

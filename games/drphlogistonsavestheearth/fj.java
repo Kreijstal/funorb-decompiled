@@ -6,11 +6,11 @@ final class fj extends gi {
     static volatile int field_j;
     static String[] field_i;
 
-    public static void d() {
+    public static void d(int param0) {
         field_i = null;
     }
 
-    final static void e() {
+    final static void e(int param0) {
     }
 
     fj(int param0) {
@@ -29,7 +29,7 @@ final class fj extends gi {
         }
     }
 
-    final static int a(int param0, CharSequence param1, int param2) {
+    final static int a(int param0, CharSequence param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -212,10 +212,8 @@ final class fj extends gi {
         return stackIn_42_0;
     }
 
-    final static a f() {
-        int discarded$0 = 127;
-        int discarded$1 = 114;
-        return new a(nf.e(), mj.b());
+    final static a f(int param0) {
+        return new a(nf.e((byte) 127), mj.b((byte) 114));
     }
 
     static {

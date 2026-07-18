@@ -37,7 +37,7 @@ final class ep extends pu {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_l = null;
     }
 

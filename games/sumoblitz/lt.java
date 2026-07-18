@@ -10,7 +10,7 @@ final class lt extends ms {
     static wi field_m;
     int field_p;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         if (!(-1 != gu.field_d)) {
             if (!(ju.b(-1, 1))) {
                 return false;
@@ -28,7 +28,7 @@ final class lt extends ms {
         return ju.b(-1, gu.field_d);
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         lf.a(0, (byte) -58);
     }
 

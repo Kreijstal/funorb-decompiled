@@ -7,12 +7,11 @@ final class dl {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 11052) {
-            int discarded$0 = 1;
-            int discarded$1 = dl.a();
+            int discarded$0 = dl.a(true);
         }
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         if (ri.field_a >= 2) {
           if (mh.field_tb != 0) {
             if (qh.field_c != null) {

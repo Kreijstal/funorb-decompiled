@@ -46,7 +46,7 @@ final class lb extends eg implements dm {
         }
     }
 
-    final static void a(bh param0) {
+    final static void a(bh param0, boolean param1) {
         int var2_int = 0;
         try {
             tl.field_X = param0.e(127) << 5;

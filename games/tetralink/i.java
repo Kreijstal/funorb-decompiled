@@ -28,12 +28,11 @@ final class i {
     static ok field_a;
 
     final static void a(boolean param0, boolean param1) {
-        int discarded$0 = -88;
-        dg.a(param1);
+        dg.a(param1, (byte) -88);
         cc.b(true, param1);
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -191,8 +190,7 @@ final class i {
               if (var2 != 0) {
                 if (var2 != 1) {
                   fk.a(-104, (Throwable) null, "HS1: " + hc.a(false));
-                  int discarded$6 = 0;
-                  mk.a();
+                  mk.a(false);
                   break L2;
                 } else {
                   var3 = var27.e(param0 ^ 126);
@@ -211,8 +209,7 @@ final class i {
                       }
                     }
                     if (var4_ref == null) {
-                      int discarded$7 = 0;
-                      mk.a();
+                      mk.a(false);
                       return;
                     } else {
                       var4_ref.b(false);
@@ -277,9 +274,9 @@ final class i {
                                         var12++;
                                         break L9;
                                       } else {
-                                        int incrementValue$8 = var15;
+                                        int incrementValue$3 = var15;
                                         var15++;
-                                        var35[0][incrementValue$8] = var27.f(-116);
+                                        var35[0][incrementValue$3] = var27.f(-116);
                                         var25++;
                                         continue L10;
                                       }
@@ -305,9 +302,9 @@ final class i {
                                         if (var7 <= var25) {
                                           break L11;
                                         } else {
-                                          int incrementValue$9 = var16;
+                                          int incrementValue$4 = var16;
                                           var16++;
-                                          var35[1][incrementValue$9] = var27.f(param0 + 118);
+                                          var35[1][incrementValue$4] = var27.f(param0 + 118);
                                           var25++;
                                           continue L12;
                                         }
@@ -331,9 +328,9 @@ final class i {
                                         if (var7 <= var25) {
                                           break L13;
                                         } else {
-                                          int incrementValue$10 = var17;
+                                          int incrementValue$5 = var17;
                                           var17++;
-                                          var35[2][incrementValue$10] = var27.f(-111);
+                                          var35[2][incrementValue$5] = var27.f(-111);
                                           var25++;
                                           continue L14;
                                         }
@@ -375,8 +372,7 @@ final class i {
                       break L2;
                     }
                   } else {
-                    int discarded$11 = 0;
-                    mk.a();
+                    mk.a(false);
                     return;
                   }
                 }
@@ -588,9 +584,9 @@ final class i {
             }
           }
           if (((i) this).field_v) {
-            int fieldTemp$4 = ((i) this).field_p - 1;
+            int fieldTemp$2 = ((i) this).field_p - 1;
             ((i) this).field_p = ((i) this).field_p - 1;
-            if (fieldTemp$4 > 0) {
+            if (fieldTemp$2 > 0) {
               return;
             } else {
               ((i) this).field_p = ((i) this).field_b;
@@ -598,8 +594,7 @@ final class i {
                 ((i) this).field_v = false;
                 return;
               } else {
-                int discarded$5 = -84;
-                this.a();
+                this.a(-84);
                 return;
               }
             }
@@ -660,7 +655,7 @@ final class i {
         throw new Error();
     }
 
-    final static void a(int param0, eh param1) {
+    final static void a(int param0, eh param1, int param2) {
         int var4 = 0;
         bc var5 = nd.field_Lb;
         var5.f(4, (byte) -92);

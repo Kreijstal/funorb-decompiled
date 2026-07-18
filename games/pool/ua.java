@@ -250,7 +250,7 @@ final class ua extends ig {
         ((ua) this).field_p = null;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_m = null;
         field_r = null;
         field_u = null;
@@ -259,7 +259,7 @@ final class ua extends ig {
         field_s = null;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         if (oh.field_h) {
             kh.field_Vb.a((byte) -79, false);
             return;

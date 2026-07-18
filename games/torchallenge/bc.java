@@ -60,8 +60,7 @@ class bc implements j, gd {
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_2_0 = this.b(-161, param0, param2);
+            stackOut_2_0 = this.b(-161, param0, param2, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -226,8 +225,7 @@ class bc implements j, gd {
                   var12 = var10;
                   L3: while (true) {
                     if (var12 > var11) {
-                      int discarded$1 = -9;
-                      ie.b();
+                      ie.b((byte) -9);
                       break L1;
                     } else {
                       L4: {
@@ -380,7 +378,7 @@ class bc implements j, gd {
         return stackIn_3_0;
     }
 
-    private final int b(int param0, ee param1, int param2) {
+    private final int b(int param0, ee param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -556,8 +554,7 @@ class bc implements j, gd {
             L2: {
               L3: {
                 param2 = df.a(param2, '_', "", (byte) 125);
-                int discarded$2 = 0;
-                var3 = je.a(param1);
+                var3 = je.a(param1, 0);
                 if (param2.indexOf(param1) != -1) {
                   break L3;
                 } else {
@@ -872,8 +869,7 @@ class bc implements j, gd {
                 var12 = stackIn_5_0 + Math.min(stackIn_5_1, Math.min(stackIn_5_2, stackIn_5_3));
                 bc.a(param2.field_l + param1 - -param2.field_i, param2.field_m + param0, param2.field_i + param1, param2.field_p + (param2.field_m + param0), 1);
                 kl.field_e.a(var10, var11, (byte) -106, var10, ((bc) this).field_c, var12);
-                int discarded$1 = -9;
-                ie.b();
+                ie.b((byte) -9);
                 break L1;
               } else {
                 break L1;
@@ -1387,7 +1383,7 @@ class bc implements j, gd {
         return stackIn_6_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_h = null;
         field_l = null;
@@ -1500,8 +1496,7 @@ class bc implements j, gd {
               var9_int = ((bc) this).a(param1, (byte) -1);
               var10 = this.d(param1, (byte) -4);
               if (((bc) this).field_j) {
-                int discarded$6 = 0;
-                int discarded$7 = ((bc) this).field_g.a(((bc) this).a(param1, -6782), this.a(param0, 0, param1, true), this.b(-161, param1, param3), var9_int, var10, param5, param7, ((bc) this).field_e, ((bc) this).field_i, ((bc) this).field_n);
+                int discarded$1 = ((bc) this).field_g.a(((bc) this).a(param1, -6782), this.a(param0, 0, param1, true), this.b(-161, param1, param3, 0), var9_int, var10, param5, param7, ((bc) this).field_e, ((bc) this).field_i, ((bc) this).field_n);
                 break L1;
               } else {
                 L2: {
@@ -1539,13 +1534,11 @@ class bc implements j, gd {
                       break L4;
                     } else {
                       if (1 == var12) {
-                        int discarded$8 = 0;
-                        ((bc) this).field_g.a(((bc) this).a(param1, -6782), (var9_int >> 1) + this.a(param0, 0, param1, true), var11 + this.b(-161, param1, param3), param5, param7);
+                        ((bc) this).field_g.a(((bc) this).a(param1, -6782), (var9_int >> 1) + this.a(param0, 0, param1, true), var11 + this.b(-161, param1, param3, 0), param5, param7);
                         break L1;
                       } else {
                         if (2 == var12) {
-                          int discarded$9 = 0;
-                          ((bc) this).field_g.b(((bc) this).a(param1, -6782), var9_int + this.a(param0, 0, param1, true), this.b(-161, param1, param3) + var11, param5, param7);
+                          ((bc) this).field_g.b(((bc) this).a(param1, -6782), var9_int + this.a(param0, 0, param1, true), this.b(-161, param1, param3, 0) + var11, param5, param7);
                           break L1;
                         } else {
                           break L1;
@@ -1554,13 +1547,11 @@ class bc implements j, gd {
                     }
                   }
                 }
-                int discarded$10 = 0;
-                ((bc) this).field_g.c(((bc) this).a(param1, -6782), this.a(param0, 0, param1, true), var11 + this.b(-161, param1, param3), param5, param7);
+                ((bc) this).field_g.c(((bc) this).a(param1, -6782), this.a(param0, 0, param1, true), var11 + this.b(-161, param1, param3, 0), param5, param7);
                 break L1;
               }
             }
-            int discarded$11 = -9;
-            ie.b();
+            ie.b((byte) -9);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

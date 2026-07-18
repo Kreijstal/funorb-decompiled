@@ -1304,7 +1304,7 @@ final class vj {
         return stackIn_9_0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         if (!pf.a((byte) 97)) {
             return;
         }
@@ -1328,7 +1328,7 @@ final class vj {
         throw new RuntimeException();
     }
 
-    final static mk a() {
+    final static mk a(byte param0) {
         mk var1 = new mk();
         int var2 = 0;
         var1.field_h = new int[1440000];

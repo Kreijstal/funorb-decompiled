@@ -110,8 +110,7 @@ final class wj extends oh {
                           }
                         }
                       }
-                      int discarded$1 = 64;
-                      if (rr.a(wl.field_f, param0)) {
+                      if (rr.a(wl.field_f, param0, (byte) 64)) {
                         dn.field_h = wl.field_f;
                         if (null == dn.field_h) {
                           break L3;
@@ -402,7 +401,7 @@ final class wj extends oh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_n = null;
         field_k = null;
     }

@@ -223,7 +223,7 @@ final class mp extends ch implements tb {
         return stackIn_11_0;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, boolean param8) {
+    final static void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, boolean param8, int param9) {
         int var11 = 0;
         L0: {
           var11 = Pool.field_O;
@@ -275,9 +275,7 @@ final class mp extends ch implements tb {
         L3: {
           pf.a(param4, -87);
           if (hb.field_a > 0) {
-            int discarded$6 = 11;
-            int discarded$7 = -127;
-            ie.a(param4, param1);
+            ie.a(param4, param1, -127, 11);
             break L3;
           } else {
             break L3;
@@ -289,8 +287,7 @@ final class mp extends ch implements tb {
           if (uf.field_z <= 0) {
             break L4;
           } else {
-            int discarded$8 = 112;
-            wk.a(param4, 11, param1);
+            wk.a(param4, 11, param1, 112);
             break L4;
           }
         }
@@ -298,9 +295,7 @@ final class mp extends ch implements tb {
           if (nj.field_b <= 0) {
             break L5;
           } else {
-            int discarded$9 = 11;
-            int discarded$10 = -102;
-            fe.a(param8, param4, param1);
+            fe.a(param8, param4, param1, -102, 11);
             break L5;
           }
         }
@@ -312,8 +307,7 @@ final class mp extends ch implements tb {
               if (em.field_L.field_Nb <= em.field_L.field_mc) {
                 ci.field_c.field_Sb.field_nb = ro.field_p;
                 c.field_e.field_pb = false;
-                int discarded$11 = 109;
-                mq.a(ci.field_c.field_Rb);
+                mq.a(ci.field_c.field_Rb, (byte) 109);
                 break L6;
               } else {
                 break L7;
@@ -427,7 +421,7 @@ final class mp extends ch implements tb {
         }
     }
 
-    final static void a(int param0, int param1, nm param2) {
+    final static void a(int param0, int param1, nm param2, int param3) {
         try {
             kp.field_d = param1;
             qe.field_o = param0;

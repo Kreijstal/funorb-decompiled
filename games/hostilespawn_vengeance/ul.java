@@ -362,8 +362,7 @@ abstract class ul extends vd {
                     si.d();
                     ((ul) this).b(0, -238948511, 0);
                     super.a(-((ul) this).field_m + -param0, -((ul) this).field_v + -param1, (byte) 47, param3);
-                    int discarded$9 = 0;
-                    eh.b();
+                    eh.b(false);
                     q.field_f.b(param1 - -((ul) this).field_v, param0 - -((ul) this).field_m, ((ul) this).field_I);
                     return;
                   } else {
@@ -372,8 +371,7 @@ abstract class ul extends vd {
                     si.d();
                     ((ul) this).b(0, -238948511, 0);
                     super.a(-((ul) this).field_m + -param0, -((ul) this).field_v + -param1, (byte) 47, param3);
-                    int discarded$10 = 0;
-                    eh.b();
+                    eh.b(false);
                     q.field_f.b(param1 - -((ul) this).field_v, param0 - -((ul) this).field_m, ((ul) this).field_I);
                     return;
                   }
@@ -383,8 +381,7 @@ abstract class ul extends vd {
                   si.d();
                   ((ul) this).b(0, -238948511, 0);
                   super.a(-((ul) this).field_m + -param0, -((ul) this).field_v + -param1, (byte) 47, param3);
-                  int discarded$11 = 0;
-                  eh.b();
+                  eh.b(false);
                   q.field_f.b(param1 - -((ul) this).field_v, param0 - -((ul) this).field_m, ((ul) this).field_I);
                   return;
                 }
@@ -394,8 +391,7 @@ abstract class ul extends vd {
                 si.d();
                 ((ul) this).b(0, -238948511, 0);
                 super.a(-((ul) this).field_m + -param0, -((ul) this).field_v + -param1, (byte) 47, param3);
-                int discarded$12 = 0;
-                eh.b();
+                eh.b(false);
                 q.field_f.b(param1 - -((ul) this).field_v, param0 - -((ul) this).field_m, ((ul) this).field_I);
                 return;
               }
@@ -405,7 +401,7 @@ abstract class ul extends vd {
           }
         } else {
           var6 = null;
-          ca discarded$13 = ul.a(true, (String) null, 48L, (String) null, -128);
+          ca discarded$1 = ul.a(true, (String) null, 48L, (String) null, -128);
           if (0 != ((ul) this).field_I) {
             if (((ul) this).field_I >= 256) {
               if (param3 != 0) {
@@ -423,8 +419,7 @@ abstract class ul extends vd {
                     si.d();
                     ((ul) this).b(0, -238948511, 0);
                     super.a(-((ul) this).field_m + -param0, -((ul) this).field_v + -param1, (byte) 47, param3);
-                    int discarded$14 = 0;
-                    eh.b();
+                    eh.b(false);
                     q.field_f.b(param1 - -((ul) this).field_v, param0 - -((ul) this).field_m, ((ul) this).field_I);
                     return;
                   } else {
@@ -433,8 +428,7 @@ abstract class ul extends vd {
                     si.d();
                     ((ul) this).b(0, -238948511, 0);
                     super.a(-((ul) this).field_m + -param0, -((ul) this).field_v + -param1, (byte) 47, param3);
-                    int discarded$15 = 0;
-                    eh.b();
+                    eh.b(false);
                     q.field_f.b(param1 - -((ul) this).field_v, param0 - -((ul) this).field_m, ((ul) this).field_I);
                     return;
                   }
@@ -444,8 +438,7 @@ abstract class ul extends vd {
                   si.d();
                   ((ul) this).b(0, -238948511, 0);
                   super.a(-((ul) this).field_m + -param0, -((ul) this).field_v + -param1, (byte) 47, param3);
-                  int discarded$16 = 0;
-                  eh.b();
+                  eh.b(false);
                   q.field_f.b(param1 - -((ul) this).field_v, param0 - -((ul) this).field_m, ((ul) this).field_I);
                   return;
                 }
@@ -455,8 +448,7 @@ abstract class ul extends vd {
                 si.d();
                 ((ul) this).b(0, -238948511, 0);
                 super.a(-((ul) this).field_m + -param0, -((ul) this).field_v + -param1, (byte) 47, param3);
-                int discarded$17 = 0;
-                eh.b();
+                eh.b(false);
                 q.field_f.b(param1 - -((ul) this).field_v, param0 - -((ul) this).field_m, ((ul) this).field_I);
                 return;
               }
@@ -467,7 +459,7 @@ abstract class ul extends vd {
         }
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         ri.a((byte) 126, true, qi.field_G, fj.field_Sb);
         md.field_i = true;
     }

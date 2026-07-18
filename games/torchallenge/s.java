@@ -70,8 +70,7 @@ final class s extends da {
           L0: {
             var4_int = param0.a(param1, 73);
             var5 = param0.a(var4_int, param3, (byte) 116);
-            int discarded$2 = 2147483647;
-            stackOut_0_0 = bl.a(var5, var4_int, param0);
+            stackOut_0_0 = bl.a(var5, var4_int, param0, 2147483647);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -231,7 +230,7 @@ final class s extends da {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
         field_q = null;
         field_j = null;

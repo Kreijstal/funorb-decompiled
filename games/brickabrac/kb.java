@@ -225,7 +225,7 @@ final class kb extends mh {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_Ub = null;
         field_Tb = null;
         field_Rb = null;
@@ -663,7 +663,7 @@ final class kb extends mh {
         return gf.field_f.field_Xb;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         try {
             pf.a(48, param0);
             int var2_int = 1;
@@ -673,7 +673,7 @@ final class kb extends mh {
         }
     }
 
-    final static boolean i() {
+    final static boolean i(int param0) {
         if (i.field_j < 10) {
             return false;
         }

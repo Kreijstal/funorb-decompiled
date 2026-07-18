@@ -105,7 +105,7 @@ final class bf extends br {
         return stackIn_11_0 != 0;
     }
 
-    final static void a(ka param0) {
+    final static void a(ka param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ka var3 = null;
@@ -180,8 +180,7 @@ final class bf extends br {
                 }
               }
               var2_int = 0;
-              int discarded$2 = 83;
-              vk.a(param0);
+              vk.a(param0, (byte) 83);
               break L0;
             } else {
               return;
@@ -219,7 +218,7 @@ final class bf extends br {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_f = null;
         field_n = null;
         field_j = null;
@@ -340,8 +339,7 @@ final class bf extends br {
                       break L5;
                     } else {
                       var3_int = 0;
-                      int discarded$2 = -2;
-                      ua.i();
+                      ua.i(-2);
                       break L5;
                     }
                   }

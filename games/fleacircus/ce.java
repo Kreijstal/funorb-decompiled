@@ -47,8 +47,7 @@ final class ce implements Runnable {
         if (param1 != 32) {
             return null;
         }
-        int discarded$0 = 12411;
-        return this.a(param0, false, param2);
+        return this.a(param0, false, param2, 12411);
     }
 
     final od b(byte param0) {
@@ -571,7 +570,7 @@ final class ce implements Runnable {
         return var6;
     }
 
-    private final od a(int param0, boolean param1, String param2) {
+    private final od a(int param0, boolean param1, String param2, int param3) {
         return this.a(param0, -125, 1, (Object) (Object) param2, 0);
     }
 

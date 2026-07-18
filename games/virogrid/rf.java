@@ -19,37 +19,31 @@ final class rf {
         if (param1 > param8) {
           if (param1 >= param10) {
             if (param8 < param10) {
-              int discarded$6 = 0;
-              sh.a(df.field_d, param11, param12, param15, param13, param14, param4, param1, param5, param3, param6, param9, param2, param7, param10, param8);
+              sh.a(df.field_d, param11, param12, param15, param13, param14, param4, param1, param5, param3, param6, param9, param2, param7, param10, param8, 0);
               field_e = -85;
               return;
             } else {
-              int discarded$7 = 0;
-              sh.a(df.field_d, param4, param13, param3, param12, param14, param11, param1, param5, param15, param6, param2, param9, param7, param8, param10);
+              sh.a(df.field_d, param4, param13, param3, param12, param14, param11, param1, param5, param15, param6, param2, param9, param7, param8, param10, 0);
               field_e = -85;
               return;
             }
           } else {
-            int discarded$8 = 0;
-            sh.a(df.field_d, param11, param5, param15, param13, param3, param7, param10, param12, param14, param2, param9, param6, param4, param1, param8);
+            sh.a(df.field_d, param11, param5, param15, param13, param3, param7, param10, param12, param14, param2, param9, param6, param4, param1, param8, 0);
             field_e = -85;
             return;
           }
         } else {
           if (param8 < param10) {
-            int discarded$9 = 0;
-            sh.a(df.field_d, param7, param13, param14, param5, param3, param11, param10, param12, param15, param2, param6, param9, param4, param8, param1);
+            sh.a(df.field_d, param7, param13, param14, param5, param3, param11, param10, param12, param15, param2, param6, param9, param4, param8, param1, 0);
             field_e = -85;
             return;
           } else {
             if (param10 > param1) {
-              int discarded$10 = 0;
-              sh.a(df.field_d, param7, param12, param14, param5, param15, param4, param8, param13, param3, param9, param6, param2, param11, param10, param1);
+              sh.a(df.field_d, param7, param12, param14, param5, param15, param4, param8, param13, param3, param9, param6, param2, param11, param10, param1, 0);
               field_e = -85;
               return;
             } else {
-              int discarded$11 = 0;
-              sh.a(df.field_d, param4, param5, param3, param12, param15, param7, param8, param13, param14, param9, param2, param6, param11, param1, param10);
+              sh.a(df.field_d, param4, param5, param3, param12, param15, param7, param8, param13, param14, param9, param2, param6, param11, param1, param10, 0);
               field_e = -85;
               return;
             }
@@ -65,7 +59,7 @@ final class rf {
         dm.field_r.a(var2 + 202 + 438 * var4 / var3, -124 + df.field_f, 438, (byte) -95, 0);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_i = null;
         field_a = null;

@@ -83,7 +83,7 @@ final class hn extends kb implements fk {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_k = null;
     }
 

@@ -151,14 +151,14 @@ abstract class wd extends wc {
 
     abstract qm h(int param0);
 
-    public static void i() {
+    public static void i(int param0) {
         field_u = null;
         field_v = null;
         field_p = null;
         field_l = null;
     }
 
-    final static String j() {
+    final static String j(int param0) {
         return sg.field_Y;
     }
 

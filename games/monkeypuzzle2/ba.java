@@ -12,7 +12,7 @@ abstract class ba {
     int field_g;
     static String field_h;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         int stackIn_4_0 = 0;

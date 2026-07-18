@@ -84,7 +84,7 @@ final class lf extends kc {
         }
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_gb = null;
         field_eb = null;
         field_V = null;

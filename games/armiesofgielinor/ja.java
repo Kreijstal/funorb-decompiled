@@ -68,7 +68,7 @@ final class ja extends tc {
         }
     }
 
-    final static boolean a(byte param0, int param1, int param2) {
+    final static boolean a(byte param0, int param1, int param2, int param3) {
         return ej.b(13, param2, -14, param1);
     }
 
@@ -409,7 +409,7 @@ final class ja extends tc {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_o = null;
         int var1 = 0;
     }

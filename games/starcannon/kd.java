@@ -74,8 +74,7 @@ final class kd extends vk implements ga {
                         }
                       }
                     } else {
-                      int discarded$1 = 0;
-                      ((kd) this).field_z[var4_int] = hf.a((CharSequence) (Object) param1[var4_int]).replace(' ', ' ');
+                      ((kd) this).field_z[var4_int] = hf.a((CharSequence) (Object) param1[var4_int], false).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }
@@ -129,7 +128,7 @@ final class kd extends vk implements ga {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_D = null;
         field_B = null;
     }

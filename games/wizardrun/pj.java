@@ -615,8 +615,7 @@ final class pj extends mi {
               }
             } else {
               if (var2 != 1) {
-                int discarded$1 = 6;
-                rg.a((Throwable) null, "LR1: " + ni.c(), -562);
+                rg.a((Throwable) null, "LR1: " + ni.c(6), -562);
                 ql.a(-66);
                 return;
               } else {

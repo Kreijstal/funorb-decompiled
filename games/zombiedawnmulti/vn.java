@@ -11,7 +11,7 @@ final class vn {
     static String field_a;
     static md[] field_c;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_g = null;
         field_h = null;
@@ -19,7 +19,7 @@ final class vn {
         field_d = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!n.a((byte) -74)) {
             return;
         }

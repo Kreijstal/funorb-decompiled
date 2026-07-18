@@ -151,7 +151,7 @@ final class ts extends td {
         return (java.awt.Frame) (Object) stackIn_25_0;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_p = null;
         field_q = null;
         field_r = null;

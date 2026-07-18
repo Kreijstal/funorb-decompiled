@@ -511,7 +511,7 @@ final class qd {
         this(param0, param1, param2, param3, param4, false);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         field_c = null;
         field_h = null;

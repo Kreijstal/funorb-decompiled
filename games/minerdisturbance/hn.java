@@ -7,14 +7,13 @@ abstract class hn {
     static String field_d;
     static boolean field_c;
 
-    final static String c() {
+    final static String c(int param0) {
         String var1 = "";
         if (di.field_D != null) {
             var1 = di.field_D.a((byte) 117);
         }
         if (!(var1.length() != 0)) {
-            int discarded$0 = -98;
-            var1 = cb.a();
+            var1 = cb.a((byte) -98);
         }
         if (var1.length() == 0) {
             var1 = bm.field_r;
@@ -34,13 +33,13 @@ abstract class hn {
 
     abstract void a(sb param0, byte param1);
 
-    final static ed a(boolean param0) {
+    final static ed a(boolean param0, byte param1) {
         ed var2 = new ed(true);
         var2.field_i = param0 ? true : false;
         return var2;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ti.field_J = kj.field_a.a(false);
         CharSequence var2 = (CharSequence) (Object) ti.field_J;
         in.field_b = cl.a(-95, var2);

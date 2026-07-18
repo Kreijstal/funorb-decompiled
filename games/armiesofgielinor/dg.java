@@ -7,7 +7,7 @@ final class dg {
     static int field_c;
     private kl field_d;
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1 = 0;
         int var2 = 0;
         int stackIn_3_0 = 0;
@@ -60,8 +60,7 @@ final class dg {
             var1 = np.field_Qb.m(-15056);
         }
         if (!(var1.length() != 0)) {
-            int discarded$0 = 1;
-            var1 = rn.b();
+            var1 = rn.b(true);
         }
         if (!(var1.length() != 0)) {
             var1 = ko.field_a;
@@ -69,7 +68,7 @@ final class dg {
         return var1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }
@@ -118,8 +117,7 @@ final class dg {
         }
         es.field_d = lo.a("bones", param0 + -28106, "basic", ((dg) this).field_d);
         wf.field_B = fk.a("boneshadows", (byte) -124, ((dg) this).field_d, "basic");
-        int discarded$0 = 0;
-        go.field_g = nh.a("player_ring", "basic", ((dg) this).field_d);
+        go.field_g = nh.a("player_ring", "basic", ((dg) this).field_d, false);
         wl.field_N = fk.a("shadows", (byte) -128, ((dg) this).field_d, "basic")[0];
     }
 

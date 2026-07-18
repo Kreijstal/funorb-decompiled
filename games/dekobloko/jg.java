@@ -15,7 +15,7 @@ final class jg {
     static volatile boolean field_e;
     static ui field_a;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_k = null;
         field_f = null;
         field_h = null;
@@ -26,7 +26,7 @@ final class jg {
         field_c = null;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
@@ -285,8 +285,7 @@ final class jg {
     }
 
     final static void a(int param0) {
-        int discarded$2 = 3970;
-        pl.a();
+        pl.a(3970);
         if (param0 >= -38) {
             field_h = null;
         }

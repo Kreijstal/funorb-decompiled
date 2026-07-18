@@ -5,7 +5,7 @@ final class ba {
     static kb field_b;
     static int[] field_a;
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -252,8 +252,7 @@ final class ba {
                   if (1.0f < mm.field_d) {
                     break L1;
                   } else {
-                    int discarded$2 = 0;
-                    lk.field_b = ha.a(param2.field_t, param0.a(false, mm.field_d));
+                    lk.field_b = ha.a(param2.field_t, param0.a(false, mm.field_d), false);
                     if (param2.a(lk.field_b, 13012)) {
                       var9++;
                       break L1;
@@ -273,8 +272,7 @@ final class ba {
                       break L2;
                     } else {
                       L3: {
-                        int discarded$3 = 0;
-                        cj.field_G = ha.a(param2.field_t, param0.a(false, rb.field_g));
+                        cj.field_G = ha.a(param2.field_t, param0.a(false, rb.field_g), false);
                         if (param2.a(cj.field_G, 13012)) {
                           var9++;
                           break L3;
@@ -366,7 +364,7 @@ final class ba {
         return param0 | param1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

@@ -19,7 +19,7 @@ final class sg {
     static int field_a;
     static String field_e;
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_m = null;
         field_g = null;
@@ -218,7 +218,7 @@ final class sg {
         return stackIn_3_0;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         RuntimeException var1 = null;
         oc var2 = null;
         int var3 = 0;
@@ -500,8 +500,7 @@ final class sg {
                                                                                                               break L19;
                                                                                                             } else {
                                                                                                               if (var23 == 36) {
-                                                                                                                int discarded$3 = 70;
-                                                                                                                nf.a(var19);
+                                                                                                                nf.a(var19, (byte) 70);
                                                                                                                 break L6;
                                                                                                               } else {
                                                                                                                 break L6;
@@ -547,8 +546,7 @@ final class sg {
                                                                                 }
                                                                               }
                                                                             } else {
-                                                                              int discarded$4 = -2312;
-                                                                              rj.a(var19);
+                                                                              rj.a(var19, -2312);
                                                                               break L6;
                                                                             }
                                                                           } else {
@@ -561,8 +559,7 @@ final class sg {
                                                                     }
                                                                   }
                                                                 }
-                                                                int discarded$5 = 0;
-                                                                ui.a(var16, var4, var19, var3, var20, var14);
+                                                                ui.a(var16, var35, var19, var3, var20, var14, false);
                                                                 break L6;
                                                               }
                                                             } else {
@@ -867,11 +864,11 @@ final class sg {
         return stackIn_11_0;
     }
 
-    final static String d() {
+    final static String d(int param0) {
         return bi.field_c[fl.d(-97)];
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

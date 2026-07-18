@@ -15,8 +15,7 @@ final class af {
     final static void a(int param0) {
         if (null != ff.field_b) {
           if (param0 < -50) {
-            int discarded$4 = 160;
-            jd.a((java.awt.Canvas) (Object) ff.field_b);
+            jd.a((java.awt.Canvas) (Object) ff.field_b, 160);
             ff.field_b.a(false, jh.field_a);
             ff.field_b = null;
             if (null != da.field_a) {
@@ -29,8 +28,7 @@ final class af {
             }
           } else {
             field_b = false;
-            int discarded$5 = 160;
-            jd.a((java.awt.Canvas) (Object) ff.field_b);
+            jd.a((java.awt.Canvas) (Object) ff.field_b, 160);
             ff.field_b.a(false, jh.field_a);
             ff.field_b = null;
             if (null == da.field_a) {

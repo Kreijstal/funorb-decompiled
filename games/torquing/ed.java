@@ -250,13 +250,12 @@ final class ed {
             L1: while (true) {
               if (var2 == null) {
                 L2: while (true) {
-                  int incrementValue$5 = var1_int;
+                  int incrementValue$2 = var1_int;
                   var1_int--;
-                  if (0 >= incrementValue$5) {
+                  if (0 >= incrementValue$2) {
                     break L0;
                   } else {
-                    int discarded$6 = 88;
-                    sn.b();
+                    sn.b((byte) 88);
                     continue L2;
                   }
                 }

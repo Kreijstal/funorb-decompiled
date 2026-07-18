@@ -4,11 +4,10 @@
 final class hd {
     static tg[] field_a;
 
-    final static int a() {
+    final static int a(byte param0) {
         ih.field_Q.b(-16840);
         if (!tb.field_p.a((byte) 71)) {
-            int discarded$0 = 1;
-            return hf.b();
+            return hf.b(true);
         }
         return 0;
     }
@@ -18,7 +17,7 @@ final class hd {
         return kg.field_j;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 

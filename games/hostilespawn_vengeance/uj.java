@@ -45,11 +45,11 @@ final class uj extends am {
     uj() {
     }
 
-    final static int e() {
+    final static int e(int param0) {
         return tm.field_v;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -121,7 +121,7 @@ final class uj extends am {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_3_0 = null;
@@ -145,8 +145,7 @@ final class uj extends am {
         try {
           L0: {
             L1: {
-              int discarded$2 = 100;
-              var2 = pm.a(l.a(param0, (byte) 114));
+              var2 = pm.a(l.a(param0, (byte) 114), (byte) 100);
               if (var2 != null) {
                 break L1;
               } else {

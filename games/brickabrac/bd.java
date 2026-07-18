@@ -5,7 +5,7 @@ final class bd implements ub {
     static String field_a;
     static al field_b;
 
-    final static void a(int param0) {
+    final static void a(int param0, boolean param1) {
         ch.field_b = param0;
     }
 
@@ -179,7 +179,7 @@ final class bd implements ub {
         return stackIn_32_0 != 0;
     }
 
-    final static jp[] a(String param0, String param1, mf param2) {
+    final static jp[] a(String param0, String param1, mf param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -235,8 +235,7 @@ final class bd implements ub {
           L0: {
             var4_int = param2.a(param0, false);
             var5 = param2.a(var4_int, -46, param1);
-            int discarded$2 = 1;
-            stackOut_2_0 = qa.a(var5, var4_int, param2);
+            stackOut_2_0 = qa.a(var5, var4_int, param2, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -409,7 +408,7 @@ final class bd implements ub {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         pi var2 = k.field_h;
         var2.e(-13413, 6);
         var2.a(-119, 1);

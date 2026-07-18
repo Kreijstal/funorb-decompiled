@@ -10,7 +10,7 @@ final class vk implements Iterator {
     private kd field_b;
     private int field_e;
 
-    private final void b() {
+    private final void b(byte param0) {
         ((vk) this).field_b = null;
         ((vk) this).field_e = 1;
         ((vk) this).field_c = ((vk) this).field_a.field_f[0].field_f;
@@ -43,8 +43,7 @@ final class vk implements Iterator {
                     var9 = (mk) (Object) var8.f(2);
                 }
             }
-            int discarded$0 = 11882;
-            fc.a(var4, param0, param2);
+            fc.a(var4, param0, param2, 11882);
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "vk.C(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -76,10 +75,8 @@ final class vk implements Iterator {
             ed.a(param1 ^ param1, param0);
             de.a(0, param0);
             vf.a(false, param0);
-            int discarded$0 = -110;
-            cb.b();
-            int discarded$1 = 19681;
-            dg.a();
+            cb.b(-110);
+            dg.a(19681);
             mc.field_k = -tf.field_c;
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "vk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -285,8 +282,7 @@ final class vk implements Iterator {
         ((vk) this).field_b = null;
         try {
             ((vk) this).field_a = param0;
-            int discarded$0 = 108;
-            this.b();
+            this.b((byte) 108);
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "vk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

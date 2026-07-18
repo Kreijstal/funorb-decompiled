@@ -6,7 +6,7 @@ final class ev extends tm {
     static hd field_D;
     static String field_A;
 
-    public static void g() {
+    public static void g(int param0) {
         field_B = null;
         field_A = null;
         field_D = null;
@@ -48,8 +48,7 @@ final class ev extends tm {
         try {
           L0: {
             if (param0 == 84) {
-              int discarded$2 = -126;
-              stackOut_3_0 = new li(wq.a(param1[0].a(true)));
+              stackOut_3_0 = new li(wq.a(param1[0].a(true), -126));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -152,8 +151,7 @@ final class ev extends tm {
                 var8 = 4474111;
                 var9 = var7.f(-105) + -param0.field_V.a(true);
                 var10 = var7.a(true) + -param0.field_V.c(879306160);
-                int discarded$1 = 170;
-                var11 = nb.a(var7);
+                var11 = nb.a(var7, 170);
                 if (var11 * var11 <= var10 * var10 + var9 * var9) {
                   break L1;
                 } else {

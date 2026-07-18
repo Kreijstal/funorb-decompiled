@@ -11,7 +11,7 @@ final class hq {
     static int field_f;
     static int field_e;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_a = null;
         field_b = null;

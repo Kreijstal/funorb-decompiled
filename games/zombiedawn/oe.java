@@ -40,17 +40,14 @@ final class oe {
     }
 
     final static void a(byte param0) {
-        int discarded$0 = 78;
-        int var1 = ma.d();
+        int var1 = ma.d((byte) 78);
         int var3 = 109 % ((param0 - 9) / 62);
-        int discarded$1 = 1;
-        int var2 = bj.a();
+        int var2 = bj.a(true);
         cl.field_b.a(var1 - -(pg.field_o << 1), el.field_k + -el.field_d, eb.field_c + -pg.field_o, (byte) -128, (el.field_d << 1) + var2);
-        int discarded$2 = -67;
-        ll.a();
+        ll.a(-67);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_f = null;
         field_a = null;
         field_c = null;
@@ -68,7 +65,7 @@ final class oe {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;

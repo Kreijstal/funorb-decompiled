@@ -11,8 +11,7 @@ final class nl {
     final static void a(java.awt.Canvas param0, int param1) {
         try {
             if (cd.field_e == 11) {
-                int discarded$0 = -11;
-                ie.f();
+                ie.f(-11);
             }
             int var2_int = -107 % ((param1 - -26) / 62);
             ti.a(he.field_g, (byte) 54, ck.field_G, sg.field_b);
@@ -22,7 +21,7 @@ final class nl {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_c = null;
         field_a = null;
@@ -45,8 +44,7 @@ final class nl {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              int discarded$4 = -114;
-              if (!ge.b()) {
+              if (!ge.b((byte) -114)) {
                 L2: {
                   cg.field_e.a(af.a(ij.field_e, true, eg.field_b), (byte) 123, af.a(jc.field_N, true, ag.field_a));
                   if (!cg.field_e.f(-85)) {
@@ -67,13 +65,11 @@ final class nl {
                       } else {
                         var3 = dd.field_j[cg.field_e.field_k];
                         if (var3 == 2) {
-                          int discarded$5 = 3;
-                          re.c();
+                          re.c(3);
                           break L3;
                         } else {
                           if (var3 == 5) {
-                            int discarded$6 = 3;
-                            re.c();
+                            re.c(3);
                             break L3;
                           } else {
                             break L3;
@@ -86,8 +82,7 @@ final class nl {
                     break L3;
                   } else {
                     if (v.field_R != 2) {
-                      int discarded$7 = 3;
-                      re.c();
+                      re.c(3);
                       break L3;
                     } else {
                       break L3;

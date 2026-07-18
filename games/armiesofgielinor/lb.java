@@ -16,7 +16,7 @@ final class lb {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return ub.field_e;
     }
 

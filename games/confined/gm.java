@@ -191,25 +191,21 @@ final class gm extends ah {
         if (param0 == 26402) {
           if (null != ((gm) this).field_eb) {
             ((gm) this).field_eb.f((byte) -125);
-            int discarded$4 = 4;
-            fl.a(((gm) this).a(-2384, bn.field_b, 1.5, 0.002, 0.5));
+            fl.a(((gm) this).a(-2384, bn.field_b, 1.5, 0.002, 0.5), 4);
             return;
           } else {
-            int discarded$5 = 4;
-            fl.a(((gm) this).a(-2384, bn.field_b, 1.5, 0.002, 0.5));
+            fl.a(((gm) this).a(-2384, bn.field_b, 1.5, 0.002, 0.5), 4);
             return;
           }
         } else {
           var3 = null;
           ((gm) this).a((mn) null, 0.183731807417079, -74, (vg) null, (oi) null);
           if (null == ((gm) this).field_eb) {
-            int discarded$6 = 4;
-            fl.a(((gm) this).a(-2384, bn.field_b, 1.5, 0.002, 0.5));
+            fl.a(((gm) this).a(-2384, bn.field_b, 1.5, 0.002, 0.5), 4);
             return;
           } else {
             ((gm) this).field_eb.f((byte) -125);
-            int discarded$7 = 4;
-            fl.a(((gm) this).a(-2384, bn.field_b, 1.5, 0.002, 0.5));
+            fl.a(((gm) this).a(-2384, bn.field_b, 1.5, 0.002, 0.5), 4);
             return;
           }
         }
@@ -244,9 +240,8 @@ final class gm extends ah {
         field_bb = null;
     }
 
-    final static void i() {
-        int discarded$2 = -58;
-        if (!ka.k()) {
+    final static void i(byte param0) {
+        if (!ka.k(-58)) {
             return;
         }
         q.a(4, false, (byte) -101);

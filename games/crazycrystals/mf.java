@@ -18,7 +18,7 @@ final class mf extends wl {
         return ((mf) this).field_s;
     }
 
-    final static String a(java.applet.Applet param0) {
+    final static String a(java.applet.Applet param0, int param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;

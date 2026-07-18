@@ -15,7 +15,7 @@ final class uca {
         int var2 = 56 / ((param1 - 49) / 47);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_b = null;
         field_d = null;

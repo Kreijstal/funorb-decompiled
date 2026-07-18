@@ -250,7 +250,7 @@ final class ma extends fn implements eg {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_X = null;
         field_Y = null;
         int var1 = 0;

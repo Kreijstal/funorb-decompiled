@@ -96,7 +96,7 @@ final class sb {
         }
     }
 
-    final static String a(int param0) {
+    final static String a(int param0, int param1) {
         int var8 = Pixelate.field_H ? 1 : 0;
         String var2 = fg.field_e;
         String var3 = Integer.toString(param0);

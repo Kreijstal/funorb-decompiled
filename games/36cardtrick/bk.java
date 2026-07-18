@@ -73,8 +73,7 @@ final class bk {
                   if (!le.field_m.startsWith("win")) {
                     break L0;
                   } else {
-                    int discarded$8 = 873140897;
-                    if (gl.a(param2)) {
+                    if (gl.a(param2, 873140897)) {
                       return;
                     } else {
                       break L0;
@@ -192,7 +191,7 @@ final class bk {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_e = null;
         field_f = null;

@@ -118,11 +118,11 @@ final class cn extends mi {
         return stackIn_15_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_z = null;
     }
 
-    final static byte[] a(File param0, int param1) {
+    final static byte[] a(File param0, int param1, boolean param2) {
         try {
             byte[] var3 = null;
             IOException var3_ref = null;
@@ -198,7 +198,7 @@ final class cn extends mi {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         return ks.field_b;
     }
 
@@ -206,7 +206,7 @@ final class cn extends mi {
         throw new Error();
     }
 
-    final static boolean a(rk param0) {
+    final static boolean a(rk param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;

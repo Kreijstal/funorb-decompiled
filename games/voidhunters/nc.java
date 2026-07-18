@@ -94,7 +94,7 @@ final class nc {
         ((nc) this).field_a = true;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         hh.field_o = 0;
         if (!(null != ug.field_o)) {

@@ -247,7 +247,7 @@ final class cn {
         return ((cn) this).field_i;
     }
 
-    final static void a(ed param0) {
+    final static void a(ed param0, int param1) {
         try {
             RuntimeException runtimeException = null;
             byte[] var2 = null;
@@ -525,12 +525,11 @@ final class cn {
             this.a((byte) 92, 4 * ((cn) this).field_c, param3, param0, param1, ((cn) this).field_w, 4 * ((cn) this).field_z);
         }
         if (param2 != 12257) {
-            int discarded$0 = 0;
-            boolean discarded$1 = cn.b();
+            boolean discarded$0 = cn.b(false);
         }
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         return gd.field_j.field_hc == ao.field_N;
     }
 

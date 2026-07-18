@@ -11,7 +11,7 @@ final class so {
     static j field_c;
     static int field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_h = null;
         field_f = null;
@@ -21,7 +21,7 @@ final class so {
         field_c = null;
     }
 
-    final static void a(Object param0, un param1) {
+    final static void a(Object param0, un param1, boolean param2) {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var3_int = 0;

@@ -12,8 +12,7 @@ public final class EscapeVector extends g {
             int var2_int = -74 / ((-71 - param0) / 55);
             eh.field_k = false;
             this.m(-27273);
-            int discarded$0 = -54;
-            jd.a();
+            jd.a((byte) -54);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "EscapeVector.O(" + param0 + ')');
         }
@@ -77,8 +76,7 @@ public final class EscapeVector extends g {
                   break L3;
                 } else {
                   ri.a(-25123);
-                  int discarded$11 = 97;
-                  oj.a();
+                  oj.a((byte) 97);
                   break L3;
                 }
               }
@@ -115,8 +113,7 @@ public final class EscapeVector extends g {
               if (!of.field_b) {
                 break L5;
               } else {
-                int discarded$12 = 1;
-                this.f();
+                this.f(true);
                 of.field_b = false;
                 break L5;
               }
@@ -126,8 +123,7 @@ public final class EscapeVector extends g {
                 od.field_s = false;
                 de.field_j = false;
                 r.field_y = false;
-                int discarded$13 = 16836;
-                if (ii.b()) {
+                if (ii.b(16836)) {
                   break L7;
                 } else {
                   L8: {
@@ -205,10 +201,8 @@ public final class EscapeVector extends g {
                                     }
                                   }
                                 }
-                                int discarded$14 = -90;
-                                mb.a();
-                                int discarded$15 = 1;
-                                this.q();
+                                mb.a((byte) -90);
+                                this.q(1);
                                 if (var4 == 0) {
                                   break L8;
                                 } else {
@@ -254,8 +248,7 @@ public final class EscapeVector extends g {
                               }
                             }
                             L22: {
-                              int discarded$16 = -14;
-                              var3 = fn.b();
+                              var3 = fn.b(-14);
                               if (var3 != 2) {
                                 break L22;
                               } else {
@@ -275,8 +268,7 @@ public final class EscapeVector extends g {
                               if (var3 != 4) {
                                 break L24;
                               } else {
-                                int discarded$17 = -112;
-                                da.a();
+                                da.a((byte) -112);
                                 break L24;
                               }
                             }
@@ -321,15 +313,13 @@ public final class EscapeVector extends g {
                         }
                       }
                     }
-                    int discarded$18 = -96;
-                    this.n();
+                    this.n((byte) -96);
                     break L8;
                   }
                   L28: while (true) {
                     L29: {
                       L30: {
-                        int discarded$19 = 109;
-                        if (!rg.a(wd.field_u)) {
+                        if (!rg.a(wd.field_u, 109)) {
                           break L30;
                         } else {
                           ((EscapeVector) this).f(127);
@@ -350,7 +340,7 @@ public final class EscapeVector extends g {
                     if (!um.a(17830)) {
                       break L6;
                     } else {
-                      int discarded$20 = ((EscapeVector) this).k((byte) -67);
+                      int discarded$1 = ((EscapeVector) this).k((byte) -67);
                       if (var4 == 0) {
                         break L6;
                       } else {
@@ -361,8 +351,7 @@ public final class EscapeVector extends g {
                 }
               }
               ((EscapeVector) this).j(-9926);
-              int discarded$21 = 16836;
-              if (!ii.b()) {
+              if (!ii.b(16836)) {
                 if (!mj.a((byte) 125)) {
                   break L6;
                 } else {
@@ -461,453 +450,274 @@ public final class EscapeVector extends g {
           L0: {
             L1: {
               EscapeVector.l((byte) -95);
-              int discarded$188 = 47;
-              ag.a();
-              int discarded$189 = 0;
-              nm.a();
-              int discarded$190 = 69;
-              ek.a();
-              int discarded$191 = -116;
-              dj.a();
-              int discarded$192 = -73;
-              g.i();
+              ag.a(47);
+              nm.a(false);
+              ek.a(69);
+              dj.a((byte) -116);
+              g.i((byte) -73);
               rn.a(false);
               eh.d((byte) -111);
-              int discarded$193 = -1;
-              ad.b();
-              int discarded$194 = -1;
-              eg.a();
-              int discarded$195 = 104;
-              ca.a();
+              ad.b(-1);
+              eg.a(-1);
+              ca.a((byte) 104);
               em.a();
               mf.c(124);
               wl.a();
-              int discarded$196 = -111;
-              nb.a();
+              nb.a(-111);
               n.a((byte) 70);
-              int discarded$197 = 128;
-              td.a();
-              int discarded$198 = -96;
-              dl.b();
+              td.a(128);
+              dl.b((byte) -96);
               bg.a(13);
-              int discarded$199 = -49153;
-              rc.a();
-              int discarded$200 = 18;
-              an.a();
-              int discarded$201 = 8192;
-              gm.a();
-              int discarded$202 = -127;
-              be.a();
-              int discarded$203 = 110;
-              bm.a();
-              int discarded$204 = 20;
-              ii.a();
-              int discarded$205 = -13885;
-              gi.c();
+              rc.a(-49153);
+              an.a(18);
+              gm.a(8192);
+              be.a((byte) -127);
+              bm.a((byte) 110);
+              ii.a(20);
+              gi.c(-13885);
               mg.a(true);
-              int discarded$206 = 0;
-              um.a();
-              int discarded$207 = -76;
-              j.a();
+              um.a(false);
+              j.a(-76);
               ok.a(true);
-              int discarded$208 = -72;
-              eo.b();
+              eo.b((byte) -72);
               vn.a((byte) 107);
-              int discarded$209 = -59;
-              uc.a();
-              int discarded$210 = 71;
-              af.a();
-              int discarded$211 = 0;
-              pk.b();
-              int discarded$212 = 77;
-              ak.c();
+              uc.a((byte) -59);
+              af.a((byte) 71);
+              pk.b(false);
+              ak.c((byte) 77);
               dn.h(-1);
               ta.f(0);
-              int discarded$213 = 1;
-              en.a();
-              int discarded$214 = 80;
-              kg.f();
-              int discarded$215 = 99;
-              p.b();
-              int discarded$216 = -4470;
-              sb.e();
-              int discarded$217 = -4;
-              kk.b();
-              int discarded$218 = 1;
-              sk.b();
+              en.a(1);
+              kg.f(80);
+              p.b(99);
+              sb.e(-4470);
+              kk.b(-4);
+              sk.b(true);
               rg.b((byte) 123);
               pj.b((byte) 6);
-              int discarded$219 = 1;
-              cn.b();
-              int discarded$220 = -32408;
-              ce.b();
+              cn.b(true);
+              ce.b(-32408);
               o.d();
               ie.e();
-              int discarded$221 = 69;
-              oe.f();
+              oe.f((byte) 69);
               t.b((byte) -34);
               ig.h(-60);
               pf.a(459);
               tf.a(-92);
-              int discarded$222 = 49;
-              wc.a();
+              wc.a((byte) 49);
               dd.a(104);
               uj.a((byte) -106);
-              int discarded$223 = 9;
-              jj.b();
-              int discarded$224 = 0;
-              sa.a();
+              jj.b(9);
+              sa.a(false);
               hg.c(-71);
               nf.f(-363232252);
               fl.a((byte) -11);
-              int discarded$225 = -26317;
-              fi.b();
-              int discarded$226 = 2097152;
-              ji.a();
-              int discarded$227 = -58;
-              ge.b();
+              fi.b(-26317);
+              ji.a(2097152);
+              ge.b((byte) -58);
               gn.b(false);
-              int discarded$228 = 80;
-              vd.c();
-              int discarded$229 = 127;
-              sl.a();
-              int discarded$230 = 91;
-              le.a();
-              int discarded$231 = 18;
-              f.a();
-              int discarded$232 = 124;
-              dh.a();
-              int discarded$233 = 123;
-              ob.a();
-              int discarded$234 = 1;
-              mj.a();
-              int discarded$235 = -1;
-              jc.b();
-              int discarded$236 = -98;
-              gk.a();
-              int discarded$237 = 1;
-              ug.a();
-              int discarded$238 = -71;
-              ke.a();
-              int discarded$239 = 0;
-              wk.a();
+              vd.c((byte) 80);
+              sl.a(127);
+              le.a(91);
+              f.a((byte) 18);
+              dh.a((byte) 124);
+              ob.a((byte) 123);
+              mj.a(true);
+              jc.b(-1);
+              gk.a((byte) -98);
+              ug.a(true);
+              ke.a(-71);
+              wk.a(false);
               da.a(0);
               kc.a(-28377);
               tb.o(0);
-              int discarded$240 = -106;
-              qc.t();
-              int discarded$241 = 300;
-              w.n();
+              qc.t(-106);
+              w.n(300);
               ng.j((byte) 124);
-              int discarded$242 = -5;
-              pn.q();
-              int discarded$243 = -125;
-              bf.l();
-              int discarded$244 = 96;
-              h.k();
-              int discarded$245 = 95;
-              oi.h();
-              int discarded$246 = -118;
-              sn.a();
-              int discarded$247 = -27204;
-              uf.b();
-              int discarded$248 = 103;
-              pa.a();
-              int discarded$249 = 1;
-              dk.g();
-              int discarded$250 = 0;
-              qe.b();
+              pn.q(-5);
+              bf.l(-125);
+              h.k(96);
+              oi.h((byte) 95);
+              sn.a((byte) -118);
+              uf.b(-27204);
+              pa.a((byte) 103);
+              dk.g(1);
+              qe.b(0);
               we.a();
               in.a();
               u.a();
-              int discarded$251 = -72;
-              ec.a();
-              int discarded$252 = 0;
-              ib.a();
-              int discarded$253 = 65;
-              kh.a();
-              int discarded$254 = 105;
-              ac.c();
-              int discarded$255 = 3;
-              na.d();
-              int discarded$256 = -12548;
-              od.d();
-              int discarded$257 = 109;
-              oc.h();
+              ec.a((byte) -72);
+              ib.a(0);
+              kh.a((byte) 65);
+              ac.c(105);
+              na.d(3);
+              od.d(-12548);
+              oc.h(109);
               li.a(68);
               m.e(-1600199832);
               am.a((byte) -107);
-              int discarded$258 = -85;
-              rb.a();
-              int discarded$259 = 102;
-              pi.a();
+              rb.a((byte) -85);
+              pi.a((byte) 102);
               ic.a(false);
               co.a((byte) 63);
-              int discarded$260 = -1;
-              cd.f();
-              int discarded$261 = 86;
-              fd.a();
-              int discarded$262 = 23;
-              se.a();
+              cd.f(-1);
+              fd.a((byte) 86);
+              se.a((byte) 23);
               cb.a(-13379);
-              int discarded$263 = 1;
-              bn.a();
-              int discarded$264 = 26;
-              lh.a();
-              int discarded$265 = 16558;
-              nl.a();
-              int discarded$266 = 124;
-              fk.a();
-              int discarded$267 = -102;
-              vj.a();
+              bn.a(true);
+              lh.a((byte) 26);
+              nl.a(16558);
+              fk.a(124);
+              vj.a(-102);
               c.n(106);
               tj.a(true);
-              int discarded$268 = -88;
-              df.a();
+              df.a((byte) -88);
               bk.h(-24811);
-              int discarded$269 = 34;
-              s.d();
+              s.d((byte) 34);
               jg.a(true);
-              int discarded$270 = 8;
-              hk.c();
+              hk.c((byte) 8);
               ma.b(1);
-              int discarded$271 = 32153;
-              e.b();
+              e.b(32153);
               oa.f(5);
-              int discarded$272 = 127;
-              on.a();
-              int discarded$273 = -23008;
-              tm.n();
-              int discarded$274 = -24239;
-              k.b();
+              on.a(127);
+              tm.n(-23008);
+              k.b(-24239);
               bi.c();
-              int discarded$275 = -117;
-              ri.b();
+              ri.b(-117);
               ui.a(true);
-              int discarded$276 = 1;
-              ia.a();
-              int discarded$277 = -117;
-              ml.a();
-              int discarded$278 = -96;
-              aa.b();
-              int discarded$279 = 56;
-              mm.b();
+              ia.a(true);
+              ml.a(-117);
+              aa.b((byte) -96);
+              mm.b(56);
               cf.a(3);
-              int discarded$280 = -56;
-              rd.a();
-              int discarded$281 = 0;
-              bc.a();
-              int discarded$282 = 0;
-              ua.a();
-              int discarded$283 = 1;
-              pc.a();
-              int discarded$284 = 4095;
-              ol.g();
+              rd.a(-56);
+              bc.a(0);
+              ua.a(0);
+              pc.a(true);
+              ol.g(4095);
               nn.b((byte) 103);
-              int discarded$285 = 127;
-              hd.a();
+              hd.a(127);
               mh.a(true);
-              int discarded$286 = 86;
-              fh.a();
+              fh.a((byte) 86);
               i.a();
-              int discarded$287 = 8192;
-              th.a();
-              int discarded$288 = 96;
-              mn.a();
-              int discarded$289 = 77;
-              jd.b();
-              int discarded$290 = 26;
-              ej.a();
-              int discarded$291 = -44;
-              hn.a();
-              int discarded$292 = 1;
-              he.a();
-              int discarded$293 = -76;
-              sc.a();
-              int discarded$294 = 0;
-              ve.a();
-              int discarded$295 = 0;
-              pg.b();
-              int discarded$296 = 58;
-              hm.d();
+              th.a(8192);
+              mn.a((byte) 96);
+              jd.b((byte) 77);
+              ej.a(26);
+              hn.a((byte) -44);
+              he.a(true);
+              sc.a((byte) -76);
+              ve.a(0);
+              pg.b(0);
+              hm.d((byte) 58);
               hc.j(1);
               r.a((byte) 58);
-              int discarded$297 = -112;
-              vg.i();
-              int discarded$298 = 127;
-              bb.h();
-              int discarded$299 = -68;
-              bj.g();
-              int discarded$300 = 0;
-              wf.a();
+              vg.i((byte) -112);
+              bb.h((byte) 127);
+              bj.g((byte) -68);
+              wf.a(false);
               ch.a(-5691);
-              int discarded$301 = 0;
-              wa.a();
+              wa.a(false);
               si.f(95);
-              int discarded$302 = -87;
-              v.a();
-              int discarded$303 = 100;
-              ff.a();
-              int discarded$304 = 1;
-              fa.a();
-              int discarded$305 = 118;
-              b.a();
-              int discarded$306 = 106;
-              ph.a();
-              int discarded$307 = 0;
-              aj.a();
-              int discarded$308 = -101;
-              ti.a();
-              int discarded$309 = 1;
-              kb.a();
+              v.a((byte) -87);
+              ff.a(100);
+              fa.a(true);
+              b.a((byte) 118);
+              ph.a((byte) 106);
+              aj.a(0);
+              ti.a((byte) -101);
+              kb.a(true);
               qf.b(116);
-              int discarded$310 = -1;
-              cg.f();
-              int discarded$311 = 119;
-              vi.a();
+              cg.f(-1);
+              vi.a(119);
               ja.a(123);
-              int discarded$312 = -17129;
-              id.b();
+              id.b(-17129);
               sf.a(false);
-              int discarded$313 = -119;
-              fg.a();
-              int discarded$314 = 1;
-              de.a();
+              fg.a((byte) -119);
+              de.a(true);
               lj.a(true);
-              int discarded$315 = 123;
-              sj.a();
+              sj.a((byte) 123);
               of.a(122);
-              int discarded$316 = 0;
-              pb.a();
-              int discarded$317 = -10497;
-              qj.b();
+              pb.a(false);
+              qj.b(-10497);
               ki.l(88);
               gd.i((byte) -87);
               ul.f((byte) -96);
               fj.n(-11555);
-              int discarded$318 = 127;
-              jm.a();
-              int discarded$319 = -24896;
-              rh.j();
-              int discarded$320 = 113;
-              oj.e();
-              int discarded$321 = 113;
-              lf.a();
-              int discarded$322 = 105;
-              bo.a();
+              jm.a((byte) 127);
+              rh.j(-24896);
+              oj.e((byte) 113);
+              lf.a((byte) 113);
+              bo.a((byte) 105);
               ah.f(-16187);
-              int discarded$323 = 1;
-              jf.j();
-              int discarded$324 = 1;
-              eb.a();
-              int discarded$325 = 59;
-              q.a();
+              jf.j(1);
+              eb.a(true);
+              q.a((byte) 59);
               cl.a();
               cj.a(17159);
-              int discarded$326 = 1;
-              wh.a();
-              int discarded$327 = -4;
-              km.c();
-              int discarded$328 = 1;
-              kn.c();
-              int discarded$329 = -105;
-              ni.l();
-              int discarded$330 = 59;
-              qa.e();
+              wh.a(true);
+              km.c(-4);
+              kn.c(true);
+              ni.l(-105);
+              qa.e((byte) 59);
               om.a(5468);
-              int discarded$331 = 126;
-              qm.a();
+              qm.a((byte) 126);
               vb.b((byte) 99);
-              int discarded$332 = 0;
-              sh.f();
+              sh.f(0);
               vk.g(28);
-              int discarded$333 = 1;
-              jb.c();
-              int discarded$334 = 8123;
-              mc.a();
+              jb.c(true);
+              mc.a(8123);
               hb.a(false);
-              int discarded$335 = 1;
-              rm.a();
+              rm.a(true);
               ij.d(-83);
-              int discarded$336 = 65535;
-              ik.d();
-              int discarded$337 = 0;
-              di.b();
-              int discarded$338 = -77;
-              ll.a();
+              ik.d(65535);
+              di.b(0);
+              ll.a((byte) -77);
               ck.a((byte) -31);
-              int discarded$339 = 97;
-              ha.a();
-              int discarded$340 = -11967;
-              re.c();
-              int discarded$341 = -93;
-              un.a();
+              ha.a((byte) 97);
+              re.c(-11967);
+              un.a((byte) -93);
               ae.a(1);
-              int discarded$342 = 119;
-              md.l();
-              int discarded$343 = 0;
-              tg.h();
-              int discarded$344 = 29152;
-              rl.d();
-              int discarded$345 = -79;
-              qk.a();
+              md.l(119);
+              tg.h(0);
+              rl.d(29152);
+              qk.a((byte) -79);
               gj.b(3355);
-              int discarded$346 = 0;
-              me.k();
+              me.k(0);
               je.a(-109);
               jl.a(-30082);
-              int discarded$347 = 0;
-              gl.b();
+              gl.b(false);
               wd.d(94);
               tc.e(96);
-              int discarded$348 = 12474;
-              gf.b();
-              int discarded$349 = -5;
-              gb.b();
+              gf.b(12474);
+              gb.b(-5);
               ea.b((byte) 118);
-              int discarded$350 = 4;
-              ci.b();
+              ci.b(4);
               mb.a(4);
-              int discarded$351 = 7;
-              qh.a();
-              int discarded$352 = -126;
-              vc.a();
-              int discarded$353 = -1;
-              uk.a();
-              int discarded$354 = -3217;
-              ga.a();
+              qh.a(7);
+              vc.a(-126);
+              uk.a(-1);
+              ga.a(-3217);
               jh.a(false);
-              int discarded$355 = 0;
-              qd.b();
+              qd.b(false);
               rk.a(122);
-              int discarded$356 = 122;
-              fn.a();
-              int discarded$357 = 75;
-              mi.a();
+              fn.a(122);
+              mi.a((byte) 75);
               al.a(-128);
-              int discarded$358 = -10;
-              lm.b();
-              int discarded$359 = 65;
-              d.a();
-              int discarded$360 = 8;
-              qi.j();
-              int discarded$361 = -20;
-              oh.a();
+              lm.b((byte) -10);
+              d.a((byte) 65);
+              qi.j(8);
+              oh.a((byte) -20);
               wi.a(64);
               tl.a((byte) -43);
               ee.a(false);
-              int discarded$362 = -71;
-              ld.b();
+              ld.b((byte) -71);
               pl.c(256);
-              int discarded$363 = 11;
-              bh.d();
+              bh.d(11);
               dc.a(false);
-              int discarded$364 = 50;
-              cc.d();
-              int discarded$365 = -116;
-              ei.e();
-              int discarded$366 = -119;
-              bd.d();
+              cc.d(50);
+              ei.e(-116);
+              bd.d(-119);
               if (param0 < -52) {
                 break L1;
               } else {
@@ -915,27 +725,18 @@ public final class EscapeVector extends g {
                 break L1;
               }
             }
-            int discarded$367 = 59;
-            ef.a();
+            ef.a(59);
             vl.a(-19467);
-            int discarded$368 = 0;
-            kf.c();
-            int discarded$369 = 29779;
-            nk.g();
-            int discarded$370 = 14;
-            hi.g();
+            kf.c((byte) 0);
+            nk.g(29779);
+            hi.g(14);
             dg.g(0);
-            int discarded$371 = -17;
-            kl.g();
-            int discarded$372 = -17318;
-            lb.g();
-            int discarded$373 = 14;
-            ka.a();
+            kl.g(-17);
+            lb.g(-17318);
+            ka.a((byte) 14);
             bl.d(255);
-            int discarded$374 = 1;
-            sm.b();
-            int discarded$375 = 31167;
-            tk.b();
+            sm.b(true);
+            tk.b(31167);
             ((EscapeVector) this).field_s = null;
             break L0;
           }
@@ -946,7 +747,7 @@ public final class EscapeVector extends g {
         }
     }
 
-    private final void n() {
+    private final void n(byte param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         dd var2_ref = null;
@@ -956,52 +757,55 @@ public final class EscapeVector extends g {
         var3 = field_A;
         try {
           L0: {
-            ac.a(25972, mg.field_f);
+            ac.a(param0 ^ -25900, mg.field_f);
             if (null != fh.field_g) {
               if (null != ff.field_i) {
                 if (null != fj.field_eb) {
                   if (null != ld.field_h) {
-                    int discarded$28 = 1;
-                    int discarded$29 = 50;
-                    qi.a();
-                    pl.field_q = new t();
-                    hn.field_l = new ig(1, vh.f(125));
-                    hm.field_o = new pf(true);
-                    rc.field_a = new ak(false, 1);
+                    L1: {
+                      qi.a(50, true);
+                      pl.field_q = new t();
+                      hn.field_l = new ig(1, vh.f(param0 ^ -35));
+                      hm.field_o = new pf(true);
+                      rc.field_a = new ak(false, 1);
+                      if (param0 == -96) {
+                        break L1;
+                      } else {
+                        field_z = null;
+                        break L1;
+                      }
+                    }
                     da.field_b = new ta();
                     qk.field_e = new dn(true);
                     oe.c((byte) 115);
-                    int discarded$30 = 0;
-                    boolean discarded$31 = fg.c();
-                    int discarded$32 = -1;
-                    this.l();
+                    boolean discarded$1 = fg.c(0);
+                    this.l(param0 + 95);
                     uk.field_h = true;
                     vl.b(1, 0);
                     break L0;
                   } else {
-                    dn.a(qa.field_H, 17637, 100.0f);
+                    dn.a(qa.field_H, param0 ^ -17595, 100.0f);
                     ((EscapeVector) this).e((byte) -127);
-                    int discarded$33 = 0;
-                    ld.field_h = bg.a(bj.field_B, ld.field_h, he.field_u);
+                    ld.field_h = bg.a(bj.field_B, ld.field_h, he.field_u, 0);
                     bj.field_B = null;
                     fn.a((byte) 51);
                     return;
                   }
                 } else {
-                  dn.a(q.field_H, 17637, 90.0f);
+                  dn.a(q.field_H, param0 + 17733, 90.0f);
                   ((EscapeVector) this).e((byte) 48);
                   var2_ref2 = new ec(hn.field_h, jm.field_I);
                   jm.field_I = null;
                   hn.field_h = null;
                   fj.field_eb = nm.a(2, "", var2_ref2, oc.field_D, "music/menu");
-                  ul.field_O = nm.a(2, "", var2_ref2, oc.field_D, "music/briefing");
+                  ul.field_O = nm.a(param0 ^ -94, "", var2_ref2, oc.field_D, "music/briefing");
                   wc.field_d = nm.a(2, "", var2_ref2, oc.field_D, "music/panic");
                   rk.field_d = new ce[5];
                   rk.field_d[0] = nm.a(2, "", var2_ref2, oc.field_D, "music/oss_area_1");
                   rk.field_d[1] = nm.a(2, "", var2_ref2, oc.field_D, "music/oss_area_2");
                   rk.field_d[2] = nm.a(2, "", var2_ref2, oc.field_D, "music/oss_area_3");
                   rk.field_d[3] = nm.a(2, "", var2_ref2, oc.field_D, "music/oss_area_4");
-                  rk.field_d[4] = nm.a(n.a(-96, -94), "", var2_ref2, oc.field_D, "music/simulator");
+                  rk.field_d[4] = nm.a(n.a((int) param0, -94), "", var2_ref2, oc.field_D, "music/simulator");
                   oc.field_D = null;
                   fn.a((byte) 93);
                   return;
@@ -1048,7 +852,7 @@ public final class EscapeVector extends g {
                 ib.field_a = kj.a(hn.field_h, "", "explosion-ship").a().a(var2_ref);
                 vn.field_c = kj.a(hn.field_h, "", "explosion_5_seconds").a().a(var2_ref);
                 pa.field_a = in.a(jm.field_I, "", "beeping").b().a(var2_ref);
-                this.a(1, var2_ref);
+                this.a(param0 + 97, var2_ref);
                 ci.field_a = kj.a(hn.field_h, "", "mine_inactive_hum_2").a().a(var2_ref);
                 qi.field_J = kj.a(hn.field_h, "", "100Hz square").a();
                 ve.field_d = kj.a(hn.field_h, "", "explosion-seeker-mine").a().a(var2_ref);
@@ -1061,74 +865,53 @@ public final class EscapeVector extends g {
               }
             } else {
               gn.a(-122);
-              dn.a(pg.field_f, 17637, 70.0f);
+              dn.a(pg.field_f, param0 ^ -17595, 70.0f);
               ((EscapeVector) this).e((byte) -128);
-              fh.field_g = oi.a(4, sn.field_c, "", "fonts_squarish16", fi.field_j);
+              fh.field_g = oi.a(param0 ^ -92, sn.field_c, "", "fonts_squarish16", fi.field_j);
               sn.field_c = null;
-              int discarded$34 = 1;
-              ea.field_f = fe.a("", fi.field_j, "titles_escape");
-              int discarded$35 = 1;
-              f.field_o = fe.a("", fi.field_j, "titles_vector");
-              int discarded$36 = 1;
-              oi.field_O = fe.a("", fi.field_j, "titles_achievements");
-              int discarded$37 = 1;
-              lf.field_I = fe.a("", fi.field_j, "titles_achievements_this_game");
-              int discarded$38 = 1;
-              na.field_w = fe.a("", fi.field_j, "titles_highscores");
-              int discarded$39 = 1;
-              jf.field_H = fe.a("", fi.field_j, "titles_instructions");
-              int discarded$40 = 1;
-              kb.field_c = fe.a("", fi.field_j, "titles_retrieval_levels");
-              int discarded$41 = 1;
-              p.field_c = fe.a("", fi.field_j, "titles_retribution_levels");
-              int discarded$42 = 1;
-              oj.field_Q = fe.a("", fi.field_j, "titles_simulator_levels");
-              int discarded$43 = 1;
-              k.field_j = fe.a("", fi.field_j, "titles_select_level_set");
+              ea.field_f = fe.a("", fi.field_j, "titles_escape", true);
+              f.field_o = fe.a("", fi.field_j, "titles_vector", true);
+              oi.field_O = fe.a("", fi.field_j, "titles_achievements", true);
+              lf.field_I = fe.a("", fi.field_j, "titles_achievements_this_game", true);
+              na.field_w = fe.a("", fi.field_j, "titles_highscores", true);
+              jf.field_H = fe.a("", fi.field_j, "titles_instructions", true);
+              kb.field_c = fe.a("", fi.field_j, "titles_retrieval_levels", true);
+              p.field_c = fe.a("", fi.field_j, "titles_retribution_levels", true);
+              oj.field_Q = fe.a("", fi.field_j, "titles_simulator_levels", true);
+              k.field_j = fe.a("", fi.field_j, "titles_select_level_set", true);
               pj.field_g = kh.a(fi.field_j, (byte) 123, "", "level_set_icons");
-              int discarded$44 = 125;
-              this.m();
-              int discarded$45 = 1;
-              s.field_H = fe.a("", fi.field_j, "seeker_mine");
-              int discarded$46 = 1;
-              od.field_b = fe.a("", fi.field_j, "seeker_mine_glow");
-              int discarded$47 = 1;
-              mf.field_m = fe.a("", fi.field_j, "rock_buster");
-              int discarded$48 = 1;
-              ga.field_b = fe.a("", fi.field_j, "interface_level_complete");
-              int discarded$49 = 1;
-              ij.field_g = fe.a("", fi.field_j, "interface_game_over");
+              this.m((byte) 125);
+              s.field_H = fe.a("", fi.field_j, "seeker_mine", true);
+              od.field_b = fe.a("", fi.field_j, "seeker_mine_glow", true);
+              mf.field_m = fe.a("", fi.field_j, "rock_buster", true);
+              ga.field_b = fe.a("", fi.field_j, "interface_level_complete", true);
+              ij.field_g = fe.a("", fi.field_j, "interface_game_over", true);
               mc.field_d = kh.a(fi.field_j, (byte) 124, "", "achievements");
-              int discarded$50 = 0;
-              bn.a(mc.field_d);
-              int discarded$51 = 1;
-              hn.field_c = fe.a("basic", ve.field_h, "unachieved");
-              int discarded$52 = 1;
-              rm.field_e = fe.a("basic", ve.field_h, "locked");
+              bn.a(mc.field_d, 0);
+              hn.field_c = fe.a("basic", ve.field_h, "unachieved", true);
+              rm.field_e = fe.a("basic", ve.field_h, "locked", true);
               qh.field_l = new ed(hn.field_c.field_A, hn.field_c.field_z);
               qh.field_l.f();
-              int discarded$53 = 1;
-              int discarded$54 = -84;
-              mb.a(fe.a("", fi.field_j, "achievements_next_page_button"));
+              mb.a(fe.a("", fi.field_j, "achievements_next_page_button", true), -84);
               mi.field_m = new ed[mc.field_d.length];
               var2_int = 0;
-              L1: while (true) {
-                L2: {
-                  L3: {
+              L2: while (true) {
+                L3: {
+                  L4: {
                     if (~mc.field_d.length >= ~var2_int) {
-                      break L3;
+                      break L4;
                     } else {
                       mi.field_m[var2_int] = new ed(32, 32);
                       mi.field_m[var2_int].g();
                       mc.field_d[var2_int].a(0, 0, 32, 32);
                       var2_int++;
                       if (var3 != 0) {
-                        break L2;
+                        break L3;
                       } else {
                         if (var3 == 0) {
-                          continue L1;
+                          continue L2;
                         } else {
-                          break L3;
+                          break L4;
                         }
                       }
                     }
@@ -1139,14 +922,13 @@ public final class EscapeVector extends g {
                   uj.field_b = new ed(32, 32);
                   uj.field_b.g();
                   rm.field_e.a(0, 0, 32, 32);
-                  md.field_D.a(125);
-                  int discarded$55 = 0;
-                  this.g();
+                  md.field_D.a(param0 ^ -35);
+                  this.g(false);
                   vd.field_f = kh.a(fi.field_j, (byte) 123, "", "level_complete_tick");
                   af.field_a = ae.a("scrshots", "", (byte) -48, fi.field_j);
                   ve.field_h = null;
                   fn.a((byte) 92);
-                  break L2;
+                  break L3;
                 }
                 return;
               }
@@ -1155,17 +937,24 @@ public final class EscapeVector extends g {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.FB(" + -96 + ')');
+          throw t.a((Throwable) (Object) var2, "EscapeVector.FB(" + param0 + ')');
         }
     }
 
-    private final void l() {
+    private final void l(int param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            int discarded$1 = 192;
-            nb.a((java.applet.Applet) this, 1585176, (byte) -125, 6340704, vj.field_c);
+            L1: {
+              if (param0 == -1) {
+                break L1;
+              } else {
+                field_z = null;
+                break L1;
+              }
+            }
+            nb.a((java.applet.Applet) this, 1585176, (byte) -125, 6340704, vj.field_c, 192);
             aj.field_a = new fe((java.applet.Applet) this, sh.field_r, af.field_a, vj.field_c);
             af.field_a = null;
             break L0;
@@ -1173,7 +962,7 @@ public final class EscapeVector extends g {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.AB(" + -1 + ')');
+          throw t.a((Throwable) (Object) var2, "EscapeVector.AB(" + param0 + ')');
         }
     }
 
@@ -1287,18 +1076,14 @@ public final class EscapeVector extends g {
         }
     }
 
-    private final void o() {
+    private final void o(int param0) {
         try {
-            int discarded$0 = 1;
-            jm.field_K[0] = fe.a("", fi.field_j, "sprites_fuel_glow");
-            int discarded$1 = 1;
-            jm.field_K[2] = fe.a("", fi.field_j, "sprites_turret_glow");
-            int discarded$2 = 1;
-            jm.field_K[3] = fe.a("", fi.field_j, "sprites_magnet_glow");
-            int discarded$3 = 1;
-            jm.field_K[4] = fe.a("", fi.field_j, "sprites_repeller_glow");
+            jm.field_K[param0] = fe.a("", fi.field_j, "sprites_fuel_glow", true);
+            jm.field_K[2] = fe.a("", fi.field_j, "sprites_turret_glow", true);
+            jm.field_K[3] = fe.a("", fi.field_j, "sprites_magnet_glow", true);
+            jm.field_K[4] = fe.a("", fi.field_j, "sprites_repeller_glow", true);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "EscapeVector.DB(" + 0 + ')');
+            throw t.a((Throwable) (Object) runtimeException, "EscapeVector.DB(" + param0 + ')');
         }
     }
 
@@ -1380,8 +1165,7 @@ public final class EscapeVector extends g {
                 break L4;
               }
             }
-            int discarded$2 = 1;
-            di.a();
+            di.a(1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1391,7 +1175,7 @@ public final class EscapeVector extends g {
         }
     }
 
-    private final void f() {
+    private final void f(boolean param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -1406,9 +1190,7 @@ public final class EscapeVector extends g {
                 break L1;
               }
             }
-            int discarded$4 = 1;
-            int discarded$5 = 1;
-            fi.field_j = ve.a(1, 0, true);
+            fi.field_j = ve.a(1, 0, param0, 1, true);
             sn.field_c = mj.a(6, -125);
             hn.field_h = mj.a(2, -126);
             jm.field_I = mj.a(3, -127);
@@ -1431,7 +1213,7 @@ public final class EscapeVector extends g {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.HB(" + true + ')');
+          throw t.a((Throwable) (Object) var2, "EscapeVector.HB(" + param0 + ')');
         }
     }
 
@@ -1617,7 +1399,7 @@ public final class EscapeVector extends g {
         try {
           L0: {
             sf.field_e[0] = kj.a(hn.field_h, "", "explosion-fuel-tank").a().a(param1);
-            sf.field_e[1] = kj.a(hn.field_h, "", "explosion-crate").a().a(param1);
+            sf.field_e[param0] = kj.a(hn.field_h, "", "explosion-crate").a().a(param1);
             hh dupTemp$4 = kj.a(hn.field_h, "", "explosion-magnet-repeller").a().a(param1);
             sf.field_e[4] = dupTemp$4;
             sf.field_e[3] = dupTemp$4;
@@ -1642,7 +1424,7 @@ public final class EscapeVector extends g {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("EscapeVector.LB(").append(1).append(',');
+            stackOut_2_1 = new StringBuilder().append("EscapeVector.LB(").append(param0).append(',');
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -1681,160 +1463,148 @@ public final class EscapeVector extends g {
         var9 = field_A;
         try {
           L0: {
-            int discarded$5 = -49;
-            var2_ref = qa.f();
-            int discarded$6 = 10;
-            var3 = bf.i();
+            L1: {
+              var2_ref = qa.f((byte) -49);
+              var3 = bf.i((byte) 10);
+              if (param0 == -27273) {
+                break L1;
+              } else {
+                field_z = null;
+                break L1;
+              }
+            }
             var4 = hm.g(11187) ? 1 : 0;
-            int discarded$7 = 16836;
-            if (!ii.b()) {
+            if (!ii.b(16836)) {
               if (uk.field_h) {
                 if (!mb.b((byte) -64)) {
                   dn.a(ff.field_a, 17637, 100.0f);
                   ah.a(var3, 0);
                   return;
                 } else {
-                  L1: {
-                    L2: {
+                  L2: {
+                    L3: {
                       if (var2_ref == null) {
-                        break L2;
+                        break L3;
                       } else {
                         var2_ref.j(107);
                         if (var9 == 0) {
-                          break L1;
-                        } else {
                           break L2;
+                        } else {
+                          break L3;
                         }
                       }
                     }
-                    L3: {
+                    L4: {
                       if (ma.field_a != null) {
                         ma.field_a.G(0);
-                        break L3;
+                        break L4;
                       } else {
-                        break L3;
+                        break L4;
                       }
                     }
-                    L4: {
+                    L5: {
                       if (!wk.field_c) {
-                        break L4;
+                        break L5;
                       } else {
                         em.d();
                         aj.field_a.c(-76);
                         if (var9 == 0) {
-                          break L1;
+                          break L2;
                         } else {
-                          break L4;
+                          break L5;
                         }
                       }
                     }
-                    L5: {
+                    L6: {
                       if (pg.field_b) {
-                        break L5;
+                        break L6;
                       } else {
-                        L6: {
+                        L7: {
                           if (od.field_q < 0) {
-                            break L6;
+                            break L7;
                           } else {
                             hn.field_l.e(3);
                             if (var9 == 0) {
-                              break L1;
+                              break L2;
                             } else {
-                              break L6;
+                              break L7;
                             }
                           }
                         }
-                        L7: {
+                        L8: {
                           if (n.field_h) {
-                            break L7;
+                            break L8;
                           } else {
-                            L8: {
+                            L9: {
                               if (!e.field_a) {
-                                break L8;
+                                break L9;
                               } else {
                                 da.field_b.i(3);
                                 if (var9 == 0) {
-                                  break L1;
-                                } else {
-                                  break L8;
-                                }
-                              }
-                            }
-                            L9: {
-                              if (!hn.field_n) {
-                                break L9;
-                              } else {
-                                rc.field_a.a(false);
-                                if (var9 == 0) {
-                                  break L1;
+                                  break L2;
                                 } else {
                                   break L9;
                                 }
                               }
                             }
                             L10: {
-                              if (!ch.field_b) {
+                              if (!hn.field_n) {
                                 break L10;
                               } else {
-                                qk.field_e.c((byte) 120);
+                                rc.field_a.a(false);
                                 if (var9 == 0) {
-                                  break L1;
+                                  break L2;
                                 } else {
                                   break L10;
                                 }
                               }
                             }
                             L11: {
-                              if (null == da.field_c) {
+                              if (!ch.field_b) {
                                 break L11;
+                              } else {
+                                qk.field_e.c((byte) 120);
+                                if (var9 == 0) {
+                                  break L2;
+                                } else {
+                                  break L11;
+                                }
+                              }
+                            }
+                            L12: {
+                              if (null == da.field_c) {
+                                break L12;
                               } else {
                                 da.field_c.d((byte) 126);
                                 if (var9 == 0) {
-                                  break L1;
+                                  break L2;
                                 } else {
-                                  break L11;
+                                  break L12;
                                 }
                               }
                             }
                             if (null != pl.field_q) {
                               pl.field_q.a((byte) -16);
                               if (var9 == 0) {
-                                break L1;
+                                break L2;
                               } else {
-                                break L7;
+                                break L8;
                               }
                             } else {
-                              break L1;
+                              break L2;
                             }
                           }
                         }
-                        int discarded$8 = 0;
-                        this.e();
+                        this.e(false);
                         if (var9 == 0) {
-                          break L1;
+                          break L2;
                         } else {
-                          break L5;
+                          break L6;
                         }
                       }
                     }
                     hm.field_o.d(100);
-                    break L1;
-                  }
-                  L12: {
-                    if (!od.field_k) {
-                      break L12;
-                    } else {
-                      if (null == ma.field_a) {
-                        break L12;
-                      } else {
-                        if (ma.field_a.field_F) {
-                          fh.field_g.c("EASY PEASY MODE IS ON", 320, 40, 16744576, -1);
-                          break L12;
-                        } else {
-                          break L12;
-                        }
-                      }
-                    }
+                    break L2;
                   }
                   L13: {
                     if (!od.field_k) {
@@ -1843,8 +1613,8 @@ public final class EscapeVector extends g {
                       if (null == ma.field_a) {
                         break L13;
                       } else {
-                        if (ma.field_a.field_gb) {
-                          fh.field_g.c("TIME HACK MODE IS ON", 320, 40, 16744576, -1);
+                        if (ma.field_a.field_F) {
+                          fh.field_g.c("EASY PEASY MODE IS ON", 320, 40, 16744576, -1);
                           break L13;
                         } else {
                           break L13;
@@ -1853,35 +1623,50 @@ public final class EscapeVector extends g {
                     }
                   }
                   L14: {
-                    if (2 > mg.field_b) {
+                    if (!od.field_k) {
                       break L14;
                     } else {
-                      if (!gk.field_c) {
+                      if (null == ma.field_a) {
                         break L14;
+                      } else {
+                        if (ma.field_a.field_gb) {
+                          fh.field_g.c("TIME HACK MODE IS ON", 320, 40, 16744576, -1);
+                          break L14;
+                        } else {
+                          break L14;
+                        }
+                      }
+                    }
+                  }
+                  L15: {
+                    if (2 > mg.field_b) {
+                      break L15;
+                    } else {
+                      if (!gk.field_c) {
+                        break L15;
                       } else {
                         fh.field_g.b("FPS: " + th.field_p, 636, 100, 16777215, 0);
                         fh.field_g.b("LPS: " + qf.field_j, 636, 120, 16777215, 0);
                         var5 = Runtime.getRuntime().totalMemory();
                         var7 = Runtime.getRuntime().freeMemory();
                         fh.field_g.b((var5 - var7) / 1000L + " kB / " + var5 / 1000L + " kB", 636, 140, 16777215, 0);
-                        break L14;
+                        break L15;
                       }
                     }
                   }
-                  L15: {
+                  L16: {
                     if (!da.c((byte) -106)) {
-                      break L15;
+                      break L16;
                     } else {
                       if (mj.a((byte) 122)) {
-                        break L15;
+                        break L16;
                       } else {
                         mh.a((byte) -111, var4 != 0);
-                        break L15;
+                        break L16;
                       }
                     }
                   }
-                  int discarded$9 = 0;
-                  nn.a(var3, 0, -1);
+                  nn.a(var3, 0, -1, 0);
                   break L0;
                 }
               } else {
@@ -1896,11 +1681,11 @@ public final class EscapeVector extends g {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.BB(" + -27273 + ')');
+          throw t.a((Throwable) (Object) var2, "EscapeVector.BB(" + param0 + ')');
         }
     }
 
-    private final void e() {
+    private final void e(boolean param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -2450,7 +2235,7 @@ public final class EscapeVector extends g {
               }
             }
             L11: {
-              fc.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4 != 0, stackIn_38_5, stackIn_38_6 != 0, stackIn_38_7, stackIn_38_8, 1, 262, false);
+              fc.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4 != 0, stackIn_38_5, stackIn_38_6 != 0, stackIn_38_7, stackIn_38_8, 1, 262, param0);
               if (mj.field_d >= 30) {
                 stackOut_41_0 = 0;
                 stackIn_42_0 = stackOut_41_0;
@@ -2651,7 +2436,7 @@ public final class EscapeVector extends g {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2_ref, "EscapeVector.UA(" + false + ')');
+          throw t.a((Throwable) (Object) var2_ref, "EscapeVector.UA(" + param0 + ')');
         }
     }
 
@@ -2712,35 +2497,21 @@ public final class EscapeVector extends g {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            int discarded$14 = 1;
-            mb.field_f[0] = fe.a("", fi.field_j, "sprites_fuel");
-            int discarded$15 = 1;
-            mb.field_f[1] = fe.a("", fi.field_j, "sprites_crate");
-            int discarded$16 = 1;
-            mb.field_f[2] = fe.a("", fi.field_j, "sprites_turret");
-            int discarded$17 = 1;
-            mb.field_f[3] = fe.a("", fi.field_j, "sprites_magnet");
-            int discarded$18 = 1;
-            mb.field_f[4] = fe.a("", fi.field_j, "sprites_repeller");
-            int discarded$19 = 1;
-            mb.field_f[5] = fe.a("", fi.field_j, "sprites_tnt");
-            int discarded$20 = 1;
-            mb.field_f[6] = fe.a("", fi.field_j, "sprites_laser_left");
+            mb.field_f[0] = fe.a("", fi.field_j, "sprites_fuel", true);
+            mb.field_f[1] = fe.a("", fi.field_j, "sprites_crate", true);
+            mb.field_f[2] = fe.a("", fi.field_j, "sprites_turret", true);
+            mb.field_f[3] = fe.a("", fi.field_j, "sprites_magnet", true);
+            mb.field_f[4] = fe.a("", fi.field_j, "sprites_repeller", true);
+            mb.field_f[5] = fe.a("", fi.field_j, "sprites_tnt", true);
+            mb.field_f[6] = fe.a("", fi.field_j, "sprites_laser_left", true);
             var2_int = -111 / ((60 - param0) / 58);
-            int discarded$21 = 1;
-            mb.field_f[7] = fe.a("", fi.field_j, "sprites_laser_right");
-            int discarded$22 = 1;
-            mb.field_f[8] = fe.a("", fi.field_j, "sprites_barrier");
-            int discarded$23 = 1;
-            mb.field_f[9] = fe.a("", fi.field_j, "sprites_powerup_shield");
-            int discarded$24 = 1;
-            mb.field_f[10] = fe.a("", fi.field_j, "sprites_powerup_triple_shot");
-            int discarded$25 = 1;
-            mb.field_f[11] = fe.a("", fi.field_j, "sprites_powerup_thrust");
-            int discarded$26 = 1;
-            mb.field_f[12] = fe.a("", fi.field_j, "sprites_powerup_one_rockbuster");
-            int discarded$27 = 1;
-            mb.field_f[13] = fe.a("", fi.field_j, "sprites_powerup_five_rockbusters");
+            mb.field_f[7] = fe.a("", fi.field_j, "sprites_laser_right", true);
+            mb.field_f[8] = fe.a("", fi.field_j, "sprites_barrier", true);
+            mb.field_f[9] = fe.a("", fi.field_j, "sprites_powerup_shield", true);
+            mb.field_f[10] = fe.a("", fi.field_j, "sprites_powerup_triple_shot", true);
+            mb.field_f[11] = fe.a("", fi.field_j, "sprites_powerup_thrust", true);
+            mb.field_f[12] = fe.a("", fi.field_j, "sprites_powerup_one_rockbuster", true);
+            mb.field_f[13] = fe.a("", fi.field_j, "sprites_powerup_five_rockbusters", true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2750,7 +2521,7 @@ public final class EscapeVector extends g {
         }
     }
 
-    private final void q() {
+    private final void q(int param0) {
         tj var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -2762,96 +2533,98 @@ public final class EscapeVector extends g {
         var4 = field_A;
         try {
           L0: {
-            int discarded$3 = -49;
-            var2 = qa.f();
-            L1: {
-              L2: {
-                if (var2 == null) {
-                  break L2;
-                } else {
-                  if (var2.field_l) {
+            var2 = qa.f((byte) -49);
+            if (param0 == 1) {
+              L1: {
+                L2: {
+                  if (var2 == null) {
                     break L2;
                   } else {
-                    L3: {
-                      if (lf.field_H == 1) {
-                        break L3;
-                      } else {
-                        vc.a(40, ul.field_O, true, (byte) -101);
-                        lf.field_H = 1;
-                        break L3;
-                      }
-                    }
-                    if (-1 + var2.field_g.length > var2.field_E) {
-                      break L1;
+                    if (var2.field_l) {
+                      break L2;
                     } else {
-                      if (var2.field_C == var2.field_B) {
-                        int discarded$4 = 32471;
-                        wa.a(40 * var2.field_t / 100);
-                        if (var4 == 0) {
-                          break L1;
+                      L3: {
+                        if (lf.field_H == 1) {
+                          break L3;
                         } else {
-                          break L2;
+                          vc.a(40, ul.field_O, true, (byte) -101);
+                          lf.field_H = 1;
+                          break L3;
                         }
-                      } else {
+                      }
+                      if (-1 + var2.field_g.length > var2.field_E) {
                         break L1;
+                      } else {
+                        if (var2.field_C == var2.field_B) {
+                          wa.a(40 * var2.field_t / 100, 32471);
+                          if (var4 == 0) {
+                            break L1;
+                          } else {
+                            break L2;
+                          }
+                        } else {
+                          break L1;
+                        }
                       }
                     }
                   }
                 }
-              }
-              L4: {
-                L5: {
-                  if (null != var2) {
-                    break L5;
-                  } else {
-                    if (ma.field_a != null) {
-                      break L4;
-                    } else {
+                L4: {
+                  L5: {
+                    if (null != var2) {
                       break L5;
+                    } else {
+                      if (ma.field_a != null) {
+                        break L4;
+                      } else {
+                        break L5;
+                      }
                     }
                   }
-                }
-                if (0 == lf.field_H) {
-                  break L1;
-                } else {
-                  vc.a(64, fj.field_eb, true, (byte) -63);
-                  lf.field_H = 0;
-                  if (var4 == 0) {
+                  if (0 == lf.field_H) {
                     break L1;
                   } else {
-                    break L4;
+                    vc.a(64, fj.field_eb, true, (byte) -63);
+                    lf.field_H = 0;
+                    if (var4 == 0) {
+                      break L1;
+                    } else {
+                      break L4;
+                    }
                   }
                 }
-              }
-              L6: {
-                if (lf.field_H == 2) {
-                  stackOut_36_0 = 0;
-                  stackIn_37_0 = stackOut_36_0;
-                  break L6;
-                } else {
-                  stackOut_34_0 = 1;
-                  stackIn_37_0 = stackOut_34_0;
-                  break L6;
+                L6: {
+                  if (lf.field_H == 2) {
+                    stackOut_36_0 = 0;
+                    stackIn_37_0 = stackOut_36_0;
+                    break L6;
+                  } else {
+                    stackOut_34_0 = 1;
+                    stackIn_37_0 = stackOut_34_0;
+                    break L6;
+                  }
                 }
-              }
-              L7: {
-                var3 = stackIn_37_0;
-                if (ma.field_a == null) {
-                  break L7;
-                } else {
-                  ma.field_a.e(var3 != 0, 0);
-                  break L7;
+                L7: {
+                  var3 = stackIn_37_0;
+                  if (ma.field_a == null) {
+                    break L7;
+                  } else {
+                    ma.field_a.e(var3 != 0, 0);
+                    break L7;
+                  }
                 }
+                lf.field_H = 2;
+                break L1;
               }
-              lf.field_H = 2;
-              break L1;
+              break L0;
+            } else {
+              return;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2_ref, "EscapeVector.EB(" + 1 + ')');
+          throw t.a((Throwable) (Object) var2_ref, "EscapeVector.EB(" + param0 + ')');
         }
     }
 
@@ -2916,27 +2689,33 @@ public final class EscapeVector extends g {
         }
     }
 
-    private final void g() {
+    private final void g(boolean param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            km.field_k = fe.a("", fi.field_j, "classic_level_select_bg");
-            int discarded$3 = 1;
-            aj.field_c = fe.a("", fi.field_j, "vengeance_level_select_bg");
+            L1: {
+              if (!param0) {
+                break L1;
+              } else {
+                this.m((byte) 29);
+                break L1;
+              }
+            }
+            km.field_k = fe.a("", fi.field_j, "classic_level_select_bg", true);
+            aj.field_c = fe.a("", fi.field_j, "vengeance_level_select_bg", true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.VA(" + false + ')');
+          throw t.a((Throwable) (Object) var2, "EscapeVector.VA(" + param0 + ')');
         }
     }
 
     private final void a(byte param0, hh param1) {
+        RuntimeException runtimeException = null;
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -2958,38 +2737,46 @@ public final class EscapeVector extends g {
         var5 = field_A;
         try {
           L0: {
-            var3_int = 0;
-            L1: while (true) {
-              L2: {
-                L3: {
+            L1: {
+              var3_int = 0;
+              if (param0 < -17) {
+                break L1;
+              } else {
+                ((EscapeVector) this).a((byte) -2);
+                break L1;
+              }
+            }
+            L2: while (true) {
+              L3: {
+                L4: {
                   if (3 <= var3_int) {
-                    break L3;
+                    break L4;
                   } else {
                     var4 = var3_int + 14;
                     sf.field_e[var4] = param1;
                     var3_int++;
                     if (var5 != 0) {
-                      break L2;
+                      break L3;
                     } else {
                       if (var5 == 0) {
-                        continue L1;
+                        continue L2;
                       } else {
-                        break L3;
+                        break L4;
                       }
                     }
                   }
                 }
-                break L2;
+                break L3;
               }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
-            stackOut_10_1 = new StringBuilder().append("EscapeVector.KB(").append(-60).append(',');
+          L5: {
+            runtimeException = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) runtimeException;
+            stackOut_10_1 = new StringBuilder().append("EscapeVector.KB(").append(param0).append(',');
             stackIn_13_0 = stackOut_10_0;
             stackIn_13_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -3001,7 +2788,7 @@ public final class EscapeVector extends g {
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L4;
+              break L5;
             } else {
               stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
               stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
@@ -3009,23 +2796,21 @@ public final class EscapeVector extends g {
               stackIn_14_0 = stackOut_11_0;
               stackIn_14_1 = stackOut_11_1;
               stackIn_14_2 = stackOut_11_2;
-              break L4;
+              break L5;
             }
           }
           throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
     }
 
-    private final void m() {
+    private final void m(byte param0) {
         try {
             this.p(-28);
-            int var2_int = -38;
-            int discarded$0 = 0;
-            this.o();
-            int discarded$1 = -23;
-            qh.a(fi.field_j);
+            int var2_int = 116 / ((-30 - param0) / 47);
+            this.o(0);
+            qh.a(fi.field_j, (byte) -23);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "EscapeVector.IB(" + 125 + ')');
+            throw t.a((Throwable) (Object) runtimeException, "EscapeVector.IB(" + param0 + ')');
         }
     }
 

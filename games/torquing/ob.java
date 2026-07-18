@@ -349,7 +349,6 @@ final class ob {
 
     private static void $cfr$clinit() {
         field_a = new byte[65536];
-        int discarded$0 = -128;
-        dk.a(field_a, 0, 65536);
+        dk.a(field_a, 0, 65536, (byte) -128);
     }
 }

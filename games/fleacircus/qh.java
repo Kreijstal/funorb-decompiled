@@ -24,11 +24,11 @@ final class qh extends dl {
         return 100;
     }
 
-    final static String i() {
+    final static String i(int param0) {
         return fg.field_m;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_C = null;
     }
 
@@ -104,7 +104,7 @@ final class qh extends dl {
         return ((qh) this).field_x;
     }
 
-    final static boolean j() {
+    final static boolean j(int param0) {
         if (null == sg.field_h) {
             return false;
         }

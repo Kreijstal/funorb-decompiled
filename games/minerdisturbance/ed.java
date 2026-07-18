@@ -14,7 +14,7 @@ final class ed {
     int field_e;
     String field_h;
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         if (mn.field_x != -kc.field_d) {
           if (250 + -kc.field_d == mn.field_x) {
@@ -40,7 +40,7 @@ final class ed {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         sl var3 = null;
@@ -66,14 +66,14 @@ final class ed {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_f = null;
         field_b = null;
         field_a = null;
         field_g = null;
     }
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

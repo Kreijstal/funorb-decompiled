@@ -33,7 +33,7 @@ final class kf {
         }
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         return hi.field_a;
     }
 

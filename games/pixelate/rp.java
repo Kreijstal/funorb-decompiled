@@ -286,7 +286,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
@@ -299,8 +299,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 var2_int = param0.getKeyChar();
                 if (var2_int != 0) {
                     if (var2_int != 65535) {
-                        int discarded$4 = 111;
-                        if (kj.a((char) var2_int)) {
+                        if (kj.a((char) var2_int, (byte) 111)) {
                             var3 = 127 & 1 + jd.field_s;
                             if (qn.field_p != var3) {
                                 gn.field_z[jd.field_s] = -1;

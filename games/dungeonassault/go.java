@@ -168,8 +168,7 @@ final class go extends qe {
                   }
                 }
               }
-              int discarded$1 = 1;
-              this.a(param1);
+              this.a(param1, true);
               this.a(var4, 114);
               ((go) this).field_y = null;
               break L1;
@@ -370,8 +369,7 @@ final class go extends qe {
     }
 
     final void b(boolean param0) {
-        int discarded$0 = 1;
-        t.a(64, g.field_Lb, true);
+        t.a(64, g.field_Lb, true, true);
     }
 
     final void a(byte param0) {
@@ -595,7 +593,7 @@ final class go extends qe {
         }
     }
 
-    private final void a(hb param0) {
+    private final void a(hb param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -661,8 +659,7 @@ final class go extends qe {
         int var2 = 0;
         ro var3 = null;
         L0: {
-          int discarded$9 = -107;
-          ib.c();
+          ib.c(-107);
           var2 = -56 % ((-42 - param0) / 52);
           if (((go) this).field_Y.field_g != 1) {
             L1: {
@@ -677,18 +674,16 @@ final class go extends qe {
                   }
                 }
               }
-              o discarded$10 = gd.a(64, ef.field_d);
+              o discarded$2 = gd.a(64, ef.field_d);
               var3 = new ro((go) this);
               var3.d(2);
               ((go) this).field_b = (kl) (Object) var3;
               break L1;
             }
-            int discarded$11 = 1;
-            t.a(1048576, tm.field_b, false);
+            t.a(1048576, tm.field_b, false, true);
             break L0;
           } else {
-            int discarded$12 = 1;
-            t.a(1048576, kj.field_o, false);
+            t.a(1048576, kj.field_o, false, true);
             break L0;
           }
         }
@@ -909,7 +904,7 @@ final class go extends qe {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         int var2 = 0;
         int var3_int = 0;
         ai var3 = null;
@@ -1315,16 +1310,13 @@ final class go extends qe {
           }
         }
         L2: {
-          int discarded$4 = -127;
-          this.g();
+          this.g(-127);
           if (!param0) {
             break L2;
           } else {
-            int discarded$5 = 2;
-            this.k();
+            this.k(2);
             if (kn.field_g) {
-              int discarded$6 = 0;
-              bl.a();
+              bl.a(0);
               break L2;
             } else {
               break L2;
@@ -1375,8 +1367,7 @@ final class go extends qe {
                         var3_ref_ec.a(6, ((go) this).field_y.field_j);
                         var3_ref_ec.a(6, ((go) this).field_y.field_e);
                         var3_ref_ec.a(6, ((go) this).field_y.field_g);
-                        int discarded$7 = 1;
-                        this.a(((go) this).field_y);
+                        this.a(((go) this).field_y, true);
                         this.a(var3_ref_ec, 118);
                         break L7;
                       }
@@ -1739,7 +1730,7 @@ final class go extends qe {
         }
     }
 
-    private final void k() {
+    private final void k(int param0) {
         Object var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -1762,12 +1753,13 @@ final class go extends qe {
         int var13 = 0;
         wb var14 = null;
         int var15 = 0;
-        wb[] var16 = null;
-        hb var17 = null;
-        ai var18 = null;
-        ac var19 = null;
-        Object var20 = null;
-        ai var20_ref = null;
+        Object var16 = null;
+        wb[] var17 = null;
+        hb var18 = null;
+        ai var19 = null;
+        ac var20 = null;
+        Object var21 = null;
+        ai var21_ref = null;
         int stackIn_61_0 = 0;
         int stackIn_103_0 = 0;
         ai stackIn_110_0 = null;
@@ -1777,13 +1769,12 @@ final class go extends qe {
         int stackOut_101_0 = 0;
         Object stackOut_109_0 = null;
         ai stackOut_108_0 = null;
-        var20 = null;
+        var21 = null;
         var15 = DungeonAssault.field_K;
         ((go) this).field_s = -1;
-        int discarded$7 = 1;
-        if (kh.d()) {
-          int discarded$8 = 1;
-          eg.a((md) null);
+        if (kh.d(true)) {
+          var16 = null;
+          eg.a((md) null, true);
           return;
         } else {
           L0: {
@@ -1897,10 +1888,10 @@ final class go extends qe {
                 if (!(hh.field_s instanceof hj)) {
                   break L2;
                 } else {
-                  var17 = ((hj) (Object) hh.field_s).field_V;
-                  var2 = (Object) (Object) var17;
+                  var18 = ((hj) (Object) hh.field_s).field_V;
+                  var2 = (Object) (Object) var18;
                   if (((go) this).field_y == null) {
-                    if (var17 == null) {
+                    if (var18 == null) {
                       break L2;
                     } else {
                       L9: {
@@ -1914,7 +1905,7 @@ final class go extends qe {
                           }
                         }
                       }
-                      if ((var17.field_o & 6) != 0) {
+                      if ((var18.field_o & 6) != 0) {
                         break L2;
                       } else {
                         L10: {
@@ -1928,7 +1919,7 @@ final class go extends qe {
                             }
                           }
                         }
-                        this.b((byte) 119, var17);
+                        this.b((byte) 119, var18);
                         this.a(pi.field_g, -8963);
                         this.m(92);
                         gh.a(2, 11);
@@ -2015,8 +2006,8 @@ final class go extends qe {
                 break L18;
               } else {
                 L19: {
-                  var18 = ((go) this).field_Y.field_h[((go) this).field_s];
-                  var4_ref_ai = var18;
+                  var19 = ((go) this).field_Y.field_h[((go) this).field_s];
+                  var4_ref_ai = var19;
                   if (var4_ref_ai != jb.field_Pb) {
                     L20: {
                       L21: {
@@ -2024,15 +2015,15 @@ final class go extends qe {
                           break L21;
                         } else {
                           if (((go) this).field_s != 24) {
-                            var19 = gh.field_i[1];
-                            kh.field_u = (en) (Object) new qf(var19.field_z.toUpperCase(), var19.field_t, var19.field_z);
+                            var20 = gh.field_i[1];
+                            kh.field_u = (en) (Object) new qf(var20.field_z.toUpperCase(), var20.field_t, var20.field_z);
                             break L20;
                           } else {
                             break L21;
                           }
                         }
                       }
-                      kh.field_u = (en) (Object) new bd(((go) this).field_Y, var18);
+                      kh.field_u = (en) (Object) new bd(((go) this).field_Y, var19);
                       break L20;
                     }
                     jb.field_Pb = var4_ref_ai;
@@ -2041,8 +2032,7 @@ final class go extends qe {
                     break L19;
                   }
                 }
-                int discarded$9 = 95;
-                uj.a(kh.field_u);
+                uj.a(kh.field_u, 95);
                 break L18;
               }
             }
@@ -2054,8 +2044,8 @@ final class go extends qe {
                   break L22;
                 } else {
                   L23: {
-                    var16 = ((go) this).field_Y.field_u.field_i;
-                    var4_ref_wb__ = var16;
+                    var17 = ((go) this).field_Y.field_u.field_i;
+                    var4_ref_wb__ = var17;
                     var5 = ((go) this).field_z[((go) this).field_Y.field_u.field_j].field_n;
                     var6_int = 7;
                     if (var4_ref_wb__ != null) {
@@ -2065,11 +2055,11 @@ final class go extends qe {
                       var10 = var8;
                       var11 = 0;
                       L24: while (true) {
-                        if (~var16.length >= ~var11) {
+                        if (~var17.length >= ~var11) {
                           break L23;
                         } else {
                           L25: {
-                            var12_ref_wb = var16[var11];
+                            var12_ref_wb = var17[var11];
                             var14 = var12_ref_wb;
                             var14 = var12_ref_wb;
                             if (!jg.a(false, var9_int, 12, 12, var10)) {
@@ -2094,8 +2084,7 @@ final class go extends qe {
                       break L23;
                     }
                   }
-                  int discarded$10 = 95;
-                  uj.a(var5);
+                  uj.a(var5, 95);
                   break L22;
                 }
               }
@@ -2146,17 +2135,17 @@ final class go extends qe {
                   }
                 }
                 L31: {
-                  var20_ref = stackIn_110_0;
-                  var5_ref = var20_ref;
+                  var21_ref = stackIn_110_0;
+                  var5_ref = var21_ref;
                   if (!jg.a(false, 518, 112, 112, 57)) {
                     break L31;
                   } else {
                     L32: {
-                      if (var20_ref == null) {
+                      if (var21_ref == null) {
                         break L32;
                       } else {
                         L33: {
-                          var6 = var20_ref.field_f;
+                          var6 = var21_ref.field_f;
                           var7 = null;
                           var8 = 7;
                           if (var6 != null) {
@@ -2196,7 +2185,7 @@ final class go extends qe {
                         L36: {
                           if (var7 == null) {
                             L37: {
-                              if (jb.field_Pb == var20_ref) {
+                              if (jb.field_Pb == var21_ref) {
                                 break L37;
                               } else {
                                 L38: {
@@ -2213,10 +2202,10 @@ final class go extends qe {
                                       }
                                     }
                                   }
-                                  kh.field_u = (en) (Object) new bd(((go) this).field_Y, var20_ref);
+                                  kh.field_u = (en) (Object) new bd(((go) this).field_Y, var21_ref);
                                   break L38;
                                 }
-                                jb.field_Pb = var20_ref;
+                                jb.field_Pb = var21_ref;
                                 break L37;
                               }
                             }
@@ -2226,8 +2215,7 @@ final class go extends qe {
                             break L36;
                           }
                         }
-                        int discarded$11 = 95;
-                        uj.a((en) var7);
+                        uj.a((en) var7, 95);
                         break L32;
                       }
                     }
@@ -2241,15 +2229,13 @@ final class go extends qe {
                   if (!jg.a(false, 50, 16, var5_int, 16 * var4 + 320)) {
                     break L40;
                   } else {
-                    int discarded$12 = 95;
-                    uj.a(fi.field_r[var4]);
+                    uj.a(fi.field_r[var4], 95);
                     break L40;
                   }
                 }
                 L41: {
                   if (jg.a(false, -var5_int + 590, 16, var5_int, 320 - -(16 * var4))) {
-                    int discarded$13 = 95;
-                    uj.a(rd.field_F[var4]);
+                    uj.a(rd.field_F[var4], 95);
                     break L41;
                   } else {
                     break L41;
@@ -2502,20 +2488,13 @@ final class go extends qe {
         ((go) this).field_P = new int[4];
         ((go) this).field_B = new md();
         ((go) this).field_T = new md();
-        int discarded$0 = 0;
-        int discarded$1 = 256;
-        ((go) this).field_D = ni.a(om.field_b.field_e);
-        int discarded$2 = 0;
-        int discarded$3 = 256;
-        ((go) this).field_L = ni.a(k.field_f.field_e);
+        ((go) this).field_D = ni.a(om.field_b.field_e, 256, 0);
+        ((go) this).field_L = ni.a(k.field_f.field_e, 256, 0);
         ((go) this).field_D.e(-1);
         ((go) this).field_L.e(-1);
-        int discarded$4 = 0;
-        fa discarded$5 = l.a(((go) this).field_D);
-        int discarded$6 = 0;
-        fa discarded$7 = l.a(((go) this).field_L);
-        int discarded$8 = 1;
-        t.a(64, g.field_Lb, true);
+        fa discarded$0 = l.a(((go) this).field_D, 0);
+        fa discarded$1 = l.a(((go) this).field_L, 0);
+        t.a(64, g.field_Lb, true, true);
     }
 
     private final void b(hb param0, int param1) {
@@ -3052,8 +3031,7 @@ final class go extends qe {
               }
               L13: {
                 if (var7 != 0) {
-                  int discarded$1 = 1;
-                  this.a(param0);
+                  this.a(param0, true);
                   this.a(var6, 110);
                   this.a(27989);
                   break L13;
@@ -3155,11 +3133,8 @@ final class go extends qe {
               if (((go) this).field_Y.field_u.field_n.field_s != -1) {
                 var5 = ((go) this).field_Y.field_u.field_n.field_d;
                 var3 = var5;
-                int discarded$6 = 30496;
-                var4 = jk.a(new String[1], "<col=178B8B><%0></col>");
-                int discarded$7 = 30496;
-                int discarded$8 = 30496;
-                ((go) this).field_O.field_n = (en) (Object) new qf(jk.a(new String[1], vo.field_m), jk.a(new String[1], var5[1]));
+                var4 = jk.a(new String[1], "<col=178B8B><%0></col>", 30496);
+                ((go) this).field_O.field_n = (en) (Object) new qf(jk.a(new String[1], vo.field_m, 30496), jk.a(new String[1], var5[1], 30496));
                 break L1;
               } else {
                 break L1;
@@ -3395,10 +3370,8 @@ final class go extends qe {
 
     final void c() {
         super.c();
-        int discarded$0 = -28711;
-        ln.a(((go) this).field_D);
-        int discarded$1 = -28711;
-        ln.a(((go) this).field_L);
+        ln.a(((go) this).field_D, -28711);
+        ln.a(((go) this).field_L, -28711);
         jb.field_Pb = null;
         ((go) this).field_R = null;
         kh.field_u = null;
@@ -4329,8 +4302,7 @@ final class go extends qe {
           if (en.a(param0 ^ -17159, bp.field_e)) {
             L4: {
               var3 = param1 ? 1 : 0;
-              int discarded$49 = 0;
-              if (ve.a()) {
+              if (ve.a(false)) {
                 stackOut_18_0 = 12;
                 stackIn_19_0 = stackOut_18_0;
                 break L4;
@@ -4343,12 +4315,10 @@ final class go extends qe {
             gd.a(stackIn_19_0, 0, 9, var3 != 0);
             break L2;
           } else {
-            int discarded$50 = 0;
-            if (!ve.a()) {
+            if (!ve.a(false)) {
               L5: {
                 var3 = param1 ? 1 : 0;
-                int discarded$51 = 0;
-                if (ve.a()) {
+                if (ve.a(false)) {
                   stackOut_14_0 = 12;
                   stackIn_15_0 = stackOut_14_0;
                   break L5;
@@ -4376,11 +4346,9 @@ final class go extends qe {
             var2 = var3.field_p - -var3.field_g > 8 ? 1 : 0;
         }
         if (var2 == 0) {
-            int discarded$1 = 1;
-            t.a(64, g.field_Lb, true);
+            t.a(64, g.field_Lb, true, true);
         } else {
-            int discarded$2 = 1;
-            t.a(64, gh.field_d, true);
+            t.a(64, gh.field_d, true, true);
         }
         if (param0 > -126) {
             this.b(true, 28);
@@ -4970,12 +4938,11 @@ final class go extends qe {
     }
 
     final void c(byte param0) {
-        int discarded$0 = 30496;
-        this.a(jk.a(new String[1], wi.field_qb), -8963);
+        this.a(jk.a(new String[1], wi.field_qb, 30496), -8963);
         if (param0 >= -107) {
             go.b((byte) 51);
         }
-        o discarded$1 = gd.a(64, qm.field_n);
+        o discarded$0 = gd.a(64, qm.field_n);
         this.e((byte) -119);
     }
 
@@ -4985,8 +4952,7 @@ final class go extends qe {
             if (param0 != 4) {
                 ((go) this).field_N = null;
             }
-            int discarded$0 = 1;
-            t.a(64, g.field_Lb, true);
+            t.a(64, g.field_Lb, true, true);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "go.VC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -5025,11 +4991,8 @@ final class go extends qe {
               if (((go) this).field_Y.field_u.field_n.field_s != -1) {
                 var5 = ((go) this).field_Y.field_u.field_n.field_d;
                 var2 = var5;
-                int discarded$3 = 30496;
-                var3_ref_String = jk.a(new String[1], "<col=178B8B><%0></col>");
-                int discarded$4 = 30496;
-                int discarded$5 = 30496;
-                ((go) this).field_O.field_n = (en) (Object) new qf(jk.a(new String[1], vo.field_m), jk.a(new String[1], var5[1]));
+                var3_ref_String = jk.a(new String[1], "<col=178B8B><%0></col>", 30496);
+                ((go) this).field_O.field_n = (en) (Object) new qf(jk.a(new String[1], vo.field_m, 30496), jk.a(new String[1], var5[1], 30496));
                 break L0;
               } else {
                 break L1;
@@ -5372,7 +5335,7 @@ final class go extends qe {
         }
     }
 
-    private final void l() {
+    private final void l(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -5540,8 +5503,7 @@ final class go extends qe {
                       break L3;
                     } else {
                       if (var8 != 0) {
-                        int discarded$4 = 30496;
-                        var9 = new oc(var7, var6, false, jk.a(new String[1], ep.field_i));
+                        var9 = new oc(var7, var6, false, jk.a(new String[1], ep.field_i, 30496));
                         break L1;
                       } else {
                         break L3;
@@ -5581,8 +5543,7 @@ final class go extends qe {
                       break L7;
                     } else {
                       if (var7.field_n.a(ob.field_jc, -120)) {
-                        int discarded$5 = 30496;
-                        var10 = var10 + " <col=FF8000>" + jk.a(new String[1], ia.field_N) + "</col> ";
+                        var10 = var10 + " <col=FF8000>" + jk.a(new String[1], ia.field_N, 30496) + "</col> ";
                         break L7;
                       } else {
                         break L7;
@@ -5690,8 +5651,7 @@ final class go extends qe {
                           L16: {
                             var18 = var10 + " " + ri.field_c;
                             if (var15 == var13) {
-                              int discarded$6 = 30496;
-                              var10 = var18 + " <col=FF8000>" + jk.a(new String[1], qi.field_h) + "</col>";
+                              var10 = var18 + " <col=FF8000>" + jk.a(new String[1], qi.field_h, 30496) + "</col>";
                               break L16;
                             } else {
                               break L16;
@@ -5716,8 +5676,7 @@ final class go extends qe {
                       var20 = var10 + " " + u.field_R;
                       var11 = 1;
                       if (var13 == var14) {
-                        int discarded$7 = 30496;
-                        var10 = var20 + " <col=FF8000>" + jk.a(new String[1], le.field_e) + "</col>";
+                        var10 = var20 + " <col=FF8000>" + jk.a(new String[1], le.field_e, 30496) + "</col>";
                         break L17;
                       } else {
                         break L17;
@@ -5914,7 +5873,7 @@ final class go extends qe {
         RuntimeException stackOut_36_0 = null;
         StringBuilder stackOut_36_1 = null;
         String stackOut_36_2 = null;
-        md discarded$4 = new md();
+        md discarded$3 = new md();
         ((go) this).field_v = true;
         ((go) this).field_y = null;
         ((go) this).field_Q = true;
@@ -5955,8 +5914,7 @@ final class go extends qe {
                   this.a(27989);
                   this.g(false);
                   this.c(7872);
-                  int discarded$5 = 18014;
-                  this.l();
+                  this.l(18014);
                   if (!kn.field_g) {
                     break L3;
                   } else {
@@ -6000,12 +5958,12 @@ final class go extends qe {
                   } else {
                     rd.field_F = new en[4];
                     fi.field_r = new en[4];
-                    e dupTemp$6 = new e(ck.field_H.a("attack", -53));
-                    rd.field_F[0] = (en) (Object) dupTemp$6;
-                    fi.field_r[0] = (en) (Object) dupTemp$6;
-                    e dupTemp$7 = new e(ck.field_H.a("defence", -126));
-                    rd.field_F[1] = (en) (Object) dupTemp$7;
-                    fi.field_r[1] = (en) (Object) dupTemp$7;
+                    e dupTemp$4 = new e(ck.field_H.a("attack", -53));
+                    rd.field_F[0] = (en) (Object) dupTemp$4;
+                    fi.field_r[0] = (en) (Object) dupTemp$4;
+                    e dupTemp$5 = new e(ck.field_H.a("defence", -126));
+                    rd.field_F[1] = (en) (Object) dupTemp$5;
+                    fi.field_r[1] = (en) (Object) dupTemp$5;
                     fi.field_r[2] = (en) (Object) new e(ck.field_H.a("dodge", -96));
                     fi.field_r[3] = (en) (Object) new e(ck.field_H.a("sneak", -48));
                     rd.field_F[2] = (en) (Object) new e(ck.field_H.a("snare", -115));

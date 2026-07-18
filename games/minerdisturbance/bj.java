@@ -132,10 +132,9 @@ final class bj {
         return stackIn_6_0;
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int a(int param0, int param1, boolean param2, int param3) {
         int var4 = 107;
-        int discarded$0 = -27911;
-        return s.a();
+        return s.a(-27911);
     }
 
     final synchronized byte[] e(int param0, int param1) {
@@ -179,7 +178,8 @@ final class bj {
     final boolean b(boolean param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        CharSequence var4 = null;
+        Object var4 = null;
+        CharSequence var5 = null;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_10_0 = 0;
@@ -211,11 +211,12 @@ final class bj {
             } else {
               L1: {
                 param1 = param1.toLowerCase();
-                var4 = (CharSequence) (Object) param1;
-                var3_int = ((bj) this).field_f.field_s.a((byte) -71, jh.a(var4, 0));
+                var5 = (CharSequence) (Object) param1;
+                var3_int = ((bj) this).field_f.field_s.a((byte) -71, jh.a(var5, 0));
                 if (!param0) {
                   break L1;
                 } else {
+                  var4 = null;
                   int discarded$2 = ((bj) this).a(-56, (String) null);
                   break L1;
                 }
@@ -270,22 +271,16 @@ final class bj {
         int[] var6 = null;
         Object[] var7 = null;
         int var8 = 0;
-        Object var9 = null;
-        int var9_int = 0;
-        byte[] var9_array = null;
-        int var10_int = 0;
-        byte[] var10 = null;
-        sb var10_ref = null;
+        int var9 = 0;
+        int var10 = 0;
         RuntimeException var11_ref_RuntimeException = null;
         int var11 = 0;
         int var12 = 0;
-        sb var13 = null;
         int[] var14 = null;
         int var14_int = 0;
         int var15_int = 0;
         byte[][] var15 = null;
         int var16 = 0;
-        byte[] var16_ref_byte__ = null;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
@@ -293,6 +288,30 @@ final class bj {
         int var21 = 0;
         int var22 = 0;
         byte[] var23 = null;
+        int[] var24 = null;
+        sb var26 = null;
+        byte[] var27 = null;
+        sb var29 = null;
+        sb var31 = null;
+        int[] var32 = null;
+        byte[][] var33 = null;
+        int[] var34 = null;
+        byte[] var37 = null;
+        int[] var40 = null;
+        byte[][] var41 = null;
+        int[] var42 = null;
+        byte[] var45 = null;
+        int[] var48 = null;
+        byte[][] var49 = null;
+        int[] var50 = null;
+        byte[] var51 = null;
+        Object var52 = null;
+        byte[] var52_array = null;
+        byte[] var53 = null;
+        byte[] var54 = null;
+        byte[] var55 = null;
+        int[] var56 = null;
+        byte[][] var57 = null;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
@@ -347,7 +366,11 @@ final class bj {
               if (null != ((bj) this).field_i[param0]) {
                 L1: {
                   var5_int = ((bj) this).field_f.field_d[param0];
-                  var6 = ((bj) this).field_f.field_p[param0];
+                  var50 = ((bj) this).field_f.field_p[param0];
+                  var42 = var50;
+                  var34 = var42;
+                  var24 = var34;
+                  var6 = var24;
                   if (null != ((bj) this).field_b[param0]) {
                     break L1;
                   } else {
@@ -358,26 +381,26 @@ final class bj {
                 var7 = ((bj) this).field_b[param0];
                 if (param2 <= -118) {
                   var8 = 1;
-                  var9_int = 0;
+                  var9 = 0;
                   L2: while (true) {
                     L3: {
-                      if (var9_int >= var5_int) {
+                      if (var9 >= var5_int) {
                         break L3;
                       } else {
                         L4: {
                           if (var6 != null) {
-                            var10_int = var6[var9_int];
+                            var10 = var50[var9];
                             break L4;
                           } else {
-                            var10_int = var9_int;
+                            var10 = var9;
                             break L4;
                           }
                         }
-                        if (null == var7[var10_int]) {
+                        if (null == var7[var10]) {
                           var8 = 0;
                           break L3;
                         } else {
-                          var9_int++;
+                          var9++;
                           continue L2;
                         }
                       }
@@ -407,20 +430,24 @@ final class bj {
                                 }
                               }
                             }
-                            var9_array = sc.a(true, true, ((bj) this).field_i[param0]);
-                            var10_ref = new sb(var9_array);
-                            var10_ref.a(5, var10_ref.field_u.length, param3, true);
+                            var51 = sc.a(true, true, ((bj) this).field_i[param0]);
+                            var26 = new sb(var51);
+                            var26.a(5, var26.field_u.length, param3, true);
+                            var52_array = var51;
                             break L5;
                           }
                         }
-                        var9_array = sc.a(false, true, ((bj) this).field_i[param0]);
+                        var52_array = sc.a(false, true, ((bj) this).field_i[param0]);
                         break L5;
                       }
                       try {
                         L8: {
-                          int discarded$3 = 0;
-                          var23 = in.a(var9_array);
-                          var10 = var23;
+                          var53 = in.a(var52_array, 0);
+                          var45 = var53;
+                          var37 = var45;
+                          var27 = var37;
+                          var23 = var27;
+                          var54 = var23;
                           break L8;
                         }
                       } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -451,9 +478,7 @@ final class bj {
                             break L9;
                           }
                         }
-                        int discarded$4 = 1;
-                        int discarded$5 = 1;
-                        throw lj.a((Throwable) (Object) stackIn_38_0, (stackIn_38_2 != 0) + " " + param0 + " " + param3.length + " " + gn.a(param3.length, var9_array) + " " + gn.a(param3.length + -2, var9_array) + " " + ((bj) this).field_f.field_h[param0] + " " + ((bj) this).field_f.field_b);
+                        throw lj.a((Throwable) (Object) stackIn_38_0, (stackIn_38_2 != 0) + " " + param0 + " " + param3.length + " " + gn.a(param3.length, var52_array, true) + " " + gn.a(param3.length + -2, var52_array, true) + " " + ((bj) this).field_f.field_h[param0] + " " + ((bj) this).field_f.field_b);
                       }
                       L10: {
                         if (!((bj) this).field_d) {
@@ -470,34 +495,42 @@ final class bj {
                               var11 = 0;
                               break L12;
                             } else {
-                              var11 = var6[0];
+                              var11 = var50[0];
                               break L12;
                             }
                           }
                           if (((bj) this).field_j == 0) {
-                            var7[var11] = qh.a((byte) 112, false, var10);
+                            var7[var11] = qh.a((byte) 112, false, var54);
                             break L11;
                           } else {
-                            var7[var11] = (Object) (Object) var23;
+                            var7[var11] = (Object) (Object) var53;
                             break L11;
                           }
                         } else {
                           if (((bj) this).field_j != 2) {
-                            var11 = var23.length;
+                            var11 = var53.length;
                             var11--;
                             var12 = var23[var11] & 255;
                             var11 = var11 - 4 * (var12 * var5_int);
-                            var13 = new sb(var10);
-                            var14 = new int[var5_int];
-                            var13.field_o = var11;
+                            var31 = new sb(var54);
+                            var56 = new int[var5_int];
+                            var48 = var56;
+                            var40 = var48;
+                            var32 = var40;
+                            var14 = var32;
+                            var31.field_o = var11;
                             var15_int = 0;
                             L13: while (true) {
                               if (var12 <= var15_int) {
-                                var15 = new byte[var5_int][];
+                                var57 = new byte[var5_int][];
+                                var49 = var57;
+                                var41 = var49;
+                                var33 = var41;
+                                var15 = var33;
                                 var16 = 0;
                                 L14: while (true) {
                                   if (var5_int <= var16) {
-                                    var13.field_o = var11;
+                                    var31.field_o = var11;
                                     var16 = 0;
                                     var17 = 0;
                                     L15: while (true) {
@@ -509,7 +542,7 @@ final class bj {
                                           } else {
                                             L17: {
                                               if (var6 != null) {
-                                                var18 = var6[var17];
+                                                var18 = var50[var17];
                                                 break L17;
                                               } else {
                                                 var18 = var17;
@@ -518,10 +551,10 @@ final class bj {
                                             }
                                             L18: {
                                               if (((bj) this).field_j != 0) {
-                                                var7[var18] = (Object) (Object) var15[var17];
+                                                var7[var18] = (Object) (Object) var57[var17];
                                                 break L18;
                                               } else {
-                                                var7[var18] = qh.a((byte) 112, false, var15[var17]);
+                                                var7[var18] = qh.a((byte) 112, false, var57[var17]);
                                                 break L18;
                                               }
                                             }
@@ -537,8 +570,8 @@ final class bj {
                                             var17++;
                                             continue L15;
                                           } else {
-                                            var18 = var18 + var13.b((byte) 61);
-                                            ai.a(var10, var16, var15[var19], var14[var19], var18);
+                                            var18 = var18 + var31.b((byte) 61);
+                                            ai.a(var54, var16, var57[var19], var56[var19], var18);
                                             var14[var19] = var14[var19] + var18;
                                             var16 = var16 + var18;
                                             var19++;
@@ -548,8 +581,8 @@ final class bj {
                                       }
                                     }
                                   } else {
-                                    var15[var16] = new byte[var14[var16]];
-                                    var14[var16] = 0;
+                                    var15[var16] = new byte[var56[var16]];
+                                    var56[var16] = 0;
                                     var16++;
                                     continue L14;
                                   }
@@ -562,7 +595,7 @@ final class bj {
                                     var15_int++;
                                     continue L13;
                                   } else {
-                                    var16 = var16 + var13.b((byte) 47);
+                                    var16 = var16 + var31.b((byte) 47);
                                     var14[var17] = var14[var17] + var16;
                                     var17++;
                                     continue L20;
@@ -571,13 +604,13 @@ final class bj {
                               }
                             }
                           } else {
-                            var11 = var23.length;
+                            var11 = var53.length;
                             var11--;
                             var12 = var23[var11] & 255;
                             var11 = var11 - 4 * var5_int * var12;
-                            var13 = new sb(var10);
+                            var29 = new sb(var54);
                             var14_int = 0;
-                            var13.field_o = var11;
+                            var29.field_o = var11;
                             var15_int = 0;
                             var16 = 0;
                             L21: while (true) {
@@ -587,14 +620,14 @@ final class bj {
                                   stackIn_58_0 = stackOut_57_0;
                                   return stackIn_58_0 != 0;
                                 } else {
-                                  var16_ref_byte__ = new byte[var14_int];
+                                  var55 = new byte[var14_int];
                                   var14_int = 0;
-                                  var13.field_o = var11;
+                                  var29.field_o = var11;
                                   var17 = 0;
                                   var18 = 0;
                                   L22: while (true) {
                                     if (var18 >= var12) {
-                                      var7[var15_int] = (Object) (Object) var16_ref_byte__;
+                                      var7[var15_int] = (Object) (Object) var55;
                                       return true;
                                     } else {
                                       var19 = 0;
@@ -605,9 +638,9 @@ final class bj {
                                           continue L22;
                                         } else {
                                           L24: {
-                                            var19 = var19 + var13.b((byte) 97);
+                                            var19 = var19 + var29.b((byte) 97);
                                             if (var6 != null) {
-                                              var21 = var6[var20];
+                                              var21 = var50[var20];
                                               break L24;
                                             } else {
                                               var21 = var20;
@@ -616,7 +649,7 @@ final class bj {
                                           }
                                           L25: {
                                             if (param1 == var21) {
-                                              ai.a(var10, var17, var16_ref_byte__, var14_int, var19);
+                                              ai.a(var54, var17, var55, var14_int, var19);
                                               var14_int = var14_int + var19;
                                               break L25;
                                             } else {
@@ -640,9 +673,9 @@ final class bj {
                                     continue L21;
                                   } else {
                                     L27: {
-                                      var17 = var17 + var13.b((byte) 81);
+                                      var17 = var17 + var29.b((byte) 81);
                                       if (var6 != null) {
-                                        var19 = var6[var18];
+                                        var19 = var50[var18];
                                         break L27;
                                       } else {
                                         var19 = var18;
@@ -721,7 +754,7 @@ final class bj {
         return stackIn_103_0 != 0;
     }
 
-    private final synchronized byte[] a(int[] param0, int param1, int param2) {
+    private final synchronized byte[] a(int[] param0, int param1, int param2, int param3) {
         Object var5 = null;
         byte[] var7 = null;
         Object stackIn_9_0 = null;
@@ -958,8 +991,7 @@ final class bj {
         if (param0) {
             byte[] discarded$0 = ((bj) this).e(-122, 54);
         }
-        int discarded$1 = -21331;
-        return this.a((int[]) null, param1, param2);
+        return this.a((int[]) null, param1, param2, -21331);
     }
 
     final boolean a(String param0, String param1, int param2) {
@@ -1121,11 +1153,13 @@ final class bj {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
+        Object var6 = null;
         L0: {
           var5 = MinerDisturbance.field_ab;
           if (param0 == -1) {
             break L0;
           } else {
+            var6 = null;
             int discarded$2 = ((bj) this).a(122, (String) null);
             break L0;
           }
@@ -1162,7 +1196,8 @@ final class bj {
     final boolean a(boolean param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        CharSequence var4 = null;
+        Object var4 = null;
+        CharSequence var5 = null;
         int stackIn_3_0 = 0;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -1195,12 +1230,13 @@ final class bj {
                 if (!param0) {
                   break L1;
                 } else {
+                  var4 = null;
                   bj.a(22, (wh) null);
                   break L1;
                 }
               }
-              var4 = (CharSequence) (Object) param1;
-              var3_int = ((bj) this).field_f.field_s.a((byte) -71, jh.a(var4, 0));
+              var5 = (CharSequence) (Object) param1;
+              var3_int = ((bj) this).field_f.field_s.a((byte) -71, jh.a(var5, 0));
               stackOut_6_0 = ((bj) this).d(var3_int, 0);
               stackIn_7_0 = stackOut_6_0;
               break L0;
@@ -1549,7 +1585,7 @@ final class bj {
         return ((bj) this).field_g.a((byte) 125, param0);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_c = null;
         int var1 = 0;
         field_e = null;
@@ -1595,8 +1631,7 @@ final class bj {
         try {
           L0: {
             L1: {
-              int discarded$3 = 0;
-              mk.a(true, param1);
+              mk.a(true, param1, 0);
               if (param0 == -6358) {
                 break L1;
               } else {

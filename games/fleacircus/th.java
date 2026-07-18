@@ -646,22 +646,55 @@ final class th extends sh {
     final synchronized void a(int param0) {
         int var3 = 0;
         L0: {
-          var3 = fleas.field_A ? 1 : 0;
-          if (((th) this).field_E > 0) {
-            if (((th) this).field_F == null) {
-              if (-1048577 > ((th) this).field_E) {
+          L1: {
+            var3 = fleas.field_A ? 1 : 0;
+            if (((th) this).field_E > 0) {
+              if (((th) this).field_F == null) {
+                if (-1048577 > ((th) this).field_E) {
+                  if (((th) this).field_r != null) {
+                    ((th) this).field_o.a(param0);
+                    break L1;
+                  } else {
+                    if (0 >= ((th) this).field_A) {
+                      break L0;
+                    } else {
+                      if (null == ((th) this).field_y) {
+                        break L0;
+                      } else {
+                        ((th) this).field_t.a(param0);
+                        break L0;
+                      }
+                    }
+                  }
+                } else {
+                  if (0 >= ((th) this).field_A) {
+                    break L0;
+                  } else {
+                    if (null == ((th) this).field_y) {
+                      break L0;
+                    } else {
+                      ((th) this).field_t.a(param0);
+                      break L0;
+                    }
+                  }
+                }
+              } else {
+                if (0 >= ((th) this).field_A) {
+                  break L0;
+                } else {
+                  if (null == ((th) this).field_y) {
+                    break L0;
+                  } else {
+                    ((th) this).field_t.a(param0);
+                    break L0;
+                  }
+                }
+              }
+            } else {
+              if (-1048577 < ((th) this).field_E) {
                 if (((th) this).field_r != null) {
                   ((th) this).field_o.a(param0);
-                  if (0 >= ((th) this).field_A) {
-                    break L0;
-                  } else {
-                    if (null == ((th) this).field_y) {
-                      break L0;
-                    } else {
-                      ((th) this).field_t.a(param0);
-                      break L0;
-                    }
-                  }
+                  break L1;
                 } else {
                   if (0 >= ((th) this).field_A) {
                     break L0;
@@ -678,110 +711,71 @@ final class th extends sh {
                 if (0 >= ((th) this).field_A) {
                   break L0;
                 } else {
-                  if (null == ((th) this).field_y) {
-                    break L0;
-                  } else {
+                  if (null != ((th) this).field_y) {
                     ((th) this).field_t.a(param0);
                     break L0;
-                  }
-                }
-              }
-            } else {
-              if (0 >= ((th) this).field_A) {
-                break L0;
-              } else {
-                if (null == ((th) this).field_y) {
-                  break L0;
-                } else {
-                  ((th) this).field_t.a(param0);
-                  break L0;
-                }
-              }
-            }
-          } else {
-            if (-1048577 < ((th) this).field_E) {
-              if (((th) this).field_r != null) {
-                ((th) this).field_o.a(param0);
-                if (0 >= ((th) this).field_A) {
-                  break L0;
-                } else {
-                  if (null == ((th) this).field_y) {
-                    break L0;
                   } else {
-                    ((th) this).field_t.a(param0);
-                    break L0;
-                  }
-                }
-              } else {
-                if (0 >= ((th) this).field_A) {
-                  break L0;
-                } else {
-                  if (null == ((th) this).field_y) {
-                    break L0;
-                  } else {
-                    ((th) this).field_t.a(param0);
-                    break L0;
-                  }
-                }
-              }
-            } else {
-              if (0 >= ((th) this).field_A) {
-                break L0;
-              } else {
-                if (null != ((th) this).field_y) {
-                  ((th) this).field_t.a(param0);
-                  break L0;
-                } else {
-                  if (0 >= ((th) this).field_A) {
-                    break L0;
-                  } else {
-                    if (null == ((th) this).field_y) {
+                    if (0 >= ((th) this).field_A) {
                       break L0;
                     } else {
-                      ((th) this).field_t.a(param0);
-                      break L0;
+                      if (null == ((th) this).field_y) {
+                        break L0;
+                      } else {
+                        ((th) this).field_t.a(param0);
+                        break L0;
+                      }
                     }
                   }
                 }
               }
             }
           }
-        }
-        L1: {
-          if (!((th) this).field_B) {
-            break L1;
+          if (0 >= ((th) this).field_A) {
+            break L0;
           } else {
-            L2: {
+            if (null == ((th) this).field_y) {
+              break L0;
+            } else {
+              ((th) this).field_t.a(param0);
+              break L0;
+            }
+          }
+        }
+        L2: {
+          if (!((th) this).field_B) {
+            break L2;
+          } else {
+            L3: {
               if (((th) this).field_u <= 0) {
-                break L2;
+                break L3;
               } else {
                 if (((th) this).field_C.d(31499)) {
-                  break L2;
+                  break L3;
                 } else {
                   ((th) this).field_u = -((th) this).field_u;
                   ((th) this).field_F = null;
                   ((th) this).field_B = false;
-                  break L1;
+                  break L2;
                 }
               }
             }
             if (((th) this).field_u >= 0) {
-              break L1;
+              break L2;
             } else {
               if (!((th) this).field_o.d(31499)) {
                 ((th) this).field_B = false;
                 ((th) this).field_r = null;
                 ((th) this).field_u = -((th) this).field_u;
-                break L1;
+                break L2;
               } else {
-                break L1;
+                break L2;
               }
             }
           }
         }
-        L3: {
+        L4: {
           if (((th) this).field_u == 0) {
-            break L3;
+            break L4;
           } else {
             ((th) this).field_E = ((th) this).field_E + param0 * ((th) this).field_u;
             if (1048576 <= ((th) this).field_E) {
@@ -789,21 +783,21 @@ final class th extends sh {
               if (!((th) this).field_B) {
                 ((th) this).field_u = 0;
                 if (((th) this).field_w) {
-                  break L3;
+                  break L4;
                 } else {
-                  L4: {
+                  L5: {
                     if (null == ((th) this).field_r) {
-                      break L4;
+                      break L5;
                     } else {
                       ((th) this).field_o.e(-398);
-                      break L4;
+                      break L5;
                     }
                   }
                   ((th) this).field_r = null;
-                  break L3;
+                  break L4;
                 }
               } else {
-                break L3;
+                break L4;
               }
             } else {
               if (((th) this).field_E <= 0) {
@@ -811,24 +805,24 @@ final class th extends sh {
                 if (!((th) this).field_B) {
                   ((th) this).field_u = 0;
                   if (((th) this).field_w) {
-                    break L3;
+                    break L4;
                   } else {
-                    L5: {
+                    L6: {
                       if (((th) this).field_F != null) {
                         ((th) this).field_C.e(-398);
-                        break L5;
+                        break L6;
                       } else {
-                        break L5;
+                        break L6;
                       }
                     }
                     ((th) this).field_F = null;
-                    break L3;
+                    break L4;
                   }
                 } else {
-                  break L3;
+                  break L4;
                 }
               } else {
-                break L3;
+                break L4;
               }
             }
           }

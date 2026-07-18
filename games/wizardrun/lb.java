@@ -226,7 +226,7 @@ final class lb {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_f = null;
     }
@@ -242,7 +242,7 @@ final class lb {
         }
     }
 
-    private final int b(int param0) {
+    private final int b(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = wizardrun.field_H;
@@ -359,9 +359,8 @@ final class lb {
         }
     }
 
-    private final void c(int param0) {
-        int discarded$0 = 0;
-        int[] var5 = new int[this.b(param0)];
+    private final void c(int param0, int param1) {
+        int[] var5 = new int[this.b(param0, 0)];
         int[] var3 = var5;
         g.a(((lb) this).field_d, 0, var5, 0, ((lb) this).field_d.length);
         int var4 = 0;

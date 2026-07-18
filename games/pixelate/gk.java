@@ -208,7 +208,7 @@ final class gk extends c implements bp {
         }
     }
 
-    public static void f() {
+    public static void f(boolean param0) {
         field_eb = null;
         field_kb = null;
         field_jb = null;
@@ -237,12 +237,11 @@ final class gk extends c implements bp {
         if (param0 <= 16) {
             field_cb = null;
         }
-        int discarded$0 = 5818;
-        nk.a(bg.field_k, ((gk) this).field_E - ((gk) this).field_hb + uf.field_d);
+        nk.a(bg.field_k, ((gk) this).field_E - ((gk) this).field_hb + uf.field_d, 5818);
         return ((gk) this).field_l;
     }
 
-    final static byte[] b(CharSequence param0) {
+    final static byte[] b(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;

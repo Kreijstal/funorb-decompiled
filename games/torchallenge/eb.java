@@ -242,7 +242,7 @@ final class eb extends da {
         return stackIn_11_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_s = null;
         field_i = null;
         field_r = null;

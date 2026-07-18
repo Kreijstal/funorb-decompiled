@@ -24,7 +24,7 @@ final class fa {
         }
     }
 
-    private final void a(long param0, Object param1) {
+    private final void a(long param0, Object param1, int param2, int param3) {
         sh var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -100,15 +100,13 @@ final class fa {
             return;
         }
         try {
-            int discarded$0 = 11261;
-            int discarded$1 = 1;
-            this.a(param1, param0);
+            this.a(param1, param0, 1, 11261);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "fa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_e = null;
         field_c = null;

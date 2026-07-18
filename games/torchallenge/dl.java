@@ -88,7 +88,7 @@ final class dl extends da {
         ((dl) this).field_k = null;
     }
 
-    final static byte[] a(String param0) {
+    final static byte[] a(String param0, boolean param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -249,7 +249,7 @@ final class dl extends da {
         return stackIn_11_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_C = null;
         field_j = null;
         field_l = null;

@@ -8,7 +8,7 @@ class cj extends ph {
     private mm field_J;
     static int field_I;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String var3 = null;
@@ -132,8 +132,7 @@ class cj extends ph {
               }
             }
             if (rl.a(2884, param3, param4, param2)) {
-              int discarded$2 = 5116;
-              stackOut_5_0 = li.a(param0.a(false, param2, param4));
+              stackOut_5_0 = li.a(param0.a(false, param2, param4), 5116);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -511,9 +510,7 @@ class cj extends ph {
     final static uj a(int param0, int param1) {
         uj var2 = new uj();
         ve.field_b.a((am) (Object) var2, 109);
-        int discarded$0 = 6;
-        int discarded$1 = 51;
-        pe.a();
+        pe.a((byte) 51, 6);
         return var2;
     }
 

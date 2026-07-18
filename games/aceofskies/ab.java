@@ -641,7 +641,7 @@ class ab extends ea implements vm {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_r = null;
     }
 
@@ -651,8 +651,7 @@ class ab extends ea implements vm {
             Object var7 = null;
             ((ab) this).a((byte) -120, (ea) null, 59, 121);
         }
-        int discarded$0 = 0;
-        this.b();
+        this.b(false);
     }
 
     void a(byte param0, ea param1, int param2, int param3) {
@@ -1157,7 +1156,7 @@ class ab extends ea implements vm {
         return stackIn_9_0 != 0;
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         an var2 = new an(((ab) this).field_s);
         ea var3 = (ea) (Object) var2.c(-1372);
         while (var3 != null) {

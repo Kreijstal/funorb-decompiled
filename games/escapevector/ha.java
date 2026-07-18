@@ -9,7 +9,7 @@ final class ha implements db {
     static int[] field_e;
     static boolean field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_e = null;
     }
@@ -565,8 +565,7 @@ final class ha implements db {
                   break L1;
                 }
               }
-              int discarded$2 = -1;
-              stackOut_5_0 = ea.a(param2.a(param0, (byte) -97, param3));
+              stackOut_5_0 = ea.a(param2.a(param0, (byte) -97, param3), -1);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

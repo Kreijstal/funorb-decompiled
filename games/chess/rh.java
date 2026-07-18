@@ -14,7 +14,7 @@ final class rh {
     static String[] field_e;
     String field_d;
 
-    final static java.net.URL a(java.net.URL param0, java.applet.Applet param1) {
+    final static java.net.URL a(java.net.URL param0, java.applet.Applet param1, byte param2) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_9_0 = null;
@@ -287,7 +287,7 @@ final class rh {
         }
     }
 
-    final static km[] a(km[] param0) {
+    final static km[] a(km[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         km var3 = null;
@@ -363,7 +363,7 @@ final class rh {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_e = null;
@@ -455,11 +455,9 @@ final class rh {
           L0: {
             vl.field_M = param15;
             sj.field_d = param2;
-            int discarded$2 = 66;
-            ql.a(param13, param3, param5, param9);
+            ql.a(param13, param3, param5, param9, (byte) 66);
             r.a(param19, (byte) -87, param7, param10);
-            int discarded$3 = 4;
-            eg.a(8, 2, 8, param8, param11);
+            eg.a(8, 2, 8, param8, param11, 4);
             ed.a(240, 320, (byte) -79);
             ca.a(param16, (byte) 107, param14, param0);
             break L0;

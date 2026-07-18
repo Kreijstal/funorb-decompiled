@@ -771,8 +771,8 @@ final class gj extends l {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
+                                    int discarded$3 = gj.a(16);
                                     int discarded$4 = gj.a(16);
-                                    int discarded$5 = gj.a(16);
                                     field_p[var6] = gj.a(8);
                                     var6++;
                                     continue L6;
@@ -797,7 +797,7 @@ final class gj extends l {
                       }
                     }
                   } else {
-                    int discarded$6 = gj.a(16);
+                    int discarded$5 = gj.a(16);
                     var3++;
                     continue L2;
                   }
@@ -857,8 +857,7 @@ final class gj extends l {
                               continue L0;
                             }
                           } else {
-                            int discarded$7 = 13760;
-                            var9[var11] = ca.b(var10, var11);
+                            var9[var11] = ca.b(var10, var11, 13760);
                             var11++;
                             continue L12;
                           }

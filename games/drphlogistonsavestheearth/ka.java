@@ -409,7 +409,7 @@ final class ka extends hj {
         return stackIn_19_0;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -526,8 +526,7 @@ final class ka extends hj {
         if (param0 >= -17) {
             ka.c(-43);
         }
-        int discarded$0 = -124;
-        sd.a();
+        sd.a((byte) -124);
         sf.a(4, 11649);
     }
 

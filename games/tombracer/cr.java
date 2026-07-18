@@ -44,7 +44,7 @@ final class cr {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
     }
 
@@ -70,7 +70,7 @@ final class cr {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3) {
+    final static void a(int[] param0, int param1, int param2, int param3, byte param4) {
         RuntimeException var5 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

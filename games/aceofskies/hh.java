@@ -34,8 +34,7 @@ abstract class hh {
         int var5 = 0;
         int var6 = 0;
         try {
-            int discarded$0 = 1;
-            var2 = fa.a(param1);
+            var2 = fa.a(param1, true);
             if (param0 != 255) {
                 field_b = null;
             }
@@ -103,7 +102,7 @@ abstract class hh {
         return (param1 & 256) != 0;
     }
 
-    final static int[][] a(byte param0, int param1, int param2, boolean param3, int param4, float param5, int param6, int param7) {
+    final static int[][] a(byte param0, int param1, int param2, boolean param3, int param4, float param5, int param6, int param7, int param8) {
         int var12 = 0;
         int var13 = AceOfSkies.field_G ? 1 : 0;
         int[][] var16 = new int[256][64];

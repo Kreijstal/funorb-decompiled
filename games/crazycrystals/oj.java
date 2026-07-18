@@ -629,7 +629,7 @@ final class oj extends om {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_M = null;
         field_L = null;
         field_C = null;

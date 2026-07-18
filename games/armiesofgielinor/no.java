@@ -93,7 +93,7 @@ final class no extends en {
         }
     }
 
-    final static void a(bv param0, uo param1, int param2) {
+    final static void a(bv param0, uo param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String var5 = null;
@@ -142,8 +142,7 @@ final class no extends en {
               } else {
                 var5 = mt.a(param0, true);
                 var6 = param0.a(false);
-                int discarded$2 = 1;
-                var7 = ej.a(param0);
+                var7 = ej.a(param0, true);
                 var8 = param0.a(false) + -var6;
                 kq.a(var6, -24232, var8, var7, param0);
                 param1.a(var7, param0, var5, (byte) 37);
@@ -246,7 +245,7 @@ final class no extends en {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_N = null;
         field_U = null;
         field_P = null;
@@ -288,7 +287,7 @@ final class no extends en {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         tf.a((byte) -99, ag.d((byte) -111));
     }
 

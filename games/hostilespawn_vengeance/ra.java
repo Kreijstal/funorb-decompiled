@@ -16,7 +16,7 @@ final class ra implements nn {
     private int field_j;
     private int field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_f = null;
         field_e = null;

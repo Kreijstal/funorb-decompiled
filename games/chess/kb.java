@@ -15,18 +15,18 @@ final class kb extends kn {
     static String field_P;
     static String field_R;
 
-    final static void f() {
+    final static void f(byte param0) {
         if (an.field_c) {
             wb.g(wb.field_i, wb.field_a, -wb.field_i + wb.field_j, -wb.field_a + wb.field_b);
             rh.field_c.a(false, false);
         }
     }
 
-    final static boolean j() {
+    final static boolean j(int param0) {
         return !pi.field_c.b((byte) 98);
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_P = null;
         field_R = null;
         field_O = null;

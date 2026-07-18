@@ -107,9 +107,8 @@ final class ko extends af {
         }
     }
 
-    final static boolean e() {
-        int discarded$0 = 0;
-        return pp.a(ob.e((byte) -124));
+    final static boolean e(byte param0) {
+        return pp.a(ob.e((byte) -124), 0);
     }
 
     final static boolean b(byte param0, int param1) {
@@ -176,7 +175,7 @@ final class ko extends af {
         return stackIn_3_0;
     }
 
-    public static void f() {
+    public static void f(boolean param0) {
         field_U = null;
         field_O = null;
         field_M = null;
@@ -186,11 +185,11 @@ final class ko extends af {
     final static void a(boolean param0, int param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
-        tn var4_ref = null;
         cr var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
+        tn var9 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
@@ -220,7 +219,7 @@ final class ko extends af {
                   break L3;
                 } else {
                   if (pe.field_r) {
-                    boolean discarded$3 = lq.field_a.a(td.field_c.field_C, param0, (byte) 82, td.field_c.field_ob);
+                    boolean discarded$1 = lq.field_a.a(td.field_c.field_C, param0, (byte) 82, td.field_c.field_ob);
                     break L3;
                   } else {
                     lq.field_a = null;
@@ -240,17 +239,15 @@ final class ko extends af {
                     }
                   }
                   L6: {
-                    var4_ref = qr.a(ia.field_G, 55, param1, r.field_f);
-                    if (var4_ref == null) {
+                    var9 = qr.a(ia.field_G, 55, param1, r.field_f);
+                    if (var9 == null) {
                       break L6;
                     } else {
-                      int discarded$4 = 32192;
-                      nd.a(var4_ref);
+                      nd.a(var9, 32192);
                       break L6;
                     }
                   }
-                  int discarded$5 = -485;
-                  var8 = ui.b();
+                  var8 = ui.b(-485);
                   if (var8 == null) {
                     break L0;
                   } else {

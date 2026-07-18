@@ -243,8 +243,7 @@ final class u {
     }
 
     final static void a(boolean param0, int param1) {
-        int discarded$0 = 1;
-        qh.a((byte) -110, 10, bj.field_c[param1]);
+        qh.a((byte) -110, 10, bj.field_c[param1], true);
     }
 
     static {

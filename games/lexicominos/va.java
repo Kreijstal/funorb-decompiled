@@ -26,7 +26,7 @@ final class va extends tj {
         return param0 <= 0 ? -1 : param0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_m = null;
         field_l = null;
     }
@@ -81,7 +81,7 @@ final class va extends tj {
                 break L1;
               } else {
                 var6 = null;
-                String discarded$22 = ((va) this).a((byte) -44, (String) null);
+                String discarded$2 = ((va) this).a((byte) -44, (String) null);
                 break L1;
               }
             }
@@ -98,18 +98,15 @@ final class va extends tj {
                   stackIn_12_0 = stackOut_11_0;
                   return stackIn_12_0;
                 } else {
-                  int discarded$23 = 17;
-                  if (hd.a(var5)) {
+                  if (hd.a(var5, 17)) {
                     stackOut_15_0 = td.field_b;
                     stackIn_16_0 = stackOut_15_0;
                     return stackIn_16_0;
                   } else {
-                    int discarded$24 = 1;
-                    if (!this.a(param1)) {
+                    if (!this.a(param1, true)) {
                       if (var7.length() > 0) {
                         if (!bi.a((byte) -124, var7, var5)) {
-                          int discarded$25 = 95;
-                          if (pd.a(var7, var5)) {
+                          if (pd.a(var7, var5, 95)) {
                             stackOut_28_0 = vf.field_s;
                             stackIn_29_0 = stackOut_28_0;
                             return stackIn_29_0;
@@ -181,7 +178,7 @@ final class va extends tj {
         return stackIn_34_0;
     }
 
-    private final boolean a(String param0) {
+    private final boolean a(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -326,14 +323,12 @@ final class va extends tj {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
             } else {
-              int discarded$13 = -118;
-              if (!ui.a(var3, var4)) {
+              if (!ui.a(var3, var4, (byte) -118)) {
                 stackOut_6_0 = ni.field_b;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
               } else {
-                int discarded$14 = 1;
-                if (this.a(param1)) {
+                if (this.a(param1, true)) {
                   stackOut_10_0 = ni.field_b;
                   stackIn_11_0 = stackOut_10_0;
                   break L0;

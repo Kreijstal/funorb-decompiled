@@ -5,7 +5,7 @@ final class nhb extends rqa {
     static int[] field_o;
     static boolean field_p;
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
         int var8 = param3 / 2;
         if (var8 < 2) {
             if (var8 < param3) {
@@ -16,8 +16,7 @@ final class nhb extends rqa {
         int var10 = rmb.a(-16777216, param0);
         int var11 = dib.a((byte) 95, param0, param1, var10);
         paa.a(12124934, -98, -var9 + param5, param2 - -((-var8 + param3) / 2), var8, param6 + var9);
-        int discarded$0 = 0;
-        ci.a(param2, param3, var10, var9, param6, var11);
+        ci.a(param2, param3, var10, var9, param6, var11, 0);
     }
 
     final nc a(nc[] param0, int param1) {
@@ -92,7 +91,7 @@ final class nhb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

@@ -173,8 +173,7 @@ final class ok implements dja {
                 jfb.field_o.a(-360 + dma.field_g >> 1, 117, 360, 10, -130 + (dma.field_j - 14));
                 sfa.field_d.a(0, 124, jfb.field_o.field_hb, 0, 24);
                 neb.field_o.a(0, 124, jfb.field_o.field_hb, 24, -24 + jfb.field_o.field_G);
-                int discarded$1 = 3;
-                neb.field_o.field_gb = uwa.a(11579568, neb.field_o.field_G, 1, 8421504, 92);
+                neb.field_o.field_gb = uwa.a(11579568, neb.field_o.field_G, 1, 8421504, 92, 3);
                 fh.field_f.a(5, 124, neb.field_o.field_hb - 10, 5, -2 + (-24 + neb.field_o.field_G) - 10);
                 rlb.field_a.a((neb.field_o.field_hb - 80) / 2, 24, 80, -29 + neb.field_o.field_G, 24);
                 irb.a(0);
@@ -377,7 +376,7 @@ final class ok implements dja {
         return (tv[]) (Object) new anb[param1];
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_b = null;
         int var1 = -1;

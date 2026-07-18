@@ -124,14 +124,14 @@ abstract class qe {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_f = null;
         field_e = null;
         field_g = null;
     }
 
-    final static byte[] a(byte[] param0, int param1, da param2) {
+    final static byte[] a(byte[] param0, int param1, da param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -287,7 +287,7 @@ abstract class qe {
         return stackIn_16_0;
     }
 
-    final static void a(long param0) {
+    final static void a(long param0, byte param1) {
         if (param0 <= 0L) {
             return;
         }

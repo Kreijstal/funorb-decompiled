@@ -29,7 +29,7 @@ final class gl {
         this(param0, false);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
     }
 

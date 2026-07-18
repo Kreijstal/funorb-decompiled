@@ -5,7 +5,7 @@ final class lm extends tm {
     lm() {
     }
 
-    final static void i() {
+    final static void i(int param0) {
         dd var1 = null;
         dd var3 = null;
         int var4 = 0;
@@ -16,18 +16,11 @@ final class lm extends tm {
             fb.a();
             qh.d();
             im.field_fc = 0;
-            int discarded$0 = -21818;
-            gi.a();
+            gi.a(-21818);
             var3 = var1.d();
             for (var4 = 0; 15 > var4; var4++) {
                 var3.f(-2, -2, 16777215);
-                int discarded$1 = 140;
-                int discarded$2 = 540;
-                int discarded$3 = 0;
-                int discarded$4 = 0;
-                int discarded$5 = 4;
-                int discarded$6 = 4;
-                qh.e();
+                qh.e(4, 4, 0, 0, 540, 140);
             }
             ci.field_h.e();
             var1.b(0, 0);
@@ -48,7 +41,7 @@ final class lm extends tm {
         }
     }
 
-    final static void c() {
+    final static void c(int param0, int param1) {
         oq var2 = ej.field_j;
         var2.b(false, 11);
         var2.field_v = var2.field_v + 1;
@@ -242,7 +235,7 @@ final class lm extends tm {
         }
     }
 
-    final static hj[] a() {
+    final static hj[] a(byte param0) {
         return new hj[]{gr.field_G, lb.field_N, nk.field_g, kk.field_A, en.field_c, jk.field_i, no.field_g, of.field_Tb, mj.field_d, pf.field_e, pq.field_J, ch.field_K, bq.field_r, pn.field_k};
     }
 

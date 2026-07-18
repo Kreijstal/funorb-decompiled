@@ -156,7 +156,7 @@ final class fi implements Runnable {
         return ((fi) this).field_j;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_h = null;
     }

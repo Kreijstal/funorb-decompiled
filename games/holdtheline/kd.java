@@ -314,7 +314,7 @@ final class kd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         if (!(mn.field_a)) {
             throw new IllegalStateException();
         }
@@ -453,7 +453,7 @@ final class kd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -639,7 +639,7 @@ final class kd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }

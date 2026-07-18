@@ -15,7 +15,7 @@ final class q extends wn {
     static int field_N;
     static int field_L;
 
-    public static void f() {
+    public static void f(int param0) {
         field_I = null;
         field_E = null;
         field_F = null;

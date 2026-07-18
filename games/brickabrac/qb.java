@@ -31,8 +31,7 @@ final class qb extends ki {
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
         pb var7 = null;
         if (((qb) this).b((byte) -106)) {
-            int discarded$1 = -20777;
-            var7 = ge.a(((qb) this).field_m, param3);
+            var7 = ge.a(((qb) this).field_m, param3, -20777);
             if (!(var7.a((byte) -84, param3, ((qb) this).field_m))) {
                 qf.a(param3, var7, 1, dm.field_f, 0, !param0 ? true : false);
                 var7.a(((qb) this).field_m, param3, (byte) 78);
@@ -46,7 +45,7 @@ final class qb extends ki {
         }
     }
 
-    final static jp a(jp param0) {
+    final static jp a(jp param0, boolean param1, int param2) {
         jp var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -363,7 +362,7 @@ final class qb extends ki {
                 if (param4.indexOf("<br>") != -1) {
                   break L1;
                 } else {
-                  args[0] = (String) (Object) args;
+                  args[0] = param4;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;
@@ -549,8 +548,7 @@ final class qb extends ki {
               }
             }
           }
-          int discarded$2 = 6846;
-          ec.h();
+          ec.h(6846);
           i.field_j = 11;
           break L0;
         }

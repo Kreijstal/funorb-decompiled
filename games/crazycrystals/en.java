@@ -50,7 +50,7 @@ abstract class en extends ab {
         }
     }
 
-    final static si a(String[] args) {
+    final static si a(String[] args, int param1) {
         si var2 = null;
         RuntimeException var2_ref = null;
         si stackIn_3_0 = null;
@@ -112,7 +112,7 @@ abstract class en extends ab {
         return stackIn_3_0;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_K = null;
         field_F = null;
         field_M = null;

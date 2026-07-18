@@ -9,7 +9,7 @@ final class hm {
     static String field_d;
     static int field_b;
 
-    final static og a(int param0, byte[] param1) {
+    final static og a(int param0, byte[] param1, int param2) {
         og var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -119,8 +119,7 @@ final class hm {
                     var4 = param1.substring(var2_int - -1);
                     var5 = wf.a(false, var3);
                     if (var5 == null) {
-                      int discarded$2 = -4384;
-                      stackOut_11_0 = jf.a(var4);
+                      stackOut_11_0 = jf.a(var4, -4384);
                       stackIn_12_0 = stackOut_11_0;
                       break L0;
                     } else {
@@ -173,7 +172,7 @@ final class hm {
         return stackIn_12_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_c = null;
         field_f = null;
@@ -181,7 +180,7 @@ final class hm {
         field_d = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         oo.field_f = -1;
         qg.field_b = null;
         re.field_h = false;

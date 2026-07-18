@@ -464,7 +464,7 @@ final class wh extends ona {
         }
     }
 
-    private final void i() {
+    private final void i(int param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -630,8 +630,7 @@ final class wh extends ona {
                   }
                 }
                 ((wh) this).field_p = (lpb) param0;
-                int discarded$1 = 7571;
-                this.i();
+                this.i(7571);
                 this.a((byte) -65, param1);
                 ((wh) this).field_b = null;
                 ((wh) this).field_i.field_e = 0;

@@ -756,7 +756,7 @@ final class lma extends dg {
         return false;
     }
 
-    private final void j() {
+    private final void j(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1913,8 +1913,7 @@ final class lma extends dg {
     final void b(int param0, uw param1) {
         try {
             if (null == ((lma) this).field_x) {
-                int discarded$0 = 2097152;
-                this.j();
+                this.j(2097152);
                 if (hb.d(67)) {
                     this.l(32166);
                 }
@@ -2378,7 +2377,7 @@ final class lma extends dg {
         super(param0, param1, param2);
     }
 
-    public static void n() {
+    public static void n(byte param0) {
         field_r = null;
         int var1 = -1;
     }

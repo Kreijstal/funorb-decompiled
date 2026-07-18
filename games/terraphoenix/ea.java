@@ -156,7 +156,7 @@ final class ea implements cj {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         int var2 = Terraphoenix.field_V;
         try {

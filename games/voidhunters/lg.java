@@ -37,7 +37,7 @@ final class lg extends uj {
         return cbb.field_h;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_d = null;
     }
 

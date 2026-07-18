@@ -40,10 +40,8 @@ final class sl extends kl {
     final void a(qm param0, int param1, int param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 1;
-            this.h();
-            int discarded$1 = -2023111216;
-            this.f();
+            this.h(1);
+            this.f(-2023111216);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "sl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -88,8 +86,7 @@ final class sl extends kl {
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
-              int discarded$2 = -2023111216;
-              this.f();
+              this.f(-2023111216);
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
@@ -212,7 +209,7 @@ final class sl extends kl {
         return stackIn_8_0 != 0;
     }
 
-    private final void f() {
+    private final void f(int param0) {
         if (null == ((sl) this).field_O) {
           if (null != ((sl) this).field_Q) {
             ((sl) this).field_P.field_B.field_n = -(int)((long)((sl) this).field_Q.field_Z * (long)(((sl) this).field_P.field_B.field_v + -((sl) this).field_P.field_v) >> 16);
@@ -231,7 +228,7 @@ final class sl extends kl {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (null != ((sl) this).field_O) {
@@ -759,8 +756,7 @@ final class sl extends kl {
                         break L5;
                       }
                     }
-                    int discarded$11 = 1;
-                    this.h();
+                    this.h(1);
                     return;
                   } else {
                     L7: {
@@ -796,8 +792,7 @@ final class sl extends kl {
                         break L7;
                       }
                     }
-                    int discarded$12 = 1;
-                    this.h();
+                    this.h(1);
                     return;
                   }
                 }
@@ -911,8 +906,7 @@ final class sl extends kl {
                   break L13;
                 }
               }
-              int discarded$13 = 1;
-              this.h();
+              this.h(1);
               return;
             } else {
               L15: {
@@ -948,8 +942,7 @@ final class sl extends kl {
                   break L15;
                 }
               }
-              int discarded$14 = 1;
-              this.h();
+              this.h(1);
               return;
             }
           } else {
@@ -1073,8 +1066,7 @@ final class sl extends kl {
                         break L22;
                       }
                     }
-                    int discarded$15 = 1;
-                    this.h();
+                    this.h(1);
                     return;
                   } else {
                     L24: {
@@ -1110,8 +1102,7 @@ final class sl extends kl {
                         break L24;
                       }
                     }
-                    int discarded$16 = 1;
-                    this.h();
+                    this.h(1);
                     return;
                   }
                 }
@@ -1225,8 +1216,7 @@ final class sl extends kl {
                   break L30;
                 }
               }
-              int discarded$17 = 1;
-              this.h();
+              this.h(1);
               return;
             } else {
               L32: {
@@ -1262,8 +1252,7 @@ final class sl extends kl {
                   break L32;
                 }
               }
-              int discarded$18 = 1;
-              this.h();
+              this.h(1);
               return;
             }
           }
@@ -1394,8 +1383,7 @@ final class sl extends kl {
                     break L40;
                   }
                 }
-                int discarded$19 = 1;
-                this.h();
+                this.h(1);
                 return;
               }
             }
@@ -1508,8 +1496,7 @@ final class sl extends kl {
                 break L46;
               }
             }
-            int discarded$20 = 1;
-            this.h();
+            this.h(1);
             return;
           } else {
             L48: {
@@ -1545,8 +1532,7 @@ final class sl extends kl {
                 break L48;
               }
             }
-            int discarded$21 = 1;
-            this.h();
+            this.h(1);
             return;
           }
         }

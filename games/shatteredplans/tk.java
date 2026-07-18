@@ -41,7 +41,7 @@ final class tk extends jc {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_x = null;
         field_B = null;
         field_C = null;

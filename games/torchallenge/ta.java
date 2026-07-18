@@ -137,7 +137,7 @@ final class ta extends wa implements sg {
         }
     }
 
-    public static void p() {
+    public static void p(int param0) {
         field_Ab = null;
         field_zb = null;
         field_Db = null;

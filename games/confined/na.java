@@ -396,7 +396,7 @@ class na extends rg {
         }
     }
 
-    final static void f() {
+    final static void f(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

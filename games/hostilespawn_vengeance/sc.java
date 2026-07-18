@@ -267,7 +267,7 @@ final class sc implements Runnable {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         u.field_f = new String[34];
         u.field_f[4] = fh.field_e;
         u.field_f[16] = ch.field_d;
@@ -481,8 +481,7 @@ final class sc implements Runnable {
                                       break L10;
                                     } else {
                                       if (var9.field_I > 0) {
-                                        int discarded$1 = 1;
-                                        tk.a(8, jc.field_c, 1);
+                                        tk.a(8, jc.field_c, 1, true);
                                         break L10;
                                       } else {
                                         break L10;

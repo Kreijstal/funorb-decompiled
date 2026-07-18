@@ -87,7 +87,7 @@ final class nk extends df {
         return stackIn_1_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         field_f = null;
         field_g = null;

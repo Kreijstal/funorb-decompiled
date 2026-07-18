@@ -15,8 +15,7 @@ final class ub {
 
     final static void a(dl param0, boolean param1, int param2, int param3, java.awt.Component param4, mf param5, boolean param6, int param7) {
         try {
-            int discarded$0 = 10;
-            gj.a(param7, param1);
+            gj.a(param7, param1, 10);
             kj.field_P = gj.a(param0, param4, 0, param2);
             ql.field_r = gj.a(param0, param4, 1, param3);
             ti.field_f = new e();

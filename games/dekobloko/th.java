@@ -14,7 +14,7 @@ final class th {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
@@ -24,8 +24,7 @@ final class th {
         ce.e(116);
         param13 = lk.a(0, -121, 14, 11, param13, 13, 15);
         ph.a(param5, param12, 16777215, true, param13, param2, param4, -1, 16777215, 11);
-        int discarded$0 = 1;
-        a.a(param12, param5);
+        a.a(param12, param5, true);
         tf.b(0, param13, 0, param12);
     }
 

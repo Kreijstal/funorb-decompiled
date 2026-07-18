@@ -25,7 +25,7 @@ final class bh implements Iterable {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         int var1 = 0;

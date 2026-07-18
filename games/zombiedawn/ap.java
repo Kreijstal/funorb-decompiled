@@ -24,7 +24,7 @@ final class ap extends al {
     private boolean field_y;
     private int field_v;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_w = null;
         field_s = null;
     }
@@ -1535,7 +1535,7 @@ final class ap extends al {
         }
     }
 
-    private final String d() {
+    private final String d(byte param0) {
         int var2 = ((ap) this).field_r / 60;
         int var3 = 0;
         int var4 = ((ap) this).field_r % 60;
@@ -2505,8 +2505,7 @@ final class ap extends al {
                                 break L3;
                               } else {
                                 sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, ((ap) this).field_v, var3);
-                                int discarded$9 = -99;
-                                sg.field_jb.c(this.d(), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
+                                sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
                                 break L3;
                               }
                             }
@@ -2521,8 +2520,7 @@ final class ap extends al {
                       var5 = var5 + (var4 + 5);
                       if (((ap) this).field_H) {
                         sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, ((ap) this).field_v, var3);
-                        int discarded$10 = -99;
-                        sg.field_jb.c(this.d(), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
+                        sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
                         sg.field_jb.b(aj.field_d, vh.field_b + 350, id.field_M - -340, var2, var3);
                         sg.field_jb.c(qi.a(true, 0, jp.field_a, (long)((ap) this).field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
                         return;
@@ -2562,8 +2560,7 @@ final class ap extends al {
                           break L6;
                         } else {
                           sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, ((ap) this).field_v, var3);
-                          int discarded$11 = -99;
-                          sg.field_jb.c(this.d(), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
+                          sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
                           break L6;
                         }
                       }
@@ -2603,8 +2600,7 @@ final class ap extends al {
                       var5 = var5 + (var4 + 5);
                       if (((ap) this).field_H) {
                         sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, ((ap) this).field_v, var3);
-                        int discarded$12 = -99;
-                        sg.field_jb.c(this.d(), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
+                        sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
                         sg.field_jb.b(aj.field_d, vh.field_b + 350, id.field_M - -340, var2, var3);
                         sg.field_jb.c(qi.a(true, 0, jp.field_a, (long)((ap) this).field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
                         return;
@@ -2621,8 +2617,7 @@ final class ap extends al {
                 var5 = var5 + (var4 + 5);
                 if (((ap) this).field_H) {
                   sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, ((ap) this).field_v, var3);
-                  int discarded$13 = -99;
-                  sg.field_jb.c(this.d(), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
+                  sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
                   sg.field_jb.b(aj.field_d, vh.field_b + 350, id.field_M - -340, var2, var3);
                   sg.field_jb.c(qi.a(true, 0, jp.field_a, (long)((ap) this).field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
                   return;
@@ -2659,8 +2654,7 @@ final class ap extends al {
                           break L11;
                         } else {
                           sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, ((ap) this).field_v, var3);
-                          int discarded$14 = -99;
-                          sg.field_jb.c(this.d(), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
+                          sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
                           break L11;
                         }
                       }
@@ -2675,8 +2669,7 @@ final class ap extends al {
                 var5 = var5 + (var4 + 5);
                 if (((ap) this).field_H) {
                   sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, ((ap) this).field_v, var3);
-                  int discarded$15 = -99;
-                  sg.field_jb.c(this.d(), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
+                  sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
                   sg.field_jb.b(aj.field_d, vh.field_b + 350, id.field_M - -340, var2, var3);
                   sg.field_jb.c(qi.a(true, 0, jp.field_a, (long)((ap) this).field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
                   return;
@@ -2733,8 +2726,7 @@ final class ap extends al {
                   break L15;
                 } else {
                   sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, ((ap) this).field_v, var3);
-                  int discarded$16 = -99;
-                  sg.field_jb.c(this.d(), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
+                  sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
                   break L15;
                 }
               }
@@ -2787,8 +2779,7 @@ final class ap extends al {
                 break L19;
               } else {
                 sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, ((ap) this).field_v, var3);
-                int discarded$17 = -99;
-                sg.field_jb.c(this.d(), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
+                sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, ((ap) this).field_v, var3);
                 break L19;
               }
             }

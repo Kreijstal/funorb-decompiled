@@ -12,7 +12,7 @@ final class n implements Iterator {
     private gg field_d;
     private ii field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         int var1 = 0;
@@ -51,7 +51,7 @@ final class n implements Iterator {
         ((n) this).field_d = null;
     }
 
-    private final void b() {
+    private final void b(int param0) {
         ((n) this).field_f = ((n) this).field_e.field_b[0].field_d;
         ((n) this).field_d = null;
         ((n) this).field_g = 1;
@@ -90,8 +90,7 @@ final class n implements Iterator {
         ((n) this).field_d = null;
         try {
             ((n) this).field_e = param0;
-            int discarded$0 = -59;
-            this.b();
+            this.b(-59);
         } catch (RuntimeException runtimeException) {
             throw fc.a((Throwable) (Object) runtimeException, "n.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

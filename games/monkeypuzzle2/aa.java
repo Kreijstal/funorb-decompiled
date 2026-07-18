@@ -209,7 +209,7 @@ abstract class aa {
                 if (param2.indexOf("<br>") != -1) {
                   break L1;
                 } else {
-                  param4[0] = (String) (Object) param4;
+                  param4[0] = param2;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;

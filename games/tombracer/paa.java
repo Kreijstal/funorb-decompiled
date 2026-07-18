@@ -34,7 +34,7 @@ abstract class paa extends b implements mk {
         return (nua) (Object) ((paa) this).field_w;
     }
 
-    public static void k() {
+    public static void k(byte param0) {
         field_y = null;
         field_z = null;
         field_x = null;
@@ -94,7 +94,7 @@ abstract class paa extends b implements mk {
 
     abstract int a(int param0);
 
-    final static vb c() {
+    final static vb c(int param0) {
         return it.a(255, 141 - -uca.field_c.a(2, 0));
     }
 

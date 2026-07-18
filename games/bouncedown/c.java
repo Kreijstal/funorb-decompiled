@@ -7,7 +7,7 @@ final class c {
     static String field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
         field_a = null;
@@ -42,8 +42,7 @@ final class c {
             var5 = param0.b(-108, param3, param2);
             var4 = var5;
             if (var5 != null) {
-              int discarded$2 = 11906;
-              qi.a(var5);
+              qi.a(var5, 11906);
               stackOut_5_0 = 1;
               stackIn_6_0 = stackOut_5_0;
               break L0;

@@ -36,7 +36,7 @@ final class ra extends uf {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_i = null;
         field_h = null;

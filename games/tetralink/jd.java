@@ -8,7 +8,7 @@ abstract class jd {
 
     abstract void a(int param0, byte[] param1);
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -93,7 +93,7 @@ abstract class jd {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_c = null;
         int var1 = -52;

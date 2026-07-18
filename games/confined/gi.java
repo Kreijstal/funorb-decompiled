@@ -434,7 +434,7 @@ final class gi extends ah {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_db = null;
         field_fb = null;
         field_bb = null;

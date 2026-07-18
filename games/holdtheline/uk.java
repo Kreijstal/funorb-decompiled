@@ -72,7 +72,7 @@ final class uk extends IOException {
         super(param0);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 97;
         field_c = null;
         field_f = null;
@@ -82,7 +82,7 @@ final class uk extends IOException {
         field_g = null;
     }
 
-    final static kg a(String param0) {
+    final static kg a(String param0, boolean param1, int param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         kg stackIn_1_0 = null;

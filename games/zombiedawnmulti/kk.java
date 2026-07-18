@@ -35,7 +35,7 @@ abstract class kk extends qa {
         ((kk) this).field_t = param0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_v = null;
         field_r = null;
         field_y = null;

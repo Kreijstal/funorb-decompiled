@@ -53,8 +53,7 @@ final class jg {
             ((jg) this).field_G[var5] = (short)(((jg) this).field_G[var5] + param2);
             ((jg) this).field_b[var5] = (short)(((jg) this).field_b[var5] + param1);
         }
-        int discarded$0 = 1;
-        this.a();
+        this.a(true);
     }
 
     final void b(int param0) {
@@ -158,8 +157,7 @@ final class jg {
             ((jg) this).field_G[var6] = (short)(param4 * ((jg) this).field_G[var6] / param3);
             ((jg) this).field_b[var6] = (short)(param1 * ((jg) this).field_b[var6] / param3);
         }
-        int discarded$0 = 1;
-        this.a();
+        this.a(true);
     }
 
     public static void a(int param0) {
@@ -171,7 +169,7 @@ final class jg {
         field_i = null;
     }
 
-    final static boolean a(db param0) {
+    final static boolean a(db param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -232,7 +230,7 @@ final class jg {
         return stackIn_1_0;
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         ((jg) this).field_O = false;
     }
 

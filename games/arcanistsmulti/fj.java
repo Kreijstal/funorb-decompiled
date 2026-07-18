@@ -8,7 +8,7 @@ final class fj extends pg {
     static int field_j;
     int field_k;
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) ch.field_a);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) ch.field_a);
@@ -18,9 +18,9 @@ final class fj extends pg {
         }
     }
 
-    final static boolean a(int param0, CharSequence param1) {
-        int var4_int = 0;
+    final static boolean a(int param0, CharSequence param1, boolean param2, int param3) {
         RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -28,30 +28,30 @@ final class fj extends pg {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_32_0 = 0;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
+        int stackIn_21_0 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_34_0 = 0;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
-        String stackIn_36_2 = null;
+        RuntimeException stackIn_37_0 = null;
+        StringBuilder stackIn_37_1 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_31_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_21_0 = 0;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
+        int stackOut_33_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_29_0 = 0;
+        int stackOut_23_0 = 0;
         RuntimeException stackOut_35_0 = null;
         StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
+        RuntimeException stackOut_37_0 = null;
+        StringBuilder stackOut_37_1 = null;
+        String stackOut_37_2 = null;
+        RuntimeException stackOut_36_0 = null;
+        StringBuilder stackOut_36_1 = null;
+        String stackOut_36_2 = null;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -62,8 +62,8 @@ final class fj extends pg {
             var8 = 0;
             L1: while (true) {
               if (var8 >= var7) {
-                stackOut_31_0 = var5;
-                stackIn_32_0 = stackOut_31_0;
+                stackOut_33_0 = var5;
+                stackIn_34_0 = stackOut_33_0;
                 break L0;
               } else {
                 L2: {
@@ -121,9 +121,9 @@ final class fj extends pg {
                         }
                       }
                     }
-                    stackOut_18_0 = 0;
-                    stackIn_19_0 = stackOut_18_0;
-                    return stackIn_19_0 != 0;
+                    stackOut_20_0 = 0;
+                    stackIn_21_0 = stackOut_20_0;
+                    return stackIn_21_0 != 0;
                   }
                   if (var9 < 10) {
                     L8: {
@@ -136,18 +136,18 @@ final class fj extends pg {
                     }
                     var10 = 10 * var6 - -var9;
                     if (var10 / 10 != var6) {
-                      stackOut_27_0 = 0;
-                      stackIn_28_0 = stackOut_27_0;
-                      return stackIn_28_0 != 0;
+                      stackOut_29_0 = 0;
+                      stackIn_30_0 = stackOut_29_0;
+                      return stackIn_30_0 != 0;
                     } else {
                       var6 = var10;
                       var5 = 1;
                       break L2;
                     }
                   } else {
-                    stackOut_21_0 = 0;
-                    stackIn_22_0 = stackOut_21_0;
-                    return stackIn_22_0 != 0;
+                    stackOut_23_0 = 0;
+                    stackIn_24_0 = stackOut_23_0;
+                    return stackIn_24_0 != 0;
                   }
                 }
                 var8++;
@@ -159,36 +159,36 @@ final class fj extends pg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var4 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) var4;
-            stackOut_33_1 = new StringBuilder().append("fj.D(").append(97).append(',');
-            stackIn_35_0 = stackOut_33_0;
-            stackIn_35_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+            stackOut_35_0 = (RuntimeException) var4;
+            stackOut_35_1 = new StringBuilder().append("fj.D(").append(97).append(',');
+            stackIn_37_0 = stackOut_35_0;
+            stackIn_37_1 = stackOut_35_1;
+            stackIn_36_0 = stackOut_35_0;
+            stackIn_36_1 = stackOut_35_1;
             if (param1 == null) {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
+              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
+              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_2 = "null";
+              stackIn_38_0 = stackOut_37_0;
+              stackIn_38_1 = stackOut_37_1;
+              stackIn_38_2 = stackOut_37_2;
               break L9;
             } else {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
-              stackOut_34_2 = "{...}";
-              stackIn_36_0 = stackOut_34_0;
-              stackIn_36_1 = stackOut_34_1;
-              stackIn_36_2 = stackOut_34_2;
+              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
+              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+              stackOut_36_2 = "{...}";
+              stackIn_38_0 = stackOut_36_0;
+              stackIn_38_1 = stackOut_36_1;
+              stackIn_38_2 = stackOut_36_2;
               break L9;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + true + ',' + 10 + ')');
+          throw aa.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ',' + true + ',' + 10 + ')');
         }
-        return stackIn_32_0 != 0;
+        return stackIn_34_0 != 0;
     }
 
-    final static void a(int param0, nk param1) {
+    final static void a(int param0, nk param1, int param2) {
         ab var3 = null;
         try {
             var3 = he.field_e;
@@ -359,22 +359,21 @@ final class fj extends pg {
         throw new Error();
     }
 
-    final static void c() {
+    final static void c(int param0) {
         if (!(hk.field_s)) {
             throw new IllegalStateException();
         }
         if (!(null == vf.field_k)) {
             vf.field_k.h(77);
         }
-        int discarded$0 = 103;
-        String var1 = ho.b();
+        String var1 = ho.b((byte) 103);
         wh.field_f = new e(var1, (String) null, true, false, false);
         p.field_b.b((qm) (Object) g.field_e, 15637);
         g.field_e.a((byte) -92, (qm) (Object) wh.field_f);
         g.field_e.a(111);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_i = null;
     }

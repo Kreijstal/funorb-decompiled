@@ -7,7 +7,7 @@ final class bg {
     int field_a;
     int field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
     }

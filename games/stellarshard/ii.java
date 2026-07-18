@@ -121,12 +121,12 @@ final class ii extends ig {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_F = null;
         field_G = null;
     }
 
-    final static void a(u param0) {
+    final static void a(u param0, int param1, byte param2) {
         ha var3 = null;
         try {
             var3 = pg.field_fb;
@@ -138,7 +138,7 @@ final class ii extends ig {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

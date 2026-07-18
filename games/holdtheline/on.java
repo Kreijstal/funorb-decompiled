@@ -231,13 +231,13 @@ final class on extends ln {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_p = null;
         field_t = null;
         field_v = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, byte param2) {
         int var3 = 0;
         int var4 = param1 >> 16;
         int var5 = 65535 & param1;

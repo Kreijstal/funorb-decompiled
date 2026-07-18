@@ -29,7 +29,7 @@ final class vba extends rqa {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_r = null;
         field_q = null;
         field_s = null;

@@ -328,7 +328,7 @@ final class uh extends ig {
         return stackIn_13_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_t = null;
         field_u = null;
         field_s = null;
@@ -502,14 +502,13 @@ final class uh extends ig {
             var4 = param0.toLowerCase();
             if (var4.length() != 0) {
               var5 = var4;
-              int discarded$15 = 28350;
-              if (!gh.a(var5)) {
+              if (!gh.a(var5, 28350)) {
                 L1: {
                   if (param1 == 0) {
                     break L1;
                   } else {
                     var6 = null;
-                    String discarded$16 = ((uh) this).a((String) null, -37);
+                    String discarded$2 = ((uh) this).a((String) null, -37);
                     break L1;
                   }
                 }
@@ -525,8 +524,7 @@ final class uh extends ig {
                       return stackIn_18_0;
                     } else {
                       if (var7.length() > 0) {
-                        int discarded$17 = 17924;
-                        if (!hq.a(var5, var7)) {
+                        if (!hq.a(var5, var7, 17924)) {
                           if (co.a(var7, (byte) -112, var5)) {
                             stackOut_27_0 = ka.field_m;
                             stackIn_28_0 = stackOut_27_0;

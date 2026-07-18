@@ -93,8 +93,7 @@ final class gj {
                         var7 = var9 + "; Discard;";
                         break L1;
                       } else {
-                        int discarded$1 = 1;
-                        var7 = var9 + "; Expires=" + fi.a(param0 * 1000L + wq.a(-123)) + "; Max-Age=" + param0;
+                        var7 = var9 + "; Expires=" + fi.a(param0 * 1000L + wq.a(-123), true) + "; Max-Age=" + param0;
                         break L1;
                       }
                     }
@@ -277,8 +276,7 @@ final class gj {
                 if (param0 <= ((gj) this).field_e.length) {
                   if (param0 > 0) {
                     L5: {
-                      int discarded$2 = -1;
-                      this.a();
+                      this.a(-1);
                       var9_int = param0;
                       if (((gj) this).field_f < var9_int) {
                         var9_int = ((gj) this).field_f;
@@ -338,9 +336,9 @@ final class gj {
                               break L8;
                             } else {
                               param0--;
-                              int incrementValue$3 = param1;
+                              int incrementValue$1 = param1;
                               param1++;
-                              param2[incrementValue$3] = (byte) 0;
+                              param2[incrementValue$1] = (byte) 0;
                               ((gj) this).field_d = ((gj) this).field_d + 1L;
                               continue L10;
                             }
@@ -833,7 +831,7 @@ final class gj {
         return ((gj) this).field_a;
     }
 
-    private final void a() throws IOException {
+    private final void a(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -898,8 +896,7 @@ final class gj {
         if (param0 != -84) {
             int discarded$0 = gj.a((byte) 37, 116);
         }
-        int discarded$1 = -96;
-        return fi.a(param1, iv.field_b);
+        return fi.a(param1, iv.field_b, (byte) -96);
     }
 
     static {

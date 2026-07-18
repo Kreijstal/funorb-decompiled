@@ -77,7 +77,7 @@ final class uib extends rqa {
         return stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_o = null;
         field_p = null;
     }

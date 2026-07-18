@@ -505,8 +505,7 @@ final class mf extends ej {
               stackIn_58_0 = stackOut_57_0;
               return stackIn_58_0 != 0;
             } else {
-              int discarded$1 = -70;
-              param4.field_w.a(param4.field_t, this.a(param4), this.a(127, param4));
+              param4.field_w.a(param4.field_t, this.a(param4, (byte) -70), this.a(127, param4));
               stackOut_59_0 = 0;
               stackIn_60_0 = stackOut_59_0;
               break L0;
@@ -778,8 +777,7 @@ final class mf extends ej {
                 ((mf) this).a(stackIn_17_1, stackIn_17_2 != 0, false);
                 break L3;
               } else {
-                int discarded$1 = -70;
-                var7.field_w = qi.a(var6, this.a(var7, 1), this.a(var7), this.a(127, var7));
+                var7.field_w = qi.a(var6, this.a(var7, 1), this.a(var7, (byte) -70), this.a(127, var7));
                 break L3;
               }
             }
@@ -924,7 +922,7 @@ final class mf extends ej {
         uc.field_a.a((gg) (Object) var1, -7044);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_x = null;
         field_F = null;
         field_l = null;
@@ -2107,7 +2105,7 @@ final class mf extends ej {
         return (ej) (Object) ((mf) this).field_Q;
     }
 
-    private final int a(hg param0) {
+    private final int a(hg param0, byte param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;

@@ -14,7 +14,7 @@ final class fi {
     private int field_f;
     private int field_c;
 
-    final static void a(sd param0, int param1) {
+    final static void a(sd param0, int param1, int param2) {
         jd var3 = null;
         try {
             var3 = id.field_c;
@@ -30,10 +30,8 @@ final class fi {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
-        int discarded$0 = 2;
-        uj.a(638, param5, 1, h.field_d, param6);
-        int discarded$1 = 2;
-        uj.a(param3, 118, (638 - param3 >> 1) + 1, of.field_b, param6 - 50);
+        uj.a(638, param5, 1, h.field_d, param6, 2);
+        uj.a(param3, 118, (638 - param3 >> 1) + 1, of.field_b, param6 - 50, 2);
         th.field_H.d((638 + -param3 >> 1) - 19, -10 + param6);
         uk.field_k.d(-18 + param3 + ((-param3 + 638 >> 1) + 1), param6 - 10);
     }
@@ -42,7 +40,7 @@ final class fi {
         return param0 & param1;
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -159,7 +157,7 @@ final class fi {
         }
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         if (!(gf.field_Z != ma.field_o)) {
             return lf.field_e;
         }
@@ -241,8 +239,7 @@ final class fi {
                           if (512 != ((fi) this).field_f) {
                             break L5;
                           } else {
-                            int discarded$2 = 24843;
-                            this.c();
+                            this.c(24843);
                             ((fi) this).field_c = 0;
                             ((fi) this).field_f = 0;
                             break L5;
@@ -271,8 +268,7 @@ final class fi {
                             if (((fi) this).field_f != 512) {
                               break L7;
                             } else {
-                              int discarded$3 = 24843;
-                              this.c();
+                              this.c(24843);
                               ((fi) this).field_c = 0;
                               ((fi) this).field_f = 0;
                               break L7;
@@ -333,7 +329,7 @@ final class fi {
         }
     }
 
-    final static o[] b() {
+    final static o[] b(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -350,8 +346,7 @@ final class fi {
             }
             var1[var2] = new o(kl.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var5);
         }
-        int discarded$0 = -97;
-        og.a();
+        og.a((byte) -97);
         return var1;
     }
 
@@ -408,14 +403,13 @@ final class fi {
               if (((fi) this).field_c > 32) {
                 L3: while (true) {
                   if (64 <= ((fi) this).field_c) {
-                    int discarded$4 = 24843;
-                    this.c();
+                    this.c(24843);
                     ((fi) this).field_c = 0;
                     break L2;
                   } else {
-                    int fieldTemp$5 = ((fi) this).field_c;
+                    int fieldTemp$2 = ((fi) this).field_c;
                     ((fi) this).field_c = ((fi) this).field_c + 1;
-                    ((fi) this).field_g[fieldTemp$5] = (byte) 0;
+                    ((fi) this).field_g[fieldTemp$2] = (byte) 0;
                     continue L3;
                   }
                 }
@@ -426,8 +420,7 @@ final class fi {
             L4: while (true) {
               if (((fi) this).field_c >= 32) {
                 fk.a(((fi) this).field_e, 0, ((fi) this).field_g, 32, 32);
-                int discarded$6 = 24843;
-                this.c();
+                this.c(24843);
                 var4_int = 0;
                 var5 = param1;
                 L5: while (true) {
@@ -449,9 +442,9 @@ final class fi {
                   }
                 }
               } else {
-                int fieldTemp$7 = ((fi) this).field_c;
+                int fieldTemp$3 = ((fi) this).field_c;
                 ((fi) this).field_c = ((fi) this).field_c + 1;
-                ((fi) this).field_g[fieldTemp$7] = (byte) 0;
+                ((fi) this).field_g[fieldTemp$3] = (byte) 0;
                 continue L4;
               }
             }

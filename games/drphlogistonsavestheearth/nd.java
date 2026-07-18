@@ -15,7 +15,7 @@ final class nd extends hf {
     int field_T;
     static vh field_P;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_L = null;
         field_R = null;
         field_P = null;

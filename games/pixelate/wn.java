@@ -24,7 +24,7 @@ final class wn extends rf {
         ((wn) this).field_a = (byte)(int)(1.0 + Math.random() * 255.0);
     }
 
-    final static void d() {
+    final static void d(int param0) {
         io.field_d = hm.a(64);
         on.field_ob = 0;
     }
@@ -535,7 +535,7 @@ final class wn extends rf {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_q = null;
         field_t = null;
     }

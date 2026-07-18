@@ -5,7 +5,7 @@ final class er extends fqa {
     static int[][] field_K;
     static String field_J;
 
-    public static void s() {
+    public static void s(byte param0) {
         field_J = null;
         field_K = null;
     }
@@ -204,7 +204,7 @@ final class er extends fqa {
         return 7;
     }
 
-    final static boolean c(int param0, int param1) {
+    final static boolean c(int param0, int param1, int param2) {
         return (param0 & 52) != 0;
     }
 

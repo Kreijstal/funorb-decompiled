@@ -9,7 +9,7 @@ final class kd extends ci {
     static int field_Hb;
     private ci field_Ib;
 
-    public static void l() {
+    public static void l(int param0) {
         field_Eb = null;
     }
 
@@ -39,8 +39,7 @@ final class kd extends ci {
             }
           } else {
             L1: while (true) {
-              int discarded$7 = 18954;
-              if (!kf.d()) {
+              if (!kf.d(18954)) {
                 ((kd) this).field_Fb.field_db = ((kd) this).field_Jb.toString();
                 if (param1) {
                   if (th.field_d != 0) {
@@ -62,7 +61,7 @@ final class kd extends ci {
                     break L2;
                   } else {
                     if (((kd) this).field_Jb.length() > 0) {
-                      StringBuilder discarded$8 = rb.a(' ', ((kd) this).field_Jb, ((kd) this).field_Jb.length() - 1, (byte) -105);
+                      StringBuilder discarded$5 = rb.a(' ', ((kd) this).field_Jb, ((kd) this).field_Jb.length() - 1, (byte) -105);
                       break L2;
                     } else {
                       break L2;
@@ -70,9 +69,8 @@ final class kd extends ci {
                   }
                 }
                 L3: {
-                  int discarded$9 = -13;
-                  if (p.a((CharSequence) (Object) ((kd) this).field_Jb, d.field_Ib)) {
-                    StringBuilder discarded$10 = ((kd) this).field_Jb.append(d.field_Ib);
+                  if (p.a((CharSequence) (Object) ((kd) this).field_Jb, d.field_Ib, -13)) {
+                    StringBuilder discarded$6 = ((kd) this).field_Jb.append(d.field_Ib);
                     break L3;
                   } else {
                     L4: {
@@ -80,7 +78,7 @@ final class kd extends ci {
                         break L4;
                       } else {
                         if (d.field_Ib == 91) {
-                          StringBuilder discarded$11 = ((kd) this).field_Jb.append(d.field_Ib);
+                          StringBuilder discarded$7 = ((kd) this).field_Jb.append(d.field_Ib);
                           break L3;
                         } else {
                           break L4;
@@ -92,7 +90,7 @@ final class kd extends ci {
                         break L5;
                       } else {
                         if (35 == d.field_Ib) {
-                          StringBuilder discarded$12 = ((kd) this).field_Jb.append(d.field_Ib);
+                          StringBuilder discarded$8 = ((kd) this).field_Jb.append(d.field_Ib);
                           break L3;
                         } else {
                           break L5;
@@ -102,7 +100,7 @@ final class kd extends ci {
                     if (93 != d.field_Ib) {
                       break L3;
                     } else {
-                      StringBuilder discarded$13 = ((kd) this).field_Jb.append(d.field_Ib);
+                      StringBuilder discarded$9 = ((kd) this).field_Jb.append(d.field_Ib);
                       break L3;
                     }
                   }
@@ -135,7 +133,7 @@ final class kd extends ci {
           if (85 == vg.field_a) {
             L0: {
               if (((kd) this).field_Jb.length() > 0) {
-                StringBuilder discarded$12 = rb.a(' ', ((kd) this).field_Jb, ((kd) this).field_Jb.length() + -1, (byte) 116);
+                StringBuilder discarded$9 = rb.a(' ', ((kd) this).field_Jb, ((kd) this).field_Jb.length() + -1, (byte) 116);
                 break L0;
               } else {
                 break L0;
@@ -184,14 +182,13 @@ final class kd extends ci {
                   if (((kd) this).field_Jb.length() <= 0) {
                     break L2;
                   } else {
-                    StringBuilder discarded$13 = ((kd) this).field_Jb.append((char) var2);
+                    StringBuilder discarded$10 = ((kd) this).field_Jb.append((char) var2);
                     break L2;
                   }
                 }
-                int discarded$14 = 104;
-                if (b.a((char) var2)) {
+                if (b.a((char) var2, (byte) 104)) {
                   L3: {
-                    StringBuilder discarded$15 = ((kd) this).field_Jb.append((char) var2);
+                    StringBuilder discarded$11 = ((kd) this).field_Jb.append((char) var2);
                     if (84 != vg.field_a) {
                       break L3;
                     } else {
@@ -213,7 +210,7 @@ final class kd extends ci {
                   }
                 } else {
                   if (di.a(param0 ^ 48, (char) var2)) {
-                    StringBuilder discarded$16 = ((kd) this).field_Jb.append((char) var2);
+                    StringBuilder discarded$12 = ((kd) this).field_Jb.append((char) var2);
                     if (84 != vg.field_a) {
                       if (13 != vg.field_a) {
                         return true;
@@ -268,9 +265,8 @@ final class kd extends ci {
                   }
                 }
               } else {
-                int discarded$17 = 104;
-                if (b.a((char) var2)) {
-                  StringBuilder discarded$18 = ((kd) this).field_Jb.append((char) var2);
+                if (b.a((char) var2, (byte) 104)) {
+                  StringBuilder discarded$13 = ((kd) this).field_Jb.append((char) var2);
                   if (84 == vg.field_a) {
                     L6: {
                       if (0 >= ((kd) this).field_Jb.length()) {
@@ -326,7 +322,7 @@ final class kd extends ci {
                     return true;
                   } else {
                     L10: {
-                      StringBuilder discarded$19 = ((kd) this).field_Jb.append((char) var2);
+                      StringBuilder discarded$14 = ((kd) this).field_Jb.append((char) var2);
                       if (84 != vg.field_a) {
                         break L10;
                       } else {
@@ -405,13 +401,12 @@ final class kd extends ci {
                   if (((kd) this).field_Jb.length() <= 0) {
                     break L15;
                   } else {
-                    StringBuilder discarded$20 = ((kd) this).field_Jb.append((char) var2);
+                    StringBuilder discarded$15 = ((kd) this).field_Jb.append((char) var2);
                     break L15;
                   }
                 }
               }
-              int discarded$21 = 104;
-              if (!b.a((char) var2)) {
+              if (!b.a((char) var2, (byte) 104)) {
                 if (!di.a(param0 ^ 48, (char) var2)) {
                   L16: {
                     if (84 != vg.field_a) {
@@ -435,7 +430,7 @@ final class kd extends ci {
                   }
                 } else {
                   L17: {
-                    StringBuilder discarded$22 = ((kd) this).field_Jb.append((char) var2);
+                    StringBuilder discarded$16 = ((kd) this).field_Jb.append((char) var2);
                     if (84 != vg.field_a) {
                       break L17;
                     } else {
@@ -461,7 +456,7 @@ final class kd extends ci {
                 }
               } else {
                 L19: {
-                  StringBuilder discarded$23 = ((kd) this).field_Jb.append((char) var2);
+                  StringBuilder discarded$17 = ((kd) this).field_Jb.append((char) var2);
                   if (84 != vg.field_a) {
                     break L19;
                   } else {
@@ -642,8 +637,7 @@ final class kd extends ci {
             var10 = 5 - -var9_int + 5;
             var11 = 3 + fe.field_g * 2 + 3;
             var12 = ao.a(var10, true, param0, param2);
-            int discarded$1 = 0;
-            var13 = sg.a(param1, var11, param3);
+            var13 = sg.a(param1, var11, param3, 0);
             ((kd) this).a(var12, var10, -2147483648, var11, var13);
             break L0;
           }

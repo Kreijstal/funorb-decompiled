@@ -117,8 +117,7 @@ final class cc {
         if (!param1) {
           var8 = null;
           ((cc) this).a((cc) null, 27);
-          int discarded$2 = 3;
-          var6 = rn.b(param4);
+          var6 = rn.b(param4, 3);
           var7 = sb.a(param4, -127);
           ((cc) this).field_a = var7;
           ((cc) this).field_b = qo.a(-8905, (long)param3, (long)var6);
@@ -126,8 +125,7 @@ final class cc {
           ((cc) this).field_d = qo.a(-8905, (long)param2, (long)var6);
           return;
         } else {
-          int discarded$3 = 3;
-          var6 = rn.b(param4);
+          var6 = rn.b(param4, 3);
           var7 = sb.a(param4, -127);
           ((cc) this).field_a = var7;
           ((cc) this).field_b = qo.a(-8905, (long)param3, (long)var6);

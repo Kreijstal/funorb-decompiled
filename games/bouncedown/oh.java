@@ -9,7 +9,7 @@ final class oh {
     static boolean field_e;
     private tg[] field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_d = null;
     }
@@ -103,7 +103,7 @@ final class oh {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         ed.field_c.a(10768, (lk) (Object) new k());
     }
 

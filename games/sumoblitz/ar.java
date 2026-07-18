@@ -20,7 +20,7 @@ class ar extends wp {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_E = null;
         field_M = null;
         field_N = null;
@@ -98,7 +98,7 @@ class ar extends wp {
         }
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

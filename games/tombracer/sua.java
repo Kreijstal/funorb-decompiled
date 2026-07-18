@@ -10,7 +10,7 @@ final class sua extends kna {
     static jea field_K;
     static int field_I;
 
-    public static void B() {
+    public static void B(int param0) {
         field_G = null;
         field_K = null;
         field_H = null;
@@ -31,7 +31,7 @@ final class sua extends kna {
         ((sua) this).a((byte) 89, new mka[1]);
     }
 
-    final static void r() {
+    final static void r(byte param0) {
         int var1 = 0;
         if (ot.field_v < 224) {
           var1 = ot.field_v % 32;
@@ -203,7 +203,7 @@ final class sua extends kna {
               if (param1 <= -99) {
                 break L1;
               } else {
-                goa discarded$3 = sua.A(-108);
+                goa discarded$2 = sua.A(-108);
                 break L1;
               }
             }
@@ -256,8 +256,7 @@ final class sua extends kna {
                         var10 = var12;
                         var6 = var10;
                         if (var3 == 1) {
-                          int discarded$4 = 9;
-                          int discarded$5 = kr.a(var6, var5_int, param0, var4);
+                          int discarded$3 = kr.a(var16, var5_int, param0, var4, 9);
                           break L6;
                         } else {
                           var7 = (Object) (Object) sma.field_e;
@@ -348,16 +347,13 @@ final class sua extends kna {
         if (param0 >= 46) {
           if (var1 != null) {
             if (var1.indexOf('@') < 0) {
-              int discarded$6 = 32;
-              return new goa(cs.a((byte) 94), npa.a());
+              return new goa(cs.a((byte) 94), npa.a(32));
             } else {
               var1 = "";
-              int discarded$7 = 32;
-              return new goa(cs.a((byte) 94), npa.a());
+              return new goa(cs.a((byte) 94), npa.a(32));
             }
           } else {
-            int discarded$8 = 32;
-            return new goa(cs.a((byte) 94), npa.a());
+            return new goa(cs.a((byte) 94), npa.a(32));
           }
         } else {
           return null;

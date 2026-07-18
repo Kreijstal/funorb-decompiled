@@ -492,7 +492,7 @@ final class lpa extends nv {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_s = null;
         field_p = null;
     }

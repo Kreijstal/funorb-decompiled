@@ -5,7 +5,7 @@ final class dn {
     static lo field_b;
     static int field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

@@ -53,12 +53,11 @@ class aj implements ol, gm {
                 break L1;
               } else {
                 var5 = null;
-                int discarded$4 = this.a(23, -29, (byte) 22, (fi) null);
+                int discarded$2 = this.a(23, -29, (byte) 22, (fi) null);
                 break L1;
               }
             }
-            int discarded$5 = 0;
-            stackOut_2_0 = this.a((byte) -92, param1, param2);
+            stackOut_2_0 = this.a((byte) -92, param1, param2, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -241,7 +240,7 @@ class aj implements ol, gm {
         }
     }
 
-    private final int a(byte param0, fi param1, int param2) {
+    private final int a(byte param0, fi param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
@@ -551,7 +550,7 @@ class aj implements ol, gm {
         return stackIn_1_0;
     }
 
-    private final void b(fi param0) {
+    private final void b(fi param0, int param1) {
         RuntimeException var3 = null;
         int var7 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -896,8 +895,7 @@ class aj implements ol, gm {
                 ((bm) (Object) param0.field_r).a(((aj) this).field_k, ((aj) this).field_j, true, ((aj) this).field_f, ((aj) this).c(param0, 218479361), ((aj) this).field_i, ((aj) this).b(param0, true), this.a(0, param0));
                 break L2;
               } else {
-                int discarded$3 = -14040;
-                this.b(param0);
+                this.b(param0, -14040);
                 break L2;
               }
             }
@@ -1007,13 +1005,11 @@ class aj implements ol, gm {
                       break L4;
                     } else {
                       if (var13 == 1) {
-                        int discarded$5 = 0;
-                        ((aj) this).field_i.c(((aj) this).c(param7, 218479361), this.a(param2, 0, (byte) -42, param7) - -(var10 >> 1), this.a((byte) 23, param7, param0) - -var12, param6, param1);
+                        ((aj) this).field_i.c(((aj) this).c(param7, 218479361), this.a(param2, 0, (byte) -42, param7) - -(var10 >> 1), this.a((byte) 23, param7, param0, 0) - -var12, param6, param1);
                         break L1;
                       } else {
                         if (var13 == 2) {
-                          int discarded$6 = 0;
-                          ((aj) this).field_i.a(((aj) this).c(param7, 218479361), this.a(param2, 0, (byte) -107, param7) - -var10, this.a((byte) -78, param7, param0) + var12, param6, param1);
+                          ((aj) this).field_i.a(((aj) this).c(param7, 218479361), this.a(param2, 0, (byte) -107, param7) - -var10, this.a((byte) -78, param7, param0, 0) + var12, param6, param1);
                           break L1;
                         } else {
                           break L1;
@@ -1022,12 +1018,10 @@ class aj implements ol, gm {
                     }
                   }
                 }
-                int discarded$7 = 0;
-                ((aj) this).field_i.b(((aj) this).c(param7, 218479361), this.a(param2, 0, (byte) -88, param7), var12 + this.a((byte) 20, param7, param0), param6, param1);
+                ((aj) this).field_i.b(((aj) this).c(param7, 218479361), this.a(param2, 0, (byte) -88, param7), var12 + this.a((byte) 20, param7, param0, 0), param6, param1);
                 break L1;
               } else {
-                int discarded$8 = 0;
-                int discarded$9 = ((aj) this).field_i.a(((aj) this).c(param7, 218479361), this.a(param2, 0, (byte) -76, param7), this.a((byte) -110, param7, param0), var10, var11, param6, param1, ((aj) this).field_j, ((aj) this).field_k, ((aj) this).field_f);
+                int discarded$1 = ((aj) this).field_i.a(((aj) this).c(param7, 218479361), this.a(param2, 0, (byte) -76, param7), this.a((byte) -110, param7, param0, 0), var10, var11, param6, param1, ((aj) this).field_j, ((aj) this).field_k, ((aj) this).field_f);
                 break L1;
               }
             }

@@ -11,7 +11,7 @@ final class mg {
     static om field_g;
     static mf field_c;
 
-    final static int a() {
+    final static int a(byte param0) {
         return ui.field_e;
     }
 

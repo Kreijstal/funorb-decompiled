@@ -90,6 +90,8 @@ final class ge extends gb {
                     break L1;
                   } else {
                     var3 = (Object) (Object) dn.field_Ub;
+                    var4 = var3;
+                    var4 = var3;
                     break L1;
                   }
                 }
@@ -107,8 +109,7 @@ final class ge extends gb {
                   }
                 }
               }
-              int discarded$2 = -1;
-              stackOut_9_0 = fc.a(-19571, param1, (String) var3, (String) var4);
+              stackOut_9_0 = fc.a(-19571, param1, (String) var3, (String) var4, -1);
               stackIn_10_0 = stackOut_9_0;
               break L0;
             } else {

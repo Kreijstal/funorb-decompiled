@@ -9,12 +9,12 @@ final class je {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
 
-    final static ak[] a(fd param0) {
+    final static ak[] a(fd param0, int param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         ak[] var4 = null;

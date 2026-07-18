@@ -135,11 +135,11 @@ final class sa {
         }
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return ho.field_a + -db.field_f;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_e = null;
         field_d = null;

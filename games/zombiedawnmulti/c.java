@@ -671,7 +671,7 @@ final class c {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return tj.field_a.c(-126);
     }
 

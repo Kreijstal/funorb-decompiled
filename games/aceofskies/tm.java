@@ -280,25 +280,24 @@ final class tm extends pa {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int[] var13 = null;
+        int[] var14 = null;
         int[] var12 = null;
         int[] var11 = null;
-        int[] var8 = null;
+        int[] var15 = null;
         int var9 = 0;
         int var10 = AceOfSkies.field_G ? 1 : 0;
         if (!((tm) this).field_g.field_eb) {
             ((tm) this).field_j.a(param3, param1, param2, param6, param4, param0, 83);
         } else {
-            var13 = ((tm) this).field_g.a(param1, param6, (byte) -78, param0, param3);
-            var12 = var13;
+            var14 = ((tm) this).field_g.a(param1, param6, (byte) -78, param0, param3);
+            var12 = var14;
             var11 = var12;
-            var8 = var11;
+            var15 = var11;
             if (!(var11 == null)) {
-                for (var9 = 0; var9 < var13.length; var9++) {
-                    var11[var9] = vo.a(var13[var9], -16777216);
+                for (var9 = 0; var9 < var14.length; var9++) {
+                    var11[var9] = vo.a(var14[var9], -16777216);
                 }
-                int discarded$0 = 0;
-                this.a(var8, param2, 0, param0, param0, param4, param6);
+                this.a(var15, param2, 0, param0, param0, param4, param6, 0);
             }
         }
         if (param5 != -14164) {
@@ -444,7 +443,7 @@ final class tm extends pa {
         return ((tm) this).field_c + (((tm) this).field_j.field_q - -((tm) this).field_d);
     }
 
-    private final void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    private final void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException var9 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

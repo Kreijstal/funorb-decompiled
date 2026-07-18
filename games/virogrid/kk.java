@@ -13,7 +13,7 @@ final class kk extends qe {
         super(param0);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_q = null;
         field_p = null;
         field_n = null;
@@ -60,8 +60,7 @@ final class kk extends qe {
             if (pa.a(var4, -113)) {
               L2: {
                 var5 = (CharSequence) (Object) param0;
-                int discarded$2 = 0;
-                var3_int = fm.a(var5);
+                var3_int = fm.a(var5, false);
                 if (var3_int <= 0) {
                   break L2;
                 } else {

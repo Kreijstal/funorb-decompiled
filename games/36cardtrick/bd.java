@@ -8,7 +8,7 @@ final class bd extends g implements qh {
     private String[] field_E;
     static int field_F;
 
-    final static void d() {
+    final static void d(byte param0) {
         try {
             Exception var1 = null;
             int decompiledRegionSelector0 = 0;
@@ -257,7 +257,7 @@ final class bd extends g implements qh {
         return stackIn_19_0;
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_H = null;
     }
 

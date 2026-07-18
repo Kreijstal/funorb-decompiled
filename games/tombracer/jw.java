@@ -480,13 +480,11 @@ final class jw extends b implements cd, tsa {
                     break L1;
                   } else {
                     if (((jw) this).field_x) {
-                      int discarded$242 = 83;
-                      eo.q();
+                      eo.q(83);
                       break L1;
                     } else {
                       if (!((jw) this).field_w) {
-                        int discarded$243 = 50;
-                        jga.b();
+                        jga.b(50);
                         break L1;
                       } else {
                         gqa.a((byte) 62);
@@ -630,8 +628,7 @@ final class jw extends b implements cd, tsa {
         } else {
           L0: {
             L1: {
-              int discarded$4 = 91;
-              if (foa.a()) {
+              if (foa.a((byte) 91)) {
                 break L1;
               } else {
                 if (((jw) this).field_A.field_o.length() <= 0) {

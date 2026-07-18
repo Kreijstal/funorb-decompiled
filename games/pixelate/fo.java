@@ -99,7 +99,7 @@ final class fo {
         return ek.field_c;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_u = null;
         int var1 = 29;
         field_a = null;

@@ -14,11 +14,11 @@ final class vm {
         return null == dg.field_f ? null : (eq) (Object) dg.field_f.a(-11434, (long)param0);
     }
 
-    final static fm a(boolean param0, byte param1, boolean param2, int param3) {
+    final static fm a(boolean param0, byte param1, boolean param2, int param3, int param4) {
         return el.a(-107, true, false, param3, 1, false);
     }
 
-    final static void b(int param0) {
+    final static void b(int param0, byte param1) {
         io.field_e = 3 & param0 >> 4;
         if (io.field_e > 2) {
             io.field_e = 2;

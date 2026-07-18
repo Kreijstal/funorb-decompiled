@@ -15,7 +15,7 @@ final class bn {
         return -var3 + (var3 + param0) / param2;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
     }

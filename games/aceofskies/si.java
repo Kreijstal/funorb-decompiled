@@ -29,11 +29,11 @@ final class si {
         vn.field_f.a(0, 0, 0);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         kh.field_a = true;
         za.a(34, new int[7], 220, 210, 0, 430, (byte) -67);
         aa.field_b[0] = new nk(0);

@@ -85,7 +85,7 @@ final class ig {
         }
     }
 
-    final static sl a(String param0, int param1) {
+    final static sl a(String param0, int param1, boolean param2) {
         sl var3 = null;
         RuntimeException var3_ref = null;
         sl stackIn_1_0 = null;

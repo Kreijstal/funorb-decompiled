@@ -14,7 +14,7 @@ final class am extends wf {
     int field_h;
     int field_j;
 
-    final static void a(boolean param0, int param1, pl param2) {
+    final static void a(boolean param0, int param1, pl param2, byte param3) {
         Object var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -39,10 +39,7 @@ final class am extends wf {
           L0: {
             L1: {
               if (null != jj.field_a) {
-                int discarded$9 = 40;
-                int discarded$10 = 1048576;
-                int discarded$11 = 256;
-                ff.a(param2, param0);
+                ff.a(param2, param0, 256, 1048576, (byte) 40);
                 break L1;
               } else {
                 break L1;

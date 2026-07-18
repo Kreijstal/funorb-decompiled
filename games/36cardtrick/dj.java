@@ -10,16 +10,16 @@ final class dj {
     static String field_e;
     int field_d;
 
-    final static int c() {
+    final static int c(int param0) {
         return qd.field_a;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_e = null;
     }
 
-    final static ek b() {
+    final static ek b(int param0) {
         if (null == t.field_j) {
           t.field_j = new ek(me.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, me.field_c.field_s, -1, 2147483647, true);
           return t.field_j;

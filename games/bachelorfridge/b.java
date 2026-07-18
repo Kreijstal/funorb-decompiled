@@ -17,7 +17,7 @@ final class b extends cia {
         ((b) this).field_s = kla.a(3, kf.field_a, -2147483648);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_t = null;
     }
 

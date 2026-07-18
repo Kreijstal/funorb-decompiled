@@ -21,7 +21,7 @@ final class bo {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_b = null;
     }
@@ -251,7 +251,7 @@ final class bo {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

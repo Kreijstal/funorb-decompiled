@@ -123,13 +123,13 @@ final class jd implements t {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_f = null;
         field_g = null;
     }
 
-    final static oi a(String param0) {
+    final static oi a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -188,14 +188,12 @@ final class jd implements t {
                   var5 = 0;
                   L1: while (true) {
                     if (var5 >= var4.length) {
-                      int discarded$4 = 1;
-                      stackOut_19_0 = u.a(var3[var3.length - 1]);
+                      stackOut_19_0 = u.a(var3[var3.length - 1], true);
                       stackIn_20_0 = stackOut_19_0;
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      int discarded$5 = 1;
-                      var7 = kf.a(var6);
+                      var7 = kf.a(var6, true);
                       if (var7 == null) {
                         var5++;
                         continue L1;
@@ -268,8 +266,7 @@ final class jd implements t {
         try {
           L0: {
             if (sk.a(param1, param3, 1, param2)) {
-              int discarded$2 = 2;
-              stackOut_4_0 = dh.e();
+              stackOut_4_0 = dh.e(2);
               stackIn_5_0 = stackOut_4_0;
               break L0;
             } else {

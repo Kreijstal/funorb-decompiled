@@ -104,7 +104,7 @@ final class he extends k {
         }
     }
 
-    private final void a(int param0, vk param1) {
+    private final void a(int param0, vk param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -620,13 +620,11 @@ final class he extends k {
                 var2 = param0;
                 L2: while (true) {
                   if (var3.field_E >= var2) {
-                    int discarded$4 = -1;
-                    this.a(var2, var3);
+                    this.a(var2, var3, -1);
                     var3.field_E = var3.field_E - var2;
                     break L1;
                   } else {
-                    int discarded$5 = -1;
-                    this.a(var3.field_E, var3);
+                    this.a(var3.field_E, var3, -1);
                     var2 = var2 - var3.field_E;
                     if (((he) this).field_t.a(0, (int[]) null, var3, var2, 0)) {
                       break L1;

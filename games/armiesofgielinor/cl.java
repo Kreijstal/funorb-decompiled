@@ -269,8 +269,7 @@ final class cl extends tc {
                                       }
                                     }
                                   }
-                                  int discarded$1 = 5;
-                                  var27 = this.a(param0, var8 - -var23, var9 - -var22);
+                                  var27 = this.a(param0, var8 - -var23, var9 - -var22, 5);
                                   if (var27 == -3.4028234663852886e+38f) {
                                     break L14;
                                   } else {
@@ -1112,7 +1111,7 @@ final class cl extends tc {
         }
     }
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         bv var2 = vl.field_n;
         var2.h(32161, 11);
         var2.field_q = var2.field_q + 1;
@@ -1232,7 +1231,7 @@ final class cl extends tc {
         return stackIn_17_0 != 0;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         nn var2 = ((cl) this).field_r.field_U;
         var2.a(false, 81, ((cl) this).field_r.field_z, ((cl) this).field_o, -1, -1);
     }
@@ -1303,8 +1302,7 @@ final class cl extends tc {
               break L1;
             } else {
               ((cl) this).field_y = 50;
-              int discarded$1 = 67;
-              this.a();
+              this.a((byte) 67);
               if (this.a((byte) 124, true) != 1000000) {
                 ((cl) this).field_y = 300;
                 break L1;
@@ -1365,7 +1363,7 @@ final class cl extends tc {
         }
     }
 
-    private final float a(int param0, int param1, int param2) {
+    private final float a(int param0, int param1, int param2, int param3) {
         float var5 = 0.0f;
         ha var6 = null;
         int var7 = 0;

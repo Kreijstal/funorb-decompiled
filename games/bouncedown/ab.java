@@ -5,7 +5,7 @@ final class ab extends ai {
     static String field_g;
     int field_h;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
     }
 
@@ -13,7 +13,7 @@ final class ab extends ai {
         ((ab) this).field_h = param0;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

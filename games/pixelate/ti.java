@@ -445,8 +445,7 @@ final class ti extends sj {
                     var9 = (int)var8.field_e;
                     var12 = (sn) (Object) ((ti) this).field_F.a(-25484, (long)var9);
                     if (var12 == null) {
-                      int discarded$1 = -30805;
-                      var13 = od.a(param2, var9);
+                      var13 = od.a(param2, var9, -30805);
                       if (var13 != null) {
                         ((ti) this).field_F.a((long)var9, 124, (fa) (Object) var13);
                         if (!var13.a(param1, (int[]) var7, (byte) -52, var8.field_r)) {
@@ -1364,7 +1363,7 @@ final class ti extends sj {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         int var1 = 0;
         field_E = null;
     }
@@ -1394,8 +1393,7 @@ final class ti extends sj {
         try {
           L0: {
             L1: {
-              int discarded$2 = 0;
-              this.a(param2, param0, true);
+              this.a(param2, param0, true, 0);
               if (param1 == -39) {
                 break L1;
               } else {
@@ -1653,8 +1651,7 @@ final class ti extends sj {
             break L1;
           } else {
             if (((ti) this).field_O == var3) {
-              int discarded$1 = 0;
-              this.a(((ti) this).field_z, ((ti) this).field_D, ((ti) this).field_s);
+              this.a(((ti) this).field_z, ((ti) this).field_D, ((ti) this).field_s, 0);
               this.f(-113);
               return;
             } else {
@@ -1899,7 +1896,7 @@ final class ti extends sj {
         int var2 = 127 / ((param0 - 78) / 45);
     }
 
-    private final synchronized void a(boolean param0, ua param1, boolean param2) {
+    private final synchronized void a(boolean param0, ua param1, boolean param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = Pixelate.field_H ? 1 : 0;

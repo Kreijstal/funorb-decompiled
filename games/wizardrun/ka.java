@@ -9,7 +9,7 @@ final class ka extends uh {
     static String field_h;
     private String field_j;
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -29,8 +29,7 @@ final class ka extends uh {
         String stackOut_4_2 = null;
         try {
           L0: {
-            int discarded$5 = 96;
-            mj.a((java.awt.Component) (Object) param0);
+            mj.a((java.awt.Component) (Object) param0, (byte) 96);
             ee.a((java.awt.Component) (Object) param0, 6769);
             if (vc.field_K == null) {
               break L0;

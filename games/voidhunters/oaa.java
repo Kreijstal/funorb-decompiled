@@ -14,7 +14,7 @@ final class oaa extends mnb implements uq {
         return ((oaa) this).field_f;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_k = null;
         field_j = null;
         field_h = null;
@@ -28,7 +28,7 @@ final class oaa extends mnb implements uq {
         ((oaa) this).field_c.a(param0, (uq) this);
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return ola.field_p != null;
     }
 

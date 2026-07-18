@@ -13,7 +13,7 @@ final class io {
     static int[] field_g;
     static int field_a;
 
-    final static void a() {
+    final static void a(int param0) {
         if (!cm.field_n) {
           if (lc.field_e == null) {
             L0: {

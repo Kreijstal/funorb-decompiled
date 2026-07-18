@@ -15,7 +15,7 @@ abstract class mg {
 
     abstract wh a(int param0);
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_g = null;
         field_b = null;

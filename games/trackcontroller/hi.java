@@ -8,7 +8,7 @@ final class hi extends tk {
     static int[] field_A;
     be field_x;
 
-    final static void b() {
+    final static void b(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -408,7 +408,7 @@ final class hi extends tk {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_A = null;
     }
 

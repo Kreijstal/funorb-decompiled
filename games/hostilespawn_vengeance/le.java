@@ -99,7 +99,7 @@ class le extends cf {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
+        le var13 = null;
         int var14 = 0;
         Object stackIn_28_0 = null;
         Object stackIn_29_0 = null;
@@ -132,7 +132,6 @@ class le extends cf {
         Object stackOut_38_0 = null;
         int stackOut_38_1 = 0;
         L0: {
-          var13 = null;
           var14 = HostileSpawn.field_I ? 1 : 0;
           if (((le) this).field_ib > 0) {
             var7 = -(-((le) this).field_ib >> 2);
@@ -327,13 +326,13 @@ class le extends cf {
         L11: {
           ((le) this).field_S = stackIn_39_1 != 0;
           if (((le) this).field_I != null) {
-            var13 = (Object) (Object) (le) (Object) ((le) this).field_I.b((byte) 117);
+            var13 = (le) (Object) ((le) this).field_I.b((byte) 117);
             L12: while (true) {
               if (var13 == null) {
                 break L11;
               } else {
-                ((le) var13).a(((le) var13).field_K, ((le) var13).field_sb, ((le) var13).field_mb, param3, (byte) 48, ((le) var13).field_qb);
-                var13 = (Object) (Object) (le) (Object) ((le) var13).field_I.a((byte) 110);
+                var13.a(((le) this).field_K, ((le) this).field_sb, ((le) this).field_mb, param3, (byte) 48, ((le) this).field_qb);
+                var13 = (le) (Object) ((le) this).field_I.a((byte) 110);
                 continue L12;
               }
             }
@@ -342,7 +341,7 @@ class le extends cf {
           }
         }
         L13: {
-          if (!((le) var13).field_Eb) {
+          if (!((le) this).field_Eb) {
             break L13;
           } else {
             wc.field_u = true;
@@ -359,16 +358,16 @@ class le extends cf {
         }
         L15: {
           si.d(var8, var9, var10, var11);
-          if (((le) var13).field_W == 0) {
+          if (((le) this).field_W == 0) {
             break L15;
           } else {
-            if (!((le) var13).field_Db) {
+            if (!((le) this).field_Db) {
               break L15;
             } else {
               L16: {
-                ((le) this).field_zb = -param2 + -((le) var13).field_E + rb.field_m;
-                ((le) this).field_tb = j.field_c + (-((le) var13).field_wb + -param0);
-                if (((le) var13).field_tb < 0) {
+                ((le) this).field_zb = -param2 + -((le) this).field_E + rb.field_m;
+                ((le) this).field_tb = j.field_c + (-((le) this).field_wb + -param0);
+                if (((le) this).field_tb < 0) {
                   ((le) this).field_tb = 0;
                   break L16;
                 } else {
@@ -376,7 +375,7 @@ class le extends cf {
                 }
               }
               L17: {
-                if (((le) var13).field_zb >= 0) {
+                if (((le) this).field_zb >= 0) {
                   break L17;
                 } else {
                   ((le) this).field_zb = 0;
@@ -384,25 +383,25 @@ class le extends cf {
                 }
               }
               L18: {
-                if (((le) var13).field_tb <= -((le) var13).field_qb + param5) {
+                if (((le) this).field_tb <= -((le) this).field_qb + param5) {
                   break L18;
                 } else {
-                  ((le) this).field_tb = -((le) var13).field_qb + param5;
+                  ((le) this).field_tb = -((le) this).field_qb + param5;
                   break L18;
                 }
               }
               L19: {
-                ((le) this).field_K = param0 + ((le) var13).field_tb;
+                ((le) this).field_K = param0 + ((le) this).field_tb;
                 ((le) this).field_z = 0;
                 ((le) this).field_ib = 0;
-                if (((le) var13).field_zb <= -((le) var13).field_sb + param1) {
+                if (((le) this).field_zb <= -((le) this).field_sb + param1) {
                   break L19;
                 } else {
-                  ((le) this).field_zb = param1 - ((le) var13).field_sb;
+                  ((le) this).field_zb = param1 - ((le) this).field_sb;
                   break L19;
                 }
               }
-              ((le) this).field_mb = ((le) var13).field_zb + param2;
+              ((le) this).field_mb = ((le) this).field_zb + param2;
               break L15;
             }
           }
@@ -763,8 +762,8 @@ class le extends cf {
               if (var24_ref == null) {
                 break L30;
               } else {
-                var24_ref.a(param0, var21 + var24_ref.field_mb, param2, (byte) -88, param4, var24_ref.field_qb, var24_ref.field_lb, var24_ref.field_K - -var20, param8, param9, var24_ref.field_sb);
-                var24_ref = (le) (Object) var24_ref.field_I.a(12684);
+                var24_ref.a(param0, var21 + ((le) this).field_mb, param2, (byte) -88, param4, ((le) this).field_qb, ((le) this).field_lb, ((le) this).field_K - -var20, param8, param9, ((le) this).field_sb);
+                var24_ref = (le) (Object) ((le) this).field_I.a(12684);
                 continue L31;
               }
             }
@@ -773,7 +772,7 @@ class le extends cf {
         si.d(var12, var13, var15, var16);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_xb = null;
         field_ub = null;
     }
@@ -792,7 +791,7 @@ class le extends cf {
         }
     }
 
-    private final void a(le param0) {
+    private final void a(le param0, int param1) {
         RuntimeException var3 = null;
         Object stackIn_65_0 = null;
         Object stackIn_66_0 = null;
@@ -1255,8 +1254,7 @@ class le extends cf {
               ((le) this).field_zb = param3;
               ((le) this).field_qb = param4;
               ((le) this).field_c = param0;
-              int discarded$2 = 7957;
-              this.a(param1);
+              this.a(param1, 7957);
               if (param6 == null) {
                 break L1;
               } else {

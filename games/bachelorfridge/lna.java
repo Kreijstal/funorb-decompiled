@@ -269,8 +269,7 @@ final class lna {
                     }
                     L2: {
                       ((lna) this).field_x = stackIn_11_1 != 0;
-                      int discarded$2 = 9;
-                      this.b();
+                      this.b(9);
                       hga.field_U.a((byte) -105);
                       if (!((lna) this).field_x) {
                         break L2;
@@ -485,7 +484,7 @@ final class lna {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -780,7 +779,7 @@ final class lna {
         bd.field_i.e(-50 + param3, param0 - 50);
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int[] var27 = this.a(16777215, 16711680, ((lna) this).field_D[0], 16777215, true, 35, 16711680, ((lna) this).field_D[8]);
         int[] var21 = var27;
         int[] var15 = var21;
@@ -993,8 +992,7 @@ final class lna {
     }
 
     final kv e(int param0) {
-        int discarded$0 = 9;
-        this.b();
+        this.b(9);
         int var2 = 29 % ((-16 - param0) / 42);
         return bd.field_i;
     }
@@ -1351,7 +1349,7 @@ final class lna {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 22;
         field_h = null;
         field_y = null;
@@ -1379,8 +1377,7 @@ final class lna {
         }
         bd.field_i = new kv(220, 300);
         ((lna) this).field_s = 0;
-        int discarded$0 = 1;
-        this.d();
+        this.d(1);
         this.b((byte) -69);
         jha.field_g.c("?", 0, jha.field_g.field_u, 16777215, 65793);
         hga.field_U.a((byte) 121);

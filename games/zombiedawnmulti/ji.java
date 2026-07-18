@@ -8,7 +8,7 @@ final class ji {
     static String field_a;
     static int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_e = null;
@@ -83,9 +83,8 @@ final class ji {
         }
     }
 
-    final static void b() {
-        int discarded$0 = -1;
-        al.j();
+    final static void b(int param0) {
+        al.j(-1);
         int var1 = -108;
         ud.field_ab = true;
         ch.field_e = true;

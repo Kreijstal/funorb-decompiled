@@ -15,7 +15,7 @@ abstract class sl extends tk {
     static String[] field_A;
     static boolean field_w;
 
-    public static void f() {
+    public static void f(int param0) {
         field_x = null;
         field_y = null;
         field_A = null;
@@ -78,14 +78,10 @@ abstract class sl extends tk {
           ff.field_i = param14;
           pf.field_i = param11;
           ki.field_k = param9;
-          int discarded$4 = 2;
-          dj.field_f = cr.a("lobby", param7, "gameprivacy");
-          int discarded$5 = 2;
-          bq.field_c = cr.a("lobby", param7, "ratedgame");
-          int discarded$6 = 2;
-          uo.field_c = cr.a("lobby", param7, "opentome");
-          int discarded$7 = 2;
-          vn.field_K = cr.a("lobby", param7, "allowspectators");
+          dj.field_f = cr.a("lobby", param7, "gameprivacy", 2);
+          bq.field_c = cr.a("lobby", param7, "ratedgame", 2);
+          uo.field_c = cr.a("lobby", param7, "opentome", 2);
+          vn.field_K = cr.a("lobby", param7, "allowspectators", 2);
           bl.field_H = new String[5];
           bl.field_H[3] = cm.field_u;
           bl.field_H[1] = t.field_e;

@@ -77,7 +77,7 @@ final class ek implements Iterable {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return !qa.field_a.b(false);
     }
 

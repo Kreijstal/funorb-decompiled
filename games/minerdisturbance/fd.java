@@ -46,7 +46,7 @@ class fd extends ja {
     static boolean[] field_mb;
     static String[] field_kb;
 
-    private final void a(fd param0) {
+    private final void a(fd param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_100_0 = null;
         StringBuilder stackIn_100_1 = null;
@@ -400,7 +400,7 @@ class fd extends ja {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         String var1 = null;
         if (!gd.field_B) {
           throw new IllegalStateException();
@@ -413,8 +413,7 @@ class fd extends ja {
               break L0;
             }
           }
-          int discarded$2 = 105;
-          var1 = hn.c();
+          var1 = hn.c(105);
           di.field_D = new cl(var1, (String) null, true, false, false);
           mb.field_b.b(1, (fe) (Object) de.field_a);
           de.field_a.a((byte) -127, (fe) (Object) di.field_D);
@@ -560,8 +559,7 @@ class fd extends ja {
             break L12;
           }
         }
-        int discarded$1 = 127;
-        tk.field_d = ql.a(var4 * var2, var5 * var2);
+        tk.field_d = ql.a(var4 * var2, var5 * var2, 127);
     }
 
     public static void g(int param0) {
@@ -632,8 +630,7 @@ class fd extends ja {
           L0: {
             L1: {
               ((fd) this).field_d = param0;
-              int discarded$2 = -1;
-              this.a(param1);
+              this.a(param1, -1);
               if (param6 == null) {
                 break L1;
               } else {

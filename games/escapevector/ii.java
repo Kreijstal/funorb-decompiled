@@ -29,12 +29,12 @@ final class ii {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         if (20 <= fc.field_a) {
           if (aa.a((byte) -84)) {
             if (am.field_g > 0) {

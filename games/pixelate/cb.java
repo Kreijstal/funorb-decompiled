@@ -368,7 +368,7 @@ final class cb implements Runnable {
                                               var8_ref.field_e = (Object) (Object) var16;
                                               var16.setResizable(false);
                                               if (!((cb) this).field_v) {
-                                                Object discarded$7 = Class.forName("gl").getMethod("enter", new Class[5]).invoke(((cb) this).field_g, new Object[5]);
+                                                Object discarded$6 = Class.forName("gl").getMethod("enter", new Class[5]).invoke(((cb) this).field_g, new Object[5]);
                                                 break L8;
                                               } else {
                                                 ((cb) this).field_s.a(65535 & var8_ref.field_a, (byte) 122, 65535 & var8_ref.field_c, var8_ref.field_c >> 16, var8_ref.field_a >>> 16, var16);
@@ -380,7 +380,7 @@ final class cb implements Runnable {
                                                   ((cb) this).field_s.a(8, (java.awt.Frame) var8_ref.field_g);
                                                   break L8;
                                                 } else {
-                                                  Object discarded$8 = Class.forName("gl").getMethod("exit", new Class[0]).invoke(((cb) this).field_g, new Object[0]);
+                                                  Object discarded$7 = Class.forName("gl").getMethod("exit", new Class[0]).invoke(((cb) this).field_g, new Object[0]);
                                                   break L8;
                                                 }
                                               } else {
@@ -394,7 +394,7 @@ final class cb implements Runnable {
                                                           var3 = var8_ref.field_a;
                                                           var4 = var8_ref.field_c;
                                                           if (!((cb) this).field_v) {
-                                                            Object discarded$9 = Class.forName("cj").getDeclaredMethod("movemouse", new Class[2]).invoke(((cb) this).field_n, new Object[2]);
+                                                            Object discarded$8 = Class.forName("cj").getDeclaredMethod("movemouse", new Class[2]).invoke(((cb) this).field_n, new Object[2]);
                                                             break L8;
                                                           } else {
                                                             ((cb) this).field_d.a(var3, var4, (byte) 112);
@@ -429,7 +429,7 @@ final class cb implements Runnable {
                                                             ((cb) this).field_d.a(var13, var3 != 0, false);
                                                             break L8;
                                                           } else {
-                                                            Object discarded$10 = Class.forName("cj").getDeclaredMethod("showcursor", new Class[2]).invoke(((cb) this).field_n, new Object[2]);
+                                                            Object discarded$9 = Class.forName("cj").getDeclaredMethod("showcursor", new Class[2]).invoke(((cb) this).field_n, new Object[2]);
                                                             break L8;
                                                           }
                                                         }
@@ -443,7 +443,7 @@ final class cb implements Runnable {
                                                           break L12;
                                                         } else {
                                                           var14 = (Object[]) var8_ref.field_g;
-                                                          Object discarded$11 = Class.forName("cj").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((cb) this).field_n, new Object[5]);
+                                                          Object discarded$10 = Class.forName("cj").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((cb) this).field_n, new Object[5]);
                                                           break L8;
                                                         }
                                                       }
@@ -470,7 +470,7 @@ final class cb implements Runnable {
                                                             var5 = 0;
                                                             L15: while (true) {
                                                               if (var15.length() <= var5) {
-                                                                Process discarded$12 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var15 + "\"");
+                                                                Process discarded$11 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var15 + "\"");
                                                                 var8_ref.field_e = null;
                                                                 break L13;
                                                               } else {
@@ -589,8 +589,7 @@ final class cb implements Runnable {
                         if (~hm.a(64) <= ~field_c) {
                           try {
                             L18: {
-                              int discarded$13 = 126;
-                              var8_ref.field_e = (Object) (Object) qe.a((String) var8_ref.field_g, var8_ref.field_a).a(116);
+                              var8_ref.field_e = (Object) (Object) qe.a((String) var8_ref.field_g, var8_ref.field_a, (byte) 126).a(116);
                               break L18;
                             }
                           } catch (java.lang.Exception decompiledCaughtParameter2) {

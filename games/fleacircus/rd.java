@@ -8,7 +8,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     static k field_c;
     static int[] field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_c = null;
@@ -36,7 +36,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static void a(ql param0, int param1) {
+    final static void a(ql param0, int param1, int param2) {
         sd.field_d.a(false, (lh) (Object) param0);
         if (param1 < 57) {
             return;

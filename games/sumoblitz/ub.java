@@ -6,7 +6,7 @@ final class ub extends ms {
     int field_l;
     long field_m;
 
-    final static void a() {
+    final static void a(int param0) {
         ah var1 = null;
         int var2 = 0;
         int var3 = 0;

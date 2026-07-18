@@ -13,7 +13,7 @@ final class nt extends tc {
     int field_s;
     int field_m;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_p = null;
     }
 

@@ -6,9 +6,8 @@ final class kg {
     static de field_b;
     static int[] field_a;
 
-    final static void b() {
-        int discarded$4 = 7;
-        if (g.j()) {
+    final static void b(byte param0) {
+        if (g.j(7)) {
           if (ec.field_f < 2) {
             return;
           } else {
@@ -20,7 +19,7 @@ final class kg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
         field_a = null;

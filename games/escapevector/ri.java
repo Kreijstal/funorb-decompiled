@@ -5,12 +5,12 @@ final class ri {
     static String field_a;
     static hh field_b;
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, byte param2) {
         bg.field_f = param1;
         oj.field_M = param0;
     }
 
-    final static StringBuilder a(int param0, char param1, StringBuilder param2) {
+    final static StringBuilder a(int param0, char param1, StringBuilder param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -84,12 +84,12 @@ final class ri {
         return stackIn_5_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         rl var3 = null;
@@ -201,8 +201,7 @@ final class ri {
                             }
                           } else {
                             L10: {
-                              int discarded$1 = 1238559653;
-                              km.a((n) (Object) var15);
+                              km.a((n) (Object) var15, 1238559653);
                               if (var6_int != 0) {
                                 af.a(1, hk.field_n, wk.field_d, oc.field_u, var6_int, bk.field_s);
                                 break L10;

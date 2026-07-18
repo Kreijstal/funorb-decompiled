@@ -266,7 +266,7 @@ final class ua implements bo {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
@@ -332,7 +332,7 @@ final class ua implements bo {
         }
     }
 
-    final static byte[] a(Object param0, int param1, int param2) {
+    final static byte[] a(Object param0, int param1, int param2, boolean param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         qu var5 = null;
@@ -365,8 +365,7 @@ final class ua implements bo {
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
-                int discarded$2 = -63;
-                ua.a();
+                ua.a(-63);
                 throw new IllegalArgumentException();
               }
             } else {
@@ -569,7 +568,7 @@ final class ua implements bo {
         return stackIn_41_0;
     }
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         cga var4 = null;

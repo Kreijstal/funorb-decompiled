@@ -88,8 +88,7 @@ final class hd extends oha {
               }
             }
           }
-          int discarded$2 = -96;
-          if (!this.c()) {
+          if (!this.c((byte) -96)) {
             throw new IllegalStateException("This special doesn't have a defined range. Fix it.");
           } else {
             return 0;
@@ -99,7 +98,7 @@ final class hd extends oha {
         }
     }
 
-    final static byte[] a(byte[] param0, pf param1) {
+    final static byte[] a(byte[] param0, pf param1, byte param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -251,11 +250,11 @@ final class hd extends oha {
         return stackIn_18_0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_r = null;
     }
 
-    private final boolean c() {
+    private final boolean c(byte param0) {
         return ((hd) this).field_p == 0 && ((hd) this).field_n == 7;
     }
 

@@ -70,7 +70,7 @@ final class bk extends ug {
         return stackIn_1_0;
     }
 
-    final static a a() {
+    final static a a(boolean param0) {
         if (jk.field_x == null) {
           jk.field_x = new a(pf.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, pf.field_c.field_C, -1, 2147483647, true);
           return jk.field_x;

@@ -18,7 +18,7 @@ final class kc extends ck {
     static fk field_s;
     static String field_t;
 
-    public static void d() {
+    public static void d(int param0) {
         field_x = null;
         field_w = null;
         field_o = null;
@@ -218,7 +218,7 @@ final class kc extends ck {
         }
     }
 
-    final static String a(int[] param0, int[] param1) {
+    final static String a(int[] param0, int[] param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

@@ -24,7 +24,7 @@ final class el {
     static String field_a;
     static int field_d;
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, byte param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -601,8 +601,7 @@ final class el {
                     break L3;
                   }
                 }
-                int discarded$12 = -116;
-                q.field_h = de.a(stackIn_5_0 != 0);
+                q.field_h = de.a(stackIn_5_0 != 0, (byte) -116);
                 break L1;
               }
             }
@@ -672,7 +671,7 @@ final class el {
         return c.field_d;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_m = null;
         field_n = null;
@@ -681,8 +680,7 @@ final class el {
     el(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-            int discarded$0 = 40;
-            ((el) this).field_r = v.a(param0, param0.length);
+            ((el) this).field_r = v.a(param0, param0.length, (byte) 40);
             if (((el) this).field_r != param1) {
                 throw new RuntimeException();
             }
@@ -697,8 +695,7 @@ final class el {
                     }
                 }
             }
-            int discarded$1 = -114;
-            this.a(param0);
+            this.a(param0, (byte) -114);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

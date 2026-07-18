@@ -94,7 +94,7 @@ final class vc extends qm {
         return stackIn_3_0 != 0;
     }
 
-    final static void a(int param0, int param1, int param2, sb param3, int param4, sb param5, int param6, int param7, int param8, jl param9, int param10, int param11, int param12, sb param13, int param14, jl param15, byte param16, int param17, int param18, int param19) {
+    final static void a(int param0, int param1, int param2, sb param3, int param4, sb param5, int param6, int param7, int param8, jl param9, int param10, int param11, int param12, sb param13, int param14, jl param15, byte param16, int param17, int param18, int param19, int param20) {
         int var21_int = 0;
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
@@ -178,9 +178,7 @@ final class vc extends qm {
             dj.a((byte) -109, param15, param9, 480);
             jj.a(param17, false, param0, param7, param18);
             op.b(240, 320, true);
-            int discarded$2 = 8;
-            int discarded$3 = 2;
-            lg.a(param5, 8, -118, param3);
+            lg.a(param5, 8, -118, param3, 2, 8);
             pb.a(0, param13, 16, 0);
             ll.a((byte) -113, param19, param11, param14);
             var21_int = -33;
@@ -347,16 +345,14 @@ final class vc extends qm {
                   h.a(-71, u.field_k);
                   t.d();
                   var17.a(112, 144, var17.field_A << 4, var17.field_B << 4, -((vc) this).field_Q << 10, 4096);
-                  int discarded$8 = 92;
-                  ia.a();
+                  ia.a((byte) 92);
                   u.field_k.b(var5 + -var17.field_A, var7 - var17.field_B, 256);
                   return;
                 } else {
                   u.field_k = new tf(var10, var11);
                   h.a(-83, u.field_k);
                   var17.a(112, 144, var17.field_A << 4, var17.field_B << 4, -((vc) this).field_Q << 10, 4096);
-                  int discarded$9 = 92;
-                  ia.a();
+                  ia.a((byte) 92);
                   u.field_k.b(var5 + -var17.field_A, var7 - var17.field_B, 256);
                   return;
                 }
@@ -364,8 +360,7 @@ final class vc extends qm {
                 u.field_k = new tf(var10, var11);
                 h.a(-83, u.field_k);
                 var17.a(112, 144, var17.field_A << 4, var17.field_B << 4, -((vc) this).field_Q << 10, 4096);
-                int discarded$10 = 92;
-                ia.a();
+                ia.a((byte) 92);
                 u.field_k.b(var5 + -var17.field_A, var7 - var17.field_B, 256);
                 return;
               }
@@ -373,8 +368,7 @@ final class vc extends qm {
               u.field_k = new tf(var10, var11);
               h.a(-83, u.field_k);
               var17.a(112, 144, var17.field_A << 4, var17.field_B << 4, -((vc) this).field_Q << 10, 4096);
-              int discarded$11 = 92;
-              ia.a();
+              ia.a((byte) 92);
               u.field_k.b(var5 + -var17.field_A, var7 - var17.field_B, 256);
               return;
             }
@@ -403,16 +397,14 @@ final class vc extends qm {
                     h.a(-71, u.field_k);
                     t.d();
                     var16.a(112, 144, var16.field_A << 4, var16.field_B << 4, -((vc) this).field_Q << 10, 4096);
-                    int discarded$12 = 92;
-                    ia.a();
+                    ia.a((byte) 92);
                     u.field_k.b(var5 + -var16.field_A, var7 - var16.field_B, 256);
                     return;
                   } else {
                     u.field_k = new tf(var10, var11);
                     h.a(-83, u.field_k);
                     var16.a(112, 144, var16.field_A << 4, var16.field_B << 4, -((vc) this).field_Q << 10, 4096);
-                    int discarded$13 = 92;
-                    ia.a();
+                    ia.a((byte) 92);
                     u.field_k.b(var5 + -var16.field_A, var7 - var16.field_B, 256);
                     return;
                   }
@@ -420,8 +412,7 @@ final class vc extends qm {
                   u.field_k = new tf(var10, var11);
                   h.a(-83, u.field_k);
                   var16.a(112, 144, var16.field_A << 4, var16.field_B << 4, -((vc) this).field_Q << 10, 4096);
-                  int discarded$14 = 92;
-                  ia.a();
+                  ia.a((byte) 92);
                   u.field_k.b(var5 + -var16.field_A, var7 - var16.field_B, 256);
                   return;
                 }
@@ -429,8 +420,7 @@ final class vc extends qm {
                 u.field_k = new tf(var10, var11);
                 h.a(-83, u.field_k);
                 var16.a(112, 144, var16.field_A << 4, var16.field_B << 4, -((vc) this).field_Q << 10, 4096);
-                int discarded$15 = 92;
-                ia.a();
+                ia.a((byte) 92);
                 u.field_k.b(var5 + -var16.field_A, var7 - var16.field_B, 256);
                 return;
               }
@@ -441,7 +431,7 @@ final class vc extends qm {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_N = null;
         field_O = null;
     }

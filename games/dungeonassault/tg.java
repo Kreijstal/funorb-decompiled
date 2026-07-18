@@ -247,23 +247,14 @@ final class tg {
         field_h = new int[14];
         field_e = new String[]{null, "Rooms you have just placed are <%highlight>surrounded by a blue glow to show they are not yet fixed</col>. You can <col=FF0000>right-click</col> on a newly placed room to remove it, restoring the tile it replaced."};
         field_n = "Orb of War";
-        int discarded$0 = 0;
-        pi.a(field_i, 180, 0, 33, 460, 88);
-        int discarded$1 = 0;
-        pi.a(new int[6], 180, 1, 33, 460, 88);
-        int discarded$2 = 0;
-        pi.a(new int[4], 82, 3, 33, 336, 88);
-        int discarded$3 = 0;
-        pi.a(new int[1], 180, 6, 33, 460, 410);
-        int discarded$4 = 0;
-        pi.a(new int[2], 200, 8, 33, 440, 392);
-        int discarded$5 = 0;
-        pi.a(new int[1], 200, 9, 33, 440, 392);
-        int discarded$6 = 0;
-        pi.a(new int[2], 180, 10, 33, 460, 400);
-        int discarded$7 = 0;
-        pi.a(new int[1], 290, 11, 33, 460, 400);
-        int discarded$8 = 0;
-        pi.a(new int[0], 180, 12, 33, 460, 88);
+        pi.a(field_i, 180, 0, 33, 460, 88, 0);
+        pi.a(new int[6], 180, 1, 33, 460, 88, 0);
+        pi.a(new int[4], 82, 3, 33, 336, 88, 0);
+        pi.a(new int[1], 180, 6, 33, 460, 410, 0);
+        pi.a(new int[2], 200, 8, 33, 440, 392, 0);
+        pi.a(new int[1], 200, 9, 33, 440, 392, 0);
+        pi.a(new int[2], 180, 10, 33, 460, 400, 0);
+        pi.a(new int[1], 290, 11, 33, 460, 400, 0);
+        pi.a(new int[0], 180, 12, 33, 460, 88, 0);
     }
 }

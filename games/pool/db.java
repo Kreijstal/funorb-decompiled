@@ -375,7 +375,7 @@ final class db extends vh {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_Wb = null;
         field_Sb = null;
         field_Nb = null;
@@ -479,7 +479,7 @@ final class db extends vh {
         }
     }
 
-    final static vh f() {
+    final static vh f(byte param0) {
         return cp.field_c.field_Mb;
     }
 
@@ -770,7 +770,7 @@ final class db extends vh {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         ma var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -927,8 +927,7 @@ final class db extends vh {
             int[] var2 = var3;
             param1.field_Y = param1.field_q;
             param1.field_q = var3;
-            int discarded$0 = 38;
-            jf.a(param1);
+            jf.a(param1, (byte) 38);
             param1.a();
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "db.DA(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');

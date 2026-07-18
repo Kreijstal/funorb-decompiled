@@ -12,7 +12,7 @@ final class kr {
     static byte[] field_c;
     private java.math.BigInteger field_h;
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_g = null;
     }
@@ -203,7 +203,7 @@ final class kr {
         return stackIn_14_0;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         an.a(1, param0);
         try {
             fi.a(31820, false, gn.field_a);

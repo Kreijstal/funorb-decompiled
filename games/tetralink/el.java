@@ -365,7 +365,7 @@ final class el extends hl {
         ((el) this).field_sc = new byte[param0];
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_Ob = null;
         field_Sb = null;
         field_Nb = null;
@@ -453,8 +453,7 @@ final class el extends hl {
             param1 = param1 + var3 * (-param1 + te.field_P) / var2;
         }
         oj.field_a.a((byte) -86, 640, param1, 120, vi.field_d);
-        int discarded$0 = 0;
-        qh.a(param0, eh.field_w, 640, te.field_P + -24, 1000000, fn.field_Q);
+        qh.a(param0, eh.field_w, 640, te.field_P + -24, 1000000, fn.field_Q, 0);
     }
 
     final int j(int param0) {
@@ -466,7 +465,7 @@ final class el extends hl {
         }
     }
 
-    final static kh[] a(ah param0, String param1, String param2) {
+    final static kh[] a(ah param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

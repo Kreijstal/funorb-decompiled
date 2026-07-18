@@ -15,7 +15,7 @@ final class of {
     private int field_a;
     float field_k;
 
-    private final void a(tc param0, int param1) {
+    private final void a(tc param0, int param1, boolean param2) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -100,8 +100,7 @@ final class of {
                   break L1;
                 } else {
                   if (!var4.field_a.c(var4.field_f, 14969)) {
-                    int discarded$4 = 0;
-                    this.a(var2, var4.field_a.b(var4.field_f, -2));
+                    this.a(var2, var4.field_a.b(var4.field_f, -2), false);
                     return false;
                   } else {
                     break L1;
@@ -115,8 +114,7 @@ final class of {
                   if (var4.field_a.a(var4.field_c, -95)) {
                     break L2;
                   } else {
-                    int discarded$5 = 0;
-                    this.a(var2, var4.field_a.a(-84, var4.field_c));
+                    this.a(var2, var4.field_a.a(-84, var4.field_c), false);
                     return false;
                   }
                 }
@@ -134,8 +132,7 @@ final class of {
                       if (var4.field_a.a(param0 ^ -58)) {
                         break L3;
                       } else {
-                        int discarded$6 = 0;
-                        this.a(var2, var4.field_a.a((byte) -77));
+                        this.a(var2, var4.field_a.a((byte) -77), false);
                         return false;
                       }
                     }
@@ -145,15 +142,14 @@ final class of {
               ((of) this).field_j = ((of) this).field_j + 1;
               continue L0;
             } else {
-              int discarded$7 = 0;
-              this.a(var2, 0);
+              this.a(var4, 0, false);
               return false;
             }
           }
         }
     }
 
-    final static jg a() {
+    final static jg a(int param0) {
         try {
             Throwable var1 = null;
             jg stackIn_1_0 = null;
@@ -178,7 +174,7 @@ final class of {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_g = null;
         field_d = null;
@@ -245,14 +241,13 @@ final class of {
                 break L1;
               } else {
                 var6 = null;
-                dd[] discarded$4 = of.a((String) null, (String) null, (rh) null, 93);
+                dd[] discarded$2 = of.a((String) null, (String) null, (rh) null, 93);
                 break L1;
               }
             }
             var4_int = param2.a(param1, (byte) -100);
             var5 = param2.a(param0, (byte) -15, var4_int);
-            int discarded$5 = -109;
-            stackOut_2_0 = oc.a(param2, var5, var4_int);
+            stackOut_2_0 = oc.a(param2, var5, var4_int, (byte) -109);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

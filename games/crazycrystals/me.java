@@ -72,7 +72,7 @@ final class me {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_d = null;
         field_a = null;

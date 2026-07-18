@@ -16,7 +16,7 @@ final class jj extends id {
     private int field_J;
     static long field_M;
 
-    public static void i() {
+    public static void i(int param0) {
         field_L = null;
         field_I = null;
         field_F = null;

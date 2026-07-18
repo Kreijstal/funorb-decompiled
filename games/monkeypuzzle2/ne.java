@@ -6,7 +6,7 @@ final class ne {
     static fg field_c;
     static int field_b;
 
-    final static am a(String param0) {
+    final static am a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -61,14 +61,12 @@ final class ne {
                   var5 = 0;
                   L1: while (true) {
                     if (var5 >= var4.length) {
-                      int discarded$4 = 5000;
-                      stackOut_19_0 = bi.a(var3[-1 + var3.length]);
+                      stackOut_19_0 = bi.a(var3[-1 + var3.length], 5000);
                       stackIn_20_0 = stackOut_19_0;
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      int discarded$5 = 55;
-                      var7 = dh.a(var6);
+                      var7 = dh.a(var6, (byte) 55);
                       if (var7 != null) {
                         stackOut_16_0 = (am) var7;
                         stackIn_17_0 = stackOut_16_0;
@@ -120,7 +118,7 @@ final class ne {
         return stackIn_20_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -391,8 +389,7 @@ final class ne {
         if (null != vl.field_f) {
             vl.field_f.c(true);
         }
-        int discarded$0 = 81;
-        vb.g();
+        vb.g(81);
     }
 
     static {

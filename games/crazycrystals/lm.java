@@ -13,7 +13,7 @@ final class lm {
     static sj field_e;
     static f[] field_d;
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var1 = null;
         int var2 = 0;
         Throwable var3 = null;

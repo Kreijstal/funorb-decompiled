@@ -535,8 +535,7 @@ class ih extends hn {
                     var9 = (int)var8.field_i;
                     var12 = (io) (Object) ((ih) this).field_T.a(-27, (long)var9);
                     if (var12 == null) {
-                      int discarded$1 = 1;
-                      var13 = wl.a(param1, var9);
+                      var13 = wl.a(param1, var9, true);
                       if (var13 != null) {
                         ((ih) this).field_T.a((tc) (Object) var13, (long)var9, 24);
                         if (var13.a(param4 + 10922, var8.field_n, (int[]) var7, param0)) {
@@ -896,7 +895,7 @@ class ih extends hn {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_G = null;
         field_H = null;
         field_X = null;

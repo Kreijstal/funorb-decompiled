@@ -14,7 +14,7 @@ final class pa {
     private int field_a;
     private long[] field_b;
 
-    final static void a() {
+    final static void a(byte param0) {
         fo var1 = (fo) (Object) ji.field_a.b((byte) 87);
         if (!(var1 != null)) {
             r.a(-28036);
@@ -59,14 +59,13 @@ final class pa {
               } else {
                 L2: while (true) {
                   if (((pa) this).field_e >= 64) {
-                    int discarded$4 = 1;
-                    this.c();
+                    this.c(true);
                     ((pa) this).field_e = 0;
                     break L1;
                   } else {
-                    int fieldTemp$5 = ((pa) this).field_e;
+                    int fieldTemp$2 = ((pa) this).field_e;
                     ((pa) this).field_e = ((pa) this).field_e + 1;
-                    ((pa) this).field_f[fieldTemp$5] = (byte) 0;
+                    ((pa) this).field_f[fieldTemp$2] = (byte) 0;
                     continue L2;
                   }
                 }
@@ -75,8 +74,7 @@ final class pa {
             L3: while (true) {
               if (((pa) this).field_e >= 32) {
                 bc.a(((pa) this).field_c, 0, ((pa) this).field_f, 32, 32);
-                int discarded$6 = 1;
-                this.c();
+                this.c(true);
                 var4_int = 0;
                 var5 = param2;
                 L4: while (true) {
@@ -107,9 +105,9 @@ final class pa {
                   }
                 }
               } else {
-                int fieldTemp$7 = ((pa) this).field_e;
+                int fieldTemp$3 = ((pa) this).field_e;
                 ((pa) this).field_e = ((pa) this).field_e + 1;
-                ((pa) this).field_f[fieldTemp$7] = (byte) 0;
+                ((pa) this).field_f[fieldTemp$3] = (byte) 0;
                 continue L3;
               }
             }
@@ -171,7 +169,7 @@ final class pa {
         mk.field_i = param2;
     }
 
-    final static void a(qi param0, qi param1) {
+    final static void a(qi param0, qi param1, byte param2, int param3) {
         sj.field_G = param1;
         q.field_a = param0;
         try {
@@ -349,7 +347,7 @@ final class pa {
         }
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -528,8 +526,7 @@ final class pa {
                           if (((pa) this).field_a != 512) {
                             break L5;
                           } else {
-                            int discarded$2 = 1;
-                            this.c();
+                            this.c(true);
                             ((pa) this).field_e = 0;
                             ((pa) this).field_a = 0;
                             break L5;
@@ -557,8 +554,7 @@ final class pa {
                             if (((pa) this).field_a != 512) {
                               break L7;
                             } else {
-                              int discarded$3 = 1;
-                              this.c();
+                              this.c(true);
                               ((pa) this).field_e = 0;
                               ((pa) this).field_a = 0;
                               break L7;

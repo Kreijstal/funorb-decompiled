@@ -5,7 +5,7 @@ final class vr {
     static String field_b;
     static String field_a;
 
-    final static void c() {
+    final static void c(int param0) {
         Object var2 = null;
         ui.a(ld.field_a, (byte) 111, (String) null);
     }
@@ -16,12 +16,12 @@ final class vr {
         return param1 < var3.length ? var3[param1] : 100;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -45,8 +45,7 @@ final class vr {
             try {
               try {
                 var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-                int discarded$2 = 3;
-                param0.getAppletContext().showDocument(qr.a(param0, var2), "_top");
+                param0.getAppletContext().showDocument(qr.a(param0, var2, 3), "_top");
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,11 +118,11 @@ final class vr {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         np.field_Jb.a((gn) (Object) new aw(), 3);
     }
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         return true;
     }
 

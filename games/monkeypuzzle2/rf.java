@@ -22,7 +22,7 @@ abstract class rf {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        int stackIn_10_0 = 0;
+        boolean stackIn_10_0 = false;
         int stackIn_27_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_30_0 = 0;
@@ -38,7 +38,7 @@ abstract class rf {
         StringBuilder stackIn_65_1 = null;
         String stackIn_65_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
+        boolean stackOut_9_0 = false;
         int stackOut_26_0 = 0;
         int stackOut_29_0 = 0;
         int stackOut_29_1 = 0;
@@ -61,17 +61,15 @@ abstract class rf {
             L1: {
               var5_int = nf.a(3 * (-param2 + param0), true);
               var6 = 3 * param2;
-              var7 = var5_int + -10;
-              int discarded$2 = 114;
-              dc.a();
+              var7 = var5_int + param1;
+              dc.a((byte) 114);
               if (0 >= param4.field_D) {
                 break L1;
               } else {
                 if (param4.field_N == null) {
                   break L1;
                 } else {
-                  int discarded$3 = -22;
-                  df.h();
+                  df.h(-22);
                   break L1;
                 }
               }
@@ -87,15 +85,15 @@ abstract class rf {
                     var9 = param4.field_u[var8];
                     var10 = param4.field_L[var8];
                     var11 = param4.field_C[var8];
-                    stackOut_9_0 = 0;
-                    stackIn_50_0 = stackOut_9_0;
+                    stackOut_9_0 = param3;
+                    stackIn_50_0 = stackOut_9_0 ? 1 : 0;
                     stackIn_10_0 = stackOut_9_0;
                     if (var19 != 0) {
                       break L3;
                     } else {
                       L5: {
                         L6: {
-                          if (stackIn_10_0 == 0) {
+                          if (!stackIn_10_0) {
                             break L6;
                           } else {
                             var12 = bg.field_L[var9];
@@ -277,7 +275,7 @@ abstract class rf {
           L18: {
             var5 = decompiledCaughtException;
             stackOut_61_0 = (RuntimeException) var5;
-            stackOut_61_1 = new StringBuilder().append("rf.K(").append(param0).append(',').append(-10).append(',').append(param2).append(',').append(false).append(',');
+            stackOut_61_1 = new StringBuilder().append("rf.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_64_0 = stackOut_61_0;
             stackIn_64_1 = stackOut_61_1;
             stackIn_62_0 = stackOut_61_0;
@@ -304,19 +302,15 @@ abstract class rf {
         }
     }
 
-    public static void a() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void a(boolean param0) {
         try {
-          L0: {
             field_b = null;
             field_a = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "rf.J(" + true + ')');
+            if (!param0) {
+                rf.a(true);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "rf.J(" + param0 + ')');
         }
     }
 

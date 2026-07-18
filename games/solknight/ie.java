@@ -366,8 +366,7 @@ final class ie {
                                             if (!il.b(507)) {
                                               L17: {
                                                 if (!il.b(507)) {
-                                                  int discarded$3 = 1;
-                                                  ah.b();
+                                                  ah.b(true);
                                                   break L17;
                                                 } else {
                                                   break L17;
@@ -461,8 +460,7 @@ final class ie {
                                   if (!((ie) this).field_f.e((byte) -57)) {
                                     break L1;
                                   } else {
-                                    int discarded$4 = -39;
-                                    cb.b();
+                                    cb.b((byte) -39);
                                     break L0;
                                   }
                                 }
@@ -475,8 +473,7 @@ final class ie {
                                     pg.field_e = true;
                                     uf.field_p = -1;
                                     if (!il.b(507)) {
-                                      int discarded$5 = 1;
-                                      ah.b();
+                                      ah.b(true);
                                       break L23;
                                     } else {
                                       break L23;
@@ -619,7 +616,7 @@ final class ie {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         int var3 = 0;
         L0: {
           var3 = SolKnight.field_L ? 1 : 0;
@@ -731,7 +728,7 @@ final class ie {
         return bb.field_P[((ie) this).field_d];
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_g = null;
     }
@@ -815,8 +812,7 @@ final class ie {
         }
         L4: {
           if (!gg.field_f[((ie) this).field_d]) {
-            int discarded$1 = 2;
-            uj.a(var10, var11, var5, w.field_b, var4);
+            uj.a(var10, var11, var5, w.field_b, var4, 2);
             break L4;
           } else {
             break L4;
@@ -865,8 +861,7 @@ final class ie {
         if (param2 < 20) {
             field_c = null;
         }
-        int discarded$0 = 16711680;
-        mi.g(param0, param1, 8);
+        mi.g(param0, param1, 8, 16711680);
         mi.b(param0 - 8, param1, 4, 16711680);
         mi.b(param0 + 4, param1, 4, 16711680);
         mi.h(param0, -8 + param1, 4, 16711680);
@@ -933,8 +928,7 @@ final class ie {
             break L1;
           }
           L5: while (true) {
-            int discarded$2 = -56;
-            if (!wk.a()) {
+            if (!wk.a((byte) -56)) {
               L6: {
                 ((ie) this).field_f.a(param0 + -125, this.a(gb.field_j, (byte) 111, ad.field_m), this.a(db.field_o, (byte) 111, s.field_gb));
                 if (-1 != ((ie) this).field_f.field_f) {
@@ -988,8 +982,7 @@ final class ie {
                   }
                 }
               }
-              int discarded$3 = -257;
-              this.e();
+              this.e(-257);
               if (((ie) this).field_f.field_f != -1) {
                 this.a(false, 2647, ((ie) this).field_f.field_f);
                 continue L5;
@@ -1355,9 +1348,7 @@ final class ie {
                 }
               }
               L5: {
-                int discarded$4 = 8;
-                int discarded$5 = 0;
-                var4 = stackIn_15_0 + ((hd) (Object) stackIn_15_1).b(qh.a(stackIn_15_2 != 0, stackIn_15_3 != 0), 600) * var3;
+                var4 = stackIn_15_0 + ((hd) (Object) stackIn_15_1).b(qh.a(stackIn_15_2 != 0, stackIn_15_3 != 0, false, (byte) 8), 600) * var3;
                 si.field_F[((ie) this).field_d] = var4 - -2 + -ah.field_i[((ie) this).field_d];
                 var4 += 41;
                 stackOut_15_0 = var4;
@@ -1438,9 +1429,7 @@ final class ie {
           }
           L7: {
             if (((ie) this).field_d == 9) {
-              int discarded$6 = 1;
-              int discarded$7 = 0;
-              df.a();
+              df.a(0, true);
               break L7;
             } else {
               break L7;
@@ -1686,8 +1675,7 @@ final class ie {
         int stackOut_83_2 = 0;
         var16 = SolKnight.field_L ? 1 : 0;
         if (9 == ((ie) this).field_d) {
-          int discarded$16 = 1;
-          we.a();
+          we.a(true);
           return;
         } else {
           L0: {
@@ -1785,8 +1773,7 @@ final class ie {
                 var3 = bb.field_P[((ie) this).field_d];
                 var2 = jb.field_a[((ie) this).field_d];
                 var6 = -var2 + var3 >> 1;
-                int discarded$17 = 2;
-                uj.a((var6 << 1) - -40, var7 + 50, -20 + var2, h.field_d, var4 + -20);
+                uj.a((var6 << 1) - -40, var7 + 50, -20 + var2, h.field_d, var4 + -20, 2);
                 break L5;
               }
             }
@@ -1971,9 +1958,7 @@ final class ie {
                             }
                           }
                           L13: {
-                            int discarded$18 = 8;
-                            int discarded$19 = 0;
-                            var8 = stackIn_69_0 + stackIn_69_1 * ((hd) (Object) stackIn_69_2).a(qh.a(stackIn_69_3 != 0, stackIn_69_4 != 0), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9);
+                            var8 = stackIn_69_0 + stackIn_69_1 * ((hd) (Object) stackIn_69_2).a(qh.a(stackIn_69_3 != 0, stackIn_69_4 != 0, false, (byte) 8), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9);
                             var8 += 41;
                             stackOut_69_0 = var8;
                             stackOut_69_1 = ad.field_b;
@@ -2049,7 +2034,7 @@ final class ie {
                           break L7;
                         } else {
                           if (((ie) this).field_d == 9) {
-                            int discarded$20 = ad.field_b.a(ua.field_E, 30, 80, 580, 300, 0, -1, 0, 0, 0);
+                            int discarded$8 = ad.field_b.a(ua.field_E, 30, 80, 580, 300, 0, -1, 0, 0, 0);
                             break L7;
                           } else {
                             if (((ie) this).field_d == 5) {
@@ -2073,12 +2058,11 @@ final class ie {
                                 var12 = -10 + var11 >> 1;
                                 var13 = -37 + (480 + (-var10 + var12)) >> 1;
                                 fi.a(var11, true, 1, 230, 638, var10, var13);
-                                int discarded$21 = -63;
-                                int discarded$22 = ad.field_b.a(bb.a(he.field_e, new String[1]), 222, -32 + var13, 194, 82, 16776960, 16777215, 1, 1, ad.field_b.field_F + ad.field_b.field_s);
+                                int discarded$9 = ad.field_b.a(bb.a(he.field_e, new String[1], -63), 222, -32 + var13, 194, 82, 16776960, 16777215, 1, 1, ad.field_b.field_F + ad.field_b.field_s);
                                 ad.field_b.a(Integer.toString(oa.field_m * 100), 112, var13 + 52, 16777215, -1);
-                                int discarded$23 = ug.field_g.a(qb.field_X, 112, var13 + 57, 0, 0, 16777215, -1, 1, 0, ug.field_g.field_s + ug.field_g.field_F);
+                                int discarded$10 = ug.field_g.a(qb.field_X, 112, var13 + 57, 0, 0, 16777215, -1, 1, 0, ug.field_g.field_s + ug.field_g.field_F);
                                 ad.field_b.a(Integer.toString(oa.field_m * 100 + lk.field_e), 528, 52 + var13, 16777215, -1);
-                                int discarded$24 = ug.field_g.a(dc.field_m, 528, -103 + (160 - -var13), 0, 0, 16777215, -1, 1, 0, ug.field_g.field_s + ug.field_g.field_F);
+                                int discarded$11 = ug.field_g.a(dc.field_m, 528, -103 + (160 - -var13), 0, 0, 16777215, -1, 1, 0, ug.field_g.field_s + ug.field_g.field_F);
                                 ad.field_b.a(gd.field_b, 320, 229 - -var13 - 103, 16776960, -1);
                                 var14 = var8 - -1 << 3;
                                 if (var8 == 0) {
@@ -2099,7 +2083,7 @@ final class ie {
                               td.field_e[var14 - -hg.field_y].d(83, 248 + var13 + -103);
                               td.field_e[hg.field_y + var14].d(526, var13 + 145);
                               ad.field_b.a(mf.field_y[var8], 320, -103 + (var13 + 277), 16727871, -1);
-                              int discarded$25 = ad.field_b.a(rf.field_N[var8], 38, var13 + 193, 564, 480, 16777215, -1, 1, 0, 28);
+                              int discarded$12 = ad.field_b.a(rf.field_N[var8], 38, var13 + 193, 564, 480, 16777215, -1, 1, 0, 28);
                               ah.field_i[((ie) this).field_d] = var13 - -var10;
                               break L7;
                             } else {
@@ -2113,26 +2097,24 @@ final class ie {
                                   var11 = -37 + (-var8 + 480) - -var10 >> 1;
                                   fi.a(var9, true, 1, 230, 638, var8, var11);
                                   ad.field_b.a(Integer.toString(100 * oa.field_m), 112, -103 + (var11 + 155), 16777215, -1);
-                                  int discarded$26 = ug.field_g.a(qb.field_X, 112, 57 - -var11, 0, 0, 16777215, -1, 1, 0, ug.field_g.field_F - -ug.field_g.field_s);
+                                  int discarded$13 = ug.field_g.a(qb.field_X, 112, 57 - -var11, 0, 0, 16777215, -1, 1, 0, ug.field_g.field_F - -ug.field_g.field_s);
                                   if (ob.field_l > 0) {
                                     var15 = 5000;
                                     var13_ref_String = w.field_d;
                                     var12_ref_String = kh.field_e;
-                                    int discarded$27 = -63;
-                                    var14_ref_String = bb.a(jj.field_I, new String[1]);
+                                    var14_ref_String = bb.a(jj.field_I, new String[1], -63);
                                     break L18;
                                   } else {
-                                    int discarded$28 = -63;
-                                    var12_ref_String = bb.a(he.field_e, new String[1]);
+                                    var12_ref_String = bb.a(he.field_e, new String[1], -63);
                                     var15 = oa.field_m * 100 + lk.field_e;
                                     var13_ref_String = ud.field_j;
                                     var14_ref_String = ai.field_d;
                                     break L18;
                                   }
                                 }
-                                int discarded$29 = ad.field_b.a(var12_ref_String, 222, -103 + (71 - -var11), 194, 82, 16776960, 16777215, 1, 1, ad.field_b.field_s + ad.field_b.field_F);
+                                int discarded$14 = ad.field_b.a(var12_ref_String, 222, -103 + (71 - -var11), 194, 82, 16776960, 16777215, 1, 1, ad.field_b.field_s + ad.field_b.field_F);
                                 ad.field_b.a(Integer.toString(var15), 528, var11 + 52, 16777215, -1);
-                                int discarded$30 = ug.field_g.a(var13_ref_String, 528, -103 + (160 - -var11), 0, 0, 16777215, -1, 1, 0, ug.field_g.field_F + ug.field_g.field_s);
+                                int discarded$15 = ug.field_g.a(var13_ref_String, 528, -103 + (160 - -var11), 0, 0, 16777215, -1, 1, 0, ug.field_g.field_F + ug.field_g.field_s);
                                 ad.field_b.a(var14_ref_String, 320, var11 + 126, 16776960, -1);
                                 h.field_b.c(45, var11 + 97, 100 * h.field_b.field_q / h.field_b.field_r, 100);
                                 h.field_b.c(-(100 * h.field_b.field_q / h.field_b.field_r) + 595, -103 + (var11 + 200), h.field_b.field_q * 100 / h.field_b.field_r, 100);
@@ -2170,8 +2152,7 @@ final class ie {
                   this.a(stackIn_37_1 != 0, param0 + -590);
                   break L7;
                 } else {
-                  int discarded$31 = 101;
-                  this.b();
+                  this.b((byte) 101);
                   break L7;
                 }
               }
@@ -2228,14 +2209,13 @@ final class ie {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var2 = ug.field_g.field_F + ug.field_g.field_s;
         int var3 = ug.field_g.b(c.field_E, 600);
         int var4 = (4 + var3) * var2 + 60;
         int var5 = -var4 + 574 >> 1;
         ah.field_i[((ie) this).field_d] = -30 + var5 + var4;
-        int discarded$0 = 2;
-        uj.a(638, var4, 1, h.field_d, var5 + -30);
+        uj.a(638, var4, 1, h.field_d, var5 + -30, 2);
         var5 = var5 + ug.field_g.a(c.field_E, 20, var5, 600, 640, 16777215, -1, 1, 0, var2) * var2;
         var5 = var5 + (var2 << 1);
         ug.field_g.a(ii.field_i, 320, var5, 16776960, -1);
@@ -2265,8 +2245,7 @@ final class ie {
         L0: {
           var13 = SolKnight.field_L ? 1 : 0;
           var3 = ug.field_g;
-          int discarded$4 = 2;
-          uj.a(638, 313, 1, h.field_d, 86);
+          uj.a(638, 313, 1, h.field_d, 86, 2);
           if (!il.b(507)) {
             L1: {
               if (kh.field_c != null) {
@@ -2288,8 +2267,7 @@ final class ie {
                 var2 = og.field_k;
                 var5 = var4_ref_sd.field_n[rg.field_c];
                 var17 = var4_ref_sd.field_i[rg.field_c];
-                int discarded$5 = 0;
-                var7 = ti.a(bi.field_b, rg.field_c, var4_ref_sd);
+                var7 = ti.a(bi.field_b, rg.field_c, var4_ref_sd, 0);
                 var8 = var3.field_F + 127;
                 var9 = 0;
                 L2: while (true) {
@@ -2300,8 +2278,7 @@ final class ie {
                       } else {
                         if (var7 == -1) {
                           var3.c(ne.field_g, 73, var8, 16776960, -1);
-                          int discarded$6 = -63;
-                          var3.b(bb.a("<%0>%", new String[1]), 380, var8, 16776960, -1);
+                          var3.b(bb.a("<%0>%", new String[1], -63), 380, var8, 16776960, -1);
                           var3.b(Integer.toString(bi.field_b.field_r[0] / 101), 582, var8, 16776960, -1);
                           break L3;
                         } else {
@@ -2332,8 +2309,7 @@ final class ie {
                       }
                       var3.b(var9 - -1 + ". ", 73, var8, var10, -1);
                       var3.c(var12, 73, var8, var10, -1);
-                      int discarded$7 = -63;
-                      var3.b(bb.a("<%0>%", new String[1]), 380, var8, var10, -1);
+                      var3.b(bb.a("<%0>%", new String[1], -63), 380, var8, var10, -1);
                       var2 = "";
                       var3.b(Integer.toString(var11 / 101), 582, var8, var10, -1);
                       var8 += 21;

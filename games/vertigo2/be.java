@@ -12,15 +12,14 @@ final class be extends li {
     static String field_s;
     int[] field_o;
 
-    final static void a(int param0, er[] param1, int param2, int param3, int param4, int param5, int param6, int param7, er[] param8, int param9, er[] param10, int param11, cc param12) {
+    final static void a(int param0, er[] param1, int param2, int param3, int param4, int param5, int param6, int param7, er[] param8, int param9, er[] param10, int param11, cc param12, int param13, int param14) {
         int var15_int = 0;
         int var16 = 0;
         try {
             var15_int = param12.field_t - -param12.field_M;
             var16 = param12.field_t;
             int var17 = 53;
-            int discarded$0 = 320;
-            c.a(8, var16, var15_int, 20, param1, 8, param12, 16766751, 280, 10, param8, 16777215, 5, param10, param12, var16, 20412, 16777215, var15_int);
+            c.a(8, var16, var15_int, 20, param1, 8, param12, 16766751, 280, 10, param8, 16777215, 5, param10, param12, var16, 20412, 16777215, var15_int, 320);
         } catch (RuntimeException runtimeException) {
             throw wn.a((Throwable) (Object) runtimeException, "be.D(" + -103 + ',' + (param1 != null ? "{...}" : "null") + ',' + 320 + ',' + 20 + ',' + 16766751 + ',' + 10 + ',' + 5 + ',' + 16777215 + ',' + (param8 != null ? "{...}" : "null") + ',' + 8 + ',' + (param10 != null ? "{...}" : "null") + ',' + 8 + ',' + (param12 != null ? "{...}" : "null") + ',' + 280 + ',' + 16777215 + ')');
         }
@@ -30,7 +29,7 @@ final class be extends li {
         return mj.a(-109, in.field_b, param0);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
         field_s = null;
     }
@@ -61,8 +60,7 @@ final class be extends li {
                     } else {
                         var5 = var7 + "; Expires=" + uh.a((byte) -66, 94608000000L + gk.a(53)) + "; Max-Age=" + 94608000L;
                     }
-                    int discarded$0 = 124;
-                    je.a(param2, "document.cookie=\"" + var5 + "\"");
+                    je.a(param2, "document.cookie=\"" + var5 + "\"", (byte) 124);
                 } catch (Throwable throwable) {
                 }
                 op.a(0, param2);

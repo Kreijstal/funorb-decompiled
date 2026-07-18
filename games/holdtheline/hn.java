@@ -269,7 +269,7 @@ final class hn extends wd {
         return Math.abs(((hn) this).field_I - ((hn) this).field_E) * (float)((hn) this).field_z;
     }
 
-    public static void p() {
+    public static void p(int param0) {
         field_J = null;
         field_G = null;
     }

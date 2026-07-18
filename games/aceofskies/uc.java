@@ -14,7 +14,7 @@ final class uc extends wf {
     int field_m;
     long[][] field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         field_g = null;
         field_k = null;
@@ -63,8 +63,7 @@ final class uc extends wf {
           L0: {
             if (tn.a(param3, (byte) -127, param2, param4)) {
               var5_int = -15;
-              int discarded$2 = -80;
-              stackOut_3_0 = te.a(param1.a(param4, -10470, param2));
+              stackOut_3_0 = te.a(param1.a(param4, -10470, param2), -80);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

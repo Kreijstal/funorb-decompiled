@@ -22,10 +22,9 @@ final class jf {
         this(3);
     }
 
-    final static void a(boolean param0, eh param1, eh param2, eh param3) {
+    final static void a(boolean param0, eh param1, eh param2, eh param3, int param4) {
         try {
-            int discarded$0 = 0;
-            w.field_I = oe.a("");
+            w.field_I = oe.a("", false);
             w.field_I.a(false, 11358);
             cf.a(param2, param3, 60, param1);
             jg.b(461050508);
@@ -113,7 +112,7 @@ final class jf {
         return stackIn_7_0 != 0;
     }
 
-    final static vh a(byte[] param0) {
+    final static vh a(byte[] param0, int param1) {
         vh var2 = null;
         RuntimeException var2_ref = null;
         RuntimeException stackIn_6_0 = null;
@@ -135,8 +134,7 @@ final class jf {
         try {
           if (param0 != null) {
             var2 = new vh(param0, el.field_w, mb.field_bb, db.field_k, gb.field_F, k.field_c, lj.field_j);
-            int discarded$2 = -28;
-            pe.b();
+            pe.b((byte) -28);
             return var2;
           } else {
             return null;
@@ -173,7 +171,7 @@ final class jf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         field_b = null;
         field_n = null;

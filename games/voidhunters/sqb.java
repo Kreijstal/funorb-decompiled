@@ -10,7 +10,7 @@ abstract class sqb extends fh {
     int field_k;
     int field_m;
 
-    final static tv[] a(tv[] param0, tv[] param1, int param2, dja param3) {
+    final static tv[] a(tv[] param0, tv[] param1, int param2, dja param3, boolean param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         tv var6 = null;
@@ -233,11 +233,9 @@ abstract class sqb extends fh {
                 return 0;
               } else {
                 if (0 > param0) {
-                  int discarded$8 = 11105;
-                  return -kq.a(-param0, param2);
+                  return -kq.a(-param0, param2, 11105);
                 } else {
-                  int discarded$9 = 11105;
-                  return kq.a(param0, param2);
+                  return kq.a(param0, param2, 11105);
                 }
               }
             } else {
@@ -245,11 +243,9 @@ abstract class sqb extends fh {
                 return 4096;
               } else {
                 if (param0 >= 0) {
-                  int discarded$10 = 11105;
-                  return -kq.a(param0, -param2) + 4096;
+                  return -kq.a(param0, -param2, 11105) + 4096;
                 } else {
-                  int discarded$11 = 11105;
-                  return -4096 + kq.a(-param0, -param2);
+                  return -4096 + kq.a(-param0, -param2, 11105);
                 }
               }
             }
@@ -272,11 +268,9 @@ abstract class sqb extends fh {
                 return 0;
               } else {
                 if (0 > param0) {
-                  int discarded$12 = 11105;
-                  return -kq.a(-param0, param2);
+                  return -kq.a(-param0, param2, 11105);
                 } else {
-                  int discarded$13 = 11105;
-                  return kq.a(param0, param2);
+                  return kq.a(param0, param2, 11105);
                 }
               }
             } else {
@@ -284,11 +278,9 @@ abstract class sqb extends fh {
                 return 4096;
               } else {
                 if (param0 >= 0) {
-                  int discarded$14 = 11105;
-                  return -kq.a(param0, -param2) + 4096;
+                  return -kq.a(param0, -param2, 11105) + 4096;
                 } else {
-                  int discarded$15 = 11105;
-                  return -4096 + kq.a(-param0, -param2);
+                  return -4096 + kq.a(-param0, -param2, 11105);
                 }
               }
             }

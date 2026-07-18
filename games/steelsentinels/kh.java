@@ -114,9 +114,8 @@ final class kh extends cn {
                 break L5;
               }
             }
-            int discarded$2 = -119;
-            sl.a(((kh) this).field_y, param1.field_x, (param1.field_E - ((kh) this).field_y[0].field_B >> 1) + (param1.field_z + param4), param0 + param1.field_o, var7);
-            int discarded$3 = ((kh) this).field_f.a(param1.field_y, param1.field_o + param0, -2 + param4 - -param1.field_z, param1.field_x, param1.field_E, var8, -1, 1, 1, ((kh) this).field_f.field_G);
+            sl.a(((kh) this).field_y, param1.field_x, (param1.field_E - ((kh) this).field_y[0].field_B >> 1) + (param1.field_z + param4), param0 + param1.field_o, var7, (byte) -119);
+            int discarded$1 = ((kh) this).field_f.a(param1.field_y, param1.field_o + param0, -2 + param4 - -param1.field_z, param1.field_x, param1.field_E, var8, -1, 1, 1, ((kh) this).field_f.field_G);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -151,7 +150,7 @@ final class kh extends cn {
         }
     }
 
-    final static void a(gh param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(gh param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8) {
         RuntimeException var9 = null;
         gh var10 = null;
         int var11 = 0;
@@ -291,7 +290,7 @@ final class kh extends cn {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_u = null;
         field_z = null;
         field_w = null;

@@ -148,7 +148,7 @@ final class ck extends rqa {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         if (null == wba.field_o) {
             return false;
         }
@@ -158,7 +158,7 @@ final class ck extends rqa {
         return true;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

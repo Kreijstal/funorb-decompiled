@@ -39,7 +39,7 @@ final class jl extends fd implements ta {
         }
     }
 
-    final static byte[] a(String param0) {
+    final static byte[] a(String param0, boolean param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -141,8 +141,7 @@ final class jl extends fd implements ta {
                 }
               }
             } else {
-              int discarded$2 = 256;
-              pj.a();
+              pj.a(256);
               return;
             }
           }
@@ -288,11 +287,11 @@ final class jl extends fd implements ta {
         ((jl) this).a((fi) (Object) ((jl) this).field_I, (byte) -78);
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return ab.field_J;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_D = null;
         field_F = null;
     }

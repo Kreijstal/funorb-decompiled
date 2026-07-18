@@ -91,7 +91,7 @@ final class kj implements cj {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = Terraphoenix.field_V;
@@ -102,15 +102,13 @@ final class kj implements cj {
           if (var1 > 0) {
             if (var1 != 1) {
               m.field_e = ij.a(new String[1], -1, na.field_X);
-              int discarded$2 = -103;
-              m.field_e = bj.a(new CharSequence[3]);
+              m.field_e = bj.a(new CharSequence[3], (byte) -103);
               nb.field_b.h((byte) -126);
               vj.a(-24517);
               return;
             } else {
               m.field_e = ol.field_Lb;
-              int discarded$3 = -103;
-              m.field_e = bj.a(new CharSequence[3]);
+              m.field_e = bj.a(new CharSequence[3], (byte) -103);
               nb.field_b.h((byte) -126);
               vj.a(-24517);
               return;

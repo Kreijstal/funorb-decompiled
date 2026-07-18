@@ -269,7 +269,7 @@ final class wb {
         return stackIn_68_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = -115;
         field_d = null;
     }

@@ -27,7 +27,7 @@ final class so {
         }
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return ms.field_r;
     }
 

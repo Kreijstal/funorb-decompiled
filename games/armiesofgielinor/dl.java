@@ -94,7 +94,7 @@ final class dl {
         return stackIn_8_0 != 0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_e = null;
         field_c = null;
         int var1 = -22;

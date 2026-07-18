@@ -21,7 +21,7 @@ final class c {
     private int field_j;
     static ck[] field_m;
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_r = null;
         field_i = null;

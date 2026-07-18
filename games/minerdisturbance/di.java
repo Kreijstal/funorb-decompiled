@@ -49,7 +49,7 @@ final class di extends um {
     private boolean field_A;
     private int field_M;
 
-    private final void b(boolean param0) {
+    private final void b(boolean param0, int param1) {
         int var3 = 0;
         int var4 = MinerDisturbance.field_ab;
         if (param0) {
@@ -109,8 +109,7 @@ final class di extends um {
                     ((di) this).field_fb = ((di) this).field_fb + (long)var4_int * (long)var7;
                     ((di) this).field_z.a(param0, param1, var7);
                     param2 = param2 - var7;
-                    int discarded$1 = 128;
-                    this.f();
+                    this.f(128);
                     param1 = param1 + var7;
                     if (!((di) this).field_eb.e()) {
                       break L1;
@@ -375,8 +374,7 @@ final class di extends um {
     private final synchronized void a(boolean param0, boolean param1) {
         ((di) this).field_eb.f();
         ((di) this).field_L = null;
-        int discarded$0 = -21400;
-        this.b(param0);
+        this.b(param0, -21400);
     }
 
     final boolean a(int param0, cg param1, int param2, int[] param3, int param4) {
@@ -810,7 +808,7 @@ final class di extends um {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
@@ -826,8 +824,7 @@ final class di extends um {
           } else {
             if (var3 == ((di) this).field_M) {
               this.a(-23, ((di) this).field_L, ((di) this).field_C, ((di) this).field_A);
-              int discarded$3 = 128;
-              this.f();
+              this.f(128);
               return;
             } else {
               break L0;
@@ -893,14 +890,12 @@ final class di extends um {
                             }
                           }
                         }
-                        int discarded$4 = -21400;
-                        this.b(true);
+                        this.b(true, -21400);
                         ((di) this).field_eb.f();
                         return;
                       } else {
                         ((di) this).a(((di) this).field_C, ((di) this).field_L, (byte) 2);
-                        int discarded$5 = 128;
-                        this.f();
+                        this.f(128);
                         return;
                       }
                     }
@@ -1889,8 +1884,7 @@ final class di extends um {
                 L1: {
                   var3_ref = "";
                   if (param0 != null) {
-                    int discarded$4 = 78;
-                    var3_ref = w.a(param0);
+                    var3_ref = w.a(param0, (byte) 78);
                     break L1;
                   } else {
                     break L1;
@@ -1912,8 +1906,7 @@ final class di extends um {
                     break L2;
                   }
                 }
-                int discarded$5 = 1;
-                vj.a(var3_ref);
+                vj.a(var3_ref, 1);
                 var3_ref = ld.a("%3a", -1, var3_ref, ":");
                 var3_ref = ld.a("%40", -1, var3_ref, "@");
                 var3_ref = ld.a("%26", -1, var3_ref, "&");
@@ -1980,15 +1973,14 @@ final class di extends um {
                           break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_a;
-                          int discarded$6 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L6;
                         }
                       }
                       break L0;
                     } else {
-                      int discarded$7 = -10309;
-                      gf.a(1L);
+                      gf.a(1L, -10309);
                       continue L5;
                     }
                   }
@@ -2156,8 +2148,7 @@ final class di extends um {
                           var4 = -1;
                           return;
                         } else {
-                          int discarded$1 = -21400;
-                          this.b(true);
+                          this.b(true, -21400);
                           return;
                         }
                       }
@@ -2473,8 +2464,7 @@ final class di extends um {
                 ((di) this).field_fb = ((di) this).field_fb + (long)var5 * (long)var2;
                 param0 = param0 - var5;
                 ((di) this).field_z.a(var5);
-                int discarded$1 = 128;
-                this.f();
+                this.f(128);
                 if (!((di) this).field_eb.e()) {
                   break L0;
                 } else {
@@ -2690,8 +2680,7 @@ final class di extends um {
         ((di) this).field_z = new gd((di) this);
         ((di) this).field_F = new tg(128);
         ((di) this).a(256, true, -1);
-        int discarded$0 = -21400;
-        this.b(true);
+        this.b(true, -21400);
     }
 
     static {

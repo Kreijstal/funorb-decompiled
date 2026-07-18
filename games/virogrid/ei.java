@@ -15,14 +15,13 @@ final class ei {
                 Object var3 = null;
                 ei.a(-102, (sc) null);
             }
-            int discarded$0 = 1;
-            di.a(param1, param0 ^ 109);
+            di.a(param1, param0 ^ 109, true);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "ei.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_e = null;

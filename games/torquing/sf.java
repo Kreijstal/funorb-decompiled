@@ -12,8 +12,7 @@ final class sf {
     final static boolean a(int param0) {
         if (param0 == -1) {
           if (20 <= b.field_x) {
-            int discarded$8 = 1;
-            if (la.a()) {
+            if (la.a(true)) {
               if (pa.field_c > 0) {
                 if (s.h((byte) 52)) {
                   return false;
@@ -32,8 +31,7 @@ final class sf {
         } else {
           field_a = -56;
           if (20 <= b.field_x) {
-            int discarded$9 = 1;
-            if (la.a()) {
+            if (la.a(true)) {
               if (pa.field_c > 0) {
                 if (s.h((byte) 52)) {
                   return false;

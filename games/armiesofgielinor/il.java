@@ -254,7 +254,7 @@ final class il extends bd {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         try {
             int var2_int = -39;
             param0.addMouseListener((java.awt.event.MouseListener) (Object) lf.field_q);

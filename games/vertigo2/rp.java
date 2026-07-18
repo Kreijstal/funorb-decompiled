@@ -82,8 +82,7 @@ final class rp implements ef {
                           break L2;
                         }
                       }
-                      int discarded$2 = 124;
-                      je.a(param0, "document.cookie=\"" + var5 + "\"");
+                      je.a(param0, "document.cookie=\"" + var5 + "\"", (byte) 124);
                       break L1;
                     } else {
                       return;
@@ -186,8 +185,7 @@ final class rp implements ef {
             ((rp) this).field_h = dk.a(var5, true, param1);
             var4 = oo.field_o;
             oo.a((ef) this);
-            int discarded$0 = -27911;
-            ((rp) this).field_g = (fc) (Object) th.a(param0, var5);
+            ((rp) this).field_g = (fc) (Object) th.a(param0, var5, -27911);
             oo.a(var4);
         } catch (RuntimeException runtimeException) {
             throw wn.a((Throwable) (Object) runtimeException, "rp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

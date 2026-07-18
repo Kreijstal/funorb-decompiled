@@ -12,7 +12,7 @@ final class je extends gi {
     int field_n;
     int field_o;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_i = null;
     }

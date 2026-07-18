@@ -463,7 +463,7 @@ final class awa extends rqa {
         return (ha) (Object) stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
         field_o = null;
     }

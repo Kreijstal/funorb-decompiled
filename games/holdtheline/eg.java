@@ -163,18 +163,11 @@ final class eg {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$7 = 480;
-            int discarded$8 = -112;
-            pa.a(param10, param9);
+            pa.a(param10, param9, (byte) -112, 480);
             dd.a(param3, param7, 20, 20, (byte) -96);
             pa.a(-76, 240, 320);
-            int discarded$9 = 0;
-            int discarded$10 = 0;
-            int discarded$11 = 19362;
-            ic.a(0, param12, param16);
-            int discarded$12 = 0;
-            int discarded$13 = 0;
-            jn.a(0, param20);
+            ic.a(0, param12, param16, 19362, 0, 0);
+            jn.a(0, param20, 0, 0);
             ih.a(14893, 5, 1, 0);
             break L0;
           }
@@ -310,7 +303,7 @@ final class eg {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         int var1 = 0;
         hj var2 = null;
         int var3 = 0;
@@ -383,8 +376,7 @@ final class eg {
               }
             }
             if (ma.field_k != 1) {
-              int discarded$5 = 2;
-              var11 = o.a(ma.field_k);
+              var11 = o.a(ma.field_k, 2);
               if (var11 == null) {
                 var8 = null;
                 eg.a(60, -46, true, (da) null);
@@ -414,13 +406,11 @@ final class eg {
                       break L6;
                     }
                   }
-                  int discarded$6 = 2;
-                  var2 = o.a(ud.field_d);
+                  var2 = o.a(ud.field_d, 2);
                   var2.d(0, 0, 256 + -((kd.field_c << 8) / 80));
                   break L5;
                 } else {
-                  int discarded$7 = 2;
-                  var2 = o.a(ud.field_d);
+                  var2 = o.a(ud.field_d, 2);
                   var2.d(0, 0, 256 + -((kd.field_c << 8) / 80));
                   break L5;
                 }
@@ -429,12 +419,10 @@ final class eg {
               eg.a(60, -46, true, (da) null);
               break L3;
             } else {
-              int discarded$8 = 2;
-              o.a(ud.field_d).b(0, 0);
+              o.a(ud.field_d, 2).b(0, 0);
               if (ud.field_d != ma.field_k) {
                 L7: {
-                  int discarded$9 = 2;
-                  var10 = o.a(ma.field_k);
+                  var10 = o.a(ma.field_k, 2);
                   if (var10 == null) {
                     break L7;
                   } else {
@@ -455,7 +443,7 @@ final class eg {
         }
     }
 
-    final static bm[] b() {
+    final static bm[] b(boolean param0) {
         int var2 = 0;
         int var3 = HoldTheLine.field_D;
         bm[] var1 = new bm[vn.field_d];

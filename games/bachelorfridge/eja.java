@@ -12,8 +12,7 @@ final class eja extends ana {
         ((eja) this).field_l = ((eja) this).field_l - 1;
         if (!(0 > fieldTemp$0)) {
             if (!(((eja) this).field_l != 25)) {
-                int discarded$1 = 94;
-                this.e();
+                this.e((byte) 94);
             }
             if (((eja) this).field_l != 45) {
                 return false;
@@ -29,7 +28,7 @@ final class eja extends ana {
     private final void d(int param0) {
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         aga var2 = null;
         pp var3 = null;
         int var4 = 0;

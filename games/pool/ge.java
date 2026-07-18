@@ -576,7 +576,7 @@ class ge extends ma {
         ((ge) this).field_t[fieldTemp$3] = (byte)param1;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_o = null;
         field_m = null;
         field_s = null;

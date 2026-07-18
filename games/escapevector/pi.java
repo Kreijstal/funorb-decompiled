@@ -15,7 +15,7 @@ final class pi extends hg {
     int field_k;
     int field_r;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         int var1 = -26;
     }
@@ -61,8 +61,7 @@ final class pi extends hg {
           L0: {
             L1: {
               param2 = ca.a(-1, '_', param2, "");
-              int discarded$2 = 0;
-              var3 = na.a(param2);
+              var3 = na.a(param2, false);
               if (param0 < -77) {
                 break L1;
               } else {

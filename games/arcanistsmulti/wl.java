@@ -110,9 +110,7 @@ final class wl extends mg {
         }
         if (param1 >= 36) {
           if (!param0) {
-            int discarded$3 = -79;
-            int discarded$4 = 80;
-            fe.field_p = rm.a((wk) (Object) var8);
+            fe.field_p = rm.a((wk) (Object) var8, 80, -79);
             ga.field_s = null;
             return new jg(param0);
           } else {
@@ -138,8 +136,7 @@ final class wl extends mg {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              int discarded$5 = 20;
-              jh.a((Throwable) (Object) var6, "CC1");
+              jh.a((Throwable) (Object) var6, "CC1", (byte) 20);
               fe.field_p = null;
               ga.field_s = null;
               return new jg(param0);
@@ -271,8 +268,7 @@ final class wl extends mg {
     }
 
     final static void f(boolean param0) {
-        int discarded$0 = -47;
-        pn.a();
+        pn.a(-47);
     }
 
     final int h(int param0) {

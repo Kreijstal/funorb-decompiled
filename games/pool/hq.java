@@ -29,8 +29,7 @@ final class hq {
         al.field_k.field_eb = al.field_k.field_eb - var6;
         ep.field_s.e();
         qh.d();
-        int discarded$0 = -109;
-        this.c();
+        this.c((byte) -109);
         al.field_k.a((byte) -79, false);
         ((hq) this).field_h.a(false);
         al.field_k.field_qb = var3;
@@ -40,7 +39,7 @@ final class hq {
         ep.field_s.d(var5, var6, param1, param1);
     }
 
-    final static void a(int param0, int[] param1, int[] param2, int param3) {
+    final static void a(int param0, int[] param1, int[] param2, int param3, byte param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -117,10 +116,8 @@ final class hq {
                     param1[var6] = var7;
                     param2[param3] = param2[var6];
                     param2[var6] = var8;
-                    int discarded$3 = 80;
-                    hq.a(param0, param1, param2, -1 + var6);
-                    int discarded$4 = 80;
-                    hq.a(1 + var6, param1, param2, param3);
+                    hq.a(param0, param1, param2, -1 + var6, (byte) 80);
+                    hq.a(1 + var6, param1, param2, param3, (byte) 80);
                     break L1;
                   } else {
                     L4: {
@@ -130,9 +127,9 @@ final class hq {
                         param1[var6] = var11;
                         var12 = param2[var10];
                         param2[var10] = param2[var6];
-                        int incrementValue$5 = var6;
+                        int incrementValue$1 = var6;
                         var6++;
-                        param2[incrementValue$5] = var12;
+                        param2[incrementValue$1] = var12;
                         break L4;
                       } else {
                         break L4;
@@ -207,8 +204,7 @@ final class hq {
         int var2 = -86 % ((40 - param0) / 46);
         int var3 = 0;
         if (qa.field_v.field_R != 0) {
-            int discarded$1 = -105;
-            this.d();
+            this.d((byte) -105);
             var3 = 1;
         } else {
             if (!(((hq) this).field_b)) {
@@ -216,15 +212,13 @@ final class hq {
             }
         }
         if (0 != jq.field_d.field_R) {
-            int discarded$2 = 89;
-            this.e();
+            this.e((byte) 89);
             this.c(255);
             var3 = 1;
         }
         if (!(0 == pl.field_b.field_R)) {
             var3 = 1;
-            int discarded$3 = -87;
-            this.a();
+            this.a((byte) -87);
         }
         if (al.field_k.field_R != 0) {
             var3 = 1;
@@ -367,8 +361,7 @@ final class hq {
               if (ng.field_s < 0) {
                 if (ca.field_i < 0) {
                   qh.c(5 + al.field_k.field_qb, al.field_k.field_eb + 5, -10 + al.field_k.field_gb, al.field_k.field_Db + -10, 0, 128);
-                  int discarded$3 = -109;
-                  this.c();
+                  this.c((byte) -109);
                   al.field_k.a((byte) -79, false);
                   qa.field_v.a((byte) -79, false);
                   ((hq) this).field_h.a(false);
@@ -381,8 +374,7 @@ final class hq {
               } else {
                 L2: {
                   qh.c(al.field_k.field_qb + 5, 5 + al.field_k.field_eb, al.field_k.field_gb + -10, -10 + al.field_k.field_Db, 0, 128);
-                  int discarded$4 = -109;
-                  this.c();
+                  this.c((byte) -109);
                   var2 = al.field_k.field_qb;
                   al.field_k.field_qb = al.field_k.field_qb - 160;
                   var3 = al.field_k.field_eb;
@@ -392,8 +384,7 @@ final class hq {
                   ((hq) this).field_l.a(false);
                   hk.field_r.e();
                   qh.d();
-                  int discarded$5 = -109;
-                  this.c();
+                  this.c((byte) -109);
                   ((hq) this).field_h.a(false);
                   var4 = -5 + (-qa.field_v.field_Db + (al.field_k.field_Db + al.field_k.field_eb));
                   var5 = al.field_k.field_eb;
@@ -480,7 +471,7 @@ final class hq {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var2 = 0;
         if (((hq) this).field_b) {
             this.d(-128);
@@ -519,7 +510,7 @@ final class hq {
         return var1;
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_4_0 = 0;
@@ -561,8 +552,7 @@ final class hq {
         try {
           L0: {
             L1: {
-              int discarded$2 = 0;
-              var3 = qa.a(param1);
+              var3 = qa.a(param1, 0);
               if (param0.indexOf(param1) != -1) {
                 break L1;
               } else {
@@ -661,7 +651,7 @@ final class hq {
         return stackIn_12_0 != 0;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         pq[] var2 = null;
         int var3 = 0;
         int var4_int = 0;
@@ -1001,7 +991,7 @@ final class hq {
         }
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1220,15 +1210,12 @@ final class hq {
         ij discarded$0 = gj.a(true, 0, ((hq) this).field_g, ke.field_a);
     }
 
-    final static void h() {
+    final static void h(int param0) {
         field_c = -7;
-        int discarded$0 = -62;
-        int var1 = ee.b();
-        int discarded$1 = 23467;
-        int var2 = hl.a();
+        int var1 = ee.b((byte) -62);
+        int var2 = hl.a(23467);
         Pool.field_I.a(var1 - -(bk.field_v << 1), -ld.field_b + uh.field_n, -6316, -bk.field_v + fk.field_Z, (ld.field_b << 1) + var2);
-        int discarded$2 = 29383;
-        e.a();
+        e.a(29383);
     }
 
     final static String a(int param0, byte param1, CharSequence[] param2, int param3) {
@@ -1635,7 +1622,7 @@ final class hq {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         if (((hq) this).field_h.field_k != ((hq) this).field_d.field_e) {
             if (((hq) this).field_h != null) {
                 if (!((Object) (Object) ((hq) this).field_h == (Object) (Object) ((hq) this).field_d.field_e)) {
@@ -1658,7 +1645,7 @@ final class hq {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_f = null;
         field_o = null;
         field_e = null;

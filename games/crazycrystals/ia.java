@@ -259,7 +259,7 @@ final class ia extends ln {
         super(param0, param1, param2, param3);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_h = null;
     }
 

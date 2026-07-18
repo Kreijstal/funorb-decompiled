@@ -24,21 +24,18 @@ abstract class or {
         ll[] var6 = null;
         var6 = new ll[9];
         var5 = var6;
-        int discarded$10 = 1;
-        ll dupTemp$11 = tn.a(param4, 1);
-        var5[6] = dupTemp$11;
-        var5[3] = dupTemp$11;
-        var5[2] = dupTemp$11;
-        var5[1] = dupTemp$11;
-        var5[0] = dupTemp$11;
-        int discarded$12 = 1;
-        ll dupTemp$13 = tn.a(param2, 1);
-        var5[8] = dupTemp$13;
-        var5[7] = dupTemp$13;
-        var5[5] = dupTemp$13;
+        ll dupTemp$4 = tn.a(param4, 1, true);
+        var6[6] = dupTemp$4;
+        var5[3] = dupTemp$4;
+        var5[2] = dupTemp$4;
+        var5[1] = dupTemp$4;
+        var5[0] = dupTemp$4;
+        ll dupTemp$5 = tn.a(param2, 1, true);
+        var6[8] = dupTemp$5;
+        var5[7] = dupTemp$5;
+        var5[5] = dupTemp$5;
         if (param3 != 0) {
-          int discarded$14 = 1;
-          var6[4] = tn.a(param3, 64);
+          var6[4] = tn.a(param3, 64, true);
           return var5;
         } else {
           return var5;

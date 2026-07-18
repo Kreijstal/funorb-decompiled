@@ -350,7 +350,7 @@ final class ao extends kd {
         return var2.toString();
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_B = null;
         field_H = null;
         field_A = null;
@@ -385,8 +385,7 @@ final class ao extends kd {
               L1: while (true) {
                 var3_int = param0.f((byte) -85);
                 if (var3_int != 0) {
-                  int discarded$3 = 100;
-                  this.a(var3_int, param0);
+                  this.a(var3_int, param0, 100);
                   continue L1;
                 } else {
                   break L0;
@@ -428,18 +427,15 @@ final class ao extends kd {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         ub.c(0);
         if (null != sl.field_n) {
-            int discarded$0 = 9174;
-            pa.a(sl.field_n);
+            pa.a(sl.field_n, 9174);
         }
         ma.g(0);
-        int discarded$13 = -115;
-        og.b();
+        og.b(-115);
         ln.a(-8601);
-        int discarded$22 = -14;
-        if (rn.a()) {
+        if (rn.a((byte) -14)) {
             mm.field_g.a(1, (byte) -117);
             gj.a(0, 0);
         }
@@ -449,7 +445,7 @@ final class ao extends kd {
     ao() {
     }
 
-    private final void a(int param0, gi param1) {
+    private final void a(int param0, gi param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

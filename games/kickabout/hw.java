@@ -10,7 +10,7 @@ final class hw extends gn {
     private static int[] field_e;
     static float field_j;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_h = null;
     }

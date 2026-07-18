@@ -360,8 +360,7 @@ class dqa extends shb implements nea {
 
     void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        int discarded$0 = 13;
-        this.h();
+        this.h((byte) 13);
     }
 
     String d(byte param0) {
@@ -909,7 +908,7 @@ class dqa extends shb implements nea {
         return stackIn_17_0;
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         int var4 = VoidHunters.field_G;
         wc var2 = new wc(((dqa) this).field_t);
         shb var3 = (shb) (Object) var2.c(570);

@@ -13,7 +13,7 @@ final class ee {
     static int[] field_b;
     private int[] field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_g = null;
         field_a = null;
@@ -22,19 +22,18 @@ final class ee {
 
     final int a(boolean param0) {
         if (!(0 != ((ee) this).field_e)) {
-            int discarded$0 = -1;
-            this.b();
+            this.b(-1);
             ((ee) this).field_e = 256;
         }
         if (param0) {
             return 55;
         }
-        int fieldTemp$1 = ((ee) this).field_e - 1;
+        int fieldTemp$0 = ((ee) this).field_e - 1;
         ((ee) this).field_e = ((ee) this).field_e - 1;
-        return ((ee) this).field_d[fieldTemp$1];
+        return ((ee) this).field_d[fieldTemp$0];
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -128,8 +127,7 @@ final class ee {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    int discarded$1 = -1;
-                    this.b();
+                    this.b(-1);
                     ((ee) this).field_e = 256;
                     return;
                   } else {

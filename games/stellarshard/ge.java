@@ -15,7 +15,7 @@ final class ge extends lk {
         ((ge) this).field_o = false;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         param0.addMouseListener((java.awt.event.MouseListener) (Object) sf.field_c);
         try {
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) sf.field_c);
@@ -156,7 +156,7 @@ final class ge extends lk {
         return stackIn_22_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_m = null;
         field_l = null;
         field_n = null;
@@ -192,8 +192,7 @@ final class ge extends lk {
         try {
           L0: {
             var4 = (CharSequence) (Object) param1;
-            int discarded$5 = 72;
-            if (lc.a(var4)) {
+            if (lc.a(var4, 72)) {
               L1: {
                 if (param0 > 10) {
                   break L1;

@@ -7,7 +7,7 @@ final class rl {
     static int field_c;
     static int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
     }
@@ -409,7 +409,7 @@ final class rl {
         }
     }
 
-    final static void a(int param0, ic param1) {
+    final static void a(int param0, ic param1, int param2) {
         en var3 = null;
         try {
             var3 = s.field_b;

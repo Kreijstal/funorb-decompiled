@@ -61,16 +61,14 @@ final class rpa implements jaa {
         sg var7 = null;
         var6 = VoidHunters.field_G;
         if (param0 == 0) {
-          int discarded$8 = 1;
-          return gqb.a();
+          return gqb.a(true);
         } else {
           var7 = new sg();
           var3 = var7;
           var4 = new ml(param0);
           var5 = param0;
           if (var5 == 3) {
-            int discarded$9 = 18632;
-            waa.a(var4);
+            waa.a(var4, 18632);
             var7.field_k = var4;
             var7.e((byte) 119);
             var7.field_k.a((byte) -128, (anb) (Object) var7);
@@ -78,8 +76,7 @@ final class rpa implements jaa {
           } else {
             if (var5 != 7) {
               if (var5 == 8) {
-                int discarded$10 = 27;
-                mc.a(var4);
+                mc.a(var4, 27);
                 var7.field_k = var4;
                 var7.e((byte) 119);
                 var7.field_k.a((byte) -128, (anb) (Object) var7);
@@ -87,8 +84,7 @@ final class rpa implements jaa {
               } else {
                 if (var5 != 9) {
                   if (10 == var5) {
-                    int discarded$11 = 116;
-                    hr.a(var4);
+                    hr.a(var4, 116);
                     var7.field_k = var4;
                     var7.e((byte) 119);
                     var7.field_k.a((byte) -128, (anb) (Object) var7);
@@ -158,16 +154,14 @@ final class rpa implements jaa {
                                       var7.field_k.a((byte) -128, (anb) (Object) var7);
                                       return var7;
                                     } else {
-                                      int discarded$12 = -10;
-                                      wnb.a(var4);
+                                      wnb.a(var4, (byte) -10);
                                       var7.field_k = var4;
                                       var7.e((byte) 119);
                                       var7.field_k.a((byte) -128, (anb) (Object) var7);
                                       return var7;
                                     }
                                   } else {
-                                    int discarded$13 = 14670;
-                                    eqb.a(var4);
+                                    eqb.a(var4, 14670);
                                     var7.field_k = var4;
                                     var7.e((byte) 119);
                                     var7.field_k.a((byte) -128, (anb) (Object) var7);
@@ -177,8 +171,7 @@ final class rpa implements jaa {
                               }
                             }
                           } else {
-                            int discarded$14 = 127;
-                            ir.a(var4);
+                            ir.a(var4, (byte) 127);
                             var7.field_k = var4;
                             var7.e((byte) 119);
                             var7.field_k.a((byte) -128, (anb) (Object) var7);
@@ -189,8 +182,7 @@ final class rpa implements jaa {
                     }
                   }
                 } else {
-                  int discarded$15 = -77;
-                  tkb.a(var4);
+                  tkb.a(var4, -77);
                   var7.field_k = var4;
                   var7.e((byte) 119);
                   var7.field_k.a((byte) -128, (anb) (Object) var7);
@@ -252,7 +244,7 @@ final class rpa implements jaa {
         }
     }
 
-    private final void a(aia param0, int param1, int param2) {
+    private final void a(aia param0, int param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         RuntimeException stackIn_11_0 = null;
@@ -452,7 +444,7 @@ final class rpa implements jaa {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_c = null;
     }
 
@@ -497,8 +489,7 @@ final class rpa implements jaa {
         try {
           L0: {
             L1: {
-              int discarded$2 = 77;
-              this.a(param2, 0, param0);
+              this.a(param2, 0, param0, 77);
               if (param1 <= -124) {
                 break L1;
               } else {

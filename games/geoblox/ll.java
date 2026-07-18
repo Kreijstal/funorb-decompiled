@@ -11,7 +11,7 @@ final class ll {
     static boolean[] field_g;
     static String field_b;
 
-    final static long a() {
+    final static long a(byte param0) {
         return -kh.field_e + oa.a(-12520);
     }
 

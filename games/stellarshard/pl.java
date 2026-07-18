@@ -73,7 +73,7 @@ final class pl extends ae implements je {
         }
     }
 
-    public static void q() {
+    public static void q(int param0) {
         field_S = null;
         field_V = null;
         field_Q = null;
@@ -92,7 +92,7 @@ final class pl extends ae implements je {
         }
     }
 
-    final static int e() {
+    final static int e(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

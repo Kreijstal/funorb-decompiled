@@ -103,8 +103,7 @@ final class n {
     }
 
     final static void a(boolean param0, boolean param1) {
-        int discarded$0 = 170;
-        wl.a(false, param0);
+        wl.a(false, param0, 170);
     }
 
     static {

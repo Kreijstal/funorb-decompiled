@@ -53,7 +53,7 @@ final class rna {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         long var1 = 0L;
         long var3 = 0L;
         int var5 = 0;
@@ -107,7 +107,7 @@ final class rna {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

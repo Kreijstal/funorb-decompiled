@@ -119,7 +119,7 @@ abstract class fm {
 
     abstract void a(wl param0, byte param1);
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_c = null;
     }

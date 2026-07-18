@@ -109,7 +109,7 @@ abstract class ug {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_e = null;
         field_g = null;
@@ -162,8 +162,7 @@ abstract class ug {
         try {
           if (null != lc.field_m) {
             var6 = (CharSequence) (Object) param0;
-            int discarded$4 = -2;
-            var2 = jg.a(var6);
+            var2 = jg.a(var6, -2);
             if (param1 >= 103) {
               L0: {
                 if (var2 == null) {
@@ -178,8 +177,7 @@ abstract class ug {
                 if (var3 != null) {
                   L2: {
                     var7 = (CharSequence) (Object) var3.field_ib;
-                    int discarded$5 = -2;
-                    var4 = jg.a(var7);
+                    var4 = jg.a(var7, -2);
                     if (var4 == null) {
                       var4 = var3.field_ib;
                       break L2;

@@ -137,7 +137,7 @@ final class re {
         }
     }
 
-    final static im a(String param0) {
+    final static im a(String param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         im var3 = null;
@@ -257,7 +257,7 @@ final class re {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         fa.field_b = null;
         e.field_b = null;
         wo.field_f = null;
@@ -330,7 +330,7 @@ final class re {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

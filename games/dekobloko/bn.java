@@ -10,7 +10,7 @@ final class bn {
     static String field_d;
     static ck field_e;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_b = null;
         field_e = null;
@@ -213,7 +213,7 @@ final class bn {
         return var2;
     }
 
-    final static void a(long param0, int param1) {
+    final static void a(long param0, int param1, byte param2) {
         uf var4 = we.field_b;
         var4.f(param1, -4);
         var4.field_n = var4.field_n + 1;

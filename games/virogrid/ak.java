@@ -75,8 +75,7 @@ final class ak {
                   if (var4 >= var3_int) {
                     continue L1;
                   } else {
-                    int discarded$2 = 1;
-                    stackOut_8_0 = bj.b(param0, var4);
+                    stackOut_8_0 = bj.b(param0, var4, 1);
                     stackIn_9_0 = stackOut_8_0;
                     break L0;
                   }
@@ -123,13 +122,13 @@ final class ak {
         return stackIn_9_0;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         oc.field_l = true;
         hc.field_a = 15000L + hc.a(-9986);
         return j.field_l == 11 ? true : false;
     }
 
-    final static mg[] a(int param0, int param1) {
+    final static mg[] a(int param0, int param1, int param2, byte param3) {
         int var5 = 0;
         int var6 = Virogrid.field_F ? 1 : 0;
         mg[] var7 = new mg[9];
@@ -142,7 +141,7 @@ final class ak {
         return var4;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         se.field_f = new String[ad.field_c];
         se.field_f[19] = rk.field_d;
         se.field_f[13] = ej.field_H;
@@ -160,7 +159,7 @@ final class ak {
         se.field_f[21] = kn.field_F;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_c = null;
         field_b = null;
@@ -417,7 +416,7 @@ final class ak {
         return stackIn_69_0;
     }
 
-    final static void a(int param0, oc param1) {
+    final static void a(int param0, oc param1, int param2) {
         hg var3 = null;
         try {
             var3 = gk.field_g;

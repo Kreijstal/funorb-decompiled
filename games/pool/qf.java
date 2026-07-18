@@ -196,7 +196,7 @@ final class qf {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_k = null;
         field_d = null;
         field_j = null;

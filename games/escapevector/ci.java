@@ -11,7 +11,7 @@ final class ci {
     static om field_d;
     static hh field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_a = null;
     }
@@ -145,7 +145,7 @@ final class ci {
         return stackIn_4_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!ce.field_f.b(117)) {
           if (null == de.field_i) {
             field_d = null;

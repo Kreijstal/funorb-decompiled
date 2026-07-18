@@ -29,8 +29,7 @@ final class ab extends qra {
             if (((ab) this).field_v == 0) {
               break L0;
             } else {
-              int discarded$5 = 1;
-              if (this.a()) {
+              if (this.a(true)) {
                 break L0;
               } else {
                 L1: {
@@ -44,8 +43,7 @@ final class ab extends qra {
                     }
                   }
                 }
-                int discarded$6 = 12721;
-                this.i();
+                this.i(12721);
                 return true;
               }
             }
@@ -118,8 +116,7 @@ final class ab extends qra {
             var7 = 0;
             L1: while (true) {
               if (var7 >= ((ab) this).field_q) {
-                int discarded$1 = 0;
-                this.h();
+                this.h(0);
                 er.b(1, 0);
                 break L0;
               } else {
@@ -273,11 +270,11 @@ final class ab extends qra {
               var9 = (koa.b(0) >> 1) + -(gg.field_f.c() >> 1);
               gg.field_f.a(var8, var9);
               if (var3 == 0) {
-                int discarded$7 = be.a(gl.a((byte) 83, cba.field_c, new String[1]).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.a());
+                int discarded$5 = be.a(gl.a((byte) 83, cba.field_c, new String[1]).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.a());
                 break L2;
               } else {
                 L3: {
-                  int discarded$8 = be.a(us.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.a());
+                  int discarded$6 = be.a(us.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.a());
                   var10 = (-((ab) this).field_o.c(-1) + 750) / 50 - -1;
                   if (var10 >= 0) {
                     break L3;
@@ -286,7 +283,7 @@ final class ab extends qra {
                     break L3;
                   }
                 }
-                int discarded$9 = be.a(gl.a((byte) 108, tla.field_h, new String[1]).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, gg.field_f.a());
+                int discarded$7 = be.a(gl.a((byte) 108, tla.field_h, new String[1]).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, gg.field_f.a());
                 break L2;
               }
             }
@@ -304,8 +301,7 @@ final class ab extends qra {
                     var12_ref_fv = ((ab) this).field_p[var10][var11_int];
                     if (var12_ref_fv != null) {
                       L6: {
-                        int discarded$10 = 1;
-                        if (!this.a()) {
+                        if (!this.a(true)) {
                           break L6;
                         } else {
                           if (var10 != ((ab) this).field_u) {
@@ -345,15 +341,14 @@ final class ab extends qra {
         }
         L8: while (true) {
           if (((ab) this).field_c.field_H.length <= var17) {
-            int discarded$11 = -6;
-            se.f();
+            se.f((byte) -6);
             ((ab) this).d(-27142);
             return;
           } else {
             L9: {
               var9 = -(((ab) this).field_c.field_H.length * var5 / 2) + var6 - -(var5 * var17);
               var10 = -200 + var7;
-              int discarded$12 = be.a(((ab) this).field_h.a(var17, false).toUpperCase(), 1, kn.field_p, wga.field_a[var17], 0, 32, 1, var10, var9, 1, (byte) 60, var5);
+              int discarded$8 = be.a(((ab) this).field_h.a(var17, false).toUpperCase(), 1, kn.field_p, wga.field_a[var17], 0, 32, 1, var10, var9, 1, (byte) 60, var5);
               if (!((ab) this).field_c.b((byte) 90, var17)) {
                 var11 = cs.field_b;
                 var12 = 8947848;
@@ -385,7 +380,7 @@ final class ab extends qra {
                 }
               }
             }
-            int discarded$13 = be.a(var11.toUpperCase(), 1, kn.field_p, var12, 0, 32, 1, 32 + var10, var9, 1, (byte) 60, var5);
+            int discarded$9 = be.a(var11.toUpperCase(), 1, kn.field_p, var12, 0, 32, 1, 32 + var10, var9, 1, (byte) 60, var5);
             var17++;
             continue L8;
           }
@@ -484,10 +479,9 @@ final class ab extends qra {
         return stackIn_11_0 != 0;
     }
 
-    private final boolean b(int param0, int param1) {
+    private final boolean b(int param0, int param1, byte param2) {
         fv var4 = null;
-        int discarded$2 = 1;
-        if (this.a()) {
+        if (this.a(true)) {
           L0: {
             if (param1 < 0) {
               break L0;
@@ -542,14 +536,13 @@ final class ab extends qra {
             } else {
                 int var4 = ((ab) this).field_o.a(-108, param2);
                 ((ab) this).field_o.a(param2, (byte) 119);
-                int discarded$0 = 0;
-                this.h();
+                this.h(0);
                 var5 = ab.a(-58, gl.a((byte) 125, fva.field_b, new String[2]));
                 iqa.field_c.a(0, var5);
             }
         }
         if (!param1) {
-            boolean discarded$1 = ab.a(-52, 79, -8, 36, 97, 39, -99);
+            boolean discarded$0 = ab.a(-52, 79, -8, 36, 97, 39, -99);
         }
     }
 
@@ -560,8 +553,7 @@ final class ab extends qra {
         if (!(!qma.field_c)) {
             if (this.a(sta.field_B, 25006, jba.field_j)) {
                 if (!(hf.field_b != 1)) {
-                    int discarded$0 = 12721;
-                    this.i();
+                    this.i(12721);
                 }
             }
         }
@@ -578,18 +570,16 @@ final class ab extends qra {
             this.a(1, 0, (byte) 73);
         }
         if (!(!((ab) this).field_h.g(0, 4))) {
-            int discarded$1 = 12721;
-            this.i();
+            this.i(12721);
         }
     }
 
-    private final boolean a() {
+    private final boolean a(boolean param0) {
         return !((ab) this).field_h.d((byte) 98) && ((ab) this).field_h.field_x == ((ab) this).field_o.g(-1);
     }
 
-    private final void i() {
-        int discarded$0 = 1;
-        if (!(this.a())) {
+    private final void i(int param0) {
+        if (!(this.a(true))) {
             return;
         }
         int var2 = ((ab) this).field_p[((ab) this).field_u][((ab) this).field_m].field_f;
@@ -610,13 +600,12 @@ final class ab extends qra {
         }
         ((ab) this).field_o.d((byte) -124);
         if (param1) {
-            int discarded$0 = 1;
-            if (this.a()) {
+            if (this.a(true)) {
                 this.g(param0 + -80);
             }
         }
         if (param0 != 80) {
-            boolean discarded$1 = ((ab) this).e(-116);
+            boolean discarded$0 = ((ab) this).e(-116);
         }
         if (!(!((ab) this).field_o.f(param0 ^ -28956))) {
             ((ab) this).field_r = 100;
@@ -634,7 +623,7 @@ final class ab extends qra {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         ((ab) this).field_m = 0;
         ((ab) this).field_u = 0;
     }
@@ -664,8 +653,7 @@ final class ab extends qra {
                 var6 = ((ab) this).field_p[var4][var5];
                 if (var6 != null) {
                   if (var6.a(param0, false, param2)) {
-                    int discarded$1 = 122;
-                    return this.b(var5, var4);
+                    return this.b(var5, var4, (byte) 122);
                   } else {
                     var5++;
                     continue L1;
@@ -793,8 +781,7 @@ final class ab extends qra {
         fv var5 = null;
         int var6 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
-        int discarded$2 = 1;
-        if (!this.a()) {
+        if (!this.a(true)) {
           return;
         } else {
           L0: {

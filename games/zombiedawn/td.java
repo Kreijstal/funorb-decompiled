@@ -8,7 +8,7 @@ final class td {
     static int field_a;
     static long field_e;
 
-    final static void a() {
+    final static void a(int param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         nn var4 = null;

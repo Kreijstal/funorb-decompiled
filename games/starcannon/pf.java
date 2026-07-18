@@ -21,7 +21,7 @@ final class pf {
         throw new IllegalStateException();
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -108,7 +108,7 @@ final class pf {
         return stackIn_13_0 != 0;
     }
 
-    final static hl[] a() {
+    final static hl[] a(int param0) {
         hl[] var1 = null;
         int var2 = 0;
         int var3 = 0;

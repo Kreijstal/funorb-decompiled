@@ -9,7 +9,7 @@ final class ei {
     static go[] field_a;
     Object[] field_b;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_c = null;
         field_f = null;
         field_a = null;
@@ -93,16 +93,15 @@ final class ei {
     final void a(Object param0, byte param1) {
         try {
             if (((ei) this).field_e == ((ei) this).field_d) {
-                int discarded$0 = 14;
-                this.a();
+                this.a((byte) 14);
             }
             if (param1 != 6) {
                 Object var4 = null;
                 ei.a(((int[]) ((ei) this).field_b[5])[6], -83, (String) null, 82, -33, (ql) null);
             }
-            int fieldTemp$1 = ((ei) this).field_e;
+            int fieldTemp$0 = ((ei) this).field_e;
             ((ei) this).field_e = ((ei) this).field_e + 1;
-            ((ei) this).field_b[fieldTemp$1] = param0;
+            ((ei) this).field_b[fieldTemp$0] = param0;
         } catch (RuntimeException runtimeException) {
             throw kk.a((Throwable) (Object) runtimeException, "ei.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -117,7 +116,7 @@ final class ei {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, byte param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -393,7 +392,7 @@ final class ei {
         ((ei) this).field_d = 10;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var3 = 0;
         int var4 = HoldTheLine.field_D;
         ((ei) this).field_d = ((ei) this).field_d + 10;

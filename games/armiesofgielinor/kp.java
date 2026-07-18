@@ -135,7 +135,7 @@ final class kp implements kh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_e = null;
         field_j = null;
@@ -175,8 +175,7 @@ final class kp implements kh {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
             } else {
-              int discarded$2 = -1;
-              b.a(var5);
+              b.a(var5, -1);
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
               break L0;

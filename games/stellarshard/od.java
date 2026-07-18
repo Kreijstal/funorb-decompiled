@@ -39,7 +39,7 @@ final class od extends ah {
         return rl.field_c[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ng.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         int stackIn_11_0 = 0;
         int stackOut_10_0 = 0;
         int stackOut_9_0 = 0;
@@ -273,8 +273,7 @@ final class od extends ah {
                   }
                 }
               } else {
-                int discarded$1 = 10287;
-                ((od) this).field_u = qj.a('<', param0.e((byte) 106));
+                ((od) this).field_u = qj.a('<', param0.e((byte) 106), 10287);
                 break L1;
               }
             }

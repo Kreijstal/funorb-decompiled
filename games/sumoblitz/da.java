@@ -13,8 +13,7 @@ abstract class da {
             return;
         }
         try {
-            int discarded$0 = 60;
-            this.a(param2, param5);
+            this.a(param2, param5, 60);
             this.a(-274, param0, (hr[]) null, param1, 0, 0, param3, (int[]) null, (aa) null);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) (Object) runtimeException, "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
@@ -216,15 +215,14 @@ abstract class da {
             if (param5 < 40) {
                 ((da) this).field_a = null;
             }
-            int discarded$0 = 60;
-            this.a(param4, param0);
+            this.a(param4, param0, 60);
             this.a(-274, param3, (hr[]) null, -((da) this).field_b.a(param2, 0) + param1, 0, 0, param2, (int[]) null, (aa) null);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) (Object) runtimeException, "da.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         Exception var4 = null;
@@ -259,8 +257,7 @@ abstract class da {
                 L2: {
                   if (param0.startsWith("col=")) {
                     var6 = (CharSequence) (Object) param0.substring(4);
-                    int discarded$6 = 16;
-                    mn.field_i = mn.field_i & -16777216 | 16777215 & ea.a((byte) -73, var6);
+                    mn.field_i = mn.field_i & -16777216 | 16777215 & ea.a((byte) -73, var6, 16);
                     break L2;
                   } else {
                     if (!param0.equals((Object) (Object) "/col")) {
@@ -286,8 +283,7 @@ abstract class da {
                                   } else {
                                     if (param0.startsWith("shad=")) {
                                       var10 = (CharSequence) (Object) param0.substring(5);
-                                      int discarded$7 = 16;
-                                      jj.field_b = mn.field_i & -16777216 | ea.a((byte) -73, var10);
+                                      jj.field_b = mn.field_i & -16777216 | ea.a((byte) -73, var10, 16);
                                       break L3;
                                     } else {
                                       if (!param0.equals((Object) (Object) "shad")) {
@@ -295,8 +291,7 @@ abstract class da {
                                           if (!param0.equals((Object) (Object) "br")) {
                                             break L3;
                                           } else {
-                                            int discarded$8 = 60;
-                                            this.a(fs.field_l, jv.field_b);
+                                            this.a(fs.field_l, jv.field_b, 60);
                                             break L3;
                                           }
                                         } else {
@@ -319,8 +314,7 @@ abstract class da {
                               }
                             } else {
                               var9 = (CharSequence) (Object) param0.substring(2);
-                              int discarded$9 = 16;
-                              fl.field_p = -16777216 & mn.field_i | ea.a((byte) -73, var9);
+                              fl.field_p = -16777216 & mn.field_i | ea.a((byte) -73, var9, 16);
                               break L3;
                             }
                           } else {
@@ -333,8 +327,7 @@ abstract class da {
                         }
                       } else {
                         var8 = (CharSequence) (Object) param0.substring(4);
-                        int discarded$10 = 16;
-                        vo.field_I = -16777216 & mn.field_i | ea.a((byte) -73, var8);
+                        vo.field_I = -16777216 & mn.field_i | ea.a((byte) -73, var8, 16);
                         break L3;
                       }
                     } else {
@@ -343,8 +336,7 @@ abstract class da {
                     }
                   } else {
                     var7 = (CharSequence) (Object) param0.substring(5);
-                    int discarded$11 = 16;
-                    mn.field_i = ea.a((byte) -73, var7);
+                    mn.field_i = ea.a((byte) -73, var7, 16);
                     break L3;
                   }
                 }
@@ -472,8 +464,7 @@ abstract class da {
               return stackIn_4_0;
             } else {
               L1: {
-                int discarded$1 = 60;
-                this.a(param6, param9);
+                this.a(param6, param9, 60);
                 if (param7 == 0) {
                   param7 = ((da) this).field_b.field_d;
                   break L1;
@@ -842,8 +833,7 @@ abstract class da {
                                       } else {
                                         if (!var15_ref_String.equals((Object) (Object) "reg")) {
                                           if (!var15_ref_String.startsWith("img=")) {
-                                            int discarded$1 = 120;
-                                            this.a(var15_ref_String);
+                                            this.a(var15_ref_String, 120);
                                             break L2;
                                           } else {
                                             try {
@@ -1319,15 +1309,14 @@ abstract class da {
             return;
         }
         try {
-            int discarded$0 = 60;
-            this.a(param1, param2);
+            this.a(param1, param2, 60);
             this.a(-274, param3, (hr[]) null, -(((da) this).field_b.a(param0, param5) / 2) + param4, 0, 0, param0, (int[]) null, (aa) null);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) (Object) runtimeException, "da.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void a(int param0, int param1, int param2) {
         lb.field_b = 0;
         fs.field_l = param0;
         mn.field_i = param0;

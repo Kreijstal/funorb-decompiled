@@ -450,7 +450,7 @@ final class pp extends jb {
         return stackIn_38_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
     }
 

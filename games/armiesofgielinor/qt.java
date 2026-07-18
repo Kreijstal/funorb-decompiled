@@ -8,7 +8,7 @@ final class qt {
     static String field_a;
     static String field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_a = null;
         field_e = null;
@@ -16,7 +16,7 @@ final class qt {
         field_b = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

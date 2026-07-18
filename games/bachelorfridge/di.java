@@ -26,7 +26,8 @@ final class di extends pu {
     }
 
     final static nea a(String param0, int param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         nea var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -35,23 +36,23 @@ final class di extends pu {
         Object stackIn_3_0 = null;
         nea stackIn_13_0 = null;
         Object stackIn_18_0 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        Object stackIn_22_0 = null;
+        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_17_0 = null;
         nea stackOut_12_0 = null;
         Object stackOut_2_0 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
-        Object stackOut_21_0 = null;
+        RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
         var5 = BachelorFridge.field_y;
@@ -60,15 +61,15 @@ final class di extends pu {
             if (fq.field_s != null) {
               L1: {
                 var6 = (CharSequence) (Object) param0;
-                var2 = (Object) (Object) fq.a(0, var6);
+                var2 = fq.a(0, var6);
                 if (var2 != null) {
                   break L1;
                 } else {
-                  var2 = (Object) (Object) var6;
+                  var2 = param0;
                   break L1;
                 }
               }
-              var3 = (nea) (Object) fq.field_s.a((long)((String) var2).hashCode(), (byte) -87);
+              var3 = (nea) (Object) fq.field_s.a((long)var2.hashCode(), (byte) -87);
               L2: while (true) {
                 if (var3 == null) {
                   if (param1 >= -110) {
@@ -90,7 +91,7 @@ final class di extends pu {
                       break L3;
                     }
                   }
-                  if (!var4.equals(var2)) {
+                  if (!var4.equals((Object) (Object) var2)) {
                     var3 = (nea) (Object) fq.field_s.a((byte) -31);
                     continue L2;
                   } else {
@@ -109,15 +110,15 @@ final class di extends pu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_19_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var2_ref;
             stackOut_19_1 = new StringBuilder().append("di.B(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = stackIn_21_0;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
@@ -125,7 +126,7 @@ final class di extends pu {
               stackIn_22_2 = stackOut_21_2;
               break L4;
             } else {
-              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
@@ -151,9 +152,7 @@ final class di extends pu {
             f.field_c = hca.a("benefits", vb.field_j, param0 + -167, "members_benefits_logo");
             ik.field_l = gw.a("benefits", "members_benefits_screenshots", vb.field_j, param0 + -143);
             pp.a(qk.field_k, -84, qq.field_l);
-            int discarded$2 = 15;
-            int discarded$3 = 80;
-            gd.a(param0, -2400, 40, (byte) -85, st.field_c, 16744576, 80, 2, (po) (Object) aha.field_D);
+            gd.a(param0, -2400, 40, (byte) -85, st.field_c, 16744576, 80, 2, (po) (Object) aha.field_D, 80, 15);
             oi.a(3, ik.field_l);
             kl.a((byte) 94, f.field_c);
             return true;
@@ -220,7 +219,7 @@ final class di extends pu {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_l = null;
     }
 

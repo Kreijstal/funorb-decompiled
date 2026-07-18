@@ -62,14 +62,10 @@ final class ha {
           rc.field_a = param10;
           fi.field_c = param13;
           sp.field_O = 1;
-          int discarded$4 = 1;
-          eg.field_r = gk.a(param14, "lobby", "gameprivacy");
-          int discarded$5 = 1;
-          ne.field_I = gk.a(param14, "lobby", "ratedgame");
-          int discarded$6 = 1;
-          mj.field_c = gk.a(param14, "lobby", "opentome");
-          int discarded$7 = 1;
-          sf.field_a = gk.a(param14, "lobby", "allowspectators");
+          eg.field_r = gk.a(param14, "lobby", "gameprivacy", true);
+          ne.field_I = gk.a(param14, "lobby", "ratedgame", true);
+          mj.field_c = gk.a(param14, "lobby", "opentome", true);
+          sf.field_a = gk.a(param14, "lobby", "allowspectators", true);
           gm.field_c = new String[5];
           gm.field_c[1] = t.field_k;
           gm.field_c[0] = fh.field_x;
@@ -420,7 +416,7 @@ final class ha {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var2 = 0;
         L0: {
           var2 = Vertigo2.field_L ? 1 : 0;
@@ -443,8 +439,7 @@ final class ha {
         }
         L1: {
           if (rk.field_y > 0) {
-            int discarded$1 = 202;
-            km.i();
+            km.i(202);
             break L1;
           } else {
             break L1;
@@ -612,8 +607,7 @@ final class ha {
                     bi.b(1 + param2, param4 + var7, 9, 7, 8795773);
                     bi.b(param2 - -4, var7 + param4, 6, 10, 8795773);
                     bi.a();
-                    int discarded$1 = 3355443;
-                    pp.a(16777215, (byte) 57, param4, param0, param2, 40, param3);
+                    pp.a(16777215, (byte) 57, param4, param0, param2, 40, param3, 3355443);
                     db.a(param2, param3, param0, 0, param4);
                     ro.field_g.a(-60);
                     var10 = 0;

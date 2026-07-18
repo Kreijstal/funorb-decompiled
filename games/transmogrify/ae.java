@@ -7,7 +7,7 @@ final class ae {
     static String field_b;
     static int[][] field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
         field_d = null;
@@ -15,7 +15,7 @@ final class ae {
         field_c = null;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (null == oi.field_k) {
             return false;
         }
@@ -25,7 +25,7 @@ final class ae {
         return true;
     }
 
-    final static ii a(int param0, ci param1, int param2) {
+    final static ii a(int param0, ci param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

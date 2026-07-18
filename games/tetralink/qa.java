@@ -21,7 +21,7 @@ final class qa extends gb {
         field_x = null;
     }
 
-    final static int c() {
+    final static int c(byte param0) {
         return wh.field_k;
     }
 

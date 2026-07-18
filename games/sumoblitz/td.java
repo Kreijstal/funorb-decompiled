@@ -230,7 +230,7 @@ final class td extends ms {
         return stackIn_20_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
     }
 
@@ -375,7 +375,7 @@ final class td extends ms {
         int var2 = -58 % ((param0 - 73) / 51);
     }
 
-    final static byte[] a(int param0) {
+    final static byte[] a(int param0, int param1) {
         byte[] var11 = null;
         byte[] var10 = null;
         byte[] var3_ref_byte__ = null;
@@ -396,8 +396,7 @@ final class td extends ms {
             }
             for (var5 = 0; 255 > var5; var5++) {
                 var6 = 255 - var5;
-                int discarded$0 = -96;
-                var7 = fi.a(var6, var4);
+                var7 = fi.a(var6, var4, (byte) -96);
                 var8 = var11[var7];
                 var3_ref_byte__[var7] = var11[var6];
                 var3_ref_byte__[-var5 + 511] = (byte) var8;
@@ -447,7 +446,7 @@ final class td extends ms {
         return var6.toString();
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         ah var2 = null;
@@ -638,9 +637,9 @@ final class td extends ms {
                                         L8: {
                                           var15_int = var38.e(-31302);
                                           if (var15_int == 0) {
-                                            int incrementValue$11 = var12;
+                                            int incrementValue$9 = var12;
                                             var12++;
-                                            var13_int = incrementValue$11;
+                                            var13_int = incrementValue$9;
                                             break L8;
                                           } else {
                                             L9: {
@@ -833,8 +832,7 @@ final class td extends ms {
                                                                                                         var27 = var30;
                                                                                                         continue L32;
                                                                                                       } else {
-                                                                                                        int discarded$12 = 0;
-                                                                                                        var34 = dh.b(var32, var30 + -var27);
+                                                                                                        var34 = dh.b(var32, var30 + -var27, false);
                                                                                                         var32 = var32 + (var31 + -var28);
                                                                                                         ((td) this).field_q[var33] = (byte)(32 + ((td) this).field_q[var33] * var34 >> 6);
                                                                                                         var33++;
@@ -917,8 +915,7 @@ final class td extends ms {
                                                                                                         continue L38;
                                                                                                       } else {
                                                                                                         L43: {
-                                                                                                          int discarded$13 = 0;
-                                                                                                          var34 = dh.b(var32, var30 + -var27);
+                                                                                                          var34 = dh.b(var32, var30 + -var27, false);
                                                                                                           var35 = (((td) this).field_t[var37] & 255) - -var34;
                                                                                                           if (0 <= var35) {
                                                                                                             break L43;
@@ -1157,9 +1154,9 @@ final class td extends ms {
                                                                                 var20 = -1;
                                                                                 break L66;
                                                                               } else {
-                                                                                int incrementValue$14 = var21;
+                                                                                int incrementValue$10 = var21;
                                                                                 var21++;
-                                                                                var20 = var18[incrementValue$14];
+                                                                                var20 = var18[incrementValue$10];
                                                                                 break L66;
                                                                               }
                                                                             }
@@ -1191,9 +1188,9 @@ final class td extends ms {
                                                                               var20 = -1;
                                                                               break L68;
                                                                             } else {
-                                                                              int incrementValue$15 = var21;
+                                                                              int incrementValue$11 = var21;
                                                                               var21++;
-                                                                              var20 = var10[incrementValue$15];
+                                                                              var20 = var10[incrementValue$11];
                                                                               break L68;
                                                                             }
                                                                           }
@@ -1216,13 +1213,13 @@ final class td extends ms {
                                                                       if (var20 != 0) {
                                                                         break L70;
                                                                       } else {
-                                                                        int incrementValue$16 = var8;
+                                                                        int incrementValue$12 = var8;
                                                                         var8++;
-                                                                        var24 = 16 + var38.field_n[incrementValue$16] << 2;
+                                                                        var24 = 16 + var38.field_n[incrementValue$12] << 2;
                                                                         if (~var68.length < ~var21) {
-                                                                          int incrementValue$17 = var21;
+                                                                          int incrementValue$13 = var21;
                                                                           var21++;
-                                                                          var20 = var7[incrementValue$17];
+                                                                          var20 = var7[incrementValue$13];
                                                                           break L70;
                                                                         } else {
                                                                           var20 = -1;
@@ -1253,15 +1250,15 @@ final class td extends ms {
                                                                         var20 = -1;
                                                                         break L73;
                                                                       } else {
-                                                                        int incrementValue$18 = var21;
+                                                                        int incrementValue$14 = var21;
                                                                         var21++;
-                                                                        var20 = var4[incrementValue$18];
+                                                                        var20 = var4[incrementValue$14];
                                                                         break L73;
                                                                       }
                                                                     }
-                                                                    int incrementValue$19 = var5;
+                                                                    int incrementValue$15 = var5;
                                                                     var5++;
-                                                                    var23 = -1 + var38.field_n[incrementValue$19];
+                                                                    var23 = -1 + var38.field_n[incrementValue$15];
                                                                     break L72;
                                                                   }
                                                                 }
@@ -1284,9 +1281,9 @@ final class td extends ms {
                                                                 var20 = -1;
                                                                 break L75;
                                                               } else {
-                                                                int incrementValue$20 = var21;
+                                                                int incrementValue$16 = var21;
                                                                 var21++;
-                                                                var20 = var18[incrementValue$20];
+                                                                var20 = var18[incrementValue$16];
                                                                 break L75;
                                                               }
                                                             }
@@ -1328,9 +1325,9 @@ final class td extends ms {
                                     }
                                   } else {
                                     L76: {
-                                      mq dupTemp$21 = new mq();
-                                      var13[var14] = dupTemp$21;
-                                      var40 = dupTemp$21;
+                                      mq dupTemp$17 = new mq();
+                                      var13[var14] = dupTemp$17;
+                                      var40 = dupTemp$17;
                                       var15 = var40;
                                       var16_int = var38.e(-31302);
                                       if (var16_int <= 0) {

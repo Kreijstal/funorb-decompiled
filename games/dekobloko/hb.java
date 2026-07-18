@@ -64,15 +64,14 @@ final class hb extends w {
                   if (((hb) this).field_Xb.length() <= 0) {
                     break L1;
                   } else {
-                    int discarded$6 = 32;
-                    StringBuilder discarded$7 = vf.a(((hb) this).field_Xb, -23510, -1 + ((hb) this).field_Xb.length());
+                    StringBuilder discarded$5 = vf.a(((hb) this).field_Xb, -23510, -1 + ((hb) this).field_Xb.length(), ' ');
                     break L1;
                   }
                 }
               }
               L2: {
                 if (re.a(param0 ^ 9, el.field_G, (CharSequence) (Object) ((hb) this).field_Xb)) {
-                  StringBuilder discarded$8 = ((hb) this).field_Xb.append(el.field_G);
+                  StringBuilder discarded$6 = ((hb) this).field_Xb.append(el.field_G);
                   break L2;
                 } else {
                   L3: {
@@ -80,7 +79,7 @@ final class hb extends w {
                       break L3;
                     } else {
                       if (91 == el.field_G) {
-                        StringBuilder discarded$9 = ((hb) this).field_Xb.append(el.field_G);
+                        StringBuilder discarded$7 = ((hb) this).field_Xb.append(el.field_G);
                         break L2;
                       } else {
                         break L3;
@@ -92,7 +91,7 @@ final class hb extends w {
                       break L4;
                     } else {
                       if (el.field_G == 35) {
-                        StringBuilder discarded$10 = ((hb) this).field_Xb.append(el.field_G);
+                        StringBuilder discarded$8 = ((hb) this).field_Xb.append(el.field_G);
                         break L2;
                       } else {
                         break L4;
@@ -100,7 +99,7 @@ final class hb extends w {
                     }
                   }
                   if (el.field_G == 93) {
-                    StringBuilder discarded$11 = ((hb) this).field_Xb.append(el.field_G);
+                    StringBuilder discarded$9 = ((hb) this).field_Xb.append(el.field_G);
                     break L2;
                   } else {
                     break L2;
@@ -163,40 +162,39 @@ final class hb extends w {
         if (((hb) this).field_Rb == 0) {
           if (wh.field_c == 85) {
             if (((hb) this).field_Xb.length() > 0) {
-              int discarded$38 = 32;
-              StringBuilder discarded$39 = vf.a(((hb) this).field_Xb, param0 ^ -23249, ((hb) this).field_Xb.length() + -1);
-              if (((hb) this).field_Xb.length() < 12) {
-                L0: {
-                  var2 = Character.toLowerCase(el.field_G);
-                  if (var2 != 32) {
-                    break L0;
-                  } else {
-                    var2 = 95;
-                    break L0;
-                  }
-                }
-                L1: {
-                  if (95 != var2) {
-                    break L1;
-                  } else {
-                    if (0 < ((hb) this).field_Xb.length()) {
-                      StringBuilder discarded$40 = ((hb) this).field_Xb.append((char) var2);
+              L0: {
+                StringBuilder discarded$26 = vf.a(((hb) this).field_Xb, param0 ^ -23249, ((hb) this).field_Xb.length() + -1, ' ');
+                if (((hb) this).field_Xb.length() >= 12) {
+                  break L0;
+                } else {
+                  L1: {
+                    var2 = Character.toLowerCase(el.field_G);
+                    if (var2 != 32) {
                       break L1;
                     } else {
+                      var2 = 95;
                       break L1;
                     }
                   }
-                }
-                L2: {
-                  int discarded$41 = -24380;
-                  if (v.a((char) var2)) {
-                    StringBuilder discarded$42 = ((hb) this).field_Xb.append((char) var2);
-                    break L2;
+                  L2: {
+                    if (95 != var2) {
+                      break L2;
+                    } else {
+                      if (0 < ((hb) this).field_Xb.length()) {
+                        StringBuilder discarded$27 = ((hb) this).field_Xb.append((char) var2);
+                        break L2;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  if (v.a((char) var2, -24380)) {
+                    StringBuilder discarded$28 = ((hb) this).field_Xb.append((char) var2);
+                    break L0;
                   } else {
-                    int discarded$43 = 23;
-                    if (fl.a((char) var2)) {
+                    if (fl.a((char) var2, (byte) 23)) {
                       L3: {
-                        StringBuilder discarded$44 = ((hb) this).field_Xb.append((char) var2);
+                        StringBuilder discarded$29 = ((hb) this).field_Xb.append((char) var2);
                         if (wh.field_c == 84) {
                           if (((hb) this).field_Xb.length() > 0) {
                             ((hb) this).field_Y = ((hb) this).field_Xb.toString();
@@ -222,397 +220,331 @@ final class hb extends w {
                         if (param0 == 261) {
                           break L5;
                         } else {
-                          int discarded$45 = ((hb) this).a((byte) 13, false);
+                          int discarded$30 = ((hb) this).a((byte) 13, false);
                           break L5;
                         }
                       }
                       return true;
                     } else {
-                      break L2;
-                    }
-                  }
-                }
-                if (wh.field_c == 84) {
-                  if (((hb) this).field_Xb.length() > 0) {
-                    ((hb) this).field_Y = ((hb) this).field_Xb.toString();
-                    ((hb) this).field_Rb = 2;
-                    if (wh.field_c != 13) {
-                      if (param0 == 261) {
-                        return true;
-                      } else {
-                        int discarded$46 = ((hb) this).a((byte) 13, false);
-                        return true;
-                      }
-                    } else {
-                      ((hb) this).field_Rb = 1;
-                      if (param0 == 261) {
-                        return true;
-                      } else {
-                        int discarded$47 = ((hb) this).a((byte) 13, false);
-                        return true;
-                      }
-                    }
-                  } else {
-                    ((hb) this).field_Rb = 1;
-                    if (wh.field_c != 13) {
-                      if (param0 == 261) {
-                        return true;
-                      } else {
-                        int discarded$48 = ((hb) this).a((byte) 13, false);
-                        return true;
-                      }
-                    } else {
-                      ((hb) this).field_Rb = 1;
-                      if (param0 == 261) {
-                        return true;
-                      } else {
-                        int discarded$49 = ((hb) this).a((byte) 13, false);
-                        return true;
-                      }
-                    }
-                  }
-                } else {
-                  if (wh.field_c != 13) {
-                    if (param0 == 261) {
-                      return true;
-                    } else {
-                      int discarded$50 = ((hb) this).a((byte) 13, false);
-                      return true;
-                    }
-                  } else {
-                    L6: {
-                      ((hb) this).field_Rb = 1;
-                      if (param0 == 261) {
-                        break L6;
-                      } else {
-                        int discarded$51 = ((hb) this).a((byte) 13, false);
-                        break L6;
-                      }
-                    }
-                    return true;
-                  }
-                }
-              } else {
-                if (wh.field_c == 84) {
-                  if (((hb) this).field_Xb.length() > 0) {
-                    ((hb) this).field_Y = ((hb) this).field_Xb.toString();
-                    ((hb) this).field_Rb = 2;
-                    if (wh.field_c != 13) {
-                      if (param0 == 261) {
-                        return true;
-                      } else {
-                        int discarded$52 = ((hb) this).a((byte) 13, false);
-                        return true;
-                      }
-                    } else {
-                      L7: {
-                        ((hb) this).field_Rb = 1;
-                        if (param0 == 261) {
-                          break L7;
-                        } else {
-                          int discarded$53 = ((hb) this).a((byte) 13, false);
-                          break L7;
-                        }
-                      }
-                      return true;
-                    }
-                  } else {
-                    ((hb) this).field_Rb = 1;
-                    if (wh.field_c != 13) {
-                      if (param0 == 261) {
-                        return true;
-                      } else {
-                        int discarded$54 = ((hb) this).a((byte) 13, false);
-                        return true;
-                      }
-                    } else {
-                      L8: {
-                        ((hb) this).field_Rb = 1;
-                        if (param0 == 261) {
-                          break L8;
-                        } else {
-                          int discarded$55 = ((hb) this).a((byte) 13, false);
-                          break L8;
-                        }
-                      }
-                      return true;
-                    }
-                  }
-                } else {
-                  if (wh.field_c != 13) {
-                    if (param0 == 261) {
-                      return true;
-                    } else {
-                      int discarded$56 = ((hb) this).a((byte) 13, false);
-                      return true;
-                    }
-                  } else {
-                    L9: {
-                      ((hb) this).field_Rb = 1;
-                      if (param0 == 261) {
-                        break L9;
-                      } else {
-                        int discarded$57 = ((hb) this).a((byte) 13, false);
-                        break L9;
-                      }
-                    }
-                    return true;
-                  }
-                }
-              }
-            } else {
-              L10: {
-                if (((hb) this).field_Xb.length() >= 12) {
-                  break L10;
-                } else {
-                  L11: {
-                    var2 = Character.toLowerCase(el.field_G);
-                    if (var2 != 32) {
-                      break L11;
-                    } else {
-                      var2 = 95;
-                      break L11;
-                    }
-                  }
-                  L12: {
-                    if (95 != var2) {
-                      break L12;
-                    } else {
-                      if (0 < ((hb) this).field_Xb.length()) {
-                        StringBuilder discarded$58 = ((hb) this).field_Xb.append((char) var2);
-                        break L12;
-                      } else {
-                        break L12;
-                      }
-                    }
-                  }
-                  int discarded$59 = -24380;
-                  if (v.a((char) var2)) {
-                    StringBuilder discarded$60 = ((hb) this).field_Xb.append((char) var2);
-                    break L10;
-                  } else {
-                    int discarded$61 = 23;
-                    if (fl.a((char) var2)) {
-                      L13: {
-                        StringBuilder discarded$62 = ((hb) this).field_Xb.append((char) var2);
-                        if (wh.field_c == 84) {
-                          if (((hb) this).field_Xb.length() > 0) {
-                            ((hb) this).field_Y = ((hb) this).field_Xb.toString();
-                            ((hb) this).field_Rb = 2;
-                            break L13;
-                          } else {
-                            ((hb) this).field_Rb = 1;
-                            break L13;
-                          }
-                        } else {
-                          break L13;
-                        }
-                      }
-                      L14: {
-                        if (wh.field_c != 13) {
-                          break L14;
-                        } else {
-                          ((hb) this).field_Rb = 1;
-                          break L14;
-                        }
-                      }
-                      L15: {
-                        if (param0 == 261) {
-                          break L15;
-                        } else {
-                          int discarded$63 = ((hb) this).a((byte) 13, false);
-                          break L15;
-                        }
-                      }
-                      return true;
-                    } else {
-                      break L10;
+                      break L0;
                     }
                   }
                 }
               }
               if (wh.field_c == 84) {
                 if (((hb) this).field_Xb.length() > 0) {
-                  L16: {
-                    ((hb) this).field_Y = ((hb) this).field_Xb.toString();
-                    ((hb) this).field_Rb = 2;
-                    if (wh.field_c != 13) {
-                      break L16;
+                  ((hb) this).field_Y = ((hb) this).field_Xb.toString();
+                  ((hb) this).field_Rb = 2;
+                  if (wh.field_c != 13) {
+                    if (param0 == 261) {
+                      return true;
                     } else {
-                      ((hb) this).field_Rb = 1;
-                      break L16;
+                      int discarded$31 = ((hb) this).a((byte) 13, false);
+                      return true;
+                    }
+                  } else {
+                    ((hb) this).field_Rb = 1;
+                    if (param0 == 261) {
+                      return true;
+                    } else {
+                      int discarded$32 = ((hb) this).a((byte) 13, false);
+                      return true;
                     }
                   }
-                  if (param0 != 261) {
-                    int discarded$64 = ((hb) this).a((byte) 13, false);
+                } else {
+                  ((hb) this).field_Rb = 1;
+                  if (wh.field_c != 13) {
+                    if (param0 == 261) {
+                      return true;
+                    } else {
+                      int discarded$33 = ((hb) this).a((byte) 13, false);
+                      return true;
+                    }
+                  } else {
+                    ((hb) this).field_Rb = 1;
+                    if (param0 == 261) {
+                      return true;
+                    } else {
+                      int discarded$34 = ((hb) this).a((byte) 13, false);
+                      return true;
+                    }
+                  }
+                }
+              } else {
+                if (wh.field_c != 13) {
+                  if (param0 == 261) {
                     return true;
                   } else {
+                    int discarded$35 = ((hb) this).a((byte) 13, false);
                     return true;
                   }
                 } else {
-                  L17: {
+                  L6: {
                     ((hb) this).field_Rb = 1;
-                    if (wh.field_c != 13) {
-                      break L17;
+                    if (param0 == 261) {
+                      break L6;
                     } else {
-                      ((hb) this).field_Rb = 1;
-                      break L17;
+                      int discarded$36 = ((hb) this).a((byte) 13, false);
+                      break L6;
                     }
                   }
-                  L18: {
-                    if (param0 == 261) {
-                      break L18;
+                  return true;
+                }
+              }
+            } else {
+              L7: {
+                if (((hb) this).field_Xb.length() >= 12) {
+                  break L7;
+                } else {
+                  L8: {
+                    var2 = Character.toLowerCase(el.field_G);
+                    if (var2 != 32) {
+                      break L8;
                     } else {
-                      int discarded$65 = ((hb) this).a((byte) 13, false);
-                      break L18;
+                      var2 = 95;
+                      break L8;
+                    }
+                  }
+                  L9: {
+                    if (95 != var2) {
+                      break L9;
+                    } else {
+                      if (0 < ((hb) this).field_Xb.length()) {
+                        StringBuilder discarded$37 = ((hb) this).field_Xb.append((char) var2);
+                        break L9;
+                      } else {
+                        break L9;
+                      }
+                    }
+                  }
+                  if (v.a((char) var2, -24380)) {
+                    StringBuilder discarded$38 = ((hb) this).field_Xb.append((char) var2);
+                    break L7;
+                  } else {
+                    if (fl.a((char) var2, (byte) 23)) {
+                      L10: {
+                        StringBuilder discarded$39 = ((hb) this).field_Xb.append((char) var2);
+                        if (wh.field_c == 84) {
+                          if (((hb) this).field_Xb.length() > 0) {
+                            ((hb) this).field_Y = ((hb) this).field_Xb.toString();
+                            ((hb) this).field_Rb = 2;
+                            break L10;
+                          } else {
+                            ((hb) this).field_Rb = 1;
+                            break L10;
+                          }
+                        } else {
+                          break L10;
+                        }
+                      }
+                      L11: {
+                        if (wh.field_c != 13) {
+                          break L11;
+                        } else {
+                          ((hb) this).field_Rb = 1;
+                          break L11;
+                        }
+                      }
+                      L12: {
+                        if (param0 == 261) {
+                          break L12;
+                        } else {
+                          int discarded$40 = ((hb) this).a((byte) 13, false);
+                          break L12;
+                        }
+                      }
+                      return true;
+                    } else {
+                      break L7;
+                    }
+                  }
+                }
+              }
+              if (wh.field_c == 84) {
+                if (((hb) this).field_Xb.length() > 0) {
+                  ((hb) this).field_Y = ((hb) this).field_Xb.toString();
+                  ((hb) this).field_Rb = 2;
+                  if (wh.field_c == 13) {
+                    ((hb) this).field_Rb = 1;
+                    if (param0 != 261) {
+                      int discarded$41 = ((hb) this).a((byte) 13, false);
+                      return true;
+                    } else {
+                      return true;
+                    }
+                  } else {
+                    L13: {
+                      if (param0 == 261) {
+                        break L13;
+                      } else {
+                        int discarded$42 = ((hb) this).a((byte) 13, false);
+                        break L13;
+                      }
+                    }
+                    return true;
+                  }
+                } else {
+                  L14: {
+                    ((hb) this).field_Rb = 1;
+                    if (wh.field_c != 13) {
+                      break L14;
+                    } else {
+                      ((hb) this).field_Rb = 1;
+                      break L14;
+                    }
+                  }
+                  L15: {
+                    if (param0 == 261) {
+                      break L15;
+                    } else {
+                      int discarded$43 = ((hb) this).a((byte) 13, false);
+                      break L15;
                     }
                   }
                   return true;
                 }
               } else {
-                L19: {
+                L16: {
                   if (wh.field_c != 13) {
-                    break L19;
+                    break L16;
                   } else {
                     ((hb) this).field_Rb = 1;
-                    break L19;
+                    break L16;
                   }
                 }
-                L20: {
+                L17: {
                   if (param0 == 261) {
-                    break L20;
+                    break L17;
                   } else {
-                    int discarded$66 = ((hb) this).a((byte) 13, false);
-                    break L20;
+                    int discarded$44 = ((hb) this).a((byte) 13, false);
+                    break L17;
                   }
                 }
                 return true;
               }
             }
           } else {
-            L21: {
+            L18: {
               if (((hb) this).field_Xb.length() >= 12) {
-                break L21;
+                break L18;
               } else {
-                L22: {
+                L19: {
                   var2 = Character.toLowerCase(el.field_G);
                   if (var2 != 32) {
-                    break L22;
+                    break L19;
                   } else {
                     var2 = 95;
-                    break L22;
+                    break L19;
                   }
                 }
-                L23: {
+                L20: {
                   if (95 != var2) {
-                    break L23;
+                    break L20;
                   } else {
                     if (0 < ((hb) this).field_Xb.length()) {
-                      StringBuilder discarded$67 = ((hb) this).field_Xb.append((char) var2);
-                      break L23;
+                      StringBuilder discarded$45 = ((hb) this).field_Xb.append((char) var2);
+                      break L20;
                     } else {
-                      break L23;
+                      break L20;
                     }
                   }
                 }
-                int discarded$68 = -24380;
-                if (v.a((char) var2)) {
-                  StringBuilder discarded$69 = ((hb) this).field_Xb.append((char) var2);
-                  break L21;
+                if (v.a((char) var2, -24380)) {
+                  StringBuilder discarded$46 = ((hb) this).field_Xb.append((char) var2);
+                  break L18;
                 } else {
-                  int discarded$70 = 23;
-                  if (fl.a((char) var2)) {
-                    L24: {
-                      StringBuilder discarded$71 = ((hb) this).field_Xb.append((char) var2);
+                  if (fl.a((char) var2, (byte) 23)) {
+                    L21: {
+                      StringBuilder discarded$47 = ((hb) this).field_Xb.append((char) var2);
                       if (wh.field_c == 84) {
                         if (((hb) this).field_Xb.length() > 0) {
                           ((hb) this).field_Y = ((hb) this).field_Xb.toString();
                           ((hb) this).field_Rb = 2;
-                          break L24;
+                          break L21;
                         } else {
                           ((hb) this).field_Rb = 1;
-                          break L24;
+                          break L21;
                         }
                       } else {
-                        break L24;
+                        break L21;
                       }
                     }
-                    L25: {
+                    L22: {
                       if (wh.field_c != 13) {
-                        break L25;
+                        break L22;
                       } else {
                         ((hb) this).field_Rb = 1;
-                        break L25;
+                        break L22;
                       }
                     }
                     if (param0 == 261) {
                       return true;
                     } else {
-                      int discarded$72 = ((hb) this).a((byte) 13, false);
+                      int discarded$48 = ((hb) this).a((byte) 13, false);
                       return true;
                     }
                   } else {
-                    break L21;
+                    break L18;
                   }
                 }
               }
             }
             if (wh.field_c == 84) {
               if (((hb) this).field_Xb.length() > 0) {
-                L26: {
+                L23: {
                   ((hb) this).field_Y = ((hb) this).field_Xb.toString();
                   ((hb) this).field_Rb = 2;
                   if (wh.field_c != 13) {
-                    break L26;
+                    break L23;
                   } else {
                     ((hb) this).field_Rb = 1;
-                    break L26;
+                    break L23;
                   }
                 }
-                L27: {
+                L24: {
                   if (param0 == 261) {
-                    break L27;
+                    break L24;
                   } else {
-                    int discarded$73 = ((hb) this).a((byte) 13, false);
-                    break L27;
+                    int discarded$49 = ((hb) this).a((byte) 13, false);
+                    break L24;
                   }
                 }
                 return true;
               } else {
-                L28: {
+                L25: {
                   ((hb) this).field_Rb = 1;
                   if (wh.field_c != 13) {
-                    break L28;
+                    break L25;
                   } else {
                     ((hb) this).field_Rb = 1;
-                    break L28;
+                    break L25;
                   }
                 }
-                L29: {
+                L26: {
                   if (param0 == 261) {
-                    break L29;
+                    break L26;
                   } else {
-                    int discarded$74 = ((hb) this).a((byte) 13, false);
-                    break L29;
+                    int discarded$50 = ((hb) this).a((byte) 13, false);
+                    break L26;
                   }
                 }
                 return true;
               }
             } else {
-              L30: {
+              L27: {
                 if (wh.field_c != 13) {
-                  break L30;
+                  break L27;
                 } else {
                   ((hb) this).field_Rb = 1;
-                  break L30;
+                  break L27;
                 }
               }
-              L31: {
+              L28: {
                 if (param0 == 261) {
-                  break L31;
+                  break L28;
                 } else {
-                  int discarded$75 = ((hb) this).a((byte) 13, false);
-                  break L31;
+                  int discarded$51 = ((hb) this).a((byte) 13, false);
+                  break L28;
                 }
               }
               return true;
@@ -857,11 +789,9 @@ final class hb extends w {
             la.a(param15, 32373);
             mf.a(8, param19, param0, param15, -8894, param8, param9, 1, param14, param17, param4, param12, 5, param13, param18);
             ua.a(46, param15, true, param3);
-            int discarded$2 = 123;
-            ge.a();
+            ge.a((byte) 123);
             tj.h((byte) -27);
-            int discarded$3 = 18;
-            f.d();
+            f.d(18);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1246,7 +1176,7 @@ final class hb extends w {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_Vb = null;
         field_Qb = null;
         field_Ob = null;

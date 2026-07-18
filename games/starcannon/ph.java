@@ -50,7 +50,7 @@ class ph extends qj implements ga {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_mb = null;
         field_nb = null;
         field_gb = null;
@@ -69,8 +69,7 @@ class ph extends qj implements ga {
               return;
             }
           } else {
-            int discarded$2 = 32083;
-            vg.a();
+            vg.a(32083);
             return;
           }
         } else {

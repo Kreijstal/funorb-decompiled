@@ -13,7 +13,7 @@ final class ld {
     private int field_g;
     static he[] field_d;
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -71,7 +71,7 @@ final class ld {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         int[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -160,7 +160,7 @@ final class ld {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -485,7 +485,7 @@ final class ld {
         }
     }
 
-    private final void k() {
+    private final void k(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -549,8 +549,7 @@ final class ld {
           ul.field_d = ul.field_d + 1;
           var2 = sd.field_a.field_q;
           if (var2 == 0) {
-            int discarded$2 = -114;
-            this.b();
+            this.b((byte) -114);
             break L0;
           } else {
             if (1 != var2) {
@@ -583,8 +582,7 @@ final class ld {
                           }
                         }
                       } else {
-                        int discarded$3 = 119;
-                        this.h();
+                        this.h(119);
                         break L0;
                       }
                     }
@@ -641,7 +639,7 @@ final class ld {
           if (param0 == -8448) {
             break L1;
           } else {
-            int discarded$4 = this.a((byte) 16, 0);
+            int discarded$1 = this.a((byte) 16, 0);
             break L1;
           }
         }
@@ -674,8 +672,7 @@ final class ld {
                             } else {
                               if (var3 != 7) {
                                 if (var3 == 8) {
-                                  int discarded$5 = -128;
-                                  this.k();
+                                  this.k(-128);
                                   dj.a(re.field_e, 70, lf.field_b, false, 370);
                                   break L2;
                                 } else {
@@ -690,8 +687,7 @@ final class ld {
                                       return;
                                     }
                                   } else {
-                                    int discarded$6 = 0;
-                                    this.a();
+                                    this.a(0);
                                     break L2;
                                   }
                                 }
@@ -700,8 +696,7 @@ final class ld {
                               }
                             }
                           }
-                          int discarded$7 = 101;
-                          this.c();
+                          this.c((byte) 101);
                           break L2;
                         }
                       } else {
@@ -808,7 +803,7 @@ final class ld {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         L0: {
           L1: {
             if (hl.field_d) {
@@ -1026,8 +1021,7 @@ final class ld {
           }
         }
         L7: {
-          int discarded$2 = 1;
-          var4 = jl.a(stackIn_20_0 != 0, stackIn_20_1 != 0, stackIn_20_2 != 0);
+          var4 = jl.a(stackIn_20_0 != 0, stackIn_20_1 != 0, stackIn_20_2 != 0, true);
           if (var4 == null) {
             var4 = kk.field_d[7];
             break L7;
@@ -1036,7 +1030,7 @@ final class ld {
           }
         }
         var6 = "<br><br>" + gd.field_e + " " + ih.field_P + " " + var4;
-        int discarded$3 = var3.a(var5 + " " + var6, 50, 130 + var2, 540, 480, 0, -1, 1, 0, var3.field_E);
+        int discarded$1 = var3.a(var5 + " " + var6, 50, 130 + var2, 540, 480, 0, -1, 1, 0, var3.field_E);
         var7 = re.field_e;
         dj.a(var7, 75, lf.field_b, false, 385);
     }
@@ -1132,7 +1126,7 @@ final class ld {
         return param1 * ul.field_f[((ld) this).field_c] + ul.field_e[((ld) this).field_c];
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -1160,8 +1154,7 @@ final class ld {
                       break L0;
                     } else {
                       if (var2 == 6) {
-                        int discarded$2 = 35;
-                        this.f();
+                        this.f((byte) 35);
                         break L0;
                       } else {
                         if (var2 != 7) {
@@ -1182,18 +1175,17 @@ final class ld {
               }
             }
           } else {
-            int discarded$3 = -1;
-            this.d();
+            this.d(-1);
             break L0;
           }
         }
     }
 
-    private final void j() {
+    private final void j(int param0) {
         we.a(false, nl.field_r[0]);
     }
 
-    private final void i() {
+    private final void i(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1572,8 +1564,7 @@ final class ld {
         }
         ie.field_y = -1;
         if (((ld) this).field_c == 11) {
-            int discarded$0 = 0;
-            ti.a(param0);
+            ti.a(param0, 0);
         }
     }
 
@@ -1780,7 +1771,7 @@ final class ld {
         }
     }
 
-    private final int g() {
+    private final int g(int param0) {
         return -4 > kh.field_c % 12 ? 16711680 : 0;
     }
 
@@ -2195,8 +2186,7 @@ final class ld {
                               if (var14 < 3) {
                                 break L26;
                               } else {
-                                int discarded$3 = 0;
-                                var20 = this.g();
+                                var20 = this.g(0);
                                 var9 = s.field_h;
                                 break L25;
                               }
@@ -2206,13 +2196,12 @@ final class ld {
                             var9 = le.field_a[var14];
                             break L25;
                           } else {
-                            int discarded$4 = 0;
-                            var20 = this.g();
+                            var20 = this.g(0);
                             var9 = pe.field_i;
                             break L25;
                           }
                         }
-                        int discarded$5 = cb.field_b.a(var9, 285, var17 + 216, 320, 240, var20, -1, 0, 0, cb.field_b.field_x);
+                        int discarded$1 = cb.field_b.a(var9, 285, var17 + 216, 320, 240, var20, -1, 0, 0, cb.field_b.field_x);
                         if (var14 > gf.field_D) {
                           break L19;
                         } else {
@@ -2372,8 +2361,7 @@ final class ld {
               return;
             } else {
               if (di.field_c != 13) {
-                int discarded$1 = -97;
-                this.i();
+                this.i(-97);
                 if (((ld) this).field_e.field_f == -1) {
                   continue L8;
                 } else {
@@ -2515,7 +2503,7 @@ final class ld {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int stackIn_3_0 = 0;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
@@ -2605,8 +2593,7 @@ final class ld {
               if (!((ld) this).field_e.e(-748)) {
                 break L0;
               } else {
-                int discarded$4 = 13;
-                this.j();
+                this.j(13);
                 break L0;
               }
             }
@@ -2625,8 +2612,7 @@ final class ld {
                   if (ck.field_f[82]) {
                     L3: {
                       if (null == nb.field_a) {
-                        int discarded$5 = 74;
-                        nb.field_a = vj.a();
+                        nb.field_a = vj.a((byte) 74);
                         break L3;
                       } else {
                         break L3;
@@ -2866,8 +2852,7 @@ final class ld {
                                                             } else {
                                                               L15: {
                                                                 var7 = dg.field_e;
-                                                                int discarded$6 = 34;
-                                                                dg.a();
+                                                                dg.a((byte) 34);
                                                                 if (!this.b(var7, -59)) {
                                                                   stackOut_209_0 = 0;
                                                                   stackIn_210_0 = stackOut_209_0;
@@ -3098,8 +3083,7 @@ final class ld {
                                                             }
                                                             L25: {
                                                               if (((ld) this).field_e.h(76)) {
-                                                                int discarded$7 = -104;
-                                                                jd.g();
+                                                                jd.g((byte) -104);
                                                                 break L25;
                                                               } else {
                                                                 break L25;
@@ -4021,7 +4005,7 @@ final class ld {
         return true;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_f = null;
         field_d = null;
         field_h = null;

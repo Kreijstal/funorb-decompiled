@@ -27,7 +27,7 @@ final class ue {
         return param0;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0, boolean param1, byte param2) {
         if (param1) {
             vb.b(0, 0, vb.field_f, vb.field_b, 0, 192);
         } else {
@@ -67,8 +67,7 @@ final class ue {
         double var12 = 0.0;
         double var14 = 0.0;
         if (param1 != param0) {
-          int discarded$1 = -126;
-          var3 = ic.a(param0, param1);
+          var3 = ic.a(param0, param1, -126);
           param0 = param0 / var3;
           param1 = param1 / var3;
           ((ue) this).field_i = param0;

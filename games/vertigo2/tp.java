@@ -13,7 +13,7 @@ final class tp extends cr {
     cr field_Ob;
     private static String field_Qb;
 
-    public static void k() {
+    public static void k(int param0) {
         field_Nb = null;
     }
 

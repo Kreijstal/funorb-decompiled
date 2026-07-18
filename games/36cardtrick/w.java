@@ -296,12 +296,10 @@ final class w extends pb {
                                     }
                                   }
                                   if (var17 >= 0) {
-                                    int discarded$6 = -1483723263;
-                                    a.a(var16 + var17, param1, var18, param0);
+                                    a.a(var16 + var17, param1, var18, param0, -1483723263);
                                     break L9;
                                   } else {
-                                    int discarded$7 = -1483723263;
-                                    a.a(var16, param1, var17 + var18, param0);
+                                    a.a(var16, param1, var17 + var18, param0, -1483723263);
                                     break L9;
                                   }
                                 } else {
@@ -309,8 +307,7 @@ final class w extends pb {
                                     break L9;
                                   } else {
                                     if (~var17 > ~jb.field_i) {
-                                      int discarded$8 = -1483723263;
-                                      a.a(var16 + var17, param1, var18, param0);
+                                      a.a(var16 + var17, param1, var18, param0, -1483723263);
                                       break L9;
                                     } else {
                                       break L9;
@@ -425,12 +422,10 @@ final class w extends pb {
                               }
                             }
                             if (0 <= var16) {
-                              int discarded$9 = -1483723263;
-                              a.a(var15 + var16, param1, var17, param0);
+                              a.a(var15 + var16, param1, var17, param0, -1483723263);
                               break L16;
                             } else {
-                              int discarded$10 = -1483723263;
-                              a.a(var15, param1, var17 + var16, param0);
+                              a.a(var15, param1, var17 + var16, param0, -1483723263);
                               break L16;
                             }
                           } else {
@@ -438,8 +433,7 @@ final class w extends pb {
                               break L16;
                             } else {
                               if (var16 < jb.field_i) {
-                                int discarded$11 = -1483723263;
-                                a.a(var16 - -var15, param1, var17, param0);
+                                a.a(var16 - -var15, param1, var17, param0, -1483723263);
                                 break L16;
                               } else {
                                 break L16;
@@ -507,7 +501,7 @@ final class w extends pb {
         ((w) this).field_g[fieldTemp$0] = (byte)(param0 + ((w) this).field_l.b(-1427));
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_m = null;
     }
 

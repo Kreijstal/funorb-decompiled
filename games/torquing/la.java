@@ -46,7 +46,7 @@ final class la {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         return op.field_i >= 10 && b.field_x >= 13;
     }
 
@@ -249,8 +249,7 @@ final class la {
         Object var9 = null;
         int var9_int = 0;
         byte[] var9_array = null;
-        int var10_int = 0;
-        byte[] var10 = null;
+        int var10 = 0;
         RuntimeException var11_ref_RuntimeException = null;
         int var11 = 0;
         int var12 = 0;
@@ -270,7 +269,6 @@ final class la {
         byte[] var25 = null;
         fj var26 = null;
         byte[] var27 = null;
-        byte[] var28 = null;
         fj var29 = null;
         fj var31 = null;
         int[] var32 = null;
@@ -278,13 +276,11 @@ final class la {
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
-        byte[] var37 = null;
         int[] var39 = null;
         byte[][] var40 = null;
         int[] var41 = null;
         byte[] var42 = null;
         byte[] var43 = null;
-        byte[] var44 = null;
         int[] var46 = null;
         byte[][] var47 = null;
         int[] var48 = null;
@@ -372,14 +368,14 @@ final class la {
                     } else {
                       L4: {
                         if (var6 == null) {
-                          var10_int = var9_int;
+                          var10 = var9_int;
                           break L4;
                         } else {
-                          var10_int = var48[var9_int];
+                          var10 = var48[var9_int];
                           break L4;
                         }
                       }
-                      if (null != var7[var10_int]) {
+                      if (null != var7[var10]) {
                         var9_int++;
                         continue L2;
                       } else {
@@ -417,8 +413,7 @@ final class la {
                               }
                             }
                           }
-                          int discarded$4 = 37;
-                          var49 = ui.a(true, ((la) this).field_f[param2]);
+                          var49 = ui.a(true, ((la) this).field_f[param2], (byte) 37);
                           var42 = var49;
                           var35 = var42;
                           var25 = var35;
@@ -428,8 +423,7 @@ final class la {
                           break L5;
                         }
                       }
-                      int discarded$5 = 37;
-                      var9_array = ui.a(false, ((la) this).field_f[param2]);
+                      var9_array = ui.a(false, ((la) this).field_f[param2], (byte) 37);
                       break L5;
                     }
                     try {
@@ -440,10 +434,6 @@ final class la {
                         var27 = var36;
                         var23 = var27;
                         var51 = var23;
-                        var44 = var51;
-                        var37 = var44;
-                        var28 = var37;
-                        var10 = var28;
                         break L8;
                       }
                     } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -530,8 +520,7 @@ final class la {
                                           }
                                           L17: {
                                             if (((la) this).field_l == 0) {
-                                              int discarded$6 = 0;
-                                              var7[var18] = md.a((byte) -5, var54[var17]);
+                                              var7[var18] = md.a((byte) -5, var54[var17], false);
                                               break L17;
                                             } else {
                                               var7[var18] = (Object) (Object) var54[var17];
@@ -689,8 +678,7 @@ final class la {
                           }
                         }
                         if (((la) this).field_l == 0) {
-                          int discarded$7 = 0;
-                          var7[var11] = md.a((byte) -5, var10);
+                          var7[var11] = md.a((byte) -5, var51, false);
                           break L11;
                         } else {
                           var7[var11] = (Object) (Object) var50;
@@ -842,8 +830,7 @@ final class la {
                   if (((la) this).field_d[param1][param2] == null) {
                     break L3;
                   } else {
-                    int discarded$1 = 37;
-                    var7 = ui.a(false, ((la) this).field_d[param1][param2]);
+                    var7 = ui.a(false, ((la) this).field_d[param1][param2], (byte) 37);
                     var5 = (Object) (Object) var7;
                     if (var7 != null) {
                       break L3;
@@ -1139,8 +1126,7 @@ final class la {
         if (((la) this).field_i) {
             ((la) this).field_f[param0] = (Object) (Object) ((la) this).field_a.a(param0, true);
         } else {
-            int discarded$0 = 0;
-            ((la) this).field_f[param0] = md.a((byte) -5, ((la) this).field_a.a(param0, true));
+            ((la) this).field_f[param0] = md.a((byte) -5, ((la) this).field_a.a(param0, true), false);
         }
         int var3 = -47 % ((32 - param1) / 62);
     }

@@ -58,7 +58,7 @@ final class km {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return !gk.field_e.b(-45);
     }
 

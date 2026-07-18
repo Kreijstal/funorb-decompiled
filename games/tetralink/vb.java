@@ -13,7 +13,7 @@ final class vb extends ca {
     static boolean field_j;
     private java.net.ProxySelector field_k;
 
-    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0, int param1) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         int var4 = 0;
@@ -235,7 +235,7 @@ final class vb extends ca {
           if (Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
             break L0;
           } else {
-            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           }
         }
@@ -341,7 +341,7 @@ final class vb extends ca {
           return ((vb) this).a(-1);
         }
         L5: {
-          boolean discarded$4 = var3.addAll((Collection) (Object) var4);
+          boolean discarded$3 = var3.addAll((Collection) (Object) var4);
           var6_array = var3.toArray();
           var7 = null;
           if (param0 < -45) {
@@ -365,8 +365,7 @@ final class vb extends ca {
             var11 = (java.net.Proxy) var10;
             try {
               L7: {
-                int discarded$5 = 111;
-                var12_ref2 = this.a(var11);
+                var12_ref2 = this.a(var11, 111);
                 if (var12_ref2 != null) {
                   stackOut_22_0 = (java.net.Socket) var12_ref2;
                   stackIn_23_0 = stackOut_22_0;
@@ -603,7 +602,7 @@ final class vb extends ca {
         return (java.net.Socket) (Object) stackIn_25_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_l = null;
         field_m = null;
     }

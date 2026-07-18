@@ -195,8 +195,7 @@ final class mj extends qr {
         try {
             ((mj) this).field_Cb = param0;
             var5 = (CharSequence) (Object) ((mj) this).field_Db;
-            int discarded$0 = 1;
-            String discarded$1 = ji.a(var5);
+            String discarded$0 = ji.a(var5, true);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "mj.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -353,8 +352,7 @@ final class mj extends qr {
             ((mj) this).field_Cb = param1;
             ((mj) this).field_Ib = param2;
             var6 = (CharSequence) (Object) ((mj) this).field_Db;
-            int discarded$0 = 1;
-            String discarded$1 = ji.a(var6);
+            String discarded$0 = ji.a(var6, true);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "mj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -7,7 +7,7 @@ final class ad {
     static boolean field_a;
     static int[] field_d;
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = -6;
         field_d = null;
         field_b = null;
@@ -144,7 +144,7 @@ final class ad {
         return stackIn_18_0 != 0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 10;
         if (ra.field_ab != -1) {
             mn.field_b = ld.field_b << 16 | ra.field_ab;

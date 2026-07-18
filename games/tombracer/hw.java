@@ -4,7 +4,7 @@
 final class hw {
     static jea field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

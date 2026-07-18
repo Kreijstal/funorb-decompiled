@@ -9,7 +9,7 @@ final class hh extends o {
     static String field_j;
     static String field_m;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_k = null;
         field_j = null;
         field_m = null;
@@ -53,28 +53,29 @@ final class hh extends o {
     }
 
     final static ve a(int param0, String param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         ve var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
         ve stackIn_15_0 = null;
-        Object stackIn_19_0 = null;
+        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         ve stackOut_14_0 = null;
-        Object stackOut_18_0 = null;
+        RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
         String stackOut_19_2 = null;
         var5 = Chess.field_G;
@@ -90,15 +91,15 @@ final class hh extends o {
           if (null != r.field_Ib) {
             L1: {
               var6 = (CharSequence) (Object) param1;
-              var2 = (Object) (Object) ad.a(var6, -2);
+              var2 = ad.a(var6, -2);
               if (var2 != null) {
                 break L1;
               } else {
-                var2 = (Object) (Object) var6;
+                var2 = param1;
                 break L1;
               }
             }
-            var3 = (ve) (Object) r.field_Ib.a((long)((String) var2).hashCode(), 3000);
+            var3 = (ve) (Object) r.field_Ib.a((long)var2.hashCode(), 3000);
             L2: while (true) {
               if (var3 != null) {
                 L3: {
@@ -111,7 +112,7 @@ final class hh extends o {
                     break L3;
                   }
                 }
-                if (!var4.equals(var2)) {
+                if (!var4.equals((Object) (Object) var2)) {
                   var3 = (ve) (Object) r.field_Ib.b(true);
                   continue L2;
                 } else {
@@ -129,15 +130,15 @@ final class hh extends o {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_18_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var2_ref;
             stackOut_18_1 = new StringBuilder().append("hh.C(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
@@ -145,7 +146,7 @@ final class hh extends o {
               stackIn_21_2 = stackOut_20_2;
               break L4;
             } else {
-              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
               stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;

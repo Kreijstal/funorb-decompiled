@@ -61,7 +61,7 @@ final class td extends hk {
         return var2;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_I = null;
     }
 
@@ -133,8 +133,7 @@ final class td extends hk {
               break L2;
             }
             var13.a(112, 144, var13.field_s << 4, var13.field_o << 4, -((td) this).field_G << 10, 4096);
-            int discarded$1 = 1;
-            id.a();
+            id.a(true);
             da.field_b.c(-var13.field_s + var5, var6 - var13.field_o, 256);
             break L0;
           }
@@ -321,7 +320,7 @@ final class td extends hk {
         }
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         int var1 = 0;
         if (gb.field_f != -uf.field_a) {
             if (250 - uf.field_a == gb.field_f) {
@@ -397,7 +396,7 @@ final class td extends hk {
         return stackIn_3_0 != 0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         md.field_a.a(ue.field_f, (byte) -70);
     }
 

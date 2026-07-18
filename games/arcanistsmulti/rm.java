@@ -495,7 +495,7 @@ final class rm {
         return stackIn_14_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_a = null;
         field_d = null;
@@ -522,7 +522,7 @@ final class rm {
         }
     }
 
-    final static String a(wk param0) {
+    final static String a(wk param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;

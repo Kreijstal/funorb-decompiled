@@ -8,7 +8,7 @@ final class pm extends ma {
     static vh field_m;
     static int field_l;
 
-    final static void a(byte[] param0, byte[] param1, String[][] param2, di param3, dd[][] param4, int param5, qb[] param6, int[] param7, dd[][] param8, int param9, String[] param10, di param11, boolean param12, int[] param13, di param14, String[][] param15) {
+    final static void a(byte[] param0, byte[] param1, String[][] param2, di param3, dd[][] param4, int param5, qb[] param6, int[] param7, dd[][] param8, int param9, String[] param10, di param11, boolean param12, int[] param13, di param14, String[][] param15, int param16) {
         RuntimeException var17 = null;
         Object var18 = null;
         RuntimeException stackIn_3_0 = null;
@@ -545,7 +545,7 @@ final class pm extends ma {
         }
     }
 
-    final static int a() {
+    final static int a(int param0) {
         if (cl.a(1, pl.field_b)) {
           return 0;
         } else {
@@ -565,7 +565,7 @@ final class pm extends ma {
         }
     }
 
-    final static void a(fl param0, int param1) {
+    final static void a(fl param0, int param1, boolean param2) {
         oq var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -623,7 +623,7 @@ final class pm extends ma {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_o = null;
         field_m = null;
     }

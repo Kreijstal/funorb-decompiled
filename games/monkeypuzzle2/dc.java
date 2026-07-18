@@ -224,7 +224,7 @@ final class dc implements Iterable {
         throw new Error();
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -278,7 +278,7 @@ final class dc implements Iterable {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
     }
 

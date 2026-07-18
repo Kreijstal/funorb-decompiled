@@ -58,8 +58,7 @@ final class ll {
                   var5 = 0;
                   L1: while (true) {
                     if (var4.length <= var5) {
-                      int discarded$2 = 127;
-                      stackOut_18_0 = ck.a(var3[var3.length + -1]);
+                      stackOut_18_0 = ck.a(var3[var3.length + -1], (byte) 127);
                       stackIn_19_0 = stackOut_18_0;
                       break L0;
                     } else {
@@ -195,7 +194,7 @@ final class ll {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean a(int param0, int param1) {
         if ((1 << param0 & i.field_o) != 0) {
             return false;
         }
@@ -204,11 +203,11 @@ final class ll {
         return true;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
     }
 
-    final static va a(String param0) {
+    final static va a(String param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

@@ -10,7 +10,7 @@ final class eb {
         Object discarded$0 = netscape.javascript.JSObject.getWindow(param2).eval(param0);
     }
 
-    final static Object a(String param0, java.applet.Applet param1) throws Throwable {
+    final static Object a(String param0, java.applet.Applet param1, int param2) throws Throwable {
         return netscape.javascript.JSObject.getWindow(param1).call(param0, (Object[]) null);
     }
 }

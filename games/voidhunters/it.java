@@ -40,13 +40,13 @@ final class it extends ara implements ntb {
                 if (super.a((byte) -47, param1)) {
                   break L2;
                 } else {
-                  if (var3.field_k != var3.field_k) {
+                  if (var3.field_k != ((it) this).field_k) {
                     break L2;
                   } else {
-                    if (var3.field_l != var3.field_l) {
+                    if (((it) this).field_l != var3.field_l) {
                       break L2;
                     } else {
-                      if (var3.field_i == var3.field_i) {
+                      if (((it) this).field_i == var3.field_i) {
                         stackOut_6_0 = 0;
                         stackIn_7_0 = stackOut_6_0;
                         break L1;
@@ -186,8 +186,8 @@ final class it extends ara implements ntb {
               super.a(param0, -71);
               var5 = (it) (Object) param0;
               var4 = 0;
-              if (var5.field_k != var5.field_k) {
-                System.out.println("int owner has changed. before=" + var5.field_k + ", now=" + var5.field_k);
+              if (var5.field_k != ((it) this).field_k) {
+                System.out.println("int owner has changed. before=" + var5.field_k + ", now=" + ((it) this).field_k);
                 var4 = 1;
                 break L1;
               } else {
@@ -203,8 +203,8 @@ final class it extends ara implements ntb {
               }
             }
             L3: {
-              if (var5.field_l != var5.field_l) {
-                System.out.println("int team has changed. before=" + var5.field_l + ", now=" + var5.field_l);
+              if (var5.field_l != ((it) this).field_l) {
+                System.out.println("int team has changed. before=" + var5.field_l + ", now=" + ((it) this).field_l);
                 var4 = 1;
                 break L3;
               } else {
@@ -212,17 +212,17 @@ final class it extends ara implements ntb {
               }
             }
             L4: {
-              if (var5.field_i == var5.field_i) {
+              if (var5.field_i == ((it) this).field_i) {
                 break L4;
               } else {
                 var4 = 1;
-                System.out.println("int hyperdrive_timer has changed. before=" + var5.field_i + ", now=" + var5.field_i);
+                System.out.println("int hyperdrive_timer has changed. before=" + var5.field_i + ", now=" + ((it) this).field_i);
                 break L4;
               }
             }
             L5: {
               if (var4 != 0) {
-                System.out.println("This instance of EscapePod has changed, where owner=" + var5.field_k);
+                System.out.println("This instance of EscapePod has changed, where owner=" + ((it) this).field_k);
                 break L5;
               } else {
                 break L5;
@@ -276,7 +276,7 @@ final class it extends ara implements ntb {
         }
     }
 
-    final static boolean a(boolean[] param0, boolean[] param1) {
+    final static boolean a(boolean[] param0, boolean[] param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -627,7 +627,7 @@ final class it extends ara implements ntb {
         ((it) this).field_i = 3 * oq.field_l;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_m = null;
     }
 
@@ -652,9 +652,9 @@ final class it extends ara implements ntb {
         try {
             var5 = (it) (Object) param1;
             var6 = var5;
-            var6.field_l = var5.field_l;
-            var6.field_i = var5.field_i;
-            var6.field_k = var5.field_k;
+            var6.field_l = ((it) this).field_l;
+            var6.field_i = ((it) this).field_i;
+            var6.field_k = ((it) this).field_k;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "it.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

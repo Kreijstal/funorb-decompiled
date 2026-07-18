@@ -107,8 +107,7 @@ final class ef extends ma {
           }
           L1: {
             if (bl.field_T > 0) {
-              int discarded$4 = -100;
-              on.b();
+              on.b((byte) -100);
               break L1;
             } else {
               break L1;
@@ -133,8 +132,7 @@ final class ef extends ma {
           }
           L3: {
             if (bl.field_T > 0) {
-              int discarded$5 = -100;
-              on.b();
+              on.b((byte) -100);
               break L3;
             } else {
               break L3;

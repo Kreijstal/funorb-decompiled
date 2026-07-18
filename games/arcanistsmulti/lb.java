@@ -392,8 +392,7 @@ class lb {
                       field_o = null;
                       break L0;
                     } else {
-                      int discarded$1 = 1;
-                      ao.a(50L);
+                      ao.a(50L, 1);
                       continue L2;
                     }
                   }

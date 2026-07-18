@@ -7,7 +7,7 @@ final class lr {
     private pv field_d;
     static qr field_b;
 
-    final static int[] a() {
+    final static int[] a(int param0) {
         return new int[8];
     }
 
@@ -22,13 +22,13 @@ final class lr {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
     }
 
-    final static void a(tv param0) {
+    final static void a(tv param0, byte param1) {
         try {
             jd.a(param0, (byte) 109, true);
         } catch (RuntimeException runtimeException) {

@@ -11,7 +11,7 @@ final class bk extends ci {
     private int field_r;
     private int field_n;
 
-    public static void d() {
+    public static void d(byte param0) {
         field_m = null;
     }
 
@@ -126,7 +126,7 @@ final class bk extends ci {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
     }
 
     final int[] c(int param0, int param1) {

@@ -6,11 +6,11 @@ final class h {
     static int field_b;
     static int field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;

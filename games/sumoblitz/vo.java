@@ -39,8 +39,7 @@ final class vo extends ao implements ai {
               }
             }
           }
-          int discarded$1 = -1840;
-          this.f();
+          this.f(-1840);
           return;
         } else {
           return;
@@ -291,7 +290,7 @@ final class vo extends ao implements ai {
         this.e((byte) 100);
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = ((vo) this).field_N == null ? ((vo) this).field_P.field_r : ((vo) this).field_N.field_r - -((vo) this).field_N.field_q;
         int var3 = null != ((vo) this).field_J ? ((vo) this).field_J.field_r - ((vo) this).field_H.field_q : ((vo) this).field_P.field_q + ((vo) this).field_P.field_r - ((vo) this).field_H.field_q;
         this.b(var3 > var2 ? (((vo) this).field_H.field_r + -var2 << 16) / (var3 + -var2) : 0, (byte) -6);
@@ -609,7 +608,7 @@ final class vo extends ao implements ai {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         int var2 = ((vo) this).field_F != null ? ((vo) this).field_F.field_v - -((vo) this).field_F.field_p : ((vo) this).field_P.field_v;
         int var3 = null != ((vo) this).field_M ? ((vo) this).field_M.field_v + -((vo) this).field_H.field_p : -((vo) this).field_H.field_p + ((vo) this).field_P.field_v + ((vo) this).field_P.field_p;
         ((vo) this).a(0, var3 <= var2 ? 0 : (((vo) this).field_H.field_v + -var2 << 16) / (-var2 + var3));
@@ -837,8 +836,7 @@ final class vo extends ao implements ai {
                     break L3;
                   } else {
                     var6 = ((vo) this).field_G;
-                    int discarded$3 = -121;
-                    this.a();
+                    this.a((byte) -121);
                     if (var6 == ((vo) this).field_G) {
                       break L3;
                     } else {
@@ -852,13 +850,11 @@ final class vo extends ao implements ai {
                   }
                 }
                 if (!((vo) this).field_K) {
-                  int discarded$4 = -1840;
-                  this.f();
+                  this.f(-1840);
                   break L1;
                 } else {
                   var6 = ((vo) this).field_D;
-                  int discarded$5 = -2066408880;
-                  this.g();
+                  this.g(-2066408880);
                   if (((vo) this).field_D == var6) {
                     break L1;
                   } else {
@@ -1155,7 +1151,7 @@ final class vo extends ao implements ai {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         int var2 = null == ((vo) this).field_F ? ((vo) this).field_P.field_v : ((vo) this).field_F.field_v + ((vo) this).field_F.field_p;
         int var3 = ((vo) this).field_M != null ? -((vo) this).field_H.field_p + ((vo) this).field_M.field_v : -((vo) this).field_H.field_p + (((vo) this).field_P.field_p + ((vo) this).field_P.field_v);
         ((vo) this).field_H.field_v = ((-var2 + var3) * ((vo) this).field_D >> 16) + var2;
@@ -1210,8 +1206,7 @@ final class vo extends ao implements ai {
           }
         }
         L4: {
-          int discarded$1 = -1840;
-          this.f();
+          this.f(-1840);
           if (!((vo) this).field_K) {
             ((vo) this).field_H.field_v = 0;
             ((vo) this).field_H.field_p = ((vo) this).field_P.field_p;
@@ -1245,8 +1240,7 @@ final class vo extends ao implements ai {
             ((vo) this).field_H.a(-49, ((vo) this).field_H.field_r, ((vo) this).field_H.field_v, ((vo) this).field_P.field_p, ((vo) this).field_H.field_q);
             this.a(8206, false);
         }
-        int discarded$0 = -1840;
-        this.f();
+        this.f(-1840);
         if (param0 < 2) {
             this.e((byte) 53);
         }

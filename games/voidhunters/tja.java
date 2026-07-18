@@ -6,7 +6,7 @@ class tja implements ntb {
     bha[] field_c;
     static soa field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
     }
@@ -452,8 +452,8 @@ class tja implements ntb {
             L2: {
               var3 = (tja) (Object) param0;
               var4 = 0;
-              boolean discarded$43 = tja.a((ntb[]) (Object) var3.field_c, 1, (ntb[]) (Object) var3.field_c, false, 5547);
-              if (dn.a((tv[]) (Object) var3.field_c, false, 1, (tv[]) (Object) var3.field_c, 126)) {
+              boolean discarded$43 = tja.a((ntb[]) (Object) var3.field_c, 1, (ntb[]) (Object) ((tja) this).field_c, false, 5547);
+              if (dn.a((tv[]) (Object) var3.field_c, false, 1, (tv[]) (Object) ((tja) this).field_c, 126)) {
                 var4 = 1;
                 iva.a(-6940, "CarouselPlayerInfo[] players has changed. ");
                 break L2;
@@ -529,7 +529,7 @@ class tja implements ntb {
           L0: {
             var3_int = -1;
             var4 = (tja) (Object) param1;
-            stackOut_0_0 = dn.a((tv[]) (Object) var4.field_c, false, 1, (tv[]) (Object) var4.field_c, -93);
+            stackOut_0_0 = dn.a((tv[]) (Object) var4.field_c, false, 1, (tv[]) (Object) ((tja) this).field_c, -93);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -651,8 +651,7 @@ class tja implements ntb {
           L0: {
             L1: {
               var3 = (tja) (Object) param1;
-              int discarded$2 = 0;
-              var3.field_c = (bha[]) (Object) sqb.a((tv[]) (Object) var3.field_c, (tv[]) (Object) var3.field_c, 1, uqa.field_q);
+              var3.field_c = (bha[]) (Object) sqb.a((tv[]) (Object) var3.field_c, (tv[]) (Object) ((tja) this).field_c, 1, uqa.field_q, false);
               if (param0 >= 54) {
                 break L1;
               } else {

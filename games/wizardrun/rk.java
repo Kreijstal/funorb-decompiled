@@ -78,8 +78,7 @@ class rk extends wl {
               }
             } else {
               if (var2 != 1) {
-                int discarded$1 = 6;
-                rg.a((Throwable) null, "A1: " + ni.c(), -562);
+                rg.a((Throwable) null, "A1: " + ni.c(6), -562);
                 ql.a(-117);
                 return;
               } else {

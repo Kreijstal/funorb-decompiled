@@ -80,7 +80,7 @@ final class to {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_k = null;
         int var1 = 38;
@@ -153,7 +153,7 @@ final class to {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         ma.field_I.a(param0, 20892);
     }
 

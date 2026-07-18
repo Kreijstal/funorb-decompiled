@@ -565,9 +565,7 @@ final class kj extends ha {
             iu discarded$0 = new iu();
             this.f(1);
             this.d(0);
-            int discarded$1 = 1;
-            int discarded$2 = 0;
-            fr.a(true);
+            fr.a(true, 0, true);
             ((kj) this).field_h = true;
             ((kj) this).field_B = (int)kh.a(-61);
         } catch (Throwable throwable) {

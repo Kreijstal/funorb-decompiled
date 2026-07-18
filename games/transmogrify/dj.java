@@ -8,7 +8,7 @@ abstract class dj {
 
     abstract byte[] a(boolean param0);
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -194,9 +194,7 @@ abstract class dj {
           } else {
             L2: {
               ub.field_c = vg.field_b.d((byte) -18);
-              int discarded$2 = 2;
-              int discarded$3 = -14226;
-              kc.a();
+              kc.a(-14226, 2);
               if (null != ub.field_c) {
                 var2 = 2;
                 cj.a((java.awt.Canvas) (Object) ub.field_c, 13861);
@@ -252,7 +250,7 @@ abstract class dj {
         }
     }
 
-    final static byte[] a(int param0, hj param1, byte[] param2) {
+    final static byte[] a(int param0, hj param1, byte[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -408,7 +406,7 @@ abstract class dj {
         return stackIn_18_0;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         if (param0 < 48) {
             return false;
         }
@@ -519,7 +517,7 @@ abstract class dj {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         pd.field_b = true;
         return false;
     }

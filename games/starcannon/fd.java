@@ -9,7 +9,7 @@ final class fd {
     static b field_a;
     static long field_c;
 
-    final static void a(int param0, int param1, byte[] param2, int[] param3) {
+    final static void a(int param0, int param1, byte[] param2, int[] param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -130,7 +130,7 @@ final class fd {
         }
     }
 
-    final static void a(rb param0) {
+    final static void a(rb param0, byte param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;
@@ -254,7 +254,7 @@ final class fd {
         md.field_a = param0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;

@@ -177,15 +177,14 @@ final class twa implements ntb {
             if (param0 <= 54) {
                 ((twa) this).field_a = 85;
             }
-            var6.field_a = var5.field_a;
+            var6.field_a = ((twa) this).field_a;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "twa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(int param0) {
-        int discarded$4 = -1;
-        lba.a();
+        lba.a(-1);
         if (param0 <= 25) {
           field_b = null;
           tla.field_c = true;
@@ -233,7 +232,7 @@ final class twa implements ntb {
             L1: {
               var4 = 36 % ((22 - param0) / 59);
               var3 = (twa) (Object) param1;
-              if (var3.field_a == var3.field_a) {
+              if (((twa) this).field_a == var3.field_a) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;

@@ -15,7 +15,7 @@ final class hl extends kg {
         return (param1 - 100) / 200;
     }
 
-    final static void a(pf param0) throws jn {
+    final static void a(pf param0, boolean param1) throws jn {
         RuntimeException runtimeException = null;
         nc var3 = null;
         nc var4 = null;
@@ -135,7 +135,7 @@ final class hl extends kg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_I = null;
         field_D = null;
         field_E = null;

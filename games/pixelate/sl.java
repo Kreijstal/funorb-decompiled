@@ -27,12 +27,11 @@ abstract class sl {
         field_i = null;
     }
 
-    final static ak a() {
-        int discarded$0 = -110;
-        return la.b();
+    final static ak a(int param0) {
+        return la.b((byte) -110);
     }
 
-    final static el a(String param0) {
+    final static el a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

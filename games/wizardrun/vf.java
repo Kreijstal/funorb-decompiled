@@ -6,14 +6,12 @@ final class vf extends wl {
     int field_k;
     static o[] field_j;
 
-    final static ne a() {
+    final static ne a(byte param0) {
         int var1 = -30;
-        int discarded$0 = -21;
-        int discarded$1 = -115;
-        return new ne(dg.a(), wj.g());
+        return new ne(dg.a(-21), wj.g((byte) -115));
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_j = null;
     }
 

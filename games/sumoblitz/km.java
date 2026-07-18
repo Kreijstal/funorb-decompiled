@@ -100,7 +100,7 @@ final class km extends ms {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         ah var2 = null;
@@ -231,7 +231,7 @@ final class km extends ms {
         }
     }
 
-    final static java.awt.Container c() {
+    final static java.awt.Container c(boolean param0) {
         if (ck.field_c != null) {
             return (java.awt.Container) (Object) ck.field_c;
         }

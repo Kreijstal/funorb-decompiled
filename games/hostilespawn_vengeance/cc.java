@@ -10,7 +10,7 @@ final class cc {
         return kh.field_eb != null ? true : false;
     }
 
-    final static String a() {
+    final static String a(int param0) {
         if (!(pb.field_Kb >= 2)) {
             return kb.field_b;
         }

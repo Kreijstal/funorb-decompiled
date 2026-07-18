@@ -119,22 +119,19 @@ final class s extends wi {
         return stackIn_16_0 != 0;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_M = null;
         field_F = null;
     }
 
-    final static ec j() {
-        int discarded$0 = -26370;
-        String var1 = ls.g();
+    final static ec j(int param0) {
+        String var1 = ls.g(-26370);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }
-        int discarded$1 = -26370;
-        int discarded$2 = -20010;
-        return new ec(ls.g(), gu.b());
+        return new ec(ls.g(-26370), gu.b(-20010));
     }
 
     final static int a(int param0, int param1, byte[] param2, int param3) {

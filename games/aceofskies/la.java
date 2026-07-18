@@ -19,7 +19,7 @@ final class la {
         return 0 != (param1 & 2048) ? true : false;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_g = null;
         field_f = null;

@@ -64,7 +64,7 @@ final class jc {
         return "LoggedPlayer{" + var2.toString() + "}";
     }
 
-    final static long a(CharSequence param0) {
+    final static long a(CharSequence param0, boolean param1) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;
@@ -226,11 +226,11 @@ final class jc {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return nq.a(false, qi.field_o, ik.field_A);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_l = null;
         field_g = null;

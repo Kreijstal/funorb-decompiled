@@ -284,17 +284,13 @@ final class kn extends tk {
     final static void a(boolean param0, java.awt.Canvas param1) {
         try {
             if (11 == i.field_j) {
-                int discarded$0 = -1;
-                mk.a();
+                mk.a(-1);
             }
             if (!param0) {
                 kn.a((byte) -116);
             }
             bf.a(ri.field_N, 8192, ep.field_a, vq.field_C);
-            int discarded$1 = 0;
-            int discarded$2 = 14209;
-            int discarded$3 = 0;
-            ck.a(param1);
+            ck.a(param1, 0, 14209, 0);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "kn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

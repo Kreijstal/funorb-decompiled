@@ -985,8 +985,7 @@ class ik implements rd, ub {
             }
             L2: {
               if (!((ik) this).field_i) {
-                int discarded$2 = -54;
-                this.b(param0);
+                this.b(param0, -54);
                 break L2;
               } else {
                 ((kk) (Object) param0.field_w).a(((ik) this).field_f, ((ik) this).field_p, ((ik) this).field_n, ((ik) this).field_m, ((ik) this).a(param0, 227), this.a((byte) -49, param0), -125, ((ik) this).c(349, param0));
@@ -1276,7 +1275,7 @@ class ik implements rd, ub {
         return stackIn_3_0;
     }
 
-    private final void b(w param0) {
+    private final void b(w param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

@@ -11,6 +11,7 @@ final class mk {
 
     final static int a(ne param0, int param1, ne param2) {
         RuntimeException var3 = null;
+        Object var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -46,8 +47,8 @@ final class mk {
         String stackOut_8_2 = null;
         try {
           L0: {
-            int discarded$2 = 27851;
-            stackOut_2_0 = qi.a(param2, param0, (String) null, 0, 0, false);
+            var4 = null;
+            stackOut_2_0 = qi.a(param2, param0, (String) null, 0, 0, false, 27851);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -109,7 +110,7 @@ final class mk {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_c = null;

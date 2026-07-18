@@ -353,8 +353,7 @@ class cn implements nn, mi {
 
     private final void a(int param0, boolean param1, int param2, ag param3) {
         try {
-            int discarded$0 = 94;
-            this.a(param3, ((cn) this).field_f, 0, param0, 0, ((cn) this).field_j, param2);
+            this.a(param3, ((cn) this).field_f, 0, param0, 0, ((cn) this).field_j, param2, (byte) 94);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "cn.H(" + param0 + ',' + false + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -427,10 +426,8 @@ class cn implements nn, mi {
             if (param0 <= 125) {
                 cn.a(122);
             }
-            int discarded$0 = -1;
-            wc.a(si.field_e / 2, si.field_k / 2);
-            int discarded$1 = -127;
-            ub.a(param1.field_F + param1.field_N, param3.field_F + param3.field_N, param3.field_N, param1.field_N);
+            wc.a(si.field_e / 2, si.field_k / 2, -1);
+            ub.a(param1.field_F + param1.field_N, param3.field_F + param3.field_N, param3.field_N, param1.field_N, (byte) -127);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "cn.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -472,7 +469,7 @@ class cn implements nn, mi {
                 break L2;
               } else {
                 var4 = null;
-                int discarded$5 = ((cn) this).b((ag) null, (byte) 124);
+                int discarded$2 = ((cn) this).b((ag) null, (byte) 124);
                 break L2;
               }
             }
@@ -481,8 +478,7 @@ class cn implements nn, mi {
                 ((mb) (Object) param0.field_l).a(0, this.a(-4, param0), ((cn) this).a(param0, (byte) 67), ((cn) this).field_b, ((cn) this).field_g, ((cn) this).c(param0, 3), ((cn) this).field_k, ((cn) this).field_a);
                 break L3;
               } else {
-                int discarded$6 = 3;
-                this.b(param0);
+                this.b(param0, 3);
                 break L3;
               }
             }
@@ -854,13 +850,10 @@ class cn implements nn, mi {
             L1: {
               if (null != ie.field_c) {
                 wa.field_q = ie.field_c.d(16776960);
-                int discarded$21 = 0;
-                int discarded$22 = 2;
-                sd.a();
+                sd.a(2, 0);
                 break L1;
               } else {
-                int discarded$23 = 0;
-                wa.field_q = jg.a(640, (byte) -114, gf.field_b, 0, 480);
+                wa.field_q = jg.a(640, (byte) -114, gf.field_b, 0, 480, 0);
                 break L1;
               }
             }
@@ -994,11 +987,9 @@ class cn implements nn, mi {
                   }
                 }
                 var12 = stackIn_7_0 - -Math.min(stackIn_7_1, Math.min(stackIn_7_2, stackIn_7_3));
-                int discarded$2 = 1;
-                sf.a(param1.field_v + (param4 - -param1.field_s), param1.field_m + param0, param1.field_x + (param0 + param1.field_m), param1.field_v + param4);
+                sf.a(param1.field_v + (param4 - -param1.field_s), param1.field_m + param0, param1.field_x + (param0 + param1.field_m), param1.field_v + param4, true);
                 gf.field_e.a(1077952576, var10, var12, var10, ((cn) this).field_o, var11);
-                int discarded$3 = 0;
-                eh.b();
+                eh.b(false);
                 break L2;
               } else {
                 break L2;
@@ -1038,7 +1029,7 @@ class cn implements nn, mi {
         }
     }
 
-    private final void a(ag param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    private final void a(ag param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -1065,8 +1056,7 @@ class cn implements nn, mi {
         try {
           L0: {
             L1: {
-              int discarded$3 = 1;
-              sf.a(param6 + param0.field_v + param0.field_s, param0.field_m + param3, param0.field_m + (param3 + param0.field_x), param6 + param0.field_v);
+              sf.a(param6 + param0.field_v + param0.field_s, param0.field_m + param3, param0.field_m + (param3 + param0.field_x), param6 + param0.field_v, true);
               var9_int = ((cn) this).a(param0, (byte) 69);
               var10 = this.a(-4, param0);
               if (!((cn) this).field_l) {
@@ -1121,12 +1111,11 @@ class cn implements nn, mi {
                 ((cn) this).field_g.c(((cn) this).c(param0, 3), this.a(param0, param6, 0, -26318), this.a(-1, param0, 0, param3) + var11, param5, param1);
                 break L1;
               } else {
-                int discarded$4 = ((cn) this).field_g.a(((cn) this).c(param0, 3), this.a(param0, param6, 0, -26318), this.a(-1, param0, 0, param3), var9_int, var10, param5, param1, ((cn) this).field_k, ((cn) this).field_b, ((cn) this).field_a);
+                int discarded$1 = ((cn) this).field_g.a(((cn) this).c(param0, 3), this.a(param0, param6, 0, -26318), this.a(-1, param0, 0, param3), var9_int, var10, param5, param1, ((cn) this).field_k, ((cn) this).field_b, ((cn) this).field_a);
                 break L1;
               }
             }
-            int discarded$5 = 0;
-            eh.b();
+            eh.b(false);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1161,7 +1150,7 @@ class cn implements nn, mi {
         }
     }
 
-    private final void b(ag param0) {
+    private final void b(ag param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -1432,13 +1421,11 @@ class cn implements nn, mi {
                   }
                   var10 = var18.a(var8, 0);
                   var11 = var18.a(var9, param1 + -41);
-                  int discarded$2 = 1;
-                  sf.a(param3.field_s + (param0 + param3.field_v), param4 - -param3.field_m, param3.field_x + (param3.field_m + param4), param0 - -param3.field_v);
+                  sf.a(param3.field_s + (param0 + param3.field_v), param4 - -param3.field_m, param3.field_x + (param3.field_m + param4), param0 - -param3.field_v, true);
                   var12 = var10;
                   L4: while (true) {
                     if (var11 < var12) {
-                      int discarded$3 = 0;
-                      eh.b();
+                      eh.b(false);
                       break L2;
                     } else {
                       L5: {

@@ -512,8 +512,7 @@ final class kl extends al {
             if (ic.field_S == fk.field_F) {
               var8 = new md(e.field_S, param2);
               e.field_S.a((ga) (Object) var8, true);
-              int discarded$16 = 12;
-              if (!sn.b()) {
+              if (!sn.b((byte) 12)) {
                 L1: {
                   to.field_d = param5;
                   ae.field_a = param4;
@@ -718,7 +717,7 @@ final class kl extends al {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
         field_p = null;
     }

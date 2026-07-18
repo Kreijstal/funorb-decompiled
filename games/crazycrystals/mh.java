@@ -10,8 +10,7 @@ final class mh extends ik {
     int field_k;
 
     final void a(boolean param0, int param1, int param2) {
-        int discarded$0 = 0;
-        il.a(((mh) this).field_c, param0, ((mh) this).field_d, ((mh) this).field_a, ((mh) this).field_b);
+        il.a(((mh) this).field_c, param0, ((mh) this).field_d, ((mh) this).field_a, ((mh) this).field_b, false);
         int var4 = 0;
         if (!(param1 != 16777215)) {
             var4 = 1;
@@ -33,7 +32,7 @@ final class mh extends ik {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_j = null;
         field_m = null;
         field_l = null;

@@ -96,9 +96,8 @@ final class sa extends hg {
         je.field_a = new cn();
     }
 
-    private final fn b() {
-        int discarded$0 = 0;
-        rk[] var4 = w.c();
+    private final fn b(boolean param0) {
+        rk[] var4 = w.c(false);
         var4 = var4;
         if (var4 == null) {
             return null;
@@ -156,9 +155,7 @@ final class sa extends hg {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$4 = 320;
-            int discarded$5 = -41;
-            di.a(param3, 22, 24, param10, 0, 24, param9, 0, param6, param11, 22, 0, param9);
+            di.a(param3, 22, 24, param10, 0, 24, param9, 0, param6, param11, 22, 0, param9, (byte) -41, 320);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -243,9 +240,8 @@ final class sa extends hg {
         }
     }
 
-    private final ed d() {
-        int discarded$0 = 0;
-        rk[] var4 = w.c();
+    private final ed d(int param0) {
+        rk[] var4 = w.c(false);
         var4 = var4;
         if (var4 == null) {
             return null;
@@ -517,10 +513,8 @@ final class sa extends hg {
 
     private final void e(int param0) {
         ((sa) this).field_i = k.a(((sa) this).field_l, (byte) -39, ((sa) this).field_n);
-        int discarded$0 = 0;
-        ((sa) this).field_t = this.d();
-        int discarded$1 = 1;
-        fn var2 = this.b();
+        ((sa) this).field_t = this.d(0);
+        fn var2 = this.b(true);
         if (param0 != -7012) {
             return;
         }
@@ -737,7 +731,7 @@ final class sa extends hg {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_q = null;
     }
 

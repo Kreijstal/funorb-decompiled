@@ -267,8 +267,7 @@ final class fs {
                       break L1;
                     } else {
                       var3 = (CharSequence) (Object) param1;
-                      int discarded$5 = 0;
-                      if (!wm.field_b.equals((Object) (Object) k.a(var3))) {
+                      if (!wm.field_b.equals((Object) (Object) k.a(var3, false))) {
                         break L1;
                       } else {
                         return true;
@@ -364,7 +363,7 @@ final class fs {
         return wq.field_a == null ? ph.field_f : true;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;

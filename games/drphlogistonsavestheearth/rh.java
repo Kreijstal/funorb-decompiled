@@ -305,13 +305,12 @@ final class rh {
                         } else {
                           L6: {
                             var8 = param1.charAt(var7);
-                            int discarded$2 = 78;
-                            if (!ue.a((char) var8)) {
+                            if (!ue.a((char) var8, (byte) 78)) {
                               break L6;
                             } else {
                               var9 = lc.a(249, (char) var8);
                               if (var9 != 0) {
-                                StringBuilder discarded$3 = var6.append((char) var9);
+                                StringBuilder discarded$1 = var6.append((char) var9);
                                 break L6;
                               } else {
                                 break L6;

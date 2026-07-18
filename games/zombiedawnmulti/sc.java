@@ -79,11 +79,8 @@ final class sc {
         String stackOut_12_2 = null;
         try {
           L0: {
-            int discarded$6 = 70;
-            aj.a(qf.field_c, 10, 320, param0, 240, 5, kk.field_x, param7, param0, 15, e.field_a, param12, new pd(param14), param12, new pd(param1), param7, ua.field_N, ic.field_g, sb.field_c);
-            int discarded$7 = 1;
-            int discarded$8 = 1;
-            gk.a(true, 2, param2);
+            aj.a(qf.field_c, 10, 320, param0, 240, 5, kk.field_x, param7, param0, 15, e.field_a, param12, new pd(param14), param12, new pd(param1), param7, ua.field_N, ic.field_g, sb.field_c, (byte) 70);
+            gk.a(true, 2, param2, 1, true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -404,17 +401,14 @@ final class sc {
         br.field_c = null;
     }
 
-    final static void a() {
-        int discarded$0 = 0;
-        int var1 = fa.d();
-        int discarded$1 = -99;
-        int var2 = sk.a();
+    final static void a(int param0) {
+        int var1 = fa.d(false);
+        int var2 = sk.a((byte) -99);
         po.field_l.a(-la.field_m + ce.field_k, -um.field_a + ZombieDawnMulti.field_H, var1 + (um.field_a << 1), (la.field_m << 1) + var2, 12018);
-        int discarded$2 = 114;
-        sq.g();
+        sq.g(114);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         fq.field_i = null;
         wb.field_hb = null;
     }

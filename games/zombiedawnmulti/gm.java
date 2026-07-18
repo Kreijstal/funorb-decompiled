@@ -54,12 +54,12 @@ abstract class gm extends ti {
         return n.field_i;
     }
 
-    public static void o() {
+    public static void o(int param0) {
         field_pb = null;
         field_ob = null;
     }
 
-    private final void p() {
+    private final void p(int param0) {
         int var4 = 0;
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         int var2 = ((gm) this).g(-96);
@@ -85,8 +85,7 @@ abstract class gm extends ti {
         ((gm) this).field_ib = hp.a((byte) 89, g.field_a, 200);
         ((gm) this).field_cb = new int[61];
         ((gm) this).field_hb = new int[61];
-        int discarded$0 = 118;
-        this.p();
+        this.p(118);
         ((gm) this).field_lb = hp.a((byte) -122, g.field_a, 5);
         if (((gm) this).m(15684)) {
             ((gm) this).field_mb = hp.a((byte) -119, g.field_a, 4) + 49;
@@ -168,8 +167,7 @@ abstract class gm extends ti {
                     break L1;
                   } else {
                     ((gm) this).field_U.h(sd.b(124, var4, var3_int));
-                    int discarded$1 = 0;
-                    ((gm) this).field_U.f(pb.a(var4, var3_int));
+                    ((gm) this).field_U.f(pb.a(var4, var3_int, false));
                     break L1;
                   }
                 } else {
@@ -432,6 +430,8 @@ abstract class gm extends ti {
         int var10 = 0;
         char[] var11 = null;
         char[] var12 = null;
+        char[] var13 = null;
+        char[] var14 = null;
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         if (0 > param0) {
           return Integer.toString(param0, 10);
@@ -440,14 +440,16 @@ abstract class gm extends ti {
           var5 = param0 / 10;
           L0: while (true) {
             if (var5 == 0) {
-              var12 = new char[var4];
+              var14 = new char[var4];
+              var13 = var14;
+              var12 = var13;
               var11 = var12;
               var6 = var11;
               var6[0] = '+';
               var7 = var4 + -1;
               L1: while (true) {
                 if (var7 <= 0) {
-                  return new String(var12);
+                  return new String(var14);
                 } else {
                   var8 = param0;
                   param0 = param0 / 10;
@@ -853,14 +855,13 @@ abstract class gm extends ti {
         ((gm) this).b(0, -27655);
     }
 
-    final static void a(long param0, String param1) {
+    final static void a(long param0, String param1, int param2) {
         CharSequence var5 = null;
         try {
             va.field_a = 2;
             qf.field_g = param1;
             var5 = (CharSequence) (Object) param1;
-            int discarded$0 = 0;
-            ql.field_a = tg.a(var5);
+            ql.field_a = tg.a(var5, false);
             sq.field_N = true;
             jj.field_M = param0;
         } catch (RuntimeException runtimeException) {

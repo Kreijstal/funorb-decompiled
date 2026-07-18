@@ -14,7 +14,7 @@ final class vk {
         ((vk) this).field_a = new int[16];
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_e = null;

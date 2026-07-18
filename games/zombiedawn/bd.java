@@ -40,7 +40,7 @@ final class bd {
         field_q = null;
     }
 
-    final static void a(vn param0) {
+    final static void a(vn param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -141,7 +141,7 @@ final class bd {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ei.field_G[46] = 72;
         ei.field_G[222] = 58;
         ei.field_G[520] = 59;

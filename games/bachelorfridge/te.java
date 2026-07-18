@@ -147,7 +147,7 @@ final class te extends kj {
         }
     }
 
-    final static int d() {
+    final static int d(byte param0) {
         return dfa.field_b - rs.field_a;
     }
 

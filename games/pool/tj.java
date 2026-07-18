@@ -262,10 +262,8 @@ abstract class tj extends oe {
               L1: while (true) {
                 if (var7 >= var4) {
                   me.field_p.c(((tj) this).field_l + param0 + -90, 10 + param1);
-                  int discarded$2 = 23;
-                  id.a(param1 - -35, ((tj) this).field_l - 10, gr.field_I, param0 - -5);
-                  int discarded$3 = 23;
-                  id.a(-22 + (param1 - -((tj) this).field_y), ((tj) this).field_l, rb.field_d, param0);
+                  id.a(param1 - -35, ((tj) this).field_l - 10, gr.field_I, param0 - -5, (byte) 23);
+                  id.a(-22 + (param1 - -((tj) this).field_y), ((tj) this).field_l, rb.field_d, param0, (byte) 23);
                   var6 = 127;
                   var5 = 169;
                   var4 = -79 + ((tj) this).field_y;

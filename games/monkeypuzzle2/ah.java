@@ -34,8 +34,7 @@ final class ah {
         int var0 = 0;
         field_z = "ah.A(";
         field_c = new byte[65536];
-        int discarded$0 = -128;
-        gl.a(field_c, 0, 65536);
+        gl.a(field_c, 0, 65536, (byte) -128);
         field_g = new lg[4];
         field_d = 0;
         field_h = false;

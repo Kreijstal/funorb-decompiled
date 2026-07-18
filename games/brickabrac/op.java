@@ -43,12 +43,11 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         try {
           L0: {
             var10 = (CharSequence) (Object) param2;
-            int discarded$7 = 0;
-            if (tk.a(var10)) {
+            if (tk.a(var10, false)) {
               if (wk.field_m == 2) {
                 var8 = pf.a(false, param2);
                 if (var8 != null) {
-                  nm discarded$8 = bf.field_N.a((byte) 107, (nm) (Object) var8);
+                  nm discarded$2 = bf.field_N.a((byte) 107, (nm) (Object) var8);
                   L1: while (true) {
                     var7 = (mp) (Object) bf.field_N.a((byte) 116);
                     if (var7 == null) {
@@ -693,7 +692,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static void a(vc param0) {
+    final static void a(vc param0, int param1) {
         try {
             kp.field_d.insertElementAt((Object) (Object) param0, 0);
         } catch (RuntimeException runtimeException) {
@@ -705,7 +704,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         return rd.a(lh.field_t, new String[1], (byte) 103).toLowerCase();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 
@@ -717,8 +716,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 var2_int = param0.getKeyChar();
                 if (0 != var2_int) {
                     if (var2_int != 65535) {
-                        int discarded$6 = -12;
-                        if (!(!od.a((char) var2_int))) {
+                        if (!(!od.a((char) var2_int, -12))) {
                             var3 = 127 & hb.field_w - -1;
                             if (!(si.field_m == var3)) {
                                 ef.field_d[hb.field_w] = -1;
@@ -735,7 +733,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

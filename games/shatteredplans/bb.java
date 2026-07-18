@@ -71,7 +71,7 @@ final class bb {
         return stackIn_3_0;
     }
 
-    final static qr a() {
+    final static qr a(byte param0) {
         return ls.field_a.field_xb;
     }
 
@@ -91,7 +91,7 @@ final class bb {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_a = null;
     }
@@ -569,8 +569,7 @@ final class bb {
                     break L29;
                   } else {
                     if (!k.field_i) {
-                      int discarded$1 = 104;
-                      rf.a(param3);
+                      rf.a(param3, 104);
                       break L29;
                     } else {
                       oq.a(param3, false);

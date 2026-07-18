@@ -11,7 +11,7 @@ final class bq extends ma {
     static String field_s;
     static boolean field_o;
 
-    final static void a(int param0, dd param1) {
+    final static void a(int param0, dd param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         RuntimeException var9 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -258,7 +258,7 @@ final class bq extends ma {
         ((bq) this).field_l = param0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_n = null;
         field_s = null;
         field_q = null;

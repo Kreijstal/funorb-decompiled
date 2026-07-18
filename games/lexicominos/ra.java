@@ -7,7 +7,7 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
     static byte[] field_a;
     java.awt.Frame field_b;
 
-    final static void a() {
+    final static void a(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -40,8 +40,7 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
           de.a(be.field_d, 6);
           k.b();
           lf.a();
-          int discarded$1 = 0;
-          rg.b();
+          rg.b(0);
           if (var5 >= 256) {
             pd.a(-22949);
             if (150 <= mc.field_k) {
@@ -326,7 +325,7 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_c = null;
     }

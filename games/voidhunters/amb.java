@@ -33,9 +33,15 @@ final class amb implements dja {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        kla var13 = null;
+        String var13 = null;
         kla var14 = null;
-        kla var15 = null;
+        String var15 = null;
+        kla var20 = null;
+        String var21 = null;
+        kla var22 = null;
+        String var23 = null;
+        String var24 = null;
+        String var25 = null;
         int stackIn_20_0 = 0;
         int stackIn_25_0 = 0;
         String stackIn_38_0 = null;
@@ -113,8 +119,7 @@ final class amb implements dja {
                   if (idb.field_o) {
                     if (vqa.field_g.field_N) {
                       if (fva.field_p) {
-                        int discarded$36 = 0;
-                        if (!tob.g()) {
+                        if (!tob.g(0)) {
                           stackOut_97_0 = 0;
                           stackIn_99_0 = stackOut_97_0;
                           break L1;
@@ -132,8 +137,7 @@ final class amb implements dja {
                       if (jkb.field_a) {
                         L2: {
                           if (fva.field_p) {
-                            int discarded$37 = 0;
-                            if (tob.g()) {
+                            if (tob.g(0)) {
                               stackOut_64_0 = 1;
                               stackIn_66_0 = stackOut_64_0;
                               break L2;
@@ -172,19 +176,16 @@ final class amb implements dja {
                           break L3;
                         }
                         L5: {
-                          int discarded$38 = 1;
-                          fr.a(stackIn_71_0 != 0);
-                          int discarded$39 = 1;
-                          var14 = feb.a(og.field_r);
-                          var3 = var14;
+                          fr.a(stackIn_71_0 != 0, true);
+                          var20 = feb.a(og.field_r, true);
+                          var3 = var20;
                           if (!li.field_i) {
                             break L5;
                           } else {
                             L6: {
                               var4_int = hca.field_o.field_u;
                               if (!uga.field_d) {
-                                int discarded$40 = 105;
-                                if (wq.e()) {
+                                if (wq.e((byte) 105)) {
                                   var4_int = dma.field_j;
                                   kp.e(-22);
                                   break L6;
@@ -221,7 +222,8 @@ final class amb implements dja {
                           }
                           L8: {
                             L9: {
-                              var4 = stackIn_85_0;
+                              var15 = stackIn_85_0;
+                              var4 = var15;
                               if (!param1) {
                                 break L9;
                               } else {
@@ -238,25 +240,21 @@ final class amb implements dja {
                             stackIn_89_0 = stackOut_88_0;
                             break L8;
                           }
-                          int discarded$41 = -73;
-                          ida.a(stackIn_89_0 != 0, var4);
+                          ida.a(stackIn_89_0 != 0, var15, -73);
                           if (!li.field_i) {
                             return;
                           } else {
-                            int discarded$42 = -47;
-                            var5 = bja.e();
-                            int discarded$43 = 120;
-                            var6 = fra.a();
+                            var5 = bja.e((byte) -47);
+                            var6 = fra.a((byte) 120);
                             var7 = se.a(false);
-                            int discarded$44 = 27546;
-                            var8 = seb.a();
+                            var8 = seb.a(27546);
                             var9 = (onb.field_a - dma.field_g) / 2;
                             var10 = (-dma.field_j + lj.field_a) / 2;
                             var11 = var5 - -var9;
                             var12 = var6 - -var10;
-                            var14.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
+                            var20.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
                             og.field_r.SA(var11 + -var5, var12, dma.field_g, var8, dma.field_i, dma.field_g * var6, dma.field_g);
-                            var14.a(true);
+                            var20.a(true);
                             return;
                           }
                         } else {
@@ -298,18 +296,15 @@ final class amb implements dja {
                   break L10;
                 }
                 L12: {
-                  int discarded$45 = 1;
-                  fr.a(stackIn_104_0 != 0);
-                  int discarded$46 = 1;
-                  var15 = feb.a(og.field_r);
-                  var3 = var15;
+                  fr.a(stackIn_104_0 != 0, true);
+                  var22 = feb.a(og.field_r, true);
+                  var3 = var22;
                   if (!li.field_i) {
                     break L12;
                   } else {
                     var4_int = hca.field_o.field_u;
                     if (!uga.field_d) {
-                      int discarded$47 = 105;
-                      if (wq.e()) {
+                      if (wq.e((byte) 105)) {
                         var4_int = dma.field_j;
                         kp.e(-22);
                         if (dma.field_j > var4_int) {
@@ -332,7 +327,8 @@ final class amb implements dja {
                             }
                             L14: {
                               L15: {
-                                var4 = stackIn_145_0;
+                                var24 = stackIn_145_0;
+                                var4 = var24;
                                 if (!param1) {
                                   break L15;
                                 } else {
@@ -349,25 +345,21 @@ final class amb implements dja {
                               stackIn_149_0 = stackOut_148_0;
                               break L14;
                             }
-                            int discarded$48 = -73;
-                            ida.a(stackIn_149_0 != 0, var4);
+                            ida.a(stackIn_149_0 != 0, var24, -73);
                             if (!li.field_i) {
                               return;
                             } else {
-                              int discarded$49 = -47;
-                              var5 = bja.e();
-                              int discarded$50 = 120;
-                              var6 = fra.a();
+                              var5 = bja.e((byte) -47);
+                              var6 = fra.a((byte) 120);
                               var7 = se.a(false);
-                              int discarded$51 = 27546;
-                              var8 = seb.a();
+                              var8 = seb.a(27546);
                               var9 = (onb.field_a - dma.field_g) / 2;
                               var10 = (-dma.field_j + lj.field_a) / 2;
                               var11 = var5 - -var9;
                               var12 = var6 - -var10;
-                              var15.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
+                              var22.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
                               og.field_r.SA(var11 + -var5, var12, dma.field_g, var8, dma.field_i, dma.field_g * var6, dma.field_g);
-                              var15.a(true);
+                              var22.a(true);
                               return;
                             }
                           } else {
@@ -399,7 +391,8 @@ final class amb implements dja {
                           }
                           L18: {
                             L19: {
-                              var4 = stackIn_131_0;
+                              var23 = stackIn_131_0;
+                              var4 = var23;
                               if (!param1) {
                                 break L19;
                               } else {
@@ -416,25 +409,21 @@ final class amb implements dja {
                             stackIn_135_0 = stackOut_134_0;
                             break L18;
                           }
-                          int discarded$52 = -73;
-                          ida.a(stackIn_135_0 != 0, var4);
+                          ida.a(stackIn_135_0 != 0, var23, -73);
                           if (!li.field_i) {
                             return;
                           } else {
-                            int discarded$53 = -47;
-                            var5 = bja.e();
-                            int discarded$54 = 120;
-                            var6 = fra.a();
+                            var5 = bja.e((byte) -47);
+                            var6 = fra.a((byte) 120);
                             var7 = se.a(false);
-                            int discarded$55 = 27546;
-                            var8 = seb.a();
+                            var8 = seb.a(27546);
                             var9 = (onb.field_a - dma.field_g) / 2;
                             var10 = (-dma.field_j + lj.field_a) / 2;
                             var11 = var5 - -var9;
                             var12 = var6 - -var10;
-                            var15.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
+                            var22.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
                             og.field_r.SA(var11 + -var5, var12, dma.field_g, var8, dma.field_i, dma.field_g * var6, dma.field_g);
-                            var15.a(true);
+                            var22.a(true);
                             return;
                           }
                         } else {
@@ -468,7 +457,8 @@ final class amb implements dja {
                         }
                         L22: {
                           L23: {
-                            var4 = stackIn_114_0;
+                            var21 = stackIn_114_0;
+                            var4 = var21;
                             if (!param1) {
                               break L23;
                             } else {
@@ -485,25 +475,21 @@ final class amb implements dja {
                           stackIn_118_0 = stackOut_117_0;
                           break L22;
                         }
-                        int discarded$56 = -73;
-                        ida.a(stackIn_118_0 != 0, var4);
+                        ida.a(stackIn_118_0 != 0, var21, -73);
                         if (!li.field_i) {
                           return;
                         } else {
-                          int discarded$57 = -47;
-                          var5 = bja.e();
-                          int discarded$58 = 120;
-                          var6 = fra.a();
+                          var5 = bja.e((byte) -47);
+                          var6 = fra.a((byte) 120);
                           var7 = se.a(false);
-                          int discarded$59 = 27546;
-                          var8 = seb.a();
+                          var8 = seb.a(27546);
                           var9 = (onb.field_a - dma.field_g) / 2;
                           var10 = (-dma.field_j + lj.field_a) / 2;
                           var11 = var5 - -var9;
                           var12 = var6 - -var10;
-                          var15.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
+                          var22.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
                           og.field_r.SA(var11 + -var5, var12, dma.field_g, var8, dma.field_i, dma.field_g * var6, dma.field_g);
-                          var15.a(true);
+                          var22.a(true);
                           return;
                         }
                       } else {
@@ -526,7 +512,8 @@ final class amb implements dja {
                   }
                   L25: {
                     L26: {
-                      var4 = stackIn_159_0;
+                      var25 = stackIn_159_0;
+                      var4 = var25;
                       if (!param1) {
                         break L26;
                       } else {
@@ -543,23 +530,19 @@ final class amb implements dja {
                     stackIn_163_0 = stackOut_162_0;
                     break L25;
                   }
-                  int discarded$60 = -73;
-                  ida.a(stackIn_163_0 != 0, var4);
+                  ida.a(stackIn_163_0 != 0, var25, -73);
                   if (li.field_i) {
-                    int discarded$61 = -47;
-                    var5 = bja.e();
-                    int discarded$62 = 120;
-                    var6 = fra.a();
+                    var5 = bja.e((byte) -47);
+                    var6 = fra.a((byte) 120);
                     var7 = se.a(false);
-                    int discarded$63 = 27546;
-                    var8 = seb.a();
+                    var8 = seb.a(27546);
                     var9 = (onb.field_a - dma.field_g) / 2;
                     var10 = (-dma.field_j + lj.field_a) / 2;
                     var11 = var5 - -var9;
                     var12 = var6 - -var10;
-                    var15.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
+                    var22.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
                     og.field_r.SA(var11 + -var5, var12, dma.field_g, var8, dma.field_i, dma.field_g * var6, dma.field_g);
-                    var15.a(true);
+                    var22.a(true);
                     return;
                   } else {
                     return;
@@ -610,8 +593,7 @@ final class amb implements dja {
                         }
                       }
                       if (fva.field_p) {
-                        int discarded$64 = 0;
-                        if (tob.g()) {
+                        if (tob.g(0)) {
                           stackOut_18_0 = 1;
                           stackIn_20_0 = stackOut_18_0;
                           break L29;
@@ -655,18 +637,15 @@ final class amb implements dja {
                     break L31;
                   }
                   L33: {
-                    int discarded$65 = 1;
-                    fr.a(stackIn_25_0 != 0);
-                    int discarded$66 = 1;
-                    var13 = feb.a(og.field_r);
+                    fr.a(stackIn_25_0 != 0, true);
+                    var14 = feb.a(og.field_r, true);
                     if (!li.field_i) {
                       break L33;
                     } else {
                       L34: {
                         var4_int = hca.field_o.field_u;
                         if (!uga.field_d) {
-                          int discarded$67 = 105;
-                          if (wq.e()) {
+                          if (wq.e((byte) 105)) {
                             var4_int = dma.field_j;
                             kp.e(-22);
                             break L34;
@@ -705,7 +684,8 @@ final class amb implements dja {
                     }
                     L36: {
                       L37: {
-                        var4 = stackIn_38_0;
+                        var13 = stackIn_38_0;
+                        var4 = var13;
                         if (!param1) {
                           break L37;
                         } else {
@@ -722,23 +702,19 @@ final class amb implements dja {
                       stackIn_42_0 = stackOut_41_0;
                       break L36;
                     }
-                    int discarded$68 = -73;
-                    ida.a(stackIn_42_0 != 0, var4);
+                    ida.a(stackIn_42_0 != 0, var13, -73);
                     if (li.field_i) {
-                      int discarded$69 = -47;
-                      var5 = bja.e();
-                      int discarded$70 = 120;
-                      var6 = fra.a();
+                      var5 = bja.e((byte) -47);
+                      var6 = fra.a((byte) 120);
                       var7 = se.a(false);
-                      int discarded$71 = 27546;
-                      var8 = seb.a();
+                      var8 = seb.a(27546);
                       var9 = (onb.field_a - dma.field_g) / 2;
                       var10 = (-dma.field_j + lj.field_a) / 2;
                       var11 = var5 - -var9;
                       var12 = var6 - -var10;
-                      var13.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
+                      var14.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
                       og.field_r.SA(var11 + -var5, var12, dma.field_g, var8, dma.field_i, dma.field_g * var6, dma.field_g);
-                      var13.a(true);
+                      var14.a(true);
                       break L28;
                     } else {
                       break L28;
@@ -754,7 +730,7 @@ final class amb implements dja {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

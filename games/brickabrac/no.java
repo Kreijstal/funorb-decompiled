@@ -14,7 +14,7 @@ class no extends vi {
         ((no) this).field_u = param4;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_s = null;
         field_t = null;
         int var1 = 0;

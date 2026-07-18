@@ -14,7 +14,7 @@ final class ub extends ne {
     static cn field_j;
     static String field_l;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_q = null;
         field_o = null;
         field_r = null;

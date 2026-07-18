@@ -9,7 +9,7 @@ final class fc {
     static re[] field_a;
     static String field_b;
 
-    final static dd[] b() {
+    final static dd[] b(int param0) {
         dd[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -30,8 +30,7 @@ final class fc {
         var2 = 0;
         L0: while (true) {
           if (ef.field_l <= var2) {
-            int discarded$1 = -28210;
-            c.o();
+            c.o(-28210);
             return var1;
           } else {
             var3 = ij.field_H[var2] * ob.field_a[var2];
@@ -75,7 +74,7 @@ final class fc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -868,8 +867,7 @@ final class fc {
                                       var16.c(var13, 35, var17 + 425 - -var16.field_H, var18, var19);
                                       var16.c(var14, 120, 425 - -var16.field_H, var18, var19);
                                       var16.c(var15, ol.field_f.field_l, 425 + var16.field_H, var18, var19);
-                                      int discarded$2 = 0;
-                                      var20 = wa.a();
+                                      var20 = wa.a(false);
                                       var21 = db.a(lf.field_b, new String[1], true);
                                       var16.c(db.a(var21, new String[1], true), 120, var16.field_H + 425 + var17, var18, var19);
                                       ol.field_f.field_l = 250;
@@ -1200,7 +1198,7 @@ final class fc {
                                             break L36;
                                           }
                                         }
-                                        int discarded$3 = ((fa) (Object) stackIn_161_0).a(stackIn_161_1, stackIn_161_2, stackIn_161_3 - -stackIn_161_4, 200, 150, 0, -1, var22, 1, 1, tl.field_p.field_H);
+                                        int discarded$1 = ((fa) (Object) stackIn_161_0).a(stackIn_161_1, stackIn_161_2, stackIn_161_3 - -stackIn_161_4, 200, 150, 0, -1, var22, 1, 1, tl.field_p.field_H);
                                         break L33;
                                       } else {
                                         break L33;
@@ -1426,7 +1424,7 @@ final class fc {
         throw new IllegalStateException();
     }
 
-    final static dd[] a(rh param0, String param1, String param2) {
+    final static dd[] a(rh param0, String param1, String param2, byte param3) {
         dd[] var4 = null;
         RuntimeException var4_ref = null;
         dd[] var5 = null;
@@ -1580,16 +1578,14 @@ final class fc {
         return stackIn_4_0;
     }
 
-    final static ad d() {
-        int discarded$0 = -55;
-        String var1 = vi.b();
+    final static ad d(int param0) {
+        String var1 = vi.b((byte) -55);
         if (var1 != null) {
             if (0 <= var1.indexOf('@')) {
                 var1 = "";
             }
         }
-        int discarded$1 = -55;
-        return new ad(vi.b(), id.a(-5935));
+        return new ad(vi.b((byte) -55), id.a(-5935));
     }
 
     static {

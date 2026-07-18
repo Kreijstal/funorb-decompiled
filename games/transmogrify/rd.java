@@ -9,7 +9,7 @@ final class rd {
     static String field_b;
     static int[] field_e;
 
-    final static void a() {
+    final static void a(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -51,11 +51,10 @@ final class rd {
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, boolean param1) {
         try {
             hi.a(-23883, param0);
-            int discarded$0 = 1702;
-            jj.a(false, gb.field_c);
+            jj.a(false, gb.field_c, 1702);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "rd.B(" + (param0 != null ? "{...}" : "null") + ',' + false + ')');
         }

@@ -16,7 +16,7 @@ final class mm extends mh {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
@@ -285,7 +285,7 @@ final class mm extends mh {
         ((mm) this).field_Ub.a(-param1 + ((mm) this).field_Ib, ((mm) this).field_Qb.field_cb, ((mm) this).field_cb, (byte) -110, param1, -((mm) this).field_Rb.field_zb, ((mm) this).field_Rb.field_cb, 0);
     }
 
-    final static void h() {
+    final static void h(int param0) {
         l var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

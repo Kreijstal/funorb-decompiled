@@ -586,9 +586,7 @@ final class eb implements Iterable {
               if (null != la.field_h) {
                 L28: {
                   if (fb.field_o.field_nb != 0) {
-                    int discarded$6 = -12508;
-                    int discarded$7 = 11;
-                    ub.b();
+                    ub.b(11, -12508);
                     break L28;
                   } else {
                     break L28;
@@ -597,14 +595,10 @@ final class eb implements Iterable {
                 L29: {
                   if (0 != ii.field_d.field_nb) {
                     if (!ld.field_c) {
-                      int discarded$8 = 11;
-                      int discarded$9 = -55;
-                      em.a();
+                      em.a((byte) -55, 11);
                       break L29;
                     } else {
-                      int discarded$10 = 11;
-                      int discarded$11 = 3;
-                      qa.a();
+                      qa.a(3, 11);
                       break L29;
                     }
                   } else {

@@ -491,8 +491,7 @@ final class mg extends oh {
           } else {
             L2: {
               L3: {
-                int discarded$3 = 0;
-                if (!cn.b()) {
+                if (!cn.b(false)) {
                   break L3;
                 } else {
                   if (param3.field_kc) {
@@ -521,8 +520,7 @@ final class mg extends oh {
             L5: while (true) {
               if (var6 >= 5) {
                 if (field_S[0][2].field_G) {
-                  int discarded$4 = 0;
-                  if (cn.b()) {
+                  if (cn.b(false)) {
                     ko.field_S = qn.field_z;
                     break L4;
                   } else {
@@ -1014,8 +1012,7 @@ final class mg extends oh {
                                 if ((il.field_b[var7][var9] & ~ob.field_L) <= 0) {
                                   break L43;
                                 } else {
-                                  int discarded$5 = 79;
-                                  var15 = ib.a(~ob.field_L & il.field_b[var7][var9]);
+                                  var15 = ib.a(~ob.field_L & il.field_b[var7][var9], (byte) 79);
                                   var14 = 1;
                                   break L43;
                                 }
@@ -1774,7 +1771,7 @@ final class mg extends oh {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_L = null;
         field_G = null;
         field_R = null;

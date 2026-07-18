@@ -16,7 +16,7 @@ final class ma {
     private int field_h;
     private tb field_c;
 
-    final static String a(ah param0, String param1, int param2, String param3) {
+    final static String a(ah param0, String param1, int param2, String param3, byte param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -331,7 +331,7 @@ final class ma {
         }
     }
 
-    private final boolean b() {
+    private final boolean b(int param0) {
         ((ma) this).field_j = ((ma) this).field_j + 1;
         if (((ma) this).field_j >= ((ma) this).field_c.field_f.length) {
           ((ma) this).field_e = ((ma) this).field_e + 1;
@@ -385,7 +385,7 @@ final class ma {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_d = null;
     }
 
@@ -502,8 +502,7 @@ final class ma {
 
     final void a(byte param0, tb param1) {
         try {
-            int discarded$0 = 109;
-            this.a();
+            this.a(109);
             ((ma) this).field_c = param1;
             ((ma) this).field_i = ((ma) this).field_c.field_f[((ma) this).field_j];
             ((ma) this).field_h = ((ma) this).field_c.field_l[((ma) this).field_j];
@@ -516,7 +515,7 @@ final class ma {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         ((ma) this).field_j = 0;
         ((ma) this).field_e = 0;
         ((ma) this).field_h = 0;
@@ -733,8 +732,7 @@ final class ma {
                   } else {
                     ((ma) this).field_h = ((ma) this).field_h - 1;
                     if (((ma) this).field_h <= 0) {
-                      int discarded$6 = 0;
-                      return this.b();
+                      return this.b(0);
                     } else {
                       var2 = -92 % ((param0 - -67) / 50);
                       return false;
@@ -746,8 +744,7 @@ final class ma {
                   } else {
                     ((ma) this).field_h = ((ma) this).field_h - 1;
                     if (((ma) this).field_h <= 0) {
-                      int discarded$7 = 0;
-                      return this.b();
+                      return this.b(0);
                     } else {
                       var2 = -92 % ((param0 - -67) / 50);
                       return false;
@@ -769,8 +766,7 @@ final class ma {
                 } else {
                   ((ma) this).field_h = ((ma) this).field_h - 1;
                   if (((ma) this).field_h <= 0) {
-                    int discarded$8 = 0;
-                    return this.b();
+                    return this.b(0);
                   } else {
                     var2 = -92 % ((param0 - -67) / 50);
                     return false;
@@ -783,8 +779,7 @@ final class ma {
               } else {
                 ((ma) this).field_h = ((ma) this).field_h - 1;
                 if (((ma) this).field_h <= 0) {
-                  int discarded$9 = 0;
-                  return this.b();
+                  return this.b(0);
                 } else {
                   var2 = -92 % ((param0 - -67) / 50);
                   return false;
@@ -797,8 +792,7 @@ final class ma {
             } else {
               ((ma) this).field_h = ((ma) this).field_h - 1;
               if (((ma) this).field_h <= 0) {
-                int discarded$10 = 0;
-                return this.b();
+                return this.b(0);
               } else {
                 var2 = -92 % ((param0 - -67) / 50);
                 return false;
@@ -811,8 +805,7 @@ final class ma {
           } else {
             ((ma) this).field_h = ((ma) this).field_h - 1;
             if (((ma) this).field_h <= 0) {
-              int discarded$11 = 0;
-              return this.b();
+              return this.b(0);
             } else {
               var2 = -92 % ((param0 - -67) / 50);
               return false;
@@ -821,7 +814,7 @@ final class ma {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         bb.field_d = new String[co.field_q];
         bb.field_d[19] = uk.field_v;
         bb.field_d[20] = ok.field_e;

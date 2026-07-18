@@ -60,8 +60,7 @@ final class ok {
                     if (var4 >= var3_int) {
                       continue L1;
                     } else {
-                      int discarded$2 = -510336929;
-                      stackOut_12_0 = eh.a(var4, param2);
+                      stackOut_12_0 = eh.a(var4, param2, -510336929);
                       stackIn_13_0 = stackOut_12_0;
                       break L0;
                     }

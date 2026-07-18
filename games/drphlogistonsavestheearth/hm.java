@@ -28,7 +28,7 @@ final class hm {
         return null;
     }
 
-    final static String a() {
+    final static String a(int param0) {
         return pi.field_J;
     }
 
@@ -115,8 +115,7 @@ final class hm {
             fj.a(480, param12, (byte) 114, param5);
             fa.a(false, param1, 30, param20, param8);
             a.a(240, 320, (byte) 103);
-            int discarded$1 = 18;
-            la.a(2, 2, param9, 8, param11);
+            la.a(2, 2, param9, 8, param11, 18);
             ia.a(param2, 0, param13, param10);
             vd.a(param19, param6, false, param3);
             break L0;
@@ -285,7 +284,7 @@ final class hm {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_e = null;
     }
 

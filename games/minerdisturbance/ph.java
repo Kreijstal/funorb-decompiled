@@ -10,7 +10,7 @@ final class ph {
     static int field_c;
     static int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_g = null;
         field_a = null;

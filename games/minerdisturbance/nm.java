@@ -12,7 +12,7 @@ final class nm implements Runnable {
     static int field_e;
     private boolean field_i;
 
-    final static void a() {
+    final static void a(int param0) {
         oj.a(4, 3);
     }
 
@@ -51,7 +51,7 @@ final class nm implements Runnable {
         }
     }
 
-    final static boolean a(int param0, int[] param1) {
+    final static boolean a(int param0, int[] param1, int param2) {
         return (param1[param0 >> 5] & 1 << (param0 & 31)) != 0;
     }
 
@@ -537,8 +537,7 @@ final class nm implements Runnable {
         try {
             var2 = param0.a((Runnable) this, (byte) 58, 5);
             while (0 == var2.field_c) {
-                int discarded$0 = -10309;
-                gf.a(10L);
+                gf.a(10L, -10309);
             }
             if (var2.field_c == 2) {
                 throw new RuntimeException();

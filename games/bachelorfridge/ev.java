@@ -16,7 +16,7 @@ final class ev implements Iterator {
         ((ev) this).field_a = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

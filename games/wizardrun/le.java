@@ -147,7 +147,7 @@ final class le {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_j = null;
         field_f = null;
         field_A = null;
@@ -160,7 +160,7 @@ final class le {
         ((le) this).field_B = false;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;

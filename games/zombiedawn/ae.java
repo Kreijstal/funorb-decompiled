@@ -10,7 +10,7 @@ final class ae {
     static int[] field_c;
     static String[] field_b;
 
-    final static void a(dj param0) {
+    final static void a(dj param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -67,8 +67,7 @@ final class ae {
                   }
                 }
               } else {
-                int discarded$1 = -128;
-                ic.field_W[var4] = bj.a(var8);
+                ic.field_W[var4] = bj.a(var8, (byte) -128);
                 var4++;
                 continue L1;
               }
@@ -193,7 +192,7 @@ final class ae {
         return stackIn_8_0;
     }
 
-    final static int[] a() {
+    final static int[] a(int param0) {
         return new int[8];
     }
 
@@ -264,8 +263,7 @@ final class ae {
                   if (param0 == null) {
                     break L2;
                   } else {
-                    int discarded$2 = -93;
-                    var3_ref = vj.a(param0);
+                    var3_ref = vj.a(param0, (byte) -93);
                     break L2;
                   }
                 }
@@ -354,7 +352,7 @@ final class ae {
                           break L7;
                         } else {
                           var5 = (DataInputStream) var4.field_d;
-                          int discarded$3 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L7;
                         }

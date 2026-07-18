@@ -42,7 +42,7 @@ final class gs {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -86,7 +86,7 @@ final class gs {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         iw.field_l = false;
         kb.field_C = un.field_e.h((byte) -111) == 0 ? true : false;
     }
@@ -95,11 +95,10 @@ final class gs {
         gu.b(0, (byte) 60, vc.field_E[1]);
         ji.k(param0);
         tc.a(vi.field_n, param0 ^ 8710, ih.field_c, rm.field_C);
-        int discarded$0 = 2147483647;
-        ui.a(1, kn.a(ih.field_c, param0 ^ 77, vi.field_n, rm.field_C), vc.field_E[2]);
+        ui.a(1, kn.a(ih.field_c, param0 ^ 77, vi.field_n, rm.field_C), vc.field_E[2], 2147483647);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_f = null;
         field_a = null;
         field_c = null;

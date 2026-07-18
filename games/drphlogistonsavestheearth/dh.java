@@ -214,7 +214,7 @@ final class dh extends si {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_H = null;
         field_S = null;
         field_N = null;
@@ -222,7 +222,7 @@ final class dh extends si {
         field_J = null;
     }
 
-    final static void k() {
+    final static void k(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -249,8 +249,7 @@ final class dh extends si {
               var12 = field_N;
               var2 = var12.l(31760);
               if (var2 == 0) {
-                int discarded$6 = 8;
-                var10 = lk.c();
+                var10 = lk.c((byte) 8);
                 var18 = var10;
                 var17 = var18;
                 var16 = var17;
@@ -265,8 +264,7 @@ final class dh extends si {
                   if (var7 >= var6) {
                     var15 = (f) (Object) ql.field_i.h(-11151);
                     if (var15 == null) {
-                      int discarded$7 = 126;
-                      eg.a();
+                      eg.a((byte) 126);
                       return;
                     } else {
                       var15.field_l = true;
@@ -288,29 +286,25 @@ final class dh extends si {
                     var11.a(-16175);
                     break L1;
                   } else {
-                    int discarded$8 = 126;
-                    eg.a();
+                    eg.a((byte) 126);
                     return;
                   }
                 } else {
                   if (var2 == 2) {
                     var13 = (f) (Object) ql.field_i.h(-11151);
                     if (var13 != null) {
-                      int discarded$9 = 8;
-                      var13.field_k = lk.c();
+                      var13.field_k = lk.c((byte) 8);
                       var13.field_l = true;
                       var13.field_j = var13.field_k[0];
                       var13.a(-16175);
                       break L1;
                     } else {
-                      int discarded$10 = 126;
-                      eg.a();
+                      eg.a((byte) 126);
                       return;
                     }
                   } else {
                     gb.a((Throwable) null, "A1: " + al.a(-99), 10);
-                    int discarded$11 = 126;
-                    eg.a();
+                    eg.a((byte) 126);
                     break L1;
                   }
                 }

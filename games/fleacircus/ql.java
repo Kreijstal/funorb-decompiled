@@ -15,13 +15,13 @@ final class ql extends lh {
     static int field_o;
     static fa field_k;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
         field_j = null;
         field_k = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1, int param2, int param3) {
         gb.a(si.field_R);
         int var4 = 95;
         int var5 = param2;
@@ -37,8 +37,7 @@ final class ql extends lh {
         int var4 = 0;
         fh[] var5 = null;
         var4 = fleas.field_A ? 1 : 0;
-        int discarded$2 = 1;
-        var5 = al.b();
+        var5 = al.b(true);
         var2 = var5;
         var3 = 0;
         L0: while (true) {

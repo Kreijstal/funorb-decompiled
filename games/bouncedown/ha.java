@@ -278,7 +278,7 @@ final class ha implements Runnable {
         }
     }
 
-    final static void a(int param0, sa param1) {
+    final static void a(int param0, sa param1, int param2) {
         ii var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;

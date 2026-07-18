@@ -10,12 +10,12 @@ final class asa extends aa {
     im field_b;
     static int field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
     }
 
-    final static Object a(File param0) {
+    final static Object a(File param0, byte param1) {
         try {
             IOException var2 = null;
             ClassNotFoundException var2_ref = null;

@@ -12,7 +12,7 @@ final class u {
     static String field_c;
     static int field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_a = null;
         field_h = null;
@@ -28,8 +28,7 @@ final class u {
             int var4_int = 0;
             pk.field_r = 2;
             var5 = (CharSequence) (Object) param1;
-            int discarded$0 = 2;
-            cf.field_c = kf.a(var5);
+            cf.field_c = kf.a(var5, (byte) 2);
             jg.field_i = true;
             fm.field_d = param2;
         } catch (RuntimeException runtimeException) {

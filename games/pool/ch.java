@@ -1308,7 +1308,7 @@ class ch extends ei implements lj {
         return stackIn_20_0 != 0;
     }
 
-    final static int a(String param0, boolean param1) {
+    final static int a(String param0, boolean param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -1375,7 +1375,7 @@ class ch extends ei implements lj {
         return stackIn_4_0;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_M = null;
         field_L = null;
         field_K = null;

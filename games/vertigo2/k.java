@@ -77,13 +77,13 @@ final class k {
         this(-1, 1000000, 1000000);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_c = null;
         field_b = null;
     }
 
-    final static ve[] a() {
+    final static ve[] a(int param0) {
         return new ve[]{g.field_f, dk.field_o, gi.field_t, ti.field_b, f.field_H, kk.field_e, br.field_Y, bd.field_e, bj.field_g, tg.field_c, bp.field_y, kq.field_Lb, rp.field_f, nb.field_B};
     }
 

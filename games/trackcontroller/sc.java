@@ -52,8 +52,7 @@ final class sc extends kd {
                 if (param1 != 0) {
                   break L1;
                 } else {
-                  int discarded$2 = 0;
-                  var10 = rf.a(param0);
+                  var10 = rf.a(param0, false);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;
@@ -105,8 +104,7 @@ final class sc extends kd {
                     return (java.awt.Frame) (Object) stackIn_21_0;
                   }
                 } else {
-                  int discarded$3 = 0;
-                  wl.a(10L);
+                  wl.a(10L, false);
                   continue L4;
                 }
               }

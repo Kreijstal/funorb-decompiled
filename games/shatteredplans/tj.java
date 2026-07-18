@@ -13,7 +13,7 @@ final class tj {
     private tk field_c;
     static int field_h;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         int var1 = -35;
         field_b = null;

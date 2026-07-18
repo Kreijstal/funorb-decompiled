@@ -19,7 +19,7 @@ class bb extends uh {
         return ud.field_c;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_g = null;
         field_j = null;
         field_l = null;
@@ -40,14 +40,13 @@ class bb extends uh {
         if (!oa.a(param0 ^ 25325)) {
             return;
         }
-        int discarded$5 = 15991;
-        le.a(false, 4);
+        le.a(false, 4, 15991);
         if (param0 != -100) {
             bb.b((byte) 126);
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -74,9 +73,7 @@ class bb extends uh {
         String stackOut_14_2 = null;
         var5 = wizardrun.field_H;
         try {
-          int discarded$12 = 0;
-          int discarded$13 = -118;
-          var3 = hg.a(param0);
+          var3 = hg.a(param0, (byte) -118, false);
           if (var3 != null) {
             stackOut_3_0 = (String) var3;
             stackIn_4_0 = stackOut_3_0;
@@ -85,8 +82,7 @@ class bb extends uh {
             var4 = 0;
             L0: while (true) {
               if (param0.length() > var4) {
-                int discarded$14 = 1;
-                if (df.a(param0.charAt(var4))) {
+                if (df.a(param0.charAt(var4), true)) {
                   var4++;
                   continue L0;
                 } else {
@@ -131,7 +127,7 @@ class bb extends uh {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         ei var1 = (ei) (Object) lh.field_b.c(8192);
         if (!(var1 != null)) {
             throw new IllegalStateException();

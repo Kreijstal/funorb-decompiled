@@ -43,7 +43,7 @@ final class uh {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         ca.field_r = null;
         dl.field_L = null;
         rl.field_a = null;
@@ -249,7 +249,7 @@ final class uh {
         }
     }
 
-    final static gk a(gk param0, int[] param1) {
+    final static gk a(gk param0, int[] param1, boolean param2) {
         gk var3 = null;
         RuntimeException var3_ref = null;
         gk stackIn_1_0 = null;

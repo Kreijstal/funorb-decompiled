@@ -35,8 +35,7 @@ final class cd {
               if (var2 != 0) {
                 if (1 != var2) {
                   if (var2 != 2) {
-                    int discarded$1 = 94;
-                    sj.a("A1: " + ci.a(), -50, (Throwable) null);
+                    sj.a("A1: " + ci.a((byte) 94), -50, (Throwable) null);
                     pm.m(121);
                     break L1;
                   } else {
@@ -106,7 +105,7 @@ final class cd {
         }
     }
 
-    final static String a(gi param0) {
+    final static String a(gi param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4_int = 0;
@@ -193,7 +192,7 @@ final class cd {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_b = null;
         field_e = null;

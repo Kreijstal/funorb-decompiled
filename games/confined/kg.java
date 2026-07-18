@@ -135,7 +135,7 @@ class kg extends rk {
         }
     }
 
-    final static void i() {
+    final static void i(byte param0) {
         RuntimeException var1 = null;
         hb var1_ref = null;
         int var2 = 0;
@@ -170,7 +170,7 @@ class kg extends rk {
         try {
           L0: {
             var1_ref = e.field_c;
-            var2 = var1_ref.c(32);
+            var2 = var1_ref.c(param0 + 84);
             if (0 != var2) {
               if (1 != var2) {
                 if (2 == var2) {
@@ -199,13 +199,17 @@ class kg extends rk {
                       rk.field_d = 1;
                       var3 = var1_ref.d(true);
                       ql.field_t = var3.intern();
-                      var4 = var1_ref.c(32);
+                      var4 = var1_ref.c(param0 ^ -20);
                       tm.a(-127, var4);
                       return;
                     } else {
                       mb.a("F1: " + ui.a(10), true, (Throwable) null);
-                      dc.d(111);
-                      break L0;
+                      if (param0 == -52) {
+                        dc.d(111);
+                        break L0;
+                      } else {
+                        return;
+                      }
                     }
                   }
                 }
@@ -231,11 +235,9 @@ class kg extends rk {
                 L5: {
                   var4_ref_String = var1_ref.d(true);
                   var5 = var1_ref.d(true);
-                  int discarded$7 = 1;
-                  var6 = pm.a(var4_ref_String);
+                  var6 = pm.a(var4_ref_String, true);
                   if (var6 == null) {
-                    int discarded$8 = 1;
-                    var6 = pm.a(var5);
+                    var6 = pm.a(var5, true);
                     if (var6 == null) {
                       break L5;
                     } else {
@@ -252,9 +254,9 @@ class kg extends rk {
                   } else {
                     var6 = new fg();
                     v.field_Db.a((long)hh.a(0, (CharSequence) (Object) var4_ref_String).hashCode(), (jl) (Object) var6, 117);
-                    int fieldTemp$9 = c.field_k;
+                    int fieldTemp$3 = c.field_k;
                     c.field_k = c.field_k + 1;
-                    var6.field_lb = fieldTemp$9;
+                    var6.field_lb = fieldTemp$3;
                     il.field_fb.a((rk) (Object) var6, (byte) -103);
                     break L6;
                   }
@@ -293,7 +295,7 @@ class kg extends rk {
                             if (!tb.a(stackIn_47_0, stackIn_47_1, stackIn_47_2)) {
                               break L11;
                             } else {
-                              var7_ref = (fg) (Object) il.field_fb.d(2123);
+                              var7_ref = (fg) (Object) il.field_fb.d(param0 ^ -2169);
                               if (var8 == 0) {
                                 continue L8;
                               } else {
@@ -316,7 +318,7 @@ class kg extends rk {
                         }
                       }
                       stackOut_55_0 = (fg) var7_ref;
-                      stackOut_55_1 = 0;
+                      stackOut_55_1 = param0 ^ -52;
                       stackOut_55_2 = (fg) var6;
                       stackIn_57_0 = stackOut_55_0;
                       stackIn_57_1 = stackOut_55_1;
@@ -354,15 +356,14 @@ class kg extends rk {
                 var3_int = stackIn_11_0;
                 var4_ref_String = var1_ref.d(true);
                 if (var3_int != 0) {
-                  String discarded$10 = var1_ref.d(true);
+                  String discarded$4 = var1_ref.d(true);
                   break L15;
                 } else {
                   break L15;
                 }
               }
               L16: {
-                int discarded$11 = 0;
-                var5_ref = nh.a(var4_ref_String);
+                var5_ref = nh.a(var4_ref_String, 0);
                 var6_ref = var1_ref.d(true);
                 var7 = hh.a(0, (CharSequence) (Object) var4_ref_String);
                 if (null != var7) {
@@ -376,8 +377,7 @@ class kg extends rk {
                 if (var5_ref != null) {
                   break L17;
                 } else {
-                  int discarded$12 = 0;
-                  var5_ref = nh.a(var6_ref);
+                  var5_ref = nh.a(var6_ref, 0);
                   if (null == var5_ref) {
                     break L17;
                   } else {
@@ -391,10 +391,10 @@ class kg extends rk {
                   break L18;
                 } else {
                   var5_ref = new fg();
-                  ij.field_t.a((long)var7.hashCode(), (jl) (Object) var5_ref, 117);
-                  int fieldTemp$13 = Confined.field_E;
+                  ij.field_t.a((long)var7.hashCode(), (jl) (Object) var5_ref, param0 ^ -71);
+                  int fieldTemp$5 = Confined.field_E;
                   Confined.field_E = Confined.field_E + 1;
-                  var5_ref.field_lb = fieldTemp$13;
+                  var5_ref.field_lb = fieldTemp$5;
                   vg.field_J.a((rk) (Object) var5_ref, (byte) -97);
                   break L18;
                 }
@@ -406,7 +406,7 @@ class kg extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "kg.L(" + -52 + ')');
+          throw sd.a((Throwable) (Object) var1, "kg.L(" + param0 + ')');
         }
     }
 
@@ -1757,12 +1757,12 @@ class kg extends rk {
         }
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         try {
-            ac.a(false);
+            ac.a(param0);
             vl.field_b = true;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "kg.A(" + false + ')');
+            throw sd.a((Throwable) (Object) runtimeException, "kg.A(" + param0 + ')');
         }
     }
 
@@ -2007,8 +2007,7 @@ class kg extends rk {
               if (param0 == 25859) {
                 break L1;
               } else {
-                int discarded$2 = 0;
-                kg.c();
+                kg.c(false);
                 break L1;
               }
             }

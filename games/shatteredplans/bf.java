@@ -7,7 +7,7 @@ final class bf {
     static String field_d;
     static String[] field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17 = 0;
         var17 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param14 < param8) {
@@ -92,8 +92,7 @@ final class bf {
                       var3_int = 1;
                       if (10 == param1) {
                         var3_int = 0;
-                        int discarded$2 = -26049;
-                        mm.f();
+                        mm.f(-26049);
                         break L4;
                       } else {
                         break L4;
@@ -198,7 +197,7 @@ final class bf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_a = null;
         field_c = null;

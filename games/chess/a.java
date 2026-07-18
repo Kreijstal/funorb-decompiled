@@ -82,7 +82,7 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static String a(int param0, String param1) {
+    final static String a(int param0, String param1, byte param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         nk var5 = null;
@@ -120,16 +120,14 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           L0: {
             var6 = (CharSequence) (Object) param1;
-            int discarded$17 = 21257;
-            if (!ed.a(var6)) {
+            if (!ed.a(var6, 21257)) {
               stackOut_2_0 = qj.field_a;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
             } else {
               if (!qd.a((byte) 13, param1)) {
                 if (ld.field_g == 2) {
-                  int discarded$18 = -19554;
-                  if (va.a(param1)) {
+                  if (va.a(param1, -19554)) {
                     stackOut_12_0 = oc.a(dh.field_g, new String[1], (byte) -94);
                     stackIn_13_0 = stackOut_12_0;
                     return stackIn_13_0;
@@ -275,7 +273,7 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_a = null;
     }
 
-    final static java.awt.Container a() {
+    final static java.awt.Container a(byte param0) {
         if (lk.field_a != null) {
             return (java.awt.Container) (Object) lk.field_a;
         }

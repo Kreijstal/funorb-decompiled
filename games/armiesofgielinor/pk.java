@@ -44,8 +44,7 @@ final class pk extends hv {
         try {
           L0: {
             var3_int = -73 / ((param2 - 55) / 56);
-            int discarded$2 = -8779;
-            stackOut_0_0 = im.a(param1, param0, 0);
+            stackOut_0_0 = im.a(param1, param0, 0, -8779);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -160,15 +159,13 @@ final class pk extends hv {
             if (((pk) this).field_Y.field_y >= var11) {
               if (var12 > ((pk) this).field_Y.field_v) {
                 ((pk) this).field_Y = new wk(var11, var12);
-                int discarded$8 = 3;
-                vn.a(((pk) this).field_Y);
+                vn.a(((pk) this).field_Y, 3);
                 var18.b(112, 144, var18.field_A << 4, var18.field_x << 4, -((pk) this).field_U << 10, 4096);
                 rf.b(-18862);
                 ((pk) this).field_Y.f(var9 - (var18.field_A >> 1), -var18.field_x + var10, 256);
                 return;
               } else {
-                int discarded$9 = 3;
-                vn.a(((pk) this).field_Y);
+                vn.a(((pk) this).field_Y, 3);
                 qn.b();
                 var18.b(112, 144, var18.field_A << 4, var18.field_x << 4, -((pk) this).field_U << 10, 4096);
                 rf.b(-18862);
@@ -177,8 +174,7 @@ final class pk extends hv {
               }
             } else {
               ((pk) this).field_Y = new wk(var11, var12);
-              int discarded$10 = 3;
-              vn.a(((pk) this).field_Y);
+              vn.a(((pk) this).field_Y, 3);
               var18.b(112, 144, var18.field_A << 4, var18.field_x << 4, -((pk) this).field_U << 10, 4096);
               rf.b(-18862);
               ((pk) this).field_Y.f(var9 - (var18.field_A >> 1), -var18.field_x + var10, 256);
@@ -186,8 +182,7 @@ final class pk extends hv {
             }
           } else {
             ((pk) this).field_Y = new wk(var11, var12);
-            int discarded$11 = 3;
-            vn.a(((pk) this).field_Y);
+            vn.a(((pk) this).field_Y, 3);
             var18.b(112, 144, var18.field_A << 4, var18.field_x << 4, -((pk) this).field_U << 10, 4096);
             rf.b(-18862);
             ((pk) this).field_Y.f(var9 - (var18.field_A >> 1), -var18.field_x + var10, 256);
@@ -217,15 +212,13 @@ final class pk extends hv {
               if (((pk) this).field_Y.field_y >= var11) {
                 if (var12 > ((pk) this).field_Y.field_v) {
                   ((pk) this).field_Y = new wk(var11, var12);
-                  int discarded$12 = 3;
-                  vn.a(((pk) this).field_Y);
+                  vn.a(((pk) this).field_Y, 3);
                   var17.b(112, 144, var17.field_A << 4, var17.field_x << 4, -((pk) this).field_U << 10, 4096);
                   rf.b(-18862);
                   ((pk) this).field_Y.f(var9 - (var17.field_A >> 1), -var17.field_x + var10, 256);
                   return;
                 } else {
-                  int discarded$13 = 3;
-                  vn.a(((pk) this).field_Y);
+                  vn.a(((pk) this).field_Y, 3);
                   qn.b();
                   var17.b(112, 144, var17.field_A << 4, var17.field_x << 4, -((pk) this).field_U << 10, 4096);
                   rf.b(-18862);
@@ -234,8 +227,7 @@ final class pk extends hv {
                 }
               } else {
                 ((pk) this).field_Y = new wk(var11, var12);
-                int discarded$14 = 3;
-                vn.a(((pk) this).field_Y);
+                vn.a(((pk) this).field_Y, 3);
                 var17.b(112, 144, var17.field_A << 4, var17.field_x << 4, -((pk) this).field_U << 10, 4096);
                 rf.b(-18862);
                 ((pk) this).field_Y.f(var9 - (var17.field_A >> 1), -var17.field_x + var10, 256);
@@ -243,8 +235,7 @@ final class pk extends hv {
               }
             } else {
               ((pk) this).field_Y = new wk(var11, var12);
-              int discarded$15 = 3;
-              vn.a(((pk) this).field_Y);
+              vn.a(((pk) this).field_Y, 3);
               var17.b(112, 144, var17.field_A << 4, var17.field_x << 4, -((pk) this).field_U << 10, 4096);
               rf.b(-18862);
               ((pk) this).field_Y.f(var9 - (var17.field_A >> 1), -var17.field_x + var10, 256);
@@ -651,7 +642,7 @@ final class pk extends hv {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_S = null;
         field_W = null;
         field_T = null;

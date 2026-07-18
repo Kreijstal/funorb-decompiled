@@ -72,8 +72,7 @@ final class rh extends fa {
                     break L2;
                   }
                 }
-                int discarded$1 = 5731;
-                v.field_b = pk.a(stackIn_12_0 != 0);
+                v.field_b = pk.a(stackIn_12_0 != 0, 5731);
                 break L1;
               } else {
                 L3: {
@@ -156,7 +155,7 @@ final class rh extends fa {
         te.b(false, 93);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_r = null;
         field_u = null;
         field_y = null;

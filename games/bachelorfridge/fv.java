@@ -267,7 +267,7 @@ final class fv extends ana {
         ((fv) this).field_q.field_s.field_d = 100;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_x = null;
         field_y = null;
     }

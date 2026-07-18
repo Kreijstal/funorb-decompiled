@@ -12,7 +12,7 @@ final class ff extends nh {
         return rg.field_J;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         ha var2 = pg.field_fb;
         var2.f(6, 950);
         var2.a(false, 1);

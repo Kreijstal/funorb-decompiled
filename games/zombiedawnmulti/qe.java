@@ -132,14 +132,14 @@ final class qe {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_q = null;
         field_k = null;
         field_o = null;
     }
 
-    final static String b() {
+    final static String b(int param0) {
         return rb.field_a;
     }
 
@@ -221,7 +221,7 @@ final class qe {
             ke.field_h = (fm) (Object) vo.a((byte) -46, "commonui", "arezzo14", param0, param2);
             ci.field_d = (fm) (Object) vo.a((byte) -46, "commonui", "arezzo14bold", param0, param2);
             var17 = new ja(param3.a("button.gif", "", false), (java.awt.Component) (Object) dk.field_Ib);
-            ri discarded$3 = wq.a(-121, "commonui", param2, "dropdown");
+            ri discarded$1 = wq.a(-121, "commonui", param2, "dropdown");
             var5 = da.a("screen_options", param2, (byte) 19, "commonui");
             mc.field_h = new ri[4];
             lo.field_a = new ri[4];
@@ -244,8 +244,7 @@ final class qe {
                 L2: while (true) {
                   if (var9 >= 3) {
                     var9 = var17.field_w;
-                    int discarded$4 = 540;
-                    m.c();
+                    m.c(540);
                     var17.a();
                     oo.a(0, 0, oo.field_b, oo.field_l);
                     var15 = new ja(var9, var9);
@@ -258,8 +257,7 @@ final class qe {
                     var12 = new ja(-(var9 * 2) + var17.field_x, var9);
                     var12.a();
                     var17.c(-var9, 0);
-                    int discarded$5 = 1;
-                    ql.a();
+                    ql.a(true);
                     ui.field_k = new ja[]{var15, var12, var11};
                     break L0;
                   } else {
@@ -556,8 +554,7 @@ final class qe {
         jj.field_F[3].a();
         oo.b();
         rb.field_e[3].f(0, 0, 16777215);
-        int discarded$0 = -18;
-        jm.d();
+        jm.d((byte) -18);
         rb.field_e[3].f(0, 0, 0);
         g.b();
     }
@@ -570,13 +567,12 @@ final class qe {
         jj.field_F[4].a();
         oo.b();
         rb.field_e[4].f(0, 0, 16777215);
-        int discarded$0 = -18;
-        jm.d();
+        jm.d((byte) -18);
         rb.field_e[4].f(0, 0, 0);
         g.b();
     }
 
-    final static void d() {
+    final static void d(int param0) {
         l.field_a = 0;
         kg.field_k = null;
         bl.field_c = -1;
@@ -584,7 +580,7 @@ final class qe {
         cb.field_l = false;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         g.c();
         rb.field_e[6].a();
         oo.b();
@@ -592,8 +588,7 @@ final class qe {
         jj.field_F[6].a();
         oo.b();
         rb.field_e[6].f(0, 0, 16777215);
-        int discarded$0 = -18;
-        jm.d();
+        jm.d((byte) -18);
         rb.field_e[6].f(0, 0, 0);
         g.b();
     }
@@ -628,8 +623,7 @@ final class qe {
         jj.field_F[5].a();
         oo.b();
         rb.field_e[5].f(0, 0, 16777215);
-        int discarded$0 = -18;
-        jm.d();
+        jm.d((byte) -18);
         rb.field_e[5].f(0, 0, 0);
         g.b();
     }
@@ -665,8 +659,7 @@ final class qe {
         this.e(430);
         this.a(false);
         if (((qe) this).field_b) {
-            int discarded$0 = 30;
-            this.e();
+            this.e((byte) 30);
         }
         dl.field_h.b((byte) 103);
     }
@@ -730,11 +723,11 @@ final class qe {
         return stackIn_3_0;
     }
 
-    private final boolean i() {
+    private final boolean i(int param0) {
         return ((qe) this).field_h <= 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17 = 0;
         L0: {
           var17 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -789,8 +782,7 @@ final class qe {
         jj.field_F[2].a();
         oo.b();
         rb.field_e[2].f(0, 0, 16777215);
-        int discarded$0 = -18;
-        jm.d();
+        jm.d((byte) -18);
         rb.field_e[2].f(0, 0, 0);
         g.b();
     }

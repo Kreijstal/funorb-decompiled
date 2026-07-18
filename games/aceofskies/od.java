@@ -129,7 +129,7 @@ final class od extends lg {
         super(8, 5, 8, 8, 2, 0.10000000149011612f, 0.550000011920929f, 3.0f);
     }
 
-    final static String a(CharSequence[] param0) {
+    final static String a(CharSequence[] param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -151,9 +151,7 @@ final class od extends lg {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 21530;
-            stackOut_2_0 = gq.a(param0.length, param0);
+            stackOut_2_0 = gq.a(param0.length, param0, 21530, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

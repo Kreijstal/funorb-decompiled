@@ -194,7 +194,7 @@ abstract class ik {
 
     abstract void a(boolean param0, int param1, int param2);
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_g = null;
     }

@@ -159,7 +159,7 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
         return stackIn_21_0 != 0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_o = null;
         field_n = null;
         field_k = null;
@@ -233,8 +233,7 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
                           if (var1_ref.field_q - (float)var1_ref.field_y < (float)hf.field_f.field_O) {
                             break L3;
                           } else {
-                            int discarded$2 = 0;
-                            lb.b();
+                            lb.b(false);
                             break L3;
                           }
                         }
@@ -252,7 +251,7 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
                             break L2;
                           } else {
                             L4: {
-                              boolean discarded$3 = jj.a(-32680, var1_ref, var1_ref.field_G + ((int)var1_ref.field_B - 80), (int)var1_ref.field_q + var1_ref.field_y);
+                              boolean discarded$1 = jj.a(-32680, var1_ref, var1_ref.field_G + ((int)var1_ref.field_B - 80), (int)var1_ref.field_q + var1_ref.field_y);
                               if (0 < var1_ref.field_m) {
                                 break L4;
                               } else {
@@ -388,9 +387,7 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
               if (var5 == null) {
                 break L0;
               } else {
-                int discarded$8 = -95;
-                int discarded$9 = 7;
-                oe.a(var5);
+                oe.a(var5, 7, (byte) -95);
                 var5 = (m) (Object) gi.field_l.d((byte) 63);
                 continue L1;
               }

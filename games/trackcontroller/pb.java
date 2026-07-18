@@ -7,7 +7,7 @@ final class pb {
     static ja field_d;
     static String field_b;
 
-    final static ck a(int param0, int param1, kk param2, kk param3) {
+    final static ck a(int param0, int param1, kk param2, kk param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         ck stackIn_4_0 = null;
@@ -112,7 +112,7 @@ final class pb {
         return stackIn_4_0;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         int var1 = 22;
         if (mg.field_b == null) {
             return false;

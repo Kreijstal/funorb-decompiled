@@ -15,7 +15,7 @@ final class tn extends ma {
     int field_r;
     int[] field_q;
 
-    final static void a(uf param0) {
+    final static void a(uf param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -228,7 +228,7 @@ final class tn extends ma {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_p = null;
         field_w = null;
         field_n = null;

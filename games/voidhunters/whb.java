@@ -180,95 +180,139 @@ final class whb implements ntb {
         whb var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        int stackIn_10_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_6_1 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_5_1 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_4_1 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_13_0 = 0;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         try {
           L0: {
-            var4 = -88 / ((param0 - 22) / 59);
-            var3 = (whb) (Object) param1;
-            ub discarded$2 = var3.field_b;
             L1: {
-              L2: {
-                L3: {
-                  if (var3.field_b == null) {
-                    break L3;
-                  } else {
-                    if (((Object) (Object) var3.field_b).getClass() != ((Object) (Object) var3.field_b).getClass()) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                L4: {
-                  if (var3.field_b == null) {
-                    break L4;
-                  } else {
-                    if (!var3.field_b.a((byte) 93, (tv) (Object) var3.field_b)) {
-                      break L4;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                stackOut_9_0 = 0;
-                stackIn_10_0 = stackOut_9_0;
+              var4 = -88 / ((param0 - 22) / 59);
+              var3 = (whb) (Object) param1;
+              if (null != var3.field_b) {
+                stackOut_2_0 = 0;
+                stackIn_3_0 = stackOut_2_0;
+                break L1;
+              } else {
+                stackOut_1_0 = 1;
+                stackIn_3_0 = stackOut_1_0;
                 break L1;
               }
-              stackOut_8_0 = 1;
-              stackIn_10_0 = stackOut_8_0;
-              break L1;
+            }
+            L2: {
+              stackOut_3_0 = stackIn_3_0;
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_4_0 = stackOut_3_0;
+              if (null != ((whb) this).field_b) {
+                stackOut_5_0 = stackIn_5_0;
+                stackOut_5_1 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_1 = stackOut_5_1;
+                break L2;
+              } else {
+                stackOut_4_0 = stackIn_4_0;
+                stackOut_4_1 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                break L2;
+              }
+            }
+            L3: {
+              L4: {
+                if ((stackIn_6_0 ^ stackIn_6_1) != 0) {
+                  break L4;
+                } else {
+                  L5: {
+                    if (((whb) this).field_b == null) {
+                      break L5;
+                    } else {
+                      if (((Object) (Object) ((whb) this).field_b).getClass() != ((Object) (Object) var3.field_b).getClass()) {
+                        break L4;
+                      } else {
+                        break L5;
+                      }
+                    }
+                  }
+                  L6: {
+                    if (((whb) this).field_b == null) {
+                      break L6;
+                    } else {
+                      if (!((whb) this).field_b.a((byte) 93, (tv) (Object) var3.field_b)) {
+                        break L6;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  }
+                  stackOut_14_0 = 0;
+                  stackIn_15_0 = stackOut_14_0;
+                  break L3;
+                }
+              }
+              stackOut_13_0 = 1;
+              stackIn_15_0 = stackOut_13_0;
+              break L3;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L7: {
             var3_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3_ref;
-            stackOut_11_1 = new StringBuilder().append("whb.C(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_16_0 = (RuntimeException) var3_ref;
+            stackOut_16_1 = new StringBuilder().append("whb.C(").append(param0).append(',');
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L5;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L7;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L5;
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
-        return stackIn_10_0 != 0;
+        return stackIn_15_0 != 0;
     }
 
     public final void a(faa param0, boolean param1) {
@@ -508,7 +552,7 @@ final class whb implements ntb {
             }
           }
           var5 = (whb) (Object) param1;
-          if (var5.field_b == null) {
+          if (((whb) this).field_b == null) {
             var5.field_b = null;
             return;
           } else {
@@ -516,25 +560,25 @@ final class whb implements ntb {
               if (null == var5.field_b) {
                 break L1;
               } else {
-                if (((Object) (Object) var5.field_b).getClass() == ((Object) (Object) var5.field_b).getClass()) {
-                  var5.field_b.b((byte) 93, (tv) (Object) var5.field_b);
+                if (((Object) (Object) var5.field_b).getClass() == ((Object) (Object) ((whb) this).field_b).getClass()) {
+                  ((whb) this).field_b.b((byte) 93, (tv) (Object) var5.field_b);
                   return;
                 } else {
                   break L1;
                 }
               }
             }
-            if (((Object) (Object) var5.field_b).getClass() == mo.class) {
+            if (((Object) (Object) ((whb) this).field_b).getClass() == mo.class) {
               var5.field_b = (ub) (Object) new mo();
-              var5.field_b.b((byte) 93, (tv) (Object) var5.field_b);
+              ((whb) this).field_b.b((byte) 93, (tv) (Object) var5.field_b);
               return;
             } else {
-              if (((Object) (Object) var5.field_b).getClass() != af.class) {
-                var5.field_b.b((byte) 93, (tv) (Object) var5.field_b);
+              if (((Object) (Object) ((whb) this).field_b).getClass() != af.class) {
+                ((whb) this).field_b.b((byte) 93, (tv) (Object) var5.field_b);
                 return;
               } else {
                 var5.field_b = (ub) (Object) new af();
-                var5.field_b.b((byte) 93, (tv) (Object) var5.field_b);
+                ((whb) this).field_b.b((byte) 93, (tv) (Object) var5.field_b);
                 return;
               }
             }

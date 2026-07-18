@@ -67,8 +67,7 @@ final class fs {
                     break L1;
                   } else {
                     var3 = (CharSequence) (Object) param1;
-                    int discarded$2 = 1;
-                    if (!nd.field_k.equals((Object) (Object) ji.a(var3))) {
+                    if (!nd.field_k.equals((Object) (Object) ji.a(var3, true))) {
                       break L1;
                     } else {
                       var2_int = -10 % ((param0 - -1) / 38);
@@ -144,7 +143,7 @@ final class fs {
         gr.a(true, param1, 0);
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, boolean param2) {
         ol.field_e = param0;
         ri.field_O = param1;
     }

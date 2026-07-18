@@ -11,7 +11,7 @@ abstract class ud extends wf {
         field_f = null;
     }
 
-    final static void a(rh param0) {
+    final static void a(rh param0, int param1) {
         try {
             qn.field_b.a((rf) (Object) param0.field_g);
         } catch (RuntimeException runtimeException) {
@@ -22,7 +22,7 @@ abstract class ud extends wf {
     ud(int param0, boolean param1) {
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         L0: {
           if (null == vs.field_b) {
             vs.field_b = new int[param0 * 2];

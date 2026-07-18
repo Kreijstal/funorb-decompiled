@@ -113,8 +113,7 @@ abstract class db extends gj {
               ok.field_y = new dd(((db) this).field_u, ((db) this).field_j);
               break L0;
             }
-            int discarded$2 = 45;
-            r.a(ok.field_y);
+            r.a(ok.field_y, 45);
             gb.c();
             ((db) this).b(0, 0, 17344);
             super.b(-param0 + -((db) this).field_z, -param1 - ((db) this).field_y, param2, param3);
@@ -248,8 +247,7 @@ abstract class db extends gj {
                         continue L1;
                       } else {
                         var5++;
-                        int discarded$5 = -9816;
-                        var8 = pl.a((CharSequence) (Object) var7_ref_String);
+                        var8 = pl.a((CharSequence) (Object) var7_ref_String, -9816);
                         var4 = var4 + (param1[var8].length() + (var6_int + -var5));
                         continue L1;
                       }
@@ -271,7 +269,7 @@ abstract class db extends gj {
                         break L5;
                       }
                     }
-                    StringBuilder discarded$6 = var6.append(param0.substring(var7));
+                    StringBuilder discarded$3 = var6.append(param0.substring(var7));
                     stackOut_26_0 = var6.toString();
                     stackIn_27_0 = stackOut_26_0;
                     break L0;
@@ -297,11 +295,10 @@ abstract class db extends gj {
                         } else {
                           if (62 == param0.charAt(var5)) {
                             var5++;
-                            int discarded$7 = -9816;
-                            var10 = pl.a((CharSequence) (Object) var9);
-                            StringBuilder discarded$8 = var6.append(param0.substring(var7, var8));
+                            var10 = pl.a((CharSequence) (Object) var9, -9816);
+                            StringBuilder discarded$4 = var6.append(param0.substring(var7, var8));
                             var7 = var5;
-                            StringBuilder discarded$9 = var6.append(param1[var10]);
+                            StringBuilder discarded$5 = var6.append(param1[var10]);
                             continue L4;
                           } else {
                             continue L4;
@@ -415,8 +412,7 @@ abstract class db extends gj {
         try {
           L0: {
             if (param2 > 0) {
-              int discarded$8 = -124;
-              if (mc.a(param2)) {
+              if (mc.a(param2, (byte) -124)) {
                 stackOut_5_0 = (int)(((long)param1.nextInt() & 4294967295L) * (long)param2 >> 32);
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
@@ -470,7 +466,7 @@ abstract class db extends gj {
         return stackIn_10_0;
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_F = null;
         field_J = null;
         field_I = null;

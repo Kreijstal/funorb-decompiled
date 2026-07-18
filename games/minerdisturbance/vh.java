@@ -17,7 +17,7 @@ final class vh implements uj {
         return "Fill Cell Oil";
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_c = null;
         field_f = null;
@@ -31,12 +31,10 @@ final class vh implements uj {
     final static void a(int param0) {
         if (param0 > -113) {
             vh.a(-8);
-            int discarded$0 = -9;
-            fa.c();
+            fa.c(-9);
             return;
         }
-        int discarded$1 = -9;
-        fa.c();
+        fa.c(-9);
     }
 
     public final void a(boolean param0) {

@@ -71,7 +71,7 @@ abstract class dd {
         return var2;
     }
 
-    final static String a(boolean param0, boolean param1) {
+    final static String a(boolean param0, boolean param1, boolean param2, int param3) {
         int var4 = 0;
         if (param1) {
             var4 += 4;
@@ -89,7 +89,7 @@ abstract class dd {
         field_f = null;
     }
 
-    final static void a(int[] param0) {
+    final static void a(int[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

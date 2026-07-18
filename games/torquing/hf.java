@@ -87,8 +87,7 @@ final class hf {
                       } else {
                         L6: {
                           var7 = param0.charAt(var6);
-                          int discarded$2 = -46;
-                          if (!ik.a((char) var7)) {
+                          if (!ik.a((char) var7, (byte) -46)) {
                             var6++;
                             break L6;
                           } else {
@@ -97,7 +96,7 @@ final class hf {
                               var6++;
                               break L6;
                             } else {
-                              StringBuilder discarded$3 = var5.append((char) var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               var6++;
                               break L6;
                             }

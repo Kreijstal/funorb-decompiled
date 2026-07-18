@@ -6,7 +6,7 @@ final class lsb {
     int field_a;
     int field_b;
 
-    final static void a() {
+    final static void a(boolean param0) {
         kva.d((byte) -48);
     }
 

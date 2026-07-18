@@ -106,20 +106,24 @@ final class qh extends da {
         int var21 = 0;
         ri var22 = null;
         ri var23 = null;
-        ri var24 = null;
-        byte[] var25 = null;
+        byte[] var24 = null;
+        ri var25 = null;
         byte[] var26 = null;
-        int[] var27 = null;
-        ri var28 = null;
-        byte[] var29 = null;
+        byte[] var27 = null;
+        int[] var28 = null;
+        ri var29 = null;
         byte[] var30 = null;
-        int[] var31 = null;
+        byte[] var31 = null;
         byte[] var32 = null;
-        byte[] var33 = null;
-        int[] var34 = null;
+        int[] var33 = null;
+        byte[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
         int[] var37 = null;
+        byte[] var38 = null;
+        byte[] var39 = null;
+        byte[] var40 = null;
+        int[] var41 = null;
         byte[] stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         byte[] stackIn_18_0 = null;
@@ -143,32 +147,32 @@ final class qh extends da {
             L1: {
               var6 = var5 * 16;
               if (!param3) {
-                var37 = new int[var6 * var6];
-                var34 = var37;
-                var31 = var34;
-                var27 = var31;
-                var7_ref_int__ = var27;
+                var41 = new int[var6 * var6];
+                var37 = var41;
+                var33 = var37;
+                var28 = var33;
+                var7_ref_int__ = var28;
                 var8_int = 0;
                 L2: while (true) {
                   if (var8_int >= 256) {
-                    ((qh) this).field_c = js.a(var6, 0, 0, false, param0, (byte) -125, var6, var37);
+                    ((qh) this).field_c = js.a(var6, 0, 0, false, param0, (byte) -125, var6, var41);
                     ((qh) this).field_d = false;
                     break L1;
                   } else {
-                    var24 = param2[var8_int];
-                    var10 = var24.field_g;
-                    var35 = var24.field_a;
-                    var32 = var35;
-                    var29 = var32;
-                    var25 = var29;
-                    var11_ref_byte__ = var25;
-                    var36 = var24.field_e;
-                    var33 = var36;
-                    var30 = var33;
-                    var26 = var30;
-                    var12_ref_byte__ = var26;
-                    var13 = var24.field_i;
-                    var14 = var24.field_h;
+                    var25 = param2[var8_int];
+                    var10 = var25.field_g;
+                    var39 = var25.field_a;
+                    var35 = var39;
+                    var31 = var35;
+                    var26 = var31;
+                    var11_ref_byte__ = var26;
+                    var40 = var25.field_e;
+                    var36 = var40;
+                    var32 = var36;
+                    var27 = var32;
+                    var12_ref_byte__ = var27;
+                    var13 = var25.field_i;
+                    var14 = var25.field_h;
                     var15_int = var8_int % 16 * var5;
                     var16_int = var8_int / 16 * var5;
                     var17_int = var16_int * var6 + var15_int;
@@ -184,17 +188,17 @@ final class qh extends da {
                               var19_int++;
                               continue L3;
                             } else {
-                              int incrementValue$11 = var18_int;
+                              int incrementValue$7 = var18_int;
                               var18_int++;
-                              var21 = var12_ref_byte__[incrementValue$11];
-                              if (var12_ref_byte__[incrementValue$11] == 0) {
+                              var21 = var12_ref_byte__[incrementValue$7];
+                              if (var12_ref_byte__[incrementValue$7] == 0) {
                                 var17_int++;
                                 var20_int++;
                                 continue L4;
                               } else {
-                                int incrementValue$12 = var17_int;
+                                int incrementValue$8 = var17_int;
                                 var17_int++;
-                                var7_ref_int__[incrementValue$12] = -16777216 | var10[var21 & 255];
+                                var7_ref_int__[incrementValue$8] = -16777216 | var10[var21 & 255];
                                 var20_int++;
                                 continue L4;
                               }
@@ -216,9 +220,9 @@ final class qh extends da {
                               var19_int++;
                               continue L5;
                             } else {
-                              int incrementValue$13 = var17_int;
+                              int incrementValue$9 = var17_int;
                               var17_int++;
-                              var7_ref_int__[incrementValue$13] = var35[var18_int] << 24 | var10[var36[var18_int] & 255];
+                              var7_ref_int__[incrementValue$9] = var39[var18_int] << 24 | var10[var40[var18_int] & 255];
                               var18_int++;
                               var20_int++;
                               continue L6;
@@ -233,15 +237,15 @@ final class qh extends da {
                   }
                 }
               } else {
-                var7_ref_byte__ = new byte[var6 * var6];
+                var38 = new byte[var6 * var6];
+                var34 = var38;
+                var30 = var34;
+                var24 = var30;
+                var7_ref_byte__ = var24;
                 var8_int = 0;
                 L7: while (true) {
                   if (var8_int >= 256) {
-                    int discarded$14 = 6406;
-                    int discarded$15 = 121;
-                    int discarded$16 = 6406;
-                    int discarded$17 = 0;
-                    ((qh) this).field_c = wp.a(param0, var6, var6, var7_ref_byte__);
+                    ((qh) this).field_c = wp.a(param0, var6, var6, var38, false, 6406, 121, 6406);
                     ((qh) this).field_d = true;
                     break L1;
                   } else {
@@ -264,11 +268,11 @@ final class qh extends da {
                               var17_int++;
                               continue L8;
                             } else {
-                              int incrementValue$18 = var14;
+                              int incrementValue$10 = var14;
                               var14++;
-                              int incrementValue$19 = var15_int;
+                              int incrementValue$11 = var15_int;
                               var15_int++;
-                              var7_ref_byte__[incrementValue$18] = var16_ref_byte__[incrementValue$19];
+                              var7_ref_byte__[incrementValue$10] = var16_ref_byte__[incrementValue$11];
                               var18_int++;
                               continue L9;
                             }
@@ -291,17 +295,17 @@ final class qh extends da {
                               continue L10;
                             } else {
                               L12: {
-                                int incrementValue$20 = var14;
+                                int incrementValue$12 = var14;
                                 var14++;
-                                int incrementValue$21 = var15_int;
+                                int incrementValue$13 = var15_int;
                                 var15_int++;
                                 stackOut_16_0 = (byte[]) var7_ref_byte__;
-                                stackOut_16_1 = incrementValue$20;
+                                stackOut_16_1 = incrementValue$12;
                                 stackIn_18_0 = stackOut_16_0;
                                 stackIn_18_1 = stackOut_16_1;
                                 stackIn_17_0 = stackOut_16_0;
                                 stackIn_17_1 = stackOut_16_1;
-                                if (var16_ref_byte__[incrementValue$21] != 0) {
+                                if (var16_ref_byte__[incrementValue$13] != 0) {
                                   stackOut_18_0 = (byte[]) (Object) stackIn_18_0;
                                   stackOut_18_1 = stackIn_18_1;
                                   stackOut_18_2 = -1;
@@ -343,11 +347,11 @@ final class qh extends da {
               if (var9 >= 256) {
                 return;
               } else {
-                var28 = param2[var9];
-                var11 = var28.field_i;
-                var12 = var28.field_h;
-                var13 = var28.field_d;
-                var14 = var28.field_c;
+                var29 = param2[var9];
+                var11 = var29.field_i;
+                var12 = var29.field_h;
+                var13 = var29.field_d;
+                var14 = var29.field_c;
                 var15 = (float)(var9 % 16 * var5);
                 var16 = (float)(var9 / 16 * var5);
                 var17 = var15 * var7;

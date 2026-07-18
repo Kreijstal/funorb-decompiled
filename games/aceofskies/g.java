@@ -77,7 +77,7 @@ final class g extends hh {
         field_h = null;
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         int var3 = 0;
         int var4 = 0;
         float var5 = 0.0f;
@@ -381,7 +381,7 @@ final class g extends hh {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.removeMouseListener((java.awt.event.MouseListener) (Object) ho.field_b);
             param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ho.field_b);
@@ -415,8 +415,7 @@ final class g extends hh {
         int var3 = 0;
         jaggl.OpenGL.glEnable(34336);
         ((g) this).field_e = true;
-        int discarded$0 = 24;
-        this.c();
+        this.c((byte) 24);
     }
 
     static {

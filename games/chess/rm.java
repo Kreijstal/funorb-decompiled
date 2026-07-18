@@ -81,8 +81,7 @@ final class rm extends mf {
     private final void e(byte param0) {
         ((rm) this).field_O = new km[]{this.c(-72, ((rm) this).field_K, ((rm) this).field_F), this.c(-43, ((rm) this).field_X, ((rm) this).field_V)};
         int var2 = -46 / ((-5 - param0) / 54);
-        int discarded$0 = 8;
-        ((rm) this).field_P = this.f();
+        ((rm) this).field_P = this.f((byte) 8);
         ((rm) this).field_N = ((rm) this).field_P.b();
         ((rm) this).field_I = new km(((rm) this).field_C >> 1, ((rm) this).field_C);
     }
@@ -127,8 +126,7 @@ final class rm extends mf {
             L1: while (true) {
               if (var5_int <= var6) {
                 L2: {
-                  int discarded$3 = 28773;
-                  fd.a();
+                  fd.a(28773);
                   if (wb.field_i > param3 + ((rm) this).field_P.field_w) {
                     break L2;
                   } else {
@@ -136,8 +134,7 @@ final class rm extends mf {
                     param1.b(-((rm) this).field_G, 0);
                     param1.b(((rm) this).field_T * 2 - ((rm) this).field_G, 0);
                     ((rm) this).field_N.e(0, 0);
-                    int discarded$4 = 28773;
-                    fd.a();
+                    fd.a(28773);
                     ((rm) this).field_I.b(param3, param0);
                     break L2;
                   }
@@ -153,8 +150,7 @@ final class rm extends mf {
                         param1.b(-var7, 0);
                         param1.b(2 * ((rm) this).field_T - var7, 0);
                         ((rm) this).field_P.e(0, 0);
-                        int discarded$5 = 28773;
-                        fd.a();
+                        fd.a(28773);
                         ((rm) this).field_I.b(var5_int - ((rm) this).field_P.field_w, param0);
                         break L3;
                       } else {
@@ -217,12 +213,11 @@ final class rm extends mf {
         if (((rm) this).field_L < 65536) {
             cf.b(((rm) this).field_C + var6, ((rm) this).field_y + var5, var6, 80, var5 + (((rm) this).field_y * ((rm) this).field_L >> 16));
             this.a(var6, ((rm) this).field_O[1], 0, var5);
-            int discarded$0 = 28773;
-            fd.a();
+            fd.a(28773);
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_D = null;
         field_J = null;
         field_H = null;
@@ -301,7 +296,7 @@ final class rm extends mf {
         }
     }
 
-    private final km f() {
+    private final km f(byte param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -321,12 +316,11 @@ final class rm extends mf {
                 wb.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
             }
         }
-        int discarded$0 = 28773;
-        fd.a();
+        fd.a(28773);
         return var3;
     }
 
-    final static int a(p param0, String param1) {
+    final static int a(p param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -465,8 +459,7 @@ final class rm extends mf {
                 break L1;
               }
             }
-            int discarded$1 = 28773;
-            fd.a();
+            fd.a(28773);
             return var14;
           } else {
             L2: {

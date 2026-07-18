@@ -141,8 +141,7 @@ final class f extends us {
 
     final static boolean d(byte param0) {
         if (param0 != 63) {
-            int discarded$0 = 0;
-            String discarded$1 = f.e();
+            String discarded$0 = f.e(false);
             return wt.field_i.b((byte) 126);
         }
         return wt.field_i.b((byte) 126);
@@ -251,7 +250,7 @@ final class f extends us {
         }
     }
 
-    final static String e() {
+    final static String e(boolean param0) {
         return rb.field_c;
     }
 

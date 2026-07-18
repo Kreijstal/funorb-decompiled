@@ -171,7 +171,7 @@ final class fa {
         }
     }
 
-    final static String a(byte param0, String param1, String param2) {
+    final static String a(byte param0, String param1, String param2, char param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -322,14 +322,14 @@ final class fa {
         return stackIn_13_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_d = null;
         field_b = null;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         try {
             dh.field_c = param0;
             jc.a((byte) 42, 12);

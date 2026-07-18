@@ -7,12 +7,12 @@ final class ada implements dja {
     static int[] field_a;
     static pia field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static int a(String param0) {
+    final static int a(String param0, boolean param1) {
         RuntimeException var2 = null;
         String var3 = null;
         byte[] var4 = null;
@@ -24,9 +24,9 @@ final class ada implements dja {
         int var8_int = 0;
         int var9 = 0;
         String var10 = null;
-        byte[] var11 = null;
+        File var11 = null;
         byte[] var12 = null;
-        File var13 = null;
+        byte[] var13 = null;
         byte[] var14 = null;
         byte[] var15 = null;
         byte[] var16 = null;
@@ -88,12 +88,12 @@ final class ada implements dja {
                       var18 = tba.field_q.a("", true, var3);
                       var16 = var18;
                       var14 = var16;
-                      var11 = var14;
-                      var4 = var11;
+                      var12 = var14;
+                      var4 = var12;
                       var5 = null;
                       try {
                         L1: {
-                          var13 = lfb.a(var10, (byte) 34);
+                          var11 = lfb.a(var10, (byte) 34);
                           break L1;
                         }
                       } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -107,16 +107,15 @@ final class ada implements dja {
                         if (var4 == null) {
                           break L2;
                         } else {
-                          if (var13 != null) {
+                          if (var11 != null) {
                             L3: {
                               L4: {
                                 var6 = 1;
-                                int discarded$2 = 48;
-                                var19 = ana.a(var13);
+                                var19 = ana.a(var11, (byte) 48);
                                 var17 = var19;
                                 var15 = var17;
-                                var12 = var15;
-                                var7 = var12;
+                                var13 = var15;
+                                var7 = var13;
                                 if (var7 == null) {
                                   break L4;
                                 } else {
@@ -147,7 +146,7 @@ final class ada implements dja {
                               L6: {
                                 L7: {
                                   if (var6 == 0) {
-                                    boolean discarded$3 = nwa.field_c.a(var18, (byte) 110, var13);
+                                    boolean discarded$1 = nwa.field_c.a(var18, (byte) 110, var11);
                                     break L7;
                                   } else {
                                     break L7;
@@ -162,7 +161,7 @@ final class ada implements dja {
                               stackIn_39_0 = stackOut_38_0;
                               return stackIn_39_0;
                             }
-                            td.a((byte) 123, param0, var13);
+                            td.a((byte) 123, param0, var11);
                             stackOut_40_0 = 100;
                             stackIn_41_0 = stackOut_40_0;
                             return stackIn_41_0;

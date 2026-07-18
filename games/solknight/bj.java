@@ -7,7 +7,7 @@ final class bj {
     final static void a(int param0, int param1) {
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

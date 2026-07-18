@@ -44,8 +44,7 @@ final class tib extends eca {
         try {
           L0: {
             var4 = (CharSequence) (Object) param0;
-            int discarded$9 = 0;
-            if (!oc.a(var4)) {
+            if (!oc.a(var4, 0)) {
               stackOut_2_0 = cca.field_o;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -170,8 +169,7 @@ final class tib extends eca {
           L0: {
             if (param1 == -1) {
               var5 = (CharSequence) (Object) param0;
-              int discarded$2 = 119;
-              var3 = igb.a(var5);
+              var3 = igb.a(var5, (byte) 119);
               if (var3 != null) {
                 stackOut_5_0 = (String) var3;
                 stackIn_6_0 = stackOut_5_0;
@@ -248,13 +246,12 @@ final class tib extends eca {
 
     final static int a(boolean param0, int param1) {
         if (li.field_i) {
-            int discarded$0 = 300;
-            return de.a(param1).field_c;
+            return de.a(param1, 300).field_c;
         }
         return ita.a(param1, 7988).field_k;
     }
 
-    final static int a(int param0, CharSequence param1) {
+    final static int a(int param0, CharSequence param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -313,7 +310,7 @@ final class tib extends eca {
         return stackIn_1_0;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_i = null;
         field_h = null;
     }

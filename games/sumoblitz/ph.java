@@ -112,7 +112,7 @@ final class ph {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         f.field_s = null;
         gf.field_a = null;
     }

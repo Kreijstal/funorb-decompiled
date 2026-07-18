@@ -211,7 +211,7 @@ final class jl extends bca {
         super(param0, param1);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_q = null;
     }
 

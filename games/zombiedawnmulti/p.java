@@ -86,7 +86,7 @@ final class p {
         ua.field_N = param3;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_f = null;
@@ -94,7 +94,7 @@ final class p {
         field_c = null;
     }
 
-    final static lk a(int param0, int param1) {
+    final static lk a(int param0, int param1, int param2, boolean param3) {
         lk var4 = (lk) (Object) bo.field_a.g(83);
         if (var4 == null) {
             var4 = new lk();

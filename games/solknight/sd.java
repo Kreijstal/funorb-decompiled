@@ -12,7 +12,7 @@ final class sd extends gg {
     boolean field_h;
     private static String field_z;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         int var1 = 5;
     }

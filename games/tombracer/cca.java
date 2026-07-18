@@ -34,8 +34,7 @@ final class cca extends rva {
         try {
           L0: {
             if (jna.a(false, param0, param3, param1)) {
-              int discarded$2 = 94;
-              stackOut_3_0 = pn.i();
+              stackOut_3_0 = pn.i(94);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -908,12 +907,11 @@ final class cca extends rva {
                         break L5;
                       }
                     }
-                    int discarded$16 = -31791;
-                    this.c();
+                    this.c(-31791);
                     return;
                   } else {
                     L7: {
-                      boolean discarded$17 = this.a(-26, -25);
+                      boolean discarded$6 = this.a(-26, -25);
                       if (((cca) this).field_x == null) {
                         stackOut_47_0 = ((cca) this).field_m;
                         stackIn_48_0 = stackOut_47_0;
@@ -1039,8 +1037,7 @@ final class cca extends rva {
                         break L11;
                       }
                     }
-                    int discarded$18 = -31791;
-                    this.c();
+                    this.c(-31791);
                     return;
                   }
                 } else {
@@ -1049,7 +1046,7 @@ final class cca extends rva {
                     if (param0 == 88) {
                       break L13;
                     } else {
-                      boolean discarded$19 = this.a(-26, -25);
+                      boolean discarded$7 = this.a(-26, -25);
                       break L13;
                     }
                   }
@@ -1179,8 +1176,7 @@ final class cca extends rva {
                       break L18;
                     }
                   }
-                  int discarded$20 = -31791;
-                  this.c();
+                  this.c(-31791);
                   return;
                 }
               } else {
@@ -1189,7 +1185,7 @@ final class cca extends rva {
                   if (param0 == 88) {
                     break L20;
                   } else {
-                    boolean discarded$21 = this.a(-26, -25);
+                    boolean discarded$8 = this.a(-26, -25);
                     break L20;
                   }
                 }
@@ -1319,8 +1315,7 @@ final class cca extends rva {
                     break L25;
                   }
                 }
-                int discarded$22 = -31791;
-                this.c();
+                this.c(-31791);
                 return;
               }
             }
@@ -1457,12 +1452,11 @@ final class cca extends rva {
                   break L31;
                 }
               }
-              int discarded$23 = -31791;
-              this.c();
+              this.c(-31791);
               return;
             } else {
               L33: {
-                boolean discarded$24 = this.a(-26, -25);
+                boolean discarded$9 = this.a(-26, -25);
                 if (((cca) this).field_x == null) {
                   stackOut_162_0 = ((cca) this).field_m;
                   stackIn_163_0 = stackOut_162_0;
@@ -1588,8 +1582,7 @@ final class cca extends rva {
                   break L37;
                 }
               }
-              int discarded$25 = -31791;
-              this.c();
+              this.c(-31791);
               return;
             }
           } else {
@@ -1721,12 +1714,11 @@ final class cca extends rva {
                   break L43;
                 }
               }
-              int discarded$26 = -31791;
-              this.c();
+              this.c(-31791);
               return;
             } else {
               L45: {
-                boolean discarded$27 = this.a(-26, -25);
+                boolean discarded$10 = this.a(-26, -25);
                 if (((cca) this).field_x == null) {
                   stackOut_125_0 = ((cca) this).field_m;
                   stackIn_126_0 = stackOut_125_0;
@@ -1852,8 +1844,7 @@ final class cca extends rva {
                   break L49;
                 }
               }
-              int discarded$28 = -31791;
-              this.c();
+              this.c(-31791);
               return;
             }
           }
@@ -1986,12 +1977,11 @@ final class cca extends rva {
                 break L55;
               }
             }
-            int discarded$29 = -31791;
-            this.c();
+            this.c(-31791);
             return;
           } else {
             L57: {
-              boolean discarded$30 = this.a(-26, -25);
+              boolean discarded$11 = this.a(-26, -25);
               if (((cca) this).field_x == null) {
                 stackOut_87_0 = ((cca) this).field_m;
                 stackIn_88_0 = stackOut_87_0;
@@ -2117,8 +2107,7 @@ final class cca extends rva {
                 break L61;
               }
             }
-            int discarded$31 = -31791;
-            this.c();
+            this.c(-31791);
             return;
           }
         }
@@ -2192,7 +2181,7 @@ final class cca extends rva {
         return stackIn_4_0 != 0;
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         if (((cca) this).field_x == null) {
             if (((cca) this).field_D == null) {
@@ -2241,8 +2230,7 @@ final class cca extends rva {
     final void a(int param0, int param1, ae param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = -31791;
-            this.c();
+            this.c(-31791);
             this.g((byte) -125);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "cca.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -2266,8 +2254,7 @@ final class cca extends rva {
                 gt.a(param1, param5, param3, param2, 10, param0);
                 return;
               } else {
-                int discarded$2 = 0;
-                caa.a(param2, param1, param5, param3, param0);
+                caa.a(param2, param1, param5, param3, param0, 0);
                 return;
               }
             }

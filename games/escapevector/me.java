@@ -24,7 +24,7 @@ final class me extends hg {
         return var6;
     }
 
-    private final int a() {
+    private final int a(byte param0) {
         int var2 = this.d((byte) 102);
         int var3 = 46;
         int var4 = ((me) this).field_l.a((char) var3);
@@ -33,9 +33,8 @@ final class me extends hg {
         return var6;
     }
 
-    private final int f() {
-        int discarded$0 = 31512;
-        int var2 = un.a(((me) this).field_l);
+    private final int f(int param0) {
+        int var2 = un.a(((me) this).field_l, 31512);
         int var3 = 0;
         var3 = var3 + var2;
         var3 += 2;
@@ -55,13 +54,13 @@ final class me extends hg {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_g = null;
         field_n = null;
         field_o = null;
     }
 
-    private final int a(int param0, int param1, int param2, int param3, int param4) {
+    private final int a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = param4 == param0 ? 1 : 0;
         int var8 = var7 == 0 ? ((me) this).field_m : ((me) this).field_r;
         if (null != ((me) this).field_i[param4]) {
@@ -81,8 +80,7 @@ final class me extends hg {
     }
 
     private final int g(int param0) {
-        int discarded$0 = 31512;
-        int var2 = un.a(((me) this).field_l);
+        int var2 = un.a(((me) this).field_l, 31512);
         int var3 = 0;
         var3 = var3 + param0;
         var3 = var3 + var2;
@@ -121,8 +119,7 @@ final class me extends hg {
           L0: {
             var4_int = ((me) this).field_k;
             var5 = this.g(2);
-            int discarded$9 = -1;
-            var6 = this.f();
+            var6 = this.f(-1);
             var7 = var5 + (((me) this).field_j - -uc.a(-1, ((me) this).field_l));
             var8 = 0;
             L1: while (true) {
@@ -132,8 +129,7 @@ final class me extends hg {
                 L2: {
                   var9 = param2[var8] ? 1 : 0;
                   if (var9 != 0) {
-                    int discarded$10 = -17751;
-                    var7 = this.a(param0, var6, var4_int, var7, var8);
+                    var7 = this.a(param0, var6, var4_int, var7, var8, -17751);
                     break L2;
                   } else {
                     var7 = var7 + var6;
@@ -259,18 +255,16 @@ final class me extends hg {
 
     final int e(byte param0) {
         if (!(0 != ((me) this).field_q)) {
-            int discarded$0 = -65;
-            return this.a();
+            return this.a((byte) -65);
         }
         if (!(((me) this).field_q != 1)) {
             return this.i(param0 + -280);
         }
         if (param0 != -127) {
-            int discarded$1 = this.g(21);
+            int discarded$0 = this.g(21);
         }
         if (((me) this).field_q == 2) {
-            int discarded$2 = -124;
-            return this.g();
+            return this.g((byte) -124);
         }
         if (3 == ((me) this).field_q) {
             return this.e(param0 ^ -126);
@@ -284,8 +278,7 @@ final class me extends hg {
         }
         int var2 = 0;
         var2 = var2 + this.g(2);
-        int discarded$0 = -1;
-        int var3 = this.f();
+        int var3 = this.f(-1);
         var2 = var2 + ((me) this).field_s * var3;
         return var2;
     }
@@ -304,7 +297,7 @@ final class me extends hg {
         em.a(var2, var3, var4, 2, ((me) this).field_m);
     }
 
-    private final int g() {
+    private final int g(byte param0) {
         int var2 = 0;
         String[] var3 = null;
         int var4 = 0;
@@ -387,12 +380,10 @@ final class me extends hg {
         int var8 = EscapeVector.field_A;
         int var3 = ((me) this).field_k;
         int var4 = this.g(2);
-        int discarded$0 = -1;
-        int var5 = this.f();
+        int var5 = this.f(-1);
         int var6 = var4 + ((me) this).field_j + uc.a(-1, ((me) this).field_l);
         for (var7 = 0; ((me) this).field_i.length > var7; var7++) {
-            int discarded$1 = -17751;
-            var6 = this.a(param1, var5, var3, var6, var7);
+            var6 = this.a(param1, var5, var3, var6, var7, -17751);
         }
     }
 

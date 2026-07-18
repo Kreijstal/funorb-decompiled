@@ -7,7 +7,7 @@ final class aka extends rqa {
     static boolean field_p;
     static int[] field_o;
 
-    final static void a(pgb param0) {
+    final static void a(pgb param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -269,14 +269,13 @@ final class aka extends rqa {
     }
 
     final static void a(boolean param0, int param1) {
-        int discarded$4 = 0;
-        rga.a(param0, false);
+        rga.a(param0, false, false);
         if (param1 > -121) {
             field_p = true;
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
     }
 

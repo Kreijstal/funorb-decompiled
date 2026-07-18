@@ -154,7 +154,7 @@ final class vi implements Iterable {
         throw new Error();
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;

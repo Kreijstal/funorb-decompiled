@@ -231,7 +231,7 @@ class sf extends ie {
         return stackIn_3_0;
     }
 
-    final static StringBuilder a(int param0, StringBuilder param1) {
+    final static StringBuilder a(int param0, StringBuilder param1, char param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -307,7 +307,7 @@ class sf extends ie {
         return stackIn_5_0;
     }
 
-    private final void a(sf param0) {
+    private final void a(sf param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_96_0 = null;
         StringBuilder stackIn_96_1 = null;
@@ -661,7 +661,7 @@ class sf extends ie {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_q = null;
         field_K = null;
     }
@@ -716,8 +716,7 @@ class sf extends ie {
           L0: {
             L1: {
               ((sf) this).field_d = param0;
-              int discarded$2 = -117;
-              this.a(param1);
+              this.a(param1, (byte) -117);
               if (param6 == null) {
                 break L1;
               } else {

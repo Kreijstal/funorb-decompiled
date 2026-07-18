@@ -316,7 +316,7 @@ final class de {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_d = null;
         field_b = null;
@@ -325,8 +325,7 @@ final class de {
 
     final static void a(int param0, boolean param1) {
         if (!(pc.field_Mb == null)) {
-            int discarded$0 = 85;
-            sj.a(pc.field_Mb);
+            sj.a(pc.field_Mb, (byte) 85);
         }
         if (null != pi.field_d) {
             pi.field_d.b(-65, param1);

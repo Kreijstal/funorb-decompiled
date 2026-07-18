@@ -99,14 +99,14 @@ final class ck extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static java.awt.Container b() {
+    final static java.awt.Container b(int param0) {
         if (!(null == al.field_W)) {
             return (java.awt.Container) (Object) al.field_W;
         }
         return (java.awt.Container) (Object) dg.a(false);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_f = null;
         field_c = null;

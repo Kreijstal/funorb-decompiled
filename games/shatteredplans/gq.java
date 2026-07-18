@@ -10,11 +10,11 @@ final class gq {
     static String field_a;
     static String field_g;
 
-    final static int c() {
+    final static int c(int param0) {
         return -ld.field_j + ah.field_R;
     }
 
-    final static boolean a(CharSequence param0, boolean param1) {
+    final static boolean a(CharSequence param0, boolean param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -64,8 +64,7 @@ final class gq {
               } else {
                 if (12 >= var3_int) {
                   L1: {
-                    int discarded$25 = 1;
-                    var4 = ji.a(param0);
+                    var4 = ji.a(param0, true);
                     if (var4 == null) {
                       break L1;
                     } else {
@@ -73,12 +72,10 @@ final class gq {
                         break L1;
                       } else {
                         L2: {
-                          int discarded$26 = 2;
-                          if (tc.a(var4.charAt(0))) {
+                          if (tc.a(var4.charAt(0), 2)) {
                             break L2;
                           } else {
-                            int discarded$27 = 2;
-                            if (tc.a(var4.charAt(var4.length() + -1))) {
+                            if (tc.a(var4.charAt(var4.length() + -1), 2)) {
                               break L2;
                             } else {
                               var5 = 0;
@@ -97,8 +94,7 @@ final class gq {
                                 } else {
                                   L4: {
                                     var7 = param0.charAt(var6);
-                                    int discarded$28 = 2;
-                                    if (tc.a((char) var7)) {
+                                    if (tc.a((char) var7, 2)) {
                                       var5++;
                                       break L4;
                                     } else {
@@ -452,7 +448,7 @@ final class gq {
         throw new IllegalStateException();
     }
 
-    final static bi d() {
+    final static bi d(int param0) {
         int var4_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var1 = cm.field_g[0] * mc.field_s[0];

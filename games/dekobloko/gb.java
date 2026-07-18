@@ -290,7 +290,7 @@ final class gb extends w {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_ac = null;
         field_Pb = null;
         field_Tb = null;

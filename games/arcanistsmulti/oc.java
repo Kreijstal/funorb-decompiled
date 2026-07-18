@@ -192,7 +192,7 @@ final class oc {
         return var2;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_a = null;
         field_h = null;
         field_d = null;

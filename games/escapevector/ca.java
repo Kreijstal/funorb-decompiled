@@ -11,7 +11,7 @@ abstract class ca {
 
     abstract int a(int param0);
 
-    final static void b() {
+    final static void b(byte param0) {
         if (!(null == bk.field_r)) {
             bk.field_r.a((byte) -34);
         }
@@ -71,7 +71,7 @@ abstract class ca {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_d = null;

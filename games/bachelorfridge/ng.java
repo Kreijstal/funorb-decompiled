@@ -1369,8 +1369,7 @@ final class ng {
           var3 = stackIn_3_0;
           var4 = 0;
           if (var3 == 0) {
-            int discarded$1 = -3;
-            var4 = this.a(var12.field_s.field_m);
+            var4 = this.a(var12.field_s.field_m, -3);
             break L1;
           } else {
             var4 = this.a((byte) -127, var12.field_s.field_m);
@@ -1477,7 +1476,7 @@ final class ng {
         }
     }
 
-    private final int a(int[] param0) {
+    private final int a(int[] param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int[] var4 = null;
@@ -1643,8 +1642,7 @@ final class ng {
         var6 = BachelorFridge.field_y;
         try {
           L0: {
-            int discarded$2 = 255;
-            var7 = gka.a(param2);
+            var7 = gka.a(param2, 255);
             if (var7 != null) {
               L1: {
                 var4 = new aga(var7, param0, -1, -1);
@@ -1662,7 +1660,7 @@ final class ng {
                 if (param1 == -51) {
                   break L1;
                 } else {
-                  boolean discarded$3 = ng.a((byte) 43);
+                  boolean discarded$1 = ng.a((byte) 43);
                   break L1;
                 }
               }
@@ -1995,7 +1993,7 @@ final class ng {
         stackIn_54_0.field_yb = stackIn_54_1 != 0;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         int var1 = 0;
         int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;

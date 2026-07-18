@@ -9,7 +9,7 @@ final class ie {
     private Random field_d;
     private int field_b;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
@@ -141,7 +141,7 @@ final class ie {
         }
     }
 
-    final static StringBuilder a(StringBuilder param0) {
+    final static StringBuilder a(StringBuilder param0, char param1, int param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -215,7 +215,7 @@ final class ie {
         return stackIn_5_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 

@@ -20,8 +20,7 @@ class ac extends ff {
     public final void a(int param0, int param1, int param2, boolean param3, el param4) {
         try {
             if (param3) {
-                int discarded$0 = -1540604944;
-                ik.a(param0 + param4.field_v, param4.field_h, param4.field_m + param2, param4.field_r);
+                ik.a(param0 + param4.field_v, param4.field_h, param4.field_m + param2, param4.field_r, -1540604944);
             }
             if (param1 > -5) {
                 field_t = null;

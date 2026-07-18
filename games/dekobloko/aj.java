@@ -8,7 +8,7 @@ final class aj {
     static mm field_e;
     static mm field_d;
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_d = null;
         field_e = null;
@@ -135,7 +135,7 @@ final class aj {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         pk.field_r = 0;
         v.b(0);
     }

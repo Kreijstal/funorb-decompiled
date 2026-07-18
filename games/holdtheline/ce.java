@@ -281,7 +281,7 @@ final class ce extends rd {
         }
     }
 
-    final static ql a(int param0, byte[] param1, bm[] param2, int param3) {
+    final static ql a(int param0, byte[] param1, bm[] param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         int[] var6_array = null;
         int[] var7 = null;
@@ -553,7 +553,7 @@ final class ce extends rd {
         return stackIn_30_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_q = null;
         field_n = null;
     }

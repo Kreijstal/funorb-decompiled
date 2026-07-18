@@ -141,7 +141,7 @@ final class ec extends ml {
         return stackIn_16_0;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         RuntimeException runtimeException = null;
         int var2 = 0;
         mj var3 = null;
@@ -416,7 +416,7 @@ final class ec extends ml {
         }
     }
 
-    final static sr a(sl param0) {
+    final static sr a(sl param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -452,10 +452,8 @@ final class ec extends ml {
               throw new IllegalStateException("" + var2_int);
             } else {
               L1: {
-                int discarded$5 = -95;
-                var3 = ng.a(param0) ? 1 : 0;
-                int discarded$6 = -95;
-                var4 = ng.a(param0) ? 1 : 0;
+                var3 = ng.a(param0, (byte) -95) ? 1 : 0;
+                var4 = ng.a(param0, (byte) -95) ? 1 : 0;
                 var5 = new sr();
                 var5.field_x = (short)param0.b((byte) 115, 16);
                 var5.field_w = tm.a((byte) 39, param0, 16, var5.field_w);
@@ -483,7 +481,7 @@ final class ec extends ml {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$7 = param0.b((byte) 98, 16);
+                  int discarded$1 = param0.b((byte) 98, 16);
                   var5.field_C = tm.a((byte) 39, param0, 16, var5.field_C);
                   var5.field_g = tm.a((byte) 39, param0, 16, var5.field_g);
                   var5.field_L = tm.a((byte) 39, param0, 16, var5.field_L);
@@ -493,8 +491,7 @@ final class ec extends ml {
                 }
               }
               L3: {
-                int discarded$8 = -95;
-                if (ng.a(param0)) {
+                if (ng.a(param0, (byte) -95)) {
                   var5.field_b = tm.a((byte) 39, param0, 16, var5.field_b);
                   break L3;
                 } else {
@@ -502,8 +499,7 @@ final class ec extends ml {
                 }
               }
               L4: {
-                int discarded$9 = -95;
-                if (!ng.a(param0)) {
+                if (!ng.a(param0, (byte) -95)) {
                   break L4;
                 } else {
                   var5.field_p = df.a(16, false, param0, var5.field_p);
@@ -613,8 +609,7 @@ final class ec extends ml {
               }
             }
             var5 = (CharSequence) (Object) param1;
-            int discarded$2 = -123;
-            var3 = im.a(var5);
+            var3 = im.a(var5, (byte) -123);
             if (var3 != null) {
               stackOut_4_0 = (String) var3;
               stackIn_5_0 = stackOut_4_0;

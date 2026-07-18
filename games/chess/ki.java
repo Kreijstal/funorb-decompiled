@@ -276,7 +276,7 @@ final class ki extends fb {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

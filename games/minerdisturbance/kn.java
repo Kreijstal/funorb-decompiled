@@ -667,7 +667,7 @@ class kn extends fe implements rk {
         }
     }
 
-    final static void a(id param0) {
+    final static void a(id param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         id var3 = null;
@@ -739,8 +739,7 @@ class kn extends fe implements rk {
                   break L5;
                 }
               }
-              int discarded$2 = 14288;
-              kh.a(param0);
+              kh.a(param0, 14288);
               var2_int = 0;
               break L0;
             }
@@ -1273,8 +1272,7 @@ class kn extends fe implements rk {
             boolean discarded$0 = ((kn) this).a(62, -126, -100, 75, (byte) -107, (fe) null, 81);
         }
         super.a(param0, -49, param2, param3, param4);
-        int discarded$1 = -48;
-        this.c();
+        this.c((byte) -48);
     }
 
     final boolean b(fe param0, int param1) {
@@ -1391,7 +1389,7 @@ class kn extends fe implements rk {
         return stackIn_18_0 != 0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_H = null;
         field_F = null;
         field_D = null;
@@ -1549,7 +1547,7 @@ class kn extends fe implements rk {
         return null != ((kn) this).m(127) ? true : false;
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         int var5 = MinerDisturbance.field_ab;
         hh var2 = new hh(((kn) this).field_G);
         fe var3 = (fe) (Object) var2.d(-19864);

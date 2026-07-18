@@ -91,7 +91,7 @@ final class jb extends kd {
         }
     }
 
-    final static wk[] g() {
+    final static wk[] g(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -108,8 +108,7 @@ final class jb extends kd {
             }
             var1[var2] = new wk(un.field_n, eb.field_n, rl.field_a[var2], oa.field_M[var2], le.field_L[var2], ca.field_r[var2], var5);
         }
-        int discarded$0 = 9324;
-        uh.a();
+        uh.a(9324);
         return var1;
     }
 
@@ -1100,7 +1099,7 @@ final class jb extends kd {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_S = null;
         field_L = null;
         field_Q = null;
@@ -1113,7 +1112,7 @@ final class jb extends kd {
         field_A = null;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         kc.field_y = null;
         int var1 = -122;
     }

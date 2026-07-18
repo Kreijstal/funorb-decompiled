@@ -14,11 +14,9 @@ final class ec {
     final static void a(kl param0, byte param1, int param2, vi param3) {
         try {
             pe.field_B = ih.a((byte) -109) * param2 / 1000;
-            int discarded$0 = -125;
-            hd.a(param0);
+            hd.a(param0, -125);
             uk.a(125, param0);
-            int discarded$1 = 1;
-            ab.a(param0);
+            ab.a(param0, (byte) 1);
             vf.a(256);
             r.c(350);
             jd.field_f = 0 - pe.field_B;

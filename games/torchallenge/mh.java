@@ -171,7 +171,7 @@ final class mh {
         }
     }
 
-    final static void a(int param0, byte[] param1, int[] param2, int param3) {
+    final static void a(int param0, byte[] param1, int[] param2, int param3, boolean param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -444,7 +444,7 @@ final class mh {
         return stackIn_25_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_e = null;

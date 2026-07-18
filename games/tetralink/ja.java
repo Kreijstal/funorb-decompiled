@@ -108,8 +108,7 @@ final class ja implements m {
             var11 = var13;
             var6 = var11;
             for (var7 = 0; var7 < var17.length; var7++) {
-                int discarded$0 = 45;
-                var6[var7] = oa.a(var17[var7], (double)param2);
+                var6[var7] = oa.a(var17[var7], (double)param2, (byte) 45);
             }
             param1.field_c = new int[16384];
             if (128 != var10.field_b) {
@@ -146,7 +145,7 @@ final class ja implements m {
         return true;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (ch.field_q != null) {
             ch.field_q.b();
         }

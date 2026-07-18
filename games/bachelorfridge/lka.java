@@ -24,8 +24,7 @@ class lka extends hf {
                 var3 = 0;
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.i(-12);
-                int discarded$1 = -51;
-                this.a(var2);
+                this.a(var2, (byte) -51);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -42,7 +41,7 @@ class lka extends hf {
         }
     }
 
-    private final int j() {
+    private final int j(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = BachelorFridge.field_y;
@@ -65,7 +64,7 @@ class lka extends hf {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_E = null;
         field_G = null;
     }
@@ -78,7 +77,7 @@ class lka extends hf {
         ((lka) this).i((byte) -118);
     }
 
-    private final int e() {
+    private final int e(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -183,7 +182,7 @@ class lka extends hf {
         return stackIn_1_0;
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
@@ -264,8 +263,7 @@ class lka extends hf {
     }
 
     private final void g(int param0) {
-        int discarded$0 = 0;
-        this.b();
+        this.b(false);
         this.i(115);
     }
 
@@ -377,10 +375,8 @@ class lka extends hf {
                     break L3;
                   } else {
                     L4: {
-                      int discarded$2 = 0;
-                      ((lka) this).field_K = this.j();
-                      int discarded$3 = -26;
-                      ((lka) this).field_H = this.e();
+                      ((lka) this).field_K = this.j(0);
+                      ((lka) this).field_H = this.e((byte) -26);
                       if (((lka) this).field_H <= 0) {
                         break L4;
                       } else {
@@ -445,7 +441,7 @@ class lka extends hf {
         }
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         if (!(!(((lka) this).field_k instanceof fca))) {
             ((fca) (Object) ((lka) this).field_k).a((lka) this, 0);
         }
@@ -467,13 +463,13 @@ class lka extends hf {
         }
     }
 
-    private final String f() {
+    private final String f(byte param0) {
         int var2 = ((lka) this).field_H > ((lka) this).field_K ? ((lka) this).field_K : ((lka) this).field_H;
         int var3 = ((lka) this).field_H > ((lka) this).field_K ? ((lka) this).field_H : ((lka) this).field_K;
         return ((lka) this).field_w.substring(var2, var3);
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         vv var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -570,8 +566,7 @@ class lka extends hf {
         try {
           L0: {
             super.a(param0, param1, param2, param3);
-            int discarded$2 = -75;
-            this.d();
+            this.d((byte) -75);
             if (param3 == 20) {
               if (((lka) this).field_u == 1) {
                 L1: {
@@ -732,12 +727,10 @@ class lka extends hf {
         }
     }
 
-    private final void b() {
-        int discarded$0 = -53;
-        String var2 = this.f();
+    private final void b(boolean param0) {
+        String var2 = this.f((byte) -53);
         if (!(var2.length() <= 0)) {
-            int discarded$1 = -53;
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.f()), (java.awt.datatransfer.ClipboardOwner) null);
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.f((byte) -53)), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
@@ -867,9 +860,9 @@ class lka extends hf {
                               break L6;
                             } else {
                               ((lka) this).field_w = ((lka) this).field_w + param2;
-                              int dupTemp$6 = ((lka) this).field_w.length();
-                              ((lka) this).field_H = dupTemp$6;
-                              ((lka) this).field_K = dupTemp$6;
+                              int dupTemp$2 = ((lka) this).field_w.length();
+                              ((lka) this).field_H = dupTemp$2;
+                              ((lka) this).field_K = dupTemp$2;
                               break L6;
                             }
                           }
@@ -944,8 +937,7 @@ class lka extends hf {
                                         break L9;
                                       } else {
                                         if (param1 == 66) {
-                                          int discarded$7 = 0;
-                                          this.b();
+                                          this.b(false);
                                           stackOut_58_0 = 1;
                                           stackIn_59_0 = stackOut_58_0;
                                           return stackIn_59_0 != 0;
@@ -967,8 +959,7 @@ class lka extends hf {
                                       }
                                     }
                                   } else {
-                                    int discarded$8 = 52;
-                                    this.h();
+                                    this.h((byte) 52);
                                     stackOut_44_0 = 1;
                                     stackIn_45_0 = stackOut_44_0;
                                     return stackIn_45_0 != 0;
@@ -1005,10 +996,9 @@ class lka extends hf {
                                     stackIn_35_2 = stackOut_34_2;
                                     break L10;
                                   } else {
-                                    int discarded$9 = -26;
                                     stackOut_33_0 = this;
                                     stackOut_33_1 = stackIn_33_1;
-                                    stackOut_33_2 = this.e();
+                                    stackOut_33_2 = this.e((byte) -26);
                                     stackIn_35_0 = stackOut_33_0;
                                     stackIn_35_1 = stackOut_33_1;
                                     stackIn_35_2 = stackOut_33_2;
@@ -1033,10 +1023,9 @@ class lka extends hf {
                                 stackIn_26_0 = stackOut_25_0;
                                 stackIn_26_1 = stackOut_25_1;
                                 if (wga.field_q[82]) {
-                                  int discarded$10 = 0;
                                   stackOut_27_0 = this;
                                   stackOut_27_1 = stackIn_27_1;
-                                  stackOut_27_2 = this.j();
+                                  stackOut_27_2 = this.j(0);
                                   stackIn_28_0 = stackOut_27_0;
                                   stackIn_28_1 = stackOut_27_1;
                                   stackIn_28_2 = stackOut_27_2;
@@ -1072,7 +1061,7 @@ class lka extends hf {
                     break L0;
                   } else {
                     var6 = null;
-                    boolean discarded$11 = ((lka) this).b(-24, 51, -40, -52, -18, (wj) null, -94);
+                    boolean discarded$3 = ((lka) this).b(-24, 51, -40, -52, -18, (wj) null, -94);
                     return false;
                   }
                 }

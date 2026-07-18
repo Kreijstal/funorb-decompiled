@@ -26,8 +26,7 @@ final class p {
     }
 
     final void a(int param0) throws IOException {
-        int discarded$0 = 66;
-        this.a();
+        this.a((byte) 66);
         ((p) this).field_h.b(0);
         if (param0 != -1) {
             ((p) this).field_f = -5;
@@ -84,8 +83,7 @@ final class p {
                     }
                   }
                 }
-                int discarded$2 = 66;
-                this.a();
+                this.a((byte) 66);
                 break L2;
               }
             }
@@ -110,8 +108,7 @@ final class p {
                   param2 = param2 + var5_int;
                   param3 = param3 - var5_int;
                   ((p) this).field_f = ((p) this).field_e.length;
-                  int discarded$3 = 66;
-                  this.a();
+                  this.a((byte) 66);
                   break L5;
                 }
               }
@@ -295,7 +292,7 @@ final class p {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_3_0 = null;
@@ -319,8 +316,7 @@ final class p {
         try {
           L0: {
             L1: {
-              int discarded$2 = 1;
-              var2 = la.a(il.a(-23718, param0));
+              var2 = la.a(il.a(-23718, param0), true);
               if (var2 != null) {
                 break L1;
               } else {
@@ -365,7 +361,7 @@ final class p {
         return stackIn_3_0;
     }
 
-    private final void a() throws IOException {
+    private final void a(byte param0) throws IOException {
         long var2 = 0L;
         long var4 = 0L;
         int var6 = 0;

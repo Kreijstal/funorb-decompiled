@@ -63,8 +63,7 @@ final class g implements j {
                 var3_int = 0;
                 try {
                   L1: {
-                    int discarded$2 = 20511;
-                    var4 = (String) ff.a("getcookies", param2);
+                    var4 = (String) ff.a("getcookies", param2, 20511);
                     var5 = dl.a(var4, ';', -75);
                     var6 = 0;
                     L2: while (true) {
@@ -164,7 +163,7 @@ final class g implements j {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
     }
 

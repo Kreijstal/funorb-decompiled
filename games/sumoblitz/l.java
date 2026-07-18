@@ -6,7 +6,7 @@ final class l {
     int field_b;
     static String[] field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
     }

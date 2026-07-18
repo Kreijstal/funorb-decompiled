@@ -6,7 +6,7 @@ final class tb {
     static java.awt.Font field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;

@@ -64,7 +64,7 @@ final class cl extends ee {
         }
     }
 
-    final static int h() {
+    final static int h(byte param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -275,8 +275,7 @@ final class cl extends ee {
                 if (((cl) this).field_R != 0) {
                   break L6;
                 } else {
-                  int discarded$1 = -1326;
-                  if (!this.a(((cl) this).field_A.field_B)) {
+                  if (!this.a(((cl) this).field_A.field_B, -1326)) {
                     break L6;
                   } else {
                     L7: {
@@ -304,7 +303,7 @@ final class cl extends ee {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_S = null;
         field_W = null;
     }
@@ -464,8 +463,7 @@ final class cl extends ee {
                 if (param0 <= -70) {
                   break L1;
                 } else {
-                  int discarded$1 = 0;
-                  cl.c();
+                  cl.c(false);
                   break L1;
                 }
               }
@@ -1014,7 +1012,7 @@ final class cl extends ee {
         }
     }
 
-    private final boolean a(dj param0) {
+    private final boolean a(dj param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

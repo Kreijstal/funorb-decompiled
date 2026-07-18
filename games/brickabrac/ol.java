@@ -111,7 +111,7 @@ final class ol extends km {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_r = null;
         field_v = null;
         field_x = null;

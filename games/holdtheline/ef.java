@@ -176,7 +176,7 @@ final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
     ef() {
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(mn.field_a)) {
             throw new IllegalStateException();
         }

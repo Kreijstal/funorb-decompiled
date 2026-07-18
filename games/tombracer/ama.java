@@ -100,7 +100,7 @@ final class ama extends lba {
                 if (param1.indexOf("<br>") != -1) {
                   break L2;
                 } else {
-                  param4[0] = (String) (Object) param4;
+                  param4[0] = param1;
                   stackOut_5_0 = 1;
                   stackIn_6_0 = stackOut_5_0;
                   return stackIn_6_0;
@@ -295,16 +295,13 @@ final class ama extends lba {
                     var2_int = oba.field_e.c(~param1);
                     if (var2_int <= 0) {
                       if (~var2_int > param1) {
-                        int discarded$9 = 60;
-                        dea.a();
+                        dea.a(60);
                         return false;
                       } else {
-                        int discarded$10 = -121;
-                        if (rf.b() <= 30000L) {
+                        if (rf.b((byte) -121) <= 30000L) {
                           break L0;
                         } else {
-                          int discarded$11 = 60;
-                          dea.a();
+                          dea.a(60);
                           return false;
                         }
                       }
@@ -335,8 +332,7 @@ final class ama extends lba {
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
-                  int discarded$12 = 60;
-                  dea.a();
+                  dea.a(60);
                   return false;
                 }
                 return false;

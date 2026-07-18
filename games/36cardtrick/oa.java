@@ -88,7 +88,7 @@ final class oa {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1, byte param2, le param3) {
+    final static void a(java.awt.Component param0, int param1, byte param2, le param3, boolean param4) {
         gd.a(22050, true, 10);
         wd.field_e = gd.a(param3, param0, 0, 22050);
         cb.field_g = gd.a(param3, param0, 1, 1024);
@@ -102,7 +102,7 @@ final class oa {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;

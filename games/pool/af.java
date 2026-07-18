@@ -223,7 +223,7 @@ final class af extends sq {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_h = null;
     }
 
@@ -345,7 +345,7 @@ final class af extends sq {
         return 1;
     }
 
-    private final boolean r() {
+    private final boolean r(int param0) {
         return true;
     }
 
@@ -362,26 +362,23 @@ final class af extends sq {
         if (param1 != 64) {
             af.a(-37, true);
         }
-        int discarded$0 = 7;
-        dd dupTemp$1 = ad.a(param3, param4);
-        var5[6] = dupTemp$1;
-        var5[3] = dupTemp$1;
-        var5[2] = dupTemp$1;
-        var5[1] = dupTemp$1;
-        var5[0] = dupTemp$1;
-        int discarded$2 = 7;
-        dd dupTemp$3 = ad.a(param2, param4);
-        var5[8] = dupTemp$3;
-        var5[7] = dupTemp$3;
-        var5[5] = dupTemp$3;
+        dd dupTemp$0 = ad.a(param3, param4, 7);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        dd dupTemp$1 = ad.a(param2, param4, 7);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
         if (!(param0 == 0)) {
-            int discarded$4 = 7;
-            var6[4] = ad.a(param0, 64);
+            var6[4] = ad.a(param0, 64, 7);
         }
         return var5;
     }
 
-    private final int d() {
+    private final int d(byte param0) {
         int var2 = 0;
         return 0;
     }
@@ -425,8 +422,7 @@ final class af extends sq {
               } else {
                 var14.a(3, -14, new int[1]);
                 var14.field_t = true;
-                int discarded$13 = 1;
-                var4 = var4 | (this.q() | um.field_c);
+                var4 = var4 | (this.q(1) | um.field_c);
                 var14.field_w = (byte)(var14.field_w - 1);
                 break L0;
               }
@@ -436,8 +432,7 @@ final class af extends sq {
                 if (var14.field_n == -1) {
                   var14.a(7, -14, new int[1]);
                   var14.field_t = true;
-                  int discarded$14 = -2;
-                  var4 = var4 | this.w();
+                  var4 = var4 | this.w(-2);
                   var14.field_w = (byte)(var14.field_w - 1);
                   break L1;
                 } else {
@@ -449,8 +444,7 @@ final class af extends sq {
                     } else {
                       var14.a(1, -14, new int[1]);
                       var14.field_t = true;
-                      int discarded$15 = 1;
-                      var4 = var4 | this.b();
+                      var4 = var4 | this.b(true);
                       var14.field_w = (byte)(var14.field_w - 1);
                       break L1;
                     }
@@ -460,8 +454,7 @@ final class af extends sq {
                 if (var3 != 2) {
                   var14.a(2, -14, new int[1]);
                   var14.field_t = true;
-                  int discarded$16 = -17;
-                  var4 = var4 | this.o();
+                  var4 = var4 | this.o(-17);
                   var14.field_w = (byte)(var14.field_w - 1);
                   break L1;
                 } else {
@@ -477,10 +470,8 @@ final class af extends sq {
                 var8 = 0;
                 L3: while (true) {
                   if (var8 >= ((af) this).field_d.field_l.length) {
-                    int discarded$17 = -91;
-                    if (~this.t() >= ~var5) {
-                      int discarded$18 = 87;
-                      if (var7 < this.d()) {
+                    if (~this.t(-91) >= ~var5) {
+                      if (var7 < this.d((byte) 87)) {
                         L4: {
                           if (var7 != 0) {
                             var14.a(14, -14, new int[0]);
@@ -491,12 +482,10 @@ final class af extends sq {
                           }
                         }
                         var14.field_t = true;
-                        int discarded$19 = 91;
-                        var4 = var4 | this.e();
+                        var4 = var4 | this.e((byte) 91);
                         break L2;
                       } else {
-                        int discarded$20 = 89;
-                        if (~var6 <= ~this.p()) {
+                        if (~var6 <= ~this.p(89)) {
                           break L2;
                         } else {
                           L5: {
@@ -509,8 +498,7 @@ final class af extends sq {
                             }
                           }
                           var14.field_t = true;
-                          int discarded$21 = -46;
-                          var4 = var4 | this.g();
+                          var4 = var4 | this.g((byte) -46);
                           break L2;
                         }
                       }
@@ -525,8 +513,7 @@ final class af extends sq {
                         }
                       }
                       var14.field_t = true;
-                      int discarded$22 = 0;
-                      var4 = var4 | this.s();
+                      var4 = var4 | this.s(0);
                       break L2;
                     }
                   } else {
@@ -609,8 +596,7 @@ final class af extends sq {
                 if (0 == (nr.field_Y & var4)) {
                   if (((af) this).a((1 + ((af) this).field_d.field_A) % ((af) this).field_d.field_n, -119)) {
                     var14.a(11, -14, new int[0]);
-                    int discarded$23 = -30;
-                    var4 = this.f();
+                    var4 = this.f((byte) -30);
                     break L12;
                   } else {
                     break L12;
@@ -639,11 +625,10 @@ final class af extends sq {
                           if (var7 <= 0) {
                             L16: {
                               ((af) this).a((int) ((af) this).b(var8, 30554), -1, var14.field_L);
-                              int discarded$24 = 9;
                               stackOut_90_0 = var4;
                               stackIn_92_0 = stackOut_90_0;
                               stackIn_91_0 = stackOut_90_0;
-                              if (this.r()) {
+                              if (this.r(9)) {
                                 stackOut_92_0 = stackIn_92_0;
                                 stackOut_92_1 = nd.field_j;
                                 stackIn_93_0 = stackOut_92_0;
@@ -662,8 +647,7 @@ final class af extends sq {
                             break L13;
                           } else {
                             L17: {
-                              int discarded$25 = -13243;
-                              var10 = this.v();
+                              var10 = this.v(-13243);
                               var11 = 3 & var10;
                               if (var11 != 0) {
                                 if (var11 != 1) {
@@ -954,7 +938,7 @@ final class af extends sq {
         return var3 != 0;
     }
 
-    private final int w() {
+    private final int w(int param0) {
         return this.u(4);
     }
 
@@ -966,7 +950,7 @@ final class af extends sq {
         return sg.field_O | ll.field_f;
     }
 
-    private final int p() {
+    private final int p(int param0) {
         return 0;
     }
 
@@ -986,8 +970,7 @@ final class af extends sq {
                     if (var4 == null) {
                       break L0;
                     } else {
-                      int discarded$6 = 1;
-                      pm.a(var4, param0);
+                      pm.a(var4, param0, true);
                       var4 = (fl) (Object) cq.field_g.f((byte) -5);
                       continue L2;
                     }
@@ -996,8 +979,7 @@ final class af extends sq {
                   return;
                 }
               } else {
-                int discarded$7 = -102;
-                ra.a(param0, var3);
+                ra.a(param0, var3, -102);
                 var3 = (oi) (Object) qr.field_a.f((byte) -5);
                 continue L1;
               }
@@ -1195,11 +1177,11 @@ final class af extends sq {
         return stackIn_12_0;
     }
 
-    private final int s() {
+    private final int s(int param0) {
         return ((af) this).field_d.j(46).field_M < 0 ? this.u(4) : ob.field_F | sg.field_O;
     }
 
-    private final int b() {
+    private final int b(boolean param0) {
         return this.u(4);
     }
 
@@ -1320,7 +1302,7 @@ final class af extends sq {
         return true;
     }
 
-    private final int v() {
+    private final int v(int param0) {
         return 9;
     }
 
@@ -1331,7 +1313,7 @@ final class af extends sq {
         return this.b(param0, (byte) 122, param2);
     }
 
-    private final int t() {
+    private final int t(int param0) {
         int var2 = 0;
         return ((af) this).field_d.j(106).field_M < 0 ? 0 : 1;
     }
@@ -1343,7 +1325,7 @@ final class af extends sq {
         return 2;
     }
 
-    private final int q() {
+    private final int q(int param0) {
         return this.u(4) | nr.field_R;
     }
 
@@ -1551,7 +1533,7 @@ final class af extends sq {
         return stackIn_12_0 != 0;
     }
 
-    private final int f() {
+    private final int f(byte param0) {
         return sg.field_O | ll.field_f | nr.field_R | ve.field_j;
     }
 
@@ -1661,7 +1643,7 @@ final class af extends sq {
         return stackIn_16_0;
     }
 
-    private final int o() {
+    private final int o(int param0) {
         return this.u(4);
     }
 
@@ -1808,14 +1790,12 @@ final class af extends sq {
         return ((af) this).field_g[1 == ((af) this).field_d.field_n ? 0 : param1 / (((af) this).field_d.field_n >> 1)];
     }
 
-    private final int g() {
-        int discarded$0 = 0;
-        return this.s();
+    private final int g(byte param0) {
+        return this.s(0);
     }
 
-    private final int e() {
-        int discarded$0 = 0;
-        return this.s();
+    private final int e(byte param0) {
+        return this.s(0);
     }
 
     final int h(int param0) {
@@ -1850,8 +1830,7 @@ final class af extends sq {
           var6.a(17, param0 + -13, new int[1]);
           if (((af) this).a((var6.field_L - param0) % ((af) this).field_d.field_n, -112)) {
             var6.a(11, -14, new int[0]);
-            int discarded$1 = -30;
-            var3 = this.f();
+            var3 = this.f((byte) -30);
             break L1;
           } else {
             break L1;

@@ -133,7 +133,7 @@ final class sw extends td {
         }
     }
 
-    final static StringBuilder a(StringBuilder param0, int param1, int param2) {
+    final static StringBuilder a(StringBuilder param0, int param1, int param2, char param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -207,7 +207,7 @@ final class sw extends td {
         return stackIn_5_0;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_p = null;
     }
 

@@ -9,13 +9,13 @@ final class ak extends RuntimeException {
     static boolean field_e;
     static int[] field_f;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_b = null;
         field_f = null;
     }
 
-    final static void a(ga param0) {
+    final static void a(ga param0, boolean param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

@@ -47,14 +47,14 @@ final class og extends ek {
         var2.e(91, -var4 + var2.field_j);
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_T = null;
         field_P = null;
         field_S = null;
         field_M = null;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         L0: {
           if (param0 < 32) {
             break L0;
@@ -899,8 +899,8 @@ final class og extends ek {
                       if (null != var12.field_bc) {
                         var31 += 2;
                         var37 = new StringBuilder(64);
-                        StringBuilder discarded$6 = var37.append(ko.field_k);
-                        StringBuilder discarded$7 = var37.append(var12.field_bc[0]);
+                        StringBuilder discarded$4 = var37.append(ko.field_k);
+                        StringBuilder discarded$5 = var37.append(var12.field_bc[0]);
                         var38_int = 1;
                         L37: while (true) {
                           if (var12.field_cc <= var38_int) {
@@ -911,8 +911,8 @@ final class og extends ek {
                             var31 = var31 + jk.field_f * var39;
                             break L36;
                           } else {
-                            StringBuilder discarded$8 = var37.append(", ");
-                            StringBuilder discarded$9 = var37.append(var12.field_bc[var38_int]);
+                            StringBuilder discarded$6 = var37.append(", ");
+                            StringBuilder discarded$7 = var37.append(var12.field_bc[var38_int]);
                             var38_int++;
                             continue L37;
                           }
@@ -942,8 +942,7 @@ final class og extends ek {
                   }
                 }
                 L39: {
-                  int discarded$10 = -9;
-                  var33 = hd.a(var12.field_Vb, var32);
+                  var33 = hd.a(var12.field_Vb, var32, -9);
                   var34 = var33;
                   var34 = var33;
                   if (var33 == null) {
@@ -1095,8 +1094,7 @@ final class og extends ek {
                             pl.a(11, (byte) 92, var12.i(6));
                             break L52;
                           } else {
-                            int discarded$11 = -123;
-                            qm.a(var12, true, var32);
+                            qm.a(var12, true, var32, -123);
                             break L52;
                           }
                         } else {

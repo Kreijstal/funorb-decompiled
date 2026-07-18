@@ -122,13 +122,13 @@ final class uca {
         return (String) (Object) stackIn_16_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = -39;
         field_f = null;
         field_c = null;
     }
 
-    final static void a(int param0, toa param1) {
+    final static void a(int param0, toa param1, byte param2) {
         kh var5 = null;
         int var4 = 0;
         try {

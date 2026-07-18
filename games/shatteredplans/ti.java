@@ -17,7 +17,7 @@ final class ti {
     static String field_j;
     static bc field_g;
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_d = null;
         field_i = null;
@@ -356,7 +356,7 @@ final class ti {
         var2.b(var2.field_j - var3, (byte) 124);
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         return null != di.a(param0, 119);
     }
 

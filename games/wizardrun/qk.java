@@ -193,8 +193,7 @@ final class qk {
           L0: {
             var7 = new ne(param2);
             var8 = new ne(param3);
-            int discarded$2 = 27851;
-            stackOut_0_0 = qi.a(var7, var8, param0, param4, param1, param6);
+            stackOut_0_0 = qi.a(var7, var8, param0, param4, param1, param6, 27851);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -391,7 +390,7 @@ final class qk {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_d = null;
         field_g = null;

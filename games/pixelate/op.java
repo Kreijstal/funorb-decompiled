@@ -40,7 +40,7 @@ final class op extends de {
         ((op) this).field_r = 1;
     }
 
-    final static tf[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static tf[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -105,8 +105,7 @@ final class op extends de {
           if (param0 == 0) {
             if (((op) this).field_g.a(79)) {
               var4 = param2 ? 1 : 0;
-              int discarded$2 = -25528;
-              la.a(ti.field_t, 16, var4 != 0);
+              la.a(ti.field_t, 16, var4 != 0, -25528);
               break L0;
             } else {
               break L0;
@@ -186,7 +185,7 @@ final class op extends de {
           if (param1 < -103) {
             break L3;
           } else {
-            int discarded$3 = ((op) this).a(125, (byte) 57);
+            int discarded$1 = ((op) this).a(125, (byte) 57);
             break L3;
           }
         }
@@ -234,7 +233,7 @@ final class op extends de {
         field_p = null;
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         pm.field_h.field_h = 0;
         pm.field_h.field_m = 0;
     }
@@ -266,8 +265,7 @@ final class op extends de {
         if (param0 > -13) {
             ((op) this).field_v = 86;
         }
-        int discarded$0 = -25528;
-        la.a(0, 16, false);
+        la.a(0, 16, false, -25528);
     }
 
     final void b(int param0) {
@@ -494,7 +492,7 @@ final class op extends de {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;

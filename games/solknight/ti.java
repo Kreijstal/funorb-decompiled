@@ -10,7 +10,7 @@ final class ti {
     static String[] field_g;
     static e field_f;
 
-    final static int a(qc param0, int param1, sd param2) {
+    final static int a(qc param0, int param1, sd param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -175,7 +175,7 @@ final class ti {
         return stackIn_20_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_d = null;
         field_c = null;
@@ -185,7 +185,7 @@ final class ti {
         field_g = null;
     }
 
-    final static long a(CharSequence param0) {
+    final static long a(CharSequence param0, byte param1) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;

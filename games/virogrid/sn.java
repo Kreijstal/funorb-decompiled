@@ -9,7 +9,7 @@ final class sn extends qe {
     private wa field_o;
     private wa field_q;
 
-    final static int h() {
+    final static int h(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -186,7 +186,7 @@ final class sn extends qe {
         return stackIn_14_0 != 0;
     }
 
-    final static mg a(eh param0, String param1, String param2) {
+    final static mg a(eh param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -343,7 +343,8 @@ final class sn extends qe {
         RuntimeException var3 = null;
         String var4 = null;
         String var5 = null;
-        String var6 = null;
+        Object var6 = null;
+        String var7 = null;
         String stackIn_5_0 = null;
         String stackIn_9_0 = null;
         String stackIn_12_0 = null;
@@ -380,7 +381,7 @@ final class sn extends qe {
         String stackOut_35_2 = null;
         try {
           L0: {
-            var6 = ((sn) this).field_q.field_n.toLowerCase();
+            var7 = ((sn) this).field_q.field_n.toLowerCase();
             var4 = param1.toLowerCase();
             if (var4.length() != 0) {
               var5 = var4;
@@ -400,21 +401,19 @@ final class sn extends qe {
                         if (param0 == -26358) {
                           break L1;
                         } else {
-                          int discarded$18 = 0;
-                          mg discarded$19 = sn.a((eh) null, (String) null, (String) null);
+                          var6 = null;
+                          mg discarded$2 = sn.a((eh) null, (String) null, (String) null, false);
                           break L1;
                         }
                       }
-                      if (var6.length() > 0) {
-                        if (mj.a(var5, var6, (byte) 126)) {
+                      if (var7.length() > 0) {
+                        if (mj.a(var5, var7, (byte) 126)) {
                           stackOut_24_0 = ec.field_A;
                           stackIn_25_0 = stackOut_24_0;
                           return stackIn_25_0;
                         } else {
-                          int discarded$20 = 1;
-                          if (!me.a(var5, var6)) {
-                            int discarded$21 = 0;
-                            if (!w.a(var5, var6)) {
+                          if (!me.a(var5, var7, true)) {
+                            if (!w.a(var5, var7, false)) {
                               stackOut_32_0 = nh.field_l;
                               stackIn_33_0 = stackOut_32_0;
                               break L0;
@@ -567,7 +566,7 @@ final class sn extends qe {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = -63;
         field_p = null;
         field_n = null;

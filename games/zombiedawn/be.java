@@ -18,7 +18,7 @@ final class be extends im {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_i = null;
     }
 

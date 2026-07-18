@@ -12,7 +12,7 @@ final class di extends hp implements hh {
     static boolean field_J;
     static String field_I;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_I = null;
         field_L = null;
     }
@@ -330,8 +330,7 @@ final class di extends hp implements hh {
                     if (((di) this).field_N != param2) {
                       break L1;
                     } else {
-                      int discarded$30 = -50;
-                      jp.b();
+                      jp.b((byte) -50);
                       break L1;
                     }
                   }
@@ -480,7 +479,7 @@ final class di extends hp implements hh {
         ((di) this).a((ga) (Object) ((di) this).field_N, 10);
     }
 
-    final static v[] a() {
+    final static v[] a(int param0) {
         int var3 = 0;
         int var4 = ZombieDawn.field_J;
         v[] var1 = new v[t.field_h];

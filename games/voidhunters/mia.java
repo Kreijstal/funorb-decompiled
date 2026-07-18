@@ -8,7 +8,7 @@ final class mia implements Runnable {
     eab field_d;
     volatile boolean field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
@@ -115,7 +115,7 @@ final class mia implements Runnable {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

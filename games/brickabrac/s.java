@@ -186,7 +186,7 @@ final class s {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var2 = null;
         fr.a(true, (String) null, am.field_cc);
     }

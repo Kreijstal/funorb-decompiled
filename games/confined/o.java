@@ -59,7 +59,7 @@ final class o implements Iterator {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         ((o) this).field_c = null;
         ((o) this).field_e = ((o) this).field_a.field_j[0].field_h;
         ((o) this).field_b = 1;
@@ -69,8 +69,7 @@ final class o implements Iterator {
         ((o) this).field_c = null;
         try {
             ((o) this).field_a = param0;
-            int discarded$0 = 1;
-            this.a();
+            this.a(1);
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "o.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

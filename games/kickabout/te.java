@@ -60,12 +60,12 @@ final class te {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_b = null;
     }
 
-    final static void a(int param0, ii param1) {
+    final static void a(int param0, ii param1, byte param2) {
         ml var3 = null;
         int var4 = 0;
         try {
@@ -345,9 +345,7 @@ final class te {
     }
 
     final static void a(int param0, byte param1, int param2, boolean param3, int param4, boolean param5, int param6, boolean param7, int param8, boolean param9, int param10, boolean param11) {
-        int discarded$0 = 0;
-        int discarded$1 = 13;
-        gm.a(-79, 14, param5, 16777215, 15, 11, true, 16777215, param6, param3, param11, param7);
+        gm.a(-79, 14, param5, 16777215, 15, 11, true, 16777215, param6, param3, param11, param7, 13, 0);
     }
 
     static {

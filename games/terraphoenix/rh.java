@@ -8,7 +8,7 @@ final class rh {
     int field_a;
     int field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

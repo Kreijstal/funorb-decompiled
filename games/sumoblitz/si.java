@@ -9,7 +9,7 @@ final class si extends nn {
     static hr field_e;
     static hr field_d;
 
-    final static int c(int param0) {
+    final static int c(int param0, int param1) {
         int var2 = 0;
         if (param0 == 0) {
             return 0;
@@ -73,7 +73,7 @@ final class si extends nn {
         }
     }
 
-    final static byte[] a(File param0) {
+    final static byte[] a(File param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] stackIn_1_0 = null;
@@ -97,8 +97,7 @@ final class si extends nn {
         try {
           L0: {
             var2_int = 0;
-            int discarded$2 = 103;
-            stackOut_0_0 = kq.a((int)param0.length(), param0);
+            stackOut_0_0 = kq.a((int)param0.length(), param0, (byte) 103);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -159,7 +158,7 @@ final class si extends nn {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         int var1 = 2;
         field_d = null;
         field_e = null;

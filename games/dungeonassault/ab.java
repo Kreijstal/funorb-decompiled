@@ -125,8 +125,7 @@ final class ab {
                 L2: {
                   var5 = to.field_c[var3_int];
                   if (var5 >= 0) {
-                    int discarded$26 = -30633;
-                    var6 = og.a(true, go.field_A[var3_int]);
+                    var6 = og.a(true, go.field_A[var3_int], -30633);
                     var4 = var4 + ci.field_j;
                     var7 = vo.field_r + -(var6 >> 1);
                     if (ec.a(var4, mj.field_g + (h.field_q << 1), param1, (oh.field_t << 1) + var6, -oh.field_t + var7, param2, 100)) {
@@ -157,7 +156,7 @@ final class ab {
         return stackIn_15_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_d = null;
     }
@@ -166,7 +165,7 @@ final class ab {
         throw new IllegalStateException();
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return kc.field_U;
     }
 

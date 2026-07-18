@@ -145,7 +145,7 @@ final class wp extends ms {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_z = null;
         field_H = null;
         field_F = null;

@@ -8,7 +8,7 @@ final class lk {
     static int[] field_a;
     static jb field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_e = null;
         field_b = null;
@@ -16,12 +16,11 @@ final class lk {
         field_d = null;
     }
 
-    final static void b() {
-        int discarded$0 = 113;
-        ia.e();
+    final static void b(int param0) {
+        ia.e((byte) 113);
     }
 
-    final static String c() {
+    final static String c(int param0) {
         String var1 = "";
         if (mb.field_s != null) {
             var1 = mb.field_s.d(false);
@@ -35,7 +34,7 @@ final class lk {
         return var1;
     }
 
-    final static void d() {
+    final static void d(int param0) {
     }
 
     static {

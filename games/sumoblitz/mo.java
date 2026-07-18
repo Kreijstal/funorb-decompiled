@@ -265,8 +265,7 @@ final class mo extends tt {
     }
 
     final static void a(int param0, int param1) {
-        int discarded$0 = 56;
-        lr.a(nt.field_m[param1]);
+        lr.a(nt.field_m[param1], (byte) 56);
         int var2 = 29 % ((param0 - -73) / 48);
     }
 
@@ -276,8 +275,7 @@ final class mo extends tt {
         int var4 = 0;
         Object var5 = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        int discarded$2 = -50;
-        ((mo) this).field_x = td.a(((mo) this).field_v);
+        ((mo) this).field_x = td.a(((mo) this).field_v, -50);
         this.d(param0 + 126);
         var2 = ((mo) this).field_s + -1;
         L0: while (true) {
@@ -513,7 +511,7 @@ final class mo extends tt {
         return (param1 * (-var16 + var17) >> 12) + var16;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_w = null;
         field_t = null;
         field_n = null;

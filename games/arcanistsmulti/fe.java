@@ -777,7 +777,7 @@ final class fe extends pg {
         ((fe) this).field_l = false;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_h = null;
         field_o = null;

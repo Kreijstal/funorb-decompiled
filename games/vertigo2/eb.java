@@ -12,7 +12,7 @@ final class eb {
     static String field_i;
     static int field_h;
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -195,8 +195,7 @@ final class eb {
                   }
                 }
                 L12: {
-                  int discarded$1 = 0;
-                  var7 = uc.a(stackIn_39_0, stackIn_39_1 != 0);
+                  var7 = uc.a(stackIn_39_0, stackIn_39_1 != 0, false);
                   var8 = vm.field_c - (var7 >> 1);
                   if (0 > var4) {
                     break L12;
@@ -261,7 +260,7 @@ final class eb {
         field_d = null;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -373,7 +372,7 @@ final class eb {
         }
     }
 
-    final static String a() {
+    final static String a(int param0) {
         if (!(un.field_Hb != bf.field_b)) {
             return mk.field_S;
         }
@@ -386,7 +385,7 @@ final class eb {
         return ff.field_u;
     }
 
-    final static String a(boolean param0, boolean param1) {
+    final static String a(boolean param0, boolean param1, int param2, boolean param3) {
         int var4 = 0;
         if (!(!param1)) {
             var4 += 4;

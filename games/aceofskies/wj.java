@@ -17,8 +17,7 @@ final class wj implements up {
             ((wj) this).field_e = null;
         }
         ((wj) this).field_a = ((wj) this).field_a & -5;
-        int discarded$0 = -15395;
-        ((wj) this).field_c = this.d();
+        ((wj) this).field_c = this.d(-15395);
     }
 
     private final void a(int param0, int param1, int param2, nr param3) {
@@ -203,8 +202,7 @@ final class wj implements up {
                         var18 = 0;
                         L6: while (true) {
                           if (3 <= var18) {
-                            int discarded$1 = 0;
-                            eg.a(var17, qg.field_e, 45, true, false, rb.field_k);
+                            eg.a(var17, qg.field_e, 45, true, false, rb.field_k, false);
                             hg.a(var14, var8, var13, var12, var9, 255, var7, var17);
                             var15++;
                             continue L4;
@@ -266,7 +264,7 @@ final class wj implements up {
         ((wj) this).field_g[param0] = null;
     }
 
-    private final int d() {
+    private final int d(int param0) {
         if (0 != (((wj) this).field_a & 4)) {
             return 36160;
         }
@@ -285,8 +283,7 @@ final class wj implements up {
         if (param0 != -19065) {
             return;
         }
-        int discarded$0 = -15395;
-        ((wj) this).field_c = this.d();
+        ((wj) this).field_c = this.d(-15395);
     }
 
     public final void c(byte param0) {
@@ -295,8 +292,7 @@ final class wj implements up {
         if (param0 <= 79) {
             return;
         }
-        int discarded$0 = -15395;
-        ((wj) this).field_c = this.d();
+        ((wj) this).field_c = this.d(-15395);
     }
 
     final void a(int param0, nr param1, int param2) {
@@ -407,8 +403,7 @@ final class wj implements up {
             ((wj) this).field_a = 59;
         }
         ((wj) this).field_a = ((wj) this).field_a | 2;
-        int discarded$0 = -15395;
-        ((wj) this).field_c = this.d();
+        ((wj) this).field_c = this.d(-15395);
     }
 
     protected final void finalize() throws Throwable {
@@ -418,8 +413,7 @@ final class wj implements up {
 
     final static void a(int param0, rk param1, java.awt.Component param2, int param3, boolean param4, jt param5, int param6, int param7) {
         try {
-            int discarded$0 = 10;
-            tk.a(param3, param4);
+            tk.a(param3, param4, 10);
             um.field_m = tk.a(param1, param2, 0, param6);
             da.field_a = tk.a(param1, param2, 1, param7);
             qn.field_b = new tp();
@@ -449,8 +443,7 @@ final class wj implements up {
         jaggl.OpenGL.glBindFramebufferEXT(36009, 0);
         ((wj) this).field_a = ((wj) this).field_a & -3;
         int var2 = -33 / ((-88 - param0) / 38);
-        int discarded$0 = -15395;
-        ((wj) this).field_c = this.d();
+        ((wj) this).field_c = this.d(-15395);
     }
 
     final static void e(int param0) {
@@ -467,8 +460,7 @@ final class wj implements up {
         }
         jaggl.OpenGL.glBindFramebufferEXT(36008, 0);
         ((wj) this).field_a = ((wj) this).field_a & -2;
-        int discarded$0 = -15395;
-        ((wj) this).field_c = this.d();
+        ((wj) this).field_c = this.d(-15395);
     }
 
     wj(wl param0) {

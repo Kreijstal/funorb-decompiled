@@ -55,7 +55,7 @@ final class pc {
         ((pc) this).field_d = param0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
     }
 
@@ -153,16 +153,15 @@ final class pc {
               var6 = 0;
               L1: while (true) {
                 if (var6 >= param3.length) {
-                  StringBuilder discarded$5 = var8.append(") is undefined.");
+                  StringBuilder discarded$4 = var8.append(") is undefined.");
                   throw new rv(var8.toString());
                 } else {
                   L2: {
                     if (param3[var6].field_a) {
-                      int discarded$6 = 0;
-                      StringBuilder discarded$7 = var8.append(jd.a(param3[var6].field_d).toString());
+                      StringBuilder discarded$5 = var8.append(jd.a(param3[var6].field_d, 0).toString());
                       break L2;
                     } else {
-                      StringBuilder discarded$8 = var8.append(rva.a(param3[var6].field_d.getClass(), (byte) -88));
+                      StringBuilder discarded$6 = var8.append(rva.a(param3[var6].field_d.getClass(), (byte) -88));
                       break L2;
                     }
                   }
@@ -170,7 +169,7 @@ final class pc {
                     if (-1 + param3.length <= var6) {
                       break L3;
                     } else {
-                      StringBuilder discarded$9 = var8.append(',');
+                      StringBuilder discarded$7 = var8.append(',');
                       break L3;
                     }
                   }

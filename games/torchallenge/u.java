@@ -315,8 +315,7 @@ final class u {
         var2.a(0, -hf.field_a.field_x);
         try {
             td.field_o.field_p = hf.field_a.field_x;
-            int discarded$0 = -9;
-            ie.b();
+            ie.b((byte) -9);
         } catch (RuntimeException runtimeException) {
             throw oj.a((Throwable) (Object) runtimeException, "u.A(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -362,8 +361,7 @@ final class u {
                 if (!uj.field_a.startsWith("win")) {
                   break L0;
                 } else {
-                  int discarded$6 = 1;
-                  if (!ol.a(param3)) {
+                  if (!ol.a(param3, true)) {
                     break L0;
                   } else {
                     return;
@@ -585,7 +583,7 @@ final class u {
         return stackIn_20_0;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         int var2 = 36;
     }
 

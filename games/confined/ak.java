@@ -289,7 +289,7 @@ final class ak extends ga implements el {
         return stackIn_11_0 != 0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         int var1 = 100;
         field_L = null;
         field_P = null;

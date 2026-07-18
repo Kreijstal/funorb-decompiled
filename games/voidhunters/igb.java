@@ -5,7 +5,7 @@ final class igb {
     static java.awt.Canvas field_a;
     static String field_b;
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -64,7 +64,7 @@ final class igb {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

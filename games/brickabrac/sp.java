@@ -14,7 +14,7 @@ final class sp extends nm {
     int[] field_i;
     int field_o;
 
-    public static void a() {
+    public static void a(int param0) {
         field_s = null;
     }
 

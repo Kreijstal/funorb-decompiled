@@ -16,7 +16,7 @@ final class vl {
     static String field_f;
     static String field_d;
 
-    final static void b() {
+    final static void b(int param0) {
     }
 
     final static u a(int param0, String param1, r param2, String param3) {
@@ -170,7 +170,7 @@ final class vl {
         return stackIn_3_0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         L0: {
           L1: {
             if (aj.field_f == null) {
@@ -1276,7 +1276,7 @@ final class vl {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_b = null;
         field_a = null;
@@ -1290,12 +1290,10 @@ final class vl {
     final static void a(int param0) {
         if (param0 > -101) {
             field_b = null;
-            int discarded$0 = -95;
-            ti.c();
+            ti.c(-95);
             return;
         }
-        int discarded$1 = -95;
-        ti.c();
+        ti.c(-95);
     }
 
     final static er[] a(int param0, int param1, int param2, int param3, int param4, int param5) {

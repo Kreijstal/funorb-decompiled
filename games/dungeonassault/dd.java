@@ -83,7 +83,7 @@ final class dd extends rj {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_A = null;
         field_C = null;
         field_E = null;
@@ -119,10 +119,8 @@ final class dd extends rj {
         var7 = DungeonAssault.field_K;
         var4 = param0 + ((dd) this).field_t;
         var5 = ((dd) this).field_i + param2;
-        int discarded$3 = 99;
-        bp.a(var5, bl.field_o, var4);
-        int discarded$4 = 99;
-        bp.a(((dd) this).field_D + var5 - -10, go.field_S, var4);
+        bp.a(var5, bl.field_o, var4, (byte) 99);
+        bp.a(((dd) this).field_D + var5 - -10, go.field_S, var4, (byte) 99);
         var6 = 0;
         L0: while (true) {
           if (var6 >= 7) {
@@ -145,8 +143,7 @@ final class dd extends rj {
                     }
                     L4: {
                       var6 = stackIn_12_0;
-                      int discarded$5 = 99;
-                      bp.a(4 + var5, im.field_m, var6 + (var4 + 10));
+                      bp.a(4 + var5, im.field_m, var6 + (var4 + 10), (byte) 99);
                       tn.field_W.h(var4, var5);
                       if (param1 == 8187) {
                         break L4;

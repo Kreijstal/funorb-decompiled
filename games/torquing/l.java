@@ -40,7 +40,7 @@ final class l {
         return new tl(param0, param5, param4, param1, param2);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         int var1 = 0;
         field_a = null;
@@ -140,8 +140,7 @@ final class l {
                         var10 = var12;
                         var6 = var10;
                         if (var3 == 1) {
-                          int discarded$2 = 9;
-                          int discarded$3 = fc.a(var6, var5_int, param1, var4);
+                          int discarded$1 = fc.a(var16, var5_int, param1, var4, 9);
                           break L5;
                         } else {
                           var7 = (Object) (Object) wo.field_d;
@@ -198,7 +197,7 @@ final class l {
         return stackIn_21_0;
     }
 
-    final static void a(ni param0) {
+    final static void a(ni param0, int param1, int param2) {
         df var5 = null;
         int var4 = 0;
         try {

@@ -8,7 +8,7 @@ final class a {
     static int[] field_c;
     static String field_e;
 
-    final static int[] b() {
+    final static int[] b(int param0) {
         return new int[8];
     }
 
@@ -19,7 +19,7 @@ final class a {
         int var2 = 48 % ((-54 - param1) / 46);
     }
 
-    final static int a(boolean param0, int param1, int param2) {
+    final static int a(boolean param0, int param1, int param2, int param3) {
         return m.a(1);
     }
 
@@ -66,8 +66,7 @@ final class a {
             L1: {
               L2: {
                 var3_int = 81 / ((param1 - 57) / 41);
-                int discarded$2 = 95;
-                param2 = je.a(125, "", param2);
+                param2 = je.a(125, "", param2, '_');
                 var4 = wa.a((byte) -117, param0);
                 if (param2.indexOf(param0) != -1) {
                   break L2;
@@ -145,7 +144,7 @@ final class a {
         return stackIn_5_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_e = null;

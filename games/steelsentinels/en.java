@@ -9,7 +9,7 @@ final class en {
     static String field_a;
     static int field_d;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_b = null;
         field_c = null;
@@ -17,7 +17,7 @@ final class en {
         field_f = null;
     }
 
-    final static void a(byte param0, ak param1, int param2, int param3, ak param4) {
+    final static void a(byte param0, ak param1, int param2, int param3, ak param4, int param5) {
         RuntimeException var6 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -128,7 +128,7 @@ final class en {
         }
     }
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1) {
         try {
             if (uj.field_d == 11) {
                 sl.a((byte) 3);
@@ -142,8 +142,7 @@ final class en {
 
     final static void a(int param0) {
         int var1 = -81 % ((0 - param0) / 52);
-        int discarded$0 = 10;
-        s.a();
+        s.a(10);
     }
 
     final static hk a(int param0, int param1) {

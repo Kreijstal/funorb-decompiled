@@ -97,7 +97,7 @@ final class ic extends jh {
         L0: {
           var13 = MinerDisturbance.field_ab;
           if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
-            String discarded$11 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$4 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           } else {
             break L0;
@@ -204,7 +204,7 @@ final class ic extends jh {
           uRISyntaxException = (java.net.URISyntaxException) (Object) decompiledCaughtException;
           return ((ic) this).b((byte) 51);
         }
-        boolean discarded$12 = var3.addAll((Collection) (Object) var4);
+        boolean discarded$5 = var3.addAll((Collection) (Object) var4);
         var6 = var3.toArray();
         var7 = null;
         var8 = var6;
@@ -221,8 +221,7 @@ final class ic extends jh {
             var11 = (java.net.Proxy) var10;
             try {
               L6: {
-                int discarded$13 = 8217;
-                var12 = this.a(var11);
+                var12 = this.a(var11, 8217);
                 if (var12 != null) {
                   stackOut_21_0 = (java.net.Socket) var12;
                   stackIn_22_0 = stackOut_21_0;
@@ -261,7 +260,7 @@ final class ic extends jh {
         }
     }
 
-    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0, int param1) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;
@@ -345,8 +344,7 @@ final class ic extends jh {
                       break L3;
                     }
                   }
-                  int discarded$1 = -13368;
-                  stackOut_18_0 = this.a(var4_ref.getHostName(), var4_ref.getPort(), (String) var5);
+                  stackOut_18_0 = this.a(var4_ref.getHostName(), var4_ref.getPort(), (String) var5, -13368);
                   stackIn_19_0 = stackOut_18_0;
                   break L0;
                 } else {
@@ -404,13 +402,13 @@ final class ic extends jh {
         return stackIn_19_0;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1, int param2, int param3) {
         pb.field_K = 4473924;
         fg.field_b = 15885602;
         am.field_J = 16502531;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
         field_g = null;
         field_l = null;
@@ -418,7 +416,7 @@ final class ic extends jh {
         field_i = null;
     }
 
-    private final java.net.Socket a(String param0, int param1, String param2) throws IOException {
+    private final java.net.Socket a(String param0, int param1, String param2, int param3) throws IOException {
         RuntimeException var5 = null;
         OutputStream var6 = null;
         BufferedReader var7 = null;

@@ -40,8 +40,7 @@ final class pg {
                   }
                 }
               } else {
-                int discarded$2 = 0;
-                s.a(var4, param1);
+                s.a(var4, param1, false);
                 var4 = (oa) (Object) cf.field_d.b((byte) -105);
                 continue L2;
               }
@@ -54,7 +53,7 @@ final class pg {
         }
     }
 
-    final static String a(int param0, int param1, byte[] param2) {
+    final static String a(int param0, int param1, byte[] param2, int param3) {
         char[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -170,19 +169,18 @@ final class pg {
         return stackIn_18_0;
     }
 
-    final static bi[] b() {
+    final static bi[] b(int param0) {
         int var2 = 0;
         int var3 = fleas.field_A ? 1 : 0;
         bi[] var1 = new bi[ef.field_l];
         for (var2 = 0; ef.field_l > var2; var2++) {
             var1[var2] = new bi(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], of.field_d[var2], rd.field_d);
         }
-        int discarded$0 = -28210;
-        c.o();
+        c.o(-28210);
         return var1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_b = null;
     }

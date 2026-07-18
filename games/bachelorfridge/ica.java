@@ -87,7 +87,7 @@ final class ica extends bca {
         super(param0, param1);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_t = null;
         field_r = null;
     }

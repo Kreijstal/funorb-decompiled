@@ -12,7 +12,7 @@ final class hb extends lj {
         return false;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_v = null;
     }
 

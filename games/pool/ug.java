@@ -9,7 +9,7 @@ final class ug extends no {
     static int field_u;
     private vb field_w;
 
-    private final void f() {
+    private final void f(int param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -157,8 +157,7 @@ final class ug extends no {
                                   if (var16 <= 0) {
                                     break L6;
                                   } else {
-                                    int discarded$2 = 22987;
-                                    if (vq.a(var10.charAt(-1 + var16))) {
+                                    if (vq.a(var10.charAt(-1 + var16), 22987)) {
                                       break L5;
                                     } else {
                                       if (35 != var10.charAt(-1 + var16)) {
@@ -174,8 +173,7 @@ final class ug extends no {
                                   if (var10.length() <= var15 + var16) {
                                     break L7;
                                   } else {
-                                    int discarded$3 = 22987;
-                                    if (!vq.a(var10.charAt(var16 - -var15))) {
+                                    if (!vq.a(var10.charAt(var16 - -var15), 22987)) {
                                       break L7;
                                     } else {
                                       break L5;
@@ -373,7 +371,7 @@ final class ug extends no {
         return stackIn_41_0;
     }
 
-    final static kb e() {
+    final static kb e(int param0) {
         return (kb) (Object) new hk();
     }
 
@@ -507,8 +505,7 @@ final class ug extends no {
                   }
                 }
                 ((ug) this).field_w = (vb) param2;
-                int discarded$1 = -55;
-                this.f();
+                this.f(-55);
                 this.a((byte) 72, param1);
                 ((ug) this).field_p.field_v = 0;
                 ((ug) this).field_i = null;
@@ -982,7 +979,7 @@ final class ug extends no {
         }
     }
 
-    final static String a(String param0, String param1, String param2) {
+    final static String a(String param0, String param1, String param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -1174,7 +1171,7 @@ final class ug extends no {
     public ug() {
     }
 
-    final static int g() {
+    final static int g(int param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;

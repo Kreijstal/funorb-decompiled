@@ -317,7 +317,7 @@ final class bo {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         sp.c(0);
         fb.a(4, 65);
     }
@@ -335,7 +335,7 @@ final class bo {
         field_c = null;
     }
 
-    final static bm a(byte[] param0) {
+    final static bm a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;

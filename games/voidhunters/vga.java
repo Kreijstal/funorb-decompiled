@@ -147,7 +147,7 @@ final class vga {
         }
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         return 1900 + new Date().getYear();
     }
 

@@ -118,8 +118,7 @@ class pm extends gn {
                           if (~((pm) this).field_S == ~((pm) this).field_O) {
                             break L3;
                           } else {
-                            int discarded$9 = 0;
-                            this.c();
+                            this.c(false);
                             break L3;
                           }
                         }
@@ -137,9 +136,9 @@ class pm extends gn {
                         L5: {
                           if (~((pm) this).field_O <= ~((pm) this).field_j.length()) {
                             ((pm) this).field_j = ((pm) this).field_j + param1;
-                            int dupTemp$10 = ((pm) this).field_j.length();
-                            ((pm) this).field_O = dupTemp$10;
-                            ((pm) this).field_S = dupTemp$10;
+                            int dupTemp$1 = ((pm) this).field_j.length();
+                            ((pm) this).field_O = dupTemp$1;
+                            ((pm) this).field_S = dupTemp$1;
                             break L5;
                           } else {
                             ((pm) this).field_j = ((pm) this).field_j.substring(0, ((pm) this).field_O) + param1 + ((pm) this).field_j.substring(((pm) this).field_O, ((pm) this).field_j.length());
@@ -162,15 +161,13 @@ class pm extends gn {
                           break L6;
                         } else {
                           ((pm) this).field_S = -1 + ((pm) this).field_O;
-                          int discarded$11 = 0;
-                          this.c();
+                          this.c(false);
                           stackOut_70_0 = 1;
                           stackIn_71_0 = stackOut_70_0;
                           return stackIn_71_0 != 0;
                         }
                       } else {
-                        int discarded$12 = 0;
-                        this.c();
+                        this.c(false);
                         stackOut_67_0 = 1;
                         stackIn_68_0 = stackOut_67_0;
                         return stackIn_68_0 != 0;
@@ -180,8 +177,7 @@ class pm extends gn {
                         if (((pm) this).field_O == ((pm) this).field_S) {
                           if (((pm) this).field_O < ((pm) this).field_j.length()) {
                             ((pm) this).field_S = ((pm) this).field_O + 1;
-                            int discarded$13 = 0;
-                            this.c();
+                            this.c(false);
                             stackOut_64_0 = 1;
                             stackIn_65_0 = stackOut_64_0;
                             return stackIn_65_0 != 0;
@@ -189,8 +185,7 @@ class pm extends gn {
                             break L6;
                           }
                         } else {
-                          int discarded$14 = 0;
-                          this.c();
+                          this.c(false);
                           stackOut_60_0 = 1;
                           stackIn_61_0 = stackOut_60_0;
                           return stackIn_61_0 != 0;
@@ -217,8 +212,7 @@ class pm extends gn {
                                         break L7;
                                       } else {
                                         if (param0 == 65) {
-                                          int discarded$15 = 102;
-                                          this.f();
+                                          this.f(102);
                                           stackOut_53_0 = 1;
                                           stackIn_54_0 = stackOut_53_0;
                                           return stackIn_54_0 != 0;
@@ -232,8 +226,7 @@ class pm extends gn {
                                         break L8;
                                       } else {
                                         if (param0 == 66) {
-                                          int discarded$16 = -60;
-                                          this.i();
+                                          this.i((byte) -60);
                                           stackOut_51_0 = 1;
                                           stackIn_52_0 = stackOut_51_0;
                                           return stackIn_52_0 != 0;
@@ -309,10 +302,9 @@ class pm extends gn {
                                 stackIn_25_0 = stackOut_24_0;
                                 stackIn_25_1 = stackOut_24_1;
                                 if (lc.field_m[82]) {
-                                  int discarded$17 = -110;
                                   stackOut_26_0 = this;
                                   stackOut_26_1 = stackIn_26_1;
-                                  stackOut_26_2 = this.h();
+                                  stackOut_26_2 = this.h((byte) -110);
                                   stackIn_27_0 = stackOut_26_0;
                                   stackIn_27_1 = stackOut_26_1;
                                   stackIn_27_2 = stackOut_26_2;
@@ -400,7 +392,7 @@ class pm extends gn {
         field_N = null;
     }
 
-    private final void i() {
+    private final void i(byte param0) {
         String var2 = this.k(-112);
         if (var2.length() > 0) {
             java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.k(-121)), (java.awt.datatransfer.ClipboardOwner) null);
@@ -514,8 +506,7 @@ class pm extends gn {
                     ((pm) this).field_M = stackIn_8_1 != 0;
                     if (((pm) this).field_M) {
                       L5: {
-                        int discarded$1 = -110;
-                        ((pm) this).field_S = this.h();
+                        ((pm) this).field_S = this.h((byte) -110);
                         ((pm) this).field_O = this.g(114);
                         if (((pm) this).field_O <= 0) {
                           break L5;
@@ -647,7 +638,7 @@ class pm extends gn {
         }
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         if (!(((pm) this).field_S == ((pm) this).field_O)) {
@@ -660,7 +651,7 @@ class pm extends gn {
         }
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         mp var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -754,11 +745,9 @@ class pm extends gn {
             try {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                int discarded$2 = 0;
-                this.c();
+                this.c(false);
                 if (param0 == 250) {
-                  int discarded$3 = 112;
-                  this.a(var2);
+                  this.a(var2, (byte) 112);
                   break L0;
                 } else {
                   return;
@@ -802,8 +791,7 @@ class pm extends gn {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              int discarded$2 = -84;
-              this.g();
+              this.g((byte) -84);
               if (1 != ((pm) this).field_u) {
                 break L1;
               } else {
@@ -889,11 +877,11 @@ class pm extends gn {
         if (!lc.field_m[81]) {
             ((pm) this).field_S = ((pm) this).field_O;
         }
-        int discarded$0 = -92;
-        this.a((String) null);
+        Object var4 = null;
+        this.a((String) null, (byte) -92);
     }
 
-    private final int h() {
+    private final int h(byte param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -919,7 +907,7 @@ class pm extends gn {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, byte param1) {
         int var3_int = 0;
         if (!(((pm) this).field_W == -1)) {
             var3_int = ((pm) this).field_W + -((pm) this).field_j.length();
@@ -942,11 +930,9 @@ class pm extends gn {
         }
     }
 
-    private final void f() {
-        int discarded$0 = -60;
-        this.i();
-        int discarded$1 = 0;
-        this.c();
+    private final void f(int param0) {
+        this.i((byte) -60);
+        this.c(false);
     }
 
     final static void a(boolean param0, boolean param1) {
@@ -1000,8 +986,7 @@ class pm extends gn {
         String stackOut_11_2 = null;
         try {
           L0: {
-            int discarded$7 = -42;
-            if (ud.a(param2, param3, param1)) {
+            if (ud.a(param2, param3, param1, (byte) -42)) {
               L1: {
                 if (param4 == -29435) {
                   break L1;

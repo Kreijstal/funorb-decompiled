@@ -77,7 +77,7 @@ final class fj {
         return (Object) (Object) stackIn_8_0;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return rd.field_h;
     }
 

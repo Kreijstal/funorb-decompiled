@@ -5,7 +5,7 @@ final class hc {
     static int field_b;
     static int field_a;
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         mi var2 = uh.field_Wb;
         var2.j(11, 122);
         var2.f(1, -117);
@@ -53,8 +53,7 @@ final class hc {
                 if (!jj.field_v.startsWith("win")) {
                   break L0;
                 } else {
-                  int discarded$6 = 1;
-                  if (!eb.a(param0)) {
+                  if (!eb.a(param0, true)) {
                     break L0;
                   } else {
                     return;

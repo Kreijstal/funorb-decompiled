@@ -40,7 +40,7 @@ final class p {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         am var2 = dp.field_e;
         var2.j(11, 6);
         var2.i(1, 101);

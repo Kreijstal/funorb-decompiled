@@ -17,11 +17,11 @@ final class etb implements dja {
         return (java.awt.Container) (Object) vpa.b((byte) -122);
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return jpa.field_a;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         int var1 = 0;
         field_b = null;

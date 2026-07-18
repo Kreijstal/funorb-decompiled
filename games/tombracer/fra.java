@@ -105,7 +105,7 @@ final class fra extends nv {
         return param0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_q = null;
         field_n = null;
     }

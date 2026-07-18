@@ -410,7 +410,7 @@ final class dj {
         return stackIn_7_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_d = null;
         field_c = null;

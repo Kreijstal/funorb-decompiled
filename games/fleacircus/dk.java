@@ -294,7 +294,7 @@ abstract class dk extends qa implements wg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_D = null;
         field_C = null;
     }
@@ -694,7 +694,7 @@ abstract class dk extends qa implements wg {
                 break L0;
               } else {
                 var6 = null;
-                StringBuilder discarded$5 = ((dk) this).a((StringBuilder) null, (Hashtable) null, 55, 21);
+                StringBuilder discarded$2 = ((dk) this).a((StringBuilder) null, (Hashtable) null, 55, 21);
                 return false;
               }
             } else {
@@ -704,8 +704,7 @@ abstract class dk extends qa implements wg {
                   stackIn_9_0 = stackOut_8_0;
                   break L2;
                 } else {
-                  int discarded$6 = -96;
-                  stackOut_7_0 = this.a(param2);
+                  stackOut_7_0 = this.a(param2, (byte) -96);
                   stackIn_9_0 = stackOut_7_0;
                   break L2;
                 }
@@ -928,7 +927,7 @@ abstract class dk extends qa implements wg {
         }
     }
 
-    private final boolean a(qa param0) {
+    private final boolean a(qa param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;

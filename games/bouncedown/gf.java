@@ -73,7 +73,7 @@ final class gf extends ai {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_h = null;
     }

@@ -114,14 +114,12 @@ final class hg extends um {
               param0 = param0.field_f;
               continue L0;
             } else {
-              int discarded$4 = -117;
-              oj.a((pi) (Object) param1, param0);
+              oj.a((pi) (Object) param1, param0, (byte) -117);
               ((hg) this).field_s = ((rl) (Object) ((hg) this).field_r.field_c.field_f).field_n;
               return;
             }
           } else {
-            int discarded$5 = -117;
-            oj.a((pi) (Object) param1, param0);
+            oj.a((pi) (Object) param1, param0, (byte) -117);
             ((hg) this).field_s = ((rl) (Object) ((hg) this).field_r.field_c.field_f).field_n;
             return;
           }

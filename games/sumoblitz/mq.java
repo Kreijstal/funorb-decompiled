@@ -51,19 +51,19 @@ final class mq {
         return stackIn_9_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
-    final static void a(fr param0) {
+    final static void a(fr param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
+        ip var3 = null;
+        qb var3_ref = null;
+        b var3_ref2 = null;
         byte[] var5 = null;
         byte[] var6 = null;
         byte[] var7 = null;
-        ip var8 = null;
-        qb var9 = null;
-        b var10 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -85,10 +85,9 @@ final class mq {
             L1: {
               var2_int = 71;
               if (null == ic.field_b) {
-                var8 = new ip();
-                var5 = var8.a((byte) 10, 128, 128, 16);
-                int discarded$14 = 0;
-                ic.field_b = aj.a((byte) -123, var5);
+                var3 = new ip();
+                var5 = var3.a((byte) 10, 128, 128, 16);
+                ic.field_b = aj.a((byte) -123, var5, false);
                 break L1;
               } else {
                 break L1;
@@ -98,25 +97,20 @@ final class mq {
               if (qu.field_j != null) {
                 break L2;
               } else {
-                var9 = new qb();
-                var6 = var9.a(16, (byte) -8, 128, 128);
-                int discarded$15 = 0;
-                qu.field_j = aj.a((byte) -117, var6);
+                var3_ref = new qb();
+                var6 = var3_ref.a(16, (byte) -8, 128, 128);
+                qu.field_j = aj.a((byte) -117, var6, false);
                 break L2;
               }
             }
             L3: {
-              var10 = param0.field_Sb;
-              if (!var10.b((byte) -101)) {
+              var3_ref2 = param0.field_Sb;
+              if (!var3_ref2.b((byte) -101)) {
                 break L3;
               } else {
                 if (null == dj.field_m) {
-                  int discarded$16 = 128;
-                  int discarded$17 = 8;
-                  int discarded$18 = 16;
-                  var7 = mr.a(0.6000000238418579f, 0.5f, 128, -30865, (ab) (Object) new vu(419684), 4.0f, 4.0f, 16.0f);
-                  int discarded$19 = 0;
-                  dj.field_m = aj.a((byte) -126, var7);
+                  var7 = mr.a(0.6000000238418579f, 0.5f, 128, -30865, (ab) (Object) new vu(419684), 4.0f, 4.0f, 16.0f, 16, 8, 128);
+                  dj.field_m = aj.a((byte) -126, var7, false);
                   break L3;
                 } else {
                   break L3;

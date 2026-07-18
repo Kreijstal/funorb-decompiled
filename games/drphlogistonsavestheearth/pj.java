@@ -15,7 +15,7 @@ class pj extends vg implements ba {
     static qb field_D;
     static boolean field_F;
 
-    public static void f() {
+    public static void f(int param0) {
         field_A = null;
         field_B = null;
         field_G = null;
@@ -628,8 +628,7 @@ class pj extends vg implements ba {
                       am.field_n.a(-23805, var14);
                       am.field_n.a(-23805, var8);
                       var15 = (CharSequence) (Object) param0;
-                      int discarded$9 = 90;
-                      am.field_n.a(-23805, fg.a(var15));
+                      am.field_n.a(-23805, fg.a(var15, 90));
                       am.field_n.c(param5, -17402);
                       am.field_n.c(param1, (byte) -88);
                       am.field_n.c(var9, (byte) -98);
@@ -645,8 +644,7 @@ class pj extends vg implements ba {
                       }
                     }
                     nj.field_p.a(var11_ref_String, -1);
-                    int discarded$10 = 0;
-                    i.a((od) (Object) nj.field_p, am.field_n, a.field_b, d.field_a);
+                    i.a((od) (Object) nj.field_p, am.field_n, a.field_b, d.field_a, 0);
                     nj.field_p.a(-2, -var10 + nj.field_p.field_j);
                     break L3;
                   } else {
@@ -708,8 +706,7 @@ class pj extends vg implements ba {
                     nj.field_p.c(16, (byte) -102);
                     nj.field_p.field_j = nj.field_p.field_j + 1;
                     var9 = nj.field_p.field_j;
-                    int discarded$11 = 0;
-                    i.a((od) (Object) nj.field_p, am.field_n, a.field_b, d.field_a);
+                    i.a((od) (Object) nj.field_p, am.field_n, a.field_b, d.field_a, 0);
                     nj.field_p.b(nj.field_p.field_j - var9, (byte) 87);
                     break L3;
                   }
@@ -743,10 +740,8 @@ class pj extends vg implements ba {
                   }
                   if (248 != var9) {
                     if (var9 == 99) {
-                      int discarded$12 = 39;
-                      boolean discarded$13 = jd.a(ab.a(), 5929);
-                      int discarded$14 = 126;
-                      oe.field_a = new Boolean(eb.a((od) (Object) dh.field_N));
+                      boolean discarded$1 = jd.a(ab.a(39), 5929);
+                      oe.field_a = new Boolean(eb.a((od) (Object) dh.field_N, 126));
                       dh.field_N.field_j = 0;
                       break L8;
                     } else {
@@ -758,8 +753,7 @@ class pj extends vg implements ba {
                   } else {
                     dd.a((byte) 64, nb.a(-77));
                     cc.field_p = dd.field_n;
-                    int discarded$15 = 126;
-                    eg.a();
+                    eg.a((byte) 126);
                     dk.field_b = false;
                     stackOut_28_0 = var9;
                     stackIn_29_0 = stackOut_28_0;
@@ -787,8 +781,7 @@ class pj extends vg implements ba {
                     var12 = 0;
                     L11: while (true) {
                       if (var11 <= var12) {
-                        int discarded$16 = 126;
-                        eg.a();
+                        eg.a((byte) 126);
                         dk.field_b = false;
                         stackOut_39_0 = 100 + var11;
                         stackIn_40_0 = stackOut_39_0;
@@ -820,8 +813,7 @@ class pj extends vg implements ba {
                       }
                     }
                   }
-                  int discarded$17 = 126;
-                  eg.a();
+                  eg.a((byte) 126);
                   dk.field_b = false;
                   stackOut_50_0 = t.field_b;
                   stackIn_51_0 = stackOut_50_0;

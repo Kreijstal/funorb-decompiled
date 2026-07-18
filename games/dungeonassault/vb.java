@@ -5,7 +5,7 @@ final class vb {
     static String field_a;
     static String[] field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }
@@ -13,8 +13,7 @@ final class vb {
     final static void a(int param0, byte param1, ak param2) {
         try {
             oh.field_j.a((ne) (Object) param2, false);
-            int discarded$0 = 50;
-            g.a(4, param2);
+            g.a(4, param2, (byte) 50);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "vb.A(" + 4 + ',' + 84 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

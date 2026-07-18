@@ -19,7 +19,7 @@ final class oc extends vi implements ib {
         }
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         vh var1 = (vh) (Object) le.field_a.a((byte) 38);
         if (!(var1 != null)) {
             throw new IllegalStateException();
@@ -376,7 +376,7 @@ final class oc extends vi implements ib {
         return ((oc) this).field_S;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -490,7 +490,7 @@ final class oc extends vi implements ib {
         super(param0, param1, param2);
     }
 
-    public static void q() {
+    public static void q(int param0) {
         field_U = null;
         field_M = null;
     }

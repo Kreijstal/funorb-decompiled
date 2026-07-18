@@ -67,19 +67,16 @@ final class kc extends nm {
 
     final static void a(mf param0, ra param1, int param2, int param3) {
         try {
-            int discarded$0 = -98;
-            rn.field_i = wn.a() * param2 / 1000;
+            rn.field_i = wn.a((byte) -98) * param2 / 1000;
             if (param3 < 91) {
                 Object var5 = null;
                 kc.a((mf) null, (ra) null, -127, -72);
             }
             ck.a(-2196, param0);
             bm.a((byte) -70, param0);
-            int discarded$1 = 115;
-            e.a(param0);
+            e.a(param0, 115);
             ul.a(-37);
-            int discarded$2 = -41;
-            fl.e();
+            fl.e(-41);
             ld.field_t = -rn.field_i;
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -90,11 +87,10 @@ final class kc extends nm {
         int var5 = 0;
         int var6 = 0;
         var5 = (int)((Math.exp((double)((float)(-((kc) this).field_k) / 20.0f)) - Math.exp(-2.0)) * 200.0);
-        int discarded$4 = 116;
-        var6 = this.a();
+        var6 = this.a((byte) 116);
         al.a(param2 - -((((kc) this).field_l >> 8) / param0), var6 / (param0 << 1), (-((kc) this).field_k + 40 << 8) / 40, var5, -94, var6 / param0, (((kc) this).field_m >> 8) / param0 + param1);
         if (!param3) {
-          boolean discarded$5 = ((kc) this).c((byte) -61);
+          boolean discarded$2 = ((kc) this).c((byte) -61);
           return;
         } else {
           return;
@@ -116,7 +112,7 @@ final class kc extends nm {
         }
     }
 
-    private final int a() {
+    private final int a(byte param0) {
         int var2 = -80;
         return ((kc) this).field_k * (-((kc) this).field_k + 100) / 20 + -5;
     }

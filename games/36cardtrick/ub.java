@@ -195,7 +195,7 @@ final class ub extends mj {
         uk.a("", param0 + -23804, (String) null);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
     }
 

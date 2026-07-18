@@ -556,8 +556,7 @@ final class ki extends vj {
     }
 
     ki(rc param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (cj) (Object) k.a());
-        int discarded$0 = 60;
+        super(param1, (cj) (Object) k.a(60));
         try {
             ((ki) this).field_X = param0;
             ((ki) this).field_V = param1;

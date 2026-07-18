@@ -5,7 +5,7 @@ final class wd {
     private java.awt.DisplayMode field_b;
     private java.awt.GraphicsDevice field_a;
 
-    private final void a(java.awt.Frame param0) {
+    private final void a(java.awt.Frame param0, int param1) {
         ((wd) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 
@@ -17,8 +17,7 @@ final class wd {
             }
             ((wd) this).field_b = null;
         }
-        int discarded$0 = -16442;
-        this.a((java.awt.Frame) null);
+        this.a((java.awt.Frame) null, -16442);
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
@@ -34,8 +33,7 @@ final class wd {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
-            int discarded$2 = -16442;
-            this.a(param0);
+            this.a(param0, -16442);
             if (0 != param4) {
               break L0;
             } else {

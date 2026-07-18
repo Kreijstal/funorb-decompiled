@@ -24,7 +24,7 @@ final class bl {
         return "" + ((bl) this).field_a;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -326,7 +326,7 @@ final class bl {
               break L0;
             } else {
               var8 = null;
-              boolean discarded$7 = ((bl) this).a(75, 38, -78, (byte[]) null);
+              boolean discarded$3 = ((bl) this).a(75, 38, -78, (byte[]) null);
               break L0;
             }
           }
@@ -341,13 +341,11 @@ final class bl {
                     break L2;
                   } else {
                     L3: {
-                      int discarded$8 = 2;
-                      var6 = this.a(param2, param0, true, param3) ? 1 : 0;
+                      var6 = this.a(param2, param0, true, param3, 2) ? 1 : 0;
                       if (var6 != 0) {
                         break L3;
                       } else {
-                        int discarded$9 = 2;
-                        var6 = this.a(param2, param0, false, param3) ? 1 : 0;
+                        var6 = this.a(param2, param0, false, param3, 2) ? 1 : 0;
                         break L3;
                       }
                     }
@@ -393,7 +391,7 @@ final class bl {
         }
     }
 
-    final static ll[] b() {
+    final static ll[] b(int param0) {
         ll[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -419,8 +417,7 @@ final class bl {
         var2 = 0;
         L0: while (true) {
           if (to.field_t <= var2) {
-            int discarded$1 = 1;
-            kf.f();
+            kf.f(1);
             return var1;
           } else {
             var3 = ji.field_b[var2] * ee.field_e[var2];
@@ -489,8 +486,7 @@ final class bl {
         String stackOut_5_2 = null;
         try {
           if (tn.a(param2, (byte) -127, param1, param3)) {
-            int discarded$2 = 15636;
-            return sq.a();
+            return sq.a(15636);
           } else {
             return null;
           }
@@ -526,7 +522,7 @@ final class bl {
         }
     }
 
-    private final boolean a(int param0, int param1, boolean param2, byte[] param3) {
+    private final boolean a(int param0, int param1, boolean param2, byte[] param3, int param4) {
         try {
             Object var6 = null;
             RuntimeException var6_ref = null;

@@ -22,7 +22,7 @@ final class lg extends na {
     private oh field_Y;
     static String field_V;
 
-    private final oh a() {
+    private final oh a(int param0) {
         int var4 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -47,7 +47,7 @@ final class lg extends na {
         return var3;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_ab = null;
         field_O = null;
         field_V = null;
@@ -140,10 +140,9 @@ final class lg extends na {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, param6 >> 1 & 8355711);
     }
 
-    private final void g() {
+    private final void g(int param0) {
         ((lg) this).field_Q = new oh[]{this.a(((lg) this).field_W, (byte) -55, ((lg) this).field_T), this.a(((lg) this).field_N, (byte) -77, ((lg) this).field_J)};
-        int discarded$0 = -37;
-        ((lg) this).field_L = this.a();
+        ((lg) this).field_L = this.a(-37);
         ((lg) this).field_P = ((lg) this).field_L.a();
         ((lg) this).field_Y = new oh(((lg) this).field_u >> 1, ((lg) this).field_u);
     }
@@ -336,8 +335,7 @@ final class lg extends na {
         int var4 = 63 / ((66 - param0) / 52);
         ((lg) this).field_W = param2;
         ((lg) this).field_J = 8355711 & param1 >> 1;
-        int discarded$0 = 308991265;
-        this.g();
+        this.g(308991265);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -366,8 +364,7 @@ final class lg extends na {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = -19 % ((param2 - -61) / 51);
         super.a(param0, param1, 90, param3, param4);
-        int discarded$0 = 308991265;
-        this.g();
+        this.g(308991265);
     }
 
     static {

@@ -36,12 +36,12 @@ abstract class vg extends bb {
         int var2 = 15 / ((param0 - 45) / 53);
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_T = null;
         field_U = null;
     }
 
-    final static int a(dk[] param0) {
+    final static int a(dk[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         dk[] var3 = null;

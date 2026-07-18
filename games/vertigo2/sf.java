@@ -9,7 +9,7 @@ final class sf {
     static int[] field_e;
     static boolean[][] field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_e = null;
         field_b = null;
@@ -48,8 +48,7 @@ final class sf {
                 try {
                   L1: {
                     var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-                    int discarded$8 = 0;
-                    param0.getAppletContext().showDocument(ar.a(param0, var2), "_top");
+                    param0.getAppletContext().showDocument(ar.a(param0, var2, 0), "_top");
                     if (param1 < -40) {
                       break L1;
                     } else {

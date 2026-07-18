@@ -70,7 +70,7 @@ final class ee {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         if (kf.field_e != -of.field_a) {
           if (-of.field_a + 250 == kf.field_e) {
             kf.field_e = kf.field_e + 1;
@@ -120,7 +120,7 @@ final class ee {
                     break L0;
                   } else {
                     L1: {
-                      if ((1 & rn.field_c) != 0) {
+                      if (-1 != (1 & rn.field_c)) {
                         stackOut_57_0 = 0;
                         stackIn_58_0 = stackOut_57_0;
                         break L1;
@@ -131,10 +131,8 @@ final class ee {
                       }
                     }
                     b.field_Db = stackIn_58_0 != 0;
-                    int discarded$18 = 18887;
-                    ge.b();
-                    int discarded$19 = 96;
-                    wn.a();
+                    ge.b(18887);
+                    wn.a((byte) 96);
                     break L0;
                   }
                 }
@@ -145,7 +143,7 @@ final class ee {
                     break L2;
                   } else {
                     L3: {
-                      if ((1 & rn.field_c) != 0) {
+                      if (-1 != (1 & rn.field_c)) {
                         stackOut_51_0 = 0;
                         stackIn_52_0 = stackOut_51_0;
                         break L3;
@@ -156,10 +154,8 @@ final class ee {
                       }
                     }
                     b.field_Db = stackIn_52_0 != 0;
-                    int discarded$20 = 18887;
-                    ge.b();
-                    int discarded$21 = 96;
-                    wn.a();
+                    ge.b(18887);
+                    wn.a((byte) 96);
                     break L2;
                   }
                 }
@@ -176,7 +172,7 @@ final class ee {
                     break L4;
                   } else {
                     L5: {
-                      if ((1 & rn.field_c) != 0) {
+                      if (-1 != (1 & rn.field_c)) {
                         stackOut_43_0 = 0;
                         stackIn_44_0 = stackOut_43_0;
                         break L5;
@@ -187,10 +183,8 @@ final class ee {
                       }
                     }
                     b.field_Db = stackIn_44_0 != 0;
-                    int discarded$22 = 18887;
-                    ge.b();
-                    int discarded$23 = 96;
-                    wn.a();
+                    ge.b(18887);
+                    wn.a((byte) 96);
                     break L4;
                   }
                 }
@@ -201,7 +195,7 @@ final class ee {
                     break L6;
                   } else {
                     L7: {
-                      if ((1 & rn.field_c) != 0) {
+                      if (-1 != (1 & rn.field_c)) {
                         stackOut_37_0 = 0;
                         stackIn_38_0 = stackOut_37_0;
                         break L7;
@@ -212,10 +206,8 @@ final class ee {
                       }
                     }
                     b.field_Db = stackIn_38_0 != 0;
-                    int discarded$24 = 18887;
-                    ge.b();
-                    int discarded$25 = 96;
-                    wn.a();
+                    ge.b(18887);
+                    wn.a((byte) 96);
                     break L6;
                   }
                 }
@@ -223,9 +215,7 @@ final class ee {
               }
             }
           } else {
-            int discarded$26 = 4;
-            int discarded$27 = 106;
-            wl.field_e = m.a();
+            wl.field_e = m.a((byte) 106, 4);
             if (wl.field_e.field_l) {
               rn.field_c = rn.field_c | wl.field_e.field_g;
               an.field_b = true;
@@ -236,7 +226,7 @@ final class ee {
                     break L8;
                   } else {
                     L9: {
-                      if ((1 & rn.field_c) != 0) {
+                      if (-1 != (1 & rn.field_c)) {
                         stackOut_28_0 = 0;
                         stackIn_29_0 = stackOut_28_0;
                         break L9;
@@ -247,10 +237,8 @@ final class ee {
                       }
                     }
                     b.field_Db = stackIn_29_0 != 0;
-                    int discarded$28 = 18887;
-                    ge.b();
-                    int discarded$29 = 96;
-                    wn.a();
+                    ge.b(18887);
+                    wn.a((byte) 96);
                     break L8;
                   }
                 }
@@ -262,7 +250,7 @@ final class ee {
                     break L10;
                   } else {
                     L11: {
-                      if ((1 & rn.field_c) != 0) {
+                      if (-1 != (1 & rn.field_c)) {
                         stackOut_22_0 = 0;
                         stackIn_23_0 = stackOut_22_0;
                         break L11;
@@ -273,10 +261,8 @@ final class ee {
                       }
                     }
                     b.field_Db = stackIn_23_0 != 0;
-                    int discarded$30 = 18887;
-                    ge.b();
-                    int discarded$31 = 96;
-                    wn.a();
+                    ge.b(18887);
+                    wn.a((byte) 96);
                     break L10;
                   }
                 }
@@ -290,7 +276,7 @@ final class ee {
                     break L12;
                   } else {
                     L13: {
-                      if ((1 & rn.field_c) != 0) {
+                      if (-1 != (1 & rn.field_c)) {
                         stackOut_14_0 = 0;
                         stackIn_15_0 = stackOut_14_0;
                         break L13;
@@ -301,10 +287,8 @@ final class ee {
                       }
                     }
                     b.field_Db = stackIn_15_0 != 0;
-                    int discarded$32 = 18887;
-                    ge.b();
-                    int discarded$33 = 96;
-                    wn.a();
+                    ge.b(18887);
+                    wn.a((byte) 96);
                     break L12;
                   }
                 }
@@ -315,7 +299,7 @@ final class ee {
                     break L14;
                   } else {
                     L15: {
-                      if ((1 & rn.field_c) != 0) {
+                      if (-1 != (1 & rn.field_c)) {
                         stackOut_8_0 = 0;
                         stackIn_9_0 = stackOut_8_0;
                         break L15;
@@ -326,10 +310,8 @@ final class ee {
                       }
                     }
                     b.field_Db = stackIn_9_0 != 0;
-                    int discarded$34 = 18887;
-                    ge.b();
-                    int discarded$35 = 96;
-                    wn.a();
+                    ge.b(18887);
+                    wn.a((byte) 96);
                     break L14;
                   }
                 }
@@ -349,7 +331,7 @@ final class ee {
         fi.field_t.b((fi) (Object) new jl(), (byte) -53);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_c = null;
         field_d = null;

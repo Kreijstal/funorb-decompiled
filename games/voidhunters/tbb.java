@@ -14,16 +14,16 @@ final class tbb implements ntb {
         tbb var3 = null;
         try {
             var3 = (tbb) (Object) param1;
-            var3.field_b = dob.a(var3.field_b, (byte) -124, var3.field_b);
-            var3.field_f = dob.a(var3.field_f, (byte) -105, var3.field_f);
-            var3.field_e = dob.a(var3.field_e, (byte) -29, var3.field_e);
-            var3.field_d = dob.a(var3.field_d, (byte) -103, var3.field_d);
+            var3.field_b = dob.a(var3.field_b, (byte) -124, ((tbb) this).field_b);
+            var3.field_f = dob.a(var3.field_f, (byte) -105, ((tbb) this).field_f);
+            var3.field_e = dob.a(var3.field_e, (byte) -29, ((tbb) this).field_e);
+            var3.field_d = dob.a(var3.field_d, (byte) -103, ((tbb) this).field_d);
             if (param0 <= 54) {
                 ((tbb) this).field_b = null;
             }
-            var3.field_a = var3.field_a;
-            var3.field_g = var3.field_g;
-            var3.field_c = var3.field_c;
+            var3.field_a = ((tbb) this).field_a;
+            var3.field_g = ((tbb) this).field_g;
+            var3.field_c = ((tbb) this).field_c;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "tbb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -294,8 +294,7 @@ final class tbb implements ntb {
           }
           return new pgb(param1);
         } else {
-          int discarded$1 = 112;
-          jh.field_p = sib.a(80, (ds) (Object) var8);
+          jh.field_p = sib.a(80, (ds) (Object) var8, (byte) 112);
           un.field_h = null;
           return new pgb(param1);
         }
@@ -394,7 +393,7 @@ final class tbb implements ntb {
         }
     }
 
-    final static void a(no param0, int param1, toa param2, String param3) {
+    final static void a(no param0, int param1, toa param2, String param3, int param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;

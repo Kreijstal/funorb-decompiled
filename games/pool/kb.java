@@ -14,6 +14,7 @@ abstract class kb {
 
     final static int a(int param0, ke param1, ke param2) {
         RuntimeException var3 = null;
+        Object var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -57,6 +58,7 @@ abstract class kb {
                 break L1;
               }
             }
+            var4 = null;
             stackOut_2_0 = ih.a((String) null, (byte) 107, 0, false, param2, param1, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -168,6 +170,7 @@ abstract class kb {
         field_b = null;
         field_i = null;
         if (param0 != 111) {
+            Object var2 = null;
             int discarded$0 = kb.a(-28, (ke) null, (ke) null);
         }
     }

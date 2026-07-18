@@ -31,8 +31,7 @@ final class cj {
         int var4 = 0;
         cg[] var5 = null;
         var4 = ZombieDawn.field_J;
-        int discarded$2 = 19795;
-        var5 = c.b();
+        var5 = c.b(19795);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -378,7 +377,7 @@ final class cj {
         return stackIn_10_0 != 0;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         og.b(-111, 17);
     }
 

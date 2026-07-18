@@ -10,7 +10,7 @@ abstract class fe {
 
     abstract java.net.Socket a(int param0) throws IOException;
 
-    final static void a() {
+    final static void a(boolean param0) {
         if (!(jj.field_d == null)) {
             jj.field_d.g((byte) -42);
         }

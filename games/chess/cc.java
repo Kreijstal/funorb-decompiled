@@ -29,7 +29,7 @@ final class cc extends ab {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_v = null;
         field_A = null;
     }

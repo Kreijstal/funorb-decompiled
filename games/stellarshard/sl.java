@@ -128,8 +128,7 @@ final class sl {
                         var12 = var14;
                         var6 = var12;
                         if (var3 == 1) {
-                          int discarded$2 = 9;
-                          int discarded$3 = j.a(var6, var5, param1, var4);
+                          int discarded$1 = j.a(var18, var5, param1, var4, 9);
                           break L6;
                         } else {
                           var7 = (Object) (Object) field_e;
@@ -466,12 +465,12 @@ final class sl {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         wd.field_c = false;
         int discarded$0 = ae.field_N.f(4);
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

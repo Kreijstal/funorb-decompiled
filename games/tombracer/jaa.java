@@ -139,7 +139,7 @@ final class jaa implements noa {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
     }

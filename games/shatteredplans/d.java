@@ -218,8 +218,7 @@ final class d {
                 break L1;
               }
             }
-            int discarded$2 = -11;
-            stackOut_2_0 = param1 + hi.a(1 + -param1 + param2, param3);
+            stackOut_2_0 = param1 + hi.a(1 + -param1 + param2, param3, -11);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

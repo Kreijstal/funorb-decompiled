@@ -10,7 +10,7 @@ final class vh extends me {
     static String field_j;
     static String field_k;
 
-    final static boolean a(java.applet.Applet param0) {
+    final static boolean a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -429,14 +429,14 @@ final class vh extends me {
         return stackIn_7_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_l = null;
         field_k = null;
         field_j = null;
         int var1 = -11;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         ba.field_q[cg.field_l] = param4;
         lk.field_d[cg.field_l] = cg.field_l;
         dk.field_k[cg.field_l] = param0;

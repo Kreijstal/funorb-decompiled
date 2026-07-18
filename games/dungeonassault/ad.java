@@ -8,7 +8,7 @@ final class ad {
     int field_b;
     static String field_c;
 
-    final static ad[] b() {
+    final static ad[] b(int param0) {
         return new ad[]{hl.field_c, am.field_b, tp.field_y, m.field_d, kj.field_p, u.field_U, og.field_c, ib.field_h, cm.field_T, ve.field_e, pm.field_l, hf.field_wb, sj.field_hb, lg.field_n};
     }
 
@@ -109,7 +109,7 @@ final class ad {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_c = null;
@@ -229,8 +229,7 @@ final class ad {
                   }
                 }
               }
-              int discarded$1 = 3;
-              sf.d();
+              sf.d(3);
               break L1;
             }
             var66 = new int[param7.field_c];

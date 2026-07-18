@@ -33,14 +33,13 @@ abstract class fc {
         try {
           L0: {
             L1: {
-              int discarded$4 = -99;
-              jf.d();
+              jf.d(-99);
               lb.a(param1.field_G, param1.field_x, param1.field_z);
               if (param0 <= -46) {
                 break L1;
               } else {
                 var3 = null;
-                bi discarded$5 = fc.a(79, (byte[]) null, 74, (tp[]) null, -94, -115);
+                bi discarded$2 = fc.a(79, (byte[]) null, 74, (tp[]) null, -94, -115);
                 break L1;
               }
             }
@@ -78,7 +77,7 @@ abstract class fc {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_c = null;
     }

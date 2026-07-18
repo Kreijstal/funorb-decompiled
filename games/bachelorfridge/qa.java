@@ -4,7 +4,7 @@
 final class qa extends k {
     static kv field_k;
 
-    final static void d() {
+    final static void d(int param0) {
         if (bka.field_h) {
           return;
         } else {
@@ -52,7 +52,7 @@ final class qa extends k {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_k = null;
     }
 

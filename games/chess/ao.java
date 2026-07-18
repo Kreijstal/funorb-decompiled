@@ -173,25 +173,20 @@ final class ao {
         return wb.field_h + -param0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         L0: {
           b.a(true);
           if (ja.field_h != null) {
-            int discarded$36 = -114;
-            kl.a(ja.field_h);
+            kl.a(ja.field_h, (byte) -114);
             break L0;
           } else {
             break L0;
           }
         }
-        int discarded$37 = 76;
-        rl.a();
-        int discarded$38 = -72;
-        uc.a();
-        int discarded$39 = -91;
-        jd.a();
-        int discarded$40 = -115;
-        if (m.a()) {
+        rl.a(76);
+        uc.a((byte) -72);
+        jd.a((byte) -91);
+        if (m.a(-115)) {
           qn.field_U.f(1, -71);
           vh.a(0, (byte) -58);
           si.d(65280);

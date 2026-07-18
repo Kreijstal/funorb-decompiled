@@ -4,14 +4,10 @@
 final class va extends rqa {
     final static phb[] a(int param0, int param1, int param2) {
         if (param0 != -26998) {
-          phb[] discarded$10 = va.a(25, -128, -53);
-          int discarded$11 = 1;
-          int discarded$12 = 1;
-          return kga.a(param2, param1);
+          phb[] discarded$2 = va.a(25, -128, -53);
+          return kga.a(param2, param1, 1, true);
         } else {
-          int discarded$13 = 1;
-          int discarded$14 = 1;
-          return kga.a(param2, param1);
+          return kga.a(param2, param1, 1, true);
         }
     }
 
@@ -34,8 +30,7 @@ final class va extends rqa {
             if (param0 == null) {
                 var8.a(param2, true);
             } else {
-                int discarded$1 = -113;
-                int discarded$2 = mla.a(param0, (ds) (Object) var8);
+                int discarded$1 = mla.a(param0, (ds) (Object) var8, -113);
             }
             var8.e(-var7 + var8.field_e, -129);
         } catch (RuntimeException runtimeException) {

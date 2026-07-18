@@ -8,7 +8,7 @@ final class cg extends me {
     private rg field_j;
     static volatile int field_k;
 
-    final static boolean g() {
+    final static boolean g(int param0) {
         ba var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -89,7 +89,7 @@ final class cg extends me {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1 = 23;
         pg.a(0);
     }

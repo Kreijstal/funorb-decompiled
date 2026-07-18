@@ -127,8 +127,7 @@ final class gd extends ul implements og {
     final String d(int param0) {
         if (((gd) this).field_u) {
           if (((gd) this).field_i != null) {
-            int discarded$12 = -62;
-            ri.a(bj.field_y, dh.field_d + ((gd) this).field_g - ((gd) this).field_W);
+            ri.a(bj.field_y, dh.field_d + ((gd) this).field_g - ((gd) this).field_W, (byte) -62);
             if (param0 != 1) {
               field_Z = null;
               return ((gd) this).field_i;

@@ -7,14 +7,14 @@ final class bf {
     static String field_b;
     static String[] field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_b = null;
         field_c = null;
         field_d = null;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1) {
         ej.a(true, (byte) 55, param0);
     }
 

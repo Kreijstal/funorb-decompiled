@@ -21,7 +21,7 @@ final class fq extends ae {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_i = null;
         field_j = null;
         field_k = null;

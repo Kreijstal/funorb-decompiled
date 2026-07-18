@@ -137,8 +137,7 @@ final class of {
         int stackOut_18_1 = 0;
         km stackOut_19_0 = null;
         int stackOut_19_1 = 0;
-        int discarded$1 = -17491;
-        je.f();
+        je.f(-17491);
         if (sb.field_i < 0) {
           L0: {
             L1: {
@@ -545,7 +544,7 @@ final class of {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
     }

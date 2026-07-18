@@ -16,18 +16,17 @@ final class dg {
         if (le.field_r != null) {
             return le.field_r;
         }
-        int discarded$0 = 0;
-        dg.b();
+        dg.b(false);
         return (java.applet.Applet) (Object) gm.field_f;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_e = null;
         field_a = null;
         field_c = null;
     }
 
-    final static String a(boolean param0, boolean param1) {
+    final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
         int var4 = 0;
         var4 = 0;
         if (param0) {
@@ -54,7 +53,7 @@ final class dg {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         uc var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

@@ -27,7 +27,7 @@ final class d {
         }
     }
 
-    final static la a(boolean param0) {
+    final static la a(boolean param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -98,13 +98,13 @@ final class d {
         }
         L4: {
           if (uk.field_a == 1) {
-            int discarded$5 = var8.k(0);
-            String discarded$6 = var8.d(-101);
+            int discarded$4 = var8.k(0);
+            String discarded$5 = var8.d(-101);
             break L4;
           } else {
             if (uk.field_a == 4) {
-              int discarded$7 = var8.k(0);
-              String discarded$8 = var8.d(-101);
+              int discarded$6 = var8.k(0);
+              String discarded$7 = var8.d(-101);
               break L4;
             } else {
               break L4;
@@ -112,8 +112,7 @@ final class d {
           }
         }
         if (!param0) {
-          int discarded$9 = 5;
-          sa.field_t = sc.a(80, (ec) (Object) var8);
+          sa.field_t = sc.a(80, (ec) (Object) var8, 5);
           kp.field_a = null;
           return new la(param0);
         } else {
@@ -148,12 +147,12 @@ final class d {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
         ie.a(121);
         gf.a(param0, param3, param2, param1);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_d = null;
         field_a = null;

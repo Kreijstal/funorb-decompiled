@@ -8,7 +8,7 @@ final class gf {
     static ud[] field_c;
     static hl[] field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_e = null;
         field_a = null;

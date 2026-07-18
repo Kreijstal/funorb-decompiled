@@ -276,7 +276,7 @@ final class aga {
         ((aga) this).field_c.a((byte) 105, (float)((var4 * ((aga) this).field_h >> 11) + ((aga) this).field_g) / 2048.0f);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -335,8 +335,7 @@ final class aga {
         int var10 = 0;
         try {
             if (ooa.field_e == null) {
-                int discarded$0 = 2;
-                pd.b();
+                pd.b(2);
             }
             this.a(param4, param3, param0, param6, 512, param2, param5);
             var9_int = (-ri.field_q + 2 * param6 >> cn.field_b) + 1;

@@ -8,7 +8,7 @@ final class b {
     static String field_c;
     static int[] field_b;
 
-    final static int a() {
+    final static int a(int param0) {
         return ug.field_c;
     }
 

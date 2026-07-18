@@ -31,7 +31,7 @@ final class il extends br {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_n = null;
         field_l = null;

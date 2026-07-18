@@ -95,7 +95,7 @@ class gha implements qda, qka {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_h = null;
         field_d = null;
@@ -162,7 +162,7 @@ class gha implements qda, qka {
         return stackIn_1_0;
     }
 
-    private final int b(wj param0) {
+    private final int b(wj param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -338,12 +338,10 @@ class gha implements qda, qka {
             }
             L3: {
               if (((gha) this).field_o) {
-                int discarded$5 = 8;
-                ((tq) (Object) param0.field_j).a(((gha) this).field_l, ((gha) this).field_c, ((gha) this).field_g, 99, ((gha) this).c(param0, 1), ((gha) this).field_m, this.b(param0), ((gha) this).a(param0, false));
+                ((tq) (Object) param0.field_j).a(((gha) this).field_l, ((gha) this).field_c, ((gha) this).field_g, 99, ((gha) this).c(param0, 1), ((gha) this).field_m, this.b(param0, 8), ((gha) this).a(param0, false));
                 break L3;
               } else {
-                int discarded$6 = 61;
-                this.a(param0);
+                this.a(param0, 61);
                 break L3;
               }
             }
@@ -395,7 +393,7 @@ class gha implements qda, qka {
         }
     }
 
-    private final void a(wj param0) {
+    private final void a(wj param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -431,8 +429,7 @@ class gha implements qda, qka {
             }
             L2: {
               var3_int = ((gha) this).a(param0, false);
-              int discarded$1 = 8;
-              var4 = this.b(param0);
+              var4 = this.b(param0, 8);
               var6 = ((gha) this).field_g;
               if (var6 == 0) {
                 var5 = ((gha) this).field_l.field_u;
@@ -746,9 +743,8 @@ class gha implements qda, qka {
                   var9 = var14.a(param3, (byte) -99);
                   var10 = this.a((byte) 100, param2, param4, var9);
                   var11 = ((gha) this).a(param2, param1, (byte) -54) + Math.max(0, var8.field_c);
-                  int discarded$1 = 8;
                   stackOut_4_0 = ((gha) this).a(param2, param1, (byte) -54);
-                  stackOut_4_1 = this.b(param2);
+                  stackOut_4_1 = this.b(param2, 8);
                   stackOut_4_2 = var8.field_d;
                   stackIn_6_0 = stackOut_4_0;
                   stackIn_6_1 = stackOut_4_1;
@@ -822,7 +818,7 @@ class gha implements qda, qka {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         ru.a(0, (byte) -101, -1, false, false, 0);
         ru.a(0, (byte) 113, 2, true, true, 6);
         ru.a(0, (byte) 126, 3, true, true, 7);
@@ -899,10 +895,9 @@ class gha implements qda, qka {
               ah.a(param4.field_p + param3 + param4.field_s, (byte) 124, param6 - -param4.field_v, param4.field_s + param3, param4.field_v + (param6 - -param4.field_q));
               var9_int = 32 / ((-2 - param2) / 49);
               var10 = ((gha) this).a(param4, false);
-              int discarded$2 = 8;
-              var11 = this.b(param4);
+              var11 = this.b(param4, 8);
               if (((gha) this).field_o) {
-                int discarded$3 = ((gha) this).field_l.a(((gha) this).c(param4, 1), this.a((byte) -110, param4, param3, param1), this.a(param0, param6, param4, (byte) 110), var10, var11, param7, param5, ((gha) this).field_m, ((gha) this).field_g, ((gha) this).field_c);
+                int discarded$1 = ((gha) this).field_l.a(((gha) this).c(param4, 1), this.a((byte) -110, param4, param3, param1), this.a(param0, param6, param4, (byte) 110), var10, var11, param7, param5, ((gha) this).field_m, ((gha) this).field_g, ((gha) this).field_c);
                 break L1;
               } else {
                 L2: {

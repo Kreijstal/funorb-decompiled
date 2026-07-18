@@ -14,7 +14,7 @@ final class th extends java.awt.Canvas {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_c = null;
     }

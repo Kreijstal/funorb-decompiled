@@ -228,7 +228,7 @@ final class vk extends jf {
         return stackIn_4_0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -413,7 +413,7 @@ final class vk extends jf {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_e = null;
         field_i = null;
     }

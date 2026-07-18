@@ -130,7 +130,7 @@ final class nl {
         var2.a(wg.a(true), false);
     }
 
-    final static oh a() {
+    final static oh a(int param0) {
         int var4_int = 0;
         int var5 = TetraLink.field_J;
         int var1 = je.field_h[0] * sn.field_e[0];
@@ -144,7 +144,7 @@ final class nl {
         return var4;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1, boolean param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -325,7 +325,7 @@ final class nl {
         return new String(var6);
     }
 
-    final static void a(oh param0, byte param1) {
+    final static void a(oh param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

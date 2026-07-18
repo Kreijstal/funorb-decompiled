@@ -12,7 +12,7 @@ final class jj {
     static je[] field_i;
     static hi field_g;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_i = null;
         field_d = null;

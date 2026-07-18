@@ -9,7 +9,7 @@ final class j extends ai {
     int field_g;
     byte[] field_i;
 
-    final static gk a(boolean param0, byte param1, boolean param2, int param3) {
+    final static gk a(boolean param0, byte param1, boolean param2, int param3, boolean param4, int param5) {
         try {
             Object var6 = null;
             Object var7 = null;
@@ -82,11 +82,11 @@ final class j extends ai {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_j = null;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         if (param0 < 65) {
           if (param0 >= 97) {
             if (param0 <= 122) {
@@ -114,7 +114,7 @@ final class j extends ai {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         ig.a(-102);
         fe.field_g = true;
         int var1 = 0;

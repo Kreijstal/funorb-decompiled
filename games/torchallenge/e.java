@@ -123,7 +123,7 @@ final class e extends da {
         }
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         ue var4 = null;

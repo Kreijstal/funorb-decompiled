@@ -220,8 +220,7 @@ final class sc {
                   }
                 }
               } else {
-                int discarded$2 = -50;
-                var3_int = mh.a(false, rc.field_o, mb.field_a, re.a(rf.field_g, new String[1]), ij.field_a);
+                var3_int = mh.a(false, rc.field_o, mb.field_a, re.a(rf.field_g, new String[1], (byte) -50), ij.field_a);
                 var4 = -1;
                 var5 = 0;
                 L10: while (true) {
@@ -245,8 +244,7 @@ final class sc {
                     og.a((Object[]) (Object) ij.field_a, 0, (Object[]) (Object) ia.field_d, 0, var4);
                     da.field_c = new String[-1 + (var3_int - var4)];
                     og.a((Object[]) (Object) ij.field_a, 1 + var4, (Object[]) (Object) da.field_c, 0, -1 + (var3_int - var4));
-                    int discarded$3 = -50;
-                    var3_int = mh.a(false, rc.field_o, mb.field_a, re.a(bf.field_b, new String[1]), ij.field_a);
+                    var3_int = mh.a(false, rc.field_o, mb.field_a, re.a(bf.field_b, new String[1], (byte) -50), ij.field_a);
                     var4 = -1;
                     var5 = 0;
                     L12: while (true) {
@@ -585,15 +583,14 @@ final class sc {
 
     final static void a(byte param0, uf param1) {
         try {
-            int discarded$0 = 0;
-            rk.a(true, param1);
+            rk.a(true, param1, false);
             int var2_int = 57 % ((param0 - -15) / 39);
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "sc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (h.field_F != 0 - vb.field_b) {
             if (h.field_F != -vb.field_b + 250) {
             }

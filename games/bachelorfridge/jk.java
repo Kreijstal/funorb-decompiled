@@ -81,7 +81,7 @@ final class jk extends at {
         return stackIn_15_0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_p = null;
         field_k = null;
         field_j = null;

@@ -20,7 +20,7 @@ final class ac extends oh {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_G = null;
         field_M = null;
         field_K = null;

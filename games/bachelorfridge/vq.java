@@ -87,13 +87,12 @@ final class vq extends ana {
           return false;
         } else {
           if (100 != ((vq) this).field_l) {
-            int fieldTemp$6 = ((vq) this).field_l - 1;
+            int fieldTemp$2 = ((vq) this).field_l - 1;
             ((vq) this).field_l = ((vq) this).field_l - 1;
-            if (fieldTemp$6 >= 0) {
+            if (fieldTemp$2 >= 0) {
               L0: {
                 if (75 == ((vq) this).field_l) {
-                  int discarded$7 = 0;
-                  this.c();
+                  this.c(false);
                   break L0;
                 } else {
                   break L0;
@@ -101,26 +100,23 @@ final class vq extends ana {
               }
               return false;
             } else {
-              int discarded$8 = 0;
-              this.b();
+              this.b(false);
               var2 = -79 / ((71 - param0) / 47);
               return true;
             }
           } else {
             wf.a(53, (byte) 126);
-            int fieldTemp$9 = ((vq) this).field_l - 1;
+            int fieldTemp$3 = ((vq) this).field_l - 1;
             ((vq) this).field_l = ((vq) this).field_l - 1;
-            if (fieldTemp$9 >= 0) {
+            if (fieldTemp$3 >= 0) {
               if (75 != ((vq) this).field_l) {
                 return false;
               } else {
-                int discarded$10 = 0;
-                this.c();
+                this.c(false);
                 return false;
               }
             } else {
-              int discarded$11 = 0;
-              this.b();
+              this.b(false);
               var2 = -79 / ((71 - param0) / 47);
               return true;
             }
@@ -128,7 +124,7 @@ final class vq extends ana {
         }
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
         aga var6 = ((vq) this).field_x.field_l.a(25, ((vq) this).field_q.field_h);
@@ -156,7 +152,7 @@ final class vq extends ana {
         }
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
     }
 
     static {

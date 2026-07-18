@@ -23,7 +23,7 @@ final class de {
         }
     }
 
-    final static void a(oi param0) {
+    final static void a(oi param0, int param1, int param2) {
         hj var3 = null;
         try {
             var3 = ff.field_D;
@@ -36,7 +36,7 @@ final class de {
         }
     }
 
-    final static uj a(boolean param0) {
+    final static uj a(boolean param0, byte param1) {
         uj var2 = new uj(true);
         var2.field_a = param0 ? true : false;
         return var2;

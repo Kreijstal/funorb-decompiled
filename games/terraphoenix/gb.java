@@ -782,7 +782,7 @@ class gb extends gl implements sf {
         return stackIn_6_0 != 0;
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         int var4 = Terraphoenix.field_V;
         k var2 = new k(((gb) this).field_C);
         gl var3 = (gl) (Object) var2.a((byte) -13);
@@ -803,15 +803,13 @@ class gb extends gl implements sf {
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 < 45) {
-            int discarded$0 = 0;
-            this.c();
+            this.c(false);
         }
         super.a(param0, (byte) 122, param2, param3, param4);
-        int discarded$1 = 0;
-        this.c();
+        this.c(false);
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_B = null;
         field_z = null;
         field_E = null;

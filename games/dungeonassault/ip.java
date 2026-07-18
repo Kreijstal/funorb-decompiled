@@ -123,7 +123,7 @@ abstract class ip extends m implements jo {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_i = null;
         field_l = null;
         field_j = null;

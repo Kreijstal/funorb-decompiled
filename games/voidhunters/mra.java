@@ -93,7 +93,7 @@ final class mra extends rqa {
         return stackIn_3_0;
     }
 
-    final static double e() {
+    final static double e(byte param0) {
         return aib.field_c;
     }
 

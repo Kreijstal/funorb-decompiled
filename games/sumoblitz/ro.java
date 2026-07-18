@@ -305,7 +305,7 @@ final class ro {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         ks.field_x = fw.c(false);
         rf.field_a = new dg();
         sm.a((byte) 127, true, true);
@@ -477,7 +477,7 @@ final class ro {
         return var2;
     }
 
-    final static void a(ah param0) {
+    final static void a(ah param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

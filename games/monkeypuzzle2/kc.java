@@ -12,18 +12,14 @@ abstract class kc {
     final static void b(boolean param0) {
         if (null != ha.field_Z) {
           if (ha.field_Z.h()) {
-            int discarded$8 = 96;
-            int discarded$9 = 100;
-            ha.field_Z = li.a(ke.field_h[4]);
+            ha.field_Z = li.a(ke.field_h[4], 100, 96);
             na.a((byte) 60, ha.field_Z);
             return;
           } else {
             return;
           }
         } else {
-          int discarded$10 = 96;
-          int discarded$11 = 100;
-          ha.field_Z = li.a(ke.field_h[4]);
+          ha.field_Z = li.a(ke.field_h[4], 100, 96);
           na.a((byte) 60, ha.field_Z);
           return;
         }
@@ -34,7 +30,7 @@ abstract class kc {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

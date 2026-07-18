@@ -13,7 +13,7 @@ final class ac {
     private vj field_c;
     static int field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
         field_j = null;

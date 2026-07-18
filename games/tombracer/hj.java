@@ -50,7 +50,7 @@ final class hj {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_d = null;
         field_b = null;
@@ -86,7 +86,7 @@ final class hj {
         }
     }
 
-    final static void a(eua param0) {
+    final static void a(eua param0, byte param1) {
         try {
             rua.field_gb.b(-127, (jea) (Object) param0);
         } catch (RuntimeException runtimeException) {

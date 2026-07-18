@@ -9,7 +9,7 @@ final class kk {
     static int[] field_a;
     static String[] field_d;
 
-    final static java.net.URL a(java.net.URL param0, java.applet.Applet param1) {
+    final static java.net.URL a(java.net.URL param0, java.applet.Applet param1, int param2) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_8_0 = null;
@@ -137,7 +137,7 @@ final class kk {
         return stackIn_8_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_d = null;
         field_c = null;
@@ -215,15 +215,14 @@ final class kk {
           L0: {
             ob.field_f = cl.a("commonui", param1, -125, "frame_top");
             kc.field_i = cl.a("commonui", param1, -115, "frame_bottom");
-            int discarded$3 = 1;
-            ck.field_l = qk.a("commonui", param1, "jagex_logo_grey");
+            ck.field_l = qk.a("commonui", param1, "jagex_logo_grey", true);
             rk.field_d = cl.a("commonui", param1, -120, "button");
             ja.field_n = ea.a("validation", "commonui", 0, param1);
             u.field_d = (rf) (Object) qg.a(param2, "arezzo12", "commonui", param1, 126);
             uh.field_i = (rf) (Object) qg.a(param2, "arezzo14", "commonui", param1, -100);
             wi.field_e = (rf) (Object) qg.a(param2, "arezzo14bold", "commonui", param1, 106);
             var18 = new nh(param3.a("button.gif", "", 24874), (java.awt.Component) (Object) n.field_g);
-            he discarded$4 = eh.a("commonui", (byte) -45, param1, "dropdown");
+            he discarded$1 = eh.a("commonui", (byte) -45, param1, "dropdown");
             var5 = ij.a("screen_options", (byte) 113, param1, "commonui");
             al.field_d = new he[4];
             qb.field_b = new he[4];
@@ -272,8 +271,7 @@ final class kk {
                         var9++;
                         continue L2;
                       } else {
-                        int discarded$5 = -122;
-                        var15[var11] = a.a(var5[var9], var22[var11]);
+                        var15[var11] = a.a(var5[var9], var22[var11], (byte) -122);
                         var11++;
                         continue L3;
                       }

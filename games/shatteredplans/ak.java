@@ -113,8 +113,7 @@ final class ak extends jc {
                       break L2;
                     }
                   }
-                  int discarded$1 = -3903;
-                  var5 = wi.a(stackIn_8_0, stackIn_8_1, (wa) (Object) stackIn_8_2, stackIn_8_3, stackIn_8_4, param2.field_g + param0);
+                  var5 = wi.a(stackIn_8_0, stackIn_8_1, (wa) (Object) stackIn_8_2, stackIn_8_3, stackIn_8_4, param2.field_g + param0, -3903);
                   param2.field_h = param0;
                   L3: while (true) {
                     L4: {
@@ -195,7 +194,7 @@ final class ak extends jc {
         }
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         L0: {
           if (di.field_m == 0) {
             sg.a(true, false, 50, vr.field_d, tk.field_C);
@@ -279,7 +278,7 @@ final class ak extends jc {
         }
     }
 
-    final static void i() {
+    final static void i(int param0) {
         int var2 = 0;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if (qa.field_t > 0) {
@@ -308,8 +307,7 @@ final class ak extends jc {
               return;
             }
           } else {
-            int discarded$4 = 438;
-            nj.a();
+            nj.a(438);
             if (bc.field_b <= 0) {
               L2: {
                 if (ee.field_k > 0) {
@@ -361,8 +359,7 @@ final class ak extends jc {
                   return;
                 }
               } else {
-                int discarded$5 = 438;
-                nj.a();
+                nj.a(438);
                 if (bc.field_b <= 0) {
                   L6: {
                     if (ee.field_k > 0) {
@@ -411,8 +408,7 @@ final class ak extends jc {
                   return;
                 }
               } else {
-                int discarded$6 = 438;
-                nj.a();
+                nj.a(438);
                 if (bc.field_b <= 0) {
                   L10: {
                     if (ee.field_k > 0) {
@@ -440,8 +436,7 @@ final class ak extends jc {
           } else {
             bc.field_b = bc.field_b - 1;
             if (qa.field_t > 0) {
-              int discarded$7 = 438;
-              nj.a();
+              nj.a(438);
               if (bc.field_b > 0) {
                 L12: {
                   qo.a(22353, bc.field_b);

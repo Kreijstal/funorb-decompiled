@@ -11,7 +11,7 @@ final class ts {
     int field_b;
     int field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
     }
 
@@ -110,19 +110,17 @@ final class ts {
                   if (stackIn_16_0 <= ~stackIn_16_1) {
                     break L0;
                   } else {
-                    int discarded$3 = -96;
-                    var8 = new float[]{0.0f, (float)(-(fi.a(param3, he.field_o) + 1))};
-                    float[] dupTemp$4 = kt.a((byte) -10, var8, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var7)));
-                    var11 = dupTemp$4;
-                    var8 = dupTemp$4;
+                    var8 = new float[]{0.0f, (float)(-(fi.a(param3, he.field_o, (byte) -96) + 1))};
+                    float[] dupTemp$1 = kt.a((byte) -10, var8, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var7)));
+                    var11 = dupTemp$1;
+                    var8 = dupTemp$1;
                     param1.a((ms) (Object) new vt(64, param0, param5, param4, (int)var11[0] << 8, (int)var11[1] << 8, 1), (byte) 39);
                     var7++;
                     continue L4;
                   }
                 }
               } else {
-                int discarded$5 = -96;
-                var8 = new float[]{0.0f, (float)(-(fi.a(param3, he.field_o) + 1))};
+                var8 = new float[]{0.0f, (float)(-(fi.a(param3, he.field_o, (byte) -96) + 1))};
                 var15 = kt.a((byte) -124, var8, (float)((double)(2048.0f / (float)var7) * 0.017453292519943295 + 0.0));
                 var14 = var15;
                 var13 = var14;

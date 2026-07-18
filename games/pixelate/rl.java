@@ -63,7 +63,7 @@ final class rl {
         this.a(-125);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_O = null;
         field_e = null;
         field_m = null;
@@ -213,7 +213,7 @@ final class rl {
                   if (param0 > 74) {
                     break L2;
                   } else {
-                    int discarded$3 = rl.b((byte) -77);
+                    int discarded$1 = rl.b((byte) -77);
                     break L2;
                   }
                 }
@@ -244,8 +244,7 @@ final class rl {
                             }
                           }
                         }
-                        int discarded$4 = 0;
-                        dh.a();
+                        dh.a(0);
                         break L4;
                       } else {
                         break L5;
@@ -256,8 +255,7 @@ final class rl {
                     break L4;
                   } else {
                     if (ha.field_h != 2) {
-                      int discarded$5 = 0;
-                      dh.a();
+                      dh.a(0);
                       break L4;
                     } else {
                       break L4;

@@ -8,7 +8,7 @@ final class ue {
     static int field_e;
     static ci field_d;
 
-    final static void a(int param0, hh param1) {
+    final static void a(int param0, hh param1, byte param2) {
         nk var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -75,7 +75,7 @@ final class ue {
         var4.a(var4.field_l - var5, -1);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_d = null;

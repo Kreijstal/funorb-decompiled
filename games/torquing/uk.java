@@ -87,7 +87,7 @@ final class uk {
         return ~param1 == ~(-param1 & param1);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

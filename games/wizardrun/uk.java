@@ -125,8 +125,7 @@ final class uk {
         if (!(aa.field_lb == null)) {
             aa.field_lb.l(-27697);
         }
-        int discarded$0 = 77;
-        String var1 = qf.c();
+        String var1 = qf.c((byte) 77);
         r.field_b = new qc(var1, (String) null, true, false, false);
         u.field_A.b((ub) (Object) td.field_f, (byte) 62);
         td.field_f.c((ub) (Object) r.field_b, -114);
@@ -256,7 +255,7 @@ final class uk {
         od.a(-127, param2);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 

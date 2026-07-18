@@ -66,8 +66,7 @@ final class et extends cg {
     }
 
     final static void a(boolean param0) {
-        int discarded$0 = 0;
-        oga.a();
+        oga.a(false);
         jf.field_r = true;
         gj.field_r = true;
         ej.field_a.e(true);
@@ -406,7 +405,7 @@ final class et extends cg {
         }
     }
 
-    private final void a(int param0, int param1, int[] param2, rta param3, int param4) {
+    private final void a(int param0, int param1, int[] param2, rta param3, int param4, boolean param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -661,13 +660,11 @@ final class et extends cg {
                     var5 = param2;
                     L3: while (true) {
                       if (var5 <= var6.field_B) {
-                        int discarded$2 = 0;
-                        this.a(var4_int - -var5, var4_int, param0, var6, var5);
+                        this.a(var4_int - -var5, var4_int, param0, var6, var5, false);
                         var6.field_B = var6.field_B - var5;
                         break L2;
                       } else {
-                        int discarded$3 = 0;
-                        this.a(var4_int - -var5, var4_int, param0, var6, var6.field_B);
+                        this.a(var4_int - -var5, var4_int, param0, var6, var6.field_B, false);
                         var4_int = var4_int + var6.field_B;
                         var5 = var5 - var6.field_B;
                         if (!((et) this).field_k.a(var6, param0, var4_int, (byte) 6, var5)) {

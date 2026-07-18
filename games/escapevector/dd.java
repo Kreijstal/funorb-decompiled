@@ -199,8 +199,7 @@ final class dd {
         double var12 = 0.0;
         double var14 = 0.0;
         if (param1 != param0) {
-          int discarded$1 = 62;
-          var3 = im.a(param1, param0);
+          var3 = im.a(param1, param0, 62);
           param1 = param1 / var3;
           param0 = param0 / var3;
           ((dd) this).field_f = param1;

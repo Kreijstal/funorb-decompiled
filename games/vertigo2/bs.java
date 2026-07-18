@@ -45,7 +45,7 @@ final class bs extends cr {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -306,7 +306,7 @@ final class bs extends cr {
         }
     }
 
-    final static void a(r param0) {
+    final static void a(r param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         cr var3 = null;

@@ -284,8 +284,7 @@ final class bg extends me {
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
               } else {
-                int discarded$8 = 3336;
-                if (ga.a(var5)) {
+                if (ga.a(var5, 3336)) {
                   stackOut_9_0 = qe.field_H;
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
@@ -615,7 +614,7 @@ final class bg extends me {
         }
     }
 
-    final static boolean g() {
+    final static boolean g(int param0) {
         int var1 = 0;
         return lb.field_d;
     }

@@ -18,7 +18,7 @@ final class gi implements Iterable {
         return (Iterator) (Object) new k((gi) this);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = Geoblox.field_C;
@@ -31,21 +31,18 @@ final class gi implements Iterable {
               ff.field_d = ih.field_b;
               ff.field_d = gg.a(-11455, new CharSequence[3]);
               Geoblox.field_y.h((byte) -104);
-              int discarded$4 = 520;
-              rd.c();
+              rd.c(520);
               return;
             } else {
               ff.field_d = wj.a(ra.field_b, new String[1], (byte) -124);
               ff.field_d = gg.a(-11455, new CharSequence[3]);
               Geoblox.field_y.h((byte) -104);
-              int discarded$5 = 520;
-              rd.c();
+              rd.c(520);
               return;
             }
           } else {
             Geoblox.field_y.h((byte) -104);
-            int discarded$6 = 520;
-            rd.c();
+            rd.c(520);
             return;
           }
         } else {
@@ -289,7 +286,7 @@ final class gi implements Iterable {
         }
     }
 
-    final static void a(Throwable param0, String param1) {
+    final static void a(Throwable param0, String param1, byte param2) {
         try {
             String var3 = null;
             Exception var3_ref = null;
@@ -366,8 +363,7 @@ final class gi implements Iterable {
                     break L2;
                   }
                 }
-                int discarded$2 = -75;
-                gb.a(var3);
+                gb.a(var3, (byte) -75);
                 var6 = og.a(var3, "%3a", true, ":");
                 var7 = og.a(var6, "%40", true, "@");
                 var8 = og.a(var7, "%26", true, "&");
@@ -436,7 +432,7 @@ final class gi implements Iterable {
                           break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_b;
-                          int discarded$3 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L6;
                         }

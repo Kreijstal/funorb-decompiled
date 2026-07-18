@@ -45,7 +45,7 @@ class ta extends q {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_m = null;
         int var1 = 0;
     }

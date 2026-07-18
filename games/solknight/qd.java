@@ -92,7 +92,7 @@ final class qd {
         return ((qd) this).c((byte) 107);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         h.a(4, true);
     }
 

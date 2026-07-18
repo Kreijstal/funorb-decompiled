@@ -14,7 +14,7 @@ class qb extends k {
         ((qb) this).field_k = -1;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_l = null;
         int var1 = 0;
         field_m = null;

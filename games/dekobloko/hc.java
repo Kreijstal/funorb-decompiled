@@ -114,7 +114,7 @@ final class hc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_c = null;
         int var1 = 68;

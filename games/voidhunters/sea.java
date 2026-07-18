@@ -8,7 +8,7 @@ final class sea extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6) {
         RuntimeException var7 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

@@ -8,7 +8,7 @@ final class uf {
     static String field_d;
     private String field_e;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_d = null;
     }

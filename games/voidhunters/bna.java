@@ -5,7 +5,7 @@ final class bna extends is {
     static String field_m;
     private java.lang.ref.SoftReference field_l;
 
-    final static void e() {
+    final static void e(int param0) {
         ff.field_o.field_g = 0;
         ff.field_o.field_k = 0;
     }

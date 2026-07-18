@@ -39,12 +39,11 @@ final class jf {
               if (param0 == -13181) {
                 break L1;
               } else {
-                boolean discarded$4 = jf.a(74, (byte) -66, -15);
+                boolean discarded$2 = jf.a(74, (byte) -66, -15);
                 break L1;
               }
             }
-            int discarded$5 = 1;
-            stackOut_2_0 = ra.a(10, param1, -46);
+            stackOut_2_0 = ra.a(10, param1, -46, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

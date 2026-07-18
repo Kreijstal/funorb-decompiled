@@ -11,13 +11,12 @@ final class nb extends ji {
     static ve field_B;
     static String field_y;
 
-    final static void a(int param0, cc param1, cc param2) {
+    final static void a(int param0, cc param1, cc param2, byte param3) {
         try {
             bc.field_c = 480;
             mf.field_c = param2;
             gb.field_b = param1;
-            int discarded$0 = 55;
-            tn.a(bi.field_j / 2, bi.field_e / 2);
+            tn.a(bi.field_j / 2, bi.field_e / 2, 55);
             ar.a(param1.field_M + param1.field_t, (byte) 92, param2.field_M + param2.field_t, param1.field_t, param2.field_t);
         } catch (RuntimeException runtimeException) {
             throw wn.a((Throwable) (Object) runtimeException, "nb.K(" + 480 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + -99 + ')');
@@ -338,11 +337,11 @@ final class nb extends ji {
         return new tn(param0);
     }
 
-    final static void h() {
+    final static void h(int param0) {
         hh.a(-20, lr.field_H);
     }
 
-    final static il i() {
+    final static il i(int param0) {
         try {
             Throwable var1 = null;
             il stackIn_1_0 = null;
@@ -604,7 +603,7 @@ final class nb extends ji {
         }
     }
 
-    final static void d() {
+    final static void d(int param0, int param1) {
         li var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -627,8 +626,7 @@ final class nb extends ji {
                   }
                 }
               } else {
-                int discarded$2 = 81;
-                lh.a(6, var4);
+                lh.a(6, var4, (byte) 81);
                 var4 = (hn) (Object) qo.field_B.b(45);
                 continue L1;
               }
@@ -701,7 +699,7 @@ final class nb extends ji {
         ((nb) this).field_C = 585;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_F = null;
         field_y = null;
         field_D = null;

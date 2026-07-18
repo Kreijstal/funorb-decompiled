@@ -162,7 +162,7 @@ abstract class re {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

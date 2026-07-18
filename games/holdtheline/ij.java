@@ -371,8 +371,7 @@ final class ij {
         }
         qd.a(20830, 3 - -cf.field_w);
         nm.field_b = kn.b((byte) -49);
-        int discarded$7 = 1;
-        if (pd.a(nm.field_b)) {
+        if (pd.a(nm.field_b, true)) {
             bl.field_r = new sg(nm.field_b, 0, false, false, t.field_l, -1);
         } else {
             ca.field_r = 0;

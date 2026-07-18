@@ -31,6 +31,7 @@ final class fi extends Exception {
         RuntimeException var5 = null;
         String var5_ref = null;
         int var6 = 0;
+        Object var7 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -111,8 +112,8 @@ final class fi extends Exception {
                   }
                 }
               }
-              int discarded$1 = 34;
-              nv.a(0, ag.field_e, var5_ref, (String) null);
+              var7 = null;
+              nv.a(0, ag.field_e, var5_ref, (String) null, (byte) 34);
               ei.field_b.field_ab = ag.field_e + (-((ag.field_e & 16711422) >> 1) + ((vv.field_o.field_ab & 16711422) >> 1));
               ei.field_b.field_H = ag.field_e + (-((ag.field_e & 16711422) >> 1) - -(8355711 & vv.field_o.field_H >> 1));
               ei.field_b.field_ub = -((16711423 & ag.field_e) >> 1) + ag.field_e - -(vv.field_o.field_ub >> 1 & 8355711);

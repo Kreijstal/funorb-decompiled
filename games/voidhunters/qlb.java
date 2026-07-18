@@ -9,7 +9,7 @@ final class qlb implements dja {
         return null;
     }
 
-    final static Object[] a(Object[] param0, Object param1, dja param2, boolean param3, boolean param4) {
+    final static Object[] a(Object[] param0, Object param1, dja param2, boolean param3, boolean param4, int param5) {
         RuntimeException var6 = null;
         tv[] var6_array = null;
         int var6_int = 0;
@@ -148,7 +148,7 @@ final class qlb implements dja {
                       var9 = 0;
                       L8: while (true) {
                         if (var9 >= var7) {
-                          var6_array[var7] = (tv) (Object) param0;
+                          var6_array[var7] = (tv) param1;
                           var9 = var7;
                           L9: while (true) {
                             if (var9 >= param0.length) {
@@ -170,7 +170,7 @@ final class qlb implements dja {
                     var7 = var13;
                     L10: while (true) {
                       if (param0.length <= var13) {
-                        var6_array[param0.length] = (tv) (Object) param0;
+                        var6_array[param0.length] = (tv) param1;
                         break L2;
                       } else {
                         var12[var13] = (tv) param0[var13];
@@ -189,7 +189,7 @@ final class qlb implements dja {
             }
             var6_array = param2.a(11995, 1);
             var6_array = var6_array;
-            var6_array[0] = (tv) (Object) param0;
+            var6_array[0] = (tv) param1;
             stackOut_4_0 = (tv[]) var6_array;
             stackIn_5_0 = stackOut_4_0;
             return (Object[]) (Object) stackIn_5_0;
@@ -281,8 +281,7 @@ final class qlb implements dja {
         if (param0 != -75) {
             qlb.b((byte) 0);
         }
-        int discarded$0 = 0;
-        kl.a(vpa.b((byte) -119));
+        kl.a(vpa.b((byte) -119), 0);
     }
 
     public final tv[] a(int param0, int param1) {

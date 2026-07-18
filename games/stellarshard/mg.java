@@ -39,7 +39,7 @@ final class mg {
     int[] field_x;
     int[][] field_e;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_h = null;
         field_k = null;
     }

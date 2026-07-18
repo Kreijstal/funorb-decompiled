@@ -119,7 +119,7 @@ final class nd extends hl {
         field_Sb = null;
     }
 
-    final static int a(int param0, boolean param1, String param2, String param3, String param4, int param5) {
+    final static int a(int param0, boolean param1, String param2, String param3, String param4, int param5, int param6) {
         hb var7 = null;
         RuntimeException var7_ref = null;
         hb var8 = null;

@@ -9,17 +9,16 @@ abstract class hr extends or {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_e = null;
     }
 
     abstract go a(int param0);
 
-    final static void a(boolean param0, String param1, boolean param2) {
+    final static void a(boolean param0, String param1, boolean param2, byte param3) {
         try {
-            int discarded$0 = -98;
-            gg.b();
+            gg.b((byte) -98);
             vn.field_f.e((byte) 74);
             vr.field_b = new ce(se.field_a, (String) null, nf.field_a, param2, param0);
             ak.field_d = new ad(vn.field_f, (ea) (Object) vr.field_b);

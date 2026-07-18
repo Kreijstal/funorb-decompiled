@@ -14,7 +14,7 @@ final class dq {
     static String field_g;
     static vb field_h;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_f = null;
         field_b = null;

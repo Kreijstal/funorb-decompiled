@@ -79,8 +79,8 @@ final class to extends ms {
               uq.field_a.a(((to) this).field_o, var2 << 24 | ((to) this).field_q, -1, var3 + ((to) this).field_p, ((to) this).field_k, 0);
               return;
             } else {
-              int discarded$13 = qv.field_k.a(100, 5023231 | var2 << 24, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p + var3, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
-              int discarded$14 = uq.field_a.a(100, var2 << 24 | 16777215, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p + var3, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
+              int discarded$12 = qv.field_k.a(100, 5023231 | var2 << 24, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p + var3, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
+              int discarded$13 = uq.field_a.a(100, var2 << 24 | 16777215, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p + var3, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
               return;
             }
           } else {
@@ -95,8 +95,8 @@ final class to extends ms {
                 }
               }
               if (((to) this).field_v) {
-                int discarded$15 = qv.field_k.a(100, var2 << 24 | 5023231, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
-                int discarded$16 = uq.field_a.a(100, 16777215 | var2 << 24, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
+                int discarded$14 = qv.field_k.a(100, var2 << 24 | 5023231, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
+                int discarded$15 = uq.field_a.a(100, 16777215 | var2 << 24, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
                 return;
               } else {
                 qv.field_k.a(((to) this).field_o, 5023231 | var2 << 24, -1, ((to) this).field_p, ((to) this).field_k, param0 + 70);
@@ -117,8 +117,8 @@ final class to extends ms {
                 }
                 var4 = 80 * var2 / ((to) this).field_l;
                 if (((to) this).field_v) {
-                  int discarded$17 = qv.field_k.a(100, 5023231 | var3 << 24, 0, 320, 160, (int[]) null, (hr[]) null, -var4 + ((to) this).field_p, -1, 0, 0, param0 + -8717, ((to) this).field_o, (aa) null, 1, 1);
-                  int discarded$18 = uq.field_a.a(100, var3 << 24 | 16777215, 0, 320, 160, (int[]) null, (hr[]) null, -var4 + ((to) this).field_p, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
+                  int discarded$16 = qv.field_k.a(100, 5023231 | var3 << 24, 0, 320, 160, (int[]) null, (hr[]) null, -var4 + ((to) this).field_p, -1, 0, 0, param0 + -8717, ((to) this).field_o, (aa) null, 1, 1);
+                  int discarded$17 = uq.field_a.a(100, var3 << 24 | 16777215, 0, 320, 160, (int[]) null, (hr[]) null, -var4 + ((to) this).field_p, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
                   return;
                 } else {
                   qv.field_k.a(((to) this).field_o, 5023231 | var3 << 24, -1, -var4 + ((to) this).field_p, ((to) this).field_k, 0);
@@ -131,8 +131,7 @@ final class to extends ms {
             }
           }
         } else {
-          int discarded$19 = 0;
-          to.c();
+          to.c(false);
           if (~((to) this).field_r < ~((to) this).field_u) {
             L3: {
               var2 = (((to) this).field_u << 8) / ((to) this).field_r;
@@ -149,8 +148,8 @@ final class to extends ms {
               uq.field_a.a(((to) this).field_o, var2 << 24 | ((to) this).field_q, -1, var3 + ((to) this).field_p, ((to) this).field_k, 0);
               return;
             } else {
-              int discarded$20 = qv.field_k.a(100, 5023231 | var2 << 24, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p + var3, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
-              int discarded$21 = uq.field_a.a(100, var2 << 24 | 16777215, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p + var3, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
+              int discarded$18 = qv.field_k.a(100, 5023231 | var2 << 24, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p + var3, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
+              int discarded$19 = uq.field_a.a(100, var2 << 24 | 16777215, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p + var3, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
               return;
             }
           } else {
@@ -165,8 +164,8 @@ final class to extends ms {
                 }
               }
               if (((to) this).field_v) {
-                int discarded$22 = qv.field_k.a(100, var2 << 24 | 5023231, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
-                int discarded$23 = uq.field_a.a(100, 16777215 | var2 << 24, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
+                int discarded$20 = qv.field_k.a(100, var2 << 24 | 5023231, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
+                int discarded$21 = uq.field_a.a(100, 16777215 | var2 << 24, 0, 320, 160, (int[]) null, (hr[]) null, ((to) this).field_p, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
                 return;
               } else {
                 qv.field_k.a(((to) this).field_o, 5023231 | var2 << 24, -1, ((to) this).field_p, ((to) this).field_k, param0 + 70);
@@ -187,8 +186,8 @@ final class to extends ms {
                 }
                 var4 = 80 * var2 / ((to) this).field_l;
                 if (((to) this).field_v) {
-                  int discarded$24 = qv.field_k.a(100, 5023231 | var3 << 24, 0, 320, 160, (int[]) null, (hr[]) null, -var4 + ((to) this).field_p, -1, 0, 0, param0 + -8717, ((to) this).field_o, (aa) null, 1, 1);
-                  int discarded$25 = uq.field_a.a(100, var3 << 24 | 16777215, 0, 320, 160, (int[]) null, (hr[]) null, -var4 + ((to) this).field_p, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
+                  int discarded$22 = qv.field_k.a(100, 5023231 | var3 << 24, 0, 320, 160, (int[]) null, (hr[]) null, -var4 + ((to) this).field_p, -1, 0, 0, param0 + -8717, ((to) this).field_o, (aa) null, 1, 1);
+                  int discarded$23 = uq.field_a.a(100, var3 << 24 | 16777215, 0, 320, 160, (int[]) null, (hr[]) null, -var4 + ((to) this).field_p, -1, 0, 0, -8787, ((to) this).field_o, (aa) null, 1, 1);
                   return;
                 } else {
                   qv.field_k.a(((to) this).field_o, 5023231 | var3 << 24, -1, -var4 + ((to) this).field_p, ((to) this).field_k, 0);
@@ -203,7 +202,7 @@ final class to extends ms {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_t = null;
         field_m = null;
         field_s = null;

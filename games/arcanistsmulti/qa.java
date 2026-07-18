@@ -15,7 +15,7 @@ final class qa extends pg {
     static volatile boolean field_g;
     static String field_p;
 
-    final static qb[] a(int param0, int param1, int param2, int param3) {
+    final static qb[] a(int param0, int param1, int param2, int param3, byte param4) {
         qb[] var6 = new qb[9];
         qb[] var5 = var6;
         qb dupTemp$0 = ce.b(1, param3, 21385);
@@ -34,7 +34,7 @@ final class qa extends pg {
         return var5;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_l = null;
         field_h = null;
@@ -109,8 +109,7 @@ final class qa extends pg {
           var9 = ArcanistsMulti.field_G ? 1 : 0;
           go.field_i = param2;
           if (go.field_i == 0) {
-            int discarded$8 = 21230;
-            var3_int = hf.a(qg.field_a, oc.field_d, eb.field_a, mg.field_C);
+            var3_int = hf.a(qg.field_a, oc.field_d, eb.field_a, mg.field_C, 21230);
             var4 = 3 + var3_int;
             ib.field_v = new String[var4];
             oe.field_c = new int[var4];
@@ -146,8 +145,7 @@ final class qa extends pg {
               if (go.field_i != 2) {
                 if (go.field_i != 3) {
                   if (go.field_i == 4) {
-                    int discarded$9 = 21230;
-                    var3_int = hf.a(qg.field_a, ki.field_w, eb.field_a, mg.field_C);
+                    var3_int = hf.a(qg.field_a, ki.field_w, eb.field_a, mg.field_C, 21230);
                     var4 = 2 + var3_int;
                     oe.field_c = new int[var4];
                     ib.field_v = new String[var4];
@@ -177,8 +175,7 @@ final class qa extends pg {
                     }
                   } else {
                     if (go.field_i == 5) {
-                      int discarded$10 = 21230;
-                      var3_int = hf.a(qg.field_a, fl.field_d, eb.field_a, mg.field_C);
+                      var3_int = hf.a(qg.field_a, fl.field_d, eb.field_a, mg.field_C, 21230);
                       var4 = 3 + var3_int;
                       ib.field_v = new String[var4];
                       oe.field_c = new int[var4];
@@ -216,12 +213,10 @@ final class qa extends pg {
                 } else {
                   L7: {
                     if (fi.field_d.field_p) {
-                      int discarded$11 = 21230;
-                      var3_int = hf.a(qg.field_a, of.field_l, eb.field_a, mg.field_C);
+                      var3_int = hf.a(qg.field_a, of.field_l, eb.field_a, mg.field_C, 21230);
                       break L7;
                     } else {
-                      int discarded$12 = 21230;
-                      var3_int = hf.a(qg.field_a, wi.field_j, eb.field_a, mg.field_C);
+                      var3_int = hf.a(qg.field_a, wi.field_j, eb.field_a, mg.field_C, 21230);
                       break L7;
                     }
                   }
@@ -254,8 +249,7 @@ final class qa extends pg {
                   }
                 }
               } else {
-                int discarded$13 = 21230;
-                var3_int = hf.a(qg.field_a, tj.a(-112, new String[1], dm.field_F), eb.field_a, mg.field_C);
+                var3_int = hf.a(qg.field_a, tj.a(-112, new String[1], dm.field_F), eb.field_a, mg.field_C, 21230);
                 var4 = -1;
                 var5 = 0;
                 L10: while (true) {
@@ -280,8 +274,7 @@ final class qa extends pg {
                     ik.field_c = new String[-1 + (-var4 + var3_int)];
                     sf.a((Object[]) (Object) qg.field_a, var4 + 1, (Object[]) (Object) ik.field_c, 0, var3_int + -var4 - 1);
                     var4 = -1;
-                    int discarded$14 = 21230;
-                    var3_int = hf.a(qg.field_a, tj.a(123, new String[1], bo.field_b), eb.field_a, mg.field_C);
+                    var3_int = hf.a(qg.field_a, tj.a(123, new String[1], bo.field_b), eb.field_a, mg.field_C, 21230);
                     var5 = 0;
                     L12: while (true) {
                       L13: {
@@ -428,8 +421,7 @@ final class qa extends pg {
                 }
               }
             } else {
-              int discarded$15 = 21230;
-              var3_int = hf.a(qg.field_a, oc.field_d, eb.field_a, mg.field_C);
+              var3_int = hf.a(qg.field_a, oc.field_d, eb.field_a, mg.field_C, 21230);
               var4 = 2 - -var3_int;
               ib.field_v = new String[var4];
               oe.field_c = new int[var4];

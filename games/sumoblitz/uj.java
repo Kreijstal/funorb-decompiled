@@ -10,7 +10,7 @@ final class uj {
         return (ah) (Object) new dr(param0, param2, param1, param4);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_b = null;
         field_a = null;

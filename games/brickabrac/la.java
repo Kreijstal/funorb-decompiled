@@ -676,7 +676,7 @@ final class la {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }
@@ -763,7 +763,7 @@ final class la {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return ka.field_l == jm.field_f;
     }
 
@@ -829,7 +829,7 @@ final class la {
         }
     }
 
-    final static int a(int param0) {
+    final static int a(int param0, int param1, int param2) {
         param0 = param0 / 60;
         int var3 = (param0 >> 8) % 6;
         param0 = param0 & 255;

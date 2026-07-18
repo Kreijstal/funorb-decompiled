@@ -106,13 +106,11 @@ final class hc {
                   } else {
                     if (param1 >= 51) {
                       L2: {
-                        int discarded$6 = 2;
-                        var6 = this.a(true, param0, param3, param2) ? 1 : 0;
+                        var6 = this.a(true, param0, param3, param2, (byte) 2) ? 1 : 0;
                         if (var6 != 0) {
                           break L2;
                         } else {
-                          int discarded$7 = 2;
-                          var6 = this.a(false, param0, param3, param2) ? 1 : 0;
+                          var6 = this.a(false, param0, param3, param2, (byte) 2) ? 1 : 0;
                           break L2;
                         }
                       }
@@ -163,7 +161,7 @@ final class hc {
         }
     }
 
-    final static wb[] a() {
+    final static wb[] a(int param0) {
         int var2 = 0;
         int var3 = Main.field_T;
         wb[] var1 = new wb[cf.field_c];
@@ -466,14 +464,14 @@ final class hc {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_a = null;
         field_h = null;
         field_b = null;
         field_e = null;
     }
 
-    private final boolean a(boolean param0, byte[] param1, int param2, int param3) {
+    private final boolean a(boolean param0, byte[] param1, int param2, int param3, byte param4) {
         try {
             Object var6 = null;
             RuntimeException var6_ref = null;

@@ -9,7 +9,7 @@ final class um {
     static String field_f;
     static go field_e;
 
-    final static k a(int param0, gn param1, gn param2, int param3) {
+    final static k a(int param0, gn param1, gn param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         Object stackIn_4_0 = null;
@@ -193,7 +193,7 @@ final class um {
         return stackIn_18_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_e = null;
         field_d = null;

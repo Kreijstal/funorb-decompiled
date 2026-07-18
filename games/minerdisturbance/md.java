@@ -4,7 +4,7 @@
 final class md {
     static String field_a;
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -63,7 +63,7 @@ final class md {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

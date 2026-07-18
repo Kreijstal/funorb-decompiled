@@ -72,8 +72,7 @@ final class gi extends ii implements vg {
                         }
                       }
                     } else {
-                      int discarded$1 = -49;
-                      ((gi) this).field_M[var5_int] = kl.a((CharSequence) (Object) param1[var5_int]).replace(' ', ' ');
+                      ((gi) this).field_M[var5_int] = kl.a((CharSequence) (Object) param1[var5_int], (byte) -49).replace(' ', ' ');
                       var5_int++;
                       continue L2;
                     }
@@ -118,7 +117,7 @@ final class gi extends ii implements vg {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_K = null;
         field_S = null;
         field_P = null;

@@ -24,7 +24,7 @@ final class em extends eh implements hh {
     private boolean field_T;
     private an field_I;
 
-    private final void j() {
+    private final void j(byte param0) {
         int var2 = ((em) this).field_S != null ? ((em) this).field_S.field_n + ((em) this).field_S.field_j : ((em) this).field_I.field_j;
         int var3 = ((em) this).field_C == null ? -((em) this).field_F.field_n + (((em) this).field_I.field_n + ((em) this).field_I.field_j) : ((em) this).field_C.field_j + -((em) this).field_F.field_n;
         int var4 = 0;
@@ -79,8 +79,7 @@ final class em extends eh implements hh {
                     break L3;
                   } else {
                     var6 = ((em) this).field_D;
-                    int discarded$3 = 33;
-                    this.k();
+                    this.k((byte) 33);
                     if (var6 == ((em) this).field_D) {
                       break L3;
                     } else {
@@ -94,13 +93,11 @@ final class em extends eh implements hh {
                   }
                 }
                 if (!((em) this).field_Q) {
-                  int discarded$4 = -734046384;
-                  this.a();
+                  this.a(-734046384);
                   break L1;
                 } else {
                   var6 = ((em) this).field_E;
-                  int discarded$5 = 117;
-                  this.j();
+                  this.j((byte) 117);
                   if (((em) this).field_E == var6) {
                     break L1;
                   } else {
@@ -275,8 +272,7 @@ final class em extends eh implements hh {
                           } else {
                             if (param1 != 104) {
                               if (105 == param1) {
-                                int discarded$2 = -49;
-                                this.b(((em) this).field_E + this.h(), (byte) -121);
+                                this.b(((em) this).field_E + this.h((byte) -49), (byte) -121);
                                 stackOut_35_0 = 1;
                                 stackIn_36_0 = stackOut_35_0;
                                 return stackIn_36_0 != 0;
@@ -334,8 +330,7 @@ final class em extends eh implements hh {
                                 }
                               }
                             } else {
-                              int discarded$3 = -49;
-                              this.b(((em) this).field_E + -this.h(), (byte) -121);
+                              this.b(((em) this).field_E + -this.h((byte) -49), (byte) -121);
                               stackOut_15_0 = 1;
                               stackIn_16_0 = stackOut_15_0;
                               return stackIn_16_0 != 0;
@@ -412,7 +407,7 @@ final class em extends eh implements hh {
         var4 = 7 % ((-29 - param1) / 44);
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = null == ((em) this).field_S ? ((em) this).field_I.field_j : ((em) this).field_S.field_n + ((em) this).field_S.field_j;
         int var3 = null != ((em) this).field_C ? ((em) this).field_C.field_j + -((em) this).field_F.field_n : -((em) this).field_F.field_n + (((em) this).field_I.field_j + ((em) this).field_I.field_n);
         ((em) this).field_F.field_j = var2 + ((var3 - var2) * ((em) this).field_E >> 16);
@@ -508,7 +503,7 @@ final class em extends eh implements hh {
         }
     }
 
-    final static vn i() {
+    final static vn i(byte param0) {
         int var5_int = 0;
         int var6 = ZombieDawn.field_J;
         int var1 = uf.field_n[0] * bn.field_c[0];
@@ -530,19 +525,16 @@ final class em extends eh implements hh {
           if (param0 >= 0) {
             if (param0 <= 65536) {
               ((em) this).field_E = param0;
-              int discarded$6 = -734046384;
-              this.a();
+              this.a(-734046384);
               return;
             } else {
               ((em) this).field_E = 65536;
-              int discarded$7 = -734046384;
-              this.a();
+              this.a(-734046384);
               return;
             }
           } else {
             ((em) this).field_E = 0;
-            int discarded$8 = -734046384;
-            this.a();
+            this.a(-734046384);
             return;
           }
         } else {
@@ -1193,8 +1185,7 @@ final class em extends eh implements hh {
         if (param1 <= param2) {
           ((em) this).field_F.a(26, ((em) this).field_F.field_j, ((em) this).field_F.field_k, ((em) this).field_F.field_i, ((em) this).field_I.field_n);
           this.a(false, param0 ^ -3989);
-          int discarded$4 = -734046384;
-          this.a();
+          this.a(-734046384);
           if (param0 == -30674) {
             return;
           } else {
@@ -1213,8 +1204,7 @@ final class em extends eh implements hh {
           }
           ((em) this).field_F.a(param0 ^ 30641, ((em) this).field_F.field_j, ((em) this).field_F.field_k, ((em) this).field_F.field_i, var4);
           this.a(true, 30789);
-          int discarded$5 = -734046384;
-          this.a();
+          this.a(-734046384);
           if (param0 == -30674) {
             return;
           } else {
@@ -1232,7 +1222,7 @@ final class em extends eh implements hh {
         field_J = null;
     }
 
-    private final int h() {
+    private final int h(byte param0) {
         return (((em) this).field_F.field_n << 16) / ((em) this).field_I.field_n;
     }
 
@@ -1448,7 +1438,7 @@ final class em extends eh implements hh {
         }
     }
 
-    private final void k() {
+    private final void k(byte param0) {
         int var2 = null == ((em) this).field_L ? ((em) this).field_I.field_k : ((em) this).field_L.field_i + ((em) this).field_L.field_k;
         int var3 = null == ((em) this).field_N ? -((em) this).field_F.field_i + (((em) this).field_I.field_i + ((em) this).field_I.field_k) : -((em) this).field_F.field_i + ((em) this).field_N.field_k;
         this.a(var2 < var3 ? (((em) this).field_F.field_k + -var2 << 16) / (var3 + -var2) : 0, 89);
@@ -1568,8 +1558,7 @@ final class em extends eh implements hh {
             ((em) this).field_I.field_j = ((em) this).field_S.field_j + ((em) this).field_S.field_n;
             if (null == ((em) this).field_C) {
               ((em) this).field_I.field_n = ((em) this).field_n + -((em) this).field_I.field_j;
-              int discarded$4 = -734046384;
-              this.a();
+              this.a(-734046384);
               if (((em) this).field_Q) {
                 L2: {
                   if (!((em) this).field_X) {
@@ -1602,8 +1591,7 @@ final class em extends eh implements hh {
                 ((em) this).field_C.field_k = ((em) this).field_i - ((em) this).field_C.field_i >> 1;
                 ((em) this).field_C.field_j = -((em) this).field_C.field_n + ((em) this).field_n;
                 ((em) this).field_I.field_n = -((em) this).field_C.field_n + ((em) this).field_n + -((em) this).field_I.field_j;
-                int discarded$5 = -734046384;
-                this.a();
+                this.a(-734046384);
                 if (((em) this).field_Q) {
                   break L4;
                 } else {
@@ -1637,8 +1625,7 @@ final class em extends eh implements hh {
                 break L6;
               }
             }
-            int discarded$6 = -734046384;
-            this.a();
+            this.a(-734046384);
             if (((em) this).field_Q) {
               L7: {
                 if (!((em) this).field_X) {
@@ -1692,8 +1679,7 @@ final class em extends eh implements hh {
               break L10;
             }
           }
-          int discarded$7 = -734046384;
-          this.a();
+          this.a(-734046384);
           if (((em) this).field_Q) {
             L11: {
               if (!((em) this).field_X) {

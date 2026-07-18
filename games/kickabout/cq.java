@@ -15,7 +15,7 @@ final class cq extends gn {
     int field_k;
     static StringBuilder field_m;
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_j = null;
         field_m = null;
@@ -170,13 +170,12 @@ final class cq extends gn {
         return stackIn_4_0;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             java.net.URL var2 = null;
             try {
                 var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
-                int discarded$1 = 3;
-                param0.getAppletContext().showDocument(qr.a(param0, var2), "_top");
+                param0.getAppletContext().showDocument(qr.a(param0, var2, 3), "_top");
             } catch (Exception exception) {
                 exception.printStackTrace();
             }
@@ -187,7 +186,7 @@ final class cq extends gn {
         }
     }
 
-    final static String a(int param0, String param1) {
+    final static String a(int param0, String param1, byte param2) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -306,12 +305,12 @@ final class cq extends gn {
         return stackIn_28_0;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         ir.a(param0, 16355);
         rg.a((byte) -125, param0);
     }
 
-    final static ut[] a(int param0, int param1, int param2) {
+    final static ut[] a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var7 = Kickabout.field_G;
         ut[] var8 = new ut[9];
@@ -344,7 +343,7 @@ final class cq extends gn {
         }
     }
 
-    final static boolean e() {
+    final static boolean e(int param0) {
         return !la.a(100) && 2 <= tk.field_Ib;
     }
 

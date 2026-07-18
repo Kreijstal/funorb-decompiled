@@ -9,7 +9,7 @@ final class il {
         throw new IllegalStateException();
     }
 
-    final static dk a(String param0) {
+    final static dk a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -52,8 +52,7 @@ final class il {
                     var4 = param0.substring(1 + var2_int);
                     var5 = g.a((byte) -126, var3);
                     if (var5 == null) {
-                      int discarded$2 = -1;
-                      stackOut_11_0 = lh.a(var4);
+                      stackOut_11_0 = lh.a(var4, -1);
                       stackIn_12_0 = stackOut_11_0;
                       break L0;
                     } else {
@@ -220,13 +219,12 @@ final class il {
         return stackIn_19_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
     final static void a(byte param0, String param1) {
-        int discarded$0 = 1;
-        System.out.println("Error: " + aw.a("%0a", param1, "\n"));
+        System.out.println("Error: " + aw.a("%0a", param1, "\n", true));
     }
 
     static {

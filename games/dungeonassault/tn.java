@@ -187,7 +187,7 @@ final class tn extends bh {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         cd.field_b = false;
         qc.field_t = false;
         sn.a(49, -1);
@@ -273,7 +273,7 @@ final class tn extends bh {
                 break L1;
               } else {
                 var18 = null;
-                pp discarded$2 = tn.a(9, 109, (se) null, (cn) null, 59, (String) null);
+                pp discarded$1 = tn.a(9, 109, (se) null, (cn) null, 59, (String) null);
                 break L1;
               }
             }
@@ -287,8 +287,7 @@ final class tn extends bh {
                 var13 = dd.a((byte) -112, 4, var9);
                 var14 = param3.d();
                 var14.e();
-                int discarded$3 = 99;
-                bp.a(var12, var13, var11);
+                bp.a(var12, var13, var11, (byte) 99);
                 var9.h(var11, var12);
                 var14.h();
                 var15 = var14.d();
@@ -403,8 +402,7 @@ final class tn extends bh {
     }
 
     tn(dp param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (ca) (Object) ri.a());
-        int discarded$0 = 56;
+        super(param1, (ca) (Object) ri.a((byte) 56));
         try {
             ((tn) this).field_Z = param1;
             ((tn) this).field_T = param0;
@@ -414,7 +412,7 @@ final class tn extends bh {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_Y = null;
         field_W = null;
         field_U = null;
@@ -527,8 +525,7 @@ final class tn extends bh {
             break L6;
           }
           var14.b(112, 144, var14.field_E << 4, var14.field_G << 4, -((tn) this).field_X << 10, 4096);
-          int discarded$1 = 1;
-          ti.c();
+          ti.c(true);
           ((tn) this).field_V.b(var9 + -(var14.field_E >> 1), -var14.field_G + var10, 256);
           break L4;
         }

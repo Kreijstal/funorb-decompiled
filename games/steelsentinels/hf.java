@@ -36,17 +36,8 @@ final class hf {
         hh.field_a.a(param0, (byte) 127);
     }
 
-    final static wk[] a() {
-        int discarded$0 = 1;
-        int discarded$1 = 1;
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        int discarded$4 = 65793;
-        int discarded$5 = 0;
-        int discarded$6 = 4;
-        int discarded$7 = 1;
-        int discarded$8 = 3;
-        return ch.a();
+    final static wk[] a(int param0, int param1, int param2, int param3, boolean param4) {
+        return ch.a(3, 1, 4, 0, 65793, 0, 0, 1, 1);
     }
 
     static {

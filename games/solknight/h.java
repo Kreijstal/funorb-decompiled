@@ -19,7 +19,7 @@ final class h {
         field_d = null;
     }
 
-    final static void a(int param0, fj param1) {
+    final static void a(int param0, fj param1, byte param2) {
         jd var3 = null;
         try {
             var3 = id.field_c;
@@ -32,7 +32,7 @@ final class h {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         ab.field_s[3] = new int[1];
         vd.field_d[3] = new ie(3);

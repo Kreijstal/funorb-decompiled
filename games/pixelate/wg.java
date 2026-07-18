@@ -63,7 +63,7 @@ final class wg {
         return var2;
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
@@ -134,8 +134,7 @@ final class wg {
                       return stackIn_18_0 != 0;
                     } else {
                       if (!pc.a(param0, (byte) -47, param1)) {
-                        int discarded$6 = 95;
-                        if (gb.a(param0, param1)) {
+                        if (gb.a(param0, param1, 95)) {
                           stackOut_24_0 = 0;
                           stackIn_25_0 = stackOut_24_0;
                           break L0;
@@ -355,7 +354,7 @@ final class wg {
         return stackIn_4_0;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return !an.field_e.d(125);
     }
 

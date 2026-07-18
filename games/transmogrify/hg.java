@@ -20,7 +20,7 @@ final class hg {
         this(param0, false);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 51;
         field_a = null;
         field_d = null;

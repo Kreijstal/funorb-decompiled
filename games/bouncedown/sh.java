@@ -202,8 +202,7 @@ class sh extends mh implements rc {
             pd.a(11173);
         } else {
             if (((sh) this).field_P) {
-                int discarded$0 = 24;
-                od.a();
+                od.a((byte) 24);
             }
         }
         if (!param0) {

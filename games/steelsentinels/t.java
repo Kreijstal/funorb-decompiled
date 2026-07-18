@@ -92,7 +92,7 @@ final class t {
         return stackIn_5_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_i = null;
         field_c = null;
@@ -104,8 +104,7 @@ final class t {
 
     final static void a(byte param0, int param1, boolean param2, int param3) {
         ad.a(param2, (byte) -76);
-        int discarded$0 = 635;
-        rh.a(param3, param2, param1);
+        rh.a(param3, param2, param1, 635);
     }
 
     final static void a(boolean param0, java.applet.Applet param1) {

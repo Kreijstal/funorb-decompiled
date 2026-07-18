@@ -189,13 +189,13 @@ final class qi {
         }
     }
 
-    final static id a() {
+    final static id a(int param0) {
         id var1 = new id(td.field_m, gb.field_w, fc.field_d[0], qd.field_H[0], gg.field_d[0], gh.field_C[0], og.field_c[0], of.field_g);
         rc.b((byte) 64);
         return var1;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }

@@ -6,7 +6,7 @@ final class mk {
     static int field_c;
     static ut field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }
@@ -412,7 +412,7 @@ final class mk {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             RuntimeException var1 = null;
             int var2_int = 0;
@@ -453,8 +453,7 @@ final class mk {
                                 L3: while (true) {
                                   if (var2_int >= 826) {
                                     var4.a((gn) (Object) ss.field_b, 3);
-                                    int discarded$1 = 0;
-                                    var2 = gt.c();
+                                    var2 = gt.c(0);
                                     var2.a(896, 940, -51);
                                     var4.a((gn) (Object) var2, 3);
                                     break L2;

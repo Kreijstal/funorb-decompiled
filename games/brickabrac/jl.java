@@ -107,8 +107,7 @@ final class jl {
                         var18 = 0;
                         L6: while (true) {
                           if (var18 >= 3) {
-                            int discarded$1 = 0;
-                            ka.a(kk.field_e, -16283, ld.field_w, false, true, var17);
+                            ka.a(kk.field_e, -16283, ld.field_w, false, true, var17, false);
                             mp.a(var14, var7, var12, var9, var17, (byte) -105, var13, var8);
                             var15++;
                             continue L4;
@@ -159,7 +158,7 @@ final class jl {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
@@ -233,8 +232,7 @@ final class jl {
         try {
           L0: {
             var6 = (CharSequence) (Object) param1;
-            int discarded$1 = 0;
-            if (!tk.a(var6)) {
+            if (!tk.a(var6, false)) {
               stackOut_2_0 = om.field_Xb;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;

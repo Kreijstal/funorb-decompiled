@@ -509,9 +509,7 @@ abstract class nq extends df {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    int discarded$8 = 11;
-                                    int discarded$9 = 16;
-                                    field_u = wm.a(var7);
+                                    field_u = wm.a(var7, 16, (byte) 11);
                                     break L1;
                                   }
                                 } else {
@@ -524,9 +522,7 @@ abstract class nq extends df {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              int discarded$10 = 11;
-                              int discarded$11 = 16;
-                              field_p = wm.a(var6);
+                              field_p = wm.a(var6, 16, (byte) 11);
                               break L1;
                             }
                           } else {
@@ -539,9 +535,7 @@ abstract class nq extends df {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        int discarded$12 = 11;
-                        int discarded$13 = 16;
-                        field_w = wm.a(var5);
+                        field_w = wm.a(var5, 16, (byte) 11);
                         break L1;
                       }
                     } else {
@@ -559,9 +553,7 @@ abstract class nq extends df {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                int discarded$14 = 11;
-                int discarded$15 = 16;
-                field_G = wm.a(var3);
+                field_G = wm.a(var3, 16, (byte) 11);
                 break L1;
               }
             }
@@ -856,8 +848,7 @@ abstract class nq extends df {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          int discarded$6 = 32;
-          StringBuilder discarded$7 = aj.a(field_B, 0, -127);
+          StringBuilder discarded$5 = aj.a(field_B, 0, -127, ' ');
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -893,9 +884,9 @@ abstract class nq extends df {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$8 = field_B.append('<');
-                        StringBuilder discarded$9 = field_B.append(var15);
-                        StringBuilder discarded$10 = field_B.append('>');
+                        StringBuilder discarded$6 = field_B.append('<');
+                        StringBuilder discarded$7 = field_B.append(var15);
+                        StringBuilder discarded$8 = field_B.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1082,7 +1073,7 @@ abstract class nq extends df {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$11 = field_B.append((char) var14);
+                        StringBuilder discarded$9 = field_B.append((char) var14);
                         var14 = (char)(q.a((byte) -83, (char) var14) & 255);
                         var4 = var4 + ((nq) this).field_y[var14];
                         if (((nq) this).field_M == null) {

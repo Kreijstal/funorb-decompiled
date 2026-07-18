@@ -8,13 +8,13 @@ final class db {
     static int field_c;
     static String field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
         field_d = null;
     }
 
-    final static void a(go param0, int param1, java.awt.Component param2, gd param3) {
+    final static void a(go param0, int param1, java.awt.Component param2, gd param3, int param4, boolean param5) {
         try {
             kk.a(22050, true, 22050, (byte) 119, param2, param0, 1024, param3);
         } catch (RuntimeException runtimeException) {

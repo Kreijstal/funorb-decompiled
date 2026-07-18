@@ -258,7 +258,7 @@ final class ad extends tj implements he {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         of var1_ref = null;
         au var1_ref2 = null;

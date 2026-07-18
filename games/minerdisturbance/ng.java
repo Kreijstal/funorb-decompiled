@@ -16,7 +16,7 @@ final class ng {
     int field_f;
     static String field_k;
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_e = null;
         field_k = null;
@@ -26,8 +26,7 @@ final class ng {
         if (!(kf.field_d != null)) {
             return;
         }
-        int discarded$0 = 0;
-        ci.a((java.awt.Canvas) (Object) kf.field_d);
+        ci.a((java.awt.Canvas) (Object) kf.field_d, 0);
         kf.field_d.a(false, qa.field_a);
         kf.field_d = null;
         if (!(ij.field_o == null)) {
@@ -92,7 +91,7 @@ final class ng {
         }
     }
 
-    final static void a(long param0) {
+    final static void a(long param0, int param1) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;

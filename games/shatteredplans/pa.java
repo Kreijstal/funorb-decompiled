@@ -13,7 +13,7 @@ final class pa extends li {
     static String field_i;
     static String field_h;
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -114,8 +114,7 @@ final class pa extends li {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = lb.a(var6, var5_int, param0, var4);
+                          int discarded$1 = lb.a(var16, var5_int, param0, var4, 9);
                           break L5;
                         }
                       }
@@ -163,7 +162,7 @@ final class pa extends li {
         return stackIn_21_0;
     }
 
-    private final java.net.Socket a(int param0, String param1, String param2) throws IOException {
+    private final java.net.Socket a(int param0, String param1, String param2, int param3) throws IOException {
         RuntimeException var5 = null;
         OutputStream var6 = null;
         BufferedReader var7 = null;
@@ -367,19 +366,18 @@ final class pa extends li {
         }
         try {
             jp.a(pc.field_r, il.field_cb, (byte) 121, oi.field_f);
-            int discarded$0 = 0;
-            mc.a(47, 0, param1);
+            mc.a(47, 0, param1, 0);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "pa.D(" + 9242 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_i = null;
         field_h = null;
     }
 
-    final static void a(String[] args, sq param1) {
+    final static void a(String[] args, sq param1, byte param2) {
         String[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -587,8 +585,7 @@ final class pa extends li {
                       break L3;
                     }
                   }
-                  int discarded$1 = 0;
-                  stackOut_14_0 = this.a(var4_ref.getPort(), (String) var5, var4_ref.getHostName());
+                  stackOut_14_0 = this.a(var4_ref.getPort(), (String) var5, var4_ref.getHostName(), 0);
                   stackIn_15_0 = stackOut_14_0;
                   return stackIn_15_0;
                 }
@@ -968,7 +965,7 @@ final class pa extends li {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         float var3 = (float)di.field_m / 1000.0f + 0.15000000596046448f;
         int var1 = -(int)(Math.sin((double)var3) * 200.0);
         int var2 = -200 + (int)(Math.cos((double)var3) * 200.0);

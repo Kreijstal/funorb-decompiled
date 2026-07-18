@@ -657,7 +657,7 @@ class fs extends ms {
         int var3 = -45 / ((param0 - 57) / 59);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_o = null;
         field_m = null;
         field_k = null;

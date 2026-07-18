@@ -16,11 +16,11 @@ final class aa extends hh {
         super(0L, (hh) null);
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         return gj.a((byte) -116, param0) != null;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_ib = null;
         field_kb = null;
         field_lb = null;

@@ -15,7 +15,7 @@ final class bo {
     static String field_i;
     static int field_k;
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_e = null;
         field_l = null;

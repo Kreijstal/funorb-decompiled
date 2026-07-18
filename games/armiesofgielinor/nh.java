@@ -14,7 +14,7 @@ final class nh extends ks {
     static int field_E;
     static tp field_K;
 
-    final static wk a(String param0, String param1, kl param2) {
+    final static wk a(String param0, String param1, kl param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

@@ -12,7 +12,7 @@ final class mn extends li {
     static String[] field_q;
     int field_s;
 
-    public static void a() {
+    public static void a(int param0) {
         field_t = null;
         field_n = null;
         field_u = null;
@@ -119,8 +119,7 @@ final class mn extends li {
                     } else {
                       L5: {
                         if (rk.field_y == 0) {
-                          int discarded$2 = 0;
-                          ne.c();
+                          ne.c(false);
                           break L5;
                         } else {
                           break L5;
@@ -145,7 +144,7 @@ final class mn extends li {
           if (param1 <= -113) {
             break L6;
           } else {
-            char discarded$3 = mn.a((byte) 97, -80);
+            char discarded$1 = mn.a((byte) 97, -80);
             break L6;
           }
         }

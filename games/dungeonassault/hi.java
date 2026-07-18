@@ -6,13 +6,13 @@ final class hi {
     static fb field_b;
     static pd field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         lk var3 = null;

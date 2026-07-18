@@ -35,13 +35,13 @@ final class eh {
         return (char)var2;
     }
 
-    final static gh a() {
+    final static gh a(boolean param0) {
         return km.field_j.field_Wb;
     }
 
     final static int a(int param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
@@ -85,8 +85,7 @@ final class eh {
                             }
                           }
                         }
-                        int discarded$2 = -2;
-                        jc.a();
+                        jc.a((byte) -2);
                         break L3;
                       } else {
                         break L4;
@@ -99,8 +98,7 @@ final class eh {
                     if (in.field_a == 2) {
                       break L3;
                     } else {
-                      int discarded$3 = -2;
-                      jc.a();
+                      jc.a((byte) -2);
                       break L3;
                     }
                   }
@@ -161,7 +159,7 @@ final class eh {
         return uc.field_i;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_b = null;
         field_c = null;

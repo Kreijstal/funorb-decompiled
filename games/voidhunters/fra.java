@@ -201,10 +201,9 @@ final class fra {
         return stackIn_38_0 != 0;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1 = 5;
-        int discarded$0 = 27546;
-        return sea.a(-19) - seb.a() / 2;
+        return sea.a(-19) - seb.a(27546) / 2;
     }
 
     static {

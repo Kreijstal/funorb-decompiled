@@ -69,7 +69,7 @@ final class ah extends ng {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         ji var4 = null;
@@ -82,9 +82,7 @@ final class ah extends ng {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$8 = 2;
-                int discarded$9 = 75;
-                nc.a(var4);
+                nc.a(var4, 75, 2);
                 var4 = (ji) (Object) vc.field_d.e((byte) -119);
                 continue L1;
               }
@@ -164,7 +162,7 @@ final class ah extends ng {
         return stackIn_3_0;
     }
 
-    final static mj a(String param0, int param1) {
+    final static mj a(String param0, int param1, int param2) {
         ql var3 = null;
         RuntimeException var3_ref = null;
         ql stackIn_1_0 = null;

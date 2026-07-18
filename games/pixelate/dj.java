@@ -26,28 +26,25 @@ final class dj {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, tf[] param2) {
+    final static void a(int param0, int param1, tf[] param2, int param3) {
         try {
             nl.field_c = new sb(param2);
             ao.field_d = param1;
             v.field_d = param0;
-            int discarded$0 = -1501881951;
-            dj.a();
+            dj.a(-1501881951);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "dj.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + -1501881951 + ')');
         }
     }
 
-    private final static void a() {
+    private final static void a(int param0) {
         int var1 = ka.m(22);
-        int discarded$0 = 107;
-        int var2 = go.c();
+        int var2 = go.c(107);
         nl.field_c.a(-ao.field_d + ce.field_c, (ao.field_d << 1) + var2, -1, (v.field_d << 1) + var1, -v.field_d + qn.field_o);
-        int discarded$1 = 88;
-        vh.a();
+        vh.a(88);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
     }

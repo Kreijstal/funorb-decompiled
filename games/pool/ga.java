@@ -139,15 +139,15 @@ final class ga extends sl implements sc {
         return stackIn_10_0;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         try {
             be.f(-1);
             wo.field_c = true;
             ro.field_e = true;
             wd.field_Ub.k(-22216);
-            wf.a(false, na.field_d, -127);
+            wf.a(param0, na.field_d, -127);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ga.LA(" + false + ')');
+            throw wm.a((Throwable) (Object) runtimeException, "ga.LA(" + param0 + ')');
         }
     }
 
@@ -205,8 +205,7 @@ final class ga extends sl implements sc {
                 }
               }
               L4: {
-                int discarded$5 = 1;
-                var6 = hl.a(var4_ref_String);
+                var6 = hl.a(var4_ref_String, 1);
                 var7 = var1.j(-17);
                 var8 = hq.a(117, (CharSequence) (Object) var4_ref_String);
                 if (var8 != null) {
@@ -220,8 +219,7 @@ final class ga extends sl implements sc {
                 if (null != var6) {
                   break L5;
                 } else {
-                  int discarded$6 = 1;
-                  var6 = hl.a(var7);
+                  var6 = hl.a(var7, 1);
                   if (var6 != null) {
                     gd.field_c.a(-6946, (long)var8.hashCode(), (rg) (Object) var6);
                     break L5;
@@ -236,9 +234,9 @@ final class ga extends sl implements sc {
                 } else {
                   var6 = new eo();
                   gd.field_c.a(param0 ^ -28521, (long)var8.hashCode(), (rg) (Object) var6);
-                  int fieldTemp$7 = gi.field_t;
+                  int fieldTemp$2 = gi.field_t;
                   gi.field_t = gi.field_t + 1;
-                  var6.field_Mb = fieldTemp$7;
+                  var6.field_Mb = fieldTemp$2;
                   jq.field_c.b((byte) -31, (ma) (Object) var6);
                   break L6;
                 }
@@ -287,9 +285,9 @@ final class ga extends sl implements sc {
                   if (null == var6) {
                     var6 = new eo();
                     df.field_b.a(-6946, (long)hq.a(param0 ^ 29715, (CharSequence) (Object) var4_ref_String).hashCode(), (rg) (Object) var6);
-                    int fieldTemp$8 = nr.field_S;
+                    int fieldTemp$3 = nr.field_S;
                     nr.field_S = nr.field_S + 1;
-                    var6.field_Mb = fieldTemp$8;
+                    var6.field_Mb = fieldTemp$3;
                     cf.field_k.b((byte) -24, (ma) (Object) var6);
                     break L10;
                   } else {
@@ -314,8 +312,7 @@ final class ga extends sl implements sc {
                     if (var7_ref == null) {
                       break L13;
                     } else {
-                      int discarded$9 = 83;
-                      if (!wk.a(var6, var7_ref)) {
+                      if (!wk.a(var6, var7_ref, 83)) {
                         break L13;
                       } else {
                         var7_ref = (eo) (Object) cf.field_k.f((byte) -5);

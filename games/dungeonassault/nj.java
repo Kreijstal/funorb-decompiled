@@ -10,7 +10,7 @@ final class nj {
     static int[] field_g;
     static md field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_c = null;
         field_d = null;
@@ -18,7 +18,7 @@ final class nj {
         field_a = null;
     }
 
-    final static void a(nh param0, nh param1) {
+    final static void a(nh param0, nh param1, int param2) {
         try {
             hf.field_pb = param0;
             jb.field_Qb = param1;

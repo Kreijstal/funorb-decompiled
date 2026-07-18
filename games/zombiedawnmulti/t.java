@@ -11,7 +11,7 @@ abstract class t {
 
     abstract byte[] a(int param0);
 
-    final static void a(ul param0, ul param1) {
+    final static void a(ul param0, ul param1, int param2, boolean param3) {
         try {
             en.a(cm.field_b, m.field_B, (fm) (Object) jj.field_L, qc.field_u, vo.field_m, ra.field_j, true, td.field_f, 16736511, up.field_g, rb.field_d, nq.field_v);
             wp.field_j = pb.a("lobby", param1, -256, "chatfilter");
@@ -29,7 +29,7 @@ abstract class t {
         return em.field_cb;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_f = null;
         field_c = null;
@@ -37,7 +37,7 @@ abstract class t {
         int var1 = 0;
     }
 
-    final static void a(boolean param0, int param1, java.awt.Canvas param2) {
+    final static void a(boolean param0, int param1, java.awt.Canvas param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;

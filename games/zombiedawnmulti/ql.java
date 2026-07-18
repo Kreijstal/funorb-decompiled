@@ -93,7 +93,7 @@ final class ql {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         il var1 = (il) (Object) mo.field_Fb.a(true);
         if (!(var1 != null)) {
             throw new IllegalStateException();

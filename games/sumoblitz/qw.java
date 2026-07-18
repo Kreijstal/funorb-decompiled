@@ -93,7 +93,7 @@ final class qw {
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(so.a((byte) 101))) {
             return;
         }
@@ -104,9 +104,10 @@ final class qw {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
-        int var4_int = 0;
-        ah var4 = null;
+        int var4 = 0;
         int var5 = 0;
+        ah var6 = null;
+        ah var7 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
@@ -127,28 +128,26 @@ final class qw {
         try {
           L0: {
             if (param1.field_Q != 0) {
-              int discarded$8 = 1;
-              if (jc.b() <= 20) {
-                int discarded$9 = -96;
-                var2_int = fi.a(2, he.field_o);
+              if (jc.b(true) <= 20) {
+                var2_int = fi.a(2, he.field_o, (byte) -96);
                 if (1 != var2_int) {
                   L1: {
                     var3 = param1.field_N;
-                    var4_int = var3;
-                    if (var4_int == 4) {
+                    var4 = var3;
+                    if (var4 == 4) {
                       var3 = 0;
                       break L1;
                     } else {
-                      if (0 == var4_int) {
+                      if (0 == var4) {
                         var3 = 5;
                         break L1;
                       } else {
-                        if (var4_int != 5) {
-                          if (var4_int == 1) {
+                        if (var4 != 5) {
+                          if (var4 == 1) {
                             var3 = 2;
                             break L1;
                           } else {
-                            if (2 != var4_int) {
+                            if (2 != var4) {
                               break L1;
                             } else {
                               var3 = 6;
@@ -170,11 +169,8 @@ final class qw {
                       break L2;
                     }
                   }
-                  int discarded$10 = -96;
-                  int discarded$11 = -96;
-                  var4 = uj.a(param1.field_Q, 26 - -fi.a(588, ki.field_b) << 8, var3, (byte) 84, 26 + fi.a(428, ki.field_b) << 8);
-                  int discarded$12 = 0;
-                  oc.a(var4);
+                  var7 = uj.a(param1.field_Q, 26 - -fi.a(588, ki.field_b, (byte) -96) << 8, var3, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 8);
+                  oc.a(var7, false);
                   break L0;
                 } else {
                   L3: {
@@ -186,11 +182,8 @@ final class qw {
                       break L3;
                     }
                   }
-                  int discarded$13 = -96;
-                  int discarded$14 = -96;
-                  var4 = uj.a(var3, 26 + fi.a(588, ki.field_b) << 8, param1.field_N, (byte) 84, 26 + fi.a(428, ki.field_b) << 8);
-                  int discarded$15 = 0;
-                  oc.a(var4);
+                  var6 = uj.a(var3, 26 + fi.a(588, ki.field_b, (byte) -96) << 8, param1.field_N, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 8);
+                  oc.a(var6, false);
                   return;
                 }
               } else {

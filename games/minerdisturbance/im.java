@@ -23,7 +23,7 @@ final class im {
         field_b = null;
     }
 
-    final static boolean a(int[] param0) {
+    final static boolean a(int[] param0, int param1) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         jn var4_ref_jn = null;
@@ -123,8 +123,7 @@ final class im {
                     }
                   }
                 }
-                int discarded$1 = -9319;
-                if (kj.b()) {
+                if (kj.b(-9319)) {
                   if (0 == qc.field_f) {
                     lc.field_s = rd.field_a;
                     rd.field_a = ud.field_a;
@@ -204,7 +203,7 @@ final class im {
         return stackIn_34_0 != 0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         bd.field_c = sl.e(105);
         mb.field_b = new hm();
         ie.a(true, true, -57);
@@ -252,8 +251,7 @@ final class im {
         try {
           L0: {
             L1: {
-              int discarded$2 = 0;
-              var3 = re.a(param2);
+              var3 = re.a(param2, 0);
               if (param0.indexOf(param2) != 0) {
                 break L1;
               } else {
@@ -352,7 +350,7 @@ final class im {
         return stackIn_12_0 != 0;
     }
 
-    final static sj[] b() {
+    final static sj[] b(int param0) {
         return new sj[]{ak.field_b, hj.field_e, li.field_d};
     }
 

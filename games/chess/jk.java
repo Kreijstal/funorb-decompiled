@@ -31,8 +31,8 @@ final class jk implements Runnable {
 
     final nl a(int param0, String param1, Class[] param2, Class param3) {
         if (param0 != 8) {
-            int discarded$0 = 0;
-            nl discarded$1 = this.a((String) null, 21, 78);
+            Object var6 = null;
+            nl discarded$0 = this.a((String) null, 21, 78, false);
         }
         return this.a(param0 ^ 9, 0, (Object) (Object) new Object[3], 8, 0);
     }
@@ -162,7 +162,7 @@ final class jk implements Runnable {
         }
     }
 
-    private final nl a(String param0, int param1, int param2) {
+    private final nl a(String param0, int param1, int param2, boolean param3) {
         if (param1 != 0) {
             nl discarded$0 = ((jk) this).a(97, -106, 27, 64, -97);
         }
@@ -695,8 +695,7 @@ final class jk implements Runnable {
         if (param1) {
             return null;
         }
-        int discarded$0 = 0;
-        return this.a(param0, 0, param2);
+        return this.a(param0, 0, param2, false);
     }
 
     final nl a(int param0) {

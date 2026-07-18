@@ -84,8 +84,7 @@ final class jo implements eb {
                   if (param2 == null) {
                     break L1;
                   } else {
-                    int discarded$4 = 120;
-                    var3_ref = oa.a(param2);
+                    var3_ref = oa.a(param2, (byte) 120);
                     break L1;
                   }
                 }
@@ -105,8 +104,7 @@ final class jo implements eb {
                     break L2;
                   }
                 }
-                int discarded$5 = 0;
-                al.a(var3_ref);
+                al.a(var3_ref, 0);
                 var7 = qk.a(var3_ref, ":", "%3a", -123);
                 var8 = qk.a(var7, "@", "%40", -128);
                 var9 = qk.a(var8, "&", "%26", -126);
@@ -170,15 +168,14 @@ final class jo implements eb {
                     if (0 != var4.field_b) {
                       if (var4.field_b == 1) {
                         var5 = (DataInputStream) var4.field_e;
-                        int discarded$6 = var5.read();
+                        int discarded$1 = var5.read();
                         var5.close();
                         break L0;
                       } else {
                         return;
                       }
                     } else {
-                      int discarded$7 = 23;
-                      vg.a(1L);
+                      vg.a(1L, (byte) 23);
                       continue L5;
                     }
                   }
@@ -317,7 +314,7 @@ final class jo implements eb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_n = null;
         field_j = null;

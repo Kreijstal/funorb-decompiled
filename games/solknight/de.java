@@ -50,8 +50,7 @@ final class de {
                 break L2;
               } else {
                 var4 = (CharSequence) (Object) var2;
-                int discarded$2 = 44;
-                if (ti.a(var4) != 0L) {
+                if (ti.a(var4, (byte) 44) != 0L) {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {

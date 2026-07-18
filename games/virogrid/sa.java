@@ -20,8 +20,7 @@ final class sa extends l {
             if (param0 <= 98) {
                 sa.a(-84);
             }
-            int discarded$0 = 0;
-            gk.a(param3, bn.field_a);
+            gk.a(param3, bn.field_a, false);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "sa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -31,7 +30,7 @@ final class sa extends l {
         int var1 = -105 / ((-9 - param0) / 56);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_m = null;
         field_o = null;
         int var1 = -84;

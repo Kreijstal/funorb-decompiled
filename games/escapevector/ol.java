@@ -116,8 +116,7 @@ class ol extends cd {
                   stackIn_8_0 = stackOut_7_0;
                   break L0;
                 } else {
-                  int discarded$2 = 97;
-                  var9 = hf.a(param1, param2, var7, param3, param4);
+                  var9 = hf.a(param1, param2, var7, param3, param4, (byte) 97);
                   var6[var7] = var9;
                   var7++;
                   continue L1;
@@ -216,7 +215,7 @@ class ol extends cd {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_E = null;
         field_ab = null;
         field_N = null;

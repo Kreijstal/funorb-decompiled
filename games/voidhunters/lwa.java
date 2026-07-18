@@ -47,11 +47,11 @@ final class lwa extends llb {
         return stackIn_9_0 != 0;
     }
 
-    final static int e() {
+    final static int e(byte param0) {
         return mw.field_e;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_vb = null;
         field_xb = null;
     }
@@ -215,8 +215,7 @@ final class lwa extends llb {
                 ((lwa) this).field_wb.a(-20 + var17.field_hb, 8, 15, 5, 15);
                 var8.a(0, 119, ((lwa) this).field_hb, var17.field_G, -var17.field_G + ((lwa) this).field_G);
                 var9.a(0, 121, ((lwa) this).field_hb, 20, 15);
-                int discarded$1 = 3;
-                var8.field_gb = uwa.a(11579568, var8.field_G, 2105376, 8421504, 119);
+                var8.field_gb = uwa.a(11579568, var8.field_G, 2105376, 8421504, 119, 3);
                 var17.b(-561, ((lwa) this).field_wb);
                 var8.b(-561, var9);
                 ((lwa) this).b(-561, var17);

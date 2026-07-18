@@ -319,7 +319,7 @@ final class qd {
         return var2;
     }
 
-    final static nk b() {
+    final static nk b(int param0) {
         if (tj.field_F == jc.field_P) {
             throw new IllegalStateException();
         }

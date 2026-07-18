@@ -261,7 +261,7 @@ final class ab {
                 break L1;
               } else {
                 var5 = null;
-                int discarded$4 = ab.a(-120, (CharSequence) null);
+                int discarded$2 = ab.a(-120, (CharSequence) null);
                 break L1;
               }
             }
@@ -272,8 +272,7 @@ final class ab {
                 stackIn_6_0 = stackOut_5_0;
                 break L0;
               } else {
-                int discarded$5 = 1;
-                var3 = -var3 + (var3 << 5) + qc.a(param1.charAt(var4));
+                var3 = -var3 + (var3 << 5) + qc.a(param1.charAt(var4), true);
                 var4++;
                 continue L2;
               }
@@ -376,8 +375,7 @@ final class ab {
                       }
                     }
                     gf.a(var2_ref, -1232328029, param1);
-                    int discarded$1 = 0;
-                    if (!uj.a(var2_ref, param1)) {
+                    if (!uj.a(var2_ref, param1, 0)) {
                       L5: {
                         if (ma.a(true, param1, var2_ref)) {
                           var3 = wd.field_b.field_v[aa.field_a + wd.field_b.field_s * aa.field_b] + -1;
@@ -558,7 +556,7 @@ final class ab {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_e = null;
         field_c = null;

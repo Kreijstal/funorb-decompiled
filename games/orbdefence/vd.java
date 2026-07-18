@@ -403,7 +403,7 @@ final class vd {
         return stackIn_17_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_f = null;
         field_e = null;

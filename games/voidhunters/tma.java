@@ -7,14 +7,14 @@ final class tma extends rqa {
     static String field_o;
     static uja field_p;
 
-    public static void f() {
+    public static void f(byte param0) {
         field_q = null;
         field_r = null;
         field_p = null;
         field_o = null;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -113,7 +113,7 @@ final class tma extends rqa {
         super(param0, param1, param2);
     }
 
-    final static tpa a(int param0, String param1) {
+    final static tpa a(int param0, String param1, byte param2) {
         tpa var3 = null;
         RuntimeException var3_ref = null;
         tpa stackIn_3_0 = null;

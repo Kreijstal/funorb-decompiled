@@ -11,7 +11,7 @@ final class qf {
     static String field_b;
     static qr field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_b = null;
@@ -24,8 +24,7 @@ final class qf {
             if (tc.field_G != null) {
               if (!tc.field_G.h(0)) {
                 if (param0 == 0) {
-                  int discarded$12 = 97;
-                  if (!ac.d()) {
+                  if (!ac.d(97)) {
                     if (ph.a(4, param1, param3, param2)) {
                       return true;
                     } else {
@@ -35,9 +34,8 @@ final class qf {
                     return true;
                   }
                 } else {
-                  boolean discarded$13 = qf.a(-33, 11, -33, 82);
-                  int discarded$14 = 97;
-                  if (!ac.d()) {
+                  boolean discarded$4 = qf.a(-33, 11, -33, 82);
+                  if (!ac.d(97)) {
                     if (!ph.a(4, param1, param3, param2)) {
                       return false;
                     } else {
@@ -54,8 +52,7 @@ final class qf {
               }
             } else {
               if (param0 == 0) {
-                int discarded$15 = 97;
-                if (!ac.d()) {
+                if (!ac.d(97)) {
                   if (ph.a(4, param1, param3, param2)) {
                     return true;
                   } else {
@@ -65,9 +62,8 @@ final class qf {
                   return true;
                 }
               } else {
-                boolean discarded$16 = qf.a(-33, 11, -33, 82);
-                int discarded$17 = 97;
-                if (!ac.d()) {
+                boolean discarded$5 = qf.a(-33, 11, -33, 82);
+                if (!ac.d(97)) {
                   if (ph.a(4, param1, param3, param2)) {
                     return true;
                   } else {
@@ -86,8 +82,7 @@ final class qf {
           if (tc.field_G != null) {
             if (!tc.field_G.h(0)) {
               if (param0 == 0) {
-                int discarded$18 = 97;
-                if (!ac.d()) {
+                if (!ac.d(97)) {
                   if (ph.a(4, param1, param3, param2)) {
                     return true;
                   } else {
@@ -97,9 +92,8 @@ final class qf {
                   return true;
                 }
               } else {
-                boolean discarded$19 = qf.a(-33, 11, -33, 82);
-                int discarded$20 = 97;
-                if (!ac.d()) {
+                boolean discarded$6 = qf.a(-33, 11, -33, 82);
+                if (!ac.d(97)) {
                   if (ph.a(4, param1, param3, param2)) {
                     return true;
                   } else {
@@ -116,8 +110,7 @@ final class qf {
             }
           } else {
             if (param0 == 0) {
-              int discarded$21 = 97;
-              if (!ac.d()) {
+              if (!ac.d(97)) {
                 if (ph.a(4, param1, param3, param2)) {
                   return true;
                 } else {
@@ -127,9 +120,8 @@ final class qf {
                 return true;
               }
             } else {
-              boolean discarded$22 = qf.a(-33, 11, -33, 82);
-              int discarded$23 = 97;
-              if (!ac.d()) {
+              boolean discarded$7 = qf.a(-33, 11, -33, 82);
+              if (!ac.d(97)) {
                 if (ph.a(4, param1, param3, param2)) {
                   return true;
                 } else {
@@ -155,8 +147,7 @@ final class qf {
         bj.field_L = 0;
         Object var2 = null;
         jo.a(32767, (gh) null, true, 50);
-        int discarded$0 = -123;
-        kg.f();
+        kg.f((byte) -123);
     }
 
     final static int a(byte param0, int param1, Random param2) {
@@ -185,12 +176,11 @@ final class qf {
               if (param0 > 0) {
                 break L1;
               } else {
-                boolean discarded$4 = qf.a(119, 68, -5, 5);
+                boolean discarded$2 = qf.a(119, 68, -5, 5);
                 break L1;
               }
             }
-            int discarded$5 = -11;
-            stackOut_2_0 = hi.a(param1, param2);
+            stackOut_2_0 = hi.a(param1, param2, -11);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -236,9 +226,8 @@ final class qf {
         }
     }
 
-    final static void b() {
-        int discarded$0 = 0;
-        jh.a(ii.field_u, ho.field_j, un.field_g, me.field_d);
+    final static void b(byte param0) {
+        jh.a(ii.field_u, ho.field_j, un.field_g, me.field_d, 0);
         int var1 = 57;
     }
 

@@ -16,7 +16,7 @@ final class fg extends k implements ae {
     static int field_Ob;
     static int[] field_Xb;
 
-    final static void n() {
+    final static void n(int param0) {
     }
 
     final static pc a(int param0, int param1, int param2, sk param3) {
@@ -41,8 +41,7 @@ final class fg extends k implements ae {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = -48;
-            stackOut_0_0 = on.a(em.b(param3, 100, param0, param1));
+            stackOut_0_0 = on.a(em.b(param3, 100, param0, param1), -48);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -79,7 +78,7 @@ final class fg extends k implements ae {
         return stackIn_1_0;
     }
 
-    public static void o() {
+    public static void o(byte param0) {
         field_Xb = null;
         field_Tb = null;
         field_Yb = null;
@@ -122,8 +121,7 @@ final class fg extends k implements ae {
                   if (248 == param2.field_a) {
                     L2: {
                       if (!param1) {
-                        int discarded$3 = 1;
-                        ud.a();
+                        ud.a(true);
                         break L2;
                       } else {
                         break L2;
@@ -154,7 +152,7 @@ final class fg extends k implements ae {
                 var5 = new bm((k) this, gf.field_d, var4_ref);
                 if (param2.field_d) {
                   if (!param2.field_f) {
-                    oa discarded$4 = var5.a(-122, (tn) this, ah.field_Sb);
+                    oa discarded$2 = var5.a(-122, (tn) this, ah.field_Sb);
                     break L4;
                   } else {
                     ((fg) this).c((lh) (Object) new nj((fg) this), -22908735);
@@ -172,7 +170,7 @@ final class fg extends k implements ae {
                         break L5;
                       }
                     } else {
-                      oa discarded$5 = var5.a(-110, (tn) this, ah.field_Sb);
+                      oa discarded$3 = var5.a(-110, (tn) this, ah.field_Sb);
                       break L5;
                     }
                   }
@@ -309,15 +307,14 @@ final class fg extends k implements ae {
         e var2 = null;
         if (((fg) this).field_Q) {
             if (!(((fg) this).field_Nb)) {
-                int discarded$0 = 73;
-                var2 = al.b();
+                var2 = al.b((byte) 73);
                 if (!(var2 == null)) {
                     this.a(5, false, var2);
                 }
             }
         }
         if (param0 != -8350) {
-            boolean discarded$1 = fg.p((byte) -108);
+            boolean discarded$0 = fg.p((byte) -108);
         }
         return super.i(param0);
     }
@@ -410,8 +407,7 @@ final class fg extends k implements ae {
             return;
         }
         try {
-            int discarded$0 = 0;
-            lc.a();
+            lc.a(0);
             ((fg) this).m(112);
             int var6_int = -27 / ((param1 - -85) / 36);
         } catch (RuntimeException runtimeException) {

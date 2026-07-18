@@ -7,7 +7,7 @@ final class rd extends cg {
     static w field_j;
     static byte[][] field_k;
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_k = null;
         field_j = null;
     }
@@ -34,8 +34,7 @@ final class rd extends cg {
     final static void a(byte param0, String param1) {
         try {
             we.a(-119, param1);
-            int discarded$0 = 16777215;
-            ca.a(kj.field_q, false);
+            ca.a(kj.field_q, false, 16777215);
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "rd.K(" + 68 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -70,8 +69,7 @@ final class rd extends cg {
         try {
           L0: {
             L1: {
-              int discarded$10 = 64;
-              if (null != di.a(param0)) {
+              if (null != di.a(param0, 64)) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -150,8 +148,7 @@ final class rd extends cg {
             }
           }
           var1 = 63;
-          int discarded$4 = 44;
-          vb.a();
+          vb.a((byte) 44);
           return;
         } else {
           L1: {
@@ -163,8 +160,7 @@ final class rd extends cg {
             }
           }
           var1 = 63;
-          int discarded$5 = 44;
-          vb.a();
+          vb.a((byte) 44);
           return;
         }
     }

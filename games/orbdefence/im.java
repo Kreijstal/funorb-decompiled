@@ -78,7 +78,7 @@ final class im {
         }
     }
 
-    final static String a(char param0, int param1) {
+    final static String a(char param0, int param1, int param2) {
         int var4 = 0;
         int var5 = OrbDefence.field_D ? 1 : 0;
         char[] var6 = new char[param1];
@@ -104,7 +104,7 @@ final class im {
         return var2;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

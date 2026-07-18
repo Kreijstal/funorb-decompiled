@@ -5,7 +5,7 @@ final class ki extends rqa {
     static llb field_p;
     static int field_o;
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
     }
 

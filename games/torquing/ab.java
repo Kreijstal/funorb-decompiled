@@ -6,7 +6,7 @@ import java.lang.String;
 final class ab extends gf {
     static hh field_l;
 
-    public static void e() {
+    public static void e(int param0) {
         field_l = null;
     }
 
@@ -157,8 +157,9 @@ final class ab extends gf {
     final cd a(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        CharSequence var4 = null;
+        Object var4 = null;
         CharSequence var5 = null;
+        CharSequence var6 = null;
         cd stackIn_3_0 = null;
         cd stackIn_10_0 = null;
         cd stackIn_12_0 = null;
@@ -183,8 +184,8 @@ final class ab extends gf {
         String stackOut_14_2 = null;
         try {
           L0: {
-            var4 = (CharSequence) (Object) param1;
-            if (!ip.a((byte) -31, var4)) {
+            var5 = (CharSequence) (Object) param1;
+            if (!ip.a((byte) -31, var5)) {
               stackOut_2_0 = so.field_u;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -193,13 +194,14 @@ final class ab extends gf {
                 if (param0 > 62) {
                   break L1;
                 } else {
+                  var4 = null;
                   cd discarded$2 = ((ab) this).a(85, (String) null);
                   break L1;
                 }
               }
               L2: {
-                var5 = (CharSequence) (Object) param1;
-                var3_int = kc.a((byte) 121, var5);
+                var6 = (CharSequence) (Object) param1;
+                var3_int = kc.a((byte) 121, var6);
                 if (var3_int <= 0) {
                   break L2;
                 } else {
@@ -250,7 +252,7 @@ final class ab extends gf {
         return stackIn_12_0;
     }
 
-    final static bc a(String param0, String param1) {
+    final static bc a(String param0, String param1, int param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;

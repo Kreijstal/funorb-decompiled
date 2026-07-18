@@ -251,7 +251,7 @@ final class lc extends gi {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_k = null;
         field_s = null;
         field_i = null;
@@ -260,9 +260,8 @@ final class lc extends gi {
         field_q = null;
     }
 
-    final static void c() {
-        int discarded$0 = 1;
-        ja.field_Q = fg.a();
+    final static void c(byte param0) {
+        ja.field_Q = fg.a(1);
         ng.field_c = new k();
         int var1 = 0;
         q.a((byte) -29, true, true);
@@ -303,7 +302,7 @@ final class lc extends gi {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         fl.field_i = false;
         int var1 = 0;
         int discarded$0 = dh.field_N.l(31760);

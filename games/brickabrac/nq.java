@@ -83,22 +83,17 @@ final class nq extends nm {
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
-            int discarded$7 = 2;
-            nf.field_W = cr.a("commonui", param3, "frame_top");
-            int discarded$8 = 2;
-            qc.field_l = cr.a("commonui", param3, "frame_bottom");
+            nf.field_W = cr.a("commonui", param3, "frame_top", 2);
+            qc.field_l = cr.a("commonui", param3, "frame_bottom", 2);
             ka.field_n = pl.a("commonui", "jagex_logo_grey", (byte) -110, param3);
-            int discarded$9 = 2;
-            sf.field_U = cr.a("commonui", param3, "button");
-            int discarded$10 = -8;
-            df.field_a = bd.a("commonui", "validation", param3);
+            sf.field_U = cr.a("commonui", param3, "button", 2);
+            df.field_a = bd.a("commonui", "validation", param3, (byte) -8);
             og.field_Yb = (dh) (Object) si.a((byte) -118, "commonui", "arezzo12", param3, param0);
             a.field_u = (dh) (Object) si.a((byte) -108, "commonui", "arezzo14", param3, param0);
             wm.field_a = (dh) (Object) si.a((byte) -126, "commonui", "arezzo14bold", param3, param0);
             var17 = new jp(param1.a(122, "button.gif", ""), (java.awt.Component) (Object) kj.field_D);
-            tp discarded$11 = uo.a((byte) 29, param3, "dropdown", "commonui");
-            int discarded$12 = -946715356;
-            var5 = wq.a("commonui", param3, "screen_options");
+            tp discarded$1 = uo.a((byte) 29, param3, "dropdown", "commonui");
+            var5 = wq.a("commonui", param3, "screen_options", -946715356);
             mq.field_b = new tp[4];
             cd.field_b = new tp[4];
             ng.field_d = new tp[4];
@@ -120,8 +115,7 @@ final class nq extends nm {
                 L2: while (true) {
                   if (var9 >= 3) {
                     var9 = var17.field_C;
-                    int discarded$13 = -99;
-                    jf.d();
+                    jf.d(-99);
                     var17.g();
                     lb.a(0, 0, lb.field_c, lb.field_d);
                     var15 = new jp(var9, var9);
@@ -250,7 +244,7 @@ final class nq extends nm {
         ((nq) this).field_j = ((nq) this).field_s.d(((nq) this).field_m, ((nq) this).field_r, pq.field_k, po.field_a);
     }
 
-    final static void e() {
+    final static void e(int param0) {
         if (!(eo.field_f == null)) {
             eo.field_f.f();
         }
@@ -259,12 +253,12 @@ final class nq extends nm {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_n = null;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         ld.field_s = true;
         ng.field_b = 0;
     }
@@ -376,8 +370,7 @@ final class nq extends nm {
           L0: {
             var5_int = param2.a(param1, false);
             var6 = param2.a(var5_int, -80, param4);
-            int discarded$2 = -112;
-            stackOut_2_0 = wn.a(var5_int, param3, param2, var6);
+            stackOut_2_0 = wn.a(var5_int, param3, param2, var6, (byte) -112);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -508,8 +501,7 @@ final class nq extends nm {
             return;
         }
         if (!(!((nq) this).field_j)) {
-            int discarded$0 = 16777215;
-            hj.a(-lm.field_b + pq.field_k, -ki.field_a + po.field_a, ((nq) this).field_o, ((nq) this).field_q, ((nq) this).field_l);
+            hj.a(-lm.field_b + pq.field_k, -ki.field_a + po.field_a, ((nq) this).field_o, ((nq) this).field_q, ((nq) this).field_l, 16777215);
         }
     }
 

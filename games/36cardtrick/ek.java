@@ -52,7 +52,7 @@ class ek implements ci, ne {
                 break L1;
               } else {
                 var8 = null;
-                int discarded$2 = ((ek) this).a(-100, -38, -40, 81, (lk) null, 47);
+                int discarded$1 = ((ek) this).a(-100, -38, -40, 81, (lk) null, 47);
                 break L1;
               }
             }
@@ -66,8 +66,7 @@ class ek implements ci, ne {
             }
             L3: {
               var3_int = ((ek) this).a(param0, 0);
-              int discarded$3 = -32260;
-              var4 = this.b(param0);
+              var4 = this.b(param0, -32260);
               var6 = ((ek) this).field_f;
               if (var6 == 0) {
                 var5 = ((ek) this).field_c.field_s;
@@ -422,7 +421,7 @@ class ek implements ci, ne {
         }
     }
 
-    private final int b(lk param0) {
+    private final int b(lk param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -541,9 +540,8 @@ class ek implements ci, ne {
                     var9 = var14.a(true, param1);
                     var10 = this.a(param4, var9, param0, -3);
                     var11 = ((ek) this).a(param4, -1815612287, param2) + Math.max(0, var8.field_b);
-                    int discarded$1 = -32260;
                     stackOut_4_0 = ((ek) this).a(param4, -1815612287, param2);
-                    stackOut_4_1 = this.b(param4);
+                    stackOut_4_1 = this.b(param4, -32260);
                     stackOut_4_2 = var8.field_c;
                     stackIn_6_0 = stackOut_4_0;
                     stackIn_6_1 = stackOut_4_1;
@@ -779,10 +777,9 @@ class ek implements ci, ne {
             L1: {
               ek.a(param7.field_i + param5, param4 + (param7.field_o - -param7.field_h), param4 + param7.field_o, (byte) 61, param5 - (-param7.field_i + -param7.field_q));
               var9_int = ((ek) this).a(param7, 0);
-              int discarded$2 = -32260;
-              var10 = this.b(param7);
+              var10 = this.b(param7, -32260);
               if (((ek) this).field_g) {
-                int discarded$3 = ((ek) this).field_c.a(((ek) this).b(11, param7), this.a(param7, 0, param4, -3), this.b(param7, 116, param5, 0), var9_int, var10, param3, param6, ((ek) this).field_i, ((ek) this).field_f, ((ek) this).field_b);
+                int discarded$1 = ((ek) this).field_c.a(((ek) this).b(11, param7), this.a(param7, 0, param4, -3), this.b(param7, 116, param5, 0), var9_int, var10, param3, param6, ((ek) this).field_i, ((ek) this).field_f, ((ek) this).field_b);
                 break L1;
               } else {
                 L2: {
@@ -985,8 +982,7 @@ class ek implements ci, ne {
                 this.a(param1, true);
                 break L2;
               } else {
-                int discarded$3 = -32260;
-                ((ub) (Object) param1.field_s).a(this.b(param1), 841570337, ((ek) this).field_f, ((ek) this).a(param1, 0), ((ek) this).field_c, ((ek) this).field_i, ((ek) this).b(75, param1), ((ek) this).field_b);
+                ((ub) (Object) param1.field_s).a(this.b(param1, -32260), 841570337, ((ek) this).field_f, ((ek) this).a(param1, 0), ((ek) this).field_c, ((ek) this).field_i, ((ek) this).b(75, param1), ((ek) this).field_b);
                 break L2;
               }
             }

@@ -15,7 +15,7 @@ final class gd extends um {
     static String field_A;
     hg field_r;
 
-    private final void a(int param0, int param1, int param2, cg param3, int[] param4) {
+    private final void a(int param0, int param1, int param2, cg param3, int[] param4, boolean param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -649,13 +649,11 @@ final class gd extends um {
                     var4_int = param1;
                     L3: while (true) {
                       if (var5 <= var6.field_M) {
-                        int discarded$20 = 0;
-                        this.a(var4_int, var5, var4_int - -var5, var6, param0);
+                        this.a(var4_int, var5, var4_int - -var5, var6, param0, false);
                         var6.field_M = var6.field_M - var5;
                         break L2;
                       } else {
-                        int discarded$21 = 0;
-                        this.a(var4_int, var6.field_M, var4_int - -var5, var6, param0);
+                        this.a(var4_int, var6.field_M, var4_int - -var5, var6, param0, false);
                         var4_int = var4_int + var6.field_M;
                         var5 = var5 - var6.field_M;
                         if (!((gd) this).field_u.a(var5, var6, 1387831944, param0, var4_int)) {

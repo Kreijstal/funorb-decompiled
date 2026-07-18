@@ -134,7 +134,7 @@ final class jj extends fm implements tb {
         ((jj) this).e((byte) -72);
     }
 
-    final static void h() {
+    final static void h(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -278,7 +278,7 @@ final class jj extends fm implements tb {
         }
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;

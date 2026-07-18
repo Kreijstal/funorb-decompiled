@@ -47,7 +47,7 @@ final class bd extends qk {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_E = null;
         field_G = null;
         field_D = null;

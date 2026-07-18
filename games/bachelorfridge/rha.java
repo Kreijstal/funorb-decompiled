@@ -14,7 +14,7 @@ final class rha {
         int var2 = -40 / ((param0 - 26) / 54);
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = BachelorFridge.field_y;
         for (var2 = 0; ((rha) this).field_b > var2; var2++) {
@@ -51,7 +51,7 @@ final class rha {
         return ((rha) this).field_c.toString();
     }
 
-    final static void a() {
+    final static void a(int param0, boolean param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -84,8 +84,7 @@ final class rha {
           bu.a(0, rl.field_r);
           jb.d();
           dg.d();
-          int discarded$1 = -8144;
-          tc.b();
+          tc.b(-8144);
           if (var5 >= 256) {
             db.b(110);
             if (ur.field_d < 150) {
@@ -451,16 +450,15 @@ final class rha {
     private final void a(boolean param0, Object param1) {
         try {
             if (((rha) this).field_a) {
-                int discarded$0 = 101;
-                this.b();
+                this.b(101);
             }
-            StringBuilder discarded$1 = ((rha) this).field_c.append(param1.toString());
+            StringBuilder discarded$0 = ((rha) this).field_c.append(param1.toString());
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "rha.B(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_e = null;
         field_d = null;
         int var1 = 0;

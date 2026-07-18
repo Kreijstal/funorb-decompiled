@@ -20,12 +20,12 @@ final class dc extends ur {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_ab = null;
         field_bb = null;
     }
 
-    final static void l() {
+    final static void l(int param0) {
         int var1 = 0;
         if (224 > kr.field_c) {
           var1 = kr.field_c % 32;

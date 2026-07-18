@@ -8,7 +8,7 @@ final class imb implements ntb, utb {
     int field_d;
     static String field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
@@ -63,7 +63,7 @@ final class imb implements ntb, utb {
             L1: {
               var4 = -41 % ((param0 - 22) / 59);
               var3 = (imb) (Object) param1;
-              if (var3.field_c == var3.field_c) {
+              if (var3.field_c == ((imb) this).field_c) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -117,9 +117,9 @@ final class imb implements ntb, utb {
             if (param0 <= 54) {
                 ((imb) this).field_d = -122;
             }
-            var6.field_e = var5.field_e;
-            var6.field_d = var5.field_d;
-            var6.field_c = var5.field_c;
+            var6.field_e = ((imb) this).field_e;
+            var6.field_d = ((imb) this).field_d;
+            var6.field_c = ((imb) this).field_c;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "imb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -177,8 +177,8 @@ final class imb implements ntb, utb {
             L1: {
               var6 = (imb) (Object) param0;
               var4 = 0;
-              if (var6.field_c != var6.field_c) {
-                System.out.println("int connected_component_idx has changed. before=" + var6.field_c + ", now=" + var6.field_c);
+              if (var6.field_c != ((imb) this).field_c) {
+                System.out.println("int connected_component_idx has changed. before=" + var6.field_c + ", now=" + ((imb) this).field_c);
                 var4 = 1;
                 break L1;
               } else {
@@ -186,20 +186,20 @@ final class imb implements ntb, utb {
               }
             }
             L2: {
-              if (var6.field_e == var6.field_e) {
+              if (((imb) this).field_e == var6.field_e) {
                 break L2;
               } else {
                 var4 = 1;
-                System.out.println("int worldx has changed. before=" + var6.field_e + ", now=" + var6.field_e);
+                System.out.println("int worldx has changed. before=" + var6.field_e + ", now=" + ((imb) this).field_e);
                 break L2;
               }
             }
             L3: {
-              if (var6.field_d == var6.field_d) {
+              if (var6.field_d == ((imb) this).field_d) {
                 break L3;
               } else {
                 var4 = 1;
-                System.out.println("int worldy has changed. before=" + var6.field_d + ", now=" + var6.field_d);
+                System.out.println("int worldy has changed. before=" + var6.field_d + ", now=" + ((imb) this).field_d);
                 break L3;
               }
             }

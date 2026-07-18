@@ -6,7 +6,7 @@ final class le implements uj {
     static String field_c;
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -66,7 +66,7 @@ final class le implements uj {
         }
     }
 
-    final static hf a(int param0, byte[] param1) {
+    final static hf a(int param0, byte[] param1, int param2) {
         hf var3 = null;
         RuntimeException var3_ref = null;
         hf stackIn_1_0 = null;
@@ -129,7 +129,7 @@ final class le implements uj {
         return stackIn_1_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
     }
 
     public final String a(byte param0) {

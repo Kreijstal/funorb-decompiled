@@ -5,7 +5,7 @@ final class fl {
     static int[] field_b;
     static int field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
@@ -19,7 +19,8 @@ final class fl {
     }
 
     final static fb a(byte param0, String param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         fb var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -27,22 +28,22 @@ final class fl {
         CharSequence var7 = null;
         Object stackIn_3_0 = null;
         fb stackIn_14_0 = null;
-        Object stackIn_18_0 = null;
+        RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        Object stackIn_19_0 = null;
+        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         fb stackOut_13_0 = null;
         Object stackOut_2_0 = null;
-        Object stackOut_17_0 = null;
+        RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
         String stackOut_19_2 = null;
-        Object stackOut_18_0 = null;
+        RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
         String stackOut_18_2 = null;
         var5 = Bounce.field_N;
@@ -50,22 +51,20 @@ final class fl {
           if (tk.field_b != null) {
             L0: {
               var6 = (CharSequence) (Object) param1;
-              int discarded$4 = 0;
-              var2 = (Object) (Object) ce.a(var6);
+              var2 = ce.a(var6, 0);
               if (var2 != null) {
                 break L0;
               } else {
-                var2 = (Object) (Object) var6;
+                var2 = param1;
                 break L0;
               }
             }
-            var3 = (fb) (Object) tk.field_b.a((long)((String) var2).hashCode(), 0);
+            var3 = (fb) (Object) tk.field_b.a((long)var2.hashCode(), 0);
             L1: while (true) {
               if (var3 != null) {
                 L2: {
                   var7 = (CharSequence) (Object) var3.field_ob;
-                  int discarded$5 = 0;
-                  var4 = ce.a(var7);
+                  var4 = ce.a(var7, 0);
                   if (var4 != null) {
                     break L2;
                   } else {
@@ -73,7 +72,7 @@ final class fl {
                     break L2;
                   }
                 }
-                if (var4.equals(var2)) {
+                if (var4.equals((Object) (Object) var2)) {
                   stackOut_13_0 = (fb) var3;
                   stackIn_14_0 = stackOut_13_0;
                   return stackIn_14_0;
@@ -93,15 +92,15 @@ final class fl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_17_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var2_ref;
             stackOut_17_1 = new StringBuilder().append("fl.C(").append(-128).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param1 == null) {
-              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
               stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
@@ -109,7 +108,7 @@ final class fl {
               stackIn_20_2 = stackOut_19_2;
               break L3;
             } else {
-              stackOut_18_0 = stackIn_18_0;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
               stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;

@@ -13,11 +13,10 @@ final class sa {
         throw new IllegalStateException();
     }
 
-    final static void a(ee param0) {
+    final static void a(ee param0, int param1) {
         try {
             if (rl.field_J != null) {
-                int discarded$1 = 107;
-                rk.a();
+                rk.a((byte) 107);
             } else {
                 rl.field_J = new ah();
             }
@@ -27,7 +26,7 @@ final class sa {
         }
     }
 
-    final static wd a(wd param0, float param1) {
+    final static wd a(wd param0, float param1, byte param2) {
         RuntimeException var3 = null;
         wd stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -49,8 +48,7 @@ final class sa {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = -115;
-            stackOut_0_0 = wc.a(param0, param1, 1.0f);
+            stackOut_0_0 = wc.a(param0, param1, 1.0f, (byte) -115);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -87,7 +85,7 @@ final class sa {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_c = null;
         field_d = null;

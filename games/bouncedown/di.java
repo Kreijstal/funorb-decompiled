@@ -10,7 +10,7 @@ final class di implements Iterator {
     private ug field_d;
     private wh field_e;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
     }

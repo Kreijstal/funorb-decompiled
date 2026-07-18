@@ -12,7 +12,7 @@ final class si extends qk {
     private int field_Vb;
     private kd field_Ob;
 
-    final static void x() {
+    final static void x(int param0) {
         tf.field_c.field_h = 0;
         tf.field_c.field_e = 0;
     }
@@ -28,9 +28,9 @@ final class si extends qk {
             field_Rb = 94;
             if (((si) this).field_F == 0) {
               if (((si) this).field_Ob == null) {
-                int fieldTemp$18 = ((si) this).field_Pb;
+                int fieldTemp$14 = ((si) this).field_Pb;
                 ((si) this).field_Pb = ((si) this).field_Pb + 1;
-                if (5 <= fieldTemp$18) {
+                if (5 <= fieldTemp$14) {
                   this.z(124);
                   ((si) this).field_Pb = 0;
                   return;
@@ -38,8 +38,7 @@ final class si extends qk {
                   return;
                 }
               } else {
-                int discarded$19 = 71;
-                this.o();
+                this.o((byte) 71);
                 return;
               }
             } else {
@@ -51,11 +50,10 @@ final class si extends qk {
                   return;
                 }
               } else {
-                int fieldTemp$20 = ((si) this).field_Pb;
+                int fieldTemp$15 = ((si) this).field_Pb;
                 ((si) this).field_Pb = ((si) this).field_Pb + 1;
-                if (fieldTemp$20 >= 5) {
-                  int discarded$21 = 71;
-                  this.o();
+                if (fieldTemp$15 >= 5) {
+                  this.o((byte) 71);
                   ((si) this).field_Pb = 0;
                   if (((si) this).field_U != null) {
                     L0: {
@@ -66,9 +64,9 @@ final class si extends qk {
                           break L0;
                         } else {
                           ((si) this).field_U = dc.a((byte) 18, 85);
-                          int fieldTemp$22 = ((si) this).field_Tb;
+                          int fieldTemp$16 = ((si) this).field_Tb;
                           ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                          if (fieldTemp$22 >= 4) {
+                          if (fieldTemp$16 >= 4) {
                             ((si) this).l((byte) 52);
                             ((si) this).field_Tb = 0;
                             return;
@@ -78,9 +76,9 @@ final class si extends qk {
                         }
                       }
                     }
-                    int fieldTemp$23 = ((si) this).field_Tb;
+                    int fieldTemp$17 = ((si) this).field_Tb;
                     ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                    if (fieldTemp$23 <= -5) {
+                    if (fieldTemp$17 <= -5) {
                       ((si) this).l((byte) 52);
                       ((si) this).field_Tb = 0;
                       return;
@@ -89,9 +87,9 @@ final class si extends qk {
                     }
                   } else {
                     if (0L != tp.field_p % 3L) {
-                      int fieldTemp$24 = ((si) this).field_Tb;
+                      int fieldTemp$18 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if (fieldTemp$24 >= 4) {
+                      if (fieldTemp$18 >= 4) {
                         ((si) this).l((byte) 52);
                         ((si) this).field_Tb = 0;
                         return;
@@ -100,9 +98,9 @@ final class si extends qk {
                       }
                     } else {
                       ((si) this).field_U = dc.a((byte) 18, 85);
-                      int fieldTemp$25 = ((si) this).field_Tb;
+                      int fieldTemp$19 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if (fieldTemp$25 >= 4) {
+                      if (fieldTemp$19 >= 4) {
                         ((si) this).l((byte) 52);
                         ((si) this).field_Tb = 0;
                         return;
@@ -112,9 +110,9 @@ final class si extends qk {
                     }
                   }
                 } else {
-                  int fieldTemp$26 = ((si) this).field_Tb;
+                  int fieldTemp$20 = ((si) this).field_Tb;
                   ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                  if (fieldTemp$26 < 4) {
+                  if (fieldTemp$20 < 4) {
                     return;
                   } else {
                     ((si) this).l((byte) 52);
@@ -127,9 +125,9 @@ final class si extends qk {
           } else {
             if (-1 == ((si) this).field_F) {
               if (((si) this).field_Ob == null) {
-                int fieldTemp$27 = ((si) this).field_Pb;
+                int fieldTemp$21 = ((si) this).field_Pb;
                 ((si) this).field_Pb = ((si) this).field_Pb + 1;
-                if (5 > fieldTemp$27) {
+                if (5 > fieldTemp$21) {
                   return;
                 } else {
                   this.z(124);
@@ -137,8 +135,7 @@ final class si extends qk {
                   return;
                 }
               } else {
-                int discarded$28 = 71;
-                this.o();
+                this.o((byte) 71);
                 return;
               }
             } else {
@@ -150,18 +147,17 @@ final class si extends qk {
                   return;
                 }
               } else {
-                int fieldTemp$29 = ((si) this).field_Pb;
+                int fieldTemp$22 = ((si) this).field_Pb;
                 ((si) this).field_Pb = ((si) this).field_Pb + 1;
-                if (fieldTemp$29 >= 5) {
-                  int discarded$30 = 71;
-                  this.o();
+                if (fieldTemp$22 >= 5) {
+                  this.o((byte) 71);
                   ((si) this).field_Pb = 0;
                   if (((si) this).field_U == null) {
                     if (0L == tp.field_p % 3L) {
                       ((si) this).field_U = dc.a((byte) 18, 85);
-                      int fieldTemp$31 = ((si) this).field_Tb;
+                      int fieldTemp$23 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if (fieldTemp$31 > -5) {
+                      if (fieldTemp$23 > -5) {
                         return;
                       } else {
                         ((si) this).l((byte) 52);
@@ -169,9 +165,9 @@ final class si extends qk {
                         return;
                       }
                     } else {
-                      int fieldTemp$32 = ((si) this).field_Tb;
+                      int fieldTemp$24 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if (fieldTemp$32 < 4) {
+                      if (fieldTemp$24 < 4) {
                         return;
                       } else {
                         ((si) this).l((byte) 52);
@@ -189,9 +185,9 @@ final class si extends qk {
                           break L1;
                         }
                       }
-                      int fieldTemp$33 = ((si) this).field_Tb;
+                      int fieldTemp$25 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if (fieldTemp$33 < 4) {
+                      if (fieldTemp$25 < 4) {
                         return;
                       } else {
                         ((si) this).l((byte) 52);
@@ -199,9 +195,9 @@ final class si extends qk {
                         return;
                       }
                     } else {
-                      int fieldTemp$34 = ((si) this).field_Tb;
+                      int fieldTemp$26 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if (fieldTemp$34 < 4) {
+                      if (fieldTemp$26 < 4) {
                         return;
                       } else {
                         ((si) this).l((byte) 52);
@@ -211,9 +207,9 @@ final class si extends qk {
                     }
                   }
                 } else {
-                  int fieldTemp$35 = ((si) this).field_Tb;
+                  int fieldTemp$27 = ((si) this).field_Tb;
                   ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                  if (fieldTemp$35 < 4) {
+                  if (fieldTemp$27 < 4) {
                     return;
                   } else {
                     ((si) this).l((byte) 52);
@@ -242,13 +238,13 @@ final class si extends qk {
         L0: {
           var6 = null;
           var8 = ZombieDawn.field_J;
-          int discarded$13 = ((si) this).a(true);
-          int discarded$14 = ((si) this).f(237239984);
+          int discarded$6 = ((si) this).a(true);
+          int discarded$7 = ((si) this).f(237239984);
           if (null == ((si) this).field_yb) {
             break L0;
           } else {
-            int discarded$15 = ((si) this).field_yb.a(true);
-            int discarded$16 = ((si) this).field_yb.f(237239984);
+            int discarded$8 = ((si) this).field_yb.a(true);
+            int discarded$9 = ((si) this).field_yb.f(237239984);
             ((si) this).field_yb = null;
             break L0;
           }
@@ -267,8 +263,7 @@ final class si extends qk {
                     L2: {
                       this.y(124);
                       if (null != ((si) this).field_Ob) {
-                        int discarded$17 = 71;
-                        this.o();
+                        this.o((byte) 71);
                         break L2;
                       } else {
                         break L2;
@@ -279,8 +274,7 @@ final class si extends qk {
                     L3: {
                       this.a(-48, (kd) var2);
                       if (null != ((si) this).field_Ob) {
-                        int discarded$18 = 71;
-                        this.o();
+                        this.o((byte) 71);
                         break L3;
                       } else {
                         break L3;
@@ -292,8 +286,7 @@ final class si extends qk {
                   L4: {
                     this.a(-123, (kd) var3);
                     if (null != ((si) this).field_Ob) {
-                      int discarded$19 = 71;
-                      this.o();
+                      this.o((byte) 71);
                       break L4;
                     } else {
                       break L4;
@@ -354,7 +347,7 @@ final class si extends qk {
             }
           } else {
             var9 = null;
-            vn discarded$20 = si.a(50, 105, (dj) null, -55);
+            vn discarded$10 = si.a(50, 105, (dj) null, -55);
             var3 = null;
             var4 = -1;
             var5 = -1;
@@ -366,8 +359,7 @@ final class si extends qk {
                     L10: {
                       this.a(-48, (kd) var2);
                       if (null != ((si) this).field_Ob) {
-                        int discarded$21 = 71;
-                        this.o();
+                        this.o((byte) 71);
                         break L10;
                       } else {
                         break L10;
@@ -378,8 +370,7 @@ final class si extends qk {
                     L11: {
                       this.y(124);
                       if (null != ((si) this).field_Ob) {
-                        int discarded$22 = 71;
-                        this.o();
+                        this.o((byte) 71);
                         break L11;
                       } else {
                         break L11;
@@ -391,8 +382,7 @@ final class si extends qk {
                   L12: {
                     this.a(-123, (kd) var3);
                     if (null != ((si) this).field_Ob) {
-                      int discarded$23 = 71;
-                      this.o();
+                      this.o((byte) 71);
                       break L12;
                     } else {
                       break L12;
@@ -464,7 +454,7 @@ final class si extends qk {
               break L17;
             } else {
               var9 = null;
-              vn discarded$24 = si.a(50, 105, (dj) null, -55);
+              vn discarded$11 = si.a(50, 105, (dj) null, -55);
               var3 = null;
               var4 = -1;
               var5 = -1;
@@ -490,8 +480,7 @@ final class si extends qk {
               }
               L20: {
                 if (null != ((si) this).field_Ob) {
-                  int discarded$25 = 71;
-                  this.o();
+                  this.o((byte) 71);
                   break L20;
                 } else {
                   break L20;
@@ -732,13 +721,12 @@ final class si extends qk {
               break L0;
             } else {
               var5 = null;
-              vn discarded$4 = si.a(-109, -74, (dj) null, 70);
+              vn discarded$2 = si.a(-109, -74, (dj) null, 70);
               break L0;
             }
           }
           if (ph.a(param1, param3 + 30995, param0, param2)) {
-            int discarded$5 = -127;
-            return fg.d();
+            return fg.d(-127);
           } else {
             return null;
           }
@@ -801,7 +789,7 @@ final class si extends qk {
         }
     }
 
-    private final void o() {
+    private final void o(byte param0) {
         if (((si) this).field_Ob == null) {
           return;
         } else {

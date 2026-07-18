@@ -15,7 +15,7 @@ final class kj {
     private int field_l;
     private int field_h;
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;

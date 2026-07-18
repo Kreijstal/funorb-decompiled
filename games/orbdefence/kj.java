@@ -23,7 +23,7 @@ abstract class kj extends pj implements c {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_z = null;
         field_x = null;
     }
@@ -123,18 +123,16 @@ abstract class kj extends pj implements c {
         return stackIn_8_0 != 0;
     }
 
-    final static void i() {
+    final static void i(int param0) {
         int var1 = 0;
         if (ij.field_g <= 32) {
-            int discarded$1 = -23235;
-            ia.b(0);
+            ia.b(0, -23235);
         } else {
             var1 = ij.field_g % 32;
             if (var1 == 0) {
                 var1 = 32;
             }
-            int discarded$2 = -23235;
-            ia.b(ij.field_g - var1);
+            ia.b(ij.field_g - var1, -23235);
         }
         var1 = 2;
     }
@@ -256,7 +254,7 @@ abstract class kj extends pj implements c {
         return null == ((kj) this).field_y ? 0 : ((kj) this).field_y.f(param0);
     }
 
-    final static void j() {
+    final static void j(int param0) {
         o.d(-1);
         il.a(4, 0);
     }
@@ -921,7 +919,7 @@ abstract class kj extends pj implements c {
         return null;
     }
 
-    final static void a(hj param0) {
+    final static void a(hj param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
             pa.field_d = 10;
             ok.field_f = 10;

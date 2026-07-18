@@ -73,7 +73,7 @@ final class kk extends hl {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_i = null;
     }
@@ -112,16 +112,7 @@ final class kk extends hl {
     }
 
     final static hj[] a(int param0, int param1, int param2, int param3, int param4) {
-        int discarded$0 = 1;
-        int discarded$1 = 3;
-        int discarded$2 = 0;
-        int discarded$3 = 1;
-        int discarded$4 = 65793;
-        int discarded$5 = 0;
-        int discarded$6 = 1;
-        int discarded$7 = 0;
-        int discarded$8 = 0;
-        return ak.a();
+        return ak.a(0, 0, 1, 0, 65793, 1, 0, 3, 1);
     }
 
     static {

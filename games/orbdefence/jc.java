@@ -92,36 +92,27 @@ class jc implements td, rj {
                     } else {
                       if (var12 != 1) {
                         if (var12 == 2) {
-                          int discarded$10 = 0;
-                          ((jc) this).field_g.a(((jc) this).a((byte) -95, param7), this.a(param2, 5, param7, 0) - -var9_int, this.a(param6, param7, (byte) -122) + var11, param5, param3);
-                          int discarded$11 = -105;
-                          oc.g();
+                          ((jc) this).field_g.a(((jc) this).a((byte) -95, param7), this.a(param2, 5, param7, 0) - -var9_int, this.a(param6, param7, (byte) -122, 0) + var11, param5, param3);
+                          oc.g((byte) -105);
                           break L1;
                         } else {
-                          int discarded$12 = -105;
-                          oc.g();
+                          oc.g((byte) -105);
                           break L1;
                         }
                       } else {
-                        int discarded$13 = 0;
-                        ((jc) this).field_g.c(((jc) this).a((byte) -95, param7), (var9_int >> 1) + this.a(param2, 5, param7, 0), this.a(param6, param7, (byte) -120) - -var11, param5, param3);
-                        int discarded$14 = -105;
-                        oc.g();
+                        ((jc) this).field_g.c(((jc) this).a((byte) -95, param7), (var9_int >> 1) + this.a(param2, 5, param7, 0), this.a(param6, param7, (byte) -120, 0) - -var11, param5, param3);
+                        oc.g((byte) -105);
                         break L1;
                       }
                     }
                   }
                 }
-                int discarded$15 = 0;
-                ((jc) this).field_g.b(((jc) this).a((byte) -95, param7), this.a(param2, 5, param7, 0), var11 + this.a(param6, param7, (byte) -120), param5, param3);
-                int discarded$16 = -105;
-                oc.g();
+                ((jc) this).field_g.b(((jc) this).a((byte) -95, param7), this.a(param2, 5, param7, 0), var11 + this.a(param6, param7, (byte) -120, 0), param5, param3);
+                oc.g((byte) -105);
                 break L1;
               } else {
-                int discarded$17 = 0;
-                int discarded$18 = ((jc) this).field_g.a(((jc) this).a((byte) -95, param7), this.a(param2, 5, param7, 0), this.a(param6, param7, (byte) -125), var9_int, var10, param5, param3, ((jc) this).field_h, ((jc) this).field_c, ((jc) this).field_t);
-                int discarded$19 = -105;
-                oc.g();
+                int discarded$1 = ((jc) this).field_g.a(((jc) this).a((byte) -95, param7), this.a(param2, 5, param7, 0), this.a(param6, param7, (byte) -125, 0), var9_int, var10, param5, param3, ((jc) this).field_h, ((jc) this).field_c, ((jc) this).field_t);
+                oc.g((byte) -105);
                 break L1;
               }
             }
@@ -251,8 +242,7 @@ class jc implements td, rj {
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_2_0 = this.a(param2, param0, (byte) -124);
+            stackOut_2_0 = this.a(param2, param0, (byte) -124, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -829,7 +819,7 @@ class jc implements td, rj {
         return stackIn_3_0;
     }
 
-    private final int a(int param0, pj param1, byte param2) {
+    private final int a(int param0, pj param1, byte param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -989,8 +979,7 @@ class jc implements td, rj {
                 var12 = stackIn_5_0 - -Math.min(stackIn_5_1, Math.min(stackIn_5_2, stackIn_5_3));
                 id.a(param1.field_m + param1.field_s + param2, param1.field_s + param2, param1.field_r + (param1.field_n + param0), param0 - -param1.field_n, 734);
                 mb.field_a.a(var10, false, var12, ((jc) this).field_m, var10, var11);
-                int discarded$1 = -105;
-                oc.g();
+                oc.g((byte) -105);
                 break L1;
               } else {
                 break L1;
@@ -1103,8 +1092,7 @@ class jc implements td, rj {
                   var13 = var11;
                   L3: while (true) {
                     if (var12 < var13) {
-                      int discarded$1 = -105;
-                      oc.g();
+                      oc.g((byte) -105);
                       break L1;
                     } else {
                       L4: {
@@ -1451,8 +1439,7 @@ class jc implements td, rj {
                       var4 = var4 + d.field_j;
                       break L2;
                     } else {
-                      int discarded$3 = 0;
-                      var6 = hg.a(true, ea.field_d[var3_int]);
+                      var6 = hg.a(true, ea.field_d[var3_int], 0);
                       var4 = var4 + gg.field_N;
                       var7 = fd.field_c - (var6 >> 1);
                       if (fm.a(var4, param2, -mj.field_f + var7, (mj.field_f << 1) + var6, 102, param0, el.field_D + (ol.field_b << 1))) {

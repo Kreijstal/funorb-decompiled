@@ -87,12 +87,12 @@ final class ui {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
     }
 
-    final static int b() {
+    final static int b(byte param0) {
         return 1;
     }
 

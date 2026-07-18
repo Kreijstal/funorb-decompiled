@@ -10,7 +10,7 @@ abstract class ej {
 
     abstract byte[] a(int param0);
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_c = null;
         field_d = null;

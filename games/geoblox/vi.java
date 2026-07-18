@@ -7,7 +7,7 @@ final class vi extends hk {
     static String field_G;
     static int field_E;
 
-    public static void f() {
+    public static void f(int param0) {
         field_F = null;
         field_G = null;
     }

@@ -76,7 +76,7 @@ final class dd extends eb {
         return stackIn_4_0 != 0;
     }
 
-    final static boolean f() {
+    final static boolean f(byte param0) {
         return pe.field_a == ua.field_d;
     }
 
@@ -208,7 +208,7 @@ final class dd extends eb {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_N = null;
         field_L = null;
         field_O = null;

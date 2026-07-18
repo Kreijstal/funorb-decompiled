@@ -139,7 +139,7 @@ final class mr implements fo {
         return var2;
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return ul.field_Hb + (sq.field_a << 2) + (vm.field_Bb << 4);
     }
 

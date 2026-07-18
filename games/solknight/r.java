@@ -14,7 +14,7 @@ final class r {
     static char[] field_g;
     static String field_e;
 
-    final static wg b() {
+    final static wg b(int param0) {
         if (ma.field_o == el.field_p) {
             throw new IllegalStateException();
         }
@@ -25,7 +25,7 @@ final class r {
         return null;
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -75,13 +75,12 @@ final class r {
     final int a(byte param0) {
         int var2 = 58 % ((66 - param0) / 35);
         if (((r) this).field_k == 0) {
-            int discarded$0 = 12009;
-            this.a();
+            this.a(12009);
             ((r) this).field_k = 256;
         }
-        int fieldTemp$1 = ((r) this).field_k - 1;
+        int fieldTemp$0 = ((r) this).field_k - 1;
         ((r) this).field_k = ((r) this).field_k - 1;
-        return ((r) this).field_f[fieldTemp$1];
+        return ((r) this).field_f[fieldTemp$0];
     }
 
     r(int[] param0) {
@@ -102,14 +101,10 @@ final class r {
         if (param1 <= 71) {
             return null;
         }
-        int discarded$0 = 0;
-        int discarded$1 = 1;
-        int discarded$2 = 0;
-        int discarded$3 = 1;
-        return ab.a(2097152, param0);
+        return ab.a(2097152, param0, 1, false, true, false);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_g = null;
         field_d = null;
         int var1 = 0;
@@ -155,8 +150,7 @@ final class r {
                 }
                 L3: while (true) {
                   if (256 <= var2) {
-                    int discarded$1 = 12009;
-                    this.a();
+                    this.a(12009);
                     ((r) this).field_k = 256;
                     return;
                   } else {
@@ -287,8 +281,7 @@ final class r {
             pb.a(param0, param2 ^ -89);
             pj.a(param2 + 2, param0);
             qk.e(param2 ^ param2);
-            int discarded$0 = 28;
-            gl.a();
+            gl.a((byte) 28);
             ad.field_h = -a.field_i;
         } catch (RuntimeException runtimeException) {
             throw fc.a((Throwable) (Object) runtimeException, "r.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

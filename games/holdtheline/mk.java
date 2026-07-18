@@ -112,7 +112,7 @@ final class mk extends w {
         return stackIn_9_0;
     }
 
-    final static java.awt.Frame a(int param0, int param1, int param2, int param3, ib param4) {
+    final static java.awt.Frame a(int param0, int param1, int param2, int param3, ib param4, int param5) {
         RuntimeException var6 = null;
         nl[] var6_array = null;
         int var7_int = 0;
@@ -149,8 +149,7 @@ final class mk extends w {
                 if (0 != param2) {
                   break L1;
                 } else {
-                  int discarded$2 = 111;
-                  var10 = oh.a(param4);
+                  var10 = oh.a(param4, (byte) 111);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;
@@ -196,8 +195,7 @@ final class mk extends w {
                     return null;
                   }
                 } else {
-                  int discarded$3 = 45;
-                  qe.a(10L);
+                  qe.a(10L, (byte) 45);
                   continue L4;
                 }
               }
@@ -288,7 +286,7 @@ final class mk extends w {
         ((mk) this).field_m = 0L;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -568,7 +566,7 @@ final class mk extends w {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -661,25 +659,24 @@ final class mk extends w {
     }
 
     final long a(int param0) {
-        int discarded$0 = 10;
-        ((mk) this).field_h = ((mk) this).field_h + this.b();
+        ((mk) this).field_h = ((mk) this).field_h + this.b(10);
         if (~((mk) this).field_h > ~((mk) this).field_f) {
             return (-((mk) this).field_h + ((mk) this).field_f) / 1000000L;
         }
         if (param0 > -25) {
             Object var3 = null;
-            ei discarded$1 = mk.a((ei) null, (byte) -102);
+            ei discarded$0 = mk.a((ei) null, (byte) -102);
         }
         return 0L;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_j = null;
         field_n = null;
         field_o = null;
     }
 
-    private final long b() {
+    private final long b(int param0) {
         int var8 = 0;
         int var9 = HoldTheLine.field_D;
         long var2 = System.nanoTime();
@@ -754,8 +751,7 @@ final class mk extends w {
                         break L4;
                       } else {
                         var3_int = 0;
-                        int discarded$4 = 17902;
-                        be.a();
+                        be.a(17902);
                         break L4;
                       }
                     }
@@ -763,8 +759,7 @@ final class mk extends w {
                       if (var3_int != 0) {
                         L6: {
                           if (fi.field_nb) {
-                            int discarded$5 = 1;
-                            param1 = sd.a(fk.field_d, new String[1]);
+                            param1 = sd.a(fk.field_d, new String[1], true);
                             break L6;
                           } else {
                             break L6;

@@ -301,11 +301,11 @@ final class ch {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return eb.field_F;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_g = null;
     }
@@ -391,7 +391,7 @@ final class ch {
         }
     }
 
-    final static rh[] c() {
+    final static rh[] c(int param0) {
         return new rh[]{vj.field_K, rf.field_z, lf.field_f, rf.field_u, fl.field_e, uc.field_p, uc.field_n, oe.field_d, eh.field_f, fi.field_p, ai.field_b, e.field_l, le.field_n, wg.field_b};
     }
 
@@ -1710,8 +1710,7 @@ final class ch {
             il.a(1, jg.field_ib);
             ob.b();
             l.a();
-            int discarded$1 = -2766;
-            af.d();
+            af.d(-2766);
             if (256 <= var5) {
               break L2;
             } else {

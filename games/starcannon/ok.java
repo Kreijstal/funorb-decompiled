@@ -111,7 +111,7 @@ final class ok extends ph implements ga {
         return stackIn_1_0;
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_sb = null;
         field_qb = null;
         field_rb = null;
@@ -140,8 +140,7 @@ final class ok extends ph implements ga {
           L0: {
             if (!((ok) this).field_ub) {
               L1: {
-                int discarded$9 = -80;
-                ej.f();
+                ej.f((byte) -80);
                 if (param2) {
                   ((ok) this).p(108);
                   ((ok) this).n(-115);
@@ -342,16 +341,14 @@ final class ok extends ph implements ga {
         if (param0 != 10341) {
             field_tb = null;
         }
-        int discarded$0 = 0;
-        this.a(true, fb.a(bg.field_d, 248), 10476);
+        this.a(true, fb.a(bg.field_d, 248, 0), 10476);
     }
 
     final boolean g(byte param0) {
         ig var2 = null;
         if (((ok) this).field_G) {
             if (!((ok) this).field_ob) {
-                int discarded$0 = -92;
-                var2 = ii.a();
+                var2 = ii.a((byte) -92);
                 if (!(var2 == null)) {
                     this.a(false, var2, 10476);
                 }

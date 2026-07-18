@@ -18,7 +18,7 @@ final class of implements pf {
     private int field_m;
     static String field_k;
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         nk var4 = null;
@@ -31,8 +31,7 @@ final class of implements pf {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$4 = 7;
-                fj.a(-26971, var4);
+                fj.a(-26971, var4, 7);
                 var4 = (nk) (Object) pe.field_Lb.a(0);
                 continue L1;
               }
@@ -166,8 +165,7 @@ final class of implements pf {
           L0: {
             var4_int = 0;
             if (fc.a(-125, param2, param0, param3)) {
-              int discarded$2 = -116;
-              stackOut_3_0 = pk.a();
+              stackOut_3_0 = pk.a((byte) -116);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -322,7 +320,7 @@ final class of implements pf {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_c = null;
         field_l = null;

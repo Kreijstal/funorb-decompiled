@@ -20,18 +20,16 @@ final class wb extends lw {
                 return true;
             }
         }
-        int discarded$3 = 2;
-        if (lk.d()) {
+        if (lk.d(2)) {
             return true;
         }
-        int discarded$10 = 0;
-        if (tc.a(param1, param0, param3)) {
+        if (tc.a(param1, param0, param3, false)) {
             return true;
         }
         return false;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_l = null;
     }
 
@@ -393,7 +391,7 @@ final class wb extends lw {
         }
     }
 
-    final static pp a(lu param0) {
+    final static pp a(lu param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         tfa stackIn_1_0 = null;
@@ -515,7 +513,7 @@ final class wb extends lw {
         return stackIn_1_0;
     }
 
-    final static k b(lu param0) {
+    final static k b(lu param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         k var3 = null;

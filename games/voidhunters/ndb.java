@@ -8,12 +8,12 @@ final class ndb extends IOException {
     static uca field_a;
     static String field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         ee.field_o[61] = 27;
         ee.field_o[59] = 57;
         ee.field_o[222] = 58;

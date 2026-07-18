@@ -71,7 +71,7 @@ final class im implements Iterable {
         field_h = null;
     }
 
-    final static boolean a(ee param0, ee param1) {
+    final static boolean a(ee param0, ee param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;

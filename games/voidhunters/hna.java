@@ -151,7 +151,7 @@ final class hna extends pca implements ntb {
               var4 = (hna) (Object) param1;
               var3 = var4;
               super.b((byte) 88, param1);
-              var4.field_p = var4.field_p;
+              var4.field_p = ((hna) this).field_p;
               if (param0 >= 54) {
                 break L1;
               } else {
@@ -160,9 +160,9 @@ final class hna extends pca implements ntb {
               }
             }
             L2: {
-              var4.field_o = var4.field_o;
-              var4.field_q = var4.field_q;
-              if (null != var4.field_r) {
+              var4.field_o = ((hna) this).field_o;
+              var4.field_q = ((hna) this).field_q;
+              if (null != ((hna) this).field_r) {
                 L3: {
                   if (var3.field_r != null) {
                     break L3;
@@ -171,7 +171,7 @@ final class hna extends pca implements ntb {
                     break L3;
                   }
                 }
-                var4.field_r.b((byte) 127, (tv) (Object) var3.field_r);
+                ((hna) this).field_r.b((byte) 127, (tv) (Object) var3.field_r);
                 break L2;
               } else {
                 var4.field_r = null;
@@ -212,7 +212,7 @@ final class hna extends pca implements ntb {
         }
     }
 
-    final static void a(pe param0, lta param1, boolean param2) {
+    final static void a(pe param0, lta param1, boolean param2, byte param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -651,87 +651,134 @@ final class hna extends pca implements ntb {
         RuntimeException var3 = null;
         int var4 = 0;
         hna var5 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        int stackIn_15_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_18_1 = 0;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        int stackOut_14_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_17_1 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_16_1 = 0;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
         try {
           L0: {
             L1: {
               super.a(param0, -94);
               var5 = (hna) (Object) param0;
-              if (null == var5.field_r) {
+              if (null == ((hna) this).field_r) {
                 break L1;
               } else {
                 if (null == var5.field_r) {
                   break L1;
                 } else {
-                  var5.field_r.a((tv) (Object) var5.field_r, -51);
+                  ((hna) this).field_r.a((tv) (Object) var5.field_r, -51);
                   break L1;
                 }
               }
             }
             L2: {
               var4 = 0;
-              if (var5.field_o == var5.field_o) {
+              if (((hna) this).field_o == var5.field_o) {
                 break L2;
               } else {
-                System.out.println("int triggers has changed. before=" + var5.field_o + ", now=" + var5.field_o);
+                System.out.println("int triggers has changed. before=" + var5.field_o + ", now=" + ((hna) this).field_o);
                 var4 = 1;
                 break L2;
               }
             }
             L3: {
-              if (var5.field_p == var5.field_p) {
+              if (var5.field_p == ((hna) this).field_p) {
                 break L3;
               } else {
                 var4 = 1;
-                System.out.println("int mousex has changed. before=" + var5.field_p + ", now=" + var5.field_p);
+                System.out.println("int mousex has changed. before=" + var5.field_p + ", now=" + ((hna) this).field_p);
                 break L3;
               }
             }
             if (param1 <= -19) {
               L4: {
-                if (var5.field_q != var5.field_q) {
-                  System.out.println("int mousey has changed. before=" + var5.field_q + ", now=" + var5.field_q);
+                if (((hna) this).field_q != var5.field_q) {
+                  System.out.println("int mousey has changed. before=" + var5.field_q + ", now=" + ((hna) this).field_q);
                   var4 = 1;
                   break L4;
                 } else {
                   break L4;
                 }
               }
-              tw discarded$1 = var5.field_r;
               L5: {
-                if (null == var5.field_r) {
+                if (((hna) this).field_r != null) {
+                  stackOut_14_0 = 0;
+                  stackIn_15_0 = stackOut_14_0;
                   break L5;
                 } else {
-                  if (var5.field_r.a((byte) 84, (tv) (Object) var5.field_r)) {
-                    System.out.println("SpecialOrderSubmessage special_order_submessage has changed. before=" + (Object) (Object) var5.field_r + ", now=" + (Object) (Object) var5.field_r);
-                    var4 = 1;
-                    break L5;
-                  } else {
-                    break L5;
-                  }
+                  stackOut_13_0 = 1;
+                  stackIn_15_0 = stackOut_13_0;
+                  break L5;
                 }
               }
               L6: {
-                if (var4 == 0) {
+                stackOut_15_0 = stackIn_15_0;
+                stackIn_17_0 = stackOut_15_0;
+                stackIn_16_0 = stackOut_15_0;
+                if (null != var5.field_r) {
+                  stackOut_17_0 = stackIn_17_0;
+                  stackOut_17_1 = 0;
+                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_18_1 = stackOut_17_1;
                   break L6;
                 } else {
-                  System.out.println("This instance of PlayerAction has changed");
+                  stackOut_16_0 = stackIn_16_0;
+                  stackOut_16_1 = 1;
+                  stackIn_18_0 = stackOut_16_0;
+                  stackIn_18_1 = stackOut_16_1;
                   break L6;
+                }
+              }
+              L7: {
+                L8: {
+                  if ((stackIn_18_0 ^ stackIn_18_1) != 0) {
+                    break L8;
+                  } else {
+                    if (null == ((hna) this).field_r) {
+                      break L7;
+                    } else {
+                      if (((hna) this).field_r.a((byte) 84, (tv) (Object) var5.field_r)) {
+                        break L8;
+                      } else {
+                        break L7;
+                      }
+                    }
+                  }
+                }
+                System.out.println("SpecialOrderSubmessage special_order_submessage has changed. before=" + (Object) (Object) var5.field_r + ", now=" + (Object) (Object) ((hna) this).field_r);
+                var4 = 1;
+                break L7;
+              }
+              L9: {
+                if (var4 == 0) {
+                  break L9;
+                } else {
+                  System.out.println("This instance of PlayerAction has changed");
+                  break L9;
                 }
               }
               break L0;
@@ -741,33 +788,33 @@ final class hna extends pca implements ntb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L10: {
             var3 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var3;
-            stackOut_21_1 = new StringBuilder().append("hna.F(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackOut_26_0 = (RuntimeException) var3;
+            stackOut_26_1 = new StringBuilder().append("hna.F(");
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_28_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
-              break L7;
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "null";
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
+              break L10;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
-              break L7;
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "{...}";
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              stackIn_29_2 = stackOut_27_2;
+              break L10;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param1 + ')');
         }
     }
 

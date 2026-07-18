@@ -169,8 +169,7 @@ final class ub {
         var2.b((byte) -115, param0);
         var2.f(2, (byte) -128);
         var2.f(4, (byte) -43);
-        int discarded$0 = -14;
-        var2.f(qn.k(), (byte) -57);
+        var2.f(qn.k((byte) -14), (byte) -57);
     }
 
     public static void a(int param0) {
@@ -184,7 +183,7 @@ final class ub {
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         pg var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

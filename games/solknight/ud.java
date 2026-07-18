@@ -9,12 +9,12 @@ final class ud extends gg {
     static String field_j;
     static int field_k;
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_i = null;
     }
 
-    final static void a(byte param0, lc param1) {
+    final static void a(byte param0, lc param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         jd var5 = null;

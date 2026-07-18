@@ -92,7 +92,7 @@ final class m extends gg {
         return stackIn_11_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
     }
 
@@ -106,7 +106,7 @@ final class m extends gg {
         return var6;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         RuntimeException var1 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;

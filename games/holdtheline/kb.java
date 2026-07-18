@@ -7,7 +7,7 @@ final class kb {
     int field_a;
     static String field_d;
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!ll.field_a) {
           L0: {
             if (null == go.field_k) {

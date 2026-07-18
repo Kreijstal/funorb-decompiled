@@ -108,7 +108,7 @@ final class nf {
         }
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return sc.field_l.a(true);
     }
 

@@ -8,7 +8,7 @@ final class ra {
     static String field_b;
     static boolean field_a;
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         if (param0 < 65) {
           if (param0 >= 97) {
             if (122 >= param0) {
@@ -36,7 +36,7 @@ final class ra {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
     }
@@ -57,14 +57,13 @@ final class ra {
               }
             }
             if (im.l(169)) {
-              boolean discarded$31 = w.field_G.a(true, ha.field_e, oe.field_a, false);
+              boolean discarded$15 = w.field_G.a(true, ha.field_e, oe.field_a, false);
               w.field_G.g((byte) -107);
               L2: while (true) {
-                int discarded$32 = -13;
-                if (!np.a()) {
+                if (!np.a((byte) -13)) {
                   break L0;
                 } else {
-                  boolean discarded$33 = w.field_G.a(e.field_f, 24454, m.field_t);
+                  boolean discarded$16 = w.field_G.a(e.field_f, 24454, m.field_t);
                   continue L2;
                 }
               }

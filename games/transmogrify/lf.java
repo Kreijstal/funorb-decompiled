@@ -62,13 +62,10 @@ final class lf {
         if (null != gd.field_k) {
           L0: {
             gd.a(gd.field_k, (byte) 118);
-            int discarded$8 = 0;
-            jh.a();
-            int discarded$9 = 0;
-            lk.b();
+            jh.a(false);
+            lk.b(false);
             eh.b((byte) 99);
-            int discarded$10 = 69;
-            if (!ua.a()) {
+            if (!ua.a((byte) 69)) {
               break L0;
             } else {
               ff.field_D.a(false, 1);
@@ -76,18 +73,14 @@ final class lf {
               break L0;
             }
           }
-          int discarded$11 = 1;
-          pc.a();
+          pc.a(1);
           return;
         } else {
           L1: {
-            int discarded$12 = 0;
-            jh.a();
-            int discarded$13 = 0;
-            lk.b();
+            jh.a(false);
+            lk.b(false);
             eh.b((byte) 99);
-            int discarded$14 = 69;
-            if (!ua.a()) {
+            if (!ua.a((byte) 69)) {
               break L1;
             } else {
               ff.field_D.a(false, 1);
@@ -95,8 +88,7 @@ final class lf {
               break L1;
             }
           }
-          int discarded$15 = 1;
-          pc.a();
+          pc.a(1);
           return;
         }
     }
@@ -236,7 +228,7 @@ final class lf {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         if (kc.field_g < 224) {
           var1 = kc.field_g % 32;

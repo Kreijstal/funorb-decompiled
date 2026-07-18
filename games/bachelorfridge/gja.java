@@ -23,7 +23,7 @@ final class gja extends tia {
         return true;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_k = null;
         field_i = null;
         field_m = null;
@@ -104,7 +104,7 @@ final class gja extends tia {
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         try {
             ij.field_m = param0;
         } catch (RuntimeException runtimeException) {
@@ -159,8 +159,7 @@ final class gja extends tia {
                 if (!ht.field_i.startsWith("win")) {
                   break L0;
                 } else {
-                  int discarded$8 = -126;
-                  if (!qd.a(param2)) {
+                  if (!qd.a(param2, -126)) {
                     break L0;
                   } else {
                     return;
@@ -173,7 +172,7 @@ final class gja extends tia {
                     if (param3 == 38) {
                       break L2;
                     } else {
-                      boolean discarded$9 = gja.b(10);
+                      boolean discarded$2 = gja.b(10);
                       break L2;
                     }
                   }

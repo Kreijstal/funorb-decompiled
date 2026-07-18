@@ -46,8 +46,7 @@ final class lf extends lb implements wk {
         if (param2 != 95) {
             return 57;
         }
-        int discarded$0 = 0;
-        return ia.b();
+        return ia.b(false);
     }
 
     final void b(boolean param0) {
@@ -57,7 +56,7 @@ final class lf extends lb implements wk {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_X = null;
         field_W = null;
         field_U = null;

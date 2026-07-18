@@ -209,7 +209,7 @@ final class uk {
         return stackIn_12_0;
     }
 
-    final static void a(oh param0, int param1, int param2, oh param3) {
+    final static void a(oh param0, int param1, int param2, oh param3, int param4, byte param5) {
         try {
             hj.field_a = 8;
             le.field_a = param3;

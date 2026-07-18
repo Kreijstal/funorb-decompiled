@@ -24,8 +24,7 @@ final class gh {
                 if (og.field_N) {
                   break L1;
                 } else {
-                  int discarded$2 = 1;
-                  if (vo.e()) {
+                  if (vo.e(1)) {
                     break L1;
                   } else {
                     stackOut_5_0 = 1;
@@ -154,8 +153,7 @@ final class gh {
                   }
                 }
               }
-              int discarded$2 = 8;
-              pn.b();
+              pn.b(8);
               break L1;
             }
             var66 = new int[param0.field_o];
@@ -311,8 +309,7 @@ final class gh {
                       var39 = (16711695 & var36 * var30) >>> 8 | -1140915969 & var30 * var35 >>> 8;
                       var38 = var38 + var32 * 65793;
                       var39 = var39 + var33 * 65793;
-                      int discarded$3 = 121;
-                      qe.a(var39 >> 16, 255 & var37, var37 >> 16, var37 >> 8 & 255, 255 & var39, var27, 255 & var38, var26, var23, (var39 & 65366) >> 8, (65470 & var38) >> 8, var38 >> 16, var25, var24, var22);
+                      qe.a(var39 >> 16, 255 & var37, var37 >> 16, var37 >> 8 & 255, 255 & var39, var27, 255 & var38, var26, var23, (var39 & 65366) >> 8, (65470 & var38) >> 8, var38 >> 16, var25, var24, var22, 121);
                       break L10;
                     }
                     var44++;
@@ -407,7 +404,7 @@ final class gh {
         }
     }
 
-    final static double a(double param0) {
+    final static double a(double param0, byte param1) {
         return ah.field_a[(int)(32768.0 * param0 / 3.141592653589793) & 65535];
     }
 
@@ -418,7 +415,7 @@ final class gh {
         return 0 != (w.field_m & 1 << -param0) ? true : false;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         int var1 = 2;
     }

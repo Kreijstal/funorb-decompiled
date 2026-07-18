@@ -63,8 +63,7 @@ final class rs {
                   gs.field_f = null;
                   dj.field_c = null;
                   sna.field_fb = null;
-                  int discarded$2 = 17035;
-                  baa.e();
+                  baa.e(17035);
                   iba.d(34);
                   break L3;
                 } else {
@@ -114,8 +113,7 @@ final class rs {
               L7: {
                 if (ge.field_D) {
                   ih.d((byte) -109);
-                  int discarded$3 = 46;
-                  oga.e();
+                  oga.e(46);
                   eo.c(106);
                   ge.field_D = false;
                   break L7;
@@ -177,7 +175,7 @@ final class rs {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         return null != pja.field_e && null != pja.field_e.h(0);
     }
 
@@ -185,7 +183,7 @@ final class rs {
         return qma.a(true, 2097152, false, 1, false, param4);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_g = null;
         field_h = null;

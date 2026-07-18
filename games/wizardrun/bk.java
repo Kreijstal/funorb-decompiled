@@ -25,8 +25,7 @@ final class bk implements Runnable {
                         var2.e();
                     }
                 }
-                int discarded$0 = 0;
-                tg.a(10L);
+                tg.a(10L, false);
                 Object var5 = null;
                 bi.a(((bk) this).field_c, (byte) -105, (Object) null);
             }
@@ -136,7 +135,7 @@ final class bk implements Runnable {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;
@@ -148,7 +147,7 @@ final class bk implements Runnable {
         ((bk) this).field_e = false;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         vf var1 = (vf) (Object) r.field_d.b((byte) 72);
         if (var1 == null) {
             ql.a(-82);

@@ -48,8 +48,7 @@ class c {
                       field_q = null;
                       break L0;
                     } else {
-                      int discarded$1 = 0;
-                      tg.a(50L);
+                      tg.a(50L, false);
                       continue L2;
                     }
                   }

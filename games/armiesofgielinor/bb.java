@@ -68,7 +68,7 @@ final class bb {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
     }
@@ -177,8 +177,7 @@ final class bb {
         if (null != tn.field_Z) {
           if (!tn.field_Z.c((byte) -121)) {
             if (null == ik.field_b) {
-              int discarded$7 = -92;
-              if (!jt.a()) {
+              if (!jt.a((byte) -92)) {
                 if (vt.a(15, 12, 13, (byte) 28)) {
                   return true;
                 } else {
@@ -189,8 +188,7 @@ final class bb {
               }
             } else {
               if (!ik.field_b.l(18585)) {
-                int discarded$8 = -92;
-                if (!jt.a()) {
+                if (!jt.a((byte) -92)) {
                   if (vt.a(15, 12, 13, (byte) 28)) {
                     return true;
                   } else {
@@ -201,20 +199,17 @@ final class bb {
                 }
               } else {
                 ik.field_b = null;
-                int discarded$9 = 76;
-                ot.g();
+                ot.g(76);
                 return true;
               }
             }
           } else {
-            int discarded$10 = 76;
-            ot.g();
+            ot.g(76);
             return true;
           }
         } else {
           if (null == ik.field_b) {
-            int discarded$11 = -92;
-            if (!jt.a()) {
+            if (!jt.a((byte) -92)) {
               if (vt.a(15, 12, 13, (byte) 28)) {
                 return true;
               } else {
@@ -225,8 +220,7 @@ final class bb {
             }
           } else {
             if (!ik.field_b.l(18585)) {
-              int discarded$12 = -92;
-              if (!jt.a()) {
+              if (!jt.a((byte) -92)) {
                 if (vt.a(15, 12, 13, (byte) 28)) {
                   return true;
                 } else {
@@ -237,8 +231,7 @@ final class bb {
               }
             } else {
               ik.field_b = null;
-              int discarded$13 = 76;
-              ot.g();
+              ot.g(76);
               return true;
             }
           }

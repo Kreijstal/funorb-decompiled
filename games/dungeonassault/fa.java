@@ -189,7 +189,7 @@ final class fa extends ne {
         return stackIn_29_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_m = null;
     }

@@ -88,7 +88,7 @@ final class wk extends java.awt.Canvas {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;

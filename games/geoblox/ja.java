@@ -160,7 +160,7 @@ final class ja extends rc {
         vf.field_L.d(var8, var9, var10);
     }
 
-    final static void h() {
+    final static void h(int param0) {
         af.field_c = 0;
         ul.field_a = null;
         gg.field_b = 0;
@@ -176,7 +176,7 @@ final class ja extends rc {
         wa.field_a = 0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_A = null;
         field_D = null;
         int var1 = 0;

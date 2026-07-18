@@ -57,17 +57,12 @@ final class ji {
                     break L2;
                   }
                 }
-                int discarded$5 = 116;
-                int discarded$6 = -103;
-                fb.a(var3_int != 0, ie.a(122), dg.field_E, ei.a());
+                fb.a(var3_int != 0, ie.a(122), dg.field_E, ei.a((byte) 116), (byte) -103);
                 break L1;
               } else {
                 if (!ic.a(false)) {
                   ll.a();
-                  int discarded$7 = 240;
-                  int discarded$8 = -122;
-                  int discarded$9 = 320;
-                  hi.b();
+                  hi.b(320, -122, 240);
                   qd.a(param2, 0, 0, 2901);
                   break L1;
                 } else {

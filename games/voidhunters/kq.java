@@ -8,7 +8,7 @@ final class kq extends rqa {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         if (param0 <= param1) {
           return hob.a((param0 << 16) / param1, (byte) -127);
         } else {
@@ -115,7 +115,7 @@ final class kq extends rqa {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
     }
 

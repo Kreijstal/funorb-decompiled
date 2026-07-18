@@ -14,7 +14,7 @@ final class co {
     static java.util.zip.CRC32 field_g;
     static int[] field_e;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_i = null;
         field_h = null;
@@ -25,7 +25,7 @@ final class co {
         field_b = null;
     }
 
-    final static int a() {
+    final static int a(int param0) {
         vn var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -162,8 +162,7 @@ final class co {
           rk.field_O.field_hb = rk.field_O.field_y >> 1;
           rk.field_O.b(649860712, true);
           if (jh.field_c[rk.field_O.a(-31497) + 1] != null) {
-            int discarded$1 = 3;
-            mi.a(jh.field_c[rk.field_O.a(-31497) - -1]);
+            mi.a(jh.field_c[rk.field_O.a(-31497) - -1], 3);
             break L8;
           } else {
             break L8;

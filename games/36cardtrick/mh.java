@@ -25,9 +25,7 @@ class mh {
             L1: {
               if (wc.field_A != null) {
                 gj.field_a = wc.field_A.c(-1);
-                int discarded$3 = -1;
-                int discarded$4 = 2;
-                vd.a();
+                vd.a(2, -1);
                 break L1;
               } else {
                 gj.field_a = qa.a(0, 480, 0, 17651, jk.field_a, 640);
@@ -35,8 +33,7 @@ class mh {
               }
             }
             if (gj.field_a != null) {
-              int discarded$5 = -1;
-              tk.a((java.awt.Canvas) (Object) gj.field_a);
+              tk.a((java.awt.Canvas) (Object) gj.field_a, -1);
               var2 = 2;
               break L0;
             } else {
@@ -137,7 +134,7 @@ class mh {
                 break L1;
               } else {
                 if (param3.indexOf("<br>") == -1) {
-                  param4[0] = (String) (Object) param4;
+                  param4[0] = param3;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;

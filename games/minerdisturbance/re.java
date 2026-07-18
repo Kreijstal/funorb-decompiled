@@ -137,7 +137,7 @@ final class re implements uj {
         }
     }
 
-    final static String a(String param0) {
+    final static String a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -220,8 +220,9 @@ final class re implements uj {
             Throwable var8_ref_Throwable = null;
             int var8 = 0;
             int var9 = 0;
-            String var10 = null;
-            CharSequence var11 = null;
+            Object var10 = null;
+            String var11 = null;
+            CharSequence var12 = null;
             int stackIn_6_0 = 0;
             int stackIn_29_0 = 0;
             int stackIn_42_0 = 0;
@@ -287,12 +288,11 @@ final class re implements uj {
                   if (qd.field_Q == cm.field_p) {
                     L3: {
                       if (param4) {
-                        int discarded$10 = 0;
-                        tb.field_d = qg.a(ne.field_Q, param5, 0, (String) null);
+                        var10 = null;
+                        tb.field_d = qg.a(ne.field_Q, param5, 0, (String) null, false);
                         break L3;
                       } else {
-                        int discarded$11 = 0;
-                        tb.field_d = sl.a((byte) 86, param3, param5);
+                        tb.field_d = sl.a((byte) 86, param3, param5, false);
                         break L3;
                       }
                     }
@@ -384,14 +384,13 @@ final class re implements uj {
                   if (qd.field_Q != wi.field_s) {
                     break L8;
                   } else {
-                    int discarded$12 = -9319;
-                    if (kj.b()) {
+                    if (kj.b(-9319)) {
                       L9: {
                         ne.field_Q = kj.field_a.h(71);
                         wj.field_j = kj.field_a.d((byte) -54);
-                        int discarded$13 = kj.field_a.d((byte) -54);
+                        int discarded$6 = kj.field_a.d((byte) -54);
                         pj.field_a = kj.field_a.e(-96);
-                        var10 = kj.field_a.j(103);
+                        var11 = kj.field_a.j(103);
                         var7 = kj.field_a.d((byte) -54);
                         if ((1 & var7) != 0) {
                           nj.a((byte) 89);
@@ -439,9 +438,9 @@ final class re implements uj {
                         if (!ei.field_L) {
                           break L13;
                         } else {
-                          int discarded$14 = kj.field_a.d((byte) -54);
-                          int discarded$15 = kj.field_a.d((byte) -54);
-                          int discarded$16 = kj.field_a.b((byte) 33);
+                          int discarded$7 = kj.field_a.d((byte) -54);
+                          int discarded$8 = kj.field_a.d((byte) -54);
+                          int discarded$9 = kj.field_a.b((byte) 33);
                           g.field_k = kj.field_a.e(-47);
                           ja.field_v = new byte[g.field_k];
                           var8 = 0;
@@ -458,8 +457,8 @@ final class re implements uj {
                       }
                       L15: {
                         ti.field_J = kj.field_a.a(false);
-                        var11 = (CharSequence) (Object) ti.field_J;
-                        in.field_b = cl.a(-95, var11);
+                        var12 = (CharSequence) (Object) ti.field_J;
+                        in.field_b = cl.a(-95, var12);
                         a.field_d = kj.field_a.d((byte) -54);
                         qd.field_Q = pb.field_c;
                         if (tb.field_d.b(0) == hk.field_i) {
@@ -476,10 +475,10 @@ final class re implements uj {
                       }
                       L16: {
                         ek.field_c = false;
-                        if (var10 == null) {
+                        if (var11 == null) {
                           break L16;
                         } else {
-                          nc.a(bm.c(-93), var10, (byte) 78);
+                          nc.a(bm.c(-93), var11, (byte) 78);
                           break L16;
                         }
                       }
@@ -491,7 +490,7 @@ final class re implements uj {
                             if (!fa.field_b) {
                               try {
                                 L19: {
-                                  Object discarded$17 = lk.a((byte) 18, "unzap", bm.c(-96));
+                                  Object discarded$10 = lk.a((byte) 18, "unzap", bm.c(-96));
                                   break L19;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -509,8 +508,7 @@ final class re implements uj {
                         }
                         try {
                           L21: {
-                            int discarded$18 = 95;
-                            Object discarded$19 = lk.a("zap", bm.c(-111), 16715, new Object[1]);
+                            Object discarded$11 = lk.a("zap", bm.c(-111), 16715, new Object[1]);
                             break L21;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -616,7 +614,7 @@ final class re implements uj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }

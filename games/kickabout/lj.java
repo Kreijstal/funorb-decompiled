@@ -137,7 +137,7 @@ final class lj extends gn {
         return stackIn_5_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_j = null;
         field_m = null;

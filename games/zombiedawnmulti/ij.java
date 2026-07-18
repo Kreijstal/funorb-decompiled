@@ -19,13 +19,13 @@ final class ij implements nl {
     static cj[] field_k;
     private int field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_k = null;
         field_f = null;
     }
 
-    final static bm a(byte[] param0) {
+    final static bm a(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -64,8 +64,7 @@ final class ij implements nl {
                 var5 = 6;
                 L2: while (true) {
                   if (param0.length / 4 <= var5) {
-                    int discarded$2 = 24;
-                    stackOut_7_0 = bo.a(var4);
+                    stackOut_7_0 = bo.a(var4, 24);
                     stackIn_8_0 = stackOut_7_0;
                     break L0;
                   } else {

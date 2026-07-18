@@ -419,7 +419,7 @@ final class ra extends dj {
         return var5;
     }
 
-    final static void i() {
+    final static void i(byte param0) {
         k.field_m = null;
     }
 
@@ -1045,7 +1045,7 @@ final class ra extends dj {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_O = null;
         field_F = null;
         field_H = null;

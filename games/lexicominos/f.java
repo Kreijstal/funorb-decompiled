@@ -8,7 +8,7 @@ final class f extends kd {
     static d[] field_l;
     int field_k;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_i = null;
         field_l = null;

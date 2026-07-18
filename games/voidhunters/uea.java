@@ -31,7 +31,7 @@ final class uea extends bob {
         }
     }
 
-    final static uma a(ds param0) {
+    final static uma a(ds param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         uma stackIn_1_0 = null;
@@ -92,7 +92,7 @@ final class uea extends bob {
         return stackIn_1_0;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         faa var2 = bk.field_w;
         faa var1 = var2;
         bk.field_w = im.field_q;
@@ -415,8 +415,7 @@ final class uea extends bob {
           var6 = 13421772;
           if (li.field_i) {
             var7 = 3;
-            int discarded$1 = 300;
-            pj.a(og.field_r, de.a(var7), nma.field_b[var7], -125, var6, ip.field_p.width, pk.field_o, var5, noa.field_q, ip.field_p.height);
+            pj.a(og.field_r, de.a(var7, 300), nma.field_b[var7], -125, var6, ip.field_p.width, pk.field_o, var5, noa.field_q, ip.field_p.height);
             break L5;
           } else {
             break L5;

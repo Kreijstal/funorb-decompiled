@@ -82,7 +82,7 @@ final class sa {
         return stackIn_3_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (vb.field_n != -wk.field_i) {
           if (vb.field_n == -wk.field_i + 250) {
             vb.field_n = vb.field_n + 1;
@@ -97,7 +97,7 @@ final class sa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_e = null;

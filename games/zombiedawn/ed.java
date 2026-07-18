@@ -45,7 +45,7 @@ final class ed {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         int var1 = 115;
         field_a = null;
@@ -84,12 +84,11 @@ final class ed {
                 break L1;
               } else {
                 var3 = null;
-                String discarded$4 = ed.a((CharSequence) null, (byte) -46);
+                String discarded$2 = ed.a((CharSequence) null, (byte) -46);
                 break L1;
               }
             }
-            int discarded$5 = 0;
-            stackOut_2_0 = fh.a(param0, param1 ^ -7154);
+            stackOut_2_0 = fh.a(param0, param1 ^ -7154, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

@@ -181,7 +181,7 @@ final class cg extends dj {
         td.field_v.a(40, rm.field_a.field_cb + -40, var3, -var3 + rm.field_a.field_Ib, (byte) 64);
     }
 
-    final static int a(int param0, byte[] param1) {
+    final static int a(int param0, byte[] param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -253,15 +253,14 @@ final class cg extends dj {
 
     final long d(byte param0) {
         int var2 = 116 / ((param0 - -1) / 38);
-        int discarded$0 = -64;
-        ((cg) this).field_r = ((cg) this).field_r + this.e();
+        ((cg) this).field_r = ((cg) this).field_r + this.e((byte) -64);
         if (~((cg) this).field_r > ~((cg) this).field_m) {
             return (-((cg) this).field_r + ((cg) this).field_m) / 1000000L;
         }
         return 0L;
     }
 
-    private final long e() {
+    private final long e(byte param0) {
         int var8 = 0;
         int var9 = BrickABrac.field_J ? 1 : 0;
         long var2 = System.nanoTime();
@@ -428,7 +427,7 @@ final class cg extends dj {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_s = null;
         field_q = null;
         field_p = null;

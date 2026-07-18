@@ -64,7 +64,7 @@ final class od extends ana {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_A = null;
         field_w = null;
         field_C = null;
@@ -89,7 +89,7 @@ final class od extends ana {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
     }
 
     final static byte[] a(String param0, byte param1) {
@@ -166,9 +166,9 @@ final class od extends ana {
         tka var2 = null;
         if (!((od) this).field_x) {
           if (!((od) this).field_m.a((byte) -106)) {
-            int fieldTemp$2 = ((od) this).field_l - 1;
+            int fieldTemp$1 = ((od) this).field_l - 1;
             ((od) this).field_l = ((od) this).field_l - 1;
-            if (0 <= fieldTemp$2) {
+            if (0 <= fieldTemp$1) {
               if (((od) this).field_v) {
                 return false;
               } else {
@@ -180,8 +180,7 @@ final class od extends ana {
               }
             } else {
               var2_int = 39 / ((param0 - 71) / 47);
-              int discarded$3 = -66;
-              this.f();
+              this.f((byte) -66);
               return true;
             }
           } else {

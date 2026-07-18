@@ -14,13 +14,12 @@ final class rd {
             hd.field_a.f((byte) 41);
         }
         if (!(ng.field_b == 0)) {
-            int discarded$0 = 1;
-            fl.b();
+            fl.b(true);
         }
         ah.field_v = 0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -132,8 +131,7 @@ final class rd {
             param0 = var3 + 1;
         }
         if (!(param0 != 7)) {
-            int discarded$0 = 0;
-            lg.h();
+            lg.h(0);
         }
         ki var2_ref = fd.field_d[param0];
         var2_ref.e(1);
@@ -198,7 +196,7 @@ final class rd {
                 break L1;
               } else {
                 var12 = null;
-                String discarded$6 = rd.a((String) null, (String[]) null, (byte) -1);
+                String discarded$4 = rd.a((String) null, (String[]) null, (byte) -1);
                 break L1;
               }
             }
@@ -232,11 +230,10 @@ final class rd {
                         } else {
                           if (62 == param0.charAt(var5)) {
                             var5++;
-                            int discarded$7 = -28734;
-                            var10 = fl.a((CharSequence) (Object) var9);
-                            StringBuilder discarded$8 = var6.append(param0.substring(var7, var8));
+                            var10 = fl.a((CharSequence) (Object) var9, -28734);
+                            StringBuilder discarded$5 = var6.append(param0.substring(var7, var8));
                             var7 = var5;
-                            StringBuilder discarded$9 = var6.append(param1[var10]);
+                            StringBuilder discarded$6 = var6.append(param1[var10]);
                             continue L3;
                           } else {
                             continue L3;
@@ -247,7 +244,7 @@ final class rd {
                       }
                     }
                   } else {
-                    StringBuilder discarded$10 = var6.append(param0.substring(var7));
+                    StringBuilder discarded$7 = var6.append(param0.substring(var7));
                     stackOut_26_0 = var6.toString();
                     stackIn_27_0 = stackOut_26_0;
                     break L0;
@@ -277,8 +274,7 @@ final class rd {
                     } else {
                       if (param0.charAt(var5) == 62) {
                         var5++;
-                        int discarded$11 = -28734;
-                        var8 = fl.a((CharSequence) (Object) var7_ref_String);
+                        var8 = fl.a((CharSequence) (Object) var7_ref_String, -28734);
                         var4 = var4 + (var6_int - var5 + param1[var8].length());
                         continue L2;
                       } else {
@@ -348,7 +344,7 @@ final class rd {
         return stackIn_27_0;
     }
 
-    final static jp[] c() {
+    final static jp[] c(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -365,12 +361,11 @@ final class rd {
             }
             var1[var2] = new jp(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var5);
         }
-        int discarded$0 = 96;
-        ee.d();
+        ee.d((byte) 96);
         return var1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_b = null;
         field_c = null;

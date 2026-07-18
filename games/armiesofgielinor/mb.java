@@ -13,7 +13,7 @@ final class mb extends oj {
     private int field_A;
     private boolean field_y;
 
-    final static rn a(String param0) {
+    final static rn a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -399,7 +399,7 @@ final class mb extends oj {
         return var3;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_F = null;
         field_B = null;
     }

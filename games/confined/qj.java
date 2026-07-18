@@ -12,7 +12,7 @@ final class qj {
         int var2 = 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;
@@ -120,7 +120,7 @@ final class qj {
         }
     }
 
-    final static String a() {
+    final static String a(int param0) {
         if (oe.field_Q == wh.field_fb) {
             return rd.field_Jb;
         }

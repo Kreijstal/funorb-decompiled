@@ -9,7 +9,7 @@ final class uc {
     static hr field_a;
     static int[] field_c;
 
-    final static long b() {
+    final static long b(int param0) {
         return -jt.field_x + wq.a(-74);
     }
 
@@ -72,7 +72,7 @@ final class uc {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         int var1 = 0;
@@ -81,7 +81,7 @@ final class uc {
         field_b = null;
     }
 
-    final static void a(ha param0) {
+    final static void a(ha param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;

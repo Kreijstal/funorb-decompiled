@@ -70,7 +70,7 @@ final class am {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 0;
         field_c = null;
         field_a = null;

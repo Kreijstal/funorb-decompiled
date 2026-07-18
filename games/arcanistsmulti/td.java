@@ -92,8 +92,7 @@ final class td extends df implements vb {
                   return;
                 }
               } else {
-                int discarded$2 = 970210916;
-                wk.k();
+                wk.k(970210916);
                 return;
               }
             } else {
@@ -191,8 +190,7 @@ final class td extends df implements vb {
             if (param0 instanceof byte[]) {
               var4 = (byte[]) param0;
               if (param2) {
-                int discarded$2 = 0;
-                stackOut_8_0 = dd.a(var4);
+                stackOut_8_0 = dd.a(var4, 0);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
@@ -341,7 +339,7 @@ final class td extends df implements vb {
         return stackIn_14_0;
     }
 
-    final static boolean e() {
+    final static boolean e(boolean param0) {
         return qf.field_d >= 2;
     }
 

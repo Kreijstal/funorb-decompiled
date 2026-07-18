@@ -351,7 +351,7 @@ final class fn extends k {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_k = null;
         field_n = null;
         field_m = null;
@@ -518,7 +518,7 @@ final class fn extends k {
         ((fn) this).field_o = 3216;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
@@ -551,8 +551,7 @@ final class fn extends k {
             Object var3 = null;
             fn.a(90, (byte) 41, -54, -20, 63, (kv) null);
         }
-        int discarded$0 = -97;
-        this.e();
+        this.e((byte) -97);
     }
 
     static {

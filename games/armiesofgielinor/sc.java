@@ -14,7 +14,7 @@ final class sc implements uo {
     int field_a;
     static String field_h;
 
-    final static void a() {
+    final static void a(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -42,12 +42,10 @@ final class sc implements uo {
               break L1;
             }
           }
-          int discarded$2 = 3;
-          vn.a(dc.field_n);
+          vn.a(dc.field_n, 3);
           tm.a();
           qn.b();
-          int discarded$3 = 9;
-          rb.e();
+          rb.e(9);
           if (var5 >= 256) {
             L2: {
               rf.b(-18862);
@@ -499,18 +497,16 @@ final class sc implements uo {
                     } else {
                       if (param2.equals((Object) (Object) "map")) {
                         if (param0 > 0) {
-                          int discarded$3 = 1;
-                          var5_int = ai.a(param1);
+                          var5_int = ai.a(param1, true);
                           ((sc) this).field_c = new ne[var5_int];
                           var6 = 0;
                           L3: while (true) {
                             if (var5_int <= var6) {
                               break L2;
                             } else {
-                              String discarded$4 = mt.a(param1, true);
+                              String discarded$1 = mt.a(param1, true);
                               var7 = param1.a(false);
-                              int discarded$5 = 1;
-                              var8 = ej.a(param1);
+                              var8 = ej.a(param1, true);
                               var9 = -var7 + param1.a(false);
                               kq.a(var7, -24232, var9, var8, param1);
                               ((sc) this).field_c[var6] = rb.a(var8, (byte) 70, param1);

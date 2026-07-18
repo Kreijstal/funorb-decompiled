@@ -212,7 +212,7 @@ final class ad extends kf {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_D = null;
         field_C = null;
         field_z = null;
@@ -271,7 +271,7 @@ final class ad extends kf {
         int discarded$0 = ((ad) this).field_F.a(((ad) this).field_A, var7 + (var5 - -((ad) this).field_B), var6 - -((ad) this).field_B, -((ad) this).field_B + ((ad) this).field_w, -(2 * ((ad) this).field_B) + ((ad) this).field_f, ((ad) this).field_x, -1, ((ad) this).field_E ? 0 : 2, 1, ((ad) this).field_F.field_p);
     }
 
-    final static void a(int param0, int[] param1) {
+    final static void a(int param0, int[] param1, boolean param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         lk var4 = null;

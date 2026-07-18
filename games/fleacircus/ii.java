@@ -197,7 +197,7 @@ final class ii {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         bj.a(14, rl.a((byte) -54));
     }
 
@@ -223,10 +223,7 @@ final class ii {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$6 = 10;
-            int discarded$7 = 0;
-            int discarded$8 = 1;
-            stackOut_0_0 = gi.a(param1);
+            stackOut_0_0 = gi.a(param1, true, 0, 10);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -263,7 +260,7 @@ final class ii {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = fleas.field_A ? 1 : 0;

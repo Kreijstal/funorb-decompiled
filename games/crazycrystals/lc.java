@@ -8,12 +8,12 @@ final class lc {
     static int field_d;
     static int field_a;
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_b = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
@@ -63,7 +63,7 @@ final class lc {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -135,7 +135,7 @@ final class lc {
         }
     }
 
-    final static e a(String param0) {
+    final static e a(String param0, byte param1) {
         RuntimeException var2 = null;
         e stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

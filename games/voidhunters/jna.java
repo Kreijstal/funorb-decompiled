@@ -75,7 +75,7 @@ final class jna extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_o = null;
     }
 

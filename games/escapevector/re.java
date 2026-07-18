@@ -10,7 +10,7 @@ class re extends k {
         this(sb.field_a, param0);
     }
 
-    final static void d() {
+    final static void d(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -159,7 +159,7 @@ class re extends k {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_r = null;
         field_s = null;
         field_q = null;

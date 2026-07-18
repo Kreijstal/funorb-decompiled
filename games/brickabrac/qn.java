@@ -31,19 +31,17 @@ final class qn {
         if (null == ua.field_d) {
           if (go.field_c > 0) {
             if (((qn) this).field_b) {
-              int fieldTemp$6 = ((qn) this).field_w - 1;
+              int fieldTemp$2 = ((qn) this).field_w - 1;
               ((qn) this).field_w = ((qn) this).field_w - 1;
-              if (fieldTemp$6 <= 0) {
+              if (fieldTemp$2 <= 0) {
                 ((qn) this).field_w = ((qn) this).field_g;
                 if (qh.field_a >= ((qn) this).field_c) {
                   if (param0 >= 23) {
-                    int discarded$7 = 0;
-                    this.d();
+                    this.d(0);
                     return;
                   } else {
                     ((qn) this).field_l = -43;
-                    int discarded$8 = 0;
-                    this.d();
+                    this.d(0);
                     return;
                   }
                 } else {
@@ -99,19 +97,17 @@ final class qn {
           } else {
             ((qn) this).field_b = false;
             if (((qn) this).field_b) {
-              int fieldTemp$9 = ((qn) this).field_w - 1;
+              int fieldTemp$3 = ((qn) this).field_w - 1;
               ((qn) this).field_w = ((qn) this).field_w - 1;
-              if (fieldTemp$9 <= 0) {
+              if (fieldTemp$3 <= 0) {
                 ((qn) this).field_w = ((qn) this).field_g;
                 if (qh.field_a >= ((qn) this).field_c) {
                   if (param0 >= 23) {
-                    int discarded$10 = 0;
-                    this.d();
+                    this.d(0);
                     return;
                   } else {
                     ((qn) this).field_l = -43;
-                    int discarded$11 = 0;
-                    this.d();
+                    this.d(0);
                     return;
                   }
                 } else {
@@ -156,7 +152,7 @@ final class qn {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         cq var4 = null;
@@ -249,7 +245,7 @@ final class qn {
         return true;
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

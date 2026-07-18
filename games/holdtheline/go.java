@@ -64,7 +64,7 @@ final class go {
         return ((go) this).field_f != null ? true : false;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -125,7 +125,7 @@ final class go {
         v.field_B = param1;
     }
 
-    final static void a(int param0, int param1, String[] param2, java.applet.Applet param3) {
+    final static void a(int param0, int param1, String[] param2, java.applet.Applet param3, int param4, int param5) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -188,8 +188,7 @@ final class go {
                 le.field_r = 2;
                 break L3;
               } else {
-                int discarded$29 = 1;
-                if (!ik.a((CharSequence) (Object) var6)) {
+                if (!ik.a((CharSequence) (Object) var6, true)) {
                   le.field_r = 2;
                   break L3;
                 } else {
@@ -283,7 +282,7 @@ final class go {
         return ((go) this).field_f;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_l = null;
         field_a = null;

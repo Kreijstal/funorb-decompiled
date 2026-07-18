@@ -51,7 +51,7 @@ class bp extends hd {
         }
     }
 
-    final static byte[] a(int param0, ml param1, byte[] param2) {
+    final static byte[] a(int param0, ml param1, byte[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -360,7 +360,7 @@ class bp extends hd {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_yb = null;
     }
 
@@ -414,8 +414,7 @@ class bp extends hd {
         var7 = Kickabout.field_G;
         try {
           L0: {
-            int discarded$2 = 124;
-            ql.a((Object[]) (Object) ((bp) this).field_Fb, param0);
+            ql.a((Object[]) (Object) ((bp) this).field_Fb, param0, (byte) 124);
             var3_int = 5;
             var4_ref_im__ = ((bp) this).field_Fb;
             var5 = 0;

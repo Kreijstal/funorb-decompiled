@@ -172,7 +172,7 @@ final class wb {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_d = null;
         int var1 = -2;

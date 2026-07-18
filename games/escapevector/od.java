@@ -38,7 +38,7 @@ final class od {
         }
     }
 
-    final static void f() {
+    final static void f(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -71,7 +71,7 @@ final class od {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((od) this).field_l = new ed(((od) this).field_m, ((od) this).field_m);
         int[] var8 = new int[4];
         int[] var2 = var8;
@@ -239,8 +239,7 @@ final class od {
               if (null != pg.field_c) {
                 break L1;
               } else {
-                int discarded$5 = 0;
-                if (sl.a(false)) {
+                if (sl.a(false, (byte) 0)) {
                   break L1;
                 } else {
                   stackOut_3_0 = -1;
@@ -393,10 +392,8 @@ final class od {
                     return stackIn_32_0;
                   } else {
                     if (var9 == 99) {
-                      int discarded$6 = 92;
-                      boolean discarded$7 = bo.a(30000, uc.b());
-                      int discarded$8 = 1;
-                      sc.field_g = new Boolean(va.a((n) (Object) om.field_g));
+                      boolean discarded$1 = bo.a(30000, uc.b(92));
+                      sc.field_g = new Boolean(va.a((n) (Object) om.field_g, true));
                       om.field_g.field_m = 0;
                       break L8;
                     } else {
@@ -480,8 +477,7 @@ final class od {
                   break L14;
                 } else {
                   L15: {
-                    int discarded$9 = 64655;
-                    if (30000L < un.e()) {
+                    if (30000L < un.e(64655)) {
                       ca.field_a = fl.field_l;
                       break L15;
                     } else {
@@ -607,8 +603,7 @@ final class od {
         if (param0 == ~(var2 % ((od) this).field_h)) {
             this.a(-110);
         }
-        int discarded$0 = 50;
-        this.e();
+        this.e(50);
         var2 = ((od) this).field_f.field_X;
         if (!(((od) this).field_c < var2)) {
             ((od) this).field_a = ((od) this).field_a + 1;
@@ -626,7 +621,7 @@ final class od {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         oc var3_ref = null;
         Object var3 = null;
         int var4 = EscapeVector.field_A;
@@ -718,7 +713,7 @@ final class od {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_d = null;
         field_j = null;
         field_b = null;
@@ -736,8 +731,7 @@ final class od {
         ((od) this).field_c = 50;
         try {
             ((od) this).field_f = param0;
-            int discarded$0 = 110;
-            this.a();
+            this.a((byte) 110);
             var2_int = (int)td.b(128);
             ((od) this).field_i = new Random((long)var2_int);
         } catch (RuntimeException runtimeException) {

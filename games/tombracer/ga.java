@@ -326,7 +326,7 @@ final class ga extends kna {
         }
     }
 
-    final static boolean r() {
+    final static boolean r(byte param0) {
         return hb.field_t instanceof qh;
     }
 
@@ -443,7 +443,7 @@ final class ga extends kna {
         }
     }
 
-    public static void A() {
+    public static void A(int param0) {
         field_K = null;
         field_F = null;
     }

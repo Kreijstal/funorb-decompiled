@@ -190,8 +190,7 @@ final class th extends hn implements ba, ng {
               if (((th) this).field_B != param1) {
                 break L0;
               } else {
-                int discarded$2 = 120;
-                this.g();
+                this.g((byte) 120);
                 return;
               }
             } else {
@@ -308,7 +307,7 @@ final class th extends hn implements ba, ng {
         }
     }
 
-    private final boolean b() {
+    private final boolean b(boolean param0) {
         if (!this.a(-127, (wg) (Object) ((th) this).field_H)) {
             return false;
         }
@@ -398,7 +397,7 @@ final class th extends hn implements ba, ng {
         return stackIn_7_0 != 0;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_F = null;
         field_C = null;
     }
@@ -437,8 +436,7 @@ final class th extends hn implements ba, ng {
         var2.a((byte) -70, 20, var3, 50, 270);
         ((th) this).a(var2, -6938);
         var3 += 50;
-        int discarded$0 = 126;
-        var3 = var3 + (this.a(de.field_b, 170, (gm) (Object) ((th) this).field_H, ad.field_l) + 5);
+        var3 = var3 + (this.a(de.field_b, 170, (gm) (Object) ((th) this).field_H, ad.field_l, var3, 126) + 5);
         ((th) this).field_B.a((byte) 124, 496 + -var5 >> 1, var3, 40, var5);
         ((th) this).field_E.a((byte) 125, 3 + var4, 15 + var3, 40, 60);
         ((th) this).field_E.field_t = (ca) this;
@@ -451,7 +449,7 @@ final class th extends hn implements ba, ng {
         ((th) this).a((byte) 127, 0, 0, var3 + 55 - -var4, 496);
     }
 
-    private final int a(String param0, int param1, gm param2, String param3) {
+    private final int a(String param0, int param1, gm param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -590,9 +588,8 @@ final class th extends hn implements ba, ng {
         return stackIn_3_0;
     }
 
-    private final void g() {
-        int discarded$0 = 1;
-        if (!this.b()) {
+    private final void g(byte param0) {
+        if (!this.b(true)) {
             return;
         }
         cm.a((byte) -21, ((th) this).field_H.field_m);
@@ -686,8 +683,7 @@ final class th extends hn implements ba, ng {
     final void a(int param0, gm param1, int param2, int param3) {
         try {
             super.a(-113, param1, param2, param3);
-            int discarded$0 = 1;
-            ((th) this).field_B.field_x = this.b();
+            ((th) this).field_B.field_x = this.b(true);
             int var5_int = 109 % ((param0 - -28) / 43);
         } catch (RuntimeException runtimeException) {
             throw rb.a((Throwable) (Object) runtimeException, "th.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

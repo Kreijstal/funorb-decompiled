@@ -37,7 +37,6 @@ final class ba extends kn implements be, sh {
             ((ba) this).field_J = param0;
             ((ba) this).field_I = new hc(oh.field_A, (rm) null);
             ((ba) this).field_I.field_A = (ad) (Object) new wi();
-            int discarded$1 = -65;
             var7 = oa.a((byte) -98, tk.field_b, new String[2]);
             var3 = 20;
             var4 = new eg(bn.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, bn.field_d.field_I, -1, 2147483647, true);
@@ -90,7 +89,7 @@ final class ba extends kn implements be, sh {
         }
     }
 
-    private final String e() {
+    private final String e(byte param0) {
         return "</col></u>";
     }
 

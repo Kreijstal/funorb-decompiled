@@ -17,7 +17,7 @@ final class rj extends fc {
     private int field_F;
     static int field_H;
 
-    final static void a(p param0) {
+    final static void a(p param0, int param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -562,7 +562,7 @@ final class rj extends fc {
         return stackIn_7_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_N = null;
         field_G = null;
         field_M = null;

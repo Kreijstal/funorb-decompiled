@@ -5,7 +5,7 @@ final class e {
     static im field_b;
     static java.awt.Font field_a;
 
-    final static byte[] a(Object param0, boolean param1) {
+    final static byte[] a(Object param0, boolean param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ll var4 = null;
@@ -38,8 +38,7 @@ final class e {
             if (param0 instanceof byte[]) {
               var3 = (byte[]) param0;
               if (param1) {
-                int discarded$2 = 117;
-                stackOut_8_0 = n.a(var3);
+                stackOut_8_0 = n.a(var3, (byte) 117);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
@@ -94,7 +93,7 @@ final class e {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }
@@ -113,7 +112,7 @@ final class e {
         }
     }
 
-    final static qg a(int param0, int param1, ki param2) {
+    final static qg a(int param0, int param1, ki param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -133,8 +132,7 @@ final class e {
         String stackOut_5_2 = null;
         try {
           if (pk.a(-56, param0, param2, param1)) {
-            int discarded$2 = 1;
-            return bd.b();
+            return bd.b(true);
           } else {
             return null;
           }

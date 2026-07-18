@@ -139,7 +139,7 @@ final class ki extends hn implements fp, ng, ba {
         }
     }
 
-    private final String j() {
+    private final String j(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -168,21 +168,18 @@ final class ki extends hn implements fp, ng, ba {
           L0: {
             L1: {
               if (0 == param2) {
-                int discarded$38 = 31;
-                d.a("terms.ws");
+                d.a("terms.ws", (byte) 31);
                 break L1;
               } else {
                 if (1 != param2) {
                   if (param2 == 2) {
-                    int discarded$39 = 31;
-                    d.a("conduct.ws");
+                    d.a("conduct.ws", (byte) 31);
                     break L1;
                   } else {
                     break L1;
                   }
                 } else {
-                  int discarded$40 = 31;
-                  d.a("privacy.ws");
+                  d.a("privacy.ws", (byte) 31);
                   break L1;
                 }
               }
@@ -191,7 +188,7 @@ final class ki extends hn implements fp, ng, ba {
               break L0;
             } else {
               var7 = null;
-              int discarded$41 = this.a((String) null, -82, -103, (gm) null, (String) null, false);
+              int discarded$1 = this.a((String) null, -82, -103, (gm) null, (String) null, false);
               return;
             }
           }
@@ -374,7 +371,7 @@ final class ki extends hn implements fp, ng, ba {
         return stackIn_3_0;
     }
 
-    private final boolean h() {
+    private final boolean h(int param0) {
         if (this.a(-1, (wg) (Object) ((ki) this).field_E)) {
           if (this.a(-1, (wg) (Object) ((ki) this).field_K)) {
             if (this.a(-1, (wg) (Object) ((ki) this).field_G)) {
@@ -439,8 +436,6 @@ final class ki extends hn implements fp, ng, ba {
         io dupTemp$1 = new io(10000536);
         ((ki) this).field_L.field_q = (el) (Object) dupTemp$1;
         ((ki) this).field_B.field_q = (el) (Object) dupTemp$1;
-        int discarded$2 = -94;
-        int discarded$3 = -128;
         String var2 = ff.a(new String[2], 0, km.field_a);
         int var3 = 20;
         var3 = var3 + this.a((byte) 106, a.field_b, 170, (gm) (Object) ((ki) this).field_K, var3);
@@ -448,8 +443,7 @@ final class ki extends hn implements fp, ng, ba {
         var3 = var3 + this.a((byte) 115, hm.field_v, 170, (gm) (Object) ((ki) this).field_B, var3);
         var3 = var3 + (this.a(ug.field_a, var3, 170, (gm) (Object) ((ki) this).field_L, bj.field_K, true) + 5);
         var3 = var3 + (5 + this.a(de.field_b, var3, 170, (gm) (Object) ((ki) this).field_E, ad.field_l, true));
-        int discarded$4 = 3;
-        var3 = var3 + this.a(170, ta.field_m, var3, (gm) (Object) ((ki) this).field_I);
+        var3 = var3 + this.a(170, ta.field_m, var3, (gm) (Object) ((ki) this).field_I, 3);
         na var4 = new na(46, var3, -90 + ((ki) this).field_p, 25, (gm) (Object) ((ki) this).field_F, true, -120 + ((ki) this).field_p, 5, sp.field_R, 11579568, ce.field_a);
         ((ki) this).a((gm) (Object) var4, -6938);
         var3 = var3 + var4.field_o;
@@ -476,9 +470,8 @@ final class ki extends hn implements fp, ng, ba {
         ((ki) this).a((byte) 125, 0, 0, var3 - (-55 - var6), 496);
     }
 
-    private final boolean l() {
-        int discarded$0 = 19545;
-        if (!(this.h())) {
+    private final boolean l(int param0) {
+        if (!(this.h(19545))) {
             return false;
         }
         int var2 = -1;
@@ -489,7 +482,7 @@ final class ki extends hn implements fp, ng, ba {
         return vf.a((ki) this, ((ki) this).field_B.field_m, var2, ((ki) this).field_F.field_A, 7013, ((ki) this).field_K.field_m, ((ki) this).field_E.field_m);
     }
 
-    private final int a(int param0, String param1, int param2, gm param3) {
+    private final int a(int param0, String param1, int param2, gm param3, int param4) {
         RuntimeException var6 = null;
         ub var7 = null;
         int var8 = 0;
@@ -788,12 +781,12 @@ final class ki extends hn implements fp, ng, ba {
         return stackIn_12_0;
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_D = null;
         field_H = null;
     }
 
-    final static String i() {
+    final static String i(int param0) {
         if (bh.field_a == mg.field_b) {
           return rf.field_u;
         } else {
@@ -894,14 +887,13 @@ final class ki extends hn implements fp, ng, ba {
         try {
             int var5_int = -8 % ((-28 - param0) / 43);
             super.a(-84, param1, param2, param3);
-            int discarded$0 = 19545;
-            ((ki) this).field_J.field_x = this.h();
+            ((ki) this).field_J.field_x = this.h(19545);
         } catch (RuntimeException runtimeException) {
             throw rb.a((Throwable) (Object) runtimeException, "ki.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final String k() {
+    private final String k(int param0) {
         return "</col></u>";
     }
 
@@ -1185,15 +1177,13 @@ final class ki extends hn implements fp, ng, ba {
             L1: {
               if (param1 != ((ki) this).field_N) {
                 if (param1 == ((ki) this).field_J) {
-                  int discarded$9 = -1;
-                  boolean discarded$10 = this.l();
+                  boolean discarded$4 = this.l(-1);
                   break L1;
                 } else {
                   break L1;
                 }
               } else {
-                int discarded$11 = 105;
-                of.b();
+                of.b((byte) 105);
                 break L1;
               }
             }
@@ -1201,7 +1191,7 @@ final class ki extends hn implements fp, ng, ba {
               break L0;
             } else {
               var7 = null;
-              int discarded$12 = this.a((String) null, 31, 19, (gm) null, (String) null, false);
+              int discarded$5 = this.a((String) null, 31, 19, (gm) null, (String) null, false);
               return;
             }
           }

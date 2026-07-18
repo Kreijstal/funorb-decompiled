@@ -177,7 +177,7 @@ final class od extends hn {
         return null;
     }
 
-    final static ig a(ah param0, String param1, ah param2, String param3) {
+    final static ig a(ah param0, String param1, ah param2, String param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -665,8 +665,7 @@ final class od extends hn {
                       tb.field_j.a(var14, (byte) 103);
                       tb.field_j.a(var8, (byte) 103);
                       var15 = (CharSequence) (Object) param1;
-                      int discarded$6 = 56;
-                      tb.field_j.a(h.a(var15), (byte) 103);
+                      tb.field_j.a(h.a(var15, (byte) 56), (byte) 103);
                       tb.field_j.b(param3, false);
                       tb.field_j.a(param4, false);
                       tb.field_j.a(var9, false);
@@ -721,7 +720,7 @@ final class od extends hn {
                       rl.field_d = -1;
                       break L8;
                     } else {
-                      boolean discarded$7 = en.b(96, bb.a(32032));
+                      boolean discarded$1 = en.b(96, bb.a(32032));
                       ui.field_b = new Boolean(bg.a((bh) (Object) kb.field_q, (byte) 55));
                       kb.field_q.field_t = 0;
                       break L8;
@@ -729,8 +728,7 @@ final class od extends hn {
                   } else {
                     ei.a(lk.q(13), 60);
                     tg.field_d = k.field_d;
-                    int discarded$8 = 0;
-                    mk.a();
+                    mk.a(false);
                     vb.field_j = false;
                     stackOut_30_0 = var9;
                     stackIn_31_0 = stackOut_30_0;
@@ -752,8 +750,7 @@ final class od extends hn {
                     var12 = 0;
                     L11: while (true) {
                       if (var12 >= var11) {
-                        int discarded$9 = 0;
-                        mk.a();
+                        mk.a(false);
                         vb.field_j = false;
                         stackOut_45_0 = 100 + var11;
                         stackIn_46_0 = stackOut_45_0;
@@ -795,8 +792,7 @@ final class od extends hn {
                       break L13;
                     }
                   }
-                  int discarded$10 = 0;
-                  mk.a();
+                  mk.a(false);
                   vb.field_j = false;
                   stackOut_54_0 = ua.field_c;
                   stackIn_55_0 = stackOut_54_0;
@@ -814,8 +810,7 @@ final class od extends hn {
                   break L14;
                 } else {
                   L15: {
-                    int discarded$11 = 127;
-                    if (ib.a() <= 30000L) {
+                    if (ib.a((byte) 127) <= 30000L) {
                       tg.field_d = ja.field_d;
                       break L15;
                     } else {

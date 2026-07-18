@@ -164,7 +164,7 @@ final class af extends kc {
         }
     }
 
-    final static char a(char param0) {
+    final static char a(char param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
@@ -420,7 +420,7 @@ final class af extends kc {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_Kb = null;
         field_Gb = null;
         field_Bb = null;

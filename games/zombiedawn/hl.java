@@ -57,7 +57,7 @@ final class hl implements Iterator {
         ((hl) this).field_i = 1;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
@@ -422,7 +422,7 @@ final class hl implements Iterator {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_g = null;
         field_f = null;

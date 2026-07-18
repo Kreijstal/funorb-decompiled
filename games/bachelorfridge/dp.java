@@ -296,7 +296,7 @@ final class dp extends lw {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_m = null;
         field_o = null;
         field_l = null;

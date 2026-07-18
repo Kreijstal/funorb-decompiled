@@ -57,7 +57,7 @@ final class cp {
         var2.c(0, (byte) -119);
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -500,7 +500,7 @@ final class cp {
         return stackIn_7_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_t = null;
         field_a = null;
     }
@@ -516,9 +516,9 @@ final class cp {
             }
           }
           if (((cp) this).field_b) {
-            int fieldTemp$2 = ((cp) this).field_i - 1;
+            int fieldTemp$1 = ((cp) this).field_i - 1;
             ((cp) this).field_i = ((cp) this).field_i - 1;
-            if (0 < fieldTemp$2) {
+            if (0 < fieldTemp$1) {
               return;
             } else {
               ((cp) this).field_i = ((cp) this).field_m;
@@ -527,8 +527,7 @@ final class cp {
                 return;
               } else {
                 L1: {
-                  int discarded$3 = 45;
-                  this.a();
+                  this.a((byte) 45);
                   if (param0) {
                     break L1;
                   } else {

@@ -11,7 +11,7 @@ final class eh extends qb {
     int field_n;
     int field_k;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return ja.field_b.a(2);
     }
 

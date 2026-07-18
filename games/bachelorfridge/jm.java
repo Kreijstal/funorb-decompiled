@@ -10,7 +10,7 @@ abstract class jm extends bw {
     static kv[] field_f;
     static lna field_i;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_k = null;
         field_f = null;
         field_h = null;
@@ -115,8 +115,7 @@ abstract class jm extends bw {
                   if (!param0) {
                     break L4;
                   } else {
-                    int discarded$6 = 11;
-                    if (!aja.e()) {
+                    if (!aja.e(11)) {
                       break L4;
                     } else {
                       if (var2 != 0) {
@@ -146,11 +145,10 @@ abstract class jm extends bw {
                       if (!param0) {
                         break L7;
                       } else {
-                        int discarded$7 = 11;
                         stackOut_60_0 = stackIn_60_0;
                         stackIn_62_0 = stackOut_60_0;
                         stackIn_61_0 = stackOut_60_0;
-                        if (!aja.e()) {
+                        if (!aja.e(11)) {
                           break L7;
                         } else {
                           stackOut_61_0 = stackIn_61_0;
@@ -195,8 +193,7 @@ abstract class jm extends bw {
                     if (!param0) {
                       break L10;
                     } else {
-                      int discarded$8 = 11;
-                      if (!aja.e()) {
+                      if (!aja.e(11)) {
                         break L10;
                       } else {
                         if (var2 != 0) {
@@ -226,11 +223,10 @@ abstract class jm extends bw {
                         if (!param0) {
                           break L13;
                         } else {
-                          int discarded$9 = 11;
                           stackOut_35_0 = stackIn_35_0;
                           stackIn_37_0 = stackOut_35_0;
                           stackIn_36_0 = stackOut_35_0;
-                          if (!aja.e()) {
+                          if (!aja.e(11)) {
                             break L13;
                           } else {
                             stackOut_36_0 = stackIn_36_0;
@@ -270,8 +266,7 @@ abstract class jm extends bw {
                     if (!param0) {
                       break L16;
                     } else {
-                      int discarded$10 = 11;
-                      if (!aja.e()) {
+                      if (!aja.e(11)) {
                         break L16;
                       } else {
                         if (var2 != 0) {
@@ -301,11 +296,10 @@ abstract class jm extends bw {
                         if (!param0) {
                           break L19;
                         } else {
-                          int discarded$11 = 11;
                           stackOut_23_0 = stackIn_23_0;
                           stackIn_25_0 = stackOut_23_0;
                           stackIn_24_0 = stackOut_23_0;
-                          if (!aja.e()) {
+                          if (!aja.e(11)) {
                             break L19;
                           } else {
                             stackOut_24_0 = stackIn_24_0;
@@ -509,7 +503,7 @@ abstract class jm extends bw {
         return 1 + param1 + "/6";
     }
 
-    final static int a(int param0, int param1, int param2, CharSequence param3, byte[] param4) {
+    final static int a(int param0, int param1, int param2, CharSequence param3, byte[] param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

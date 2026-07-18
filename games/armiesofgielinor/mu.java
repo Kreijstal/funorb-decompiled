@@ -83,8 +83,7 @@ final class mu {
               param2.field_e = 0;
               mp.field_Sb = new bl(var3_int, param2, param2);
               ce.field_K = new rf(var3_int, param2, param2, (gj) (Object) new cu());
-              int discarded$1 = -83;
-              var4 = ps.b();
+              var4 = ps.b((byte) -83);
               if (var4 == null) {
                 var11 = null;
                 af.a((Throwable) null, 124, "QC2");
@@ -177,7 +176,7 @@ final class mu {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_c = null;
         field_b = null;

@@ -56,7 +56,7 @@ final class ii {
         return var2;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_j = null;
         field_g = null;

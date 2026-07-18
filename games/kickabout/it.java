@@ -38,7 +38,7 @@ final class it extends mo {
         }
     }
 
-    final static void a(rj param0, sj param1) {
+    final static void a(rj param0, sj param1, byte param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -286,7 +286,7 @@ final class it extends mo {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_m = null;
     }
 

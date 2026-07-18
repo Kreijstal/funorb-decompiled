@@ -6,7 +6,7 @@ final class de implements java.awt.event.KeyListener, java.awt.event.FocusListen
     static int[] field_b;
     static String field_a;
 
-    final static void a(sj param0, sj param1) {
+    final static void a(sj param0, sj param1, byte param2) {
         try {
             gs.field_d = param0;
             gd.field_c = param1;
@@ -116,7 +116,7 @@ final class de implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -586,7 +586,7 @@ final class de implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var2 = 0;
         if (!(iu.field_i <= 0)) {
             iu.field_i = iu.field_i - 1;

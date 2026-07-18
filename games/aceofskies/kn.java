@@ -6,7 +6,7 @@ final class kn {
     static al[] field_c;
     static vs field_b;
 
-    final static java.awt.Frame a(rk param0, int param1, int param2, int param3) {
+    final static java.awt.Frame a(rk param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         rm[] var6_array = null;
         int var7_int = 0;
@@ -45,8 +45,7 @@ final class kn {
             if (param0.a((byte) 84)) {
               L1: {
                 if (param3 == 0) {
-                  int discarded$2 = 1175069442;
-                  var10 = sk.a(param0);
+                  var10 = sk.a(param0, 1175069442);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;
@@ -100,8 +99,7 @@ final class kn {
                     return (java.awt.Frame) (Object) stackIn_22_0;
                   }
                 } else {
-                  int discarded$3 = 0;
-                  wf.a(10L);
+                  wf.a(10L, false);
                   continue L4;
                 }
               }
@@ -142,13 +140,13 @@ final class kn {
         return (java.awt.Frame) (Object) stackIn_27_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
     }
 
-    final static wp[] a() {
+    final static wp[] a(int param0) {
         int var3 = 0;
         int var4 = AceOfSkies.field_G ? 1 : 0;
         int var1 = -18;
@@ -156,8 +154,7 @@ final class kn {
         for (var3 = 0; var3 < to.field_t; var3++) {
             var2[var3] = new wp(pu.field_a, cc.field_i, lh.field_a[var3], lg.field_j[var3], ji.field_b[var3], ee.field_e[var3], fk.field_a[var3], ud.field_e);
         }
-        int discarded$0 = 1;
-        kf.f();
+        kf.f(1);
         return var2;
     }
 

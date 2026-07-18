@@ -174,7 +174,7 @@ final class ma {
         }
     }
 
-    final static oc a(int param0, boolean param1) {
+    final static oc a(int param0, boolean param1, int param2) {
         oc var3 = new oc(param0);
         var3.field_q = param1 ? true : false;
         return var3;
@@ -197,7 +197,7 @@ final class ma {
         }
     }
 
-    final static ee[] a() {
+    final static ee[] a(boolean param0) {
         return new ee[]{kf.field_q, oh.field_n, qj.field_g};
     }
 

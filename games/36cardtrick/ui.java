@@ -143,7 +143,7 @@ final class ui extends g implements qh {
         field_F = null;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;

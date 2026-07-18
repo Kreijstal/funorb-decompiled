@@ -82,8 +82,7 @@ final class mc {
               var8 = new r(kd.field_e, param3);
               var7 = var8;
               kd.field_e.a(false, (el) (Object) var8);
-              int discarded$4 = 122;
-              if (kf.a()) {
+              if (kf.a(122)) {
                 var8.q(12086);
                 stackOut_10_0 = 1;
                 stackIn_11_0 = stackOut_10_0;
@@ -223,7 +222,7 @@ final class mc {
         return stackIn_11_0 != 0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

@@ -36,8 +36,7 @@ final class ml extends iw {
             var2 = new ut(param1.a("", "final_frame.jpg", 8), (java.awt.Component) (Object) ic.field_d);
             var3 = var2.field_q;
             var4 = var2.field_w;
-            int discarded$0 = -12974;
-            tr.d();
+            tr.d(-12974);
             js.field_a = new ut(var3, 3 * var4 / 4);
             js.field_a.e();
             var2.d(0, 0);
@@ -84,7 +83,7 @@ final class ml extends iw {
         }
     }
 
-    final static void o() {
+    final static void o(int param0) {
         fb.field_Q[47] = 73;
         fb.field_Q[45] = 26;
         fb.field_Q[46] = 72;
@@ -180,7 +179,7 @@ final class ml extends iw {
         }
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -353,8 +352,7 @@ final class ml extends iw {
         }
         L2: {
           ((hd) (Object) stackIn_6_0).a(stackIn_6_1 != 0, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_6_5 + -stackIn_6_6);
-          int discarded$1 = 0;
-          bs.a();
+          bs.a(0);
           rg.field_a.a(true, ss.field_c.field_q, 0, ss.field_c.field_mb + -40, 40);
           fp.field_o.a(true, af.field_d.field_q, 0, 0, 30);
           bt.field_b.a(true, af.field_d.field_q, 0, 30, -2 + (-40 + (af.field_d.field_mb - 30)));

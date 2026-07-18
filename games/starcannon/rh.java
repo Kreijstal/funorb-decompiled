@@ -12,7 +12,7 @@ final class rh extends rf {
     static hl[] field_f;
     static int field_i;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_j = null;
         field_f = null;
         field_g = null;
@@ -23,7 +23,7 @@ final class rh extends rf {
         throw new Error();
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 0;
         int stackIn_6_0 = 0;
         int stackOut_4_0 = 0;
@@ -58,7 +58,7 @@ final class rh extends rf {
         return stackIn_6_0 != 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -157,7 +157,7 @@ final class rh extends rf {
         return var8;
     }
 
-    final static void a(ia param0) {
+    final static void a(ia param0, byte param1) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;

@@ -4,7 +4,7 @@
 final class jda extends ci {
     static int field_m;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         gl.a(false, param0, (byte) 116);
     }
 
@@ -25,8 +25,7 @@ final class jda extends ci {
         int stackOut_1_1 = 0;
         int stackOut_4_0 = 0;
         L0: {
-          int discarded$18 = 26205;
-          stackOut_0_0 = go.d(param0, param2);
+          stackOut_0_0 = go.d(param0, param2, 26205);
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
           if ((262144 & param2) == 0) {
@@ -44,8 +43,7 @@ final class jda extends ci {
           }
         }
         if (stackIn_3_0 | stackIn_3_1 == 0) {
-          int discarded$19 = 36864;
-          if (no.a(param0, param2)) {
+          if (no.a(param0, param2, 36864)) {
             return true;
           } else {
             return false;

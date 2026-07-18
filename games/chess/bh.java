@@ -550,7 +550,7 @@ abstract class bh extends mf implements ra {
         return stackIn_4_0;
     }
 
-    private final boolean a(byte param0, mf param1) {
+    private final boolean a(byte param0, mf param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         mf var5 = null;
@@ -828,7 +828,7 @@ abstract class bh extends mf implements ra {
         return stackIn_7_0 != 0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_G = null;
         field_H = null;
         field_D = null;
@@ -1042,8 +1042,7 @@ abstract class bh extends mf implements ra {
                   } else {
                     L3: {
                       if (!ok.field_Jb[81]) {
-                        int discarded$3 = 121;
-                        stackOut_19_0 = this.a(param3);
+                        stackOut_19_0 = this.a(param3, (byte) 121);
                         stackIn_20_0 = stackOut_19_0;
                         break L3;
                       } else {
@@ -1226,10 +1225,7 @@ abstract class bh extends mf implements ra {
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, boolean param8, boolean param9, boolean param10, boolean param11) {
         L0: {
-          int discarded$54 = 16777215;
-          int discarded$55 = 15;
-          int discarded$56 = 16777215;
-          ic.a(param11, true, false, 11, param4, 0, 13, param9, 14, param5, param8);
+          ic.a(param11, true, false, 11, param4, 0, 13, param9, 14, param5, param8, 16777215, 15, 16777215);
           if (param0 < -102) {
             break L0;
           } else {
@@ -1279,7 +1275,7 @@ abstract class bh extends mf implements ra {
         }
     }
 
-    private final boolean a(mf param0) {
+    private final boolean a(mf param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -1301,8 +1297,7 @@ abstract class bh extends mf implements ra {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            stackOut_2_0 = this.a((byte) -123, param0);
+            stackOut_2_0 = this.a((byte) -123, param0, 1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -1339,7 +1334,7 @@ abstract class bh extends mf implements ra {
         return stackIn_3_0;
     }
 
-    private final mf h() {
+    private final mf h(int param0) {
         mf[] var2 = null;
         int var3 = 0;
         mf var4 = null;
@@ -1506,8 +1501,7 @@ abstract class bh extends mf implements ra {
         if (param0 != -67) {
             field_G = null;
         }
-        int discarded$0 = -31830;
-        return this.h() != null ? true : false;
+        return this.h(-31830) != null ? true : false;
     }
 
     bh(int param0, int param1, int param2, int param3, jm param4) {

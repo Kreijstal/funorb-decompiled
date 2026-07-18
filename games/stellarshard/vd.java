@@ -8,7 +8,7 @@ final class vd {
     static String field_d;
     static int field_b;
 
-    final static int a() {
+    final static int a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -54,8 +54,7 @@ final class vd {
                             }
                           }
                         }
-                        int discarded$3 = -12128;
-                        wl.l();
+                        wl.l(-12128);
                         break L3;
                       } else {
                         break L4;
@@ -68,8 +67,7 @@ final class vd {
                     if (2 == rb.field_s) {
                       break L3;
                     } else {
-                      int discarded$4 = -12128;
-                      wl.l();
+                      wl.l(-12128);
                       break L3;
                     }
                   }
@@ -84,8 +82,7 @@ final class vd {
                       var4 = ih.a((byte) -98) - jj.field_p;
                       var6 = (int)((-var4 + 10999L) / 1000L);
                       if (0 >= var6) {
-                        int discarded$5 = 0;
-                        qc.a(5, true);
+                        qc.a(5, true, 0);
                         var3 = 2;
                         break L6;
                       } else {
@@ -142,7 +139,7 @@ final class vd {
         return (char)var2;
     }
 
-    final static void a(nj param0) {
+    final static void a(nj param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

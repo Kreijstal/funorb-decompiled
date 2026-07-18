@@ -11,7 +11,7 @@ final class nb extends vd implements qk {
     static int field_I;
     static gg field_F;
 
-    final static int j() {
+    final static int j(int param0) {
         if (pb.field_Kb < 2) {
           return 0;
         } else {
@@ -269,8 +269,7 @@ final class nb extends vd implements qk {
                 return;
               }
             } else {
-              int discarded$2 = 5109;
-              fa.a();
+              fa.a(5109);
               return;
             }
           }
@@ -306,7 +305,7 @@ final class nb extends vd implements qk {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_F = null;
         field_J = null;
         field_L = null;

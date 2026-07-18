@@ -38,8 +38,7 @@ final class ap {
         try {
           L0: {
             L1: {
-              int discarded$2 = 3;
-              var2 = qc.a(ah.a(true, param1));
+              var2 = qc.a(ah.a(true, param1), (byte) 3);
               if (var2 != null) {
                 break L1;
               } else {
@@ -175,8 +174,7 @@ final class ap {
         try {
           L0: {
             md.a(-118, (java.awt.Component) (Object) param1);
-            int discarded$9 = 7282;
-            pl.a((java.awt.Component) (Object) param1);
+            pl.a((java.awt.Component) (Object) param1, 7282);
             if (null == qa.field_x) {
               break L0;
             } else {

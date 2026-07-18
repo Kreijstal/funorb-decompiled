@@ -812,7 +812,7 @@ class ds extends ksa {
         return (255 & ((ds) this).field_h[((ds) this).field_e + -1]) + ((((ds) this).field_h[((ds) this).field_e - 2] & 255) << 8);
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_f = null;
         int var1 = 1;
     }

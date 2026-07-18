@@ -34,20 +34,18 @@ final class si {
             field_d = 17;
             ke.field_U.a(0);
             if (!aj.field_c.a((byte) -53)) {
-                int discarded$0 = 1;
-                return fn.b();
+                return fn.b(true);
             }
             return 0;
         }
         ke.field_U.a(0);
         if (!(aj.field_c.a((byte) -53))) {
-            int discarded$1 = 1;
-            return fn.b();
+            return fn.b(true);
         }
         return 0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_c = null;
         field_f = null;

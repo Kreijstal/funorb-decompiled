@@ -217,8 +217,7 @@ final class kn {
             }
             L2: {
               if (!((kn) this).field_n) {
-                int discarded$2 = 73;
-                this.a(param3, param1, param0);
+                this.a(param3, param1, param0, (byte) 73);
                 break L2;
               } else {
                 this.a(67, param0, param3, param1);
@@ -282,7 +281,7 @@ final class kn {
         field_p = null;
     }
 
-    private final void a(int param0, int param1, String param2) {
+    private final void a(int param0, int param1, String param2, byte param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -367,9 +366,9 @@ final class kn {
             ((kn) this).field_f = 3;
             ((kn) this).field_b = 3;
             ((kn) this).field_o = -1;
-            ng discarded$15 = var4.a(0, (byte) 41).b(15658734, -2147483648).a(2, gn.b(8947848, 1, 10066329, 7829367));
-            ng discarded$16 = var4.a(1, (byte) 98).a(2, gn.b(11184810, 1, 10066329, 13421772));
-            ng discarded$17 = var4.a(3, (byte) 42).a(2, gn.b(8947848, 1, 7829367, 10066329)).c(-1, 1).a(1, 1);
+            ng discarded$10 = var4.a(0, (byte) 41).b(15658734, -2147483648).a(2, gn.b(8947848, 1, 10066329, 7829367));
+            ng discarded$11 = var4.a(1, (byte) 98).a(2, gn.b(11184810, 1, 10066329, 13421772));
+            ng discarded$12 = var4.a(3, (byte) 42).a(2, gn.b(8947848, 1, 7829367, 10066329)).c(-1, 1).a(1, 1);
             var5 = new iu[9];
             var16 = new mea(32, 32);
             var18 = var16;
@@ -377,27 +376,22 @@ final class kn {
             L1: while (true) {
               if (var7_int >= var18.field_r.length) {
                 var5[4] = (iu) (Object) var18;
-                ng discarded$18 = var4.a(4, (byte) 127).a(-2, true).a(2, var5);
-                int discarded$19 = 0;
-                int discarded$20 = 0;
-                int discarded$21 = 0;
-                int discarded$22 = 2;
-                int discarded$23 = 65793;
-                ng discarded$24 = var4.a(5, (byte) 107).a(2, jsa.b()).a(-2, true).b(-1, -2147483648);
+                ng discarded$13 = var4.a(4, (byte) 127).a(-2, true).a(2, var5);
+                ng discarded$14 = var4.a(5, (byte) 107).a(2, jsa.b(65793, 2, 0, 0, 0)).a(-2, true).b(-1, -2147483648);
                 ((kn) this).field_u = (isa) (Object) var4;
                 var6 = new vga(var4, true);
                 var6.field_l = 0;
                 var7 = new vga(var4, true);
                 var7.field_l = 0;
                 var7.a(-18379, eca.a(4, 8947848));
-                ng discarded$25 = var7.a(1, (byte) 85).a(2, eca.a(4, 11184810)).b(2236962, -2147483648);
+                ng discarded$15 = var7.a(1, (byte) 85).a(2, eca.a(4, 11184810)).b(2236962, -2147483648);
                 ((kn) this).field_d = (isa) (Object) new jr(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                bsa discarded$26 = new bsa(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                cj discarded$27 = new cj(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                bsa discarded$16 = new bsa(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                cj discarded$17 = new cj(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new vga();
                 var17.a((vpa) (Object) var8, -107);
-                ng discarded$28 = var8.a(0, (byte) 65).a(2, gn.b(15658734, 1, 7829367, 10066329)).b(1118481, -2147483648).a((byte) 7, -1);
-                ng discarded$29 = var8.a(4, (byte) 87).a(-2, true).a(2, var5);
+                ng discarded$18 = var8.a(0, (byte) 65).a(2, gn.b(15658734, 1, 7829367, 10066329)).b(1118481, -2147483648).a((byte) 7, -1);
+                ng discarded$19 = var8.a(4, (byte) 87).a(-2, true).a(2, var5);
                 ((kn) this).field_e = (isa) (Object) var8;
                 var9 = new iu[9];
                 var10 = new iu[9];

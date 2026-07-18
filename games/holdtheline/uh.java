@@ -77,7 +77,7 @@ final class uh {
         }
     }
 
-    private final int c(int param0) {
+    private final int c(int param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -118,8 +118,7 @@ final class uh {
     }
 
     private final void a(int param0, int param1) {
-        int discarded$0 = -81;
-        int[] var4 = new int[this.c(param1)];
+        int[] var4 = new int[this.c(param1, (byte) -81)];
         int[] var3 = var4;
         bc.a(((uh) this).field_a, 0, var4, 0, ((uh) this).field_a.length);
         ((uh) this).field_a = var4;

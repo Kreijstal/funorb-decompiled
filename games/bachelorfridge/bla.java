@@ -166,8 +166,7 @@ final class bla extends td {
         }
         try {
             ge.field_I = param3;
-            int discarded$0 = 122;
-            el.e();
+            el.e((byte) 122);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "bla.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -273,12 +272,12 @@ final class bla extends td {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_p = null;
         field_q = null;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         lw.field_k = new String[cja.field_v];
         lw.field_k[7] = me.field_q;
         lw.field_k[18] = saa.field_r;

@@ -23,7 +23,7 @@ final class jl {
         return tk.a(-121, sb.field_sb);
     }
 
-    final static long a(CharSequence param0) {
+    final static long a(CharSequence param0, boolean param1) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;
@@ -157,7 +157,7 @@ final class jl {
         return stackIn_20_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

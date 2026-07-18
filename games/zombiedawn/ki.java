@@ -114,7 +114,7 @@ abstract class ki extends pn {
         }
     }
 
-    final static boolean a(int param0, CharSequence param1) {
+    final static boolean a(int param0, CharSequence param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -393,8 +393,7 @@ abstract class ki extends pn {
     }
 
     final static void a(byte param0, vn param1) {
-        int discarded$2 = 1584;
-        hk.i();
+        hk.i(1584);
         if (param0 >= -76) {
             return;
         }

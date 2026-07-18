@@ -4,7 +4,7 @@
 final class ws extends rqa {
     static String field_o;
 
-    public static void e() {
+    public static void e(int param0) {
         field_o = null;
     }
 
@@ -134,12 +134,10 @@ final class ws extends rqa {
                 } else {
                   L2: {
                     var3 = param1.charAt(var2_int);
-                    int discarded$10 = 0;
-                    if (cs.a((char) var3)) {
+                    if (cs.a((char) var3, 0)) {
                       break L2;
                     } else {
-                      int discarded$11 = 1;
-                      if (haa.a((char) var3)) {
+                      if (haa.a((char) var3, true)) {
                         break L2;
                       } else {
                         stackOut_7_0 = 1;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dba extends rqa {
-    final static void a(int param0, ea param1) {
+    final static void a(int param0, ea param1, int param2) {
         try {
             oaa.field_k.b(-10258, (ksa) (Object) param1);
             hs.a(param1, 1, 4);

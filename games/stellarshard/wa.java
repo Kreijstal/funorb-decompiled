@@ -9,7 +9,7 @@ final class wa {
     static String[] field_e;
     private int field_c;
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         char[] var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
@@ -88,11 +88,11 @@ final class wa {
         return stackIn_18_0 != 0;
     }
 
-    final static String a() {
+    final static String a(int param0) {
         return ae.field_N.e((byte) 91);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_b = null;
     }
@@ -116,8 +116,7 @@ final class wa {
             if (1 > ((wa) this).field_c) {
                 throw new IllegalStateException();
             }
-            int discarded$0 = 110;
-            this.a(param2);
+            this.a(param2, (byte) 110);
             ((wa) this).field_d = ((wa) this).field_d - 1;
             while (0 > ((wa) this).field_d) {
                 var6 = (gj) (Object) ((wa) this).field_f.b((byte) 103);
@@ -242,7 +241,7 @@ final class wa {
         }
     }
 
-    private final void a(long param0) {
+    private final void a(long param0, byte param1) {
         gj var4 = (gj) (Object) ((wa) this).field_a.a(param0, -1);
         this.a(var4, (byte) 118);
     }

@@ -212,7 +212,7 @@ final class gj extends ao {
         return (java.net.Socket) (Object) stackIn_25_0;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

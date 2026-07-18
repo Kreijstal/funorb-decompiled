@@ -19,7 +19,7 @@ final class fp extends je {
         this.c(param0 ^ 120, param2);
     }
 
-    final static void a(int param0, pu param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, pu param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
         RuntimeException var8 = null;
         int[] var8_array = null;
         int var13 = 0;
@@ -390,17 +390,14 @@ final class fp extends je {
         }
     }
 
-    final static gl l() {
-        int discarded$0 = -4938;
-        String var1 = sk.i();
+    final static gl l(int param0) {
+        String var1 = sk.i(-4938);
         if (var1 != null) {
             if (!(var1.indexOf('@') < 0)) {
                 var1 = "";
             }
         }
-        int discarded$1 = -4938;
-        int discarded$2 = 0;
-        return new gl(sk.i(), gi.a());
+        return new gl(sk.i(-4938), gi.a(false));
     }
 
     final static void a(java.math.BigInteger param0, java.math.BigInteger param1, byte param2, vh param3, vh param4) {
@@ -431,7 +428,7 @@ final class fp extends je {
         ((fp) this).field_Kb.a(((fp) this).field_ob, param0 + -20500, ((fp) this).field_gb + -var3, param0, var3);
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         try {
             gh.field_P = param0;
         } catch (RuntimeException runtimeException) {
@@ -439,7 +436,7 @@ final class fp extends je {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_Lb = null;
         field_Ib = null;
     }

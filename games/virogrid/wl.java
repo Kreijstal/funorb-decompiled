@@ -9,7 +9,7 @@ final class wl {
     static int[] field_c;
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_e = null;
         int var1 = 54;
@@ -49,7 +49,7 @@ final class wl {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, int param2, sc param3) {
+    final static void a(int param0, int param1, int param2, sc param3, boolean param4) {
         RuntimeException var5 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -160,8 +160,7 @@ final class wl {
         try {
           L0: {
             L1: {
-              int discarded$2 = 10;
-              ua.a(param6, param4);
+              ua.a(param6, param4, 10);
               ae.field_g = ua.a(param0, param5, 0, param7);
               ac.field_c = ua.a(param0, param5, 1, param2);
               hd.field_g = new r();

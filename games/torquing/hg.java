@@ -20,16 +20,14 @@ final class hg {
           if (var2 == null) {
             break L0;
           } else {
-            int discarded$101 = 0;
-            cp.field_i = lj.a(var2);
+            cp.field_i = lj.a(var2, false);
             break L0;
           }
         }
         L1: {
           var2 = da.a((byte) 117, "benefits_6worlds");
           if (var2 != null) {
-            int discarded$102 = 0;
-            ld.field_b = lj.a(var2);
+            ld.field_b = lj.a(var2, false);
             break L1;
           } else {
             break L1;
@@ -38,8 +36,7 @@ final class hg {
         L2: {
           var2 = da.a((byte) -25, "benefits_30levels");
           if (null != var2) {
-            int discarded$103 = 0;
-            hm.field_t = lj.a(var2);
+            hm.field_t = lj.a(var2, false);
             break L2;
           } else {
             break L2;
@@ -48,8 +45,7 @@ final class hg {
         L3: {
           var2 = da.a((byte) 110, "benefits_newtwists");
           if (var2 != null) {
-            int discarded$104 = 0;
-            qa.field_j = lj.a(var2);
+            qa.field_j = lj.a(var2, false);
             break L3;
           } else {
             break L3;
@@ -60,8 +56,7 @@ final class hg {
           if (null == var2) {
             break L4;
           } else {
-            int discarded$105 = 0;
-            gi.field_b = lj.a(var2);
+            gi.field_b = lj.a(var2, false);
             break L4;
           }
         }
@@ -70,16 +65,14 @@ final class hg {
           if (var2 == null) {
             break L5;
           } else {
-            int discarded$106 = 0;
-            ea.field_u = lj.a(var2);
+            ea.field_u = lj.a(var2, false);
             break L5;
           }
         }
         L6: {
           var2 = da.a((byte) 112, "shield");
           if (null != var2) {
-            int discarded$107 = 0;
-            je.field_i = lj.a(var2);
+            je.field_i = lj.a(var2, false);
             break L6;
           } else {
             break L6;
@@ -88,8 +81,7 @@ final class hg {
         L7: {
           var2 = da.a((byte) -79, "skin");
           if (null != var2) {
-            int discarded$108 = 0;
-            nc.field_c = lj.a(var2);
+            nc.field_c = lj.a(var2, false);
             break L7;
           } else {
             break L7;
@@ -100,8 +92,7 @@ final class hg {
           if (null == var2) {
             break L8;
           } else {
-            int discarded$109 = 0;
-            af.field_b = lj.a(var2);
+            af.field_b = lj.a(var2, false);
             break L8;
           }
         }
@@ -110,16 +101,14 @@ final class hg {
           if (null == var2) {
             break L9;
           } else {
-            int discarded$110 = 0;
-            nl.field_u = lj.a(var2);
+            nl.field_u = lj.a(var2, false);
             break L9;
           }
         }
         L10: {
           var2 = da.a((byte) -98, "yourscore");
           if (null != var2) {
-            int discarded$111 = 0;
-            om.field_e = lj.a(var2);
+            om.field_e = lj.a(var2, false);
             break L10;
           } else {
             break L10;
@@ -128,8 +117,7 @@ final class hg {
         L11: {
           var2 = da.a((byte) 124, "freegame_completed");
           if (null != var2) {
-            int discarded$112 = 0;
-            vf.field_m = lj.a(var2);
+            vf.field_m = lj.a(var2, false);
             break L11;
           } else {
             break L11;
@@ -138,8 +126,7 @@ final class hg {
         L12: {
           var2 = da.a((byte) -56, "worldcolon");
           if (var2 != null) {
-            int discarded$113 = 0;
-            wa.field_c = lj.a(var2);
+            wa.field_c = lj.a(var2, false);
             break L12;
           } else {
             break L12;
@@ -150,8 +137,7 @@ final class hg {
           if (null == var2) {
             break L13;
           } else {
-            int discarded$114 = 0;
-            lj.field_b = lj.a(var2);
+            lj.field_b = lj.a(var2, false);
             break L13;
           }
         }
@@ -160,8 +146,7 @@ final class hg {
           if (var2 == null) {
             break L14;
           } else {
-            int discarded$115 = 0;
-            k.field_b[0] = lj.a(var2);
+            k.field_b[0] = lj.a(var2, false);
             break L14;
           }
         }
@@ -170,8 +155,7 @@ final class hg {
           if (var2 == null) {
             break L15;
           } else {
-            int discarded$116 = 0;
-            k.field_b[1] = lj.a(var2);
+            k.field_b[1] = lj.a(var2, false);
             break L15;
           }
         }
@@ -180,8 +164,7 @@ final class hg {
           if (null == var2) {
             break L16;
           } else {
-            int discarded$117 = 0;
-            k.field_b[2] = lj.a(var2);
+            k.field_b[2] = lj.a(var2, false);
             break L16;
           }
         }
@@ -190,16 +173,14 @@ final class hg {
           if (var2 == null) {
             break L17;
           } else {
-            int discarded$118 = 0;
-            k.field_b[3] = lj.a(var2);
+            k.field_b[3] = lj.a(var2, false);
             break L17;
           }
         }
         L18: {
           var2 = da.a((byte) -61, "achievement_names,4");
           if (null != var2) {
-            int discarded$119 = 0;
-            k.field_b[4] = lj.a(var2);
+            k.field_b[4] = lj.a(var2, false);
             break L18;
           } else {
             break L18;
@@ -210,8 +191,7 @@ final class hg {
           if (null == var2) {
             break L19;
           } else {
-            int discarded$120 = 0;
-            k.field_b[5] = lj.a(var2);
+            k.field_b[5] = lj.a(var2, false);
             break L19;
           }
         }
@@ -220,16 +200,14 @@ final class hg {
           if (var2 == null) {
             break L20;
           } else {
-            int discarded$121 = 0;
-            k.field_b[6] = lj.a(var2);
+            k.field_b[6] = lj.a(var2, false);
             break L20;
           }
         }
         L21: {
           var2 = da.a((byte) -50, "achievement_names,7");
           if (null != var2) {
-            int discarded$122 = 0;
-            k.field_b[7] = lj.a(var2);
+            k.field_b[7] = lj.a(var2, false);
             break L21;
           } else {
             break L21;
@@ -240,16 +218,14 @@ final class hg {
           if (var2 == null) {
             break L22;
           } else {
-            int discarded$123 = 0;
-            k.field_b[8] = lj.a(var2);
+            k.field_b[8] = lj.a(var2, false);
             break L22;
           }
         }
         L23: {
           var2 = da.a((byte) 104, "achievement_names,9");
           if (var2 != null) {
-            int discarded$124 = 0;
-            k.field_b[9] = lj.a(var2);
+            k.field_b[9] = lj.a(var2, false);
             break L23;
           } else {
             break L23;
@@ -260,16 +236,14 @@ final class hg {
           if (null == var2) {
             break L24;
           } else {
-            int discarded$125 = 0;
-            k.field_b[10] = lj.a(var2);
+            k.field_b[10] = lj.a(var2, false);
             break L24;
           }
         }
         L25: {
           var2 = da.a((byte) -120, "achievement_names,11");
           if (null != var2) {
-            int discarded$126 = 0;
-            k.field_b[11] = lj.a(var2);
+            k.field_b[11] = lj.a(var2, false);
             break L25;
           } else {
             break L25;
@@ -280,16 +254,14 @@ final class hg {
           if (null == var2) {
             break L26;
           } else {
-            int discarded$127 = 0;
-            k.field_b[12] = lj.a(var2);
+            k.field_b[12] = lj.a(var2, false);
             break L26;
           }
         }
         L27: {
           var2 = da.a((byte) -60, "achievement_names,13");
           if (var2 != null) {
-            int discarded$128 = 0;
-            k.field_b[13] = lj.a(var2);
+            k.field_b[13] = lj.a(var2, false);
             break L27;
           } else {
             break L27;
@@ -300,8 +272,7 @@ final class hg {
           if (var2 == null) {
             break L28;
           } else {
-            int discarded$129 = 0;
-            k.field_b[14] = lj.a(var2);
+            k.field_b[14] = lj.a(var2, false);
             break L28;
           }
         }
@@ -310,16 +281,14 @@ final class hg {
           if (null == var2) {
             break L29;
           } else {
-            int discarded$130 = 0;
-            k.field_b[15] = lj.a(var2);
+            k.field_b[15] = lj.a(var2, false);
             break L29;
           }
         }
         L30: {
           var2 = da.a((byte) -73, "achievement_names,16");
           if (var2 != null) {
-            int discarded$131 = 0;
-            k.field_b[16] = lj.a(var2);
+            k.field_b[16] = lj.a(var2, false);
             break L30;
           } else {
             break L30;
@@ -328,8 +297,7 @@ final class hg {
         L31: {
           var2 = da.a((byte) -62, "achievement_criteria,0");
           if (var2 != null) {
-            int discarded$132 = 0;
-            cn.field_a[0] = lj.a(var2);
+            cn.field_a[0] = lj.a(var2, false);
             break L31;
           } else {
             break L31;
@@ -340,16 +308,14 @@ final class hg {
           if (null == var2) {
             break L32;
           } else {
-            int discarded$133 = 0;
-            cn.field_a[1] = lj.a(var2);
+            cn.field_a[1] = lj.a(var2, false);
             break L32;
           }
         }
         L33: {
           var2 = da.a((byte) 109, "achievement_criteria,2");
           if (var2 != null) {
-            int discarded$134 = 0;
-            cn.field_a[2] = lj.a(var2);
+            cn.field_a[2] = lj.a(var2, false);
             break L33;
           } else {
             break L33;
@@ -358,8 +324,7 @@ final class hg {
         L34: {
           var2 = da.a((byte) 125, "achievement_criteria,3");
           if (var2 != null) {
-            int discarded$135 = 0;
-            cn.field_a[3] = lj.a(var2);
+            cn.field_a[3] = lj.a(var2, false);
             break L34;
           } else {
             break L34;
@@ -370,8 +335,7 @@ final class hg {
           if (var2 == null) {
             break L35;
           } else {
-            int discarded$136 = 0;
-            cn.field_a[4] = lj.a(var2);
+            cn.field_a[4] = lj.a(var2, false);
             break L35;
           }
         }
@@ -380,17 +344,15 @@ final class hg {
           if (null == var2) {
             break L36;
           } else {
-            int discarded$137 = 0;
-            cn.field_a[5] = lj.a(var2);
+            cn.field_a[5] = lj.a(var2, false);
             break L36;
           }
         }
         L37: {
           var2 = da.a((byte) 108, "achievement_criteria,6");
-          var3 = -49;
+          var3 = -99 / ((20 - param0) / 43);
           if (null != var2) {
-            int discarded$138 = 0;
-            cn.field_a[6] = lj.a(var2);
+            cn.field_a[6] = lj.a(var2, false);
             break L37;
           } else {
             break L37;
@@ -401,16 +363,14 @@ final class hg {
           if (var2 == null) {
             break L38;
           } else {
-            int discarded$139 = 0;
-            cn.field_a[7] = lj.a(var2);
+            cn.field_a[7] = lj.a(var2, false);
             break L38;
           }
         }
         L39: {
           var2 = da.a((byte) 119, "achievement_criteria,8");
           if (null != var2) {
-            int discarded$140 = 0;
-            cn.field_a[8] = lj.a(var2);
+            cn.field_a[8] = lj.a(var2, false);
             break L39;
           } else {
             break L39;
@@ -419,8 +379,7 @@ final class hg {
         L40: {
           var2 = da.a((byte) 111, "achievement_criteria,9");
           if (var2 != null) {
-            int discarded$141 = 0;
-            cn.field_a[9] = lj.a(var2);
+            cn.field_a[9] = lj.a(var2, false);
             break L40;
           } else {
             break L40;
@@ -429,8 +388,7 @@ final class hg {
         L41: {
           var2 = da.a((byte) 127, "achievement_criteria,10");
           if (null != var2) {
-            int discarded$142 = 0;
-            cn.field_a[10] = lj.a(var2);
+            cn.field_a[10] = lj.a(var2, false);
             break L41;
           } else {
             break L41;
@@ -441,8 +399,7 @@ final class hg {
           if (var2 == null) {
             break L42;
           } else {
-            int discarded$143 = 0;
-            cn.field_a[11] = lj.a(var2);
+            cn.field_a[11] = lj.a(var2, false);
             break L42;
           }
         }
@@ -451,16 +408,14 @@ final class hg {
           if (null == var2) {
             break L43;
           } else {
-            int discarded$144 = 0;
-            cn.field_a[12] = lj.a(var2);
+            cn.field_a[12] = lj.a(var2, false);
             break L43;
           }
         }
         L44: {
           var2 = da.a((byte) 117, "achievement_criteria,13");
           if (var2 != null) {
-            int discarded$145 = 0;
-            cn.field_a[13] = lj.a(var2);
+            cn.field_a[13] = lj.a(var2, false);
             break L44;
           } else {
             break L44;
@@ -469,8 +424,7 @@ final class hg {
         L45: {
           var2 = da.a((byte) 121, "achievement_criteria,14");
           if (null != var2) {
-            int discarded$146 = 0;
-            cn.field_a[14] = lj.a(var2);
+            cn.field_a[14] = lj.a(var2, false);
             break L45;
           } else {
             break L45;
@@ -479,8 +433,7 @@ final class hg {
         L46: {
           var2 = da.a((byte) 115, "achievement_criteria,15");
           if (null != var2) {
-            int discarded$147 = 0;
-            cn.field_a[15] = lj.a(var2);
+            cn.field_a[15] = lj.a(var2, false);
             break L46;
           } else {
             break L46;
@@ -489,8 +442,7 @@ final class hg {
         L47: {
           var2 = da.a((byte) -48, "achievement_criteria,16");
           if (null != var2) {
-            int discarded$148 = 0;
-            cn.field_a[16] = lj.a(var2);
+            cn.field_a[16] = lj.a(var2, false);
             break L47;
           } else {
             break L47;
@@ -501,16 +453,14 @@ final class hg {
           if (null == var2) {
             break L48;
           } else {
-            int discarded$149 = 0;
-            m.field_n[0] = lj.a(var2);
+            m.field_n[0] = lj.a(var2, false);
             break L48;
           }
         }
         L49: {
           var2 = da.a((byte) -71, "powerup_descriptions,1");
           if (null != var2) {
-            int discarded$150 = 0;
-            m.field_n[1] = lj.a(var2);
+            m.field_n[1] = lj.a(var2, false);
             break L49;
           } else {
             break L49;
@@ -521,16 +471,14 @@ final class hg {
           if (var2 == null) {
             break L50;
           } else {
-            int discarded$151 = 0;
-            m.field_n[2] = lj.a(var2);
+            m.field_n[2] = lj.a(var2, false);
             break L50;
           }
         }
         L51: {
           var2 = da.a((byte) 105, "powerup_descriptions,4");
           if (null != var2) {
-            int discarded$152 = 0;
-            m.field_n[4] = lj.a(var2);
+            m.field_n[4] = lj.a(var2, false);
             break L51;
           } else {
             break L51;
@@ -539,8 +487,7 @@ final class hg {
         L52: {
           var2 = da.a((byte) -114, "powerup_descriptions,5");
           if (null != var2) {
-            int discarded$153 = 0;
-            m.field_n[5] = lj.a(var2);
+            m.field_n[5] = lj.a(var2, false);
             break L52;
           } else {
             break L52;
@@ -549,8 +496,7 @@ final class hg {
         L53: {
           var2 = da.a((byte) 112, "powerup_descriptions,6");
           if (null != var2) {
-            int discarded$154 = 0;
-            m.field_n[6] = lj.a(var2);
+            m.field_n[6] = lj.a(var2, false);
             break L53;
           } else {
             break L53;
@@ -559,8 +505,7 @@ final class hg {
         L54: {
           var2 = da.a((byte) -100, "powerup_descriptions,7");
           if (var2 != null) {
-            int discarded$155 = 0;
-            m.field_n[7] = lj.a(var2);
+            m.field_n[7] = lj.a(var2, false);
             break L54;
           } else {
             break L54;
@@ -569,8 +514,7 @@ final class hg {
         L55: {
           var2 = da.a((byte) 119, "powerup_descriptions,8");
           if (var2 != null) {
-            int discarded$156 = 0;
-            m.field_n[8] = lj.a(var2);
+            m.field_n[8] = lj.a(var2, false);
             break L55;
           } else {
             break L55;
@@ -581,8 +525,7 @@ final class hg {
           if (var2 == null) {
             break L56;
           } else {
-            int discarded$157 = 0;
-            m.field_n[9] = lj.a(var2);
+            m.field_n[9] = lj.a(var2, false);
             break L56;
           }
         }
@@ -591,16 +534,14 @@ final class hg {
           if (var2 == null) {
             break L57;
           } else {
-            int discarded$158 = 0;
-            m.field_n[18] = lj.a(var2);
+            m.field_n[18] = lj.a(var2, false);
             break L57;
           }
         }
         L58: {
           var2 = da.a((byte) -74, "surface_descriptions,0");
           if (null != var2) {
-            int discarded$159 = 0;
-            ga.field_d[0] = lj.a(var2);
+            ga.field_d[0] = lj.a(var2, false);
             break L58;
           } else {
             break L58;
@@ -611,8 +552,7 @@ final class hg {
           if (var2 == null) {
             break L59;
           } else {
-            int discarded$160 = 0;
-            ga.field_d[1] = lj.a(var2);
+            ga.field_d[1] = lj.a(var2, false);
             break L59;
           }
         }
@@ -621,16 +561,14 @@ final class hg {
           if (null == var2) {
             break L60;
           } else {
-            int discarded$161 = 0;
-            ga.field_d[2] = lj.a(var2);
+            ga.field_d[2] = lj.a(var2, false);
             break L60;
           }
         }
         L61: {
           var2 = da.a((byte) -119, "surface_descriptions,3");
           if (var2 != null) {
-            int discarded$162 = 0;
-            ga.field_d[3] = lj.a(var2);
+            ga.field_d[3] = lj.a(var2, false);
             break L61;
           } else {
             break L61;
@@ -641,8 +579,7 @@ final class hg {
           if (null == var2) {
             break L62;
           } else {
-            int discarded$163 = 0;
-            ga.field_d[4] = lj.a(var2);
+            ga.field_d[4] = lj.a(var2, false);
             break L62;
           }
         }
@@ -651,8 +588,7 @@ final class hg {
           if (null == var2) {
             break L63;
           } else {
-            int discarded$164 = 0;
-            ga.field_d[5] = lj.a(var2);
+            ga.field_d[5] = lj.a(var2, false);
             break L63;
           }
         }
@@ -661,16 +597,14 @@ final class hg {
           if (null == var2) {
             break L64;
           } else {
-            int discarded$165 = 0;
-            vd.field_a = lj.a(var2);
+            vd.field_a = lj.a(var2, false);
             break L64;
           }
         }
         L65: {
           var2 = da.a((byte) 117, "gyro_warning");
           if (var2 != null) {
-            int discarded$166 = 0;
-            hl.field_c = lj.a(var2);
+            hl.field_c = lj.a(var2, false);
             break L65;
           } else {
             break L65;
@@ -681,8 +615,7 @@ final class hg {
           if (var2 == null) {
             break L66;
           } else {
-            int discarded$167 = 0;
-            eq.field_c = lj.a(var2);
+            eq.field_c = lj.a(var2, false);
             break L66;
           }
         }
@@ -691,8 +624,7 @@ final class hg {
           if (var2 == null) {
             break L67;
           } else {
-            int discarded$168 = 0;
-            vp.field_G = lj.a(var2);
+            vp.field_G = lj.a(var2, false);
             break L67;
           }
         }
@@ -701,8 +633,7 @@ final class hg {
           if (null == var2) {
             break L68;
           } else {
-            int discarded$169 = 0;
-            q.field_i = lj.a(var2);
+            q.field_i = lj.a(var2, false);
             break L68;
           }
         }
@@ -711,16 +642,14 @@ final class hg {
           if (var2 == null) {
             break L69;
           } else {
-            int discarded$170 = 0;
-            String discarded$171 = lj.a(var2);
+            String discarded$1 = lj.a(var2, false);
             break L69;
           }
         }
         L70: {
           var2 = da.a((byte) -93, "torquing_bonus");
           if (var2 != null) {
-            int discarded$172 = 0;
-            fh.field_s = lj.a(var2);
+            fh.field_s = lj.a(var2, false);
             break L70;
           } else {
             break L70;
@@ -731,8 +660,7 @@ final class hg {
           if (var2 == null) {
             break L71;
           } else {
-            int discarded$173 = 0;
-            qj.field_b = lj.a(var2);
+            qj.field_b = lj.a(var2, false);
             break L71;
           }
         }
@@ -741,8 +669,7 @@ final class hg {
           if (null == var2) {
             break L72;
           } else {
-            int discarded$174 = 0;
-            kk.field_q = lj.a(var2);
+            kk.field_q = lj.a(var2, false);
             break L72;
           }
         }
@@ -751,8 +678,7 @@ final class hg {
           if (null == var2) {
             break L73;
           } else {
-            int discarded$175 = 0;
-            pc.field_n = lj.a(var2);
+            pc.field_n = lj.a(var2, false);
             break L73;
           }
         }
@@ -761,16 +687,14 @@ final class hg {
           if (null == var2) {
             break L74;
           } else {
-            int discarded$176 = 0;
-            ka.field_l = lj.a(var2);
+            ka.field_l = lj.a(var2, false);
             break L74;
           }
         }
         L75: {
           var2 = da.a((byte) 119, "highscores_all");
           if (null != var2) {
-            int discarded$177 = 0;
-            ae.field_lb = lj.a(var2);
+            ae.field_lb = lj.a(var2, false);
             break L75;
           } else {
             break L75;
@@ -779,8 +703,7 @@ final class hg {
         L76: {
           var2 = da.a((byte) -55, "highscores_mine");
           if (var2 != null) {
-            int discarded$178 = 0;
-            qe.field_a = lj.a(var2);
+            qe.field_a = lj.a(var2, false);
             break L76;
           } else {
             break L76;
@@ -789,8 +712,7 @@ final class hg {
         L77: {
           var2 = da.a((byte) -64, "highscores_besteach");
           if (var2 != null) {
-            int discarded$179 = 0;
-            ai.field_m = lj.a(var2);
+            ai.field_m = lj.a(var2, false);
             break L77;
           } else {
             break L77;
@@ -801,8 +723,7 @@ final class hg {
           if (null == var2) {
             break L78;
           } else {
-            int discarded$180 = 0;
-            ro.field_t = lj.a(var2);
+            ro.field_t = lj.a(var2, false);
             break L78;
           }
         }
@@ -811,16 +732,14 @@ final class hg {
           if (var2 == null) {
             break L79;
           } else {
-            int discarded$181 = 0;
-            hh.field_c = lj.a(var2);
+            hh.field_c = lj.a(var2, false);
             break L79;
           }
         }
         L80: {
           var2 = da.a((byte) -84, "graphics_high");
           if (null != var2) {
-            int discarded$182 = 0;
-            wf.field_q = lj.a(var2);
+            wf.field_q = lj.a(var2, false);
             break L80;
           } else {
             break L80;
@@ -829,8 +748,7 @@ final class hg {
         L81: {
           var2 = da.a((byte) 123, "soundcolon");
           if (null != var2) {
-            int discarded$183 = 0;
-            vb.field_e = lj.a(var2);
+            vb.field_e = lj.a(var2, false);
             break L81;
           } else {
             break L81;
@@ -841,16 +759,14 @@ final class hg {
           if (var2 == null) {
             break L82;
           } else {
-            int discarded$184 = 0;
-            am.field_o = lj.a(var2);
+            am.field_o = lj.a(var2, false);
             break L82;
           }
         }
         L83: {
           var2 = da.a((byte) -124, "graphicscolonspace");
           if (var2 != null) {
-            int discarded$185 = 0;
-            l.field_a = lj.a(var2);
+            l.field_a = lj.a(var2, false);
             break L83;
           } else {
             break L83;
@@ -859,8 +775,7 @@ final class hg {
         L84: {
           var2 = da.a((byte) -67, "nursery_slopes");
           if (var2 != null) {
-            int discarded$186 = 0;
-            vk.field_x = lj.a(var2);
+            vk.field_x = lj.a(var2, false);
             break L84;
           } else {
             break L84;
@@ -869,8 +784,7 @@ final class hg {
         L85: {
           var2 = da.a((byte) 122, "squared_away");
           if (null != var2) {
-            int discarded$187 = 0;
-            to.field_r = lj.a(var2);
+            to.field_r = lj.a(var2, false);
             break L85;
           } else {
             break L85;
@@ -881,16 +795,14 @@ final class hg {
           if (null == var2) {
             break L86;
           } else {
-            int discarded$188 = 0;
-            mi.field_u = lj.a(var2);
+            mi.field_u = lj.a(var2, false);
             break L86;
           }
         }
         L87: {
           var2 = da.a((byte) 121, "straight_and_narrow");
           if (null != var2) {
-            int discarded$189 = 0;
-            bq.field_b = lj.a(var2);
+            bq.field_b = lj.a(var2, false);
             break L87;
           } else {
             break L87;
@@ -901,8 +813,7 @@ final class hg {
           if (var2 == null) {
             break L88;
           } else {
-            int discarded$190 = 0;
-            un.field_f = lj.a(var2);
+            un.field_f = lj.a(var2, false);
             break L88;
           }
         }
@@ -911,8 +822,7 @@ final class hg {
           if (var2 == null) {
             break L89;
           } else {
-            int discarded$191 = 0;
-            w.field_gb = lj.a(var2);
+            w.field_gb = lj.a(var2, false);
             break L89;
           }
         }
@@ -921,16 +831,14 @@ final class hg {
           if (null == var2) {
             break L90;
           } else {
-            int discarded$192 = 0;
-            nc.field_b = lj.a(var2);
+            nc.field_b = lj.a(var2, false);
             break L90;
           }
         }
         L91: {
           var2 = da.a((byte) -29, "leap_of_faith");
           if (var2 != null) {
-            int discarded$193 = 0;
-            bl.field_e = lj.a(var2);
+            bl.field_e = lj.a(var2, false);
             break L91;
           } else {
             break L91;
@@ -941,16 +849,14 @@ final class hg {
           if (var2 == null) {
             break L92;
           } else {
-            int discarded$194 = 0;
-            qa.field_k[0] = lj.a(var2);
+            qa.field_k[0] = lj.a(var2, false);
             break L92;
           }
         }
         L93: {
           var2 = da.a((byte) -101, "mustlogin,1");
           if (null != var2) {
-            int discarded$195 = 0;
-            qa.field_k[1] = lj.a(var2);
+            qa.field_k[1] = lj.a(var2, false);
             break L93;
           } else {
             break L93;
@@ -961,16 +867,14 @@ final class hg {
           if (null == var2) {
             break L94;
           } else {
-            int discarded$196 = 0;
-            qa.field_k[2] = lj.a(var2);
+            qa.field_k[2] = lj.a(var2, false);
             break L94;
           }
         }
         L95: {
           var2 = da.a((byte) -26, "mustlogin,3");
           if (var2 != null) {
-            int discarded$197 = 0;
-            qa.field_k[3] = lj.a(var2);
+            qa.field_k[3] = lj.a(var2, false);
             break L95;
           } else {
             break L95;
@@ -979,8 +883,7 @@ final class hg {
         L96: {
           var2 = da.a((byte) 126, "mustlogin,4");
           if (var2 != null) {
-            int discarded$198 = 0;
-            qa.field_k[4] = lj.a(var2);
+            qa.field_k[4] = lj.a(var2, false);
             break L96;
           } else {
             break L96;
@@ -991,8 +894,7 @@ final class hg {
           if (var2 == null) {
             break L97;
           } else {
-            int discarded$199 = 0;
-            qa.field_k[5] = lj.a(var2);
+            qa.field_k[5] = lj.a(var2, false);
             break L97;
           }
         }
@@ -1001,16 +903,14 @@ final class hg {
           if (var2 == null) {
             break L98;
           } else {
-            int discarded$200 = 0;
-            qa.field_k[6] = lj.a(var2);
+            qa.field_k[6] = lj.a(var2, false);
             break L98;
           }
         }
         L99: {
           var2 = da.a((byte) -66, "mustlogin,7");
           if (var2 != null) {
-            int discarded$201 = 0;
-            qa.field_k[7] = lj.a(var2);
+            qa.field_k[7] = lj.a(var2, false);
             break L99;
           } else {
             break L99;
@@ -1019,21 +919,17 @@ final class hg {
         dn.field_i = null;
     }
 
-    public static void a() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void a(boolean param0) {
+        field_b = null;
+        field_f = null;
+        field_e = null;
+        if (param0) {
+            return;
+        }
         try {
-          L0: {
-            field_b = null;
-            field_f = null;
-            field_e = null;
             field_d = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "hg.B(" + false + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "hg.B(" + param0 + ')');
         }
     }
 
@@ -1071,6 +967,14 @@ final class hg {
                 if (param2 <= 0) {
                   break L1;
                 } else {
+                  L2: {
+                    if (!param0) {
+                      break L2;
+                    } else {
+                      field_e = null;
+                      break L2;
+                    }
+                  }
                   var5_int = param4[0].field_w;
                   var6 = param4[2].field_w;
                   var7 = param4[1].field_w;
@@ -1081,27 +985,27 @@ final class hg {
                   var8 = var5_int + param1;
                   var9 = -var6 + param1 - -param2;
                   param1 = var8;
-                  L2: while (true) {
-                    L3: {
-                      L4: {
+                  L3: while (true) {
+                    L4: {
+                      L5: {
                         if (~param1 <= ~var9) {
-                          break L4;
+                          break L5;
                         } else {
                           param4[1].d(param1, param3);
                           param1 = param1 + var7;
                           if (var10 != 0) {
-                            break L3;
+                            break L4;
                           } else {
                             if (var10 == 0) {
-                              continue L2;
+                              continue L3;
                             } else {
-                              break L4;
+                              break L5;
                             }
                           }
                         }
                       }
                       ph.a(lj.field_c);
-                      break L3;
+                      break L4;
                     }
                     break L0;
                   }
@@ -1112,10 +1016,10 @@ final class hg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var5 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var5;
-            stackOut_19_1 = new StringBuilder().append("hg.C(").append(false).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+            stackOut_19_1 = new StringBuilder().append("hg.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_22_0 = stackOut_19_0;
             stackIn_22_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -1127,7 +1031,7 @@ final class hg {
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
-              break L5;
+              break L6;
             } else {
               stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
@@ -1135,7 +1039,7 @@ final class hg {
               stackIn_23_0 = stackOut_20_0;
               stackIn_23_1 = stackOut_20_1;
               stackIn_23_2 = stackOut_20_2;
-              break L5;
+              break L6;
             }
           }
           throw rb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');

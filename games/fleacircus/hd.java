@@ -40,12 +40,10 @@ abstract class hd {
             }
           }
           L2: {
-            int discarded$2 = 45;
-            r.a(nj.field_b);
+            r.a(nj.field_b, 45);
             bl.b();
             gb.c();
-            int discarded$3 = -515966495;
-            mj.a();
+            mj.a(-515966495);
             if (256 > var5) {
               gb.g(0, 0, gb.field_d, gb.field_k, 0, -var5 + 256);
               break L2;
@@ -167,8 +165,7 @@ abstract class hd {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              int discarded$2 = -116;
-              var3 = hc.a();
+              var3 = hc.a((byte) -116);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -295,7 +292,7 @@ abstract class hd {
         return stackIn_18_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_h = null;
         field_e = null;
@@ -305,7 +302,7 @@ abstract class hd {
 
     abstract byte[] b(int param0);
 
-    final static void a(int param0, ei param1, int param2, int param3, int param4, ce param5, java.awt.Component param6) {
+    final static void a(int param0, ei param1, int param2, int param3, int param4, ce param5, java.awt.Component param6, boolean param7) {
         la.a(22050, true, 10);
         db.field_J = la.a(param5, param6, 0, 22050);
         try {

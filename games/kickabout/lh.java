@@ -65,8 +65,7 @@ final class lh extends tm {
         try {
           L0: {
             var6 = (CharSequence) (Object) param2;
-            int discarded$1 = -9907;
-            if (ef.a(var6)) {
+            if (ef.a(var6, -9907)) {
               if (ts.field_d != 2) {
                 stackOut_5_0 = ss.field_h;
                 stackIn_6_0 = stackOut_5_0;
@@ -159,7 +158,7 @@ final class lh extends tm {
         return (String) (Object) stackIn_26_0;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_A = null;
         field_C = null;
         field_F = null;
@@ -235,7 +234,7 @@ final class lh extends tm {
         return stackIn_4_0;
     }
 
-    final static bc a(iw param0) {
+    final static bc a(iw param0, int param1) {
         bc var2 = null;
         RuntimeException var2_ref = null;
         bc stackIn_1_0 = null;
