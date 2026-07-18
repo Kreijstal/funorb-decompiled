@@ -140,7 +140,7 @@ final class ir {
               break L0;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 13588 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + 13588 + ',' + param2 + ')');
         }
     }
 

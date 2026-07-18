@@ -80,7 +80,7 @@ final class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var3, "ib.A(" + -122 + 44 + param1 + 44 + param2 + 41);
+          throw wn.a((Throwable) (Object) var3, "ib.A(" + -122 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

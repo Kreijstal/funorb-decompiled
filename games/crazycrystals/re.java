@@ -630,7 +630,7 @@ final class re extends ue {
         try {
             ak.a((byte) 61, 9 + (param0.field_a + ((re) this).field_r), param0.field_d, param2, param1);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "re.L(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + 1 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "re.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + true + ')');
         }
     }
 
@@ -727,7 +727,7 @@ final class re extends ue {
           L3: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2_ref2;
-            stackOut_22_1 = new StringBuilder().append("re.K(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("re.K(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -750,7 +750,7 @@ final class re extends ue {
               break L3;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 

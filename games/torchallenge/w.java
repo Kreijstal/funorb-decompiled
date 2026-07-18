@@ -66,7 +66,7 @@ class w extends da {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("w.AC(").append(-15).append(44);
+            stackOut_9_1 = new StringBuilder().append("w.AC(").append(-15).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -89,7 +89,7 @@ class w extends da {
               break L3;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ')');
         }
         return stackIn_8_0;
     }
@@ -131,7 +131,7 @@ class w extends da {
           L0: {
             var4 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4;
-            stackOut_4_1 = new StringBuilder().append("w.CC(").append(61).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_4_1 = new StringBuilder().append("w.CC(").append(61).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -154,7 +154,7 @@ class w extends da {
               break L0;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -237,7 +237,7 @@ class w extends da {
                   L4: while (true) {
                     if (var5 >= gi.field_f.length) {
                       if (var2_ref != null) {
-                        int discarded$4 = ek.field_G.a("Screenshot(s) " + var2_ref + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$4 = ek.field_G.a("Screenshot(s) " + (String) var2_ref + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L3;
                       } else {
                         break L3;
@@ -276,7 +276,7 @@ class w extends da {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "w.BC(" + param0 + 41);
+          throw oj.a((Throwable) (Object) var1, "w.BC(" + param0 + ')');
         }
     }
 

@@ -82,7 +82,7 @@ final class vr {
                   break L0;
                 }
               }
-              throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 23607 + 41);
+              throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 23607 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -115,7 +115,7 @@ final class vr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "vr.B(" + -2 + 41);
+          throw nb.a((Throwable) (Object) var1, "vr.B(" + -2 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class vr {
         if (param1 == 2) {
             var3 = (Object) (Object) "street";
         }
-        String var5 = var3 + "_surface" + param0;
+        String var5 = (String) var3 + "_surface" + param0;
         String var6 = var5;
         if (!bo.field_Cb.a(false, var6)) {
             return bo.field_Cb.a(var6, -16248);

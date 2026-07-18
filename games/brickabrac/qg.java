@@ -111,7 +111,7 @@ abstract class qg extends ke {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -353,7 +353,7 @@ abstract class qg extends ke {
               break L16;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + 44 + 1 + 41);
+          throw qb.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + ',' + 1 + ')');
         }
         return stackIn_47_0;
     }
@@ -1177,7 +1177,7 @@ abstract class qg extends ke {
           L8: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var6_ref;
-            stackOut_20_1 = new StringBuilder().append("qg.LA(").append(103).append(44);
+            stackOut_20_1 = new StringBuilder().append("qg.LA(").append(103).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -1200,7 +1200,7 @@ abstract class qg extends ke {
               break L8;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 44 + 640 + 44 + 480 + 41);
+          throw qb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param2 + ',' + 640 + ',' + 480 + ')');
         }
     }
 
@@ -1293,7 +1293,7 @@ abstract class qg extends ke {
               break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+          throw qb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
         }
         return stackIn_7_0;
     }

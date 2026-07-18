@@ -96,7 +96,7 @@ final class sp implements Iterator {
           }
           L2: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44).append(0).append(44).append(param3).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',').append(0).append(',').append(param3).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -119,7 +119,7 @@ final class sp implements Iterator {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -168,7 +168,7 @@ final class sp implements Iterator {
             ((sp) this).field_a = null;
             ((sp) this).field_f = ((sp) this).field_c.field_f.field_s;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "sp.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "sp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

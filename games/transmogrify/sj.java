@@ -183,7 +183,7 @@ final class sj extends wf {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var4;
-            stackOut_9_1 = new StringBuilder().append("sj.G(").append(param0).append(44).append(param1).append(44);
+            stackOut_9_1 = new StringBuilder().append("sj.G(").append(param0).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -206,7 +206,7 @@ final class sj extends wf {
               break L3;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 
@@ -378,7 +378,7 @@ final class sj extends wf {
             int discarded$0 = var5.d(var4, -1323322296);
             var5.a((byte) -42, var5.field_h + -var4);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "sj.D(" + -7812 + 44 + 5 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "sj.D(" + -7812 + ',' + 5 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

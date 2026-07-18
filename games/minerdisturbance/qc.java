@@ -76,7 +76,7 @@ final class qc implements Iterable {
             }
             param1.field_t.field_q = param1;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "qc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "qc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

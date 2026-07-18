@@ -39,7 +39,7 @@ final class wh {
             ((wh) this).field_f = param1;
             ((wh) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class wh {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -122 + 41);
+          throw vk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -122 + ')');
         }
         return stackIn_4_0;
     }

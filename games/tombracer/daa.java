@@ -90,7 +90,7 @@ final class daa {
         try {
             ((daa) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "daa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "daa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

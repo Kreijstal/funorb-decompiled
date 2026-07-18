@@ -87,7 +87,7 @@ final class pwa implements ntb {
                 break L4;
               } else {
                 if (var5.field_e.a((byte) 115, (tv) (Object) var5.field_e)) {
-                  iva.a(-6940, "PlayerJoin join has changed. before=" + var5.field_e + ", now=" + var5.field_e);
+                  iva.a(-6940, "PlayerJoin join has changed. before=" + (Object) (Object) var5.field_e + ", now=" + (Object) (Object) var5.field_e);
                   var4 = 1;
                   break L4;
                 } else {
@@ -103,7 +103,7 @@ final class pwa implements ntb {
                 if (!var5.field_d.a((byte) -51, (tv) (Object) var5.field_d)) {
                   break L5;
                 } else {
-                  iva.a(-6940, "PlayerLeave leave has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+                  iva.a(-6940, "PlayerLeave leave has changed. before=" + (Object) (Object) var5.field_d + ", now=" + (Object) (Object) var5.field_d);
                   var4 = 1;
                   break L5;
                 }
@@ -118,7 +118,7 @@ final class pwa implements ntb {
                   break L6;
                 } else {
                   var4 = 1;
-                  iva.a(-6940, "PlayerReady ready has changed. before=" + var5.field_f + ", now=" + var5.field_f);
+                  iva.a(-6940, "PlayerReady ready has changed. before=" + (Object) (Object) var5.field_f + ", now=" + (Object) (Object) var5.field_f);
                   break L6;
                 }
               }
@@ -204,7 +204,7 @@ final class pwa implements ntb {
               break L11;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + ',' + param1 + ')');
         }
     }
 
@@ -408,7 +408,7 @@ final class pwa implements ntb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ')');
         }
     }
 
@@ -508,7 +508,7 @@ final class pwa implements ntb {
           L7: {
             var3 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var3;
-            stackOut_22_1 = new StringBuilder().append("pwa.D(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("pwa.D(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -531,12 +531,12 @@ final class pwa implements ntb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 
     public final String toString() {
-        return "join=" + ((pwa) this).field_e + ", leave=" + ((pwa) this).field_d + ", ready=" + ((pwa) this).field_f + ", event_cancellation=" + ((pwa) this).field_c;
+        return "join=" + (Object) (Object) ((pwa) this).field_e + ", leave=" + (Object) (Object) ((pwa) this).field_d + ", ready=" + (Object) (Object) ((pwa) this).field_f + ", event_cancellation=" + ((pwa) this).field_c;
     }
 
     public final boolean a(byte param0, tv param1) {
@@ -650,7 +650,7 @@ final class pwa implements ntb {
           L7: {
             var3 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var3;
-            stackOut_22_1 = new StringBuilder().append("pwa.C(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("pwa.C(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -673,7 +673,7 @@ final class pwa implements ntb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
         return stackIn_21_0 != 0;
     }
@@ -778,7 +778,7 @@ final class pwa implements ntb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ')');
         }
     }
 

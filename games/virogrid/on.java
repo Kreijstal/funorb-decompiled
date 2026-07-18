@@ -28,7 +28,7 @@ final class on {
             pa.field_o.a(24, -44 + jj.field_a.field_ub, jj.field_a.field_K - 48, (byte) -71, 16);
             nk.field_H.a(120, 24, 80, (byte) -101, -24 + (-20 + jj.field_a.field_ub));
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "on.C(" + 106 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "on.C(" + 106 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

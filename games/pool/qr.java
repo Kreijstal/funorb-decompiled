@@ -51,7 +51,7 @@ final class qr {
         try {
             ((qr) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "qr.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "qr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

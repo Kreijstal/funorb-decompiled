@@ -64,7 +64,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1_ref, "vf.E(" + -37 + 41);
+          throw aa.a((Throwable) (Object) var1_ref, "vf.E(" + -37 + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2_ref, "vf.A(" + -3 + 44 + param1 + 41);
+          throw aa.a((Throwable) (Object) var2_ref, "vf.A(" + -3 + ',' + param1 + ')');
         }
         return stackIn_24_0 != 0;
     }
@@ -405,7 +405,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var3, "vf.B(" + param0 + 44 + 0 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) var3, "vf.B(" + param0 + ',' + 0 + ',' + param2 + ')');
         }
     }
 
@@ -492,7 +492,7 @@ final class vf {
                   break L4;
                 }
               }
-              throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 3279 + 41);
+              throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 3279 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

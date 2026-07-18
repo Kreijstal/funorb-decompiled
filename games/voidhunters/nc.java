@@ -7,7 +7,7 @@ final class nc {
 
     public final String toString() {
         if (!(!((nc) this).field_a)) {
-            return sna.a(((nc) this).field_b, (byte) 107) + "{" + ((nc) this).field_b + "}";
+            return (Object) (Object) sna.a(((nc) this).field_b, (byte) 107) + "{" + ((nc) this).field_b + "}";
         }
         if (!(((nc) this).field_b != null)) {
             return "null";
@@ -164,7 +164,7 @@ final class nc {
             ((nc) this).field_b = param0;
             ((nc) this).field_a = false;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "nc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "nc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

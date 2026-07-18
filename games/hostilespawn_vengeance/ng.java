@@ -165,7 +165,7 @@ final class ng extends am {
           }
           L4: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -190,7 +190,7 @@ final class ng extends am {
           }
           L5: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -215,7 +215,7 @@ final class ng extends am {
           }
           L6: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param5).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param5).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -238,7 +238,7 @@ final class ng extends am {
               break L6;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
         return stackIn_12_0 != 0;
     }
@@ -514,7 +514,7 @@ final class ng extends am {
           L15: {
             var5 = decompiledCaughtException;
             stackOut_51_0 = (RuntimeException) var5;
-            stackOut_51_1 = new StringBuilder().append("ng.B(").append(78).append(44);
+            stackOut_51_1 = new StringBuilder().append("ng.B(").append(78).append(',');
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
@@ -539,7 +539,7 @@ final class ng extends am {
           }
           L16: {
             stackOut_54_0 = (RuntimeException) (Object) stackIn_54_0;
-            stackOut_54_1 = ((StringBuilder) (Object) stackIn_54_1).append(stackIn_54_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_54_1 = ((StringBuilder) (Object) stackIn_54_1).append(stackIn_54_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_56_0 = stackOut_54_0;
             stackIn_56_1 = stackOut_54_1;
             stackIn_55_0 = stackOut_54_0;
@@ -562,7 +562,7 @@ final class ng extends am {
               break L16;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + ')');
         }
     }
 

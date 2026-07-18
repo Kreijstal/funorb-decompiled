@@ -58,7 +58,7 @@ final class ki {
               break L0;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 6 + 44 + 160 + 41);
+          throw oj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 6 + ',' + 160 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class ki {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("ki.A(").append(-18).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("ki.A(").append(-18).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -140,7 +140,7 @@ final class ki {
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }

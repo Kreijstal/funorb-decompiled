@@ -92,7 +92,7 @@ final class jh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1_ref, "jh.B(" + 103 + 41);
+          throw sh.a((Throwable) (Object) var1_ref, "jh.B(" + 103 + ')');
         }
         return stackIn_18_0 != 0;
     }
@@ -510,7 +510,7 @@ final class jh {
               break L35;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_101_0, stackIn_101_2 + 44 + -80 + 41);
+          throw sh.a((Throwable) (Object) stackIn_101_0, stackIn_101_2 + ',' + -80 + ')');
         }
     }
 
@@ -535,7 +535,7 @@ final class jh {
             int discarded$0 = -80;
             this.a(param0);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "jh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "jh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

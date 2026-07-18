@@ -125,7 +125,7 @@ final class kab extends bob {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var6;
-            stackOut_21_1 = new StringBuilder().append("kab.A(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("kab.A(").append(param0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -148,7 +148,7 @@ final class kab extends bob {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class kab extends bob {
             ((kab) this).field_d = loa.field_o;
             ((kab) this).field_q = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "kab.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "kab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -129,7 +129,7 @@ final class qh {
           L5: {
             var6_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var6_ref;
-            stackOut_12_1 = new StringBuilder().append("qh.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("qh.C(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -152,7 +152,7 @@ final class qh {
               break L5;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw fa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class qh {
             var4 = new cj[]{param1, pa.field_O, (cj) (Object) gl.field_L};
             ((qh) this).field_c = new dc(0L, kf.field_i, var3, aa.field_l, var4, 0);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "qh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

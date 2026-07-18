@@ -398,7 +398,7 @@ final class ed {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var2, "ed.E(" + 89 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) var2, "ed.E(" + 89 + ',' + param1 + ')');
         }
     }
 
@@ -413,7 +413,7 @@ final class ed {
             int discarded$0 = -82;
             this.b();
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "ed.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "ed.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

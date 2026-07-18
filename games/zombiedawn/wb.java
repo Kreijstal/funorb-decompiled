@@ -220,7 +220,7 @@ abstract class wb extends ke {
               break L8;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 640 + 44 + -17761 + 44 + 480 + 44 + param4 + 41);
+          throw sh.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 640 + ',' + -17761 + ',' + 480 + ',' + param4 + ')');
         }
     }
 
@@ -1174,7 +1174,7 @@ abstract class wb extends ke {
         try {
             this.a(param2, 640, -17761, 480, param0);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "wb.R(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "wb.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

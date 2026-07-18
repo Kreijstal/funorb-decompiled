@@ -102,7 +102,7 @@ final class fi extends oh implements ag {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var3;
-            stackOut_29_1 = new StringBuilder().append("fi.B(").append(param0).append(44).append(-11).append(44);
+            stackOut_29_1 = new StringBuilder().append("fi.B(").append(param0).append(',').append(-11).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -125,7 +125,7 @@ final class fi extends oh implements ag {
               break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ')');
         }
         return stackIn_28_0;
     }
@@ -198,7 +198,7 @@ final class fi extends oh implements ag {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("fi.C(").append(27).append(44);
+            stackOut_2_1 = new StringBuilder().append("fi.C(").append(27).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -223,7 +223,7 @@ final class fi extends oh implements ag {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -246,7 +246,7 @@ final class fi extends oh implements ag {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -256,7 +256,7 @@ final class fi extends oh implements ag {
             ((fi) this).field_k = param1;
             ((fi) this).field_l = (int)(0.5 + Math.sqrt((double)((-param0.field_A + param1.field_A) * (-param0.field_A + param1.field_A) + (param1.field_S + -param0.field_S) * (-param0.field_S + param1.field_S))));
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "fi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "fi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -324,7 +324,7 @@ final class fi extends oh implements ag {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

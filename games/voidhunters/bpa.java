@@ -29,7 +29,7 @@ final class bpa implements wwa {
         try {
             ((bpa) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bpa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "bpa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class bpa implements wwa {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var6;
-            stackOut_9_1 = new StringBuilder().append("bpa.A(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("bpa.A(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -123,7 +123,7 @@ final class bpa implements wwa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

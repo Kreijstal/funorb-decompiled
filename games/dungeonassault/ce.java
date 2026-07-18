@@ -202,7 +202,7 @@ final class ce extends kl {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

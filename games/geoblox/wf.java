@@ -188,7 +188,7 @@ abstract class wf extends ch {
           }
           L4: {
             stackOut_13_0 = stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param1).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -211,7 +211,7 @@ abstract class wf extends ch {
               break L4;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_9_0;
     }
@@ -278,7 +278,7 @@ abstract class wf extends ch {
         try {
             this.a(480, param1, param0, (byte) 81, param2);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "wf.EA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "wf.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -1505,7 +1505,7 @@ abstract class wf extends ch {
           L8: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var6_ref;
-            stackOut_20_1 = new StringBuilder().append("wf.UA(").append(480).append(44);
+            stackOut_20_1 = new StringBuilder().append("wf.UA(").append(480).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -1528,7 +1528,7 @@ abstract class wf extends ch {
               break L8;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 44 + 81 + 44 + param4 + 41);
+          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param2 + ',' + 81 + ',' + param4 + ')');
         }
     }
 

@@ -546,9 +546,9 @@ abstract class hc extends wt {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$7 = field_n.append(60);
+                        StringBuilder discarded$7 = field_n.append('<');
                         StringBuilder discarded$8 = field_n.append(var15);
-                        StringBuilder discarded$9 = field_n.append(62);
+                        StringBuilder discarded$9 = field_n.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -736,7 +736,7 @@ abstract class hc extends wt {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$11 = field_n.append(var14);
+                        StringBuilder discarded$11 = field_n.append((char) var14);
                         var14 = (char)(ae.a((char) var14, 68) & 255);
                         var4 = var4 + ((hc) this).field_p[var14];
                         if (((hc) this).field_L == null) {

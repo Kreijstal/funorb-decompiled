@@ -80,7 +80,7 @@ abstract class hf {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

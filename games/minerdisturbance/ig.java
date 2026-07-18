@@ -36,7 +36,7 @@ final class ig {
             int discarded$0 = var3.e(-128, var4);
             var3.g(-1, var3.field_o - var4);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "ig.A(" + param0 + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "ig.A(" + param0 + ',' + 1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

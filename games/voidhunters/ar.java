@@ -186,7 +186,7 @@ abstract class ar {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var5;
-            stackOut_16_1 = new StringBuilder().append("ar.J(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_16_1 = new StringBuilder().append("ar.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -209,7 +209,7 @@ abstract class ar {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
         return stackIn_15_0;
     }

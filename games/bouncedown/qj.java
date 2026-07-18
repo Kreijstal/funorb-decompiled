@@ -116,7 +116,7 @@ final class qj {
               }
               L5: {
                 stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
@@ -139,7 +139,7 @@ final class qj {
                   break L5;
                 }
               }
-              throw ii.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 41);
+              throw ii.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -192,7 +192,7 @@ final class qj {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("qj.D(").append(0).append(44);
+            stackOut_2_1 = new StringBuilder().append("qj.D(").append(false).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -215,7 +215,7 @@ final class qj {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }

@@ -51,7 +51,7 @@ final class me extends hf {
             lc.field_b = (var2_int & 1) << 16;
             lc.field_b = lc.field_b + param1.b(true);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "me.B(" + 116 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "me.B(" + 116 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

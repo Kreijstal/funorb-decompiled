@@ -97,7 +97,7 @@ final class ea extends sl {
                         ((ea) this).field_v = uk.a(var28);
                         break L0;
                       } else {
-                        StringBuilder discarded$17 = var9.append(var10);
+                        StringBuilder discarded$17 = var9.append((char) var10);
                         continue L4;
                       }
                     }
@@ -154,7 +154,7 @@ final class ea extends sl {
           L8: {
             var3 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var3;
-            stackOut_22_1 = new StringBuilder().append("ea.<init>(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("ea.<init>(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -177,7 +177,7 @@ final class ea extends sl {
               break L8;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class ea extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1, "ea.O(" + 0 + 41);
+          throw sl.a((Throwable) (Object) var1, "ea.O(" + false + ')');
         }
     }
 

@@ -76,7 +76,7 @@ final class ae implements Runnable {
           L2: {
             var5_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var5_ref;
-            stackOut_4_1 = new StringBuilder().append("ae.F(").append(param0).append(44).append(param1).append(44);
+            stackOut_4_1 = new StringBuilder().append("ae.F(").append(param0).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -101,7 +101,7 @@ final class ae implements Runnable {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -124,7 +124,7 @@ final class ae implements Runnable {
               break L3;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -237,7 +237,7 @@ final class ae implements Runnable {
               break L4;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 44 + param2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_17_0;
     }
@@ -321,7 +321,7 @@ final class ae implements Runnable {
           L1: {
             var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3_ref2;
-            stackOut_9_1 = new StringBuilder().append("ae.D(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("ae.D(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -344,7 +344,7 @@ final class ae implements Runnable {
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 
@@ -394,7 +394,7 @@ final class ae implements Runnable {
           L2: {
             var4_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4_ref;
-            stackOut_4_1 = new StringBuilder().append("ae.A(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("ae.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -417,7 +417,7 @@ final class ae implements Runnable {
               break L2;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
@@ -507,7 +507,7 @@ final class ae implements Runnable {
             var2 = sl.a(param1, "jagex logo2.packvorbis", "");
             sh discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ae.E(" + 26197 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ae.E(" + 26197 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -526,7 +526,7 @@ final class ae implements Runnable {
             }
             ((ae) this).field_c = (Thread) var2.field_e;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ae.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ae.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

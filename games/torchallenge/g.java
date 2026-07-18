@@ -131,7 +131,7 @@ final class g implements j {
               }
               L6: {
                 stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(75).append(44);
+                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(75).append(',');
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
@@ -154,7 +154,7 @@ final class g implements j {
                   break L6;
                 }
               }
-              throw oj.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+              throw oj.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
             }
             return (String) (Object) stackIn_12_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -291,7 +291,7 @@ final class g implements j {
               break L6;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw oj.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -306,7 +306,7 @@ final class g implements j {
             ((g) this).field_d = param5;
             ((g) this).field_e = param3;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "g.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

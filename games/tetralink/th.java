@@ -160,7 +160,7 @@ abstract class th {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2;
-            stackOut_14_1 = new StringBuilder().append("th.N(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("th.N(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -183,7 +183,7 @@ abstract class th {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0;
     }

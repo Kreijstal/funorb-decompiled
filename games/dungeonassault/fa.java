@@ -161,7 +161,7 @@ final class fa extends ne {
           L10: {
             var6 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var6;
-            stackOut_30_1 = new StringBuilder().append("fa.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_30_1 = new StringBuilder().append("fa.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -184,7 +184,7 @@ final class fa extends ne {
               break L10;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
         }
         return stackIn_29_0;
     }
@@ -207,7 +207,7 @@ final class fa extends ne {
             ((fa) this).field_o = param1;
             ((fa) this).field_n.h(oo.field_d * ((fa) this).field_l - -128 >> 8);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "fa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

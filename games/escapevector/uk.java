@@ -29,7 +29,7 @@ final class uk {
         try {
             gi.a(-1 + param1.length, param2, 1, 0, param1);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "uk.B(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "uk.B(" + -1 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -373,7 +373,7 @@ final class uk {
           L17: {
             var8 = decompiledCaughtException;
             stackOut_53_0 = (RuntimeException) var8;
-            stackOut_53_1 = new StringBuilder().append("uk.A(").append(param0).append(44).append(-16711760).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_53_1 = new StringBuilder().append("uk.A(").append(param0).append(',').append(-16711760).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_55_0 = stackOut_53_0;
             stackIn_55_1 = stackOut_53_1;
             stackIn_54_0 = stackOut_53_0;
@@ -396,7 +396,7 @@ final class uk {
               break L17;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_56_0, stackIn_56_2 + 44 + param6 + 44 + param7 + 41);
+          throw t.a((Throwable) (Object) stackIn_56_0, stackIn_56_2 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

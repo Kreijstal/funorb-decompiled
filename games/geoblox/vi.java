@@ -17,7 +17,7 @@ final class vi extends hk {
         try {
             ((vi) this).field_q = hb.field_j.field_c;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "vi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class vi extends hk {
         try {
             ((vi) this).field_q = hb.field_j.field_c;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "vi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class vi extends hk {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("vi.F(").append(111).append(44);
+            stackOut_15_1 = new StringBuilder().append("vi.F(").append(111).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -144,7 +144,7 @@ final class vi extends hk {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
         return stackIn_14_0;
     }
@@ -154,7 +154,7 @@ final class vi extends hk {
         try {
             ((vi) this).field_y = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "vi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

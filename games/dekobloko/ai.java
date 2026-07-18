@@ -90,7 +90,7 @@ final class ai extends ek {
           L4: {
             var8 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var8;
-            stackOut_16_1 = new StringBuilder().append("ai.LB(").append(param0).append(44).append(param1).append(44);
+            stackOut_16_1 = new StringBuilder().append("ai.LB(").append(param0).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -113,7 +113,7 @@ final class ai extends ek {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_15_0 != 0;
     }
@@ -135,7 +135,7 @@ final class ai extends ek {
             var5_int = (int)(0.5 + (double)(param2.field_p * 256) * Math.pow(2.0, (double)param1 * 0.08333333333333333) / (double)en.field_o);
             dg.field_c.a(param2, var5_int, param4 * pb.field_d, param3 << 6);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ai.G(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "ai.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

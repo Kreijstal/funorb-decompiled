@@ -56,7 +56,7 @@ final class km {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var2, "km.A(" + -128 + 44 + 5 + 41);
+          throw rb.a((Throwable) (Object) var2, "km.A(" + -128 + ',' + 5 + ')');
         }
     }
 

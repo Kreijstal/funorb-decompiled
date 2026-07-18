@@ -39,7 +39,7 @@ final class rq extends tc {
         try {
             ((rq) this).field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "rq.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "rq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

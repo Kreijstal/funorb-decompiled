@@ -92,7 +92,7 @@ final class me extends pja {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
         }
         return stackIn_10_0;
     }
@@ -1132,7 +1132,7 @@ final class me extends pja {
                           }
                         }
                         if (var35 != null) {
-                          lob.field_a = hva.field_c[var34_int] + " - " + var35;
+                          lob.field_a = hva.field_c[var34_int] + " - " + (String) var35;
                           break L55;
                         } else {
                           lob.field_a = hva.field_c[var34_int];

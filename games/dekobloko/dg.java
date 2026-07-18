@@ -116,7 +116,7 @@ final class dg implements Iterator {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("dg.A(").append(21014).append(44);
+            stackOut_12_1 = new StringBuilder().append("dg.A(").append(21014).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -141,7 +141,7 @@ final class dg implements Iterator {
           }
           L6: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -164,7 +164,7 @@ final class dg implements Iterator {
               break L6;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 
@@ -200,7 +200,7 @@ final class dg implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2, "dg.C(" + -111 + 44 + 3 + 41);
+          throw dh.a((Throwable) (Object) var2, "dg.C(" + -111 + ',' + 3 + ')');
         }
     }
 
@@ -220,7 +220,7 @@ final class dg implements Iterator {
             ((dg) this).field_f = ((dg) this).field_a.field_a.field_p;
             ((dg) this).field_g = null;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "dg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "dg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -66,7 +66,7 @@ abstract class dr extends ms {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("dr.G(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_3_1 = new StringBuilder().append("dr.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -89,7 +89,7 @@ abstract class dr extends ms {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -253,7 +253,7 @@ abstract class dr extends ms {
           }
           L6: {
             stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-            stackOut_34_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_34_2).append(44).append(param1).append(44);
+            stackOut_34_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_34_2).append(',').append(param1).append(',');
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
@@ -276,7 +276,7 @@ abstract class dr extends ms {
               break L6;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ')');
         }
         return stackIn_30_0 != 0;
     }
@@ -288,7 +288,7 @@ abstract class dr extends ms {
         try {
             ((dr) this).field_u = param1;
             ((dr) this).field_B = param0;
-            var7 = new StringBuilder(((dr) this).field_B).append(40);
+            var7 = new StringBuilder(((dr) this).field_B).append('(');
             var8 = var7;
             for (var5 = 0; var5 < ((dr) this).field_u.length; var5++) {
                 StringBuilder discarded$9 = var7.append(hw.a(640, ((dr) this).field_u[var5]));
@@ -296,13 +296,13 @@ abstract class dr extends ms {
                     StringBuilder discarded$10 = var8.append(", ");
                 }
             }
-            StringBuilder discarded$15 = var8.append(41);
+            StringBuilder discarded$15 = var8.append(')');
             if (param2 != null) {
                 StringBuilder discarded$16 = var8.append("     <col=ffaaff>" + param2 + "</col>");
             }
             ((dr) this).field_A = var8.toString();
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "dr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "dr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

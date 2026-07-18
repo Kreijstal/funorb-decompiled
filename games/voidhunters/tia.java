@@ -141,7 +141,7 @@ final class tia extends mu {
             ((tia) this).field_I = ((tia) this).field_E.field_A + ((tia) this).field_E.field_k;
             this.a(param3, 28, param2);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "tia.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "tia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -226,7 +226,7 @@ final class tia extends mu {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("tia.MA(").append(param0).append(44).append(28).append(44);
+            stackOut_8_1 = new StringBuilder().append("tia.MA(").append(param0).append(',').append(28).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -249,7 +249,7 @@ final class tia extends mu {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 

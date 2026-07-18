@@ -277,7 +277,7 @@ final class dd {
                         continue stateLoop;
                     }
                     case 19: {
-                        throw oi.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
+                        throw oi.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }

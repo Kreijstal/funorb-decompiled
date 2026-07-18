@@ -33,7 +33,7 @@ final class ku extends af {
             }
             java.nio.ByteBuffer discarded$7 = ((ku) this).field_d.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ku.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "ku.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

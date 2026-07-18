@@ -124,7 +124,7 @@ final class vj {
               break L5;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class vj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "vj.C(" + 124 + 41);
+          throw ma.a((Throwable) (Object) var1, "vj.C(" + 124 + ')');
         }
     }
 

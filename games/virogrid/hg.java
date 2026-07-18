@@ -92,7 +92,7 @@ final class hg extends jc {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -214,7 +214,7 @@ final class hg extends jc {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("hg.G(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("hg.G(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -237,7 +237,7 @@ final class hg extends jc {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param3 + 41);
+          throw kg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param3 + ')');
         }
     }
 

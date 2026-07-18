@@ -179,7 +179,7 @@ final class ama extends k {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var4;
-            stackOut_24_1 = new StringBuilder().append("ama.E(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("ama.E(").append(param0).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -202,7 +202,7 @@ final class ama extends k {
               break L6;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param2 + ')');
         }
     }
 
@@ -302,7 +302,7 @@ final class ama extends k {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var3;
-            stackOut_15_1 = new StringBuilder().append("ama.C(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("ama.C(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -325,7 +325,7 @@ final class ama extends k {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 

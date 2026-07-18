@@ -48,7 +48,7 @@ final class qk extends q {
           L0: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("qk.C(").append(-90).append(44);
+            stackOut_2_1 = new StringBuilder().append("qk.C(").append(-90).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -71,7 +71,7 @@ final class qk extends q {
               break L0;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class qk extends q {
             int discarded$0 = 109;
             w.c();
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "qk.B(" + 14 + 44 + 14 + 44 + (param2 != null ? "{...}" : "null") + 44 + -4 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "qk.B(" + 14 + ',' + 14 + ',' + (param2 != null ? "{...}" : "null") + ',' + -4 + ')');
         }
     }
 

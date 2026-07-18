@@ -133,7 +133,7 @@ final class cd {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("cd.I(").append(-98).append(44);
+            stackOut_21_1 = new StringBuilder().append("cd.I(").append(-98).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -156,7 +156,7 @@ final class cd {
               break L8;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
         return stackIn_20_0;
     }

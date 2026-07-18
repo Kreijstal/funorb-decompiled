@@ -125,7 +125,7 @@ abstract class ea {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var2;
-            stackOut_30_1 = new StringBuilder().append("ea.B(").append(10126).append(44);
+            stackOut_30_1 = new StringBuilder().append("ea.B(").append(10126).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -148,7 +148,7 @@ abstract class ea {
               break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
         }
         return stackIn_29_0;
     }
@@ -342,7 +342,7 @@ abstract class ea {
             var2 = uk.a(param0, "jagex logo2.packvorbis", "");
             sk discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ea.C(" + (param0 != null ? "{...}" : "null") + 44 + 1728986241 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + 1728986241 + ')');
         }
     }
 

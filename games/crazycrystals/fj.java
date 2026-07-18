@@ -49,7 +49,7 @@ final class fj {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var3_ref;
-            stackOut_10_1 = new StringBuilder().append("fj.A(").append(0).append(44).append(1).append(44);
+            stackOut_10_1 = new StringBuilder().append("fj.A(").append(false).append(',').append(true).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -72,7 +72,7 @@ final class fj {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
         return (Object) (Object) stackIn_8_0;
     }

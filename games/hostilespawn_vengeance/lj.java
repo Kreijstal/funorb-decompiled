@@ -142,7 +142,7 @@ abstract class lj extends dk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var1, "lj.O(" + param0 + 41);
+          throw wg.a((Throwable) (Object) var1, "lj.O(" + param0 + ')');
         }
         return stackIn_29_0;
     }
@@ -549,7 +549,7 @@ abstract class lj extends dk {
           }
           L26: {
             stackOut_77_0 = (RuntimeException) (Object) stackIn_77_0;
-            stackOut_77_1 = ((StringBuilder) (Object) stackIn_77_1).append(stackIn_77_2).append(44).append(param1).append(44).append(0).append(44);
+            stackOut_77_1 = ((StringBuilder) (Object) stackIn_77_1).append(stackIn_77_2).append(',').append(param1).append(',').append(0).append(',');
             stackIn_79_0 = stackOut_77_0;
             stackIn_79_1 = stackOut_77_1;
             stackIn_78_0 = stackOut_77_0;
@@ -572,7 +572,7 @@ abstract class lj extends dk {
               break L26;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_80_0, stackIn_80_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_80_0, stackIn_80_2 + ')');
         }
     }
 

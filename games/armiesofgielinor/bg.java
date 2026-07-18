@@ -159,7 +159,7 @@ final class bg {
             param0.field_i = param1;
             param0.field_b.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "bg.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "bg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

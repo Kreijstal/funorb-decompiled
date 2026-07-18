@@ -115,7 +115,7 @@ final class jc {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -138,7 +138,7 @@ final class jc {
               break L4;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 8965 + 41);
+          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + 8965 + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class jc {
               break L0;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 65 + 44 + param2 + 44 + param3 + 41);
+          throw wg.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 65 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -226,7 +226,7 @@ final class jc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var1, "jc.A(" + -122 + 41);
+          throw wg.a((Throwable) (Object) var1, "jc.A(" + -122 + ')');
         }
     }
 

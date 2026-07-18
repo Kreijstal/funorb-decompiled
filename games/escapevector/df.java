@@ -251,7 +251,7 @@ final class df {
             }
             this.a(false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "df.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "df.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

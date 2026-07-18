@@ -184,7 +184,7 @@ final class tn {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("tn.A(").append(param0).append(44).append(1).append(44);
+            stackOut_7_1 = new StringBuilder().append("tn.A(").append(param0).append(',').append(1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -207,7 +207,7 @@ final class tn {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }

@@ -60,7 +60,7 @@ final class pk extends java.awt.Canvas {
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class pk extends java.awt.Canvas {
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class pk extends java.awt.Canvas {
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -265,7 +265,7 @@ final class pk extends java.awt.Canvas {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5;
-            stackOut_10_1 = new StringBuilder().append("pk.B(").append(256).append(44);
+            stackOut_10_1 = new StringBuilder().append("pk.B(").append(256).append(',');
             stackIn_13_0 = stackOut_10_0;
             stackIn_13_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -290,7 +290,7 @@ final class pk extends java.awt.Canvas {
           }
           L2: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
             stackIn_17_0 = stackOut_14_0;
             stackIn_17_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -315,7 +315,7 @@ final class pk extends java.awt.Canvas {
           }
           L3: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
             stackIn_21_0 = stackOut_18_0;
             stackIn_21_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -340,7 +340,7 @@ final class pk extends java.awt.Canvas {
           }
           L4: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
             stackIn_25_0 = stackOut_22_0;
             stackIn_25_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -363,7 +363,7 @@ final class pk extends java.awt.Canvas {
               break L4;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
         return stackIn_9_0;
     }

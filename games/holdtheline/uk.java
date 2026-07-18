@@ -53,7 +53,7 @@ final class uk extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1, "uk.A(" + 3979 + 41);
+          throw kk.a((Throwable) (Object) var1, "uk.A(" + 3979 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class uk extends IOException {
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 44 + 105 + 44 + 1 + 41);
+          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + false + ',' + 105 + ',' + true + ')');
         }
         return stackIn_1_0;
     }

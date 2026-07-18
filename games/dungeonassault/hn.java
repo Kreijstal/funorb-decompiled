@@ -23,7 +23,7 @@ final class hn extends kl {
             ((hn) this).field_f.a((ne) (Object) ((hn) this).field_m, false);
             ((hn) this).field_f.a((ne) (Object) ((hn) this).field_r, false);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "hn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class hn extends kl {
             int discarded$0 = 1;
             ti.c();
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "hn.C(" + -117 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "hn.C(" + -117 + ')');
         }
     }
 

@@ -54,7 +54,7 @@ final class tn extends o {
             ((tn) this).field_n = param1;
             ((tn) this).field_k.h(((tn) this).field_o * lf.field_S / 80);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "tn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "tn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

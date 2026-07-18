@@ -43,7 +43,7 @@ final class f {
             bi.a(param1.a(var3, (byte) -89) << 4, param1.a(var4, 0) << 4, pl.field_r, ga.field_q, b.field_p);
             bi.c();
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "f.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "f.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -118,7 +118,7 @@ final class vk implements os {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "vk.D(" + 107 + 41);
+          throw tba.a((Throwable) (Object) var1, "vk.D(" + 107 + ')');
         }
         return stackIn_29_0;
     }

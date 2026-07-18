@@ -37,7 +37,7 @@ final class pi {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("pi.B(").append(param0).append(44).append(31465).append(44);
+            stackOut_4_1 = new StringBuilder().append("pi.B(").append(param0).append(',').append(31465).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -60,7 +60,7 @@ final class pi {
               break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }

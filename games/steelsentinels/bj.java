@@ -33,7 +33,7 @@ final class bj {
             var4 = -1L;
             mm.a(var2, (byte) 97, var3, param1, var4);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "bj.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "bj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class bj {
               break L9;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ci.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_41_0 != 0;
     }

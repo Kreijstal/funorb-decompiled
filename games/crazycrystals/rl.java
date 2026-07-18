@@ -40,7 +40,7 @@ abstract class rl extends oh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1_ref, "rl.K(" + 0 + 41);
+          throw dn.a((Throwable) (Object) var1_ref, "rl.K(" + 0 + ')');
         }
     }
 

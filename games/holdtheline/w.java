@@ -120,7 +120,7 @@ abstract class w {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var5;
-            stackOut_24_1 = new StringBuilder().append("w.O(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("w.O(").append(param0).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -143,7 +143,7 @@ abstract class w {
               break L8;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + 109 + 44 + param3 + 44 + param4 + 41);
+          throw kk.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + 109 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -222,7 +222,7 @@ abstract class w {
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 55 + 41);
+          throw kk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 55 + ')');
         }
     }
 

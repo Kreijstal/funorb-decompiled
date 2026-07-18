@@ -196,7 +196,7 @@ final class ik {
               break L3;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
     }
 

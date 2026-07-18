@@ -26,7 +26,7 @@ final class kg {
         try {
             ((kg) this).field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "kg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class kg {
             var2 = new rg(param0, param1);
         } else {
             var2 = (rg) (Object) param0;
-            var2.field_c = var2.field_c + 32 + param1;
+            var2.field_c = var2.field_c + ' ' + param1;
         }
         return var2;
     }

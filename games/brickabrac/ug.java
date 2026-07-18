@@ -69,7 +69,7 @@ abstract class ug extends ib implements je {
           L2: {
             var13_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var13_ref;
-            stackOut_4_1 = new StringBuilder().append("ug.P(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackOut_4_1 = new StringBuilder().append("ug.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -92,7 +92,7 @@ abstract class ug extends ib implements je {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 41);
+          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
         return stackIn_3_0;
     }
@@ -164,7 +164,7 @@ abstract class ug extends ib implements je {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw qb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

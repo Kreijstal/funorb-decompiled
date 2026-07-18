@@ -66,7 +66,7 @@ final class fa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1_ref, "fa.B(" + param0 + 41);
+          throw lj.a((Throwable) (Object) var1_ref, "fa.B(" + param0 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class fa {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 66 + 41);
+          throw lj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 66 + ')');
         }
         return stackIn_5_0 != 0;
     }

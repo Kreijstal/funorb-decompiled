@@ -145,7 +145,7 @@ final class mq {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var5;
-            stackOut_11_1 = new StringBuilder().append("mq.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("mq.B(").append(param0).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -170,7 +170,7 @@ final class mq {
           }
           L4: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -193,7 +193,7 @@ final class mq {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_10_0 != 0;
     }
@@ -208,7 +208,7 @@ final class mq {
         try {
             ((mq) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "mq.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "mq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

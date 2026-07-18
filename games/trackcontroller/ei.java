@@ -16,7 +16,7 @@ final class ei extends fc {
             param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) hd.field_p);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) hd.field_p);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ei.C(" + -125 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "ei.C(" + -125 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class ei extends fc {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("ei.B(").append(0).append(44);
+            stackOut_2_1 = new StringBuilder().append("ei.B(").append(0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -101,7 +101,7 @@ final class ei extends fc {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -124,7 +124,7 @@ final class ei extends fc {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -259,7 +259,7 @@ final class ei extends fc {
               break L4;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + -1 + 41);
+          throw sl.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + -1 + ')');
         }
     }
 

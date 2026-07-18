@@ -198,7 +198,7 @@ final class rg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var1, "rg.E(" + 1 + 41);
+          throw wg.a((Throwable) (Object) var1, "rg.E(" + 1 + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class rg {
               break L5;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

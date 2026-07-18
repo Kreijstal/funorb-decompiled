@@ -73,7 +73,7 @@ final class il {
                   L4: while (true) {
                     if (wa.field_k.length <= var5) {
                       if (var2 != null) {
-                        int discarded$4 = qj.field_H.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$4 = qj.field_H.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L3;
                       } else {
                         return;
@@ -95,7 +95,7 @@ final class il {
                             }
                           }
                           if (var2 != null) {
-                            var2 = (Object) (Object) (var2 + ", " + var5);
+                            var2 = (Object) (Object) ((String) var2 + ", " + var5);
                             break L5;
                           } else {
                             var2 = (Object) (Object) Integer.toString(var5);
@@ -128,7 +128,7 @@ final class il {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1, "il.E(" + 198 + 41);
+          throw pf.a((Throwable) (Object) var1, "il.E(" + 198 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class il {
             param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) sg.field_i);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) sg.field_i);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "il.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "il.A(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class il {
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("il.C(").append(77).append(44);
+                stackOut_6_1 = new StringBuilder().append("il.C(").append(77).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -218,7 +218,7 @@ final class il {
                   break L1;
                 }
               }
-              throw pf.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+              throw pf.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -22,7 +22,7 @@ final class uga extends kl {
             jaggl.OpenGL.glPixelStorei(3317, 4);
             ((uga) this).b(true, 3);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "uga.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "uga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

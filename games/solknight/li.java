@@ -19,7 +19,7 @@ final class li extends gg {
                 li.a(-110);
             }
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "li.A(" + param0 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "li.A(" + param0 + ')');
         }
     }
 
@@ -279,7 +279,7 @@ final class li extends gg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var1, "li.B(" + 117 + 41);
+          throw fc.a((Throwable) (Object) var1, "li.B(" + 117 + ')');
         }
     }
 
@@ -291,7 +291,7 @@ final class li extends gg {
             ((li) this).field_l = param0;
             ((li) this).field_n = param2;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "li.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "li.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

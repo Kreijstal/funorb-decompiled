@@ -31,7 +31,7 @@ final class sa extends i {
             java.nio.ByteBuffer discarded$1 = ((sa) this).field_f.put(param0);
             int var3_int = -42 % ((param1 - 19) / 40);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "sa.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "sa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class sa extends i {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2_ref;
-            stackOut_5_1 = new StringBuilder().append("sa.I(").append(2376).append(44);
+            stackOut_5_1 = new StringBuilder().append("sa.I(").append(2376).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -100,7 +100,7 @@ final class sa extends i {
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }

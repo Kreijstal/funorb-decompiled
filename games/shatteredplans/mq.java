@@ -200,7 +200,7 @@ final class mq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "mq.D(" + param0 + 41);
+          throw r.a((Throwable) (Object) var1, "mq.D(" + param0 + ')');
         }
     }
 

@@ -19,7 +19,7 @@ class ma extends oa {
         try {
             ((ma) this).field_p = param1;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ma.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -32,7 +32,7 @@ class ma extends oa {
             cc.field_Xb = param2;
             bf.a((byte) -102, param0, rh.field_p);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ma.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ma.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -226,7 +226,7 @@ class ma extends oa {
             var3.a((byte) 125, param1.field_u);
             var3.a((byte) 113, param1.field_w);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ma.CA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -2864 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ma.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + -2864 + ')');
         }
     }
 
@@ -346,7 +346,7 @@ class ma extends oa {
               break L5;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -389,7 +389,7 @@ class ma extends oa {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("ma.E(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("ma.E(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -412,7 +412,7 @@ class ma extends oa {
               break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0 != 0;
     }
@@ -466,7 +466,7 @@ class ma extends oa {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var5;
-            stackOut_4_1 = new StringBuilder().append("ma.H(").append(param0).append(44).append(92).append(44);
+            stackOut_4_1 = new StringBuilder().append("ma.H(").append(param0).append(',').append(92).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -489,7 +489,7 @@ class ma extends oa {
               break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param3 + 41);
+          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param3 + ')');
         }
     }
 

@@ -96,7 +96,7 @@ final class ag {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("ag.B(").append(-1).append(44);
+            stackOut_24_1 = new StringBuilder().append("ag.B(").append(-1).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -119,7 +119,7 @@ final class ag {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
     }
 

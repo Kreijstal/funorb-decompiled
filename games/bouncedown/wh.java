@@ -53,7 +53,7 @@ final class wh implements Iterable {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("wh.C(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("wh.C(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -76,7 +76,7 @@ final class wh implements Iterable {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class wh implements Iterable {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("wh.B(").append(1).append(44);
+            stackOut_4_1 = new StringBuilder().append("wh.B(").append(1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -153,7 +153,7 @@ final class wh implements Iterable {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 16 + 41);
+          throw ii.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 16 + ')');
         }
         return stackIn_3_0;
     }

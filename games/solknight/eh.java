@@ -21,7 +21,7 @@ final class eh {
             vg.field_P = vg.field_P + (var2_int >> 1);
             fh.field_a = fh.field_a + param1.i(40);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "eh.B(" + 68 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "eh.B(" + 68 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

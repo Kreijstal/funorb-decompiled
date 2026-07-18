@@ -75,7 +75,7 @@ final class ke {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 32 + 44 + 0 + 44 + 0 + 41);
+          throw rb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + ' ' + ',' + false + ',' + 0 + ')');
         }
         return (StringBuilder) (Object) stackIn_5_0;
     }
@@ -351,7 +351,7 @@ final class ke {
             eg.field_w = (1 & var2_int) << 16;
             eg.field_w = eg.field_w + param1.i(7088);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "ke.C(" + 225225318 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "ke.C(" + 225225318 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -14,7 +14,7 @@ final class gka extends vg {
         try {
             ((gka) this).field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "gka.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "gka.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

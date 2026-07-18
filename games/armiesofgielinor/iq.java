@@ -63,7 +63,7 @@ final class iq {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var2;
-            stackOut_9_1 = new StringBuilder().append("iq.C(").append(30).append(44);
+            stackOut_9_1 = new StringBuilder().append("iq.C(").append(30).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -86,7 +86,7 @@ final class iq {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return stackIn_8_0 != 0;
     }
@@ -137,7 +137,7 @@ final class iq {
             ((iq) this).field_i = param3;
             ((iq) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "iq.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "iq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

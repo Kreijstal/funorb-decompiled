@@ -125,7 +125,7 @@ final class lu {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
     }
 

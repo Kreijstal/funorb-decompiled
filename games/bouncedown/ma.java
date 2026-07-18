@@ -145,7 +145,7 @@ abstract class ma extends ug {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("ma.E(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("ma.E(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -168,7 +168,7 @@ abstract class ma extends ug {
               break L8;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
         return stackIn_21_0;
     }

@@ -121,7 +121,7 @@ final class vp implements hc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "vp.A(" + -4121 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) var2, "vp.A(" + -4121 + ',' + param1 + ')');
         }
     }
 

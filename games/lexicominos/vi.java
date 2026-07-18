@@ -51,7 +51,7 @@ final class vi extends kd {
             int discarded$0 = var5.a(var4, (byte) 119);
             var5.d(-var4 + var5.field_h, (byte) -122);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "vi.A(" + 4 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "vi.A(" + 4 + ',' + (param1 != null ? "{...}" : "null") + ',' + 1 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class vi extends kd {
               break L1;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 107 + 41);
+          throw ld.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 107 + ')');
         }
         return stackIn_5_0;
     }

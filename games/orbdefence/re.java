@@ -250,7 +250,7 @@ final class re {
             int discarded$0 = 92;
             this.b();
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

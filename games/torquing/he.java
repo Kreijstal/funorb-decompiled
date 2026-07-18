@@ -133,7 +133,7 @@ final class he {
           }
           L5: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param1).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -156,7 +156,7 @@ final class he {
               break L5;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 16777215 + 44 + param4 + 41);
+          throw rb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + 16777215 + ',' + param4 + ')');
         }
         return stackIn_10_0 != 0;
     }
@@ -200,7 +200,7 @@ final class he {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("he.A(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("he.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -223,7 +223,7 @@ final class he {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -236,7 +236,7 @@ final class he {
         try {
             ((he) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "he.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -410,7 +410,7 @@ final class he {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var5, "he.E(" + param0 + 44 + param1 + 44 + param2 + 44 + 2 + 44 + param4 + 41);
+          throw rb.a((Throwable) (Object) var5, "he.E(" + param0 + ',' + param1 + ',' + param2 + ',' + 2 + ',' + param4 + ')');
         }
     }
 
@@ -476,7 +476,7 @@ final class he {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var2;
-            stackOut_11_1 = new StringBuilder().append("he.D(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("he.D(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -499,7 +499,7 @@ final class he {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
         return (dn) (Object) stackIn_10_0;
     }
@@ -511,7 +511,7 @@ final class he {
             }
             ni.a((byte) 102, param0, ((he) this).field_c, 31536000L, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "he.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "he.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

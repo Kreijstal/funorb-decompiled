@@ -20,7 +20,7 @@ final class tk implements bf {
             jg.field_m = 0;
             kk.field_xb = 2500;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "tk.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 0 + 44 + 2500 + 44 + 0 + 44 + 2 + 44 + param7 + 44 + 0 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "tk.C(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + 0 + ',' + 2500 + ',' + 0 + ',' + 2 + ',' + param7 + ',' + 0 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class tk implements bf {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var6;
-            stackOut_20_1 = new StringBuilder().append("tk.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_20_1 = new StringBuilder().append("tk.B(").append(param0).append(',').append(param1).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -153,7 +153,7 @@ final class tk implements bf {
               break L6;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param3 + 44 + param4 + 41);
+          throw bd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class tk implements bf {
             ((tk) this).field_d = param0;
             ((tk) this).field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "tk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

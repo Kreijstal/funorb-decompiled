@@ -68,7 +68,7 @@ final class lp {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + 0 + 41);
+          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + false + ')');
         }
         return stackIn_4_0;
     }

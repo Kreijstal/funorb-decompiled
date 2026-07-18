@@ -75,7 +75,7 @@ final class hb {
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -126,7 +126,7 @@ final class hb {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("hb.B(").append(0).append(44).append(30).append(44);
+            stackOut_6_1 = new StringBuilder().append("hb.B(").append(0).append(',').append(30).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -149,7 +149,7 @@ final class hb {
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 32 + 41);
+          throw oj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + ' ' + ')');
         }
         return stackIn_5_0;
     }
@@ -444,7 +444,7 @@ final class hb {
                   break L23;
                 }
               }
-              throw oj.a((Throwable) (Object) stackIn_60_0, stackIn_60_2 + 44 + -95 + 41);
+              throw oj.a((Throwable) (Object) stackIn_60_0, stackIn_60_2 + ',' + -95 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -513,7 +513,7 @@ final class hb {
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -533,7 +533,7 @@ final class hb {
         try {
             ((hb) this).field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "hb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "hb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

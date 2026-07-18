@@ -108,7 +108,7 @@ final class oj implements el {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var6;
-            stackOut_16_1 = new StringBuilder().append("oj.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_16_1 = new StringBuilder().append("oj.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -131,7 +131,7 @@ final class oj implements el {
               break L6;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 
@@ -367,7 +367,7 @@ final class oj implements el {
           L8: {
             var10 = decompiledCaughtException;
             stackOut_49_0 = (RuntimeException) var10;
-            stackOut_49_1 = new StringBuilder().append("oj.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
+            stackOut_49_1 = new StringBuilder().append("oj.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
             stackIn_51_0 = stackOut_49_0;
             stackIn_51_1 = stackOut_49_1;
             stackIn_50_0 = stackOut_49_0;
@@ -390,7 +390,7 @@ final class oj implements el {
               break L8;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + ')');
         }
     }
 
@@ -417,7 +417,7 @@ final class oj implements el {
             ((oj) this).field_c = param0;
             ((oj) this).field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

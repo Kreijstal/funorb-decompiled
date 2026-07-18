@@ -219,7 +219,7 @@ final class lg {
             var4.field_a = dupTemp$0;
             var4.field_x = dupTemp$0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "lg.F(" + 63 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "lg.F(" + 63 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -391,7 +391,7 @@ final class lg {
           L11: {
             var6 = decompiledCaughtException;
             stackOut_32_0 = (RuntimeException) var6;
-            stackOut_32_1 = new StringBuilder().append("lg.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_32_1 = new StringBuilder().append("lg.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
@@ -414,7 +414,7 @@ final class lg {
               break L11;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ')');
         }
     }
 

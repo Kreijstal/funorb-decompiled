@@ -22,7 +22,7 @@ final class ga implements Iterator {
         try {
             eh.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ga.B(" + -8039 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ga.B(" + -8039 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class ga implements Iterator {
             ((ga) this).field_e = param0;
             this.a(1);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ga.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

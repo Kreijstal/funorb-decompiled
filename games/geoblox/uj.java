@@ -66,7 +66,7 @@ final class uj {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + 0 + 41);
+          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + 0 + ')');
         }
         return stackIn_3_0;
     }
@@ -142,7 +142,7 @@ final class uj {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("uj.D(").append(param0).append(44).append(1).append(44);
+            stackOut_8_1 = new StringBuilder().append("uj.D(").append(param0).append(',').append(true).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -165,7 +165,7 @@ final class uj {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }

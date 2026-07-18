@@ -11,7 +11,7 @@ final class vf {
             int var3_int = -91 / ((param0 - -66) / 55);
             ah.field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "vf.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "vf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -24,7 +24,7 @@ final class vf {
             tj.field_y = 10;
             kf.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "vf.D(" + (param0 != null ? "{...}" : "null") + 44 + 10 + 44 + 10 + 44 + param3 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "vf.D(" + (param0 != null ? "{...}" : "null") + ',' + 10 + ',' + 10 + ',' + param3 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1_ref, "vf.B(" + param0 + 41);
+          throw ch.a((Throwable) (Object) var1_ref, "vf.B(" + param0 + ')');
         }
     }
 

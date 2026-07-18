@@ -119,7 +119,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "of.B(" + 5 + 41);
+          throw sd.a((Throwable) (Object) var1, "of.B(" + 5 + ')');
         }
         return stackIn_26_0;
     }
@@ -261,7 +261,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "of.C(" + 0 + 41);
+          throw sd.a((Throwable) (Object) var1, "of.C(" + false + ')');
         }
     }
 

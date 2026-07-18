@@ -32,7 +32,7 @@ final class bj {
             }
             ((bj) this).field_a = ((bj) this).field_a + (long)param0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "bj.F(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "bj.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class bj {
             }
             ((bj) this).field_d.seek(0L);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "bj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "bj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class bj {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var5;
-            stackOut_4_1 = new StringBuilder().append("bj.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_4_1 = new StringBuilder().append("bj.B(").append(param0).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -151,7 +151,7 @@ final class bj {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param3 + 41);
+          throw wn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param3 + ')');
         }
         return stackIn_3_0;
     }

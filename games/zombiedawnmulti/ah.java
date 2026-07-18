@@ -25,7 +25,7 @@ final class ah {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1, "ah.A(" + -79 + 41);
+          throw fa.a((Throwable) (Object) var1, "ah.A(" + -79 + ')');
         }
     }
 
@@ -7626,7 +7626,7 @@ final class ah {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "ah.B(" + param0 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) var2, "ah.B(" + param0 + ',' + param1 + ')');
         }
     }
 

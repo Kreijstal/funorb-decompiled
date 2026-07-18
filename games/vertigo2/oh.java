@@ -47,7 +47,7 @@ abstract class oh extends iq implements dq {
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            StringBuilder discarded$13 = param3.append(10);
+            StringBuilder discarded$13 = param3.append('\n');
             if (param0 == 1000) {
               var5_int = 0;
               L1: while (true) {
@@ -60,7 +60,7 @@ abstract class oh extends iq implements dq {
                     return;
                   }
                 } else {
-                  StringBuilder discarded$16 = param3.append(32);
+                  StringBuilder discarded$16 = param3.append(' ');
                   var5_int++;
                   continue L1;
                 }
@@ -74,7 +74,7 @@ abstract class oh extends iq implements dq {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5;
-            stackOut_10_1 = new StringBuilder().append("oh.WA(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("oh.WA(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -99,7 +99,7 @@ abstract class oh extends iq implements dq {
           }
           L3: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -122,7 +122,7 @@ abstract class oh extends iq implements dq {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
     }
 
@@ -166,7 +166,7 @@ abstract class oh extends iq implements dq {
           L0: {
             var3_ref = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3_ref;
-            stackOut_9_1 = new StringBuilder().append("oh.LA(").append(0).append(44).append(1).append(44);
+            stackOut_9_1 = new StringBuilder().append("oh.LA(").append(false).append(',').append(true).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -189,7 +189,7 @@ abstract class oh extends iq implements dq {
               break L0;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 
@@ -236,7 +236,7 @@ abstract class oh extends iq implements dq {
             bi.b(1 + var7, var8 + 1, var5 + -2, var6 - 2, 16777088);
             int discarded$0 = ee.field_b.field_z.a(param0, var7 + 3, -ee.field_b.field_z.field_z + (1 + (var8 - -hc.field_b)), 500, 1000, 0, -1, 0, 0, r.field_f);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "oh.QA(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "oh.QA(" + (param0 != null ? "{...}" : "null") + ',' + false + ')');
         }
     }
 
@@ -296,7 +296,7 @@ abstract class oh extends iq implements dq {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("oh.DA(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("oh.DA(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -319,7 +319,7 @@ abstract class oh extends iq implements dq {
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0 != 0;
     }
@@ -394,7 +394,7 @@ abstract class oh extends iq implements dq {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var5;
-            stackOut_4_1 = new StringBuilder().append("oh.E(").append(64).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_4_1 = new StringBuilder().append("oh.E(").append(64).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -417,7 +417,7 @@ abstract class oh extends iq implements dq {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -480,7 +480,7 @@ abstract class oh extends iq implements dq {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -658,7 +658,7 @@ abstract class oh extends iq implements dq {
           }
           L3: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -681,7 +681,7 @@ abstract class oh extends iq implements dq {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -781,7 +781,7 @@ abstract class oh extends iq implements dq {
           L3: {
             var8 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var8;
-            stackOut_6_1 = new StringBuilder().append("oh.NA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_6_1 = new StringBuilder().append("oh.NA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -804,7 +804,7 @@ abstract class oh extends iq implements dq {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -875,7 +875,7 @@ abstract class oh extends iq implements dq {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4;
-            stackOut_2_1 = new StringBuilder().append("oh.UA(").append(-39).append(44);
+            stackOut_2_1 = new StringBuilder().append("oh.UA(").append(-39).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -900,7 +900,7 @@ abstract class oh extends iq implements dq {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -925,7 +925,7 @@ abstract class oh extends iq implements dq {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -948,7 +948,7 @@ abstract class oh extends iq implements dq {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -1009,7 +1009,7 @@ abstract class oh extends iq implements dq {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("oh.TA(").append(78).append(44);
+            stackOut_6_1 = new StringBuilder().append("oh.TA(").append(78).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -1032,7 +1032,7 @@ abstract class oh extends iq implements dq {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -1112,7 +1112,7 @@ abstract class oh extends iq implements dq {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var5;
-            stackOut_14_1 = new StringBuilder().append("oh.M(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_14_1 = new StringBuilder().append("oh.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -1135,7 +1135,7 @@ abstract class oh extends iq implements dq {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0;
     }
@@ -1215,7 +1215,7 @@ abstract class oh extends iq implements dq {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 16777088 + 41);
+          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 16777088 + ')');
         }
         return stackIn_5_0 != 0;
     }

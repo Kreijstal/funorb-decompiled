@@ -76,7 +76,7 @@ final class ap {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class ap {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3_ref;
-            stackOut_5_1 = new StringBuilder().append("ap.C(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("ap.C(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -148,7 +148,7 @@ final class ap {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -125 + 41);
+          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -125 + ')');
         }
         return stackIn_4_0;
     }

@@ -277,7 +277,7 @@ final class wab extends rqa {
           L17: {
             var2 = decompiledCaughtException;
             stackOut_50_0 = (RuntimeException) var2;
-            stackOut_50_1 = new StringBuilder().append("wab.B(").append(0).append(44);
+            stackOut_50_1 = new StringBuilder().append("wab.B(").append(0).append(',');
             stackIn_52_0 = stackOut_50_0;
             stackIn_52_1 = stackOut_50_1;
             stackIn_51_0 = stackOut_50_0;
@@ -300,7 +300,7 @@ final class wab extends rqa {
               break L17;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + ')');
         }
     }
 
@@ -371,7 +371,7 @@ final class wab extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

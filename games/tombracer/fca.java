@@ -29,7 +29,7 @@ final class fca {
             ((fca) this).field_c = param0;
             ((fca) this).field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "fca.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "fca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -93,7 +93,7 @@ final class koa extends le {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("koa.F(").append(param0).append(44).append(param1).append(44);
+            stackOut_15_1 = new StringBuilder().append("koa.F(").append(param0).append(',').append(param1).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -116,7 +116,7 @@ final class koa extends le {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 

@@ -109,7 +109,7 @@ final class ob {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var6, "ob.A(" + param0 + 44 + param1 + 44 + 64 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ma.a((Throwable) (Object) var6, "ob.A(" + param0 + ',' + param1 + ',' + 64 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

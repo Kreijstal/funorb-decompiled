@@ -170,7 +170,7 @@ final class kna extends bw {
           L11: {
             var4 = decompiledCaughtException;
             stackOut_42_0 = (RuntimeException) var4;
-            stackOut_42_1 = new StringBuilder().append("kna.A(").append(param0).append(44);
+            stackOut_42_1 = new StringBuilder().append("kna.A(").append(param0).append(',');
             stackIn_44_0 = stackOut_42_0;
             stackIn_44_1 = stackOut_42_1;
             stackIn_43_0 = stackOut_42_0;
@@ -193,7 +193,7 @@ final class kna extends bw {
               break L11;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 44 + param2 + 44 + param3 + 41);
+          throw pe.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_41_0;
     }

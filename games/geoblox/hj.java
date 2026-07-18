@@ -70,7 +70,7 @@ final class hj {
             param1.addKeyListener((java.awt.event.KeyListener) (Object) je.field_j);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) je.field_j);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "hj.A(" + -85 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "hj.A(" + -85 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

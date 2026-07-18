@@ -81,7 +81,7 @@ abstract class nl extends kb implements gw {
           L4: {
             var8 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var8;
-            stackOut_8_1 = new StringBuilder().append("nl.RA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_8_1 = new StringBuilder().append("nl.RA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -104,7 +104,7 @@ abstract class nl extends kb implements gw {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -155,7 +155,7 @@ abstract class nl extends kb implements gw {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("nl.P(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_5_1 = new StringBuilder().append("nl.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -178,7 +178,7 @@ abstract class nl extends kb implements gw {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 
@@ -219,7 +219,7 @@ abstract class nl extends kb implements gw {
           L2: {
             var7 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var7;
-            stackOut_3_1 = new StringBuilder().append("nl.JA(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("nl.JA(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -242,7 +242,7 @@ abstract class nl extends kb implements gw {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -321,7 +321,7 @@ abstract class nl extends kb implements gw {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("nl.OA(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("nl.OA(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -346,7 +346,7 @@ abstract class nl extends kb implements gw {
           }
           L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param2).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -369,7 +369,7 @@ abstract class nl extends kb implements gw {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -413,7 +413,7 @@ abstract class nl extends kb implements gw {
         var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            StringBuilder discarded$16 = param3.append(10);
+            StringBuilder discarded$16 = param3.append('\n');
             var5_int = -96 / ((param2 - 43) / 54);
             var6 = 0;
             L1: while (true) {
@@ -429,7 +429,7 @@ abstract class nl extends kb implements gw {
                 }
                 break L0;
               } else {
-                StringBuilder discarded$19 = param3.append(32);
+                StringBuilder discarded$19 = param3.append(' ');
                 var6++;
                 continue L1;
               }
@@ -465,7 +465,7 @@ abstract class nl extends kb implements gw {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -488,7 +488,7 @@ abstract class nl extends kb implements gw {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
     }
 
@@ -560,7 +560,7 @@ abstract class nl extends kb implements gw {
           L4: {
             var8 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var8;
-            stackOut_7_1 = new StringBuilder().append("nl.NA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_7_1 = new StringBuilder().append("nl.NA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -583,7 +583,7 @@ abstract class nl extends kb implements gw {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param5 + 44 + param6 + 41);
+          throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_6_0 != 0;
     }
@@ -1115,7 +1115,7 @@ abstract class nl extends kb implements gw {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("nl.IA(").append(4).append(44);
+            stackOut_8_1 = new StringBuilder().append("nl.IA(").append(4).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -1138,7 +1138,7 @@ abstract class nl extends kb implements gw {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -1243,7 +1243,7 @@ abstract class nl extends kb implements gw {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ig.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_12_0;
     }
@@ -1257,7 +1257,7 @@ abstract class nl extends kb implements gw {
             cg.field_c.a((byte) -119, (tc) (Object) param2);
             ot.a((byte) 112, param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "nl.MA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "nl.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1445,7 +1445,7 @@ abstract class nl extends kb implements gw {
           }
           L10: {
             stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44);
+            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -1470,7 +1470,7 @@ abstract class nl extends kb implements gw {
           }
           L11: {
             stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(44);
+            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -1493,7 +1493,7 @@ abstract class nl extends kb implements gw {
               break L11;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param3 + 41);
+          throw ig.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + param3 + ')');
         }
     }
 
@@ -1553,7 +1553,7 @@ abstract class nl extends kb implements gw {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("nl.M(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("nl.M(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -1576,7 +1576,7 @@ abstract class nl extends kb implements gw {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0 != 0;
     }
@@ -1656,7 +1656,7 @@ abstract class nl extends kb implements gw {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 107 + 41);
+          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 107 + ')');
         }
         return stackIn_7_0 != 0;
     }

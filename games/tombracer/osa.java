@@ -108,7 +108,7 @@ abstract class osa extends wda {
           }
           L2: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -131,7 +131,7 @@ abstract class osa extends wda {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ abstract class osa extends wda {
             param0.a((byte) -39, dqa.a(true, ((osa) this).field_o >> 16, 12), 12);
             param0.a((byte) 45, dqa.a(true, ((osa) this).field_q >> 16, 12), 12);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "osa.R(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "osa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

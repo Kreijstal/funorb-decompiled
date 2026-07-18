@@ -119,7 +119,7 @@ final class sc {
           L8: {
             runtimeException = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) runtimeException;
-            stackOut_25_1 = new StringBuilder().append("sc.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_25_1 = new StringBuilder().append("sc.A(").append(param0).append(',').append(param1).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -142,7 +142,7 @@ final class sc {
               break L8;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
         }
     }
 

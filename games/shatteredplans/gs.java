@@ -217,7 +217,7 @@ final class gs extends fp {
             qd.field_a = 0;
             hj.field_l[0] = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "gs.I(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "gs.I(" + (param0 != null ? "{...}" : "null") + ',' + true + ')');
         }
     }
 

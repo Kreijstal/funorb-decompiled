@@ -175,7 +175,7 @@ abstract class hd {
           L10: {
             var4 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var4;
-            stackOut_38_1 = new StringBuilder().append("hd.A(").append(param0).append(44).append(127).append(44).append(1).append(44);
+            stackOut_38_1 = new StringBuilder().append("hd.A(").append(param0).append(',').append(127).append(',').append(true).append(',');
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -198,7 +198,7 @@ abstract class hd {
               break L10;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ')');
         }
         return stackIn_37_0;
     }

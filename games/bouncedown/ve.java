@@ -323,7 +323,7 @@ final class ve {
           L23: {
             var6 = decompiledCaughtException;
             stackOut_71_0 = (RuntimeException) var6;
-            stackOut_71_1 = new StringBuilder().append("ve.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_71_1 = new StringBuilder().append("ve.C(").append(param0).append(',').append(param1).append(',');
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
@@ -346,7 +346,7 @@ final class ve {
               break L23;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ii.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -520,7 +520,7 @@ final class ve {
               break L4;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw ii.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
     }
 

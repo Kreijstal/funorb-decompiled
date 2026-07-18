@@ -64,7 +64,7 @@ abstract class bi {
                           break L3;
                         } else {
                           if (var4 != 41) {
-                            StringBuilder discarded$5 = var3.append(var4);
+                            StringBuilder discarded$5 = var3.append((char) var4);
                             continue L1;
                           } else {
                             break L3;
@@ -116,7 +116,7 @@ abstract class bi {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("bi.J(").append(-118).append(44);
+            stackOut_22_1 = new StringBuilder().append("bi.J(").append(-118).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -139,7 +139,7 @@ abstract class bi {
               break L7;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
         return stackIn_21_0;
     }

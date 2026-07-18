@@ -22,7 +22,7 @@ final class ce extends i {
             var4 = vo.a((byte) -18, gd.field_e[30], new String[2]);
             ((ce) this).a(var4, ((ce) this).field_t, ((ce) this).field_D, -91, ((ce) this).field_u);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ce.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

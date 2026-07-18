@@ -14,7 +14,7 @@ final class ql extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((ql) this).field_e = true;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ql.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "ql.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class ql extends java.awt.Canvas implements java.awt.event.FocusListener {
           }
           L2: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(41).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(41).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -119,7 +119,7 @@ final class ql extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -239,7 +239,7 @@ final class ql extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 44 + param2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -288,7 +288,7 @@ final class ql extends java.awt.Canvas implements java.awt.event.FocusListener {
             }
             wj.a(true, ((ql) this).field_g, param0);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ql.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "ql.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

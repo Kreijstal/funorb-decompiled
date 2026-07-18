@@ -238,7 +238,7 @@ final class j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1, "j.C(" + param0 + 41);
+          throw dd.a((Throwable) (Object) var1, "j.C(" + param0 + ')');
         }
     }
 
@@ -288,7 +288,7 @@ final class j {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("j.B(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("j.B(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -311,7 +311,7 @@ final class j {
               break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ')');
         }
     }
 
@@ -321,7 +321,7 @@ final class j {
             ((j) this).field_d = param1;
             param2[((j) this).field_a] = param1;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "j.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "j.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

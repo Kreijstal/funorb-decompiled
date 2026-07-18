@@ -25,7 +25,7 @@ final class cj {
             s.field_G.field_v = cb.field_a.field_x;
             dl.a((byte) 120);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "cj.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "cj.A(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class cj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1_ref, "cj.C(" + -99 + 41);
+          throw t.a((Throwable) (Object) var1_ref, "cj.C(" + -99 + ')');
         }
     }
 

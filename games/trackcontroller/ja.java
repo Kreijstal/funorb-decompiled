@@ -78,7 +78,7 @@ final class ja {
             param0.field_e.field_h = param0;
             param0.field_h.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ja.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "ja.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class ja {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("ja.M(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("ja.M(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -182,7 +182,7 @@ final class ja {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 

@@ -266,7 +266,7 @@ final class tk {
           L15: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_63_0 = (RuntimeException) var5_ref;
-            stackOut_63_1 = new StringBuilder().append("tk.I(").append(param0).append(44);
+            stackOut_63_1 = new StringBuilder().append("tk.I(").append(param0).append(',');
             stackIn_65_0 = stackOut_63_0;
             stackIn_65_1 = stackOut_63_1;
             stackIn_64_0 = stackOut_63_0;
@@ -289,7 +289,7 @@ final class tk {
               break L15;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_66_0, stackIn_66_2 + 44 + param2 + 44 + param3 + 41);
+          throw ma.a((Throwable) (Object) stackIn_66_0, stackIn_66_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -509,7 +509,7 @@ final class tk {
               break L14;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ma.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -524,7 +524,7 @@ final class tk {
         try {
             ((tk) this).a((byte) -118, param1, param0, param1.length);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "tk.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "tk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -691,7 +691,7 @@ final class tk {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -1 + 41);
+          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -1 + ')');
         }
     }
 
@@ -717,7 +717,7 @@ final class tk {
             ((tk) this).field_h = new byte[param2];
             ((tk) this).field_e = new byte[param1];
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "tk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

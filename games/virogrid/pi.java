@@ -78,7 +78,7 @@ final class pi {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -1127,7 +1127,7 @@ final class pi {
                           }
                         }
                         if (var35 != null) {
-                          wc.field_g = bd.field_a[var34_int] + " - " + var35;
+                          wc.field_g = bd.field_a[var34_int] + " - " + (String) var35;
                           break L56;
                         } else {
                           wc.field_g = bd.field_a[var34_int];

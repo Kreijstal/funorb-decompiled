@@ -404,7 +404,7 @@ final class te extends id {
           L15: {
             var3 = decompiledCaughtException;
             stackOut_59_0 = (RuntimeException) var3;
-            stackOut_59_1 = new StringBuilder().append("te.B(").append(param0).append(44);
+            stackOut_59_1 = new StringBuilder().append("te.B(").append(param0).append(',');
             stackIn_61_0 = stackOut_59_0;
             stackIn_61_1 = stackOut_59_1;
             stackIn_60_0 = stackOut_59_0;
@@ -427,7 +427,7 @@ final class te extends id {
               break L15;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_62_0, stackIn_62_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_62_0, stackIn_62_2 + ')');
         }
     }
 
@@ -503,7 +503,7 @@ final class te extends id {
               break L1;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_4_0;
     }

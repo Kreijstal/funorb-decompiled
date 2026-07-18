@@ -83,7 +83,7 @@ final class ef {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw ld.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -149,7 +149,7 @@ final class ef {
           L2: {
             var6 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var6;
-            stackOut_8_1 = new StringBuilder().append("ef.A(").append(param0).append(44).append(-27981).append(44);
+            stackOut_8_1 = new StringBuilder().append("ef.A(").append(param0).append(',').append(-27981).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -174,7 +174,7 @@ final class ef {
           }
           L3: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(0).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(false).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -197,7 +197,7 @@ final class ef {
               break L3;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
         return (kb) (Object) stackIn_6_0;
     }
@@ -250,7 +250,7 @@ final class ef {
                         break L3;
                       } else {
                         if (122 >= var5) {
-                          StringBuilder discarded$5 = var3.append(var5);
+                          StringBuilder discarded$5 = var3.append((char) var5);
                           break L2;
                         } else {
                           break L3;
@@ -262,7 +262,7 @@ final class ef {
                         break L4;
                       } else {
                         if (var5 <= 57) {
-                          StringBuilder discarded$6 = var3.append(var5);
+                          StringBuilder discarded$6 = var3.append((char) var5);
                           break L2;
                         } else {
                           break L4;
@@ -292,7 +292,7 @@ final class ef {
                               break L7;
                             } else {
                               if (var3.charAt(var6 - 1) != 95) {
-                                StringBuilder discarded$8 = var3.append(95);
+                                StringBuilder discarded$8 = var3.append('_');
                                 break L7;
                               } else {
                                 break L2;
@@ -305,7 +305,7 @@ final class ef {
                         }
                       }
                     }
-                    StringBuilder discarded$9 = var3.append(43);
+                    StringBuilder discarded$9 = var3.append('+');
                     break L2;
                   }
                   var4++;
@@ -346,7 +346,7 @@ final class ef {
               break L8;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param1 + 41);
+          throw ld.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param1 + ')');
         }
         return stackIn_28_0;
     }

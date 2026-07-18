@@ -34,7 +34,7 @@ final class bc {
             pc.field_c = pc.field_c + (var2_int >> 1);
             nl.field_b = nl.field_b + param1.d((byte) 72);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "bc.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "bc.B(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class bc {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 32 + 44 + 0 + 44 + 2053368837 + 41);
+          throw ma.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + ' ' + ',' + 0 + ',' + 2053368837 + ')');
         }
         return stackIn_5_0;
     }

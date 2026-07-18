@@ -23,7 +23,7 @@ final class hs implements Iterable {
             int var3_int = 43 % ((-3 - param1) / 51);
             param0.field_j.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "hs.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "hs.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class hs implements Iterable {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 128 + 41);
+          throw pn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + 128 + ')');
         }
         return stackIn_8_0;
     }

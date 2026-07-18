@@ -97,7 +97,7 @@ final class nh extends jq {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
+          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
         }
         return stackIn_9_0 != 0;
     }

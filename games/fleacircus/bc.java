@@ -135,7 +135,7 @@ final class bc extends c implements nh {
               break L3;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw pf.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class bc extends c implements nh {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("bc.I(").append(param0).append(44).append(param1).append(44);
+            stackOut_3_1 = new StringBuilder().append("bc.I(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -205,7 +205,7 @@ final class bc extends c implements nh {
               break L2;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param3 + 41);
+          throw pf.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param3 + ')');
         }
     }
 
@@ -214,7 +214,7 @@ final class bc extends c implements nh {
             wf.field_b = param0;
             ub.field_b = param2;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "bc.CA(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "bc.CA(" + (param0 != null ? "{...}" : "null") + ',' + 1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -254,7 +254,7 @@ final class bc extends c implements nh {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("bc.EA(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("bc.EA(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -277,7 +277,7 @@ final class bc extends c implements nh {
               break L2;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

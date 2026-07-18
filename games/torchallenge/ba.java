@@ -467,7 +467,7 @@ final class ba {
               break L17;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + 44 + 0 + 41);
+          throw oj.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + ',' + 0 + ')');
         }
     }
 

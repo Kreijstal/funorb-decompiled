@@ -117,7 +117,7 @@ final class ve {
         var10 = 0;
         L3: while (true) {
           if (var10 >= 1) {
-            StringBuilder discarded$57 = var9.append(var6);
+            StringBuilder discarded$57 = var9.append((char) var6);
             var10 = 0;
             L4: while (true) {
               var11 = (int)param1;
@@ -128,13 +128,13 @@ final class ve {
                 if (0 != var10 % 3) {
                   continue L4;
                 } else {
-                  StringBuilder discarded$59 = var9.append(var7);
+                  StringBuilder discarded$59 = var9.append((char) var7);
                   continue L4;
                 }
               } else {
                 L5: {
                   if (var8 != 0) {
-                    StringBuilder discarded$60 = var9.append(45);
+                    StringBuilder discarded$60 = var9.append('-');
                     break L5;
                   } else {
                     break L5;

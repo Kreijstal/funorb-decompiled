@@ -128,7 +128,7 @@ final class sb {
             param0.field_o = param1;
             param0.field_m.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "sb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "sb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

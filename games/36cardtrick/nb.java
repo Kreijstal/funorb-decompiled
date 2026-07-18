@@ -116,7 +116,7 @@ final class nb implements ci {
           L7: {
             var6 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var6;
-            stackOut_20_1 = new StringBuilder().append("nb.C(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("nb.C(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -139,7 +139,7 @@ final class nb implements ci {
               break L7;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ma.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -261,7 +261,7 @@ final class nb implements ci {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var5;
-            stackOut_17_1 = new StringBuilder().append("nb.A(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("nb.A(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -286,7 +286,7 @@ final class nb implements ci {
           }
           L6: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -309,7 +309,7 @@ final class nb implements ci {
               break L6;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param4 + 41);
+          throw ma.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param4 + ')');
         }
     }
 
@@ -325,7 +325,7 @@ final class nb implements ci {
             ((nb) this).field_a = param2;
             ((nb) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "nb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "nb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -454,7 +454,7 @@ final class nb implements ci {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("nb.D(").append(119).append(44);
+            stackOut_24_1 = new StringBuilder().append("nb.D(").append(119).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -477,7 +477,7 @@ final class nb implements ci {
               break L7;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
         return stackIn_23_0;
     }

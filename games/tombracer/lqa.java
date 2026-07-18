@@ -134,7 +134,7 @@ final class lqa extends ei {
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
         }
         return stackIn_15_0 != 0;
     }

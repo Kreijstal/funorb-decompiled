@@ -180,7 +180,7 @@ abstract class bf extends bw {
           L11: {
             var4 = decompiledCaughtException;
             stackOut_46_0 = (RuntimeException) var4;
-            stackOut_46_1 = new StringBuilder().append("bf.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_46_1 = new StringBuilder().append("bf.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_48_0 = stackOut_46_0;
             stackIn_48_1 = stackOut_46_1;
             stackIn_47_0 = stackOut_46_0;
@@ -203,7 +203,7 @@ abstract class bf extends bw {
               break L11;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_49_0, stackIn_49_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_49_0, stackIn_49_2 + ')');
         }
         return stackIn_45_0 != 0;
     }

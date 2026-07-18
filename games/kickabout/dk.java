@@ -39,7 +39,7 @@ final class dk extends gn {
           L0: {
             var4 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4;
-            stackOut_4_1 = new StringBuilder().append("dk.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_4_1 = new StringBuilder().append("dk.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -62,7 +62,7 @@ final class dk extends gn {
               break L0;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 

@@ -35,7 +35,7 @@ final class bj extends IOException {
             int discarded$0 = 112;
             ih.a();
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "bj.B(" + 71 + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "bj.B(" + 71 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class bj extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var5, "bj.D(" + param0 + 44 + 0 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw oj.a((Throwable) (Object) var5, "bj.D(" + param0 + ',' + false + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
         return stackIn_29_0;
     }

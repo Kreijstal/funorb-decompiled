@@ -101,7 +101,7 @@ class vn {
           L3: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3_ref;
-            stackOut_14_1 = new StringBuilder().append("vn.I(").append(0).append(44);
+            stackOut_14_1 = new StringBuilder().append("vn.I(").append(0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -126,7 +126,7 @@ class vn {
           }
           L4: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -149,7 +149,7 @@ class vn {
               break L4;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 

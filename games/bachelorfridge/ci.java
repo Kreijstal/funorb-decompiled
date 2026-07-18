@@ -168,7 +168,7 @@ final class ci extends td {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param1 + ')');
         }
         return (ii) (Object) stackIn_26_0;
     }
@@ -179,7 +179,7 @@ final class ci extends td {
             ((ci) this).field_n = param3;
             ((ci) this).field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ci.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ci.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

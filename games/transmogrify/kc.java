@@ -63,7 +63,7 @@ final class kc extends wf {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) hi.field_e);
             cg.field_k = 0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "kc.D(" + 104 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "kc.D(" + 104 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

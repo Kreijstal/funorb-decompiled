@@ -140,7 +140,7 @@ abstract class lb extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var3, "lb.E(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw oj.a((Throwable) (Object) var3, "lb.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ abstract class lb extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "lb.C(" + param0 + 41);
+          throw oj.a((Throwable) (Object) var1, "lb.C(" + param0 + ')');
         }
     }
 

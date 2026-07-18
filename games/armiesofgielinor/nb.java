@@ -28,7 +28,7 @@ final class nb {
             ns.field_E.h(param0 + 48, 12 + param1);
             km.field_h[0].h(46 + param0, param1 - -10);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "nb.S(" + param0 + 44 + param1 + 44 + -97 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "nb.S(" + param0 + ',' + param1 + ',' + -97 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1069,7 +1069,7 @@ final class nb {
           }
           L2: {
             stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44);
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -1092,7 +1092,7 @@ final class nb {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ')');
         }
     }
 

@@ -16,7 +16,7 @@ final class ei extends vf {
             java.nio.Buffer discarded$0 = ((ei) this).field_c.position(0);
             java.nio.ByteBuffer discarded$1 = ((ei) this).field_c.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ei.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ei.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class ei extends vf {
             var3.b(-9469, param1.field_k);
             var3.b(-9469, param1.field_h);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ei.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ei.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

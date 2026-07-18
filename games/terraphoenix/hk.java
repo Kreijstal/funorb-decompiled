@@ -99,7 +99,7 @@ final class hk {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var5;
-            stackOut_11_1 = new StringBuilder().append("hk.B(").append(param0).append(44).append(-57).append(44);
+            stackOut_11_1 = new StringBuilder().append("hk.B(").append(param0).append(',').append(-57).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -124,7 +124,7 @@ final class hk {
           }
           L4: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param3).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param3).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -147,7 +147,7 @@ final class hk {
               break L4;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class hk {
             param0.addKeyListener((java.awt.event.KeyListener) (Object) th.field_g);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) th.field_g);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "hk.A(" + (param0 != null ? "{...}" : "null") + 44 + 93 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "hk.A(" + (param0 != null ? "{...}" : "null") + ',' + 93 + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class hk {
                 int discarded$1 = 1;
                 dh.a(param2);
             } catch (RuntimeException runtimeException) {
-                throw qk.a((Throwable) (Object) runtimeException, "hk.D(" + (param0 != null ? "{...}" : "null") + 44 + 3 + 44 + (param2 != null ? "{...}" : "null") + 41);
+                throw qk.a((Throwable) (Object) runtimeException, "hk.D(" + (param0 != null ? "{...}" : "null") + ',' + 3 + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -261,7 +261,7 @@ final class hk {
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw qk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
     }
 

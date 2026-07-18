@@ -190,7 +190,7 @@ final class nl {
               break L6;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + 64 + 41);
+          throw qb.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + 64 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class nl {
           StringBuilder discarded$3 = var9.append((char)(-(10 * (int)param3) + var11 + 48));
           if (param3 == 0L) {
             if (var8 != 0) {
-              StringBuilder discarded$4 = var9.append(45);
+              StringBuilder discarded$4 = var9.append('-');
               return var9.reverse().toString();
             } else {
               return var9.reverse().toString();
@@ -250,7 +250,7 @@ final class nl {
             if (var10 % 3 != 0) {
               continue L3;
             } else {
-              StringBuilder discarded$5 = var9.append(var7);
+              StringBuilder discarded$5 = var9.append((char) var7);
               continue L3;
             }
           }

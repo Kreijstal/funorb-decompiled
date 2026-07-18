@@ -94,7 +94,7 @@ final class lua implements ntb, ofa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class lua implements ntb, ofa {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ')');
         }
     }
 
@@ -295,7 +295,7 @@ final class lua implements ntb, ofa {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("lua.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("lua.C(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -318,7 +318,7 @@ final class lua implements ntb, ofa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -336,7 +336,7 @@ final class lua implements ntb, ofa {
             int discarded$0 = 0;
             var3.field_b = (qob[]) (Object) sqb.a((tv[]) (Object) var3.field_b, (tv[]) (Object) var3.field_b, 1, rma.field_c);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "lua.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "lua.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -419,7 +419,7 @@ final class lua implements ntb, ofa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
         return stackIn_8_0;
     }
@@ -439,7 +439,7 @@ final class lua implements ntb, ofa {
             }
             ((lua) this).field_b = (qob[]) (Object) kcb.a(12, rma.field_c, param0, 1, -65, (tv[]) (Object) ((lua) this).field_b);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "lua.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "lua.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

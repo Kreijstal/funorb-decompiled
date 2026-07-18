@@ -76,7 +76,7 @@ final class bg extends qn implements ee {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("bg.BA(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("bg.BA(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -99,7 +99,7 @@ final class bg extends qn implements ee {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class bg extends qn implements ee {
             super.a(param0, -30, param2, param3);
             ((bg) this).field_bb = -param0 + (-((bg) this).field_u + hn.field_k);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "bg.G(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "bg.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

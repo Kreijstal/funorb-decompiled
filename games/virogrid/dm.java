@@ -116,7 +116,7 @@ abstract class dm extends wb {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 41);
+          throw kg.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ')');
         }
         return stackIn_13_0 != 0;
     }

@@ -16,7 +16,7 @@ final class uj extends o {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) bj.field_cb);
             nd.field_l = 0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "uj.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "uj.C(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -630,7 +630,7 @@ final class uj extends o {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1, "uj.A(" + -243 + 41);
+          throw fk.a((Throwable) (Object) var1, "uj.A(" + -243 + ')');
         }
     }
 

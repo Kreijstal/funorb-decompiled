@@ -348,7 +348,7 @@ final class sk {
           L9: {
             var4 = decompiledCaughtException;
             stackOut_35_0 = (RuntimeException) var4;
-            stackOut_35_1 = new StringBuilder().append("sk.O(").append(1).append(44);
+            stackOut_35_1 = new StringBuilder().append("sk.O(").append(true).append(',');
             stackIn_37_0 = stackOut_35_0;
             stackIn_37_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
@@ -371,7 +371,7 @@ final class sk {
               break L9;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + 1 + 44 + 10 + 41);
+          throw dh.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ',' + true + ',' + 10 + ')');
         }
         return stackIn_34_0 != 0;
     }

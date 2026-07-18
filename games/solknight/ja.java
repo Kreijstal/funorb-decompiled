@@ -84,7 +84,7 @@ final class ja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var1_ref, "ja.A(" + param0 + 41);
+          throw fc.a((Throwable) (Object) var1_ref, "ja.A(" + param0 + ')');
         }
     }
 
@@ -150,7 +150,7 @@ final class ja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var1_ref, "ja.D(" + 0 + 41);
+          throw fc.a((Throwable) (Object) var1_ref, "ja.D(" + 0 + ')');
         }
     }
 

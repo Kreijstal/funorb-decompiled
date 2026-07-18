@@ -93,7 +93,7 @@ abstract class pib implements mda {
               break L0;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + 0 + 41);
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + 0 + ')');
         }
     }
 
@@ -215,7 +215,7 @@ abstract class pib implements mda {
             ((pib) this).field_c = ika.field_a[0];
             this.a(0, 0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pib.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "pib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

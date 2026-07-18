@@ -52,7 +52,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1_ref, "mj.A(" + 208 + 41);
+          throw sl.a((Throwable) (Object) var1_ref, "mj.A(" + 208 + ')');
         }
     }
 

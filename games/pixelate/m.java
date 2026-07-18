@@ -79,7 +79,7 @@ final class m extends fa {
                   break L1;
                 }
               }
-              throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -60 + 41);
+              throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -60 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

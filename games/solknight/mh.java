@@ -33,7 +33,7 @@ final class mh {
           L0: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("mh.C(").append(param0).append(44).append(1).append(44);
+            stackOut_2_1 = new StringBuilder().append("mh.C(").append(param0).append(',').append(true).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -56,7 +56,7 @@ final class mh {
               break L0;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class mh {
             }
             mj.field_b = 0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "mh.D(" + 8192 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "mh.D(" + 8192 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class mh {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("mh.A(").append(1).append(44);
+            stackOut_5_1 = new StringBuilder().append("mh.A(").append(true).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -144,7 +144,7 @@ final class mh {
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 41);
+          throw fc.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_4_0;
     }

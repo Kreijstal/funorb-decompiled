@@ -70,7 +70,7 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "cg.keyTyped(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "cg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L5;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
         }
     }
 

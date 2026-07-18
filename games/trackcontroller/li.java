@@ -27,7 +27,7 @@ final class li extends fc {
             ((li) this).field_k = param1;
             ((li) this).field_j.g(qd.field_d * ((li) this).field_m + 128 >> 8);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "li.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

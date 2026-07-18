@@ -34,7 +34,7 @@ final class ep extends le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1, "ep.C(" + -50 + 41);
+          throw sh.a((Throwable) (Object) var1, "ep.C(" + -50 + ')');
         }
     }
 

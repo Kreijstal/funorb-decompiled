@@ -99,7 +99,7 @@ final class sj implements fc {
           L4: {
             var6 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var6;
-            stackOut_10_1 = new StringBuilder().append("sj.B(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("sj.B(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -122,7 +122,7 @@ final class sj implements fc {
               break L4;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ii.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class sj implements fc {
             ((sj) this).field_a = param6;
             ((sj) this).field_g = param4;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "sj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

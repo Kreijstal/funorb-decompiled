@@ -92,7 +92,7 @@ abstract class hf extends rg {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -115,7 +115,7 @@ abstract class hf extends rg {
               break L2;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -11 + 41);
+          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -11 + ')');
         }
         return stackIn_1_0;
     }
@@ -384,7 +384,7 @@ abstract class hf extends rg {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var6;
-            stackOut_27_1 = new StringBuilder().append("hf.IA(").append(1).append(44);
+            stackOut_27_1 = new StringBuilder().append("hf.IA(").append(true).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -407,7 +407,7 @@ abstract class hf extends rg {
               break L5;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw qo.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return (java.awt.Frame) (Object) stackIn_26_0;
     }

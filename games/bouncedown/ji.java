@@ -26,7 +26,7 @@ class ji extends ng {
             param1.a(252186072, ((ji) this).field_e);
             param1.b(((ji) this).field_c, (byte) -118);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ji.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "ji.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,7 +35,7 @@ class ji extends ng {
             ((ji) this).field_e = param0;
             ((ji) this).field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ji.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "ji.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

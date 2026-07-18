@@ -27,7 +27,7 @@ final class nma extends ana {
             int discarded$1 = -95;
             gaa.a((po) (Object) ds.field_l, param0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nma.G(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + 1 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "nma.G(" + (param0 != null ? "{...}" : "null") + ',' + true + ',' + true + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class nma extends ana {
         try {
             ((nma) this).field_w = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nma.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "nma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

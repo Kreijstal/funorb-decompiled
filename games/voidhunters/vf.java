@@ -12,7 +12,7 @@ final class vf {
             od discarded$1 = new od(((vf) this).field_b, 5126, 3, param0);
             od discarded$2 = new od(((vf) this).field_b, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "vf.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "vf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

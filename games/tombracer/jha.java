@@ -359,7 +359,7 @@ final class jha extends vg {
             ((jha) this).field_r = param0;
             ((jha) this).field_n = param2;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "jha.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "jha.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

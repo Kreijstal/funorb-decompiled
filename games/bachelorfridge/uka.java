@@ -66,7 +66,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
         try {
             ((uka) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uka.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uka.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
             boolean discarded$2 = param1.prepareImage(((uka) this).field_c, (java.awt.image.ImageObserver) this);
             ((uka) this).a((byte) 125);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uka.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var3, "uka.D(" + param0 + 44 + param1 + 44 + 1 + 41);
+          throw pe.a((Throwable) (Object) var3, "uka.D(" + param0 + ',' + param1 + ',' + 1 + ')');
         }
     }
 
@@ -237,7 +237,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -265,7 +265,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
             }
             boolean discarded$0 = param2.drawImage(((uka) this).field_c, param3, param1, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uka.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uka.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
             param0.setColorModel(((uka) this).field_m);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uka.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uka.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -295,7 +295,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
             int var5_int = -1;
             kw.field_j.a(param1, !param3 ? true : false, 1000000, 256, 1048576, true);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uka.H(" + 1048576 + 44 + (param1 != null ? "{...}" : "null") + 44 + 256 + 44 + param3 + 44 + -112 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uka.H(" + 1048576 + ',' + (param1 != null ? "{...}" : "null") + ',' + 256 + ',' + param3 + ',' + -112 + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
           L0: {
             var4 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4;
-            stackOut_4_1 = new StringBuilder().append("uka.F(").append(param0).append(44).append(126).append(44);
+            stackOut_4_1 = new StringBuilder().append("uka.F(").append(param0).append(',').append(126).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -354,7 +354,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
               break L0;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param3 + 41);
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param3 + ')');
         }
     }
 

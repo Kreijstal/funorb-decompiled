@@ -68,7 +68,7 @@ final class kb {
               break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 69 + 44 + param2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 69 + ',' + param2 + ')');
         }
         return stackIn_5_0;
     }

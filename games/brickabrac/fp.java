@@ -96,7 +96,7 @@ final class fp extends lh {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("fp.B(").append(2).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("fp.B(").append(2).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -119,7 +119,7 @@ final class fp extends lh {
               break L4;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param3 + 41);
+          throw qb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param3 + ')');
         }
         return stackIn_11_0;
     }

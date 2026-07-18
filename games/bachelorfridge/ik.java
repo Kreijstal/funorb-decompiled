@@ -170,7 +170,7 @@ final class ik {
           L8: {
             var3 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var3;
-            stackOut_20_1 = new StringBuilder().append("ik.N(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("ik.N(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -193,7 +193,7 @@ final class ik {
               break L8;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
     }
 
@@ -521,7 +521,7 @@ final class ik {
               break L8;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param1 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -661,7 +661,7 @@ final class ik {
             var4.d(param3, 0);
             sja.field_fb.a((byte) -88, sja.field_fb.field_g + -var5);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ik.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -6622 + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ik.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + -6622 + ',' + param3 + ')');
         }
     }
 
@@ -729,7 +729,7 @@ final class ik {
             ((ik) this).field_c = param6;
             param0.field_t = true;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

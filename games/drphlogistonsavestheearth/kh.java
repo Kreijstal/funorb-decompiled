@@ -417,7 +417,7 @@ final class kh {
           L35: {
             var3 = decompiledCaughtException;
             stackOut_99_0 = (RuntimeException) var3;
-            stackOut_99_1 = new StringBuilder().append("kh.C(").append(1).append(44);
+            stackOut_99_1 = new StringBuilder().append("kh.C(").append(true).append(',');
             stackIn_101_0 = stackOut_99_0;
             stackIn_101_1 = stackOut_99_1;
             stackIn_100_0 = stackOut_99_0;
@@ -440,7 +440,7 @@ final class kh {
               break L35;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_102_0, stackIn_102_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_102_0, stackIn_102_2 + ')');
         }
     }
 
@@ -512,7 +512,7 @@ final class kh {
             }
             this.a(true, param0);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "kh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "kh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

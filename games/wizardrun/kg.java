@@ -40,7 +40,7 @@ final class kg implements Iterator {
             ((kg) this).field_d = ((kg) this).field_b.field_b.field_i;
             ((kg) this).field_a = null;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "kg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

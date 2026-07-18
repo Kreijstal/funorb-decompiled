@@ -78,7 +78,7 @@ final class tl extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -207,7 +207,7 @@ final class tl extends rqa {
               if (var3 != 0) {
                 if (awa.field_p.length() < 80) {
                   L6: {
-                    StringBuilder discarded$32 = awa.field_p.append(var4);
+                    StringBuilder discarded$32 = awa.field_p.append((char) var4);
                     var5 = 485;
                     var13 = kca.field_a;
                     var7 = var13;

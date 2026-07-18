@@ -112,7 +112,7 @@ final class kh extends w {
               break L5;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw wg.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -294,7 +294,7 @@ final class kh extends w {
               break L7;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 44 + param2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -308,7 +308,7 @@ final class kh extends w {
             var4_int = param1 * ug.field_g / 1000;
             this.a(var4_int, -17, param0);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "kh.GB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "kh.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -383,7 +383,7 @@ final class kh extends w {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("kh.EB(").append(param0).append(44).append(-17).append(44);
+            stackOut_5_1 = new StringBuilder().append("kh.EB(").append(param0).append(',').append(-17).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -406,7 +406,7 @@ final class kh extends w {
               break L2;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 
@@ -419,7 +419,7 @@ final class kh extends w {
             int discarded$0 = 381;
             this.h();
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "kh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "kh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -433,7 +433,7 @@ final class kh extends w {
             this.h();
             super.a(param0, (byte) 125, param2, param3);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "kh.Q(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "kh.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

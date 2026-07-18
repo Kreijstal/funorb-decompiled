@@ -68,7 +68,7 @@ final class cf {
             ((cf) this).field_a = param1;
             ((cf) this).field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "cf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "cf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class cf {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("cf.B(").append(100).append(44);
+            stackOut_2_1 = new StringBuilder().append("cf.B(").append(100).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -127,7 +127,7 @@ final class cf {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }

@@ -267,7 +267,7 @@ final class wg {
               L4: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_9_0 = (RuntimeException) var6_ref;
-                stackOut_9_1 = new StringBuilder().append("wg.C(").append(param0).append(44);
+                stackOut_9_1 = new StringBuilder().append("wg.C(").append(param0).append(',');
                 stackIn_11_0 = stackOut_9_0;
                 stackIn_11_1 = stackOut_9_1;
                 stackIn_10_0 = stackOut_9_0;
@@ -292,7 +292,7 @@ final class wg {
               }
               L5: {
                 stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+                stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
                 stackIn_14_0 = stackOut_12_0;
                 stackIn_14_1 = stackOut_12_1;
                 stackIn_13_0 = stackOut_12_0;
@@ -317,7 +317,7 @@ final class wg {
               }
               L6: {
                 stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
                 stackIn_17_0 = stackOut_15_0;
                 stackIn_17_1 = stackOut_15_1;
                 stackIn_16_0 = stackOut_15_0;
@@ -340,7 +340,7 @@ final class wg {
                   break L6;
                 }
               }
-              throw sd.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param4 + 41);
+              throw sd.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param4 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

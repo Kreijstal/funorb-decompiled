@@ -45,7 +45,7 @@ abstract class jtb extends fh {
           L0: {
             var6 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var6;
-            stackOut_2_1 = new StringBuilder().append("jtb.G(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(0).append(44);
+            stackOut_2_1 = new StringBuilder().append("jtb.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(false).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -68,7 +68,7 @@ abstract class jtb extends fh {
               break L0;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
     }
 

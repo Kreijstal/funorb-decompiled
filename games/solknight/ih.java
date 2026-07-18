@@ -26,7 +26,7 @@ final class ih {
             uj.a(jl.field_e, pe.field_m, ib.field_o);
             uf.a((byte) 99, 0, 0, param1);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ih.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ih.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -124,7 +124,7 @@ final class hr extends gn {
                           var12 = ug.a(0, var8 * var2_int + var2_int);
                           var13 = lf.a((byte) -97, var3 * var9 - -var3);
                           on.e(var10, var11, var12 + -var10, var13 + -var11, 65793);
-                          pb.field_C.d(40 + Integer.toString(var8) + 44 + Integer.toString(var9) + 41, var10 + (-var10 + var12 >> 1), (-var11 + var13 >> 1) + var11, 16777215, 65793);
+                          pb.field_C.d('(' + Integer.toString(var8) + ',' + Integer.toString(var9) + ')', var10 + (-var10 + var12 >> 1), (-var11 + var13 >> 1) + var11, 16777215, 65793);
                           var9++;
                           continue L3;
                         }
@@ -474,7 +474,7 @@ final class hr extends gn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "hr.B(" + -48 + 41);
+          throw nb.a((Throwable) (Object) var1, "hr.B(" + -48 + ')');
         }
     }
 

@@ -30,7 +30,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "mj.keyTyped(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "mj.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         continue stateLoop;
                     }
                     case 20: {
-                        throw oj.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
+                        throw oj.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -423,7 +423,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L7;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 
@@ -519,7 +519,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L4;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -581,7 +581,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

@@ -71,7 +71,7 @@ final class ki extends pe implements qd {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var5;
-            stackOut_14_1 = new StringBuilder().append("ki.K(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_14_1 = new StringBuilder().append("ki.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -94,7 +94,7 @@ final class ki extends pe implements qd {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0;
     }
@@ -207,7 +207,7 @@ final class ki extends pe implements qd {
           L2: {
             var6 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var6;
-            stackOut_10_1 = new StringBuilder().append("ki.DA(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("ki.DA(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -230,7 +230,7 @@ final class ki extends pe implements qd {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw bd.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

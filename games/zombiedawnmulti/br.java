@@ -72,7 +72,7 @@ class br {
             param1[4 * param0 + 2] = (byte)(param3 >>> 8);
             param1[3 + 4 * param0] = (byte)param3;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "br.OB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "br.OB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -63,7 +63,7 @@ final class lg {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3_ref;
-            stackOut_8_1 = new StringBuilder().append("lg.A(").append(0).append(44);
+            stackOut_8_1 = new StringBuilder().append("lg.A(").append(0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -88,7 +88,7 @@ final class lg {
           }
           L2: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -111,7 +111,7 @@ final class lg {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
         return stackIn_6_0 != 0;
     }

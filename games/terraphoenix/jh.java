@@ -66,7 +66,7 @@ final class jh extends uf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var2, "jh.B(" + 5 + 44 + -31890 + 41);
+          throw qk.a((Throwable) (Object) var2, "jh.B(" + 5 + ',' + -31890 + ')');
         }
     }
 
@@ -232,7 +232,7 @@ final class jh extends uf {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_49_0 = (RuntimeException) var2;
-            stackOut_49_1 = new StringBuilder().append("jh.A(").append(param0).append(44);
+            stackOut_49_1 = new StringBuilder().append("jh.A(").append(param0).append(',');
             stackIn_51_0 = stackOut_49_0;
             stackIn_51_1 = stackOut_49_1;
             stackIn_50_0 = stackOut_49_0;
@@ -255,7 +255,7 @@ final class jh extends uf {
               break L7;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + ')');
         }
     }
 

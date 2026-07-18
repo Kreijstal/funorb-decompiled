@@ -305,7 +305,7 @@ final class b extends tc {
               break L17;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + 44 + -1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + ',' + -1 + ')');
         }
     }
 
@@ -406,7 +406,7 @@ final class b extends tc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "b.A(" + 0 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) var2, "b.A(" + false + ',' + param1 + ')');
         }
         return stackIn_12_0;
     }

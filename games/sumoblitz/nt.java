@@ -58,7 +58,7 @@ class nt extends ms {
         try {
             ua.field_g[0].a((float)((nt) this).field_k, (float)((nt) this).field_o, 1848 - (int)((double)((nt) this).field_p / 30.0 * 2048.0), 0, 1, 0, 2);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "nt.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "nt.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ class nt extends ms {
             var4.readFully(param0, 0, param3);
             var4.close();
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "nt.J(" + (param0 != null ? "{...}" : "null") + 44 + 7039 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "nt.J(" + (param0 != null ? "{...}" : "null") + ',' + 7039 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -291,7 +291,7 @@ final class dq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var3, "dq.C(" + 44 + 44 + param1 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) var3, "dq.C(" + 44 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -521,7 +521,7 @@ final class dq {
             int discarded$0 = 1;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "dq.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "dq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

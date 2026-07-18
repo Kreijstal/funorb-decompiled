@@ -11,7 +11,7 @@ final class hk extends il {
             int var3_int = 113 / ((51 - param1) / 57);
             super.b(param0, 125);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "hk.AB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "hk.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

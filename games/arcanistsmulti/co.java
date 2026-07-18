@@ -62,7 +62,7 @@ final class co {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1_ref, "co.C(" + -20675 + 41);
+          throw aa.a((Throwable) (Object) var1_ref, "co.C(" + -20675 + ')');
         }
         return stackIn_7_0;
     }

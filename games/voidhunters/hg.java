@@ -65,7 +65,7 @@ final class hg implements ntb {
               L4: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref;
-                stackOut_6_1 = new StringBuilder().append("hg.G(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("hg.G(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -88,7 +88,7 @@ final class hg implements ntb {
                   break L4;
                 }
               }
-              throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+              throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -142,7 +142,7 @@ final class hg implements ntb {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var3;
-            stackOut_3_1 = new StringBuilder().append("hg.D(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("hg.D(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -165,7 +165,7 @@ final class hg implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class hg implements ntb {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("hg.I(").append(108).append(44);
+            stackOut_21_1 = new StringBuilder().append("hg.I(").append(108).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -278,7 +278,7 @@ final class hg implements ntb {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 
@@ -289,7 +289,7 @@ final class hg implements ntb {
             }
             param0.a(-632, ((hg) this).field_d, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "hg.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "hg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -338,7 +338,7 @@ final class hg implements ntb {
           L2: {
             var3_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3_ref;
-            stackOut_4_1 = new StringBuilder().append("hg.C(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("hg.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -361,7 +361,7 @@ final class hg implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -373,7 +373,7 @@ final class hg implements ntb {
         try {
             ((hg) this).field_d = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "hg.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "hg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -452,7 +452,7 @@ final class hg implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
     }
 

@@ -110,7 +110,7 @@ final class b extends le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2, "b.B(" + 0 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) var2, "b.B(" + 0 + ',' + param1 + ')');
         }
     }
 

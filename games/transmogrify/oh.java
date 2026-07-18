@@ -67,7 +67,7 @@ final class oh extends wf {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("oh.B(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("oh.B(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -90,7 +90,7 @@ final class oh extends wf {
               break L3;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0 != 0;
     }

@@ -1385,7 +1385,7 @@ final class roa extends ka {
           L3: {
             var13 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var13;
-            stackOut_15_1 = new StringBuilder().append("roa.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_15_1 = new StringBuilder().append("roa.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -1408,7 +1408,7 @@ final class roa extends ka {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 41);
+          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
         return stackIn_14_0;
     }
@@ -1730,7 +1730,7 @@ final class roa extends ka {
               break L11;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

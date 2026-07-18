@@ -20,7 +20,7 @@ final class uab {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) wj.field_q);
             am.field_q = 0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "uab.A(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "uab.A(" + 1 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

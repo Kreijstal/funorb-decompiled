@@ -138,7 +138,7 @@ abstract class nb extends wb {
         try {
             cm.field_h.a(0, (km) (Object) param1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "nb.E(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "nb.E(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

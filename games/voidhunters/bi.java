@@ -272,7 +272,7 @@ final class bi implements Runnable {
                   }
                 }
                 if (((bi) this).field_h.field_e == ((bi) this).field_h.field_h.length) {
-                  throw bi.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((bi) this).field_h.field_h.length + " " + ((bi) this).field_i));
+                  throw bi.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((bi) this).field_h.field_h.length + " " + (Object) (Object) ((bi) this).field_i));
                 } else {
                   var1 = this;
                   synchronized (var1) {
@@ -321,7 +321,7 @@ final class bi implements Runnable {
             ((bi) this).field_i = param1;
             ((bi) this).field_h = new ds(param2);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "bi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -156,7 +156,7 @@ final class rp extends hfa {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("rp.C(").append(1).append(44);
+            stackOut_2_1 = new StringBuilder().append("rp.C(").append(true).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -179,7 +179,7 @@ final class rp extends hfa {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class rp extends hfa {
         try {
             boolean discarded$0 = var3.a((wj) this, -94);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "rp.DA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "rp.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

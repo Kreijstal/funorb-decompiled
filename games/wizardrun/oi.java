@@ -24,7 +24,7 @@ final class oi {
             param0.field_c.field_b = param0;
             param0.field_b.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "oi.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "oi.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class oi {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw bd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 

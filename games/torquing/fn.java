@@ -61,7 +61,7 @@ final class fn {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var2;
-            stackOut_8_1 = new StringBuilder().append("fn.B(").append(-58).append(44);
+            stackOut_8_1 = new StringBuilder().append("fn.B(").append(-58).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -84,7 +84,7 @@ final class fn {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
@@ -93,7 +93,7 @@ final class fn {
         try {
             ((fn) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "fn.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "fn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

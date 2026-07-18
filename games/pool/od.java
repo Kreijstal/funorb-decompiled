@@ -73,7 +73,7 @@ final class od extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class od extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((od) this).field_e = true;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "od.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "od.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

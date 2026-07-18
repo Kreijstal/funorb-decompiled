@@ -551,7 +551,7 @@ final class cfa implements dv {
             ((cfa) this).field_e = uha.a(5907, param0);
             ((cfa) this).field_f = param0.b((byte) 44, 2);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "cfa.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "cfa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -571,7 +571,7 @@ final class cfa implements dv {
         try {
             ((cfa) this).field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "cfa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "cfa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

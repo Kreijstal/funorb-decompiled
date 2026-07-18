@@ -33,7 +33,7 @@ final class hp extends ht {
             }
             ((hp) this).a(true, 0);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "hp.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "hp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class hp extends ht {
               break L2;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 1 + 41);
+          throw qo.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + true + ')');
         }
         return stackIn_8_0 != 0;
     }

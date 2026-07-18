@@ -43,7 +43,7 @@ final class ho extends bw {
             ((ho) this).field_i = param1;
             ((ho) this).field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ho.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ho.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

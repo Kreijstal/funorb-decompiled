@@ -112,7 +112,7 @@ class rk extends wl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1, "rk.F(" + -2 + 41);
+          throw bd.a((Throwable) (Object) var1, "rk.F(" + -2 + ')');
         }
     }
 

@@ -25,7 +25,7 @@ abstract class nn extends tf {
         } else {
             var1 = var1 + ":";
             for (var2 = 0; var2 < fj.field_h; var2++) {
-                var1 = var1 + 32;
+                var1 = var1 + ' ';
                 var3 = 255 & df.field_z.field_j[var2];
                 var4 = var3 >> 4;
                 var3 = var3 & 15;
@@ -520,7 +520,7 @@ abstract class nn extends tf {
           L3: {
             var4_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4_ref;
-            stackOut_8_1 = new StringBuilder().append("nn.A(").append(param0).append(44).append(-93).append(44);
+            stackOut_8_1 = new StringBuilder().append("nn.A(").append(param0).append(',').append(-93).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -543,7 +543,7 @@ abstract class nn extends tf {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 41);
+          throw aa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ')');
         }
         return stackIn_7_0;
     }

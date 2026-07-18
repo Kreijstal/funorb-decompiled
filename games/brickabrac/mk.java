@@ -192,7 +192,7 @@ final class mk {
             param1.field_s.field_n = param1;
             param1.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "mk.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "mk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

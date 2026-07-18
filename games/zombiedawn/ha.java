@@ -75,7 +75,7 @@ final class ha {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1_ref, "ha.B(" + 27914 + 41);
+          throw sh.a((Throwable) (Object) var1_ref, "ha.B(" + 27914 + ')');
         }
     }
 

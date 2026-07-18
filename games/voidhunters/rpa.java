@@ -331,7 +331,7 @@ final class rpa implements jaa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 0 + 44 + param2 + 44 + 77 + 41);
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + 0 + ',' + param2 + ',' + 77 + ')');
         }
     }
 
@@ -400,7 +400,7 @@ final class rpa implements jaa {
           L3: {
             runtimeException = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) runtimeException;
-            stackOut_13_1 = new StringBuilder().append("rpa.K(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("rpa.K(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -423,7 +423,7 @@ final class rpa implements jaa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param2 + ')');
         }
     }
 
@@ -513,7 +513,7 @@ final class rpa implements jaa {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("rpa.L(").append(param0).append(44).append(param1).append(44);
+            stackOut_3_1 = new StringBuilder().append("rpa.L(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -536,7 +536,7 @@ final class rpa implements jaa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -552,7 +552,7 @@ final class rpa implements jaa {
             jaggl.OpenGL.glGenFramebuffersEXT(1, qea.field_r, 0);
             ((rpa) this).field_e = qea.field_r[0];
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rpa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "rpa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

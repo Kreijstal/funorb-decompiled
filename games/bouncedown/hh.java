@@ -22,7 +22,7 @@ final class hh extends ai {
         try {
             mc.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "hh.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "hh.C(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class hh extends ai {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw ii.a((Throwable) (Object) var1_ref, "hh.B(" + 48 + 41);
+              throw ii.a((Throwable) (Object) var1_ref, "hh.B(" + 48 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -183,7 +183,7 @@ final class hh extends ai {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -206,7 +206,7 @@ final class hh extends ai {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 99 + 41);
+          throw ii.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 99 + ')');
         }
         return stackIn_1_0;
     }

@@ -244,7 +244,7 @@ final class ph {
             param0.field_j = param1;
             param0.field_h.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ph.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ph.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

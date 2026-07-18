@@ -115,7 +115,7 @@ final class vb extends pl {
           L6: {
             var8 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var8;
-            stackOut_24_1 = new StringBuilder().append("vb.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_24_1 = new StringBuilder().append("vb.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -138,7 +138,7 @@ final class vb extends pl {
               break L6;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
         return stackIn_23_0 != 0;
     }

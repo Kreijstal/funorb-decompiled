@@ -49,7 +49,7 @@ final class nd {
     public final String toString() {
         if (!(!((nd) this).field_e)) {
             int discarded$0 = -75;
-            return cq.a(((nd) this).field_c) + "{" + ((nd) this).field_c + "}";
+            return (Object) (Object) cq.a(((nd) this).field_c) + "{" + ((nd) this).field_c + "}";
         }
         if (!(((nd) this).field_c != null)) {
             return "null";
@@ -114,7 +114,7 @@ final class nd {
             ((nd) this).field_c = param0;
             ((nd) this).field_e = false;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "nd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "nd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

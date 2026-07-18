@@ -460,7 +460,7 @@ final class pb extends pg {
             param2.field_j = var6.d(-10674);
             var6.b(var6.field_g + -var4, (byte) 43);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "pb.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "pb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

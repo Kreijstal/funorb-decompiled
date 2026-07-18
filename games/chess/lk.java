@@ -16,7 +16,7 @@ final class lk {
         try {
             ni.a(0, param1.field_l, param0, param2, -21105, param4, param1.field_o);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "lk.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "lk.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class lk {
           }
           L2: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(255).append(44).append(param2).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(255).append(',').append(param2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -162,7 +162,7 @@ final class lk {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 

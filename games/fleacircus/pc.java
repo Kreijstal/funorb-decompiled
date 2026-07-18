@@ -20,7 +20,7 @@ final class pc {
         try {
             af.a(param2, false, param1, (byte) 50);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "pc.F(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "pc.F(" + false + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -292,7 +292,7 @@ final class pc {
             int discarded$0 = -125;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "pc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "pc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

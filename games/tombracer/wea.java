@@ -16,7 +16,7 @@ final class wea implements dv {
         try {
             ((wea) this).field_e = fa.a(0, param0, 8, ((wea) this).field_e);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wea.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "wea.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class wea implements dv {
             int discarded$1 = -45;
             nba.a(param5, param2, 1024, 22050, 22050, param4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wea.D(" + 22050 + 44 + 1024 + 44 + (param2 != null ? "{...}" : "null") + 44 + 1 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "wea.D(" + 22050 + ',' + 1024 + ',' + (param2 != null ? "{...}" : "null") + ',' + true + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class wea implements dv {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var5;
-            stackOut_4_1 = new StringBuilder().append("wea.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_4_1 = new StringBuilder().append("wea.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -117,7 +117,7 @@ final class wea implements dv {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }

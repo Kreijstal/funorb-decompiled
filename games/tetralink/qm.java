@@ -130,7 +130,7 @@ final class qm {
               break L5;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

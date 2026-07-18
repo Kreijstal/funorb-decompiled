@@ -50,7 +50,7 @@ final class jf extends ug {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "jf.B(" + -2147483648 + 41);
+          throw la.a((Throwable) (Object) var1, "jf.B(" + -2147483648 + ')');
         }
         return stackIn_7_0;
     }
@@ -99,7 +99,7 @@ final class jf extends ug {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("jf.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_3_1 = new StringBuilder().append("jf.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -122,7 +122,7 @@ final class jf extends ug {
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

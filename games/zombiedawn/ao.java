@@ -76,7 +76,7 @@ final class ao extends fb {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -156,7 +156,7 @@ final class ao extends fb {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) runtimeException;
-            stackOut_9_1 = new StringBuilder().append("ao.B(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("ao.B(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -179,7 +179,7 @@ final class ao extends fb {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 

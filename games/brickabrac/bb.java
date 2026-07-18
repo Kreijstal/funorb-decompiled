@@ -109,7 +109,7 @@ final class bb implements ub {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var6;
-            stackOut_20_1 = new StringBuilder().append("bb.AA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_20_1 = new StringBuilder().append("bb.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -132,7 +132,7 @@ final class bb implements ub {
               break L6;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param4 + 41);
+          throw qb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param4 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class bb implements ub {
             ((bb) this).field_b = param0;
             ((bb) this).field_f = param2;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "bb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "bb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

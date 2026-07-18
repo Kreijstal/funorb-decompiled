@@ -228,7 +228,7 @@ abstract class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "cv.J(" + 11383 + 41);
+          throw nb.a((Throwable) (Object) var1, "cv.J(" + 11383 + ')');
         }
     }
 
@@ -359,7 +359,7 @@ abstract class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "cv.I(" + param0 + 41);
+          throw nb.a((Throwable) (Object) var1, "cv.I(" + param0 + ')');
         }
     }
 

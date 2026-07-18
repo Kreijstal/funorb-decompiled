@@ -73,7 +73,7 @@ abstract class ff {
           L2: {
             var6_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var6_ref;
-            stackOut_7_1 = new StringBuilder().append("ff.H(").append(0).append(44).append(0).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_7_1 = new StringBuilder().append("ff.H(").append(0).append(',').append(0).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -96,7 +96,7 @@ abstract class ff {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -153,7 +153,7 @@ abstract class ff {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var2, "ff.G(" + param0 + 44 + param1 + 41);
+          throw qb.a((Throwable) (Object) var2, "ff.G(" + param0 + ',' + param1 + ')');
         }
     }
 

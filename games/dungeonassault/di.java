@@ -200,7 +200,7 @@ final class di {
               break L8;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param1 + 41);
+          throw vk.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ',' + param1 + ')');
         }
         return stackIn_38_0 != 0;
     }
@@ -222,7 +222,7 @@ final class di {
             ((di) this).field_f = param0.f(param1 ^ 125);
             ((di) this).field_h = param0.f(-117);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "di.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "di.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

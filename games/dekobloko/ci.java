@@ -84,7 +84,7 @@ final class ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1_ref, "ci.A(" + param0 + 41);
+          throw dh.a((Throwable) (Object) var1_ref, "ci.A(" + param0 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class ci {
             qk.field_m = 4;
             pa.field_Y = 5;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ci.E(" + (param0 != null ? "{...}" : "null") + 44 + 32 + 44 + 5 + 44 + -63 + 44 + 4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "ci.E(" + (param0 != null ? "{...}" : "null") + ',' + 32 + ',' + 5 + ',' + -63 + ',' + 4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

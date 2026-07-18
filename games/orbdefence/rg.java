@@ -144,7 +144,7 @@ abstract class rg {
           L6: {
             var3 = decompiledCaughtException;
             stackOut_34_0 = (RuntimeException) var3;
-            stackOut_34_1 = new StringBuilder().append("rg.J(").append(0).append(44);
+            stackOut_34_1 = new StringBuilder().append("rg.J(").append(false).append(',');
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
@@ -167,7 +167,7 @@ abstract class rg {
               break L6;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + 0 + 41);
+          throw dd.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + 0 + ')');
         }
         return stackIn_32_0;
     }

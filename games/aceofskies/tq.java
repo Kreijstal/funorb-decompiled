@@ -88,7 +88,7 @@ final class tq extends fa {
         try {
             ((tq) this).field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "tq.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "tq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

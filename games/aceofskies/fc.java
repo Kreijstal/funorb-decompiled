@@ -241,7 +241,7 @@ final class fc {
             int discarded$0 = -104;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "fc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "fc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

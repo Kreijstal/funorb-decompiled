@@ -29,7 +29,7 @@ final class th {
             }
             ((th) this).field_j = (float)((th) this).field_i * var4_float / (float)(1 + ((th) this).field_b);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "th.B(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + param2 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "th.B(" + (param0 != null ? "{...}" : "null") + ',' + 1 + ',' + param2 + ')');
         }
     }
 
@@ -202,7 +202,7 @@ final class th {
           L6: {
             var3 = decompiledCaughtException;
             stackOut_32_0 = (RuntimeException) var3;
-            stackOut_32_1 = new StringBuilder().append("th.E(").append(param0).append(44);
+            stackOut_32_1 = new StringBuilder().append("th.E(").append(param0).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
@@ -225,7 +225,7 @@ final class th {
               break L6;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + -27911 + 41);
+          throw wn.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + -27911 + ')');
         }
         return stackIn_31_0;
     }

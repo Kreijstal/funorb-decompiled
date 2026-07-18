@@ -12,7 +12,7 @@ final class vm {
             param0.addKeyListener((java.awt.event.KeyListener) (Object) kb.field_a);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) kb.field_a);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "vm.A(" + (param0 != null ? "{...}" : "null") + 44 + 11631 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "vm.A(" + (param0 != null ? "{...}" : "null") + ',' + 11631 + ')');
         }
     }
 

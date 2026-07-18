@@ -74,7 +74,7 @@ final class ua extends vi {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 1 + 41);
+          throw dh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + true + ')');
         }
         return stackIn_6_0;
     }
@@ -112,7 +112,7 @@ final class ua extends vi {
             jh.a((byte) 116, (mm) (Object) tg.field_a, param3);
             int var4_int = -74;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ua.D(" + 46 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "ua.D(" + 46 + ',' + (param1 != null ? "{...}" : "null") + ',' + true + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class ua extends vi {
         try {
             ((ua) this).field_F = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ua.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

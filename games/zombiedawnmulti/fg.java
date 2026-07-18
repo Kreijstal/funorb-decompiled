@@ -20,7 +20,7 @@ final class fg extends ae {
         try {
             ((fg) this).field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "fg.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "fg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class fg extends ae {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("fg.D(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("fg.D(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -95,7 +95,7 @@ final class fg extends ae {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class fg extends ae {
             jj.field_M = param1;
             lp.a((byte) 69);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "fg.E(" + -16745 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "fg.E(" + -16745 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

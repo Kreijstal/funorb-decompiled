@@ -68,7 +68,7 @@ abstract class jd {
                   break L0;
                 }
               }
-              throw oi.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + -126 + 41);
+              throw oi.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -126 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -209,7 +209,7 @@ abstract class jd {
           }
           L4: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(-6270).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(-6270).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -232,7 +232,7 @@ abstract class jd {
               break L4;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
         return stackIn_14_0 != 0;
     }

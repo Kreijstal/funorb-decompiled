@@ -36,7 +36,7 @@ final class jj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1_ref, "jj.C(" + 8 + 41);
+          throw fk.a((Throwable) (Object) var1_ref, "jj.C(" + 8 + ')');
         }
     }
 

@@ -147,7 +147,7 @@ final class rb extends hg {
               break L6;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class rb extends hg {
             ((rb) this).field_g = param0;
             ((rb) this).field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "rb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

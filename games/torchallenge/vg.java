@@ -141,7 +141,7 @@ final class vg {
           L1: {
             var9 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var9;
-            stackOut_4_1 = new StringBuilder().append("vg.B(").append(80).append(44).append(param1).append(44);
+            stackOut_4_1 = new StringBuilder().append("vg.B(").append(80).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -164,7 +164,7 @@ final class vg {
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param3 + 44 + param4 + 44 + 0 + 44 + 30 + 44 + 0 + 44 + 65 + 41);
+          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param3 + ',' + param4 + ',' + 0 + ',' + 30 + ',' + 0 + ',' + 65 + ')');
         }
     }
 
@@ -213,7 +213,7 @@ final class vg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var2, "vg.D(" + param0 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) var2, "vg.D(" + param0 + ',' + param1 + ')');
         }
         return stackIn_10_0 != 0;
     }

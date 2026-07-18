@@ -59,7 +59,7 @@ final class db extends wk {
             ((db) this).field_W = param2;
             ((db) this).field_N.field_F = (int)(param1 / 100.0f * (float)param3);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "db.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "db.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class db extends wk {
             ((db) this).field_Q = false;
             ((db) this).b((lk) (Object) ((db) this).field_N, true);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "db.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "db.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class db extends wk {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 8351 + 41);
+          throw ii.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 8351 + ')');
         }
         return stackIn_1_0;
     }

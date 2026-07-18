@@ -69,7 +69,7 @@ final class cg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1, "cg.B(" + param0 + 41);
+          throw sh.a((Throwable) (Object) var1, "cg.B(" + param0 + ')');
         }
         return stackIn_13_0;
     }

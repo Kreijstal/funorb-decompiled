@@ -91,7 +91,7 @@ final class ld extends ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1, "ld.C(" + 120 + 41);
+          throw ii.a((Throwable) (Object) var1, "ld.C(" + 120 + ')');
         }
     }
 

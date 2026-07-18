@@ -19,7 +19,7 @@ final class rab extends kva implements gf {
         try {
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rab.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "rab.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -43,7 +43,7 @@ final class rab extends kva implements gf {
             jaggl.OpenGL.glTexImage3Dub(((rab) this).field_e, 0, ((rab) this).e((byte) -31), ((rab) this).field_j, ((rab) this).field_l, ((rab) this).field_k, 0, una.a(-29328, ((rab) this).field_f), 5121, param5, 0);
             jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rab.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "rab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

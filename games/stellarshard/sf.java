@@ -22,7 +22,7 @@ final class sf {
             kl.field_o = param0;
             rh.a(param1, (byte) -72);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "sf.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "sf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

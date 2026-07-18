@@ -84,7 +84,7 @@ final class hc extends ug {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6_ref;
-            stackOut_5_1 = new StringBuilder().append("hc.DA(").append(0).append(44);
+            stackOut_5_1 = new StringBuilder().append("hc.DA(").append(0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -107,7 +107,7 @@ final class hc extends ug {
               break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 44 + param3 + 44 + 0 + 44 + param5 + 41);
+          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 0 + ',' + param3 + ',' + 0 + ',' + param5 + ')');
         }
         return stackIn_4_0;
     }
@@ -248,7 +248,7 @@ final class hc extends ug {
           L4: {
             var12 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var12;
-            stackOut_12_1 = new StringBuilder().append("hc.<init>(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_12_1 = new StringBuilder().append("hc.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -273,7 +273,7 @@ final class hc extends ug {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -298,7 +298,7 @@ final class hc extends ug {
           }
           L6: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param9).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param9).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -321,7 +321,7 @@ final class hc extends ug {
               break L6;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
     }
 

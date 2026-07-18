@@ -68,7 +68,7 @@ final class vf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class vf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class vf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -260,7 +260,7 @@ final class vf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -325,7 +325,7 @@ final class vf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -360,7 +360,7 @@ final class vf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 var7.setCharAt(var11, Character.toUpperCase(var7.charAt(var11)));
                 var10 = 160;
             }
-            StringBuilder discarded$0 = var7.append(var10);
+            StringBuilder discarded$0 = var7.append((char) var10);
         }
         StringBuilder discarded$1 = var7.reverse();
         var7.setCharAt(0, Character.toUpperCase(var7.charAt(0)));
@@ -467,7 +467,7 @@ final class vf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "vf.A(" + param0 + 41);
+          throw oj.a((Throwable) (Object) var1, "vf.A(" + param0 + ')');
         }
     }
 
@@ -538,7 +538,7 @@ final class vf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -642,7 +642,7 @@ final class vf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L6;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
     }
 
@@ -734,7 +734,7 @@ final class vf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L5;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 
@@ -769,7 +769,7 @@ final class vf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("vf.C(").append(95).append(44);
+            stackOut_2_1 = new StringBuilder().append("vf.C(").append(95).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -792,7 +792,7 @@ final class vf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }

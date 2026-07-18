@@ -75,7 +75,7 @@ final class aa {
         qa var2 = null;
         if (param0 instanceof qa) {
             var2 = (qa) (Object) param0;
-            var2.field_d = var2.field_d + 32 + param1;
+            var2.field_d = var2.field_d + ' ' + param1;
         } else {
             var2 = new qa(param0, param1);
         }
@@ -116,7 +116,7 @@ final class aa {
             ((aa) this).field_n = param1;
             ((aa) this).field_l = null;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "aa.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "aa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -25,7 +25,7 @@ final class hh {
             og.a(-113, 8, 128, param6, 16777215, (param3.field_i + -param0.field_x) / 2, 480 + param1 + (-param0.field_z - -(60 / param2)));
             sc.b(-90);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "hh.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + -8562 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "hh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + -8562 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class hh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var3, "hh.A(" + param0 + 44 + 29605 + 44 + param2 + 41);
+          throw qb.a((Throwable) (Object) var3, "hh.A(" + param0 + ',' + 29605 + ',' + param2 + ')');
         }
         return stackIn_12_0;
     }

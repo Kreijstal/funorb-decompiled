@@ -184,7 +184,7 @@ final class pj extends db {
               break L1;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+          throw sl.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -246,7 +246,7 @@ final class pj extends db {
               break L0;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + -127 + 44 + param3 + 41);
+          throw sl.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + -127 + ',' + param3 + ')');
         }
     }
 

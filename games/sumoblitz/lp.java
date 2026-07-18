@@ -43,7 +43,7 @@ final class lp extends ak {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4;
-            stackOut_2_1 = new StringBuilder().append("lp.B(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("lp.B(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -66,7 +66,7 @@ final class lp extends ak {
               break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param2 + ')');
         }
     }
 

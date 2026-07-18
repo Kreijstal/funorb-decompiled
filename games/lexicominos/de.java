@@ -14,7 +14,7 @@ final class de extends RuntimeException {
             ja.b((byte) -111);
             lf.a(param0.field_y, param0.field_r, param0.field_x);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "de.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "de.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class de extends RuntimeException {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var2;
-            stackOut_8_1 = new StringBuilder().append("de.B(").append(0).append(44);
+            stackOut_8_1 = new StringBuilder().append("de.B(").append(0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -109,7 +109,7 @@ final class de extends RuntimeException {
               break L3;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class de extends RuntimeException {
             lf.a();
             we.a((byte) -65, true);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "de.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "de.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + true + ')');
         }
     }
 

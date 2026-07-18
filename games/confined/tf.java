@@ -134,7 +134,7 @@ final class tf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var4, "tf.B(" + 59 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sd.a((Throwable) (Object) var4, "tf.B(" + 59 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class tf {
         try {
             ((tf) this).field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "tf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "tf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

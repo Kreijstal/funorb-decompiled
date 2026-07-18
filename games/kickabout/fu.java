@@ -173,7 +173,7 @@ final class fu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var3, "fu.H(" + 5464 + 44 + param1 + 44 + param2 + 41);
+          throw nb.a((Throwable) (Object) var3, "fu.H(" + 5464 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_23_0;
     }

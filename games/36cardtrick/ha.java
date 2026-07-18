@@ -96,7 +96,7 @@ final class ha {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + 0 + 41);
+          throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + false + ')');
         }
     }
 
@@ -529,7 +529,7 @@ final class ha {
               L32: {
                 var6 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_98_0 = (RuntimeException) var6;
-                stackOut_98_1 = new StringBuilder().append("ha.B(").append(param0).append(44);
+                stackOut_98_1 = new StringBuilder().append("ha.B(").append(param0).append(',');
                 stackIn_100_0 = stackOut_98_0;
                 stackIn_100_1 = stackOut_98_1;
                 stackIn_99_0 = stackOut_98_0;
@@ -554,7 +554,7 @@ final class ha {
               }
               L33: {
                 stackOut_101_0 = (RuntimeException) (Object) stackIn_101_0;
-                stackOut_101_1 = ((StringBuilder) (Object) stackIn_101_1).append(stackIn_101_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+                stackOut_101_1 = ((StringBuilder) (Object) stackIn_101_1).append(stackIn_101_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
                 stackIn_103_0 = stackOut_101_0;
                 stackIn_103_1 = stackOut_101_1;
                 stackIn_102_0 = stackOut_101_0;
@@ -577,7 +577,7 @@ final class ha {
                   break L33;
                 }
               }
-              throw ma.a((Throwable) (Object) stackIn_104_0, stackIn_104_2 + 41);
+              throw ma.a((Throwable) (Object) stackIn_104_0, stackIn_104_2 + ')');
             }
             return stackIn_97_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {

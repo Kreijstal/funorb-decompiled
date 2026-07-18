@@ -132,7 +132,7 @@ final class bab implements dja {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 107 + 41);
+          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + 107 + ')');
         }
         return stackIn_19_0;
     }
@@ -156,7 +156,7 @@ final class bab implements dja {
             lsa.field_f = param1;
             oma.a(true);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bab.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 63 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "bab.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 63 + ')');
         }
     }
 
@@ -214,7 +214,7 @@ final class bab implements dja {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("bab.C(").append(1).append(44);
+            stackOut_2_1 = new StringBuilder().append("bab.C(").append(true).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -237,7 +237,7 @@ final class bab implements dja {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
     }
 

@@ -85,7 +85,7 @@ final class tg implements Serializable {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2;
-            stackOut_13_1 = new StringBuilder().append("tg.B(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("tg.B(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -108,7 +108,7 @@ final class tg implements Serializable {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_12_0;
     }

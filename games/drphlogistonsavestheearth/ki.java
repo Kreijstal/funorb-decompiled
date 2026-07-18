@@ -87,7 +87,7 @@ final class ki {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("ki.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("ki.A(").append(param0).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -110,7 +110,7 @@ final class ki {
               break L4;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
         return stackIn_10_0;
     }

@@ -31,7 +31,7 @@ final class ah {
             ((ah) this).field_f = param0.field_f;
             ((ah) this).field_d = param0.field_d;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ah.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

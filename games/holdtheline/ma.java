@@ -76,7 +76,7 @@ final class ma extends hl {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("ma.A(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("ma.A(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -99,7 +99,7 @@ final class ma extends hl {
               break L5;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ')');
         }
     }
 
@@ -184,7 +184,7 @@ final class ma extends hl {
               break L2;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 41);
+          throw kk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
         }
         return stackIn_11_0 != 0;
     }

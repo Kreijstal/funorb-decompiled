@@ -58,7 +58,7 @@ final class rs extends tc {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("rs.D(").append(-116).append(44);
+            stackOut_6_1 = new StringBuilder().append("rs.D(").append(-116).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -81,7 +81,7 @@ final class rs extends tc {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 

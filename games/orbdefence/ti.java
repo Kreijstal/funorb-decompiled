@@ -320,7 +320,7 @@ final class ti extends sf {
           L23: {
             var6 = decompiledCaughtException;
             stackOut_72_0 = (RuntimeException) var6;
-            stackOut_72_1 = new StringBuilder().append("ti.B(").append(param0).append(44).append(6).append(44).append(param2).append(44);
+            stackOut_72_1 = new StringBuilder().append("ti.B(").append(param0).append(',').append(6).append(',').append(param2).append(',');
             stackIn_74_0 = stackOut_72_0;
             stackIn_74_1 = stackOut_72_1;
             stackIn_73_0 = stackOut_72_0;
@@ -343,7 +343,7 @@ final class ti extends sf {
               break L23;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + 44 + param4 + 44 + param5 + 41);
+          throw dd.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

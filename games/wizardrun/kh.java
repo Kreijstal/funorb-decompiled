@@ -15,7 +15,7 @@ final class kh extends dj {
             int var3_int = -117 % ((param1 - 75) / 38);
             java.nio.ByteBuffer discarded$1 = ((kh) this).field_i.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "kh.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "kh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -57,7 +57,7 @@ final class vab {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("vab.A(").append(-94).append(44);
+            stackOut_5_1 = new StringBuilder().append("vab.A(").append(-94).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -80,7 +80,7 @@ final class vab {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class vab {
             ((vab) this).field_b = param2;
             ((vab) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "vab.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "vab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

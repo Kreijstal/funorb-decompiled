@@ -168,7 +168,7 @@ final class ds extends wf {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_47_0 = (RuntimeException) var2;
-            stackOut_47_1 = new StringBuilder().append("ds.B(").append(0).append(44);
+            stackOut_47_1 = new StringBuilder().append("ds.B(").append(false).append(',');
             stackIn_49_0 = stackOut_47_0;
             stackIn_49_1 = stackOut_47_1;
             stackIn_48_0 = stackOut_47_0;
@@ -191,7 +191,7 @@ final class ds extends wf {
               break L7;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_50_0, stackIn_50_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_50_0, stackIn_50_2 + ')');
         }
     }
 

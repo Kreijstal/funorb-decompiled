@@ -339,7 +339,7 @@ final class mg {
           L18: {
             var9 = decompiledCaughtException;
             stackOut_75_0 = (RuntimeException) var9;
-            stackOut_75_1 = new StringBuilder().append("mg.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_75_1 = new StringBuilder().append("mg.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_77_0 = stackOut_75_0;
             stackIn_77_1 = stackOut_75_1;
             stackIn_76_0 = stackOut_75_0;
@@ -362,7 +362,7 @@ final class mg {
               break L18;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + 44 + -445834032 + 44 + param7 + 44 + param8 + 41);
+          throw ma.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + ',' + -445834032 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

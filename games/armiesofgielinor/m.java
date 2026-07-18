@@ -30,7 +30,7 @@ final class m implements Iterable {
             param0.field_b.field_j = param0;
             param0.field_i = param2;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "m.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "m.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

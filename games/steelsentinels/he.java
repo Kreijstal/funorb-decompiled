@@ -73,7 +73,7 @@ abstract class he {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("he.K(").append(-1766).append(44);
+            stackOut_6_1 = new StringBuilder().append("he.K(").append(-1766).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -96,7 +96,7 @@ abstract class he {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -235,7 +235,7 @@ abstract class he {
               if (var3 != 0) {
                 if (tf.field_g.length() < 80) {
                   L6: {
-                    StringBuilder discarded$11 = tf.field_g.append(var4);
+                    StringBuilder discarded$11 = tf.field_g.append((char) var4);
                     var5 = 485;
                     var17 = g.field_l;
                     var7 = var17;

@@ -66,7 +66,7 @@ final class ffb {
           L0: {
             var3 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var3;
-            stackOut_21_1 = new StringBuilder().append("ffb.A(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("ffb.A(").append(param0).append(',');
             stackIn_24_0 = stackOut_21_0;
             stackIn_24_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -89,7 +89,7 @@ final class ffb {
               break L0;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + true + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class ffb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var5, "ffb.C(" + param0 + 44 + -89 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) var5, "ffb.C(" + param0 + ',' + -89 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

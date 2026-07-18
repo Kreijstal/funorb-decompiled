@@ -104,7 +104,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L6;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -235,7 +235,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -303,7 +303,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -366,7 +366,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -16 + 41);
+          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -16 + ')');
         }
         return stackIn_3_0;
     }
@@ -402,7 +402,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var2, "kh.D(" + param0 + 44 + param1 + 41);
+          throw lj.a((Throwable) (Object) var2, "kh.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -467,7 +467,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -586,7 +586,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L7;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + 14288 + 41);
+          throw lj.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + 14288 + ')');
         }
     }
 
@@ -678,7 +678,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L5;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 
@@ -743,7 +743,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -805,7 +805,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -856,7 +856,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "kh.C(" + 92 + 41);
+          throw lj.a((Throwable) (Object) var1, "kh.C(" + 92 + ')');
         }
     }
 

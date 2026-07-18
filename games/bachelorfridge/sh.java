@@ -17,7 +17,7 @@ abstract class sh extends vd implements mca {
             ((sh) this).field_F = param0;
             ((sh) this).field_F.field_e = (sh) this;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "sh.A(" + (param0 != null ? "{...}" : "null") + 44 + 114 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "sh.A(" + (param0 != null ? "{...}" : "null") + ',' + 114 + ')');
         }
     }
 
@@ -103,7 +103,7 @@ abstract class sh extends vd implements mca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "sh.T(" + -71 + 41);
+          throw pe.a((Throwable) (Object) var1, "sh.T(" + -71 + ')');
         }
     }
 

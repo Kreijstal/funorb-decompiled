@@ -119,7 +119,7 @@ final class bb extends hf {
           L6: {
             var8 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var8;
-            stackOut_23_1 = new StringBuilder().append("bb.L(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_23_1 = new StringBuilder().append("bb.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -142,7 +142,7 @@ final class bb extends hf {
               break L6;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param6 + 41);
+          throw pe.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param6 + ')');
         }
         return stackIn_22_0 != 0;
     }

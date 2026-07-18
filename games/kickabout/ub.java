@@ -109,7 +109,7 @@ abstract class ub extends wj {
             var2 = new hn(4, new int[1]);
             ii.a(var2, 102);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ub.BC(" + param0 + 44 + -38 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ub.BC(" + param0 + ',' + -38 + ')');
         }
     }
 
@@ -176,7 +176,7 @@ abstract class ub extends wj {
             ((ub) this).field_H = param0;
             ((ub) this).field_C = false;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ub.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ub.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

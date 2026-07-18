@@ -25,7 +25,7 @@ final class re extends ha {
             }
             rc.field_m.a(param3, param2 - -param1.field_o + (param1.field_x >> 1), param4 - (-param1.field_z + 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "re.FA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "re.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class re extends ha {
         try {
             ((re) this).a(param2, (byte) -101, param3, param4, param5);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -239,7 +239,7 @@ final class re extends ha {
                   break L1;
                 }
               }
-              throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 9268 + 41);
+              throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 9268 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -327,7 +327,7 @@ final class re extends ha {
             }
             ((re) this).a((lh) (Object) ((re) this).field_db, -114);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -341,7 +341,7 @@ final class re extends ha {
             ((re) this).field_gb.field_A = (tn) (Object) param1;
             ((re) this).field_db.field_A = (tn) (Object) param1;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "re.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "re.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

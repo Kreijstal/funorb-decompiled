@@ -67,7 +67,7 @@ final class stb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -151,7 +151,7 @@ final class stb extends rqa {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("stb.D(").append(2).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("stb.D(").append(2).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -176,7 +176,7 @@ final class stb extends rqa {
           }
           L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -199,7 +199,7 @@ final class stb extends rqa {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
     }
 

@@ -84,7 +84,7 @@ final class uj {
           L5: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4_ref;
-            stackOut_17_1 = new StringBuilder().append("uj.A(").append(-124).append(44).append(256).append(44).append(param2).append(44);
+            stackOut_17_1 = new StringBuilder().append("uj.A(").append(-124).append(',').append(256).append(',').append(param2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -107,7 +107,7 @@ final class uj {
               break L5;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 

@@ -41,7 +41,7 @@ final class nsa {
             ((nsa) this).field_a = param0.field_a;
             ((nsa) this).field_b = param0.field_b;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "nsa.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "nsa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

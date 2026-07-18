@@ -18,7 +18,7 @@ final class db {
         try {
             kk.a(22050, true, 22050, (byte) 119, param2, param0, 1024, param3);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "db.A(" + (param0 != null ? "{...}" : "null") + 44 + 22050 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + 1024 + 44 + 1 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "db.A(" + (param0 != null ? "{...}" : "null") + ',' + 22050 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + 1024 + ',' + true + ')');
         }
     }
 

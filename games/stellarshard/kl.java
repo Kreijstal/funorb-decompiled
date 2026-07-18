@@ -262,7 +262,7 @@ final class kl extends gg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "kl.B(" + 1 + 41);
+          throw ma.a((Throwable) (Object) var1, "kl.B(" + true + ')');
         }
     }
 
@@ -502,7 +502,7 @@ final class kl extends gg {
               break L6;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + 44 + -20650 + 41);
+          throw ma.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + ',' + -20650 + ')');
         }
         return stackIn_67_0;
     }

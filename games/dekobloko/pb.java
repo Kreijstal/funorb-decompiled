@@ -657,7 +657,7 @@ final class pb {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + -2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + -2 + ')');
         }
     }
 

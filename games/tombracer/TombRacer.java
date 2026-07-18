@@ -389,7 +389,7 @@ public final class TombRacer extends rfa implements ls {
           L14: {
             var4 = decompiledCaughtException;
             stackOut_54_0 = (RuntimeException) var4;
-            stackOut_54_1 = new StringBuilder().append("TombRacer.FB(").append(param0).append(44);
+            stackOut_54_1 = new StringBuilder().append("TombRacer.FB(").append(param0).append(',');
             stackIn_56_0 = stackOut_54_0;
             stackIn_56_1 = stackOut_54_1;
             stackIn_55_0 = stackOut_54_0;
@@ -412,7 +412,7 @@ public final class TombRacer extends rfa implements ls {
               break L14;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + ',' + param2 + ')');
         }
     }
 
@@ -2449,7 +2449,7 @@ public final class TombRacer extends rfa implements ls {
           L18: {
             var4 = decompiledCaughtException;
             stackOut_117_0 = (RuntimeException) var4;
-            stackOut_117_1 = new StringBuilder().append("TombRacer.CB(").append(param0).append(44);
+            stackOut_117_1 = new StringBuilder().append("TombRacer.CB(").append(param0).append(',');
             stackIn_119_0 = stackOut_117_0;
             stackIn_119_1 = stackOut_117_1;
             stackIn_118_0 = stackOut_117_0;
@@ -2472,7 +2472,7 @@ public final class TombRacer extends rfa implements ls {
               break L18;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_120_0, stackIn_120_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_120_0, stackIn_120_2 + ',' + param2 + ')');
         }
         return stackIn_116_0;
     }
@@ -2685,7 +2685,7 @@ public final class TombRacer extends rfa implements ls {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + 44 + param1 + 44 + 111 + 41);
+          throw tba.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + ',' + param1 + ',' + 111 + ')');
         }
         return stackIn_39_0 != 0;
     }

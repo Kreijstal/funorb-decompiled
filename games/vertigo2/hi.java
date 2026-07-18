@@ -21,7 +21,7 @@ final class hi extends bg {
         try {
             ((hi) this).a(-30, param1, param2, (byte[]) null, param3);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "hi.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "hi.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class hi extends bg {
             var2 = vh.a(param0, "jagex logo2.packvorbis", "");
             ae discarded$0 = var2.b();
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "hi.C(" + (param0 != null ? "{...}" : "null") + 44 + 56 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "hi.C(" + (param0 != null ? "{...}" : "null") + ',' + 56 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class hi extends bg {
             ((hi) this).field_k = param3;
             ((hi) this).field_h = param1;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "hi.H(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "hi.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class hi extends bg {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("hi.G(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("hi.G(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -238,7 +238,7 @@ final class hi extends bg {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_11_0 != 0;
     }
@@ -376,7 +376,7 @@ final class hi extends bg {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var6;
-            stackOut_15_1 = new StringBuilder().append("hi.L(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("hi.L(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -401,7 +401,7 @@ final class hi extends bg {
           }
           L4: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param2).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -424,7 +424,7 @@ final class hi extends bg {
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param4 + 41);
+          throw wn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param4 + ')');
         }
     }
 

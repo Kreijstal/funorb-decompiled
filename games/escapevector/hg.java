@@ -58,7 +58,7 @@ class hg {
             int discarded$0 = var5.c(var4, -61);
             var5.e(118, -var4 + var5.field_m);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "hg.WA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "hg.WA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -163,7 +163,7 @@ class hg {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 22178 + 41);
+          throw t.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + 22178 + ')');
         }
         return stackIn_17_0;
     }

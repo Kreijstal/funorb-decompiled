@@ -157,7 +157,7 @@ abstract class le {
               if (var3 != 0) {
                 if (cg.field_E.length() < 80) {
                   L6: {
-                    StringBuilder discarded$37 = cg.field_E.append(var4);
+                    StringBuilder discarded$37 = cg.field_E.append((char) var4);
                     var5 = 485;
                     var17 = ln.field_o;
                     var16 = v.a(var17, (byte) 17);

@@ -226,7 +226,7 @@ final class nj extends rg {
           L6: {
             var8 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var8;
-            stackOut_22_1 = new StringBuilder().append("nj.AA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_22_1 = new StringBuilder().append("nj.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -249,7 +249,7 @@ final class nj extends rg {
               break L6;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param5 + 44 + param6 + 41);
+          throw sd.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_21_0 != 0;
     }

@@ -123,7 +123,7 @@ final class ri {
               break L4;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw dn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
         }
         return stackIn_17_0;
     }

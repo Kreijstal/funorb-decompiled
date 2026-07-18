@@ -257,7 +257,7 @@ final class hi implements dja {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + ',' + param1 + ')');
         }
         return stackIn_68_0;
     }

@@ -30,7 +30,7 @@ final class rg extends RuntimeException {
           L0: while (true) {
             if (ba.field_a > var2) {
               L1: {
-                var7 = var1 + 32;
+                var7 = var1 + ' ';
                 var3 = sh.field_qb.field_g[var2] & 255;
                 var4 = var3 >> 4;
                 var3 = var3 & 15;

@@ -48,7 +48,7 @@ class wc extends hl {
             }
             super.a((byte) 127, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "wc.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "wc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -211,7 +211,7 @@ class wc extends hl {
           }
           L10: {
             stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(44).append(param1).append(44);
+            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param1).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -234,7 +234,7 @@ class wc extends hl {
               break L10;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param3 + 44 + 0 + 41);
+          throw fk.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param3 + ',' + false + ')');
         }
     }
 
@@ -483,7 +483,7 @@ class wc extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1, "wc.D(" + param0 + 41);
+          throw fk.a((Throwable) (Object) var1, "wc.D(" + param0 + ')');
         }
     }
 

@@ -49,7 +49,7 @@ final class sf implements Iterator {
             ((sf) this).field_f = null;
             ((sf) this).field_g = ((sf) this).field_e.field_e.field_o;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "sf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

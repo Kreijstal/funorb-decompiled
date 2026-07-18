@@ -189,7 +189,7 @@ final class db extends vm {
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw fk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
         }
         return stackIn_10_0;
     }
@@ -264,7 +264,7 @@ final class db extends vm {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("db.B(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("db.B(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -287,7 +287,7 @@ final class db extends vm {
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0;
     }
@@ -311,7 +311,7 @@ final class db extends vm {
         try {
             ((db) this).field_q = new oc(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "db.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "db.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

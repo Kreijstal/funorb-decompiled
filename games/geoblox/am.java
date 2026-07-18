@@ -217,7 +217,7 @@ final class am {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

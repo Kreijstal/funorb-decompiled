@@ -205,7 +205,7 @@ final class gk {
           L12: {
             var5 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var5;
-            stackOut_38_1 = new StringBuilder().append("gk.A(").append(1).append(44).append(2).append(44);
+            stackOut_38_1 = new StringBuilder().append("gk.A(").append(true).append(',').append(2).append(',');
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -228,7 +228,7 @@ final class gk {
               break L12;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + 1 + 44 + 1 + 41);
+          throw fa.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ',' + 1 + ',' + true + ')');
         }
     }
 

@@ -31,7 +31,7 @@ final class bd {
             jh.field_C = new ra(wg.field_j, (we) (Object) j.field_e);
             wg.field_j.b((byte) -101, (we) (Object) jh.field_C);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "bd.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw la.a((Throwable) (Object) runtimeException, "bd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

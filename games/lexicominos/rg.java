@@ -17,7 +17,7 @@ final class rg {
             id.field_v = param1;
             ge.f(72);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "rg.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "rg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class rg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var1, "rg.A(" + 0 + 41);
+          throw ld.a((Throwable) (Object) var1, "rg.A(" + 0 + ')');
         }
     }
 

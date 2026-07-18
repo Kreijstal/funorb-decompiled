@@ -81,7 +81,7 @@ class np extends rj {
             var4 = -1L;
             lm.a(false, var2, var4, param1, var3);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "np.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "np.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -135,7 +135,7 @@ class np extends rj {
             ((np) this).field_J.b((ne) (Object) param0, false);
             param0.field_r = (rj) this;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "np.B(" + (param0 != null ? "{...}" : "null") + 44 + -76 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "np.B(" + (param0 != null ? "{...}" : "null") + ',' + -76 + ')');
         }
     }
 

@@ -64,7 +64,7 @@ final class cm implements bo {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class cm implements bo {
         try {
             param1.i(((cm) this).field_b, 0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "cm.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "cm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1288,7 +1288,7 @@ final class cm implements bo {
                                       var21 = (Object) (Object) var31;
                                       break L68;
                                     } else {
-                                      var21 = (Object) (Object) (var21 + "<br>" + var31);
+                                      var21 = (Object) (Object) ((String) var21 + "<br>" + var31);
                                       break L68;
                                     }
                                   } else {
@@ -1318,7 +1318,7 @@ final class cm implements bo {
                                     }
                                   }
                                   if (var21 != null) {
-                                    var21 = (Object) (Object) (var21 + "<br>" + var22_ref);
+                                    var21 = (Object) (Object) ((String) var21 + "<br>" + var22_ref);
                                     break L66;
                                   } else {
                                     var21 = (Object) (Object) var22_ref;
@@ -1394,13 +1394,13 @@ final class cm implements bo {
                             if (var21 == null) {
                               break L74;
                             } else {
-                              var21 = (Object) (Object) ("<col=A00000>" + var21);
+                              var21 = (Object) (Object) ("<col=A00000>" + (String) var21);
                               var32 = fta.a((String) var21, "<br>", 0, "<br><col=A00000>");
                               if (var20 == null) {
                                 var20 = (Object) (Object) var32;
                                 break L74;
                               } else {
-                                var20 = (Object) (Object) (var20 + "<br>" + var32);
+                                var20 = (Object) (Object) ((String) var20 + "<br>" + var32);
                                 break L74;
                               }
                             }

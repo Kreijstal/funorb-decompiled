@@ -253,7 +253,7 @@ final class ff {
             int discarded$0 = 77;
             this.b();
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "ff.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "ff.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

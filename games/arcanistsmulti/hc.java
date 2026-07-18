@@ -96,7 +96,7 @@ final class hc {
                   break L1;
                 }
               }
-              throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 27901 + 41);
+              throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 27901 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -197,7 +197,7 @@ final class hc {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
+          throw aa.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
         }
     }
 

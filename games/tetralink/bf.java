@@ -86,7 +86,7 @@ final class bf extends mc {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4;
-            stackOut_4_1 = new StringBuilder().append("bf.C(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("bf.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -111,7 +111,7 @@ final class bf extends mc {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -136,7 +136,7 @@ final class bf extends mc {
           }
           L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -159,7 +159,7 @@ final class bf extends mc {
               break L4;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -505,7 +505,7 @@ final class bf extends mc {
           L17: {
             var8 = decompiledCaughtException;
             stackOut_50_0 = (RuntimeException) var8;
-            stackOut_50_1 = new StringBuilder().append("bf.B(").append(65793).append(44).append(param1).append(44);
+            stackOut_50_1 = new StringBuilder().append("bf.B(").append(65793).append(',').append(param1).append(',');
             stackIn_52_0 = stackOut_50_0;
             stackIn_52_1 = stackOut_50_1;
             stackIn_51_0 = stackOut_50_0;
@@ -528,7 +528,7 @@ final class bf extends mc {
               break L17;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw oi.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -539,7 +539,7 @@ final class bf extends mc {
             ((bf) this).field_q = param1;
             ((bf) this).field_t.f(128 + ((bf) this).field_u * wb.field_c >> 8);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "bf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

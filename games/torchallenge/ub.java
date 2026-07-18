@@ -169,7 +169,7 @@ final class ub {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var4, "ub.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw oj.a((Throwable) (Object) var4, "ub.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_33_0;
     }

@@ -357,7 +357,7 @@ final class qj {
           L23: {
             var6 = decompiledCaughtException;
             stackOut_70_0 = (RuntimeException) var6;
-            stackOut_70_1 = new StringBuilder().append("qj.C(").append(param0).append(44).append(-36).append(44);
+            stackOut_70_1 = new StringBuilder().append("qj.C(").append(param0).append(',').append(-36).append(',');
             stackIn_72_0 = stackOut_70_0;
             stackIn_72_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;
@@ -380,7 +380,7 @@ final class qj {
               break L23;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw oi.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

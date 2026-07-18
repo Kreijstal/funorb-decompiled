@@ -93,7 +93,7 @@ final class fb {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("fb.A(").append(12).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("fb.A(").append(12).append(',').append(param1).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -116,7 +116,7 @@ final class fb {
               break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return (n) (Object) stackIn_1_0;
     }

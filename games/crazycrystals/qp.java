@@ -322,7 +322,7 @@ final class qp extends jb {
           L18: {
             var9 = decompiledCaughtException;
             stackOut_77_0 = (RuntimeException) var9;
-            stackOut_77_1 = new StringBuilder().append("qp.B(").append(99).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_77_1 = new StringBuilder().append("qp.B(").append(99).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_79_0 = stackOut_77_0;
             stackIn_79_1 = stackOut_77_1;
             stackIn_78_0 = stackOut_77_0;
@@ -345,7 +345,7 @@ final class qp extends jb {
               break L18;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_80_0, stackIn_80_2 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw dn.a((Throwable) (Object) stackIn_80_0, stackIn_80_2 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

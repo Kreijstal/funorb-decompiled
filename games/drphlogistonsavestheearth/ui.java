@@ -143,7 +143,7 @@ final class ui {
           L6: {
             var3 = decompiledCaughtException;
             stackOut_32_0 = (RuntimeException) var3;
-            stackOut_32_1 = new StringBuilder().append("ui.D(").append(0).append(44);
+            stackOut_32_1 = new StringBuilder().append("ui.D(").append(false).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
@@ -166,7 +166,7 @@ final class ui {
               break L6;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + -3 + 41);
+          throw ie.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + -3 + ')');
         }
         return stackIn_31_0;
     }
@@ -184,7 +184,7 @@ final class ui {
             s.b();
             vb.field_n = -wk.field_i;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "ui.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "ui.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -66,7 +66,7 @@ final class gh {
               break L0;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -161 + 41);
+          throw fk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -161 + ')');
         }
     }
 
@@ -191,7 +191,7 @@ final class gh {
               break L4;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw fk.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_19_0;
     }

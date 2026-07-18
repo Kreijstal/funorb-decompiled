@@ -150,7 +150,7 @@ final class fc {
               break L8;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 44 + param2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

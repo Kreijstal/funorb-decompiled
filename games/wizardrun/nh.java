@@ -632,7 +632,7 @@ final class nh extends bb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var5, "nh.B(" + 69 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw bd.a((Throwable) (Object) var5, "nh.B(" + 69 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

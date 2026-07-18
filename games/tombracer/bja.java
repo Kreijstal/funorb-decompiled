@@ -122,7 +122,7 @@ abstract class bja {
           L4: {
             var5 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var5;
-            stackOut_16_1 = new StringBuilder().append("bja.J(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("bja.J(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -145,7 +145,7 @@ abstract class bja {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_14_0;
     }
@@ -259,7 +259,7 @@ abstract class bja {
           L2: {
             var4_ref = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var4_ref;
-            stackOut_3_1 = new StringBuilder().append("bja.I(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("bja.I(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -284,7 +284,7 @@ abstract class bja {
           }
           L3: {
             stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44).append(param2).append(44);
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -307,7 +307,7 @@ abstract class bja {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 

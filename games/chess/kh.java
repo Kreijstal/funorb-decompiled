@@ -118,7 +118,7 @@ final class kh extends gm {
           L3: {
             var4_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4_ref;
-            stackOut_8_1 = new StringBuilder().append("kh.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_8_1 = new StringBuilder().append("kh.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -141,7 +141,7 @@ final class kh extends gm {
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
@@ -753,7 +753,7 @@ final class kh extends gm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1, "kh.B(" + param0 + 41);
+          throw fk.a((Throwable) (Object) var1, "kh.B(" + param0 + ')');
         }
     }
 
@@ -815,7 +815,7 @@ final class kh extends gm {
             ie.b();
             sl.field_a = 0 - eg.field_i;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "kh.E(" + -127 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "kh.E(" + -127 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

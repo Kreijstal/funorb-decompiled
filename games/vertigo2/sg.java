@@ -277,7 +277,7 @@ final class sg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var8, "sg.B(" + param0 + 44 + param1 + 44 + param2 + 44 + 47 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw wn.a((Throwable) (Object) var8, "sg.B(" + param0 + ',' + param1 + ',' + param2 + ',' + 47 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

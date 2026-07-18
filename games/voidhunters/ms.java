@@ -826,7 +826,7 @@ abstract class ms extends wi {
             int discarded$0 = 32;
             this.a(param2, 480, 640, param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ms.EA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ms.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -884,7 +884,7 @@ abstract class ms extends wi {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 23100 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 23100 + ')');
         }
         return stackIn_1_0;
     }
@@ -1033,7 +1033,7 @@ abstract class ms extends wi {
           L8: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var6_ref;
-            stackOut_22_1 = new StringBuilder().append("ms.SA(").append(param0).append(44).append(480).append(44).append(640).append(44);
+            stackOut_22_1 = new StringBuilder().append("ms.SA(").append(param0).append(',').append(480).append(',').append(640).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -1056,7 +1056,7 @@ abstract class ms extends wi {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 32 + 41);
+          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 32 + ')');
         }
     }
 

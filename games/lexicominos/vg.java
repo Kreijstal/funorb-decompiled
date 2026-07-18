@@ -50,7 +50,7 @@ final class vg {
               L0: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref;
-                stackOut_6_1 = new StringBuilder().append("vg.D(").append(0).append(44);
+                stackOut_6_1 = new StringBuilder().append("vg.D(").append(false).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -73,7 +73,7 @@ final class vg {
                   break L0;
                 }
               }
-              throw ld.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+              throw ld.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

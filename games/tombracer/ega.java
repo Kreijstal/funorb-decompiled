@@ -147,7 +147,7 @@ final class ega {
           L8: {
             var4 = decompiledCaughtException;
             stackOut_35_0 = (RuntimeException) var4;
-            stackOut_35_1 = new StringBuilder().append("ega.A(").append(10).append(44);
+            stackOut_35_1 = new StringBuilder().append("ega.A(").append(10).append(',');
             stackIn_37_0 = stackOut_35_0;
             stackIn_37_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
@@ -170,7 +170,7 @@ final class ega {
               break L8;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + 1 + 44 + 1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ',' + true + ',' + true + ')');
         }
         return stackIn_34_0 != 0;
     }

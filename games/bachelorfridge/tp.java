@@ -92,7 +92,7 @@ final class tp extends ana {
             ((tp) this).field_y = new taa(((tp) this).field_q, ((tp) this).field_w.field_r, ((tp) this).field_w.field_q);
             ((tp) this).a(27799, (at) (Object) ((tp) this).field_y);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "tp.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "tp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

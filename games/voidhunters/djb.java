@@ -87,7 +87,7 @@ final class djb extends qc {
                       L4: while (true) {
                         if (var13 == null) {
                           if (var10 != 0) {
-                            StringBuilder discarded$4 = var8.append(var12);
+                            StringBuilder discarded$4 = var8.append((char) var12);
                             var9++;
                             continue L2;
                           } else {
@@ -295,9 +295,9 @@ final class djb extends qc {
                 ((djb) this).field_t[incrementValue$0] = var5;
                 var5 = (rqa) (Object) param0.a((byte) 92);
             }
-            ((djb) this).a((byte) 93, "# <col=ffaaff>FunOrbConsole (loaded " + ((djb) this).field_t.length + " methods at " + new Date() + ")</col>");
+            ((djb) this).a((byte) 93, "# <col=ffaaff>FunOrbConsole (loaded " + ((djb) this).field_t.length + " methods at " + (Object) (Object) new Date() + ")</col>");
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "djb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "djb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -369,7 +369,7 @@ final class djb extends qc {
               L1: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_10_0 = (RuntimeException) var3_ref2;
-                stackOut_10_1 = new StringBuilder().append("djb.G(").append(param0).append(44);
+                stackOut_10_1 = new StringBuilder().append("djb.G(").append(param0).append(',');
                 stackIn_12_0 = stackOut_10_0;
                 stackIn_12_1 = stackOut_10_1;
                 stackIn_11_0 = stackOut_10_0;
@@ -392,7 +392,7 @@ final class djb extends qc {
                   break L1;
                 }
               }
-              throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+              throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -850,7 +850,7 @@ final class djb extends qc {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + 28 + 41);
+          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + 28 + ')');
         }
         return stackIn_11_0;
     }

@@ -66,7 +66,7 @@ final class ej extends ta {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class ej extends ta {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_36_0 = (RuntimeException) var6;
-            stackOut_36_1 = new StringBuilder().append("ej.EB(").append(0).append(44).append(-3428).append(44);
+            stackOut_36_1 = new StringBuilder().append("ej.EB(").append(0).append(',').append(-3428).append(',');
             stackIn_39_0 = stackOut_36_0;
             stackIn_39_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
@@ -281,7 +281,7 @@ final class ej extends ta {
               break L5;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ma.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_35_0;
     }
@@ -342,7 +342,7 @@ final class ej extends ta {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("ej.DB(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("ej.DB(").append(param0).append(',');
             stackIn_6_0 = stackOut_3_0;
             stackIn_6_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -367,7 +367,7 @@ final class ej extends ta {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_10_0 = stackOut_7_0;
             stackIn_10_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -390,7 +390,7 @@ final class ej extends ta {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 41);
+          throw ma.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ')');
         }
     }
 

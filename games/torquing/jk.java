@@ -64,7 +64,7 @@ final class jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "jk.B(" + -118 + 41);
+          throw rb.a((Throwable) (Object) var1, "jk.B(" + -118 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class jk {
             gn.field_m = new mn(dc.field_a, pe.field_E, param0, ff.field_a, nk.field_t);
             dc.field_a.a((gm) (Object) gn.field_m, (byte) 112);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "jk.A(" + (param0 != null ? "{...}" : "null") + 44 + -79 + 44 + param2 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "jk.A(" + (param0 != null ? "{...}" : "null") + ',' + -79 + ',' + param2 + ')');
         }
     }
 

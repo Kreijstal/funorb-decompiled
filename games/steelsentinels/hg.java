@@ -152,7 +152,7 @@ final class hg {
           L9: {
             var2 = decompiledCaughtException;
             stackOut_34_0 = (RuntimeException) var2;
-            stackOut_34_1 = new StringBuilder().append("hg.C(").append(-127).append(44);
+            stackOut_34_1 = new StringBuilder().append("hg.C(").append(-127).append(',');
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
@@ -175,7 +175,7 @@ final class hg {
               break L9;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ')');
         }
     }
 
@@ -213,7 +213,7 @@ final class hg {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var2;
-            stackOut_3_1 = new StringBuilder().append("hg.B(").append(-93).append(44);
+            stackOut_3_1 = new StringBuilder().append("hg.B(").append(-93).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -236,7 +236,7 @@ final class hg {
               break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

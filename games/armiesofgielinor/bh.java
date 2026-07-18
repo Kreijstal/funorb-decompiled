@@ -66,7 +66,7 @@ final class bh extends nl {
             ((bh) this).field_K = 256;
             ((bh) this).field_E = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

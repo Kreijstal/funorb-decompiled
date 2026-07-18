@@ -185,7 +185,7 @@ class ai {
           L8: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var5_ref;
-            stackOut_18_1 = new StringBuilder().append("ai.QC(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("ai.QC(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -210,7 +210,7 @@ class ai {
           }
           L9: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(-24).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(-24).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -233,7 +233,7 @@ class ai {
               break L9;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param4 + 41);
+          throw ii.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param4 + ')');
         }
     }
 

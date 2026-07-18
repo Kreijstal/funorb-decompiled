@@ -65,7 +65,7 @@ final class j extends li {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("j.C(").append(0).append(44);
+            stackOut_7_1 = new StringBuilder().append("j.C(").append(0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -88,7 +88,7 @@ final class j extends li {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_5_0 != 0;
     }

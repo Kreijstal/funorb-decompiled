@@ -92,7 +92,7 @@ final class jf implements Iterator {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw aa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class jf implements Iterator {
                 }
                 ml.a(-122, param1);
             } catch (RuntimeException runtimeException) {
-                throw aa.a((Throwable) (Object) runtimeException, "jf.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
+                throw aa.a((Throwable) (Object) runtimeException, "jf.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -216,7 +216,7 @@ final class jf implements Iterator {
             ((jf) this).field_c = param0;
             this.a(-1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "jf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "jf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

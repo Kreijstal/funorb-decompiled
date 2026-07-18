@@ -85,7 +85,7 @@ final class bfa {
     public final String toString() {
         if (((bfa) this).field_a) {
             int discarded$0 = 0;
-            return jd.a(((bfa) this).field_d) + "{" + ((bfa) this).field_d + "}";
+            return (Object) (Object) jd.a(((bfa) this).field_d) + "{" + ((bfa) this).field_d + "}";
         }
         if (!(null != ((bfa) this).field_d)) {
             return "null";
@@ -130,7 +130,7 @@ final class bfa {
             ((bfa) this).field_a = false;
             ((bfa) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "bfa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "bfa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

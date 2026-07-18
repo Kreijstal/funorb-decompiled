@@ -271,7 +271,7 @@ final class ef {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "ef.C(" + 0 + 41);
+          throw aa.a((Throwable) (Object) var1, "ef.C(" + false + ')');
         }
     }
 

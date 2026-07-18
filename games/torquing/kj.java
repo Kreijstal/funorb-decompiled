@@ -37,7 +37,7 @@ abstract class kj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1_ref, "kj.I(" + 8 + 41);
+          throw rb.a((Throwable) (Object) var1_ref, "kj.I(" + 8 + ')');
         }
     }
 

@@ -60,7 +60,7 @@ abstract class ui extends uh {
             fc.a(ki.field_j / 2, (byte) 102, ki.field_f / 2);
             le.a(-4797, param2.field_r - -param2.field_q, param2.field_r, param3.field_r, param3.field_r + param3.field_q);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ui.MB(" + 640 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ui.MB(" + 640 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

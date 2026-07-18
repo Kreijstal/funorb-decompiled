@@ -11,7 +11,7 @@ final class lc extends qj {
         try {
             super.c(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "lc.GA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "lc.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class lc extends qj {
             ai.field_g.field_y = m.field_a.field_v;
             wf.a(-61);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "lc.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "lc.C(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

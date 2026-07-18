@@ -46,7 +46,7 @@ final class gh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var2, "gh.A(" + param0 + 44 + param1 + 41);
+          throw lj.a((Throwable) (Object) var2, "gh.A(" + param0 + ',' + param1 + ')');
         }
     }
 

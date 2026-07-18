@@ -17,7 +17,7 @@ final class sj {
             ol.a(4, param0);
             int var3_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "sj.A(" + (param0 != null ? "{...}" : "null") + 44 + -56 + 44 + 4 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "sj.A(" + (param0 != null ? "{...}" : "null") + ',' + -56 + ',' + 4 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class sj {
         try {
             ea.a((byte) 115, var4, param0, var2, var3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "sj.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "sj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -26,7 +26,7 @@ final class ep extends pu {
             }
             sja.field_fb.a((byte) -88, sja.field_fb.field_g + -var5_int);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ep.D(" + 42 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ep.D(" + 42 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

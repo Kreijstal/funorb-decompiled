@@ -346,7 +346,7 @@ final class ti {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("ti.E(").append(45).append(44);
+            stackOut_13_1 = new StringBuilder().append("ti.E(").append(45).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -369,7 +369,7 @@ final class ti {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 0 + 41);
+          throw oi.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + false + ')');
         }
         return stackIn_12_0 != 0;
     }
@@ -430,7 +430,7 @@ final class ti {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }
@@ -453,7 +453,7 @@ final class ti {
             }
             nc.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "ti.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "ti.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

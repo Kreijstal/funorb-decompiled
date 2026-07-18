@@ -101,7 +101,7 @@ final class dm extends wn {
             ((dm) this).field_B = param0;
             ((dm) this).field_K = 256;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "dm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "dm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

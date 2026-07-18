@@ -27,7 +27,7 @@ final class kk {
               return var1;
             } else {
               L1: {
-                var7 = var1 + 32;
+                var7 = var1 + ' ';
                 var3 = vc.field_q.field_g[var2] & 255;
                 var4 = var3 >> 4;
                 if (var4 < 10) {

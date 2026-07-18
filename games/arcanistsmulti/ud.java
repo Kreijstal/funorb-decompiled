@@ -222,7 +222,7 @@ abstract class ud extends dc {
           L9: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var6_ref;
-            stackOut_24_1 = new StringBuilder().append("ud.P(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("ud.P(").append(param0).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -245,7 +245,7 @@ abstract class ud extends dc {
               break L9;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw aa.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -86,7 +86,7 @@ final class cj extends kd {
           L4: {
             var2 = (Object) (Object) decompiledCaughtException;
             stackOut_19_0 = var2;
-            stackOut_19_1 = new StringBuilder().append("cj.A(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("cj.A(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -109,7 +109,7 @@ final class cj extends kd {
               break L4;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
         }
         return (hc) (Object) stackIn_18_0;
     }
@@ -118,7 +118,7 @@ final class cj extends kd {
         try {
             ((cj) this).field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "cj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "cj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

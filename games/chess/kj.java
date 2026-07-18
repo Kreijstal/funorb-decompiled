@@ -138,7 +138,7 @@ final class kj {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("kj.<init>(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("kj.<init>(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -163,7 +163,7 @@ final class kj {
           }
           L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -186,7 +186,7 @@ final class kj {
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 

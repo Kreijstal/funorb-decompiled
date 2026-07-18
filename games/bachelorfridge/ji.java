@@ -174,7 +174,7 @@ final class ji extends bw {
           L10: {
             var2 = decompiledCaughtException;
             stackOut_41_0 = (RuntimeException) var2;
-            stackOut_41_1 = new StringBuilder().append("ji.A(").append(param0).append(44);
+            stackOut_41_1 = new StringBuilder().append("ji.A(").append(param0).append(',');
             stackIn_43_0 = stackOut_41_0;
             stackIn_43_1 = stackOut_41_1;
             stackIn_42_0 = stackOut_41_0;
@@ -197,7 +197,7 @@ final class ji extends bw {
               break L10;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + ')');
         }
     }
 

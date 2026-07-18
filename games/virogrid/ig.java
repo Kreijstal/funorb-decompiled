@@ -49,7 +49,7 @@ final class ig {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("ig.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("ig.C(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -72,7 +72,7 @@ final class ig {
               break L1;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -92 + 41);
+          throw kg.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -92 + ')');
         }
         return (rn) (Object) stackIn_1_0;
     }
@@ -207,7 +207,7 @@ final class ig {
             qk.a(false);
             kf.field_e = -of.field_a;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "ig.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "ig.B(" + false + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

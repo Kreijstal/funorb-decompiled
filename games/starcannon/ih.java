@@ -28,7 +28,7 @@ final class ih {
             param2.field_b = param0;
             param2.field_a.field_d = param2;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ih.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ih.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

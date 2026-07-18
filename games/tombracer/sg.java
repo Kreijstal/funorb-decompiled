@@ -38,7 +38,7 @@ final class sg extends nv {
             ((sg) this).field_v = param1.b((byte) 44, 1) != 1 ? false : true;
             ((sg) this).field_o = param1.b((byte) 44, 1) == 1 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "sg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class sg extends nv {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + 1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + 1 + ')');
         }
         return stackIn_28_0;
     }
@@ -224,7 +224,7 @@ final class sg extends nv {
             param1.a((byte) 12, !((sg) this).field_v ? 0 : 1, 1);
             param1.a((byte) -125, ((sg) this).field_o ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "sg.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "sg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

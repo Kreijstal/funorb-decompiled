@@ -16,7 +16,7 @@ final class gqa implements ntb {
             param0.b((byte) 0, ((gqa) this).field_b);
             param0.q(-110);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "gqa.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "gqa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class gqa implements ntb {
             ((gqa) this).field_b = param0.g(-1609246200);
             param0.p(-23497);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "gqa.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "gqa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class gqa implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class gqa implements ntb {
             var6.field_a = var5.field_a;
             var6.field_b = var5.field_b;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "gqa.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "gqa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class gqa implements ntb {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3_ref;
-            stackOut_6_1 = new StringBuilder().append("gqa.C(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("gqa.C(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -216,7 +216,7 @@ final class gqa implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0 != 0;
     }

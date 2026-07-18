@@ -517,7 +517,7 @@ abstract class gb extends fa {
           L8: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var6_ref;
-            stackOut_22_1 = new StringBuilder().append("gb.FB(").append(1).append(44).append(param1).append(44);
+            stackOut_22_1 = new StringBuilder().append("gb.FB(").append(true).append(',').append(param1).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -540,7 +540,7 @@ abstract class gb extends fa {
               break L8;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param3 + 44 + param4 + 41);
+          throw fk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -631,7 +631,7 @@ abstract class gb extends fa {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("gb.BB(").append(param0).append(44).append(param1).append(44);
+            stackOut_3_1 = new StringBuilder().append("gb.BB(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -654,7 +654,7 @@ abstract class gb extends fa {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

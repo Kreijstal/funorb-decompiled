@@ -15,7 +15,7 @@ abstract class vq extends dqa implements lca {
             ((vq) this).field_z = param1;
             ((vq) this).field_z.field_c = (vq) this;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "vq.K(" + 75 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "vq.K(" + 75 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -124,7 +124,7 @@ abstract class vq extends dqa implements lca {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_4_0;
     }

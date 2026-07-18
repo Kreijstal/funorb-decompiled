@@ -13,7 +13,7 @@ final class rm extends java.awt.Canvas {
         try {
             ((rm) this).field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "rm.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "rm.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class rm extends java.awt.Canvas {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("rm.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("rm.C(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -108,7 +108,7 @@ final class rm extends java.awt.Canvas {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class rm extends java.awt.Canvas {
         try {
             ((rm) this).field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "rm.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "rm.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class rm extends java.awt.Canvas {
         try {
             ((rm) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "rm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "rm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

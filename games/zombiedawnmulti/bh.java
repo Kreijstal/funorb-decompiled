@@ -67,7 +67,7 @@ final class bh {
                 if (param1.field_h != 2) {
                   break L1;
                 } else {
-                  var2 = (Object) (Object) ("<img=1>" + var2);
+                  var2 = (Object) (Object) ("<img=1>" + (String) var2);
                   break L1;
                 }
               }
@@ -125,7 +125,7 @@ final class bh {
                   }
                 }
                 if (!param1.field_k) {
-                  var3 = var3 + var2 + ": ";
+                  var3 = var3 + (String) var2 + ": ";
                   break L4;
                 } else {
                   break L4;
@@ -160,7 +160,7 @@ final class bh {
           L10: {
             var2 = (Object) (Object) decompiledCaughtException;
             stackOut_33_0 = var2;
-            stackOut_33_1 = new StringBuilder().append("bh.A(").append(param0).append(44);
+            stackOut_33_1 = new StringBuilder().append("bh.A(").append(param0).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
@@ -183,7 +183,7 @@ final class bh {
               break L10;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ')');
         }
         return stackIn_32_0;
     }
@@ -573,7 +573,7 @@ final class bh {
           L27: {
             var8 = decompiledCaughtException;
             stackOut_98_0 = (RuntimeException) var8;
-            stackOut_98_1 = new StringBuilder().append("bh.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_98_1 = new StringBuilder().append("bh.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_100_0 = stackOut_98_0;
             stackIn_100_1 = stackOut_98_1;
             stackIn_99_0 = stackOut_98_0;
@@ -596,7 +596,7 @@ final class bh {
               break L27;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_101_0, stackIn_101_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw fa.a((Throwable) (Object) stackIn_101_0, stackIn_101_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

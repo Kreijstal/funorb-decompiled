@@ -69,7 +69,7 @@ final class jd {
               break L0;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 160 + 41);
+          throw ld.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 160 + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class jd {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$3 = var6.append(var9);
+                      StringBuilder discarded$3 = var6.append((char) var9);
                       continue L1;
                     }
                   }

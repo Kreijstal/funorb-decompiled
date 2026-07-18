@@ -17,7 +17,7 @@ final class jl {
             si.field_q = param0;
             ni.a(-124, 12);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "jl.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "jl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

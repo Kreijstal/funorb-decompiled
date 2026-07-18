@@ -24,7 +24,7 @@ final class dn {
             var2 = new ub(param0, param1);
         } else {
             var2 = (ub) (Object) param0;
-            var2.field_a = var2.field_a + 32 + param1;
+            var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;
     }

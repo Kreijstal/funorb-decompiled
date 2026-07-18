@@ -100,7 +100,7 @@ final class jh {
               break L4;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw t.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -614,7 +614,7 @@ final class jh {
               L19: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_67_0 = (RuntimeException) var6_ref;
-                stackOut_67_1 = new StringBuilder().append("jh.C(").append(255).append(44).append(param1).append(44).append(param2).append(44);
+                stackOut_67_1 = new StringBuilder().append("jh.C(").append(255).append(',').append(param1).append(',').append(param2).append(',');
                 stackIn_69_0 = stackOut_67_0;
                 stackIn_69_1 = stackOut_67_1;
                 stackIn_68_0 = stackOut_67_0;
@@ -637,7 +637,7 @@ final class jh {
                   break L19;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_70_0, stackIn_70_2 + 44 + param4 + 41);
+              throw t.a((Throwable) (Object) stackIn_70_0, stackIn_70_2 + ',' + param4 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -663,7 +663,7 @@ final class jh {
             ag.a(j.field_gb, (byte) -67);
             fj.field_p.b((ia) (Object) param3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "jh.D(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "jh.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + false + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -677,7 +677,7 @@ final class jh {
             ((jh) this).field_c = param2;
             ((jh) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "jh.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "jh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

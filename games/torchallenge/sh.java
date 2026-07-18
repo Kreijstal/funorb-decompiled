@@ -172,7 +172,7 @@ abstract class sh extends w {
           L9: {
             var7 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var7;
-            stackOut_27_1 = new StringBuilder().append("sh.K(").append(param0).append(44).append(-100).append(44);
+            stackOut_27_1 = new StringBuilder().append("sh.K(").append(param0).append(',').append(-100).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -197,7 +197,7 @@ abstract class sh extends w {
           }
           L10: {
             stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(44).append(param3).append(44);
+            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',').append(param3).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -222,7 +222,7 @@ abstract class sh extends w {
           }
           L11: {
             stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-            stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(44);
+            stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
@@ -245,7 +245,7 @@ abstract class sh extends w {
               break L11;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param6 + 41);
+          throw oj.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + param6 + ')');
         }
     }
 

@@ -72,7 +72,7 @@ final class gh implements Iterable {
             param0.field_h.field_a = param0;
             param0.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "gh.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "gh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

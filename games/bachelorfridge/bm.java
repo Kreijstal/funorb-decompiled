@@ -35,7 +35,7 @@ final class bm extends pp {
             param0.d(((bm) this).field_k, 0);
             param0.d(((bm) this).field_l, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "bm.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "bm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class bm extends pp {
             }
             param1.b((byte) 76, ((bm) this).field_j, ((bm) this).field_k, ((bm) this).field_l);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "bm.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "bm.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

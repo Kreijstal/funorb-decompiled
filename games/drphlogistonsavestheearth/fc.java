@@ -154,7 +154,7 @@ final class fc {
           L9: {
             var4 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var4;
-            stackOut_38_1 = new StringBuilder().append("fc.A(").append(1).append(44).append(-44).append(44);
+            stackOut_38_1 = new StringBuilder().append("fc.A(").append(true).append(',').append(-44).append(',');
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -177,7 +177,7 @@ final class fc {
               break L9;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + 10 + 41);
+          throw ie.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ',' + 10 + ')');
         }
         return stackIn_37_0 != 0;
     }
@@ -203,7 +203,7 @@ final class fc {
             int discarded$0 = var5.d(var4, (byte) 9);
             var5.b(var5.field_j + -var4, (byte) 87);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "fc.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "fc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

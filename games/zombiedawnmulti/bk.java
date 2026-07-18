@@ -33,7 +33,7 @@ final class bk extends t {
             java.nio.Buffer discarded$1 = ((bk) this).field_h.position(0);
             java.nio.ByteBuffer discarded$2 = ((bk) this).field_h.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "bk.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "bk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class bk extends t {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -17708 + 41);
+          throw fa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -17708 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

@@ -73,7 +73,7 @@ class wh extends ji {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ class wh extends ji {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("wh.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("wh.C(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -143,7 +143,7 @@ class wh extends ji {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 

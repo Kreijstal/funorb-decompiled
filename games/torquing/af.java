@@ -26,7 +26,7 @@ abstract class af {
             var1.c(0, 0);
             r.a(126);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "af.C(" + 1 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "af.C(" + true + ')');
         }
     }
 

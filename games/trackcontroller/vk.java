@@ -791,7 +791,7 @@ final class vk extends fc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1, "vk.C(" + 1 + 41);
+          throw sl.a((Throwable) (Object) var1, "vk.C(" + true + ')');
         }
         return stackIn_4_0;
     }
@@ -819,7 +819,7 @@ final class vk extends fc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1, "vk.A(" + 2 + 41);
+          throw sl.a((Throwable) (Object) var1, "vk.A(" + 2 + ')');
         }
     }
 

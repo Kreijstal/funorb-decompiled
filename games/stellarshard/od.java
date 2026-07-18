@@ -158,7 +158,7 @@ final class od extends ah {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
     }
 
@@ -317,7 +317,7 @@ final class od extends ah {
               break L7;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + param2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

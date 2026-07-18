@@ -35,7 +35,7 @@ final class ufa {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         String var1 = "Profile - ";
-        var1 = var1 + "RoomsComplete[" + ((ufa) this).field_o + "]";
+        var1 = var1 + "RoomsComplete[" + (Object) (Object) ((ufa) this).field_o + "]";
         var1 = var1 + "CharUnlocked[" + ((ufa) this).field_s.toString() + "]";
         var1 = var1 + "CourUnlocked[" + ((ufa) this).field_m.toString() + "]";
         var1 = var1 + "WorldMedals[";
@@ -193,7 +193,7 @@ final class ufa {
               break L8;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param1 + ')');
         }
     }
 
@@ -326,7 +326,7 @@ final class ufa {
           L6: {
             var3 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var3;
-            stackOut_17_1 = new StringBuilder().append("ufa.G(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("ufa.G(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -349,7 +349,7 @@ final class ufa {
               break L6;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 
@@ -377,7 +377,7 @@ final class ufa {
             }
             ((ufa) this).field_i.b((byte) -48, (vg) (Object) param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ufa.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ufa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -39,7 +39,7 @@ final class je extends gn {
             fp.field_e = 6;
             pc.field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "je.B(" + 100 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "je.B(" + 100 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -340,7 +340,7 @@ final class je extends gn {
           L8: {
             var3 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var3;
-            stackOut_23_1 = new StringBuilder().append("je.<init>(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("je.<init>(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -363,7 +363,7 @@ final class je extends gn {
               break L8;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
     }
 

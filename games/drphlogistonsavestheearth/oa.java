@@ -127,7 +127,7 @@ final class oa implements Iterator {
             ((oa) this).field_e = ((oa) this).field_f.field_b.field_p;
             ((oa) this).field_a = null;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "oa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "oa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

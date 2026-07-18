@@ -17,7 +17,7 @@ final class wm {
             param1[3] = param1[1];
             param1[1] = var2_int != 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "wm.A(" + -11825 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "wm.A(" + -11825 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

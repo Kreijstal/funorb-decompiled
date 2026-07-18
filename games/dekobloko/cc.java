@@ -35,7 +35,7 @@ final class cc {
         try {
             ((cc) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

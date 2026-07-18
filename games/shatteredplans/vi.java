@@ -726,7 +726,7 @@ final class vi extends hs {
             var2 = in.field_f.field_p;
             in.field_f.c((-var1_int + 640) / 2, (480 - var2) / 2, 256);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "vi.G(" + 480 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "vi.G(" + 480 + ')');
         }
     }
 
@@ -1067,7 +1067,7 @@ final class vi extends hs {
                 }
                 case 29: {
                     stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-                    stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(param1).append(44);
+                    stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',').append(param1).append(',');
                     stackIn_32_0 = stackOut_29_0;
                     stackIn_32_1 = stackOut_29_1;
                     stackIn_30_0 = stackOut_29_0;
@@ -1101,7 +1101,7 @@ final class vi extends hs {
                 }
                 case 33: {
                     stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-                    stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(44);
+                    stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',');
                     stackIn_36_0 = stackOut_33_0;
                     stackIn_36_1 = stackOut_33_1;
                     stackIn_34_0 = stackOut_33_0;
@@ -1134,7 +1134,7 @@ final class vi extends hs {
                     continue stateLoop;
                 }
                 case 37: {
-                    throw r.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 41);
+                    throw r.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ')');
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
@@ -8660,7 +8660,7 @@ final class vi extends hs {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var3;
-            stackOut_24_1 = new StringBuilder().append("vi.D(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("vi.D(").append(param0).append(',');
             stackIn_27_0 = stackOut_24_0;
             stackIn_27_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -8683,7 +8683,7 @@ final class vi extends hs {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + 119 + 41);
+          throw r.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + 119 + ')');
         }
         return stackIn_23_0 != 0;
     }
@@ -8735,7 +8735,7 @@ final class vi extends hs {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var3, "vi.E(" + 30429 + 44 + param1 + 41);
+          throw r.a((Throwable) (Object) var3, "vi.E(" + 30429 + ',' + param1 + ')');
         }
     }
 
@@ -8750,7 +8750,7 @@ final class vi extends hs {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "vi.C(" + -10 + 41);
+          throw r.a((Throwable) (Object) var1, "vi.C(" + -10 + ')');
         }
     }
 
@@ -8785,7 +8785,7 @@ final class vi extends hs {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var2_ref, "vi.H(" + param0 + 41);
+          throw r.a((Throwable) (Object) var2_ref, "vi.H(" + param0 + ')');
         }
         return stackIn_1_0;
     }

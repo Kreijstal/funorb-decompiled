@@ -88,7 +88,7 @@ final class jc implements ch {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var6;
-            stackOut_10_1 = new StringBuilder().append("jc.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_10_1 = new StringBuilder().append("jc.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -111,7 +111,7 @@ final class jc implements ch {
               break L3;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param4 + 41);
+          throw pf.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param4 + ')');
         }
     }
 
@@ -268,7 +268,7 @@ final class jc implements ch {
           L10: {
             var4 = decompiledCaughtException;
             stackOut_43_0 = (RuntimeException) var4;
-            stackOut_43_1 = new StringBuilder().append("jc.D(").append(param0).append(44).append(param1).append(44).append(1).append(44);
+            stackOut_43_1 = new StringBuilder().append("jc.D(").append(param0).append(',').append(param1).append(',').append(true).append(',');
             stackIn_45_0 = stackOut_43_0;
             stackIn_45_1 = stackOut_43_1;
             stackIn_44_0 = stackOut_43_0;
@@ -291,7 +291,7 @@ final class jc implements ch {
               break L10;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + ')');
         }
         return stackIn_42_0;
     }

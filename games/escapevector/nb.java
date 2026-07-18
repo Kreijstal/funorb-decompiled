@@ -126,7 +126,7 @@ final class nb {
           }
           L6: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(1585176).append(44).append(-125).append(44).append(6340704).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(1585176).append(',').append(-125).append(',').append(6340704).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -149,7 +149,7 @@ final class nb {
               break L6;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 192 + 41);
+          throw t.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + 192 + ')');
         }
     }
 

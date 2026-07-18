@@ -49,7 +49,7 @@ final class ibb {
           L2: {
             var8 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var8;
-            stackOut_6_1 = new StringBuilder().append("ibb.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_6_1 = new StringBuilder().append("ibb.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -72,7 +72,7 @@ final class ibb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class ibb {
             ((ibb) this).field_c = param0;
             ((ibb) this).field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ibb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ibb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

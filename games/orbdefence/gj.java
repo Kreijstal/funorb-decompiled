@@ -35,7 +35,7 @@ final class gj extends ca {
             tg.field_c = tl.field_h;
             qc.field_g = tl.field_h;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "gj.D(" + (param0 != null ? "{...}" : "null") + 44 + 33 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "gj.D(" + (param0 != null ? "{...}" : "null") + ',' + 33 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class gj extends ca {
             int discarded$0 = 1;
             fg.a(22050, 1024, 22050, param4, param5, true, param1);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "gj.B(" + 22050 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 44 + 1024 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "gj.B(" + 22050 + ',' + (param1 != null ? "{...}" : "null") + ',' + true + ',' + 1024 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

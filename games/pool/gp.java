@@ -19,7 +19,7 @@ final class gp {
             param1.field_A = new char[]{'?'};
             param1.field_D = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "gp.C(" + 58 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "gp.C(" + 58 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class gp {
             int discarded$0 = var6.d(-1, var4);
             var6.b(-var4 + var6.field_v, true);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "gp.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "gp.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

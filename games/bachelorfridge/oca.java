@@ -46,7 +46,7 @@ final class oca extends jm {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("oca.C(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("oca.C(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -69,7 +69,7 @@ final class oca extends jm {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class oca extends jm {
             param0.d(((oca) this).field_m, 0);
             int var3_int = 118 % ((37 - param1) / 38);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oca.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "oca.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class oca extends jm {
         try {
             param0.field_o.b(30996, ((oca) this).field_q, ((oca) this).field_m);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oca.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "oca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class oca extends jm {
             ((oca) this).field_q = param0.b(16711935);
             ((oca) this).field_m = param0.b(16711935);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oca.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "oca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

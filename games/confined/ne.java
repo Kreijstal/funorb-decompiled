@@ -42,7 +42,7 @@ final class ne {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "ne.B(" + -11 + 41);
+          throw sd.a((Throwable) (Object) var1, "ne.B(" + -11 + ')');
         }
     }
 

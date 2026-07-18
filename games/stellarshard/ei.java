@@ -82,7 +82,7 @@ final class ei extends dg {
             var4.field_G = true;
             boolean discarded$0 = var4.a(-2147483648, (rj) this);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ei.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ei.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -205,7 +205,7 @@ final class ei extends dg {
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }

@@ -121,7 +121,7 @@ final class pj extends ct {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var4_ref;
-            stackOut_14_1 = new StringBuilder().append("pj.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("pj.D(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -144,7 +144,7 @@ final class pj extends ct {
               break L5;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param3 + 41);
+          throw nb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param3 + ')');
         }
         return stackIn_13_0;
     }
@@ -156,7 +156,7 @@ final class pj extends ct {
             ((pj) this).field_F = 256;
             ((pj) this).field_z = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "pj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "pj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

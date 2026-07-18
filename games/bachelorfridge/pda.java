@@ -128,7 +128,7 @@ final class pda extends eo {
               break L6;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 0 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + 0 + ',' + param2 + ')');
         }
     }
 
@@ -214,7 +214,7 @@ final class pda extends eo {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
     }
 

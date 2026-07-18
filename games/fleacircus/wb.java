@@ -80,7 +80,7 @@ abstract class wb extends cd {
             int discarded$0 = 640;
             this.a(480, param0, false, param2);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "wb.TA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "wb.TA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1085,7 +1085,7 @@ abstract class wb extends cd {
           L8: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var6_ref;
-            stackOut_22_1 = new StringBuilder().append("wb.PA(").append(480).append(44).append(param1).append(44).append(0).append(44);
+            stackOut_22_1 = new StringBuilder().append("wb.PA(").append(480).append(',').append(param1).append(',').append(false).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -1108,7 +1108,7 @@ abstract class wb extends cd {
               break L8;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 640 + 41);
+          throw pf.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 640 + ')');
         }
     }
 

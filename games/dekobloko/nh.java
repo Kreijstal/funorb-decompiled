@@ -425,7 +425,7 @@ final class nh {
           L16: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_61_0 = (RuntimeException) var5_ref;
-            stackOut_61_1 = new StringBuilder().append("nh.H(").append(param0).append(44);
+            stackOut_61_1 = new StringBuilder().append("nh.H(").append(param0).append(',');
             stackIn_63_0 = stackOut_61_0;
             stackIn_63_1 = stackOut_61_1;
             stackIn_62_0 = stackOut_61_0;
@@ -448,7 +448,7 @@ final class nh {
               break L16;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_64_0, stackIn_64_2 + 44 + param2 + 44 + param3 + 41);
+          throw dh.a((Throwable) (Object) stackIn_64_0, stackIn_64_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -684,7 +684,7 @@ final class nh {
               break L15;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw dh.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -736,7 +736,7 @@ final class nh {
             ((nh) this).field_j = 0L;
             ((nh) this).field_d = new byte[param2];
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "nh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "nh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -745,7 +745,7 @@ final class nh {
             ((nh) this).a(0, param0, 741, param0.length);
             int var3_int = 38 / ((param1 - 70) / 44);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "nh.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "nh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

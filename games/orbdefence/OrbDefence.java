@@ -324,7 +324,7 @@ public final class OrbDefence extends ph {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1, "OrbDefence.B(" + param0 + 41);
+          throw dd.a((Throwable) (Object) var1, "OrbDefence.B(" + param0 + ')');
         }
     }
 
@@ -651,7 +651,7 @@ public final class OrbDefence extends ph {
               break L17;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + 44 + param1 + 41);
+          throw dd.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + ',' + param1 + ')');
         }
     }
 

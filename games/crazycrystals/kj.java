@@ -145,7 +145,7 @@ final class kj {
               break L7;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 36 + 41);
+          throw dn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 36 + ')');
         }
     }
 

@@ -91,7 +91,7 @@ final class gi extends ii implements vg {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("gi.C(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("gi.C(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -114,7 +114,7 @@ final class gi extends ii implements vg {
               break L4;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class gi extends ii implements vg {
               break L5;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw vk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -232,7 +232,7 @@ final class gi extends ii implements vg {
         try {
             ((gi) this).field_N = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "gi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -322,7 +322,7 @@ final class gi extends ii implements vg {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw vk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_13_0 != 0;
     }

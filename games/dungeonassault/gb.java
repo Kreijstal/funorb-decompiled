@@ -131,7 +131,7 @@ final class gb {
               break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 41);
+          throw vk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ')');
         }
         return stackIn_14_0;
     }

@@ -58,7 +58,7 @@ final class oa extends mc {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("oa.E(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("oa.E(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -81,7 +81,7 @@ final class oa extends mc {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class oa extends mc {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 65416 + 41);
+          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + 65416 + ')');
         }
         return stackIn_9_0 != 0;
     }

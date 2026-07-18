@@ -43,7 +43,7 @@ final class bb {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2_ref;
-            stackOut_4_1 = new StringBuilder().append("bb.E(").append(-2).append(44);
+            stackOut_4_1 = new StringBuilder().append("bb.E(").append(-2).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -66,7 +66,7 @@ final class bb {
               break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -87,7 +87,7 @@ final class bb {
             js.field_f.c(param3 ? 1 : 0, (byte) -96);
             js.field_f.b(js.field_f.field_j - var7_int, (byte) 118);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "bb.A(" + 94 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "bb.A(" + 94 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -587,7 +587,7 @@ final class bb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var4, "bb.C(" + param0 + 44 + param1 + 44 + -2 + 44 + param3 + 41);
+          throw r.a((Throwable) (Object) var4, "bb.C(" + param0 + ',' + param1 + ',' + -2 + ',' + param3 + ')');
         }
     }
 

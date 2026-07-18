@@ -74,7 +74,7 @@ final class oga extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -190,7 +190,7 @@ final class oga extends rqa {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw rta.a((Throwable) (Object) var1, "oga.D(" + 16928 + 41);
+              throw rta.a((Throwable) (Object) var1, "oga.D(" + 16928 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

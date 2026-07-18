@@ -213,7 +213,7 @@ final class sd extends am {
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 1 + 44 + 0 + 41);
+          throw rb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 1 + ',' + 0 + ')');
         }
     }
 
@@ -347,7 +347,7 @@ final class sd extends am {
               break L0;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

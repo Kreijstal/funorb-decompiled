@@ -26,7 +26,7 @@ abstract class jb extends tf {
             param0.c(param3, (byte) -88);
             param0.f(param2, (byte) -97);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "jb.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "jb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

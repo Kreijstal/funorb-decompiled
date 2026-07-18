@@ -1134,7 +1134,7 @@ final class vn extends ue {
             int discarded$0 = 0;
             this.b();
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "vn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -1208,7 +1208,7 @@ final class vn extends ue {
                   break L3;
                 }
               }
-              throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 87 + 41);
+              throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 87 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

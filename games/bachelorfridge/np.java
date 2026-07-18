@@ -86,7 +86,7 @@ final class np implements Iterator {
             int discarded$0 = -87;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "np.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "np.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

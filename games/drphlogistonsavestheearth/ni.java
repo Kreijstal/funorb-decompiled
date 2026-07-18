@@ -65,7 +65,7 @@ final class ni extends ei {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("ni.D(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("ni.D(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -88,7 +88,7 @@ final class ni extends ei {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -162,7 +162,7 @@ final class ni extends ei {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("ni.G(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("ni.G(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -185,7 +185,7 @@ final class ni extends ei {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return stackIn_8_0;
     }

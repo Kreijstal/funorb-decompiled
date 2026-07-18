@@ -127,7 +127,7 @@ final class ik {
               break L7;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 0 + 41);
+          throw kk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + 0 + ')');
         }
         return stackIn_15_0;
     }
@@ -188,7 +188,7 @@ final class ik {
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 1 + 41);
+          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + true + ')');
         }
         return stackIn_1_0;
     }
@@ -246,7 +246,7 @@ final class ik {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("ik.C(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("ik.C(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -269,7 +269,7 @@ final class ik {
               break L2;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ')');
         }
         return (vj) (Object) stackIn_6_0;
     }

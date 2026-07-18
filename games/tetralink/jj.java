@@ -14,7 +14,7 @@ final class jj {
             fa.field_d = 14;
             em.c(54);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "jj.A(" + 14 + 44 + 12 + 44 + (param2 != null ? "{...}" : "null") + 44 + -88 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "jj.A(" + 14 + ',' + 12 + ',' + (param2 != null ? "{...}" : "null") + ',' + -88 + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class jj {
             rk.a(ra.field_e / 2, -33, ra.field_f / 2);
             gd.a(param2.field_u + param2.field_K, false, param1.field_K + param1.field_u, param1.field_u, param2.field_u);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "jj.B(" + 480 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 2 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "jj.B(" + 480 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + 2 + ')');
         }
     }
 

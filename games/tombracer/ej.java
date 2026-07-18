@@ -148,7 +148,7 @@ final class ej {
           L6: {
             var3 = decompiledCaughtException;
             stackOut_35_0 = (RuntimeException) var3;
-            stackOut_35_1 = new StringBuilder().append("ej.B(").append(0).append(44).append(param1).append(44);
+            stackOut_35_1 = new StringBuilder().append("ej.B(").append(false).append(',').append(param1).append(',');
             stackIn_37_0 = stackOut_35_0;
             stackIn_37_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
@@ -171,7 +171,7 @@ final class ej {
               break L6;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ')');
         }
         return stackIn_34_0 != 0;
     }

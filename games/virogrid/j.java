@@ -158,7 +158,7 @@ final class j implements Iterator {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2_ref;
-            stackOut_22_1 = new StringBuilder().append("j.E(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("j.E(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -181,7 +181,7 @@ final class j implements Iterator {
               break L1;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 
@@ -372,7 +372,7 @@ final class j implements Iterator {
               break L5;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + 44 + 0 + 41);
+          throw kg.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + ',' + 0 + ')');
         }
     }
 
@@ -423,7 +423,7 @@ final class j implements Iterator {
             int discarded$0 = 0;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "j.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "j.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

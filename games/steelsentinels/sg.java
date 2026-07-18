@@ -275,7 +275,7 @@ final class sg implements Runnable {
           }
           L10: {
             stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-            stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(44);
+            stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
@@ -300,7 +300,7 @@ final class sg implements Runnable {
           }
           L11: {
             stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-            stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(44).append(0).append(44);
+            stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(',').append(false).append(',');
             stackIn_38_0 = stackOut_36_0;
             stackIn_38_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
@@ -325,7 +325,7 @@ final class sg implements Runnable {
           }
           L12: {
             stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-            stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(44);
+            stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',');
             stackIn_41_0 = stackOut_39_0;
             stackIn_41_1 = stackOut_39_1;
             stackIn_40_0 = stackOut_39_0;
@@ -348,7 +348,7 @@ final class sg implements Runnable {
               break L12;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ')');
         }
         return stackIn_29_0;
     }
@@ -620,7 +620,7 @@ final class sg implements Runnable {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var5;
-            stackOut_11_1 = new StringBuilder().append("sg.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("sg.E(").append(param0).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -643,7 +643,7 @@ final class sg implements Runnable {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 41);
+          throw ci.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param3 + ')');
         }
     }
 
@@ -786,7 +786,7 @@ final class sg implements Runnable {
           L5: {
             var10 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var10;
-            stackOut_14_1 = new StringBuilder().append("sg.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("sg.D(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -811,7 +811,7 @@ final class sg implements Runnable {
           }
           L6: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -836,7 +836,7 @@ final class sg implements Runnable {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -861,7 +861,7 @@ final class sg implements Runnable {
           }
           L8: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param7).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',').append(param7).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -884,7 +884,7 @@ final class sg implements Runnable {
               break L8;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param9 + 41);
+          throw ci.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param9 + ')');
         }
     }
 
@@ -1239,7 +1239,7 @@ final class sg implements Runnable {
           L4: {
             var5 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var5;
-            stackOut_26_1 = new StringBuilder().append("sg.B(").append(param0).append(44);
+            stackOut_26_1 = new StringBuilder().append("sg.B(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -1262,7 +1262,7 @@ final class sg implements Runnable {
               break L4;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param2 + 44 + param3 + 41);
+          throw ci.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1280,7 +1280,7 @@ final class sg implements Runnable {
             ((sg) this).field_l = ((sg) this).field_d.getOutputStream();
             ((sg) this).field_j = param2;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "sg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

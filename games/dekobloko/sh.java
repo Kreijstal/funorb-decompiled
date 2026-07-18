@@ -30,7 +30,7 @@ final class sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "sh.C(" + -105 + 41);
+          throw dh.a((Throwable) (Object) var1, "sh.C(" + -105 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class sh {
             dh.field_e = -1;
             jc.field_g = 0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "sh.D(" + 0 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "sh.D(" + 0 + ')');
         }
     }
 
@@ -185,7 +185,7 @@ final class sh {
           }
           L9: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(-25724).append(44).append(param2).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(-25724).append(',').append(param2).append(',');
             stackIn_24_0 = stackOut_21_0;
             stackIn_24_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -208,7 +208,7 @@ final class sh {
               break L9;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param4 + 41);
+          throw dh.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param4 + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class sh {
           L1: {
             var9 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var9;
-            stackOut_5_1 = new StringBuilder().append("sh.A(").append(0).append(44).append(80).append(44).append(25547).append(44).append(param3).append(44).append(30).append(44).append(0).append(44).append(param6).append(44);
+            stackOut_5_1 = new StringBuilder().append("sh.A(").append(0).append(',').append(80).append(',').append(25547).append(',').append(param3).append(',').append(30).append(',').append(0).append(',').append(param6).append(',');
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -286,7 +286,7 @@ final class sh {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param8 + 41);
+          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param8 + ')');
         }
     }
 

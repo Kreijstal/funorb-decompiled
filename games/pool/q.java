@@ -17,7 +17,7 @@ final class q {
             var2 = gm.a(param0, "jagex logo2.packvorbis", "");
             jg discarded$0 = var2.b();
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "q.A(" + (param0 != null ? "{...}" : "null") + 44 + 102 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "q.A(" + (param0 != null ? "{...}" : "null") + ',' + 102 + ')');
         }
     }
 

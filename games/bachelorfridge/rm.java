@@ -11,7 +11,7 @@ final class rm {
             eaa.field_d.a((bw) (Object) param2, true);
             nr.a(4, param2, (byte) -48);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "rm.B(" + 4 + 44 + 122 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "rm.B(" + 4 + ',' + 122 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

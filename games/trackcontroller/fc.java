@@ -126,7 +126,7 @@ class fc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var5, "fc.LB(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw sl.a((Throwable) (Object) var5, "fc.LB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -225,7 +225,7 @@ class fc {
           L2: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var2_ref2;
-            stackOut_18_1 = new StringBuilder().append("fc.QB(").append(0).append(44);
+            stackOut_18_1 = new StringBuilder().append("fc.QB(").append(false).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -248,7 +248,7 @@ class fc {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
     }
 

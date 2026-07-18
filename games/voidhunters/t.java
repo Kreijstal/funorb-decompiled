@@ -20,7 +20,7 @@ final class t {
             var3.f(((t) this).field_f, ((t) this).field_a);
             param1.field_e = ((t) this).field_c;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "t.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "t.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class t {
             ((t) this).field_a = var3.XA();
             ((t) this).field_c = param1.field_e;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "t.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "t.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

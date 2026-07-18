@@ -115,7 +115,7 @@ final class wb implements bf {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var6;
-            stackOut_12_1 = new StringBuilder().append("wb.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("wb.B(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -138,7 +138,7 @@ final class wb implements bf {
               break L6;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param3 + 44 + param4 + 41);
+          throw bd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class wb implements bf {
             ((wb) this).field_b = param5;
             ((wb) this).field_i = param4;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "wb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "wb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

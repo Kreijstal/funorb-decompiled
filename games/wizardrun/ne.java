@@ -139,7 +139,7 @@ final class ne {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var2_ref, "ne.E(" + param0 + 44 + 160 + 41);
+          throw bd.a((Throwable) (Object) var2_ref, "ne.E(" + param0 + ',' + 160 + ')');
         }
         return stackIn_22_0 != 0;
     }
@@ -243,7 +243,7 @@ final class ne {
               break L3;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
+          throw bd.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
         }
     }
 

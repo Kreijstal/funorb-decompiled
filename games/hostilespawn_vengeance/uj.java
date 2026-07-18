@@ -112,7 +112,7 @@ final class uj extends am {
                   break L1;
                 }
               }
-              throw wg.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 41 + 41);
+              throw wg.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 41 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -186,7 +186,7 @@ final class uj extends am {
               break L2;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 18719 + 41);
+          throw wg.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 18719 + ')');
         }
         return stackIn_3_0;
     }

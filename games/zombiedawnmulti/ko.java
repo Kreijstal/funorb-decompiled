@@ -29,7 +29,7 @@ final class ko {
         try {
             g.a(param2, 320 + -(param2.field_x / 2), 400);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ko.F(" + (param0 != null ? "{...}" : "null") + 44 + 59 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "ko.F(" + (param0 != null ? "{...}" : "null") + ',' + 59 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1313,7 +1313,7 @@ final class ko {
           L9: {
             var5 = decompiledCaughtException;
             stackOut_62_0 = (RuntimeException) var5;
-            stackOut_62_1 = new StringBuilder().append("ko.S(").append(param0).append(44);
+            stackOut_62_1 = new StringBuilder().append("ko.S(").append(param0).append(',');
             stackIn_64_0 = stackOut_62_0;
             stackIn_64_1 = stackOut_62_1;
             stackIn_63_0 = stackOut_62_0;
@@ -1336,7 +1336,7 @@ final class ko {
               break L9;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + 44 + param2 + 44 + param3 + 41);
+          throw fa.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

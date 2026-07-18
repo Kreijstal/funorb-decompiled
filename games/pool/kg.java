@@ -53,7 +53,7 @@ final class kg extends ma {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2, "kg.A(" + 2 + 44 + 49 + 41);
+          throw wm.a((Throwable) (Object) var2, "kg.A(" + 2 + ',' + 49 + ')');
         }
     }
 

@@ -39,7 +39,7 @@ final class nb {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var2;
-            stackOut_3_1 = new StringBuilder().append("nb.B(").append(-2).append(44);
+            stackOut_3_1 = new StringBuilder().append("nb.B(").append(-2).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -62,7 +62,7 @@ final class nb {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

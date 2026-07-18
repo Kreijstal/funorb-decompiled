@@ -37,7 +37,7 @@ final class ej {
             int var3_int = 121 / ((-13 - param1) / 47);
             gl.a(-11, 31536000L, param0, ((ej) this).field_a, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ej.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "ej.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class ej {
         try {
             ((ej) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ej.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "ej.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class ej {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("ej.A(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("ej.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -117,7 +117,7 @@ final class ej {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }

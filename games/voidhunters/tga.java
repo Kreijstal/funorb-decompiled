@@ -47,7 +47,7 @@ final class tga extends uf implements lca {
         try {
             ((tga) this).field_O = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "tga.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "tga.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class tga extends uf implements lca {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param1).append(44).append(118).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param1).append(',').append(118).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -182,7 +182,7 @@ final class tga extends uf implements lca {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param4 + ')');
         }
     }
 
@@ -191,7 +191,7 @@ final class tga extends uf implements lca {
             super.a(param0, param1, param2, param3);
             ((tga) this).field_L = -param1 + (kc.field_b - ((tga) this).field_g);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "tga.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "tga.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

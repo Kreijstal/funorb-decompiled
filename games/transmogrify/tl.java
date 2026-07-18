@@ -90,7 +90,7 @@ final class tl {
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 41);
+          throw ch.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
         }
         return stackIn_11_0;
     }
@@ -159,7 +159,7 @@ final class tl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var3, "tl.A(" + 196077633 + 44 + param1 + 44 + param2 + 41);
+          throw ch.a((Throwable) (Object) var3, "tl.A(" + 196077633 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_11_0;
     }
@@ -261,7 +261,7 @@ final class tl {
               break L3;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw ch.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
         }
         return stackIn_10_0;
     }
@@ -296,7 +296,7 @@ final class tl {
                 var9 = 160;
                 var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
             }
-            StringBuilder discarded$0 = var6.append(var9);
+            StringBuilder discarded$0 = var6.append((char) var9);
         }
         StringBuilder discarded$1 = var6.reverse();
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
@@ -406,7 +406,7 @@ final class tl {
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw ch.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
         }
         return stackIn_17_0;
     }
@@ -446,7 +446,7 @@ final class tl {
           L1: {
             var9_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var9_ref;
-            stackOut_2_1 = new StringBuilder().append("tl.D(").append(param0).append(44).append(36).append(44);
+            stackOut_2_1 = new StringBuilder().append("tl.D(").append(param0).append(',').append(36).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -469,7 +469,7 @@ final class tl {
               break L1;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 3 + 44 + param4 + 44 + param5 + 44 + 65506 + 44 + 29 + 44 + param8 + 41);
+          throw ch.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 3 + ',' + param4 + ',' + param5 + ',' + 65506 + ',' + 29 + ',' + param8 + ')');
         }
         return stackIn_1_0;
     }
@@ -504,7 +504,7 @@ final class tl {
         try {
             ((tl) this).field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "tl.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "tl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

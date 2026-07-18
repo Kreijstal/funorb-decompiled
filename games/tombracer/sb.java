@@ -92,7 +92,7 @@ final class sb {
           L5: {
             var2_ref = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var2_ref;
-            stackOut_17_1 = new StringBuilder().append("sb.B(").append(0).append(44);
+            stackOut_17_1 = new StringBuilder().append("sb.B(").append(0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -115,7 +115,7 @@ final class sb {
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
         return stackIn_16_0;
     }
@@ -131,7 +131,7 @@ final class sb {
             int var5_int = 0;
             fna.field_j = new qua[4];
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "sb.C(" + -70 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "sb.C(" + -70 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

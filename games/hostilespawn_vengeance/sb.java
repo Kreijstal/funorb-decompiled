@@ -59,7 +59,7 @@ final class sb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var1_ref, "sb.A(" + -113 + 41);
+          throw wg.a((Throwable) (Object) var1_ref, "sb.A(" + -113 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class sb {
               break L2;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + 3 + 41);
+          throw wg.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + 3 + ')');
         }
     }
 
@@ -203,7 +203,7 @@ final class sb {
           L0: {
             var3_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3_ref;
-            stackOut_13_1 = new StringBuilder().append("sb.B(").append(1).append(44);
+            stackOut_13_1 = new StringBuilder().append("sb.B(").append(true).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -226,7 +226,7 @@ final class sb {
               break L0;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param2 + ')');
         }
     }
 
@@ -238,7 +238,7 @@ final class sb {
             pf.b(511);
             si.a(param0.field_D, param0.field_u, param0.field_r);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "sb.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "sb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

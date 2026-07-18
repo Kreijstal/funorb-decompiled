@@ -47,7 +47,7 @@ final class fh extends wd {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("fh.A(").append(73).append(44);
+            stackOut_4_1 = new StringBuilder().append("fh.A(").append(73).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -70,7 +70,7 @@ final class fh extends wd {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -157,7 +157,7 @@ final class fh extends wd {
           L5: {
             var8 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var8;
-            stackOut_16_1 = new StringBuilder().append("fh.IA(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("fh.IA(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -180,7 +180,7 @@ final class fh extends wd {
               break L5;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw ii.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_15_0 != 0;
     }

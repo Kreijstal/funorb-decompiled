@@ -126,7 +126,7 @@ final class da {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_5_0 != 0;
     }

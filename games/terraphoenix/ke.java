@@ -35,7 +35,7 @@ abstract class ke {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var1, "ke.E(" + 0 + 41);
+          throw qk.a((Throwable) (Object) var1, "ke.E(" + false + ')');
         }
     }
 
@@ -55,7 +55,7 @@ abstract class ke {
             ll.a(var3, var4, (byte) 116, param0, var2);
             int var6 = -64 / ((param1 - -40) / 38);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ke.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "ke.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

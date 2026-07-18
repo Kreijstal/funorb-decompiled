@@ -35,7 +35,7 @@ abstract class wf extends ta {
             }
             ia.field_i = 0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "wf.DB(" + 76 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "wf.DB(" + 76 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ abstract class wf extends ta {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("wf.AB(").append(-117).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("wf.AB(").append(-117).append(',').append(param1).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -125,7 +125,7 @@ abstract class wf extends ta {
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }

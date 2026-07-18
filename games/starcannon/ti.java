@@ -46,7 +46,7 @@ abstract class ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var2, "ti.B(" + 57 + 44 + 2 + 41);
+          throw sd.a((Throwable) (Object) var2, "ti.B(" + 57 + ',' + 2 + ')');
         }
     }
 

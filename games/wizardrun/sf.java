@@ -62,7 +62,7 @@ final class sf {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("sf.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("sf.B(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -85,7 +85,7 @@ final class sf {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -359,7 +359,7 @@ final class sf {
         try {
             ((sf) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "sf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

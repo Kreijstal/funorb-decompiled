@@ -15,7 +15,7 @@ final class ch {
             var2 = new kl(param0, param1);
         } else {
             var2 = (kl) (Object) param0;
-            var2.field_a = var2.field_a + 32 + param1;
+            var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;
     }
@@ -37,7 +37,7 @@ final class ch {
             sb.c();
             kh.a(-111, true);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "ch.C(" + 58 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "ch.C(" + 58 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

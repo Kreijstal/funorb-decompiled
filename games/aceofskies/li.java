@@ -175,7 +175,7 @@ abstract class li implements sp {
           L8: {
             var3 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var3;
-            stackOut_24_1 = new StringBuilder().append("li.I(").append(param0).append(44).append(param1).append(44);
+            stackOut_24_1 = new StringBuilder().append("li.I(").append(param0).append(',').append(param1).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -198,7 +198,7 @@ abstract class li implements sp {
               break L8;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
     }
 

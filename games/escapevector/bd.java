@@ -21,7 +21,7 @@ final class bd extends hg {
         try {
             ((bd) this).field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "bd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "bd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

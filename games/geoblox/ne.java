@@ -254,7 +254,7 @@ final class ne {
             int discarded$0 = 1;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ne.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

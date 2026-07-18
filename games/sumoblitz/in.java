@@ -49,7 +49,7 @@ final class in extends ie {
             ((in) this).field_A = 256;
             ((in) this).field_y = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "in.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "in.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

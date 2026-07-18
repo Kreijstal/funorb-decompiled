@@ -87,7 +87,7 @@ final class wk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1_ref, "wk.D(" + 1816 + 41);
+          throw ma.a((Throwable) (Object) var1_ref, "wk.D(" + 1816 + ')');
         }
         return stackIn_19_0 != 0;
     }

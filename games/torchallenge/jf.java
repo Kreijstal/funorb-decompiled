@@ -13,7 +13,7 @@ final class jf extends n {
         try {
             super.c(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "jf.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "jf.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class jf extends n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "jf.R(" + param0 + 41);
+          throw oj.a((Throwable) (Object) var1, "jf.R(" + param0 + ')');
         }
     }
 

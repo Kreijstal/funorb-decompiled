@@ -102,7 +102,7 @@ final class jk extends hl {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw kk.a((Throwable) (Object) var1_ref, "jk.C(" + 27370 + 41);
+              throw kk.a((Throwable) (Object) var1_ref, "jk.C(" + 27370 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -221,7 +221,7 @@ final class jk extends hl {
               break L3;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + -64 + 41);
+          throw kk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + -64 + ')');
         }
     }
 

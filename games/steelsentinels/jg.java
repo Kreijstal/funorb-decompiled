@@ -694,7 +694,7 @@ final class jg {
             pb.a(1 + var7, 1 + var8, -2 + var5, var6 + -2, 16777088);
             int discarded$0 = bd.field_f.field_L.a(param0, 3 + var7, param1 + var8 - (-km.field_g - -bd.field_f.field_L.field_G), 500, 1000, 0, -1, 0, 0, db.field_b);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "jg.L(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "jg.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -729,7 +729,7 @@ final class jg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var6, "jg.I(" + 0 + 44 + 48 + 44 + param2 + 44 + 0 + 44 + 480 + 44 + param5 + 41);
+          throw ci.a((Throwable) (Object) var6, "jg.I(" + 0 + ',' + 48 + ',' + param2 + ',' + false + ',' + 480 + ',' + param5 + ')');
         }
     }
 

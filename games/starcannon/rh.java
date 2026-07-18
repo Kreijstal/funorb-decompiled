@@ -146,7 +146,7 @@ final class rh extends rf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var6, "rh.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 64 + 44 + 1 + 41);
+          throw sd.a((Throwable) (Object) var6, "rh.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + 64 + ',' + true + ')');
         }
     }
 
@@ -459,7 +459,7 @@ final class rh extends rf {
                   break L24;
                 }
               }
-              throw sd.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + 44 + -68 + 41);
+              throw sd.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + ',' + -68 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -66,7 +66,7 @@ final class qfb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -108,7 +108,7 @@ final class qfb extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1_ref, "qfb.B(" + param0 + 41);
+          throw rta.a((Throwable) (Object) var1_ref, "qfb.B(" + param0 + ')');
         }
     }
 

@@ -233,7 +233,7 @@ abstract class rg extends gm {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("rg.MA(").append(param0).append(44).append(0).append(44);
+            stackOut_5_1 = new StringBuilder().append("rg.MA(").append(param0).append(',').append(false).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -256,7 +256,7 @@ abstract class rg extends gm {
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param3 + 41);
+          throw pn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param3 + ')');
         }
     }
 

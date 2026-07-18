@@ -153,7 +153,7 @@ abstract class jc extends gl implements sf {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("jc.EB(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("jc.EB(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -176,7 +176,7 @@ abstract class jc extends gl implements sf {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return stackIn_8_0 != 0;
     }
@@ -240,7 +240,7 @@ abstract class jc extends gl implements sf {
               break L2;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 44 + 66 + 41);
+          throw qk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + param2 + ',' + 66 + ')');
         }
     }
 
@@ -287,7 +287,7 @@ abstract class jc extends gl implements sf {
           L3: {
             var7 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var7;
-            stackOut_6_1 = new StringBuilder().append("jc.HA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_6_1 = new StringBuilder().append("jc.HA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -310,7 +310,7 @@ abstract class jc extends gl implements sf {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -400,7 +400,7 @@ abstract class jc extends gl implements sf {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var5;
-            stackOut_16_1 = new StringBuilder().append("jc.K(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("jc.K(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -423,7 +423,7 @@ abstract class jc extends gl implements sf {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 44 + param3 + 41);
+          throw qk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_15_0 != 0;
     }
@@ -503,7 +503,7 @@ abstract class jc extends gl implements sf {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 41);
+          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 0 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -555,7 +555,7 @@ abstract class jc extends gl implements sf {
         var6 = Terraphoenix.field_V;
         try {
           L0: {
-            StringBuilder discarded$16 = param0.append(10);
+            StringBuilder discarded$16 = param0.append('\n');
             var5_int = param3;
             L1: while (true) {
               if (var5_int > param2) {
@@ -570,7 +570,7 @@ abstract class jc extends gl implements sf {
                 }
                 break L0;
               } else {
-                StringBuilder discarded$19 = param0.append(32);
+                StringBuilder discarded$19 = param0.append(' ');
                 var5_int++;
                 continue L1;
               }
@@ -606,7 +606,7 @@ abstract class jc extends gl implements sf {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -629,7 +629,7 @@ abstract class jc extends gl implements sf {
               break L4;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 44 + param3 + 41);
+          throw qk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -689,7 +689,7 @@ abstract class jc extends gl implements sf {
           L3: {
             var8 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var8;
-            stackOut_8_1 = new StringBuilder().append("jc.U(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_8_1 = new StringBuilder().append("jc.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -712,7 +712,7 @@ abstract class jc extends gl implements sf {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param6 + 41);
+          throw qk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param6 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -773,7 +773,7 @@ abstract class jc extends gl implements sf {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("jc.F(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("jc.F(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -796,7 +796,7 @@ abstract class jc extends gl implements sf {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -884,7 +884,7 @@ abstract class jc extends gl implements sf {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw qk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_8_0 != 0;
     }
@@ -954,7 +954,7 @@ abstract class jc extends gl implements sf {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("jc.KA(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("jc.KA(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -979,7 +979,7 @@ abstract class jc extends gl implements sf {
           }
           L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param2).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -1002,7 +1002,7 @@ abstract class jc extends gl implements sf {
               break L4;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
         return stackIn_6_0;
     }

@@ -61,7 +61,7 @@ final class sa extends pi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var3, "sa.A(" + param0 + 44 + param1 + 44 + 0 + 41);
+          throw lj.a((Throwable) (Object) var3, "sa.A(" + param0 + ',' + param1 + ',' + 0 + ')');
         }
         return stackIn_6_0;
     }
@@ -73,7 +73,7 @@ final class sa extends pi {
             ((sa) this).field_p = param1;
             ((sa) this).field_n.f(128 + ((sa) this).field_q * oc.field_f >> 8);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "sa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

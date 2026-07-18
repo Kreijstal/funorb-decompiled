@@ -96,7 +96,7 @@ final class vu {
                                 var6++;
                                 break L5;
                               } else {
-                                StringBuilder discarded$3 = var5.append(var8);
+                                StringBuilder discarded$3 = var5.append((char) var8);
                                 var6++;
                                 break L5;
                               }
@@ -129,7 +129,7 @@ final class vu {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_34_0 = (RuntimeException) var2;
-            stackOut_34_1 = new StringBuilder().append("vu.B(").append(param0).append(44);
+            stackOut_34_1 = new StringBuilder().append("vu.B(").append(param0).append(',');
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
@@ -152,7 +152,7 @@ final class vu {
               break L6;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class vu {
               break L3;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + 103 + 44 + param2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + 103 + ',' + param2 + ')');
         }
         return stackIn_11_0;
     }
@@ -270,7 +270,7 @@ final class vu {
             ((vu) this).field_d = param1;
             ((vu) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "vu.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

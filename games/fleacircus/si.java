@@ -482,7 +482,7 @@ final class si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var2, "si.E(" + 26 + 44 + param1 + 41);
+          throw pf.a((Throwable) (Object) var2, "si.E(" + 26 + ',' + param1 + ')');
         }
         return stackIn_104_0;
     }
@@ -516,7 +516,7 @@ final class si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var3, "si.D(" + param0 + 44 + -56 + 44 + param2 + 41);
+          throw pf.a((Throwable) (Object) var3, "si.D(" + param0 + ',' + -56 + ',' + param2 + ')');
         }
         return stackIn_5_0;
     }

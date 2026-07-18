@@ -84,7 +84,7 @@ class ii extends gb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1_ref, "ii.H(" + -62 + 41);
+          throw sl.a((Throwable) (Object) var1_ref, "ii.H(" + -62 + ')');
         }
     }
 

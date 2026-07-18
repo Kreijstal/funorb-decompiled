@@ -29,7 +29,7 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "vf.keyTyped(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "vf.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L4;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -354,7 +354,7 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L6;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
     }
 

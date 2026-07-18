@@ -26,7 +26,7 @@ final class qi extends java.awt.Canvas implements java.awt.event.FocusListener {
             bi.a();
             ln.field_f.c(param2 + param1, param3, 64);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "qi.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "qi.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -43,7 +43,7 @@ final class qi extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((qi) this).field_e = true;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "qi.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "qi.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class qi extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             br.a(((qi) this).field_c, param0, 8);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "qi.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

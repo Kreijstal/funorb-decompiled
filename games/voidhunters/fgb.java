@@ -27,7 +27,7 @@ class fgb extends fh {
             var3.c(0, param2.field_g);
             var3.a(param2.field_d, true);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "fgb.DA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "fgb.DA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -119,7 +119,7 @@ final class os extends hn {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -292,7 +292,7 @@ final class os extends hn {
               break L5;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 16 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + 16 + ',' + param2 + ')');
         }
     }
 
@@ -306,7 +306,7 @@ final class os extends hn {
         try {
             ((os) this).field_r = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "os.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "os.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -448,7 +448,7 @@ final class os extends hn {
           L7: {
             var7 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var7;
-            stackOut_23_1 = new StringBuilder().append("os.H(").append(param0).append(44).append(param1).append(44);
+            stackOut_23_1 = new StringBuilder().append("os.H(").append(param0).append(',').append(param1).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -473,7 +473,7 @@ final class os extends hn {
           }
           L8: {
             stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44).append(-1).append(44);
+            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(-1).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -496,7 +496,7 @@ final class os extends hn {
               break L8;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param5 + 41);
+          throw ig.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param5 + ')');
         }
     }
 

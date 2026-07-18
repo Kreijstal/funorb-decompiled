@@ -359,7 +359,7 @@ final class wb extends ji {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var4;
-            stackOut_21_1 = new StringBuilder().append("wb.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_21_1 = new StringBuilder().append("wb.C(").append(param0).append(',').append(param1).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -382,7 +382,7 @@ final class wb extends ji {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 

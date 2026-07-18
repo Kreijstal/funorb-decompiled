@@ -152,7 +152,7 @@ final class ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "ck.D(" + param0 + 41);
+          throw t.a((Throwable) (Object) var1, "ck.D(" + param0 + ')');
         }
     }
 
@@ -205,7 +205,7 @@ final class ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "ck.B(" + 1 + 41);
+          throw t.a((Throwable) (Object) var1, "ck.B(" + 1 + ')');
         }
     }
 

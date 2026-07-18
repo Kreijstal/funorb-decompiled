@@ -269,7 +269,7 @@ final class ko {
             }
             this.a(48);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ko.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ko.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -623,7 +623,7 @@ final class em {
               break L4;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+          throw oi.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
         }
     }
 
@@ -903,7 +903,7 @@ final class em {
             ((em) this).field_p = new byte[6];
             ((em) this).field_o = param1;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "em.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "em.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

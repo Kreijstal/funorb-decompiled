@@ -32,7 +32,7 @@ final class wha implements Iterable {
             param2.field_c = param1;
             param2.field_b.field_e = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "wha.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "wha.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

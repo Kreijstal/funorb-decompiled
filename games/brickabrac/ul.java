@@ -53,7 +53,7 @@ final class ul extends nm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1, "ul.D(" + param0 + 41);
+          throw qb.a((Throwable) (Object) var1, "ul.D(" + param0 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class ul extends nm {
             dc.field_e.a(256, false, 1048576, (byte) 22, 1000000, param1);
             int var5_int = 44;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ul.F(" + 1048576 + 44 + (param1 != null ? "{...}" : "null") + 44 + 256 + 44 + 1 + 44 + -104 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "ul.F(" + 1048576 + ',' + (param1 != null ? "{...}" : "null") + ',' + 256 + ',' + true + ',' + -104 + ')');
         }
     }
 

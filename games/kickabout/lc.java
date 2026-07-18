@@ -137,7 +137,7 @@ final class lc implements Iterator {
             ((lc) this).field_a = ((lc) this).field_c.field_d.field_f;
             ((lc) this).field_d = null;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "lc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "lc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

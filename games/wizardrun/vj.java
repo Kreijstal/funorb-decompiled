@@ -55,7 +55,7 @@ final class vj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1_ref, "vj.A(" + 0 + 41);
+          throw bd.a((Throwable) (Object) var1_ref, "vj.A(" + 0 + ')');
         }
     }
 
@@ -351,7 +351,7 @@ final class vj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1, "vj.C(" + param0 + 41);
+          throw bd.a((Throwable) (Object) var1, "vj.C(" + param0 + ')');
         }
     }
 

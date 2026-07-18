@@ -99,7 +99,7 @@ final class h {
                   break L1;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+              throw t.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -143,7 +143,7 @@ final class h {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "h.B(" + param0 + 41);
+          throw t.a((Throwable) (Object) var1, "h.B(" + param0 + ')');
         }
     }
 
@@ -170,7 +170,7 @@ final class h {
         try {
             ((h) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "h.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "h.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

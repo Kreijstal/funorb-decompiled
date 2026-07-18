@@ -32,7 +32,7 @@ class bb extends uh {
             ic.field_c = 12;
             tl.field_c = param3;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "bb.G(" + 12 + 44 + 12 + 44 + -13 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "bb.G(" + 12 + ',' + 12 + ',' + -13 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -127,7 +127,7 @@ class bb extends uh {
               break L1;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 0 + 44 + 0 + 41);
+          throw bd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + 0 + ',' + false + ')');
         }
     }
 
@@ -181,7 +181,7 @@ class bb extends uh {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("bb.J(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("bb.J(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -204,7 +204,7 @@ class bb extends uh {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -213,7 +213,7 @@ class bb extends uh {
             ((bb) this).field_m = param0;
             ((bb) this).field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "bb.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "bb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

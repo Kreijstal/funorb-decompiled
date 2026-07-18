@@ -94,7 +94,7 @@ final class sj implements j {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var6;
-            stackOut_14_1 = new StringBuilder().append("sj.T(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_14_1 = new StringBuilder().append("sj.T(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -117,7 +117,7 @@ final class sj implements j {
               break L5;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -132,7 +132,7 @@ final class sj implements j {
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) ee.field_j);
             u.field_d = 0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "sj.B(" + (param0 != null ? "{...}" : "null") + 44 + -122 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "sj.B(" + (param0 != null ? "{...}" : "null") + ',' + -122 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class sj implements j {
             m.field_h.a((gg) (Object) param1, -7044);
             la.a(0, 4, param1);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "sj.A(" + 4 + 44 + (param1 != null ? "{...}" : "null") + 44 + -7471 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "sj.A(" + 4 + ',' + (param1 != null ? "{...}" : "null") + ',' + -7471 + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class sj implements j {
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 41);
+          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 0 + ')');
         }
         return stackIn_1_0;
     }
@@ -291,7 +291,7 @@ final class sj implements j {
           L2: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var2_ref2;
-            stackOut_19_1 = new StringBuilder().append("sj.E(").append(97).append(44);
+            stackOut_19_1 = new StringBuilder().append("sj.E(").append(97).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -314,7 +314,7 @@ final class sj implements j {
               break L2;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
         }
     }
 
@@ -328,7 +328,7 @@ final class sj implements j {
             ((sj) this).field_c = param4;
             ((sj) this).field_g = param3;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "sj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

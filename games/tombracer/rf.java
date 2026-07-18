@@ -123,7 +123,7 @@ final class rf {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_28_0 = (RuntimeException) var3;
-            stackOut_28_1 = new StringBuilder().append("rf.B(").append(1).append(44);
+            stackOut_28_1 = new StringBuilder().append("rf.B(").append(true).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -146,7 +146,7 @@ final class rf {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + param2 + ')');
         }
         return (String) (Object) stackIn_27_0;
     }

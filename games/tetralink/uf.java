@@ -45,7 +45,7 @@ final class uf {
             vj.field_o = param2;
             hi.a(97);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "uf.A(" + -127 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "uf.A(" + -127 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class uf {
             fl.field_u = new lk(mf.field_s, ab.field_V, param0, qa.field_v, sn.field_b);
             mf.field_s.a((na) (Object) fl.field_u, param1);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "uf.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "uf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

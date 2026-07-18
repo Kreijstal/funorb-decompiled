@@ -110,7 +110,7 @@ final class wi extends ee implements pl {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var5;
-            stackOut_16_1 = new StringBuilder().append("wi.I(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_16_1 = new StringBuilder().append("wi.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_19_0 = stackOut_16_0;
             stackIn_19_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -133,7 +133,7 @@ final class wi extends ee implements pl {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
         return stackIn_15_0 != 0;
     }
@@ -148,7 +148,7 @@ final class wi extends ee implements pl {
             int discarded$0 = ng.field_F.a(ji.field_l, var6 - -20, 20 + var7, -40 + ((wi) this).field_r, ((wi) this).field_h - 50, 16777215, -1, 1, 0, ng.field_F.field_o);
             super.a(param0, param1, (byte) 63, param3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "wi.FA(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "wi.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -221,7 +221,7 @@ final class wi extends ee implements pl {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var6;
-            stackOut_20_1 = new StringBuilder().append("wi.Q(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_20_1 = new StringBuilder().append("wi.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_23_0 = stackOut_20_0;
             stackIn_23_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -244,7 +244,7 @@ final class wi extends ee implements pl {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class wi extends ee implements pl {
                 wi.f(69);
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "wi.B(" + param0 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "wi.B(" + param0 + ')');
         }
     }
 

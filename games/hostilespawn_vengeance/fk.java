@@ -56,7 +56,7 @@ final class fk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var1_ref, "fk.A(" + -74 + 41);
+          throw wg.a((Throwable) (Object) var1_ref, "fk.A(" + -74 + ')');
         }
     }
 

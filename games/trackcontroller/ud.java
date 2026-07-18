@@ -21,7 +21,7 @@ final class ud {
             pb.field_a = param1;
             qi.field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ud.B(" + 128 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "ud.B(" + 128 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1_ref, "ud.C(" + param0 + 41);
+          throw sl.a((Throwable) (Object) var1_ref, "ud.C(" + param0 + ')');
         }
     }
 

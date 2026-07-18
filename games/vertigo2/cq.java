@@ -121,7 +121,7 @@ final class cq {
               break L5;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 41);
+          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class cq {
           L3: {
             var7 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var7;
-            stackOut_11_1 = new StringBuilder().append("cq.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_11_1 = new StringBuilder().append("cq.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -216,7 +216,7 @@ final class cq {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param5 + 41);
+          throw wn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param5 + ')');
         }
     }
 

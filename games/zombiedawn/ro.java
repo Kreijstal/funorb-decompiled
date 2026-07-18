@@ -14,7 +14,7 @@ final class ro {
         try {
             qi.field_G = param3;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "ro.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + -386 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "ro.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + -386 + ')');
         }
     }
 

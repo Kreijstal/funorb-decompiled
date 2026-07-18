@@ -198,7 +198,7 @@ abstract class gi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var7, "gi.O(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw pf.a((Throwable) (Object) var7, "gi.O(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -364,7 +364,7 @@ abstract class gi {
               break L8;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + 1 + 44 + 0 + 44 + 10 + 41);
+          throw pf.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ',' + true + ',' + 0 + ',' + 10 + ')');
         }
         return stackIn_34_0 != 0;
     }

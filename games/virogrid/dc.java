@@ -74,7 +74,7 @@ abstract class dc extends gg {
               L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_7_0 = (RuntimeException) var2_ref2;
-                stackOut_7_1 = new StringBuilder().append("dc.B(").append(-11670).append(44);
+                stackOut_7_1 = new StringBuilder().append("dc.B(").append(-11670).append(',');
                 stackIn_9_0 = stackOut_7_0;
                 stackIn_9_1 = stackOut_7_1;
                 stackIn_8_0 = stackOut_7_0;
@@ -97,7 +97,7 @@ abstract class dc extends gg {
                   break L4;
                 }
               }
-              throw kg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+              throw kg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -137,7 +137,7 @@ abstract class dc extends gg {
             }
             oa.field_q = 0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "dc.N(" + param0 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "dc.N(" + param0 + ')');
         }
     }
 

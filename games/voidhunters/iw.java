@@ -373,7 +373,7 @@ abstract class iw extends bl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "iw.MA(" + param0 + 41);
+          throw rta.a((Throwable) (Object) var1, "iw.MA(" + param0 + ')');
         }
     }
 

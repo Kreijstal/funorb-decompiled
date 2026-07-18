@@ -603,7 +603,7 @@ final class jp extends ak {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var4;
-            stackOut_20_1 = new StringBuilder().append("jp.B(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("jp.B(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -626,7 +626,7 @@ final class jp extends ak {
               break L6;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param2 + ')');
         }
     }
 

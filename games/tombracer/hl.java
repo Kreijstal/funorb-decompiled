@@ -185,7 +185,7 @@ abstract class hl implements mta {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + 1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ',' + 1 + ')');
         }
         return (jaclib.memory.Buffer) (Object) stackIn_20_0;
     }
@@ -484,7 +484,7 @@ abstract class hl implements mta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var8, "hl.J(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw tba.a((Throwable) (Object) var8, "hl.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -621,7 +621,7 @@ abstract class hl implements mta {
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ')');
         }
         return stackIn_13_0 != 0;
     }
@@ -641,7 +641,7 @@ abstract class hl implements mta {
             ((hl) this).field_j = param2 ? true : false;
             ((hl) this).field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "hl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "hl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -20,7 +20,7 @@ final class oj extends hc {
             ((oj) this).field_R = ((oj) this).field_R + 1;
             super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oj.Q(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "oj.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class oj extends hc {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("oj.M(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("oj.M(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -94,7 +94,7 @@ final class oj extends hc {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -282,7 +282,7 @@ final class oj extends hc {
             fh.field_g.b(param3, 340, param0, 16777215, -1);
             int var4_int = -103 / ((param2 - 7) / 46);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oj.D(" + param0 + 44 + 340 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "oj.D(" + param0 + ',' + 340 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -314,7 +314,7 @@ final class oj extends hc {
         try {
             ((oj) this).field_F = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

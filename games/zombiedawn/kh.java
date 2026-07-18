@@ -39,7 +39,7 @@ final class kh implements io {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("kh.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_3_1 = new StringBuilder().append("kh.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -62,7 +62,7 @@ final class kh implements io {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param4 + 41);
+          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param4 + ')');
         }
     }
 

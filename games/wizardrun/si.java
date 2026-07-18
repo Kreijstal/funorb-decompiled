@@ -81,7 +81,7 @@ final class si {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw bd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -300,7 +300,7 @@ final class si {
           L14: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_52_0 = (RuntimeException) var5_ref;
-            stackOut_52_1 = new StringBuilder().append("si.I(").append(param0).append(44);
+            stackOut_52_1 = new StringBuilder().append("si.I(").append(param0).append(',');
             stackIn_54_0 = stackOut_52_0;
             stackIn_54_1 = stackOut_52_1;
             stackIn_53_0 = stackOut_52_0;
@@ -323,7 +323,7 @@ final class si {
               break L14;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + 44 + param2 + 44 + param3 + 41);
+          throw bd.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -745,7 +745,7 @@ final class si {
           L16: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_63_0 = (RuntimeException) var5_ref;
-            stackOut_63_1 = new StringBuilder().append("si.G(").append(param0).append(44);
+            stackOut_63_1 = new StringBuilder().append("si.G(").append(param0).append(',');
             stackIn_65_0 = stackOut_63_0;
             stackIn_65_1 = stackOut_63_1;
             stackIn_64_0 = stackOut_63_0;
@@ -768,7 +768,7 @@ final class si {
               break L16;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_66_0, stackIn_66_2 + 44 + param2 + 44 + param3 + 41);
+          throw bd.a((Throwable) (Object) stackIn_66_0, stackIn_66_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -785,7 +785,7 @@ final class si {
             ((si) this).field_e = 0L;
             ((si) this).field_k = new byte[param2];
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "si.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "si.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

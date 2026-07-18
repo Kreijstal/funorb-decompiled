@@ -131,7 +131,7 @@ final class nj {
                             break L9;
                           } else {
                             if ((8 & ((nj) this).field_m) == 0) {
-                              var7_ref_String = var7_ref_String + 95;
+                              var7_ref_String = var7_ref_String + '_';
                               break L9;
                             } else {
                               break L9;
@@ -150,7 +150,7 @@ final class nj {
                             if ((((nj) this).field_m & 8) != 0) {
                               break L10;
                             } else {
-                              var8 = var8 + 95;
+                              var8 = var8 + '_';
                               var7_ref_String = var8;
                               var7_ref_String = var8;
                               break L10;
@@ -173,7 +173,7 @@ final class nj {
                     break L11;
                   } else {
                     if (-1 == (8 & ((nj) this).field_m)) {
-                      var7_ref_String = var7_ref_String + 95;
+                      var7_ref_String = var7_ref_String + '_';
                       break L11;
                     } else {
                       break L11;
@@ -205,7 +205,7 @@ final class nj {
                         if ((8 & ((nj) this).field_m) != 0) {
                           break L14;
                         } else {
-                          var7_ref_String = var7_ref_String + 95;
+                          var7_ref_String = var7_ref_String + '_';
                           break L14;
                         }
                       }
@@ -400,7 +400,7 @@ final class nj {
             ((nj) this).field_a = param0;
             ((nj) this).field_o = param2;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "nj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "nj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -416,7 +416,7 @@ final class nj {
             ((nj) this).field_b = param1;
             ((nj) this).field_o = rn.a(param2, (byte) 74);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "nj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "nj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

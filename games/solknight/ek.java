@@ -31,7 +31,7 @@ final class ek {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var1, "ek.A(" + 1 + 41);
+          throw fc.a((Throwable) (Object) var1, "ek.A(" + 1 + ')');
         }
     }
 

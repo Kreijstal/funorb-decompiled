@@ -17,7 +17,7 @@ final class oc extends fc {
             int var3_int = -95 / ((param1 - -25) / 60);
             re.field_g.b((al) (Object) ra.field_y, -120);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "oc.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "oc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

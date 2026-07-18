@@ -17,7 +17,7 @@ final class vk {
             var2 = new b(param0, param1);
         } else {
             var2 = (b) (Object) param0;
-            var2.field_c = var2.field_c + 32 + param1;
+            var2.field_c = var2.field_c + ' ' + param1;
         }
         return var2;
     }
@@ -90,7 +90,7 @@ final class vk {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var2;
-            stackOut_11_1 = new StringBuilder().append("vk.B(").append(-126).append(44);
+            stackOut_11_1 = new StringBuilder().append("vk.B(").append(-126).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -113,7 +113,7 @@ final class vk {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
         return (vk) (Object) stackIn_10_0;
     }

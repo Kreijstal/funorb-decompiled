@@ -186,7 +186,7 @@ abstract class wf extends iv {
             this.a(param1, -26261, 480, 640, param2);
             int var4_int = -77 % ((param0 - -5) / 34);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "wf.I(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "wf.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1484,7 +1484,7 @@ abstract class wf extends iv {
           L8: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var6_ref;
-            stackOut_20_1 = new StringBuilder().append("wf.S(").append(param0).append(44).append(-26261).append(44).append(480).append(44).append(640).append(44);
+            stackOut_20_1 = new StringBuilder().append("wf.S(").append(param0).append(',').append(-26261).append(',').append(480).append(',').append(640).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -1507,7 +1507,7 @@ abstract class wf extends iv {
               break L8;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
     }
 
@@ -1635,7 +1635,7 @@ abstract class wf extends iv {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + -101 + 41);
+          throw ig.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + -101 + ')');
         }
         return stackIn_19_0;
     }

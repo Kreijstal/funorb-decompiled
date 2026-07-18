@@ -9,7 +9,7 @@ final class rs {
             int var2_int = 104 % ((param1 - 4) / 38);
             nl.field_f.b((byte) -77, (vg) (Object) param0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "rs.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "rs.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

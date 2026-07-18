@@ -158,7 +158,7 @@ final class db {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw dn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
         }
         return stackIn_10_0 != 0;
     }
@@ -290,7 +290,7 @@ final class db {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var5;
-            stackOut_13_1 = new StringBuilder().append("db.W(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("db.W(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -315,7 +315,7 @@ final class db {
           }
           L4: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -340,7 +340,7 @@ final class db {
           }
           L5: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -363,7 +363,7 @@ final class db {
               break L5;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
         }
         return stackIn_12_0;
     }
@@ -459,7 +459,7 @@ final class db {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("db.T(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("db.T(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -482,7 +482,7 @@ final class db {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
@@ -527,7 +527,7 @@ final class db {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("db.H(").append(109).append(44);
+            stackOut_2_1 = new StringBuilder().append("db.H(").append(109).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -550,7 +550,7 @@ final class db {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -776,7 +776,7 @@ final class db {
                           break L9;
                         }
                       }
-                      throw dn.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + " " + param0 + " " + param1.length + " " + gi.a(param1.length, var9_array, 26009) + " " + gi.a(-2 + param1.length, var9_array, 26009) + " " + ((db) this).field_b.field_n[param0] + " " + ((db) this).field_b.field_b);
+                      throw dn.a((Throwable) (Object) stackIn_35_0, (stackIn_35_2 != 0) + " " + param0 + " " + param1.length + " " + gi.a(param1.length, var9_array, 26009) + " " + gi.a(-2 + param1.length, var9_array, 26009) + " " + ((db) this).field_b.field_n[param0] + " " + ((db) this).field_b.field_b);
                     }
                     L10: {
                       if (((db) this).field_c) {
@@ -1013,7 +1013,7 @@ final class db {
           L29: {
             var5 = decompiledCaughtException;
             stackOut_100_0 = (RuntimeException) var5;
-            stackOut_100_1 = new StringBuilder().append("db.BA(").append(param0).append(44);
+            stackOut_100_1 = new StringBuilder().append("db.BA(").append(param0).append(',');
             stackIn_102_0 = stackOut_100_0;
             stackIn_102_1 = stackOut_100_1;
             stackIn_101_0 = stackOut_100_0;
@@ -1036,7 +1036,7 @@ final class db {
               break L29;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_103_0, stackIn_103_2 + 44 + param2 + 44 + 30511 + 41);
+          throw dn.a((Throwable) (Object) stackIn_103_0, stackIn_103_2 + ',' + param2 + ',' + 30511 + ')');
         }
         return stackIn_99_0 != 0;
     }
@@ -1124,7 +1124,7 @@ final class db {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw dn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
         return stackIn_6_0;
     }
@@ -1212,7 +1212,7 @@ final class db {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
+          throw dn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
         }
         return stackIn_9_0;
     }
@@ -1305,7 +1305,7 @@ final class db {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var4;
-            stackOut_10_1 = new StringBuilder().append("db.R(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("db.R(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -1330,7 +1330,7 @@ final class db {
           }
           L3: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -1353,7 +1353,7 @@ final class db {
               break L3;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_9_0;
     }
@@ -1540,7 +1540,7 @@ final class db {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var4;
-            stackOut_11_1 = new StringBuilder().append("db.M(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("db.M(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -1563,7 +1563,7 @@ final class db {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ')');
         }
         return stackIn_10_0;
     }
@@ -1682,7 +1682,7 @@ final class db {
           L5: {
             var5 = (Object) (Object) decompiledCaughtException;
             stackOut_29_0 = var5;
-            stackOut_29_1 = new StringBuilder().append("db.AA(").append(param0).append(44).append(param1).append(44);
+            stackOut_29_1 = new StringBuilder().append("db.AA(").append(param0).append(',').append(param1).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -1705,7 +1705,7 @@ final class db {
               break L5;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param3 + 41);
+          throw dn.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param3 + ')');
         }
         return (byte[]) (Object) stackIn_28_0;
     }
@@ -1802,7 +1802,7 @@ final class db {
               break L3;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1886,7 +1886,7 @@ final class db {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var4;
-            stackOut_13_1 = new StringBuilder().append("db.U(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("db.U(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -1911,7 +1911,7 @@ final class db {
           }
           L2: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -1934,7 +1934,7 @@ final class db {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
         return stackIn_12_0;
     }

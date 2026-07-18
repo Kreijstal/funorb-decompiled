@@ -65,7 +65,7 @@ final class jr extends rqa {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var5;
-            stackOut_13_1 = new StringBuilder().append("jr.B(").append(28).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_13_1 = new StringBuilder().append("jr.B(").append(28).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -88,7 +88,7 @@ final class jr extends rqa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param4 + ')');
         }
         return stackIn_12_0;
     }
@@ -160,7 +160,7 @@ final class jr extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

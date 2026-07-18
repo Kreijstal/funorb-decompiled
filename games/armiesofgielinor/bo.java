@@ -167,7 +167,7 @@ final class bo {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var3;
-            stackOut_27_1 = new StringBuilder().append("bo.J(").append(param0).append(44);
+            stackOut_27_1 = new StringBuilder().append("bo.J(").append(param0).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -190,7 +190,7 @@ final class bo {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param2 + ')');
         }
         return (ik) (Object) stackIn_25_0;
     }

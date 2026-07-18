@@ -137,7 +137,7 @@ final class sg extends anb implements ntb, utb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class sg extends anb implements ntb, utb {
             int var3_int = -32 % ((-79 - param0) / 42);
             ((sg) this).field_S = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sg.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "sg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -232,7 +232,7 @@ final class sg extends anb implements ntb, utb {
         try {
             ((sg) this).field_x = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sg.BC(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "sg.BC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -295,7 +295,7 @@ final class sg extends anb implements ntb, utb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -415,7 +415,7 @@ final class sg extends anb implements ntb, utb {
             }
             boolean discarded$1 = ((sg) this).field_z.a((sg) this, (byte) -73, param1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sg.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "sg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -480,7 +480,7 @@ final class sg extends anb implements ntb, utb {
             }
             ((sg) this).field_k.a(param0, (sg) this, 0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sg.LC(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "sg.LC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -531,7 +531,7 @@ final class sg extends anb implements ntb, utb {
             int discarded$0 = 2;
             nhb.a(qpb.a(false, ((sg) this).field_N, param2 ^ 13894111), var4_int, var9, var6, param0, var5, var8);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sg.NC(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "sg.NC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -809,7 +809,7 @@ final class sg extends anb implements ntb, utb {
           L12: {
             var3 = decompiledCaughtException;
             stackOut_52_0 = (RuntimeException) var3;
-            stackOut_52_1 = new StringBuilder().append("sg.C(").append(param0).append(44);
+            stackOut_52_1 = new StringBuilder().append("sg.C(").append(param0).append(',');
             stackIn_54_0 = stackOut_52_0;
             stackIn_54_1 = stackOut_52_1;
             stackIn_53_0 = stackOut_52_0;
@@ -832,7 +832,7 @@ final class sg extends anb implements ntb, utb {
               break L12;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + ')');
         }
         return stackIn_51_0 != 0;
     }
@@ -952,7 +952,7 @@ final class sg extends anb implements ntb, utb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
         }
     }
 
@@ -1146,7 +1146,7 @@ final class sg extends anb implements ntb, utb {
               break L10;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_34_0 != 0;
     }
@@ -1306,7 +1306,7 @@ final class sg extends anb implements ntb, utb {
               break L10;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1405,7 +1405,7 @@ final class sg extends anb implements ntb, utb {
           L6: {
             var3 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var3;
-            stackOut_17_1 = new StringBuilder().append("sg.D(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("sg.D(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -1428,7 +1428,7 @@ final class sg extends anb implements ntb, utb {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 
@@ -1446,7 +1446,7 @@ final class sg extends anb implements ntb, utb {
             }
             ((sg) this).field_z = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sg.MC(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "sg.MC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1663,7 +1663,7 @@ final class sg extends anb implements ntb, utb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
         }
     }
 
@@ -1998,7 +1998,7 @@ final class sg extends anb implements ntb, utb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
         }
     }
 
@@ -2162,7 +2162,7 @@ final class sg extends anb implements ntb, utb {
           }
           L6: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param1).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -2185,7 +2185,7 @@ final class sg extends anb implements ntb, utb {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -2346,7 +2346,7 @@ final class sg extends anb implements ntb, utb {
           L7: {
             var6 = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var6;
-            stackOut_25_1 = new StringBuilder().append("sg.WA(").append(param0).append(44).append(param1).append(44);
+            stackOut_25_1 = new StringBuilder().append("sg.WA(").append(param0).append(',').append(param1).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -2369,7 +2369,7 @@ final class sg extends anb implements ntb, utb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param3 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -2521,7 +2521,7 @@ final class sg extends anb implements ntb, utb {
               } else {
                 if (var5.field_z.a((byte) 89, (tv) (Object) var5.field_z)) {
                   var4 = 1;
-                  System.out.println("ShipAI ai has changed. before=" + var5.field_z + ", now=" + var5.field_z);
+                  System.out.println("ShipAI ai has changed. before=" + (Object) (Object) var5.field_z + ", now=" + (Object) (Object) var5.field_z);
                   break L6;
                 } else {
                   break L6;
@@ -2757,7 +2757,7 @@ final class sg extends anb implements ntb, utb {
                   break L27;
                 } else {
                   var4 = 1;
-                  System.out.println("ShipBlueprint target_blueprint has changed. before=" + var5.field_S + ", now=" + var5.field_S);
+                  System.out.println("ShipBlueprint target_blueprint has changed. before=" + (Object) (Object) var5.field_S + ", now=" + (Object) (Object) var5.field_S);
                   break L27;
                 }
               }
@@ -2809,7 +2809,7 @@ final class sg extends anb implements ntb, utb {
               break L30;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_91_0, stackIn_91_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_91_0, stackIn_91_2 + ',' + param1 + ')');
         }
     }
 

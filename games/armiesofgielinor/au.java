@@ -407,7 +407,7 @@ final class au extends je {
           L15: {
             var3 = decompiledCaughtException;
             stackOut_72_0 = (RuntimeException) var3;
-            stackOut_72_1 = new StringBuilder().append("au.B(").append(param0).append(44);
+            stackOut_72_1 = new StringBuilder().append("au.B(").append(param0).append(',');
             stackIn_74_0 = stackOut_72_0;
             stackIn_74_1 = stackOut_72_1;
             stackIn_73_0 = stackOut_72_0;
@@ -430,7 +430,7 @@ final class au extends je {
               break L15;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + ')');
         }
         return stackIn_71_0 != 0;
     }

@@ -82,7 +82,7 @@ abstract class cga extends eo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2_ref, "cga.C(" + 255 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) var2_ref, "cga.C(" + 255 + ',' + param1 + ')');
         }
         return stackIn_23_0 != 0;
     }

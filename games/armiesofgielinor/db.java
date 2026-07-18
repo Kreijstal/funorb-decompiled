@@ -200,7 +200,7 @@ final class db {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ')');
         }
     }
 

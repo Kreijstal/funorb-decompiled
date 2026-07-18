@@ -51,7 +51,7 @@ final class eb extends lc implements ki, rc {
           L2: {
             var6 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6;
-            stackOut_5_1 = new StringBuilder().append("eb.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_5_1 = new StringBuilder().append("eb.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -74,7 +74,7 @@ final class eb extends lc implements ki, rc {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class eb extends lc implements ki, rc {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ii.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_10_0;
     }
@@ -263,7 +263,7 @@ final class eb extends lc implements ki, rc {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ii.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -273,7 +273,7 @@ final class eb extends lc implements ki, rc {
             param0.addKeyListener((java.awt.event.KeyListener) (Object) qj.field_c);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) qj.field_c);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "eb.F(" + (param0 != null ? "{...}" : "null") + 44 + -105 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "eb.F(" + (param0 != null ? "{...}" : "null") + ',' + -105 + ')');
         }
     }
 
@@ -355,7 +355,7 @@ final class eb extends lc implements ki, rc {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

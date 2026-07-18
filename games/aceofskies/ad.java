@@ -10,7 +10,7 @@ final class ad extends dg {
         try {
             super.d(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ad.CA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "ad.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

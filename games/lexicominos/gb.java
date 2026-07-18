@@ -102,7 +102,7 @@ final class gb {
               break L4;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw ld.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
@@ -234,7 +234,7 @@ final class gb {
           L4: {
             var2 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var2;
-            stackOut_19_1 = new StringBuilder().append("gb.D(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("gb.D(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -257,7 +257,7 @@ final class gb {
               break L4;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
         }
         return stackIn_18_0;
     }

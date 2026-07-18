@@ -189,7 +189,7 @@ abstract class rt implements ws {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2_ref, "rt.N(" + param0 + 44 + param1 + 41);
+          throw pn.a((Throwable) (Object) var2_ref, "rt.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -278,7 +278,7 @@ abstract class rt implements ws {
             ((rt) this).field_d = hd.field_c[0];
             this.a(0, (byte) 1);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "rt.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "rt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

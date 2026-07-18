@@ -29,7 +29,7 @@ final class jk extends fb {
         try {
             ((jk) this).field_i = new ji((f) null, 0, 0);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "jk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "jk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

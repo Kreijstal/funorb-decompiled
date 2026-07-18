@@ -116,7 +116,7 @@ final class ba {
             }
             ((ba) this).field_c = ok.a(ea.field_b, -100, 3) + 2;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ba.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ba.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

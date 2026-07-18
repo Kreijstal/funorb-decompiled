@@ -51,7 +51,7 @@ final class ia extends mg {
             ((ia) this).field_A = param0;
             ((ia) this).field_E = 256;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "ia.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

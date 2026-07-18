@@ -33,7 +33,7 @@ abstract class m extends wb implements ib {
                 cf.field_eb = new Vector();
                 on.a((byte) 6, (ib) this);
             } catch (RuntimeException runtimeException) {
-                throw sh.a((Throwable) (Object) runtimeException, "m.NA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+                throw sh.a((Throwable) (Object) runtimeException, "m.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

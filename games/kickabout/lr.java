@@ -250,7 +250,7 @@ final class lr extends hs {
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class lr extends hs {
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) nr.field_q);
             rc.field_d = -1;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "lr.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "lr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

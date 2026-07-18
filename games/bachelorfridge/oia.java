@@ -190,7 +190,7 @@ final class oia extends kj {
             ((oia) this).field_h = 128;
             ((oia) this).field_g = new eaa();
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oia.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "oia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

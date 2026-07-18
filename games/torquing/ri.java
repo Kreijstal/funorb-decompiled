@@ -138,7 +138,7 @@ final class ri extends lg {
           L6: {
             var8 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var8;
-            stackOut_30_1 = new StringBuilder().append("ri.KA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_30_1 = new StringBuilder().append("ri.KA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -161,7 +161,7 @@ final class ri extends lg {
               break L6;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param6 + 41);
+          throw rb.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + param6 + ')');
         }
         return stackIn_29_0 != 0;
     }

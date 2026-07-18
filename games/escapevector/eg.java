@@ -62,7 +62,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -248,7 +248,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           L2: {
             var5_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5_ref;
-            stackOut_5_1 = new StringBuilder().append("eg.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(1).append(44);
+            stackOut_5_1 = new StringBuilder().append("eg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(true).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -271,7 +271,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -331,7 +331,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -396,7 +396,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -485,7 +485,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L4;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 
@@ -550,7 +550,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -651,7 +651,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
     }
 

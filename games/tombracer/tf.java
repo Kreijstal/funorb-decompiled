@@ -97,7 +97,7 @@ final class tf extends kca {
           L5: {
             var3_ref = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var3_ref;
-            stackOut_16_1 = new StringBuilder().append("tf.A(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("tf.A(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -120,7 +120,7 @@ final class tf extends kca {
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
         return stackIn_15_0;
     }
@@ -207,7 +207,7 @@ final class tf extends kca {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var3_ref;
-            stackOut_18_1 = new StringBuilder().append("tf.B(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("tf.B(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -230,7 +230,7 @@ final class tf extends kca {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
         return stackIn_17_0;
     }

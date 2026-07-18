@@ -833,7 +833,7 @@ class ak {
           L14: {
             var6 = decompiledCaughtException;
             stackOut_41_0 = (RuntimeException) var6;
-            stackOut_41_1 = new StringBuilder().append("ak.F(").append(param0).append(44).append(param1).append(44).append(-112).append(44);
+            stackOut_41_1 = new StringBuilder().append("ak.F(").append(param0).append(',').append(param1).append(',').append(-112).append(',');
             stackIn_43_0 = stackOut_41_0;
             stackIn_43_1 = stackOut_41_1;
             stackIn_42_0 = stackOut_41_0;
@@ -856,7 +856,7 @@ class ak {
               break L14;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 44 + param4 + 41);
+          throw qo.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + ',' + param4 + ')');
         }
     }
 
@@ -2791,7 +2791,7 @@ class ak {
           L27: {
             var4 = decompiledCaughtException;
             stackOut_82_0 = (RuntimeException) var4;
-            stackOut_82_1 = new StringBuilder().append("ak.B(").append(param0).append(44);
+            stackOut_82_1 = new StringBuilder().append("ak.B(").append(param0).append(',');
             stackIn_84_0 = stackOut_82_0;
             stackIn_84_1 = stackOut_82_1;
             stackIn_83_0 = stackOut_82_0;
@@ -2814,7 +2814,7 @@ class ak {
               break L27;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_85_0, stackIn_85_2 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_85_0, stackIn_85_2 + ',' + param2 + ')');
         }
     }
 
@@ -3125,7 +3125,7 @@ class ak {
             var2 = q.a(param0, "jagex logo2.packvorbis", "");
             qp discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ak.J(" + (param0 != null ? "{...}" : "null") + 44 + 100 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "ak.J(" + (param0 != null ? "{...}" : "null") + ',' + 100 + ')');
         }
     }
 
@@ -3533,7 +3533,7 @@ class ak {
             be.field_t.a(param0, 5023231 | param1 << 24, -1, 96, 320, 0);
             hc.field_e.a(param0, 16777215 | param1 << 24, -1, 96, 320, 0);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ak.M(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 29228 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "ak.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 29228 + ')');
         }
     }
 

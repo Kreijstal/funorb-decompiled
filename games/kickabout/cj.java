@@ -31,7 +31,7 @@ abstract class cj extends wj implements cw {
             }
             ((cj) this).field_B.field_g = (cj) this;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "cj.K(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "cj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

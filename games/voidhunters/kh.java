@@ -70,7 +70,7 @@ final class kh extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -260,7 +260,7 @@ final class kh extends rqa {
                     case 16: {
                         var2_ref2 = (RuntimeException) (Object) caughtException;
                         stackOut_16_0 = (RuntimeException) var2_ref2;
-                        stackOut_16_1 = new StringBuilder().append("kh.B(").append(-6465).append(44);
+                        stackOut_16_1 = new StringBuilder().append("kh.B(").append(-6465).append(',');
                         stackIn_18_0 = stackOut_16_0;
                         stackIn_18_1 = stackOut_16_1;
                         stackIn_17_0 = stackOut_16_0;
@@ -293,7 +293,7 @@ final class kh extends rqa {
                         continue stateLoop;
                     }
                     case 19: {
-                        throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+                        throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }

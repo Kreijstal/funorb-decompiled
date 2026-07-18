@@ -301,7 +301,7 @@ final class mn {
                                                         var27 = "<col=A00000>" + pa.field_db[var13] + "</col>";
                                                         if (var11_ref != null) {
                                                           var12 = 1;
-                                                          var11_ref = (Object) (Object) (var11_ref + ", " + var27);
+                                                          var11_ref = (Object) (Object) ((String) var11_ref + ", " + var27);
                                                           break L18;
                                                         } else {
                                                           var11_ref = (Object) (Object) var27;
@@ -417,7 +417,7 @@ final class mn {
                                       var28 = "<col=A00000>" + pa.field_db[var13] + "</col>";
                                       if (var11_ref != null) {
                                         var12 = 1;
-                                        var11_ref = (Object) (Object) (var11_ref + ", " + var28);
+                                        var11_ref = (Object) (Object) ((String) var11_ref + ", " + var28);
                                         break L26;
                                       } else {
                                         var11_ref = (Object) (Object) var28;
@@ -439,13 +439,13 @@ final class mn {
                               var14_ref_String = cm.a((byte) 119, fn.field_f, new String[1]);
                               break L27;
                             } else {
-                              var14_ref_String = jf.field_a + var11_ref;
+                              var14_ref_String = jf.field_a + (String) var11_ref;
                               break L27;
                             }
                           } else {
                             var13_ref_String = hh.field_d;
                             if (var12 != 0) {
-                              var14_ref_String = mf.field_S + var11_ref;
+                              var14_ref_String = mf.field_S + (String) var11_ref;
                               break L27;
                             } else {
                               var14_ref_String = cm.a((byte) 82, ci.field_e, new String[1]);
@@ -889,7 +889,7 @@ final class mn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var5, "mn.C(" + 0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw dh.a((Throwable) (Object) var5, "mn.C(" + 0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

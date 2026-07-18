@@ -55,7 +55,7 @@ final class ch {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var3;
-            stackOut_3_1 = new StringBuilder().append("ch.A(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("ch.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -78,7 +78,7 @@ final class ch {
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "ch.K(" + param0 + 41);
+          throw la.a((Throwable) (Object) var1, "ch.K(" + param0 + ')');
         }
     }
 
@@ -341,7 +341,7 @@ final class ch {
               break L14;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw la.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -626,7 +626,7 @@ final class ch {
               break L15;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw la.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -766,7 +766,7 @@ final class ch {
             ((ch) this).field_k = new byte[param1];
             ((ch) this).field_c = new byte[param2];
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "ch.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "ch.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -875,7 +875,7 @@ final class ch {
               break L1;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + -1 + 41);
+          throw la.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + -1 + ')');
         }
     }
 

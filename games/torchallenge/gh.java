@@ -69,7 +69,7 @@ final class gh extends da {
           L0: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("gh.A(").append(-116).append(44);
+            stackOut_2_1 = new StringBuilder().append("gh.A(").append(-116).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -92,7 +92,7 @@ final class gh extends da {
               break L0;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param2 + ')');
         }
     }
 

@@ -144,7 +144,7 @@ final class hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1, "hl.A(" + 0 + 41);
+          throw ie.a((Throwable) (Object) var1, "hl.A(" + 0 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class hl {
             int discarded$0 = var6.d(var4, (byte) 48);
             var6.b(var6.field_j + -var4, (byte) 87);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "hl.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 4 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "hl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 4 + ')');
         }
     }
 
@@ -266,7 +266,7 @@ final class hl {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 

@@ -73,7 +73,7 @@ final class qc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1_ref, "qc.C(" + 0 + 41);
+          throw oj.a((Throwable) (Object) var1_ref, "qc.C(" + 0 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class qc {
               break L4;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw oj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_9_0;
     }

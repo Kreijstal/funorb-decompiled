@@ -27,7 +27,7 @@ abstract class tu extends ma implements hc {
                 sn.field_g = new Vector();
                 oa.a(false, (hc) this);
             } catch (RuntimeException runtimeException) {
-                throw nb.a((Throwable) (Object) runtimeException, "tu.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+                throw nb.a((Throwable) (Object) runtimeException, "tu.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -537,7 +537,7 @@ abstract class tu extends ma implements hc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "tu.D(" + param0 + 41);
+          throw nb.a((Throwable) (Object) var1, "tu.D(" + param0 + ')');
         }
     }
 

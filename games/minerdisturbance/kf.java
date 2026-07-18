@@ -482,7 +482,7 @@ final class kf {
               break L4;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 45977 + 41);
+          throw lj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + 45977 + ')');
         }
     }
 
@@ -545,7 +545,7 @@ final class kf {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

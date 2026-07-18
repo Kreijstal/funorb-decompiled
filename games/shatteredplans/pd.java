@@ -59,7 +59,7 @@ final class pd extends hb {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$3 = var6.append(var10);
+                      StringBuilder discarded$3 = var6.append((char) var10);
                       continue L1;
                     }
                   }
@@ -90,7 +90,7 @@ final class pd extends hb {
         try {
             ((pd) this).field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "pd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "pd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

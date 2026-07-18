@@ -75,7 +75,7 @@ final class ok {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("ok.C(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("ok.C(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -98,7 +98,7 @@ final class ok {
               break L3;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 75 + 41);
+          throw bd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + 75 + ')');
         }
         return stackIn_10_0;
     }
@@ -111,7 +111,7 @@ final class ok {
             }
             field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ok.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "ok.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

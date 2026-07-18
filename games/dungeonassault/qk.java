@@ -30,7 +30,7 @@ final class qk {
         try {
             ((qk) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "qk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "qk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

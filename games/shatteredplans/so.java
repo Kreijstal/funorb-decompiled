@@ -110,7 +110,7 @@ final class so extends qe {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var4;
-            stackOut_14_1 = new StringBuilder().append("so.B(").append(0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_14_1 = new StringBuilder().append("so.B(").append(0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -133,7 +133,7 @@ final class so extends qe {
               break L6;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -248,7 +248,7 @@ final class so extends qe {
               break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 41);
+          throw r.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_8_0;
     }
@@ -265,7 +265,7 @@ final class so extends qe {
             ((so) this).field_n = (int)(Math.cos(var2_double) * (double)var4);
             ((so) this).field_u = 0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "so.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "so.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

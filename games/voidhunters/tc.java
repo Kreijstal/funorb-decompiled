@@ -71,7 +71,7 @@ final class tc {
           L0: {
             var2 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var2;
-            stackOut_16_1 = new StringBuilder().append("tc.A(").append(8448).append(44);
+            stackOut_16_1 = new StringBuilder().append("tc.A(").append(8448).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -94,7 +94,7 @@ final class tc {
               break L0;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 

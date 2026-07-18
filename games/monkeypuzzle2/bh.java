@@ -48,7 +48,7 @@ abstract class bh {
             L0: while (true) {
               if (rc.field_f > var2) {
                 L1: {
-                  var16 = var1 + 32;
+                  var16 = var1 + ' ';
                   var3 = 255 & MonkeyPuzzle2.field_D.field_g[var2];
                   var4 = var3 >> 4;
                   var3 = var3 & 15;
@@ -89,7 +89,7 @@ abstract class bh {
             L3: while (true) {
               if (rc.field_f > var2) {
                 L4: {
-                  var13 = var1 + 32;
+                  var13 = var1 + ' ';
                   var3 = 255 & MonkeyPuzzle2.field_D.field_g[var2];
                   var4 = var3 >> 4;
                   var3 = var3 & 15;

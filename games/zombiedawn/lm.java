@@ -75,7 +75,7 @@ final class lm extends fb {
             var4 = param1.a(((lm) this).field_x >> 16, 0) + -((lm) this).field_H;
             ob.field_c[((lm) this).field_E].b(var3_int, var4);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "lm.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "lm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

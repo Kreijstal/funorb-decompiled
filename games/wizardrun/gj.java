@@ -87,7 +87,7 @@ final class gj implements Iterable {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2_ref;
-            stackOut_20_1 = new StringBuilder().append("gj.A(").append(-116).append(44);
+            stackOut_20_1 = new StringBuilder().append("gj.A(").append(-116).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -110,7 +110,7 @@ final class gj implements Iterable {
               break L1;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
     }
 
@@ -948,7 +948,7 @@ final class gj implements Iterable {
               break L3;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + -30782 + 41);
+          throw bd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + -30782 + ')');
         }
     }
 
@@ -1005,7 +1005,7 @@ final class gj implements Iterable {
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) tc.field_m);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) tc.field_m);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "gj.E(" + (param0 != null ? "{...}" : "null") + 44 + 98 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "gj.E(" + (param0 != null ? "{...}" : "null") + ',' + 98 + ')');
         }
     }
 
@@ -1024,7 +1024,7 @@ final class gj implements Iterable {
             param1.field_e = param0;
             param1.field_b.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "gj.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "gj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

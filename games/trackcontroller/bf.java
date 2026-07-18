@@ -174,7 +174,7 @@ final class bf {
               break L9;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 44 + param2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -334,7 +334,7 @@ final class bf {
               break L5;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -383,7 +383,7 @@ final class bf {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("bf.B(").append(-26).append(44);
+            stackOut_2_1 = new StringBuilder().append("bf.B(").append(-26).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -406,7 +406,7 @@ final class bf {
               break L1;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
     }
 

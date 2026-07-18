@@ -9,7 +9,7 @@ final class ks extends pp {
             er.a(((ks) this).field_h, 121, param0);
             int var3_int = 30 / ((34 - param1) / 58);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ks.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ks.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -23,7 +23,7 @@ final class ks extends pp {
             var4.b((byte) 117, 0);
             var4.d(param2 + -123);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ks.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ks.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class ks extends pp {
         try {
             ((ks) this).field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ks.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ks.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

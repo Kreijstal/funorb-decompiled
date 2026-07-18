@@ -204,7 +204,7 @@ final class eg extends hf {
               break L11;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw t.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_44_0;
     }

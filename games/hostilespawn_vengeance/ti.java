@@ -172,7 +172,7 @@ final class ti implements nn {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var6;
-            stackOut_19_1 = new StringBuilder().append("ti.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_19_1 = new StringBuilder().append("ti.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -195,7 +195,7 @@ final class ti implements nn {
               break L6;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param4 + 41);
+          throw wg.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param4 + ')');
         }
     }
 
@@ -205,7 +205,7 @@ final class ti implements nn {
             ((ti) this).field_e = param1;
             ((ti) this).field_g = param2;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

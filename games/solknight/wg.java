@@ -176,7 +176,7 @@ final class wg {
                   }
                   L9: {
                     if (var5_ref.length() <= var6) {
-                      StringBuilder discarded$12 = var7.append(47);
+                      StringBuilder discarded$12 = var7.append('/');
                       break L9;
                     } else {
                       StringBuilder discarded$13 = var7.append(var5_ref.substring(var6, var5_ref.length()));
@@ -232,7 +232,7 @@ final class wg {
               }
               L12: {
                 stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
-                stackOut_45_1 = ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(44).append(-7362).append(44);
+                stackOut_45_1 = ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(',').append(-7362).append(',');
                 stackIn_47_0 = stackOut_45_0;
                 stackIn_47_1 = stackOut_45_1;
                 stackIn_46_0 = stackOut_45_0;
@@ -257,7 +257,7 @@ final class wg {
               }
               L13: {
                 stackOut_48_0 = (RuntimeException) (Object) stackIn_48_0;
-                stackOut_48_1 = ((StringBuilder) (Object) stackIn_48_1).append(stackIn_48_2).append(44).append(-1).append(44);
+                stackOut_48_1 = ((StringBuilder) (Object) stackIn_48_1).append(stackIn_48_2).append(',').append(-1).append(',');
                 stackIn_50_0 = stackOut_48_0;
                 stackIn_50_1 = stackOut_48_1;
                 stackIn_49_0 = stackOut_48_0;
@@ -280,7 +280,7 @@ final class wg {
                   break L13;
                 }
               }
-              throw fc.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + 41);
+              throw fc.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -329,7 +329,7 @@ final class wg {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("wg.E(").append(47).append(44);
+            stackOut_5_1 = new StringBuilder().append("wg.E(").append(47).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -352,7 +352,7 @@ final class wg {
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 41);
+          throw fc.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_4_0;
     }

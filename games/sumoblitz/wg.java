@@ -58,7 +58,7 @@ final class wg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var3, "wg.A(" + param0 + 44 + 1882601153 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) var3, "wg.A(" + param0 + ',' + 1882601153 + ',' + param2 + ')');
         }
         return stackIn_15_0;
     }
@@ -104,7 +104,7 @@ final class wg {
             ((wg) this).field_b = param2;
             ((wg) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

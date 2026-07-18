@@ -18,7 +18,7 @@ final class nj {
             var2 = qd.a(param0, "jagex logo2.packvorbis", "");
             sp discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "nj.C(" + (param0 != null ? "{...}" : "null") + 44 + 14 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "nj.C(" + (param0 != null ? "{...}" : "null") + ',' + 14 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class nj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "nj.E(" + param0 + 41);
+          throw aa.a((Throwable) (Object) var1, "nj.E(" + param0 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class nj {
             param1.field_p.field_r = param1;
             int var3_int = -65 % ((31 - param0) / 45);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "nj.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "nj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

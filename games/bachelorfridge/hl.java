@@ -220,7 +220,7 @@ final class hl extends hfa {
           L9: {
             var5 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var5;
-            stackOut_27_1 = new StringBuilder().append("hl.BA(").append(param0).append(44).append(param1).append(44);
+            stackOut_27_1 = new StringBuilder().append("hl.BA(").append(param0).append(',').append(param1).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -245,7 +245,7 @@ final class hl extends hfa {
           }
           L10: {
             stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(44).append(param3).append(44);
+            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',').append(param3).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -268,7 +268,7 @@ final class hl extends hfa {
               break L10;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
         }
         return stackIn_26_0;
     }
@@ -311,7 +311,7 @@ final class hl extends hfa {
             ((hl) this).field_F = 256;
             ((hl) this).field_A = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "hl.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "hl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -388,7 +388,7 @@ final class hl extends hfa {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("hl.C(").append(-67).append(44);
+            stackOut_2_1 = new StringBuilder().append("hl.C(").append(-67).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -411,7 +411,7 @@ final class hl extends hfa {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
     }
 

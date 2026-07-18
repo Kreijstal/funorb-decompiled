@@ -170,7 +170,7 @@ final class of {
           }
           L8: {
             stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(44).append(0).append(44);
+            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(0).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -193,7 +193,7 @@ final class of {
               break L8;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
         return stackIn_20_0;
     }

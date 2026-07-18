@@ -15,7 +15,7 @@ final class id extends pn {
             int discarded$0 = 128;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "id.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class id extends pn {
             int var2_int = -125 % ((-18 - param0) / 55);
             saa.field_a.b((tda) (Object) param1.field_i);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "id.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "id.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class id extends pn {
             var2 = dv.a(param0, "jagex logo2.packvorbis", "");
             be discarded$0 = var2.b();
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "id.D(" + (param0 != null ? "{...}" : "null") + 44 + 64 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "id.D(" + (param0 != null ? "{...}" : "null") + ',' + 64 + ')');
         }
     }
 
@@ -284,7 +284,7 @@ final class id extends pn {
               break L14;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + param1 + ')');
         }
     }
 

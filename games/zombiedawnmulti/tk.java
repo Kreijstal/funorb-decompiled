@@ -1019,7 +1019,7 @@ final class tk extends nc {
             b.field_a.field_x = 5;
             b.field_a.field_z = 15;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "tk.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "tk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1295,7 +1295,7 @@ final class tk extends nc {
             int discarded$0 = var6.f(var4, 115);
             var6.e(70, var6.field_j + -var4);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "tk.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "tk.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

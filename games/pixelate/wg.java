@@ -187,7 +187,7 @@ final class wg {
           }
           L2: {
             stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44);
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -210,7 +210,7 @@ final class wg {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + -4 + 41);
+          throw aa.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + -4 + ')');
         }
         return stackIn_25_0 != 0;
     }
@@ -283,7 +283,7 @@ final class wg {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -350,7 +350,7 @@ final class wg {
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_4_0;
     }
@@ -381,7 +381,7 @@ final class wg {
             }
             ((wg) this).field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -480,7 +480,7 @@ final class wg {
           L4: {
             var3_ref = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var3_ref;
-            stackOut_15_1 = new StringBuilder().append("wg.A(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("wg.A(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -503,7 +503,7 @@ final class wg {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
         return stackIn_14_0;
     }

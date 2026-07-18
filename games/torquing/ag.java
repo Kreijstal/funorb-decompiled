@@ -56,7 +56,7 @@ final class ag {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var2, "ag.B(" + -45 + 44 + 3 + 41);
+          throw rb.a((Throwable) (Object) var2, "ag.B(" + -45 + ',' + 3 + ')');
         }
     }
 

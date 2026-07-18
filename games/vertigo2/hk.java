@@ -99,7 +99,7 @@ final class hk extends da {
           L5: {
             var3_ref = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var3_ref;
-            stackOut_16_1 = new StringBuilder().append("hk.A(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("hk.A(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -122,7 +122,7 @@ final class hk extends da {
               break L5;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
         return stackIn_15_0;
     }
@@ -217,7 +217,7 @@ final class hk extends da {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var3_ref;
-            stackOut_18_1 = new StringBuilder().append("hk.C(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("hk.C(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -240,7 +240,7 @@ final class hk extends da {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
         return stackIn_17_0;
     }
@@ -277,7 +277,7 @@ final class hk extends da {
             param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) as.field_b);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) as.field_b);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "hk.R(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "hk.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -145,7 +145,7 @@ final class sb {
                   break L8;
                 }
               }
-              throw ii.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
+              throw ii.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

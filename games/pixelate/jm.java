@@ -65,7 +65,7 @@ final class jm {
         } else {
             var1 = var1 + ":";
             for (var2 = 0; var2 < jj.field_b; var2++) {
-                var1 = var1 + 32;
+                var1 = var1 + ' ';
                 var3 = 255 & vi.field_o.field_k[var2];
                 var4 = var3 >> 4;
                 if (10 > var4) {

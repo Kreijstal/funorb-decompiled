@@ -43,7 +43,7 @@ final class hf extends dj {
             java.nio.Buffer discarded$0 = ((hf) this).field_e.position(0);
             java.nio.ByteBuffer discarded$1 = ((hf) this).field_e.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "hf.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "hf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

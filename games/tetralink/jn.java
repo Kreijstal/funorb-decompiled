@@ -14,7 +14,7 @@ final class jn {
         try {
             nn.field_T = param0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "jn.B(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "jn.B(" + (param0 != null ? "{...}" : "null") + ',' + true + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class jn {
             }
             ((jn) this).field_e = param0.e(127);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "jn.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "jn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

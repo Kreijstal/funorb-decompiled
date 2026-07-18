@@ -72,7 +72,7 @@ final class rta extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -92,7 +92,7 @@ final class rta extends rqa {
         hva var2 = null;
         if (param0 instanceof hva) {
             var2 = (hva) (Object) param0;
-            var2.field_a = var2.field_a + 32 + param1;
+            var2.field_a = var2.field_a + ' ' + param1;
         } else {
             var2 = new hva(param0, param1);
         }

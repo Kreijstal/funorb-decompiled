@@ -109,7 +109,7 @@ final class ei implements ub {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var6;
-            stackOut_16_1 = new StringBuilder().append("ei.AA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_16_1 = new StringBuilder().append("ei.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -132,7 +132,7 @@ final class ei implements ub {
               break L6;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param4 + 41);
+          throw qb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param4 + ')');
         }
     }
 
@@ -191,7 +191,7 @@ final class ei implements ub {
             ((ei) this).field_j = param4;
             ((ei) this).field_c = param2;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ei.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

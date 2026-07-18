@@ -27,7 +27,7 @@ final class oo {
             fr.field_H = param0;
             int var2_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "oo.C(" + (param0 != null ? "{...}" : "null") + 44 + -70 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "oo.C(" + (param0 != null ? "{...}" : "null") + ',' + -70 + ')');
         }
     }
 

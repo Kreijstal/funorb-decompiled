@@ -17,7 +17,7 @@ final class na extends rg {
             ((na) this).field_E = 256;
             ((na) this).field_B = param0;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "na.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "na.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -198,7 +198,7 @@ final class na extends rg {
           L4: {
             var2_ref = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var2_ref;
-            stackOut_11_1 = new StringBuilder().append("na.A(").append(127).append(44);
+            stackOut_11_1 = new StringBuilder().append("na.A(").append(127).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -221,7 +221,7 @@ final class na extends rg {
               break L4;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
     }
 
@@ -330,7 +330,7 @@ final class na extends rg {
           }
           L4: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44).append(param1).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -353,7 +353,7 @@ final class na extends rg {
               break L4;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param3 + 44 + param4 + 41);
+          throw fa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param3 + ',' + param4 + ')');
         }
         return stackIn_8_0 != 0;
     }

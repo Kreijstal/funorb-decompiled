@@ -124,7 +124,7 @@ abstract class qb {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var2;
-            stackOut_23_1 = new StringBuilder().append("qb.F(").append(-122).append(44);
+            stackOut_23_1 = new StringBuilder().append("qb.F(").append(-122).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -147,7 +147,7 @@ abstract class qb {
               break L8;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
         return stackIn_22_0;
     }
@@ -209,7 +209,7 @@ abstract class qb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2_ref, "qb.E(" + 0 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) var2_ref, "qb.E(" + false + ',' + param1 + ')');
         }
     }
 

@@ -22,7 +22,7 @@ final class hf extends pi {
         try {
             ((hf) this).field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -23,7 +23,7 @@ final class mn {
                 int discarded$0 = 49;
                 bb.a(param1);
             } catch (RuntimeException runtimeException) {
-                throw kk.a((Throwable) (Object) runtimeException, "mn.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + -1 + 41);
+                throw kk.a((Throwable) (Object) runtimeException, "mn.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + -1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -209,7 +209,7 @@ final class mn {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -232,7 +232,7 @@ final class mn {
               break L5;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param2 + ')');
         }
     }
 

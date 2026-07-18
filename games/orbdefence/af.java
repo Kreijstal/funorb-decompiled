@@ -33,7 +33,7 @@ final class af {
                 }
                 var1_int = 3;
             } catch (RuntimeException runtimeException) {
-                throw dd.a((Throwable) (Object) runtimeException, "af.C(" + 109 + 41);
+                throw dd.a((Throwable) (Object) runtimeException, "af.C(" + 109 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -131,7 +131,7 @@ final class af {
               break L5;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -221,7 +221,7 @@ final class af {
               break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 1 + 41);
+          throw dd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + true + ')');
         }
         return stackIn_4_0 != 0;
     }
@@ -373,7 +373,7 @@ final class af {
           L10: {
             var4 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var4;
-            stackOut_38_1 = new StringBuilder().append("af.D(").append(1).append(44);
+            stackOut_38_1 = new StringBuilder().append("af.D(").append(true).append(',');
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -396,7 +396,7 @@ final class af {
               break L10;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + param2 + 44 + param3 + 41);
+          throw dd.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_37_0;
     }

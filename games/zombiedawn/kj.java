@@ -146,7 +146,7 @@ final class kj {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + 27994 + 41);
+          throw sh.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + 27994 + ')');
         }
     }
 

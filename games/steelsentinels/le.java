@@ -123,7 +123,7 @@ final class le extends bg {
           }
           L7: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(50).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(50).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -146,7 +146,7 @@ final class le extends bg {
               break L7;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class le extends bg {
         try {
             ((le) this).field_I = param0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "le.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "le.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -84,7 +84,7 @@ final class ri extends na {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2_ref;
-            stackOut_21_1 = new StringBuilder().append("ri.E(").append(0).append(44);
+            stackOut_21_1 = new StringBuilder().append("ri.E(").append(0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -107,7 +107,7 @@ final class ri extends na {
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class ri extends na {
             fk.a(true, 12);
             int var2_int = -108 / ((param1 - -3) / 57);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "ri.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "ri.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

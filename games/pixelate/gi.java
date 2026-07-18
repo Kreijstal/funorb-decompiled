@@ -41,7 +41,7 @@ final class gi {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("gi.A(").append(0).append(44);
+            stackOut_2_1 = new StringBuilder().append("gi.A(").append(0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -64,7 +64,7 @@ final class gi {
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -75,7 +75,7 @@ final class gi {
             int var3_int = 67 % ((34 - param2) / 41);
             ga.field_a = ho.field_e;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "gi.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "gi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -171,7 +171,7 @@ final class lf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "lf.A(" + 80 + 41);
+          throw aa.a((Throwable) (Object) var1, "lf.A(" + 80 + ')');
         }
     }
 

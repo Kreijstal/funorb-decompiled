@@ -20,7 +20,7 @@ final class kb extends mc {
             ck.field_bb.a((byte) 112, (hl) (Object) gl.field_o);
             hi.field_a = true;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "kb.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "kb.A(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

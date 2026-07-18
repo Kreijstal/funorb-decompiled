@@ -39,7 +39,7 @@ abstract class wf extends cc {
             }
             ig.field_b = 0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "wf.T(" + param0 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "wf.T(" + param0 + ')');
         }
     }
 

@@ -167,7 +167,7 @@ final class sj extends kd {
           L10: {
             var2 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var2;
-            stackOut_38_1 = new StringBuilder().append("sj.A(").append(0).append(44);
+            stackOut_38_1 = new StringBuilder().append("sj.A(").append(0).append(',');
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -190,7 +190,7 @@ final class sj extends kd {
               break L10;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ')');
         }
     }
 

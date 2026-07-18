@@ -28,7 +28,7 @@ class nk extends tg {
         try {
             ((nk) this).field_w = param1;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "nk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -252,7 +252,7 @@ class nk extends tg {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var5;
-            stackOut_6_1 = new StringBuilder().append("nk.E(").append(param0).append(44).append(114).append(44);
+            stackOut_6_1 = new StringBuilder().append("nk.E(").append(param0).append(',').append(114).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -275,7 +275,7 @@ class nk extends tg {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param3 + 41);
+          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param3 + ')');
         }
     }
 
@@ -354,7 +354,7 @@ class nk extends tg {
               break L1;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw kg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0 != 0;
     }
@@ -470,7 +470,7 @@ class nk extends tg {
               break L5;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

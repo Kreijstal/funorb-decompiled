@@ -137,7 +137,7 @@ final class vi extends mc {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("vi.I(").append(80).append(44);
+            stackOut_24_1 = new StringBuilder().append("vi.I(").append(80).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -160,7 +160,7 @@ final class vi extends mc {
               break L6;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
     }
 
@@ -262,7 +262,7 @@ final class vi extends mc {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var4;
-            stackOut_18_1 = new StringBuilder().append("vi.H(").append(param0).append(44).append(127).append(44);
+            stackOut_18_1 = new StringBuilder().append("vi.H(").append(param0).append(',').append(127).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -287,7 +287,7 @@ final class vi extends mc {
           }
           L6: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -310,7 +310,7 @@ final class vi extends mc {
               break L6;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
         return stackIn_17_0 != 0;
     }

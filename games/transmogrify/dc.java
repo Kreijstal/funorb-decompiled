@@ -93,7 +93,7 @@ final class dc {
                   }
                 }
                 L8: {
-                  StringBuilder discarded$28 = vi.field_g[n.field_a].append(of.field_e);
+                  StringBuilder discarded$28 = vi.field_g[n.field_a].append((CharSequence) (Object) of.field_e);
                   vi.field_a[n.field_a] = var2_int;
                   hf.field_j = hf.field_j + (var2_int << 6);
                   eh.field_a = eh.field_a + var2_int;
@@ -685,7 +685,7 @@ final class dc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var2, "dc.B(" + -22991 + 44 + param1 + 41);
+          throw ch.a((Throwable) (Object) var2, "dc.B(" + -22991 + ',' + param1 + ')');
         }
     }
 

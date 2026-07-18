@@ -168,7 +168,7 @@ final class oo extends id {
               break L8;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + 1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + true + ')');
         }
     }
 
@@ -239,7 +239,7 @@ final class oo extends id {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("oo.B(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("oo.B(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -262,7 +262,7 @@ final class oo extends id {
               break L4;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
     }
 
@@ -594,7 +594,7 @@ final class oo extends id {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
         }
     }
 
@@ -772,7 +772,7 @@ final class oo extends id {
               break L9;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + 47 + 41);
+          throw sh.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + 47 + ')');
         }
     }
 

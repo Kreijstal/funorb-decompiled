@@ -21,7 +21,7 @@ final class n extends ta {
         try {
             ((n) this).field_v = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "n.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "n.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

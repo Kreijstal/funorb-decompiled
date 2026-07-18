@@ -45,7 +45,7 @@ class gi {
             }
             ej.field_a.b((ic) (Object) param0);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "gi.TB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "gi.TB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

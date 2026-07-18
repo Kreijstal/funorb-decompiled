@@ -21,7 +21,7 @@ final class ad {
             int discarded$8 = 0;
             ui.a(0, param0, (byte) 90);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "ad.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "ad.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class ad {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var1_ref, "ad.D(" + -118 + 41);
+          throw wg.a((Throwable) (Object) var1_ref, "ad.D(" + -118 + ')');
         }
     }
 

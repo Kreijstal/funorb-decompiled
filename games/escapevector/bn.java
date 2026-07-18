@@ -17,7 +17,7 @@ final class bn {
             int discarded$0 = 0;
             gb.a(param4, false, param3, param2.field_g, param1, param2.field_m);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "bn.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "bn.B(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class bn {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 0 + 41);
+          throw t.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 0 + ')');
         }
     }
 

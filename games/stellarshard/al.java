@@ -75,7 +75,7 @@ final class al {
             param1.field_l.field_m = param1;
             param1.field_m.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "al.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "al.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1_ref, "al.G(" + 0 + 41);
+          throw ma.a((Throwable) (Object) var1_ref, "al.G(" + false + ')');
         }
     }
 

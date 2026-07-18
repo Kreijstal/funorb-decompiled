@@ -38,7 +38,7 @@ final class bb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "bb.B(" + 121 + 41);
+          throw la.a((Throwable) (Object) var1, "bb.B(" + 121 + ')');
         }
     }
 

@@ -49,7 +49,7 @@ abstract class jh extends gm implements cj {
         var6 = Torquing.field_u;
         try {
           L0: {
-            StringBuilder discarded$11 = param2.append(10);
+            StringBuilder discarded$11 = param2.append('\n');
             var5_int = 0;
             L1: while (true) {
               if (var5_int > param0) {
@@ -72,7 +72,7 @@ abstract class jh extends gm implements cj {
                 }
                 break L0;
               } else {
-                StringBuilder discarded$15 = param2.append(32);
+                StringBuilder discarded$15 = param2.append(' ');
                 var5_int++;
                 continue L1;
               }
@@ -83,7 +83,7 @@ abstract class jh extends gm implements cj {
           L4: {
             var5 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5;
-            stackOut_10_1 = new StringBuilder().append("jh.H(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("jh.H(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -108,7 +108,7 @@ abstract class jh extends gm implements cj {
           }
           L5: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -131,7 +131,7 @@ abstract class jh extends gm implements cj {
               break L5;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param3 + 41);
+          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param3 + ')');
         }
     }
 
@@ -223,7 +223,7 @@ abstract class jh extends gm implements cj {
           }
           L4: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(param1).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -246,7 +246,7 @@ abstract class jh extends gm implements cj {
               break L4;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param3 + 41);
+          throw rb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param3 + ')');
         }
         return stackIn_5_0;
     }
@@ -289,7 +289,7 @@ abstract class jh extends gm implements cj {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var5;
-            stackOut_4_1 = new StringBuilder().append("jh.P(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("jh.P(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -312,7 +312,7 @@ abstract class jh extends gm implements cj {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 44 + param3 + 41);
+          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -432,7 +432,7 @@ abstract class jh extends gm implements cj {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("jh.C(").append(119).append(44);
+            stackOut_6_1 = new StringBuilder().append("jh.C(").append(119).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -455,7 +455,7 @@ abstract class jh extends gm implements cj {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -467,7 +467,7 @@ abstract class jh extends gm implements cj {
             }
             np.a(param0, true, 126);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "jh.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "jh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -506,7 +506,7 @@ abstract class jh extends gm implements cj {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) runtimeException;
-            stackOut_5_1 = new StringBuilder().append("jh.N(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(124).append(44);
+            stackOut_5_1 = new StringBuilder().append("jh.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(124).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -529,7 +529,7 @@ abstract class jh extends gm implements cj {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param5 + 41);
+          throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param5 + ')');
         }
     }
 
@@ -616,7 +616,7 @@ abstract class jh extends gm implements cj {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var5;
-            stackOut_12_1 = new StringBuilder().append("jh.D(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("jh.D(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -639,7 +639,7 @@ abstract class jh extends gm implements cj {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 44 + param3 + 41);
+          throw rb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_11_0 != 0;
     }
@@ -713,7 +713,7 @@ abstract class jh extends gm implements cj {
           L4: {
             var8 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var8;
-            stackOut_8_1 = new StringBuilder().append("jh.IA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_8_1 = new StringBuilder().append("jh.IA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -736,7 +736,7 @@ abstract class jh extends gm implements cj {
               break L4;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param5 + 44 + param6 + 41);
+          throw rb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -822,7 +822,7 @@ abstract class jh extends gm implements cj {
               break L4;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw rb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
         return stackIn_6_0 != 0;
     }
@@ -881,7 +881,7 @@ abstract class jh extends gm implements cj {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("jh.A(").append(-69).append(44);
+            stackOut_6_1 = new StringBuilder().append("jh.A(").append(-69).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -904,7 +904,7 @@ abstract class jh extends gm implements cj {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0 != 0;
     }

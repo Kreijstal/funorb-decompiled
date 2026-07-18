@@ -33,7 +33,7 @@ final class qi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1_ref, "qi.B(" + 8 + 41);
+          throw qo.a((Throwable) (Object) var1_ref, "qi.B(" + 8 + ')');
         }
     }
 

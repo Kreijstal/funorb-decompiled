@@ -59,7 +59,7 @@ final class uea extends kj {
             param0.field_s.field_p.e(0, 0, param3);
             db.b(100);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uea.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -35,7 +35,7 @@ final class ub {
             bf.field_o.field_p = jl.field_c.field_q;
             ve.a(-124);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ub.A(" + -32 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "ub.A(" + -32 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

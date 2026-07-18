@@ -25,7 +25,7 @@ class cj extends he {
             jc.field_P = tj.field_F;
             ei.field_d = tj.field_F;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "cj.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + 126 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "cj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + 126 + ')');
         }
     }
 

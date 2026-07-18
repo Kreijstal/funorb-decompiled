@@ -18,7 +18,7 @@ final class fk extends gg {
             param1.addKeyListener((java.awt.event.KeyListener) (Object) pk.field_e);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) pk.field_e);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "fk.B(" + -28092 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "fk.B(" + -28092 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class fk extends gg {
               }
               L3: {
                 stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param1).append(44);
+                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param1).append(',');
                 stackIn_16_0 = stackOut_14_0;
                 stackIn_16_1 = stackOut_14_1;
                 stackIn_15_0 = stackOut_14_0;
@@ -158,7 +158,7 @@ final class fk extends gg {
                   break L3;
                 }
               }
-              throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param3 + 41);
+              throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param3 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

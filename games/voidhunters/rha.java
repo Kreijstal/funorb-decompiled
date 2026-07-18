@@ -68,7 +68,7 @@ final class rha implements ntb {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("rha.C(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("rha.C(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -91,7 +91,7 @@ final class rha implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -188,7 +188,7 @@ final class rha implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -307,7 +307,7 @@ final class rha implements ntb {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
         }
     }
 
@@ -323,7 +323,7 @@ final class rha implements ntb {
             var4.field_b = var4.field_b;
             var4.field_c = var4.field_c;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rha.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "rha.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -337,7 +337,7 @@ final class rha implements ntb {
             ((rha) this).field_b = param0.i(0, 8) - 1;
             ((rha) this).field_c = -1 + param0.i(0, 8);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rha.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "rha.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

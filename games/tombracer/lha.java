@@ -30,7 +30,7 @@ final class lha extends kl {
             jaggl.OpenGL.glTexImage3Dub(((lha) this).field_e, 0, ((lha) this).field_c, ((lha) this).field_r, ((lha) this).field_q, ((lha) this).field_o, 0, sja.b(((lha) this).field_c), 5121, (byte[]) null, 0);
             ((lha) this).b(true, 3);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "lha.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "lha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class lha extends kl {
             jaggl.OpenGL.glPixelStorei(3317, 4);
             ((lha) this).b(true, 3);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "lha.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "lha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -185,7 +185,7 @@ final class lha extends kl {
               }
               L4: {
                 stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+                stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
                 stackIn_14_0 = stackOut_12_0;
                 stackIn_14_1 = stackOut_12_1;
                 stackIn_13_0 = stackOut_12_0;
@@ -210,7 +210,7 @@ final class lha extends kl {
               }
               L5: {
                 stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param2).append(44).append(param3).append(44);
+                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',');
                 stackIn_17_0 = stackOut_15_0;
                 stackIn_17_1 = stackOut_15_1;
                 stackIn_16_0 = stackOut_15_0;
@@ -233,7 +233,7 @@ final class lha extends kl {
                   break L5;
                 }
               }
-              throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+              throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -31,7 +31,7 @@ final class si extends vj implements java.awt.image.ImageProducer, java.awt.imag
             boolean discarded$2 = param0.prepareImage(((si) this).field_j, (java.awt.image.ImageObserver) this);
             ((si) this).b(48);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "si.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "si.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class si extends vj implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class si extends vj implements java.awt.image.ImageProducer, java.awt.imag
             }
             boolean discarded$0 = param2.drawImage(((si) this).field_j, param0, param3, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "si.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "si.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class si extends vj implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((si) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "si.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "si.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class si extends vj implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw fk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -281,7 +281,7 @@ final class si extends vj implements java.awt.image.ImageProducer, java.awt.imag
             param0.setColorModel(((si) this).field_k);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "si.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "si.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

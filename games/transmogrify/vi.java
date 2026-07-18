@@ -48,7 +48,7 @@ final class vi implements Iterable {
             param0.field_b.field_f = param0;
             param0.field_c = param2;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "vi.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "vi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class vi implements Iterable {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("vi.D(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("vi.D(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -141,7 +141,7 @@ final class vi implements Iterable {
               break L3;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ')');
         }
         return stackIn_8_0;
     }

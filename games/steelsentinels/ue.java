@@ -59,7 +59,7 @@ final class ue {
             param1.field_lb = 0;
             param1.field_gb = 0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ue.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ue.C(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class ue {
               break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

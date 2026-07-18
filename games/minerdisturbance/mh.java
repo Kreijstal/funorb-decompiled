@@ -92,7 +92,7 @@ final class mh implements uj {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
+          throw lj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
         }
         return stackIn_9_0 != 0;
     }
@@ -161,7 +161,7 @@ final class mh implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1_ref, "mh.C(" + 114 + 41);
+          throw lj.a((Throwable) (Object) var1_ref, "mh.C(" + 114 + ')');
         }
     }
 

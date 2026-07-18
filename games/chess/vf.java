@@ -71,7 +71,7 @@ final class vf implements jm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) runtimeException, "vf.B(" + 1 + 41);
+          throw fk.a((Throwable) (Object) runtimeException, "vf.B(" + true + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class vf implements jm {
           L2: {
             var6 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var6;
-            stackOut_9_1 = new StringBuilder().append("vf.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_9_1 = new StringBuilder().append("vf.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -153,7 +153,7 @@ final class vf implements jm {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 

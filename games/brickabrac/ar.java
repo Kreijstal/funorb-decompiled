@@ -396,7 +396,7 @@ final class ar {
           L26: {
             var8 = decompiledCaughtException;
             stackOut_98_0 = (RuntimeException) var8;
-            stackOut_98_1 = new StringBuilder().append("ar.C(").append(param0).append(44);
+            stackOut_98_1 = new StringBuilder().append("ar.C(").append(param0).append(',');
             stackIn_100_0 = stackOut_98_0;
             stackIn_100_1 = stackOut_98_1;
             stackIn_99_0 = stackOut_98_0;
@@ -419,7 +419,7 @@ final class ar {
               break L26;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_101_0, stackIn_101_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw qb.a((Throwable) (Object) stackIn_101_0, stackIn_101_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

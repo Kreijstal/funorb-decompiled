@@ -61,7 +61,7 @@ final class rm implements bp {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var2_ref;
-            stackOut_7_1 = new StringBuilder().append("rm.C(").append(12658477).append(44);
+            stackOut_7_1 = new StringBuilder().append("rm.C(").append(12658477).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -84,7 +84,7 @@ final class rm implements bp {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -143,7 +143,7 @@ final class rm implements bp {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 16711935 + 41);
+          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 16711935 + ')');
         }
         return stackIn_1_0;
     }

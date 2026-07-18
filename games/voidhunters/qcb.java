@@ -43,7 +43,7 @@ final class qcb extends rqa {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4_ref;
-            stackOut_4_1 = new StringBuilder().append("qcb.C(").append(32768).append(44);
+            stackOut_4_1 = new StringBuilder().append("qcb.C(").append(32768).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -66,7 +66,7 @@ final class qcb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 44 + 31783 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param2 + ',' + 31783 + ')');
         }
         return stackIn_3_0;
     }
@@ -145,7 +145,7 @@ final class qcb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

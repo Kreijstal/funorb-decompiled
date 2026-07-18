@@ -95,7 +95,7 @@ final class tm extends am {
           L4: {
             runtimeException = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) runtimeException;
-            stackOut_11_1 = new StringBuilder().append("tm.C(").append(88).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_11_1 = new StringBuilder().append("tm.C(").append(88).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -118,7 +118,7 @@ final class tm extends am {
               break L4;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
     }
 

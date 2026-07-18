@@ -11,7 +11,7 @@ final class oh {
             kd.b((byte) 107);
             int var6_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oh.B(" + 320 + 44 + 240 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + -128 + 44 + param5 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "oh.B(" + 320 + ',' + 240 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + -128 + ',' + param5 + ')');
         }
     }
 

@@ -129,7 +129,7 @@ final class kj extends fc {
               break L3;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 41);
+          throw sl.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
         }
         return stackIn_11_0;
     }

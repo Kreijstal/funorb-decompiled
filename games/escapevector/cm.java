@@ -79,7 +79,7 @@ final class cm extends oa {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class cm extends oa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var3, "cm.B(" + param0 + 44 + param1 + 44 + 96 + 41);
+          throw t.a((Throwable) (Object) var3, "cm.B(" + param0 + ',' + param1 + ',' + 96 + ')');
         }
         return stackIn_5_0;
     }

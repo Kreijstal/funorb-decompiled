@@ -60,7 +60,7 @@ final class th extends om {
             ((th) this).field_w = param0;
             ((th) this).field_z = 256;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "th.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "th.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

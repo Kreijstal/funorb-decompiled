@@ -50,7 +50,7 @@ final class oj {
             }
             param0.e(-16 + param5 + (int)((oj) this).field_a, (int)((oj) this).field_b + (param2 - 16), param3);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "oj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "oj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class oj {
           L0: {
             var5 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var5;
-            stackOut_4_1 = new StringBuilder().append("oj.D(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("oj.D(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -160,7 +160,7 @@ final class oj {
           }
           L1: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -183,7 +183,7 @@ final class oj {
               break L1;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 0 + 41);
+          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + 0 + ')');
         }
     }
 

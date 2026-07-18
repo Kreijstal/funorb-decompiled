@@ -90,7 +90,7 @@ final class hb {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var2;
-            stackOut_18_1 = new StringBuilder().append("hb.A(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("hb.A(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -113,7 +113,7 @@ final class hb {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
     }
 

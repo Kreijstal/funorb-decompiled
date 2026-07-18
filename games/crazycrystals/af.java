@@ -24,7 +24,7 @@ final class af extends qb {
             int var3_int = 81 / ((-54 - param1) / 37);
             java.nio.ByteBuffer discarded$1 = ((af) this).field_d.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "af.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "af.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

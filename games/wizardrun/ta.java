@@ -156,7 +156,7 @@ abstract class ta {
                           if (fg.a((char) var7)) {
                             var8 = sf.a(-1514, (char) var7);
                             if (var8 != 0) {
-                              StringBuilder discarded$3 = var5.append(var8);
+                              StringBuilder discarded$3 = var5.append((char) var8);
                               break L6;
                             } else {
                               break L6;
@@ -187,7 +187,7 @@ abstract class ta {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_31_0 = (RuntimeException) var2;
-            stackOut_31_1 = new StringBuilder().append("ta.D(").append(param0).append(44);
+            stackOut_31_1 = new StringBuilder().append("ta.D(").append(param0).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -210,7 +210,7 @@ abstract class ta {
               break L7;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
         }
     }
 

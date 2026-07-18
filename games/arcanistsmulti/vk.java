@@ -118,7 +118,7 @@ final class vk extends ve {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3_ref;
-            stackOut_12_1 = new StringBuilder().append("vk.G(").append(0).append(44);
+            stackOut_12_1 = new StringBuilder().append("vk.G(").append(false).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -141,7 +141,7 @@ final class vk extends ve {
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + -123 + 41);
+          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + -123 + ')');
         }
     }
 

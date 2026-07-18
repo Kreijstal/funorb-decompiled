@@ -127,7 +127,7 @@ abstract class jp {
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 8192 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 8192 + ',' + param2 + ')');
         }
         return stackIn_4_0;
     }

@@ -138,7 +138,7 @@ final class cg {
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 30 + 41);
+          throw la.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + 30 + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class cg {
             param0.field_a = param1;
             param0.field_d.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "cg.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "cg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

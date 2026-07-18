@@ -184,7 +184,7 @@ abstract class ub {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var5;
-            stackOut_18_1 = new StringBuilder().append("ub.L(").append(param0).append(44).append(param1).append(44);
+            stackOut_18_1 = new StringBuilder().append("ub.L(").append(param0).append(',').append(param1).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -207,7 +207,7 @@ abstract class ub {
               break L5;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param3 + 41);
+          throw fk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param3 + ')');
         }
         return stackIn_16_0;
     }

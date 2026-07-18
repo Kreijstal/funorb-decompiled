@@ -89,7 +89,7 @@ final class hb implements Iterator {
             int discarded$0 = -59;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "hb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "hb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

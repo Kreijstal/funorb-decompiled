@@ -53,7 +53,7 @@ final class og extends rk implements jl {
         try {
             ((og) this).field_fb = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "og.S(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "og.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class og extends rk implements jl {
         try {
             ((og) this).field_db = bh.field_g - ((og) this).field_u + -param3;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "og.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "og.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

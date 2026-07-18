@@ -107,9 +107,9 @@ abstract class qe extends uh {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$9 = field_w.append(60);
+                        StringBuilder discarded$9 = field_w.append('<');
                         StringBuilder discarded$10 = field_w.append(var15);
-                        StringBuilder discarded$11 = field_w.append(62);
+                        StringBuilder discarded$11 = field_w.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -297,7 +297,7 @@ abstract class qe extends uh {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$13 = field_w.append(var14);
+                        StringBuilder discarded$13 = field_w.append((char) var14);
                         var14 = (char)(ma.a(-127, (char) var14) & 255);
                         var4 = var4 + ((qe) this).field_v[var14];
                         if (((qe) this).field_H == null) {

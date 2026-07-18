@@ -24,7 +24,7 @@ final class tg {
             }
             param0.field_l.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "tg.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "tg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

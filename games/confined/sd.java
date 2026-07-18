@@ -45,7 +45,7 @@ final class sd {
         ec var2 = null;
         if (param0 instanceof ec) {
             var2 = (ec) (Object) param0;
-            var2.field_c = var2.field_c + 32 + param1;
+            var2.field_c = var2.field_c + ' ' + param1;
         } else {
             var2 = new ec(param0, param1);
         }

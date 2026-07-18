@@ -69,7 +69,7 @@ final class hha extends ana {
         try {
             ((hha) this).field_x = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "hha.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "hha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class hha extends ana {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2_ref;
-            stackOut_14_1 = new StringBuilder().append("hha.F(").append(127).append(44);
+            stackOut_14_1 = new StringBuilder().append("hha.F(").append(127).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -177,7 +177,7 @@ final class hha extends ana {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0;
     }

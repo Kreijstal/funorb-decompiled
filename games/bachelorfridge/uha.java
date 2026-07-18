@@ -133,7 +133,7 @@ final class uha extends sna {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
         return (pp) (Object) stackIn_6_0;
     }
@@ -465,7 +465,7 @@ final class uha extends sna {
           L15: {
             var3 = decompiledCaughtException;
             stackOut_71_0 = (RuntimeException) var3;
-            stackOut_71_1 = new StringBuilder().append("uha.AA(").append(param0).append(44);
+            stackOut_71_1 = new StringBuilder().append("uha.AA(").append(param0).append(',');
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
@@ -488,7 +488,7 @@ final class uha extends sna {
               break L15;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + ')');
         }
         return stackIn_70_0 != 0;
     }

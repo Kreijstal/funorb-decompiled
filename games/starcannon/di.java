@@ -43,7 +43,7 @@ final class di extends qf {
           L0: {
             var4 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4;
-            stackOut_4_1 = new StringBuilder().append("di.C(").append(130).append(44).append(param1).append(44);
+            stackOut_4_1 = new StringBuilder().append("di.C(").append(130).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -66,7 +66,7 @@ final class di extends qf {
               break L0;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param3 + 41);
+          throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param3 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class di extends qf {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw sd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
         return stackIn_5_0;
     }
@@ -229,7 +229,7 @@ final class di extends qf {
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw sd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
         }
         return stackIn_10_0;
     }

@@ -6735,7 +6735,7 @@ final class jga extends eta {
             jsa.a(false, 4);
             int var1_int = 37;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "jga.C(" + 50 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "jga.C(" + 50 + ')');
         }
     }
 
@@ -6750,7 +6750,7 @@ final class jga extends eta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "jga.B(" + -3 + 41);
+          throw tba.a((Throwable) (Object) var1, "jga.B(" + -3 + ')');
         }
     }
 

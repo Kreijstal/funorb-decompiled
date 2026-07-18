@@ -205,7 +205,7 @@ final class qw {
           L4: {
             var2 = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var2;
-            stackOut_29_1 = new StringBuilder().append("qw.B(").append(94).append(44);
+            stackOut_29_1 = new StringBuilder().append("qw.B(").append(94).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -228,7 +228,7 @@ final class qw {
               break L4;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ')');
         }
     }
 

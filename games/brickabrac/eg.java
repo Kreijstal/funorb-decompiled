@@ -77,7 +77,7 @@ final class eg extends nm {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3_ref;
-            stackOut_13_1 = new StringBuilder().append("eg.C(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("eg.C(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -100,7 +100,7 @@ final class eg extends nm {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 0 + 41);
+          throw qb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + false + ')');
         }
         return (Object) (Object) stackIn_11_0;
     }

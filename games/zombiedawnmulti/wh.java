@@ -52,7 +52,7 @@ final class wh implements Iterable {
             }
             param2.field_d.field_b = param2;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "wh.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "wh.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class wh implements Iterable {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
         }
         return stackIn_15_0;
     }
@@ -175,7 +175,7 @@ final class wh implements Iterable {
             ec.field_b.field_zb = ec.field_b.field_zb - ua.field_E.field_zb;
             ua.field_E.field_x = ua.field_E.field_x - ua.field_E.field_zb;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "wh.B(" + 6 + 44 + param1 + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "wh.B(" + 6 + ',' + param1 + ',' + 0 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -13,7 +13,7 @@ final class ui extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((ui) this).field_b = true;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ui.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "ui.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -22,7 +22,7 @@ final class ui extends java.awt.Canvas implements java.awt.event.FocusListener {
             int var3_int = -58 % ((-46 - param1) / 36);
             q.a(-119, ((ui) this).field_c, param0);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ui.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "ui.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class ui extends java.awt.Canvas implements java.awt.event.FocusListener {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("ui.B(").append(1).append(44);
+            stackOut_4_1 = new StringBuilder().append("ui.B(").append(true).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -98,7 +98,7 @@ final class ui extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 

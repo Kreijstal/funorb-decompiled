@@ -86,7 +86,7 @@ final class rj {
         try {
             ((rj) this).field_m = param0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "rj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "rj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

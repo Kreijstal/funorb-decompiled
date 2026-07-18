@@ -787,9 +787,9 @@ abstract class oh extends gb {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$13 = field_C.append(60);
+                        StringBuilder discarded$13 = field_C.append('<');
                         StringBuilder discarded$14 = field_C.append(var15);
-                        StringBuilder discarded$15 = field_C.append(62);
+                        StringBuilder discarded$15 = field_C.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -977,7 +977,7 @@ abstract class oh extends gb {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$17 = field_C.append(var14);
+                        StringBuilder discarded$17 = field_C.append((char) var14);
                         var14 = (char)(hj.a((char) var14, (byte) -128) & 255);
                         var4 = var4 + ((oh) this).field_K[var14];
                         if (((oh) this).field_J == null) {

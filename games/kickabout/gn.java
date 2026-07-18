@@ -120,11 +120,11 @@ class gn {
         String var4 = Integer.toBinaryString(param0);
         try {
             for (var5 = 0; param2 - var4.length() > var5; var5++) {
-                StringBuilder discarded$0 = param3.append(48);
+                StringBuilder discarded$0 = param3.append('0');
             }
             StringBuilder discarded$1 = param3.append(var4);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "gn.QB(" + param0 + 44 + -28745 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "gn.QB(" + param0 + ',' + -28745 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

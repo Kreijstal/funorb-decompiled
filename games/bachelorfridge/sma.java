@@ -178,12 +178,12 @@ final class sma extends ana {
                     break L3;
                   }
                 } else {
-                  var2 = var2 + 32;
+                  var2 = var2 + ' ';
                   continue L1;
                 }
               }
             }
-            var2 = var2 + 32;
+            var2 = var2 + ' ';
             continue L1;
           } else {
             var2 = var11;
@@ -1174,7 +1174,7 @@ final class sma extends ana {
                           }
                         }
                         if (var36 != null) {
-                          jja.field_m = kka.field_k[var35_int] + " - " + var36;
+                          jja.field_m = kka.field_k[var35_int] + " - " + (String) var36;
                           break L55;
                         } else {
                           jja.field_m = kka.field_k[var35_int];
@@ -1213,7 +1213,7 @@ final class sma extends ana {
             ((sma) this).field_G = ((sma) this).field_w.field_s;
             ((sma) this).field_F = ((sma) this).field_w.field_r;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "sma.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "sma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

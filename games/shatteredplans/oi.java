@@ -73,7 +73,7 @@ final class oi {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("oi.C(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("oi.C(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -96,7 +96,7 @@ final class oi {
               break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 

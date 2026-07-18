@@ -157,7 +157,7 @@ abstract class vc {
             var1.f(0, 0);
             ij.a(false);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "vc.M(" + 1 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "vc.M(" + true + ')');
         }
     }
 

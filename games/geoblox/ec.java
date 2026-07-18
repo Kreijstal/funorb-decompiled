@@ -44,7 +44,7 @@ final class ec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "ec.C(" + param0 + 44 + 3 + 41);
+          throw t.a((Throwable) (Object) var2, "ec.C(" + param0 + ',' + 3 + ')');
         }
     }
 
@@ -250,7 +250,7 @@ final class ec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "ec.A(" + param0 + 41);
+          throw t.a((Throwable) (Object) var1, "ec.A(" + param0 + ')');
         }
         return stackIn_49_0 != 0;
     }

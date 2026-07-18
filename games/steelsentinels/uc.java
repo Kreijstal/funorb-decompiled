@@ -68,7 +68,7 @@ final class uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2, "uc.B(" + param0 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) var2, "uc.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class uc {
               break L3;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ci.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -239,7 +239,7 @@ final class uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2_ref, "uc.A(" + param0 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) var2_ref, "uc.A(" + param0 + ',' + param1 + ')');
         }
         return stackIn_19_0 != 0;
     }

@@ -48,7 +48,7 @@ final class mf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1, "mf.D(" + -67 + 41);
+          throw sh.a((Throwable) (Object) var1, "mf.D(" + -67 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class mf {
         try {
             ((mf) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "mf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "mf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

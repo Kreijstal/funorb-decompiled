@@ -95,7 +95,7 @@ abstract class af {
           L4: {
             var5 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var5;
-            stackOut_19_1 = new StringBuilder().append("af.J(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("af.J(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -118,7 +118,7 @@ abstract class af {
               break L4;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param2 + 44 + param3 + 41);
+          throw bd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_18_0;
     }
@@ -188,7 +188,7 @@ abstract class af {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw bd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

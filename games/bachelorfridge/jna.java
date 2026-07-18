@@ -81,7 +81,7 @@ final class jna extends bw {
           L4: {
             var8 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var8;
-            stackOut_18_1 = new StringBuilder().append("jna.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_18_1 = new StringBuilder().append("jna.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -104,7 +104,7 @@ final class jna extends bw {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw pe.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class jna extends bw {
             }
             int discarded$0 = param1.f(-55);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "jna.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "jna.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

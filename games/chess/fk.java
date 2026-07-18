@@ -14,7 +14,7 @@ abstract class fk extends l {
         ae var2 = null;
         if (param0 instanceof ae) {
             var2 = (ae) (Object) param0;
-            var2.field_h = var2.field_h + 32 + param1;
+            var2.field_h = var2.field_h + ' ' + param1;
         } else {
             var2 = new ae(param0, param1);
         }
@@ -67,7 +67,7 @@ abstract class fk extends l {
           L1: {
             var5_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5_ref;
-            stackOut_5_1 = new StringBuilder().append("fk.AA(").append(0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_5_1 = new StringBuilder().append("fk.AA(").append(0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -90,7 +90,7 @@ abstract class fk extends l {
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param4 + 41);
+          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param4 + ')');
         }
     }
 

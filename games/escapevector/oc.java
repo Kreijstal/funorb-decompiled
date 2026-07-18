@@ -362,7 +362,7 @@ final class oc extends fl {
             vn.field_e.a(-12328, (hg) (Object) param2);
             hg.a(-97, param0, param2);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oc.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "oc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -394,7 +394,7 @@ final class oc extends fl {
             param2.field_d = param1.field_d;
             param2.field_h = param1.field_h;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oc.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "oc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -458,7 +458,7 @@ final class oc extends fl {
         try {
             param1.addFocusListener((java.awt.event.FocusListener) (Object) ck.field_v);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oc.Q(" + -38 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "oc.Q(" + -38 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -967,7 +967,7 @@ final class oc extends fl {
           }
           L8: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -990,7 +990,7 @@ final class oc extends fl {
               break L8;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 
@@ -1045,7 +1045,7 @@ final class oc extends fl {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("oc.<init>(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("oc.<init>(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -1068,7 +1068,7 @@ final class oc extends fl {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 

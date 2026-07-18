@@ -58,7 +58,7 @@ final class gi {
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 13 + 44 + 31 + 41);
+          throw rb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 13 + ',' + 31 + ')');
         }
     }
 

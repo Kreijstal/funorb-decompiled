@@ -100,7 +100,7 @@ final class nh {
               break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class nh {
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 0 + 41);
+          throw sd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + 0 + ')');
         }
     }
 

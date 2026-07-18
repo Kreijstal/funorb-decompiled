@@ -32,7 +32,7 @@ final class io {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2, "io.A(" + 2 + 44 + -20304 + 41);
+          throw aa.a((Throwable) (Object) var2, "io.A(" + 2 + ',' + -20304 + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class io {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "io.B(" + -123 + 41);
+          throw aa.a((Throwable) (Object) var1, "io.B(" + -123 + ')');
         }
     }
 
@@ -616,7 +616,7 @@ final class io {
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+          throw aa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
@@ -738,7 +738,7 @@ final class io {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var5;
-            stackOut_20_1 = new StringBuilder().append("io.H(").append(param0).append(44).append(-67).append(44);
+            stackOut_20_1 = new StringBuilder().append("io.H(").append(param0).append(',').append(-67).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -761,7 +761,7 @@ final class io {
               break L8;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param3 + 44 + param4 + 41);
+          throw aa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -771,7 +771,7 @@ final class io {
             pe.field_c = hk.field_d.field_z + hk.field_d.field_w;
             int var2_int = -38;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "io.F(" + (param0 != null ? "{...}" : "null") + 44 + -108 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "io.F(" + (param0 != null ? "{...}" : "null") + ',' + -108 + ')');
         }
     }
 
@@ -783,7 +783,7 @@ final class io {
             }
             nn.a(param0, -75, ((io) this).field_b, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "io.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "io.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -798,7 +798,7 @@ final class io {
         try {
             ((io) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "io.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "io.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

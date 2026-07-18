@@ -196,7 +196,7 @@ final class oo extends ki {
             lm.field_e = new jp[2];
             on.field_I = new jp[2][];
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "oo.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "oo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -357,7 +357,7 @@ final class oo extends ki {
                   break L2;
                 }
               }
-              throw qb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+              throw qb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

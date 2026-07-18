@@ -119,7 +119,7 @@ final class vd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "vd.A(" + -61 + 41);
+          throw ma.a((Throwable) (Object) var1, "vd.A(" + -61 + ')');
         }
         return stackIn_27_0;
     }
@@ -257,7 +257,7 @@ final class vd {
               break L7;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + -128 + 41);
+          throw ma.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + -128 + ')');
         }
     }
 

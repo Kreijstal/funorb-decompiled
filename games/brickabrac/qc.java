@@ -64,7 +64,7 @@ final class qc extends nm {
               break L0;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 0 + 41);
+          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 0 + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class qc extends nm {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw qb.a((Throwable) (Object) var1, "qc.E(" + 14676 + 41);
+              throw qb.a((Throwable) (Object) var1, "qc.E(" + 14676 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -188,7 +188,7 @@ final class qc extends nm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1, "qc.D(" + 27144 + 41);
+          throw qb.a((Throwable) (Object) var1, "qc.D(" + 27144 + ')');
         }
     }
 
@@ -226,7 +226,7 @@ final class qc extends nm {
                 var9 = 160;
                 var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
             }
-            StringBuilder discarded$0 = var6.append(var9);
+            StringBuilder discarded$0 = var6.append((char) var9);
         }
         StringBuilder discarded$1 = var6.reverse();
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));

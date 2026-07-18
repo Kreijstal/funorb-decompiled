@@ -36,7 +36,7 @@ final class di {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) runtimeException, "di.B(" + param0 + 44 + 1 + 44 + param2 + 41);
+          throw nb.a((Throwable) (Object) runtimeException, "di.B(" + param0 + ',' + true + ',' + param2 + ')');
         }
     }
 

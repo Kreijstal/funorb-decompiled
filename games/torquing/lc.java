@@ -99,7 +99,7 @@ final class lc extends ro {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var2;
-            stackOut_23_1 = new StringBuilder().append("lc.C(").append(0).append(44);
+            stackOut_23_1 = new StringBuilder().append("lc.C(").append(false).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -122,7 +122,7 @@ final class lc extends ro {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
     }
 
@@ -267,7 +267,7 @@ final class lc extends ro {
                     L7: while (true) {
                       if (var5 >= nc.field_d.length) {
                         if (var2 != null) {
-                          int discarded$5 = kl.field_o.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                          int discarded$5 = kl.field_o.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                           break L6;
                         } else {
                           break L5;
@@ -290,7 +290,7 @@ final class lc extends ro {
                               }
                             }
                             if (var2 != null) {
-                              var2 = (Object) (Object) (var2 + ", " + var5);
+                              var2 = (Object) (Object) ((String) var2 + ", " + var5);
                               break L8;
                             } else {
                               var2 = (Object) (Object) Integer.toString(var5);
@@ -312,7 +312,7 @@ final class lc extends ro {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "lc.J(" + param0 + 41);
+          throw rb.a((Throwable) (Object) var1, "lc.J(" + param0 + ')');
         }
     }
 

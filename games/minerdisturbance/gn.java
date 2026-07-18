@@ -37,7 +37,7 @@ final class gn {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("gn.D(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("gn.D(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -60,7 +60,7 @@ final class gn {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 1 + 41);
+          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + true + ')');
         }
         return stackIn_1_0;
     }
@@ -157,7 +157,7 @@ final class gn {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var2;
-            stackOut_17_1 = new StringBuilder().append("gn.C(").append(-591).append(44);
+            stackOut_17_1 = new StringBuilder().append("gn.C(").append(-591).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -180,7 +180,7 @@ final class gn {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
         return stackIn_16_0;
     }
@@ -203,7 +203,7 @@ final class gn {
             var3 = b.a(param0, "jagex logo2.packvorbis", "");
             ji discarded$0 = var3.a();
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "gn.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "gn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

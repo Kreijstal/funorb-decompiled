@@ -4622,7 +4622,7 @@ final class nk {
             var3.a(param1.field_g, -68);
             var3.b((byte) -60, param1.field_h);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "nk.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 14 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "nk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 14 + ')');
         }
     }
 
@@ -4726,7 +4726,7 @@ final class nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1, "nk.D(" + param0 + 41);
+          throw dd.a((Throwable) (Object) var1, "nk.D(" + param0 + ')');
         }
         return stackIn_24_0;
     }

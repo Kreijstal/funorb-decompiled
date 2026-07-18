@@ -212,7 +212,7 @@ class id extends fb {
           L10: {
             var3 = decompiledCaughtException;
             stackOut_43_0 = (RuntimeException) var3;
-            stackOut_43_1 = new StringBuilder().append("id.B(").append(param0).append(44);
+            stackOut_43_1 = new StringBuilder().append("id.B(").append(param0).append(',');
             stackIn_45_0 = stackOut_43_0;
             stackIn_45_1 = stackOut_43_1;
             stackIn_44_0 = stackOut_43_0;
@@ -235,7 +235,7 @@ class id extends fb {
               break L10;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + ')');
         }
     }
 

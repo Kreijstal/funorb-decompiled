@@ -372,7 +372,7 @@ final class fn extends pi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "fn.B(" + 0 + 41);
+          throw lj.a((Throwable) (Object) var1, "fn.B(" + 0 + ')');
         }
     }
 
@@ -491,7 +491,7 @@ final class fn extends pi {
         try {
             aa.field_j = new th(var2);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "fn.F(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "fn.F(" + (param0 != null ? "{...}" : "null") + ',' + true + ')');
         }
     }
 
@@ -506,7 +506,7 @@ final class fn extends pi {
         try {
             ((fn) this).field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "fn.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "fn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

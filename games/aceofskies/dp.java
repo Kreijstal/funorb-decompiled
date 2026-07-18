@@ -74,7 +74,7 @@ final class dp extends pj implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -101,7 +101,7 @@ final class dp extends pj implements java.awt.image.ImageProducer, java.awt.imag
             boolean discarded$6 = param3.prepareImage(((dp) this).field_d, (java.awt.image.ImageObserver) this);
             ((dp) this).a(-12595);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "dp.G(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "dp.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class dp extends pj implements java.awt.image.ImageProducer, java.awt.imag
             param0.setColorModel(((dp) this).field_g);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "dp.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "dp.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -190,7 +190,7 @@ final class dp extends pj implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -198,7 +198,7 @@ final class dp extends pj implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((dp) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "dp.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "dp.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -209,7 +209,7 @@ final class dp extends pj implements java.awt.image.ImageProducer, java.awt.imag
             this.b();
             boolean discarded$1 = param1.drawImage(((dp) this).field_d, param3, param2, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "dp.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "dp.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

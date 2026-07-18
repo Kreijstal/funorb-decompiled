@@ -237,7 +237,7 @@ final class gf implements Iterator {
                     break L4;
                   } else {
                     L5: {
-                      StringBuilder discarded$19 = fb.field_D.append(var4);
+                      StringBuilder discarded$19 = fb.field_D.append((char) var4);
                       var5 = 485;
                       var13 = qe.field_V;
                       var7 = var13;
@@ -482,7 +482,7 @@ final class gf implements Iterator {
             ((gf) this).field_a = param0;
             this.a(-120);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "gf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "gf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

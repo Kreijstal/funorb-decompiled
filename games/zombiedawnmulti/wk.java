@@ -34,7 +34,7 @@ abstract class wk extends se implements kh {
             ((wk) this).field_H = param1;
             ((wk) this).field_H.field_n = (wk) this;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "wk.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "wk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -42,7 +42,7 @@ abstract class wk extends se implements kh {
         try {
             oe.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "wk.C(" + (param0 != null ? "{...}" : "null") + 44 + 48 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "wk.C(" + (param0 != null ? "{...}" : "null") + ',' + 48 + ')');
         }
     }
 

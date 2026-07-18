@@ -83,7 +83,7 @@ final class gp extends ana {
             dg.c(1 + var7, 1 + var8, var5 - 2, var6 - 2, 16777088);
             int discarded$0 = qs.field_m.field_jb.a(param1, 3 + var7, -qs.field_m.field_jb.field_u + (df.field_r + 1 + var8), 500, 1000, 0, -1, 0, 0, rg.field_h);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "gp.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "gp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class gp extends ana {
         try {
             ((gp) this).field_w = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "gp.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "gp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

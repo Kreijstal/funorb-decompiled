@@ -23,7 +23,7 @@ final class fl {
             bl.field_f = 640;
             mh.field_D = 640;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "fl.C(" + param0 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "fl.C(" + param0 + ')');
         }
     }
 

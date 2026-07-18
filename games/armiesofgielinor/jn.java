@@ -74,7 +74,7 @@ final class jn {
           L2: {
             var10_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var10_ref;
-            stackOut_4_1 = new StringBuilder().append("jn.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(33423424).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_4_1 = new StringBuilder().append("jn.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(33423424).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -97,7 +97,7 @@ final class jn {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param8 + 44 + param9 + 41);
+          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

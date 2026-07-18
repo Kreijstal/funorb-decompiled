@@ -91,7 +91,7 @@ final class gg extends li {
               }
               L2: {
                 stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(1).append(44);
+                stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(true).append(',');
                 stackIn_9_0 = stackOut_7_0;
                 stackIn_9_1 = stackOut_7_1;
                 stackIn_8_0 = stackOut_7_0;
@@ -114,7 +114,7 @@ final class gg extends li {
                   break L2;
                 }
               }
-              throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+              throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -136,7 +136,7 @@ final class gg extends li {
             ((gg) this).field_q = param1;
             ((gg) this).field_r.g(tg.field_e * ((gg) this).field_p + 128 >> 8);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "gg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "gg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

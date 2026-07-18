@@ -84,7 +84,7 @@ final class vga extends vpa {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -128 + 41);
+          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -128 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -155,7 +155,7 @@ final class vga extends vpa {
           L4: {
             var3_ref = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3_ref;
-            stackOut_9_1 = new StringBuilder().append("vga.F(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("vga.F(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -178,7 +178,7 @@ final class vga extends vpa {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 
@@ -259,7 +259,7 @@ final class vga extends vpa {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
         }
     }
 
@@ -279,7 +279,7 @@ final class vga extends vpa {
             }
             ((vga) this).field_o[param1].field_i = param2;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "vga.H(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "vga.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -455,7 +455,7 @@ final class vga extends vpa {
               break L9;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw tba.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -573,7 +573,7 @@ final class vga extends vpa {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("vga.D(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("vga.D(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -596,7 +596,7 @@ final class vga extends vpa {
               break L6;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param2 + ')');
         }
     }
 
@@ -605,7 +605,7 @@ final class vga extends vpa {
         try {
             param0.a((byte) -16, (vga) this, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "vga.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "vga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

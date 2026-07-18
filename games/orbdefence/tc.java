@@ -80,7 +80,7 @@ final class tc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var2_ref, "tc.A(" + -20 + 44 + param1 + 41);
+          throw dd.a((Throwable) (Object) var2_ref, "tc.A(" + -20 + ',' + param1 + ')');
         }
         return stackIn_22_0 != 0;
     }
@@ -296,7 +296,7 @@ final class tc {
                     case 17: {
                         var2_ref2 = (RuntimeException) (Object) caughtException;
                         stackOut_17_0 = (RuntimeException) var2_ref2;
-                        stackOut_17_1 = new StringBuilder().append("tc.C(").append(-41).append(44);
+                        stackOut_17_1 = new StringBuilder().append("tc.C(").append(-41).append(',');
                         stackIn_19_0 = stackOut_17_0;
                         stackIn_19_1 = stackOut_17_1;
                         stackIn_18_0 = stackOut_17_0;
@@ -329,7 +329,7 @@ final class tc {
                         continue stateLoop;
                     }
                     case 20: {
-                        throw dd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+                        throw dd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }

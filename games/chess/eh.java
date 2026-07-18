@@ -308,7 +308,7 @@ abstract class eh extends ma {
             ((eh) this).field_P = false;
             ((eh) this).field_Q = param0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "eh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "eh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -463,7 +463,7 @@ abstract class eh extends ma {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("eh.MA(").append(28207).append(44);
+            stackOut_11_1 = new StringBuilder().append("eh.MA(").append(28207).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -486,7 +486,7 @@ abstract class eh extends ma {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ')');
         }
         return stackIn_10_0;
     }

@@ -70,7 +70,7 @@ final class ha {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var3, "ha.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw oj.a((Throwable) (Object) var3, "ha.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_17_0;
     }
@@ -208,7 +208,7 @@ final class ha {
             int var6 = 80 / ((-24 - param0) / 40);
             param1.field_d = param2;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "ha.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "ha.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

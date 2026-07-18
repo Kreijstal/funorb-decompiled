@@ -66,7 +66,7 @@ final class fg {
             int discarded$2 = 1;
             ej.field_a = fe.a(var1, fi.field_j, var3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fg.B(" + 0 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "fg.B(" + 0 + ')');
         }
     }
 

@@ -106,7 +106,7 @@ final class da {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4;
-            stackOut_17_1 = new StringBuilder().append("da.B(").append(param0).append(44).append(param1).append(44).append(-110).append(44);
+            stackOut_17_1 = new StringBuilder().append("da.B(").append(param0).append(',').append(param1).append(',').append(-110).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -129,7 +129,7 @@ final class da {
               break L6;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 

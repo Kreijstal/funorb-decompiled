@@ -110,7 +110,7 @@ final class gka extends at {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 255 + 41);
+          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 255 + ')');
         }
         return stackIn_4_0;
     }
@@ -160,7 +160,7 @@ final class gka extends at {
             ((gka) this).field_k = new taa(((gka) this).field_p, (((gka) this).field_p.field_h.field_z >> 1) - 1, -3);
             ((gka) this).a(27799, (at) (Object) ((gka) this).field_k);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "gka.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "gka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

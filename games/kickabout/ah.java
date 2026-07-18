@@ -118,7 +118,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 
@@ -227,7 +227,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "ah.V(" + -43 + 41);
+          throw nb.a((Throwable) (Object) var2, "ah.V(" + -43 + ')');
         }
     }
 
@@ -292,7 +292,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -347,7 +347,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -460,7 +460,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
         return stackIn_14_0;
     }
@@ -576,7 +576,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw nb.a((Throwable) (Object) runtimeException, "ah.FA(" + param0 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) runtimeException, "ah.FA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -633,7 +633,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -688,7 +688,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -747,7 +747,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -854,7 +854,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (Object) (Object) decompiledCaughtException;
-          throw nb.a((Throwable) var2, "ah.W(" + param0 + 41);
+          throw nb.a((Throwable) var2, "ah.W(" + param0 + ')');
         }
     }
 
@@ -1389,7 +1389,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
               L5: {
                 var8_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_20_0 = (RuntimeException) var8_ref;
-                stackOut_20_1 = new StringBuilder().append("ah.R(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+                stackOut_20_1 = new StringBuilder().append("ah.R(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
                 stackIn_23_0 = stackOut_20_0;
                 stackIn_23_1 = stackOut_20_1;
                 stackIn_21_0 = stackOut_20_0;
@@ -1412,7 +1412,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
                   break L5;
                 }
               }
-              throw nb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param6 + 41);
+              throw nb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param6 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1472,7 +1472,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1519,7 +1519,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "ah.BA(" + param0 + 41);
+          throw nb.a((Throwable) (Object) var1, "ah.BA(" + param0 + ')');
         }
     }
 
@@ -1587,7 +1587,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "ah.S(" + 1 + 41);
+          throw nb.a((Throwable) (Object) var2, "ah.S(" + true + ')');
         }
     }
 

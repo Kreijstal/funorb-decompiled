@@ -571,7 +571,7 @@ final class mk {
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = decompiledCaughtException;
-              throw nb.a((Throwable) (Object) var1, "mk.B(" + -1622 + 41);
+              throw nb.a((Throwable) (Object) var1, "mk.B(" + -1622 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -714,7 +714,7 @@ final class mk {
               break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + 6 + 44 + param3 + 41);
+          throw nb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + 6 + ',' + param3 + ')');
         }
         return stackIn_7_0;
     }

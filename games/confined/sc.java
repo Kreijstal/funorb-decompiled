@@ -130,7 +130,7 @@ abstract class sc {
           }
           L5: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(95).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append('_').append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -153,7 +153,7 @@ abstract class sc {
               break L5;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param3 + 41);
+          throw sd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param3 + ')');
         }
         return stackIn_10_0;
     }
@@ -434,7 +434,7 @@ abstract class sc {
           L4: {
             var5 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var5;
-            stackOut_19_1 = new StringBuilder().append("sc.K(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_19_1 = new StringBuilder().append("sc.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -457,7 +457,7 @@ abstract class sc {
               break L4;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
         }
         return stackIn_17_0;
     }

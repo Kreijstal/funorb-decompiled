@@ -79,7 +79,7 @@ final class th {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + -17900 + 41);
+          throw ig.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + -17900 + ')');
         }
         return stackIn_11_0 != 0;
     }

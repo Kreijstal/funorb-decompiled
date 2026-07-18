@@ -215,7 +215,7 @@ abstract class ta extends l {
                   break L3;
                 }
               }
-              throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 19 + 41);
+              throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 19 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -232,7 +232,7 @@ abstract class ta extends l {
             ((ta) this).field_e = param0;
             param0.a((byte) 19, (ta) this);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "ta.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "ta.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

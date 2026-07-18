@@ -37,7 +37,7 @@ final class uma {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("uma.B(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("uma.B(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -60,7 +60,7 @@ final class uma {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -26803 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -26803 + ')');
         }
         return stackIn_1_0;
     }

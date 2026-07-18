@@ -119,7 +119,7 @@ final class bb extends ak {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var4;
-            stackOut_18_1 = new StringBuilder().append("bb.B(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("bb.B(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -142,7 +142,7 @@ final class bb extends ak {
               break L5;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param2 + ')');
         }
     }
 

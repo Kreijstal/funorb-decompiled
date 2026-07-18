@@ -178,7 +178,7 @@ final class j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1, "j.C(" + 119 + 41);
+          throw ig.a((Throwable) (Object) var1, "j.C(" + 119 + ')');
         }
     }
 
@@ -221,7 +221,7 @@ final class j {
           L1: {
             var6 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var6;
-            stackOut_2_1 = new StringBuilder().append("j.B(").append(92).append(44).append(0).append(44);
+            stackOut_2_1 = new StringBuilder().append("j.B(").append(92).append(',').append(0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -244,7 +244,7 @@ final class j {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 44 + param4 + 41);
+          throw ig.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 0 + ',' + param4 + ')');
         }
     }
 
@@ -560,7 +560,7 @@ final class j {
                       var10 = 0;
                       L15: while (true) {
                         if (var10 >= tq.field_b) {
-                          ad.field_I = "<col=A00000>" + kp.field_e + "<br>" + ov.field_j + var9;
+                          ad.field_I = "<col=A00000>" + kp.field_e + "<br>" + ov.field_j + (String) var9;
                           break L1;
                         } else {
                           L16: {
@@ -611,7 +611,7 @@ final class j {
                     if (32 != (48 & hg.field_b)) {
                       break L19;
                     } else {
-                      var9 = (Object) (Object) (var9 + "..");
+                      var9 = (Object) (Object) ((String) var9 + "..");
                       break L19;
                     }
                   }
@@ -619,7 +619,7 @@ final class j {
                     if (48 != (48 & hg.field_b)) {
                       break L20;
                     } else {
-                      var9 = (Object) (Object) (var9 + "...");
+                      var9 = (Object) (Object) ((String) var9 + "...");
                       break L20;
                     }
                   }
@@ -811,7 +811,7 @@ final class j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var4, "j.A(" + 1 + 44 + param1 + 44 + param2 + 44 + 11 + 41);
+          throw ig.a((Throwable) (Object) var4, "j.A(" + 1 + ',' + param1 + ',' + param2 + ',' + 11 + ')');
         }
     }
 
@@ -851,7 +851,7 @@ final class j {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var3;
-            stackOut_3_1 = new StringBuilder().append("j.<init>(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("j.<init>(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -874,7 +874,7 @@ final class j {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

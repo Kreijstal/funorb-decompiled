@@ -94,7 +94,7 @@ final class jh extends rg {
           L4: {
             var8 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var8;
-            stackOut_16_1 = new StringBuilder().append("jh.AA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_16_1 = new StringBuilder().append("jh.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -117,7 +117,7 @@ final class jh extends rg {
               break L4;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param5 + 44 + param6 + 41);
+          throw sd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_15_0 != 0;
     }

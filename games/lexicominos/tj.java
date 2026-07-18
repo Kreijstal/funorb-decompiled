@@ -84,7 +84,7 @@ abstract class tj extends ri implements nf {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ abstract class tj extends ri implements nf {
         try {
             ((tj) this).field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "tj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "tj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -148,7 +148,7 @@ abstract class tj extends ri implements nf {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("tj.I(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("tj.I(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -171,7 +171,7 @@ abstract class tj extends ri implements nf {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

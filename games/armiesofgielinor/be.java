@@ -29,7 +29,7 @@ final class be extends bd {
             }
             param1.field_l.a((byte) -119, (tc) (Object) new mb(((be) this).field_t, ((be) this).field_G, ((be) this).field_B, ((be) this).field_C, ((be) this).field_m));
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "be.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "be.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class be extends bd {
           L6: {
             var3 = decompiledCaughtException;
             stackOut_36_0 = (RuntimeException) var3;
-            stackOut_36_1 = new StringBuilder().append("be.B(").append(param0).append(44);
+            stackOut_36_1 = new StringBuilder().append("be.B(").append(param0).append(',');
             stackIn_38_0 = stackOut_36_0;
             stackIn_38_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
@@ -189,7 +189,7 @@ final class be extends bd {
               break L6;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + 0 + 41);
+          throw ig.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + false + ')');
         }
         return stackIn_35_0;
     }

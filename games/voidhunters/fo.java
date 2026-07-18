@@ -356,7 +356,7 @@ final class fo {
                   break L20;
                 }
               }
-              throw rta.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+              throw rta.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -431,7 +431,7 @@ final class fo {
           L4: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var5_ref;
-            stackOut_13_1 = new StringBuilder().append("fo.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_13_1 = new StringBuilder().append("fo.C(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -454,7 +454,7 @@ final class fo {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param3 + ')');
         }
     }
 
@@ -653,7 +653,7 @@ final class fo {
             ((fo) this).field_b = param2;
             ((fo) this).field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "fo.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "fo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

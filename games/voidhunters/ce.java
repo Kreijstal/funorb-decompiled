@@ -74,7 +74,7 @@ final class ce extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -102,7 +102,7 @@ final class ce extends rqa {
             var2 = fca.a(param0, "jagex logo2.packvorbis", "");
             gd discarded$0 = var2.b();
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ce.D(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ce.D(" + (param0 != null ? "{...}" : "null") + ',' + false + ')');
         }
     }
 

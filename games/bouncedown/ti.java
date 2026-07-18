@@ -47,7 +47,7 @@ final class ti extends ba implements wc {
             }
             ((ti) this).field_M = -param1 + (uc.field_C - ((ti) this).field_r);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ti.P(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "ti.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class ti extends ba implements wc {
             }
             ((ti) this).field_N = param0;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ti.N(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "ti.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -454,7 +454,7 @@ final class ti extends ba implements wc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1, "ti.Q(" + 6 + 41);
+          throw ii.a((Throwable) (Object) var1, "ti.Q(" + 6 + ')');
         }
     }
 

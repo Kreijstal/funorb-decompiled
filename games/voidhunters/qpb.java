@@ -12,7 +12,7 @@ final class qpb extends mc {
             ((qpb) this).field_t = param0;
             ((qpb) this).field_v = 256;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qpb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "qpb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

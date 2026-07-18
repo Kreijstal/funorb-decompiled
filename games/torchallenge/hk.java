@@ -153,7 +153,7 @@ final class hk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "hk.A(" + param0 + 41);
+          throw oj.a((Throwable) (Object) var1, "hk.A(" + param0 + ')');
         }
     }
 

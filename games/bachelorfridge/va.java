@@ -64,7 +64,7 @@ final class va {
                     if (var2 == null) {
                       break L0;
                     } else {
-                      int discarded$4 = g.field_f.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                      int discarded$4 = g.field_f.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                       return;
                     }
                   } else {
@@ -84,7 +84,7 @@ final class va {
                           }
                         }
                         if (var2 != null) {
-                          var2 = (Object) (Object) (var2 + ", " + var5);
+                          var2 = (Object) (Object) ((String) var2 + ", " + var5);
                           break L4;
                         } else {
                           var2 = (Object) (Object) Integer.toString(var5);
@@ -117,7 +117,7 @@ final class va {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "va.A(" + 127 + 41);
+          throw pe.a((Throwable) (Object) var1, "va.A(" + 127 + ')');
         }
     }
 

@@ -49,7 +49,7 @@ final class bd {
             me.a(false);
             param0.c();
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "bd.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "bd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

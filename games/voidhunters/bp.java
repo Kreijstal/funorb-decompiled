@@ -236,7 +236,7 @@ final class bp extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var7, "bp.B(" + param0 + 44 + param1 + 44 + param2 + 44 + -8 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw rta.a((Throwable) (Object) var7, "bp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + -8 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -303,7 +303,7 @@ final class bp extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

@@ -115,7 +115,7 @@ final class qb extends qm {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var6;
-            stackOut_21_1 = new StringBuilder().append("qb.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_21_1 = new StringBuilder().append("qb.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -138,7 +138,7 @@ final class qb extends qm {
               break L6;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param4 + 41);
+          throw pn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param4 + ')');
         }
     }
 

@@ -192,7 +192,7 @@ final class wg {
                     case 15: {
                         var2_ref2 = (RuntimeException) (Object) caughtException;
                         stackOut_15_0 = (RuntimeException) var2_ref2;
-                        stackOut_15_1 = new StringBuilder().append("wg.B(").append(0).append(44);
+                        stackOut_15_1 = new StringBuilder().append("wg.B(").append(0).append(',');
                         stackIn_17_0 = stackOut_15_0;
                         stackIn_17_1 = stackOut_15_1;
                         stackIn_16_0 = stackOut_15_0;
@@ -225,7 +225,7 @@ final class wg {
                         continue stateLoop;
                     }
                     case 18: {
-                        throw fa.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+                        throw fa.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -295,7 +295,7 @@ final class wg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1, "wg.C(" + -85 + 41);
+          throw fa.a((Throwable) (Object) var1, "wg.C(" + -85 + ')');
         }
         return stackIn_15_0;
     }

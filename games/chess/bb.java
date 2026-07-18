@@ -489,7 +489,7 @@ final class bb {
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + 16 + 41);
+          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + 16 + ')');
         }
         return stackIn_4_0;
     }

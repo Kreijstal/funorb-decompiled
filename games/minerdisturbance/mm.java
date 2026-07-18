@@ -111,7 +111,7 @@ final class mm implements uj {
           L3: {
             var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var6_ref2;
-            stackOut_14_1 = new StringBuilder().append("mm.C(").append(0).append(44);
+            stackOut_14_1 = new StringBuilder().append("mm.C(").append(false).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -134,7 +134,7 @@ final class mm implements uj {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 2 + 44 + param3 + 44 + 1 + 44 + 2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + 2 + ',' + param3 + ',' + true + ',' + 2 + ')');
         }
     }
 

@@ -49,7 +49,7 @@ final class fg extends pd {
           L2: {
             var6 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var6;
-            stackOut_4_1 = new StringBuilder().append("fg.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_4_1 = new StringBuilder().append("fg.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -72,7 +72,7 @@ final class fg extends pd {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return (f) (Object) stackIn_3_0;
     }

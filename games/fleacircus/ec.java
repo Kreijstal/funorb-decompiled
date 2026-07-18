@@ -306,7 +306,7 @@ final class ec implements Runnable {
                   break L23;
                 }
               }
-              throw pf.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + 44 + 0 + 41);
+              throw pf.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + ',' + false + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -322,7 +322,7 @@ final class ec implements Runnable {
             var3.a(-11, param0.field_m);
             var3.a(-11, param0.field_j);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "ec.B(" + (param0 != null ? "{...}" : "null") + 44 + 30 + 44 + 7 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "ec.B(" + (param0 != null ? "{...}" : "null") + ',' + 30 + ',' + 7 + ')');
         }
     }
 

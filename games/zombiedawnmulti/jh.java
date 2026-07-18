@@ -344,7 +344,7 @@ final class jh extends cj {
               break L13;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_69_0, stackIn_69_2 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) stackIn_69_0, stackIn_69_2 + ',' + param1 + ')');
         }
         return stackIn_65_0 != 0;
     }
@@ -427,7 +427,7 @@ final class jh extends cj {
                 }
                 ak.a(14158, param0);
             } catch (RuntimeException runtimeException) {
-                throw fa.a((Throwable) (Object) runtimeException, "jh.CA(" + (param0 != null ? "{...}" : "null") + 44 + -1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+                throw fa.a((Throwable) (Object) runtimeException, "jh.CA(" + (param0 != null ? "{...}" : "null") + ',' + -1 + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

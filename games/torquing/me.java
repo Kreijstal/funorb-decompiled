@@ -17,7 +17,7 @@ abstract class me {
         if (oo.field_a > 0) {
             var1 = var1 + ":";
             for (var2 = 0; var2 < oo.field_a; var2++) {
-                var1 = var1 + 32;
+                var1 = var1 + ' ';
                 var3 = kj.field_d.field_j[var2] & 255;
                 var4 = var3 >> 4;
                 var3 = var3 & 15;

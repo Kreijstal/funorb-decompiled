@@ -77,7 +77,7 @@ final class wkb implements dja {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 6 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 6 + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class wkb implements dja {
           L7: {
             var4 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var4;
-            stackOut_19_1 = new StringBuilder().append("wkb.D(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("wkb.D(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -235,7 +235,7 @@ final class wkb implements dja {
           }
           L8: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -258,7 +258,7 @@ final class wkb implements dja {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param3 + ')');
         }
         return stackIn_18_0;
     }

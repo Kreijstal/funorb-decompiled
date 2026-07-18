@@ -36,7 +36,7 @@ final class mo extends jb {
             ((mo) this).field_k = param0;
             ((mo) this).field_g = param2;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "mo.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "mo.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

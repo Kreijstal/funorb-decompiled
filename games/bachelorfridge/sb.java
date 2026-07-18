@@ -194,7 +194,7 @@ final class sb extends pu {
           L13: {
             var8 = decompiledCaughtException;
             stackOut_39_0 = (RuntimeException) var8;
-            stackOut_39_1 = new StringBuilder().append("sb.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_39_1 = new StringBuilder().append("sb.B(").append(param0).append(',').append(param1).append(',');
             stackIn_41_0 = stackOut_39_0;
             stackIn_41_1 = stackOut_39_1;
             stackIn_40_0 = stackOut_39_0;
@@ -217,7 +217,7 @@ final class sb extends pu {
               break L13;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 1 + 44 + param7 + 41);
+          throw pe.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + 1 + ',' + param7 + ')');
         }
     }
 

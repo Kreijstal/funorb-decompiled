@@ -85,7 +85,7 @@ class qd extends gg {
                   break L1;
                 }
               }
-              throw pn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 1 + 44 + param2 + 44 + param3 + 41);
+              throw pn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + true + ',' + param2 + ',' + param3 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

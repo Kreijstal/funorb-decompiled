@@ -147,7 +147,7 @@ final class wg {
           }
           L5: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(0).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -172,7 +172,7 @@ final class wg {
           }
           L6: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -195,7 +195,7 @@ final class wg {
               break L6;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
         return stackIn_14_0;
     }
@@ -254,7 +254,7 @@ final class wg {
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("wg.A(").append(1234).append(44);
+                stackOut_6_1 = new StringBuilder().append("wg.A(").append(1234).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -277,7 +277,7 @@ final class wg {
                   break L1;
                 }
               }
-              throw bd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+              throw bd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

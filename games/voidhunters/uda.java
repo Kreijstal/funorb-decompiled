@@ -50,7 +50,7 @@ abstract class uda {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "uda.L(" + param0 + 41);
+          throw rta.a((Throwable) (Object) var1, "uda.L(" + param0 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ abstract class uda {
         try {
             ((uda) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "uda.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "uda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -295,7 +295,7 @@ final class eg extends ms {
           L17: {
             var2 = decompiledCaughtException;
             stackOut_51_0 = (RuntimeException) var2;
-            stackOut_51_1 = new StringBuilder().append("eg.B(").append(param0).append(44);
+            stackOut_51_1 = new StringBuilder().append("eg.B(").append(param0).append(',');
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
@@ -318,7 +318,7 @@ final class eg extends ms {
               break L17;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + ')');
         }
     }
 

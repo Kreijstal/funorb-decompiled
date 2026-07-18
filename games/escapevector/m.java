@@ -115,7 +115,7 @@ final class m extends wg {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 44 + 0 + 41);
+          throw t.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ',' + 0 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class m extends wg {
               break L4;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 41);
+          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -316,7 +316,7 @@ final class ao implements Runnable {
                   break L25;
                 }
               }
-              throw aa.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + 44 + -20 + 41);
+              throw aa.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + ',' + -20 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

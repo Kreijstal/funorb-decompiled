@@ -16,7 +16,7 @@ final class ki extends fn {
             param0.a(!param1 ? true : false, ((ki) this).field_d);
             param0.b(0, ((ki) this).field_f);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ki.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "ki.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class ki extends fn {
             ((ki) this).field_d = param0;
             ((ki) this).field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ki.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

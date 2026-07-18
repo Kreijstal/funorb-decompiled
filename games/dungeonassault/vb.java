@@ -16,7 +16,7 @@ final class vb {
             int discarded$0 = 50;
             g.a(4, param2);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "vb.A(" + 4 + 44 + 84 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "vb.A(" + 4 + ',' + 84 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -695,7 +695,7 @@ final class qh {
               break L5;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

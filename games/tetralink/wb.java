@@ -13,7 +13,7 @@ final class wb extends java.awt.Canvas {
         try {
             ((wb) this).field_d.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "wb.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "wb.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -28,7 +28,7 @@ final class wb extends java.awt.Canvas {
         try {
             ((wb) this).field_d.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "wb.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "wb.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,7 +36,7 @@ final class wb extends java.awt.Canvas {
         try {
             ((wb) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "wb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "wb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

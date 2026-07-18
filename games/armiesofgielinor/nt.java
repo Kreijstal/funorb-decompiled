@@ -204,7 +204,7 @@ final class nt extends tc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var5, "nt.B(" + 894 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ig.a((Throwable) (Object) var5, "nt.B(" + 894 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -259,7 +259,7 @@ final class nt extends tc {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("nt.C(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("nt.C(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -282,7 +282,7 @@ final class nt extends tc {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }

@@ -35,7 +35,7 @@ final class io {
             }
             int var3 = 0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "io.B(" + -117 + 44 + 2 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "io.B(" + -117 + ',' + 2 + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class io {
             ((io) this).field_b = param0;
             ((io) this).field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "io.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "io.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

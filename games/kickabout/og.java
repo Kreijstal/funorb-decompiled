@@ -145,7 +145,7 @@ abstract class og {
           L7: {
             var4 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var4;
-            stackOut_20_1 = new StringBuilder().append("og.G(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("og.G(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -168,7 +168,7 @@ abstract class og {
               break L7;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 15 + 44 + 15 + 41);
+          throw nb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + 15 + ',' + 15 + ')');
         }
     }
 
@@ -268,7 +268,7 @@ abstract class og {
                     if (var11_int == 0) {
                       break L4;
                     } else {
-                      StringBuilder discarded$4 = c.field_a.append(var11_int);
+                      StringBuilder discarded$4 = c.field_a.append((char) var11_int);
                       var3_int++;
                       int discarded$5 = -104;
                       var11_int = (char)(255 & mf.a((char) var11_int));
@@ -342,7 +342,7 @@ abstract class og {
               break L8;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param1 + 44 + param2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_25_0;
     }

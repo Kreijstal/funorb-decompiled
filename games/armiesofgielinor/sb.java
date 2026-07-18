@@ -15,7 +15,7 @@ final class sb extends rb implements fb, rp {
             int var3_int = -12 / ((-80 - param1) / 33);
             ((sb) this).a(127);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "sb.FA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "sb.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -26,7 +26,7 @@ final class sb extends rb implements fb, rp {
         try {
             ((sb) this).a(125);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "sb.N(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "sb.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -227,7 +227,7 @@ final class sb extends rb implements fb, rp {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
         }
         return (rn) (Object) stackIn_24_0;
     }
@@ -353,7 +353,7 @@ final class sb extends rb implements fb, rp {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

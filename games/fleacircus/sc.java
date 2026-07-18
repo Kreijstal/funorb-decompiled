@@ -36,7 +36,7 @@ final class sc {
             int discarded$0 = var3.c(var4, -30532);
             var3.c((byte) -81, var3.field_i - var4);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "sc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "sc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 1 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class sc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1_ref, "sc.A(" + -1 + 41);
+          throw pf.a((Throwable) (Object) var1_ref, "sc.A(" + -1 + ')');
         }
     }
 

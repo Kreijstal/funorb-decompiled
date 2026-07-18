@@ -50,7 +50,7 @@ final class wga implements dja {
           L2: {
             var5_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5_ref;
-            stackOut_5_1 = new StringBuilder().append("wga.D(").append(1).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_5_1 = new StringBuilder().append("wga.D(").append(true).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -73,7 +73,7 @@ final class wga implements dja {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 

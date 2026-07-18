@@ -62,7 +62,7 @@ final class gk {
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("gk.B(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("gk.B(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -85,7 +85,7 @@ final class gk {
                   break L2;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+              throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

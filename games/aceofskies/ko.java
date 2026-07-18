@@ -87,7 +87,7 @@ final class ko extends pm {
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 80 + 44 + -114 + 41);
+          throw pn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 80 + ',' + -114 + ')');
         }
     }
 

@@ -77,7 +77,7 @@ final class msa extends rqa {
                         break L5;
                       } else {
                         if (var5 <= 122) {
-                          StringBuilder discarded$15 = var3.append(var5);
+                          StringBuilder discarded$15 = var3.append((char) var5);
                           break L4;
                         } else {
                           break L5;
@@ -89,7 +89,7 @@ final class msa extends rqa {
                         break L6;
                       } else {
                         if (var5 <= 90) {
-                          StringBuilder discarded$16 = var3.append(var5);
+                          StringBuilder discarded$16 = var3.append((char) var5);
                           break L4;
                         } else {
                           break L6;
@@ -101,7 +101,7 @@ final class msa extends rqa {
                         break L7;
                       } else {
                         if (57 >= var5) {
-                          StringBuilder discarded$17 = var3.append(var5);
+                          StringBuilder discarded$17 = var3.append((char) var5);
                           break L4;
                         } else {
                           break L7;
@@ -109,22 +109,22 @@ final class msa extends rqa {
                       }
                     }
                     if (var5 == 46) {
-                      StringBuilder discarded$18 = var3.append(var5);
+                      StringBuilder discarded$18 = var3.append((char) var5);
                       break L4;
                     } else {
                       if (var5 == 45) {
-                        StringBuilder discarded$19 = var3.append(var5);
+                        StringBuilder discarded$19 = var3.append((char) var5);
                         break L4;
                       } else {
                         if (var5 == 42) {
-                          StringBuilder discarded$20 = var3.append(var5);
+                          StringBuilder discarded$20 = var3.append((char) var5);
                           break L4;
                         } else {
                           if (var5 != 95) {
                             if (var5 != 32) {
                               L8: {
                                 var6 = aea.a(param1 ^ -90, (char) var5);
-                                StringBuilder discarded$21 = var3.append(37);
+                                StringBuilder discarded$21 = var3.append('%');
                                 var7 = (var6 & 244) >> 4;
                                 if (var7 < 10) {
                                   StringBuilder discarded$22 = var3.append((char)(48 - -var7));
@@ -144,12 +144,12 @@ final class msa extends rqa {
                                 break L3;
                               }
                             } else {
-                              StringBuilder discarded$26 = var3.append(43);
+                              StringBuilder discarded$26 = var3.append('+');
                               var4++;
                               break L3;
                             }
                           } else {
-                            StringBuilder discarded$27 = var3.append(var5);
+                            StringBuilder discarded$27 = var3.append((char) var5);
                             break L4;
                           }
                         }
@@ -192,7 +192,7 @@ final class msa extends rqa {
               break L9;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + ',' + param1 + ')');
         }
         return stackIn_40_0;
     }
@@ -259,7 +259,7 @@ final class msa extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

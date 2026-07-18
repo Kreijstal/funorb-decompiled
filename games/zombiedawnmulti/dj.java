@@ -70,7 +70,7 @@ final class dj extends gf implements fi, qg {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class dj extends gf implements fi, qg {
         try {
             ((dj) this).a(-1306);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "dj.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "dj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

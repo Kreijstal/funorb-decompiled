@@ -19,7 +19,7 @@ final class hd extends java.awt.Canvas {
         try {
             ((hd) this).field_b.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "hd.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "hd.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class hd extends java.awt.Canvas {
           }
           L2: {
             stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44).append(0).append(44);
+            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(false).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -161,7 +161,7 @@ final class hd extends java.awt.Canvas {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
         }
         return stackIn_20_0 != 0;
     }
@@ -170,7 +170,7 @@ final class hd extends java.awt.Canvas {
         try {
             ((hd) this).field_b.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "hd.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "hd.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class hd extends java.awt.Canvas {
         try {
             ((hd) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "hd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "hd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

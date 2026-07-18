@@ -180,7 +180,7 @@ final class ph {
               break L6;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + -1 + 41);
+          throw ci.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + -1 + ')');
         }
     }
 

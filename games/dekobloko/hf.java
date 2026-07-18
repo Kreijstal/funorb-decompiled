@@ -86,7 +86,7 @@ final class hf {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_5_0;
     }
@@ -240,7 +240,7 @@ final class hf {
           L6: {
             var4_ref = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var4_ref;
-            stackOut_25_1 = new StringBuilder().append("hf.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_25_1 = new StringBuilder().append("hf.D(").append(param0).append(',').append(param1).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -263,7 +263,7 @@ final class hf {
               break L6;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param3 + 41);
+          throw dh.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param3 + ')');
         }
         return stackIn_24_0;
     }
@@ -286,7 +286,7 @@ final class hf {
             ((hf) this).field_f.write(param0, param2, param3);
             ((hf) this).field_d = ((hf) this).field_d + (long)param3;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "hf.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "hf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -311,7 +311,7 @@ final class hf {
             }
             ((hf) this).field_f.seek(0L);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

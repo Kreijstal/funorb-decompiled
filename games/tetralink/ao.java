@@ -115,7 +115,7 @@ final class ao {
               break L6;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + -127 + 41);
+          throw oi.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + -127 + ')');
         }
     }
 

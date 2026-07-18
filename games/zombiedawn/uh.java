@@ -211,7 +211,7 @@ final class uh {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("uh.C(").append(-36).append(44);
+            stackOut_5_1 = new StringBuilder().append("uh.C(").append(-36).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -234,7 +234,7 @@ final class uh {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0 != 0;
     }
@@ -366,7 +366,7 @@ final class uh {
             param2.b(-(param2.field_w / 2) + bd.field_d, 400);
             so.a(param1, bd.field_d - param1.field_w / 2, 400);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "uh.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "uh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -809,7 +809,7 @@ final class uh {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_45_0 = (RuntimeException) var3;
-            stackOut_45_1 = new StringBuilder().append("uh.H(").append(param0).append(44);
+            stackOut_45_1 = new StringBuilder().append("uh.H(").append(param0).append(',');
             stackIn_47_0 = stackOut_45_0;
             stackIn_47_1 = stackOut_45_1;
             stackIn_46_0 = stackOut_45_0;
@@ -832,7 +832,7 @@ final class uh {
               break L5;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + ')');
         }
     }
 
@@ -956,7 +956,7 @@ final class uh {
           L3: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4_ref2;
-            stackOut_5_1 = new StringBuilder().append("uh.U(").append(param0).append(44).append(0).append(44).append(0).append(44);
+            stackOut_5_1 = new StringBuilder().append("uh.U(").append(param0).append(',').append(0).append(',').append(0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -979,7 +979,7 @@ final class uh {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 

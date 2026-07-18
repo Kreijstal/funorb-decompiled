@@ -636,7 +636,7 @@ final class oi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "oi.J(" + 106 + 41);
+          throw la.a((Throwable) (Object) var1, "oi.J(" + 106 + ')');
         }
     }
 

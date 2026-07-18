@@ -114,7 +114,7 @@ class eo extends bw {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -4479 + 41);
+          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -4479 + ')');
         }
         return (pp) (Object) stackIn_1_0;
     }
@@ -141,7 +141,7 @@ class eo extends bw {
             }
             um.field_c = 0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "eo.I(" + param0 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "eo.I(" + param0 + ')');
         }
     }
 

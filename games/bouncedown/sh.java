@@ -173,7 +173,7 @@ class sh extends mh implements rc {
               break L6;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param1 + 44 + param2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ class sh extends mh implements rc {
             ((sh) this).field_db.field_C = true;
             ((sh) this).b((lk) (Object) ((sh) this).field_db, true);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "sh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "sh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -252,7 +252,7 @@ class sh extends mh implements rc {
           L2: {
             var6 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var6;
-            stackOut_6_1 = new StringBuilder().append("sh.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_6_1 = new StringBuilder().append("sh.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -275,7 +275,7 @@ class sh extends mh implements rc {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -352,7 +352,7 @@ class sh extends mh implements rc {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ii.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_7_0;
     }

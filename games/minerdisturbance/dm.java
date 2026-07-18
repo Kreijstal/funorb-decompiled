@@ -70,7 +70,7 @@ final class dm {
               break L0;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 100 + 44 + param2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 100 + ',' + param2 + ')');
         }
     }
 

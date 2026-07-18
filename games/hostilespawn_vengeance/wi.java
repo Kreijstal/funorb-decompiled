@@ -26,7 +26,7 @@ final class wi {
             int var4_int = 0;
             om.field_d.a(true, 128, (int)param0.field_c - -128, param1, param3);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "wi.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -87 + 44 + param3 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "wi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + -87 + ',' + param3 + ')');
         }
     }
 

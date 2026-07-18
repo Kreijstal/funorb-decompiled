@@ -55,7 +55,7 @@ abstract class ie extends ah {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "ie.VA(" + -56 + 41);
+          throw ma.a((Throwable) (Object) var1, "ie.VA(" + -56 + ')');
         }
     }
 

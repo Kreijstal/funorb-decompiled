@@ -194,7 +194,7 @@ abstract class hd {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2_ref;
-            stackOut_13_1 = new StringBuilder().append("hd.E(").append(1).append(44);
+            stackOut_13_1 = new StringBuilder().append("hd.E(").append(true).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -217,7 +217,7 @@ abstract class hd {
               break L2;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_12_0;
     }
@@ -290,7 +290,7 @@ abstract class hd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1_ref, "hd.H(" + -101 + 41);
+          throw pf.a((Throwable) (Object) var1_ref, "hd.H(" + -101 + ')');
         }
         return stackIn_18_0 != 0;
     }
@@ -317,7 +317,7 @@ abstract class hd {
             gg.field_h.b(17, th.field_D);
             db.field_J.b((sh) (Object) gg.field_h);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "hd.G(" + 220 + 44 + (param1 != null ? "{...}" : "null") + 44 + 22050 + 44 + 11 + 44 + 22050 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "hd.G(" + 220 + ',' + (param1 != null ? "{...}" : "null") + ',' + 22050 + ',' + 11 + ',' + 22050 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + true + ')');
         }
     }
 

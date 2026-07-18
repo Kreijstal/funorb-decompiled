@@ -41,7 +41,7 @@ final class tq {
         try {
             ((tq) this).field_b = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "tq.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "tq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class tq {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var2;
-            stackOut_3_1 = new StringBuilder().append("tq.G(").append(-106).append(44);
+            stackOut_3_1 = new StringBuilder().append("tq.G(").append(-106).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -125,7 +125,7 @@ final class tq {
               break L2;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

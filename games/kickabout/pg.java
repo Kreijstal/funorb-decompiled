@@ -127,7 +127,7 @@ final class pg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "pg.E(" + -3 + 41);
+          throw nb.a((Throwable) (Object) var1, "pg.E(" + -3 + ')');
         }
         return stackIn_27_0;
     }
@@ -390,7 +390,7 @@ final class pg {
           L4: {
             var5 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var5;
-            stackOut_14_1 = new StringBuilder().append("pg.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("pg.A(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -413,7 +413,7 @@ final class pg {
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + -79 + 44 + param4 + 41);
+          throw nb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + -79 + ',' + param4 + ')');
         }
         return stackIn_13_0;
     }

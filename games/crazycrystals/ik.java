@@ -109,7 +109,7 @@ abstract class ik {
               break L4;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_10_0;
     }

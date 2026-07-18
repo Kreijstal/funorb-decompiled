@@ -397,7 +397,7 @@ final class ik {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var2, "ik.C(" + 76 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) var2, "ik.C(" + 76 + ',' + param1 + ')');
         }
         return stackIn_78_0;
     }

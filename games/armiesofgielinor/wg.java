@@ -80,7 +80,7 @@ final class wg implements Iterable {
             param1.field_l.field_s = param1;
             param1.field_s.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "wg.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "wg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

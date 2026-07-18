@@ -15,7 +15,7 @@ final class bs {
             var4 = new llb[]{param1, ci.field_c, (llb) (Object) vra.field_b};
             ((bs) this).field_a = new ooa(0L, vhb.field_c, var3, gfb.field_a, var4, 0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bs.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "bs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

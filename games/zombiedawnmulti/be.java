@@ -416,7 +416,7 @@ final class be {
           L36: {
             var3 = decompiledCaughtException;
             stackOut_94_0 = (RuntimeException) var3;
-            stackOut_94_1 = new StringBuilder().append("be.B(").append(0).append(44);
+            stackOut_94_1 = new StringBuilder().append("be.B(").append(0).append(',');
             stackIn_96_0 = stackOut_94_0;
             stackIn_96_1 = stackOut_94_1;
             stackIn_95_0 = stackOut_94_0;
@@ -439,7 +439,7 @@ final class be {
               break L36;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_97_0, stackIn_97_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_97_0, stackIn_97_2 + ')');
         }
     }
 
@@ -486,7 +486,7 @@ final class be {
             }
             this.a(0, param0);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "be.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "be.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -145,7 +145,7 @@ class lc extends pa {
                   break L7;
                 }
               }
-              throw pf.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + -113 + 41);
+              throw pf.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + -113 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -237,7 +237,7 @@ class lc extends pa {
               break L1;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 41);
+          throw pf.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + false + ')');
         }
         return stackIn_4_0;
     }

@@ -25,7 +25,7 @@ class mi extends ff {
             param1.a(((mi) this).field_d, (byte) 98);
             param1.b(((mi) this).field_e, 15045);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "mi.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "mi.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,7 +34,7 @@ class mi extends ff {
             gh.a(li.a(param1, param2, param3), (byte) -111);
             int var4_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "mi.G(" + 118 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "mi.G(" + 118 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -43,7 +43,7 @@ class mi extends ff {
             ((mi) this).field_d = param0;
             ((mi) this).field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "mi.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "mi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

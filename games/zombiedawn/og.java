@@ -206,7 +206,7 @@ final class og extends pj {
               break L9;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + 0 + 41);
+          throw sh.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + ',' + 0 + ')');
         }
     }
 
@@ -262,7 +262,7 @@ final class og extends pj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1_ref, "og.H(" + param0 + 41);
+          throw sh.a((Throwable) (Object) var1_ref, "og.H(" + param0 + ')');
         }
     }
 

@@ -304,7 +304,7 @@ final class kg extends gh {
           L3: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4_ref2;
-            stackOut_4_1 = new StringBuilder().append("kg.D(").append(0).append(44).append(0).append(44).append(28594).append(44);
+            stackOut_4_1 = new StringBuilder().append("kg.D(").append(0).append(',').append(0).append(',').append(28594).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -327,7 +327,7 @@ final class kg extends gh {
               break L3;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -373,7 +373,7 @@ final class kg extends gh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var3, "kg.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ci.a((Throwable) (Object) var3, "kg.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_7_0;
     }
@@ -480,7 +480,7 @@ final class kg extends gh {
             ((kg) this).field_Ub = param1;
             ((kg) this).field_Tb.a(param1, 123);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "kg.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "kg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -506,7 +506,7 @@ final class kg extends gh {
             sf.a(74, pb.field_c / 2, pb.field_j / 2);
             he.a(false, param2.field_U, param1.field_U, param2.field_U - -param2.field_F, param1.field_F + param1.field_U);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "kg.B(" + 2048 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 480 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "kg.B(" + 2048 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + 480 + ')');
         }
     }
 

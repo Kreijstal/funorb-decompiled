@@ -39,7 +39,7 @@ final class cr implements gj {
             ((cr) this).field_a = param1;
             ((cr) this).field_i = param2;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "cr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "cr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class cr implements gj {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var6;
-            stackOut_20_1 = new StringBuilder().append("cr.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_20_1 = new StringBuilder().append("cr.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -170,7 +170,7 @@ final class cr implements gj {
               break L5;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param4 + 41);
+          throw nb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param4 + ')');
         }
     }
 

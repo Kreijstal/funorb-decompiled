@@ -140,7 +140,7 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1, "f.C(" + 16 + 41);
+          throw ch.a((Throwable) (Object) var1, "f.C(" + 16 + ')');
         }
     }
 

@@ -272,7 +272,7 @@ final class jp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (Object) (Object) decompiledCaughtException;
-          throw fa.a((Throwable) var1, "jp.B(" + -104 + 41);
+          throw fa.a((Throwable) var1, "jp.B(" + -104 + ')');
         }
         return (String) (Object) stackIn_104_0;
     }
@@ -284,7 +284,7 @@ final class jp {
             field_b = null;
             field_c = null;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "jp.A(" + -80 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "jp.A(" + -80 + ')');
         }
     }
 

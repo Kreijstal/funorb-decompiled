@@ -91,7 +91,7 @@ final class fn {
                     break L3;
                   } else {
                     L4: {
-                      StringBuilder discarded$14 = oi.field_h.append(var5);
+                      StringBuilder discarded$14 = oi.field_h.append((char) var5);
                       var6 = 485;
                       var18 = mi.field_d;
                       var8 = var18;
@@ -358,7 +358,7 @@ final class fn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "fn.D(" + -64 + 41);
+          throw kg.a((Throwable) (Object) var1, "fn.D(" + -64 + ')');
         }
     }
 
@@ -456,7 +456,7 @@ final class fn {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("fn.B(").append(param0).append(44).append(105).append(44);
+            stackOut_12_1 = new StringBuilder().append("fn.B(").append(param0).append(',').append(105).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -481,7 +481,7 @@ final class fn {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -504,7 +504,7 @@ final class fn {
               break L5;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 
@@ -527,7 +527,7 @@ final class fn {
             }
             qh.field_K = 0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "fn.F(" + param0 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "fn.F(" + param0 + ')');
         }
     }
 

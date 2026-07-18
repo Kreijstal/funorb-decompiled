@@ -395,7 +395,7 @@ abstract class gm extends ti {
           L16: {
             var3 = decompiledCaughtException;
             stackOut_76_0 = (RuntimeException) var3;
-            stackOut_76_1 = new StringBuilder().append("gm.H(").append(param0).append(44);
+            stackOut_76_1 = new StringBuilder().append("gm.H(").append(param0).append(',');
             stackIn_78_0 = stackOut_76_0;
             stackIn_78_1 = stackOut_76_1;
             stackIn_77_0 = stackOut_76_0;
@@ -418,7 +418,7 @@ abstract class gm extends ti {
               break L16;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_79_0, stackIn_79_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_79_0, stackIn_79_2 + ')');
         }
     }
 
@@ -864,7 +864,7 @@ abstract class gm extends ti {
             sq.field_N = true;
             jj.field_M = param0;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "gm.W(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -1 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "gm.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + -1 + ')');
         }
     }
 

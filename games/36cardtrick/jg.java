@@ -108,7 +108,7 @@ final class jg extends je {
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class jg extends je {
             ((jg) this).field_i = ((jg) this).field_k.field_i;
             ((jg) this).field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "jg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "jg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

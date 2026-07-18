@@ -42,7 +42,7 @@ final class pq implements os {
             var6.a(0, param0, param0.length, 91);
             var6.d(-var7 + var6.field_h, (byte) -1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "pq.D(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + 0 + 44 + 17 + 44 + param4 + 44 + param5 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "pq.D(" + (param0 != null ? "{...}" : "null") + ',' + true + ',' + 0 + ',' + 17 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class pq implements os {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 41);
+          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + false + ')');
         }
     }
 

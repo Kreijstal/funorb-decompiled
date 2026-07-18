@@ -89,7 +89,7 @@ final class mh {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + 0 + 44 + param3 + 44 + param4 + 41);
+          throw oi.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + 0 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -441,7 +441,7 @@ final class mh {
                                 var14 = var13;
                                 var14 = var13;
                                 if (var12 != 0) {
-                                  var14 = hm.field_d + var11;
+                                  var14 = hm.field_d + (String) var11;
                                   break L22;
                                 } else {
                                   var14 = sk.a(new String[1], hb.field_f, 119);
@@ -452,7 +452,7 @@ final class mh {
                                 var14 = var13;
                                 var14 = var13;
                                 if (var12 != 0) {
-                                  var14 = o.field_p + var11;
+                                  var14 = o.field_p + (String) var11;
                                   break L22;
                                 } else {
                                   var14 = sk.a(new String[1], mc.field_d, 127);
@@ -908,7 +908,7 @@ final class mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var5, "mh.D(" + param0 + 44 + param1 + 44 + 11 + 44 + param3 + 44 + -87 + 41);
+          throw oi.a((Throwable) (Object) var5, "mh.D(" + param0 + ',' + param1 + ',' + 11 + ',' + param3 + ',' + -87 + ')');
         }
     }
 
@@ -999,7 +999,7 @@ final class mh {
               L7: {
                 runtimeException = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_15_0 = (RuntimeException) runtimeException;
-                stackOut_15_1 = new StringBuilder().append("mh.A(").append(-105).append(44);
+                stackOut_15_1 = new StringBuilder().append("mh.A(").append(-105).append(',');
                 stackIn_17_0 = stackOut_15_0;
                 stackIn_17_1 = stackOut_15_1;
                 stackIn_16_0 = stackOut_15_0;
@@ -1022,7 +1022,7 @@ final class mh {
                   break L7;
                 }
               }
-              throw oi.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+              throw oi.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

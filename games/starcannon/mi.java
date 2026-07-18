@@ -21,7 +21,7 @@ abstract class mi extends uh {
             var4 = -1L;
             wg.a((byte) 111, var3, param1, var2, var4);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "mi.B(" + 1048576 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "mi.B(" + 1048576 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

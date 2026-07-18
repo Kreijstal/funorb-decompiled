@@ -18,7 +18,7 @@ final class me {
             }
             sj.a(param1, (byte) 122, ((me) this).field_c, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "me.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "me.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -149,7 +149,7 @@ final class me {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 44 + 2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ',' + 2 + ')');
         }
         return (String) (Object) stackIn_21_0;
     }
@@ -220,7 +220,7 @@ final class me {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -233,7 +233,7 @@ final class me {
         try {
             ((me) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "me.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "me.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

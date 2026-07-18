@@ -57,7 +57,7 @@ final class wh {
         try {
             ((wh) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -57,7 +57,7 @@ final class bf extends l {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("bf.D(").append(0).append(44).append(25928).append(44);
+            stackOut_5_1 = new StringBuilder().append("bf.D(").append(0).append(',').append(25928).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -80,7 +80,7 @@ final class bf extends l {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class bf extends l {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var5, "bf.F(" + 1 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw kg.a((Throwable) (Object) var5, "bf.F(" + true + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -164,7 +164,7 @@ final class bf extends l {
             param0.field_i = var5.d((byte) 127);
             var5.b(var5.field_l + -var4, -1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "bf.E(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + 6 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "bf.E(" + (param0 != null ? "{...}" : "null") + ',' + 4 + ',' + 6 + ')');
         }
     }
 

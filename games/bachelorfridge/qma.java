@@ -63,7 +63,7 @@ final class qma extends pu {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var6 = (Object) (Object) decompiledCaughtException;
-              throw pe.a((Throwable) var6, field_z + param0 + 44 + 2097152 + 44 + 0 + 44 + param3 + 44 + 0 + 44 + param5 + 41);
+              throw pe.a((Throwable) var6, field_z + param0 + ',' + 2097152 + ',' + false + ',' + param3 + ',' + false + ',' + param5 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

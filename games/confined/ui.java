@@ -29,7 +29,7 @@ final class ui {
               return var1;
             } else {
               L1: {
-                var7 = var1 + 32;
+                var7 = var1 + ' ';
                 var3 = 255 & e.field_c.field_m[var2];
                 var4 = var3 >> 4;
                 var3 = var3 & 15;

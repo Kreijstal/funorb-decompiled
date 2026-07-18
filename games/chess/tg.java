@@ -178,7 +178,7 @@ final class tg {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw fk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
     }
 
@@ -236,7 +236,7 @@ final class tg {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("tg.E(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("tg.E(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -259,7 +259,7 @@ final class tg {
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + 22081 + 41);
+          throw fk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param2 + ',' + 22081 + ')');
         }
     }
 
@@ -421,7 +421,7 @@ final class tg {
               break L10;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 44 + param2 + 44 + 8947848 + 41);
+          throw fk.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param1 + ',' + param2 + ',' + 8947848 + ')');
         }
     }
 
@@ -436,7 +436,7 @@ final class tg {
             }
             int var5_int = -21 / ((param2 - 41) / 62);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "tg.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "tg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

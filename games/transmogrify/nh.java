@@ -58,7 +58,7 @@ final class nh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var3, "nh.D(" + param0 + 44 + param1 + 44 + 26186 + 41);
+          throw ch.a((Throwable) (Object) var3, "nh.D(" + param0 + ',' + param1 + ',' + 26186 + ')');
         }
         return stackIn_10_0;
     }
@@ -158,7 +158,7 @@ final class nh {
               break L4;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
+          throw ch.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
         }
     }
 

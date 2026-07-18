@@ -118,7 +118,7 @@ final class fi implements Runnable {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var4_ref;
-            stackOut_25_1 = new StringBuilder().append("fi.D(").append(param0).append(44).append(-33).append(44).append(0).append(44);
+            stackOut_25_1 = new StringBuilder().append("fi.D(").append(param0).append(',').append(-33).append(',').append(0).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -141,7 +141,7 @@ final class fi implements Runnable {
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
         }
         return stackIn_24_0;
     }
@@ -199,7 +199,7 @@ final class fi implements Runnable {
                     }
                     break L0;
                   } else {
-                    throw fi.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((fi) this).field_j.field_h.length + " " + ((fi) this).field_d));
+                    throw fi.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((fi) this).field_j.field_h.length + " " + (Object) (Object) ((fi) this).field_d));
                   }
                 }
               }
@@ -384,7 +384,7 @@ final class fi implements Runnable {
             ((fi) this).field_d = param1;
             ((fi) this).field_j = new od(param2);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "fi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "fi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

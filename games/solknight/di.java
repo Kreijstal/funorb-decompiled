@@ -111,7 +111,7 @@ final class di extends gg {
                   break L4;
                 }
               }
-              throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 63 + 41);
+              throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 63 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

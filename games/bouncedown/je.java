@@ -39,7 +39,7 @@ final class je {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("je.B(").append(param0).append(44).append(-121).append(44);
+            stackOut_2_1 = new StringBuilder().append("je.B(").append(param0).append(',').append(-121).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -62,7 +62,7 @@ final class je {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return (oa) (Object) stackIn_1_0;
     }

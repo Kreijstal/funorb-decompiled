@@ -179,7 +179,7 @@ final class pj implements Runnable {
           L4: {
             var5 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var5;
-            stackOut_25_1 = new StringBuilder().append("pj.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_25_1 = new StringBuilder().append("pj.E(").append(param0).append(',').append(param1).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -202,7 +202,7 @@ final class pj implements Runnable {
               break L4;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param3 + 41);
+          throw t.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param3 + ')');
         }
     }
 
@@ -443,7 +443,7 @@ final class pj implements Runnable {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var5;
-            stackOut_11_1 = new StringBuilder().append("pj.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("pj.A(").append(param0).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -466,7 +466,7 @@ final class pj implements Runnable {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 41);
+          throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param3 + ')');
         }
     }
 
@@ -484,7 +484,7 @@ final class pj implements Runnable {
             ((pj) this).field_b = ((pj) this).field_i.getOutputStream();
             ((pj) this).field_j = param2;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "pj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "pj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -28,7 +28,7 @@ final class gp extends tk implements wg {
             ((gp) this).field_O = -((gp) this).field_w + n.field_t + -param3;
             int var5_int = -91 % ((param0 - -28) / 43);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "gp.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "gp.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class gp extends tk implements wg {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

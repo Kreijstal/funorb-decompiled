@@ -65,7 +65,7 @@ final class ik {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1_ref, "ik.B(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var1_ref, "ik.B(" + param0 + ')');
         }
     }
 

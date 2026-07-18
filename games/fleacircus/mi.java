@@ -123,7 +123,7 @@ final class mi extends lh {
           L4: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var4_ref;
-            stackOut_16_1 = new StringBuilder().append("mi.D(").append(12).append(44).append(256).append(44).append(1).append(44);
+            stackOut_16_1 = new StringBuilder().append("mi.D(").append(12).append(',').append(256).append(',').append(true).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -146,7 +146,7 @@ final class mi extends lh {
               break L4;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 

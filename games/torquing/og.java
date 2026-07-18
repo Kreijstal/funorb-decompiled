@@ -15,7 +15,7 @@ final class og extends q {
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) ha.field_b);
             hb.field_y = -1;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "og.D(" + (param0 != null ? "{...}" : "null") + 44 + -1 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "og.D(" + (param0 != null ? "{...}" : "null") + ',' + -1 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class og extends q {
           }
           L5: {
             stackOut_14_0 = stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -161,7 +161,7 @@ final class og extends q {
               break L5;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param2 + ')');
         }
         return stackIn_10_0;
     }

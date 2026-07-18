@@ -98,7 +98,7 @@ final class he extends ub {
               L3: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_9_0 = (RuntimeException) var6_ref;
-                stackOut_9_1 = new StringBuilder().append("he.D(").append(param0).append(44);
+                stackOut_9_1 = new StringBuilder().append("he.D(").append(param0).append(',');
                 stackIn_11_0 = stackOut_9_0;
                 stackIn_11_1 = stackOut_9_1;
                 stackIn_10_0 = stackOut_9_0;
@@ -123,7 +123,7 @@ final class he extends ub {
               }
               L4: {
                 stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+                stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
                 stackIn_14_0 = stackOut_12_0;
                 stackIn_14_1 = stackOut_12_1;
                 stackIn_13_0 = stackOut_12_0;
@@ -148,7 +148,7 @@ final class he extends ub {
               }
               L5: {
                 stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param3).append(44);
+                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param3).append(',');
                 stackIn_17_0 = stackOut_15_0;
                 stackIn_17_1 = stackOut_15_1;
                 stackIn_16_0 = stackOut_15_0;
@@ -171,7 +171,7 @@ final class he extends ub {
                   break L5;
                 }
               }
-              throw kk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+              throw kk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -187,7 +187,7 @@ final class he extends ub {
             ((he) this).field_B = param0;
             ((he) this).field_F = 256;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "he.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

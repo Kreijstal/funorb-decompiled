@@ -99,7 +99,7 @@ final class ah {
               break L3;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw pf.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -420,7 +420,7 @@ final class ah {
               L19: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_65_0 = (RuntimeException) var6_ref;
-                stackOut_65_1 = new StringBuilder().append("ah.A(").append(37).append(44);
+                stackOut_65_1 = new StringBuilder().append("ah.A(").append(37).append(',');
                 stackIn_67_0 = stackOut_65_0;
                 stackIn_67_1 = stackOut_65_1;
                 stackIn_66_0 = stackOut_65_0;
@@ -443,7 +443,7 @@ final class ah {
                   break L19;
                 }
               }
-              throw pf.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+              throw pf.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -708,7 +708,7 @@ final class ah {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1, "ah.C(" + -1 + 41);
+          throw pf.a((Throwable) (Object) var1, "ah.C(" + -1 + ')');
         }
     }
 
@@ -722,7 +722,7 @@ final class ah {
             ((ah) this).field_f = param1;
             ((ah) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "ah.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "ah.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

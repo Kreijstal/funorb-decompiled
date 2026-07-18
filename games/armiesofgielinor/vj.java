@@ -289,7 +289,7 @@ final class vj {
           L2: {
             var5_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var5_ref;
-            stackOut_8_1 = new StringBuilder().append("vj.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_8_1 = new StringBuilder().append("vj.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -312,7 +312,7 @@ final class vj {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
@@ -380,7 +380,7 @@ final class vj {
             ((vj) this).field_e = ((vj) this).field_f.field_d[((vj) this).field_m];
             ((vj) this).field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "vj.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "vj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

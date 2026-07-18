@@ -517,7 +517,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2_ref, "HostileSpawn.WA(" + 114 + 41);
+          throw wg.a((Throwable) (Object) var2_ref, "HostileSpawn.WA(" + 114 + ')');
         }
     }
 
@@ -845,7 +845,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var3, "HostileSpawn.TA(" + param0 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) var3, "HostileSpawn.TA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -879,7 +879,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "HostileSpawn.CA(" + param0 + 41);
+          throw wg.a((Throwable) (Object) var2, "HostileSpawn.CA(" + param0 + ')');
         }
     }
 
@@ -1017,7 +1017,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "HostileSpawn.KA(" + param0 + 41);
+          throw wg.a((Throwable) (Object) var2, "HostileSpawn.KA(" + param0 + ')');
         }
         return stackIn_48_0;
     }
@@ -1028,7 +1028,7 @@ public final class HostileSpawn extends d {
             int discarded$0 = -91;
             this.j();
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "HostileSpawn.EA(" + param0 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "HostileSpawn.EA(" + param0 + ')');
         }
     }
 
@@ -1153,7 +1153,7 @@ public final class HostileSpawn extends d {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("HostileSpawn.LA(").append(22).append(44);
+            stackOut_5_1 = new StringBuilder().append("HostileSpawn.LA(").append(22).append(',');
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -1176,7 +1176,7 @@ public final class HostileSpawn extends d {
               break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -1203,7 +1203,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var1, "HostileSpawn.UA(" + param0 + 41);
+          throw wg.a((Throwable) (Object) var1, "HostileSpawn.UA(" + param0 + ')');
         }
     }
 
@@ -1246,7 +1246,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "HostileSpawn.DA(" + 111 + 41);
+          throw wg.a((Throwable) (Object) var2, "HostileSpawn.DA(" + 111 + ')');
         }
     }
 
@@ -1712,7 +1712,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "HostileSpawn.PA(" + param0 + 41);
+          throw wg.a((Throwable) (Object) var2, "HostileSpawn.PA(" + param0 + ')');
         }
     }
 
@@ -1764,7 +1764,7 @@ public final class HostileSpawn extends d {
             } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw wg.a((Throwable) (Object) var2_ref, "HostileSpawn.U(" + -91 + 41);
+              throw wg.a((Throwable) (Object) var2_ref, "HostileSpawn.U(" + -91 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1843,7 +1843,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "HostileSpawn.IA(" + 39 + 41);
+          throw wg.a((Throwable) (Object) var2, "HostileSpawn.IA(" + 39 + ')');
         }
     }
 
@@ -1887,7 +1887,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "HostileSpawn.AA(" + 0 + 41);
+          throw wg.a((Throwable) (Object) var2, "HostileSpawn.AA(" + 0 + ')');
         }
     }
 
@@ -2139,7 +2139,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "HostileSpawn.HA(" + param0 + 41);
+          throw wg.a((Throwable) (Object) var2, "HostileSpawn.HA(" + param0 + ')');
         }
     }
 
@@ -2193,7 +2193,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "HostileSpawn.SA(" + param0 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) var2, "HostileSpawn.SA(" + param0 + ',' + param1 + ')');
         }
         return stackIn_18_0;
     }
@@ -2643,7 +2643,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2_ref, "HostileSpawn.VA(" + 4 + 41);
+          throw wg.a((Throwable) (Object) var2_ref, "HostileSpawn.VA(" + 4 + ')');
         }
         return stackIn_164_0 != 0;
     }
@@ -2675,7 +2675,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var3, "HostileSpawn.RA(" + 113 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) var3, "HostileSpawn.RA(" + 113 + ',' + param1 + ')');
         }
     }
 
@@ -2727,7 +2727,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2_ref, "HostileSpawn.OA(" + param0 + 41);
+          throw wg.a((Throwable) (Object) var2_ref, "HostileSpawn.OA(" + param0 + ')');
         }
     }
 
@@ -2883,7 +2883,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2_ref, "HostileSpawn.MA(" + param0 + 41);
+          throw wg.a((Throwable) (Object) var2_ref, "HostileSpawn.MA(" + param0 + ')');
         }
     }
 
@@ -2959,7 +2959,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "HostileSpawn.V(" + param0 + 41);
+          throw wg.a((Throwable) (Object) var2, "HostileSpawn.V(" + param0 + ')');
         }
     }
 
@@ -2984,7 +2984,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "HostileSpawn.JA(" + 28974 + 41);
+          throw wg.a((Throwable) (Object) var2, "HostileSpawn.JA(" + 28974 + ')');
         }
     }
 
@@ -3209,7 +3209,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "HostileSpawn.BA(" + 76 + 41);
+          throw wg.a((Throwable) (Object) var2, "HostileSpawn.BA(" + 76 + ')');
         }
     }
 
@@ -3257,7 +3257,7 @@ public final class HostileSpawn extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) runtimeException, "HostileSpawn.GA(" + param0 + 41);
+          throw wg.a((Throwable) (Object) runtimeException, "HostileSpawn.GA(" + param0 + ')');
         }
     }
 
@@ -3380,7 +3380,7 @@ public final class HostileSpawn extends d {
               break L4;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
         }
     }
 

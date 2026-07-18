@@ -53,7 +53,7 @@ abstract class wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1, "wd.L(" + 139 + 41);
+          throw ie.a((Throwable) (Object) var1, "wd.L(" + 139 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

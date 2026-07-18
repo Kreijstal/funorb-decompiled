@@ -127,7 +127,7 @@ final class pu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1, "pu.E(" + -112 + 41);
+          throw ig.a((Throwable) (Object) var1, "pu.E(" + -112 + ')');
         }
     }
 
@@ -280,7 +280,7 @@ final class pu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1_ref, "pu.C(" + 28704 + 41);
+          throw ig.a((Throwable) (Object) var1_ref, "pu.C(" + 28704 + ')');
         }
     }
 

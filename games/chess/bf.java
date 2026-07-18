@@ -90,7 +90,7 @@ abstract class bf extends ma implements ee {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("bf.F(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("bf.F(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -113,7 +113,7 @@ abstract class bf extends ma implements ee {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

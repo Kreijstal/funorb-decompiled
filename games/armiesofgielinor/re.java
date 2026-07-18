@@ -14,7 +14,7 @@ final class re extends dr {
             param4[1].d(param4[1].field_y + param1, param0, -(param4[2].field_y << 1) + param3, param4[2].field_v, 128);
             param4[2].f(param3 + (param1 + -param4[2].field_y), param0, 128);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "re.B(" + param0 + 44 + param1 + 44 + -122 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + 128 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "re.B(" + param0 + ',' + param1 + ',' + -122 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + 128 + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class re extends dr {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("re.C(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("re.C(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -81,7 +81,7 @@ final class re extends dr {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }

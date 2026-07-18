@@ -26,7 +26,7 @@ final class qa extends df {
             ((qa) this).field_u = param0;
             ((qa) this).field_v = param1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "qa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

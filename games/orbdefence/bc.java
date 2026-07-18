@@ -122,7 +122,7 @@ final class bc extends hi {
               break L5;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
+          throw dd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ')');
         }
         return stackIn_16_0;
     }
@@ -202,7 +202,7 @@ final class bc extends hi {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var3_ref;
-            stackOut_16_1 = new StringBuilder().append("bc.B(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("bc.B(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -225,7 +225,7 @@ final class bc extends hi {
               break L3;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
         return stackIn_15_0;
     }

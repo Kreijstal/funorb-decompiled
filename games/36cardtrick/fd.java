@@ -79,7 +79,7 @@ final class fd extends qb {
           L0: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("fd.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("fd.C(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -102,7 +102,7 @@ final class fd extends qb {
               break L0;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 41);
+          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + false + ')');
         }
     }
 

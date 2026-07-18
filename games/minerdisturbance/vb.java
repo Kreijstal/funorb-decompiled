@@ -85,7 +85,7 @@ abstract class vb {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

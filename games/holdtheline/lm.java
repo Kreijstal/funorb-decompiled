@@ -4883,7 +4883,7 @@ abstract class lm {
             tc.a(var4, var5, 200, var3, 16777215);
             int discarded$0 = HoldTheLine.field_F.a(param1, 10 + var4, var5, 180, var3, 0, -1, 1, 1, 20);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "lm.P(" + -107 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "lm.P(" + -107 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -4970,7 +4970,7 @@ abstract class lm {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var5;
-            stackOut_17_1 = new StringBuilder().append("lm.J(").append(param0).append(44).append(param1).append(44);
+            stackOut_17_1 = new StringBuilder().append("lm.J(").append(param0).append(',').append(param1).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -4993,7 +4993,7 @@ abstract class lm {
               break L5;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param3 + 41);
+          throw kk.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param3 + ')');
         }
         return stackIn_16_0;
     }

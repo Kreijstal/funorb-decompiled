@@ -99,7 +99,7 @@ final class uc {
         try {
             ((uc) this).field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "uc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "uc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -182,7 +182,7 @@ final class dm extends rma {
           }
           L9: {
             stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(23772).append(44);
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',').append(23772).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -205,7 +205,7 @@ final class dm extends rma {
               break L9;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param3 + 41);
+          throw pe.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + param3 + ')');
         }
         return (java.net.Socket) (Object) stackIn_24_0;
     }
@@ -583,7 +583,7 @@ final class dm extends rma {
           L4: {
             var3 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var3;
-            stackOut_21_1 = new StringBuilder().append("dm.F(").append(-20).append(44);
+            stackOut_21_1 = new StringBuilder().append("dm.F(").append(-20).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -606,7 +606,7 @@ final class dm extends rma {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
         return (java.net.Socket) (Object) stackIn_20_0;
     }

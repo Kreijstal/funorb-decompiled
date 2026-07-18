@@ -99,7 +99,7 @@ final class cm {
               break L5;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

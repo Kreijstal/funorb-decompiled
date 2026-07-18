@@ -32,7 +32,7 @@ final class ob {
             }
             ((ob) this).field_a = param1.field_a;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ob.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "ob.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class ob {
             ((ob) this).field_b = param0.field_b;
             ((ob) this).field_a = param0.field_a;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ob.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

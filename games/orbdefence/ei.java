@@ -49,7 +49,7 @@ final class ei {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("ei.C(").append(97).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_6_1 = new StringBuilder().append("ei.C(").append(97).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -72,7 +72,7 @@ final class ei {
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0;
     }
@@ -150,7 +150,7 @@ final class ei {
                       if (var2 == null) {
                         break L4;
                       } else {
-                        int discarded$5 = rc.field_a.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$5 = rc.field_a.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         return;
                       }
                     } else {
@@ -173,7 +173,7 @@ final class ei {
                             var2 = (Object) (Object) Integer.toString(var5);
                             break L6;
                           } else {
-                            var2 = (Object) (Object) (var2 + ", " + var5);
+                            var2 = (Object) (Object) ((String) var2 + ", " + var5);
                             break L6;
                           }
                         } else {
@@ -193,7 +193,7 @@ final class ei {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1, "ei.B(" + -463 + 41);
+          throw dd.a((Throwable) (Object) var1, "ei.B(" + -463 + ')');
         }
     }
 

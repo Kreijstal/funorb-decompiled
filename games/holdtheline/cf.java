@@ -115,7 +115,7 @@ final class cf extends jj {
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + -28 + 44 + 0 + 41);
+          throw kk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + -28 + ',' + false + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class cf extends jj {
         try {
             ((cf) this).field_x = param0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "cf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "cf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

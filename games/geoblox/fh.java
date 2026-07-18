@@ -72,7 +72,7 @@ final class fh implements dh {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$3 = var6.append(var9);
+                      StringBuilder discarded$3 = var6.append((char) var9);
                       continue L1;
                     }
                   }
@@ -191,7 +191,7 @@ final class fh implements dh {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var6;
-            stackOut_20_1 = new StringBuilder().append("fh.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_20_1 = new StringBuilder().append("fh.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -214,7 +214,7 @@ final class fh implements dh {
               break L6;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class fh implements dh {
             ((fh) this).field_b = param1;
             ((fh) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "fh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

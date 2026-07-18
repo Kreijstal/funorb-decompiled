@@ -134,7 +134,7 @@ final class cs implements mw {
               break L3;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -242,7 +242,7 @@ final class cs implements mw {
           L3: {
             runtimeException = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) runtimeException;
-            stackOut_11_1 = new StringBuilder().append("cs.I(").append(param0).append(44).append(0).append(44).append(param2).append(44);
+            stackOut_11_1 = new StringBuilder().append("cs.I(").append(param0).append(',').append(0).append(',').append(param2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -265,7 +265,7 @@ final class cs implements mw {
               break L3;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
     }
 
@@ -328,7 +328,7 @@ final class cs implements mw {
               break L2;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -366,7 +366,7 @@ final class cs implements mw {
             jaggl.OpenGL.glGenFramebuffersEXT(1, ci.field_e, 0);
             ((cs) this).field_a = ci.field_e[0];
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "cs.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "cs.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

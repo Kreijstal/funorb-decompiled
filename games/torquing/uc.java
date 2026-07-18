@@ -875,9 +875,9 @@ abstract class uc extends ta {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$12 = field_L.append(60);
+                        StringBuilder discarded$12 = field_L.append('<');
                         StringBuilder discarded$13 = field_L.append(var15);
-                        StringBuilder discarded$14 = field_L.append(62);
+                        StringBuilder discarded$14 = field_L.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1064,7 +1064,7 @@ abstract class uc extends ta {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$15 = field_L.append(var14);
+                        StringBuilder discarded$15 = field_L.append((char) var14);
                         var14 = (char)(ka.a(false, (char) var14) & 255);
                         var4 = var4 + ((uc) this).field_N[var14];
                         if (((uc) this).field_z == null) {

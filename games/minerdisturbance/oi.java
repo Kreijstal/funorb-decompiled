@@ -158,7 +158,7 @@ final class oi extends fe {
             ti.a((byte) 88, eh.field_c / 2, eh.field_g / 2);
             vl.a(param1.field_E + param1.field_N, param1.field_N, false, param0.field_N - -param0.field_E, param0.field_N);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "oi.H(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "oi.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class oi extends fe {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("oi.D(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("oi.D(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -224,7 +224,7 @@ final class oi extends fe {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -317,7 +317,7 @@ final class oi extends fe {
           L6: {
             var5 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var5;
-            stackOut_14_1 = new StringBuilder().append("oi.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_14_1 = new StringBuilder().append("oi.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -340,7 +340,7 @@ final class oi extends fe {
               break L6;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -418,7 +418,7 @@ final class oi extends fe {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("oi.V(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_7_1 = new StringBuilder().append("oi.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -441,7 +441,7 @@ final class oi extends fe {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 

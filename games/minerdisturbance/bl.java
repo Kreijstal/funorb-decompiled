@@ -84,7 +84,7 @@ abstract class bl extends al {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw lj.a((Throwable) (Object) var1_ref, "bl.J(" + 1 + 41);
+              throw lj.a((Throwable) (Object) var1_ref, "bl.J(" + true + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -441,7 +441,7 @@ abstract class bl extends al {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("bl.H(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("bl.H(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -464,7 +464,7 @@ abstract class bl extends al {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -79 + 44 + param3 + 41);
+          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -79 + ',' + param3 + ')');
         }
         return stackIn_4_0;
     }

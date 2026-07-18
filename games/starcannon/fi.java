@@ -34,7 +34,7 @@ abstract class fi {
             var1.a(0, 0);
             wf.a(-71);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "fi.K(" + -96 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "fi.K(" + -96 + ')');
         }
     }
 
@@ -103,7 +103,7 @@ abstract class fi {
           L1: {
             var7_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var7_ref;
-            stackOut_4_1 = new StringBuilder().append("fi.H(").append(param0).append(44).append(param1).append(44);
+            stackOut_4_1 = new StringBuilder().append("fi.H(").append(param0).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -128,7 +128,7 @@ abstract class fi {
           }
           L2: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -153,7 +153,7 @@ abstract class fi {
           }
           L3: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param4).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param4).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -176,7 +176,7 @@ abstract class fi {
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + -3 + 41);
+          throw sd.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + -3 + ')');
         }
         return stackIn_3_0;
     }

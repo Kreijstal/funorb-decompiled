@@ -49,7 +49,7 @@ final class hk extends rg {
             ((hk) this).field_Z.field_z = (int)(65536.0f * (param1 / 100.0f));
             ((hk) this).field_X = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "hk.EA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "hk.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class hk extends rg {
             ((hk) this).field_U = false;
             ((hk) this).a((ub) (Object) ((hk) this).field_Z, (byte) 27);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "hk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "hk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

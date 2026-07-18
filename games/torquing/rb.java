@@ -15,7 +15,7 @@ class rb extends lg {
         try {
             ((rb) this).field_q = param1;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "rb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -81,7 +81,7 @@ class rb extends lg {
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0 != 0;
     }
@@ -305,7 +305,7 @@ class rb extends lg {
                     case 17: {
                         var2_ref = (RuntimeException) (Object) caughtException;
                         stackOut_17_0 = (RuntimeException) var2_ref;
-                        stackOut_17_1 = new StringBuilder().append("rb.C(").append(param0).append(44);
+                        stackOut_17_1 = new StringBuilder().append("rb.C(").append(param0).append(',');
                         stackIn_19_0 = stackOut_17_0;
                         stackIn_19_1 = stackOut_17_1;
                         stackIn_18_0 = stackOut_17_0;
@@ -338,7 +338,7 @@ class rb extends lg {
                         continue stateLoop;
                     }
                     case 20: {
-                        throw rb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+                        throw rb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -436,7 +436,7 @@ class rb extends lg {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("rb.P(").append(-88).append(44);
+            stackOut_3_1 = new StringBuilder().append("rb.P(").append(-88).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -459,7 +459,7 @@ class rb extends lg {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 44 + param3 + 41);
+          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -560,7 +560,7 @@ class rb extends lg {
           L6: {
             var4_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var4_ref;
-            stackOut_13_1 = new StringBuilder().append("rb.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_13_1 = new StringBuilder().append("rb.B(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -583,7 +583,7 @@ class rb extends lg {
               break L6;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
     }
 
@@ -706,7 +706,7 @@ class rb extends lg {
             var2 = new ga(param0, param1);
         } else {
             var2 = (ga) (Object) param0;
-            var2.field_b = var2.field_b + 32 + param1;
+            var2.field_b = var2.field_b + ' ' + param1;
         }
         return var2;
     }

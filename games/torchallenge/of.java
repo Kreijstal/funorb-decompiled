@@ -75,7 +75,7 @@ abstract class of {
           L0: {
             var3_ref = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var3_ref;
-            stackOut_15_1 = new StringBuilder().append("of.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_15_1 = new StringBuilder().append("of.D(").append(param0).append(',').append(param1).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -98,7 +98,7 @@ abstract class of {
               break L0;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 

@@ -281,7 +281,7 @@ abstract class sf extends be {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (Object) (Object) decompiledCaughtException;
-          throw dh.a((Throwable) var1, "sf.C(" + -36 + 41);
+          throw dh.a((Throwable) var1, "sf.C(" + -36 + ')');
         }
         return (String) (Object) stackIn_97_0;
     }
@@ -301,7 +301,7 @@ abstract class sf extends be {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "sf.A(" + -126 + 41);
+          throw dh.a((Throwable) (Object) var1, "sf.A(" + -126 + ')');
         }
     }
 

@@ -376,7 +376,7 @@ final class bb {
             param2.field_h = var5.f((byte) -109);
             var5.b(-var4 + var5.field_g, param0 ^ 31702);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "bb.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "bb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

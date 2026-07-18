@@ -277,7 +277,7 @@ abstract class rf {
           L18: {
             var5 = decompiledCaughtException;
             stackOut_61_0 = (RuntimeException) var5;
-            stackOut_61_1 = new StringBuilder().append("rf.K(").append(param0).append(44).append(-10).append(44).append(param2).append(44).append(0).append(44);
+            stackOut_61_1 = new StringBuilder().append("rf.K(").append(param0).append(',').append(-10).append(',').append(param2).append(',').append(false).append(',');
             stackIn_64_0 = stackOut_61_0;
             stackIn_64_1 = stackOut_61_1;
             stackIn_62_0 = stackOut_61_0;
@@ -300,7 +300,7 @@ abstract class rf {
               break L18;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + ')');
         }
     }
 
@@ -316,7 +316,7 @@ abstract class rf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "rf.J(" + 1 + 41);
+          throw la.a((Throwable) (Object) var1, "rf.J(" + true + ')');
         }
     }
 

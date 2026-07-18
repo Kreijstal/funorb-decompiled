@@ -49,7 +49,7 @@ final class wp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1_ref, "wp.D(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var1_ref, "wp.D(" + param0 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class wp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1_ref, "wp.A(" + 127 + 41);
+          throw fa.a((Throwable) (Object) var1_ref, "wp.A(" + 127 + ')');
         }
     }
 

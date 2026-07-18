@@ -22,7 +22,7 @@ final class mh {
             var3.c(param2.field_h, (byte) -127);
             var3.c(param2.field_m, (byte) -99);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "mh.A(" + 3 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "mh.A(" + 3 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -27,7 +27,7 @@ final class pr {
             param0.field_e.field_d = param0;
             param0.field_i = param2;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pr.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "pr.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

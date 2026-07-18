@@ -18,7 +18,7 @@ final class af extends sa {
         try {
             ((af) this).a(ri.field_c, ((af) this).field_S, param4, (byte) 64, param1, param0, param3, 128);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "af.QA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "af.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class af extends sa {
         try {
             kj.a(rd.field_Hb, 96, (pm) (Object) param1);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "af.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "af.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -150,7 +150,7 @@ final class af extends sa {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var6;
-            stackOut_30_1 = new StringBuilder().append("af.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_30_1 = new StringBuilder().append("af.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -173,7 +173,7 @@ final class af extends sa {
               break L5;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + 23221 + 41);
+          throw sd.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + 23221 + ')');
         }
         return (java.awt.Frame) (Object) stackIn_29_0;
     }

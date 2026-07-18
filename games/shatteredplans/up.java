@@ -34,7 +34,7 @@ final class up implements Iterable {
             param0.field_j.field_h = param0;
             param0.field_h.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "up.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "up.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

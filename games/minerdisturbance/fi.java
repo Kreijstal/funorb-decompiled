@@ -23,7 +23,7 @@ final class fi {
             ii.a(140);
             mn.field_x = -kc.field_d;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "fi.A(" + 104 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "fi.A(" + 104 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

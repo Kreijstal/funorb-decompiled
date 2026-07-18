@@ -81,7 +81,7 @@ final class wh {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var2;
-            stackOut_8_1 = new StringBuilder().append("wh.C(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("wh.C(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -104,7 +104,7 @@ final class wh {
               break L3;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }

@@ -120,7 +120,7 @@ final class ua extends ig {
               break L3;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
         }
         return stackIn_17_0;
     }
@@ -233,7 +233,7 @@ final class ua extends ig {
               break L4;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ')');
         }
         return stackIn_16_0;
     }

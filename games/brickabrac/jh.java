@@ -44,7 +44,7 @@ final class jh {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("jh.C(").append(0).append(44);
+            stackOut_2_1 = new StringBuilder().append("jh.C(").append(0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -67,7 +67,7 @@ final class jh {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -100,7 +100,7 @@ final class jh {
             param1.field_cb = 0;
             param1.field_C = 0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "jh.A(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "jh.A(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

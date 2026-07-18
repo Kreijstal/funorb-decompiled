@@ -117,7 +117,7 @@ final class q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1_ref, "q.D(" + 1 + 41);
+          throw sl.a((Throwable) (Object) var1_ref, "q.D(" + true + ')');
         }
     }
 
@@ -226,7 +226,7 @@ final class q {
                   break L2;
                 }
               }
-              throw sl.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + -1 + 41);
+              throw sl.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

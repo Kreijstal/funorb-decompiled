@@ -100,7 +100,7 @@ final class qd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var3, "qd.D(" + 16452 + 44 + param1 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) var3, "qd.D(" + 16452 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_12_0;
     }

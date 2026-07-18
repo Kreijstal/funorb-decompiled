@@ -149,7 +149,7 @@ final class sa extends gg {
               break L8;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + 1 + 41);
+          throw fc.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + true + ')');
         }
         return stackIn_25_0;
     }
@@ -160,7 +160,7 @@ final class sa extends gg {
             ((sa) this).field_h = param0;
             ((sa) this).field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "sa.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "sa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

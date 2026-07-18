@@ -51,7 +51,7 @@ final class ji {
               L0: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_4_0 = (RuntimeException) var2_ref2;
-                stackOut_4_1 = new StringBuilder().append("ji.A(").append(8355711).append(44);
+                stackOut_4_1 = new StringBuilder().append("ji.A(").append(8355711).append(',');
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;
@@ -74,7 +74,7 @@ final class ji {
                   break L0;
                 }
               }
-              throw fa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+              throw fa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

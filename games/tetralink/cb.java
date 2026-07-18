@@ -83,7 +83,7 @@ final class cb extends um {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3_ref;
-            stackOut_14_1 = new StringBuilder().append("cb.C(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("cb.C(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -106,7 +106,7 @@ final class cb extends um {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0;
     }
@@ -116,7 +116,7 @@ final class cb extends um {
         try {
             ((cb) this).field_x = param1;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "cb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "cb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -233,7 +233,7 @@ final class cb extends um {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 41);
+          throw oi.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ')');
         }
         return (String) (Object) stackIn_17_0;
     }

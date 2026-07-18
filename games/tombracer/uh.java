@@ -170,7 +170,7 @@ final class uh extends vg {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ')');
         }
     }
 
@@ -396,7 +396,7 @@ final class uh extends vg {
         try {
             ((uh) this).field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "uh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "uh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

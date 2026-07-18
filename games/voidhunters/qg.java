@@ -95,7 +95,7 @@ abstract class qg {
               break L0;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + 0 + 41);
+          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + false + ')');
         }
     }
 
@@ -105,7 +105,7 @@ abstract class qg {
         try {
             ((qg) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "qg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

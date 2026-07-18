@@ -88,7 +88,7 @@ abstract class ci extends vg {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("ci.A(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("ci.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -111,7 +111,7 @@ abstract class ci extends vg {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ')');
         }
     }
 
@@ -270,7 +270,7 @@ abstract class ci extends vg {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -123 + 41);
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -123 + ')');
         }
         return stackIn_4_0;
     }

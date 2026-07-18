@@ -70,7 +70,7 @@ final class ni implements Runnable {
           L2: {
             var5_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var5_ref;
-            stackOut_4_1 = new StringBuilder().append("ni.C(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("ni.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -95,7 +95,7 @@ final class ni implements Runnable {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -118,7 +118,7 @@ final class ni implements Runnable {
               break L3;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param3 + 41);
+          throw dn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param3 + ')');
         }
         return stackIn_3_0;
     }
@@ -161,7 +161,7 @@ final class ni implements Runnable {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$3 = var6.append(var9);
+                      StringBuilder discarded$3 = var6.append((char) var9);
                       continue L1;
                     }
                   }
@@ -226,7 +226,7 @@ final class ni implements Runnable {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4_ref;
-            stackOut_5_1 = new StringBuilder().append("ni.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("ni.A(").append(param0).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -249,7 +249,7 @@ final class ni implements Runnable {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -492,7 +492,7 @@ final class ni implements Runnable {
           L6: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var4_ref;
-            stackOut_22_1 = new StringBuilder().append("ni.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_22_1 = new StringBuilder().append("ni.B(").append(param0).append(',').append(param1).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -515,7 +515,7 @@ final class ni implements Runnable {
               break L6;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
         return stackIn_21_0;
     }
@@ -571,7 +571,7 @@ final class ni implements Runnable {
             }
             ((ni) this).field_a = (Thread) var2.field_b;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "ni.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "ni.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

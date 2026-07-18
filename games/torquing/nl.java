@@ -178,7 +178,7 @@ final class nl extends am {
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

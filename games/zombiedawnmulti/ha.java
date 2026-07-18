@@ -66,7 +66,7 @@ final class ha extends br {
             ((ha) this).field_m = param0;
             ((ha) this).field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ha.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

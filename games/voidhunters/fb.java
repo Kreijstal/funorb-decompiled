@@ -68,7 +68,7 @@ final class fb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -157,7 +157,7 @@ final class fb extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "fb.C(" + 0 + 41);
+          throw rta.a((Throwable) (Object) var1, "fb.C(" + 0 + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class fb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -116 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -116 + ')');
         }
         return stackIn_3_0;
     }

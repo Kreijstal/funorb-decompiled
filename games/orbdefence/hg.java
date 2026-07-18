@@ -48,7 +48,7 @@ final class hg extends sf {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("hg.D(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("hg.D(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -71,7 +71,7 @@ final class hg extends sf {
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 41);
+          throw dd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 0 + ')');
         }
         return stackIn_4_0;
     }
@@ -130,7 +130,7 @@ final class hg extends sf {
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 113 + 41);
+          throw dd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 113 + ')');
         }
         return stackIn_3_0;
     }

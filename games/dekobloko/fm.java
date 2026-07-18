@@ -20,7 +20,7 @@ abstract class fm {
             param1.field_a.field_b = param1;
             param1.field_b.field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "fm.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "fm.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -90,7 +90,7 @@ abstract class fm {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("fm.I(").append(param0).append(44).append(3).append(44);
+            stackOut_7_1 = new StringBuilder().append("fm.I(").append(param0).append(',').append(3).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -113,7 +113,7 @@ abstract class fm {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 

@@ -53,7 +53,7 @@ final class kma extends k {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("kma.E(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("kma.E(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -76,7 +76,7 @@ final class kma extends k {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class kma extends k {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "kma.D(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var1, "kma.D(" + param0 + ')');
         }
     }
 

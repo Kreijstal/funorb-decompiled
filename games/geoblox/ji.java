@@ -50,7 +50,7 @@ abstract class ji {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1_ref, "ji.B(" + -102 + 41);
+          throw t.a((Throwable) (Object) var1_ref, "ji.B(" + -102 + ')');
         }
     }
 
@@ -325,7 +325,7 @@ abstract class ji {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(16).append(44).append(0).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(16).append(',').append(0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -348,7 +348,7 @@ abstract class ji {
               break L7;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
         return stackIn_16_0;
     }

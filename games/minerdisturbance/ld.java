@@ -15,7 +15,7 @@ final class ld extends sb {
             ((ld) this).field_v = new mf(param0);
             int var3_int = -24 % ((param1 - 64) / 40);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "ld.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "ld.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -222,7 +222,7 @@ final class ld extends sb {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -22,7 +22,7 @@ final class gj {
             var3.a(0, (byte) -69);
             var3.a(param1.field_i, (byte) -120);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "gj.C(" + 2 + 44 + (param1 != null ? "{...}" : "null") + 44 + 5 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "gj.C(" + 2 + ',' + (param1 != null ? "{...}" : "null") + ',' + 5 + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class gj {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var2_ref;
-            stackOut_17_1 = new StringBuilder().append("gj.B(").append(100).append(44);
+            stackOut_17_1 = new StringBuilder().append("gj.B(").append(100).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -114,7 +114,7 @@ final class gj {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
         return stackIn_16_0;
     }

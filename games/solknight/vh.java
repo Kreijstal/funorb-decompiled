@@ -145,7 +145,7 @@ final class vh {
                   break L7;
                 }
               }
-              throw fc.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 107 + 41);
+              throw fc.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + 107 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

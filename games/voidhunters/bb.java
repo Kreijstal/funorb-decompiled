@@ -21,7 +21,7 @@ final class bb extends rqa {
             qfb.field_o = 65536 & var2_int << 16;
             qfb.field_o = qfb.field_o + param0.e(1869);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bb.C(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "bb.C(" + (param0 != null ? "{...}" : "null") + ',' + true + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class bb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

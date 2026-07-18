@@ -310,7 +310,7 @@ final class qi extends mc {
           L18: {
             var9 = decompiledCaughtException;
             stackOut_75_0 = (RuntimeException) var9;
-            stackOut_75_1 = new StringBuilder().append("qi.C(").append(param0).append(44).append(param1).append(44).append(98).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_75_1 = new StringBuilder().append("qi.C(").append(param0).append(',').append(param1).append(',').append(98).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_77_0 = stackOut_75_0;
             stackIn_77_1 = stackOut_75_1;
             stackIn_76_0 = stackOut_75_0;
@@ -333,7 +333,7 @@ final class qi extends mc {
               break L18;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + 44 + param7 + 44 + param8 + 41);
+          throw oi.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -371,7 +371,7 @@ final class qi extends mc {
                 ii.a(-19149, "document.cookie=\"" + var5 + "\"", param2);
                 q.a(param2, 64);
             } catch (RuntimeException runtimeException) {
-                throw oi.a((Throwable) (Object) runtimeException, "qi.A(" + (param0 != null ? "{...}" : "null") + 44 + -7011 + 44 + (param2 != null ? "{...}" : "null") + 41);
+                throw oi.a((Throwable) (Object) runtimeException, "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + -7011 + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

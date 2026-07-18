@@ -91,7 +91,7 @@ final class fd {
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -6 + 41);
+          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -6 + ')');
         }
         return stackIn_1_0;
     }
@@ -138,7 +138,7 @@ final class fd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var3, "fd.B(" + 1 + 44 + param1 + 44 + param2 + 41);
+          throw pn.a((Throwable) (Object) var3, "fd.B(" + 1 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_11_0;
     }

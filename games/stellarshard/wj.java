@@ -469,7 +469,7 @@ final class wj extends fb {
               }
               L31: {
                 stackOut_98_0 = (RuntimeException) (Object) stackIn_98_0;
-                stackOut_98_1 = ((StringBuilder) (Object) stackIn_98_1).append(stackIn_98_2).append(44).append(param1).append(44).append(param2).append(44);
+                stackOut_98_1 = ((StringBuilder) (Object) stackIn_98_1).append(stackIn_98_2).append(',').append(param1).append(',').append(param2).append(',');
                 stackIn_100_0 = stackOut_98_0;
                 stackIn_100_1 = stackOut_98_1;
                 stackIn_99_0 = stackOut_98_0;
@@ -492,7 +492,7 @@ final class wj extends fb {
                   break L31;
                 }
               }
-              throw ma.a((Throwable) (Object) stackIn_101_0, stackIn_101_2 + 44 + param4 + 44 + param5 + 41);
+              throw ma.a((Throwable) (Object) stackIn_101_0, stackIn_101_2 + ',' + param4 + ',' + param5 + ')');
             }
             return stackIn_94_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1004,7 +1004,7 @@ final class wj extends fb {
               L11: {
                 var4_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_22_0 = (RuntimeException) var4_ref;
-                stackOut_22_1 = new StringBuilder().append("wj.C(").append(param0).append(44);
+                stackOut_22_1 = new StringBuilder().append("wj.C(").append(param0).append(',');
                 stackIn_24_0 = stackOut_22_0;
                 stackIn_24_1 = stackOut_22_1;
                 stackIn_23_0 = stackOut_22_0;
@@ -1027,7 +1027,7 @@ final class wj extends fb {
                   break L11;
                 }
               }
-              throw ma.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param2 + 41);
+              throw ma.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

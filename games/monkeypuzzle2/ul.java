@@ -114,7 +114,7 @@ final class ul extends nf {
           L5: {
             runtimeException = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) runtimeException;
-            stackOut_16_1 = new StringBuilder().append("ul.D(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("ul.D(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -137,7 +137,7 @@ final class ul extends nf {
               break L5;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 44 + param3 + 41);
+          throw la.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class ul extends nf {
             ((ul) this).field_Q.field_G = true;
             ((ul) this).b((byte) -28, (we) (Object) ((ul) this).field_Q);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "ul.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw la.a((Throwable) (Object) runtimeException, "ul.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

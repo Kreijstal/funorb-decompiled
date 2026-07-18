@@ -23,7 +23,7 @@ final class bl {
             }
             dh.a(((bl) this).field_e, 31536000L, param0, "jagex-last-login-method", param1 + 1004);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "bl.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "bl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -237,7 +237,7 @@ final class bl {
               L16: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_36_0 = (RuntimeException) var4;
-                stackOut_36_1 = new StringBuilder().append("bl.D(").append(0).append(44).append(param1).append(44);
+                stackOut_36_1 = new StringBuilder().append("bl.D(").append(0).append(',').append(param1).append(',');
                 stackIn_38_0 = stackOut_36_0;
                 stackIn_38_1 = stackOut_36_1;
                 stackIn_37_0 = stackOut_36_0;
@@ -262,7 +262,7 @@ final class bl {
               }
               L17: {
                 stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-                stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(44);
+                stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',');
                 stackIn_41_0 = stackOut_39_0;
                 stackIn_41_1 = stackOut_39_1;
                 stackIn_40_0 = stackOut_39_0;
@@ -285,7 +285,7 @@ final class bl {
                   break L17;
                 }
               }
-              throw sl.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 41);
+              throw sl.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -426,7 +426,7 @@ final class bl {
         try {
             ((bl) this).field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "bl.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "bl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -492,7 +492,7 @@ final class bl {
               break L1;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw sl.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

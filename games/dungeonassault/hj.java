@@ -164,7 +164,7 @@ final class hj extends gd {
             ((hj) this).field_Y = true;
             ((hj) this).field_n = (en) (Object) new fc(((hj) this).field_R, ((hj) this).field_V);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "hj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "hj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -372,7 +372,7 @@ final class hj extends gd {
           L9: {
             var5 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var5;
-            stackOut_21_1 = new StringBuilder().append("hj.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_21_1 = new StringBuilder().append("hj.B(").append(param0).append(',').append(param1).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -395,7 +395,7 @@ final class hj extends gd {
               break L9;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param3 + 41);
+          throw vk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param3 + ')');
         }
     }
 

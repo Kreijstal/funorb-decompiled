@@ -410,7 +410,7 @@ final class ha {
           L35: {
             var3 = decompiledCaughtException;
             stackOut_96_0 = (RuntimeException) var3;
-            stackOut_96_1 = new StringBuilder().append("ha.B(").append(-88).append(44);
+            stackOut_96_1 = new StringBuilder().append("ha.B(").append(-88).append(',');
             stackIn_98_0 = stackOut_96_0;
             stackIn_98_1 = stackOut_96_1;
             stackIn_97_0 = stackOut_96_0;
@@ -433,7 +433,7 @@ final class ha {
               break L35;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_99_0, stackIn_99_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_99_0, stackIn_99_2 + ')');
         }
     }
 
@@ -450,7 +450,7 @@ final class ha {
         try {
             param0.field_d.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ha.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ha.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -487,7 +487,7 @@ final class ha {
             }
             this.a((byte) -88, param0);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ha.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -54,7 +54,7 @@ class ba extends tk {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("ba.EA(").append(param0).append(44).append(param1).append(44).append(-59).append(44);
+            stackOut_7_1 = new StringBuilder().append("ba.EA(").append(param0).append(',').append(param1).append(',').append(-59).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -77,7 +77,7 @@ class ba extends tk {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -191,7 +191,7 @@ class ba extends tk {
               break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw qb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_7_0;
     }

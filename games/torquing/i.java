@@ -121,7 +121,7 @@ final class i extends im implements ng {
           }
           L3: {
             stackOut_13_0 = stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -144,7 +144,7 @@ final class i extends im implements ng {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class i extends im implements ng {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var6;
-            stackOut_6_1 = new StringBuilder().append("i.NA(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("i.NA(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -217,7 +217,7 @@ final class i extends im implements ng {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -349,7 +349,7 @@ final class i extends im implements ng {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param1).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -372,7 +372,7 @@ final class i extends im implements ng {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_3_0;
     }

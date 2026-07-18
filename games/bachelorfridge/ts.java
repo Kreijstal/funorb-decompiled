@@ -13,7 +13,7 @@ final class ts extends td {
         try {
             ((ts) this).field_j = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ts.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ts.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class ts extends td {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var6;
-            stackOut_26_1 = new StringBuilder().append("ts.C(").append(param0).append(44);
+            stackOut_26_1 = new StringBuilder().append("ts.C(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -146,7 +146,7 @@ final class ts extends td {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param2 + 44 + 0 + 44 + 2 + 44 + param5 + 41);
+          throw pe.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param2 + ',' + 0 + ',' + 2 + ',' + param5 + ')');
         }
         return (java.awt.Frame) (Object) stackIn_25_0;
     }
@@ -238,7 +238,7 @@ final class ts extends td {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
         }
         return (ii) (Object) stackIn_7_0;
     }

@@ -74,7 +74,7 @@ final class fo {
             int discarded$1 = -27300;
             vl.a(param0);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "fo.A(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "fo.A(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
     }
 
@@ -278,7 +278,7 @@ final class fo {
             }
             this.a(true);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "fo.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "fo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

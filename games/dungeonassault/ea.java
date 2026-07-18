@@ -84,7 +84,7 @@ final class ea {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var1_ref, "ea.C(" + 0 + 41);
+          throw vk.a((Throwable) (Object) var1_ref, "ea.C(" + 0 + ')');
         }
     }
 

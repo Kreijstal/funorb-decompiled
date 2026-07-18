@@ -118,7 +118,7 @@ final class aw extends sm {
           L4: {
             runtimeException = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) runtimeException;
-            stackOut_8_1 = new StringBuilder().append("aw.F(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("aw.F(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -141,7 +141,7 @@ final class aw extends sm {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class aw extends sm {
             var2_int = fieldTemp$8;
             var3 = new StringBuilder();
             var4 = param1.b(-1);
-            StringBuilder discarded$9 = var3.append(var4);
+            StringBuilder discarded$9 = var3.append((char) var4);
             var5 = 0;
             L1: while (true) {
               L2: {
@@ -204,12 +204,12 @@ final class aw extends sm {
                   var6 = param1.b(-1);
                   if (var5 != 0) {
                     var5 = 0;
-                    StringBuilder discarded$10 = var3.append(var6);
+                    StringBuilder discarded$10 = var3.append((char) var6);
                     continue L1;
                   } else {
                     L3: {
                       if (var6 != 92) {
-                        StringBuilder discarded$11 = var3.append(var6);
+                        StringBuilder discarded$11 = var3.append((char) var6);
                         break L3;
                       } else {
                         var5 = 1;
@@ -246,7 +246,7 @@ final class aw extends sm {
           L5: {
             var2 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("aw.B(").append(121).append(44);
+            stackOut_15_1 = new StringBuilder().append("aw.B(").append(121).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -269,7 +269,7 @@ final class aw extends sm {
               break L5;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
         return stackIn_14_0;
     }
@@ -278,7 +278,7 @@ final class aw extends sm {
         try {
             param1[param0.field_d] = (co) (Object) param1;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "aw.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + -5841 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "aw.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + -5841 + ')');
         }
     }
 
@@ -305,7 +305,7 @@ final class aw extends sm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "aw.R(" + 7 + 44 + 1742 + 41);
+          throw ig.a((Throwable) (Object) var2, "aw.R(" + 7 + ',' + 1742 + ')');
         }
     }
 

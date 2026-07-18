@@ -64,7 +64,7 @@ final class ugb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -140,7 +140,7 @@ final class ugb extends rqa {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("ugb.B(").append(2).append(44);
+            stackOut_15_1 = new StringBuilder().append("ugb.B(").append(2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -163,7 +163,7 @@ final class ugb extends rqa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
         return stackIn_14_0;
     }

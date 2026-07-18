@@ -89,7 +89,7 @@ final class ua {
                             if (0 == var9) {
                               break L5;
                             } else {
-                              StringBuilder discarded$7 = var6.append(var9);
+                              StringBuilder discarded$7 = var6.append((char) var9);
                               break L5;
                             }
                           } else {
@@ -116,7 +116,7 @@ final class ua {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_28_0 = (RuntimeException) var2;
-            stackOut_28_1 = new StringBuilder().append("ua.D(").append(param0).append(44);
+            stackOut_28_1 = new StringBuilder().append("ua.D(").append(param0).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -139,7 +139,7 @@ final class ua {
               break L6;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class ua {
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + 91 + 44 + param3 + 41);
+          throw dd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + 91 + ',' + param3 + ')');
         }
         return stackIn_6_0;
     }

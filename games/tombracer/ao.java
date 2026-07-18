@@ -25,7 +25,7 @@ final class ao extends dg {
             int discarded$0 = 1;
             oq.a(-var6_int + param2, -var7 + param1, param3, 160, var6_int + param2, 16777215, var7 + param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ao.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ao.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -33,7 +33,7 @@ final class ao extends dg {
         try {
             super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ao.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ao.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

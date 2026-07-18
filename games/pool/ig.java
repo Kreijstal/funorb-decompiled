@@ -13,7 +13,7 @@ abstract class ig extends gg implements pe {
             ((ig) this).b(11755);
             int var3_int = -31 % ((-43 - param1) / 35);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ig.BA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "ig.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ abstract class ig extends gg implements pe {
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ abstract class ig extends gg implements pe {
         try {
             ((ig) this).field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ig.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "ig.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -196,7 +196,7 @@ abstract class ig extends gg implements pe {
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + -12 + 41);
+          throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -12 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

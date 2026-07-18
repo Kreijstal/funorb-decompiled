@@ -115,7 +115,7 @@ final class lk extends pm {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
         }
         return stackIn_12_0;
     }
@@ -127,7 +127,7 @@ final class lk extends pm {
         try {
             ((lk) this).field_h = new fj(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "lk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -205,7 +205,7 @@ final class lk extends pm {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
         return stackIn_8_0;
     }

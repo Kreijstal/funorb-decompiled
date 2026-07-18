@@ -398,7 +398,7 @@ final class oi extends of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var3, "oi.J(" + param0 + 44 + 1 + 44 + param2 + 41);
+          throw oj.a((Throwable) (Object) var3, "oi.J(" + param0 + ',' + true + ',' + param2 + ')');
         }
     }
 
@@ -475,7 +475,7 @@ final class oi extends of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var2, "oi.G(" + param0 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) var2, "oi.G(" + param0 + ',' + param1 + ')');
         }
         return stackIn_17_0;
     }
@@ -518,7 +518,7 @@ final class oi extends of {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("oi.A(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("oi.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -541,7 +541,7 @@ final class oi extends of {
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

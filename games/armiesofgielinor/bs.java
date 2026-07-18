@@ -93,7 +93,7 @@ final class bs {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 3 + 41);
+          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 3 + ')');
         }
         return stackIn_7_0;
     }

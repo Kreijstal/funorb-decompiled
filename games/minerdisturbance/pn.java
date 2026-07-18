@@ -1035,7 +1035,7 @@ final class pn implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "pn.E(" + -17 + 41);
+          throw lj.a((Throwable) (Object) var1, "pn.E(" + -17 + ')');
         }
     }
 

@@ -153,7 +153,7 @@ final class hg extends hc {
           }
           L3: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param1).append(44).append(param2).append(44).append(-38).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(-38).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -178,7 +178,7 @@ final class hg extends hc {
           }
           L4: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -203,7 +203,7 @@ final class hg extends hc {
           }
           L5: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -226,7 +226,7 @@ final class hg extends hc {
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
         }
         return stackIn_9_0 != 0;
     }
@@ -272,7 +272,7 @@ final class hg extends hc {
                 }
                 ti.a((byte) -101, param0);
             } catch (RuntimeException runtimeException) {
-                throw ie.a((Throwable) (Object) runtimeException, "hg.L(" + (param0 != null ? "{...}" : "null") + 44 + -1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+                throw ie.a((Throwable) (Object) runtimeException, "hg.L(" + (param0 != null ? "{...}" : "null") + ',' + -1 + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -317,7 +317,7 @@ final class hg extends hc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var3, "hg.M(" + param0 + 44 + param1 + 44 + -82 + 41);
+          throw ie.a((Throwable) (Object) var3, "hg.M(" + param0 + ',' + param1 + ',' + -82 + ')');
         }
         return stackIn_5_0;
     }

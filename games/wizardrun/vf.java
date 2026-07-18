@@ -55,7 +55,7 @@ final class vf extends wl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1, "vf.A(" + 256 + 41);
+          throw bd.a((Throwable) (Object) var1, "vf.A(" + 256 + ')');
         }
     }
 

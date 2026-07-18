@@ -3844,7 +3844,7 @@ final class qk {
             field_e = null;
             int var1_int = -103 % ((param0 - 6) / 41);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "qk.B(" + param0 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "qk.B(" + param0 + ')');
         }
     }
 

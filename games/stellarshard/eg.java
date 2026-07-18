@@ -57,7 +57,7 @@ final class eg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "eg.B(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1, "eg.B(" + param0 + ')');
         }
         return stackIn_11_0;
     }

@@ -167,7 +167,7 @@ final class so extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "so.A(" + param0 + 41);
+          throw rb.a((Throwable) (Object) var1, "so.A(" + param0 + ')');
         }
     }
 

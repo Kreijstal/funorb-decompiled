@@ -52,7 +52,7 @@ final class lf implements Runnable {
                   }
                   return;
                 } else {
-                  throw lf.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((lf) this).field_g.field_u.length + " " + ((lf) this).field_h));
+                  throw lf.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((lf) this).field_g.field_u.length + " " + (Object) (Object) ((lf) this).field_h));
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -284,7 +284,7 @@ final class lf implements Runnable {
         try {
             wi.field_A = param1;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "lf.D(" + -673 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "lf.D(" + -673 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -294,7 +294,7 @@ final class lf implements Runnable {
             ((lf) this).field_f = param0;
             ((lf) this).field_g = new sb(param2);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "lf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "lf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

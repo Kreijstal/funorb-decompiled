@@ -80,7 +80,7 @@ final class qk extends br {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + -114 + 41);
+          throw fa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -114 + ')');
         }
         return (ae) (Object) stackIn_5_0;
     }
@@ -113,7 +113,7 @@ final class qk extends br {
             }
             int discarded$0 = vo.field_m.field_yb.a(param0, var7 + 3, -vo.field_m.field_yb.field_C + 1 + (var8 + jp.field_f), 500, 1000, 0, -1, 0, 0, jk.field_f);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "qk.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "qk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

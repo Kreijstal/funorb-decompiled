@@ -58,7 +58,7 @@ final class ig extends dh implements ai {
             mh.b((byte) -57);
             ((ig) this).q(4210752);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "ig.M(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "ig.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class ig extends dh implements ai {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_31_0 = (RuntimeException) var4;
-            stackOut_31_1 = new StringBuilder().append("ig.N(").append(param0).append(44).append(param1).append(44);
+            stackOut_31_1 = new StringBuilder().append("ig.N(").append(param0).append(',').append(param1).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -202,7 +202,7 @@ final class ig extends dh implements ai {
               break L4;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class ig extends dh implements ai {
         try {
             ((ig) this).field_jb = param1;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "ig.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "ig.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -20,7 +20,7 @@ final class nn {
         try {
             var5.b(-var4 + var5.field_g, (byte) 124);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "nn.B(" + (param0 != null ? "{...}" : "null") + 44 + 6 + 44 + 62 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "nn.B(" + (param0 != null ? "{...}" : "null") + ',' + 6 + ',' + 62 + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var5, "nn.A(" + param0 + 44 + 70 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw pn.a((Throwable) (Object) var5, "nn.A(" + param0 + ',' + 70 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

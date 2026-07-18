@@ -128,7 +128,7 @@ final class bh implements Runnable {
               break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw nb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -382,7 +382,7 @@ final class bh implements Runnable {
           L5: {
             var5 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var5;
-            stackOut_25_1 = new StringBuilder().append("bh.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_25_1 = new StringBuilder().append("bh.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -405,7 +405,7 @@ final class bh implements Runnable {
               break L5;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
         }
     }
 
@@ -499,7 +499,7 @@ final class bh implements Runnable {
             ((bh) this).field_m = ((bh) this).field_b.getOutputStream();
             ((bh) this).field_o = param2;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

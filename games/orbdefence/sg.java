@@ -188,7 +188,7 @@ abstract class sg extends ta {
             ((sg) this).field_A = false;
             ((sg) this).field_D = 0;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "sg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -308,7 +308,7 @@ abstract class sg extends ta {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2;
-            stackOut_20_1 = new StringBuilder().append("sg.QB(").append(-1326).append(44);
+            stackOut_20_1 = new StringBuilder().append("sg.QB(").append(-1326).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -331,7 +331,7 @@ abstract class sg extends ta {
               break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
         return stackIn_19_0;
     }

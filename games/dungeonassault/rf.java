@@ -107,7 +107,7 @@ abstract class rf extends ii {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("rf.HA(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("rf.HA(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -130,7 +130,7 @@ abstract class rf extends ii {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 41);
+          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ')');
         }
         return stackIn_7_0;
     }
@@ -142,7 +142,7 @@ abstract class rf extends ii {
             ((rf) this).field_U = 0;
             ((rf) this).field_T = false;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "rf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

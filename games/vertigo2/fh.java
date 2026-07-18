@@ -29,7 +29,7 @@ class fh extends gp {
             rh.field_I.a(125, -48 + oc.field_v.field_Fb, -20 + (oc.field_v.field_db + -24), 16, 24);
             gb.field_c.a(79, 80, 24, -44 + oc.field_v.field_db, 120);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "fh.A(" + (param0 != null ? "{...}" : "null") + 44 + -19615 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "fh.A(" + (param0 != null ? "{...}" : "null") + ',' + -19615 + ')');
         }
     }
 

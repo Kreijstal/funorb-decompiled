@@ -94,7 +94,7 @@ final class ti {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var4;
-            stackOut_9_1 = new StringBuilder().append("ti.F(").append(param0).append(44).append(param1).append(44);
+            stackOut_9_1 = new StringBuilder().append("ti.F(").append(param0).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -117,7 +117,7 @@ final class ti {
               break L4;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return (ec) (Object) stackIn_8_0;
     }
@@ -210,7 +210,7 @@ final class ti {
               break L5;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
+          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
         }
     }
 
@@ -393,7 +393,7 @@ final class ti {
             var2 = ho.a(param0, "jagex logo2.packvorbis", "");
             gg discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "ti.L(" + (param0 != null ? "{...}" : "null") + 44 + 28922 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "ti.L(" + (param0 != null ? "{...}" : "null") + ',' + 28922 + ')');
         }
     }
 
@@ -431,7 +431,7 @@ final class ti {
             ((ti) this).b((byte) 62);
             ((ti) this).field_j = -1;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "ti.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "ti.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -560,7 +560,7 @@ final class ti {
             ((ti) this).field_c = param3;
             ((ti) this).field_o = new ei();
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

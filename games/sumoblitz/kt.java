@@ -49,7 +49,7 @@ final class kt {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3_ref;
-            stackOut_5_1 = new StringBuilder().append("kt.C(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("kt.C(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -72,7 +72,7 @@ final class kt {
               break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ')');
         }
         return stackIn_4_0;
     }
@@ -189,7 +189,7 @@ final class kt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "kt.A(" + -38 + 41);
+          throw qo.a((Throwable) (Object) var1, "kt.A(" + -38 + ')');
         }
         return stackIn_30_0;
     }

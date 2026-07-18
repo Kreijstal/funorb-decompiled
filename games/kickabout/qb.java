@@ -300,7 +300,7 @@ final class qb extends hd {
           L12: {
             var3 = decompiledCaughtException;
             stackOut_62_0 = (RuntimeException) var3;
-            stackOut_62_1 = new StringBuilder().append("qb.B(").append(param0).append(44);
+            stackOut_62_1 = new StringBuilder().append("qb.B(").append(param0).append(',');
             stackIn_64_0 = stackOut_62_0;
             stackIn_64_1 = stackOut_62_1;
             stackIn_63_0 = stackOut_62_0;
@@ -323,7 +323,7 @@ final class qb extends hd {
               break L12;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + ')');
         }
         return stackIn_61_0 != 0;
     }

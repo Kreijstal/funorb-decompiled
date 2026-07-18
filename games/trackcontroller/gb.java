@@ -43,7 +43,7 @@ class gb extends fc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var2_ref, "gb.OA(" + 4 + 44 + 6 + 41);
+          throw sl.a((Throwable) (Object) var2_ref, "gb.OA(" + 4 + ',' + 6 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ class gb extends fc {
               break L1;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -523 + 41);
+          throw sl.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -523 + ')');
         }
         return stackIn_1_0;
     }

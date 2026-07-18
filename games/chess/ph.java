@@ -75,7 +75,7 @@ class ph extends dm {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw fk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -166,7 +166,7 @@ class ph extends dm {
           L4: {
             var6 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var6;
-            stackOut_7_1 = new StringBuilder().append("ph.N(").append(param0).append(44).append(-43).append(44);
+            stackOut_7_1 = new StringBuilder().append("ph.N(").append(param0).append(',').append(-43).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -191,7 +191,7 @@ class ph extends dm {
           }
           L5: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param3).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param3).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -214,7 +214,7 @@ class ph extends dm {
               break L5;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
         return stackIn_6_0 != 0;
     }
@@ -310,7 +310,7 @@ class ph extends dm {
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -365,7 +365,7 @@ class ph extends dm {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("ph.L(").append(-125).append(44);
+            stackOut_7_1 = new StringBuilder().append("ph.L(").append(-125).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -388,7 +388,7 @@ class ph extends dm {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0 != 0;
     }
@@ -398,7 +398,7 @@ class ph extends dm {
             ((ph) this).field_i = param0;
             ((ph) this).field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ph.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "ph.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

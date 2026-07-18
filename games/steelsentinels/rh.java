@@ -109,7 +109,7 @@ final class rh extends ck {
             var3.a((byte) 123, param2.field_q);
             var3.d(param2.field_s, 77);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "rh.A(" + param0 + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "rh.A(" + param0 + ',' + 0 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class rh extends ck {
         try {
             ((rh) this).field_r = param0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "rh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "rh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

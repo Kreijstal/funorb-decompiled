@@ -16,7 +16,7 @@ final class df {
         try {
             ((df) this).field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "df.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "df.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class df {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("df.C(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("df.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -82,7 +82,7 @@ final class df {
               break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -105,7 +105,7 @@ final class df {
             }
             ke.a(849743536, "jagex-last-login-method", param1, ((df) this).field_h, 31536000L);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "df.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "df.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class df {
           }
           L5: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param1).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(param1).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -253,7 +253,7 @@ final class df {
               break L5;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
         }
         return stackIn_15_0 != 0;
     }

@@ -95,7 +95,7 @@ final class vb extends dh {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw wn.a((Throwable) (Object) var1_ref, "vb.E(" + 65 + 41);
+              throw wn.a((Throwable) (Object) var1_ref, "vb.E(" + 65 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -122,7 +122,7 @@ final class vb extends dh {
             java.nio.Buffer discarded$0 = ((vb) this).field_i.position(0);
             java.nio.ByteBuffer discarded$1 = ((vb) this).field_i.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "vb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "vb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

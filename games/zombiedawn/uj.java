@@ -15,7 +15,7 @@ final class uj {
             param3.a(param0, (byte) 105);
             param3.i(param1, 104);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "uj.B(" + param0 + 44 + param1 + 44 + -114 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "uj.B(" + param0 + ',' + param1 + ',' + -114 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

@@ -374,7 +374,7 @@ final class mba extends uq {
           L8: {
             var3 = decompiledCaughtException;
             stackOut_35_0 = (RuntimeException) var3;
-            stackOut_35_1 = new StringBuilder().append("mba.DB(").append(param0).append(44);
+            stackOut_35_1 = new StringBuilder().append("mba.DB(").append(param0).append(',');
             stackIn_37_0 = stackOut_35_0;
             stackIn_37_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
@@ -397,7 +397,7 @@ final class mba extends uq {
               break L8;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ')');
         }
     }
 

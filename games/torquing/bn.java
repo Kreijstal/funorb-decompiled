@@ -107,7 +107,7 @@ abstract class bn {
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -17310 + 41);
+          throw rb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -17310 + ')');
         }
         return stackIn_1_0;
     }

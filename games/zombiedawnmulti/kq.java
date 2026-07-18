@@ -55,7 +55,7 @@ final class kq extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1_ref, "kq.A(" + 0 + 41);
+          throw fa.a((Throwable) (Object) var1_ref, "kq.A(" + 0 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class kq extends java.awt.Canvas {
         try {
             ((kq) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "kq.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "kq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class kq extends java.awt.Canvas {
         try {
             ((kq) this).field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "kq.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "kq.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class kq extends java.awt.Canvas {
         try {
             ((kq) this).field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "kq.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "kq.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

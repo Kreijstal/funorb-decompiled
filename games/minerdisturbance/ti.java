@@ -46,7 +46,7 @@ final class ti extends hc {
         try {
             ((ti) this).field_H = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class ti extends hc {
         try {
             ((ti) this).field_A = bd.field_c.field_e;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class ti extends hc {
             var3.c(0, 25564);
             var3.c(param0.field_n, 25564);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "ti.D(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + param2 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "ti.D(" + (param0 != null ? "{...}" : "null") + ',' + true + ',' + param2 + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class ti extends hc {
         try {
             ((ti) this).field_A = bd.field_c.field_e;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

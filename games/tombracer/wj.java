@@ -26,7 +26,7 @@ final class wj {
             int discarded$0 = var5.g(var4, 64);
             var5.d(var5.field_h - var4, (byte) 16);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wj.C(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "wj.C(" + (param0 != null ? "{...}" : "null") + ',' + 4 + ',' + param2 + ')');
         }
     }
 

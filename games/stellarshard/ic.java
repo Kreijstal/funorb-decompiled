@@ -138,7 +138,7 @@ abstract class ic implements w {
               break L4;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -190,7 +190,7 @@ abstract class ic implements w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2, "ic.J(" + 5 + 44 + 55 + 41);
+          throw ma.a((Throwable) (Object) var2, "ic.J(" + 5 + ',' + 55 + ')');
         }
     }
 

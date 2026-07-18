@@ -107,7 +107,7 @@ final class nj implements dja {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var4_ref;
-            stackOut_24_1 = new StringBuilder().append("nj.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_24_1 = new StringBuilder().append("nj.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -130,7 +130,7 @@ final class nj implements dja {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
         return stackIn_23_0;
     }

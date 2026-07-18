@@ -154,7 +154,7 @@ abstract class dk {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var5;
-            stackOut_16_1 = new StringBuilder().append("dk.J(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_16_1 = new StringBuilder().append("dk.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -177,7 +177,7 @@ abstract class dk {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
         return stackIn_15_0;
     }
@@ -247,7 +247,7 @@ abstract class dk {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw t.a((Throwable) (Object) var1, "dk.O(" + -121 + 41);
+              throw t.a((Throwable) (Object) var1, "dk.O(" + -121 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

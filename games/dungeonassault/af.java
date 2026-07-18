@@ -17,7 +17,7 @@ final class af {
             ek.field_b.a(ql.field_d, 256);
             ub.field_n.a((qb) (Object) ek.field_b);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "af.A(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + 22050 + 44 + 22050 + 44 + (param4 != null ? "{...}" : "null") + 44 + -126 + 44 + 2048 + 44 + (param7 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "af.A(" + true + ',' + (param1 != null ? "{...}" : "null") + ',' + 22050 + ',' + 22050 + ',' + (param4 != null ? "{...}" : "null") + ',' + -126 + ',' + 2048 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class af {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) runtimeException, "af.B(" + param0 + 41);
+          throw vk.a((Throwable) (Object) runtimeException, "af.B(" + param0 + ')');
         }
     }
 

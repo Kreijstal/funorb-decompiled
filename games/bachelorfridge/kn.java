@@ -45,7 +45,7 @@ final class kn extends pn {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("kn.A(").append(-7726).append(44);
+            stackOut_5_1 = new StringBuilder().append("kn.A(").append(-7726).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -68,7 +68,7 @@ final class kn extends pn {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 41);
+          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_4_0;
     }
@@ -222,7 +222,7 @@ final class kn extends pn {
               break L10;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param1 + ')');
         }
     }
 
@@ -280,7 +280,7 @@ final class kn extends pn {
             int discarded$0 = -5;
             this.b();
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "kn.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "kn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

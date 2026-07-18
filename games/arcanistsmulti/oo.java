@@ -208,7 +208,7 @@ final class oo extends tf {
               break L6;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 44 + 127 + 41);
+          throw aa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param1 + ',' + 127 + ')');
         }
     }
 
@@ -325,7 +325,7 @@ final class oo extends tf {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("oo.C(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("oo.C(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -348,7 +348,7 @@ final class oo extends tf {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 

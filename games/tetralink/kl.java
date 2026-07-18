@@ -38,7 +38,7 @@ final class kl extends java.awt.Canvas implements java.awt.event.FocusListener {
             int discarded$0 = 0;
             r.a(param1, ((kl) this).field_d);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "kl.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "kl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class kl extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((kl) this).field_c = true;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "kl.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "kl.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

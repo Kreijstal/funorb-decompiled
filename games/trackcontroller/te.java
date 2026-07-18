@@ -9,7 +9,7 @@ final class te extends java.awt.Canvas {
         try {
             ((te) this).field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "te.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "te.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class te extends java.awt.Canvas {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var2;
-            stackOut_3_1 = new StringBuilder().append("te.B(").append(1).append(44);
+            stackOut_3_1 = new StringBuilder().append("te.B(").append(true).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -84,7 +84,7 @@ final class te extends java.awt.Canvas {
               break L1;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class te extends java.awt.Canvas {
         try {
             ((te) this).field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "te.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "te.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class te extends java.awt.Canvas {
         try {
             ((te) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "te.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class te extends java.awt.Canvas {
               break L3;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_11_0;
     }

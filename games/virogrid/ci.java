@@ -99,7 +99,7 @@ final class ci extends qe {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var3_ref;
-            stackOut_17_1 = new StringBuilder().append("ci.H(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("ci.H(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -122,7 +122,7 @@ final class ci extends qe {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
         return stackIn_15_0;
     }
@@ -225,7 +225,7 @@ final class ci extends qe {
               break L4;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 41);
+          throw kg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
         }
         return stackIn_11_0;
     }
@@ -272,7 +272,7 @@ final class ci extends qe {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$5 = var6.append(var9);
+                      StringBuilder discarded$5 = var6.append((char) var9);
                       continue L1;
                     }
                   }
@@ -305,7 +305,7 @@ final class ci extends qe {
         try {
             ((ci) this).field_p = param1;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "ci.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

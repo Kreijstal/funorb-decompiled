@@ -139,7 +139,7 @@ final class aaa {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 

@@ -106,7 +106,7 @@ final class jj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var6, "jj.A(" + 64 + 44 + -971598481 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw vk.a((Throwable) (Object) var6, "jj.A(" + 64 + ',' + -971598481 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -79,7 +79,7 @@ final class wp {
               break L0;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -109 + 44 + param2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -109 + ',' + param2 + ')');
         }
     }
 

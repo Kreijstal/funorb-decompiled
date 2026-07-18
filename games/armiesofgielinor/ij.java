@@ -372,9 +372,9 @@ final class ij extends dv {
                 ((ij) this).field_z[incrementValue$0] = var5;
                 var5 = (dr) (Object) param0.a((byte) 123);
             }
-            ((ij) this).a(-1, "# <col=ffaaff>FunOrbConsole (loaded " + ((ij) this).field_z.length + " methods at " + new Date() + ")</col>");
+            ((ij) this).a(-1, "# <col=ffaaff>FunOrbConsole (loaded " + ((ij) this).field_z.length + " methods at " + (Object) (Object) new Date() + ")</col>");
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ij.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "ij.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -596,7 +596,7 @@ final class ij extends dv {
                           if (var10 == 0) {
                             continue L3;
                           } else {
-                            StringBuilder discarded$2 = var8.append(var12);
+                            StringBuilder discarded$2 = var8.append((char) var12);
                             continue L3;
                           }
                         } else {
@@ -733,7 +733,7 @@ final class ij extends dv {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3_ref;
-            stackOut_11_1 = new StringBuilder().append("ij.BA(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("ij.BA(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -756,7 +756,7 @@ final class ij extends dv {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
         return stackIn_10_0;
     }
@@ -852,7 +852,7 @@ final class ij extends dv {
                   break L0;
                 }
               }
-              throw ig.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+              throw ig.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

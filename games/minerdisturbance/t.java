@@ -13,7 +13,7 @@ final class t extends ni {
             java.nio.Buffer discarded$0 = ((t) this).field_e.position(0);
             java.nio.ByteBuffer discarded$1 = ((t) this).field_e.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "t.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "t.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class t extends ni {
         try {
             mb.field_b.b(1, (fe) (Object) sj.field_h);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "t.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "t.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
     }
 

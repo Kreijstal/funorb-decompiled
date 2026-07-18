@@ -47,7 +47,7 @@ final class nm {
             }
             var4.close();
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "nm.B(" + -106 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "nm.B(" + -106 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class nm {
               break L5;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

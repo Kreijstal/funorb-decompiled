@@ -107,7 +107,7 @@ abstract class ag {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var5;
-            stackOut_18_1 = new StringBuilder().append("ag.S(").append(param0).append(44).append(param1).append(44);
+            stackOut_18_1 = new StringBuilder().append("ag.S(").append(param0).append(',').append(param1).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -130,7 +130,7 @@ abstract class ag {
               break L5;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param3 + 41);
+          throw qo.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param3 + ')');
         }
         return stackIn_16_0;
     }

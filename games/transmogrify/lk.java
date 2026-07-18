@@ -172,7 +172,7 @@ final class lk {
           L7: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("lk.E(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("lk.E(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -195,7 +195,7 @@ final class lk {
               break L7;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
         return stackIn_21_0;
     }

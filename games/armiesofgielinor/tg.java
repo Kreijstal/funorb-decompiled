@@ -144,7 +144,7 @@ final class tg {
                 ((tg) this).field_i.a(13, ai.field_R, (byte) -119);
             }
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "tg.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "tg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class tg {
             co.field_k[param1] = cd.field_d;
             mu.a((ka) (Object) t.field_a, param1 + -2, param0);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "tg.N(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "tg.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -748,7 +748,7 @@ final class tg {
               break L8;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param1 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -789,7 +789,7 @@ final class tg {
             ((tg) this).field_e = param5;
             param0.field_rb = true;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "tg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "tg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

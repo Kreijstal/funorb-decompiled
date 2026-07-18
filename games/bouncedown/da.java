@@ -136,7 +136,7 @@ final class da {
               break L5;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

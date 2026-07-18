@@ -67,7 +67,7 @@ final class ae {
               L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_7_0 = (RuntimeException) var2_ref2;
-                stackOut_7_1 = new StringBuilder().append("ae.B(").append(-16666).append(44);
+                stackOut_7_1 = new StringBuilder().append("ae.B(").append(-16666).append(',');
                 stackIn_9_0 = stackOut_7_0;
                 stackIn_9_1 = stackOut_7_1;
                 stackIn_8_0 = stackOut_7_0;
@@ -90,7 +90,7 @@ final class ae {
                   break L4;
                 }
               }
-              throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+              throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -229,7 +229,7 @@ final class ae {
               break L5;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + -44 + 44 + param2 + 44 + 0 + 41);
+          throw kk.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + -44 + ',' + param2 + ',' + 0 + ')');
         }
         return stackIn_25_0;
     }

@@ -125,7 +125,7 @@ final class dh extends kc {
           L1: {
             var9 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var9;
-            stackOut_3_1 = new StringBuilder().append("dh.<init>(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_3_1 = new StringBuilder().append("dh.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -150,7 +150,7 @@ final class dh extends kc {
           }
           L2: {
             stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44);
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -175,7 +175,7 @@ final class dh extends kc {
           }
           L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -200,7 +200,7 @@ final class dh extends kc {
           }
           L4: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -223,7 +223,7 @@ final class dh extends kc {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 
@@ -287,7 +287,7 @@ final class dh extends kc {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -509,7 +509,7 @@ final class dh extends kc {
               break L16;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 44 + -66 + 41);
+          throw aa.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + ',' + -66 + ')');
         }
     }
 
@@ -1067,7 +1067,7 @@ final class dh extends kc {
                   if (((dh) this).field_Ib.length() <= 0) {
                     break L3;
                   } else {
-                    StringBuilder discarded$13 = ((dh) this).field_Ib.append(var2);
+                    StringBuilder discarded$13 = ((dh) this).field_Ib.append((char) var2);
                     break L3;
                   }
                 }
@@ -1083,7 +1083,7 @@ final class dh extends kc {
                   }
                 }
               }
-              StringBuilder discarded$14 = ((dh) this).field_Ib.append(var2);
+              StringBuilder discarded$14 = ((dh) this).field_Ib.append((char) var2);
               break L1;
             }
           }

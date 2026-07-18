@@ -100,7 +100,7 @@ final class fqb extends rqa {
           L3: {
             var4_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4_ref;
-            stackOut_8_1 = new StringBuilder().append("fqb.D(").append(25).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("fqb.D(").append(25).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -123,7 +123,7 @@ final class fqb extends rqa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ')');
         }
         return stackIn_7_0;
     }
@@ -196,7 +196,7 @@ final class fqb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

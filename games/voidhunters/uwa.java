@@ -86,7 +86,7 @@ final class uwa {
             ((uwa) this).field_d = param3;
             ((uwa) this).field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "uwa.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 44 + param9 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "uwa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class uwa {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("uwa.B(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("uwa.B(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -144,7 +144,7 @@ final class uwa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 20 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 20 + ')');
         }
         return stackIn_3_0;
     }

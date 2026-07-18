@@ -111,7 +111,7 @@ final class rh {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
         }
         return stackIn_10_0;
     }
@@ -127,7 +127,7 @@ final class rh {
             }
             var3.c(param1.field_h, -17402);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "rh.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "rh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -213,7 +213,7 @@ final class rh {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
         }
         return stackIn_10_0;
     }
@@ -311,7 +311,7 @@ final class rh {
                             } else {
                               var9 = lc.a(249, (char) var8);
                               if (var9 != 0) {
-                                StringBuilder discarded$3 = var6.append(var9);
+                                StringBuilder discarded$3 = var6.append((char) var9);
                                 break L6;
                               } else {
                                 break L6;
@@ -343,7 +343,7 @@ final class rh {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var2;
-            stackOut_29_1 = new StringBuilder().append("rh.A(").append(param0).append(44);
+            stackOut_29_1 = new StringBuilder().append("rh.A(").append(param0).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -366,7 +366,7 @@ final class rh {
               break L7;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ')');
         }
         return stackIn_28_0;
     }
@@ -388,7 +388,7 @@ final class rh {
         try {
             ((rh) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "rh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "rh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

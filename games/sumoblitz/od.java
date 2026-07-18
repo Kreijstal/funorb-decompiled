@@ -87,7 +87,7 @@ final class od implements nr {
             hu.a(hn.field_k, ur.field_R, ch.field_h);
             um.a(0, 0, param1, (byte) 124);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "od.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "od.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

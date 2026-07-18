@@ -80,7 +80,7 @@ final class apb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1_ref, "apb.B(" + 57 + 41);
+          throw rta.a((Throwable) (Object) var1_ref, "apb.B(" + 57 + ')');
         }
         return stackIn_20_0 != 0;
     }

@@ -156,7 +156,7 @@ abstract class sk {
               break L3;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 1175069442 + 41);
+          throw pn.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + 1175069442 + ')');
         }
         return stackIn_16_0;
     }
@@ -178,7 +178,7 @@ abstract class sk {
         try {
             ((sk) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "sk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "sk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

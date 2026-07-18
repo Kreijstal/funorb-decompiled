@@ -1120,7 +1120,7 @@ final class jg extends tc {
                           }
                         }
                         if (var35 != null) {
-                          ad.field_I = ob.field_M[var34_int] + " - " + var35;
+                          ad.field_I = ob.field_M[var34_int] + " - " + (String) var35;
                           break L55;
                         } else {
                           ad.field_I = ob.field_M[var34_int];
@@ -1229,7 +1229,7 @@ final class jg extends tc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1, "jg.A(" + 0 + 41);
+          throw ig.a((Throwable) (Object) var1, "jg.A(" + 0 + ')');
         }
     }
 

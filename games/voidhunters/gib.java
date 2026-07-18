@@ -98,7 +98,7 @@ final class gib {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2_ref;
-            stackOut_14_1 = new StringBuilder().append("gib.D(").append(19314).append(44);
+            stackOut_14_1 = new StringBuilder().append("gib.D(").append(19314).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -121,7 +121,7 @@ final class gib {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0;
     }

@@ -101,7 +101,7 @@ final class gi {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ma.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -627,7 +627,7 @@ final class gi {
               L19: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_68_0 = (RuntimeException) var6_ref;
-                stackOut_68_1 = new StringBuilder().append("gi.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+                stackOut_68_1 = new StringBuilder().append("gi.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
                 stackIn_70_0 = stackOut_68_0;
                 stackIn_70_1 = stackOut_68_1;
                 stackIn_69_0 = stackOut_68_0;
@@ -650,7 +650,7 @@ final class gi {
                   break L19;
                 }
               }
-              throw ma.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + 41);
+              throw ma.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -673,7 +673,7 @@ final class gi {
             ((gi) this).field_b = param0;
             ((gi) this).field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "gi.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "gi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

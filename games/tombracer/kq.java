@@ -257,7 +257,7 @@ final class kq {
               L17: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_34_0 = (RuntimeException) var4;
-                stackOut_34_1 = new StringBuilder().append("kq.I(").append(param0).append(44);
+                stackOut_34_1 = new StringBuilder().append("kq.I(").append(param0).append(',');
                 stackIn_36_0 = stackOut_34_0;
                 stackIn_36_1 = stackOut_34_1;
                 stackIn_35_0 = stackOut_34_0;
@@ -282,7 +282,7 @@ final class kq {
               }
               L18: {
                 stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-                stackOut_37_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_37_2).append(44).append(72).append(44);
+                stackOut_37_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_37_2).append(',').append(72).append(',');
                 stackIn_39_0 = stackOut_37_0;
                 stackIn_39_1 = stackOut_37_1;
                 stackIn_38_0 = stackOut_37_0;
@@ -305,7 +305,7 @@ final class kq {
                   break L18;
                 }
               }
-              throw tba.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 41);
+              throw tba.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

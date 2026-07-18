@@ -48,7 +48,7 @@ final class mi {
         try {
             ((mi) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "mi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "mi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

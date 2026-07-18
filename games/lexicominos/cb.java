@@ -76,7 +76,7 @@ final class cb extends kd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var1, "cb.C(" + -110 + 41);
+          throw ld.a((Throwable) (Object) var1, "cb.C(" + -110 + ')');
         }
     }
 

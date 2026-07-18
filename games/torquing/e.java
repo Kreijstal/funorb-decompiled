@@ -74,7 +74,7 @@ class e extends bc {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ class e extends bc {
             ((e) this).field_e = param0;
             ((e) this).field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "e.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "e.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

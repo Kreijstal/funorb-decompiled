@@ -131,7 +131,7 @@ final class vi {
               break L7;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 3 + 41);
+          throw t.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + 3 + ')');
         }
     }
 
@@ -241,7 +241,7 @@ final class vi {
           L6: {
             var5 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var5;
-            stackOut_16_1 = new StringBuilder().append("vi.C(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("vi.C(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -266,7 +266,7 @@ final class vi {
           }
           L7: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -291,7 +291,7 @@ final class vi {
           }
           L8: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -314,7 +314,7 @@ final class vi {
               break L8;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 0 + 41);
+          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + false + ')');
         }
     }
 

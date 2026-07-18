@@ -164,7 +164,7 @@ final class sh extends mh {
               break L9;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
         }
         return stackIn_24_0;
     }

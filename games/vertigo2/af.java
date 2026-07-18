@@ -19,7 +19,7 @@ abstract class af extends cj implements ik {
             ((af) this).field_K = param1;
             ((af) this).field_K.field_h = (af) this;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "af.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "af.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -81,7 +81,7 @@ abstract class af extends cj implements ik {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("af.W(").append(0).append(44);
+            stackOut_12_1 = new StringBuilder().append("af.W(").append(false).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -104,7 +104,7 @@ abstract class af extends cj implements ik {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + -99 + 41);
+          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + -99 + ')');
         }
         return stackIn_11_0 != 0;
     }

@@ -90,7 +90,7 @@ final class gu {
           L3: {
             var2_ref = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var2_ref;
-            stackOut_17_1 = new StringBuilder().append("gu.D(").append(0).append(44);
+            stackOut_17_1 = new StringBuilder().append("gu.D(").append(false).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -113,7 +113,7 @@ final class gu {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
         return stackIn_16_0;
     }

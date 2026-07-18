@@ -35,7 +35,7 @@ final class qi implements Iterable {
             param2.field_e.field_a = param2;
             param2.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "qi.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "qi.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

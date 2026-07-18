@@ -15,7 +15,7 @@ final class hj extends oa {
             param0.addKeyListener((java.awt.event.KeyListener) (Object) el.field_n);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) el.field_n);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "hj.AB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "hj.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class hj extends oa {
               break L3;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ch.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class hj extends oa {
                             if (0 == var8) {
                               break L6;
                             } else {
-                              StringBuilder discarded$7 = var5.append(var8);
+                              StringBuilder discarded$7 = var5.append((char) var8);
                               break L6;
                             }
                           } else {
@@ -228,7 +228,7 @@ final class hj extends oa {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var2;
-            stackOut_30_1 = new StringBuilder().append("hj.WA(").append(param0).append(44);
+            stackOut_30_1 = new StringBuilder().append("hj.WA(").append(param0).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -251,7 +251,7 @@ final class hj extends oa {
               break L7;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
         }
     }
 
@@ -326,7 +326,7 @@ final class hj extends oa {
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ch.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_6_0;
     }
@@ -336,7 +336,7 @@ final class hj extends oa {
             int var3_int = 113 % ((-12 - param0) / 36);
             ((hj) this).field_p = new ug(param1);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "hj.TA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "hj.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

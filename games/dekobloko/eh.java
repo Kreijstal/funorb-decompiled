@@ -297,7 +297,7 @@ abstract class eh {
           L17: {
             var2 = decompiledCaughtException;
             stackOut_51_0 = (RuntimeException) var2;
-            stackOut_51_1 = new StringBuilder().append("eh.M(").append(-72).append(44);
+            stackOut_51_1 = new StringBuilder().append("eh.M(").append(-72).append(',');
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
@@ -320,7 +320,7 @@ abstract class eh {
               break L17;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + ')');
         }
     }
 

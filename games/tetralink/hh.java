@@ -129,7 +129,7 @@ final class hh {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param1 + 41);
+          throw oi.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + param1 + ')');
         }
         return stackIn_29_0;
     }

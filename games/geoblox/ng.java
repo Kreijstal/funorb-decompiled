@@ -32,7 +32,7 @@ final class ng extends sh {
             var3.field_I = true;
             boolean discarded$0 = var3.a((byte) -37, (el) this);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ng.N(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ng.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

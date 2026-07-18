@@ -15,7 +15,7 @@ final class hk extends java.awt.Canvas {
         try {
             ((hk) this).field_c.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "hk.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "hk.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -23,7 +23,7 @@ final class hk extends java.awt.Canvas {
         try {
             ((hk) this).field_c.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "hk.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "hk.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class hk extends java.awt.Canvas {
         try {
             ((hk) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "hk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "hk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

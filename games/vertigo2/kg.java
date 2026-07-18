@@ -315,7 +315,7 @@ final class kg extends ji {
               break L16;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + param1 + 44 + -107 + 41);
+          throw wn.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + param1 + ',' + -107 + ')');
         }
     }
 
@@ -633,7 +633,7 @@ final class kg extends ji {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var4;
-            stackOut_30_1 = new StringBuilder().append("kg.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_30_1 = new StringBuilder().append("kg.C(").append(param0).append(',').append(param1).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -656,7 +656,7 @@ final class kg extends ji {
               break L6;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
         }
     }
 

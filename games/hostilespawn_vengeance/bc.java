@@ -313,7 +313,7 @@ final class bc extends am {
           }
           L18: {
             stackOut_49_0 = (RuntimeException) (Object) stackIn_49_0;
-            stackOut_49_1 = ((StringBuilder) (Object) stackIn_49_1).append(stackIn_49_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_49_1 = ((StringBuilder) (Object) stackIn_49_1).append(stackIn_49_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
             stackIn_51_0 = stackOut_49_0;
             stackIn_51_1 = stackOut_49_1;
             stackIn_50_0 = stackOut_49_0;
@@ -338,7 +338,7 @@ final class bc extends am {
           }
           L19: {
             stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
-            stackOut_52_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_52_2).append(44).append(param8).append(44).append(param9).append(44);
+            stackOut_52_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_52_2).append(',').append(param8).append(',').append(param9).append(',');
             stackIn_54_0 = stackOut_52_0;
             stackIn_54_1 = stackOut_52_1;
             stackIn_53_0 = stackOut_52_0;
@@ -361,7 +361,7 @@ final class bc extends am {
               break L19;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + 44 + param11 + 41);
+          throw wg.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + ',' + param11 + ')');
         }
     }
 
@@ -511,7 +511,7 @@ final class bc extends am {
         try {
             ((bc) this).field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "bc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "bc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

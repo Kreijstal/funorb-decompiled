@@ -1354,7 +1354,7 @@ final class ue {
           L35: {
             var6 = decompiledCaughtException;
             stackOut_188_0 = (RuntimeException) var6;
-            stackOut_188_1 = new StringBuilder().append("ue.B(").append(param0).append(44);
+            stackOut_188_1 = new StringBuilder().append("ue.B(").append(param0).append(',');
             stackIn_191_0 = stackOut_188_0;
             stackIn_191_1 = stackOut_188_1;
             stackIn_189_0 = stackOut_188_0;
@@ -1379,7 +1379,7 @@ final class ue {
           }
           L36: {
             stackOut_192_0 = (RuntimeException) (Object) stackIn_192_0;
-            stackOut_192_1 = ((StringBuilder) (Object) stackIn_192_1).append(stackIn_192_2).append(44).append(param2).append(44).append(352).append(44);
+            stackOut_192_1 = ((StringBuilder) (Object) stackIn_192_1).append(stackIn_192_2).append(',').append(param2).append(',').append(352).append(',');
             stackIn_195_0 = stackOut_192_0;
             stackIn_195_1 = stackOut_192_1;
             stackIn_193_0 = stackOut_192_0;
@@ -1402,7 +1402,7 @@ final class ue {
               break L36;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_196_0, stackIn_196_2 + 44 + param5 + 41);
+          throw fc.a((Throwable) (Object) stackIn_196_0, stackIn_196_2 + ',' + param5 + ')');
         }
         return stackIn_187_0;
     }

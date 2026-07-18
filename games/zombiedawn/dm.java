@@ -80,7 +80,7 @@ final class dm extends nb {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
     }
 
@@ -249,7 +249,7 @@ final class dm extends nb {
               break L7;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 44 + -9604 + 41);
+          throw sh.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ',' + -9604 + ')');
         }
     }
 

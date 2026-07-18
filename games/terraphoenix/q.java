@@ -124,7 +124,7 @@ final class q extends g {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_31_0 = (RuntimeException) var2;
-            stackOut_31_1 = new StringBuilder().append("q.A(").append(param0).append(44);
+            stackOut_31_1 = new StringBuilder().append("q.A(").append(param0).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -147,7 +147,7 @@ final class q extends g {
               break L2;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
         }
         return stackIn_30_0;
     }

@@ -387,7 +387,7 @@ final class i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "i.C(" + param0 + 41);
+          throw oi.a((Throwable) (Object) var1, "i.C(" + param0 + ')');
         }
     }
 
@@ -520,7 +520,7 @@ final class i {
           L6: {
             var3 = decompiledCaughtException;
             stackOut_33_0 = (RuntimeException) var3;
-            stackOut_33_1 = new StringBuilder().append("i.E(").append(param0).append(44).append(0).append(44);
+            stackOut_33_1 = new StringBuilder().append("i.E(").append(param0).append(',').append(false).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
@@ -543,7 +543,7 @@ final class i {
               break L6;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ')');
         }
         return stackIn_32_0 != 0;
     }
@@ -677,7 +677,7 @@ final class i {
             int discarded$0 = var5.c(var4, -71);
             var5.b(var5.field_t - var4, -2);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "i.M(" + 4 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "i.M(" + 4 + ',' + (param1 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
     }
 

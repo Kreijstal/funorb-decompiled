@@ -20,7 +20,7 @@ final class an extends bd {
             int var3_int = 124 / ((-35 - param1) / 36);
             param0.a((byte) 7, ((an) this).field_i);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "an.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "an.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class an extends bd {
             ((an) this).field_k = param0;
             ((an) this).field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "an.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "an.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

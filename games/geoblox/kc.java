@@ -17,7 +17,7 @@ final class kc {
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) je.field_j);
             ii.field_c = -1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "kc.D(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class kc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "kc.A(" + param0 + 44 + -98 + 41);
+          throw t.a((Throwable) (Object) var2, "kc.A(" + param0 + ',' + -98 + ')');
         }
     }
 
@@ -545,7 +545,7 @@ final class kc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "kc.C(" + param0 + 41);
+          throw t.a((Throwable) (Object) var1, "kc.C(" + param0 + ')');
         }
     }
 

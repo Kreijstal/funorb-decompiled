@@ -10,7 +10,7 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((cq) this).field_a = true;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "cq.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "cq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             wj.a(((cq) this).field_b, param1, param0);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "cq.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "cq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

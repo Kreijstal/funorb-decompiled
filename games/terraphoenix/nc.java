@@ -73,7 +73,7 @@ final class nc {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("nc.A(").append(14352).append(44);
+            stackOut_11_1 = new StringBuilder().append("nc.A(").append(14352).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -96,7 +96,7 @@ final class nc {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ')');
         }
         return stackIn_10_0;
     }
@@ -164,7 +164,7 @@ final class nc {
               break L0;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 75 + 44 + 2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 75 + ',' + 2 + ')');
         }
     }
 

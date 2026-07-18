@@ -109,7 +109,7 @@ final class jf {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
@@ -204,7 +204,7 @@ final class jf {
           L4: {
             var2 = (Object) (Object) decompiledCaughtException;
             stackOut_19_0 = var2;
-            stackOut_19_1 = new StringBuilder().append("jf.A(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("jf.A(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -227,7 +227,7 @@ final class jf {
               break L4;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
         }
     }
 
@@ -344,7 +344,7 @@ final class jf {
             ((jf) this).field_h = param1;
             ((jf) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "jf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "jf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

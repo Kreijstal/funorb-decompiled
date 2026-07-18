@@ -120,7 +120,7 @@ final class wi implements ui {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var6;
-            stackOut_15_1 = new StringBuilder().append("wi.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_15_1 = new StringBuilder().append("wi.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -143,7 +143,7 @@ final class wi implements ui {
               break L5;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class wi implements ui {
             ((wi) this).field_a = param1;
             ((wi) this).field_b = param5;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "wi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

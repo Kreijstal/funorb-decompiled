@@ -18,7 +18,7 @@ final class rm implements Iterator {
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) om.field_b);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) om.field_b);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "rm.A(" + (param0 != null ? "{...}" : "null") + 44 + 38 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "rm.A(" + (param0 != null ? "{...}" : "null") + ',' + 38 + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class rm implements Iterator {
             ((rm) this).field_b = ((rm) this).field_f.field_c.field_j;
             ((rm) this).field_d = null;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "rm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "rm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

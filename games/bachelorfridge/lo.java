@@ -114,7 +114,7 @@ final class lo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "lo.C(" + 75 + 41);
+          throw pe.a((Throwable) (Object) var1, "lo.C(" + 75 + ')');
         }
     }
 
@@ -267,7 +267,7 @@ final class lo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "lo.A(" + -102 + 41);
+          throw pe.a((Throwable) (Object) var1, "lo.A(" + -102 + ')');
         }
         return stackIn_36_0 != 0;
     }

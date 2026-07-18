@@ -150,7 +150,7 @@ final class vi {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("vi.E(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("vi.E(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -173,7 +173,7 @@ final class vi {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class vi {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var5;
-            stackOut_6_1 = new StringBuilder().append("vi.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("vi.B(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -246,7 +246,7 @@ final class vi {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param3 + 41);
+          throw lj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param3 + ')');
         }
     }
 
@@ -311,7 +311,7 @@ final class vi {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("vi.A(").append(4).append(44);
+            stackOut_7_1 = new StringBuilder().append("vi.A(").append(4).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -334,7 +334,7 @@ final class vi {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 44 + param3 + 41);
+          throw lj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -475,7 +475,7 @@ final class vi {
           L11: {
             var5 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var5;
-            stackOut_26_1 = new StringBuilder().append("vi.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_26_1 = new StringBuilder().append("vi.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -498,7 +498,7 @@ final class vi {
               break L11;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
         }
     }
 

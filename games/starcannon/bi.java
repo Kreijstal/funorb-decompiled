@@ -63,7 +63,7 @@ final class bi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1_ref, "bi.A(" + 119 + 41);
+          throw sd.a((Throwable) (Object) var1_ref, "bi.A(" + 119 + ')');
         }
     }
 

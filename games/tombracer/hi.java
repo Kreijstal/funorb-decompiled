@@ -217,7 +217,7 @@ final class hi extends nv {
             ((hi) this).field_s = bla.a(true, 4, param1.b((byte) 44, 4)) << 16;
             ((hi) this).field_r = bla.a(true, 4, param1.b((byte) 44, 4)) << 16;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -236,7 +236,7 @@ final class hi extends nv {
             int discarded$0 = 0;
             this.b();
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "hi.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "hi.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -246,7 +246,7 @@ final class hi extends nv {
             param1.a((byte) -125, dqa.a(true, ((hi) this).field_s >> 16, 4), 4);
             param1.a((byte) -127, dqa.a(true, ((hi) this).field_r >> 16, 4), 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "hi.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "hi.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

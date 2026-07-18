@@ -267,7 +267,7 @@ abstract class hg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var3, "hg.C(" + param0 + 44 + param1 + 44 + 0 + 41);
+          throw aa.a((Throwable) (Object) var3, "hg.C(" + param0 + ',' + param1 + ',' + false + ')');
         }
     }
 
@@ -281,7 +281,7 @@ abstract class hg {
             param1.addKeyListener((java.awt.event.KeyListener) (Object) ch.field_a);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) ch.field_a);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "hg.H(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "hg.H(" + 1 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -362,7 +362,7 @@ abstract class hg {
             int discarded$0 = 3896;
             hj.a((dj) (Object) ea.field_w, param0);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "hg.F(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -103 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "hg.F(" + (param0 != null ? "{...}" : "null") + ',' + true + ',' + (param2 != null ? "{...}" : "null") + ',' + -103 + ')');
         }
     }
 

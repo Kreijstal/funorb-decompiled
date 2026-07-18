@@ -21,7 +21,7 @@ class ah extends mo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var2_ref, "ah.D(" + -50 + 44 + 11 + 41);
+          throw wn.a((Throwable) (Object) var2_ref, "ah.D(" + -50 + ',' + 11 + ')');
         }
     }
 
@@ -33,7 +33,7 @@ class ah extends mo {
                 ah.a((byte) 82);
             }
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ah.F(" + param0 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "ah.F(" + param0 + ')');
         }
     }
 

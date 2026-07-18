@@ -174,7 +174,7 @@ final class hh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2, "hh.B(" + param0 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) var2, "hh.B(" + param0 + ',' + param1 + ')');
         }
         return stackIn_35_0;
     }

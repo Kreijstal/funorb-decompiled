@@ -69,7 +69,7 @@ final class l {
             ad.field_c = param0;
             g.a((byte) -116, 12);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "l.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "l.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class l {
               break L8;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ')');
         }
         return stackIn_21_0;
     }

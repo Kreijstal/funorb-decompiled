@@ -101,7 +101,7 @@ final class op {
           }
           L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param1).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -124,7 +124,7 @@ final class op {
               break L4;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 0 + 41);
+          throw pn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + false + ')');
         }
         return stackIn_6_0;
     }
@@ -140,7 +140,7 @@ final class op {
             var2 = t.a(param1, "jagex logo2.packvorbis", "");
             al discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "op.C(" + 20786 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "op.C(" + 20786 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -70,7 +70,7 @@ final class gq {
               L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_8_0 = (RuntimeException) var2_ref2;
-                stackOut_8_1 = new StringBuilder().append("gq.C(").append(25530).append(44);
+                stackOut_8_1 = new StringBuilder().append("gq.C(").append(25530).append(',');
                 stackIn_10_0 = stackOut_8_0;
                 stackIn_10_1 = stackOut_8_1;
                 stackIn_9_0 = stackOut_8_0;
@@ -93,7 +93,7 @@ final class gq {
                   break L3;
                 }
               }
-              throw rb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+              throw rb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -282,7 +282,7 @@ final class gq {
               break L9;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + 4 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + 4 + ',' + param2 + ')');
         }
     }
 

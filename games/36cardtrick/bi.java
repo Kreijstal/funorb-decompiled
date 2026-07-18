@@ -204,7 +204,7 @@ final class bi {
                     case 16: {
                         var2_ref = (RuntimeException) (Object) caughtException;
                         stackOut_16_0 = (RuntimeException) var2_ref;
-                        stackOut_16_1 = new StringBuilder().append("bi.B(").append(param0).append(44);
+                        stackOut_16_1 = new StringBuilder().append("bi.B(").append(param0).append(',');
                         stackIn_18_0 = stackOut_16_0;
                         stackIn_18_1 = stackOut_16_1;
                         stackIn_17_0 = stackOut_16_0;
@@ -237,7 +237,7 @@ final class bi {
                         continue stateLoop;
                     }
                     case 19: {
-                        throw ma.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+                        throw ma.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -304,7 +304,7 @@ final class bi {
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 28 + 41);
+          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 28 + ')');
         }
         return stackIn_1_0;
     }

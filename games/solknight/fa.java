@@ -78,7 +78,7 @@ final class fa {
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + 99 + 41);
+          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + 99 + ')');
         }
         return stackIn_6_0;
     }

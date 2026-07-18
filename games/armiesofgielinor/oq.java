@@ -42,7 +42,7 @@ final class oq extends wv {
             param1.addKeyListener((java.awt.event.KeyListener) (Object) va.field_w);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) va.field_w);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "oq.F(" + 27080 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "oq.F(" + 27080 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

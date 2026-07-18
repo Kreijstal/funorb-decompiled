@@ -118,7 +118,7 @@ final class va extends rf {
           L6: {
             var4_ref = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var4_ref;
-            stackOut_20_1 = new StringBuilder().append("va.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_20_1 = new StringBuilder().append("va.A(").append(param0).append(',').append(param1).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -141,7 +141,7 @@ final class va extends rf {
               break L6;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param3 + 41);
+          throw sd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param3 + ')');
         }
         return stackIn_19_0;
     }

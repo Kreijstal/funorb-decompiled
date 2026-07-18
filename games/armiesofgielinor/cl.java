@@ -1204,7 +1204,7 @@ final class cl extends tc {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var3;
-            stackOut_18_1 = new StringBuilder().append("cl.D(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("cl.D(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -1227,7 +1227,7 @@ final class cl extends tc {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
         return stackIn_17_0 != 0;
     }
@@ -1607,7 +1607,7 @@ final class cl extends tc {
             ((cl) this).field_o = param1;
             ((cl) this).field_o.field_p = (cl) this;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "cl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "cl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

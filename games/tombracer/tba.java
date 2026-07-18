@@ -122,7 +122,7 @@ final class tba extends vg {
         lr var2 = null;
         if (param0 instanceof lr) {
             var2 = (lr) (Object) param0;
-            var2.field_d = var2.field_d + 32 + param1;
+            var2.field_d = var2.field_d + ' ' + param1;
         } else {
             var2 = new lr(param0, param1);
         }

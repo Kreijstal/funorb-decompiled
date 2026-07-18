@@ -152,7 +152,7 @@ final class ng {
               break L7;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param1 + ')');
         }
         return stackIn_19_0;
     }
@@ -256,7 +256,7 @@ final class ng {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
         }
         return (og) (Object) stackIn_11_0;
     }

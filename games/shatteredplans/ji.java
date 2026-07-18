@@ -85,7 +85,7 @@ abstract class ji extends f implements ki {
               break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -93 + 41);
+          throw r.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -93 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ abstract class ji extends f implements ki {
                             int discarded$6 = -31024;
                             var8 = os.a((char) var7);
                             if (var8 != 0) {
-                              StringBuilder discarded$7 = var5.append(var8);
+                              StringBuilder discarded$7 = var5.append((char) var8);
                               break L5;
                             } else {
                               break L5;
@@ -238,7 +238,7 @@ abstract class ji extends f implements ki {
               break L6;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + 1 + 41);
+          throw r.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + true + ')');
         }
     }
 
@@ -343,7 +343,7 @@ abstract class ji extends f implements ki {
               break L5;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 62 + 41);
+          throw r.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + 62 + ')');
         }
     }
 
@@ -413,7 +413,7 @@ abstract class ji extends f implements ki {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var2;
-            stackOut_11_1 = new StringBuilder().append("ji.A(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("ji.A(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -436,7 +436,7 @@ abstract class ji extends f implements ki {
               break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
         return (kj) (Object) stackIn_10_0;
     }

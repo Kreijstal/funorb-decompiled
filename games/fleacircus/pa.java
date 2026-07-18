@@ -189,7 +189,7 @@ class pa extends lh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1, "pa.M(" + 111 + 41);
+          throw pf.a((Throwable) (Object) var1, "pa.M(" + 111 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ class pa extends lh {
         try {
             dl.field_s = param1;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "pa.L(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "pa.L(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

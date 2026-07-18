@@ -97,7 +97,7 @@ final class qab {
             ((qab) this).field_c = param0;
             ((qab) this).field_e = ((qab) this).field_c.length();
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qab.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "qab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

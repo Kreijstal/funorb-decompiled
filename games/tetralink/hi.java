@@ -84,7 +84,7 @@ abstract class hi {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + -80 + 41);
+          throw oi.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + -80 + ')');
         }
         return stackIn_11_0;
     }
@@ -340,7 +340,7 @@ abstract class hi {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_11_0;
     }
@@ -483,7 +483,7 @@ abstract class hi {
           L4: {
             var5 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var5;
-            stackOut_20_1 = new StringBuilder().append("hi.T(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_20_1 = new StringBuilder().append("hi.T(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -506,7 +506,7 @@ abstract class hi {
               break L4;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
         return stackIn_19_0;
     }

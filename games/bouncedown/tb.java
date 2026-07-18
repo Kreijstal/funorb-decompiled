@@ -109,7 +109,7 @@ final class tb extends v {
               L11: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_27_0 = (RuntimeException) var4_ref2;
-                stackOut_27_1 = new StringBuilder().append("tb.B(").append(param0).append(44);
+                stackOut_27_1 = new StringBuilder().append("tb.B(").append(param0).append(',');
                 stackIn_29_0 = stackOut_27_0;
                 stackIn_29_1 = stackOut_27_1;
                 stackIn_28_0 = stackOut_27_0;
@@ -132,7 +132,7 @@ final class tb extends v {
                   break L11;
                 }
               }
-              throw ii.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param2 + 41);
+              throw ii.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

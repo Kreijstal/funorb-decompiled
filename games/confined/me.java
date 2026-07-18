@@ -60,7 +60,7 @@ final class me extends am {
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_9_0 = (RuntimeException) var2_ref2;
-                stackOut_9_1 = new StringBuilder().append("me.B(").append(param0).append(44);
+                stackOut_9_1 = new StringBuilder().append("me.B(").append(param0).append(',');
                 stackIn_11_0 = stackOut_9_0;
                 stackIn_11_1 = stackOut_9_1;
                 stackIn_10_0 = stackOut_9_0;
@@ -83,7 +83,7 @@ final class me extends am {
                   break L1;
                 }
               }
-              throw sd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+              throw sd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -103,7 +103,7 @@ final class me extends am {
             ((me) this).field_H = param0;
             ((me) this).field_K = 256;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "me.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "me.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

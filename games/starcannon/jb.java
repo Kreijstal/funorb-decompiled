@@ -104,7 +104,7 @@ final class jb {
             int discarded$0 = 119;
             this.c();
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "jb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "jb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

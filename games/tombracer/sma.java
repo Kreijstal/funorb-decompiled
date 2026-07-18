@@ -238,7 +238,7 @@ final class sma {
               break L8;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_47_0, stackIn_47_2 + 44 + 28893 + 41);
+          throw tba.a((Throwable) (Object) stackIn_47_0, stackIn_47_2 + ',' + 28893 + ')');
         }
         return stackIn_43_0;
     }
@@ -352,7 +352,7 @@ final class sma {
             int discarded$0 = -54;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "sma.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "sma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

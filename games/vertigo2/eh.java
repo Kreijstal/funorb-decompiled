@@ -479,7 +479,7 @@ final class eh {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_28_0 = (RuntimeException) var2;
-            stackOut_28_1 = new StringBuilder().append("eh.E(").append(-1147375319).append(44);
+            stackOut_28_1 = new StringBuilder().append("eh.E(").append(-1147375319).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -502,7 +502,7 @@ final class eh {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ')');
         }
         return stackIn_27_0;
     }

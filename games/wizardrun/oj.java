@@ -62,7 +62,7 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L1;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -88,7 +88,7 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "oj.keyTyped(" + (param0 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "oj.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var3.b((byte) 11, param1.field_k);
             var3.b(-1947079288, param1.field_i);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "oj.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -22 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "oj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + -22 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L4;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -334,7 +334,7 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L6;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
     }
 

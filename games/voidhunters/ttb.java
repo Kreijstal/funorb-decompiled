@@ -144,7 +144,7 @@ final class ttb extends shb {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var5;
-            stackOut_6_1 = new StringBuilder().append("ttb.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_6_1 = new StringBuilder().append("ttb.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -167,7 +167,7 @@ final class ttb extends shb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -322,7 +322,7 @@ final class ttb extends shb {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var5;
-            stackOut_12_1 = new StringBuilder().append("ttb.DA(").append(2).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("ttb.DA(").append(2).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -345,7 +345,7 @@ final class ttb extends shb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param3 + ')');
         }
     }
 

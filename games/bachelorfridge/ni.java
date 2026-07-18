@@ -10,7 +10,7 @@ final class ni extends pv {
         try {
             ((ni) this).field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ni.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ni.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class ni extends pv {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2;
-            stackOut_14_1 = new StringBuilder().append("ni.E(").append(41).append(44);
+            stackOut_14_1 = new StringBuilder().append("ni.E(").append(41).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -109,7 +109,7 @@ final class ni extends pv {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0;
     }

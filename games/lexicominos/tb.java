@@ -179,7 +179,7 @@ abstract class tb {
               break L7;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param1 + 41);
+          throw ld.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + param1 + ')');
         }
         return stackIn_27_0;
     }

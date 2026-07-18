@@ -387,13 +387,13 @@ abstract class lu extends am {
                                   var14 = vo.a((byte) -18, bp.field_yb, new String[1]);
                                   break L21;
                                 } else {
-                                  var14 = oi.field_k + var11;
+                                  var14 = oi.field_k + (String) var11;
                                   break L21;
                                 }
                               } else {
                                 var13 = sb.field_g;
                                 if (var12 != 0) {
-                                  var14 = gm.field_S + var11;
+                                  var14 = gm.field_S + (String) var11;
                                   break L21;
                                 } else {
                                   var14 = vo.a((byte) -18, kb.field_D, new String[1]);
@@ -412,7 +412,7 @@ abstract class lu extends am {
                                   break L22;
                                 } else {
                                   var12 = 1;
-                                  var11 = (Object) (Object) (var11 + ", " + var24);
+                                  var11 = (Object) (Object) ((String) var11 + ", " + var24);
                                   break L22;
                                 }
                               } else {
@@ -845,7 +845,7 @@ abstract class lu extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var5, "lu.DB(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw nb.a((Throwable) (Object) var5, "lu.DB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1036,7 +1036,7 @@ abstract class lu extends am {
           }
           L8: {
             stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44);
+            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -1061,7 +1061,7 @@ abstract class lu extends am {
           }
           L9: {
             stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(param2).append(44);
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',').append(param2).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -1084,7 +1084,7 @@ abstract class lu extends am {
               break L9;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param4 + 41);
+          throw nb.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + param4 + ')');
         }
         return stackIn_21_0;
     }

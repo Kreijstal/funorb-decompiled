@@ -23,7 +23,7 @@ final class sa {
             }
             ch.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "sa.B(" + (param0 != null ? "{...}" : "null") + 44 + -15676 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "sa.B(" + (param0 != null ? "{...}" : "null") + ',' + -15676 + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class sa {
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + -97 + 41);
+          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + -97 + ')');
         }
         return stackIn_1_0;
     }

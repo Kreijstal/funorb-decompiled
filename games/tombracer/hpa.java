@@ -148,7 +148,7 @@ final class hpa extends aa {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("hpa.A(").append(-2).append(44);
+            stackOut_24_1 = new StringBuilder().append("hpa.A(").append(-2).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -171,7 +171,7 @@ final class hpa extends aa {
               break L6;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
     }
 

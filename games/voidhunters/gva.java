@@ -22,7 +22,7 @@ final class gva extends Exception {
         try {
             ((gva) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "gva.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "gva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

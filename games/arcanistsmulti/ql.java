@@ -116,7 +116,7 @@ final class ql {
               break L6;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 111 + 41);
+          throw aa.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + 111 + ')');
         }
     }
 
@@ -306,7 +306,7 @@ final class ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var3, "ql.H(" + param0 + 44 + param1 + 44 + 0 + 41);
+          throw aa.a((Throwable) (Object) var3, "ql.H(" + param0 + ',' + param1 + ',' + 0 + ')');
         }
     }
 
@@ -341,7 +341,7 @@ final class ql {
             }
             sm.a(31536000L, "jagex-last-login-method", param0, -15367, ((ql) this).field_d);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ql.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ql.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -407,7 +407,7 @@ final class ql {
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -430,7 +430,7 @@ final class ql {
         try {
             ((ql) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ql.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ql.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

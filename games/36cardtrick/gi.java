@@ -66,7 +66,7 @@ final class gi extends qb {
           L2: {
             var10_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var10_ref;
-            stackOut_4_1 = new StringBuilder().append("gi.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(8355711).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_4_1 = new StringBuilder().append("gi.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(8355711).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -89,7 +89,7 @@ final class gi extends qb {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -203,7 +203,7 @@ final class gi extends qb {
           }
           L4: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(-123).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(-123).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -226,7 +226,7 @@ final class gi extends qb {
               break L4;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
         return stackIn_14_0 != 0;
     }
@@ -286,7 +286,7 @@ final class gi extends qb {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var2;
-            stackOut_9_1 = new StringBuilder().append("gi.C(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("gi.C(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -309,7 +309,7 @@ final class gi extends qb {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return stackIn_8_0;
     }
@@ -321,7 +321,7 @@ final class gi extends qb {
             ((gi) this).field_i = param1;
             ((gi) this).field_h.f(((gi) this).field_j * mf.field_i / 80);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "gi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

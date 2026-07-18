@@ -36,7 +36,7 @@ final class la {
             rr.a("", (byte) -112, param1);
             jn.a((byte) 120, param1);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "la.A(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "la.A(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

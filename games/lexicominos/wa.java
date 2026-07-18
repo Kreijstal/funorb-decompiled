@@ -105,7 +105,7 @@ final class wa extends kd {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw ld.a((Throwable) (Object) var1_ref, "wa.C(" + -45 + 41);
+              throw ld.a((Throwable) (Object) var1_ref, "wa.C(" + -45 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

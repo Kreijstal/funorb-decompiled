@@ -169,7 +169,7 @@ final class ef {
           }
           L10: {
             stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44).append(12258).append(44);
+            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',').append(12258).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -192,7 +192,7 @@ final class ef {
               break L10;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ')');
         }
         return stackIn_23_0;
     }
@@ -223,7 +223,7 @@ final class ef {
             var3 = -70 / ((param0 - 40) / 32);
             jb.field_P = 0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ef.A(" + param0 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ef.A(" + param0 + ')');
         }
     }
 
@@ -617,7 +617,7 @@ final class ef {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2, "ef.E(" + 1 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) var2, "ef.E(" + 1 + ',' + param1 + ')');
         }
     }
 

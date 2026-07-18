@@ -88,7 +88,7 @@ final class hi extends um {
                     if (var3 != 0) {
                       if (fp.field_A.length() < 80) {
                         L4: {
-                          StringBuilder discarded$29 = fp.field_A.append(var4);
+                          StringBuilder discarded$29 = fp.field_A.append((char) var4);
                           var5 = 485;
                           var13 = tb.field_cb;
                           var7 = var13;
@@ -303,7 +303,7 @@ final class hi extends um {
               if (var3 != 0) {
                 if (fp.field_A.length() < 80) {
                   L14: {
-                    StringBuilder discarded$43 = fp.field_A.append(var4);
+                    StringBuilder discarded$43 = fp.field_A.append((char) var4);
                     var5 = 485;
                     var13 = tb.field_cb;
                     var7 = var13;
@@ -595,7 +595,7 @@ final class hi extends um {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var6;
-            stackOut_21_1 = new StringBuilder().append("hi.AA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_21_1 = new StringBuilder().append("hi.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -618,7 +618,7 @@ final class hi extends um {
               break L6;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param4 + 41);
+          throw qb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param4 + ')');
         }
     }
 
@@ -653,7 +653,7 @@ final class hi extends um {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("hi.EA(").append(85).append(44);
+            stackOut_2_1 = new StringBuilder().append("hi.EA(").append(85).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -676,7 +676,7 @@ final class hi extends um {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
     }
 

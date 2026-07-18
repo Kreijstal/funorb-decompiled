@@ -40,7 +40,7 @@ abstract class kk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var2, "kk.A(" + param0 + 44 + 42 + 41);
+          throw sd.a((Throwable) (Object) var2, "kk.A(" + param0 + ',' + 42 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ abstract class kk {
         try {
             ik.field_q = param2;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "kk.C(" + (param0 != null ? "{...}" : "null") + 44 + -60 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "kk.C(" + (param0 != null ? "{...}" : "null") + ',' + -60 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

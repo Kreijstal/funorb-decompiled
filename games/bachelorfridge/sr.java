@@ -340,7 +340,7 @@ final class sr {
                       var10 = 0;
                       L15: while (true) {
                         if (ld.field_q <= var10) {
-                          jja.field_m = "<col=A00000>" + iha.field_k + "<br>" + jm.field_l + var9;
+                          jja.field_m = "<col=A00000>" + iha.field_k + "<br>" + jm.field_l + (String) var9;
                           break L1;
                         } else {
                           L16: {
@@ -393,13 +393,13 @@ final class sr {
                     if ((qf.field_v & 48) != 32) {
                       break L19;
                     } else {
-                      var9 = (Object) (Object) (var9 + "..");
+                      var9 = (Object) (Object) ((String) var9 + "..");
                       break L19;
                     }
                   }
                   L20: {
                     if ((48 & qf.field_v) == 48) {
-                      var9 = (Object) (Object) (var9 + "...");
+                      var9 = (Object) (Object) ((String) var9 + "...");
                       break L20;
                     } else {
                       break L20;
@@ -599,7 +599,7 @@ final class sr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var4, "sr.D(" + 1 + 44 + param1 + 44 + 11 + 44 + param3 + 41);
+          throw pe.a((Throwable) (Object) var4, "sr.D(" + true + ',' + param1 + ',' + 11 + ',' + param3 + ')');
         }
     }
 

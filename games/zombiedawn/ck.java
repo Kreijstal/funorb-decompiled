@@ -189,7 +189,7 @@ final class ck extends le {
               break L10;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param1 + ')');
         }
     }
 

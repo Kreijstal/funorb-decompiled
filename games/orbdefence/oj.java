@@ -345,7 +345,7 @@ final class oj extends ca {
           }
           L5: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(100).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(100).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -368,7 +368,7 @@ final class oj extends ca {
               break L5;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
         return stackIn_16_0 != 0;
     }
@@ -477,7 +477,7 @@ final class oj extends ca {
             ((oj) this).field_g = -param3;
             ((oj) this).field_s = param2;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "oj.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "oj.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -506,7 +506,7 @@ final class oj extends ca {
             ((oj) this).field_s = param2;
             ((oj) this).field_i = param4;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "oj.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "oj.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -167,7 +167,7 @@ abstract class ms extends ck {
           L9: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var6_ref;
-            stackOut_23_1 = new StringBuilder().append("ms.MA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_23_1 = new StringBuilder().append("ms.MA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -190,7 +190,7 @@ abstract class ms extends ck {
               break L9;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
     }
 
@@ -1468,7 +1468,7 @@ abstract class ms extends ck {
             }
             this.a(640, param2, 480, param0 + 19898, param1);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ms.NA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ms.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -112,7 +112,7 @@ abstract class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2_ref, "of.C(" + param0 + 44 + param1 + 41);
+          throw dh.a((Throwable) (Object) var2_ref, "of.C(" + param0 + ',' + param1 + ')');
         }
     }
 

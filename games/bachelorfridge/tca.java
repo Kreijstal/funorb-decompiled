@@ -55,7 +55,7 @@ final class tca implements Runnable {
                   }
                   return;
                 } else {
-                  throw tca.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((tca) this).field_h.field_h.length + " " + ((tca) this).field_i));
+                  throw tca.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((tca) this).field_h.field_h.length + " " + (Object) (Object) ((tca) this).field_i));
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -300,7 +300,7 @@ final class tca implements Runnable {
             ((tca) this).field_d = param0;
             ((tca) this).field_h = new lu(param2);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "tca.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "tca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -320,7 +320,7 @@ final class tca implements Runnable {
             int discarded$0 = var5.a(var4, 19);
             var5.b((byte) 124, -var4 + var5.field_g);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "tca.D(" + (param0 != null ? "{...}" : "null") + 44 + 5 + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "tca.D(" + (param0 != null ? "{...}" : "null") + ',' + 5 + ',' + param2 + ')');
         }
     }
 

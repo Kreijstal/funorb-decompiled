@@ -93,7 +93,7 @@ final class n implements Iterator {
             int discarded$0 = -59;
             this.b();
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "n.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "n.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

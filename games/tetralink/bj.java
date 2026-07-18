@@ -103,7 +103,7 @@ final class bj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var4, "bj.B(" + param0 + 44 + 0 + 44 + 0 + 44 + param3 + 41);
+          throw oi.a((Throwable) (Object) var4, "bj.B(" + param0 + ',' + 0 + ',' + false + ',' + param3 + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class bj {
         try {
             ck.field_Z = param1;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "bj.F(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "bj.F(" + 5 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

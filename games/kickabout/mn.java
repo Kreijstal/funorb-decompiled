@@ -71,7 +71,7 @@ final class mn implements gj {
           L2: {
             var6 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var6;
-            stackOut_6_1 = new StringBuilder().append("mn.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_6_1 = new StringBuilder().append("mn.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -94,7 +94,7 @@ final class mn implements gj {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param4 + 41);
+          throw nb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param4 + ')');
         }
     }
 

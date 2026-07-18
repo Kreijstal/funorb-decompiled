@@ -67,7 +67,7 @@ final class dq {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("dq.C(").append(param0).append(44).append(32).append(44);
+            stackOut_2_1 = new StringBuilder().append("dq.C(").append(param0).append(',').append(32).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -90,7 +90,7 @@ final class dq {
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }

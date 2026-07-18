@@ -212,7 +212,7 @@ class vb extends bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "vb.F(" + -26 + 41);
+          throw la.a((Throwable) (Object) var1, "vb.F(" + -26 + ')');
         }
     }
 
@@ -233,7 +233,7 @@ class vb extends bf {
             var3.b(0, -49152);
             var3.b(param1.field_e, -49152);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "vb.H(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "vb.H(" + 5 + ',' + (param1 != null ? "{...}" : "null") + ',' + true + ')');
         }
     }
 

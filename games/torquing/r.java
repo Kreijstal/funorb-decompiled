@@ -77,7 +77,7 @@ final class r {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var5, "r.B(" + param0 + 44 + param1 + 44 + -121 + 44 + param3 + 44 + param4 + 41);
+          throw rb.a((Throwable) (Object) var5, "r.B(" + param0 + ',' + param1 + ',' + -121 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

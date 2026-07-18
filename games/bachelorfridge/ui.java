@@ -99,7 +99,7 @@ final class ui extends td {
           L4: {
             var2 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2;
-            stackOut_14_1 = new StringBuilder().append("ui.B(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("ui.B(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -122,7 +122,7 @@ final class ui extends td {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class ui extends td {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return (ii) (Object) stackIn_4_0;
     }

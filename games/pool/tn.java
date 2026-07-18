@@ -153,7 +153,7 @@ final class tn extends ma {
               break L6;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + -16813 + 41);
+          throw wm.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + -16813 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class tn extends ma {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("tn.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_3_1 = new StringBuilder().append("tn.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -224,7 +224,7 @@ final class tn extends ma {
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param7 + 41);
+          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param7 + ')');
         }
     }
 

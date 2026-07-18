@@ -107,7 +107,7 @@ final class wk implements Iterator {
           }
           L3: {
             stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44).append(param1).append(44);
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -130,7 +130,7 @@ final class wk implements Iterator {
               break L3;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param3 + 41);
+          throw dn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param3 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class wk implements Iterator {
             ((wk) this).field_e = ((wk) this).field_d.field_f.field_j;
             ((wk) this).field_a = null;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "wk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "wk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

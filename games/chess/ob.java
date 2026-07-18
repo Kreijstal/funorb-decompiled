@@ -41,7 +41,7 @@ final class ob extends wm {
             }
             hk.field_M = 0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ob.P(" + 0 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "ob.P(" + 0 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class ob extends wm {
               L11: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_26_0 = (RuntimeException) var4_ref2;
-                stackOut_26_1 = new StringBuilder().append("ob.B(").append(param0).append(44);
+                stackOut_26_1 = new StringBuilder().append("ob.B(").append(param0).append(',');
                 stackIn_28_0 = stackOut_26_0;
                 stackIn_28_1 = stackOut_26_1;
                 stackIn_27_0 = stackOut_26_0;
@@ -175,7 +175,7 @@ final class ob extends wm {
                   break L11;
                 }
               }
-              throw fk.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param2 + 41);
+              throw fk.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

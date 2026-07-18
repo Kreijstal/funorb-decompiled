@@ -105,7 +105,7 @@ final class hf {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 1 + 41);
+          throw ii.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + true + ')');
         }
     }
 
@@ -270,7 +270,7 @@ final class hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1, "hf.A(" + 0 + 41);
+          throw ii.a((Throwable) (Object) var1, "hf.A(" + false + ')');
         }
         return stackIn_8_0;
     }

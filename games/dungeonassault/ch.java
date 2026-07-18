@@ -72,7 +72,7 @@ class ch extends hl {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw vk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ class ch extends hl {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("ch.B(").append(-16).append(44);
+            stackOut_6_1 = new StringBuilder().append("ch.B(").append(-16).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -166,7 +166,7 @@ class ch extends hl {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 3 + 41);
+          throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 3 + ')');
         }
     }
 
@@ -175,7 +175,7 @@ class ch extends hl {
             ((ch) this).field_o = param1;
             ((ch) this).field_m = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "ch.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "ch.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

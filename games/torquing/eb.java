@@ -44,7 +44,7 @@ final class eb {
             param2.field_e.field_h = param2;
             param2.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "eb.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "eb.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

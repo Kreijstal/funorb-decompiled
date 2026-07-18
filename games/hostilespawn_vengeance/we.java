@@ -240,7 +240,7 @@ final class we {
             ((we) this).field_f = ((we) this).field_c;
             ((we) this).field_a = ((we) this).field_e;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "we.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "we.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

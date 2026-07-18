@@ -834,7 +834,7 @@ abstract class ug extends jna {
           L9: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var6_ref;
-            stackOut_25_1 = new StringBuilder().append("ug.EA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_25_1 = new StringBuilder().append("ug.EA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -857,7 +857,7 @@ abstract class ug extends jna {
               break L9;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param4 + 41);
+          throw tba.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param4 + ')');
         }
     }
 

@@ -143,7 +143,7 @@ final class dc extends si {
               break L3;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + -125 + 41);
+          throw ld.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + -125 + ')');
         }
         return stackIn_8_0;
     }
@@ -211,7 +211,7 @@ final class dc extends si {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var4;
-            stackOut_10_1 = new StringBuilder().append("dc.D(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("dc.D(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -234,7 +234,7 @@ final class dc extends si {
               break L3;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 16 + 44 + param3 + 41);
+          throw ld.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + 16 + ',' + param3 + ')');
         }
         return stackIn_9_0;
     }

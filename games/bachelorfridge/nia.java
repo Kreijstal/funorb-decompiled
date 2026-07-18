@@ -180,7 +180,7 @@ final class nia extends lw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "nia.H(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var1, "nia.H(" + param0 + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class nia extends lw {
         if (dw.field_f > 0) {
             var1 = var1 + ":";
             for (var2 = 0; var2 < dw.field_f; var2++) {
-                var1 = var1 + 32;
+                var1 = var1 + ' ';
                 var3 = 255 & ig.field_m.field_h[var2];
                 var4 = var3 >> 4;
                 if (var4 < 10) {

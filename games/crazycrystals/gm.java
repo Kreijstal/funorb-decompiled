@@ -70,7 +70,7 @@ final class gm {
                   break L1;
                 }
               }
-              throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 2 + 41);
+              throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -165,7 +165,7 @@ final class gm {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw dn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_8_0 != 0;
     }

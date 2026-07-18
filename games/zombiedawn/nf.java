@@ -18,7 +18,7 @@ final class nf {
             gk.field_F = param1;
             og.b(param0 ^ -114, param0);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "nf.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "nf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class nf {
           L2: {
             var6_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var6_ref;
-            stackOut_7_1 = new StringBuilder().append("nf.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("nf.B(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -108,7 +108,7 @@ final class nf {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 0 + 44 + param4 + 44 + 0 + 41);
+          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + 0 + ',' + param4 + ',' + 0 + ')');
         }
         return stackIn_6_0;
     }

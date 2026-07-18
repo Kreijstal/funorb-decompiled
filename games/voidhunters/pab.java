@@ -22,7 +22,7 @@ final class pab extends fh {
         try {
             ((pab) this).field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pab.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "pab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -65,7 +65,7 @@ final class ti {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 102 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 102 + ',' + param2 + ')');
         }
         return (du) (Object) stackIn_1_0;
     }

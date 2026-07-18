@@ -67,7 +67,7 @@ final class ce {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var2_ref, "ce.B(" + param0 + 44 + param1 + 41);
+          throw dd.a((Throwable) (Object) var2_ref, "ce.B(" + param0 + ',' + param1 + ')');
         }
     }
 

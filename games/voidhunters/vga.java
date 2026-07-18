@@ -48,7 +48,7 @@ final class vga {
                             break L2;
                           }
                         }
-                        StringBuilder discarded$3 = var6.append(var9);
+                        StringBuilder discarded$3 = var6.append((char) var9);
                         continue L1;
                       }
                     }
@@ -92,7 +92,7 @@ final class vga {
             dpa.field_p.c(0, !param5 ? 0 : 1);
             dpa.field_p.e(-var7_int + dpa.field_p.field_e, -129);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "vga.B(" + param0 + 44 + -119 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "vga.B(" + param0 + ',' + -119 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class vga {
             param0.field_d.field_e = param0;
             param0.field_e.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "vga.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "vga.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -198,7 +198,7 @@ final class vga {
             param0.field_d.field_e = param0;
             param0.field_e.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "vga.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "vga.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

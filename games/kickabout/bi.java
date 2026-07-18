@@ -240,7 +240,7 @@ abstract class bi {
           }
           L2: {
             stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-            stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(44).append(param1).append(44);
+            stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',').append(param1).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
@@ -263,7 +263,7 @@ abstract class bi {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ')');
         }
         return stackIn_29_0 != 0;
     }

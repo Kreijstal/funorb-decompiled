@@ -184,7 +184,7 @@ final class kk extends ae {
               break L6;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw oi.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_21_0 != 0;
     }
@@ -247,7 +247,7 @@ final class kk extends ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "kk.A(" + -91 + 41);
+          throw oi.a((Throwable) (Object) var1, "kk.A(" + -91 + ')');
         }
         return stackIn_13_0;
     }

@@ -35,7 +35,7 @@ final class mk extends kd {
             ((mk) this).field_i = param0;
             ((mk) this).field_k = param1;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "mk.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "mk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

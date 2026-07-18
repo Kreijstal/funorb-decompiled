@@ -374,7 +374,7 @@ final class c {
                                 if (var10 != 0) {
                                   var13 = on.field_i;
                                   if (var12 != 0) {
-                                    var14 = oj.field_d + var11;
+                                    var14 = oj.field_d + (String) var11;
                                     break L23;
                                   } else {
                                     var14 = tj.a(-11, new String[1], hb.field_Hb);
@@ -383,7 +383,7 @@ final class c {
                                 } else {
                                   var13 = hd.field_c;
                                   if (var12 != 0) {
-                                    var14 = rf.field_g + var11;
+                                    var14 = rf.field_g + (String) var11;
                                     break L23;
                                   } else {
                                     var14 = tj.a(-42, new String[1], fo.field_b);
@@ -402,7 +402,7 @@ final class c {
                                     break L24;
                                   } else {
                                     var12 = 1;
-                                    var11 = (Object) (Object) (var11 + ", " + var24);
+                                    var11 = (Object) (Object) ((String) var11 + ", " + var24);
                                     break L24;
                                   }
                                 } else {
@@ -798,7 +798,7 @@ final class c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var5, "c.B(" + param0 + 44 + param1 + 44 + param2 + 44 + 2 + 44 + param4 + 41);
+          throw aa.a((Throwable) (Object) var5, "c.B(" + param0 + ',' + param1 + ',' + param2 + ',' + 2 + ',' + param4 + ')');
         }
     }
 

@@ -112,7 +112,7 @@ final class fj {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(-7036).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(-7036).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -135,7 +135,7 @@ final class fj {
               break L4;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -212,7 +212,7 @@ final class fj {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var3;
-            stackOut_17_1 = new StringBuilder().append("fj.A(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("fj.A(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -235,7 +235,7 @@ final class fj {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + -99 + 41);
+          throw ci.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + -99 + ')');
         }
         return stackIn_15_0 != 0;
     }

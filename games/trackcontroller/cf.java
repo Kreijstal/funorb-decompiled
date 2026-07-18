@@ -82,7 +82,7 @@ final class cf extends fc {
           L3: {
             var4_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4_ref;
-            stackOut_8_1 = new StringBuilder().append("cf.C(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("cf.C(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -105,7 +105,7 @@ final class cf extends fc {
               break L3;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + -6196 + 41);
+          throw sl.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param2 + ',' + -6196 + ')');
         }
         return stackIn_7_0;
     }

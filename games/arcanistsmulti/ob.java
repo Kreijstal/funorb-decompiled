@@ -280,7 +280,7 @@ abstract class ob extends vi {
             he.field_e.f(param1.field_m, (byte) -111);
             he.field_e.f(param1.field_h, (byte) -124);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ob.KA(" + 20 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ob.KA(" + 20 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

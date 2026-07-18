@@ -8,7 +8,7 @@ final class pc extends java.awt.Canvas {
         try {
             ((pc) this).field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pc.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "pc.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -16,7 +16,7 @@ final class pc extends java.awt.Canvas {
         try {
             ((pc) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "pc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -24,7 +24,7 @@ final class pc extends java.awt.Canvas {
         try {
             ((pc) this).field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pc.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "pc.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

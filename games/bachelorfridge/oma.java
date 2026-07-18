@@ -21,7 +21,7 @@ final class oma {
             }
             int var7 = 10;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oma.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + -72 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "oma.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + -72 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -80,7 +80,7 @@ final class wi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var2_ref, "wi.H(" + param0 + 44 + param1 + 41);
+          throw sd.a((Throwable) (Object) var2_ref, "wi.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class wi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1_ref, "wi.F(" + 0 + 41);
+          throw sd.a((Throwable) (Object) var1_ref, "wi.F(" + false + ')');
         }
         return stackIn_20_0 != 0;
     }

@@ -253,7 +253,7 @@ final class gh {
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 42 + 44 + param2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + 42 + ',' + param2 + ')');
         }
     }
 
@@ -348,7 +348,7 @@ final class gh {
               break L5;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + -123 + 44 + param2 + 44 + 256 + 41);
+          throw wn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + -123 + ',' + param2 + ',' + 256 + ')');
         }
     }
 

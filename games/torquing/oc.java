@@ -170,7 +170,7 @@ final class oc {
           L10: {
             var10 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var10;
-            stackOut_27_1 = new StringBuilder().append("oc.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_27_1 = new StringBuilder().append("oc.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -195,7 +195,7 @@ final class oc {
           }
           L11: {
             stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
+            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -218,7 +218,7 @@ final class oc {
               break L11;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
         }
     }
 

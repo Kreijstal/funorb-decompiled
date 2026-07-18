@@ -191,7 +191,7 @@ final class cq extends nm {
           L3: {
             var4_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4_ref;
-            stackOut_12_1 = new StringBuilder().append("cq.C(").append(16727).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_12_1 = new StringBuilder().append("cq.C(").append(16727).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -214,7 +214,7 @@ final class cq extends nm {
               break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 

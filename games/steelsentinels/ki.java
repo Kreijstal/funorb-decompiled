@@ -141,7 +141,7 @@ final class ki extends ac {
             ((ki) this).field_qb = param2;
             int var5_int = 68 / ((param0 - 52) / 57);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ki.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ki.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class ki extends ac {
             ((ki) this).field_nb = false;
             ((ki) this).a((lh) (Object) ((ki) this).field_mb, -110);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ki.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -181,7 +181,7 @@ final class ki extends ac {
             }
             int var2_int = -30 / ((15 - param0) / 62);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ki.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ki.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

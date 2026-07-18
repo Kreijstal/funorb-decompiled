@@ -98,7 +98,7 @@ final class ce implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L4;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class ce implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -212,7 +212,7 @@ final class ce implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "ce.keyTyped(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "ce.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -350,7 +350,7 @@ final class ce implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L6;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
         }
     }
 

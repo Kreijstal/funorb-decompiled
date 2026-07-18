@@ -30,7 +30,7 @@ final class ti extends he implements java.awt.image.ImageProducer, java.awt.imag
             param0.setColorModel(((ti) this).field_v);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ti.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ti.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class ti extends he implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((ti) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ti.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ti.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class ti extends he implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class ti extends he implements java.awt.image.ImageProducer, java.awt.imag
             boolean discarded$5 = param2.prepareImage(((ti) this).field_b, (java.awt.image.ImageObserver) this);
             ((ti) this).b((byte) 122);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ti.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ti.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class ti extends he implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ci.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -225,7 +225,7 @@ final class ti extends he implements java.awt.image.ImageProducer, java.awt.imag
         try {
             boolean discarded$1 = param1.drawImage(((ti) this).field_b, param2, param3, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ti.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ti.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

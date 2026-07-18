@@ -107,7 +107,7 @@ final class lg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2, "lg.A(" + param0 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) var2, "lg.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -782,7 +782,7 @@ final class lg {
             ((lg) this).field_t = 640;
             ((lg) this).field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "lg.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "lg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 

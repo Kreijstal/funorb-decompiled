@@ -293,9 +293,9 @@ abstract class qi extends ln {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_x.append(60);
+                        StringBuilder discarded$6 = field_x.append('<');
                         StringBuilder discarded$7 = field_x.append(var15);
-                        StringBuilder discarded$8 = field_x.append(62);
+                        StringBuilder discarded$8 = field_x.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -482,7 +482,7 @@ abstract class qi extends ln {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_x.append(var14);
+                        StringBuilder discarded$9 = field_x.append((char) var14);
                         var14 = (char)(sj.a(-98, (char) var14) & 255);
                         var4 = var4 + ((qi) this).field_K[var14];
                         if (((qi) this).field_H == null) {

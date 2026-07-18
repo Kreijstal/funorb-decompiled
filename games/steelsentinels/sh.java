@@ -114,7 +114,7 @@ final class sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var3, "sh.E(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ci.a((Throwable) (Object) var3, "sh.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

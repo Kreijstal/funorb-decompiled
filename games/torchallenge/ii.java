@@ -167,7 +167,7 @@ final class ii {
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
     }
 
@@ -279,7 +279,7 @@ final class ii {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var6, "ii.G(" + param0 + 44 + param1 + 44 + 64 + 44 + 4 + 44 + param4 + 44 + param5 + 41);
+          throw oj.a((Throwable) (Object) var6, "ii.G(" + param0 + ',' + param1 + ',' + 64 + ',' + 4 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

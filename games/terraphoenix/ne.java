@@ -46,7 +46,7 @@ final class ne implements Iterator {
             ((ne) this).field_c = null;
             ((ne) this).field_a = ((ne) this).field_d.field_a.field_o;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ne.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

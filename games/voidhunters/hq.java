@@ -14,7 +14,7 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
         try {
             ((hq) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "hq.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "hq.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
             boolean discarded$0 = param0.drawImage(((hq) this).field_j, -param4 + param6, param5 - param2, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
             param0.setClip(var9);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "hq.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "hq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
             param0.setColorModel(((hq) this).field_h);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "hq.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "hq.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
             this.e();
             boolean discarded$14 = ((hq) this).field_k.prepareImage(((hq) this).field_j, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "hq.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "hq.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

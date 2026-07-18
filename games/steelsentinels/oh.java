@@ -827,7 +827,7 @@ final class oh {
                   break L4;
                 }
               }
-              throw ci.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+              throw ci.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

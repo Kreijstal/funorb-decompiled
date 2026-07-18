@@ -54,7 +54,7 @@ final class vj {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var2;
-            stackOut_9_1 = new StringBuilder().append("vj.A(").append(-23424).append(44);
+            stackOut_9_1 = new StringBuilder().append("vj.A(").append(-23424).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -77,7 +77,7 @@ final class vj {
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return stackIn_8_0 != 0;
     }
@@ -180,7 +180,7 @@ final class vj {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -203,7 +203,7 @@ final class vj {
               break L4;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + -69 + 44 + param3 + 44 + param4 + 41);
+          throw ch.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + -69 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

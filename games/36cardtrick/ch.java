@@ -25,7 +25,7 @@ abstract class ch {
             int var3 = 108;
             ib discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ch.E(" + -114 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ch.E(" + -114 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

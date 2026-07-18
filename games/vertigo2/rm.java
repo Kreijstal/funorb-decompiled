@@ -137,7 +137,7 @@ final class rm extends ji {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4_ref;
-            stackOut_12_1 = new StringBuilder().append("rm.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("rm.E(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -160,7 +160,7 @@ final class rm extends ji {
               break L5;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_11_0 != 0;
     }
@@ -171,7 +171,7 @@ final class rm extends ji {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) kb.field_a);
             fh.field_w = -1;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "rm.B(" + -89 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "rm.B(" + -89 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -237,7 +237,7 @@ final class rm extends ji {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var4;
-            stackOut_10_1 = new StringBuilder().append("rm.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_10_1 = new StringBuilder().append("rm.C(").append(param0).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -260,7 +260,7 @@ final class rm extends ji {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
     }
 

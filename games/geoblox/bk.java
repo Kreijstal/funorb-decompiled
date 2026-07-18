@@ -25,7 +25,7 @@ final class bk {
             ad.a((byte) -32);
             gb.field_f = -uf.field_a;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "bk.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 111 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "bk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 111 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -155,7 +155,7 @@ final class hb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1, "hb.C(" + 554553416 + 41);
+          throw dd.a((Throwable) (Object) var1, "hb.C(" + 554553416 + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class hb {
           L1: {
             var9 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var9;
-            stackOut_2_1 = new StringBuilder().append("hb.E(").append(0).append(44).append(param1).append(44).append(0).append(44).append(80).append(44).append(-1).append(44).append(param5).append(44).append(30).append(44).append(param7).append(44);
+            stackOut_2_1 = new StringBuilder().append("hb.E(").append(0).append(',').append(param1).append(',').append(0).append(',').append(80).append(',').append(-1).append(',').append(param5).append(',').append(30).append(',').append(param7).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -233,7 +233,7 @@ final class hb {
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
     }
 

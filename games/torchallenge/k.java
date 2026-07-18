@@ -88,7 +88,7 @@ final class k {
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 0 + 41);
+          throw oj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + 0 + ')');
         }
         return stackIn_1_0;
     }

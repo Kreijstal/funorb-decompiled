@@ -445,7 +445,7 @@ final class hk extends fb {
           L7: {
             var3 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var3;
-            stackOut_17_1 = new StringBuilder().append("hk.B(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("hk.B(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -468,7 +468,7 @@ final class hk extends fb {
               break L7;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 
@@ -486,7 +486,7 @@ final class hk extends fb {
             var7[var7.length + -1] = new va(param6, param0, param4, param2, param3, param5);
             pa.field_x = var7;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "hk.C(" + param0 + 44 + -23 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "hk.C(" + param0 + ',' + -23 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

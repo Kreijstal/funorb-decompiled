@@ -67,7 +67,7 @@ final class wo extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -80,7 +80,7 @@ final class wo extends rqa {
         try {
             ew.field_p.a(256, 1048576, !param1 ? true : false, param4, -47, 1000000);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "wo.C(" + 1048576 + 44 + param1 + 44 + 256 + 44 + 1 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "wo.C(" + 1048576 + ',' + param1 + ',' + 256 + ',' + true + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

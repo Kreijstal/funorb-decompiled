@@ -72,7 +72,7 @@ class bd extends ij {
             int discarded$0 = 192;
             cc.a(8438015, (java.applet.Applet) (Object) fe.field_g, (byte) -121, 2121856, io.field_I);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "bd.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 8 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "bd.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + 8 + ')');
         }
     }
 

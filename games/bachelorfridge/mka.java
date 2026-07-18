@@ -58,7 +58,7 @@ final class mka extends bw {
           L2: {
             var8_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var8_ref;
-            stackOut_4_1 = new StringBuilder().append("mka.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_4_1 = new StringBuilder().append("mka.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -81,7 +81,7 @@ final class mka extends bw {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
         return stackIn_3_0;
     }
@@ -101,7 +101,7 @@ final class mka extends bw {
             ((mka) this).field_h = param0;
             ((mka) this).field_g = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "mka.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "mka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

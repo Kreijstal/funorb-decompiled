@@ -68,7 +68,7 @@ final class hc extends dj implements nl {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("hc.IA(").append(82).append(44);
+            stackOut_2_1 = new StringBuilder().append("hc.IA(").append(82).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -91,7 +91,7 @@ final class hc extends dj implements nl {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -104,7 +104,7 @@ final class hc extends dj implements nl {
             super.a(param0, param1, param2, param3);
             ((hc) this).field_S = -((hc) this).field_v + (qa.field_a - param3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "hc.H(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "hc.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -642,7 +642,7 @@ final class hc extends dj implements nl {
             ((hc) this).field_Q = param1;
             int var3_int = 48 % ((param0 - 34) / 39);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "hc.GA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "hc.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -77,7 +77,7 @@ final class wq {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var4;
-            stackOut_9_1 = new StringBuilder().append("wq.H(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("wq.H(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -100,7 +100,7 @@ final class wq {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ')');
         }
         return stackIn_8_0 != 0;
     }
@@ -177,7 +177,7 @@ final class wq {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class wq {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("wq.B(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("wq.B(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -246,7 +246,7 @@ final class wq {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 

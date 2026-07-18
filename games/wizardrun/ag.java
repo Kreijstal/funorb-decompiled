@@ -37,7 +37,7 @@ final class ag extends ig {
         try {
             ((ag) this).field_r = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ag.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "ag.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class ag extends ig {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 1 + 41);
+          throw bd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 1 + ')');
         }
         return stackIn_5_0;
     }

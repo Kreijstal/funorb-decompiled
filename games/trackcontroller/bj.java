@@ -46,7 +46,7 @@ final class bj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var2, "bj.A(" + 0 + 44 + param1 + 41);
+          throw sl.a((Throwable) (Object) var2, "bj.A(" + 0 + ',' + param1 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class bj {
             int var6 = -35 / ((param2 - 52) / 58);
             param0.field_k.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "bj.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "bj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

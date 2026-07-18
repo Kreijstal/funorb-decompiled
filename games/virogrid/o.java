@@ -42,7 +42,7 @@ final class o {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var2, "o.B(" + 3 + 44 + 109 + 41);
+          throw kg.a((Throwable) (Object) var2, "o.B(" + 3 + ',' + 109 + ')');
         }
     }
 

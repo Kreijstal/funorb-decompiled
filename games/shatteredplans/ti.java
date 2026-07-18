@@ -40,7 +40,7 @@ final class ti {
             int var6 = 113 / ((-54 - param1) / 63);
             param0.field_f.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ti.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "ti.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class ti {
             vn.field_w = new rn(param6);
             lg.field_c = new tj(vp.field_o, vn.field_w);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ti.F(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 1491341222 + 44 + (param6 != null ? "{...}" : "null") + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "ti.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + 1491341222 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -267,7 +267,7 @@ final class ti {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("ti.G(").append(83).append(44);
+            stackOut_24_1 = new StringBuilder().append("ti.G(").append(83).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -290,7 +290,7 @@ final class ti {
               break L8;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
         return stackIn_23_0;
     }

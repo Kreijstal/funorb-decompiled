@@ -25,7 +25,7 @@ final class gj {
             nm.field_o = param0;
             fl.field_b = param2;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "gj.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + -20140 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "gj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + -20140 + ')');
         }
     }
 

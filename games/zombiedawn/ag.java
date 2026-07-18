@@ -101,7 +101,7 @@ final class ag implements Iterator {
               break L0;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 44 + param2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class ag implements Iterator {
             int discarded$0 = var5.e(-69, var4);
             var5.d(-60, -var4 + var5.field_j);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "ag.C(" + param0 + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "ag.C(" + param0 + ',' + true + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class ag implements Iterator {
             ((ag) this).field_d = null;
             ((ag) this).field_g = ((ag) this).field_f.field_c.field_i;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "ag.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "ag.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

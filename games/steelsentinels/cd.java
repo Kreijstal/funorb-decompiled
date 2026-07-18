@@ -102,7 +102,7 @@ final class cd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "cd.A(" + param0 + 41);
+          throw ci.a((Throwable) (Object) var1, "cd.A(" + param0 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class cd {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 80 + 44 + -100 + 41);
+          throw ci.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 80 + ',' + -100 + ')');
         }
     }
 

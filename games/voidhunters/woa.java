@@ -39,7 +39,7 @@ final class woa implements wib {
           L0: {
             var7 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var7;
-            stackOut_6_1 = new StringBuilder().append("woa.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(74).append(44).append(-1).append(44).append(param5).append(44);
+            stackOut_6_1 = new StringBuilder().append("woa.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(74).append(',').append(-1).append(',').append(param5).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -62,7 +62,7 @@ final class woa implements wib {
               break L0;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 

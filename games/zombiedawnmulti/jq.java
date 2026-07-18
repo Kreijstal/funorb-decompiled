@@ -190,7 +190,7 @@ final class jq {
                   break L8;
                 }
               }
-              throw fa.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 13746 + 41);
+              throw fa.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + 13746 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -75,7 +75,7 @@ final class kpa {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class kpa {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("kpa.<init>(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("kpa.<init>(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -151,7 +151,7 @@ final class kpa {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class kpa {
             }
             param0.a((byte) 112, var3_int, ((kpa) this).field_a.length);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "kpa.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "kpa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

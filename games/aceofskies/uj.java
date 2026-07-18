@@ -81,7 +81,7 @@ final class uj {
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 44 + param2 + 44 + 0 + 44 + 0 + 44 + param5 + 41);
+          throw pn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 0 + ',' + param2 + ',' + 0 + ',' + 0 + ',' + param5 + ')');
         }
         return stackIn_4_0;
     }

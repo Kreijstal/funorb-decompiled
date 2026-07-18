@@ -419,7 +419,7 @@ final class rf extends a {
             super.b(-52, param1);
             int var3_int = 83 / ((34 - param0) / 54);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "rf.RB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "rf.RB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

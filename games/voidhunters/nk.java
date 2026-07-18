@@ -224,7 +224,7 @@ final class nk {
           L4: {
             var5 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var5;
-            stackOut_14_1 = new StringBuilder().append("nk.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("nk.B(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -249,7 +249,7 @@ final class nk {
           }
           L5: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -272,7 +272,7 @@ final class nk {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
         return stackIn_13_0 != 0;
     }
@@ -281,7 +281,7 @@ final class nk {
         try {
             ((nk) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "nk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "nk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -184,7 +184,7 @@ final class lj extends br {
           L9: {
             var3 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var3;
-            stackOut_27_1 = new StringBuilder().append("lj.D(").append(param0).append(44);
+            stackOut_27_1 = new StringBuilder().append("lj.D(").append(param0).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -207,7 +207,7 @@ final class lj extends br {
               break L9;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ')');
         }
     }
 
@@ -233,7 +233,7 @@ final class lj extends br {
             uo.a(oo.field_l / 2, oo.field_b / 2, 1633);
             ek.a(param0.field_J, param2.field_r + param2.field_J, 1829947600, param2.field_J, param0.field_r + param0.field_J);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "lj.A(" + (param0 != null ? "{...}" : "null") + 44 + 480 + 44 + (param2 != null ? "{...}" : "null") + 44 + 61 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "lj.A(" + (param0 != null ? "{...}" : "null") + ',' + 480 + ',' + (param2 != null ? "{...}" : "null") + ',' + 61 + ')');
         }
     }
 

@@ -29,7 +29,7 @@ final class rg {
             param2.field_n.field_l = param2;
             param2.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "rg.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "rg.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

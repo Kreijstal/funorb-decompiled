@@ -296,7 +296,7 @@ final class hia extends sfa {
           L17: {
             var2 = decompiledCaughtException;
             stackOut_50_0 = (RuntimeException) var2;
-            stackOut_50_1 = new StringBuilder().append("hia.E(").append(param0).append(44);
+            stackOut_50_1 = new StringBuilder().append("hia.E(").append(param0).append(',');
             stackIn_52_0 = stackOut_50_0;
             stackIn_52_1 = stackOut_50_1;
             stackIn_51_0 = stackOut_50_0;
@@ -319,7 +319,7 @@ final class hia extends sfa {
               break L17;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + ')');
         }
     }
 
@@ -514,7 +514,7 @@ final class hia extends sfa {
               break L10;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + param1 + ')');
         }
         return (ii) (Object) stackIn_36_0;
     }
@@ -1058,7 +1058,7 @@ final class hia extends sfa {
           L31: {
             var4 = decompiledCaughtException;
             stackOut_124_0 = (RuntimeException) var4;
-            stackOut_124_1 = new StringBuilder().append("hia.D(").append(param0).append(44);
+            stackOut_124_1 = new StringBuilder().append("hia.D(").append(param0).append(',');
             stackIn_126_0 = stackOut_124_0;
             stackIn_126_1 = stackOut_124_1;
             stackIn_125_0 = stackOut_124_0;
@@ -1083,7 +1083,7 @@ final class hia extends sfa {
           }
           L32: {
             stackOut_127_0 = (RuntimeException) (Object) stackIn_127_0;
-            stackOut_127_1 = ((StringBuilder) (Object) stackIn_127_1).append(stackIn_127_2).append(44);
+            stackOut_127_1 = ((StringBuilder) (Object) stackIn_127_1).append(stackIn_127_2).append(',');
             stackIn_129_0 = stackOut_127_0;
             stackIn_129_1 = stackOut_127_1;
             stackIn_128_0 = stackOut_127_0;
@@ -1106,7 +1106,7 @@ final class hia extends sfa {
               break L32;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_130_0, stackIn_130_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_130_0, stackIn_130_2 + ')');
         }
     }
 
@@ -1115,7 +1115,7 @@ final class hia extends sfa {
             int var3_int = 84 / ((61 - param0) / 53);
             param1.d(((hia) this).field_j | ((hia) this).field_k << 3, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "hia.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "hia.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

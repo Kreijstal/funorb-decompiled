@@ -77,7 +77,7 @@ final class bj {
         try {
             ((bj) this).field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "bj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "bj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

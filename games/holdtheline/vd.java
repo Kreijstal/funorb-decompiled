@@ -76,7 +76,7 @@ abstract class vd {
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 65535 + 44 + param2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + 65535 + ',' + param2 + ')');
         }
         return stackIn_6_0;
     }
@@ -87,7 +87,7 @@ abstract class vd {
             param0.addKeyListener((java.awt.event.KeyListener) (Object) tf.field_n);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) tf.field_n);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "vd.I(" + (param0 != null ? "{...}" : "null") + 44 + -116 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "vd.I(" + (param0 != null ? "{...}" : "null") + ',' + -116 + ')');
         }
     }
 

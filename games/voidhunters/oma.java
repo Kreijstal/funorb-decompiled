@@ -74,7 +74,7 @@ final class oma implements ntb, mfa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class oma implements ntb, mfa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class oma implements ntb, mfa {
           L4: {
             var3_ref = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3_ref;
-            stackOut_9_1 = new StringBuilder().append("oma.D(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("oma.D(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -220,7 +220,7 @@ final class oma implements ntb, mfa {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 
@@ -267,7 +267,7 @@ final class oma implements ntb, mfa {
             param1.p(-23497);
             nkb.a(false, "has read state");
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "oma.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "oma.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -324,7 +324,7 @@ final class oma implements ntb, mfa {
                   break L3;
                 } else {
                   var4 = 1;
-                  System.out.println("Carousel_commongame_Info carousel_info has changed. before=" + var5.field_l + ", now=" + var5.field_l);
+                  System.out.println("Carousel_commongame_Info carousel_info has changed. before=" + (Object) (Object) var5.field_l + ", now=" + (Object) (Object) var5.field_l);
                   break L3;
                 }
               }
@@ -367,7 +367,7 @@ final class oma implements ntb, mfa {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ')');
         }
     }
 
@@ -473,7 +473,7 @@ final class oma implements ntb, mfa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
@@ -604,7 +604,7 @@ final class oma implements ntb, mfa {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -627,7 +627,7 @@ final class oma implements ntb, mfa {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param4 + 44 + param5 + 44 + -82 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 41);
+          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param4 + ',' + param5 + ',' + -82 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
     }
 
@@ -738,7 +738,7 @@ final class oma implements ntb, mfa {
           L6: {
             var3_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3_ref;
-            stackOut_13_1 = new StringBuilder().append("oma.C(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("oma.C(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -761,7 +761,7 @@ final class oma implements ntb, mfa {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_12_0 != 0;
     }
@@ -947,7 +947,7 @@ final class oma implements ntb, mfa {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

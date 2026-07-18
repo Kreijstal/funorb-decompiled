@@ -10,7 +10,7 @@ final class en extends d {
         try {
             ((en) this).field_u = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "en.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "en.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class en extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "en.F(" + 50 + 41);
+          throw rb.a((Throwable) (Object) var1, "en.F(" + 50 + ')');
         }
     }
 

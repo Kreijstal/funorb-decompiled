@@ -36,7 +36,7 @@ final class bc implements Iterator {
             ((bc) this).field_c = ((bc) this).field_f.field_e.field_t;
             ((bc) this).field_e = null;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "bc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "bc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

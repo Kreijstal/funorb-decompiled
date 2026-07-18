@@ -134,7 +134,7 @@ final class di extends pu {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ')');
         }
         return (nea) (Object) stackIn_18_0;
     }
@@ -216,7 +216,7 @@ final class di extends pu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2_ref, "di.D(" + 1 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) var2_ref, "di.D(" + true + ',' + param1 + ')');
         }
     }
 

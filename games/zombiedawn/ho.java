@@ -199,7 +199,7 @@ final class ho {
               break L8;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sh.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

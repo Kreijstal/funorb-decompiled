@@ -72,7 +72,7 @@ abstract class ba implements nb {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -2147483648 + 41);
+          throw dh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -2147483648 + ')');
         }
         return stackIn_1_0;
     }
@@ -376,7 +376,7 @@ abstract class ba implements nb {
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_65_0 = (RuntimeException) var2;
-                stackOut_65_1 = new StringBuilder().append("ba.V(").append(-32141).append(44);
+                stackOut_65_1 = new StringBuilder().append("ba.V(").append(-32141).append(',');
                 stackIn_67_0 = stackOut_65_0;
                 stackIn_67_1 = stackOut_65_1;
                 stackIn_66_0 = stackOut_65_0;
@@ -399,7 +399,7 @@ abstract class ba implements nb {
                   break L24;
                 }
               }
-              throw dh.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + 41);
+              throw dh.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

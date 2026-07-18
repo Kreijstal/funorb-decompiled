@@ -75,7 +75,7 @@ final class pnb implements Iterator {
             int discarded$0 = 1;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pnb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "pnb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -121,7 +121,7 @@ final class ek extends fb {
           L4: {
             runtimeException = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) runtimeException;
-            stackOut_14_1 = new StringBuilder().append("ek.B(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("ek.B(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -144,7 +144,7 @@ final class ek extends fb {
               break L4;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

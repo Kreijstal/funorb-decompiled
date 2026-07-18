@@ -28,7 +28,7 @@ final class eh extends qb {
             ((eh) this).field_n = param1;
             ((eh) this).field_j = param5;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "eh.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "eh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class eh extends qb {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$3 = var6.append(var9);
+                      StringBuilder discarded$3 = var6.append((char) var9);
                       continue L1;
                     }
                   }

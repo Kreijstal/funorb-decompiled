@@ -124,7 +124,7 @@ final class wh extends lj {
           L4: {
             var8 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var8;
-            stackOut_22_1 = new StringBuilder().append("wh.O(").append(param0).append(44).append(param1).append(44);
+            stackOut_22_1 = new StringBuilder().append("wh.O(").append(param0).append(',').append(param1).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -147,7 +147,7 @@ final class wh extends lj {
               break L4;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw ch.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_21_0 != 0;
     }
@@ -199,7 +199,7 @@ final class wh extends lj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (Object) (Object) decompiledCaughtException;
-          throw ch.a((Throwable) var1, "wh.C(" + 104 + 41);
+          throw ch.a((Throwable) var1, "wh.C(" + 104 + ')');
         }
     }
 

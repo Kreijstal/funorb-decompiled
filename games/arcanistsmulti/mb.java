@@ -303,7 +303,7 @@ final class mb extends mh {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 10 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 10 + ',' + param2 + ')');
         }
     }
 
@@ -398,7 +398,7 @@ final class mb extends mh {
           L5: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3_ref;
-            stackOut_14_1 = new StringBuilder().append("mb.VA(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("mb.VA(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -423,7 +423,7 @@ final class mb extends mh {
           }
           L6: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -446,7 +446,7 @@ final class mb extends mh {
               break L6;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 
@@ -458,7 +458,7 @@ final class mb extends mh {
             ((mb) this).field_T = ((mb) this).field_M.field_m + ((mb) this).field_M.field_C;
             this.a(param2, (byte) 10, param3);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "mb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "mb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

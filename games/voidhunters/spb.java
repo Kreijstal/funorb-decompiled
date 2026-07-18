@@ -32,7 +32,7 @@ final class spb {
             eob.field_o = param1;
             int var2_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "spb.D(" + -22 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "spb.D(" + -22 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

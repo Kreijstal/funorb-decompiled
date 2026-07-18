@@ -79,7 +79,7 @@ final class uk {
             param0.field_p.field_j = param0;
             param0.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "uk.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "uk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

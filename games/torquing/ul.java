@@ -94,7 +94,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L4;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -270,7 +270,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L5;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 
@@ -332,7 +332,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -389,7 +389,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               L0: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var3_ref2;
-                stackOut_6_1 = new StringBuilder().append("ul.A(").append(0).append(44);
+                stackOut_6_1 = new StringBuilder().append("ul.A(").append(0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -414,7 +414,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               }
               L1: {
                 stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-                stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+                stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
                 stackIn_11_0 = stackOut_9_0;
                 stackIn_11_1 = stackOut_9_1;
                 stackIn_10_0 = stackOut_9_0;
@@ -437,7 +437,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                   break L1;
                 }
               }
-              throw rb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+              throw rb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -507,7 +507,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -572,7 +572,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -634,7 +634,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -696,7 +696,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

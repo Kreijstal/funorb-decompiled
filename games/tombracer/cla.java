@@ -68,7 +68,7 @@ final class cla extends od {
             ((cla) this).field_p = param2 * param1;
             ((cla) this).field_k = ((cla) this).field_l.field_l.createPbuffer(param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "cla.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "cla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

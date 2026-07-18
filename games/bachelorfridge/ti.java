@@ -54,7 +54,7 @@ final class ti {
         var11 = 0;
         L3: while (true) {
           if (var11 >= 2) {
-            StringBuilder discarded$5 = var10.append(var6);
+            StringBuilder discarded$5 = var10.append((char) var6);
             var11 = 0;
             L4: while (true) {
               var12 = (int)param2;
@@ -63,7 +63,7 @@ final class ti {
               if (0L != param2) {
                 var11++;
                 if (var11 % 3 == 0) {
-                  StringBuilder discarded$7 = var10.append(var7);
+                  StringBuilder discarded$7 = var10.append((char) var7);
                   continue L4;
                 } else {
                   continue L4;
@@ -71,7 +71,7 @@ final class ti {
               } else {
                 L5: {
                   if (var8 != 0) {
-                    StringBuilder discarded$8 = var10.append(45);
+                    StringBuilder discarded$8 = var10.append('-');
                     break L5;
                   } else {
                     break L5;

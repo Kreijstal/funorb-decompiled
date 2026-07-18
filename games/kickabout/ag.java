@@ -32,7 +32,7 @@ final class ag extends gn {
             ((ag) this).field_k = param1;
             ((ag) this).field_i.b(128 + mn.field_a * ((ag) this).field_j >> 8);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ag.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ag.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

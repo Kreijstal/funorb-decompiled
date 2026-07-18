@@ -59,7 +59,7 @@ final class jf {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3_ref;
-            stackOut_11_1 = new StringBuilder().append("jf.A(").append(param0).append(44).append(0).append(44);
+            stackOut_11_1 = new StringBuilder().append("jf.A(").append(param0).append(',').append(false).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -82,7 +82,7 @@ final class jf {
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
         return stackIn_9_0;
     }

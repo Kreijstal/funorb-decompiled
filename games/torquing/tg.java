@@ -104,7 +104,7 @@ abstract class tg extends hk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1_ref, "tg.R(" + param0 + 41);
+          throw rb.a((Throwable) (Object) var1_ref, "tg.R(" + param0 + ')');
         }
     }
 
@@ -971,7 +971,7 @@ abstract class tg extends hk {
             this.a((byte) 88, param0, 480, 640, param1);
             int var4_int = 56 % ((28 - param2) / 53);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "tg.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "tg.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -1271,7 +1271,7 @@ abstract class tg extends hk {
           L9: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var6_ref;
-            stackOut_21_1 = new StringBuilder().append("tg.P(").append(88).append(44).append(param1).append(44).append(480).append(44).append(640).append(44);
+            stackOut_21_1 = new StringBuilder().append("tg.P(").append(88).append(',').append(param1).append(',').append(480).append(',').append(640).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -1294,7 +1294,7 @@ abstract class tg extends hk {
               break L9;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 

@@ -94,7 +94,7 @@ final class k {
                             } else {
                               var8 = pv.a(124, (char) var7);
                               if (var8 != 0) {
-                                StringBuilder discarded$1 = var5.append(var8);
+                                StringBuilder discarded$1 = var5.append((char) var8);
                                 break L6;
                               } else {
                                 break L6;
@@ -147,7 +147,7 @@ final class k {
               break L7;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + 0 + 41);
+          throw ig.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + false + ')');
         }
         return stackIn_28_0;
     }

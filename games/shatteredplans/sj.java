@@ -26,7 +26,7 @@ final class sj {
             int discarded$0 = 1;
             an.a();
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "sj.C(" + 77 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "sj.C(" + 77 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -110,10 +110,10 @@ final class sj {
                                 var6_ref = (Object) (Object) var9;
                                 if (var5_int != 0) {
                                   if (var5_int == 1) {
-                                    var6_ref = (Object) (Object) (var9 + qn.field_d + var6_ref);
+                                    var6_ref = (Object) (Object) (var9 + qn.field_d + (String) var6_ref);
                                     break L7;
                                   } else {
-                                    var6_ref = (Object) (Object) (var9 + ef.field_d + var6_ref);
+                                    var6_ref = (Object) (Object) (var9 + ef.field_d + (String) var6_ref);
                                     break L7;
                                   }
                                 } else {
@@ -176,10 +176,10 @@ final class sj {
                               break L12;
                             } else {
                               if (var4 != 1) {
-                                var5 = (Object) (Object) (var7 + ef.field_d + var5);
+                                var5 = (Object) (Object) (var7 + ef.field_d + (String) var5);
                                 break L12;
                               } else {
-                                var5 = (Object) (Object) (var7 + qn.field_d + var5);
+                                var5 = (Object) (Object) (var7 + qn.field_d + (String) var5);
                                 break L12;
                               }
                             }
@@ -212,7 +212,7 @@ final class sj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "sj.A(" + param0 + 41);
+          throw r.a((Throwable) (Object) var1, "sj.A(" + param0 + ')');
         }
     }
 

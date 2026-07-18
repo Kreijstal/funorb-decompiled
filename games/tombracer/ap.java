@@ -75,7 +75,7 @@ final class ap implements bo {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -88,7 +88,7 @@ final class ap implements bo {
             param1.a((byte) -125, ((ap) this).field_b, 4);
             param1.k(-1826190686);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ap.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ap.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

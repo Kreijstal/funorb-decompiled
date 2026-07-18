@@ -24,7 +24,7 @@ final class ig extends tc {
         g var2 = null;
         if (param0 instanceof g) {
             var2 = (g) (Object) param0;
-            var2.field_g = var2.field_g + 32 + param1;
+            var2.field_g = var2.field_g + ' ' + param1;
         } else {
             var2 = new g(param0, param1);
         }
@@ -163,7 +163,7 @@ final class ig extends tc {
           L8: {
             var3 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var3;
-            stackOut_23_1 = new StringBuilder().append("ig.<init>(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("ig.<init>(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -186,7 +186,7 @@ final class ig extends tc {
               break L8;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
     }
 

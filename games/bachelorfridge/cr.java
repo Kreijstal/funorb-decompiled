@@ -127,7 +127,7 @@ final class cr {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

@@ -17,7 +17,7 @@ final class gj extends fj {
             var3.d((byte) 125, 0);
             var3.d((byte) -90, param2.field_f);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "gj.E(" + -88 + 44 + 5 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "gj.E(" + -88 + ',' + 5 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class gj extends fj {
           }
           L2: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -161,7 +161,7 @@ final class gj extends fj {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class gj extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1_ref, "gj.B(" + param0 + 41);
+          throw t.a((Throwable) (Object) var1_ref, "gj.B(" + param0 + ')');
         }
     }
 
@@ -235,7 +235,7 @@ final class gj extends fj {
         try {
             ((gj) this).field_r = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "gj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -44,7 +44,7 @@ final class bj {
             var3.c(0, (byte) -128);
             var3.c(param2.field_h, (byte) -127);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "bj.C(" + 5 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "bj.C(" + 5 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

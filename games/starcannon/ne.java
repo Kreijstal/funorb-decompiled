@@ -21,7 +21,7 @@ abstract class ne {
             sd.field_b = param1;
             sc.a(param0, (byte) 93, bl.field_c);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ne.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 150 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ne.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + 150 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ abstract class ne {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var2;
-            stackOut_9_1 = new StringBuilder().append("ne.I(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("ne.I(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -134,7 +134,7 @@ abstract class ne {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return stackIn_8_0;
     }

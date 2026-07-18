@@ -57,7 +57,7 @@ final class mm extends le {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("mm.E(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("mm.E(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -80,7 +80,7 @@ final class mm extends le {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 
@@ -237,7 +237,7 @@ final class mm extends le {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
         }
         return stackIn_10_0 != 0;
     }

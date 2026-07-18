@@ -1078,7 +1078,7 @@ abstract class fn extends kc {
         try {
             this.a(param0, param2 ^ 480, 640, param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "fn.CA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "fn.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -1224,7 +1224,7 @@ abstract class fn extends kc {
           L9: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var6_ref;
-            stackOut_23_1 = new StringBuilder().append("fn.S(").append(param0).append(44).append(param1).append(44).append(640).append(44);
+            stackOut_23_1 = new StringBuilder().append("fn.S(").append(param0).append(',').append(param1).append(',').append(640).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -1247,7 +1247,7 @@ abstract class fn extends kc {
               break L9;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param4 + 41);
+          throw qo.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param4 + ')');
         }
     }
 

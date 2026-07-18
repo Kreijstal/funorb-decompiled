@@ -38,7 +38,7 @@ class uh extends ca {
             ((uh) this).field_n = param0;
             ((uh) this).field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "uh.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "uh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,7 +50,7 @@ class uh extends ca {
             param0.b(9201, ((uh) this).field_n);
             param0.a((byte) -36, ((uh) this).field_e);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "uh.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "uh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

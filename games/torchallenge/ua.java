@@ -114,7 +114,7 @@ final class ua {
           L6: {
             var5 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var5;
-            stackOut_17_1 = new StringBuilder().append("ua.A(").append(param0).append(44).append(-113).append(44);
+            stackOut_17_1 = new StringBuilder().append("ua.A(").append(param0).append(',').append(-113).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -139,7 +139,7 @@ final class ua {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -164,7 +164,7 @@ final class ua {
           }
           L8: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -187,7 +187,7 @@ final class ua {
               break L8;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
     }
 

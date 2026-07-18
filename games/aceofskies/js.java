@@ -45,7 +45,7 @@ final class js implements Iterator {
             ((js) this).field_a = null;
             ((js) this).field_d = ((js) this).field_b.field_c.field_j;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "js.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "js.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

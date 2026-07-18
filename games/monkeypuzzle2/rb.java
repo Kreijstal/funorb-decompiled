@@ -324,7 +324,7 @@ final class rb extends ii {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var2, "rb.B(" + param0 + 44 + -58 + 41);
+          throw la.a((Throwable) (Object) var2, "rb.B(" + param0 + ',' + -58 + ')');
         }
     }
 

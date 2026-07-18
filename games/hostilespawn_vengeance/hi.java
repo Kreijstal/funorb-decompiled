@@ -20,7 +20,7 @@ abstract class hi extends bj implements cd {
             ((hi) this).a(true);
             int var3_int = 31 % ((-76 - param1) / 41);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "hi.U(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "hi.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ abstract class hi extends bj implements cd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var1, "hi.P(" + 0 + 41);
+          throw wg.a((Throwable) (Object) var1, "hi.P(" + false + ')');
         }
     }
 
@@ -110,7 +110,7 @@ abstract class hi extends bj implements cd {
         try {
             ((hi) this).field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -145,7 +145,7 @@ abstract class hi extends bj implements cd {
         try {
             int var3_int = 12 / (param1 / 41);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "hi.T(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "hi.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -192,7 +192,7 @@ abstract class hi extends bj implements cd {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("hi.N(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("hi.N(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -215,7 +215,7 @@ abstract class hi extends bj implements cd {
               break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }

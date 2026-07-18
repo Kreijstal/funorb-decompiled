@@ -107,7 +107,7 @@ final class hr {
                   break L3;
                 }
               }
-              throw r.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+              throw r.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -193,7 +193,7 @@ final class hr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var6, "hr.B(" + param0 + 44 + param1 + 44 + param2 + 44 + 113 + 44 + param4 + 44 + param5 + 41);
+          throw r.a((Throwable) (Object) var6, "hr.B(" + param0 + ',' + param1 + ',' + param2 + ',' + 113 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -105,7 +105,7 @@ final class ui extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "ui.B(" + param0 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) var2, "ui.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class ui extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

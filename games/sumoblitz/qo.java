@@ -11,7 +11,7 @@ final class qo {
         su var2 = null;
         if (param0 instanceof su) {
             var2 = (su) (Object) param0;
-            var2.field_a = var2.field_a + 32 + param1;
+            var2.field_a = var2.field_a + ' ' + param1;
         } else {
             var2 = new su(param0, param1);
         }

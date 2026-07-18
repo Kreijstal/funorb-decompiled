@@ -571,7 +571,7 @@ final class vf extends ji {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("vf.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("vf.C(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -594,7 +594,7 @@ final class vf extends ji {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 

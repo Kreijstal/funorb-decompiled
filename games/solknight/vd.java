@@ -62,7 +62,7 @@ final class vd {
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 4 + 41);
+          throw fc.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 4 + ')');
         }
         return stackIn_3_0;
     }
@@ -278,7 +278,7 @@ final class vd {
               break L3;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 44 + 160 + 41);
+          throw fc.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + 160 + ')');
         }
         return stackIn_7_0;
     }

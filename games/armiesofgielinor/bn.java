@@ -15,7 +15,7 @@ final class bn {
             wa.field_e = param2;
             q.field_C = param1;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "bn.C(" + -24 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "bn.C(" + -24 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

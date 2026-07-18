@@ -134,7 +134,7 @@ final class uq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) runtimeException, "uq.B(" + param0 + 41);
+          throw wm.a((Throwable) (Object) runtimeException, "uq.B(" + param0 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class uq {
             uh.field_x = param0;
             tq.field_t = param2;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "uq.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + -76 + 44 + param4 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "uq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + -76 + ',' + param4 + ')');
         }
     }
 

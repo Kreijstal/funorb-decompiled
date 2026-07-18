@@ -113,7 +113,7 @@ final class hg {
           }
           L4: {
             stackOut_13_0 = stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -136,7 +136,7 @@ final class hg {
               break L4;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + -1 + 41);
+          throw qb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + -1 + ')');
         }
         return stackIn_9_0;
     }
@@ -185,7 +185,7 @@ final class hg {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("hg.B(").append(0).append(44);
+            stackOut_6_1 = new StringBuilder().append("hg.B(").append(0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -208,7 +208,7 @@ final class hg {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0;
     }

@@ -35,7 +35,7 @@ final class tk extends pe {
           L0: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("tk.D(").append(-15).append(44);
+            stackOut_2_1 = new StringBuilder().append("tk.D(").append(-15).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -58,7 +58,7 @@ final class tk extends pe {
               break L0;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class tk extends pe {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var3_ref;
-            stackOut_16_1 = new StringBuilder().append("tk.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_16_1 = new StringBuilder().append("tk.E(").append(param0).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -154,7 +154,7 @@ final class tk extends pe {
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 
@@ -170,7 +170,7 @@ final class tk extends pe {
         try {
             ((tk) this).field_s = param0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "tk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -203,7 +203,7 @@ final class tk extends pe {
           L0: {
             var9_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var9_ref;
-            stackOut_2_1 = new StringBuilder().append("tk.B(").append(param0).append(44).append(15).append(44);
+            stackOut_2_1 = new StringBuilder().append("tk.B(").append(param0).append(',').append(15).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -226,7 +226,7 @@ final class tk extends pe {
               break L0;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 65520 + 44 + 3 + 44 + param5 + 44 + -115 + 44 + param7 + 44 + param8 + 41);
+          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 65520 + ',' + 3 + ',' + param5 + ',' + -115 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

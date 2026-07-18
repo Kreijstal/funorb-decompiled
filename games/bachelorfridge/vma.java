@@ -208,7 +208,7 @@ final class vma extends pv {
             kka.field_l = new sja(gja.field_m, (wj) (Object) ola.field_e);
             gja.field_m.a((wj) (Object) kka.field_l, (byte) 63);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vma.F(" + -6 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "vma.F(" + -6 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class vma extends pv {
         try {
             ((vma) this).field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vma.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "vma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

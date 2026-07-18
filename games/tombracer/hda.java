@@ -54,7 +54,7 @@ final class hda extends tc {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("hda.J(").append(param0).append(44).append(1303).append(44);
+            stackOut_2_1 = new StringBuilder().append("hda.J(").append(param0).append(',').append(1303).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -77,7 +77,7 @@ final class hda extends tc {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }

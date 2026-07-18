@@ -25,7 +25,7 @@ final class e {
             fl.field_b = 12;
             ca.b(-69);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "e.B(" + 8 + 44 + -92 + 44 + 12 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "e.B(" + 8 + ',' + -92 + ',' + 12 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -18,7 +18,7 @@ final class tc extends da {
             uc.field_Y = 2;
             ni.field_i = 32;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "tc.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 27 + 44 + 8 + 44 + 32 + 44 + 2 + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "tc.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 27 + ',' + 8 + ',' + 32 + ',' + 2 + ')');
         }
     }
 

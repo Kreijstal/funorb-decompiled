@@ -136,7 +136,7 @@ final class lb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1, "lb.D(" + 122 + 41);
+          throw dd.a((Throwable) (Object) var1, "lb.D(" + 122 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class lb {
             ((lb) this).field_i = param1;
             ((lb) this).c(false);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "lb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "lb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

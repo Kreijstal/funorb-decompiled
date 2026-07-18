@@ -79,7 +79,7 @@ final class rh implements jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1_ref, "rh.B(" + -127 + 41);
+          throw r.a((Throwable) (Object) var1_ref, "rh.B(" + -127 + ')');
         }
     }
 

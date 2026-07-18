@@ -113,7 +113,7 @@ final class pm {
                 var7.setCharAt(var11, Character.toUpperCase(var7.charAt(var11)));
                 var10 = 160;
             }
-            StringBuilder discarded$0 = var7.append(var10);
+            StringBuilder discarded$0 = var7.append((char) var10);
         }
         StringBuilder discarded$1 = var7.reverse();
         var7.setCharAt(0, Character.toUpperCase(var7.charAt(0)));

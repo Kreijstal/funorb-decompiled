@@ -109,7 +109,7 @@ final class na implements Iterator {
             ((na) this).field_g = param0;
             this.a(-1);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "na.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "na.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

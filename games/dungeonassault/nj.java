@@ -23,7 +23,7 @@ final class nj {
             hf.field_pb = param0;
             jb.field_Qb = param1;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "nj.B(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + -6332 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "nj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + -6332 + ')');
         }
     }
 

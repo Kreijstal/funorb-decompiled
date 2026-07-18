@@ -16,7 +16,7 @@ final class jb {
             re.field_g = new pj(gl.field_E, (al) (Object) ra.field_y);
             gl.field_E.d((byte) -70, (al) (Object) re.field_g);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "jb.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + 0 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "jb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + 0 + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class jb {
             fj.field_P.d(16384, kc.field_b);
             sb.field_b.a((wh) (Object) fj.field_P);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "jb.B(" + -109 + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 22050 + 44 + (param4 != null ? "{...}" : "null") + 44 + 1024 + 44 + (param6 != null ? "{...}" : "null") + 44 + 22050 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "jb.B(" + -109 + ',' + true + ',' + (param2 != null ? "{...}" : "null") + ',' + 22050 + ',' + (param4 != null ? "{...}" : "null") + ',' + 1024 + ',' + (param6 != null ? "{...}" : "null") + ',' + 22050 + ')');
         }
     }
 

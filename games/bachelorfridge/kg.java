@@ -30,7 +30,7 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((kg) this).field_f = true;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "kg.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "kg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
             int var3_int = 80 / ((-61 - param0) / 41);
             gv.a(-110, param1, ((kg) this).field_g);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "kg.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "kg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 112 + 41);
+          throw pe.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + 112 + ')');
         }
     }
 

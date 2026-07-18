@@ -21,7 +21,7 @@ abstract class hb extends tk {
             param0.field_v = new int[]{-1};
             param0.field_u = new char[]{'?'};
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "hb.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "hb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -94,7 +94,7 @@ final class to extends tm {
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
     }
 
@@ -214,7 +214,7 @@ final class to extends tm {
         try {
             ((to) this).field_e = aj.a(0, "", param1, "top_bar_balls_polar");
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "to.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "to.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

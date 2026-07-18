@@ -90,7 +90,7 @@ final class ni implements Iterable {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("ni.C(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("ni.C(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -113,7 +113,7 @@ final class ni implements Iterable {
               break L3;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_11_0;
     }
@@ -131,7 +131,7 @@ final class ni implements Iterable {
             param1.field_e.field_g = param1;
             param1.field_g.field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "ni.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw la.a((Throwable) (Object) runtimeException, "ni.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class ni implements Iterable {
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) wj.field_k);
             vf.field_a = -1;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "ni.D(" + (param0 != null ? "{...}" : "null") + 44 + -124 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "ni.D(" + (param0 != null ? "{...}" : "null") + ',' + -124 + ')');
         }
     }
 

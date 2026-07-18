@@ -99,7 +99,7 @@ final class bk extends ci {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4;
-            stackOut_17_1 = new StringBuilder().append("bk.A(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("bk.A(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -122,7 +122,7 @@ final class bk extends ci {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param2 + ')');
         }
     }
 

@@ -56,7 +56,7 @@ final class lf {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$3 = var7.append(var10);
+                      StringBuilder discarded$3 = var7.append((char) var10);
                       continue L1;
                     }
                   }

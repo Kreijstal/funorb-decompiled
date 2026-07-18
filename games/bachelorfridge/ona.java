@@ -185,7 +185,7 @@ final class ona extends sna {
               break L7;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + 44 + -15679 + 41);
+          throw pe.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + ',' + -15679 + ')');
         }
     }
 
@@ -214,7 +214,7 @@ final class ona extends sna {
             }
             ((ona) this).field_zb = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ona.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ona.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

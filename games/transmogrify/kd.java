@@ -65,7 +65,7 @@ final class kd implements ui {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var6;
-            stackOut_7_1 = new StringBuilder().append("kd.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_7_1 = new StringBuilder().append("kd.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -88,7 +88,7 @@ final class kd implements ui {
               break L3;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 
@@ -339,7 +339,7 @@ final class kd implements ui {
               if (var6 <= 99) {
                 StringBuilder discarded$9 = var17.append((char)(48 + var6 / 10));
                 StringBuilder discarded$10 = var17.append((char)(var6 % 10 + 48));
-                StringBuilder discarded$11 = var17.append(58);
+                StringBuilder discarded$11 = var17.append(':');
                 StringBuilder discarded$12 = var17.append((char)(var5 / 10 + 48));
                 StringBuilder discarded$13 = var17.append((char)(var5 % 10 + 48));
                 break L10;

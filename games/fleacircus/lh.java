@@ -122,7 +122,7 @@ class lh {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("lh.PC(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("lh.PC(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -145,7 +145,7 @@ class lh {
               break L2;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 
@@ -274,7 +274,7 @@ class lh {
           }
           L2: {
             stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44);
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -297,7 +297,7 @@ class lh {
               break L2;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + -1 + 41);
+          throw pf.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + -1 + ')');
         }
         return stackIn_24_0 != 0;
     }

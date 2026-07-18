@@ -37,7 +37,7 @@ final class ck {
               }
             } else {
               L1: {
-                var1 = var1 + 32;
+                var1 = var1 + ' ';
                 var3 = 255 & id.field_b.field_m[var2];
                 var4 = var3 >> 4;
                 if (var4 < 10) {

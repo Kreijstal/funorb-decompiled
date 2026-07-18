@@ -163,7 +163,7 @@ final class ve extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1, "ve.B(" + -76 + 41);
+          throw fk.a((Throwable) (Object) var1, "ve.B(" + -76 + ')');
         }
         return stackIn_21_0;
     }

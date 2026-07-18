@@ -12,7 +12,7 @@ final class tka extends vpa {
             ((tka) this).field_e = mj.field_J;
             ((tka) this).field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "tka.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "tka.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class tka extends vpa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "tka.A(" + param0 + 41);
+          throw tba.a((Throwable) (Object) var1, "tka.A(" + param0 + ')');
         }
     }
 
@@ -217,7 +217,7 @@ final class tka extends vpa {
               break L6;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw tba.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -57,7 +57,7 @@ final class mm {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3_ref;
-            stackOut_6_1 = new StringBuilder().append("mm.B(").append(10332).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("mm.B(").append(10332).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -80,7 +80,7 @@ final class mm {
               break L1;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -362,7 +362,7 @@ final class mm {
             int discarded$0 = 83;
             this.b();
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "mm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "mm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

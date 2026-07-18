@@ -1027,7 +1027,7 @@ public final class BrickABrac extends sa {
               break L28;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_138_0, stackIn_138_2 + 44 + param1 + 44 + param2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_138_0, stackIn_138_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_134_0 != 0;
     }

@@ -96,7 +96,7 @@ final class uj {
               break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_12_0;
     }
@@ -139,7 +139,7 @@ final class uj {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$3 = var6.append(var9);
+                      StringBuilder discarded$3 = var6.append((char) var9);
                       continue L1;
                     }
                   }
@@ -214,7 +214,7 @@ final class uj {
               break L0;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 95 + 41);
+          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 95 + ')');
         }
     }
 

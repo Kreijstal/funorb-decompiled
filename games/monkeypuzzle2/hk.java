@@ -593,7 +593,7 @@ final class hk extends ug {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var5, "hk.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw la.a((Throwable) (Object) var5, "hk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -854,7 +854,7 @@ final class hk extends ug {
               }
               L18: {
                 stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-                stackOut_37_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_37_2).append(44);
+                stackOut_37_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_37_2).append(',');
                 stackIn_39_0 = stackOut_37_0;
                 stackIn_39_1 = stackOut_37_1;
                 stackIn_38_0 = stackOut_37_0;
@@ -877,7 +877,7 @@ final class hk extends ug {
                   break L18;
                 }
               }
-              throw la.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + -1 + 44 + param3 + 41);
+              throw la.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + -1 + ',' + param3 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -893,7 +893,7 @@ final class hk extends ug {
             ((hk) this).field_h = param1;
             ((hk) this).field_g.g(re.field_e * ((hk) this).field_j / 256);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "hk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw la.a((Throwable) (Object) runtimeException, "hk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

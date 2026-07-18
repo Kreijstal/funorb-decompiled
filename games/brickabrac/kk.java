@@ -36,7 +36,7 @@ final class kk {
         try {
             qn.field_p = param1;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "kk.A(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "kk.A(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class kk {
           L2: {
             var3_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var3_ref;
-            stackOut_10_1 = new StringBuilder().append("kk.C(").append(0).append(44).append(param1).append(44);
+            stackOut_10_1 = new StringBuilder().append("kk.C(").append(false).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -120,7 +120,7 @@ final class kk {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
         return stackIn_9_0;
     }

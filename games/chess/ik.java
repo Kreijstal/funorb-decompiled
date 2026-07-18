@@ -103,7 +103,7 @@ final class ik implements Iterator {
             ((ik) this).field_j = param0;
             this.a(90);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

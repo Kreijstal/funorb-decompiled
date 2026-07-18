@@ -150,7 +150,7 @@ final class hc {
                 }
               }
             }
-            var2 = var2 + 32;
+            var2 = var2 + ' ';
             continue L1;
           }
         }

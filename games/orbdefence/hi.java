@@ -81,7 +81,7 @@ abstract class hi extends wb implements jb {
               break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 2 + 44 + 0 + 44 + 1 + 44 + param4 + 44 + 2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + 2 + ',' + false + ',' + 1 + ',' + param4 + ',' + 2 + ')');
         }
     }
 
@@ -135,7 +135,7 @@ abstract class hi extends wb implements jb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1_ref, "hi.J(" + 0 + 41);
+          throw dd.a((Throwable) (Object) var1_ref, "hi.J(" + false + ')');
         }
     }
 
@@ -173,7 +173,7 @@ abstract class hi extends wb implements jb {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("hi.M(").append(2).append(44);
+            stackOut_2_1 = new StringBuilder().append("hi.M(").append(2).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -196,7 +196,7 @@ abstract class hi extends wb implements jb {
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -302,7 +302,7 @@ abstract class hi extends wb implements jb {
           L1: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3_ref;
-            stackOut_6_1 = new StringBuilder().append("hi.P(").append(80).append(44).append(-111).append(44);
+            stackOut_6_1 = new StringBuilder().append("hi.P(").append(80).append(',').append(-111).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -325,7 +325,7 @@ abstract class hi extends wb implements jb {
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -333,7 +333,7 @@ abstract class hi extends wb implements jb {
         try {
             ((hi) this).field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -395,7 +395,7 @@ abstract class hi extends wb implements jb {
               break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -506,7 +506,7 @@ abstract class hi extends wb implements jb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1, "hi.O(" + 0 + 41);
+          throw dd.a((Throwable) (Object) var1, "hi.O(" + 0 + ')');
         }
         return stackIn_28_0;
     }
@@ -587,7 +587,7 @@ abstract class hi extends wb implements jb {
               break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

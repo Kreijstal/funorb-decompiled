@@ -24,7 +24,7 @@ final class ua extends mo {
             int var3_int = -57 % ((25 - param1) / 63);
             ((ua) this).field_n = -1 + param0.l(2, 59);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ua.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ua.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class ua extends mo {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class ua extends mo {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("ua.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("ua.D(").append(param0).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -203,7 +203,7 @@ final class ua extends mo {
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 41);
+          throw nb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + false + ')');
         }
         return stackIn_4_0;
     }
@@ -222,7 +222,7 @@ final class ua extends mo {
             ((ua) this).field_n = var3.field_n;
             var4.field_j[1] = var4.field_j[1];
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ua.R(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ua.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

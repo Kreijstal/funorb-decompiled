@@ -22,7 +22,7 @@ final class vq extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((vq) this).field_b = true;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "vq.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "vq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class vq extends java.awt.Canvas implements java.awt.event.FocusListener {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("vq.B(").append(70).append(44);
+            stackOut_2_1 = new StringBuilder().append("vq.B(").append(70).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -85,7 +85,7 @@ final class vq extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -152,7 +152,7 @@ final class vq extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -190,7 +190,7 @@ final class vq extends java.awt.Canvas implements java.awt.event.FocusListener {
             pi.field_b = new gq();
             pg.field_d.a((lq) (Object) pi.field_b);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "vq.A(" + (param0 != null ? "{...}" : "null") + 44 + 23 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "vq.A(" + (param0 != null ? "{...}" : "null") + ',' + 23 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

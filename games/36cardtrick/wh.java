@@ -145,7 +145,7 @@ final class wh {
           }
           L6: {
             stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44).append(param1).append(44).append(-122).append(44);
+            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param1).append(',').append(-122).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -168,7 +168,7 @@ final class wh {
               break L6;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
         }
         return stackIn_21_0;
     }
@@ -239,7 +239,7 @@ final class wh {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 61 + 41);
+          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 61 + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class wh {
                   break L4;
                 }
               }
-              throw ma.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 63 + 41);
+              throw ma.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 63 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -445,7 +445,7 @@ final class wh {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -468,7 +468,7 @@ final class wh {
               break L4;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 80 + 41);
+          throw ma.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + 80 + ')');
         }
     }
 

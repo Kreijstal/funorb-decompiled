@@ -83,7 +83,7 @@ final class oc extends ng {
         try {
             bn.field_I.a((ak) (Object) param0, (byte) 26);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "oc.C(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + true + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class oc extends ng {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("oc.L(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_7_1 = new StringBuilder().append("oc.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -199,7 +199,7 @@ final class oc extends ng {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 
@@ -441,7 +441,7 @@ final class oc extends ng {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 1177347297 + 44 + param2 + 44 + param3 + 41);
+          throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + 1177347297 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

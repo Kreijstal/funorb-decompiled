@@ -33,7 +33,7 @@ final class pg extends o {
         try {
             an.field_c = true;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "pg.A(" + -18 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "pg.A(" + -18 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

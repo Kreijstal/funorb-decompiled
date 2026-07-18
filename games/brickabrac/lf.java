@@ -131,7 +131,7 @@ final class lf extends km {
             param3.b((-param3.field_x + param0.field_i) / 2 + -(50 / param1), -(189 / param1) + (-param3.field_z + param0.field_q) + param2, 55, 83);
             sc.b(-94);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "lf.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "lf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

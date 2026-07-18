@@ -69,7 +69,7 @@ abstract class um extends d implements ih {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw oi.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -191,7 +191,7 @@ abstract class um extends d implements ih {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44).append(0).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param1).append(',').append(false).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -214,7 +214,7 @@ abstract class um extends d implements ih {
               break L5;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
         return (String) (Object) stackIn_10_0;
     }
@@ -255,7 +255,7 @@ abstract class um extends d implements ih {
             ((um) this).a(127);
             int var3_int = 33 / ((-18 - param0) / 63);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "um.O(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "um.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -288,7 +288,7 @@ abstract class um extends d implements ih {
         try {
             ((um) this).field_p = param0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "um.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "um.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

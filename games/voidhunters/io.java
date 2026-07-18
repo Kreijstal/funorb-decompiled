@@ -12,7 +12,7 @@ class io extends bob {
             super.a(59, param1, param2, param3, param4);
             int var6_int = -48 / ((param0 - -27) / 35);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "io.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "io.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

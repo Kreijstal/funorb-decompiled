@@ -432,7 +432,7 @@ final class b {
               L31: {
                 var6 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_98_0 = (RuntimeException) var6;
-                stackOut_98_1 = new StringBuilder().append("b.A(").append(-37).append(44).append(param1).append(44);
+                stackOut_98_1 = new StringBuilder().append("b.A(").append(-37).append(',').append(param1).append(',');
                 stackIn_100_0 = stackOut_98_0;
                 stackIn_100_1 = stackOut_98_1;
                 stackIn_99_0 = stackOut_98_0;
@@ -457,7 +457,7 @@ final class b {
               }
               L32: {
                 stackOut_101_0 = (RuntimeException) (Object) stackIn_101_0;
-                stackOut_101_1 = ((StringBuilder) (Object) stackIn_101_1).append(stackIn_101_2).append(44);
+                stackOut_101_1 = ((StringBuilder) (Object) stackIn_101_1).append(stackIn_101_2).append(',');
                 stackIn_103_0 = stackOut_101_0;
                 stackIn_103_1 = stackOut_101_1;
                 stackIn_102_0 = stackOut_101_0;
@@ -480,7 +480,7 @@ final class b {
                   break L32;
                 }
               }
-              throw ii.a((Throwable) (Object) stackIn_104_0, stackIn_104_2 + 44 + param4 + 44 + param5 + 41);
+              throw ii.a((Throwable) (Object) stackIn_104_0, stackIn_104_2 + ',' + param4 + ',' + param5 + ')');
             }
             return stackIn_97_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {

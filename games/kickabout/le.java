@@ -96,12 +96,12 @@ final class le {
                     break L3;
                   }
                 } else {
-                  var2 = var2 + 32;
+                  var2 = var2 + ' ';
                   continue L1;
                 }
               }
             }
-            var2 = var2 + 32;
+            var2 = var2 + ' ';
             continue L1;
           } else {
             var2 = var11;

@@ -20,7 +20,7 @@ final class soa {
             var3.f(((soa) this).field_b, ((soa) this).field_e);
             param1.field_f = ((soa) this).field_c;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "soa.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "soa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class soa {
             }
             ((soa) this).field_c = param1.field_f;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "soa.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "soa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

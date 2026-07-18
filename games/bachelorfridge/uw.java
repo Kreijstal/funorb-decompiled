@@ -27,7 +27,7 @@ final class uw extends eo {
             var1.f(0, 0);
             db.b(78);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uw.B(" + 65536 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uw.B(" + 65536 + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class uw extends eo {
         try {
             ((uw) this).field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uw.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

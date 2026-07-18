@@ -113,7 +113,7 @@ final class tk extends jc {
           L1: {
             var6 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var6;
-            stackOut_6_1 = new StringBuilder().append("tk.K(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("tk.K(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -138,7 +138,7 @@ final class tk extends jc {
           }
           L2: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(0).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(false).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -161,7 +161,7 @@ final class tk extends jc {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param4 + 41);
+          throw r.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param4 + ')');
         }
         return stackIn_4_0 != 0;
     }

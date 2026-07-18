@@ -680,7 +680,7 @@ final class lha {
           }
           L11: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -703,7 +703,7 @@ final class lha {
               break L11;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param2 + 44 + param3 + 44 + 3 + 41);
+          throw pe.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param2 + ',' + param3 + ',' + 3 + ')');
         }
     }
 
@@ -774,7 +774,7 @@ final class lha {
                   break L3;
                 }
               }
-              throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -17672 + 41);
+              throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -17672 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

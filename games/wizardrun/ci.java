@@ -29,7 +29,7 @@ final class ci {
             bi.field_a = bi.field_a + (var2_int >> 1);
             ia.field_j = ia.field_j + param1.j(-14477);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ci.A(" + 2026380485 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "ci.A(" + 2026380485 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

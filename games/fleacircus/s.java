@@ -25,7 +25,7 @@ final class s {
             param0.field_i = var5.c((byte) -3);
             var5.c((byte) -128, -var4 + var5.field_i);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "s.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 0 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "s.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + false + ')');
         }
     }
 
@@ -103,7 +103,7 @@ final class s {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("s.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("s.C(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -126,7 +126,7 @@ final class s {
               break L3;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 

@@ -189,7 +189,7 @@ final class oc extends li {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_33_0 = (RuntimeException) var6;
-            stackOut_33_1 = new StringBuilder().append("oc.A(").append(param0).append(44).append(param1).append(44).append(0).append(44);
+            stackOut_33_1 = new StringBuilder().append("oc.A(").append(param0).append(',').append(param1).append(',').append(0).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
@@ -212,7 +212,7 @@ final class oc extends li {
               break L6;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param4 + 44 + 54 + 41);
+          throw wn.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + param4 + ',' + 54 + ')');
         }
         return (java.awt.Frame) (Object) stackIn_32_0;
     }

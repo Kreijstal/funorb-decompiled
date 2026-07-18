@@ -28,7 +28,7 @@ final class tw {
             int var4 = -21;
             sja.field_fb.a((byte) -88, sja.field_fb.field_g + -var3_int);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "tw.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -63 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "tw.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + -63 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class tw {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -36 + 41);
+          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -36 + ')');
         }
         return stackIn_1_0;
     }

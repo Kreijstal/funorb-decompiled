@@ -60,7 +60,7 @@ final class vi extends bk {
             ((vi) this).field_i = param1;
             ((vi) this).field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "vi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class vi extends bk {
             param1.b(((vi) this).field_e, (byte) 112);
             param1.c(((vi) this).field_i, (byte) 82);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "vi.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "vi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

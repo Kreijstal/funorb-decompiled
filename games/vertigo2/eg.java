@@ -503,7 +503,7 @@ final class eg extends tk {
                   break L11;
                 }
               }
-              throw wn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 44 + param2 + 41);
+              throw wn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -637,7 +637,7 @@ final class eg extends tk {
         try {
             il.field_g.b((sn) (Object) param1);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "eg.T(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "eg.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

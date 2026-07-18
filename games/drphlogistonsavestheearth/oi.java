@@ -144,7 +144,7 @@ abstract class oi {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -167,7 +167,7 @@ abstract class oi {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -85 + 41);
+          throw ie.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -85 + ')');
         }
         return stackIn_1_0;
     }
@@ -243,7 +243,7 @@ abstract class oi {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw ie.a((Throwable) (Object) var1, "oi.H(" + -120 + 41);
+              throw ie.a((Throwable) (Object) var1, "oi.H(" + -120 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -324,7 +324,7 @@ abstract class oi {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2;
-            stackOut_13_1 = new StringBuilder().append("oi.B(").append(8975).append(44);
+            stackOut_13_1 = new StringBuilder().append("oi.B(").append(8975).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -347,7 +347,7 @@ abstract class oi {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_12_0 != 0;
     }

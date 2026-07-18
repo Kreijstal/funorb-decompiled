@@ -39,7 +39,7 @@ final class kh extends gd {
         try {
             ((kh) this).field_m = new qf(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "kh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "kh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -191,7 +191,7 @@ final class kh extends gd {
               break L2;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw kk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
         }
         return stackIn_10_0;
     }
@@ -354,7 +354,7 @@ final class kh extends gd {
               break L4;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 41);
+          throw kk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ')');
         }
         return stackIn_14_0;
     }

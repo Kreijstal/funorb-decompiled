@@ -59,7 +59,7 @@ final class cf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1, "cf.B(" + 109 + 41);
+          throw dd.a((Throwable) (Object) var1, "cf.B(" + 109 + ')');
         }
     }
 
@@ -347,7 +347,7 @@ final class cf {
           L20: {
             var7 = decompiledCaughtException;
             stackOut_71_0 = (RuntimeException) var7;
-            stackOut_71_1 = new StringBuilder().append("cf.C(").append(param0).append(44);
+            stackOut_71_1 = new StringBuilder().append("cf.C(").append(param0).append(',');
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
@@ -372,7 +372,7 @@ final class cf {
           }
           L21: {
             stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-            stackOut_74_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_74_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_74_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_74_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_76_0 = stackOut_74_0;
             stackIn_76_1 = stackOut_74_1;
             stackIn_75_0 = stackOut_74_0;
@@ -395,7 +395,7 @@ final class cf {
               break L21;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + 44 + param5 + 41);
+          throw dd.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + ',' + param5 + ')');
         }
         return stackIn_70_0;
     }

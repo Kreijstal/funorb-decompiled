@@ -23,7 +23,7 @@ class fd extends ug {
             var2 = te.a(param0, "jagex logo2.packvorbis", "");
             ue discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "fd.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "fd.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

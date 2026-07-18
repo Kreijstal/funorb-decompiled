@@ -143,7 +143,7 @@ final class ig {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 0 + 41);
+          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + false + ')');
         }
         return stackIn_1_0;
     }

@@ -35,7 +35,7 @@ final class in extends fa {
             param0.addKeyListener((java.awt.event.KeyListener) (Object) mc.field_r);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) mc.field_r);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "in.D(" + (param0 != null ? "{...}" : "null") + 44 + 57 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "in.D(" + (param0 != null ? "{...}" : "null") + ',' + 57 + ')');
         }
     }
 

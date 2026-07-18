@@ -18,7 +18,7 @@ final class lr {
             kh.field_d = param1;
             oc.a(us.field_m, param0, (byte) -99);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "lr.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "lr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class lr {
         try {
             jd.a(param0, (byte) 109, true);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "lr.E(" + (param0 != null ? "{...}" : "null") + 44 + 56 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "lr.E(" + (param0 != null ? "{...}" : "null") + ',' + 56 + ')');
         }
     }
 

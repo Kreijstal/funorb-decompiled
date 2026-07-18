@@ -121,7 +121,7 @@ final class dh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var1, "dh.A(" + 120 + 41);
+          throw pn.a((Throwable) (Object) var1, "dh.A(" + 120 + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class dh {
         try {
             wt.field_e.a((byte) -50, 1048576, !param2 ? true : false, 256, param4, 1000000);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "dh.B(" + 1000000 + 44 + 256 + 44 + param2 + 44 + 1048576 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "dh.B(" + 1000000 + ',' + 256 + ',' + param2 + ',' + 1048576 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

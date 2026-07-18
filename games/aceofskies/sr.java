@@ -40,7 +40,7 @@ final class sr extends rt {
             jaggl.OpenGL.glPixelStorei(3317, 4);
             ((sr) this).a(true, -128);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "sr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "sr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class sr extends rt {
             jaggl.OpenGL.glTexImage3Dub(((sr) this).field_f, 0, ((sr) this).field_b, ((sr) this).field_l, ((sr) this).field_m, ((sr) this).field_n, 0, ia.a(((sr) this).field_b, -16445), 5121, (byte[]) null, 0);
             ((sr) this).a(true, -128);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "sr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "sr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

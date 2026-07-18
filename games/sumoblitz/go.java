@@ -18,7 +18,7 @@ final class go extends bp implements nh {
             }
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "go.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "go.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class go extends bp implements nh {
             jaggl.OpenGL.glTexImage3Dub(((go) this).field_h, 0, ((go) this).e(-11), ((go) this).field_i, ((go) this).field_k, ((go) this).field_l, 0, te.a(-21339, ((go) this).field_c), 5121, param5, 0);
             jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "go.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -14,7 +14,7 @@ final class sg {
             var3.b(-1336879960, param2.field_l);
             var3.b(-1336879960, param2.field_f);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "sg.B(" + 7 + 44 + -92 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "sg.B(" + 7 + ',' + -92 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

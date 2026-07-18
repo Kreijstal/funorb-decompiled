@@ -194,7 +194,7 @@ final class of {
           }
           L4: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -219,7 +219,7 @@ final class of {
           }
           L5: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -242,7 +242,7 @@ final class of {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + -90 + 41);
+          throw t.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + -90 + ')');
         }
         return stackIn_14_0 != 0;
     }
@@ -301,7 +301,7 @@ final class of {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var2;
-            stackOut_9_1 = new StringBuilder().append("of.B(").append(122).append(44);
+            stackOut_9_1 = new StringBuilder().append("of.B(").append(122).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -324,7 +324,7 @@ final class of {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return (lm) (Object) stackIn_8_0;
     }

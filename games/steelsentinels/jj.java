@@ -494,7 +494,7 @@ final class jj {
               L33: {
                 var6 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_109_0 = (RuntimeException) var6;
-                stackOut_109_1 = new StringBuilder().append("jj.A(").append(param0).append(44).append(param1).append(44);
+                stackOut_109_1 = new StringBuilder().append("jj.A(").append(param0).append(',').append(param1).append(',');
                 stackIn_111_0 = stackOut_109_0;
                 stackIn_111_1 = stackOut_109_1;
                 stackIn_110_0 = stackOut_109_0;
@@ -519,7 +519,7 @@ final class jj {
               }
               L34: {
                 stackOut_112_0 = (RuntimeException) (Object) stackIn_112_0;
-                stackOut_112_1 = ((StringBuilder) (Object) stackIn_112_1).append(stackIn_112_2).append(44).append(param3).append(44).append(param4).append(44);
+                stackOut_112_1 = ((StringBuilder) (Object) stackIn_112_1).append(stackIn_112_2).append(',').append(param3).append(',').append(param4).append(',');
                 stackIn_114_0 = stackOut_112_0;
                 stackIn_114_1 = stackOut_112_1;
                 stackIn_113_0 = stackOut_112_0;
@@ -542,7 +542,7 @@ final class jj {
                   break L34;
                 }
               }
-              throw ci.a((Throwable) (Object) stackIn_115_0, stackIn_115_2 + 41);
+              throw ci.a((Throwable) (Object) stackIn_115_0, stackIn_115_2 + ')');
             }
             return stackIn_108_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {

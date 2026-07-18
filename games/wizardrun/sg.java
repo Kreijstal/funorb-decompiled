@@ -395,7 +395,7 @@ final class sg {
                     }
                     case 16: {
                         stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                        stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+                        stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
                         stackIn_18_0 = stackOut_16_0;
                         stackIn_18_1 = stackOut_16_1;
                         stackIn_17_0 = stackOut_16_0;
@@ -428,7 +428,7 @@ final class sg {
                         continue stateLoop;
                     }
                     case 19: {
-                        throw bd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 0 + 41);
+                        throw bd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + 0 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -776,7 +776,7 @@ final class sg {
               L19: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_68_0 = (RuntimeException) var6_ref;
-                stackOut_68_1 = new StringBuilder().append("sg.E(").append(param0).append(44);
+                stackOut_68_1 = new StringBuilder().append("sg.E(").append(param0).append(',');
                 stackIn_70_0 = stackOut_68_0;
                 stackIn_70_1 = stackOut_68_1;
                 stackIn_69_0 = stackOut_68_0;
@@ -799,7 +799,7 @@ final class sg {
                   break L19;
                 }
               }
-              throw bd.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + 44 + param2 + 44 + param3 + 44 + 1 + 41);
+              throw bd.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + ',' + param2 + ',' + param3 + ',' + true + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -891,7 +891,7 @@ final class sg {
               break L3;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw bd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -909,7 +909,7 @@ final class sg {
             ((sg) this).field_d = param2;
             ((sg) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "sg.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "sg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

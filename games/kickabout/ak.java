@@ -154,7 +154,7 @@ final class ak extends gn {
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
         }
         return stackIn_24_0;
     }

@@ -178,7 +178,7 @@ abstract class ok implements jm {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_34_0 = (RuntimeException) var3;
-            stackOut_34_1 = new StringBuilder().append("ok.Q(").append(111).append(44);
+            stackOut_34_1 = new StringBuilder().append("ok.Q(").append(111).append(',');
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
@@ -201,7 +201,7 @@ abstract class ok implements jm {
               break L5;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + 0 + 41);
+          throw lj.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + false + ')');
         }
         return stackIn_33_0 != 0;
     }

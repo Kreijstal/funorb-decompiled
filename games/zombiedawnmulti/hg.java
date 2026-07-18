@@ -101,7 +101,7 @@ final class hg extends gm {
                 }
               }
             }
-            var2 = var2 + 32;
+            var2 = var2 + ' ';
             continue L1;
           } else {
             var2 = var11;
@@ -220,7 +220,7 @@ final class hg extends gm {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
     }
 

@@ -183,7 +183,7 @@ final class t {
             var2 = new rn(param0, param1);
         } else {
             var2 = (rn) (Object) param0;
-            var2.field_g = var2.field_g + 32 + param1;
+            var2.field_g = var2.field_g + ' ' + param1;
         }
         return var2;
     }

@@ -47,7 +47,7 @@ final class hd {
                             break L2;
                           }
                         }
-                        StringBuilder discarded$6 = var12.append(var9);
+                        StringBuilder discarded$6 = var12.append((char) var9);
                         continue L1;
                       }
                     }
@@ -81,7 +81,7 @@ final class hd {
                             break L5;
                           }
                         }
-                        StringBuilder discarded$9 = var13.append(var9);
+                        StringBuilder discarded$9 = var13.append((char) var9);
                         continue L4;
                       }
                     }

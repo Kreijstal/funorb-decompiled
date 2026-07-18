@@ -22,7 +22,7 @@ final class bc extends rf {
             wj.b();
             ki.a(param0.field_B, param0.field_x, param0.field_q);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "bc.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "bc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class bc extends rf {
             ((bc) this).field_k = param5;
             ((bc) this).field_f = param4;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "bc.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "bc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

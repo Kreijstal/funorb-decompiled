@@ -181,7 +181,7 @@ final class fr extends ma {
             param1.field_o = var6.b(true);
             var6.b(-var4 + var6.field_v, true);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "fr.D(" + 98 + 44 + (param1 != null ? "{...}" : "null") + 44 + 6 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "fr.D(" + 98 + ',' + (param1 != null ? "{...}" : "null") + ',' + 6 + ')');
         }
     }
 
@@ -221,7 +221,7 @@ final class fr extends ma {
             ((fr) this).field_l = param2;
             ((fr) this).field_r = param1;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "fr.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "fr.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

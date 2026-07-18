@@ -168,7 +168,7 @@ abstract class sb {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_46_0 = (RuntimeException) var2;
-            stackOut_46_1 = new StringBuilder().append("sb.V(").append(32351).append(44);
+            stackOut_46_1 = new StringBuilder().append("sb.V(").append(32351).append(',');
             stackIn_48_0 = stackOut_46_0;
             stackIn_48_1 = stackOut_46_1;
             stackIn_47_0 = stackOut_46_0;
@@ -191,7 +191,7 @@ abstract class sb {
               break L7;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_49_0, stackIn_49_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_49_0, stackIn_49_2 + ')');
         }
     }
 

@@ -265,7 +265,7 @@ final class ji {
               break L1;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw pf.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_7_0;
     }
@@ -292,7 +292,7 @@ final class ji {
             ((ji) this).field_j = ma.a((double)param2 * 3.141592653589793 / 512.0, 70) * var5_double;
             ((ji) this).field_h = nb.a(3.141592653589793 * (double)param2 / 512.0, -127) * var5_double;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "ji.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "ji.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

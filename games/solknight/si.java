@@ -74,7 +74,7 @@ abstract class si extends rc implements oh {
         var6 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            StringBuilder discarded$20 = param1.append(10);
+            StringBuilder discarded$20 = param1.append('\n');
             if (param3 == -19156) {
               var5_int = 0;
               L1: while (true) {
@@ -90,7 +90,7 @@ abstract class si extends rc implements oh {
                   }
                   break L0;
                 } else {
-                  StringBuilder discarded$23 = param1.append(32);
+                  StringBuilder discarded$23 = param1.append(' ');
                   var5_int++;
                   continue L1;
                 }
@@ -129,7 +129,7 @@ abstract class si extends rc implements oh {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -152,7 +152,7 @@ abstract class si extends rc implements oh {
               break L4;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 44 + param3 + 41);
+          throw fc.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -225,7 +225,7 @@ abstract class si extends rc implements oh {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var5;
-            stackOut_12_1 = new StringBuilder().append("si.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_12_1 = new StringBuilder().append("si.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -248,7 +248,7 @@ abstract class si extends rc implements oh {
               break L3;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_11_0;
     }
@@ -348,7 +348,7 @@ abstract class si extends rc implements oh {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("si.AA(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("si.AA(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -371,7 +371,7 @@ abstract class si extends rc implements oh {
               break L4;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -432,7 +432,7 @@ abstract class si extends rc implements oh {
           L3: {
             var8 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var8;
-            stackOut_8_1 = new StringBuilder().append("si.S(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_8_1 = new StringBuilder().append("si.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -455,7 +455,7 @@ abstract class si extends rc implements oh {
               break L3;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -543,7 +543,7 @@ abstract class si extends rc implements oh {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -566,7 +566,7 @@ abstract class si extends rc implements oh {
               break L3;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
@@ -641,7 +641,7 @@ abstract class si extends rc implements oh {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("si.MA(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("si.MA(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -664,7 +664,7 @@ abstract class si extends rc implements oh {
               break L4;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0 != 0;
     }
@@ -774,7 +774,7 @@ abstract class si extends rc implements oh {
           }
           L2: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -799,7 +799,7 @@ abstract class si extends rc implements oh {
           }
           L3: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(1).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(true).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -824,7 +824,7 @@ abstract class si extends rc implements oh {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -847,7 +847,7 @@ abstract class si extends rc implements oh {
               break L4;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -860,7 +860,7 @@ abstract class si extends rc implements oh {
             param4.a(true, param0);
             param4.c(-119, param2);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "si.CA(" + param0 + 44 + 22 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "si.CA(" + param0 + ',' + 22 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -900,7 +900,7 @@ abstract class si extends rc implements oh {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var5;
-            stackOut_4_1 = new StringBuilder().append("si.JA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_4_1 = new StringBuilder().append("si.JA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -923,7 +923,7 @@ abstract class si extends rc implements oh {
               break L2;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -977,7 +977,7 @@ abstract class si extends rc implements oh {
           L3: {
             var7 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var7;
-            stackOut_5_1 = new StringBuilder().append("si.O(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("si.O(").append(param0).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -1000,7 +1000,7 @@ abstract class si extends rc implements oh {
               break L3;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw fc.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -1079,7 +1079,7 @@ abstract class si extends rc implements oh {
               break L3;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + -125 + 41);
+          throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -125 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -1147,7 +1147,7 @@ abstract class si extends rc implements oh {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("si.GA(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("si.GA(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -1172,7 +1172,7 @@ abstract class si extends rc implements oh {
           }
           L3: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -1195,7 +1195,7 @@ abstract class si extends rc implements oh {
               break L3;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 41);
+          throw fc.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param3 + ')');
         }
         return stackIn_7_0;
     }
@@ -1267,7 +1267,7 @@ abstract class si extends rc implements oh {
           L4: {
             var8 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var8;
-            stackOut_8_1 = new StringBuilder().append("si.LA(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("si.LA(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -1290,7 +1290,7 @@ abstract class si extends rc implements oh {
               break L4;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw fc.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_7_0 != 0;
     }

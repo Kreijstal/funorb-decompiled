@@ -349,7 +349,7 @@ final class bi {
           L17: {
             var8 = decompiledCaughtException;
             stackOut_50_0 = (RuntimeException) var8;
-            stackOut_50_1 = new StringBuilder().append("bi.C(").append(77).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_50_1 = new StringBuilder().append("bi.C(").append(77).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_52_0 = stackOut_50_0;
             stackIn_52_1 = stackOut_50_1;
             stackIn_51_0 = stackOut_50_0;
@@ -372,7 +372,7 @@ final class bi {
               break L17;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw fc.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -442,7 +442,7 @@ final class bi {
           L4: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var5_ref;
-            stackOut_13_1 = new StringBuilder().append("bi.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_13_1 = new StringBuilder().append("bi.E(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -465,7 +465,7 @@ final class bi {
               break L4;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param3 + 41);
+          throw fc.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param3 + ')');
         }
     }
 
@@ -979,7 +979,7 @@ final class bi {
               L19: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_64_0 = (RuntimeException) var6_ref;
-                stackOut_64_1 = new StringBuilder().append("bi.A(").append(-24942).append(44);
+                stackOut_64_1 = new StringBuilder().append("bi.A(").append(-24942).append(',');
                 stackIn_66_0 = stackOut_64_0;
                 stackIn_66_1 = stackOut_64_1;
                 stackIn_65_0 = stackOut_64_0;
@@ -1002,7 +1002,7 @@ final class bi {
                   break L19;
                 }
               }
-              throw fc.a((Throwable) (Object) stackIn_67_0, stackIn_67_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+              throw fc.a((Throwable) (Object) stackIn_67_0, stackIn_67_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1032,7 +1032,7 @@ final class bi {
             ((bi) this).field_j = param0;
             ((bi) this).field_c = param3;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "bi.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "bi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

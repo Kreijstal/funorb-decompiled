@@ -69,7 +69,7 @@ final class wi extends sj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var3, "wi.A(" + param0 + 44 + 2113632 + 44 + param2 + 41);
+          throw vk.a((Throwable) (Object) var3, "wi.A(" + param0 + ',' + 2113632 + ',' + param2 + ')');
         }
         return stackIn_14_0;
     }
@@ -132,7 +132,7 @@ final class wi extends sj {
             ((wi) this).field_ub.field_R = true;
             ((wi) this).b((byte) -84, (lm) (Object) ((wi) this).field_ub);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "wi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class wi extends sj {
           L5: {
             runtimeException = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) runtimeException;
-            stackOut_16_1 = new StringBuilder().append("wi.G(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("wi.G(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -278,7 +278,7 @@ final class wi extends sj {
               break L5;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 44 + param3 + 41);
+          throw vk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

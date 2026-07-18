@@ -106,7 +106,7 @@ final class hj {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 0 + 41);
+          throw oi.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + false + ')');
         }
         return stackIn_1_0;
     }
@@ -138,7 +138,7 @@ final class hj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "hj.D(" + -93 + 41);
+          throw oi.a((Throwable) (Object) var1, "hj.D(" + -93 + ')');
         }
     }
 
@@ -233,7 +233,7 @@ final class hj {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("hj.<init>(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("hj.<init>(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -258,7 +258,7 @@ final class hj {
           }
           L4: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -281,7 +281,7 @@ final class hj {
               break L4;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 

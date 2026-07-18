@@ -42,7 +42,7 @@ final class s {
             ((s) this).field_i = param0.field_i;
             ((s) this).field_d = param0.field_d;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "s.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "s.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

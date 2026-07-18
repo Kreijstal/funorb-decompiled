@@ -180,7 +180,7 @@ final class dh {
                         if (vf.a((byte) -3, (char) var7)) {
                           var8 = ae.a(124, (char) var7);
                           if (0 != var8) {
-                            StringBuilder discarded$1 = var5.append(var8);
+                            StringBuilder discarded$1 = var5.append((char) var8);
                             var6++;
                             var6++;
                             continue L4;
@@ -237,7 +237,7 @@ final class dh {
               break L6;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + param1 + 41);
+          throw aa.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + param1 + ')');
         }
     }
 

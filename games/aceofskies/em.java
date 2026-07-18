@@ -311,7 +311,7 @@ final class em {
               break L6;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 

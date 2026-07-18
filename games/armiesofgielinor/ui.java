@@ -98,7 +98,7 @@ final class ui {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + 80 + 41);
+          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + 80 + ')');
         }
         return stackIn_4_0;
     }
@@ -170,7 +170,7 @@ final class ui {
             param0.field_l.field_s = param0;
             param0.field_s.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ui.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "ui.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1113,7 +1113,7 @@ final class ui {
             var2 = qs.a(param1, "jagex logo2.packvorbis", "");
             sn discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ui.G(" + -124 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "ui.G(" + -124 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

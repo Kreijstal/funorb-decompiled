@@ -121,7 +121,7 @@ final class gt extends mo {
             ((gt) this).field_u = mu.a(param0);
             ((gt) this).field_l = param0.l(8, 59);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "gt.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "gt.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class gt extends mo {
             ((gt) this).field_n = var3.field_n;
             ((gt) this).field_u = var3.field_u;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "gt.R(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "gt.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

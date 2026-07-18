@@ -1246,7 +1246,7 @@ abstract class vf {
                                       var21 = (Object) (Object) var31;
                                       break L72;
                                     } else {
-                                      var21 = (Object) (Object) (var21 + "<br>" + var31);
+                                      var21 = (Object) (Object) ((String) var21 + "<br>" + var31);
                                       break L72;
                                     }
                                   } else {
@@ -1276,7 +1276,7 @@ abstract class vf {
                                     }
                                   }
                                   if (var21 != null) {
-                                    var21 = (Object) (Object) (var21 + "<br>" + var22_ref);
+                                    var21 = (Object) (Object) ((String) var21 + "<br>" + var22_ref);
                                     break L70;
                                   } else {
                                     var21 = (Object) (Object) var22_ref;
@@ -1352,10 +1352,10 @@ abstract class vf {
                             if (var21 == null) {
                               break L78;
                             } else {
-                              var21 = (Object) (Object) ("<col=A00000>" + var21);
+                              var21 = (Object) (Object) ("<col=A00000>" + (String) var21);
                               var32 = dj.a(6609, (String) var21, "<br>", "<br><col=A00000>");
                               if (var20 != null) {
-                                var20 = (Object) (Object) (var20 + "<br>" + var32);
+                                var20 = (Object) (Object) ((String) var20 + "<br>" + var32);
                                 break L78;
                               } else {
                                 var20 = (Object) (Object) var32;
@@ -1862,7 +1862,7 @@ abstract class vf {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(-13546).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(-13546).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -1885,7 +1885,7 @@ abstract class vf {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_1_0;
     }

@@ -103,7 +103,7 @@ final class gj {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + true + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class gj {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var4;
-            stackOut_3_1 = new StringBuilder().append("gj.<init>(").append(param0).append(44).append(param1).append(44);
+            stackOut_3_1 = new StringBuilder().append("gj.<init>(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -216,7 +216,7 @@ final class gj {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

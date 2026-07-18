@@ -9,7 +9,7 @@ final class rha {
     private boolean field_a;
 
     private final void a(int param0) {
-        StringBuilder discarded$0 = ((rha) this).field_c.append(10);
+        StringBuilder discarded$0 = ((rha) this).field_c.append('\n');
         ((rha) this).field_a = true;
         int var2 = -40 / ((param0 - 26) / 54);
     }
@@ -39,7 +39,7 @@ final class rha {
             this.a(true, param0);
             this.a(83);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "rha.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "rha.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -456,7 +456,7 @@ final class rha {
             }
             StringBuilder discarded$1 = ((rha) this).field_c.append(param1.toString());
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "rha.B(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "rha.B(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -477,7 +477,7 @@ final class rha {
         try {
             param0.a((byte) -59, param1);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "rha.G(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "rha.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

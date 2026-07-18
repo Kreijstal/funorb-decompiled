@@ -120,7 +120,7 @@ final class hi implements Runnable {
           L5: {
             var5 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var5;
-            stackOut_24_1 = new StringBuilder().append("hi.G(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("hi.G(").append(param0).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -143,7 +143,7 @@ final class hi implements Runnable {
               break L5;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param2 + 44 + param3 + 41);
+          throw bd.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -368,7 +368,7 @@ final class hi implements Runnable {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw bd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -547,7 +547,7 @@ final class hi implements Runnable {
             ((hi) this).field_h = ((hi) this).field_o.getOutputStream();
             ((hi) this).field_n = param2;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -20,7 +20,7 @@ final class tm {
             var3.c(param1.field_q, (byte) -91);
             var3.c(param1.field_u, (byte) -60);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "tm.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 7 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "tm.C(" + false + ',' + (param1 != null ? "{...}" : "null") + ',' + 7 + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class tm {
           L0: while (true) {
             if (sb.field_sb > var2) {
               L1: {
-                var7 = var1 + 32;
+                var7 = var1 + ' ';
                 var3 = 255 & tk.field_h.field_o[var2];
                 var4 = var3 >> 4;
                 var3 = var3 & 15;

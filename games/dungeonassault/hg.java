@@ -202,7 +202,7 @@ final class hg extends qb {
           }
           L8: {
             stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44);
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -225,7 +225,7 @@ final class hg extends qb {
               break L8;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 1 + 41);
+          throw vk.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + true + ')');
         }
     }
 
@@ -1273,7 +1273,7 @@ final class hg extends qb {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4;
-            stackOut_17_1 = new StringBuilder().append("hg.B(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("hg.B(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -1296,7 +1296,7 @@ final class hg extends qb {
               break L6;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param2 + ')');
         }
     }
 
@@ -1461,7 +1461,7 @@ final class hg extends qb {
               break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1471,7 +1471,7 @@ final class hg extends qb {
         try {
             ((hg) this).field_m = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "hg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "hg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -117,7 +117,7 @@ class fh extends hd {
               }
               L3: {
                 stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
                 stackIn_17_0 = stackOut_15_0;
                 stackIn_17_1 = stackOut_15_1;
                 stackIn_16_0 = stackOut_15_0;
@@ -140,7 +140,7 @@ class fh extends hd {
                   break L3;
                 }
               }
-              throw sd.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + 120 + 41);
+              throw sd.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + 120 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -183,7 +183,7 @@ class fh extends hd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var2, "fh.K(" + 5 + 44 + 8100 + 41);
+          throw sd.a((Throwable) (Object) var2, "fh.K(" + 5 + ',' + 8100 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ class fh extends hd {
             int var6_int = -54 / ((param2 - 2) / 54);
             super.a(param0, param1, 66, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "fh.L(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "fh.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -75,7 +75,7 @@ class bh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2_ref, "bh.CB(" + 6 + 44 + -120 + 41);
+          throw dh.a((Throwable) (Object) var2_ref, "bh.CB(" + 6 + ',' + -120 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ class bh {
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("bh.VA(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("bh.VA(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -171,7 +171,7 @@ class bh {
                   break L2;
                 }
               }
-              throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+              throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -231,7 +231,7 @@ class bh {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("bh.BB(").append(16).append(44).append(0).append(44);
+            stackOut_2_1 = new StringBuilder().append("bh.BB(").append(16).append(',').append(false).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -254,7 +254,7 @@ class bh {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }

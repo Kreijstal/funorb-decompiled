@@ -31,7 +31,7 @@ final class bh extends java.awt.Canvas {
         try {
             ((bh) this).field_b.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "bh.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "bh.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class bh extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "bh.B(" + 2 + 41);
+          throw t.a((Throwable) (Object) var1, "bh.B(" + 2 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class bh extends java.awt.Canvas {
         try {
             ((bh) this).field_b.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "bh.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "bh.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -355,7 +355,7 @@ final class bh extends java.awt.Canvas {
           L11: {
             var5 = decompiledCaughtException;
             stackOut_33_0 = (RuntimeException) var5;
-            stackOut_33_1 = new StringBuilder().append("bh.D(").append(param0).append(44);
+            stackOut_33_1 = new StringBuilder().append("bh.D(").append(param0).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
@@ -380,7 +380,7 @@ final class bh extends java.awt.Canvas {
           }
           L12: {
             stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-            stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(44).append(1).append(44);
+            stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(',').append(1).append(',');
             stackIn_38_0 = stackOut_36_0;
             stackIn_38_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
@@ -403,7 +403,7 @@ final class bh extends java.awt.Canvas {
               break L12;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + param4 + 41);
+          throw t.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + param4 + ')');
         }
     }
 
@@ -411,7 +411,7 @@ final class bh extends java.awt.Canvas {
         try {
             ((bh) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

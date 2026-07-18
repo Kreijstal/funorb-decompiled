@@ -120,7 +120,7 @@ final class db extends hi {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_32_0 = (RuntimeException) var3;
-            stackOut_32_1 = new StringBuilder().append("db.K(").append(param0).append(44);
+            stackOut_32_1 = new StringBuilder().append("db.K(").append(param0).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
@@ -143,7 +143,7 @@ final class db extends hi {
               break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ')');
         }
         return stackIn_31_0;
     }
@@ -271,7 +271,7 @@ final class db extends hi {
               break L5;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw wg.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_18_0;
     }
@@ -282,7 +282,7 @@ final class db extends hi {
             ((db) this).field_q = param1;
             ((db) this).field_p = param2;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "db.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "db.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -378,7 +378,7 @@ final class db extends hi {
           L2: {
             var3_ref = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var3_ref;
-            stackOut_18_1 = new StringBuilder().append("db.F(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("db.F(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -401,7 +401,7 @@ final class db extends hi {
               break L2;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
         return stackIn_17_0 != 0;
     }
@@ -491,7 +491,7 @@ final class db extends hi {
               break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
         }
         return stackIn_10_0;
     }
@@ -500,7 +500,7 @@ final class db extends hi {
         try {
             kh.a(param2, 256, (byte) -105, param0);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "db.H(" + param0 + 44 + 256 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "db.H(" + param0 + ',' + 256 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

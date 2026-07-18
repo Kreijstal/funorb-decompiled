@@ -490,7 +490,7 @@ final class dk extends wc {
           L10: {
             var3 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var3;
-            stackOut_38_1 = new StringBuilder().append("dk.B(").append(param0).append(44);
+            stackOut_38_1 = new StringBuilder().append("dk.B(").append(param0).append(',');
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -513,7 +513,7 @@ final class dk extends wc {
               break L10;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ')');
         }
     }
 

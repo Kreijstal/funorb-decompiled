@@ -161,7 +161,7 @@ final class co {
               break L7;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + -127 + 41);
+          throw t.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + -127 + ')');
         }
         return (char) stackIn_22_0;
     }
@@ -247,7 +247,7 @@ final class co {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 0 + 41);
+          throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + 0 + ')');
         }
         return stackIn_10_0;
     }

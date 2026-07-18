@@ -230,7 +230,7 @@ final class qd extends pv {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + -126 + 41);
+          throw pe.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + -126 + ')');
         }
     }
 
@@ -241,7 +241,7 @@ final class qd extends pv {
             ((qd) this).field_o = ((qd) this).field_f.field_k;
             ((qd) this).field_j = (double)((qd) this).field_m / (-43.0 + (double)this.c(false));
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "qd.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

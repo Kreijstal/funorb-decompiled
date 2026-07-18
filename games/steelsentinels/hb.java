@@ -22,7 +22,7 @@ final class hb implements Iterable {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) ub.field_e);
             wn.field_d = 0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "hb.E(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "hb.E(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class hb implements Iterable {
             param1.field_v.field_o = param1;
             param1.field_o.field_v = param1;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "hb.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "hb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -408,7 +408,7 @@ final class hb implements Iterable {
           L19: {
             var9 = decompiledCaughtException;
             stackOut_89_0 = (RuntimeException) var9;
-            stackOut_89_1 = new StringBuilder().append("hb.G(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_89_1 = new StringBuilder().append("hb.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_91_0 = stackOut_89_0;
             stackIn_91_1 = stackOut_89_1;
             stackIn_90_0 = stackOut_89_0;
@@ -431,7 +431,7 @@ final class hb implements Iterable {
               break L19;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_92_0, stackIn_92_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw ci.a((Throwable) (Object) stackIn_92_0, stackIn_92_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -891,7 +891,7 @@ final class hb implements Iterable {
           L23: {
             var6 = decompiledCaughtException;
             stackOut_74_0 = (RuntimeException) var6;
-            stackOut_74_1 = new StringBuilder().append("hb.C(").append(param0).append(44);
+            stackOut_74_1 = new StringBuilder().append("hb.C(").append(param0).append(',');
             stackIn_76_0 = stackOut_74_0;
             stackIn_76_1 = stackOut_74_1;
             stackIn_75_0 = stackOut_74_0;
@@ -914,7 +914,7 @@ final class hb implements Iterable {
               break L23;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ci.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

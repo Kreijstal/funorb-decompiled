@@ -65,7 +65,7 @@ final class db {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 95 + 41);
+          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 95 + ')');
         }
         return (pp) (Object) stackIn_1_0;
     }
@@ -187,7 +187,7 @@ final class db {
           }
           L4: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -210,7 +210,7 @@ final class db {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 0 + 41);
+          throw pe.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + false + ')');
         }
         return stackIn_5_0 != 0;
     }

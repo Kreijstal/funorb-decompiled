@@ -43,7 +43,7 @@ final class jj extends kj {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$3 = var6.append(var9);
+                      StringBuilder discarded$3 = var6.append((char) var9);
                       continue L1;
                     }
                   }
@@ -97,7 +97,7 @@ final class jj extends kj {
             ((jj) this).field_A = 256;
             ((jj) this).field_y = param0;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "jj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "jj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class jj extends kj {
               }
               L2: {
                 stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param1).append(44);
+                stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
                 stackIn_9_0 = stackOut_7_0;
                 stackIn_9_1 = stackOut_7_1;
                 stackIn_8_0 = stackOut_7_0;
@@ -216,7 +216,7 @@ final class jj extends kj {
                   break L2;
                 }
               }
-              throw dd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+              throw dd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

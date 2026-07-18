@@ -84,7 +84,7 @@ abstract class db {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2_ref;
-            stackOut_14_1 = new StringBuilder().append("db.A(").append(-60).append(44);
+            stackOut_14_1 = new StringBuilder().append("db.A(").append(-60).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -107,7 +107,7 @@ abstract class db {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0;
     }
@@ -290,7 +290,7 @@ abstract class db {
           }
           L9: {
             stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(44).append(param1).append(44);
+            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',').append(param1).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
@@ -313,7 +313,7 @@ abstract class db {
               break L9;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ')');
         }
         return stackIn_28_0;
     }
@@ -354,7 +354,7 @@ abstract class db {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "db.H(" + 10000 + 41);
+          throw ci.a((Throwable) (Object) var1, "db.H(" + 10000 + ')');
         }
     }
 
@@ -398,7 +398,7 @@ abstract class db {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("db.G(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("db.G(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -421,7 +421,7 @@ abstract class db {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

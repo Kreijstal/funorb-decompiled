@@ -123,7 +123,7 @@ final class bh implements dja {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + -122 + 41);
+          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + -122 + ')');
         }
         return stackIn_15_0;
     }

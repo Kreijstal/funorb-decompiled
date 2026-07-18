@@ -96,7 +96,7 @@ abstract class ff {
                           } else {
                             var8 = r.a(-219, (char) var7);
                             if (var8 != 0) {
-                              StringBuilder discarded$3 = var5.append(var8);
+                              StringBuilder discarded$3 = var5.append((char) var8);
                               break L5;
                             } else {
                               break L5;
@@ -123,7 +123,7 @@ abstract class ff {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var2;
-            stackOut_30_1 = new StringBuilder().append("ff.B(").append(116).append(44);
+            stackOut_30_1 = new StringBuilder().append("ff.B(").append(116).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -146,7 +146,7 @@ abstract class ff {
               break L6;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
         }
     }
 

@@ -23,7 +23,7 @@ final class kp extends rf {
             java.nio.Buffer discarded$0 = ((kp) this).field_e.position(0);
             java.nio.ByteBuffer discarded$1 = ((kp) this).field_e.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "kp.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "kp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

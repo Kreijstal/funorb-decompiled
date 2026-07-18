@@ -367,7 +367,7 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("ra.D(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("ra.D(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -390,7 +390,7 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -528,7 +528,7 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((ra) this).field_d = true;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "ra.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "ra.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

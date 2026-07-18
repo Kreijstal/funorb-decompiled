@@ -439,7 +439,7 @@ final class tf {
           L36: {
             var3 = decompiledCaughtException;
             stackOut_99_0 = (RuntimeException) var3;
-            stackOut_99_1 = new StringBuilder().append("tf.A(").append(-123).append(44);
+            stackOut_99_1 = new StringBuilder().append("tf.A(").append(-123).append(',');
             stackIn_101_0 = stackOut_99_0;
             stackIn_101_1 = stackOut_99_1;
             stackIn_100_0 = stackOut_99_0;
@@ -462,7 +462,7 @@ final class tf {
               break L36;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_102_0, stackIn_102_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_102_0, stackIn_102_2 + ')');
         }
     }
 
@@ -487,7 +487,7 @@ final class tf {
             }
             this.a((byte) -123, param0);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "tf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "tf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

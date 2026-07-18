@@ -30,7 +30,7 @@ final class gb extends nt {
             var4 = var4 * 2;
             am.field_j[4].a((float)(((gb) this).field_k >> 8), (float)(((gb) this).field_o >> 8), var4, 0, 1, var3_int << 24, 1);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "gb.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "gb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -87,7 +87,7 @@ final class rt {
           }
           L2: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -110,7 +110,7 @@ final class rt {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 9 + 41);
+          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + 9 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class rt {
             oea.field_p.a(128, (byte) 39, 9);
             lfa.a(22050, param2, true, (byte) 107, oea.field_p, (java.awt.Component) (Object) param0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "rt.B(" + (param0 != null ? "{...}" : "null") + 44 + 120 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "rt.B(" + (param0 != null ? "{...}" : "null") + ',' + 120 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

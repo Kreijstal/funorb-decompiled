@@ -81,7 +81,7 @@ final class oa implements Runnable {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2_ref;
-            stackOut_13_1 = new StringBuilder().append("oa.C(").append(1).append(44);
+            stackOut_13_1 = new StringBuilder().append("oa.C(").append(true).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -104,7 +104,7 @@ final class oa implements Runnable {
               break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_12_0;
     }

@@ -92,7 +92,7 @@ final class eh implements bf {
           L4: {
             var6 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var6;
-            stackOut_14_1 = new StringBuilder().append("eh.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("eh.B(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -115,7 +115,7 @@ final class eh implements bf {
               break L4;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param3 + 44 + param4 + 41);
+          throw bd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class eh implements bf {
             ((eh) this).field_b = param0;
             ((eh) this).field_a = param4;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "eh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "eh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

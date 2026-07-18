@@ -589,7 +589,7 @@ final class sc {
             rk.a(true, param1);
             int var2_int = 57 % ((param0 - -15) / 39);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "sc.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "sc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

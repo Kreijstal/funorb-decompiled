@@ -73,7 +73,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -181,7 +181,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
           }
           L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_12_0 = stackOut_9_0;
             stackIn_12_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -206,7 +206,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_16_0 = stackOut_13_0;
             stackIn_16_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -229,7 +229,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param3 + 41);
+          throw dh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param3 + ')');
         }
         return stackIn_4_0;
     }
@@ -311,7 +311,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
         return stackIn_14_0;
     }
@@ -468,7 +468,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                   break L5;
                 }
               }
-              throw dh.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+              throw dh.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -532,7 +532,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -634,7 +634,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2, "hn.H(" + 0 + 41);
+          throw dh.a((Throwable) (Object) var2, "hn.H(" + false + ')');
         }
     }
 
@@ -733,7 +733,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2, "hn.K(" + param0 + 41);
+          throw dh.a((Throwable) (Object) var2, "hn.K(" + param0 + ')');
         }
     }
 
@@ -844,7 +844,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw dh.a((Throwable) (Object) runtimeException, "hn.C(" + param0 + 44 + param1 + 41);
+          throw dh.a((Throwable) (Object) runtimeException, "hn.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -942,7 +942,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
               L5: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_11_0 = (RuntimeException) var3_ref2;
-                stackOut_11_1 = new StringBuilder().append("hn.L(").append(param0).append(44);
+                stackOut_11_1 = new StringBuilder().append("hn.L(").append(param0).append(',');
                 stackIn_14_0 = stackOut_11_0;
                 stackIn_14_1 = stackOut_11_1;
                 stackIn_12_0 = stackOut_11_0;
@@ -965,7 +965,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                   break L5;
                 }
               }
-              throw dh.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+              throw dh.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1025,7 +1025,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1068,7 +1068,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw dh.a((Throwable) (Object) runtimeException, "hn.N(" + 121 + 41);
+          throw dh.a((Throwable) (Object) runtimeException, "hn.N(" + 121 + ')');
         }
     }
 
@@ -1469,7 +1469,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1482,7 +1482,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
         try {
             field_g = null;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "hn.E(" + param0 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "hn.E(" + param0 + ')');
         }
     }
 
@@ -1597,7 +1597,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
     }
 
@@ -1728,7 +1728,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

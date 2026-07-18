@@ -84,7 +84,7 @@ final class ac {
             field_B.a(2, param0);
             field_B.c(-var2_int + field_B.field_o, -1);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "ac.B(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "ac.B(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class ac {
             var2 = jp.a(param1, "jagex logo2.packvorbis", "");
             va discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "ac.E(" + -125 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "ac.E(" + -125 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class ac {
           L5: {
             var13 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var13;
-            stackOut_16_1 = new StringBuilder().append("ac.<init>(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44).append(param9).append(44).append(param10).append(44);
+            stackOut_16_1 = new StringBuilder().append("ac.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -253,7 +253,7 @@ final class ac {
               break L5;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 

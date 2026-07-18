@@ -22,7 +22,7 @@ final class aeb {
             int discarded$0 = var3.g(1595, var4);
             var3.e(var3.field_e - var4, -129);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "aeb.B(" + 5 + 44 + -21584 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "aeb.B(" + 5 + ',' + -21584 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

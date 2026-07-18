@@ -287,7 +287,7 @@ final class re extends lb {
               break L8;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + ',' + param1 + ')');
         }
     }
 
@@ -373,7 +373,7 @@ final class re extends lb {
                   break L4;
                 }
               }
-              throw oj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+              throw oj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -387,7 +387,7 @@ final class re extends lb {
         try {
             ((re) this).field_y = param0;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -439,7 +439,7 @@ final class re extends lb {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("re.H(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("re.H(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -462,7 +462,7 @@ final class re extends lb {
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }

@@ -105,7 +105,7 @@ final class cq extends am {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class cq extends am {
               L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_5_0 = (RuntimeException) var2_ref2;
-                stackOut_5_1 = new StringBuilder().append("cq.C(").append(param0).append(44);
+                stackOut_5_1 = new StringBuilder().append("cq.C(").append(param0).append(',');
                 stackIn_7_0 = stackOut_5_0;
                 stackIn_7_1 = stackOut_5_1;
                 stackIn_6_0 = stackOut_5_0;
@@ -194,7 +194,7 @@ final class cq extends am {
                   break L4;
                 }
               }
-              throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+              throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -377,7 +377,7 @@ final class cq extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var3, "cq.D(" + param0 + 44 + param1 + 44 + 125 + 41);
+          throw rb.a((Throwable) (Object) var3, "cq.D(" + param0 + ',' + param1 + ',' + 125 + ')');
         }
         return stackIn_7_0;
     }

@@ -55,7 +55,7 @@ final class wma {
             param0.field_m.field_i = param0;
             param0.field_h = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "wma.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "wma.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

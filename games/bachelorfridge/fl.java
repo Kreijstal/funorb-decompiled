@@ -68,7 +68,7 @@ final class fl extends at {
             ((fl) this).field_n.field_f.a((byte) 18, ((fl) this).field_n.field_s.field_o.field_b, 5);
             ((fl) this).field_k = 25;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "fl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "fl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

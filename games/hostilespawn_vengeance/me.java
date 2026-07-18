@@ -106,7 +106,7 @@ abstract class me extends wb {
               break L2;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
     }
 
@@ -239,7 +239,7 @@ abstract class me extends wb {
             param0.addKeyListener((java.awt.event.KeyListener) (Object) nj.field_c);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) nj.field_c);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "me.V(" + (param0 != null ? "{...}" : "null") + 44 + 118 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "me.V(" + (param0 != null ? "{...}" : "null") + ',' + 118 + ')');
         }
     }
 
@@ -350,7 +350,7 @@ abstract class me extends wb {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var5;
-            stackOut_12_1 = new StringBuilder().append("me.F(").append(274).append(44);
+            stackOut_12_1 = new StringBuilder().append("me.F(").append(274).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -373,7 +373,7 @@ abstract class me extends wb {
               break L3;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 44 + param3 + 41);
+          throw wg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_11_0 != 0;
     }
@@ -392,7 +392,7 @@ abstract class me extends wb {
             ((me) this).a(51448, (ag) (Object) ((me) this).field_fb);
             ((me) this).field_bb = null;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "me.T(" + (param0 != null ? "{...}" : "null") + 44 + -9797 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "me.T(" + (param0 != null ? "{...}" : "null") + ',' + -9797 + ')');
         }
     }
 
@@ -510,7 +510,7 @@ abstract class me extends wb {
             } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               var2 = (RuntimeException) (Object) decompiledCaughtException;
-              throw wg.a((Throwable) (Object) var2, "me.Q(" + param0 + 44 + param1 + 41);
+              throw wg.a((Throwable) (Object) var2, "me.Q(" + param0 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -529,7 +529,7 @@ abstract class me extends wb {
             int discarded$0 = -9797;
             this.a(param1);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "me.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

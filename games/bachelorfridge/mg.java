@@ -53,7 +53,7 @@ final class mg extends at {
             ((mg) this).field_n = 50;
             ((mg) this).field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "mg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "mg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

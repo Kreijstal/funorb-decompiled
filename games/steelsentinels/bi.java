@@ -170,7 +170,7 @@ final class bi {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 1 + 41);
+          throw ci.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + true + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -319,7 +319,7 @@ final class bi {
           L9: {
             var4 = decompiledCaughtException;
             stackOut_37_0 = (RuntimeException) var4;
-            stackOut_37_1 = new StringBuilder().append("bi.F(").append(1).append(44).append(10).append(44).append(0).append(44);
+            stackOut_37_1 = new StringBuilder().append("bi.F(").append(true).append(',').append(10).append(',').append(false).append(',');
             stackIn_39_0 = stackOut_37_0;
             stackIn_39_1 = stackOut_37_1;
             stackIn_38_0 = stackOut_37_0;
@@ -342,7 +342,7 @@ final class bi {
               break L9;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ')');
         }
         return stackIn_36_0 != 0;
     }

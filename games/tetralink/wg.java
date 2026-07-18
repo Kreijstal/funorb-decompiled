@@ -308,7 +308,7 @@ final class wg {
               break L7;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + -3 + 44 + param2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + -3 + ',' + param2 + ')');
         }
         return stackIn_33_0;
     }

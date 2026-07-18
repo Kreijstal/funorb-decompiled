@@ -10,7 +10,7 @@ final class kh {
         try {
             sc.field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "kh.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "kh.A(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -45,7 +45,7 @@ final class lw extends pt {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("lw.K(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("lw.K(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -68,7 +68,7 @@ final class lw extends pt {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class lw extends pt {
             int var3_int = -61 % ((-27 - param1) / 44);
             super.a(param0, (byte) 87);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "lw.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "lw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

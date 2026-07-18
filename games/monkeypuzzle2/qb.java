@@ -44,7 +44,7 @@ final class qb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var2_ref, "qb.D(" + 256 + 44 + param1 + 41);
+          throw la.a((Throwable) (Object) var2_ref, "qb.D(" + 256 + ',' + param1 + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class qb {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5;
-            stackOut_10_1 = new StringBuilder().append("qb.B(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("qb.B(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -137,7 +137,7 @@ final class qb {
               break L3;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw la.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

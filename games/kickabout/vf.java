@@ -272,7 +272,7 @@ final class vf extends i {
             var4 = vo.a((byte) -18, gd.field_e[29], new String[2]);
             ((vf) this).a(var4, ((vf) this).field_t, ((vf) this).field_D, -90, ((vf) this).field_u);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "vf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "vf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -107,7 +107,7 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L4;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L2;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -304,7 +304,7 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L6;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
     }
 
@@ -332,7 +332,7 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "jg.keyTyped(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "jg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -405,7 +405,7 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var1, "jg.B(" + param0 + 41);
+          throw wg.a((Throwable) (Object) var1, "jg.B(" + param0 + ')');
         }
         return stackIn_21_0;
     }
@@ -464,7 +464,7 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
           L2: {
             var6_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var6_ref;
-            stackOut_7_1 = new StringBuilder().append("jg.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("jg.C(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -487,7 +487,7 @@ final class jg implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L2;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 0 + 44 + param4 + 44 + 0 + 41);
+          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + 0 + ',' + param4 + ',' + 0 + ')');
         }
         return stackIn_6_0;
     }

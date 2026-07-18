@@ -35,7 +35,7 @@ final class fk extends sh {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("fk.F(").append(2229).append(44);
+            stackOut_4_1 = new StringBuilder().append("fk.F(").append(2229).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -58,7 +58,7 @@ final class fk extends sh {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -69,7 +69,7 @@ final class fk extends sh {
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) pg.field_c);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) pg.field_c);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fk.C(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "fk.C(" + (param0 != null ? "{...}" : "null") + ',' + 1 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class fk extends sh {
         try {
             ((fk) this).field_A = param6;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fk.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "fk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class fk extends sh {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) runtimeException;
-            stackOut_8_1 = new StringBuilder().append("fk.TA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_8_1 = new StringBuilder().append("fk.TA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -165,7 +165,7 @@ final class fk extends sh {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param4 + 44 + param5 + 41);
+          throw t.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class fk extends sh {
               L0: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var4_ref2;
-                stackOut_6_1 = new StringBuilder().append("fk.E(").append(0).append(44);
+                stackOut_6_1 = new StringBuilder().append("fk.E(").append(false).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -241,7 +241,7 @@ final class fk extends sh {
                   break L0;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 44 + param3 + 41);
+              throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ',' + param3 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

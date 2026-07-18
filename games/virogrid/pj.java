@@ -62,7 +62,7 @@ final class pj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var2_ref, "pj.C(" + 4 + 44 + param1 + 41);
+          throw kg.a((Throwable) (Object) var2_ref, "pj.C(" + 4 + ',' + param1 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class pj {
             }
             param0.b();
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "pj.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "pj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

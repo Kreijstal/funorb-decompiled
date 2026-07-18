@@ -299,7 +299,7 @@ final class lc extends gi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2_ref, "lc.A(" + param0 + 44 + 24 + 41);
+          throw ie.a((Throwable) (Object) var2_ref, "lc.A(" + param0 + ',' + 24 + ')');
         }
     }
 

@@ -236,7 +236,7 @@ final class eq extends ji {
                 var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
                 var9 = 160;
             }
-            StringBuilder discarded$0 = var6.append(var9);
+            StringBuilder discarded$0 = var6.append((char) var9);
         }
         StringBuilder discarded$1 = var6.reverse();
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
@@ -327,7 +327,7 @@ final class eq extends ji {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("eq.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_15_1 = new StringBuilder().append("eq.C(").append(param0).append(',').append(param1).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -350,7 +350,7 @@ final class eq extends ji {
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 
@@ -478,7 +478,7 @@ final class eq extends ji {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -501,7 +501,7 @@ final class eq extends ji {
               break L5;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 44 + 0 + 41);
+          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param2 + ',' + 0 + ')');
         }
     }
 

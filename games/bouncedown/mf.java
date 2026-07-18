@@ -70,7 +70,7 @@ final class mf {
           L1: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3_ref;
-            stackOut_7_1 = new StringBuilder().append("mf.A(").append(80).append(44).append(-2808).append(44);
+            stackOut_7_1 = new StringBuilder().append("mf.A(").append(80).append(',').append(-2808).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -93,7 +93,7 @@ final class mf {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 

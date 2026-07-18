@@ -15,7 +15,7 @@ abstract class vf extends vd {
             ((vf) this).field_E = 0;
             ((vf) this).field_C = false;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -171,7 +171,7 @@ abstract class vf extends vd {
             ija.a((byte) 105, var6);
             int var7 = -6 / ((70 - param2) / 45);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vf.EA(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + 2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "vf.EA(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + 2 + ')');
         }
     }
 

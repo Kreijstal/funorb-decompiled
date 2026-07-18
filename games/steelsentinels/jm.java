@@ -308,7 +308,7 @@ final class jm extends ck {
           L19: {
             var6 = decompiledCaughtException;
             stackOut_60_0 = (RuntimeException) var6;
-            stackOut_60_1 = new StringBuilder().append("jm.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_60_1 = new StringBuilder().append("jm.A(").append(param0).append(',').append(param1).append(',');
             stackIn_62_0 = stackOut_60_0;
             stackIn_62_1 = stackOut_60_1;
             stackIn_61_0 = stackOut_60_0;
@@ -331,7 +331,7 @@ final class jm extends ck {
               break L19;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ci.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

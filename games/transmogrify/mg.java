@@ -236,7 +236,7 @@ final class mg {
               break L4;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 

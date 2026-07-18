@@ -31,7 +31,7 @@ final class dc {
                 if (-1 >= var3.length()) {
                   break L1;
                 } else {
-                  StringBuilder discarded$2 = var3.append(47);
+                  StringBuilder discarded$2 = var3.append('/');
                   break L1;
                 }
               }

@@ -192,7 +192,7 @@ final class pm extends q {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + -27226 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -27226 + ',' + param2 + ')');
         }
     }
 

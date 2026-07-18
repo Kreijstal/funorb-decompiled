@@ -23,7 +23,7 @@ final class qb {
             int discarded$0 = var5.c(var4, -30532);
             var5.c((byte) -111, -var4 + var5.field_i);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "qb.A(" + 5 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "qb.A(" + 5 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class qb {
               break L8;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + -76 + 41);
+          throw pf.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + -76 + ')');
         }
         return stackIn_26_0;
     }

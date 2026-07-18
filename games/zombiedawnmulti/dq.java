@@ -69,7 +69,7 @@ final class dq extends l implements java.awt.image.ImageProducer, java.awt.image
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class dq extends l implements java.awt.image.ImageProducer, java.awt.image
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("dq.B(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("dq.B(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -139,7 +139,7 @@ final class dq extends l implements java.awt.image.ImageProducer, java.awt.image
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 44 + param3 + 41);
+          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class dq extends l implements java.awt.image.ImageProducer, java.awt.image
         try {
             ((dq) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "dq.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "dq.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class dq extends l implements java.awt.image.ImageProducer, java.awt.image
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("dq.A(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("dq.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -233,7 +233,7 @@ final class dq extends l implements java.awt.image.ImageProducer, java.awt.image
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 44 + param3 + 41);
+          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -407,7 +407,7 @@ final class dq extends l implements java.awt.image.ImageProducer, java.awt.image
             param0.setColorModel(((dq) this).field_m);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "dq.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "dq.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -526,7 +526,7 @@ final class dq extends l implements java.awt.image.ImageProducer, java.awt.image
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw fa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }

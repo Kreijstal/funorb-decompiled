@@ -106,7 +106,7 @@ final class gi {
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 41);
+          throw dd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ')');
         }
     }
 
@@ -198,7 +198,7 @@ final class gi {
               break L3;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+          throw dd.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
         }
     }
 

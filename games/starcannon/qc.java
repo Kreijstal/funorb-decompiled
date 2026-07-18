@@ -18,7 +18,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
             int discarded$0 = 480;
             se.a(param8);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "qc.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + -109 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + (param11 != null ? "{...}" : "null") + 44 + param12 + 44 + param13 + 44 + (param14 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "qc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + -109 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + (param14 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L7;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 41);
+          throw sd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((qc) this).field_b = true;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "qc.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "qc.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
             int var3_int = -27 / ((param1 - 68) / 49);
             eg.a(((qc) this).field_f, (byte) -47, param0);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "qc.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "qc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
             param0.addKeyListener((java.awt.event.KeyListener) (Object) hj.field_c);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) hj.field_c);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "qc.D(" + (param0 != null ? "{...}" : "null") + 44 + 69 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "qc.D(" + (param0 != null ? "{...}" : "null") + ',' + 69 + ')');
         }
     }
 
@@ -631,7 +631,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
               }
               L31: {
                 stackOut_97_0 = (RuntimeException) (Object) stackIn_97_0;
-                stackOut_97_1 = ((StringBuilder) (Object) stackIn_97_1).append(stackIn_97_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(-1).append(44);
+                stackOut_97_1 = ((StringBuilder) (Object) stackIn_97_1).append(stackIn_97_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(-1).append(',');
                 stackIn_99_0 = stackOut_97_0;
                 stackIn_99_1 = stackOut_97_1;
                 stackIn_98_0 = stackOut_97_0;
@@ -654,7 +654,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
                   break L31;
                 }
               }
-              throw sd.a((Throwable) (Object) stackIn_100_0, stackIn_100_2 + 41);
+              throw sd.a((Throwable) (Object) stackIn_100_0, stackIn_100_2 + ')');
             }
             return stackIn_93_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {

@@ -43,7 +43,7 @@ final class jga extends ana {
             ((jga) this).field_x = new taa(((jga) this).field_q, ((jga) this).field_w.field_q, ((jga) this).field_w.field_t);
             ((jga) this).a(27799, (at) (Object) ((jga) this).field_x);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "jga.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "jga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

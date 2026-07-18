@@ -132,7 +132,7 @@ final class bk {
             param1.field_g.field_h = param1;
             param1.field_h.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "bk.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "bk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

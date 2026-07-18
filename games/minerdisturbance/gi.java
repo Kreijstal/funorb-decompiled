@@ -98,7 +98,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L4;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var2_ref, "gi.B(" + param0 + 44 + param1 + 41);
+          throw lj.a((Throwable) (Object) var2_ref, "gi.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -209,7 +209,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -237,7 +237,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "gi.keyTyped(" + (param0 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "gi.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -370,7 +370,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L6;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 

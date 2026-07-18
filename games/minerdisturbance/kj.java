@@ -41,7 +41,7 @@ final class kj {
             jn.a(0);
             ja.field_u = 150;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "kj.B(" + param0 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "kj.B(" + param0 + ')');
         }
     }
 

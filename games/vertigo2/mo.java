@@ -52,7 +52,7 @@ class mo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "mo.G(" + 1 + 41);
+          throw wn.a((Throwable) (Object) var1, "mo.G(" + true + ')');
         }
     }
 

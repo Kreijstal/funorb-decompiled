@@ -37,7 +37,7 @@ final class km extends fh {
             }
             java.nio.ByteBuffer discarded$7 = ((km) this).field_m.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "km.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "km.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -303,7 +303,7 @@ final class km extends fh {
               }
               L18: {
                 stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-                stackOut_38_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_38_2).append(44);
+                stackOut_38_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_38_2).append(',');
                 stackIn_40_0 = stackOut_38_0;
                 stackIn_40_1 = stackOut_38_1;
                 stackIn_39_0 = stackOut_38_0;
@@ -326,7 +326,7 @@ final class km extends fh {
                   break L18;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + param2 + 44 + -24183 + 41);
+              throw t.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ',' + param2 + ',' + -24183 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -352,7 +352,7 @@ final class km extends fh {
             oc.field_u = oc.field_u + (var2_int >> 1);
             bk.field_s = bk.field_s + param0.f(1952);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "km.H(" + (param0 != null ? "{...}" : "null") + 44 + 1238559653 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "km.H(" + (param0 != null ? "{...}" : "null") + ',' + 1238559653 + ')');
         }
     }
 

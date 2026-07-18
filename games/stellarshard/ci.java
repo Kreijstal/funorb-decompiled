@@ -147,7 +147,7 @@ abstract class ci {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(95).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append('_').append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -170,7 +170,7 @@ abstract class ci {
               break L5;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + 2619 + 41);
+          throw ma.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + 2619 + ')');
         }
         return stackIn_11_0;
     }
@@ -228,7 +228,7 @@ abstract class ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1_ref, "ci.J(" + 36 + 41);
+          throw ma.a((Throwable) (Object) var1_ref, "ci.J(" + 36 + ')');
         }
     }
 

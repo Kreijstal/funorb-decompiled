@@ -10,7 +10,7 @@ final class la extends b {
         try {
             ((la) this).field_p = param0;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "la.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "la.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -23,7 +23,7 @@ final class la extends b {
         dd var2 = null;
         if (param0 instanceof dd) {
             var2 = (dd) (Object) param0;
-            var2.field_c = var2.field_c + 32 + param1;
+            var2.field_c = var2.field_c + ' ' + param1;
         } else {
             var2 = new dd(param0, param1);
         }

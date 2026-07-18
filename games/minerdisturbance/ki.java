@@ -88,7 +88,7 @@ final class ki extends pi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "ki.A(" + -15003 + 41);
+          throw lj.a((Throwable) (Object) var1, "ki.A(" + -15003 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class ki extends pi {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("ki.B(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("ki.B(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -160,7 +160,7 @@ final class ki extends pi {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 44 + param3 + 41);
+          throw lj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_6_0;
     }

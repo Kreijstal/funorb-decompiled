@@ -29,7 +29,7 @@ final class fh {
             param1.field_t = ih.field_E;
             param1.field_R = ih.field_E;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "fh.C(" + 124 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "fh.C(" + 124 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -246,7 +246,7 @@ final class fh {
           L1: {
             var7 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var7;
-            stackOut_4_1 = new StringBuilder().append("fh.H(").append(param0).append(44).append(param1).append(44).append(56).append(44);
+            stackOut_4_1 = new StringBuilder().append("fh.H(").append(param0).append(',').append(param1).append(',').append(56).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -269,7 +269,7 @@ final class fh {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

@@ -96,7 +96,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
               L6: {
                 runtimeException = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_14_0 = (RuntimeException) runtimeException;
-                stackOut_14_1 = new StringBuilder().append("jna.S(").append(param0).append(44);
+                stackOut_14_1 = new StringBuilder().append("jna.S(").append(param0).append(',');
                 stackIn_17_0 = stackOut_14_0;
                 stackIn_17_1 = stackOut_14_1;
                 stackIn_15_0 = stackOut_14_0;
@@ -119,7 +119,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
                   break L6;
                 }
               }
-              throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+              throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -205,7 +205,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_10_0;
     }
@@ -229,7 +229,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "jna.M(" + param0 + 41);
+          throw tba.a((Throwable) (Object) var1, "jna.M(" + param0 + ')');
         }
     }
 
@@ -328,7 +328,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "jna.O(" + 270 + 41);
+          throw tba.a((Throwable) (Object) var2, "jna.O(" + 270 + ')');
         }
     }
 
@@ -373,7 +373,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "jna.H(" + -6 + 41);
+          throw tba.a((Throwable) (Object) var2, "jna.H(" + -6 + ')');
         }
     }
 
@@ -462,7 +462,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -553,7 +553,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4_ref;
-            stackOut_5_1 = new StringBuilder().append("jna.L(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_5_1 = new StringBuilder().append("jna.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -576,7 +576,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_4_0 != 0;
     }
@@ -694,7 +694,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1161,7 +1161,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
     }
 
@@ -1216,7 +1216,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1328,7 +1328,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           var3_ref4 = (RuntimeException) (Object) decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3_ref4, "jna.J(" + 109 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) var3_ref4, "jna.J(" + 109 + ',' + param1 + ')');
         }
     }
 
@@ -1386,7 +1386,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1485,7 +1485,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
               L6: {
                 var8_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_21_0 = (RuntimeException) var8_ref;
-                stackOut_21_1 = new StringBuilder().append("jna.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+                stackOut_21_1 = new StringBuilder().append("jna.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
                 stackIn_24_0 = stackOut_21_0;
                 stackIn_24_1 = stackOut_21_1;
                 stackIn_22_0 = stackOut_21_0;
@@ -1508,7 +1508,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
                   break L6;
                 }
               }
-              throw tba.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+              throw tba.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1568,7 +1568,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1668,7 +1668,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (Object) (Object) decompiledCaughtException;
-          throw tba.a((Throwable) var2, "jna.Q(" + param0 + 41);
+          throw tba.a((Throwable) var2, "jna.Q(" + param0 + ')');
         }
     }
 
@@ -1753,7 +1753,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
           L4: {
             var2 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var2;
-            stackOut_10_1 = new StringBuilder().append("jna.N(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("jna.N(").append(param0).append(',');
             stackIn_13_0 = stackOut_10_0;
             stackIn_13_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -1776,7 +1776,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
         return stackIn_9_0;
     }

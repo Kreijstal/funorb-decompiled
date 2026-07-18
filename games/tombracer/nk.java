@@ -196,7 +196,7 @@ final class nk extends vg {
           L9: {
             var3 = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var3;
-            stackOut_25_1 = new StringBuilder().append("nk.<init>(").append(param0).append(44);
+            stackOut_25_1 = new StringBuilder().append("nk.<init>(").append(param0).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -219,7 +219,7 @@ final class nk extends vg {
               break L9;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
         }
     }
 

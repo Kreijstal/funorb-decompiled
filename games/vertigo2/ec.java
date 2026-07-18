@@ -112,7 +112,7 @@ final class ec extends ji {
             var3.f(0, 79);
             var3.f(param2.field_r, 89);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ec.A(" + 5 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "ec.A(" + 5 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class ec extends ji {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("ec.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("ec.C(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -219,7 +219,7 @@ final class ec extends ji {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 

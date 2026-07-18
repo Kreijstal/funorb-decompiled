@@ -47,7 +47,7 @@ abstract class eq extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2, "eq.G(" + param0 + 44 + param1 + 41);
+          throw pn.a((Throwable) (Object) var2, "eq.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ abstract class eq extends wf {
         try {
             ((eq) this).field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "eq.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "eq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

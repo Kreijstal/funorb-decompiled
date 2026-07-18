@@ -60,7 +60,7 @@ final class nja extends fqa {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4_ref;
-            stackOut_5_1 = new StringBuilder().append("nja.AC(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("nja.AC(").append(param0).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -83,7 +83,7 @@ final class nja extends fqa {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -144,7 +144,7 @@ final class nja extends fqa {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("nja.V(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("nja.V(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -167,7 +167,7 @@ final class nja extends fqa {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

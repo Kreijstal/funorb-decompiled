@@ -165,7 +165,7 @@ final class nl extends fb {
             ((nl) this).field_j = param0.field_w & 3;
             ((nl) this).field_h = (de) (Object) var3;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "nl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "nl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class nl extends fb {
             var2 = bl.a(param0, "jagex logo2.packvorbis", "");
             ko discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "nl.A(" + (param0 != null ? "{...}" : "null") + 44 + 640 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "nl.A(" + (param0 != null ? "{...}" : "null") + ',' + 640 + ')');
         }
     }
 

@@ -41,7 +41,7 @@ final class ve {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "ve.B(" + -125 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) var2, "ve.B(" + -125 + ',' + param1 + ')');
         }
     }
 

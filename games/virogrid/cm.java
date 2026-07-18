@@ -154,7 +154,7 @@ final class cm extends l {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "cm.D(" + 11 + 41);
+          throw kg.a((Throwable) (Object) var1, "cm.D(" + 11 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class cm extends l {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + -47 + 44 + param2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + -47 + ',' + param2 + ')');
         }
     }
 

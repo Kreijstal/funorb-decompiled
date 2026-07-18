@@ -21,7 +21,7 @@ final class ss {
             rw.a();
             td.field_u = 0 - gi.field_i;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ss.C(" + (param0 != null ? "{...}" : "null") + 44 + 127 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "ss.C(" + (param0 != null ? "{...}" : "null") + ',' + 127 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class ss {
             var3.b((byte) 89, 0);
             var3.b((byte) 82, param2.field_n);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ss.A(" + param0 + 44 + 1000 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "ss.A(" + param0 + ',' + 1000 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

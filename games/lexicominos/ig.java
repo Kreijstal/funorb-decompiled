@@ -190,7 +190,7 @@ final class ig {
               break L7;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + -66 + 41);
+          throw ld.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + -66 + ')');
         }
         return stackIn_26_0;
     }

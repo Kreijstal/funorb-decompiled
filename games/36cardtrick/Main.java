@@ -330,7 +330,7 @@ public final class Main extends c {
     private final void d(int param0, int param1) {
         int var3 = param0 / 60;
         param0 = param0 % 60;
-        ((Main) this).field_Z = String.valueOf(var3) + 58 + String.valueOf(param0 / 10) + String.valueOf(param0 % param1);
+        ((Main) this).field_Z = String.valueOf(var3) + ':' + String.valueOf(param0 / 10) + String.valueOf(param0 % param1);
     }
 
     private final void p() {
@@ -1573,7 +1573,7 @@ public final class Main extends c {
           }
           L8: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -1596,7 +1596,7 @@ public final class Main extends c {
               break L8;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param2 + ')');
         }
     }
 
@@ -3533,7 +3533,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1_ref, "Main.AA(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1_ref, "Main.AA(" + param0 + ')');
         }
     }
 
@@ -3705,7 +3705,7 @@ public final class Main extends c {
           L9: {
             var2 = decompiledCaughtException;
             stackOut_49_0 = (RuntimeException) var2;
-            stackOut_49_1 = new StringBuilder().append("Main.HB(").append(30).append(44);
+            stackOut_49_1 = new StringBuilder().append("Main.HB(").append(30).append(',');
             stackIn_52_0 = stackOut_49_0;
             stackIn_52_1 = stackOut_49_1;
             stackIn_50_0 = stackOut_49_0;
@@ -3728,7 +3728,7 @@ public final class Main extends c {
               break L9;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + ')');
         }
         return stackIn_48_0 != 0;
     }

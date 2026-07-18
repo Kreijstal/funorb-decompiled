@@ -215,7 +215,7 @@ abstract class jc extends ib {
             ((jc) this).field_I = param0;
             ((jc) this).field_L = 0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "jc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "jc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -237,7 +237,7 @@ abstract class jc extends ib {
             da.a("", 121, param0);
             mi.a((byte) -111, param0);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "jc.PB(" + (param0 != null ? "{...}" : "null") + 44 + 97 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "jc.PB(" + (param0 != null ? "{...}" : "null") + ',' + 97 + ')');
         }
     }
 

@@ -133,7 +133,7 @@ final class ga extends RuntimeException {
                   break L8;
                 }
               }
-              throw rb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 24 + 41);
+              throw rb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + 24 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -223,7 +223,7 @@ final class ga extends RuntimeException {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var2;
-            stackOut_17_1 = new StringBuilder().append("ga.E(").append(0).append(44);
+            stackOut_17_1 = new StringBuilder().append("ga.E(").append(false).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -246,7 +246,7 @@ final class ga extends RuntimeException {
               break L6;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 
@@ -662,7 +662,7 @@ final class ga extends RuntimeException {
           L10: {
             var4 = decompiledCaughtException;
             stackOut_37_0 = (RuntimeException) var4;
-            stackOut_37_1 = new StringBuilder().append("ga.C(").append(0).append(44);
+            stackOut_37_1 = new StringBuilder().append("ga.C(").append(false).append(',');
             stackIn_39_0 = stackOut_37_0;
             stackIn_39_1 = stackOut_37_1;
             stackIn_38_0 = stackOut_37_0;
@@ -685,7 +685,7 @@ final class ga extends RuntimeException {
               break L10;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + 1 + 44 + param3 + 41);
+          throw rb.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + true + ',' + param3 + ')');
         }
         return stackIn_36_0;
     }

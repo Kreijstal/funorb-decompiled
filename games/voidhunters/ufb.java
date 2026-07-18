@@ -18,7 +18,7 @@ final class ufb extends java.awt.Canvas implements java.awt.event.FocusListener 
             }
             db.a(((ufb) this).field_b, param0, (byte) 126);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ufb.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ufb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -29,7 +29,7 @@ final class ufb extends java.awt.Canvas implements java.awt.event.FocusListener 
         try {
             ((ufb) this).field_a = true;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ufb.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ufb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

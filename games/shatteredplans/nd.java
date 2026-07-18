@@ -121,7 +121,7 @@ final class nd {
                         }
                       } else {
                         StringBuilder discarded$8 = var3.append(sd.field_t);
-                        StringBuilder discarded$9 = var3.append(32);
+                        StringBuilder discarded$9 = var3.append(' ');
                         break L2;
                       }
                     }

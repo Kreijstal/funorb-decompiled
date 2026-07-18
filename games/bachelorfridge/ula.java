@@ -114,7 +114,7 @@ final class ula {
             sja.field_fb.d(!param4 ? 0 : 1, 0);
             sja.field_fb.b((byte) -127, sja.field_fb.field_g + -var7_int);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ula.D(" + param0 + 44 + 75 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ula.D(" + param0 + ',' + 75 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class ula {
             ((ula) this).field_c.field_v.a((byte) 46, ((ula) this).field_c.field_g.field_o.field_b, 3);
             qm.a(5, 7758);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ula.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ula.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

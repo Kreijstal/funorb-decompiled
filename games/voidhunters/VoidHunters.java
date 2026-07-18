@@ -57,7 +57,7 @@ public final class VoidHunters extends ms {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("VoidHunters.O(").append(-23134).append(44);
+            stackOut_8_1 = new StringBuilder().append("VoidHunters.O(").append(-23134).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -80,7 +80,7 @@ public final class VoidHunters extends ms {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param2 + ')');
         }
     }
 
@@ -183,7 +183,7 @@ public final class VoidHunters extends ms {
           L6: {
             var2_ref = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2_ref;
-            stackOut_22_1 = new StringBuilder().append("VoidHunters.B(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("VoidHunters.B(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -206,7 +206,7 @@ public final class VoidHunters extends ms {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
         return stackIn_21_0 != 0;
     }
@@ -298,7 +298,7 @@ public final class VoidHunters extends ms {
           L5: {
             var8 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var8;
-            stackOut_16_1 = new StringBuilder().append("VoidHunters.N(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_16_1 = new StringBuilder().append("VoidHunters.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -321,7 +321,7 @@ public final class VoidHunters extends ms {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -1436,7 +1436,7 @@ public final class VoidHunters extends ms {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + -19653 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + -19653 + ',' + param2 + ')');
         }
     }
 
@@ -1792,7 +1792,7 @@ public final class VoidHunters extends ms {
                   break L2;
                 }
               }
-              throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+              throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -4603,7 +4603,7 @@ public final class VoidHunters extends ms {
                   if (uu.field_b == var10) {
                     break L1;
                   } else {
-                    nkb.a(false, "Canvas=" + var10 + " hashcode=" + ((Object) (Object) var10).hashCode());
+                    nkb.a(false, "Canvas=" + (Object) (Object) var10 + " hashcode=" + ((Object) (Object) var10).hashCode());
                     uu.field_b = var10;
                     break L1;
                   }

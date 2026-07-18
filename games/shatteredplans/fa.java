@@ -17,7 +17,7 @@ final class fa extends go implements ki {
             super.a(param0, param1, param2, param3);
             ((fa) this).field_U = pd.field_k - (((fa) this).field_m + param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "fa.PA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "fa.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class fa extends go implements ki {
             }
             ((fa) this).field_V = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "fa.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "fa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
