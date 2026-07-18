@@ -48,7 +48,7 @@ final class bc extends a {
         try {
           L0: {
             L1: {
-              super.a(-12253, (a) (Object) param1);
+              super.a(-12253, param1);
               if (param2) {
                 var4_int = 0;
                 L2: while (true) {
@@ -91,7 +91,7 @@ final class bc extends a {
                   }
                 }
               } else {
-                an.a((Object[]) (Object) ((bc) this).field_A, 0, (Object[]) (Object) param1.field_A, 0, 6);
+                an.a(((bc) this).field_A, 0, param1.field_A, 0, 6);
                 break L1;
               }
             }
@@ -658,10 +658,6 @@ final class bc extends a {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = "No spectators";
         field_I = new int[8192];
         field_G = "Allow spectators?";

@@ -343,7 +343,7 @@ final class tj extends w {
             aj.field_a.a(gg.field_y, -16834);
             dc.field_e = new ak(uc.field_b, aj.field_a);
             g.field_R = new w(0L, (w) null);
-            g.field_R.a((w) (Object) dc.field_e.field_h, -16834);
+            g.field_R.a(dc.field_e.field_h, -16834);
             g.field_R.a(uh.field_c, -16834);
             mf.h(5);
             return;
@@ -351,7 +351,7 @@ final class tj extends w {
             aj.field_a.a(gg.field_y, -16834);
             dc.field_e = new ak(uc.field_b, aj.field_a);
             g.field_R = new w(0L, (w) null);
-            g.field_R.a((w) (Object) dc.field_e.field_h, -16834);
+            g.field_R.a(dc.field_e.field_h, -16834);
             g.field_R.a(uh.field_c, -16834);
             mf.h(5);
             return;
@@ -391,10 +391,6 @@ final class tj extends w {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_ac = "Show chat";
         field_ic = "Unfortunately we are unable to create an account for you at this time.";
     }

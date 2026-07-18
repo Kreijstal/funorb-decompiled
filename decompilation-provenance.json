@@ -1,22 +1,24 @@
 {
   "formatVersion": 1,
-  "capturedAt": "2026-07-18T07:01:33.182Z",
+  "capturedAt": "2026-07-18T16:45:10.247Z",
   "generators": {
     "dekoblokoWork": {
-      "commit": "8f5aae583013477e19d9203d6dfb7193c6a5d36a",
+      "commit": "3640f9a867fc9bdbe56dab561c6875cda3eac96d",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "0e168889a4c033b1359ca918759b1a07665493ea",
+      "commit": "6e6fd6d1d8e9f5a99e54404bdce4ae45ea5bc08d",
       "trackedClean": true
     }
   },
   "invocation": {
     "script": "scripts/decompile-all-games.sh",
     "arguments": [
-      "/home/kreijstal/git/dekobloko-work/.work/games"
+      "/tmp/issue23-games",
+      "--game",
+      "dekobloko"
     ],
-    "selectedGame": null,
+    "selectedGame": "dekobloko",
     "reusePipeline": false,
     "updateBaseline": false,
     "fixedPipelineArguments": [
@@ -31,53 +33,10 @@
     }
   },
   "publication": {
-    "synchronizedAt": "2026-07-18T08:56:33.033Z",
-    "destinationBaseCommit": "ab22425456e0b95dbe0540e9a2232f2a972d9c4c",
+    "synchronizedAt": "2026-07-18T16:55:31.470Z",
+    "destinationBaseCommit": "224dea0a925167b8453dc9631d4973cb8e5954a4",
     "syncedGames": [
-      "36cardtrick",
-      "aceofskies",
-      "arcanistsmulti",
-      "armiesofgielinor",
-      "bachelorfridge",
-      "bouncedown",
-      "brickabrac",
-      "chess",
-      "confined",
-      "crazycrystals",
-      "dekobloko",
-      "drphlogistonsavestheearth",
-      "dungeonassault",
-      "escapevector",
-      "fleacircus",
-      "geoblox",
-      "holdtheline",
-      "hostilespawn_vengeance",
-      "kickabout",
-      "lexicominos",
-      "minerdisturbance",
-      "monkeypuzzle2",
-      "orbdefence",
-      "pixelate",
-      "pool",
-      "shatteredplans",
-      "solknight",
-      "starcannon",
-      "steelsentinels",
-      "stellarshard",
-      "sumoblitz",
-      "terraphoenix",
-      "tetralink",
-      "tombracer",
-      "torchallenge",
-      "torquing",
-      "trackcontroller",
-      "transmogrify",
-      "vertigo2",
-      "virogrid",
-      "voidhunters",
-      "wizardrun",
-      "zombiedawn",
-      "zombiedawnmulti"
+      "dekobloko"
     ]
   }
 }

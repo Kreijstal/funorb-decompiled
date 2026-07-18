@@ -519,10 +519,6 @@ final class jb extends RuntimeException {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = 500;
         field_j = new tb();
         field_h = "Previous";

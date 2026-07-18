@@ -35,12 +35,12 @@ final class nn {
               break L0;
             }
           }
-          var3 = (Object) (Object) km.field_z;
+          var3 = km.field_z;
           synchronized (var3) {
             L1: {
               L2: {
                 if (null != wj.field_Ob) {
-                  sh.field_a.c((rh) (Object) wj.field_Ob);
+                  sh.field_a.c(wj.field_Ob);
                   wj.field_Ob = null;
                   break L2;
                 } else {
@@ -52,7 +52,7 @@ final class nn {
                   wj.field_Ob = new ia(param1);
                   wj.field_Ob.a(a.field_g * 50 / 128);
                   wj.field_Ob.c(param0);
-                  sh.field_a.a((rh) (Object) wj.field_Ob);
+                  sh.field_a.a(wj.field_Ob);
                   break L3;
                 } else {
                   break L3;
@@ -247,10 +247,6 @@ final class nn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new um();
         field_b = "Please remove <%0> from your friend list first.";
     }

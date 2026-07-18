@@ -32,7 +32,7 @@ final class ij {
         try {
           L0: {
             var3_int = -19 % ((42 - param1) / 60);
-            stackOut_0_0 = ((ij) this).field_a.equals((Object) (Object) param0);
+            stackOut_0_0 = ((ij) this).field_a.equals(param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -427,10 +427,6 @@ final class ij {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = true;
         field_b = "Player Name: ";
     }

@@ -364,10 +364,6 @@ final class kd extends wm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = new int[2][8];
         field_r = "Find opponent";
         field_q = "Loading music";

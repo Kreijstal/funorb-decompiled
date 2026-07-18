@@ -168,7 +168,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         Throwable decompiledCaughtException = null;
         L0: {
           if (f.field_r != null) {
-            var1 = (Object) (Object) f.field_r;
+            var1 = f.field_r;
             synchronized (var1) {
               L1: {
                 f.field_r = null;
@@ -223,6 +223,15 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         if (!ii.field_t.a("benefits", (byte) -75)) {
             return false;
         }
+        ck var1 = id.a(ii.field_t, "borders", "benefits", 8192);
+        ck var2 = id.a(ii.field_t, "price", "benefits", 8192);
+        ck var3 = id.a(ii.field_t, "logo", "benefits", 8192);
+        ck[] var4 = bj.a(112, ii.field_t, "benefits", "screenshots");
+        ik.a(200, var1, ph.field_Gb);
+        id.a(103, 92, 2, -2400, 35, 13, 8192, var2, 15);
+        ib.a((byte) -108, var4);
+        wj.a(var3, 369179521);
+        la.field_d = true;
         return true;
     }
 
@@ -237,7 +246,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         var4 = client.field_A ? 1 : 0;
         try {
           L0: {
-            var1 = (Object) (Object) f.field_r;
+            var1 = f.field_r;
             synchronized (var1) {
               L1: {
                 L2: {
@@ -416,10 +425,6 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = new um();
         field_m = "Loading...";
         field_u = new um();

@@ -72,10 +72,6 @@ final class qa extends wk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = "Stage:";
         field_w = "Waiting for backgrounds";
         field_r = new float[8];

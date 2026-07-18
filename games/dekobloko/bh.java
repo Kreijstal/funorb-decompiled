@@ -270,10 +270,6 @@ class bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "This is <%0>'s RuneScape clan if they have one.";
         field_j = "RuneScape clan";
         field_d = new ck[8][];

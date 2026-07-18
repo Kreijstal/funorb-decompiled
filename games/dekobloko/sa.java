@@ -74,7 +74,7 @@ final class sa extends bh {
             L2: {
               L3: {
                 if (param0 != null) {
-                  if (param0.equals((Object) (Object) k.field_e)) {
+                  if (param0.equals(k.field_e)) {
                     break L2;
                   } else {
                     break L3;
@@ -354,10 +354,6 @@ final class sa extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "OVER <%0>";
         field_p = -1;
         field_A = "members-only content";

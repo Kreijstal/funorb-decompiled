@@ -809,7 +809,7 @@ final class sn {
                         }
                         try {
                           L24: {
-                            Object discarded$9 = nc.a("zap", -14541, se.h(25144), new Object[1]);
+                            Object discarded$9 = nc.a("zap", -14541, se.h(25144), new Object[]{cf.a(0, sh.field_f)});
                             break L24;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -1261,7 +1261,7 @@ final class sn {
         if (!(cl.field_v != null)) {
             return;
         }
-        tj.a(false, (java.awt.Canvas) (Object) cl.field_v);
+        tj.a(false, cl.field_v);
         cl.field_v.a(lf.field_e, 115);
         cl.field_v = null;
         if (!(null == li.field_b)) {
@@ -1296,10 +1296,6 @@ final class sn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new vj();
     }
 }

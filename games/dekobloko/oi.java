@@ -285,10 +285,6 @@ final class oi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Winner!";
         field_d = new qm(7, 0, 1, 1);
         field_b = "Drawn";

@@ -117,8 +117,8 @@ final class sb extends bh {
 
     final static fm a(long param0, String param1, boolean param2, String param3, int param4) {
         RuntimeException var6 = null;
-        qa stackIn_4_0 = null;
-        ob stackIn_6_0 = null;
+        ob stackIn_5_0 = null;
+        wk stackIn_7_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -134,8 +134,8 @@ final class sb extends bh {
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ob stackOut_5_0 = null;
-        qa stackOut_3_0 = null;
+        ob stackOut_4_0 = null;
+        wk stackOut_6_0 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
@@ -159,17 +159,17 @@ final class sb extends bh {
                 break L1;
               } else {
                 if (param3 != null) {
-                  stackOut_5_0 = new ob(param3, param1);
-                  stackIn_6_0 = stackOut_5_0;
-                  break L0;
+                  stackOut_4_0 = new ob(param3, param1);
+                  stackIn_5_0 = stackOut_4_0;
+                  return (fm) (Object) stackIn_5_0;
                 } else {
                   break L1;
                 }
               }
             }
-            stackOut_3_0 = new qa(param0, param1);
-            stackIn_4_0 = stackOut_3_0;
-            return (fm) (Object) stackIn_4_0;
+            stackOut_6_0 = new wk(param0, param1);
+            stackIn_7_0 = stackOut_6_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -226,17 +226,13 @@ final class sb extends bh {
           }
           throw dh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + 0 + ')');
         }
-        return (fm) (Object) stackIn_6_0;
+        return (fm) (Object) stackIn_7_0;
     }
 
     sb() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = "Secret achievement";
         field_o = new int[]{10076391, 4944180, 14961707, 16178128, 13820388};
         field_u = new ui[8][4];

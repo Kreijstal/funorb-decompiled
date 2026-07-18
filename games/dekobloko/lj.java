@@ -23,10 +23,6 @@ final class lj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Invite <%0> to this game";
     }
 }

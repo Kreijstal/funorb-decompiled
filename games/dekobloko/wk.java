@@ -60,10 +60,10 @@ class wk extends fm {
               }
             }
             if (var2 != null) {
-              fm.a((byte) 114, (bh) (Object) param1, (bh) (Object) var2);
+              fm.a((byte) 114, param1, var2);
               return;
             } else {
-              i.field_b.a((bh) (Object) param1, 2777);
+              i.field_b.a(param1, 2777);
               return;
             }
           }
@@ -117,7 +117,7 @@ class wk extends fm {
             if (param0 != 3) {
                 field_i = false;
             }
-            cd.field_c.a((bh) (Object) param2, 2777);
+            cd.field_c.a(param2, 2777);
             mc.a(true, param2, param1);
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "wk.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -201,10 +201,6 @@ class wk extends fm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "<%0> has entered a game.";
         field_n = "Send private message";
         field_o = "Remove name";

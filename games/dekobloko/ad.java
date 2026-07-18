@@ -658,10 +658,6 @@ final class ad {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Please enter a year between <%0> and <%1>";
         field_d = new ck(18, 18);
         field_j = new ck[8][];

@@ -63,10 +63,10 @@ final class gn {
                 if (null == rb.field_l) {
                   break L1;
                 } else {
-                  if (rb.field_l.equals((Object) (Object) param2.getParameter("settings"))) {
+                  if (rb.field_l.equals(param2.getParameter("settings"))) {
                     break L1;
                   } else {
-                    var3 = (Object) (Object) rb.field_l;
+                    var3 = rb.field_l;
                     var4 = var3;
                     var4 = var3;
                     break L1;
@@ -78,8 +78,8 @@ final class gn {
                 if (u.field_a == null) {
                   break L2;
                 } else {
-                  if (!u.field_a.equals((Object) (Object) param2.getParameter("session"))) {
-                    var4 = (Object) (Object) u.field_a;
+                  if (!u.field_a.equals(param2.getParameter("session"))) {
+                    var4 = u.field_a;
                     break L2;
                   } else {
                     break L2;
@@ -98,7 +98,7 @@ final class gn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var3 = (Object) (Object) decompiledCaughtException;
+            var3 = decompiledCaughtException;
             stackOut_12_0 = var3;
             stackOut_12_1 = new StringBuilder().append("gn.B(");
             stackIn_14_0 = stackOut_12_0;
@@ -159,10 +159,6 @@ final class gn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Stamina Mode";
         field_f = 0L;
     }

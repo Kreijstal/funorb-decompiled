@@ -367,10 +367,6 @@ final class ta {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = null;
         field_g = "Fullscreen mode";
         field_d = 0;

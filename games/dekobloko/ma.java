@@ -767,7 +767,7 @@ abstract class ma extends ce implements ra {
                 }
               }
               tb.field_c.field_Hb = true;
-              jc.field_c.field_Y = cm.a((byte) 98, ve.field_cc, new String[1]);
+              jc.field_c.field_Y = cm.a((byte) 98, ve.field_cc, new String[]{f.field_w});
               k.field_b.field_Rb.field_Rb.field_Y = null;
               var6 = null;
               var7 = (wb) (Object) var4.c((byte) -108);
@@ -779,7 +779,7 @@ abstract class ma extends ce implements ra {
                     } else {
                       var8 = 0;
                       stackOut_20_0 = (wb) var7;
-                      stackIn_92_0 = (Object) (Object) stackOut_20_0;
+                      stackIn_92_0 = stackOut_20_0;
                       stackIn_21_0 = stackOut_20_0;
                       if (var19 != 0) {
                         break L8;
@@ -838,7 +838,7 @@ abstract class ma extends ce implements ra {
                           if (var7.field_Tb == null) {
                             break L14;
                           } else {
-                            if (var7.field_Tb.equals((Object) (Object) "")) {
+                            if (var7.field_Tb.equals("")) {
                               break L14;
                             } else {
                               var7.field_Wb.field_Bb = var11;
@@ -909,7 +909,7 @@ abstract class ma extends ce implements ra {
                         L18: {
                           stackIn_49_0.field_Y = stackIn_49_1;
                           var7.field_Yb.a(80, 0, var9, kf.field_O, var7.field_mb + -80);
-                          if (var7.field_Sb.field_Y.equals((Object) (Object) var7.field_Ob)) {
+                          if (var7.field_Sb.field_Y.equals(var7.field_Ob)) {
                             stackOut_52_0 = 0;
                             stackIn_53_0 = stackOut_52_0;
                             break L18;
@@ -933,7 +933,7 @@ abstract class ma extends ce implements ra {
                           if (var8 == 0) {
                             break L20;
                           } else {
-                            k.field_b.field_Sb.a((w) var6, (w) (Object) var7, 2, 0);
+                            k.field_b.field_Sb.a((w) var6, var7, 2, 0);
                             break L20;
                           }
                         }
@@ -956,8 +956,8 @@ abstract class ma extends ce implements ra {
                               } else {
                                 L25: {
                                   var16 = var7.field_Ob;
-                                  sl.a(var16, (int[]) null, (byte) 101, k.field_b.field_Rb, (w) (Object) var7, (String) null, 0L, -1, -1);
-                                  var5 = (Object) (Object) var7;
+                                  sl.a(var16, (int[]) null, (byte) 101, k.field_b.field_Rb, var7, (String) null, 0L, -1, -1);
+                                  var5 = var7;
                                   if (var7.field_Vb == null) {
                                     break L25;
                                   } else {
@@ -970,13 +970,13 @@ abstract class ma extends ce implements ra {
                                             break L26;
                                           } else {
                                             var17 = w.field_H;
-                                            var18 = cm.a((byte) 111, ai.field_M, new String[1]);
+                                            var18 = cm.a((byte) 111, ai.field_M, new String[]{var16});
                                             var17.field_h.a(var18, 8, 80);
                                             break L26;
                                           }
                                         }
                                         var17 = w.field_H;
-                                        var18 = cm.a((byte) 99, wa.field_e, new String[1]);
+                                        var18 = cm.a((byte) 99, wa.field_e, new String[]{var16});
                                         var17.field_h.a(var18, 18, 65);
                                         break L25;
                                       } else {
@@ -1010,7 +1010,7 @@ abstract class ma extends ce implements ra {
                           sl.field_g = var7.field_Tb;
                           break L21;
                         }
-                        var6 = (Object) (Object) var7;
+                        var6 = var7;
                         var7 = (wb) (Object) var4.d(true);
                         if (var19 == 0) {
                           continue L7;
@@ -1021,7 +1021,7 @@ abstract class ma extends ce implements ra {
                     }
                   }
                   stackOut_91_0 = k.field_b.field_Ob;
-                  stackIn_92_0 = (Object) (Object) stackOut_91_0;
+                  stackIn_92_0 = stackOut_91_0;
                   break L8;
                 }
                 L27: {
@@ -1963,10 +1963,6 @@ abstract class ma extends ce implements ra {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_H = new String[]{"£3.20", "€4.25", "US$ 5.00", "Can$ 4.95", "Aus$ 6.50", "Krn 29.95", "", "Rp 160", "Rng 17.95", "NZ$ 7.95", "SG$ 6.95", "Krn 44.95", "R$ 7,00"};
     }
 }

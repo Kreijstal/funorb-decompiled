@@ -104,10 +104,6 @@ final class jf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Your game";
         field_a = "Invite more players, or alternatively try changing the following settings:  ";
         field_b = "<%0> might change the options - wait and see.";

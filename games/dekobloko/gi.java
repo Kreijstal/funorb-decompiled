@@ -66,10 +66,6 @@ final class gi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Warning: if you quit, you will lose any game you are in the middle of!";
     }
 }

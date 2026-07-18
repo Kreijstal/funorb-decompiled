@@ -112,9 +112,9 @@ final class um {
 
     final boolean b(int param0) {
         if (param0 == 22277) {
-          if (this != (Object) (Object) nn.field_c) {
-            if (this != (Object) (Object) of.field_a) {
-              if (this == (Object) (Object) wf.field_u) {
+          if (this != nn.field_c) {
+            if (this != of.field_a) {
+              if (this == wf.field_u) {
                 return true;
               } else {
                 return false;
@@ -137,10 +137,6 @@ final class um {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Please enter your age in years";
         field_d = 65;
         field_a = 4;

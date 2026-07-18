@@ -26,10 +26,6 @@ final class ah {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ah.A(";
         field_b = new boolean[8];
         field_f = new ij("email");

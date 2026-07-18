@@ -389,10 +389,6 @@ final class bj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "The Twist";
         field_d = new boolean[112];
         field_b = "<%0> cannot join; the game is full.";

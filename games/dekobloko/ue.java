@@ -141,10 +141,6 @@ final class ue {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Solicitation";
         field_c = "Tips";
         field_a = "Report abuse";

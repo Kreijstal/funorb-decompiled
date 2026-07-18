@@ -595,7 +595,7 @@ final class qk implements Runnable {
                 ((mk) (Object) var3_ref).a(param0, true);
                 stackOut_8_0 = (fn) var3_ref;
                 stackIn_9_0 = stackOut_8_0;
-                return (Object) (Object) stackIn_9_0;
+                return stackIn_9_0;
               } else {
                 L1: {
                   if (param1 == -1389597532) {
@@ -612,7 +612,7 @@ final class qk implements Runnable {
                 } else {
                   stackOut_14_0 = jd.a(0, param0);
                   stackIn_15_0 = stackOut_14_0;
-                  return (Object) (Object) stackIn_15_0;
+                  return stackIn_15_0;
                 }
               }
             }
@@ -647,7 +647,7 @@ final class qk implements Runnable {
           }
           throw dh.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ',' + param2 + ')');
         }
-        return (Object) (Object) stackIn_17_0;
+        return stackIn_17_0;
     }
 
     final int b(int param0) throws IOException {
@@ -960,10 +960,6 @@ final class qk implements Runnable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = new String[]{"Deko Bloko", "Double Deko", "Triple Deko", "Mega Deko", "Double Bloko", "Triple Bloko", "Mini Bombo", "Maxi Bombo", "Tower Bloko", "Massive Attako", "Clean Sweepo", "Uh-Oh Bloko", "Floral Bloko", "Urban Bloko", "Retro Bloko", "Bronze Blokker", "Silver Blokker", "Gold Blokker", "Blok of Beginning", "Blok of Victory", "Blok of Supremacy", "Deko Pwnage", "Ultimate Pwnage", "Quick Deko", "Safe Deko", "Deko Modo", "Shape Mover", "Shape Sender", "Shape Dispatcher", "Shape Consigner", "Shape Shifter"};
         field_e = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
     }

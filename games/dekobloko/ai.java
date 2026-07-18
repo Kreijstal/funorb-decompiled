@@ -248,7 +248,7 @@ final class ai extends ek {
             var4 = new cl();
             var4.field_z = 10;
             var4.field_q = 0;
-            oe.field_I.a((bh) (Object) var4, 2777);
+            oe.field_I.a(var4, 2777);
             fh.a((byte) 8, var4, 7);
             return var4;
           } else {
@@ -263,10 +263,6 @@ final class ai extends ek {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_T = "This option cannot be combined with the current '<%0>' setting.";
         field_P = -1;
         field_M = "Send private message to <%0>";

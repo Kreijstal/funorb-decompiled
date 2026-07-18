@@ -42,7 +42,7 @@ class gk extends ca implements vn {
         ((gk) this).field_xb.a(param0, 4088, 2121792);
         dj var2 = new dj((gk) this, ((gk) this).field_Bb, fm.field_a);
         var2.a(mn.field_a, 15, param0 ^ 4210766);
-        ((gk) this).c((ce) (Object) var2, (byte) 51);
+        ((gk) this).c(var2, (byte) 51);
     }
 
     final static int c(int param0, int param1, int param2) {
@@ -56,7 +56,7 @@ class gk extends ca implements vn {
     }
 
     gk(ka param0, mm param1, String param2, boolean param3, boolean param4) {
-        super(param0, (ce) (Object) new dj((gk) null, param1, param2), 77, 10, 10);
+        super(param0, new dj((gk) null, param1, param2), 77, 10, 10);
         try {
             ((gk) this).field_Bb = param1;
             ((gk) this).field_Ab = param3 ? true : false;
@@ -65,7 +65,7 @@ class gk extends ca implements vn {
             ((gk) this).field_Eb = param4 ? true : false;
             ((gk) this).field_xb = new r(13, 50, 274, 30, 15, 2113632, 4210752);
             ((gk) this).field_xb.field_L = true;
-            ((gk) this).b((ce) (Object) ((gk) this).field_xb, (byte) -55);
+            ((gk) this).b(((gk) this).field_xb, (byte) -55);
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "gk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -216,7 +216,7 @@ class gk extends ca implements vn {
                     break L4;
                   }
                 }
-                ((gk) this).c((ce) (Object) var6, (byte) 84);
+                ((gk) this).c(var6, (byte) 84);
                 break L0;
               } else {
                 return;
@@ -412,10 +412,6 @@ class gk extends ca implements vn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Db = "Options";
         field_yb = new byte[50][];
         field_Cb = new int[4];

@@ -45,10 +45,6 @@ final class gh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new qm(15, 0, 1, 0);
         field_d = "Macroing or use of bots";
         field_e = null;

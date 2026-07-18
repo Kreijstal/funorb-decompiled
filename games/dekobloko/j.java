@@ -1252,10 +1252,6 @@ final class j {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Not yet achieved";
         field_d = b.h(26);
     }

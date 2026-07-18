@@ -290,7 +290,7 @@ final class ab {
         int stackOut_4_0 = 0;
         int stackOut_2_0 = 0;
         var1 = 108 % ((-69 - param0) / 50);
-        var2 = (Object) (Object) f.field_r;
+        var2 = f.field_r;
         synchronized (var2) {
           L0: {
             if (ea.field_n != sf.field_B) {
@@ -338,10 +338,6 @@ final class ab {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Resign";
         field_e = 64;
         field_c = new java.util.zip.CRC32();

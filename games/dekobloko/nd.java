@@ -11,10 +11,6 @@ final class nd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "nd.A(";
         field_a = new int[]{2, 3, 4, 6, 8};
     }

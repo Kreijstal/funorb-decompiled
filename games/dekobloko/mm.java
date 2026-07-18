@@ -263,7 +263,7 @@ abstract class mm extends be {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var3 = ((mm) this).a(param0, new int[1], field_E);
+        var3 = ((mm) this).a(param0, new int[]{param1}, field_E);
         var4 = 0;
         var5 = 0;
         L0: while (true) {
@@ -357,15 +357,15 @@ abstract class mm extends be {
                         StringBuilder discarded$6 = field_J.append('<');
                         StringBuilder discarded$7 = field_J.append(var15);
                         StringBuilder discarded$8 = field_J.append('>');
-                        if (!var15.equals((Object) (Object) "br")) {
-                          if (!var15.equals((Object) (Object) "lt")) {
-                            if (!var15.equals((Object) (Object) "gt")) {
-                              if (!var15.equals((Object) (Object) "nbsp")) {
-                                if (!var15.equals((Object) (Object) "shy")) {
-                                  if (!var15.equals((Object) (Object) "times")) {
-                                    if (!var15.equals((Object) (Object) "euro")) {
-                                      if (!var15.equals((Object) (Object) "copy")) {
-                                        if (!var15.equals((Object) (Object) "reg")) {
+                        if (!var15.equals("br")) {
+                          if (!var15.equals("lt")) {
+                            if (!var15.equals("gt")) {
+                              if (!var15.equals("nbsp")) {
+                                if (!var15.equals("shy")) {
+                                  if (!var15.equals("times")) {
+                                    if (!var15.equals("euro")) {
+                                      if (!var15.equals("copy")) {
+                                        if (!var15.equals("reg")) {
                                           if (!var15.startsWith("img=")) {
                                             break L3;
                                           } else {
@@ -681,14 +681,14 @@ abstract class mm extends be {
                   } else {
                     var9_ref_String = param0.substring(var4 + 1, var7).toLowerCase();
                     var4 = -1;
-                    if (!var9_ref_String.equals((Object) (Object) "lt")) {
-                      if (!var9_ref_String.equals((Object) (Object) "gt")) {
-                        if (!var9_ref_String.equals((Object) (Object) "nbsp")) {
-                          if (!var9_ref_String.equals((Object) (Object) "shy")) {
-                            if (!var9_ref_String.equals((Object) (Object) "times")) {
-                              if (!var9_ref_String.equals((Object) (Object) "euro")) {
-                                if (!var9_ref_String.equals((Object) (Object) "copy")) {
-                                  if (!var9_ref_String.equals((Object) (Object) "reg")) {
+                    if (!var9_ref_String.equals("lt")) {
+                      if (!var9_ref_String.equals("gt")) {
+                        if (!var9_ref_String.equals("nbsp")) {
+                          if (!var9_ref_String.equals("shy")) {
+                            if (!var9_ref_String.equals("times")) {
+                              if (!var9_ref_String.equals("euro")) {
+                                if (!var9_ref_String.equals("copy")) {
+                                  if (!var9_ref_String.equals("reg")) {
                                     if (!var9_ref_String.startsWith("img=")) {
                                       this.b(var9_ref_String);
                                       var7++;
@@ -893,14 +893,14 @@ abstract class mm extends be {
                     } else {
                       var8 = param0.substring(var2 + 1, var6).toLowerCase();
                       var2 = -1;
-                      if (!var8.equals((Object) (Object) "lt")) {
-                        if (!var8.equals((Object) (Object) "gt")) {
-                          if (!var8.equals((Object) (Object) "nbsp")) {
-                            if (!var8.equals((Object) (Object) "shy")) {
-                              if (!var8.equals((Object) (Object) "times")) {
-                                if (!var8.equals((Object) (Object) "euro")) {
-                                  if (!var8.equals((Object) (Object) "copy")) {
-                                    if (!var8.equals((Object) (Object) "reg")) {
+                      if (!var8.equals("lt")) {
+                        if (!var8.equals("gt")) {
+                          if (!var8.equals("nbsp")) {
+                            if (!var8.equals("shy")) {
+                              if (!var8.equals("times")) {
+                                if (!var8.equals("euro")) {
+                                  if (!var8.equals("copy")) {
+                                    if (!var8.equals("reg")) {
                                       if (var8.startsWith("img=")) {
                                         try {
                                           L2: {
@@ -1015,19 +1015,19 @@ abstract class mm extends be {
           L0: {
             L1: {
               if (!param0.startsWith("col=")) {
-                if (!param0.equals((Object) (Object) "/col")) {
+                if (!param0.equals("/col")) {
                   if (!param0.startsWith("trans=")) {
-                    if (!param0.equals((Object) (Object) "/trans")) {
+                    if (!param0.equals("/trans")) {
                       if (!param0.startsWith("str=")) {
-                        if (!param0.equals((Object) (Object) "str")) {
-                          if (!param0.equals((Object) (Object) "/str")) {
+                        if (!param0.equals("str")) {
+                          if (!param0.equals("/str")) {
                             if (!param0.startsWith("u=")) {
-                              if (!param0.equals((Object) (Object) "u")) {
-                                if (!param0.equals((Object) (Object) "/u")) {
+                              if (!param0.equals("u")) {
+                                if (!param0.equals("/u")) {
                                   if (!param0.startsWith("shad=")) {
-                                    if (!param0.equals((Object) (Object) "shad")) {
-                                      if (!param0.equals((Object) (Object) "/shad")) {
-                                        if (!param0.equals((Object) (Object) "br")) {
+                                    if (!param0.equals("shad")) {
+                                      if (!param0.equals("/shad")) {
+                                        if (!param0.equals("br")) {
                                           break L1;
                                         } else {
                                           this.a(field_A, field_I, field_N);
@@ -1344,7 +1344,7 @@ abstract class mm extends be {
         if (param2 == 0) {
             param2 = ((mm) this).field_S;
         }
-        int var4 = ((mm) this).a(param0, new int[1], field_E);
+        int var4 = ((mm) this).a(param0, new int[]{param1}, field_E);
         int var5 = (var4 - 1) * param2;
         return ((mm) this).field_R + var5 + ((mm) this).field_K;
     }
@@ -1363,7 +1363,7 @@ abstract class mm extends be {
     }
 
     final int a(String param0, int param1) {
-        return ((mm) this).a(param0, new int[1], field_E);
+        return ((mm) this).a(param0, new int[]{param1}, field_E);
     }
 
     final void c(String param0, int param1, int param2, int param3, int param4, int param5) {
@@ -1527,10 +1527,6 @@ abstract class mm extends be {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_J = new StringBuilder(100);
         field_O = 0;
         field_U = -1;

@@ -94,10 +94,10 @@ final class pj extends sf {
                 }
               }
               if (var2 != null) {
-                fm.a((byte) 114, (bh) (Object) param0, (bh) (Object) var2);
+                fm.a((byte) 114, param0, var2);
                 break L0;
               } else {
-                h.field_b.a((bh) (Object) param0, 2777);
+                h.field_b.a(param0, 2777);
                 return;
               }
             }
@@ -143,10 +143,6 @@ final class pj extends sf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = "This game option is only available to members.";
         field_G = "Add <%0> to ignore list";
         field_N = new String[16];

@@ -123,10 +123,6 @@ final class ci {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "<%0> has not yet unlocked this option for use.";
         field_g = "Hide private chat and appear offline to friends";
         field_e = "Please select an option in the '<%0>' row.";

@@ -138,7 +138,7 @@ final class ul {
                             }
                           } else {
                             L10: {
-                              pn.a(63, (wl) (Object) var15);
+                              pn.a(63, var15);
                               if (var6_int == 0) {
                                 var3.field_p = oc.field_c;
                                 var3.field_o = dj.field_Y;
@@ -203,10 +203,6 @@ final class ul {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Challenge Highscores";
         field_e = new qm(6, 0, 4, 2);
         field_g = 20000000L;

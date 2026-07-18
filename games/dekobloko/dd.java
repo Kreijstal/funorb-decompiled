@@ -67,13 +67,13 @@ abstract class dd {
                   return stackIn_9_0;
                 } else {
                   if (ik.a(param0, (byte) -118)) {
-                    stackOut_12_0 = cm.a((byte) 114, ph.field_Bb, new String[1]);
+                    stackOut_12_0 = cm.a((byte) 114, ph.field_Bb, new String[]{param0});
                     stackIn_13_0 = stackOut_12_0;
                     return stackIn_13_0;
                   } else {
                     if (ed.field_g < 100) {
                       if (qe.a(param0, 3)) {
-                        stackOut_19_0 = cm.a((byte) 116, nn.field_b, new String[1]);
+                        stackOut_19_0 = cm.a((byte) 116, nn.field_b, new String[]{param0});
                         stackIn_20_0 = stackOut_19_0;
                         return stackIn_20_0;
                       } else {
@@ -216,7 +216,7 @@ abstract class dd {
                         if (!tj.field_Vb) {
                           break L6;
                         } else {
-                          param0 = cm.a((byte) 103, cm.field_d, new String[1]);
+                          param0 = cm.a((byte) 103, cm.field_d, new String[]{param0});
                           break L6;
                         }
                       }
@@ -343,12 +343,12 @@ abstract class dd {
             if (!(((dd) this).c((byte) -109) < 20)) {
                 throw new RuntimeException();
             }
-            ((dd) this).field_d.a((be) (Object) var8, -7267);
+            ((dd) this).field_d.a(var8, -7267);
         } else {
             if (!(20 > ((dd) this).c(0))) {
                 throw new RuntimeException();
             }
-            ((dd) this).field_n.a((be) (Object) var8, -7267);
+            ((dd) this).field_n.a(var8, -7267);
         }
         return var8;
     }
@@ -428,10 +428,6 @@ abstract class dd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Email address is unavailable";
         field_a = new int[8192];
     }

@@ -80,7 +80,7 @@ final class qb extends dd {
                 L4: while (true) {
                   var5_ref = (pj) (Object) ((qb) this).field_g.a((byte) -111);
                   if (var5_ref != null) {
-                    ((qb) this).field_d.a((be) (Object) var5_ref, -7267);
+                    ((qb) this).field_d.a(var5_ref, -7267);
                     continue L4;
                   } else {
                     L5: while (true) {
@@ -107,7 +107,7 @@ final class qb extends dd {
                         ((qb) this).field_e = ik.a(4);
                         break L0;
                       } else {
-                        ((qb) this).field_n.a((be) (Object) var5_ref, -7267);
+                        ((qb) this).field_n.a(var5_ref, -7267);
                         continue L5;
                       }
                     }
@@ -428,7 +428,7 @@ final class qb extends dd {
                     we.field_b.a(true, 16);
                     we.field_b.field_n = we.field_b.field_n + 1;
                     var10 = we.field_b.field_n;
-                    re.a(uk.field_p, ea.field_k, (wl) (Object) we.field_b, vi.field_A, 0);
+                    re.a(uk.field_p, ea.field_k, we.field_b, vi.field_A, 0);
                     we.field_b.b(-var10 + we.field_b.field_n, true);
                     break L3;
                   } else {
@@ -464,7 +464,7 @@ final class qb extends dd {
                       }
                     }
                     we.field_b.a(0, var12_ref_String);
-                    re.a(uk.field_p, ea.field_k, (wl) (Object) we.field_b, vi.field_A, 0);
+                    re.a(uk.field_p, ea.field_k, we.field_b, vi.field_A, 0);
                     we.field_b.b(true, -var11 + we.field_b.field_n);
                     break L3;
                   }
@@ -509,7 +509,7 @@ final class qb extends dd {
                   } else {
                     if (99 == var10) {
                       boolean discarded$1 = pe.b(25973, vi.d(1));
-                      wb.field_Ub = new Boolean(f.a((wl) (Object) de.field_V, 19));
+                      wb.field_Ub = new Boolean(f.a(de.field_V, 19));
                       de.field_V.field_n = 0;
                       break L8;
                     } else {
@@ -993,7 +993,7 @@ final class qb extends dd {
                             ((qb) this).field_i.a(true, 0);
                             ((qb) this).field_i.a(-98, var2_ref.field_r);
                             ((qb) this).field_v.a(0, ((qb) this).field_i.field_r.length, 1, ((qb) this).field_i.field_r);
-                            ((qb) this).field_l.a((be) (Object) var2_ref, -7267);
+                            ((qb) this).field_l.a(var2_ref, -7267);
                             var2_ref = (pj) (Object) ((qb) this).field_n.b((byte) 20);
                             continue L6;
                           }
@@ -1008,7 +1008,7 @@ final class qb extends dd {
                       ((qb) this).field_i.a(true, 1);
                       ((qb) this).field_i.a(-71, var2_ref.field_r);
                       ((qb) this).field_v.a(0, ((qb) this).field_i.field_r.length, 1, ((qb) this).field_i.field_r);
-                      ((qb) this).field_g.a((be) (Object) var2_ref, -7267);
+                      ((qb) this).field_g.a(var2_ref, -7267);
                       var2_ref = (pj) (Object) ((qb) this).field_d.b((byte) 20);
                       continue L5;
                     }
@@ -1174,7 +1174,7 @@ final class qb extends dd {
 
     final static void a(int param0, byte param1, kn param2) {
         try {
-            pb.field_c.a((bh) (Object) param2, 2777);
+            pb.field_c.a(param2, 2777);
             fm.a((byte) -113, 3, param2);
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "qb.B(" + 3 + ',' + 85 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -1370,10 +1370,6 @@ final class qb extends dd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = 22;
         field_s = new ln();
     }

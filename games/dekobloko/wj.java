@@ -446,25 +446,25 @@ final class wj extends gk implements vn {
                 }
                 if (-4 == param1.field_h) {
                   var5.a(ce.field_z, 7, 14);
-                  ((wj) this).c((ce) (Object) var5, (byte) 68);
+                  ((wj) this).c(var5, (byte) 68);
                   break L3;
                 } else {
                   if (-7 != param1.field_h) {
-                    ((wj) this).c((ce) (Object) var5, (byte) 68);
+                    ((wj) this).c(var5, (byte) 68);
                     break L3;
                   } else {
                     var5.a(vb.field_Y, 9, 14);
-                    ((wj) this).c((ce) (Object) var5, (byte) 68);
+                    ((wj) this).c(var5, (byte) 68);
                     break L3;
                   }
                 }
               } else {
                 if (!param1.field_e) {
                   ek discarded$3 = var5.a(119, fa.field_o, (kg) this);
-                  ((wj) this).c((ce) (Object) var5, (byte) 68);
+                  ((wj) this).c(var5, (byte) 68);
                   break L3;
                 } else {
-                  ((wj) this).c((ce) (Object) new md((wj) this), (byte) 79);
+                  ((wj) this).c(new md((wj) this), (byte) 79);
                   return;
                 }
               }
@@ -613,7 +613,7 @@ final class wj extends gk implements vn {
                   var9_ref_hl.field_f.a(var9_ref_hl.field_f.a(true), 0, var7, param1, param3);
                   var7 = var7 + param1;
                   if (var9_ref_hl.field_f.field_ob != 0) {
-                    var4 = (Object) (Object) var9_ref_hl;
+                    var4 = var9_ref_hl;
                     var8++;
                     continue L1;
                   } else {
@@ -764,10 +764,6 @@ final class wj extends gk implements vn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Kb = "Accept unrated rematch";
         field_Jb = new sk(1);
     }

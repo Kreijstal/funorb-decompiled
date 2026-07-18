@@ -148,10 +148,6 @@ final class ef extends ma {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_S = new vj();
     }
 }

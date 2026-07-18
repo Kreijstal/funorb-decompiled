@@ -88,7 +88,6 @@ final class jh {
                   }
                 }
               }
-              field_h = true;
               var11 = param1.a((byte) 107, param0, param3, param2, param5);
               L4: while (true) {
                 if (0 != var11.field_c) {
@@ -207,7 +206,7 @@ final class jh {
               param2.field_b = false;
               param2.field_g = 0;
               oi.field_a = new em(var3_int, param2, param2);
-              wj.field_Qb = new sm(var3_int, param2, param2, (lh) (Object) new ga());
+              wj.field_Qb = new sm(var3_int, param2, param2, new ga());
               var4 = dn.b((byte) 124);
               if (var4 == null) {
                 var11 = null;
@@ -385,10 +384,6 @@ final class jh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new String[]{"Form a Deko and a Bloko at precisely the same time", "Eliminate a wildcard as part of 2 shapes at the same time", "Eliminate a wildcard as part of 3 shapes at the same time", "Eliminate a wildcard as part of 7 shapes at the same time", "Double-eliminate a solid shape by completing 2 touching loose shapes at the same time", "Triple-eliminate a solid shape by completing 3 touching loose shapes at the same time", "Set off a chain of 5 explosions", "Set off a chain of 10 explosions", "Make a solid shape as tall as the bucket", "Bombard your victim with 100 shapes in one go in a multiplayer game", "Completely clear a quarter-full bucket in a Rated game", "Have over 30 shapes in your machine in a Rated game", "Unlock the Flowers theme in the Master Challenge (Theme 5)", "Unlock the City theme in the Master Challenge (Theme 7)", "Unlock the Eight-bit theme in the Master Challenge (Theme 8)", "Get at least 50,000 points in the Master Challenge", "Get at least 100,000 points in the Master Challenge", "Get at least 200,000 points in the Master Challenge", "Win a Rated game", "Win 3 Rated games in a row, in one session", "Win 5 Rated games in a row, in one session, starting with a Rating of at least 1500", "Win an 8-player Rated game", "Win an 8-player Rated game, defeating all opponents yourself", "Earn 50,000 points within the first two levels of the Master Challenge", "Win a Rated game without the glass breaking at all", "Defeat a FunOrb Moderator or someone who has this Achievement", "Send 500 shapes to other players in Rated games", "Send 1,000 shapes to other players in Rated games", "Send 2,500 shapes to other players in Rated games", "Send 5,000 shapes to other players in Rated games", "Send 10,000 shapes to other players in Rated games"};
         field_a = "Log in";
         field_g = "Accept <%0> into this game";

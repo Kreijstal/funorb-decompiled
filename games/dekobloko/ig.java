@@ -126,7 +126,7 @@ final class ig extends w {
             if (((ig) this).field_Ub != null) {
               break L2;
             } else {
-              if (this != (Object) (Object) mg.field_bc) {
+              if (this != mg.field_bc) {
                 break L2;
               } else {
                 if (var4 == 0) {
@@ -568,12 +568,12 @@ final class ig extends w {
                       }
                     }
                   }
-                  var14 = (Object) (Object) qb.field_q;
+                  var14 = qb.field_q;
                   break L3;
                 }
                 L5: {
                   ((ig) this).field_gc[var13] = new qd(0L, param2, (w) null, param3, (ck) var14, param6[var13]);
-                  ((ig) this).a((w) (Object) ((ig) this).field_gc[var13], -16834);
+                  ((ig) this).a(((ig) this).field_gc[var13], -16834);
                   var15 = var17.a(param6[var13]);
                   if (var15 <= ((ig) this).field_fc) {
                     break L5;
@@ -774,10 +774,6 @@ final class ig extends w {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Sb = "This game option has not yet been unlocked for use.";
         field_Yb = 0;
         field_Xb = "Set up new game";

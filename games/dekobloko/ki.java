@@ -100,7 +100,7 @@ final class ki extends bh {
           }
         }
         if (!param1) {
-          ib.field_pb = li.a(80, 0, (wl) (Object) var8);
+          ib.field_pb = li.a(80, 0, var8);
           fa.field_q = null;
           return new hl(param1);
         } else {
@@ -110,7 +110,7 @@ final class ki extends bh {
               L6: {
                 var9 = wj.field_Qb.a(127, var5);
                 ib.field_pb = var9.f((byte) -61);
-                if (sa.field_B.equals((Object) (Object) oa.field_f)) {
+                if (sa.field_B.equals(oa.field_f)) {
                   stackOut_22_0 = null;
                   stackIn_23_0 = (int[]) (Object) stackOut_22_0;
                   break L6;
@@ -241,10 +241,6 @@ final class ki extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
         field_u = "Any special items you earn will be given to both you and the player who gets your shapes!";
         field_t = new tb();

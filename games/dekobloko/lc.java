@@ -40,10 +40,6 @@ abstract class lc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = -1;
     }
 }

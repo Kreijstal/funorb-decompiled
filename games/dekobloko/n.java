@@ -576,13 +576,13 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
           } else {
             if (var1 == 1) {
               ed.field_d = aa.field_d;
-              ed.field_d = db.a(new CharSequence[3], -62);
+              ed.field_d = db.a(new CharSequence[]{(CharSequence) (Object) ed.field_d, (CharSequence) (Object) "<br>", (CharSequence) (Object) hf.field_b}, -62);
               cl.field_r.n(-127);
               em.a(-1199770620);
               return;
             } else {
-              ed.field_d = cm.a((byte) 87, jc.field_e, new String[1]);
-              ed.field_d = db.a(new CharSequence[3], -62);
+              ed.field_d = cm.a((byte) 87, jc.field_e, new String[]{Integer.toString(var1)});
+              ed.field_d = db.a(new CharSequence[]{(CharSequence) (Object) ed.field_d, (CharSequence) (Object) "<br>", (CharSequence) (Object) hf.field_b}, -62);
               cl.field_r.n(-127);
               em.a(-1199770620);
               return;
@@ -636,10 +636,6 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Day";
         field_a = "Total: ";
     }

@@ -151,10 +151,6 @@ final class dn extends ie {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = "Service unavailable";
         field_j = "Flowers";
         field_r = 20;

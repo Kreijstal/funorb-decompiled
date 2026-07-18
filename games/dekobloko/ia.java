@@ -118,7 +118,7 @@ final class ia extends rh {
         int var1 = 0;
         for (var1 = 0; var1 < ((ia) this).field_I.field_H; var1++) {
             if (((ia) this).field_fb[var1] != null) {
-                ((ia) this).field_n.a((ol) (Object) ((ia) this).field_fb[var1]);
+                ((ia) this).field_n.a(((ia) this).field_fb[var1]);
             }
         }
     }
@@ -223,7 +223,7 @@ final class ia extends rh {
         int var1 = 0;
         for (var1 = 0; var1 < ((ia) this).field_I.field_H; var1++) {
             if (((ia) this).field_fb[var1] != null) {
-                ((ia) this).field_n.b((ol) (Object) ((ia) this).field_fb[var1]);
+                ((ia) this).field_n.b(((ia) this).field_fb[var1]);
             }
         }
     }
@@ -1914,10 +1914,10 @@ final class ia extends rh {
                 if (((ia) this).field_n == null) {
                   break L7;
                 } else {
-                  var8 = (Object) (Object) ((ia) this).field_n;
+                  var8 = ((ia) this).field_n;
                   synchronized (var8) {
                     L8: {
-                      ((ia) this).field_n.a((ol) (Object) var7);
+                      ((ia) this).field_n.a(var7);
                       break L8;
                     }
                   }
@@ -1973,10 +1973,6 @@ final class ia extends rh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_nb = new int[8000];
         field_K = new int[68];

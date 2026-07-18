@@ -297,7 +297,7 @@ final class oh implements Runnable {
                   }
                 }
                 if (((oh) this).field_a.field_r.length == ((oh) this).field_a.field_n) {
-                  throw oh.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((oh) this).field_a.field_r.length + " " + (Object) (Object) ((oh) this).field_j));
+                  throw oh.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((oh) this).field_a.field_r.length + " " + ((oh) this).field_j));
                 } else {
                   var1 = this;
                   synchronized (var1) {
@@ -564,10 +564,6 @@ final class oh implements Runnable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = 64;
         field_b = false;
         field_f = new char[]{'[', ']', '#'};

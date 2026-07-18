@@ -103,10 +103,6 @@ final class og extends rk implements jl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_gb = "Close";
         field_ib = true;
         field_hb = "Next";

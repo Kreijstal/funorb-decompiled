@@ -257,10 +257,6 @@ final class sl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Username: ";
         field_b = "Score";
         field_d = "You have been removed from <%0>'s game.";

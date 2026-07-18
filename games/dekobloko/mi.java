@@ -37,7 +37,7 @@ final class mi extends ol {
               ((mi) this).field_s = ((mi) this).field_s + var4;
               this.e();
               var5 = (rh) (Object) ((mi) this).field_u.c((byte) -109);
-              var6 = (Object) (Object) var5;
+              var6 = var5;
               synchronized (var6) {
                 L1: {
                   L2: {
@@ -96,7 +96,7 @@ final class mi extends ol {
               ((mi) this).field_s = ((mi) this).field_s + var2;
               this.e();
               var3 = (rh) (Object) ((mi) this).field_u.c((byte) -54);
-              var4 = (Object) (Object) var3;
+              var4 = var3;
               synchronized (var4) {
                 L1: {
                   L2: {
@@ -140,11 +140,11 @@ final class mi extends ol {
     }
 
     final void a(ud param0, int param1, int param2, int param3) {
-        ((mi) this).a((ol) (Object) ei.a(param0, param1, param2, param3));
+        ((mi) this).a(ei.a(param0, param1, param2, param3));
     }
 
     final synchronized void a(ol param0) {
-        ((mi) this).field_t.b((bh) (Object) param0, 7143);
+        ((mi) this).field_t.b(param0, 7143);
     }
 
     private final void b(rh param0) {
@@ -161,7 +161,7 @@ final class mi extends ol {
 
     final synchronized void c(rh param0) {
         if (param0.field_n != null) {
-          if ((Object) (Object) param0.field_n != this) {
+          if (param0.field_n != this) {
             throw new RuntimeException();
           } else {
             this.e();
@@ -196,12 +196,12 @@ final class mi extends ol {
               param0 = param0.field_b;
               continue L0;
             } else {
-              fm.a((byte) 10, (bh) (Object) param1, param0);
+              fm.a((byte) 10, param1, param0);
               ((mi) this).field_r = ((rh) (Object) ((mi) this).field_u.field_c.field_b).field_o;
               return;
             }
           } else {
-            fm.a((byte) 10, (bh) (Object) param1, param0);
+            fm.a((byte) 10, param1, param0);
             ((mi) this).field_r = ((rh) (Object) ((mi) this).field_u.field_c.field_b).field_o;
             return;
           }

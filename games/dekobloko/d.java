@@ -46,10 +46,6 @@ final class d {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[8192];
         field_c = 0;
         field_e = new pi(36, 36, 0);

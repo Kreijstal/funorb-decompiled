@@ -104,12 +104,12 @@ final class ua extends vi {
 
     final static void a(int param0, ji param1, boolean param2, ji param3) {
         try {
-            re.a(fc.field_c, df.field_ab, field_H, rd.field_a, sg.field_e, true, wa.field_a, db.field_c, (mm) (Object) nf.field_d, oh.field_i, (byte) 103, tm.field_b);
+            re.a(fc.field_c, df.field_ab, field_H, rd.field_a, sg.field_e, true, wa.field_a, db.field_c, nf.field_d, oh.field_i, (byte) 103, tm.field_b);
             ef.field_O = bj.a(112, param1, "lobby", "chatfilter");
             sg.field_a[2] = mc.field_d;
             sg.field_a[0] = qj.field_g;
             sg.field_a[1] = al.field_a;
-            jh.a((byte) 116, (mm) (Object) tg.field_a, param3);
+            jh.a((byte) 116, tg.field_a, param3);
             int var4_int = -74;
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "ua.D(" + 46 + ',' + (param1 != null ? "{...}" : "null") + ',' + true + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -190,10 +190,6 @@ final class ua extends vi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_E = new int[8];
         field_D = "WELL DONE!";
         field_G = "Login: ";

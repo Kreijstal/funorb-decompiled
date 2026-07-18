@@ -22,9 +22,9 @@ final class al implements gl {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            param1.addMouseListener((java.awt.event.MouseListener) (Object) ik.field_f);
-            param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ik.field_f);
-            param1.addFocusListener((java.awt.event.FocusListener) (Object) ik.field_f);
+            param1.addMouseListener(ik.field_f);
+            param1.addMouseMotionListener(ik.field_f);
+            param1.addFocusListener(ik.field_f);
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "al.D(" + -2204 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -308,10 +308,6 @@ final class al implements gl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Friends";
         field_j = "Updates will sent to the email address you've given";
     }

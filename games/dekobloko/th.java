@@ -42,10 +42,6 @@ final class th {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Settling Score: ";
     }
 }

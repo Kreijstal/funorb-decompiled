@@ -29,10 +29,6 @@ final class jj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new String[]{"Match shapes and try to keep your bucket clear.", "Use wildcards to match multiple shapes for big points!", "Keep solid shapes under control by repeatedly popping them.", "Have you noticed the special items? Make two or more shapes at the same time to get them!", "Solid shapes will now come back with a vengeance, getting larger each time. Use special items to keep your bucket under control!", "Danger looms! Try to empty your bucket as much as possible before this next theme ends...", "Special items will no longer save you. Try to hold on and grab as many points as possible!", "Congratulations, this is the last theme! Hint: get the best highscores by choosing and perfecting a different strategy for each theme..."};
     }
 }

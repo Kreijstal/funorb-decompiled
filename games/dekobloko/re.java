@@ -59,7 +59,7 @@ final class re extends wm {
                     if (var3_ref.a(20350) != dc.field_b) {
                       break L3;
                     } else {
-                      if (param0.equals((Object) (Object) ((re) this).field_p.field_E)) {
+                      if (param0.equals(((re) this).field_p.field_E)) {
                         break L3;
                       } else {
                         stackOut_13_0 = ak.field_f;
@@ -78,7 +78,7 @@ final class re extends wm {
                 break L2;
               }
             }
-            if (!param0.equals((Object) (Object) ((re) this).field_p.field_E)) {
+            if (!param0.equals(((re) this).field_p.field_E)) {
               stackOut_20_0 = ak.field_f;
               stackIn_21_0 = stackOut_20_0;
               return stackIn_21_0;
@@ -723,7 +723,7 @@ final class re extends wm {
               }
             }
             L3: {
-              if (param0.equals((Object) (Object) ((re) this).field_p.field_E)) {
+              if (param0.equals(((re) this).field_p.field_E)) {
                 stackOut_13_0 = dc.field_b;
                 stackIn_14_0 = stackOut_13_0;
                 break L3;
@@ -1070,7 +1070,7 @@ final class re extends wm {
             var17 = new w(0L, (w) null);
             var17.field_M = new vj();
             dn.field_l = new nm(0L, var17, param4, param11);
-            field_x.a((w) (Object) dn.field_l, -16834);
+            field_x.a(dn.field_l, -16834);
             sk.field_c = new w(0L, param0);
             field_x.a(sk.field_c, -16834);
             wj.field_Mb = new w(0L, param2);
@@ -1474,10 +1474,6 @@ final class re extends wm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = "Theme:";
         field_u = "Error connecting to server. Please try using a different server.";
         field_w = "Fullscreen";

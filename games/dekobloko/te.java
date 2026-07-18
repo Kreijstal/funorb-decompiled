@@ -605,10 +605,6 @@ final class te extends wm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = null;
         field_r = -1;
         field_v = new boolean[64];

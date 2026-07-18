@@ -40,7 +40,7 @@ abstract class sf extends be {
                 break L1;
               } else {
                 if (g.field_N != null) {
-                  var2 = (Object) (Object) gh.field_f;
+                  var2 = gh.field_f;
                   break L1;
                 } else {
                   break L1;
@@ -57,7 +57,7 @@ abstract class sf extends be {
                       if (qe.a(cf.field_c, 3)) {
                         break L4;
                       } else {
-                        var2 = (Object) (Object) cm.a((byte) 96, se.field_V, new String[1]);
+                        var2 = cm.a((byte) 96, se.field_V, new String[]{ed.field_c});
                         if (var10 == 0) {
                           break L3;
                         } else {
@@ -65,7 +65,7 @@ abstract class sf extends be {
                         }
                       }
                     }
-                    var2 = (Object) (Object) cm.a((byte) 87, dc.field_k, new String[1]);
+                    var2 = cm.a((byte) 87, dc.field_k, new String[]{ed.field_c});
                     break L3;
                   }
                   if (jh.field_h) {
@@ -90,7 +90,7 @@ abstract class sf extends be {
                   if (tf.field_gb != null) {
                     break L5;
                   } else {
-                    var2 = (Object) (Object) bl.field_W;
+                    var2 = bl.field_W;
                     break L5;
                   }
                 }
@@ -113,8 +113,8 @@ abstract class sf extends be {
                       break L8;
                     } else {
                       L9: {
-                        var4 = cm.a((byte) 81, oj.field_b, new String[1]);
-                        var8 = cm.a((byte) 125, im.field_j, new String[1]);
+                        var4 = cm.a((byte) 81, oj.field_b, new String[]{ed.field_c});
+                        var8 = cm.a((byte) 125, im.field_j, new String[]{var3_ref_String});
                         var7 = -485 + jb.field_f.field_mb + wj.field_Mb.field_mb - (-ff.field_o.a(var8) + ff.field_o.a(var4));
                         if (0 <= var7) {
                           break L9;
@@ -164,7 +164,7 @@ abstract class sf extends be {
                               }
                             }
                           }
-                          var4 = "[" + cm.a((byte) 115, hf.field_a, new String[1]) + "] ";
+                          var4 = "[" + cm.a((byte) 115, hf.field_a, new String[]{cd.field_m.field_Vb}) + "] ";
                           break L12;
                         }
                         var6 = 1;
@@ -217,10 +217,10 @@ abstract class sf extends be {
                       } else {
                         if (~(bh.field_g + -wj.field_Mb.field_E) > ~var9) {
                           if (wc.field_n) {
-                            var1 = (Object) (Object) "Broken!";
+                            var1 = "Broken!";
                             break L17;
                           } else {
-                            var1 = (Object) (Object) ci.field_d;
+                            var1 = ci.field_d;
                             break L17;
                           }
                         } else {
@@ -259,7 +259,7 @@ abstract class sf extends be {
                   if (!jb.field_f.field_jb) {
                     break L19;
                   } else {
-                    var1 = (Object) (Object) cm.a((byte) 126, vf.field_d, new String[2]);
+                    var1 = cm.a((byte) 126, vf.field_d, new String[]{var3_ref_String, ed.field_c});
                     break L19;
                   }
                 }
@@ -273,7 +273,7 @@ abstract class sf extends be {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Object) (Object) decompiledCaughtException;
+          var1 = decompiledCaughtException;
           throw dh.a((Throwable) var1, "sf.C(" + param0 + ')');
         }
         return (String) (Object) stackIn_97_0;
@@ -311,10 +311,6 @@ abstract class sf extends be {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = new int[8192];
         field_y = new long[32];
         field_B = 0;

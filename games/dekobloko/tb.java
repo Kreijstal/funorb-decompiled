@@ -108,10 +108,6 @@ final class tb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "NEW THEME<br>UNLOCKED!";
     }
 }

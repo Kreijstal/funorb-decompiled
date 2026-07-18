@@ -407,7 +407,7 @@ final class sm {
             }
           }
           if (32768 > param1) {
-            ((sm) this).field_a.a((Object) (Object) var3, (long)param1, 125);
+            ((sm) this).field_a.a(var3, (long)param1, 125);
             if (param0 < 123) {
               int discarded$4 = sm.a((byte) 69);
               return var3;
@@ -416,7 +416,7 @@ final class sm {
             }
           } else {
             var3.d(19423);
-            ((sm) this).field_a.a((Object) (Object) var3, (long)param1, 125);
+            ((sm) this).field_a.a(var3, (long)param1, 125);
             if (param0 >= 123) {
               return var3;
             } else {

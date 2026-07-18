@@ -164,7 +164,7 @@ final class wi {
                     break L1;
                   } else {
                     var3 = (CharSequence) (Object) param1;
-                    if (!cf.field_c.equals((Object) (Object) kf.a(var3, (byte) 2))) {
+                    if (!cf.field_c.equals(kf.a(var3, (byte) 2))) {
                       break L1;
                     } else {
                       var2_int = 82 / ((-50 - param0) / 34);
@@ -241,7 +241,7 @@ final class wi {
               dc.field_d = param0;
               mg.field_Nb = true;
               cl.field_r = new gk(ah.field_c, ec.field_p, param2, vb.field_Z, dc.field_d);
-              ah.field_c.a((byte) -115, (ce) (Object) cl.field_r);
+              ah.field_c.a((byte) -115, cl.field_r);
               if (param1 <= -20) {
                 break L1;
               } else {
@@ -284,10 +284,6 @@ final class wi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "to keep fullscreen or";
         field_b = 0;
     }

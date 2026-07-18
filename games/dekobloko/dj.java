@@ -124,7 +124,7 @@ final class dj extends kf implements vn {
             if (param0 > 95) {
               ((dj) this).b(((dj) this).field_y + 34, ((dj) this).field_t, 0, 0, -16555);
               var4.b(30, -14 + ((dj) this).field_t, 7, var5, -16555);
-              ((dj) this).b((ce) (Object) var4, (byte) -55);
+              ((dj) this).b(var4, (byte) -55);
               stackOut_3_0 = (ek) var4;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -361,10 +361,6 @@ final class dj extends kf implements vn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_T = null;
         field_ab = new StringBuilder(80);
         field_bb = "Show lobby chat from my friends";

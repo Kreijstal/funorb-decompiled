@@ -41,20 +41,20 @@ final class pb {
           } else {
             if (id.field_P >= 3) {
               if (id.field_P < 7) {
-                var2 = cm.a((byte) 83, field_f[2], new String[2]);
+                var2 = cm.a((byte) 83, field_f[2], new String[]{Integer.toString(id.field_P - -1), Integer.toString(8)});
                 break L0;
               } else {
                 var2 = field_f[3];
                 break L0;
               }
             } else {
-              var2 = cm.a((byte) 85, field_f[1], new String[2]);
+              var2 = cm.a((byte) 85, field_f[1], new String[]{Integer.toString(id.field_P + 1), Integer.toString(8)});
               break L0;
             }
           }
         }
-        fl.a(var1 + 454, 256, 16777215, var2, -(1023 & bb.field_f) + -382, (mm) (Object) w.field_kb);
-        fl.a(var1 + 454, 256, 16777215, var2, -(bb.field_f & 1023) + 642, (mm) (Object) w.field_kb);
+        fl.a(var1 + 454, 256, 16777215, var2, -(1023 & bb.field_f) + -382, w.field_kb);
+        fl.a(var1 + 454, 256, 16777215, var2, -(bb.field_f & 1023) + 642, w.field_kb);
     }
 
     final static void a(int param0) {
@@ -160,10 +160,10 @@ final class pb {
                       var12 = new ck(195, 221);
                       var6 = var12.field_I / 2;
                       var12.a();
-                      aj.field_e.b(cm.a((byte) 84, af.field_g, new String[1]), var6, 40, 16777215, -1);
-                      bn.field_g.b(cm.a((byte) 90, qi.field_N, new String[1]), var6, 60, 16777215, -1);
-                      aj.field_e.b(cm.a((byte) 126, sa.field_n, new String[1]), var6, 110, 16777215, -1);
-                      bn.field_g.b(cm.a((byte) 94, we.field_c, new String[1]), var6, 130, 16777215, -1);
+                      aj.field_e.b(cm.a((byte) 84, af.field_g, new String[]{wf.field_n}), var6, 40, 16777215, -1);
+                      bn.field_g.b(cm.a((byte) 90, qi.field_N, new String[]{wf.field_n}), var6, 60, 16777215, -1);
+                      aj.field_e.b(cm.a((byte) 126, sa.field_n, new String[]{jm.field_u}), var6, 110, 16777215, -1);
+                      bn.field_g.b(cm.a((byte) 94, we.field_c, new String[]{jm.field_u}), var6, 130, 16777215, -1);
                       aj.field_e.b(we.field_a, var6, 180, 16777215, -1);
                       bn.field_g.b(sa.field_A, var6, 200, 16777215, -1);
                       re.a(3, 1, 0, 2, var12, 0, var12.field_I, var12.field_H);
@@ -212,7 +212,7 @@ final class pb {
                   var2 = hk.field_j;
                   var3 = hk.field_i;
                   hk.b(he.field_V);
-                  var14 = cm.a((byte) 120, pd.field_b, new String[1]);
+                  var14 = cm.a((byte) 120, pd.field_b, new String[]{ma.field_H[rb.field_m]});
                   var5 = aj.field_e.b(var14, ce.field_r);
                   var6 = aj.field_e.b(var14, ce.field_r, aj.field_e.field_R + aj.field_e.field_K);
                   var7 = pm.field_d + (-var5 + ce.field_r) / 2;
@@ -306,7 +306,7 @@ final class pb {
                 var3 = hk.field_i;
                 hk.b(he.field_V);
                 var16 = new ck(412, 43);
-                var17 = cm.a((byte) 122, df.field_Z, new String[1]);
+                var17 = cm.a((byte) 122, df.field_Z, new String[]{n.field_b});
                 n.field_b = null;
                 var16.a();
                 int discarded$5 = bn.field_g.a(var17, 3, 3, var16.field_I - 6, var16.field_H - 6, 16777215, -1, 0, 1, bn.field_g.field_R + bn.field_g.field_K);
@@ -662,10 +662,6 @@ final class pb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new String[]{"Play Stamina Mode to unlock themes for the multiplayer game!", "<%0> of <%1> themes unlocked for multiplayer - play Stamina Mode to unlock up to 4!", "<%0> of <%1> themes unlocked for multiplayer - play the Master Challenge to unlock the rest!", "All themes unlocked for multiplayer! Can you beat your Stamina and Master Challenge highscores?"};
         field_k = "Try changing the following settings:  ";
         field_c = new vj();

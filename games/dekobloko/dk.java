@@ -136,10 +136,6 @@ final class dk extends java.awt.Canvas {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Some special items will sit in your bucket until you activate them. To activate one, pop a shape next to it.";
         field_b = "Invite only";
         field_j = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};

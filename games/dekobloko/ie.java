@@ -265,10 +265,6 @@ abstract class ie {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new qm(2, 4, 4, 0);
     }
 }

@@ -37,10 +37,6 @@ final class u {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = -1;
         field_g = "Multiplayer Rankings";
         field_d = "Ask to join <%0>'s game";

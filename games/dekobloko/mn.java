@@ -234,7 +234,7 @@ final class mn {
                               if (cj.field_a == 1) {
                                 break L9;
                               } else {
-                                var10_ref_String = cm.a((byte) 122, fl.field_a, new String[1]);
+                                var10_ref_String = cm.a((byte) 122, fl.field_a, new String[]{Integer.toString(cj.field_a)});
                                 if (var19 == 0) {
                                   break L8;
                                 } else {
@@ -572,7 +572,7 @@ final class mn {
                                               if (null != var11_ref) {
                                                 break L42;
                                               } else {
-                                                var11_ref = (Object) (Object) var14_ref_String;
+                                                var11_ref = var14_ref_String;
                                                 if (var19 == 0) {
                                                   break L41;
                                                 } else {
@@ -581,7 +581,7 @@ final class mn {
                                               }
                                             }
                                             var12 = 1;
-                                            var11_ref = (Object) (Object) ((String) var11_ref + ", " + var14_ref_String);
+                                            var11_ref = (String) var11_ref + ", " + var14_ref_String;
                                             break L41;
                                           }
                                         }
@@ -613,7 +613,7 @@ final class mn {
                                         }
                                       }
                                     }
-                                    var14_ref_String = cm.a((byte) 119, fn.field_f, new String[1]);
+                                    var14_ref_String = cm.a((byte) 119, fn.field_f, new String[]{(String) var11_ref});
                                     break L43;
                                   } else {
                                     L45: {
@@ -621,7 +621,7 @@ final class mn {
                                       if (var12 != 0) {
                                         break L45;
                                       } else {
-                                        var14_ref_String = cm.a((byte) 82, ci.field_e, new String[1]);
+                                        var14_ref_String = cm.a((byte) 82, ci.field_e, new String[]{(String) var11_ref});
                                         if (var19 == 0) {
                                           break L43;
                                         } else {
@@ -899,7 +899,7 @@ final class mn {
                                   if (0 == je.field_f.field_h.field_Pb) {
                                     break L66;
                                   } else {
-                                    sl.field_g = cm.a((byte) 94, ii.field_s, new String[1]);
+                                    sl.field_g = cm.a((byte) 94, ii.field_s, new String[]{eg.field_b});
                                     if (var19 == 0) {
                                       break L36;
                                     } else {
@@ -924,9 +924,9 @@ final class mn {
                     }
                   }
                   var9_ref_String = cd.field_m.field_Vb;
-                  fl.field_b.field_Y = cm.a((byte) 101, hf.field_a, new String[1]).toUpperCase();
+                  fl.field_b.field_Y = cm.a((byte) 101, hf.field_a, new String[]{var9_ref_String}).toUpperCase();
                   tg.field_i.a(oh.field_d.field_mb, param0, oh.field_d.field_N - 40, 40, 0);
-                  tg.field_i.field_Y = cm.a((byte) 116, h.field_e, new String[1]);
+                  tg.field_i.field_Y = cm.a((byte) 116, h.field_e, new String[]{var9_ref_String});
                   var8 = tg.field_i;
                   break L3;
                 }
@@ -944,11 +944,11 @@ final class mn {
                         break L68;
                       }
                     }
-                    var8.field_Y = cm.a((byte) 119, cf.field_b, new String[1]);
+                    var8.field_Y = cm.a((byte) 119, cf.field_b, new String[]{Integer.toString(var9)});
                     break L67;
                   }
                 }
-                he.field_jb.field_Y = cm.a((byte) 101, sb.field_n, new String[2]);
+                he.field_jb.field_Y = cm.a((byte) 101, sb.field_n, new String[]{Integer.toString(cd.field_m.field_rc), Integer.toString(cd.field_m.field_mc)});
                 break L2;
               } else {
                 break L2;
@@ -1206,10 +1206,6 @@ final class mn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Return to game";
         field_d = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
         field_b = new int[]{40, 30, 24, 19, 15, 12, 9, 6, 4, 2, 0};

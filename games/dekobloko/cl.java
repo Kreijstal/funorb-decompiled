@@ -358,7 +358,7 @@ final class cl extends bh {
                   }
                   L18: {
                     var20 = mm.a(var12.field_Zb.field_J, var20, var21);
-                    if (var20.equals((Object) (Object) var12.field_Yb)) {
+                    if (var20.equals(var12.field_Yb)) {
                       stackOut_66_0 = 0;
                       stackIn_67_0 = stackOut_66_0;
                       break L18;
@@ -450,7 +450,7 @@ final class cl extends bh {
                                   if (!var12.field_fc) {
                                     break L28;
                                   } else {
-                                    var12.field_Zb.field_Y = cm.a((byte) 91, ad.field_A, new String[1]);
+                                    var12.field_Zb.field_Y = cm.a((byte) 91, ad.field_A, new String[]{var20});
                                     var12.field_Wb.field_Y = uc.field_f;
                                     var12.field_Ob.field_Y = ql.field_f;
                                     if (var31 == 0) {
@@ -468,7 +468,7 @@ final class cl extends bh {
                                 }
                               }
                             }
-                            var12.field_Zb.field_Y = cm.a((byte) 116, lb.field_i, new String[1]);
+                            var12.field_Zb.field_Y = cm.a((byte) 116, lb.field_i, new String[]{var20});
                             var12.field_Ob.field_Y = fc.field_g;
                             if (var31 == 0) {
                               break L25;
@@ -633,7 +633,7 @@ final class cl extends bh {
                   }
                   L39: {
                     if (var13 != 0) {
-                      param3.field_Ob.a((w) var11, (w) (Object) var12, 2, 0);
+                      param3.field_Ob.a((w) var11, var12, 2, 0);
                       break L39;
                     } else {
                       break L39;
@@ -676,7 +676,7 @@ final class cl extends bh {
                     }
                   }
                   L43: {
-                    var11 = (Object) (Object) var12;
+                    var11 = var12;
                     if (!var12.field_Kb) {
                       break L43;
                     } else {
@@ -693,7 +693,7 @@ final class cl extends bh {
                                 if (var12.field_ec) {
                                   break L45;
                                 } else {
-                                  var24 = (Object) (Object) rn.field_a;
+                                  var24 = rn.field_a;
                                   break L44;
                                 }
                               }
@@ -704,7 +704,7 @@ final class cl extends bh {
                                   break L44;
                                 } else {
                                   var25_int = wb.b((byte) -94, var8 & ~var12.field_Sb);
-                                  var24 = (Object) (Object) tm.field_e;
+                                  var24 = tm.field_e;
                                   if (var25_int <= 0) {
                                     break L44;
                                   } else {
@@ -717,7 +717,7 @@ final class cl extends bh {
                                         if (lc.field_e[-1 + var25_int] == null) {
                                           break L44;
                                         } else {
-                                          var24 = (Object) (Object) lc.field_e[var25_int - 1][1];
+                                          var24 = lc.field_e[var25_int - 1][1];
                                           break L44;
                                         }
                                       }
@@ -725,20 +725,20 @@ final class cl extends bh {
                                   }
                                 }
                               } else {
-                                var24 = (Object) (Object) cm.a((byte) 90, gd.field_a, new String[2]);
+                                var24 = cm.a((byte) 90, gd.field_a, new String[]{null, Integer.toString(var6)});
                                 break L44;
                               }
                             } else {
                               L46: {
                                 var25_int = -var12.field_Xb + var7;
                                 if (var25_int == 1) {
-                                  var24 = (Object) (Object) oa.field_d;
+                                  var24 = oa.field_d;
                                   break L46;
                                 } else {
                                   break L46;
                                 }
                               }
-                              var24 = (Object) (Object) cm.a((byte) 118, lb.field_a, new String[2]);
+                              var24 = cm.a((byte) 118, lb.field_a, new String[]{null, Integer.toString(var25_int)});
                               break L44;
                             }
                           } else {
@@ -747,7 +747,7 @@ final class cl extends bh {
                                 break L47;
                               } else {
                                 if (!var12.field_ec) {
-                                  var24 = (Object) (Object) cm.a((byte) 92, in.field_s, new String[1]);
+                                  var24 = cm.a((byte) 92, in.field_s, new String[]{var20});
                                   break L44;
                                 } else {
                                   break L47;
@@ -759,7 +759,7 @@ final class cl extends bh {
                                 if (0 != (~var12.field_Sb & var8)) {
                                   L48: {
                                     var25_int = wb.b((byte) -120, var8 & ~var12.field_Sb);
-                                    var24 = (Object) (Object) cm.a((byte) 91, ci.field_f, new String[1]);
+                                    var24 = cm.a((byte) 91, ci.field_f, new String[]{var20});
                                     if (var25_int <= 0) {
                                       break L48;
                                     } else {
@@ -770,7 +770,7 @@ final class cl extends bh {
                                           break L48;
                                         } else {
                                           if (lc.field_e[var25_int - 1] != null) {
-                                            var24 = (Object) (Object) cm.a((byte) 93, lc.field_e[-1 + var25_int][2], new String[1]);
+                                            var24 = cm.a((byte) 93, lc.field_e[-1 + var25_int][2], new String[]{var20});
                                             break L48;
                                           } else {
                                             break L48;
@@ -784,26 +784,26 @@ final class cl extends bh {
                                   break L44;
                                 }
                               } else {
-                                var24 = (Object) (Object) cm.a((byte) 98, wm.field_i, new String[2]);
+                                var24 = cm.a((byte) 98, wm.field_i, new String[]{var20, Integer.toString(var6)});
                                 break L44;
                               }
                             } else {
                               L49: {
                                 var25_int = -var12.field_Xb + var7;
                                 if (var25_int == 1) {
-                                  var24 = (Object) (Object) cm.a((byte) 93, qf.field_m, new String[1]);
+                                  var24 = cm.a((byte) 93, qf.field_m, new String[]{var20});
                                   break L49;
                                 } else {
                                   break L49;
                                 }
                               }
-                              var24 = (Object) (Object) cm.a((byte) 99, kn.field_n, new String[2]);
+                              var24 = cm.a((byte) 99, kn.field_n, new String[]{var20, Integer.toString(var25_int)});
                               break L44;
                             }
                           }
                         }
                         if (var24 != null) {
-                          var24 = (Object) (Object) ("<col=A00000>" + (String) var24);
+                          var24 = "<col=A00000>" + (String) var24;
                           var25 = null;
                           var26 = 0;
                           var27_int = 0;
@@ -930,7 +930,7 @@ final class cl extends bh {
                                             if (var25 != null) {
                                               break L61;
                                             } else {
-                                              var25 = (Object) (Object) var30;
+                                              var25 = var30;
                                               if (var31 == 0) {
                                                 break L60;
                                               } else {
@@ -939,7 +939,7 @@ final class cl extends bh {
                                             }
                                           }
                                           var26 = 1;
-                                          var25 = (Object) (Object) ((String) var25 + ", " + var30);
+                                          var25 = (String) var25 + ", " + var30;
                                           break L60;
                                         }
                                       }
@@ -962,7 +962,7 @@ final class cl extends bh {
                                       if (var26 != 0) {
                                         break L62;
                                       } else {
-                                        var24 = (Object) (Object) ((String) var24 + "<br>" + cm.a((byte) 111, ci.field_b, new String[1]));
+                                        var24 = (String) var24 + "<br>" + cm.a((byte) 111, ci.field_b, new String[]{(String) var25});
                                         if (var31 == 0) {
                                           break L51;
                                         } else {
@@ -970,7 +970,7 @@ final class cl extends bh {
                                         }
                                       }
                                     }
-                                    var24 = (Object) (Object) ((String) var24 + "<br>" + pb.field_k + (String) var25);
+                                    var24 = (String) var24 + "<br>" + pb.field_k + (String) var25;
                                     if (var31 == 0) {
                                       break L51;
                                     } else {
@@ -983,7 +983,7 @@ final class cl extends bh {
                                 if (var26 != 0) {
                                   break L63;
                                 } else {
-                                  var24 = (Object) (Object) ((String) var24 + "<br>" + cm.a((byte) 101, fj.field_i, new String[1]));
+                                  var24 = (String) var24 + "<br>" + cm.a((byte) 101, fj.field_i, new String[]{(String) var25});
                                   if (var31 == 0) {
                                     break L51;
                                   } else {
@@ -991,7 +991,7 @@ final class cl extends bh {
                                   }
                                 }
                               }
-                              var24 = (Object) (Object) ((String) var24 + "<br>" + am.field_b + (String) var25);
+                              var24 = (String) var24 + "<br>" + am.field_b + (String) var25;
                               break L51;
                             }
                             L64: {
@@ -1002,7 +1002,7 @@ final class cl extends bh {
                                   break L64;
                                 } else {
                                   var27 = cd.field_m.field_Vb;
-                                  var24 = (Object) (Object) ((String) var24 + "<br>" + cm.a((byte) 116, jf.field_b, new String[1]));
+                                  var24 = (String) var24 + "<br>" + cm.a((byte) 116, jf.field_b, new String[]{var27});
                                   break L64;
                                 }
                               }
@@ -1590,10 +1590,6 @@ final class cl extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = "Rated game";
     }
 }

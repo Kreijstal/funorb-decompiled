@@ -292,10 +292,6 @@ final class jg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = true;
         field_g = 0;
         field_k = new String[]{"This shape is called a Deko:", "This shape is called a Bloko:", "You can activate special items by popping shapes next to them.", "Using 'Z' and 'X' for rotation will give you more control.", "If you pop 2 or more shapes in one go, you will be awarded a special item!", "If you pop 4 or more shapes in one go, you will be awarded 2 special items!", "If you pop 7 or more shapes in one go, you will be awarded 4 special items!", "In multiplayer, any special items you earn will be given to both you and your victim.", "Dropping shapes quickly using the 'DOWN' arrow will give you 'fast drop' bonus points.", "Try popping several shapes simultaneously for bonus points!", "Try popping several shapes in a row for bonus points! This is called a chain.", "A chain of 2 will give you 1000 points, but a chain of 4 will give you 6000 points!"};

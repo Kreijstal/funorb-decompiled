@@ -263,9 +263,9 @@ final class bb {
           var7 = cd.a("largefont", param4, param1, (byte) 91, "lobby");
           tg.field_a = cd.a("generalfont", param4, param1, (byte) 121, "lobby");
           nf.field_d = cd.a("chatfont", param4, param1, (byte) 102, "lobby");
-          var7.a((lc[]) (Object) var5, var6_array);
-          tg.field_a.a((lc[]) (Object) var5, var6_array);
-          nf.field_d.a((lc[]) (Object) var5, var6_array);
+          var7.a(var5, var6_array);
+          tg.field_a.a(var5, var6_array);
+          nf.field_d.a(var5, var6_array);
           var8 = new w(0L, (w) null);
           var8.field_Db = kf.field_O;
           var8.field_G = 16777215;
@@ -623,10 +623,6 @@ final class bb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = -1;
         field_a = new ck[8][];
         field_f = 0;

@@ -40,12 +40,12 @@ final class tf extends kf implements rl, vn, fi {
         ((tf) this).field_S.field_B = ua.field_C;
         ((tf) this).field_T.field_B = fb.field_a;
         ((tf) this).field_W.field_B = al.field_j;
-        ((tf) this).field_fb.a((nb) (Object) new jm((rk) (Object) ((tf) this).field_fb), -5362);
-        ((tf) this).field_Y.a((nb) (Object) new ii((rk) (Object) ((tf) this).field_Y), -5362);
-        ((tf) this).field_eb.a((nb) (Object) new tl((rk) (Object) ((tf) this).field_eb, (rk) (Object) ((tf) this).field_Y), -5362);
-        ((tf) this).field_hb.a((nb) (Object) new te((rk) (Object) ((tf) this).field_hb, (rk) (Object) ((tf) this).field_fb, (rk) (Object) ((tf) this).field_Y), -5362);
-        ((tf) this).field_S.a((nb) (Object) new re((rk) (Object) ((tf) this).field_S, (rk) (Object) ((tf) this).field_hb), -5362);
-        ((tf) this).field_T.a((nb) (Object) new kd((rk) (Object) ((tf) this).field_T), -5362);
+        ((tf) this).field_fb.a(new jm(((tf) this).field_fb), -5362);
+        ((tf) this).field_Y.a(new ii(((tf) this).field_Y), -5362);
+        ((tf) this).field_eb.a(new tl(((tf) this).field_eb, ((tf) this).field_Y), -5362);
+        ((tf) this).field_hb.a(new te(((tf) this).field_hb, ((tf) this).field_fb, ((tf) this).field_Y), -5362);
+        ((tf) this).field_S.a(new re(((tf) this).field_S, ((tf) this).field_hb), -5362);
+        ((tf) this).field_T.a(new kd(((tf) this).field_T), -5362);
         ((tf) this).field_X.field_I = false;
         ((tf) this).field_X.field_p = (gl) (Object) new fk();
         ((tf) this).field_V.field_p = (gl) (Object) new on();
@@ -58,37 +58,37 @@ final class tf extends kf implements rl, vn, fi {
         gm dupTemp$1 = new gm(10000536);
         ((tf) this).field_S.field_p = (gl) (Object) dupTemp$1;
         ((tf) this).field_hb.field_p = (gl) (Object) dupTemp$1;
-        String var2 = cm.a((byte) 102, me.field_G, new String[2]);
+        String var2 = cm.a((byte) 102, me.field_G, new String[]{this.g((byte) 63), this.h((byte) 29)});
         int var3 = 20;
-        var3 = var3 + this.a(9828, (ce) (Object) ((tf) this).field_Y, var3, eg.field_c, 170);
-        var3 = var3 + (5 + this.a((ce) (Object) ((tf) this).field_eb, oc.field_d, 20, (byte) -44, 170, var3, ""));
-        var3 = var3 + this.a(9828, (ce) (Object) ((tf) this).field_hb, var3, ch.field_d, 170);
-        var3 = var3 + (this.a(125, (ce) (Object) ((tf) this).field_S, var3, sl.field_e, ga.field_c, 170) + 5);
-        var3 = var3 + (5 + this.a(114, (ce) (Object) ((tf) this).field_fb, var3, rg.field_e, ij.field_b, 170));
-        var3 = var3 + this.a(qe.field_e, (byte) -107, (ce) (Object) ((tf) this).field_T, 170, var3);
-        de var4 = new de(46, var3, -90 + ((tf) this).field_t, 25, (ce) (Object) ((tf) this).field_W, true, -120 + ((tf) this).field_t, 5, bj.field_f, 11579568, h.field_a);
-        ((tf) this).b((ce) (Object) var4, (byte) -55);
+        var3 = var3 + this.a(9828, ((tf) this).field_Y, var3, eg.field_c, 170);
+        var3 = var3 + (5 + this.a(((tf) this).field_eb, oc.field_d, 20, (byte) -44, 170, var3, ""));
+        var3 = var3 + this.a(9828, ((tf) this).field_hb, var3, ch.field_d, 170);
+        var3 = var3 + (this.a(125, ((tf) this).field_S, var3, sl.field_e, ga.field_c, 170) + 5);
+        var3 = var3 + (5 + this.a(114, ((tf) this).field_fb, var3, rg.field_e, ij.field_b, 170));
+        var3 = var3 + this.a(qe.field_e, (byte) -107, ((tf) this).field_T, 170, var3);
+        de var4 = new de(46, var3, -90 + ((tf) this).field_t, 25, ((tf) this).field_W, true, -120 + ((tf) this).field_t, 5, bj.field_f, 11579568, h.field_a);
+        ((tf) this).b(var4, (byte) -55);
         var3 = var3 + var4.field_y;
         a var5 = new a(hh.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, hh.field_e.field_R, -1, 2147483647, true);
-        ((tf) this).field_U = new qi(var2, (gl) (Object) var5);
+        ((tf) this).field_U = new qi(var2, var5);
         ((tf) this).field_U.field_B = "";
         ((tf) this).field_U.a(rb.field_i, 0, 1);
         ((tf) this).field_U.a(rb.field_i, 1, 1);
         ((tf) this).field_U.field_v = (kg) this;
         ((tf) this).field_U.c(-114, 46, var3, -90 + ((tf) this).field_t);
         var3 = var3 + (15 + ((tf) this).field_U.field_y);
-        ((tf) this).b((ce) (Object) ((tf) this).field_U, (byte) -55);
+        ((tf) this).b(((tf) this).field_U, (byte) -55);
         int var6 = 4;
         int var7 = 200;
         ((tf) this).field_X.b(40, var7, -var7 + 496 >> 1, var3, -16555);
         ((tf) this).field_V.b(40, 60, 3 + var6, var3 + 15, -16555);
         ((tf) this).field_V.field_v = (kg) this;
         ((tf) this).field_X.field_v = (kg) this;
-        ((tf) this).b((ce) (Object) ((tf) this).field_X, (byte) -55);
-        ((tf) this).b((ce) (Object) ((tf) this).field_V, (byte) -55);
+        ((tf) this).b(((tf) this).field_X, (byte) -55);
+        ((tf) this).b(((tf) this).field_V, (byte) -55);
         ((tf) this).field_db = new df((fi) this);
         ((tf) this).field_db.b(150, -60 + -((tf) this).field_fb.field_t + (((tf) this).field_t + -((tf) this).field_fb.field_u), ((tf) this).field_fb.field_u + ((tf) this).field_fb.field_t + 60, ((tf) this).field_fb.field_D - -20, -16555);
-        ((tf) this).b((ce) (Object) ((tf) this).field_db, (byte) -55);
+        ((tf) this).b(((tf) this).field_db, (byte) -55);
         ((tf) this).b(55 + var3 - -var6, 496, 0, 0, -16555);
     }
 
@@ -555,10 +555,10 @@ final class tf extends kf implements rl, vn, fi {
         try {
           L0: {
             var10 = new de(20, param5, 290, 25, param0, false, 120, 3, hh.field_e, 16777215, param1);
-            ((tf) this).b((ce) (Object) var10, (byte) -55);
+            ((tf) this).b(var10, (byte) -55);
             var9 = new pa(((jl) (Object) param0).a(-122), param6, 126, param5 + var10.field_y, 220, param2);
             var9.field_v = (kg) this;
-            ((tf) this).b((ce) (Object) var9, (byte) -55);
+            ((tf) this).b(var9, (byte) -55);
             stackOut_0_0 = var10.field_y - -var9.field_y;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -758,22 +758,22 @@ final class tf extends kf implements rl, vn, fi {
     private final boolean i(int param0) {
         int var2 = 0;
         L0: {
-          if (!this.a((jl) (Object) ((tf) this).field_fb, 127)) {
+          if (!this.a(((tf) this).field_fb, 127)) {
             break L0;
           } else {
-            if (!this.a((jl) (Object) ((tf) this).field_Y, -111)) {
+            if (!this.a(((tf) this).field_Y, -111)) {
               break L0;
             } else {
-              if (!this.a((jl) (Object) ((tf) this).field_eb, 124)) {
+              if (!this.a(((tf) this).field_eb, 124)) {
                 break L0;
               } else {
-                if (!this.a((jl) (Object) ((tf) this).field_hb, 126)) {
+                if (!this.a(((tf) this).field_hb, 126)) {
                   break L0;
                 } else {
-                  if (!this.a((jl) (Object) ((tf) this).field_S, -94)) {
+                  if (!this.a(((tf) this).field_S, -94)) {
                     break L0;
                   } else {
-                    if (this.a((jl) (Object) ((tf) this).field_T, 124)) {
+                    if (this.a(((tf) this).field_T, 124)) {
                       var2 = 37 % ((16 - param0) / 54);
                       return true;
                     } else {
@@ -1125,9 +1125,9 @@ final class tf extends kf implements rl, vn, fi {
           L0: {
             L1: {
               var8 = new de(20, param4, 120 - -param3, 25, param2, false, 120, 3, hh.field_e, 16777215, param0);
-              ((tf) this).b((ce) (Object) var8, (byte) -55);
+              ((tf) this).b(var8, (byte) -55);
               var7 = new g(((jl) (Object) param2).a(-126));
-              ((tf) this).b((ce) (Object) var7, (byte) -55);
+              ((tf) this).b(var7, (byte) -55);
               if (param1 == -107) {
                 break L1;
               } else {
@@ -1237,7 +1237,7 @@ final class tf extends kf implements rl, vn, fi {
         try {
           L0: {
             var6 = new de(20, param2, 290, 25, param1, false, 120, 3, hh.field_e, 16777215, param3);
-            ((tf) this).b((ce) (Object) var6, (byte) -55);
+            ((tf) this).b(var6, (byte) -55);
             stackOut_0_0 = var6.field_y;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -1301,10 +1301,6 @@ final class tf extends kf implements rl, vn, fi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_ab = "Status";
         field_Z = "Click";
         field_cb = new Random();

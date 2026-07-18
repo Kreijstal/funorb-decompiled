@@ -498,10 +498,6 @@ final class ug extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "The Controls";
     }
 }

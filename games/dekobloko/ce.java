@@ -612,7 +612,7 @@ class ce extends bh {
                   }
                 }
               }
-              int discarded$3 = ij.a(-20539, (wl) (Object) var6, param5);
+              int discarded$3 = ij.a(-20539, var6, param5);
               break L3;
             }
             var6.b(var6.field_n - var7, true);
@@ -696,7 +696,7 @@ class ce extends bh {
         try {
           L0: {
             if (param2 == -697) {
-              cg.field_c.a((bh) (Object) param1, 2777);
+              cg.field_c.a(param1, 2777);
               kk.a(param0, -15016, param1);
               break L0;
             } else {
@@ -888,7 +888,7 @@ class ce extends bh {
             L1: {
               if (null != ub.field_c) {
                 var1_ref = ub.field_c;
-                jb.a((byte) 107, cm.a((byte) 117, sl.field_d, new String[1]));
+                jb.a((byte) 107, cm.a((byte) 117, sl.field_d, new String[]{var1_ref}));
                 ub.field_c = null;
                 break L1;
               } else {
@@ -1559,7 +1559,7 @@ class ce extends bh {
                     }
                   }
                 }
-                StringBuilder discarded$13 = param1.append((Object) (Object) ((ce) this).field_p);
+                StringBuilder discarded$13 = param1.append(((ce) this).field_p);
                 break L5;
               } else {
                 break L5;
@@ -1572,7 +1572,7 @@ class ce extends bh {
                   if (((ce) this).field_v instanceof ce) {
                     break L8;
                   } else {
-                    StringBuilder discarded$15 = param1.append((Object) (Object) ((ce) this).field_v);
+                    StringBuilder discarded$15 = param1.append(((ce) this).field_v);
                     if (var6 == 0) {
                       break L7;
                     } else {
@@ -1977,10 +1977,6 @@ class ce extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "To server list";
     }
 }

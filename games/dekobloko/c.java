@@ -202,7 +202,7 @@ final class c {
             var17.field_q = 16777215;
             ((c) this).field_k = (gl) (Object) var17;
             var4 = new bc();
-            var17.a(-12253, (a) (Object) var4);
+            var17.a(-12253, var4);
             var4.field_c = 11711154;
             var4.field_v = 15658734;
             ((c) this).field_h = 3;
@@ -237,7 +237,7 @@ final class c {
                 al discarded$16 = new al(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
                 qj discarded$17 = new qj(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new bc();
-                var17.a(-12253, (a) (Object) var8);
+                var17.a(-12253, var8);
                 sn discarded$18 = var8.a(0, 78).a(param0 ^ -13421740, fl.a(10066329, 15658734, 7829367, param0 + -13389632)).a(1118481, (byte) 106).b(-83, -1);
                 sn discarded$19 = var8.a(4, param0 ^ 13421812).a(-16598, true).a(-27, var5);
                 ((c) this).field_l = (gl) (Object) var8;
@@ -407,22 +407,22 @@ final class c {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        String stackIn_32_2 = null;
+        String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
         RuntimeException stackOut_29_0 = null;
         StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
         var15 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -471,7 +471,7 @@ final class c {
                   break L5;
                 }
               }
-              var11 = ((c) this).field_p.a(param2, new int[1], el.field_L);
+              var11 = ((c) this).field_p.a(param2, new int[]{var12}, el.field_L);
               var10 = var10 + (-1 + var11) * var7;
               var9 = 0;
               var13 = 0;
@@ -482,11 +482,9 @@ final class c {
                   L7: {
                     var14 = ((c) this).field_p.a(el.field_L[var13]);
                     if (var14 <= var9) {
-                      var13++;
                       break L7;
                     } else {
                       var9 = var14;
-                      var13++;
                       break L7;
                     }
                   }
@@ -522,31 +520,31 @@ final class c {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var5 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) var5;
-            stackOut_29_1 = new StringBuilder().append("c.D(").append(param0).append(',').append(16521).append(',');
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            stackOut_27_0 = (RuntimeException) var5;
+            stackOut_27_1 = new StringBuilder().append("c.D(").append(param0).append(',').append(16521).append(',');
+            stackIn_29_0 = stackOut_27_0;
+            stackIn_29_1 = stackOut_27_1;
+            stackIn_28_0 = stackOut_27_0;
+            stackIn_28_1 = stackOut_27_1;
             if (param2 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "null";
+              stackIn_30_0 = stackOut_29_0;
+              stackIn_30_1 = stackOut_29_1;
+              stackIn_30_2 = stackOut_29_2;
               break L10;
             } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "{...}";
+              stackIn_30_0 = stackOut_28_0;
+              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_2 = stackOut_28_2;
               break L10;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param3 + ')');
+          throw dh.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param3 + ')');
         }
     }
 
@@ -623,10 +621,6 @@ final class c {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = new vj();
     }
 }

@@ -323,7 +323,7 @@ final class mc {
                     L8: {
                       if (qa.field_v[0][2].field_Kb) {
                         if (!ig.b(true)) {
-                          sl.field_g = cm.a((byte) 82, bh.field_h, new String[1]);
+                          sl.field_g = cm.a((byte) 82, bh.field_h, new String[]{cd.field_m.field_Vb});
                           break L8;
                         } else {
                           sl.field_g = kf.field_J;
@@ -1193,7 +1193,7 @@ final class mc {
                                 var19 = null;
                                 break L70;
                               } else {
-                                var19 = (Object) (Object) hb.field_Qb[var7][var9];
+                                var19 = hb.field_Qb[var7][var9];
                                 break L70;
                               }
                             }
@@ -1203,7 +1203,7 @@ final class mc {
                             if (var19 == null) {
                               break L71;
                             } else {
-                              if (((String) var19).equals((Object) (Object) var18_ref_String)) {
+                              if (((String) var19).equals(var18_ref_String)) {
                                 break L71;
                               } else {
                                 var20 = var19;
@@ -1214,7 +1214,7 @@ final class mc {
                           L72: {
                             var21 = null;
                             if (var13 != 0) {
-                              var21 = (Object) (Object) gd.field_d;
+                              var21 = gd.field_d;
                               var22 = var21;
                               var25 = var22;
                               var22 = var25;
@@ -1228,17 +1228,17 @@ final class mc {
                               break L72;
                             } else {
                               if (var10 != 0) {
-                                var21 = (Object) (Object) pj.field_F;
+                                var21 = pj.field_F;
                                 break L72;
                               } else {
                                 L73: {
                                   if (var11 != 0) {
                                     var22_int = -rf.field_o + ik.field_h[var7][var9];
                                     if (var22_int != 1) {
-                                      var21 = (Object) (Object) cm.a((byte) 81, eb.field_g, new String[1]);
+                                      var21 = cm.a((byte) 81, eb.field_g, new String[]{Integer.toString(var22_int)});
                                       break L73;
                                     } else {
-                                      var21 = (Object) (Object) pl.field_f;
+                                      var21 = pl.field_f;
                                       break L73;
                                     }
                                   } else {
@@ -1247,18 +1247,18 @@ final class mc {
                                 }
                                 L74: {
                                   if (var12 != 0) {
-                                    var32 = cm.a((byte) 110, wl.field_q, new String[2]);
+                                    var32 = cm.a((byte) 110, wl.field_q, new String[]{Integer.toString(de.field_R), Integer.toString(mg.field_Ob[var7][var9])});
                                     var22_ref = var32;
                                     var25_ref = var22_ref;
                                     var22_ref = var25_ref;
-                                    var21 = (Object) (Object) var22_ref;
+                                    var21 = var22_ref;
                                     var25_ref = var32;
                                     var22_ref = var25_ref;
                                     if (var21 != null) {
-                                      var21 = (Object) (Object) ((String) var21 + "<br>" + var32);
+                                      var21 = (String) var21 + "<br>" + var32;
                                       break L74;
                                     } else {
-                                      var21 = (Object) (Object) var32;
+                                      var21 = var32;
                                       break L74;
                                     }
                                   } else {
@@ -1288,10 +1288,10 @@ final class mc {
                                     }
                                   }
                                   if (var21 != null) {
-                                    var21 = (Object) (Object) ((String) var21 + "<br>" + var22_ref);
+                                    var21 = (String) var21 + "<br>" + var22_ref;
                                     break L72;
                                   } else {
-                                    var21 = (Object) (Object) var22_ref;
+                                    var21 = var22_ref;
                                     break L72;
                                   }
                                 } else {
@@ -1318,7 +1318,7 @@ final class mc {
                                     var22_ref = var25_ref;
                                     var25_ref = var22_ref;
                                     var22_ref = var25_ref;
-                                    var21 = (Object) (Object) var22_ref;
+                                    var21 = var22_ref;
                                     break L77;
                                   }
                                 }
@@ -1326,10 +1326,10 @@ final class mc {
                                 L78: while (true) {
                                   if (var7 <= var24) {
                                     if (var23 == 0) {
-                                      var21 = (Object) (Object) cm.a((byte) 115, ai.field_T, new String[1]);
+                                      var21 = cm.a((byte) 115, ai.field_T, new String[]{var22_ref});
                                       break L76;
                                     } else {
-                                      var21 = (Object) (Object) (tl.field_x + var22_ref);
+                                      var21 = tl.field_x + var22_ref;
                                       break L76;
                                     }
                                   } else {
@@ -1337,12 +1337,12 @@ final class mc {
                                       if (rd.field_c[var24]) {
                                         var25_ref = "</col>" + pa.field_db[var24] + "<col=A00000>";
                                         var22_ref = var25_ref;
-                                        var21 = (Object) (Object) var22_ref;
+                                        var21 = var22_ref;
                                         var22_ref = var25_ref;
                                         if (var22_ref != null) {
                                           var22_ref = var22_ref + ", " + var25_ref;
-                                          var21 = (Object) (Object) var22_ref;
-                                          var21 = (Object) (Object) var22_ref;
+                                          var21 = var22_ref;
+                                          var21 = var22_ref;
                                           var23 = 1;
                                           break L79;
                                         } else {
@@ -1364,13 +1364,13 @@ final class mc {
                             if (var21 == null) {
                               break L80;
                             } else {
-                              var21 = (Object) (Object) ("<col=A00000>" + (String) var21);
+                              var21 = "<col=A00000>" + (String) var21;
                               var33 = j.a("<br>", (String) var21, "<br><col=A00000>", 0);
                               if (var20 != null) {
-                                var20 = (Object) (Object) ((String) var20 + "<br>" + var33);
+                                var20 = (String) var20 + "<br>" + var33;
                                 break L80;
                               } else {
-                                var20 = (Object) (Object) var33;
+                                var20 = var33;
                                 break L80;
                               }
                             }
@@ -1729,10 +1729,6 @@ final class mc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[]{2053254, 7976409, 15906096, 11781092, 41672};
         field_f = 5;
         field_d = "Off";

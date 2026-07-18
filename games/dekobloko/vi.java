@@ -290,7 +290,6 @@ abstract class vi extends be {
                   }
                 }
               }
-              int discarded$1 = vi.d(-63);
               L3: while (true) {
                 L4: {
                   if (0 > dl.field_N) {
@@ -338,7 +337,7 @@ abstract class vi extends be {
                     var6 = 0;
                     L6: while (true) {
                       if (sm.field_e <= var6) {
-                        ci.field_h.a((bh) (Object) var5, 2777);
+                        ci.field_h.a(var5, 2777);
                         dl.field_N = -1;
                         continue L3;
                       } else {
@@ -390,10 +389,6 @@ abstract class vi extends be {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = new wl(256);
     }
 }

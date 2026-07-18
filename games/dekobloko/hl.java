@@ -190,10 +190,6 @@ final class hl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new int[4];
         field_b = "Decline invitation to <%0>'s game";
         field_c = "Who can join";

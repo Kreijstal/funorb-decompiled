@@ -155,10 +155,6 @@ final class tm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "You have not yet unlocked this option for use.";
         field_d = 0;
         field_g = "Waiting for music";

@@ -255,10 +255,6 @@ final class dh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = -1;
     }
 }

@@ -13,7 +13,7 @@ final class ji {
 
     private final synchronized void a(int param0, int param1) {
         if (((ji) this).field_b) {
-            ((ji) this).field_d[param1] = (Object) (Object) ((ji) this).field_a.a(param1, (byte) 91);
+            ((ji) this).field_d[param1] = ((ji) this).field_a.a(param1, (byte) 91);
         } else {
             ((ji) this).field_d[param1] = qk.a(((ji) this).field_a.a(param1, (byte) 91), -1389597532, false);
         }
@@ -649,7 +649,7 @@ final class ji {
                           }
                         }
                         if (((ji) this).field_g != 0) {
-                          var7[var11] = (Object) (Object) var54;
+                          var7[var11] = var54;
                           break L11;
                         } else {
                           var7[var11] = qk.a(var53, -1389597532, false);
@@ -676,7 +676,7 @@ final class ji {
                                 var18 = 0;
                                 L14: while (true) {
                                   if (var18 >= var12) {
-                                    var7[var15] = (Object) (Object) var57;
+                                    var7[var15] = var57;
                                     return true;
                                   } else {
                                     var19 = 0;
@@ -797,7 +797,7 @@ final class ji {
                                               var7[var18] = qk.a(var56[var17], -1389597532, false);
                                               break L26;
                                             } else {
-                                              var7[var18] = (Object) (Object) var56[var17];
+                                              var7[var18] = var56[var17];
                                               break L26;
                                             }
                                           }
@@ -1488,7 +1488,7 @@ final class ji {
                     break L3;
                   } else {
                     var7 = cf.a(false, 95, ((ji) this).field_e[param2][param0]);
-                    var5 = (Object) (Object) var7;
+                    var5 = var7;
                     if (var7 == null) {
                       throw new RuntimeException("");
                     } else {
@@ -1533,7 +1533,7 @@ final class ji {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var5 = (Object) (Object) decompiledCaughtException;
+            var5 = decompiledCaughtException;
             stackOut_28_0 = var5;
             stackOut_28_1 = new StringBuilder().append("ji.AA(").append(param0).append(',');
             stackIn_30_0 = stackOut_28_0;
@@ -1722,10 +1722,6 @@ final class ji {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Offer rematch";
         field_h = "FINAL!";
     }

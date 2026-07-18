@@ -158,10 +158,6 @@ final class dl extends ek {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_M = 20;
         field_L = "Stage <%0>";
         field_N = -1;

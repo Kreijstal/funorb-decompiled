@@ -866,10 +866,6 @@ final class jd extends w {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Zb = "Buying or selling an account";
         field_Ub = new long[32];
         field_Xb = "Orb points: ";

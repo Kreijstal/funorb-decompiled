@@ -598,7 +598,7 @@ final class vk {
                       if (param1 != 10) {
                         if (param1 != 11) {
                           if (param1 == 14) {
-                            stackOut_25_0 = cm.a((byte) 119, pd.field_c, new String[1]);
+                            stackOut_25_0 = cm.a((byte) 119, pd.field_c, new String[]{param0});
                             stackIn_26_0 = stackOut_25_0;
                             break L0;
                           } else {
@@ -726,10 +726,6 @@ final class vk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new qm(9, 0, 4, 1);
         field_e = "This game is full.";
         field_c = new byte[250][];

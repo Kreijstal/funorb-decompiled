@@ -639,10 +639,6 @@ final class un {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Names cannot contain consecutive spaces";
         field_a = "Loading fonts";
         field_c = "Kick <%0> from this game";

@@ -133,10 +133,6 @@ final class oa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Enter multiplayer lobby";
         field_d = "You must play 1 more rated game before playing with the current options.";
     }

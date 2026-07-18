@@ -266,10 +266,6 @@ class km extends be {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_B = "ESC - cancel this line";
         field_y = "Advertising websites";
     }

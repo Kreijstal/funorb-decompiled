@@ -231,10 +231,6 @@ final class ak {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Stamina Highscores";
         field_g = "Connection lost - attempting to reconnect";
         field_a = "Rating";

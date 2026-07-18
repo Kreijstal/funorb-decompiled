@@ -61,7 +61,7 @@ final class hd extends bh {
         try {
           L0: {
             L1: {
-              sl.a((String) null, (int[]) null, (byte) 105, gf.field_c, (w) (Object) param2, (String) null, 0L, -1, param2.e(-88));
+              sl.a((String) null, (int[]) null, (byte) 105, gf.field_c, param2, (String) null, 0L, -1, param2.e(-88));
               if (!param2.field_lc) {
                 break L1;
               } else {
@@ -77,7 +77,7 @@ final class hd extends bh {
                   }
                 }
                 var7 = w.field_H;
-                var8 = cm.a((byte) 86, ec.field_a, new String[1]);
+                var8 = cm.a((byte) 86, ec.field_a, new String[]{param3});
                 var7.field_h.a(var8, 10, 126);
                 break L1;
               }
@@ -89,12 +89,12 @@ final class hd extends bh {
               } else {
                 if (w.field_H.field_f != ta.field_b) {
                   var11 = w.field_H;
-                  var12 = cm.a((byte) 86, sb.field_p, new String[1]);
+                  var12 = cm.a((byte) 86, sb.field_p, new String[]{param3});
                   var11.field_h.a(var12, 15, 91);
                   break L3;
                 } else {
                   var9 = w.field_H;
-                  var10 = cm.a((byte) 94, fb.field_d, new String[1]);
+                  var10 = cm.a((byte) 94, fb.field_d, new String[]{param3});
                   var9.field_h.a(var10, 16, 87);
                   break L3;
                 }
@@ -173,10 +173,6 @@ final class hd extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Won";
         field_t = "Don't mind";
         field_p = "Similar rating";

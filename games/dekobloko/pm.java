@@ -25,9 +25,9 @@ final class pm {
         int var7 = 0;
         int var8 = 0;
         int stackIn_8_0 = 0;
-        int stackIn_16_0 = 0;
+        int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
+        int stackOut_13_0 = 0;
         int stackOut_7_0 = 0;
         var8 = client.field_A ? 1 : 0;
         try {
@@ -44,15 +44,14 @@ final class pm {
             var4 = rn.field_d;
             L2: while (true) {
               if (ef.field_M.length <= var3_int) {
-                stackOut_15_0 = -1;
-                stackIn_16_0 = stackOut_15_0;
+                stackOut_13_0 = -1;
+                stackIn_14_0 = stackOut_13_0;
                 break L0;
               } else {
                 L3: {
                   var5 = ug.field_q[var3_int];
                   if (var5 < 0) {
                     var4 = var4 + ma.field_I;
-                    var3_int++;
                     break L3;
                   } else {
                     var6 = qb.a(0, ef.field_M[var3_int], true);
@@ -60,7 +59,6 @@ final class pm {
                     var7 = -(var6 >> 1) + af.field_f;
                     if (!gi.a(17, param0, param2, var6 + (ba.field_d << 1), var4, vb.field_V - -(le.field_t << 1), var7 + -ba.field_d)) {
                       var4 = var4 + ((le.field_t << 1) + (je.field_c + vb.field_V));
-                      var3_int++;
                       break L3;
                     } else {
                       stackOut_7_0 = var5;
@@ -79,14 +77,10 @@ final class pm {
           var3 = decompiledCaughtException;
           throw dh.a((Throwable) (Object) var3, "pm.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_16_0;
+        return stackIn_14_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_a = "You have declined the invitation.";
         field_c = "Sound: ";

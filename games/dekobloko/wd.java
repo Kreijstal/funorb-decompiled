@@ -111,7 +111,7 @@ final class wd {
                     }
                     case 4: {
                         try {
-                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param2)) {
+                            if (var4[var5].substring(0, var6).trim().equals(param2)) {
                                 statePc = 6;
                             } else {
                                 statePc = 5;
@@ -305,17 +305,13 @@ final class wd {
             }
             var7.field_f[-1 + var6.field_b.field_l].field_n = 46 + var4;
         }
-        var7.a(new ec(18, om.field_b, (mm) (Object) a.field_t), 104);
+        var7.a(new ec(18, om.field_b, a.field_t), 104);
         var7.a(-1, param1, -129);
         var7.a(param0, 320, false, -117, 28);
         return var7;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "You appear to be telling someone your password - please don't!";
         field_d = false;
         field_b = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";

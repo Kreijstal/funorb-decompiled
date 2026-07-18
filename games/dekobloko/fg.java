@@ -53,14 +53,18 @@ final class fg implements com.ms.directX.IEnumModesCallback {
         if (null == field_a) {
             field_c = field_c + 4;
         } else {
+            int fieldTemp$0 = field_c;
             field_c = field_c + 1;
-            field_a[field_c] = param0.width;
+            field_a[fieldTemp$0] = param0.width;
+            int fieldTemp$1 = field_c;
             field_c = field_c + 1;
-            field_a[field_c] = param0.height;
+            field_a[fieldTemp$1] = param0.height;
+            int fieldTemp$2 = field_c;
             field_c = field_c + 1;
-            field_a[field_c] = param0.rgbBitCount;
+            field_a[fieldTemp$2] = param0.rgbBitCount;
+            int fieldTemp$3 = field_c;
             field_c = field_c + 1;
-            field_a[field_c] = param0.refreshRate;
+            field_a[fieldTemp$3] = param0.refreshRate;
         }
     }
 

@@ -63,7 +63,7 @@ final class jm extends wm {
               return stackIn_5_0;
             } else {
               L2: {
-                if (!param0.equals((Object) (Object) ((jm) this).field_t)) {
+                if (!param0.equals(((jm) this).field_t)) {
                   L3: {
                     var3 = f.a(param1 + -11039, param0);
                     if (var3 == null) {
@@ -205,7 +205,7 @@ final class jm extends wm {
               return stackIn_3_0;
             } else {
               L1: {
-                if (!param0.equals((Object) (Object) ((jm) this).field_t)) {
+                if (!param0.equals(((jm) this).field_t)) {
                   var4 = f.a(param1 + -11068, param0);
                   if (var4 != null) {
                     if (null == var4.field_f) {
@@ -525,7 +525,7 @@ final class jm extends wm {
                 break L7;
               }
             }
-            re.a(uk.field_p, ea.field_k, (wl) (Object) we.field_b, vi.field_A, 0);
+            re.a(uk.field_p, ea.field_k, we.field_b, vi.field_A, 0);
             we.field_b.b(true, we.field_b.field_n - var5_int);
             wj.c(4792, -1);
             break L0;
@@ -563,10 +563,6 @@ final class jm extends wm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = new vj();
         field_v = new ud[4];
         field_p = 0;

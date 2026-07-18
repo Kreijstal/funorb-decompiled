@@ -149,10 +149,6 @@ final class pc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "A detailed explanation of each rule can be found through the link on our website.<br>(in the Help Section)";
         field_d = "Private";
         field_a = "FINISH<br><%0>";

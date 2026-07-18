@@ -135,7 +135,7 @@ final class rg {
                     }
                     case 8: {
                         try {
-                            if (!var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
+                            if (!var4[var5].substring(0, var6).trim().equals(var2)) {
                                 statePc = 11;
                             } else {
                                 statePc = 9;
@@ -284,10 +284,6 @@ final class rg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Offline";
         field_e = "Player names can be up to 12 letters, numbers and underscores";
         field_f = "Can you unlock the Master Challenge by reaching Stage<nbsp>4 of Stamina Mode?";

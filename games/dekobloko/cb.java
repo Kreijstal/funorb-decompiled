@@ -25,7 +25,7 @@ final class cb {
             if (((cb) this).field_g >= ((cb) this).field_f.length) {
                 var9 = new pb[2 * ((cb) this).field_g];
                 pb[] var7 = var9;
-                an.a((Object[]) (Object) ((cb) this).field_f, 0, (Object[]) (Object) var9, 0, ((cb) this).field_g);
+                an.a(((cb) this).field_f, 0, var9, 0, ((cb) this).field_g);
                 ((cb) this).field_f = var9;
             }
             var8 = new pb();
@@ -916,10 +916,6 @@ final class cb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Breaking real-world laws";
         field_k = "Game full";
         field_h = "Name";

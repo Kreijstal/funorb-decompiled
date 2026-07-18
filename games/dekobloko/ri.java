@@ -875,10 +875,6 @@ final class ri {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "DRAW!";
         field_f = new String[8];
         field_f[0] = "fruit";

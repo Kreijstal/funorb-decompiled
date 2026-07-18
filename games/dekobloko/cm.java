@@ -23,7 +23,7 @@ final class cm implements Iterator {
             var1 = ((cm) this).field_c;
             ((cm) this).field_c = var1.field_b;
             ((cm) this).field_j = var1;
-            return (Object) (Object) var1;
+            return var1;
         }
         do {
             if (((cm) this).field_k.field_a <= ((cm) this).field_e) {
@@ -35,7 +35,7 @@ final class cm implements Iterator {
         } while (var1 == ((cm) this).field_k.field_h[-1 + ((cm) this).field_e]);
         ((cm) this).field_c = var1.field_b;
         ((cm) this).field_j = var1;
-        return (Object) (Object) var1;
+        return var1;
     }
 
     final static void a(byte param0) {
@@ -411,76 +411,74 @@ final class cm implements Iterator {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        int var0 = 0;
-        int[] var1 = null;
-        int var2 = 0;
-        int[] var3 = null;
-        int[] var4 = null;
-        int[] var5 = null;
-        int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        int[] var17 = null;
-        field_a = b.h(-126);
-        field_h = b.h(80);
-        field_g = b.h(-125);
-        field_b = b.h(86);
-        var0 = 0;
-        L0: while (true) {
-          if (var0 >= 15) {
-            var0 = 15;
-            L1: while (true) {
-              if (31 <= var0) {
-                var13 = field_g;
-                var8 = var13;
-                var3 = var8;
-                var3[0] = de.b(var13[0], 8);
-                var14 = field_g;
-                var9 = var14;
-                var4 = var9;
-                var4[0] = de.b(var14[0], 128);
-                var15 = field_g;
-                var10 = var15;
-                var5 = var10;
-                var5[0] = de.b(var15[0], 4194304);
-                var16 = field_b;
-                var11 = var16;
-                var6 = var11;
-                var6[0] = de.b(var16[0], 1);
-                var17 = field_b;
-                var12 = var17;
-                var7 = var12;
-                var7[0] = de.b(var17[0], 2048);
-                field_i = "Creating your account";
-                field_d = "Connection lost. <%0>";
-                return;
+        $cfr$clinit: {
+            int var0 = 0;
+            int[] var1 = null;
+            int var2 = 0;
+            int[] var3 = null;
+            int[] var4 = null;
+            int[] var5 = null;
+            int[] var6 = null;
+            int[] var7 = null;
+            int[] var8 = null;
+            int[] var9 = null;
+            int[] var10 = null;
+            int[] var11 = null;
+            int[] var12 = null;
+            int[] var13 = null;
+            int[] var14 = null;
+            int[] var15 = null;
+            int[] var16 = null;
+            int[] var17 = null;
+            field_a = b.h(-126);
+            field_h = b.h(80);
+            field_g = b.h(-125);
+            field_b = b.h(86);
+            var0 = 0;
+            L0: while (true) {
+              if (var0 >= 15) {
+                var0 = 15;
+                L1: while (true) {
+                  if (31 <= var0) {
+                    var13 = field_g;
+                    var8 = var13;
+                    var3 = var8;
+                    var3[0] = de.b(var13[0], 8);
+                    var14 = field_g;
+                    var9 = var14;
+                    var4 = var9;
+                    var4[0] = de.b(var14[0], 128);
+                    var15 = field_g;
+                    var10 = var15;
+                    var5 = var10;
+                    var5[0] = de.b(var15[0], 4194304);
+                    var16 = field_b;
+                    var11 = var16;
+                    var6 = var11;
+                    var6[0] = de.b(var16[0], 1);
+                    var17 = field_b;
+                    var12 = var17;
+                    var7 = var12;
+                    var7[0] = de.b(var17[0], 2048);
+                    field_i = "Creating your account";
+                    field_d = "Connection lost. <%0>";
+                    break $cfr$clinit;
+                  } else {
+                    var1 = field_h;
+                    var2 = var0;
+                    var1[var2 >> 5] = de.b(var1[var2 >> 5], 1 << lb.a(31, var2));
+                    var0++;
+                    continue L1;
+                  }
+                }
               } else {
-                var1 = field_h;
+                var1 = field_a;
                 var2 = var0;
-                var1[var2 >> 5] = de.b(var1[var2 >> 5], 1 << lb.a(31, var2));
+                var1[var2 >> 5] = de.b(var1[var2 >> 5], 1 << lb.a(var2, 31));
                 var0++;
-                continue L1;
+                continue L0;
               }
             }
-          } else {
-            var1 = field_a;
-            var2 = var0;
-            var1[var2 >> 5] = de.b(var1[var2 >> 5], 1 << lb.a(var2, 31));
-            var0++;
-            continue L0;
-          }
         }
     }
 }

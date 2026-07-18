@@ -39,10 +39,6 @@ final class l {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_d = new ck[64];
         field_f = 0;

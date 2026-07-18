@@ -528,10 +528,6 @@ final class de extends ma {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_ab = "If you do nothing the game will revert to normal view in <%0> second.";
         field_P = "Instructions";
         field_Z = false;

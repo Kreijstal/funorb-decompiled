@@ -246,7 +246,7 @@ final class le extends of {
           var10 = client.field_A ? 1 : 0;
           sf dupTemp$2 = (sf) (Object) ((le) this).field_G.a((long)param1, 95);
           var12 = dupTemp$2;
-          var4 = (Object) (Object) dupTemp$2;
+          var4 = dupTemp$2;
           if (var12 == null) {
             break L0;
           } else {
@@ -278,7 +278,7 @@ final class le extends of {
                     break L3;
                   } else {
                     if (((le) this).field_F[param1] != -1) {
-                      var4 = (Object) (Object) ((le) this).field_v.a(param1, ((le) this).field_w, -98);
+                      var4 = ((le) this).field_v.a(param1, ((le) this).field_w, -98);
                       break L2;
                     } else {
                       break L3;
@@ -286,7 +286,7 @@ final class le extends of {
                   }
                 }
                 if (!((le) this).field_l.a(true)) {
-                  var4 = (Object) (Object) ((le) this).field_l.a(true, (byte) 2, true, ((le) this).field_x, param1);
+                  var4 = ((le) this).field_l.a(true, (byte) 2, true, ((le) this).field_x, param1);
                   break L2;
                 } else {
                   return null;
@@ -294,7 +294,7 @@ final class le extends of {
               } else {
                 if (1 == param0) {
                   if (null != ((le) this).field_w) {
-                    var4 = (Object) (Object) ((le) this).field_v.a(param1, ((le) this).field_w, (byte) 61);
+                    var4 = ((le) this).field_v.a(param1, ((le) this).field_w, (byte) 61);
                     break L2;
                   } else {
                     throw new RuntimeException();
@@ -310,7 +310,7 @@ final class le extends of {
                         throw new RuntimeException();
                       } else {
                         if (!((le) this).field_l.b(0)) {
-                          var4 = (Object) (Object) ((le) this).field_l.a(false, (byte) 2, true, ((le) this).field_x, param1);
+                          var4 = ((le) this).field_l.a(false, (byte) 2, true, ((le) this).field_x, param1);
                           break L2;
                         } else {
                           return null;
@@ -389,7 +389,7 @@ final class le extends of {
               ((sf) var4).b((byte) 117);
               if (((sf) var4).field_D) {
                 if (!((le) this).field_l.a(true)) {
-                  var4 = (Object) (Object) ((le) this).field_l.a(true, (byte) 2, true, ((le) this).field_x, param1);
+                  var4 = ((le) this).field_l.a(true, (byte) 2, true, ((le) this).field_x, param1);
                   ((le) this).field_G.a((long)param1, -1, (bh) var4);
                   return null;
                 } else {
@@ -509,7 +509,7 @@ final class le extends of {
               if (((sf) var4).field_D) {
                 L17: {
                   if (!((le) this).field_l.a(true)) {
-                    var4 = (Object) (Object) ((le) this).field_l.a(true, (byte) 2, true, ((le) this).field_x, param1);
+                    var4 = ((le) this).field_l.a(true, (byte) 2, true, ((le) this).field_x, param1);
                     ((le) this).field_G.a((long)param1, -1, (bh) var4);
                     break L17;
                   } else {
@@ -1043,10 +1043,6 @@ final class le extends of {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "No highscores";
         field_o = new tb();
     }

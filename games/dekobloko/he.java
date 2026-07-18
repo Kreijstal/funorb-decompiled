@@ -310,13 +310,13 @@ final class he extends kf implements qh, vn {
               }
             }
             L14: {
-              de dupTemp$2 = new de(10, ((he) this).field_D, ((he) this).field_t - 20, 25, (ce) (Object) ((he) this).field_bb, false, 80, 3, var7, 16777215, var8);
+              de dupTemp$2 = new de(10, ((he) this).field_D, ((he) this).field_t - 20, 25, ((he) this).field_bb, false, 80, 3, var7, 16777215, var8);
               var12 = dupTemp$2;
-              ((he) this).b((ce) (Object) dupTemp$2, (byte) -55);
+              ((he) this).b(dupTemp$2, (byte) -55);
               ((he) this).field_D = ((he) this).field_D + (((ce) (Object) var12).field_y + 5);
-              de dupTemp$3 = new de(10, ((he) this).field_D, -20 + ((he) this).field_t, 25, (ce) (Object) ((he) this).field_cb, false, 80, 3, var7, 16777215, ch.field_d);
+              de dupTemp$3 = new de(10, ((he) this).field_D, -20 + ((he) this).field_t, 25, ((he) this).field_cb, false, 80, 3, var7, 16777215, ch.field_d);
               var13 = dupTemp$3;
-              ((he) this).b((ce) (Object) dupTemp$3, (byte) -55);
+              ((he) this).b(dupTemp$3, (byte) -55);
               ((he) this).field_U.field_v = (kg) this;
               ((he) this).field_D = ((he) this).field_D + (5 + ((ce) (Object) var13).field_y);
               if (((he) this).field_ib == null) {
@@ -378,11 +378,11 @@ final class he extends kf implements qh, vn {
             }
             L20: {
               ((he) this).b(((he) this).field_D + 3, ((he) this).field_t, 0, 0, -16555);
-              ((he) this).b((ce) (Object) ((he) this).field_U, (byte) -55);
+              ((he) this).b(((he) this).field_U, (byte) -55);
               if (null == ((he) this).field_ib) {
                 break L20;
               } else {
-                ((he) this).b((ce) (Object) ((he) this).field_ib, (byte) -55);
+                ((he) this).b(((he) this).field_ib, (byte) -55);
                 break L20;
               }
             }
@@ -390,7 +390,7 @@ final class he extends kf implements qh, vn {
               if (((he) this).field_X == null) {
                 break L21;
               } else {
-                ((he) this).b((ce) (Object) ((he) this).field_X, (byte) -55);
+                ((he) this).b(((he) this).field_X, (byte) -55);
                 break L21;
               }
             }
@@ -883,7 +883,7 @@ final class he extends kf implements qh, vn {
                     if (var6.field_Tb == null) {
                       break L7;
                     } else {
-                      if (!var6.field_Tb.equals((Object) (Object) "")) {
+                      if (!var6.field_Tb.equals("")) {
                         var6.field_Wb.field_I = a.field_p;
                         var6.field_Wb.field_Bb = 16737894;
                         var6.field_Wb.a(3 + a.field_p.field_K, 0, 0, kf.field_O, 0);
@@ -925,7 +925,7 @@ final class he extends kf implements qh, vn {
                   }
                   L10: {
                     stackIn_21_0.field_Y = stackIn_21_1;
-                    if (var6.field_Sb.field_Y.equals((Object) (Object) var6.field_Ob)) {
+                    if (var6.field_Sb.field_Y.equals(var6.field_Ob)) {
                       stackOut_23_0 = 0;
                       stackIn_24_0 = stackOut_23_0;
                       break L10;
@@ -947,7 +947,7 @@ final class he extends kf implements qh, vn {
                   }
                   L12: {
                     if (var7 != 0) {
-                      ge.field_f.field_Sb.a((w) var5, (w) (Object) var6, 2, 0);
+                      ge.field_f.field_Sb.a((w) var5, var6, 2, 0);
                       break L12;
                     } else {
                       break L12;
@@ -978,11 +978,11 @@ final class he extends kf implements qh, vn {
                     }
                   }
                   L15: {
-                    var5 = (Object) (Object) var6;
+                    var5 = var6;
                     if (var6.field_ob == 0) {
                       break L15;
                     } else {
-                      sl.a(var6.field_Pb, (int[]) null, (byte) 112, ge.field_f.field_Rb, (w) (Object) var6, var6.field_Ob, 0L, -1, -1);
+                      sl.a(var6.field_Pb, (int[]) null, (byte) 112, ge.field_f.field_Rb, var6, var6.field_Ob, 0L, -1, -1);
                       var16 = w.field_H;
                       var13_ref_String = wk.field_o;
                       var16.field_h.a(var13_ref_String, 7, 72);
@@ -1501,10 +1501,6 @@ final class he extends kf implements qh, vn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_V = new int[4];
         field_gb = 250;
         field_fb = "Loading sound effects";

@@ -13,7 +13,7 @@ final class cc {
 
     final static f a(int param0, byte param1) {
         f var2 = new f();
-        rc.field_e.a((bh) (Object) var2, 2777);
+        rc.field_e.a(var2, 2777);
         gm.b(4, 65);
         return var2;
     }
@@ -28,7 +28,7 @@ final class cc {
     }
 
     final static void a(int param0) {
-        kb.field_i = new bk(ui.field_x, tg.field_h, ib.field_nb, ua.field_H, (w) (Object) al.field_h, df.field_ab);
+        kb.field_i = new bk(ui.field_x, tg.field_h, ib.field_nb, ua.field_H, al.field_h, df.field_ab);
     }
 
     cc(ck[] param0) {
@@ -45,10 +45,6 @@ final class cc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Score: ";
         field_f = new pi[8][];
         field_d = "Colourful pieces are falling from the sky!";

@@ -30,9 +30,9 @@ final class lg extends kf implements vn {
         ((lg) this).field_X.field_B = tm.field_h;
         ((lg) this).field_V.field_v = (kg) this;
         ((lg) this).field_V.field_B = kh.field_c;
-        ((lg) this).b((ce) (Object) ((lg) this).field_S, (byte) -55);
-        ((lg) this).b((ce) (Object) ((lg) this).field_X, (byte) -55);
-        ((lg) this).b((ce) (Object) ((lg) this).field_V, (byte) -55);
+        ((lg) this).b(((lg) this).field_S, (byte) -55);
+        ((lg) this).b(((lg) this).field_X, (byte) -55);
+        ((lg) this).b(((lg) this).field_V, (byte) -55);
     }
 
     public static void f(byte param0) {
@@ -516,10 +516,6 @@ final class lg extends kf implements vn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_T = "Discard";
         field_U = -1;
     }

@@ -66,7 +66,7 @@ final class tl extends wm {
           L0: {
             if (((tl) this).field_v.b(param0, param1) != vm.field_u) {
               L1: {
-                if (param0.equals((Object) (Object) ((tl) this).field_t)) {
+                if (param0.equals(((tl) this).field_t)) {
                   break L1;
                 } else {
                   var3 = ik.a(103, param0);
@@ -232,10 +232,6 @@ final class tl extends wm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = "This option cannot be combined with the current settings for:  ";
         field_q = new int[5];
         field_s = "Ignore";

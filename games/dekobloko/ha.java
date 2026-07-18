@@ -26,7 +26,7 @@ final class ha extends w {
 
     final static void e(int param0) {
         da.field_e = new tf();
-        de.field_W.c((ce) (Object) da.field_e, (byte) 62);
+        de.field_W.c(da.field_e, (byte) 62);
     }
 
     final int c(int param0, int param1) {
@@ -90,10 +90,6 @@ final class ha extends w {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Pb = new ud[3];
     }
 }

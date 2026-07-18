@@ -25,7 +25,7 @@ final class am {
             var5.field_n = param3;
             var5.field_o = 10;
             var5.field_v = 1;
-            dg.field_e.a((bh) (Object) var5, 2777);
+            dg.field_e.a(var5, 2777);
             wb.a(var5, 3, 60);
             return var5;
           }
@@ -48,10 +48,6 @@ final class am {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
         field_b = "The following settings need to be changed:  ";
     }

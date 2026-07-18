@@ -236,8 +236,8 @@ final class rc implements Runnable {
         L2: {
           stackIn_6_0.field_j = stackIn_6_1 != 0;
           var9.field_r = true;
-          var9.a(new ec(20, qn.field_rb, (mm) (Object) a.field_t), 115);
-          var9.a(new ec(21, lg.field_T, (mm) (Object) a.field_t), 102);
+          var9.a(new ec(20, qn.field_rb, a.field_t), 115);
+          var9.a(new ec(21, lg.field_T, a.field_t), 102);
           var8.field_f[0].field_l = 320 + -(var8.field_f[0].field_n / 2);
           var8.field_f[0].field_m = 150;
           var8.field_f[1].field_m = 250;
@@ -302,10 +302,6 @@ final class rc implements Runnable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_a = 0;
         field_h = "Left";

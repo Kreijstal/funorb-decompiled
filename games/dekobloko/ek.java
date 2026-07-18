@@ -770,7 +770,7 @@ class ek extends ce {
         L0: {
           var7 = new ke(3);
           var8 = var7;
-          var8.a(new ec(25, jb.field_h, (mm) (Object) a.field_t), 110);
+          var8.a(new ec(25, jb.field_h, a.field_t), 110);
           stackOut_0_0 = (ke) var8;
           stackOut_0_1 = null;
           stackOut_0_2 = null;
@@ -809,8 +809,8 @@ class ek extends ce {
             break L0;
           }
         }
-        ((ke) (Object) stackIn_3_0).a(new ec(stackIn_3_3, stackIn_3_4, (mm) (Object) a.field_t), 120);
-        var8.a(new ec(26, og.field_hb, (mm) (Object) a.field_t), 122);
+        ((ke) (Object) stackIn_3_0).a(new ec(stackIn_3_3, stackIn_3_4, a.field_t), 120);
+        var8.a(new ec(26, og.field_hb, a.field_t), 122);
         var7.field_f[1].field_n = 40 + a.field_t.a(var7.field_f[1].field_o);
         var4 = var7.field_f[0];
         var7.field_f[2].field_n = 120;

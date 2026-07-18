@@ -338,10 +338,6 @@ abstract class eh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new jc();
         field_e = "Shape feedback:";
     }

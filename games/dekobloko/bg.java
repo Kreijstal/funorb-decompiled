@@ -543,10 +543,6 @@ final class bg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "<%0> has entered another game.";
         field_f = "This password contains your email address, and would be easy to guess";
         field_c = "Loading extra data";

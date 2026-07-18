@@ -226,7 +226,7 @@ final class hf {
                   stackIn_8_0 = stackOut_7_0;
                   return stackIn_8_0;
                 } else {
-                  return ((Object) (Object) var11).toString();
+                  return var11.toString();
                 }
               }
             } else {
@@ -304,7 +304,7 @@ final class hf {
             ((hf) this).field_i = param2;
             var5_int = ((hf) this).field_f.read();
             if (var5_int != -1) {
-                if (!param1.equals((Object) (Object) "r")) {
+                if (!param1.equals("r")) {
                     ((hf) this).field_f.seek(0L);
                     ((hf) this).field_f.write(var5_int);
                 }
@@ -316,10 +316,6 @@ final class hf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Visit the Account Management section on the main site to view.";
         field_a = "<%0>'s game";
         field_h = "Report abuse";

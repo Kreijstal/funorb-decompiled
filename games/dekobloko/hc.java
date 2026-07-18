@@ -231,10 +231,6 @@ final class hc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = Math.atan2(1.0, 0.0);
         field_e = "Searching for opponents";
         field_f = "To report a player, right-click on their name and select the option to report abuse.";

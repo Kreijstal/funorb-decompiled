@@ -159,8 +159,9 @@ final class lk {
               }
             }
           }
-          var2 = new int[((lk) this).field_C * ((lk) this).field_zb];
-          ((lk) this).field_B = new int[((lk) this).field_C * ((lk) this).field_zb];
+          int[] array$4 = new int[((lk) this).field_C * ((lk) this).field_zb];
+          var2 = array$4;
+          ((lk) this).field_B = array$4;
           break L0;
         }
         var3 = 0;
@@ -222,9 +223,9 @@ final class lk {
                 var4++;
                 continue L2;
               } else {
-                int incrementValue$2 = var3;
+                int incrementValue$5 = var3;
                 var3++;
-                ((lk) this).field_B[var5] = ((lk) this).field_T[incrementValue$2];
+                ((lk) this).field_B[var5] = ((lk) this).field_T[incrementValue$5];
                 var5 = var5 + ((lk) this).field_zb;
                 var6++;
                 continue L5;
@@ -757,7 +758,7 @@ final class lk {
                             he.field_ab = he.field_ab + var20;
                             fb.field_e = fb.field_e + var20;
                             ((lk) this).field_hb = ((lk) this).field_hb + var19;
-                            ((lk) this).field_rb.a((bh) (Object) new sa(false, this.b(0, var15, 81), this.a(true, var15, 0), var19, a.field_u, -1 + var15, 8 | 7 & var12_int, new String[4]), 2777);
+                            ((lk) this).field_rb.a(new sa(false, this.b(0, var15, 81), this.a(true, var15, 0), var19, a.field_u, -1 + var15, 8 | 7 & var12_int, new String[]{" <times> ", Integer.toString(var15), " = <b>", Integer.toString(var19)}), 2777);
                             break L23;
                           }
                         }
@@ -779,11 +780,11 @@ final class lk {
                           if (0 >= var20) {
                             break L25;
                           } else {
-                            ((lk) this).field_rb.a((bh) (Object) new sa(false, this.b(var18, var15, 65), this.a(true, var15, var18), var20, a.field_u, var15 + -var18 - 1, 8 | 7 & var12_int, new String[4]), 2777);
+                            ((lk) this).field_rb.a(new sa(false, this.b(var18, var15, 65), this.a(true, var15, var18), var20, a.field_u, var15 + -var18 - 1, 8 | 7 & var12_int, new String[]{" <times> ", Integer.toString(var15 + -var18), " = <b>", Integer.toString(var20)}), 2777);
                             break L25;
                           }
                         }
-                        ((lk) this).field_rb.a((bh) (Object) new sa(false, this.b(0, var18, 112), this.a(true, var18, 0), var19, bc.field_J, -4 + var18, 16 | 7 & var12_int, new String[4]), 2777);
+                        ((lk) this).field_rb.a(new sa(false, this.b(0, var18, 112), this.a(true, var18, 0), var19, bc.field_J, -4 + var18, 16 | 7 & var12_int, new String[]{" <times> ", Integer.toString(var18), " = <b>", Integer.toString(var19)}), 2777);
                         break L23;
                       }
                     }
@@ -1176,8 +1177,9 @@ final class lk {
                   }
                 }
               }
-              var7 = new int[((lk) this).field_C * ((lk) this).field_zb];
-              ((lk) this).field_B = new int[((lk) this).field_C * ((lk) this).field_zb];
+              int[] array$4 = new int[((lk) this).field_C * ((lk) this).field_zb];
+              var7 = array$4;
+              ((lk) this).field_B = array$4;
               break L1;
             }
             var8 = 0;
@@ -1199,9 +1201,9 @@ final class lk {
                     var9++;
                     continue L3;
                   } else {
-                    int incrementValue$2 = var8;
+                    int incrementValue$5 = var8;
                     var8++;
-                    ((lk) this).field_B[var10] = ((lk) this).field_T[incrementValue$2];
+                    ((lk) this).field_B[var10] = ((lk) this).field_T[incrementValue$5];
                     var10 = var10 + ((lk) this).field_zb;
                     var11++;
                     continue L4;
@@ -1799,7 +1801,7 @@ final class lk {
                                 if (!var15.a((byte) 93)) {
                                   break L8;
                                 } else {
-                                  if ((Object) (Object) var15.field_q == (Object) (Object) var9_ref_ud) {
+                                  if (var15.field_q == var9_ref_ud) {
                                     var15.b(en.field_o / 50, var10 * pb.field_d, ((lk) this).field_lb << 6);
                                     break L5;
                                   } else {
@@ -1818,7 +1820,7 @@ final class lk {
                             }
                             var16 = ei.c(var9_ref_ud, 100, var10 * pb.field_d, ((lk) this).field_lb << 6);
                             var16.f(-1);
-                            dg.field_c.a((ol) (Object) var16);
+                            dg.field_c.a(var16);
                             wf.field_l[((lk) this).field_Q] = var16;
                             break L5;
                           } else {
@@ -2243,7 +2245,7 @@ final class lk {
                     if (0 < var7) {
                       int fieldTemp$6 = gg.field_B;
                       gg.field_B = gg.field_B - 1;
-                      ((lk) this).field_rb.a((bh) (Object) new sa(true, ((lk) this).field_O * 128, -384 + fieldTemp$6 * 256, var7, jg.field_f, -2 + var6, 0, new String[3]), 2777);
+                      ((lk) this).field_rb.a(new sa(true, ((lk) this).field_O * 128, -384 + fieldTemp$6 * 256, var7, jg.field_f, -2 + var6, 0, new String[]{cm.a((byte) 85, on.field_h, new String[]{Integer.toString(var6)}), " = <b>", Integer.toString(var7)}), 2777);
                       break L41;
                     } else {
                       break L41;
@@ -2253,7 +2255,7 @@ final class lk {
                   if (0 < var8) {
                     int fieldTemp$7 = gg.field_B;
                     gg.field_B = gg.field_B - 1;
-                    ((lk) this).field_W = new sa(true, 128 * ((lk) this).field_O, -384 + fieldTemp$7 * 256, var8, nf.field_f, ((lk) this).field_nb + -2, 0, new String[3]);
+                    ((lk) this).field_W = new sa(true, 128 * ((lk) this).field_O, -384 + fieldTemp$7 * 256, var8, nf.field_f, ((lk) this).field_nb + -2, 0, new String[]{cm.a((byte) 115, e.field_d, new String[]{Integer.toString(((lk) this).field_nb)}), " = <b>", Integer.toString(var8)});
                     break L40;
                   } else {
                     break L40;
@@ -2322,7 +2324,7 @@ final class lk {
                                     if (var13 == null) {
                                       var18 = ei.c(ob.field_n, 100, pb.field_d * var12, ((lk) this).field_lb << 6);
                                       var18.f(-1);
-                                      dg.field_c.a((ol) (Object) var18);
+                                      dg.field_c.a(var18);
                                       var11_ref_ei__[((lk) this).field_Q] = var18;
                                       break L47;
                                     } else {
@@ -2358,7 +2360,7 @@ final class lk {
                                     if (var13 == null) {
                                       var20 = ei.c(ob.field_n, 120, var12 * pb.field_d, ((lk) this).field_lb << 6);
                                       var20.f(-1);
-                                      dg.field_c.a((ol) (Object) var20);
+                                      dg.field_c.a(var20);
                                       var11_ref_ei__[((lk) this).field_Q] = var20;
                                       break L50;
                                     } else {
@@ -2573,7 +2575,7 @@ final class lk {
                         he.field_ab = he.field_ab + var9;
                         fb.field_e = fb.field_e + var9;
                         ((lk) this).field_hb = ((lk) this).field_hb + var8;
-                        ((lk) this).field_rb.a((bh) (Object) new sa(true, ((lk) this).field_O * 128, ((lk) this).field_O * -32, var8, oh.field_c, -1 + h.a(var6, 63), 26, new String[2]), 2777);
+                        ((lk) this).field_rb.a(new sa(true, ((lk) this).field_O * 128, ((lk) this).field_O * -32, var8, oh.field_c, -1 + h.a(var6, 63), 26, new String[]{" = <b>", Integer.toString(var8)}), 2777);
                         break L66;
                       }
                     } else {
@@ -2773,7 +2775,7 @@ final class lk {
                           var6 = ((lk) this).field_W.field_t;
                           fb.field_e = fb.field_e + var6;
                           he.field_ab = he.field_ab + var6;
-                          ((lk) this).field_rb.a((bh) (Object) ((lk) this).field_W, 2777);
+                          ((lk) this).field_rb.a(((lk) this).field_W, 2777);
                           ((lk) this).field_W = null;
                           break L85;
                         } else {
@@ -3147,7 +3149,7 @@ final class lk {
                     he.field_ab = he.field_ab + 2000;
                     fb.field_e = fb.field_e + 2000;
                     ((lk) this).field_bb = ((lk) this).field_bb + 2000;
-                    ((lk) this).field_rb.a((bh) (Object) new sa(true, 128 - -(256 * (param1 % ((lk) this).field_O)), param1 / ((lk) this).field_O * 256 + 128, 2000, (int[]) null, 13684944, var4, new String[2]), 2777);
+                    ((lk) this).field_rb.a(new sa(true, 128 - -(256 * (param1 % ((lk) this).field_O)), param1 / ((lk) this).field_O * 256 + 128, 2000, (int[]) null, 13684944, var4, new String[]{" = <b>", Integer.toString(2000)}), 2777);
                     break L0;
                   } else {
                     break L0;
@@ -3195,8 +3197,9 @@ final class lk {
               }
             }
           }
-          var2 = new int[((lk) this).field_C * ((lk) this).field_zb];
-          ((lk) this).field_B = new int[((lk) this).field_C * ((lk) this).field_zb];
+          int[] array$4 = new int[((lk) this).field_C * ((lk) this).field_zb];
+          var2 = array$4;
+          ((lk) this).field_B = array$4;
           break L0;
         }
         var3 = 0;
@@ -3258,9 +3261,9 @@ final class lk {
                 var4++;
                 continue L2;
               } else {
-                int incrementValue$2 = var3;
+                int incrementValue$5 = var3;
                 var3++;
-                ((lk) this).field_B[var5] = ((lk) this).field_T[incrementValue$2];
+                ((lk) this).field_B[var5] = ((lk) this).field_T[incrementValue$5];
                 var5 = var5 - ((lk) this).field_zb;
                 var6++;
                 continue L5;
@@ -3364,53 +3367,50 @@ final class lk {
         var3 = ((lk) this).field_q + ((lk) this).field_L * ((lk) this).field_O;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= ((lk) this).field_zb) {
+          if (~var4 <= ~((lk) this).field_zb) {
             return false;
           } else {
             var5 = 0;
             L1: while (true) {
-              if (((lk) this).field_C <= var5) {
+              if (~((lk) this).field_C >= ~var5) {
                 var3 = var3 + (((lk) this).field_O - ((lk) this).field_C);
                 var4++;
                 continue L0;
               } else {
-                if (((lk) this).field_T[var2] != 0) {
-                  L2: {
-                    if (((lk) this).field_q - -var5 < 0) {
-                      break L2;
-                    } else {
-                      if (((lk) this).field_O <= ((lk) this).field_q + var5) {
-                        break L2;
+                L2: {
+                  if (((lk) this).field_T[var2] != 0) {
+                    L3: {
+                      if (((lk) this).field_q - -var5 < 0) {
+                        break L3;
                       } else {
-                        if (((lk) this).field_L + var4 < ((lk) this).field_a) {
-                          if (var4 + ((lk) this).field_L <= -1) {
-                            if (-1 != ((lk) this).field_P[var3]) {
-                              return true;
+                        if (~((lk) this).field_O >= ~(((lk) this).field_q + var5)) {
+                          break L3;
+                        } else {
+                          if (((lk) this).field_L + var4 < ((lk) this).field_a) {
+                            if (var4 + ((lk) this).field_L < 0) {
+                              break L2;
                             } else {
-                              var2++;
-                              var3++;
-                              var5++;
-                              continue L1;
+                              if (((lk) this).field_P[var3] != 0) {
+                                return true;
+                              } else {
+                                break L2;
+                              }
                             }
                           } else {
-                            var2++;
-                            var3++;
-                            var5++;
-                            continue L1;
+                            return true;
                           }
-                        } else {
-                          return true;
                         }
                       }
                     }
+                    return true;
+                  } else {
+                    break L2;
                   }
-                  return true;
-                } else {
-                  var2++;
-                  var3++;
-                  var5++;
-                  continue L1;
                 }
+                var2++;
+                var3++;
+                var5++;
+                continue L1;
               }
             }
           }
@@ -4079,7 +4079,7 @@ final class lk {
                   if (param1 == null) {
                     break L3;
                   } else {
-                    var14 = (Object) (Object) param1.a(false, var13);
+                    var14 = param1.a(false, var13);
                     break L3;
                   }
                 }
@@ -4088,7 +4088,7 @@ final class lk {
                     break L4;
                   } else {
                     var21 = new rf(var13);
-                    var14 = (Object) (Object) var21;
+                    var14 = var21;
                     int fieldTemp$3 = ((lk) this).field_p;
                     ((lk) this).field_p = ((lk) this).field_p + 1;
                     var21.field_m = fieldTemp$3;
@@ -4247,7 +4247,6 @@ final class lk {
         if (!(!this.t(0))) {
             return;
         }
-        boolean discarded$2 = this.c(61, 75);
         if (!((((lk) this).field_db | ((lk) this).field_o) == 0)) {
             ((lk) this).field_db = -((lk) this).field_db;
             ((lk) this).field_o = -((lk) this).field_o;
@@ -4711,7 +4710,7 @@ final class lk {
                     var11 = ei.c(kf.field_P, var6, pb.field_d * ((lk) this).field_J, ((lk) this).field_sb << 6);
                     var14 = var11;
                     var14.f(-1);
-                    dg.field_c.a((ol) (Object) var11);
+                    dg.field_c.a(var11);
                     ik.field_c[((lk) this).field_Q] = var11;
                     break L27;
                   } else {
@@ -4760,7 +4759,7 @@ final class lk {
                   } else {
                     if (var5_int >= 5) {
                       L31: {
-                        ((lk) this).field_vb = cm.a((byte) 105, uj.field_b, new String[1]);
+                        ((lk) this).field_vb = cm.a((byte) 105, uj.field_b, new String[]{Integer.toString(var5_int)});
                         ((lk) this).field_eb = ka.a((byte) 62, 7, tf.field_cb) - 3;
                         ((lk) this).field_n = ka.a((byte) 126, 7, tf.field_cb) - 3;
                         ((lk) this).field_R = 0;
@@ -4847,10 +4846,6 @@ final class lk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_I = 3;
         field_i = "There are no valid types of game that match your preferences.";
     }

@@ -53,7 +53,7 @@ abstract class t extends bl {
     }
 
     final static void k(byte param0) {
-        de.field_W.c((ce) (Object) new lg(), (byte) 121);
+        de.field_W.c(new lg(), (byte) 121);
     }
 
     void j(int param0) {
@@ -414,10 +414,6 @@ abstract class t extends bl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_bb = "Matching Score: ";
         field_ib = "Animals";
         field_cb = new String[255];

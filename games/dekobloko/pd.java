@@ -58,10 +58,6 @@ final class pd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "All players have left <%0>'s game.";
         field_a = true;
         field_b = "From only <%0>/month";

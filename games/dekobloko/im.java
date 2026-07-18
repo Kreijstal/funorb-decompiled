@@ -21,10 +21,10 @@ final class im implements Runnable {
         Throwable decompiledCaughtException = null;
         var2 = 53 % ((param0 - -50) / 38);
         ((im) this).field_a = true;
-        var3 = (Object) (Object) ((im) this).field_e;
+        var3 = ((im) this).field_e;
         synchronized (var3) {
           L0: {
-            ((Object) (Object) ((im) this).field_e).notifyAll();
+            ((im) this).field_e.notifyAll();
             break L0;
           }
         }
@@ -78,7 +78,7 @@ final class im implements Runnable {
               if (((im) this).field_a) {
                 return;
               } else {
-                var2 = (Object) (Object) ((im) this).field_e;
+                var2 = ((im) this).field_e;
                 synchronized (var2) {
                   L1: {
                     var7 = (el) (Object) ((im) this).field_e.a((byte) 79);
@@ -89,7 +89,7 @@ final class im implements Runnable {
                     } else {
                       {
                         L2: {
-                          ((Object) (Object) ((im) this).field_e).wait();
+                          ((im) this).field_e.wait();
                           break L2;
                         }
                       }
@@ -145,9 +145,9 @@ final class im implements Runnable {
     private final void a(byte param0, el param1) {
         synchronized (((im) this).field_e) {
             int var4 = 78 % ((param0 - -34) / 50);
-            ((im) this).field_e.a((be) (Object) param1, -7267);
+            ((im) this).field_e.a(param1, -7267);
             ((im) this).field_b = ((im) this).field_b + 1;
-            ((Object) (Object) ((im) this).field_e).notifyAll();
+            ((im) this).field_e.notifyAll();
         }
     }
 
@@ -376,7 +376,7 @@ final class im implements Runnable {
           L0: {
             var4 = new el();
             var4.field_F = 1;
-            var5_ref_Object = (Object) (Object) ((im) this).field_e;
+            var5_ref_Object = ((im) this).field_e;
             synchronized (var5_ref_Object) {
               L1: {
                 var6 = (el) (Object) ((im) this).field_e.b(-2198);
@@ -470,10 +470,6 @@ final class im implements Runnable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Please wait while we search.<br>Games usually start within a minute, provided the server is busy enough.<br><br>The longer you are forced to wait, the earlier in the list of players you are likely to appear.<br><br>If the game doesn't start, click 'Cancel' and then try choosing 'Don't mind' for more options or switching to a busier lobby.";
         field_j = "From <%0>: ";
         field_g = "Options Menu";

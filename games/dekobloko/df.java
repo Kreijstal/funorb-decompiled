@@ -284,14 +284,14 @@ final class df extends kf implements vn {
                           ((df) this).field_bb[var3_int] = new ek(cc.field_e, (kg) this);
                           ((df) this).field_bb[var3_int].field_p = (gl) (Object) var4;
                           ((df) this).field_bb[var3_int].b(15, 100, 0, 20 + 16 * (1 + var3_int), -16555);
-                          ((df) this).b((ce) (Object) ((df) this).field_bb[var3_int], (byte) -55);
+                          ((df) this).b(((df) this).field_bb[var3_int], (byte) -55);
                           break L0;
                         } else {
                           ((df) this).field_bb[var5] = new ek(((df) this).field_V[var5], (kg) this);
                           ((df) this).field_bb[var5].field_p = (gl) (Object) var4;
                           ((df) this).field_bb[var5].field_B = client.field_B;
                           ((df) this).field_bb[var5].b(15, 80, 0, var5 * 16 + 20, -16555);
-                          ((df) this).b((ce) (Object) ((df) this).field_bb[var5], (byte) -55);
+                          ((df) this).b(((df) this).field_bb[var5], (byte) -55);
                           var5++;
                           continue L4;
                         }
@@ -343,10 +343,6 @@ final class df extends kf implements vn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Z = "(Including <%0>)";
         field_X = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
         field_S = "Press TAB to chat or F10 to open Quick Chat.";

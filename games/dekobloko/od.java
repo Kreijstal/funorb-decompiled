@@ -90,10 +90,6 @@ public class od {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = false;
         field_b = new Hashtable(16);
     }

@@ -394,10 +394,6 @@ final class hg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Activating Special Items";
     }
 }

@@ -194,10 +194,6 @@ final class ii extends wm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Eliminate Score: ";
         field_s = "Some players haven't unlocked the currently selected game options.<br>Please view the '<%0>' tab on the left for details.";
         field_r = "<%0> is not on your ignore list.";

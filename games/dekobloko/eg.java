@@ -416,10 +416,6 @@ final class eg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Playing";
         field_b = "Game";
         field_c = "Email (Login):";

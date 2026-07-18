@@ -15,7 +15,7 @@ abstract class bl extends kf {
     static String field_X;
 
     private final int a(int param0) {
-        return !((bl) this).field_S ? 0 : (Object) (Object) ((bl) this).field_ab.g((byte) -83) == this ? 256 : 0;
+        return !((bl) this).field_S ? 0 : ((bl) this).field_ab.g((byte) -83) == this ? 256 : 0;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -341,7 +341,7 @@ abstract class bl extends kf {
                   }
                 }
               } else {
-                var3_int = te.a(cm.a((byte) 91, de.field_ab, new String[1]), 86, om.field_a, vg.field_I, rk.field_R);
+                var3_int = te.a(cm.a((byte) 91, de.field_ab, new String[]{"<br><%0><br>"}), 86, om.field_a, vg.field_I, rk.field_R);
                 var4 = -1;
                 var5 = 0;
                 L12: while (true) {
@@ -349,7 +349,7 @@ abstract class bl extends kf {
                     if (var5 >= var3_int) {
                       break L13;
                     } else {
-                      if (!"<%0>".equals((Object) (Object) vg.field_I[var5])) {
+                      if (!"<%0>".equals(vg.field_I[var5])) {
                         var5++;
                         continue L12;
                       } else {
@@ -360,18 +360,18 @@ abstract class bl extends kf {
                   }
                   if (var4 != -1) {
                     tg.field_g = new String[var4];
-                    an.a((Object[]) (Object) vg.field_I, 0, (Object[]) (Object) tg.field_g, 0, var4);
+                    an.a(vg.field_I, 0, tg.field_g, 0, var4);
                     dh.field_b = new String[-1 + (var3_int + -var4)];
-                    an.a((Object[]) (Object) vg.field_I, 1 + var4, (Object[]) (Object) dh.field_b, 0, -var4 + var3_int + -1);
+                    an.a(vg.field_I, 1 + var4, dh.field_b, 0, -var4 + var3_int + -1);
                     var4 = -1;
-                    var3_int = te.a(cm.a((byte) 86, ga.field_d, new String[1]), 112, om.field_a, vg.field_I, rk.field_R);
+                    var3_int = te.a(cm.a((byte) 86, ga.field_d, new String[]{"<br><%0><br>"}), 112, om.field_a, vg.field_I, rk.field_R);
                     var5 = 0;
                     L14: while (true) {
                       L15: {
                         if (~var5 <= ~var3_int) {
                           break L15;
                         } else {
-                          if (!"<%0>".equals((Object) (Object) vg.field_I[var5])) {
+                          if (!"<%0>".equals(vg.field_I[var5])) {
                             var5++;
                             continue L14;
                           } else {
@@ -383,9 +383,9 @@ abstract class bl extends kf {
                       if (-1 != var4) {
                         L16: {
                           vb.field_U = new String[var4];
-                          an.a((Object[]) (Object) vg.field_I, 0, (Object[]) (Object) vb.field_U, 0, var4);
+                          an.a(vg.field_I, 0, vb.field_U, 0, var4);
                           wb.field_Qb = new String[var3_int - (var4 + 1)];
-                          an.a((Object[]) (Object) vg.field_I, var4 - -1, (Object[]) (Object) wb.field_Qb, 0, -1 + (-var4 + var3_int));
+                          an.a(vg.field_I, var4 - -1, wb.field_Qb, 0, -1 + (-var4 + var3_int));
                           if (tg.field_g.length >= vb.field_U.length) {
                             stackOut_19_0 = tg.field_g.length;
                             stackIn_20_0 = stackOut_19_0;
@@ -696,10 +696,10 @@ abstract class bl extends kf {
         int stackOut_1_0 = 0;
         int stackOut_1_1 = 0;
         L0: {
-          fl.a(130, 256, 16694016, mb.field_e, 80 + param0, (mm) (Object) w.field_kb);
+          fl.a(130, 256, 16694016, mb.field_e, 80 + param0, w.field_kb);
           var2 = 145;
           kd.field_t.c(param0 + 82, var2, 18, 18);
-          var2 = var2 + (16 + ga.a(188, 0, var2, nk.field_c, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -127, 0, param0 + 110) * 16);
+          var2 = var2 + (16 + ga.a(188, 0, var2, nk.field_c, 16, 64, 16777215, se.field_S, (byte) -127, 0, param0 + 110) * 16);
           tg.a(true, 2).c(82 + param0, var2, 18, 18);
           stackOut_0_0 = var2;
           stackIn_2_0 = stackOut_0_0;
@@ -718,18 +718,18 @@ abstract class bl extends kf {
             break L0;
           }
         }
-        var2 = stackIn_3_0 + (stackIn_3_1 - -(ga.a(188, 0, var2, kb.field_e, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -127, 0, param0 + 110) * 16));
+        var2 = stackIn_3_0 + (stackIn_3_1 - -(ga.a(188, 0, var2, kb.field_e, 16, 64, 16777215, se.field_S, (byte) -127, 0, param0 + 110) * 16));
         vk.a(nf.field_e, param0 + 190, 3, gi.field_c, kk.field_n, var2, -22981);
         hk.g(309 - -param0, 117, 242, 263172);
         hk.g(310 - -param0, 117, 242, 6316128);
-        fl.a(130, 256, 16694016, hg.field_d, 320 + param0, (mm) (Object) w.field_kb);
+        fl.a(130, 256, 16694016, hg.field_d, 320 + param0, w.field_kb);
         var2 = 145;
         tg.a(true, 0).c(320 - -param0, var2, 18, 18);
-        var2 = var2 + (16 * ga.a(212, 0, var2, dk.field_f, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -128, 0, 348 - -param0) + 16);
-        fl.a(var2 - -14, 256, 16694016, kc.field_q, param0 + 320, (mm) (Object) w.field_kb);
+        var2 = var2 + (16 * ga.a(212, 0, var2, dk.field_f, 16, 64, 16777215, se.field_S, (byte) -128, 0, 348 - -param0) + 16);
+        fl.a(var2 - -14, 256, 16694016, kc.field_q, param0 + 320, w.field_kb);
         var2 += 29;
         tg.a(true, 3).c(param0 + 320, var2, 18, 18);
-        var2 = var2 + (16 - -(ga.a(212, 0, var2, ki.field_u, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -128, 0, 348 - -param0) * 16));
+        var2 = var2 + (16 - -(ga.a(212, 0, var2, ki.field_u, 16, 64, 16777215, se.field_S, (byte) -128, 0, 348 - -param0) * 16));
     }
 
     boolean f(byte param0) {
@@ -840,10 +840,6 @@ abstract class bl extends kf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_W = "Chat view has been scrolled up. Scroll down to chat.";
         field_Z = new char[128];
         field_X = "Back";

@@ -291,13 +291,13 @@ final class me extends be {
                   L1: {
                     var5 = param1.getCodeBase();
                     var3 = gn.a(var5, -1, param1).getFile();
-                    Object discarded$6 = nc.a("updatelinks", -14541, param1, new Object[2]);
+                    Object discarded$6 = nc.a("updatelinks", -14541, param1, new Object[]{"home", var3 + "home.ws"});
                     var4 = -128 / ((param0 - 10) / 61);
-                    Object discarded$7 = nc.a("updatelinks", -14541, param1, new Object[2]);
-                    Object discarded$8 = nc.a("updatelinks", -14541, param1, new Object[2]);
-                    Object discarded$9 = nc.a("updatelinks", -14541, param1, new Object[2]);
-                    Object discarded$10 = nc.a("updatelinks", -14541, param1, new Object[2]);
-                    Object discarded$11 = nc.a("updatelinks", -14541, param1, new Object[2]);
+                    Object discarded$7 = nc.a("updatelinks", -14541, param1, new Object[]{"gamelist", var3 + "togamelist.ws"});
+                    Object discarded$8 = nc.a("updatelinks", -14541, param1, new Object[]{"serverlist", var3 + "toserverlist.ws"});
+                    Object discarded$9 = nc.a("updatelinks", -14541, param1, new Object[]{"options", var3 + "options.ws"});
+                    Object discarded$10 = nc.a("updatelinks", -14541, param1, new Object[]{"terms", var3 + "terms.ws"});
+                    Object discarded$11 = nc.a("updatelinks", -14541, param1, new Object[]{"privacy", var3 + "privacy.ws"});
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -631,10 +631,6 @@ final class me extends be {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_B = "Orb coins: ";
         field_G = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_C = "Members";
