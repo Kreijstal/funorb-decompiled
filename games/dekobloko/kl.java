@@ -45,10 +45,6 @@ final class kl extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_B = new um();
         field_x = "Unable to delete friend - system busy";
         field_n = new int[8192];

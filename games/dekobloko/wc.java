@@ -167,10 +167,8 @@ final class wc extends bh {
                       gn.field_e[var9 + 2] = gn.field_e[var3_int + 2];
                       gn.field_e[var9 - -3] = gn.field_e[3 + var3_int];
                       gn.field_e[4 + var9] = gn.field_e[4 + var3_int];
-                      var9 += 5;
                       break L2;
                     } else {
-                      var9 += 5;
                       break L2;
                     }
                   }
@@ -193,10 +191,6 @@ final class wc extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = true;
         field_q = "<%0> is not on your friend list.";
     }

@@ -268,7 +268,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                 if (null == kb.field_h) {
                   break L1;
                 } else {
-                  if (this != (Object) (Object) kb.field_h) {
+                  if (this != kb.field_h) {
                     stackOut_11_0 = kb.field_h.getParameter(param0);
                     stackIn_12_0 = stackOut_11_0;
                     return stackIn_12_0;
@@ -335,7 +335,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                 if (kb.field_h == null) {
                   break L1;
                 } else {
-                  if ((Object) (Object) kb.field_h == this) {
+                  if (kb.field_h == this) {
                     break L1;
                   } else {
                     stackOut_9_0 = kb.field_h.getAppletContext();
@@ -544,7 +544,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
         try {
           L0: {
             L1: {
-              if ((Object) (Object) ta.field_i != this) {
+              if (ta.field_i != this) {
                 break L1;
               } else {
                 if (eg.field_d) {
@@ -667,7 +667,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                 if (null == oj.field_c) {
                   break L3;
                 } else {
-                  var3 = (Object) (Object) oj.field_c;
+                  var3 = oj.field_c;
                   if (var5 == 0) {
                     break L2;
                   } else {
@@ -683,7 +683,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                     if (kb.field_h == null) {
                       break L5;
                     } else {
-                      var3 = (Object) (Object) kb.field_h;
+                      var3 = kb.field_h;
                       if (var5 == 0) {
                         break L2;
                       } else {
@@ -691,7 +691,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                       }
                     }
                   }
-                  var3 = (Object) (Object) ta.field_i;
+                  var3 = ta.field_i;
                   if (var5 == 0) {
                     break L2;
                   } else {
@@ -699,7 +699,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                   }
                 }
               }
-              var3 = (Object) (Object) hg.field_c;
+              var3 = hg.field_c;
               break L2;
             }
             L6: {
@@ -709,7 +709,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                 java.awt.Component discarded$6 = ((java.awt.Container) var3).add((java.awt.Component) (Object) jh.field_b);
                 jh.field_b.setSize(de.field_M, ob.field_g);
                 jh.field_b.setVisible(true);
-                if ((Object) (Object) hg.field_c != var3) {
+                if (hg.field_c != var3) {
                   break L7;
                 } else {
                   var4 = hg.field_c.getInsets();
@@ -862,7 +862,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
         try {
           L0: {
             L1: {
-              if (this != (Object) (Object) ta.field_i) {
+              if (this != ta.field_i) {
                 break L1;
               } else {
                 if (!eg.field_d) {
@@ -1114,7 +1114,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                           L5: {
                             if (null != fd.field_k) {
                               L6: {
-                                var1 = (Object) (Object) fd.field_k.toLowerCase();
+                                var1 = fd.field_k.toLowerCase();
                                 if (-1 != ((String) var1).indexOf("sun")) {
                                   break L6;
                                 } else {
@@ -1128,37 +1128,37 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                               L7: {
                                 L8: {
                                   var2 = fd.field_c;
-                                  if (var2.equals((Object) (Object) "1.1")) {
+                                  if (var2.equals("1.1")) {
                                     break L8;
                                   } else {
                                     if (var2.startsWith("1.1.")) {
                                       break L8;
                                     } else {
-                                      if (var2.equals((Object) (Object) "1.2")) {
+                                      if (var2.equals("1.2")) {
                                         break L8;
                                       } else {
                                         if (var2.startsWith("1.2.")) {
                                           break L8;
                                         } else {
-                                          if (var2.equals((Object) (Object) "1.3")) {
+                                          if (var2.equals("1.3")) {
                                             break L8;
                                           } else {
                                             if (var2.startsWith("1.3.")) {
                                               break L8;
                                             } else {
-                                              if (var2.equals((Object) (Object) "1.4")) {
+                                              if (var2.equals("1.4")) {
                                                 break L8;
                                               } else {
                                                 if (var2.startsWith("1.4.")) {
                                                   break L8;
                                                 } else {
-                                                  if (var2.equals((Object) (Object) "1.5")) {
+                                                  if (var2.equals("1.5")) {
                                                     break L8;
                                                   } else {
                                                     if (var2.startsWith("1.5.")) {
                                                       break L8;
                                                     } else {
-                                                      if (!var2.equals((Object) (Object) "1.6.0")) {
+                                                      if (!var2.equals("1.6.0")) {
                                                         break L7;
                                                       } else {
                                                         break L8;
@@ -1300,11 +1300,11 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                         }
                       }
                       L15: {
-                        var1 = (Object) (Object) ta.field_i;
+                        var1 = ta.field_i;
                         if (null == kb.field_h) {
                           break L15;
                         } else {
-                          var1 = (Object) (Object) kb.field_h;
+                          var1 = kb.field_h;
                           break L15;
                         }
                       }
@@ -1313,7 +1313,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                         if (var2_ref != null) {
                           try {
                             L17: {
-                              Object discarded$1 = var2_ref.invoke(var1, new Object[1]);
+                              Object discarded$1 = var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
                               break L17;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -1379,7 +1379,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                               }
                             }
                             this.a(false);
-                            db.a(-61, (Object) (Object) jh.field_b, lf.field_e);
+                            db.a(-61, jh.field_b, lf.field_e);
                             break L23;
                           }
                           if (var5 == 0) {
@@ -1395,7 +1395,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   L25: {
-                    var1 = (Object) (Object) decompiledCaughtException;
+                    var1 = decompiledCaughtException;
                     qb.a((Throwable) var1, 16408, (String) null);
                     ((hn) this).a(true, "crash");
                     break L25;
@@ -1406,7 +1406,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (Object) (Object) decompiledCaughtException;
+              var1 = decompiledCaughtException;
               throw dh.a((Throwable) var1, "hn.run()");
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1493,7 +1493,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
             if (null == kb.field_h) {
               break L0;
             } else {
-              if ((Object) (Object) kb.field_h == this) {
+              if (kb.field_h == this) {
                 break L0;
               } else {
                 return kb.field_h.getCodeBase();
@@ -1528,7 +1528,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
         try {
           L0: {
             L1: {
-              if ((Object) (Object) ta.field_i != this) {
+              if (ta.field_i != this) {
                 break L1;
               } else {
                 if (eg.field_d) {
@@ -1609,7 +1609,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
         try {
           L0: {
             L1: {
-              if ((Object) (Object) ta.field_i != this) {
+              if (ta.field_i != this) {
                 break L1;
               } else {
                 if (!eg.field_d) {
@@ -1649,7 +1649,7 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
                 if (null == kb.field_h) {
                   break L1;
                 } else {
-                  if ((Object) (Object) kb.field_h != this) {
+                  if (kb.field_h != this) {
                     stackOut_11_0 = kb.field_h.getDocumentBase();
                     stackIn_12_0 = stackOut_11_0;
                     return stackIn_12_0;
@@ -1738,10 +1738,6 @@ public abstract class hn extends java.applet.Applet implements Runnable, java.aw
     abstract void b(boolean param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new ij("");
     }
 }

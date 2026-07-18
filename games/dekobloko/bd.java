@@ -963,7 +963,7 @@ abstract class bd extends hn {
                                 break L2;
                               } else {
                                 if (var2 == 8) {
-                                  qn.a(sm.field_e, lf.field_e, 4210752, (wl) (Object) de.field_V);
+                                  qn.a(sm.field_e, lf.field_e, 4210752, de.field_V);
                                   break L2;
                                 } else {
                                   if (var2 == 16) {
@@ -1276,7 +1276,7 @@ abstract class bd extends hn {
                     stackOut_2_0 = this;
                     stackIn_5_0 = stackOut_2_0;
                     stackIn_3_0 = stackOut_2_0;
-                    if (var6_ref2.equals((Object) (Object) "jagex.com")) {
+                    if (var6_ref2.equals("jagex.com")) {
                       break L2;
                     } else {
                       stackOut_3_0 = this;
@@ -1316,7 +1316,7 @@ abstract class bd extends hn {
                 L4: {
                   ((bd) this).field_u = Integer.parseInt(((bd) this).getParameter("gamecrc"));
                   ((bd) this).field_s = Long.parseLong(((bd) this).getParameter("instanceid"));
-                  ((bd) this).field_t = ((bd) this).getParameter("member").equals((Object) (Object) "yes");
+                  ((bd) this).field_t = ((bd) this).getParameter("member").equals("yes");
                   var8 = ((bd) this).getParameter("lang");
                   if (var8 == null) {
                     break L4;

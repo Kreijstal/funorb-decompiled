@@ -1001,7 +1001,7 @@ final class va extends bh {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
+                  var17 = var40;
                   if (((va) this).field_G) {
                     break L36;
                   } else {
@@ -1180,10 +1180,6 @@ final class va extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = false;
     }
 }

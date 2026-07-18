@@ -26,7 +26,7 @@ final class pf {
             if (((pf) this).field_e != uc.field_g) {
               var3 = this.d(-116);
               var2 = var3;
-              ((pf) this).field_h.a(cm.a((byte) 104, li.field_f, new String[1]), 17, param0 ^ 89);
+              ((pf) this).field_h.a(cm.a((byte) 104, li.field_f, new String[]{var3}), 17, param0 ^ 89);
               break L0;
             } else {
               if (param0 == 17) {
@@ -151,13 +151,13 @@ final class pf {
                     var5 = this.d(-124);
                     if (var4 != null) {
                       if (!cd.field_m.field_lc) {
-                        ((pf) this).field_h.a(cm.a((byte) 106, un.field_c, new String[1]), 1, -20);
+                        ((pf) this).field_h.a(cm.a((byte) 106, un.field_c, new String[]{var5}), 1, -20);
                         return;
                       } else {
                         if (0 > cd.field_m.field_Nb) {
                           break L0;
                         } else {
-                          ((pf) this).field_h.a(cm.a((byte) 106, un.field_c, new String[1]), 1, -20);
+                          ((pf) this).field_h.a(cm.a((byte) 106, un.field_c, new String[]{var5}), 1, -20);
                           return;
                         }
                       }
@@ -173,20 +173,20 @@ final class pf {
                           } else {
                             if (!var7.field_bc) {
                               if (!param0) {
-                                ((pf) this).field_h.a(cm.a((byte) 92, lj.field_b, new String[1]), 0, -30);
+                                ((pf) this).field_h.a(cm.a((byte) 92, lj.field_b, new String[]{var5}), 0, -30);
                                 return;
                               } else {
                                 if (var7.field_fc) {
-                                  ((pf) this).field_h.a(cm.a((byte) 101, jh.field_g, new String[1]), 0, -124);
-                                  ((pf) this).field_h.a(cm.a((byte) 108, df.field_T, new String[1]), 1, param1 ^ -29114);
+                                  ((pf) this).field_h.a(cm.a((byte) 101, jh.field_g, new String[]{var5}), 0, -124);
+                                  ((pf) this).field_h.a(cm.a((byte) 108, df.field_T, new String[]{var5}), 1, param1 ^ -29114);
                                   return;
                                 } else {
-                                  ((pf) this).field_h.a(cm.a((byte) 92, lj.field_b, new String[1]), 0, -30);
+                                  ((pf) this).field_h.a(cm.a((byte) 92, lj.field_b, new String[]{var5}), 0, -30);
                                   return;
                                 }
                               }
                             } else {
-                              ((pf) this).field_h.a(cm.a((byte) 93, vm.field_p, new String[1]), 1, 64);
+                              ((pf) this).field_h.a(cm.a((byte) 93, vm.field_p, new String[]{var5}), 1, 64);
                               return;
                             }
                           }
@@ -212,13 +212,13 @@ final class pf {
                     var5 = this.d(-124);
                     if (var4 != null) {
                       if (!cd.field_m.field_lc) {
-                        ((pf) this).field_h.a(cm.a((byte) 106, un.field_c, new String[1]), 1, -20);
+                        ((pf) this).field_h.a(cm.a((byte) 106, un.field_c, new String[]{var5}), 1, -20);
                         return;
                       } else {
                         if (0 > cd.field_m.field_Nb) {
                           break L1;
                         } else {
-                          ((pf) this).field_h.a(cm.a((byte) 106, un.field_c, new String[1]), 1, -20);
+                          ((pf) this).field_h.a(cm.a((byte) 106, un.field_c, new String[]{var5}), 1, -20);
                           return;
                         }
                       }
@@ -230,20 +230,20 @@ final class pf {
                           } else {
                             if (!var7.field_bc) {
                               if (!param0) {
-                                ((pf) this).field_h.a(cm.a((byte) 92, lj.field_b, new String[1]), 0, -30);
+                                ((pf) this).field_h.a(cm.a((byte) 92, lj.field_b, new String[]{var5}), 0, -30);
                                 return;
                               } else {
                                 if (var7.field_fc) {
-                                  ((pf) this).field_h.a(cm.a((byte) 101, jh.field_g, new String[1]), 0, -124);
-                                  ((pf) this).field_h.a(cm.a((byte) 108, df.field_T, new String[1]), 1, param1 ^ -29114);
+                                  ((pf) this).field_h.a(cm.a((byte) 101, jh.field_g, new String[]{var5}), 0, -124);
+                                  ((pf) this).field_h.a(cm.a((byte) 108, df.field_T, new String[]{var5}), 1, param1 ^ -29114);
                                   return;
                                 } else {
-                                  ((pf) this).field_h.a(cm.a((byte) 92, lj.field_b, new String[1]), 0, -30);
+                                  ((pf) this).field_h.a(cm.a((byte) 92, lj.field_b, new String[]{var5}), 0, -30);
                                   return;
                                 }
                               }
                             } else {
-                              ((pf) this).field_h.a(cm.a((byte) 93, vm.field_p, new String[1]), 1, 64);
+                              ((pf) this).field_h.a(cm.a((byte) 93, vm.field_p, new String[]{var5}), 1, 64);
                               return;
                             }
                           }
@@ -281,8 +281,8 @@ final class pf {
           if (var5 != null) {
             var3 = var5.field_Vb;
             if (var5.field_Zb) {
-              ((pf) this).field_h.a(cm.a((byte) 124, di.field_C, new String[1]), 2, 73);
-              ((pf) this).field_h.a(cm.a((byte) 89, hl.field_b, new String[1]), 3, 126);
+              ((pf) this).field_h.a(cm.a((byte) 124, di.field_C, new String[]{var3}), 2, 73);
+              ((pf) this).field_h.a(cm.a((byte) 89, hl.field_b, new String[]{var3}), 3, 126);
               if (param0 <= -71) {
                 return;
               } else {
@@ -294,9 +294,9 @@ final class pf {
                 if (!var5.field_Ob) {
                   if (var5.field_wc) {
                     if (!var5.field_lc) {
-                      ((pf) this).field_h.a(cm.a((byte) 114, u.field_d, new String[1]), 2, -93);
+                      ((pf) this).field_h.a(cm.a((byte) 114, u.field_d, new String[]{var3}), 2, -93);
                       if (var5.field_Ob) {
-                        ((pf) this).field_h.a(cm.a((byte) 120, fj.field_j, new String[1]), 3, -110);
+                        ((pf) this).field_h.a(cm.a((byte) 120, fj.field_j, new String[]{var3}), 3, -110);
                         if (param0 <= -71) {
                           return;
                         } else {
@@ -313,9 +313,9 @@ final class pf {
                       }
                     } else {
                       if (var5.field_gc) {
-                        ((pf) this).field_h.a(cm.a((byte) 114, u.field_d, new String[1]), 2, -93);
+                        ((pf) this).field_h.a(cm.a((byte) 114, u.field_d, new String[]{var3}), 2, -93);
                         if (var5.field_Ob) {
-                          ((pf) this).field_h.a(cm.a((byte) 120, fj.field_j, new String[1]), 3, -110);
+                          ((pf) this).field_h.a(cm.a((byte) 120, fj.field_j, new String[]{var3}), 3, -110);
                           if (param0 <= -71) {
                             return;
                           } else {
@@ -332,7 +332,7 @@ final class pf {
                         }
                       } else {
                         if (var5.field_Ob) {
-                          ((pf) this).field_h.a(cm.a((byte) 120, fj.field_j, new String[1]), 3, -110);
+                          ((pf) this).field_h.a(cm.a((byte) 120, fj.field_j, new String[]{var3}), 3, -110);
                           if (param0 <= -71) {
                             return;
                           } else {
@@ -351,7 +351,7 @@ final class pf {
                     }
                   } else {
                     if (var5.field_Ob) {
-                      ((pf) this).field_h.a(cm.a((byte) 120, fj.field_j, new String[1]), 3, -110);
+                      ((pf) this).field_h.a(cm.a((byte) 120, fj.field_j, new String[]{var3}), 3, -110);
                       if (param0 <= -71) {
                         return;
                       } else {
@@ -369,7 +369,7 @@ final class pf {
                   }
                 } else {
                   if (var5.field_Ob) {
-                    ((pf) this).field_h.a(cm.a((byte) 120, fj.field_j, new String[1]), 3, -110);
+                    ((pf) this).field_h.a(cm.a((byte) 120, fj.field_j, new String[]{var3}), 3, -110);
                     if (param0 > -71) {
                       ((pf) this).field_f = -11;
                       return;
@@ -386,9 +386,9 @@ final class pf {
                   }
                 }
               } else {
-                ((pf) this).field_h.a(cm.a((byte) 119, fl.field_c, new String[1]), 2, -98);
+                ((pf) this).field_h.a(cm.a((byte) 119, fl.field_c, new String[]{var3}), 2, -98);
                 if (var5.field_Ob) {
-                  ((pf) this).field_h.a(cm.a((byte) 120, fj.field_j, new String[1]), 3, -110);
+                  ((pf) this).field_h.a(cm.a((byte) 120, fj.field_j, new String[]{var3}), 3, -110);
                   if (param0 <= -71) {
                     return;
                   } else {
@@ -851,8 +851,8 @@ final class pf {
                       break L4;
                     } else {
                       if (var6 == 0) {
-                        ((pf) this).field_h.a(cm.a((byte) 93, pl.field_e, new String[1]), 4, param1 + -60);
-                        ((pf) this).field_h.a(cm.a((byte) 122, pj.field_G, new String[1]), 6, param1 ^ 12);
+                        ((pf) this).field_h.a(cm.a((byte) 93, pl.field_e, new String[]{var8}), 4, param1 + -60);
+                        ((pf) this).field_h.a(cm.a((byte) 122, pj.field_G, new String[]{var8}), 6, param1 ^ 12);
                         if (param2 == null) {
                           break L4;
                         } else {
@@ -863,7 +863,7 @@ final class pf {
                               break L4;
                             } else {
                               ((pf) this).field_j = param2;
-                              ((pf) this).field_h.a(cm.a((byte) 94, ta.field_h, new String[1]), 19, param1 + -85);
+                              ((pf) this).field_h.a(cm.a((byte) 94, ta.field_h, new String[]{var8}), 19, param1 + -85);
                               break L4;
                             }
                           }
@@ -884,16 +884,16 @@ final class pf {
                               if (wl.field_p) {
                                 break L7;
                               } else {
-                                ((pf) this).field_h.a(cm.a((byte) 125, ai.field_M, new String[1]), 8, 89);
+                                ((pf) this).field_h.a(cm.a((byte) 125, ai.field_M, new String[]{var8}), 8, 89);
                                 break L7;
                               }
                             }
-                            ((pf) this).field_h.a(cm.a((byte) 124, wa.field_e, new String[1]), 18, 80);
+                            ((pf) this).field_h.a(cm.a((byte) 124, wa.field_e, new String[]{var8}), 18, 80);
                             if (param2 == null) {
                               break L6;
                             } else {
                               ((pf) this).field_j = param2;
-                              ((pf) this).field_h.a(cm.a((byte) 99, ta.field_h, new String[1]), 19, param1 + 140);
+                              ((pf) this).field_h.a(cm.a((byte) 99, ta.field_h, new String[]{var8}), 19, param1 + 140);
                               break L6;
                             }
                           } else {
@@ -901,7 +901,7 @@ final class pf {
                           }
                         }
                       }
-                      ((pf) this).field_h.a(cm.a((byte) 118, cn.field_ab, new String[1]), 5, param1 ^ 102);
+                      ((pf) this).field_h.a(cm.a((byte) 118, cn.field_ab, new String[]{var8}), 5, param1 ^ 102);
                       break L5;
                     } else {
                       break L5;
@@ -910,7 +910,7 @@ final class pf {
                   if (var6 == 0) {
                     break L2;
                   } else {
-                    ((pf) this).field_h.a(cm.a((byte) 116, oj.field_a, new String[1]), 7, -12);
+                    ((pf) this).field_h.a(cm.a((byte) 116, oj.field_a, new String[]{var8}), 7, -12);
                     return;
                   }
                 } else {
@@ -1053,10 +1053,6 @@ final class pf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = 0;
         field_i = new int[128];
         field_c = "Year";

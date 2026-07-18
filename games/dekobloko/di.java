@@ -52,10 +52,6 @@ class di extends a {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         long var4 = 0L;
         long var6 = 0L;

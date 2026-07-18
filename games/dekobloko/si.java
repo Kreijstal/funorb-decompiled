@@ -147,11 +147,11 @@ final class si implements Iterable {
         if (cl.field_r != null) {
           cl.field_r.n(22);
           sn.field_k = new cn();
-          de.field_W.c((ce) (Object) sn.field_k, (byte) 87);
+          de.field_W.c(sn.field_k, (byte) 87);
           return;
         } else {
           sn.field_k = new cn();
-          de.field_W.c((ce) (Object) sn.field_k, (byte) 87);
+          de.field_W.c(sn.field_k, (byte) 87);
           return;
         }
     }
@@ -339,13 +339,13 @@ final class si implements Iterable {
             Object var4 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
+              var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
               if (var1 != null) {
                 try {
                   L0: {
                     var2_ref = Runtime.getRuntime();
                     var4 = null;
-                    var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
+                    var3 = (Long) var1.invoke(var2_ref, (Object[]) null);
                     ab.field_e = 1 + (int)(var3.longValue() / 1048576L);
                     break L0;
                   }
@@ -418,10 +418,6 @@ final class si implements Iterable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Mute this player for 48 hours";
         field_e = new vj();
         field_k = "Unrated game";

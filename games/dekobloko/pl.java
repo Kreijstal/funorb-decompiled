@@ -885,7 +885,7 @@ final class pl {
                 } else {
                   var9 = va.a(((pl) this).field_d, param2, param0);
                   if (var9 != null) {
-                    ((pl) this).field_a.a(var6, -1, (bh) (Object) var9);
+                    ((pl) this).field_a.a(var6, -1, var9);
                     break L2;
                   } else {
                     stackOut_9_0 = null;
@@ -897,7 +897,7 @@ final class pl {
               var8 = var9.a(param1);
               if (var8 != null) {
                 var9.b((byte) 101);
-                ((pl) this).field_b.a(var6, -1, (bh) (Object) var8);
+                ((pl) this).field_b.a(var6, -1, var8);
                 stackOut_16_0 = (ud) var8;
                 stackIn_17_0 = stackOut_16_0;
                 break L0;
@@ -1008,7 +1008,7 @@ final class pl {
                 L3: {
                   var10 = var9.b();
                   var8 = var10;
-                  ((pl) this).field_b.a(var6, -1, (bh) (Object) var8);
+                  ((pl) this).field_b.a(var6, -1, var8);
                   if (param2 != null) {
                     param2[0] = param2[0] - var10.field_o.length;
                     break L3;
@@ -1082,10 +1082,6 @@ final class pl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "New Game";
         field_f = "You need to play 1 more rated game to unlock this option.";
         field_e = "Add <%0> to friend list";

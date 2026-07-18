@@ -466,7 +466,7 @@ final class vg {
                     }
                   }
                   L15: {
-                    stackIn_27_0.field_Y = cm.a((byte) stackIn_27_1, stackIn_27_2, new String[1]);
+                    stackIn_27_0.field_Y = cm.a((byte) stackIn_27_1, stackIn_27_2, new String[]{nn.field_a.field_Y});
                     ma.field_G.field_Hb = true;
                     tg.field_i.field_Y = kh.field_b;
                     ve.field_ac = true;
@@ -789,10 +789,6 @@ final class vg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = "Chat is currently disabled.";
         field_I = new String[16];
         field_G = new int[8192];

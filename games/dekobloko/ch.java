@@ -1237,10 +1237,6 @@ final class ch {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = false;
         field_d = "Password: ";
     }

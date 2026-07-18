@@ -55,7 +55,7 @@ final class mb {
                     bb.field_d = stackIn_9_0;
                     kf.field_L = stackIn_9_0;
                     var2_ref_uf.field_n = 0;
-                    gi.a(kb.field_g, l.field_c, 17, (wl) (Object) we.field_b, qk.field_a);
+                    gi.a(kb.field_g, l.field_c, 17, we.field_b, qk.field_a);
                     wj.c(4792, -1);
                     break L1;
                   }
@@ -127,14 +127,14 @@ final class mb {
                   var3 = var5;
                   var3 = var5;
                   if (param1.field_l == 1) {
-                    var2 = (Object) (Object) ("<img=0>" + var5);
+                    var2 = "<img=0>" + var5;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
                 if (param1.field_l == 2) {
-                  var2 = (Object) (Object) ("<img=1>" + (String) var2);
+                  var2 = "<img=1>" + (String) var2;
                   var3 = (String) var2;
                   var3 = (String) var2;
                   break L1;
@@ -154,12 +154,12 @@ final class mb {
                       if (param1.field_n != 0) {
                         break L4;
                       } else {
-                        var3 = cm.a((byte) 90, oj.field_b, new String[1]);
+                        var3 = cm.a((byte) 90, oj.field_b, new String[]{(String) var2});
                         break L3;
                       }
                     }
                   }
-                  var3 = cm.a((byte) 110, im.field_j, new String[1]);
+                  var3 = cm.a((byte) 110, im.field_j, new String[]{(String) var2});
                   break L3;
                 } else {
                   break L3;
@@ -181,7 +181,7 @@ final class mb {
                   if (param1.field_m != 1) {
                     break L6;
                   } else {
-                    var3 = "[" + cm.a((byte) 125, hf.field_a, new String[1]) + "] ";
+                    var3 = "[" + cm.a((byte) 125, hf.field_a, new String[]{param1.field_g}) + "] ";
                     break L6;
                   }
                 }
@@ -220,7 +220,7 @@ final class mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
-            var2 = (Object) (Object) decompiledCaughtException;
+            var2 = decompiledCaughtException;
             stackOut_32_0 = var2;
             stackOut_32_1 = new StringBuilder().append("mb.D(").append(106).append(',');
             stackIn_34_0 = stackOut_32_0;
@@ -296,9 +296,25 @@ final class mb {
     }
 
     private final void a(byte param0, int param1, int param2) {
-        if (((mb) this).field_g < param1) {
-            ((mb) this).field_g = param1;
+        if (((mb) this).field_g >= param1) {
+          if (param1 >= ((mb) this).field_b.length) {
+            this.a(param1, -23);
+            ((mb) this).field_b[param1] = param2;
             return;
+          } else {
+            ((mb) this).field_b[param1] = param2;
+            return;
+          }
+        } else {
+          ((mb) this).field_g = param1;
+          if (param1 < ((mb) this).field_b.length) {
+            ((mb) this).field_b[param1] = param2;
+            return;
+          } else {
+            this.a(param1, -23);
+            ((mb) this).field_b[param1] = param2;
+            return;
+          }
         }
     }
 
@@ -366,10 +382,6 @@ final class mb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Special Items";
     }
 }

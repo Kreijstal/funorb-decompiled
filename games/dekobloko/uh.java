@@ -44,7 +44,7 @@ final class uh implements Iterable {
               if (!ph.n(-30146)) {
                 break L1;
               } else {
-                var6 = new ec(20, qn.field_rb, (mm) (Object) a.field_t);
+                var6 = new ec(20, qn.field_rb, a.field_t);
                 var6.field_m = 387;
                 var6.field_l = 320 + -(var6.field_n / 2);
                 var7.a(var6, 100);
@@ -53,7 +53,7 @@ final class uh implements Iterable {
             }
             L2: {
               if (mg.field_Zb) {
-                var8 = new ec(10, jd.field_Ob, (mm) (Object) a.field_t);
+                var8 = new ec(10, jd.field_Ob, a.field_t);
                 var8.field_l = -(var8.field_n / 2) + 320;
                 var8.field_m = 387;
                 var7.a(var8, 101);
@@ -64,7 +64,7 @@ final class uh implements Iterable {
             }
             L3: {
               if (fm.field_e) {
-                var9 = new ec(19, jd.field_Ob, (mm) (Object) a.field_t);
+                var9 = new ec(19, jd.field_Ob, a.field_t);
                 var9.field_m = 387;
                 var9.field_l = -(var9.field_n / 2) + 320;
                 var7.a(var9, 100);
@@ -75,7 +75,7 @@ final class uh implements Iterable {
             }
             L4: {
               if (he.field_db) {
-                var10 = new ec(3, oa.field_c, (mm) (Object) a.field_t);
+                var10 = new ec(3, oa.field_c, a.field_t);
                 var10.field_l = -(var10.field_n / 2) + 320;
                 var10.field_m = 387;
                 var7.a(var10, 123);
@@ -85,7 +85,7 @@ final class uh implements Iterable {
               }
             }
             L5: {
-              var11 = new ec(13, pc.field_f, (mm) (Object) a.field_t);
+              var11 = new ec(13, pc.field_f, a.field_t);
               if (param3 <= -103) {
                 break L5;
               } else {
@@ -170,7 +170,7 @@ final class uh implements Iterable {
             var1 = new wc();
         }
         var1.a((byte) 37, hk.field_i, hk.field_l, hk.field_j, hk.field_g, hk.field_c, hk.field_h, hk.field_b);
-        ci.field_a.a((bh) (Object) var1, 2777);
+        ci.field_a.a(var1, 2777);
     }
 
     final static void a(pi[] param0, byte param1) {

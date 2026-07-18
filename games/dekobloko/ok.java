@@ -353,25 +353,33 @@ final class ok {
                 if (var7 >= var6) {
                   break L4;
                 } else {
+                  int fieldTemp$8 = field_d;
                   field_d = field_d + 1;
-                  field_f[field_d] = param0[var8];
+                  field_f[fieldTemp$8] = param0[var8];
+                  int fieldTemp$9 = field_d;
                   field_d = field_d + 1;
-                  field_f[field_d] = var7;
+                  field_f[fieldTemp$9] = var7;
+                  int fieldTemp$10 = field_d;
                   field_d = field_d + 1;
-                  field_f[field_d] = param0[var4];
+                  field_f[fieldTemp$10] = param0[var4];
+                  int fieldTemp$11 = field_d;
                   field_d = field_d + 1;
-                  field_f[field_d] = var6;
+                  field_f[fieldTemp$11] = var6;
                   break L4;
                 }
               } else {
+                int fieldTemp$12 = field_d;
                 field_d = field_d + 1;
-                field_f[field_d] = param0[var4];
+                field_f[fieldTemp$12] = param0[var4];
+                int fieldTemp$13 = field_d;
                 field_d = field_d + 1;
-                field_f[field_d] = var6;
+                field_f[fieldTemp$13] = var6;
+                int fieldTemp$14 = field_d;
                 field_d = field_d + 1;
-                field_f[field_d] = param0[var8];
+                field_f[fieldTemp$14] = param0[var8];
+                int fieldTemp$15 = field_d;
                 field_d = field_d + 1;
-                field_f[field_d] = var7;
+                field_f[fieldTemp$15] = var7;
                 break L4;
               }
             }

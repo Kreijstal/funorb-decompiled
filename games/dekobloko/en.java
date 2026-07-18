@@ -458,7 +458,7 @@ class en {
                                       break L8;
                                     } else {
                                       var5 = var5 | 1 << var7_int;
-                                      var10 = (Object) (Object) var11;
+                                      var10 = var11;
                                       var11 = var11.field_o;
                                       continue L7;
                                     }
@@ -549,7 +549,7 @@ class en {
                         var6++;
                         continue L14;
                       } else {
-                        var10 = (Object) (Object) var7.field_o;
+                        var10 = var7.field_o;
                         var7.field_o = null;
                         var7 = (ol) var10;
                         continue L15;
@@ -634,7 +634,7 @@ class en {
                 }
               } else {
                 L3: {
-                  if ((Object) (Object) field_r.field_l[var2] != this) {
+                  if (field_r.field_l[var2] != this) {
                     break L3;
                   } else {
                     field_r.field_l[var2] = null;

@@ -41,10 +41,6 @@ final class aa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Type your email address again to make sure it's correct";
         field_f = new vj();
         field_b = '/';

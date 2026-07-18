@@ -56,14 +56,14 @@ final class la {
             L1: {
               if (var7.g((byte) -83)) {
                 var6 = new ua(var5, var7.field_y);
-                ((la) this).field_e.a(var7.field_i, false, (bh) (Object) var6);
-                ((la) this).field_b.a((byte) 4, (be) (Object) var6);
+                ((la) this).field_e.a(var7.field_i, false, var6);
+                ((la) this).field_b.a((byte) 4, var6);
                 ((vi) (Object) var6).field_r = 0L;
                 var7.b((byte) 106);
                 var7.e((byte) 125);
                 break L1;
               } else {
-                ((la) this).field_b.a((byte) 4, (be) (Object) var7);
+                ((la) this).field_b.a((byte) 4, var7);
                 var7.field_r = 0L;
                 break L1;
               }
@@ -153,8 +153,8 @@ final class la {
                 this.a(-122, var6);
             }
             var6_ref = new ua(param3, 1);
-            ((la) this).field_e.a(param0, false, (bh) (Object) var6_ref);
-            ((la) this).field_b.a((byte) 4, (be) (Object) var6_ref);
+            ((la) this).field_e.a(param0, false, var6_ref);
+            ((la) this).field_b.a((byte) 4, var6_ref);
             ((vi) (Object) var6_ref).field_r = 0L;
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "la.E(" + param0 + ',' + 77 + ',' + 1 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -201,7 +201,7 @@ final class la {
               tb.field_c.a(jc.field_c, -16834);
               tb.field_c.a(tc.field_Ub, -16834);
               tb.field_c.a(cf.field_d, -16834);
-              tb.field_c.a((w) (Object) k.field_b, param1 ^ -16309);
+              tb.field_c.a(k.field_b, param1 ^ -16309);
               tb.field_c.a(jc.field_d, -16834);
               k.field_b.field_Rb.field_Rb.a(param1 ^ -32262, ua.field_H);
               k.field_b.field_Rb.field_Rb.field_W = 1;
@@ -346,10 +346,6 @@ final class la {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
         field_g = "End Game";
         field_h = new int[128];

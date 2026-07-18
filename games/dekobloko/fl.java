@@ -80,7 +80,7 @@ final class fl {
         int var10 = 0;
         int var11 = 0;
         try {
-            sl.a(param1.field_Rb, (int[]) null, (byte) 89, param2, (w) (Object) param1, param1.field_Yb, param1.field_cc, -1, -1);
+            sl.a(param1.field_Rb, (int[]) null, (byte) 89, param2, param1, param1.field_Yb, param1.field_cc, -1, -1);
             w.field_H.a(true, 29072);
             w.field_H.a(0, (byte) -43, (int[]) null);
             w.field_H.a(17);
@@ -140,7 +140,7 @@ final class fl {
           L0: {
             L1: {
               var6_int = 2;
-              if ((Object) (Object) se.field_S == (Object) (Object) param5) {
+              if (se.field_S == param5) {
                 var6_int = 1;
                 break L1;
               } else {
@@ -156,7 +156,7 @@ final class fl {
               param5.a(param3, param4 - -var6_int, -var6_int + param0, 0, -1);
               param5.a(param3, var6_int + param4, param0, 0, -1);
               param5.a(param3, param4 + var6_int, param0 - -var6_int, 0, -1);
-              if ((Object) (Object) w.field_kb != (Object) (Object) param5) {
+              if (w.field_kb != param5) {
                 break L2;
               } else {
                 param5.a(param3, param4 + 1, -var6_int + param0, 0, -1);
@@ -235,12 +235,8 @@ final class fl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "(<%0> players want to join)";
-        field_d = new int[][]{null, new int[5], null, null, null};
+        field_d = new int[][]{null, new int[]{0, 0, 0, 1500, 2000}, null, null, null};
         field_c = "Join <%0>'s game";
         field_e = "Remove friend";
     }

@@ -37,9 +37,9 @@ final class pn extends vb {
         }
         param0 = param0 + ((pn) this).field_u;
         param3 = param3 + ((pn) this).field_D;
-        this.a(param0, n.field_d, param3, (ce) (Object) ((pn) this).field_gb, 0);
-        this.a(param0, ql.field_a, param3, (ce) (Object) ((pn) this).field_hb, 0);
-        this.a(param0, pf.field_c, param3, (ce) (Object) ((pn) this).field_ib, 0);
+        this.a(param0, n.field_d, param3, ((pn) this).field_gb, 0);
+        this.a(param0, ql.field_a, param3, ((pn) this).field_hb, 0);
+        this.a(param0, pf.field_c, param3, ((pn) this).field_ib, 0);
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, String param4, int param5, int param6, int param7) {
@@ -159,13 +159,13 @@ final class pn extends vb {
             ((pn) this).field_gb.field_p = param0;
             ((pn) this).field_cb = param1 ? true : false;
             if (!((pn) this).field_cb) {
-                ((pn) this).b((ce) (Object) ((pn) this).field_gb, (byte) -55);
-                ((pn) this).b((ce) (Object) ((pn) this).field_hb, (byte) -55);
+                ((pn) this).b(((pn) this).field_gb, (byte) -55);
+                ((pn) this).b(((pn) this).field_hb, (byte) -55);
             } else {
-                ((pn) this).b((ce) (Object) ((pn) this).field_hb, (byte) -55);
-                ((pn) this).b((ce) (Object) ((pn) this).field_gb, (byte) -55);
+                ((pn) this).b(((pn) this).field_hb, (byte) -55);
+                ((pn) this).b(((pn) this).field_gb, (byte) -55);
             }
-            ((pn) this).b((ce) (Object) ((pn) this).field_ib, (byte) -55);
+            ((pn) this).b(((pn) this).field_ib, (byte) -55);
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -608,9 +608,9 @@ final class pn extends vb {
             gh.field_e = null;
             kf.field_I = new qc(false, 0, false, 0, 0, 3, 0, (String[]) null, 0, false, param1, param0);
             if (!param1) {
-                kf.field_I.field_p.a((bh) (Object) new in(sk.field_i, 10, false), 2777);
+                kf.field_I.field_p.a(new in(sk.field_i, 10, false), 2777);
             } else {
-                kf.field_I.field_p.a((bh) (Object) new in(ka.field_M, 10, false), 2777);
+                kf.field_I.field_p.a(new in(ka.field_M, 10, false), 2777);
             }
             am.field_c = param2;
             gk.field_Ib = false;
@@ -630,10 +630,6 @@ final class pn extends vb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_ab = 0;
         field_eb = new int[]{40, 33, 27, 22, 18, 15, 12, 10, 8, 7, 6, 5, 4, 3, 2, 1, 0};
     }

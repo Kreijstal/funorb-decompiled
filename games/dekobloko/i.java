@@ -237,7 +237,7 @@ final class i {
                         var11 = var13;
                         var7 = var11;
                         if (1 != var3) {
-                          var8 = (Object) (Object) jf.field_g;
+                          var8 = jf.field_g;
                           synchronized (var8) {
                             L6: {
                               jf.field_g.a((byte) 111, var10, var17);
@@ -299,10 +299,6 @@ final class i {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_f = "Create a free Account";
         field_g = "Accept";

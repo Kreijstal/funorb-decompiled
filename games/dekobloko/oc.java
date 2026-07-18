@@ -137,10 +137,6 @@ final class oc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Confirm Email:";
     }
 }

@@ -17,7 +17,7 @@ final class pa extends qi {
     static String field_W;
 
     pa(nb param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (gl) (Object) vh.a(1424));
+        super(param1, vh.a(1424));
         try {
             ((pa) this).field_ab = param1;
             ((pa) this).field_X = param0;
@@ -82,7 +82,7 @@ final class pa extends qi {
               break L0;
             }
           }
-          if (!var5.equals((Object) (Object) ((pa) this).field_E)) {
+          if (!var5.equals(((pa) this).field_E)) {
             ((pa) this).field_E = var5;
             ((pa) this).a(2874);
             super.a(param0, -105, param2, param3);
@@ -345,7 +345,7 @@ final class pa extends qi {
         } else {
           L8: {
             var18 = qi.field_T;
-            if (var18.equals((Object) (Object) ((pa) this).field_E)) {
+            if (var18.equals(((pa) this).field_E)) {
               break L8;
             } else {
               ((pa) this).field_E = var18;
@@ -595,10 +595,6 @@ final class pa extends qi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_bb = 0;
         field_Z = -1;
         field_V = new af();

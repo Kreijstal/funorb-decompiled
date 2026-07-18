@@ -46,7 +46,7 @@ final class k {
         try {
           L0: {
             var3 = (CharSequence) (Object) param0;
-            stackOut_2_0 = h.field_c.equals((Object) (Object) kf.a(var3, (byte) 2));
+            stackOut_2_0 = h.field_c.equals(kf.a(var3, (byte) 2));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -88,10 +88,6 @@ final class k {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Accept rematch";
         field_d = "Security";
         field_f = new sk(1);

@@ -29,10 +29,6 @@ final class vd extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = 480;
         field_o = "Unpacking graphics";
         field_r = "Lost";

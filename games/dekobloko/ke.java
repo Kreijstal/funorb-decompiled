@@ -1486,7 +1486,7 @@ final class ke {
             var3.c(320 - var3.field_K / 2, -(var2_int >> -492469630) + (50 + -(var3.field_C / 2)));
             hk.a(var2_int + 4 + ((ke) this).field_w, ((ke) this).field_z + 4, -8 + ((ke) this).field_y, -8 + ((ke) this).field_q, 0, 150);
             vk.a(((ke) this).field_q, (byte) 50, a.field_n, ((ke) this).field_y, ((ke) this).field_z, var2_int + ((ke) this).field_w);
-            kn.a((mm) (Object) w.field_kb, (byte) -39, 362, ve.c(((ke) this).field_t, 26135), 16777215, 560 + var2_int);
+            kn.a(w.field_kb, (byte) -39, 362, ve.c(((ke) this).field_t, 26135), 16777215, 560 + var2_int);
             wk.a(72, ((ke) this).field_t, var2_int);
             break L0;
           }
@@ -1583,7 +1583,7 @@ final class ke {
                 } else {
                   L5: {
                     L6: {
-                      ed.a(16777215, 320 - -var2_int, qk.field_s[var4], 200, (byte) 75, (mm) (Object) w.field_kb);
+                      ed.a(16777215, 320 - -var2_int, qk.field_s[var4], 200, (byte) 75, w.field_kb);
                       var5 = rb.a(-35, var4, ((ke) this).field_v) ? 1 : 0;
                       if (var5 != 0) {
                         break L6;
@@ -1636,7 +1636,7 @@ final class ke {
                   }
                   L11: {
                     var8 = se.field_S.a(var7, 171);
-                    int discarded$1 = ga.a(171, 0, -se.field_S.field_R + 274 + -(var8 * 8), var7, 16, 1000, 16769088, (mm) (Object) se.field_S, (byte) -124, 0, var2_int + 80);
+                    int discarded$1 = ga.a(171, 0, -se.field_S.field_R + 274 + -(var8 * 8), var7, 16, 1000, 16769088, se.field_S, (byte) -124, 0, var2_int + 80);
                     stackOut_25_0 = 8 * var8 + 282;
                     stackOut_25_1 = 256;
                     stackOut_25_2 = 16777215;
@@ -1670,14 +1670,14 @@ final class ke {
                   }
                   L12: {
                     L13: {
-                      fl.a(stackIn_29_0, stackIn_29_1, stackIn_29_2, stackIn_29_3, 80 + var2_int, (mm) (Object) w.field_kb);
-                      kn.a((mm) (Object) se.field_S, (byte) -39, 271, jd.field_Xb, 16777215, var2_int + 500);
-                      kn.a((mm) (Object) se.field_S, (byte) -39, 289, me.field_B, 16777215, 500 - -var2_int);
+                      fl.a(stackIn_29_0, stackIn_29_1, stackIn_29_2, stackIn_29_3, 80 + var2_int, w.field_kb);
+                      kn.a(se.field_S, (byte) -39, 271, jd.field_Xb, 16777215, var2_int + 500);
+                      kn.a(se.field_S, (byte) -39, 289, me.field_B, 16777215, 500 - -var2_int);
                       if (var6 == 0) {
                         break L13;
                       } else {
-                        fl.a(271, 256, 16769088, "???", 500 - -var2_int, (mm) (Object) se.field_S);
-                        fl.a(289, 256, 16769088, "???", var2_int + 500, (mm) (Object) se.field_S);
+                        fl.a(271, 256, 16769088, "???", 500 - -var2_int, se.field_S);
+                        fl.a(289, 256, 16769088, "???", var2_int + 500, se.field_S);
                         if (var10 == 0) {
                           break L12;
                         } else {
@@ -1685,7 +1685,7 @@ final class ke {
                         }
                       }
                     }
-                    fl.a(271, 256, 16769088, Integer.toString(on.field_g[var4]), var2_int + 500, (mm) (Object) se.field_S);
+                    fl.a(271, 256, 16769088, Integer.toString(on.field_g[var4]), var2_int + 500, se.field_S);
                     var9 = 0;
                     L14: while (true) {
                       if (vb.field_X[var4] <= var9) {
@@ -1712,12 +1712,12 @@ final class ke {
                   }
                 }
               }
-              ed.a(16777215, var2_int + 320, v.field_e, 200, (byte) 75, (mm) (Object) w.field_kb);
+              ed.a(16777215, var2_int + 320, v.field_e, 200, (byte) 75, w.field_kb);
               break L3;
             }
             L15: {
               if (ph.n(-30146)) {
-                ed.a(16777215, var2_int + 320, lf.field_d, 360, (byte) 75, (mm) (Object) se.field_S);
+                ed.a(16777215, var2_int + 320, lf.field_d, 360, (byte) 75, se.field_S);
                 break L15;
               } else {
                 break L15;
@@ -1725,7 +1725,7 @@ final class ke {
             }
             L16: {
               if (rb.a(-80, 5, ((ke) this).field_v)) {
-                ed.a(16777215, 320 - -var2_int, ph.field_Cb, 360, (byte) 75, (mm) (Object) se.field_S);
+                ed.a(16777215, 320 - -var2_int, ph.field_Cb, 360, (byte) 75, se.field_S);
                 break L16;
               } else {
                 break L16;
@@ -1881,9 +1881,9 @@ final class ke {
               }
             }
             var4 = bf.a((byte) 107, gh.field_e, fc.field_e, ((ke) this).field_e);
-            fl.a(105, 256, 16777215, vm.field_x, var2_int + 125, (mm) (Object) w.field_kb);
-            fl.a(105, 256, 16777215, a.field_x, 333 + var2_int, (mm) (Object) w.field_kb);
-            kn.a((mm) (Object) w.field_kb, (byte) -39, 105, sl.field_b, 16777215, 545 - -var2_int);
+            fl.a(105, 256, 16777215, vm.field_x, var2_int + 125, w.field_kb);
+            fl.a(105, 256, 16777215, a.field_x, 333 + var2_int, w.field_kb);
+            kn.a(w.field_kb, (byte) -39, 105, sl.field_b, 16777215, 545 - -var2_int);
             if (param0 <= -42) {
               var5_int = 0;
               L2: while (true) {
@@ -1892,7 +1892,7 @@ final class ke {
                     break L3;
                   } else {
                     var6 = 16777215;
-                    kn.a((mm) (Object) w.field_kb, (byte) -39, 130 + 20 * var5_int, 1 + var5_int + ".", var6, var2_int + 115);
+                    kn.a(w.field_kb, (byte) -39, 130 + 20 * var5_int, 1 + var5_int + ".", var6, var2_int + 115);
                     var5_int++;
                     if (var14 == 0) {
                       continue L2;
@@ -1957,10 +1957,10 @@ final class ke {
                                     break L10;
                                   }
                                 }
-                                fl.a(var9 * 20 + 130, 256, var10, var7_ref_String__[var9], 125 - -var2_int, (mm) (Object) se.field_S);
-                                kn.a((mm) (Object) se.field_S, (byte) -39, 130 + var9 * 20, cm.a((byte) 106, kk.field_q, new String[1]), var10, 350 - -var2_int);
-                                fl.a(130 - -(var9 * 20), 256, var10, md.field_U[var12], var2_int + 350, (mm) (Object) se.field_S);
-                                kn.a((mm) (Object) se.field_S, (byte) -39, 20 * var9 + 130, Integer.toString(var13), var10, 545 + var2_int);
+                                fl.a(var9 * 20 + 130, 256, var10, var7_ref_String__[var9], 125 - -var2_int, se.field_S);
+                                kn.a(se.field_S, (byte) -39, 130 + var9 * 20, cm.a((byte) 106, kk.field_q, new String[]{Integer.toString(var12 + 1)}), var10, 350 - -var2_int);
+                                fl.a(130 - -(var9 * 20), 256, var10, md.field_U[var12], var2_int + 350, se.field_S);
+                                kn.a(se.field_S, (byte) -39, 20 * var9 + 130, Integer.toString(var13), var10, 545 + var2_int);
                                 break L9;
                               }
                             }
@@ -1983,13 +1983,13 @@ final class ke {
                         if (gh.field_e.field_x != 0) {
                           break L4;
                         } else {
-                          fl.a(330, 256, 16777215, oa.field_f, 125 + var2_int, (mm) (Object) se.field_S);
+                          fl.a(330, 256, 16777215, oa.field_f, 125 + var2_int, se.field_S);
                           var7 = gh.field_e.field_s[0];
                           var8 = var7 % 8;
                           var9 = var7 / 8;
-                          kn.a((mm) (Object) se.field_S, (byte) -39, 330, cm.a((byte) 81, kk.field_q, new String[1]), 16777215, var2_int + 350);
-                          fl.a(330, 256, 16777215, md.field_U[var8], 350 + var2_int, (mm) (Object) se.field_S);
-                          kn.a((mm) (Object) se.field_S, (byte) -39, 330, Integer.toString(var9), 16777215, var2_int + 545);
+                          kn.a(se.field_S, (byte) -39, 330, cm.a((byte) 81, kk.field_q, new String[]{Integer.toString(1 + var8)}), 16777215, var2_int + 350);
+                          fl.a(330, 256, 16777215, md.field_U[var8], 350 + var2_int, se.field_S);
+                          kn.a(se.field_S, (byte) -39, 330, Integer.toString(var9), 16777215, var2_int + 545);
                           var6 = 0;
                           break L4;
                         }
@@ -2001,7 +2001,7 @@ final class ke {
                 }
                 L11: {
                   if (null != var5) {
-                    ed.a(16777215, 320 - -var2_int, var5, 220, (byte) 75, (mm) (Object) w.field_kb);
+                    ed.a(16777215, 320 - -var2_int, var5, 220, (byte) 75, w.field_kb);
                     break L11;
                   } else {
                     break L11;
@@ -2013,7 +2013,7 @@ final class ke {
                       break L13;
                     } else {
                       if (var6 != 0) {
-                        ed.a(16777215, var2_int + 320, af.field_e, 330, (byte) 75, (mm) (Object) se.field_S);
+                        ed.a(16777215, var2_int + 320, af.field_e, 330, (byte) 75, se.field_S);
                         if (var14 == 0) {
                           break L12;
                         } else {
@@ -2024,7 +2024,7 @@ final class ke {
                       }
                     }
                   }
-                  ed.a(16777215, 320 - -var2_int, lf.field_d, 330, (byte) 75, (mm) (Object) se.field_S);
+                  ed.a(16777215, 320 - -var2_int, lf.field_d, 330, (byte) 75, se.field_S);
                   break L12;
                 }
                 break L0;
@@ -2265,8 +2265,8 @@ final class ke {
             }
             L6: {
               var7 = stackIn_23_0;
-              fl.a(105, 256, 16777215, vm.field_x, 125 + var2_int, (mm) (Object) w.field_kb);
-              kn.a((mm) (Object) w.field_kb, (byte) -39, 105, ga.field_a, 16777215, var4 - -var2_int);
+              fl.a(105, 256, 16777215, vm.field_x, 125 + var2_int, w.field_kb);
+              kn.a(w.field_kb, (byte) -39, 105, ga.field_a, 16777215, var4 - -var2_int);
               if (param0 == 45) {
                 break L6;
               } else {
@@ -2275,10 +2275,10 @@ final class ke {
               }
             }
             L7: {
-              kn.a((mm) (Object) w.field_kb, (byte) -39, 105, om.field_c, 16777215, var2_int + var5);
-              kn.a((mm) (Object) w.field_kb, (byte) -39, 105, hd.field_o, 16777215, var6 - -var2_int);
-              kn.a((mm) (Object) w.field_kb, (byte) -39, 105, vd.field_r, 16777215, var2_int + var7);
-              kn.a((mm) (Object) w.field_kb, (byte) -39, 105, sh.field_h, 16777215, 545 - -var2_int);
+              kn.a(w.field_kb, (byte) -39, 105, om.field_c, 16777215, var2_int + var5);
+              kn.a(w.field_kb, (byte) -39, 105, hd.field_o, 16777215, var6 - -var2_int);
+              kn.a(w.field_kb, (byte) -39, 105, vd.field_r, 16777215, var2_int + var7);
+              kn.a(w.field_kb, (byte) -39, 105, sh.field_h, 16777215, 545 - -var2_int);
               var8 = -1;
               var9 = hf.field_g;
               if (((ke) this).field_a == null) {
@@ -2369,7 +2369,7 @@ final class ke {
                       break L18;
                     } else {
                       var11 = 16777215;
-                      kn.a((mm) (Object) w.field_kb, (byte) -39, 130 + var10 * 20, var10 + 1 + ".", var11, var2_int + 115);
+                      kn.a(w.field_kb, (byte) -39, 130 + var10 * 20, var10 + 1 + ".", var11, var2_int + 115);
                       var10++;
                       if (var14 != 0) {
                         break L17;
@@ -2388,14 +2388,14 @@ final class ke {
                     break L16;
                   }
                 }
-                ed.a(16777215, 320 + var2_int, var9, 220, (byte) 75, (mm) (Object) w.field_kb);
+                ed.a(16777215, 320 + var2_int, var9, 220, (byte) 75, w.field_kb);
                 break L16;
               }
               L19: {
                 if (!ph.n(-30146)) {
                   break L19;
                 } else {
-                  ed.a(16777215, var2_int + 320, lf.field_d, 330, (byte) 75, (mm) (Object) se.field_S);
+                  ed.a(16777215, var2_int + 320, lf.field_d, 330, (byte) 75, se.field_S);
                   break L19;
                 }
               }
@@ -2942,7 +2942,7 @@ final class ke {
                       }
                       var7 = ((ke) this).field_f[var5];
                       var8 = var7.field_o;
-                      int discarded$1 = ga.a(var7.field_n, 1, var7.field_m, var8, 1, var7.field_r, var6, (mm) (Object) a.field_t, (byte) -125, 1, var2_int + var7.field_l);
+                      int discarded$1 = ga.a(var7.field_n, 1, var7.field_m, var8, 1, var7.field_r, var6, a.field_t, (byte) -125, 1, var2_int + var7.field_l);
                       var5++;
                       if (var9 == 0) {
                         continue L3;
@@ -3282,7 +3282,7 @@ final class ke {
                   var3_int = ((wl) (Object) var1).e(3);
                   cd.field_m = new ve(j.field_b);
                   cd.field_m.a((long)var3_int, (byte) 111);
-                  wg.a(false, (wl) (Object) var1, cd.field_m, (byte) -49);
+                  wg.a(false, var1, cd.field_m, (byte) -49);
                   km.field_C = 0L;
                   break L14;
                 }
@@ -3399,11 +3399,11 @@ final class ke {
                               break L28;
                             } else {
                               var4_ref_ve = new ve(j.field_b);
-                              tg.field_b.a((be) (Object) var4_ref_ve, -1, (long)var3_int);
+                              tg.field_b.a(var4_ref_ve, -1, (long)var3_int);
                               break L28;
                             }
                           }
-                          wg.a(true, (wl) (Object) var1, var4_ref_ve, (byte) -89);
+                          wg.a(true, var1, var4_ref_ve, (byte) -89);
                           pj.a(var4_ref_ve, (byte) -50);
                           if (var11 == 0) {
                             break L1;
@@ -3601,7 +3601,7 @@ final class ke {
                                           if (20 != var2) {
                                             break L50;
                                           } else {
-                                            wg.a(false, (wl) (Object) var1, cd.field_m, (byte) -103);
+                                            wg.a(false, var1, cd.field_m, (byte) -103);
                                             if (var11 == 0) {
                                               break L1;
                                             } else {
@@ -3716,7 +3716,7 @@ final class ke {
                                     break L59;
                                   } else {
                                     var7_ref = new tj(var5, var6, var3);
-                                    hn.field_h.a((be) (Object) var7_ref, -1, var3);
+                                    hn.field_h.a(var7_ref, -1, var3);
                                     cd.field_m.field_rc = cd.field_m.field_rc + 1;
                                     break L59;
                                   }
@@ -3745,7 +3745,7 @@ final class ke {
                                 stackIn_162_0.field_ec = stackIn_162_1 != 0;
                                 var7_ref.field_dc = ((wl) (Object) var1).d((byte) -29);
                                 var7_ref.field_Sb = ((wl) (Object) var1).d((byte) -79);
-                                oc.field_b.a((bh) (Object) var7_ref, 2777);
+                                oc.field_b.a(var7_ref, 2777);
                                 if (var11 == 0) {
                                   break L1;
                                 } else {
@@ -3912,7 +3912,7 @@ final class ke {
             var6 = ((wl) (Object) var1).c((byte) -38);
             var7 = ((wl) (Object) var1).c((byte) -38);
             var8 = ma.a(-102, var3);
-            if (var6.equals((Object) (Object) "")) {
+            if (var6.equals("")) {
               stackOut_201_0 = 0;
               stackIn_202_0 = stackOut_201_0;
               break L74;
@@ -3929,7 +3929,7 @@ final class ke {
                 break L76;
               } else {
                 var8 = new tj(var5, var7, var3);
-                ob.field_i.a((be) (Object) var8, -1, var3);
+                ob.field_i.a(var8, -1, var3);
                 if (var11 == 0) {
                   break L75;
                 } else {
@@ -4017,10 +4017,10 @@ final class ke {
             }
             this.a(false, 15764);
             var2_int = 640 + (-(((ke) this).field_o * ((ke) this).field_o * 640 / 400) - (((ke) this).field_u >> -1363351294));
-            ed.a(16777215, var2_int + 320, si.field_g, 120, (byte) 75, (mm) (Object) w.field_kb);
-            ed.a(16777215, var2_int + 320, gf.a(-125, ((ke) this).field_s, ((ke) this).field_j, ((ke) this).field_r), 140, (byte) 75, (mm) (Object) w.field_kb);
-            ed.a(16777215, 320 + var2_int, ri.a(param0 ^ -75, ((ke) this).field_s, ((ke) this).field_j, ((ke) this).field_r), 240, (byte) 75, (mm) (Object) w.field_kb);
-            ed.a(16777215, var2_int + 320, kk.a(((ke) this).field_j, ((ke) this).field_s, ((ke) this).field_r, true), 300, (byte) 75, (mm) (Object) w.field_kb);
+            ed.a(16777215, var2_int + 320, si.field_g, 120, (byte) 75, w.field_kb);
+            ed.a(16777215, var2_int + 320, gf.a(-125, ((ke) this).field_s, ((ke) this).field_j, ((ke) this).field_r), 140, (byte) 75, w.field_kb);
+            ed.a(16777215, 320 + var2_int, ri.a(param0 ^ -75, ((ke) this).field_s, ((ke) this).field_j, ((ke) this).field_r), 240, (byte) 75, w.field_kb);
+            ed.a(16777215, var2_int + 320, kk.a(((ke) this).field_j, ((ke) this).field_s, ((ke) this).field_r, true), 300, (byte) 75, w.field_kb);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4079,9 +4079,9 @@ final class ke {
             }
             var4 = -44 / ((63 - param0) / 44);
             var5 = bf.a((byte) 107, gh.field_e, fc.field_e, ((ke) this).field_e);
-            fl.a(105, 256, 16777215, vm.field_x, 125 - -var2_int, (mm) (Object) w.field_kb);
-            kn.a((mm) (Object) w.field_kb, (byte) -39, 105, ng.field_g, 16777215, var2_int + 400);
-            kn.a((mm) (Object) w.field_kb, (byte) -39, 105, sl.field_b, 16777215, 545 + var2_int);
+            fl.a(105, 256, 16777215, vm.field_x, 125 - -var2_int, w.field_kb);
+            kn.a(w.field_kb, (byte) -39, 105, ng.field_g, 16777215, var2_int + 400);
+            kn.a(w.field_kb, (byte) -39, 105, sl.field_b, 16777215, 545 + var2_int);
             var6_int = 0;
             L2: while (true) {
               L3: {
@@ -4089,7 +4089,7 @@ final class ke {
                   break L3;
                 } else {
                   var7 = 16777215;
-                  kn.a((mm) (Object) w.field_kb, (byte) -39, 130 + var6_int * 20, 1 + var6_int + ".", var7, var2_int + 115);
+                  kn.a(w.field_kb, (byte) -39, 130 + var6_int * 20, 1 + var6_int + ".", var7, var2_int + 115);
                   var6_int++;
                   if (var15 == 0) {
                     continue L2;
@@ -4147,7 +4147,7 @@ final class ke {
                             break L4;
                           } else {
                             L10: {
-                              if (stackIn_23_0 == (Object) (Object) stackIn_23_1) {
+                              if (stackIn_23_0 == stackIn_23_1) {
                                 break L10;
                               } else {
                                 L11: {
@@ -4163,9 +4163,9 @@ final class ke {
                                   }
                                 }
                                 var14 = 1 + var12 % 256;
-                                fl.a(130 + 20 * var10, 256, var11, var8_ref_String__[var10], 125 - -var2_int, (mm) (Object) se.field_S);
-                                kn.a((mm) (Object) se.field_S, (byte) -39, 20 * var10 + 130, Integer.toString(var14), var11, var2_int + 400);
-                                kn.a((mm) (Object) se.field_S, (byte) -39, var10 * 20 + 130, Integer.toString(var13), var11, var2_int + 545);
+                                fl.a(130 + 20 * var10, 256, var11, var8_ref_String__[var10], 125 - -var2_int, se.field_S);
+                                kn.a(se.field_S, (byte) -39, 20 * var10 + 130, Integer.toString(var14), var11, var2_int + 400);
+                                kn.a(se.field_S, (byte) -39, var10 * 20 + 130, Integer.toString(var13), var11, var2_int + 545);
                                 break L10;
                               }
                             }
@@ -4188,13 +4188,13 @@ final class ke {
                         if (gh.field_e.field_x != 1) {
                           break L5;
                         } else {
-                          fl.a(330, 256, 16777215, oa.field_f, var2_int + 125, (mm) (Object) se.field_S);
+                          fl.a(330, 256, 16777215, oa.field_f, var2_int + 125, se.field_S);
                           var8 = gh.field_e.field_s[0];
                           var9 = var8 % 256 + 1;
-                          kn.a((mm) (Object) se.field_S, (byte) -39, 330, Integer.toString(var9), 16777215, 400 + var2_int);
+                          kn.a(se.field_S, (byte) -39, 330, Integer.toString(var9), 16777215, 400 + var2_int);
                           var10 = var8 >>> -1510192632;
                           var7 = 0;
-                          kn.a((mm) (Object) se.field_S, (byte) -39, 330, Integer.toString(var10), 16777215, var2_int + 545);
+                          kn.a(se.field_S, (byte) -39, 330, Integer.toString(var10), 16777215, var2_int + 545);
                           break L5;
                         }
                       }
@@ -4208,8 +4208,8 @@ final class ke {
                 break L4;
               }
               L12: {
-                if (stackIn_41_0 != (Object) (Object) stackIn_41_1) {
-                  ed.a(16777215, 320 - -var2_int, var6, 220, (byte) 75, (mm) (Object) w.field_kb);
+                if (stackIn_41_0 != stackIn_41_1) {
+                  ed.a(16777215, 320 - -var2_int, var6, 220, (byte) 75, w.field_kb);
                   break L12;
                 } else {
                   break L12;
@@ -4220,7 +4220,7 @@ final class ke {
                   if (!ph.n(-30146)) {
                     break L14;
                   } else {
-                    ed.a(16777215, 320 + var2_int, lf.field_d, 330, (byte) 75, (mm) (Object) se.field_S);
+                    ed.a(16777215, 320 + var2_int, lf.field_d, 330, (byte) 75, se.field_S);
                     if (var15 == 0) {
                       break L13;
                     } else {
@@ -4229,7 +4229,7 @@ final class ke {
                   }
                 }
                 if (var7 != 0) {
-                  ed.a(16777215, var2_int + 320, af.field_e, 330, (byte) 75, (mm) (Object) se.field_S);
+                  ed.a(16777215, var2_int + 320, af.field_e, 330, (byte) 75, se.field_S);
                   break L13;
                 } else {
                   break L13;
@@ -4542,7 +4542,7 @@ final class ke {
                                   }
                                 }
                               }
-                              int discarded$2 = ga.a(var5.field_n, 1, var7, var6, 20, var8, var9, (mm) (Object) a.field_t, (byte) -128, 1, var5.field_l - -var3_int);
+                              int discarded$2 = ga.a(var5.field_n, 1, var7, var6, 20, var8, var9, a.field_t, (byte) -128, 1, var5.field_l - -var3_int);
                               if (var15 == 0) {
                                 break L23;
                               } else {
@@ -4577,7 +4577,7 @@ final class ke {
                         }
                         L29: {
                           var13 = stackIn_101_0;
-                          int discarded$3 = ga.a(-5 + var12 - var5.field_l, 1, var7, var6, 20, var8, var9, (mm) (Object) a.field_t, (byte) -124, 2, var5.field_l - -var3_int);
+                          int discarded$3 = ga.a(-5 + var12 - var5.field_l, 1, var7, var6, 20, var8, var9, a.field_t, (byte) -124, 2, var5.field_l - -var3_int);
                           if (var5.field_d == 6) {
                             stackOut_104_0 = 1;
                             stackIn_105_0 = stackOut_104_0;
@@ -5109,12 +5109,12 @@ final class ke {
             }
             L6: {
               var15 = stackIn_20_0;
-              fl.a(param5, 256, param1, param7, 125 - -param9, (mm) (Object) param0);
-              kn.a((mm) (Object) param0, (byte) -39, param5, Integer.toString(param8), param1, var12 - -param9);
-              kn.a((mm) (Object) param0, (byte) -39, param5, Integer.toString(var11_int), param1, var13 - -param9);
-              kn.a((mm) (Object) param0, (byte) -39, param5, param6 + "%", param1, var14 + param9);
-              kn.a((mm) (Object) param0, (byte) -39, param5, param3 + "%", param1, param9 + var15);
-              kn.a((mm) (Object) param0, (byte) -39, param5, param2 + "%", param1, param9 + 545);
+              fl.a(param5, 256, param1, param7, 125 - -param9, param0);
+              kn.a(param0, (byte) -39, param5, Integer.toString(param8), param1, var12 - -param9);
+              kn.a(param0, (byte) -39, param5, Integer.toString(var11_int), param1, var13 - -param9);
+              kn.a(param0, (byte) -39, param5, param6 + "%", param1, var14 + param9);
+              kn.a(param0, (byte) -39, param5, param3 + "%", param1, param9 + var15);
+              kn.a(param0, (byte) -39, param5, param2 + "%", param1, param9 + 545);
               if (param4 == -5328) {
                 break L6;
               } else {
@@ -6211,10 +6211,6 @@ final class ke {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "Your rating is <%0>";
         field_h = new int[8192];
     }

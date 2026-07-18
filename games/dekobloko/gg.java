@@ -218,10 +218,6 @@ abstract class gg extends be {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = new Random();
         field_E = "Disruptive behaviour";
     }

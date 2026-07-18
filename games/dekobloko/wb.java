@@ -269,10 +269,6 @@ final class wb extends w {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Nb = null;
     }
 }

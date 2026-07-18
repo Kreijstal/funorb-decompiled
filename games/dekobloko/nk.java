@@ -489,7 +489,7 @@ final class nk {
             } else {
               L1: {
                 var8 = new wj(ah.field_c, param2);
-                ah.field_c.a((byte) -123, (ce) (Object) var8);
+                ah.field_c.a((byte) -123, var8);
                 if (!dg.b(-40)) {
                   L2: {
                     ve.field_Gc = param0;
@@ -672,13 +672,9 @@ final class nk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "The wildcard special item can be used in place of any other colour.";
         field_j = new int[8];
-        field_d = new String[][]{new String[2], new String[2], new String[2], new String[2], new String[2], new String[2], new String[2]};
+        field_d = new String[][]{new String[]{"Earthquake", "Causes stacks of loose pieces to collapse."}, new String[]{"Drill", "Individually pops every piece in its path."}, new String[]{"Bomb", "When you pop a shape touching a bomb, everything in your bucket of the same colour will explode."}, new String[]{"Power Drill", "Pops every entire shape, loose or solid, in its path. Loose shapes take touching solid shapes with them!"}, new String[]{"Water Capsule", "Turns every solid shape in your bucket into loose pieces. Can be quite spectacular."}, new String[]{"Poison", "Turns all the loose pieces in your bucket into solid shapes. Not good!"}, new String[]{"Wildcard", "Can be used in place of any other loose piece."}};
         field_f = new qm(8, 0, 4, 1);
         field_l = 0;
         field_i = false;

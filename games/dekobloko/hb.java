@@ -1382,10 +1382,6 @@ final class hb extends w {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Pb = "Players";
         field_Tb = "Please try changing the following settings:  ";
         field_Vb = new int[16384];

@@ -2399,98 +2399,96 @@ final class uk extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        int var0 = 0;
-        int var1 = 0;
-        long var2 = 0L;
-        long var4 = 0L;
-        long var6 = 0L;
-        long var8 = 0L;
-        long var10 = 0L;
-        long var12 = 0L;
-        int var14 = 0;
-        long stackIn_6_0 = 0L;
-        long stackOut_5_0 = 0L;
-        long stackOut_3_0 = 0L;
-        field_p = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
-        field_z = new int[8192];
-        field_x = new long[11];
-        field_s = new long[8][256];
-        var0 = 0;
-        L0: while (true) {
-          if (256 <= var0) {
-            field_x[0] = 0L;
-            var0 = 1;
-            L1: while (true) {
-              if (10 < var0) {
-                field_y = "Passwords can only contain letters and numbers";
-                return;
+        $cfr$clinit: {
+            int var0 = 0;
+            int var1 = 0;
+            long var2 = 0L;
+            long var4 = 0L;
+            long var6 = 0L;
+            long var8 = 0L;
+            long var10 = 0L;
+            long var12 = 0L;
+            int var14 = 0;
+            long stackIn_6_0 = 0L;
+            long stackOut_5_0 = 0L;
+            long stackOut_3_0 = 0L;
+            field_p = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
+            field_z = new int[8192];
+            field_x = new long[11];
+            field_s = new long[8][256];
+            var0 = 0;
+            L0: while (true) {
+              if (256 <= var0) {
+                field_x[0] = 0L;
+                var0 = 1;
+                L1: while (true) {
+                  if (10 < var0) {
+                    field_y = "Passwords can only contain letters and numbers";
+                    break $cfr$clinit;
+                  } else {
+                    var1 = (-1 + var0) * 8;
+                    field_x[var0] = pj.a(jg.a(255L, field_s[7][7 + var1]), pj.a(pj.a(pj.a(pj.a(pj.a(pj.a(jg.a(field_s[1][var1 - -1], 71776119061217280L), jg.a(field_s[0][var1], -72057594037927936L)), jg.a(field_s[2][2 + var1], 280375465082880L)), jg.a(1095216660480L, field_s[3][var1 - -3])), jg.a(4278190080L, field_s[4][var1 - -4])), jg.a(16711680L, field_s[5][var1 - -5])), jg.a(65280L, field_s[6][var1 - -6])));
+                    var0++;
+                    continue L1;
+                  }
+                }
               } else {
-                var1 = (-1 + var0) * 8;
-                field_x[var0] = pj.a(jg.a(255L, field_s[7][7 + var1]), pj.a(pj.a(pj.a(pj.a(pj.a(pj.a(jg.a(field_s[1][var1 - -1], 71776119061217280L), jg.a(field_s[0][var1], -72057594037927936L)), jg.a(field_s[2][2 + var1], 280375465082880L)), jg.a(1095216660480L, field_s[3][var1 - -3])), jg.a(4278190080L, field_s[4][var1 - -4])), jg.a(16711680L, field_s[5][var1 - -5])), jg.a(65280L, field_s[6][var1 - -6])));
-                var0++;
-                continue L1;
+                L2: {
+                  var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+                  if (0 != (1 & var0)) {
+                    stackOut_5_0 = (long)(var1 & 255);
+                    stackIn_6_0 = stackOut_5_0;
+                    break L2;
+                  } else {
+                    stackOut_3_0 = (long)(var1 >>> 1748502536);
+                    stackIn_6_0 = stackOut_3_0;
+                    break L2;
+                  }
+                }
+                L3: {
+                  var2 = stackIn_6_0;
+                  var4 = var2 << -1739026111;
+                  if (var4 >= 256L) {
+                    var4 = var4 ^ 285L;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                L4: {
+                  var6 = var4 << -2116044543;
+                  if (var6 < 256L) {
+                    break L4;
+                  } else {
+                    var6 = var6 ^ 285L;
+                    break L4;
+                  }
+                }
+                L5: {
+                  var8 = var2 ^ var6;
+                  var10 = var6 << -1833427391;
+                  if (var10 < 256L) {
+                    break L5;
+                  } else {
+                    var10 = var10 ^ 285L;
+                    break L5;
+                  }
+                }
+                var12 = var10 ^ var2;
+                field_s[0][var0] = jj.a(jj.a(jj.a(var8 << -536369200, jj.a(var10 << 1383493720, jj.a(jj.a(var6 << -473011736, jj.a(var2 << 962775152, var2 << 851384312)), var2 << -1186783072))), var4 << -1696148856), var12);
+                var14 = 1;
+                L6: while (true) {
+                  if (var14 >= 8) {
+                    var0++;
+                    continue L0;
+                  } else {
+                    field_s[var14][var0] = jj.a(field_s[var14 + -1][var0] >>> 225008840, field_s[var14 + -1][var0] << 538906104);
+                    var14++;
+                    continue L6;
+                  }
+                }
               }
             }
-          } else {
-            L2: {
-              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-              if (0 != (1 & var0)) {
-                stackOut_5_0 = (long)(var1 & 255);
-                stackIn_6_0 = stackOut_5_0;
-                break L2;
-              } else {
-                stackOut_3_0 = (long)(var1 >>> 1748502536);
-                stackIn_6_0 = stackOut_3_0;
-                break L2;
-              }
-            }
-            L3: {
-              var2 = stackIn_6_0;
-              var4 = var2 << -1739026111;
-              if (var4 >= 256L) {
-                var4 = var4 ^ 285L;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              var6 = var4 << -2116044543;
-              if (var6 < 256L) {
-                break L4;
-              } else {
-                var6 = var6 ^ 285L;
-                break L4;
-              }
-            }
-            L5: {
-              var8 = var2 ^ var6;
-              var10 = var6 << -1833427391;
-              if (var10 < 256L) {
-                break L5;
-              } else {
-                var10 = var10 ^ 285L;
-                break L5;
-              }
-            }
-            var12 = var10 ^ var2;
-            field_s[0][var0] = jj.a(jj.a(jj.a(var8 << -536369200, jj.a(var10 << 1383493720, jj.a(jj.a(var6 << -473011736, jj.a(var2 << 962775152, var2 << 851384312)), var2 << -1186783072))), var4 << -1696148856), var12);
-            var14 = 1;
-            L6: while (true) {
-              if (var14 >= 8) {
-                var0++;
-                continue L0;
-              } else {
-                field_s[var14][var0] = jj.a(field_s[var14 + -1][var0] >>> 225008840, field_s[var14 + -1][var0] << 538906104);
-                var14++;
-                continue L6;
-              }
-            }
-          }
         }
     }
 }

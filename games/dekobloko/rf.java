@@ -146,7 +146,7 @@ final class rf {
             L1: {
               if (null == pk.field_v) {
                 pk.field_v = new qn(ah.field_c, ed.field_d);
-                ah.field_c.a((byte) -107, (ce) (Object) pk.field_v);
+                ah.field_c.a((byte) -107, pk.field_v);
                 break L1;
               } else {
                 break L1;
@@ -204,7 +204,7 @@ final class rf {
           if (null == ik.field_f) {
             break L0;
           } else {
-            var1 = (Object) (Object) ik.field_f;
+            var1 = ik.field_f;
             synchronized (var1) {
               L1: {
                 ik.field_f = null;
@@ -218,8 +218,8 @@ final class rf {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            param1.removeKeyListener((java.awt.event.KeyListener) (Object) f.field_r);
-            param1.removeFocusListener((java.awt.event.FocusListener) (Object) f.field_r);
+            param1.removeKeyListener(f.field_r);
+            param1.removeFocusListener(f.field_r);
             wi.field_b = -1;
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "rf.F(" + 12 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -390,10 +390,6 @@ final class rf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new qm(14, 0, 4, 1);
         field_p = "Unpacking sound effects";
         field_i = "When you match pieces, the machine transforms them into solid shapes.";

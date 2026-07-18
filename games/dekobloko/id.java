@@ -285,10 +285,6 @@ final class id extends ma {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_O = "<%0>: <%1>";
         field_M = new int[8192];
     }

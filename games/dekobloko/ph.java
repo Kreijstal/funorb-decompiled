@@ -514,10 +514,6 @@ final class ph extends ca {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Hb = "To report a player, click on the most suitable option from the Rules of Conduct. Please do not abuse this form.";
         field_Bb = "<%0> is already on your ignore list.";
         field_Ab = false;

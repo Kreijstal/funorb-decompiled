@@ -48,7 +48,7 @@ final class ga implements lh {
           L0: {
             L1: {
               var11_int = 2;
-              if ((Object) (Object) param7 == (Object) (Object) se.field_S) {
+              if (param7 == se.field_S) {
                 var11_int = 1;
                 break L1;
               } else {
@@ -72,7 +72,7 @@ final class ga implements lh {
               int discarded$21 = param7.a(param3, param10 - -var11_int, param2 + -var11_int, param0, param5, 65793, -1, param9, param1, param4);
               int discarded$22 = param7.a(param3, param10 - -var11_int, param2, param0, param5, 65793, -1, param9, param1, param4);
               int discarded$23 = param7.a(param3, var11_int + param10, param2 + var11_int, param0, param5, 65793, -1, param9, param1, param4);
-              if ((Object) (Object) param7 != (Object) (Object) w.field_kb) {
+              if (param7 != w.field_kb) {
                 break L3;
               } else {
                 int discarded$24 = param7.a(param3, 1 + param10, -var11_int + param2, param0, param5, 65793, -1, param9, param1, param4);
@@ -282,10 +282,6 @@ final class ga implements lh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "If you do nothing the game will revert to normal view in <%0> seconds.";
         field_a = "Rating";
         field_e = new jc();

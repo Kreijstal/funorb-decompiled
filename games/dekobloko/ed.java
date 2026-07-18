@@ -50,7 +50,7 @@ final class ed {
           L0: {
             L1: {
               var6_int = 2;
-              if ((Object) (Object) se.field_S != (Object) (Object) param5) {
+              if (se.field_S != param5) {
                 break L1;
               } else {
                 var6_int = 1;
@@ -66,7 +66,7 @@ final class ed {
               param5.b(param2, param1 - -var6_int, param3 + -var6_int, 0, -1);
               param5.b(param2, var6_int + param1, param3, 0, -1);
               param5.b(param2, param1 + var6_int, param3 + var6_int, 0, -1);
-              if ((Object) (Object) param5 == (Object) (Object) w.field_kb) {
+              if (param5 == w.field_kb) {
                 param5.b(param2, 1 + param1, param3 + -var6_int, 0, -1);
                 param5.b(param2, param1 - 1, -var6_int + param3, 0, -1);
                 param5.b(param2, param1 + var6_int, param3 + -1, 0, -1);
@@ -227,7 +227,7 @@ final class ed {
                     if (var4 != null) {
                       var8 = (CharSequence) (Object) var4.field_Ob;
                       var5 = kf.a(var8, (byte) 2);
-                      if (var5.equals((Object) (Object) var2)) {
+                      if (var5.equals(var2)) {
                         stackOut_16_0 = (wb) var4;
                         stackIn_17_0 = stackOut_16_0;
                         return stackIn_17_0;
@@ -284,10 +284,6 @@ final class ed {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Name is available";
         field_a = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
         field_d = null;

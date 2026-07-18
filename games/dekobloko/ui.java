@@ -471,10 +471,6 @@ final class ui {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Steady...";
         field_t = new gh(2);
         field_L = "Some players haven't unlocked the currently selected game options.<br>Please see the player list on the left for details.";

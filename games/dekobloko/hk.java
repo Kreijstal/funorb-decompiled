@@ -2075,10 +2075,6 @@ final class hk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = 0;
         field_b = 0;
         field_h = 0;

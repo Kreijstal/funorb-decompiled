@@ -173,10 +173,6 @@ final class ob extends fm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Message game";
         field_j = new ck[8][7][16];
     }

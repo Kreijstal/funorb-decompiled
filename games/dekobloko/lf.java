@@ -175,10 +175,6 @@ final class lf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Create a free account to start using this feature";
         field_b = "This password contains repeated characters, and would be easy to guess";
     }

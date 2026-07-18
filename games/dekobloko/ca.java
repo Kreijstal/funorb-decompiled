@@ -78,7 +78,7 @@ abstract class ca extends t {
               break L2;
             }
             L4: {
-              ((ca) this).b((ce) (Object) ((ca) this).field_ub, (byte) -55);
+              ((ca) this).b(((ca) this).field_ub, (byte) -55);
               ((ca) this).field_sb = null;
               if (param1 == -29870) {
                 break L4;
@@ -1156,10 +1156,6 @@ abstract class ca extends t {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_ob = "Your ignore list is full. Max of 100 hit.";
     }
 }

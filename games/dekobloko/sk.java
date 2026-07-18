@@ -554,10 +554,6 @@ final class sk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "START!";
         field_a = new ei[2][8];
         field_m = "Private";

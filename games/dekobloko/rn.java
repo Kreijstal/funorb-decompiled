@@ -17,10 +17,6 @@ final class rn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "rn.A(";
         field_b = new int[8192];
         field_a = "You must be a member to play with the current options.";

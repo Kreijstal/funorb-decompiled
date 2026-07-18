@@ -89,7 +89,7 @@ final class em {
                 break L2;
               }
             }
-            ah.field_c.a((byte) -119, (ce) (Object) pk.field_v);
+            ah.field_c.a((byte) -119, pk.field_v);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,7 +147,7 @@ final class em {
                   break L4;
                 }
               }
-              ((em) this).field_c.a((Object) (Object) var3, (long)param1, 69);
+              ((em) this).field_c.a(var3, (long)param1, 69);
               stackOut_12_0 = (ac) var3;
               stackIn_13_0 = stackOut_12_0;
               break L0;
@@ -697,10 +697,6 @@ final class em {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "<%0> has withdrawn the request to join.";
     }
 }

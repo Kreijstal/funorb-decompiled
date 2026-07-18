@@ -561,10 +561,6 @@ abstract class cf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 640;
         field_e = "FIGHT!";
         field_j = "Quit";

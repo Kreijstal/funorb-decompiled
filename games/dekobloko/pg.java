@@ -29,10 +29,6 @@ final class pg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new boolean[8];
         field_c = "Accept draw";
         field_g = "TAB - hide chat temporarily";

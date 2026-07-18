@@ -209,10 +209,6 @@ final class jc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = 0;
         field_a = "Logging in...";
         field_e = "You have <%0> unread messages!";

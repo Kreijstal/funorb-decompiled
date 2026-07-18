@@ -587,26 +587,26 @@ final class cg {
         String stackOut_30_2 = null;
         try {
           L0: {
-            if (param0.equals((Object) (Object) "B")) {
+            if (param0.equals("B")) {
               stackOut_2_0 = Byte.TYPE;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
             } else {
-              if (param0.equals((Object) (Object) "I")) {
+              if (param0.equals("I")) {
                 stackOut_6_0 = Integer.TYPE;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
               } else {
-                if (!param0.equals((Object) (Object) "S")) {
-                  if (!param0.equals((Object) (Object) "J")) {
-                    if (!param0.equals((Object) (Object) "Z")) {
-                      if (param0.equals((Object) (Object) "F")) {
+                if (!param0.equals("S")) {
+                  if (!param0.equals("J")) {
+                    if (!param0.equals("Z")) {
+                      if (param0.equals("F")) {
                         stackOut_19_0 = Float.TYPE;
                         stackIn_20_0 = stackOut_19_0;
                         return stackIn_20_0;
                       } else {
-                        if (!param0.equals((Object) (Object) "D")) {
-                          if (!param0.equals((Object) (Object) "C")) {
+                        if (!param0.equals("D")) {
+                          if (!param0.equals("C")) {
                             var2_int = 85 / ((-49 - param1) / 43);
                             stackOut_27_0 = Class.forName(param0);
                             stackIn_28_0 = stackOut_27_0;
@@ -682,10 +682,6 @@ final class cg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new vj();
         field_b = " Press 'ESC' to accept.";
     }

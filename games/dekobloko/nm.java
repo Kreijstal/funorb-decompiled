@@ -241,8 +241,8 @@ final class nm extends w {
                       var7 = var18;
                       if (pk.field_r == 2) {
                         var22 = (CharSequence) (Object) ed.field_c;
-                        var20 = cm.a((byte) 94, oj.field_b, new String[1]);
-                        var8 = cm.a((byte) 108, im.field_j, new String[1]);
+                        var20 = cm.a((byte) 94, oj.field_b, new String[]{ua.a(var22, true)});
+                        var8 = cm.a((byte) 108, im.field_j, new String[]{var16});
                         var9 = ff.field_o.a(var20);
                         var10 = ff.field_o.a(var8);
                         if (var9 <= var10) {
@@ -285,7 +285,7 @@ final class nm extends w {
                                   }
                                 }
                               }
-                              var7 = "[" + cm.a((byte) 125, hf.field_a, new String[1]) + "] ";
+                              var7 = "[" + cm.a((byte) 125, hf.field_a, new String[]{cd.field_m.field_Vb}) + "] ";
                               break L5;
                             }
                           }
@@ -397,7 +397,7 @@ final class nm extends w {
             ((nm) this).field_Rb = new w(0L, param2);
             ((nm) this).field_Sb = new jd(0L, param3);
             ((nm) this).a(((nm) this).field_Rb, -16834);
-            ((nm) this).a((w) (Object) ((nm) this).field_Sb, -16834);
+            ((nm) this).a(((nm) this).field_Sb, -16834);
             ((nm) this).field_Ob = param1;
             ((nm) this).field_Rb.a(param1, -16834);
         } catch (RuntimeException runtimeException) {
@@ -524,10 +524,6 @@ final class nm extends w {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Pb = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
         field_Nb = new int[128];
     }

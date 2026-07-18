@@ -115,10 +115,10 @@ final class md extends kf implements rl, vn {
             ((md) this).field_W = param0;
             ((md) this).field_V = new ek(fa.field_o, (kg) null);
             ((md) this).field_V.field_p = (gl) (Object) new fk();
-            var7 = cm.a((byte) 118, i.field_a, new String[2]);
+            var7 = cm.a((byte) 118, i.field_a, new String[]{this.h((byte) 60), this.g((byte) 57)});
             var3 = 20;
             var4 = new a(hh.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, hh.field_e.field_R, -1, 2147483647, true);
-            ((md) this).field_T = new qi(var7, (gl) (Object) var4);
+            ((md) this).field_T = new qi(var7, var4);
             ((md) this).field_T.field_B = "";
             ((md) this).field_T.a(rb.field_i, 0, 1);
             ((md) this).field_T.a(rb.field_i, 1, 1);
@@ -126,12 +126,12 @@ final class md extends kf implements rl, vn {
             ((md) this).field_T.field_v = (kg) this;
             ((md) this).field_T.c(15, 26, var3, ((md) this).field_t + -40);
             var3 = var3 + (((md) this).field_T.field_y + 15);
-            ((md) this).b((ce) (Object) ((md) this).field_T, (byte) -55);
+            ((md) this).b(((md) this).field_T, (byte) -55);
             var5 = 4;
             var6 = 200;
             ((md) this).field_V.b(40, var6, 300 - var6 >> 1, var3, -16555);
             ((md) this).field_V.field_v = (kg) this;
-            ((md) this).b((ce) (Object) ((md) this).field_V, (byte) -55);
+            ((md) this).b(((md) this).field_V, (byte) -55);
             ((md) this).b(var5 + 55 + var3, 300, 0, 0, -16555);
             break L0;
           }
@@ -211,11 +211,11 @@ final class md extends kf implements rl, vn {
               } else {
                 var8 = ed.a(param1, (byte) -94);
                 if (var8 == null) {
-                  stackOut_10_0 = cm.a((byte) 94, wc.field_q, new String[1]);
+                  stackOut_10_0 = cm.a((byte) 94, wc.field_q, new String[]{param1});
                   stackIn_11_0 = stackOut_10_0;
                   return stackIn_11_0;
                 } else {
-                  bh discarded$2 = qi.field_S.a(64, (bh) (Object) var8);
+                  bh discarded$2 = qi.field_S.a(64, var8);
                   L1: while (true) {
                     var7 = (wb) (Object) qi.field_S.d(true);
                     if (var7 == null) {
@@ -455,10 +455,6 @@ final class md extends kf implements rl, vn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_U = new String[8];
         field_S = "<%0> has been removed.";
         field_Y = "Specials enabled:";

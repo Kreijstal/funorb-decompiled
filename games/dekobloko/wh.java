@@ -16,10 +16,6 @@ final class wh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "wh.A(";
         field_e = "Player";
         field_b = false;

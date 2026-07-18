@@ -340,9 +340,9 @@ final class td {
                                                           var12 = 50;
                                                           var21 = param0.field_g[var11];
                                                           var22 = param0.field_v[var21];
-                                                          var23 = (Object) (Object) param0.field_D[var21];
-                                                          var25 = (Object) (Object) param0.field_c[var21];
-                                                          var24 = (Object) (Object) param0.field_u[var21];
+                                                          var23 = param0.field_D[var21];
+                                                          var25 = param0.field_c[var21];
+                                                          var24 = param0.field_u[var21];
                                                           break L13;
                                                         }
                                                       }
@@ -455,9 +455,9 @@ final class td {
                                                                         var12 = 50;
                                                                         var21 = param0.field_g[var11];
                                                                         var22 = param0.field_v[var21];
-                                                                        var23 = (Object) (Object) param0.field_D[var21];
-                                                                        var25 = (Object) (Object) param0.field_c[var21];
-                                                                        var24 = (Object) (Object) param0.field_u[var21];
+                                                                        var23 = param0.field_D[var21];
+                                                                        var25 = param0.field_c[var21];
+                                                                        var24 = param0.field_u[var21];
                                                                         break L24;
                                                                       }
                                                                     }
@@ -505,9 +505,9 @@ final class td {
                                                                     var12 = 50;
                                                                     var21 = param0.field_g[var11];
                                                                     var22 = param0.field_v[var21];
-                                                                    var23 = (Object) (Object) param0.field_D[var21];
-                                                                    var25 = (Object) (Object) param0.field_c[var21];
-                                                                    var24 = (Object) (Object) param0.field_u[var21];
+                                                                    var23 = param0.field_D[var21];
+                                                                    var25 = param0.field_c[var21];
+                                                                    var24 = param0.field_u[var21];
                                                                     break L28;
                                                                   }
                                                                 }
@@ -900,7 +900,7 @@ final class td {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         int stackOut_1_0 = 0;
-        var5 = (Object) (Object) field_a;
+        var5 = field_a;
         synchronized (var5) {
           L0: {
             field_a.field_j = param2;
@@ -950,10 +950,6 @@ final class td {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new vl();
     }
 }

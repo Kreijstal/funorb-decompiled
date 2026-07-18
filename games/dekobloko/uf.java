@@ -85,7 +85,7 @@ final class uf extends wl {
         var7 = client.field_A ? 1 : 0;
         try {
           L0: {
-            fl.a(130, 256, 16694016, mb.field_e, param0 + 80, (mm) (Object) w.field_kb);
+            fl.a(130, 256, 16694016, mb.field_e, param0 + 80, w.field_kb);
             var2_int = 140;
             var3 = 0;
             var4 = 0;
@@ -95,9 +95,9 @@ final class uf extends wl {
               } else {
                 L2: {
                   var5 = 245 * (var4 % 2) + (80 + param0);
-                  fl.a(var2_int - -14, 256, 16777215, nk.field_d[var4][0], var5, (mm) (Object) w.field_kb);
+                  fl.a(var2_int - -14, 256, 16777215, nk.field_d[var4][0], var5, w.field_kb);
                   tg.a(true, var4).c(var5 - -param0, 20 + var2_int, 18, 18);
-                  var6 = ga.a(211, 0, var2_int + 20, nk.field_d[var4][1], 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -128, 0, var5 + 24);
+                  var6 = ga.a(211, 0, var2_int + 20, nk.field_d[var4][1], 16, 64, 16777215, se.field_S, (byte) -128, 0, var5 + 24);
                   if (var3 < var6) {
                     var3 = var6;
                     break L2;
@@ -360,10 +360,6 @@ final class uf extends wl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = "Concluded";
         field_B = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
     }

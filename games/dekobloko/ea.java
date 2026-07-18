@@ -74,7 +74,7 @@ final class ea extends cf {
                       if (null == ((ea) this).field_m) {
                         break L1;
                       } else {
-                        if (!((ea) this).field_m.equals((Object) (Object) param2)) {
+                        if (!((ea) this).field_m.equals(param2)) {
                           break L1;
                         } else {
                           return;
@@ -239,7 +239,7 @@ final class ea extends cf {
             var14 = null;
             if (param0 > 0) {
               var16 = new ck(16, 16);
-              var14 = (Object) (Object) var16;
+              var14 = var16;
               var16.a();
               hk.a(0, 0, 16, 16, param0);
               break L0;
@@ -266,7 +266,7 @@ final class ea extends cf {
             if (((ea) this).field_w) {
                 if (((ea) this).field_s == 0) {
                     if (null != ((ea) this).field_m) {
-                        if (!(!((ea) this).field_m.equals((Object) (Object) param2))) {
+                        if (!(!((ea) this).field_m.equals(param2))) {
                             return;
                         }
                     }
@@ -408,7 +408,7 @@ final class ea extends cf {
                               if (null == ((ea) this).field_m) {
                                 break L2;
                               } else {
-                                if (!((ea) this).field_m.equals((Object) (Object) param0)) {
+                                if (!((ea) this).field_m.equals(param0)) {
                                   break L2;
                                 } else {
                                   return;
@@ -433,7 +433,7 @@ final class ea extends cf {
                 ((ea) this).field_s = param5;
                 var16 = new String[param2.a(param0, param3) + 1];
                 var17 = var16;
-                var10 = Math.max(1, param2.a(param0, new int[1], var17));
+                var10 = Math.max(1, param2.a(param0, new int[]{param3}, var17));
                 if (((ea) this).field_q != 3) {
                   break L3;
                 } else {
@@ -656,7 +656,7 @@ final class ea extends cf {
             if (((ea) this).field_w) {
                 if (((ea) this).field_s == 2) {
                     if (((ea) this).field_m != null) {
-                        if (((ea) this).field_m.equals((Object) (Object) param4)) {
+                        if (((ea) this).field_m.equals(param4)) {
                             return;
                         }
                     }
@@ -848,10 +848,6 @@ final class ea extends cf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = 0;
         field_u = "Invite players";
         field_y = "Under the Sea";

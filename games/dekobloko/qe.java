@@ -477,7 +477,7 @@ final class qe {
           var10 = null;
           if (param2) {
             var13 = var9.c();
-            var10 = (Object) (Object) var13;
+            var10 = var13;
             var13.a();
             hk.a(0, 0, 5, 0);
             hk.a(0, 1, 3, 0);
@@ -495,7 +495,7 @@ final class qe {
             break L1;
           } else {
             var14 = var9.c();
-            var11 = (Object) (Object) var14;
+            var11 = var14;
             var14.a();
             hk.a(11, 0, 5, 0);
             hk.a(13, 1, 3, 0);
@@ -553,10 +553,6 @@ final class qe {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new int[8];
         field_h = "Unable to add name - system busy";
         field_j = "To activate a special item, pop a shape next to it.";

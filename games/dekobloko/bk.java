@@ -444,10 +444,6 @@ final class bk extends w {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Nb = "Game options";
         field_Qb = "Elapsed time";
         field_Ob = "Waiting for extra data";

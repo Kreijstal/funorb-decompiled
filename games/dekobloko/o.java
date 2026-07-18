@@ -33,10 +33,6 @@ final class o {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 50;
         field_h = "Add friend";
         field_g = b.h(-123);

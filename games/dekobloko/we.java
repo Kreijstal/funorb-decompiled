@@ -171,10 +171,6 @@ abstract class we {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "<%0> players want to draw. Hold 'F1' for details.";
         field_c = "achievements to collect";
         field_g = "Rematch!";

@@ -67,7 +67,7 @@ final class gb extends w {
           } else {
             ((gb) this).field_Wb[((gb) this).field_Rb] = new qd(0L, (w) null, (w) null, ((gb) this).field_Qb, (ck) null, on.field_i);
             ((gb) this).field_Wb[((gb) this).field_Rb].field_W = 1;
-            ((gb) this).a((w) (Object) ((gb) this).field_Wb[((gb) this).field_Rb], -16834);
+            ((gb) this).a(((gb) this).field_Wb[((gb) this).field_Rb], -16834);
             ((gb) this).field_Yb[((gb) this).field_Rb] = -1;
             ((gb) this).field_Rb = ((gb) this).field_Rb + 1;
             break L0;
@@ -240,7 +240,7 @@ final class gb extends w {
         ((gb) this).field_Wb[((gb) this).field_Rb].field_S = ((gb) this).field_cc;
         ((gb) this).field_Wb[((gb) this).field_Rb].field_Gb = true;
         ((gb) this).field_Wb[((gb) this).field_Rb].field_W = 1;
-        ((gb) this).a((w) (Object) ((gb) this).field_Wb[((gb) this).field_Rb], -16834);
+        ((gb) this).a(((gb) this).field_Wb[((gb) this).field_Rb], -16834);
         ((gb) this).field_Yb[((gb) this).field_Rb] = param1;
         if (param0 != 4193) {
             return;
@@ -253,7 +253,7 @@ final class gb extends w {
     }
 
     gb(gb param0) {
-        this((w) (Object) param0, param0.field_cc, param0.field_Qb, param0.field_ec, param0.field_Sb, param0.field_Ub, param0.field_Nb, param0.field_bc, param0.field_Xb);
+        this(param0, param0.field_cc, param0.field_Qb, param0.field_ec, param0.field_Sb, param0.field_Ub, param0.field_Nb, param0.field_bc, param0.field_Xb);
     }
 
     gb(w param0, ck[] param1, w param2, w param3, int param4, int param5, int param6, int param7, int param8) {
@@ -282,7 +282,7 @@ final class gb extends w {
             ((gb) this).field_Wb[((gb) this).field_Rb].field_Gb = true;
             ((gb) this).field_Wb[((gb) this).field_Rb].field_W = 1;
             int var4_int = -81 / ((24 - param2) / 32);
-            ((gb) this).a((w) (Object) ((gb) this).field_Wb[((gb) this).field_Rb], -16834);
+            ((gb) this).a(((gb) this).field_Wb[((gb) this).field_Rb], -16834);
             ((gb) this).field_Yb[((gb) this).field_Rb] = param1;
             ((gb) this).field_Rb = ((gb) this).field_Rb + 1;
         } catch (RuntimeException runtimeException) {
@@ -297,10 +297,6 @@ final class gb extends w {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_ac = "Join";
         field_Vb = 0;
         field_Tb = "Encouraging rule breaking";

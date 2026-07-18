@@ -19,7 +19,7 @@ final class p {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                Object discarded$2 = nc.a("resizing", param1 + -14511, se.h(param1 ^ -25126), new Object[1]);
+                Object discarded$2 = nc.a("resizing", param1 + -14511, se.h(param1 ^ -25126), new Object[]{new Integer(param0)});
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -43,10 +43,6 @@ final class p {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Create unrated game";
         field_d = "Position";
     }

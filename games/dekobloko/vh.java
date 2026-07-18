@@ -98,10 +98,6 @@ final class vh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Asking for or providing contact information";
         field_e = 15;
         field_g = 0;

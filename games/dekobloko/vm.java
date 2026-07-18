@@ -393,7 +393,7 @@ final class vm extends bh {
 
     final static void a(int param0, ig param1) {
         try {
-            ie.field_c.a((w) (Object) param1, -16834);
+            ie.field_c.a(param1, -16834);
             int var2_int = -14;
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "vm.B(" + 107 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -408,10 +408,6 @@ final class vm extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = "Name";
         field_p = "Withdraw invitation to <%0> to join this game";
         field_u = new tb();

@@ -98,10 +98,6 @@ final class fb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Hide players in <%0>'s game";
         field_a = "Type your age in years";
         field_g = new java.awt.Color(10040319);

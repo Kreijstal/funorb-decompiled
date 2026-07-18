@@ -19,10 +19,6 @@ final class om {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "om.A(";
         field_b = "Return to lobby";
         field_c = "Played";

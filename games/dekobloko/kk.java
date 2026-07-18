@@ -212,10 +212,6 @@ final class kk implements gl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Hide chat";
         field_q = "<%0>: ";
         field_p = new um();

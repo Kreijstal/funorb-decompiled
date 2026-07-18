@@ -26,10 +26,6 @@ final class fa extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Continue";
     }
 }

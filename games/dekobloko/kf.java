@@ -114,7 +114,7 @@ class kf extends ce implements ra {
                 Object var4 = null;
                 boolean discarded$0 = ((kf) this).a(false, (ce) null);
             }
-            ((kf) this).field_H.a((bh) (Object) param0, 2777);
+            ((kf) this).field_H.a(param0, 2777);
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "kf.KC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -581,7 +581,7 @@ class kf extends ce implements ra {
                       break L2;
                     } else {
                       var5 = new rd(((kf) this).field_H);
-                      bh discarded$2 = var5.a((bh) (Object) var4, (byte) -88);
+                      bh discarded$2 = var5.a(var4, (byte) -88);
                       var6 = (ce) (Object) var5.d(2078965185);
                       L3: while (true) {
                         if (var6 == null) {
@@ -1170,7 +1170,7 @@ class kf extends ce implements ra {
                       break L3;
                     } else {
                       var5 = new rd(((kf) this).field_H);
-                      bh discarded$2 = var5.a((bh) (Object) var4, false);
+                      bh discarded$2 = var5.a(var4, false);
                       var6 = (ce) (Object) var5.a(param0 ^ -24);
                       L4: while (true) {
                         if (var6 == null) {
@@ -1346,10 +1346,6 @@ class kf extends ce implements ra {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_R = "Offer draw";
         field_N = "Unable to connect to the data server. Please check any firewall you are using.";
         field_L = -1;

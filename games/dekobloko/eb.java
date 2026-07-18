@@ -120,10 +120,6 @@ final class eb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "You need to play <%0> more rated games to unlock this option.";
         field_r = "Quick Chat game";
         field_c = "SPEED UP!";

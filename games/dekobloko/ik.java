@@ -176,7 +176,7 @@ final class ik {
             if (!jj.field_f.a(91)) {
               break L0;
             } else {
-              if (!param1.equals((Object) (Object) jj.field_f.b((byte) 86))) {
+              if (!param1.equals(jj.field_f.b((byte) 86))) {
                 jj.field_f = ui.a(0, param1);
                 break L0;
               } else {
@@ -218,10 +218,6 @@ final class ik {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
         field_g = "Offer unrated rematch";
         field_b = new ck[6][4];

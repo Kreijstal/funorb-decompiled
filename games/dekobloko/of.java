@@ -117,10 +117,6 @@ abstract class of {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "That name is not available";
         field_a = new um();
         field_f = new byte[1000][];

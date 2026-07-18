@@ -104,10 +104,6 @@ final class fj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Withdraw request to join <%0>'s game";
         field_e = false;
         field_f = "Music: ";

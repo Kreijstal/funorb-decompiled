@@ -510,10 +510,6 @@ final class kj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var1 = 0;
         field_u = new int[32768];
         Random var0 = new Random(0L);

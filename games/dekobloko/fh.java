@@ -134,7 +134,7 @@ final class fh {
                     break L1;
                   } else {
                     sn.a(false);
-                    u.field_i.a((byte) -105, (ce) (Object) new ib(u.field_i, kl.field_p));
+                    u.field_i.a((byte) -105, new ib(u.field_i, kl.field_p));
                     break L1;
                   }
                 }
@@ -162,10 +162,6 @@ final class fh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "<%0> WINS!";
         field_e = new i();
     }

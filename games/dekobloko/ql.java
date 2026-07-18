@@ -185,11 +185,11 @@ final class ql extends java.awt.Canvas implements java.awt.event.FocusListener {
                       var7 = (uk) (Object) var6;
                       L2: while (true) {
                         if (param0.field_c == var5) {
-                          fm.a((byte) 113, (bh) (Object) var7, var5);
+                          fm.a((byte) 113, var7, var5);
                           continue L1;
                         } else {
                           if (var7.field_o <= ((uk) (Object) var5).field_o) {
-                            fm.a((byte) 113, (bh) (Object) var7, var5);
+                            fm.a((byte) 113, var7, var5);
                             continue L1;
                           } else {
                             var5 = var5.field_b;
@@ -254,7 +254,7 @@ final class ql extends java.awt.Canvas implements java.awt.event.FocusListener {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        var1 = (Object) (Object) ik.field_f;
+        var1 = ik.field_f;
         synchronized (var1) {
           L0: {
             L1: {
@@ -296,10 +296,6 @@ final class ql extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Month";
         field_f = "Reject";
     }

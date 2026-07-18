@@ -119,7 +119,7 @@ final class qf extends ba implements qh, tn {
                 }
               }
             }
-            stackOut_5_0 = cm.a((byte) 99, ad.field_b, new String[2]);
+            stackOut_5_0 = cm.a((byte) 99, ad.field_b, new String[]{"1890", Integer.toString(var5 - 3)});
             stackIn_6_0 = stackOut_5_0;
             return stackIn_6_0;
           }
@@ -211,7 +211,7 @@ final class qf extends ba implements qh, tn {
                 field_l = null;
             }
             dm.field_c = new he(param0, param2, false, true, true);
-            de.field_W.c((ce) (Object) dm.field_c, (byte) 91);
+            de.field_W.c(dm.field_c, (byte) 91);
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "qf.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -281,9 +281,9 @@ final class qf extends ba implements qh, tn {
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-            param1.removeMouseListener((java.awt.event.MouseListener) (Object) ik.field_f);
-            param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ik.field_f);
-            param1.removeFocusListener((java.awt.event.FocusListener) (Object) ik.field_f);
+            param1.removeMouseListener(ik.field_f);
+            param1.removeMouseMotionListener(ik.field_f);
+            param1.removeFocusListener(ik.field_f);
             pa.field_bb = 0;
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "qf.L(" + -35 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -413,8 +413,8 @@ final class qf extends ba implements qh, tn {
           }
           var1 = qe.a((byte) 103);
           dm.field_c = new he(var1, (String) null, true, false, false);
-          ah.field_c.a((byte) -107, (ce) (Object) de.field_W);
-          de.field_W.c((ce) (Object) dm.field_c, (byte) 101);
+          ah.field_c.a((byte) -107, de.field_W);
+          de.field_W.c(dm.field_c, (byte) 101);
           de.field_W.j(100);
           return;
         }
@@ -597,10 +597,6 @@ final class qf extends ba implements qh, tn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Show chat (<%0> unread messages)";
         field_k = "Achievements This Game";
         field_m = "<%0> must play 1 more rated game before playing with the current options.";

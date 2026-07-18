@@ -68,9 +68,9 @@ final class qj implements gl {
           var7 = new ke(4);
           var10 = var7;
           if (!ph.n(-30146)) {
-            var7.a(new ec(22, sf.field_E[0], (mm) (Object) a.field_t), 127);
-            var7.a(new ec(22, sf.field_E[1], (mm) (Object) a.field_t), 120);
-            var7.a(new ec(22, sf.field_E[2], (mm) (Object) a.field_t), 117);
+            var7.a(new ec(22, sf.field_E[0], a.field_t), 127);
+            var7.a(new ec(22, sf.field_E[1], a.field_t), 120);
+            var7.a(new ec(22, sf.field_E[2], a.field_t), 117);
             var8 = var7.field_f[0];
             var3 = var8;
             var4 = var7.field_f[1];
@@ -87,14 +87,14 @@ final class qj implements gl {
             var5.field_m = 372;
             break L0;
           } else {
-            var9 = new ec(20, qn.field_rb, (mm) (Object) a.field_t);
+            var9 = new ec(20, qn.field_rb, a.field_t);
             var9.field_l = 320 - var9.field_n / 2;
             var9.field_m = 372;
             var10.a(var9, 122);
             break L0;
           }
         }
-        var11 = new ec(13, pc.field_f, (mm) (Object) a.field_t);
+        var11 = new ec(13, pc.field_f, a.field_t);
         var11.field_l = -(var11.field_n / 2) + 320;
         var11.field_m = 415;
         var10.a(var11, 115);
@@ -297,10 +297,6 @@ final class qj implements gl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "On";
         field_e = "Location";
     }

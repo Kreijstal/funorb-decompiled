@@ -522,10 +522,6 @@ final class ve extends w {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_hc = 10;
         field_uc = new ck[8][];
         field_cc = "You are on <%0>";

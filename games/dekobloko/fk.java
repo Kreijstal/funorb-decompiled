@@ -168,10 +168,6 @@ final class fk extends a {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_G = new pi[8][];
         field_I = new int[2];
     }

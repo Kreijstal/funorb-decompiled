@@ -291,10 +291,6 @@ final class gf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new gh(0);
         field_e = new qm(4, 1, 1, 1);
         field_d = "<%0> has declined the invitation.";

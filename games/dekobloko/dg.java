@@ -21,7 +21,7 @@ final class dg implements Iterator {
             ((dg) this).field_f = null;
         }
         ((dg) this).field_g = var1;
-        return (Object) (Object) var1;
+        return var1;
     }
 
     public final void remove() {
@@ -224,10 +224,6 @@ final class dg implements Iterator {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new ck[8][];
         field_e = new vj();
     }

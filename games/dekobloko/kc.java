@@ -465,7 +465,7 @@ final class kc extends bh {
                   if (bl.field_U.field_i != null) {
                     mk.field_d = new nh(bl.field_U.field_i, 5200, 0);
                     bl.field_U.field_i = null;
-                    var6 = (Object) (Object) new kh(255, mk.field_d, new nh(bl.field_U.field_l, 12000, 0), 2097152);
+                    var6 = new kh(255, mk.field_d, new nh(bl.field_U.field_l, 12000, 0), 2097152);
                     break L1;
                   } else {
                     break L1;
@@ -492,18 +492,18 @@ final class kc extends bh {
                         break L4;
                       }
                     }
-                    var7 = (Object) (Object) new kh(param2, mk.field_d, ig.field_cc[param2], 2097152);
+                    var7 = new kh(param2, mk.field_d, ig.field_cc[param2], 2097152);
                     break L2;
                   }
                 }
                 var8 = sc.field_l.a((byte) -86, param2, (kh) var7, (kh) var6, false);
-                stackOut_11_0 = new ji((of) (Object) var8, true, 1);
+                stackOut_11_0 = new ji(var8, true, 1);
                 stackIn_12_0 = stackOut_11_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (Object) (Object) decompiledCaughtException;
+              var6 = decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
             return stackIn_12_0;
@@ -523,10 +523,6 @@ final class kc extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = "In Multiplayer";
         field_s = "The Basics";
     }

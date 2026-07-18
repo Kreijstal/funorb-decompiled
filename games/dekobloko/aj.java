@@ -141,10 +141,6 @@ final class aj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "<%0> has left the lobby.";
     }
 }

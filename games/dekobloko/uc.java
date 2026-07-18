@@ -448,10 +448,6 @@ final class uc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = true;
         field_c = new af();
         field_f = "Accept";

@@ -105,10 +105,6 @@ final class kb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Data server full or too many connections from your address. Please try again in a few minutes.";
         field_c = new um();
         field_b = "Your request to join has been declined.";

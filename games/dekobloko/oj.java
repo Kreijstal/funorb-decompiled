@@ -510,7 +510,7 @@ final class oj {
                     stackIn_33_0 = stackOut_32_0;
                     break L0;
                   } else {
-                    ta.field_k.a((Object) (Object) rk.field_L, (byte) -128, ta.field_f);
+                    ta.field_k.a(rk.field_L, (byte) -128, ta.field_f);
                     rk.field_L = null;
                     d.field_f = null;
                     hd.field_n = 0;
@@ -561,14 +561,14 @@ final class oj {
           var5 = new ke(3);
           var8 = var5;
           if (ph.n(-30146)) {
-            var7 = new ec(20, qn.field_rb, (mm) (Object) a.field_t);
+            var7 = new ec(20, qn.field_rb, a.field_t);
             var7.field_l = 320 - var7.field_n / 2;
             var7.field_m = 372;
             var8.a(var7, 112);
             break L0;
           } else {
-            var5.a(new ec(23, vh.field_b[0], (mm) (Object) a.field_t), 117);
-            var5.a(new ec(23, vh.field_b[1], (mm) (Object) a.field_t), param1 + -299);
+            var5.a(new ec(23, vh.field_b[0], a.field_t), 117);
+            var5.a(new ec(23, vh.field_b[1], a.field_t), param1 + -299);
             var5.field_f[1].field_n = 200;
             var6 = var5.field_f[0];
             var3 = var6;
@@ -581,7 +581,7 @@ final class oj {
             break L0;
           }
         }
-        var9 = new ec(13, pc.field_f, (mm) (Object) a.field_t);
+        var9 = new ec(13, pc.field_f, a.field_t);
         var9.field_l = -(var9.field_n / 2) + 320;
         var9.field_m = param1;
         var8.a(var9, 102);
@@ -594,10 +594,6 @@ final class oj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Remove <%0> from ignore list";
         field_b = "To <%0>: ";
     }

@@ -261,10 +261,6 @@ final class fn extends mk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Invite more players, or alternatively try changing the '<%0>' setting.";
     }
 }

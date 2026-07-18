@@ -355,7 +355,7 @@ final class mf extends oe implements vn {
           }
         }
         L1: {
-          gg.field_y.a((w) (Object) ec.field_k, -16834);
+          gg.field_y.a(ec.field_k, -16834);
           ec.field_k.field_Rb.a(-122, ua.field_H);
           var23 = ec.field_k.field_Rb;
           var24 = var23;
@@ -431,7 +431,7 @@ final class mf extends oe implements vn {
         L3: {
           li.field_h.a(jc.field_h, -16834);
           li.field_h.a(bk.field_Rb, -16834);
-          li.field_h.a((w) (Object) gf.field_c, -16834);
+          li.field_h.a(gf.field_c, -16834);
           if (!pd.field_a) {
             break L3;
           } else {
@@ -468,7 +468,7 @@ final class mf extends oe implements vn {
             break L4;
           }
         }
-        in.field_o.a((w) (Object) tb.field_b, -16834);
+        in.field_o.a(tb.field_b, -16834);
         ma.field_G = new w(0L, hd.field_q, om.field_b.toUpperCase());
         fl.field_b = new w(0L, ml.field_a);
         qm.field_a = new w(0L, bf.field_t);
@@ -501,7 +501,7 @@ final class mf extends oe implements vn {
             }
             L8: {
               um.field_c[2] = new w(0L, sg.field_e, bc.field_G);
-              qa.field_v[2] = new qd[3];
+              qa.field_v[2] = new qd[]{new qd(0L, l.field_a, (w) null, df.field_ab, (ck) null, hd.field_t), new qd(0L, l.field_a, (w) null, df.field_ab, bb.field_b[0], jh.field_f), new qd(0L, l.field_a, (w) null, df.field_ab, bb.field_b[1], h.field_f)};
               if (mg.field_Vb <= 1) {
                 break L8;
               } else {
@@ -578,7 +578,7 @@ final class mf extends oe implements vn {
                             } else {
                               L17: {
                                 if (qa.field_v[var18][var19] != null) {
-                                  qm.field_a.a((w) (Object) qa.field_v[var18][var19], -16834);
+                                  qm.field_a.a(qa.field_v[var18][var19], -16834);
                                   break L17;
                                 } else {
                                   break L17;
@@ -649,7 +649,7 @@ final class mf extends oe implements vn {
                         break L23;
                       } else {
                         if (null != rn.field_e[var17_int]) {
-                          var19_ref = (Object) (Object) rn.field_e[var17_int][var18];
+                          var19_ref = rn.field_e[var17_int][var18];
                           break L23;
                         } else {
                           var19_ref = null;
@@ -663,7 +663,7 @@ final class mf extends oe implements vn {
                           var20 = null;
                           break L24;
                         } else {
-                          var20 = (Object) (Object) gn.field_c[var17_int][var18];
+                          var20 = gn.field_c[var17_int][var18];
                           break L24;
                         }
                       } else {
@@ -722,7 +722,7 @@ final class mf extends oe implements vn {
 
     mf(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (gl) null);
-        ((mf) this).field_T = new pn((gl) (Object) new di(10000536), gf.field_i, 0, 0, 140, 25);
+        ((mf) this).field_T = new pn(new di(10000536), gf.field_i, 0, 0, 140, 25);
         ((mf) this).field_T.a((byte) 79, new qf());
         ((mf) this).field_U = new ek(fa.field_o, (kg) this);
         ((mf) this).field_K = new ce[]{(ce) (Object) ((mf) this).field_T, (ce) (Object) ((mf) this).field_U};
@@ -731,10 +731,6 @@ final class mf extends oe implements vn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_V = "Add name";
         field_S = "Please select options in the following rows:  ";
         field_O = new ck(36, 36);

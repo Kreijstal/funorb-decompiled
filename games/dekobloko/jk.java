@@ -30,7 +30,7 @@ final class jk {
               var2 = 3;
               break L0;
             } else {
-              hl.a((java.awt.Canvas) (Object) cl.field_v, (byte) -42);
+              hl.a(cl.field_v, (byte) -42);
               var2 = 2;
               break L0;
             }
@@ -775,10 +775,6 @@ final class jk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Names can only contain letters, numbers, spaces and underscores";
     }
 }

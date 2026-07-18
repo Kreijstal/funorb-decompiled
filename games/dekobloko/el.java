@@ -124,10 +124,6 @@ final class el extends sf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_I = "The invitation has been withdrawn.";
     }
 }

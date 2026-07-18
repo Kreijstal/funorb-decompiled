@@ -87,10 +87,6 @@ final class ec {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "(1 player wants to join)";
         field_j = "Only show private chat from my friends and opponents";
         field_f = new int[8192];

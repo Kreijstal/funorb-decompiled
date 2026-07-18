@@ -21,7 +21,6 @@ final class gd {
         int var4 = 0;
         int var5 = 0;
         if (param3 > 0) {
-          String discarded$1 = gd.a(false, 12, -120, -73);
           if (param1 == 0) {
             var4 = param3 % 100;
             if (var4 < 11) {
@@ -97,10 +96,6 @@ final class gd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "You need a rating of <%1> to play with the current options.";
         field_h = "Spectate";
         field_c = new ln();

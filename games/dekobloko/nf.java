@@ -38,7 +38,7 @@ final class nf {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
-        fl.a(param3 - -20, 256, 16777215, o.field_c, param1, (mm) (Object) w.field_kb);
+        fl.a(param3 - -20, 256, 16777215, o.field_c, param1, w.field_kb);
         int discarded$1 = se.field_S.a(jg.field_k[param0], param1, param3 + 24, 120, 200, 16777215, -1, 0, 0, 16);
         if (param0 != 0) {
           if (param0 == 1) {
@@ -119,10 +119,6 @@ final class nf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = 0;
     }
 }

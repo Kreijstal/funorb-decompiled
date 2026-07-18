@@ -198,10 +198,6 @@ final class hj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new float[2][8];
         field_a = new int[2][8];
     }

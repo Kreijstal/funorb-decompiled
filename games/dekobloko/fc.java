@@ -15,27 +15,27 @@ final class fc {
 
     final static void a(int param0, byte param1, boolean param2, int param3) {
         L0: {
-          fl.a(param0 - -20, 256, 16777215, ug.field_n, param3 - -4, (mm) (Object) w.field_kb);
+          fl.a(param0 - -20, 256, 16777215, ug.field_n, param3 - -4, w.field_kb);
           param0 += 26;
-          fl.a(12 + param0, 256, 16777215, vk.field_b[0], 4 + param3, (mm) (Object) se.field_S);
+          fl.a(12 + param0, 256, 16777215, vk.field_b[0], 4 + param3, se.field_S);
           ph.field_yb[0].c(122 + param3, param0);
           param0 += 16;
-          fl.a(12 + param0, 256, 16777215, vk.field_b[1], param3 - -4, (mm) (Object) se.field_S);
+          fl.a(12 + param0, 256, 16777215, vk.field_b[1], param3 - -4, se.field_S);
           ph.field_yb[1].c(param3 + 122, param0);
           param0 += 23;
-          fl.a(12 + param0, 256, 16777215, vk.field_b[2], 4 + param3, (mm) (Object) se.field_S);
+          fl.a(12 + param0, 256, 16777215, vk.field_b[2], 4 + param3, se.field_S);
           ph.field_yb[3].c(122 + param3, param0);
           param0 += 16;
-          fl.a(param0 - -12, 256, 16777215, vk.field_b[3], 4 + param3, (mm) (Object) se.field_S);
+          fl.a(param0 - -12, 256, 16777215, vk.field_b[3], 4 + param3, se.field_S);
           ph.field_yb[2].c(param3 + 100, param0);
-          ed.a(16777215, 119 + param3, "/", 12 + param0, (byte) 75, (mm) (Object) se.field_S);
+          ed.a(16777215, 119 + param3, "/", 12 + param0, (byte) 75, se.field_S);
           ph.field_yb[4].c(122 + param3, param0);
           param0 += 23;
-          fl.a(param0 + 12, 256, 16777215, vk.field_b[5], param3 - -4, (mm) (Object) se.field_S);
+          fl.a(param0 + 12, 256, 16777215, vk.field_b[5], param3 - -4, se.field_S);
           ph.field_yb[5].c(122 + param3, param0);
           param0 += 23;
           if (param2) {
-            fl.a(12 + param0, 256, 16777215, vk.field_b[6], 4 + param3, (mm) (Object) se.field_S);
+            fl.a(12 + param0, 256, 16777215, vk.field_b[6], 4 + param3, se.field_S);
             ph.field_yb[6].c(param3 + 122, param0);
             break L0;
           } else {
@@ -371,10 +371,6 @@ final class fc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[8192];
         field_g = "Cancel";
         field_b = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};

@@ -290,8 +290,9 @@ final class ge {
                   var7[var17_int] = param3[var17_int].field_c + -param2;
                   var8[var17_int] = (param2 << 1) + param3[var17_int].field_b;
                   var9[var17_int] = param3[var17_int].field_i + (param2 << 1);
-                  var12[var17_int] = new byte[var51[var17_int] * var52[var17_int]];
-                  var18 = new byte[var51[var17_int] * var52[var17_int]];
+                  byte[] array$4 = new byte[var51[var17_int] * var52[var17_int]];
+                  var12[var17_int] = array$4;
+                  var18 = array$4;
                   var19 = param3[var17_int].field_k;
                   var20 = param3[var17_int].field_b;
                   var21 = param3[var17_int].field_i;
@@ -321,12 +322,12 @@ final class ge {
                                   continue L4;
                                 } else {
                                   L6: {
-                                    int incrementValue$3 = var24;
+                                    int incrementValue$5 = var24;
                                     var24++;
-                                    if (var19[incrementValue$3] != 0) {
-                                      int incrementValue$4 = var25;
+                                    if (var19[incrementValue$5] != 0) {
+                                      int incrementValue$6 = var25;
                                       var25++;
-                                      var18[incrementValue$4] = (byte) 1;
+                                      var18[incrementValue$6] = (byte) 1;
                                       break L6;
                                     } else {
                                       var25++;
@@ -353,9 +354,9 @@ final class ge {
                           continue L2;
                         } else {
                           L8: {
-                            int incrementValue$5 = var24;
+                            int incrementValue$7 = var24;
                             var24++;
-                            if (0 == var19[incrementValue$5]) {
+                            if (0 == var19[incrementValue$7]) {
                               break L8;
                             } else {
                               hk.a(var26, var25, (param2 << 1) + 1, (param2 << 1) + 1, 2);
@@ -514,10 +515,6 @@ final class ge {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = false;
         field_d = "Invalid name";
         field_g = new ij("usename");

@@ -64,7 +64,7 @@ final class kn extends bh {
           L0: {
             L1: {
               var6_int = 2;
-              if ((Object) (Object) se.field_S != (Object) (Object) param0) {
+              if (se.field_S != param0) {
                 break L1;
               } else {
                 var6_int = 1;
@@ -80,7 +80,7 @@ final class kn extends bh {
               param0.c(param3, param5 + var6_int, -var6_int + param2, 0, -1);
               param0.c(param3, var6_int + param5, param2, 0, -1);
               param0.c(param3, var6_int + param5, var6_int + param2, 0, -1);
-              if ((Object) (Object) w.field_kb == (Object) (Object) param0) {
+              if (w.field_kb == param0) {
                 param0.c(param3, 1 + param5, param2 + -var6_int, 0, -1);
                 param0.c(param3, -1 + param5, param2 + -var6_int, 0, -1);
                 param0.c(param3, var6_int + param5, -1 + param2, 0, -1);
@@ -172,10 +172,6 @@ final class kn extends bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "<%0> must play <%1> more rated games before playing with the current options.";
     }
 }

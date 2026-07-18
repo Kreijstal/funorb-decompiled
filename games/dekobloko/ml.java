@@ -6764,10 +6764,6 @@ final class ml {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_c = "Owner";
         field_d = "Scamming";

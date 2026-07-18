@@ -497,8 +497,8 @@ class qi extends ek {
                     break L5;
                   }
                 }
-                ((qi) this).field_O.a((bh) (Object) var15, 2777);
-                var10 = (Object) (Object) var15;
+                ((qi) this).field_O.a(var15, 2777);
+                var10 = var15;
                 var11++;
                 continue L2;
               }
@@ -518,10 +518,6 @@ class qi extends ek {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_N = "to over <%0> great games";
         field_L = "Fast Drop Bonus: ";
         field_T = "Checking";

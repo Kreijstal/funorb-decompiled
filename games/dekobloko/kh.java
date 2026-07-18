@@ -89,7 +89,7 @@ final class kh {
         StringBuilder stackOut_14_1 = null;
         String stackOut_14_2 = null;
         try {
-          var5 = (Object) (Object) ((kh) this).field_a;
+          var5 = ((kh) this).field_a;
           synchronized (var5) {
             L0: {
               L1: {
@@ -220,7 +220,7 @@ final class kh {
             String stackOut_72_2 = null;
             var16 = client.field_A ? 1 : 0;
             try {
-              var6_ref2 = (Object) (Object) ((kh) this).field_a;
+              var6_ref2 = ((kh) this).field_a;
               synchronized (var6_ref2) {
                 try {
                   L0: {
@@ -631,7 +631,7 @@ final class kh {
             Object stackOut_7_0 = null;
             Object stackOut_56_0 = null;
             var18 = client.field_A ? 1 : 0;
-            var3 = (Object) (Object) ((kh) this).field_a;
+            var3 = ((kh) this).field_a;
             synchronized (var3) {
               try {
                 L0: {
@@ -796,10 +796,6 @@ final class kh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Connection timed out. Please try using a different server.";
         field_b = "Hint: to start quickly, choose 'Don't mind' for as many options as you can!";
         field_e = new int[4];

@@ -282,7 +282,7 @@ final class g extends ek {
                     break L2;
                   }
                 }
-                if (var4.equals((Object) (Object) var2)) {
+                if (var4.equals(var2)) {
                   stackOut_13_0 = (wb) var3;
                   stackIn_14_0 = stackOut_13_0;
                   return stackIn_14_0;
@@ -422,10 +422,6 @@ final class g extends ek {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_L = 2;
         field_K = "Suggested names: ";
     }

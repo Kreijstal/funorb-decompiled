@@ -561,10 +561,6 @@ final class vj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[8192];
     }
 }

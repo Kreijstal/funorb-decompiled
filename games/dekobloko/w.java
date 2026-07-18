@@ -624,7 +624,7 @@ class w extends km {
             if (null == ((w) this).field_M) {
                 ((w) this).field_M = new vj();
             }
-            ((w) this).field_M.a((bh) (Object) param0, 2777);
+            ((w) this).field_M.a(param0, 2777);
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "w.GA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -1666,10 +1666,6 @@ class w extends km {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Fb = 100;
     }
 }

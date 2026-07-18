@@ -695,10 +695,6 @@ final class se extends ma {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Q = "Create";
         field_V = "You cannot chat to <%0> because <%0> is not in your friend list.";
     }

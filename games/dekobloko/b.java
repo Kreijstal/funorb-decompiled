@@ -279,10 +279,6 @@ final class b extends ek {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_M = new int[8192];
         field_Q = "Master Challenge";
     }

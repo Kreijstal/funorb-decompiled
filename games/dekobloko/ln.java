@@ -22,10 +22,6 @@ final class ln {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "<%0> has lost connection.";
         field_e = "Press F10 to open Quick Chat.";
     }

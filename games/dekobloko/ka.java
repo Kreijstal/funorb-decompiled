@@ -301,243 +301,272 @@ final class ka extends ma {
         int stackOut_17_9 = 0;
         int stackOut_17_10 = 0;
         int stackOut_17_11 = 0;
-        sb.c((byte) 123);
-        if (hh.field_a == tc.field_Tb) {
-          gn.b(-29550);
-          return;
-        } else {
-          L0: {
-            if (cd.field_m != null) {
-              if (km.b(cd.field_m.field_rc, -8222)) {
-                stackOut_5_0 = 1;
-                stackIn_7_0 = stackOut_5_0;
-                break L0;
-              } else {
-                stackOut_4_0 = 0;
-                stackIn_7_0 = stackOut_4_0;
-                break L0;
-              }
-            } else {
-              stackOut_2_0 = 0;
-              stackIn_7_0 = stackOut_2_0;
-              break L0;
-            }
-          }
-          L1: {
-            var2 = stackIn_7_0;
-            if (hh.field_a == null) {
-              stackOut_9_0 = 0;
-              stackIn_10_0 = stackOut_9_0;
-              break L1;
-            } else {
-              stackOut_8_0 = 1;
-              stackIn_10_0 = stackOut_8_0;
-              break L1;
-            }
-          }
-          L2: {
-            L3: {
-              var3 = stackIn_10_0;
-              stackOut_10_0 = 0;
-              stackOut_10_1 = 1;
-              stackOut_10_2 = 14;
-              stackOut_10_3 = 11;
-              stackOut_10_4 = 13;
-              stackOut_10_5 = jk.field_c;
-              stackIn_14_0 = stackOut_10_0;
-              stackIn_14_1 = stackOut_10_1;
-              stackIn_14_2 = stackOut_10_2;
-              stackIn_14_3 = stackOut_10_3;
-              stackIn_14_4 = stackOut_10_4;
-              stackIn_14_5 = stackOut_10_5;
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              stackIn_11_3 = stackOut_10_3;
-              stackIn_11_4 = stackOut_10_4;
-              stackIn_11_5 = stackOut_10_5;
-              if (fm.field_b) {
-                break L3;
-              } else {
-                stackOut_11_0 = stackIn_11_0;
-                stackOut_11_1 = stackIn_11_1;
-                stackOut_11_2 = stackIn_11_2;
-                stackOut_11_3 = stackIn_11_3;
-                stackOut_11_4 = stackIn_11_4;
-                stackOut_11_5 = stackIn_11_5;
-                stackIn_14_0 = stackOut_11_0;
-                stackIn_14_1 = stackOut_11_1;
-                stackIn_14_2 = stackOut_11_2;
-                stackIn_14_3 = stackOut_11_3;
-                stackIn_14_4 = stackOut_11_4;
-                stackIn_14_5 = stackOut_11_5;
-                stackIn_12_0 = stackOut_11_0;
-                stackIn_12_1 = stackOut_11_1;
-                stackIn_12_2 = stackOut_11_2;
-                stackIn_12_3 = stackOut_11_3;
-                stackIn_12_4 = stackOut_11_4;
-                stackIn_12_5 = stackOut_11_5;
-                if (fa.field_n) {
-                  break L3;
+        L0: {
+          sb.c((byte) 123);
+          if (hh.field_a == tc.field_Tb) {
+            gn.b(-29550);
+            break L0;
+          } else {
+            L1: {
+              if (cd.field_m != null) {
+                if (km.b(cd.field_m.field_rc, -8222)) {
+                  stackOut_5_0 = 1;
+                  stackIn_7_0 = stackOut_5_0;
+                  break L1;
                 } else {
-                  stackOut_12_0 = stackIn_12_0;
-                  stackOut_12_1 = stackIn_12_1;
-                  stackOut_12_2 = stackIn_12_2;
-                  stackOut_12_3 = stackIn_12_3;
-                  stackOut_12_4 = stackIn_12_4;
-                  stackOut_12_5 = stackIn_12_5;
-                  stackIn_15_0 = stackOut_12_0;
-                  stackIn_15_1 = stackOut_12_1;
-                  stackIn_15_2 = stackOut_12_2;
-                  stackIn_15_3 = stackOut_12_3;
-                  stackIn_15_4 = stackOut_12_4;
-                  stackIn_15_5 = stackOut_12_5;
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
-                  stackIn_13_2 = stackOut_12_2;
-                  stackIn_13_3 = stackOut_12_3;
-                  stackIn_13_4 = stackOut_12_4;
-                  stackIn_13_5 = stackOut_12_5;
-                  if (var3 == 0) {
-                    stackOut_15_0 = stackIn_15_0;
-                    stackOut_15_1 = stackIn_15_1;
-                    stackOut_15_2 = stackIn_15_2;
-                    stackOut_15_3 = stackIn_15_3;
-                    stackOut_15_4 = stackIn_15_4;
-                    stackOut_15_5 = stackIn_15_5;
-                    stackOut_15_6 = 0;
-                    stackIn_16_0 = stackOut_15_0;
-                    stackIn_16_1 = stackOut_15_1;
-                    stackIn_16_2 = stackOut_15_2;
-                    stackIn_16_3 = stackOut_15_3;
-                    stackIn_16_4 = stackOut_15_4;
-                    stackIn_16_5 = stackOut_15_5;
-                    stackIn_16_6 = stackOut_15_6;
-                    break L2;
+                  stackOut_4_0 = 0;
+                  stackIn_7_0 = stackOut_4_0;
+                  break L1;
+                }
+              } else {
+                stackOut_2_0 = 0;
+                stackIn_7_0 = stackOut_2_0;
+                break L1;
+              }
+            }
+            L2: {
+              var2 = stackIn_7_0;
+              if (hh.field_a == null) {
+                stackOut_9_0 = 0;
+                stackIn_10_0 = stackOut_9_0;
+                break L2;
+              } else {
+                stackOut_8_0 = 1;
+                stackIn_10_0 = stackOut_8_0;
+                break L2;
+              }
+            }
+            L3: {
+              L4: {
+                var3 = stackIn_10_0;
+                stackOut_10_0 = 0;
+                stackOut_10_1 = 1;
+                stackOut_10_2 = 14;
+                stackOut_10_3 = 11;
+                stackOut_10_4 = 13;
+                stackOut_10_5 = jk.field_c;
+                stackIn_14_0 = stackOut_10_0;
+                stackIn_14_1 = stackOut_10_1;
+                stackIn_14_2 = stackOut_10_2;
+                stackIn_14_3 = stackOut_10_3;
+                stackIn_14_4 = stackOut_10_4;
+                stackIn_14_5 = stackOut_10_5;
+                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_1 = stackOut_10_1;
+                stackIn_11_2 = stackOut_10_2;
+                stackIn_11_3 = stackOut_10_3;
+                stackIn_11_4 = stackOut_10_4;
+                stackIn_11_5 = stackOut_10_5;
+                if (fm.field_b) {
+                  break L4;
+                } else {
+                  stackOut_11_0 = stackIn_11_0;
+                  stackOut_11_1 = stackIn_11_1;
+                  stackOut_11_2 = stackIn_11_2;
+                  stackOut_11_3 = stackIn_11_3;
+                  stackOut_11_4 = stackIn_11_4;
+                  stackOut_11_5 = stackIn_11_5;
+                  stackIn_14_0 = stackOut_11_0;
+                  stackIn_14_1 = stackOut_11_1;
+                  stackIn_14_2 = stackOut_11_2;
+                  stackIn_14_3 = stackOut_11_3;
+                  stackIn_14_4 = stackOut_11_4;
+                  stackIn_14_5 = stackOut_11_5;
+                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_1 = stackOut_11_1;
+                  stackIn_12_2 = stackOut_11_2;
+                  stackIn_12_3 = stackOut_11_3;
+                  stackIn_12_4 = stackOut_11_4;
+                  stackIn_12_5 = stackOut_11_5;
+                  if (fa.field_n) {
+                    break L4;
                   } else {
-                    stackOut_13_0 = stackIn_13_0;
-                    stackOut_13_1 = stackIn_13_1;
-                    stackOut_13_2 = stackIn_13_2;
-                    stackOut_13_3 = stackIn_13_3;
-                    stackOut_13_4 = stackIn_13_4;
-                    stackOut_13_5 = stackIn_13_5;
-                    stackIn_14_0 = stackOut_13_0;
-                    stackIn_14_1 = stackOut_13_1;
-                    stackIn_14_2 = stackOut_13_2;
-                    stackIn_14_3 = stackOut_13_3;
-                    stackIn_14_4 = stackOut_13_4;
-                    stackIn_14_5 = stackOut_13_5;
-                    break L3;
+                    stackOut_12_0 = stackIn_12_0;
+                    stackOut_12_1 = stackIn_12_1;
+                    stackOut_12_2 = stackIn_12_2;
+                    stackOut_12_3 = stackIn_12_3;
+                    stackOut_12_4 = stackIn_12_4;
+                    stackOut_12_5 = stackIn_12_5;
+                    stackIn_15_0 = stackOut_12_0;
+                    stackIn_15_1 = stackOut_12_1;
+                    stackIn_15_2 = stackOut_12_2;
+                    stackIn_15_3 = stackOut_12_3;
+                    stackIn_15_4 = stackOut_12_4;
+                    stackIn_15_5 = stackOut_12_5;
+                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_1 = stackOut_12_1;
+                    stackIn_13_2 = stackOut_12_2;
+                    stackIn_13_3 = stackOut_12_3;
+                    stackIn_13_4 = stackOut_12_4;
+                    stackIn_13_5 = stackOut_12_5;
+                    if (var3 == 0) {
+                      stackOut_15_0 = stackIn_15_0;
+                      stackOut_15_1 = stackIn_15_1;
+                      stackOut_15_2 = stackIn_15_2;
+                      stackOut_15_3 = stackIn_15_3;
+                      stackOut_15_4 = stackIn_15_4;
+                      stackOut_15_5 = stackIn_15_5;
+                      stackOut_15_6 = 0;
+                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_16_1 = stackOut_15_1;
+                      stackIn_16_2 = stackOut_15_2;
+                      stackIn_16_3 = stackOut_15_3;
+                      stackIn_16_4 = stackOut_15_4;
+                      stackIn_16_5 = stackOut_15_5;
+                      stackIn_16_6 = stackOut_15_6;
+                      break L3;
+                    } else {
+                      stackOut_13_0 = stackIn_13_0;
+                      stackOut_13_1 = stackIn_13_1;
+                      stackOut_13_2 = stackIn_13_2;
+                      stackOut_13_3 = stackIn_13_3;
+                      stackOut_13_4 = stackIn_13_4;
+                      stackOut_13_5 = stackIn_13_5;
+                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_14_1 = stackOut_13_1;
+                      stackIn_14_2 = stackOut_13_2;
+                      stackIn_14_3 = stackOut_13_3;
+                      stackIn_14_4 = stackOut_13_4;
+                      stackIn_14_5 = stackOut_13_5;
+                      break L4;
+                    }
                   }
                 }
               }
+              stackOut_14_0 = stackIn_14_0;
+              stackOut_14_1 = stackIn_14_1;
+              stackOut_14_2 = stackIn_14_2;
+              stackOut_14_3 = stackIn_14_3;
+              stackOut_14_4 = stackIn_14_4;
+              stackOut_14_5 = stackIn_14_5;
+              stackOut_14_6 = 1;
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_3 = stackOut_14_3;
+              stackIn_16_4 = stackOut_14_4;
+              stackIn_16_5 = stackOut_14_5;
+              stackIn_16_6 = stackOut_14_6;
+              break L3;
             }
-            stackOut_14_0 = stackIn_14_0;
-            stackOut_14_1 = stackIn_14_1;
-            stackOut_14_2 = stackIn_14_2;
-            stackOut_14_3 = stackIn_14_3;
-            stackOut_14_4 = stackIn_14_4;
-            stackOut_14_5 = stackIn_14_5;
-            stackOut_14_6 = 1;
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_16_2 = stackOut_14_2;
-            stackIn_16_3 = stackOut_14_3;
-            stackIn_16_4 = stackOut_14_4;
-            stackIn_16_5 = stackOut_14_5;
-            stackIn_16_6 = stackOut_14_6;
-            break L2;
-          }
-          L4: {
-            stackOut_16_0 = stackIn_16_0;
-            stackOut_16_1 = stackIn_16_1;
-            stackOut_16_2 = stackIn_16_2;
-            stackOut_16_3 = stackIn_16_3;
-            stackOut_16_4 = stackIn_16_4;
-            stackOut_16_5 = stackIn_16_5;
-            stackOut_16_6 = stackIn_16_6;
-            stackOut_16_7 = 15;
-            stackOut_16_8 = param0;
-            stackOut_16_9 = 1;
-            stackOut_16_10 = var2;
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_18_2 = stackOut_16_2;
-            stackIn_18_3 = stackOut_16_3;
-            stackIn_18_4 = stackOut_16_4;
-            stackIn_18_5 = stackOut_16_5;
-            stackIn_18_6 = stackOut_16_6;
-            stackIn_18_7 = stackOut_16_7;
-            stackIn_18_8 = stackOut_16_8;
-            stackIn_18_9 = stackOut_16_9;
-            stackIn_18_10 = stackOut_16_10;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
-            stackIn_17_2 = stackOut_16_2;
-            stackIn_17_3 = stackOut_16_3;
-            stackIn_17_4 = stackOut_16_4;
-            stackIn_17_5 = stackOut_16_5;
-            stackIn_17_6 = stackOut_16_6;
-            stackIn_17_7 = stackOut_16_7;
-            stackIn_17_8 = stackOut_16_8;
-            stackIn_17_9 = stackOut_16_9;
-            stackIn_17_10 = stackOut_16_10;
-            if (50 >= pm.field_g) {
-              stackOut_18_0 = stackIn_18_0;
-              stackOut_18_1 = stackIn_18_1;
-              stackOut_18_2 = stackIn_18_2;
-              stackOut_18_3 = stackIn_18_3;
-              stackOut_18_4 = stackIn_18_4;
-              stackOut_18_5 = stackIn_18_5;
-              stackOut_18_6 = stackIn_18_6;
-              stackOut_18_7 = stackIn_18_7;
-              stackOut_18_8 = stackIn_18_8;
-              stackOut_18_9 = stackIn_18_9;
-              stackOut_18_10 = stackIn_18_10;
-              stackOut_18_11 = 0;
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
-              stackIn_19_3 = stackOut_18_3;
-              stackIn_19_4 = stackOut_18_4;
-              stackIn_19_5 = stackOut_18_5;
-              stackIn_19_6 = stackOut_18_6;
-              stackIn_19_7 = stackOut_18_7;
-              stackIn_19_8 = stackOut_18_8;
-              stackIn_19_9 = stackOut_18_9;
-              stackIn_19_10 = stackOut_18_10;
-              stackIn_19_11 = stackOut_18_11;
-              break L4;
-            } else {
-              stackOut_17_0 = stackIn_17_0;
-              stackOut_17_1 = stackIn_17_1;
-              stackOut_17_2 = stackIn_17_2;
-              stackOut_17_3 = stackIn_17_3;
-              stackOut_17_4 = stackIn_17_4;
-              stackOut_17_5 = stackIn_17_5;
-              stackOut_17_6 = stackIn_17_6;
-              stackOut_17_7 = stackIn_17_7;
-              stackOut_17_8 = stackIn_17_8;
-              stackOut_17_9 = stackIn_17_9;
-              stackOut_17_10 = stackIn_17_10;
-              stackOut_17_11 = 1;
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
-              stackIn_19_3 = stackOut_17_3;
-              stackIn_19_4 = stackOut_17_4;
-              stackIn_19_5 = stackOut_17_5;
-              stackIn_19_6 = stackOut_17_6;
-              stackIn_19_7 = stackOut_17_7;
-              stackIn_19_8 = stackOut_17_8;
-              stackIn_19_9 = stackOut_17_9;
-              stackIn_19_10 = stackOut_17_10;
-              stackIn_19_11 = stackOut_17_11;
-              break L4;
+            L5: {
+              stackOut_16_0 = stackIn_16_0;
+              stackOut_16_1 = stackIn_16_1;
+              stackOut_16_2 = stackIn_16_2;
+              stackOut_16_3 = stackIn_16_3;
+              stackOut_16_4 = stackIn_16_4;
+              stackOut_16_5 = stackIn_16_5;
+              stackOut_16_6 = stackIn_16_6;
+              stackOut_16_7 = 15;
+              stackOut_16_8 = param0;
+              stackOut_16_9 = 1;
+              stackOut_16_10 = var2;
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_3 = stackOut_16_3;
+              stackIn_18_4 = stackOut_16_4;
+              stackIn_18_5 = stackOut_16_5;
+              stackIn_18_6 = stackOut_16_6;
+              stackIn_18_7 = stackOut_16_7;
+              stackIn_18_8 = stackOut_16_8;
+              stackIn_18_9 = stackOut_16_9;
+              stackIn_18_10 = stackOut_16_10;
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_3 = stackOut_16_3;
+              stackIn_17_4 = stackOut_16_4;
+              stackIn_17_5 = stackOut_16_5;
+              stackIn_17_6 = stackOut_16_6;
+              stackIn_17_7 = stackOut_16_7;
+              stackIn_17_8 = stackOut_16_8;
+              stackIn_17_9 = stackOut_16_9;
+              stackIn_17_10 = stackOut_16_10;
+              if (50 >= pm.field_g) {
+                stackOut_18_0 = stackIn_18_0;
+                stackOut_18_1 = stackIn_18_1;
+                stackOut_18_2 = stackIn_18_2;
+                stackOut_18_3 = stackIn_18_3;
+                stackOut_18_4 = stackIn_18_4;
+                stackOut_18_5 = stackIn_18_5;
+                stackOut_18_6 = stackIn_18_6;
+                stackOut_18_7 = stackIn_18_7;
+                stackOut_18_8 = stackIn_18_8;
+                stackOut_18_9 = stackIn_18_9;
+                stackOut_18_10 = stackIn_18_10;
+                stackOut_18_11 = 0;
+                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_1 = stackOut_18_1;
+                stackIn_19_2 = stackOut_18_2;
+                stackIn_19_3 = stackOut_18_3;
+                stackIn_19_4 = stackOut_18_4;
+                stackIn_19_5 = stackOut_18_5;
+                stackIn_19_6 = stackOut_18_6;
+                stackIn_19_7 = stackOut_18_7;
+                stackIn_19_8 = stackOut_18_8;
+                stackIn_19_9 = stackOut_18_9;
+                stackIn_19_10 = stackOut_18_10;
+                stackIn_19_11 = stackOut_18_11;
+                break L5;
+              } else {
+                stackOut_17_0 = stackIn_17_0;
+                stackOut_17_1 = stackIn_17_1;
+                stackOut_17_2 = stackIn_17_2;
+                stackOut_17_3 = stackIn_17_3;
+                stackOut_17_4 = stackIn_17_4;
+                stackOut_17_5 = stackIn_17_5;
+                stackOut_17_6 = stackIn_17_6;
+                stackOut_17_7 = stackIn_17_7;
+                stackOut_17_8 = stackIn_17_8;
+                stackOut_17_9 = stackIn_17_9;
+                stackOut_17_10 = stackIn_17_10;
+                stackOut_17_11 = 1;
+                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_1 = stackOut_17_1;
+                stackIn_19_2 = stackOut_17_2;
+                stackIn_19_3 = stackOut_17_3;
+                stackIn_19_4 = stackOut_17_4;
+                stackIn_19_5 = stackOut_17_5;
+                stackIn_19_6 = stackOut_17_6;
+                stackIn_19_7 = stackOut_17_7;
+                stackIn_19_8 = stackOut_17_8;
+                stackIn_19_9 = stackOut_17_9;
+                stackIn_19_10 = stackOut_17_10;
+                stackIn_19_11 = stackOut_17_11;
+                break L5;
+              }
             }
+            lk.a(stackIn_19_0, stackIn_19_1 != 0, stackIn_19_2, stackIn_19_3, stackIn_19_4, stackIn_19_5, stackIn_19_6 != 0, stackIn_19_7, stackIn_19_8, stackIn_19_9 != 0, stackIn_19_10 != 0, stackIn_19_11 != 0);
+            break L0;
           }
-          lk.a(stackIn_19_0, stackIn_19_1 != 0, stackIn_19_2, stackIn_19_3, stackIn_19_4, stackIn_19_5, stackIn_19_6 != 0, stackIn_19_7, stackIn_19_8, stackIn_19_9 != 0, stackIn_19_10 != 0, stackIn_19_11 != 0);
-          return;
+        }
+        L6: {
+          if (sn.field_g) {
+            jb.a((byte) 126, uj.field_g);
+            sn.field_g = false;
+            break L6;
+          } else {
+            break L6;
+          }
+        }
+        L7: {
+          if (gm.field_I) {
+            we.field_b.f(58, -4);
+            gm.field_I = false;
+            break L7;
+          } else {
+            break L7;
+          }
+        }
+        L8: {
+          if (nh.field_a) {
+            we.field_b.f(10, -4);
+            nh.field_a = false;
+            break L8;
+          } else {
+            break L8;
+          }
         }
     }
 
@@ -616,7 +645,7 @@ final class ka extends ma {
                 ((ka) this).a((byte) -72, (ce) null);
             }
             var3 = (bl) (Object) param1;
-            ((ka) this).field_Q.b((bh) (Object) var3, 7143);
+            ((ka) this).field_Q.b(var3, 7143);
             var3.field_S = true;
             boolean discarded$0 = var3.a(false, (ce) this);
         } catch (RuntimeException runtimeException) {
@@ -641,10 +670,6 @@ final class ka extends ma {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_M = "CHALLENGE!";
         field_O = "Members' Benefits";
     }

@@ -14,10 +14,6 @@ final class ic {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ic.A(";
         field_d = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
         field_b = "Just play";

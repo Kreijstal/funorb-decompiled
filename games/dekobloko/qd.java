@@ -409,12 +409,8 @@ final class qd extends w {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Ob = 4;
         field_Rb = 0;
-        field_Pb = new String[][]{new String[2], new String[5], new String[5], new String[5], new String[3]};
+        field_Pb = new String[][]{new String[]{"Standard", "Large"}, new String[]{"Slow", "Medium", "Fast", "Maximum", "Panic!"}, new String[]{"3", "4", "5", "6", "7"}, new String[]{"None", "Level 1 - wildcards only", "Level 2 - wildcards, earthquakes and drills", "Level 3 - Level 2 with bombs and power drills added", "Level 4 - all special items enabled"}, new String[]{"Level 1 - when loose pieces are eliminated, they are cooked<br>into a solid shape and sent to the next player", "Level 2 - like Level 1, but in addition to loose tiles, whole solid shapes<br>are sent to the next player when eliminated", "Level 3 - like Level 2, but even special items will bombard<br>the next player with everything they destroy!"}};
     }
 }

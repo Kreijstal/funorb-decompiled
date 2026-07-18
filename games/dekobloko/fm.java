@@ -179,10 +179,6 @@ abstract class fm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "In Single-player";
         field_a = "Connection restored.";
     }

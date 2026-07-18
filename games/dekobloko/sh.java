@@ -2667,10 +2667,6 @@ final class sh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Drawn";
         field_e = "Colours in play:";
         field_b = "<%0> has dropped out.";

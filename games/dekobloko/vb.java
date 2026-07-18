@@ -434,10 +434,6 @@ abstract class vb extends kf implements jl {
     abstract int b(boolean param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_T = "Show tutorial again";
         field_Y = "To Customer Support";
         field_X = new int[]{2, 1, 2, 3, 2, 10, 2, 10, 3, 5, 5, 1, 1, 2, 5, 2, 3, 10, 1, 2, 5, 3, 5, 5, 1, 1, 1, 1, 2, 2, 3};

@@ -68,10 +68,6 @@ final class vl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = new byte[]{(byte) 2, (byte) 5, (byte) 5, (byte) 5, (byte) 3};
     }
 }

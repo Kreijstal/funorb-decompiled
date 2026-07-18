@@ -129,38 +129,38 @@ final class da {
     }
 
     final static void a(int param0, boolean param1) {
-        fl.a(130, 256, 16694016, kc.field_s, 82 - -param0, (mm) (Object) w.field_kb);
+        fl.a(130, 256, 16694016, kc.field_s, 82 - -param0, w.field_kb);
         int var2 = 145;
         fb.field_c[0][0].c(82 + param0, var2, 18, 18);
-        var2 = var2 + (ga.a(188, 0, var2, cc.field_d, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -124, 0, 110 + param0) * 16 + 16);
+        var2 = var2 + (ga.a(188, 0, var2, cc.field_d, 16, 64, 16777215, se.field_S, (byte) -124, 0, 110 + param0) * 16 + 16);
         fb.field_c[1][3].c(param0 + 82, var2, 18, 18);
-        var2 = var2 + (16 - -(ga.a(188, 0, var2, dn.field_q, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -125, 0, 110 - -param0) * 16));
+        var2 = var2 + (16 - -(ga.a(188, 0, var2, dn.field_q, 16, 64, 16777215, se.field_S, (byte) -125, 0, 110 - -param0) * 16));
         ri.a(var2, kk.field_n, gi.field_c, -115, 190 + param0, nf.field_e, 0);
         hk.g(309 + param0, 117, 242, 263172);
         var2 = 116;
         hk.g(param0 + 310, 117, 242, 6316128);
-        fl.a(var2 - -14, 256, 16694016, ug.field_n, 322 + param0, (mm) (Object) w.field_kb);
+        fl.a(var2 - -14, 256, 16694016, ug.field_n, 322 + param0, w.field_kb);
         var2 += 29;
-        fl.a(13 + var2, 256, 16777215, vk.field_b[0], param0 + 322, (mm) (Object) se.field_S);
+        fl.a(13 + var2, 256, 16777215, vk.field_b[0], param0 + 322, se.field_S);
         ph.field_yb[0].c(param0 + 480, var2 - -1);
         var2 += 18;
-        fl.a(13 + var2, 256, 16777215, vk.field_b[1], 322 - -param0, (mm) (Object) se.field_S);
+        fl.a(13 + var2, 256, 16777215, vk.field_b[1], 322 - -param0, se.field_S);
         ph.field_yb[1].c(param0 + 480, var2 - -1);
         var2 += 34;
-        fl.a(var2 - -13, 256, 16777215, vk.field_b[2], param0 + 322, (mm) (Object) se.field_S);
+        fl.a(var2 - -13, 256, 16777215, vk.field_b[2], param0 + 322, se.field_S);
         ph.field_yb[3].c(480 - -param0, var2 + 1);
         var2 += 18;
-        fl.a(var2 - -13, 256, 16777215, vk.field_b[3], param0 + 322, (mm) (Object) se.field_S);
+        fl.a(var2 - -13, 256, 16777215, vk.field_b[3], param0 + 322, se.field_S);
         ph.field_yb[4].c(param0 + 480, var2 - -1);
-        ed.a(16777215, 506 - -param0, vk.field_b[4], var2 + 13, (byte) 75, (mm) (Object) se.field_S);
+        ed.a(16777215, 506 - -param0, vk.field_b[4], var2 + 13, (byte) 75, se.field_S);
         ph.field_yb[2].c(516 + param0, var2 - -1);
         var2 += 34;
-        fl.a(var2 + 13, 256, 16777215, vk.field_b[5], 322 + param0, (mm) (Object) se.field_S);
+        fl.a(var2 + 13, 256, 16777215, vk.field_b[5], 322 + param0, se.field_S);
         ph.field_yb[5].c(param0 + 480, var2 + 1);
         var2 += 34;
-        fl.a(14 + var2, 256, 16694016, kc.field_q, param0 + 322, (mm) (Object) w.field_kb);
+        fl.a(14 + var2, 256, 16694016, kc.field_q, param0 + 322, w.field_kb);
         var2 += 29;
-        fl.a(13 + var2, 256, 16777215, vk.field_b[6], 322 - -param0, (mm) (Object) se.field_S);
+        fl.a(13 + var2, 256, 16777215, vk.field_b[6], 322 - -param0, se.field_S);
         ph.field_yb[6].c(480 + param0, 1 + var2);
     }
 
@@ -459,10 +459,6 @@ final class da {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new i();
     }
 }

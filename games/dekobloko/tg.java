@@ -124,10 +124,6 @@ final class tg implements gl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_d = new String[][]{new String[2], new String[5], new String[5], new String[5], new String[4]};
+        field_d = new String[][]{new String[]{"Standard", "Large"}, new String[]{"Slow", "Medium", "Fast", "Maximum", "Panic!"}, new String[]{"3", "4", "5", "6", "7"}, new String[]{"None", "W/cards", "+Drills", "+Bombs", "All"}, new String[]{"Level 1", "Level 2", "Level 3", "Off"}};
     }
 }

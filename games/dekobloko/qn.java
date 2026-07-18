@@ -22,7 +22,7 @@ final class qn extends t {
         var9.field_u = param1;
         var9.field_t = param0;
         var9.field_v = param6;
-        var8.a((bh) (Object) var9, 2777);
+        var8.a(var9, 2777);
         int var10 = -11 / ((param7 - 10) / 35);
         var9.b(11976, param3);
         return var8;
@@ -41,7 +41,7 @@ final class qn extends t {
             ((qn) this).field_nb = false;
             ((qn) this).field_ob.field_L = true;
             ((qn) this).field_qb = false;
-            ((qn) this).b((ce) (Object) ((qn) this).field_ob, (byte) -55);
+            ((qn) this).b(((qn) this).field_ob, (byte) -55);
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "qn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -296,7 +296,7 @@ final class qn extends t {
             var14 = client.field_A ? 1 : 0;
             try {
               L0: {
-                var18 = (Object) (Object) new kl();
+                var18 = new kl();
                 ((kl) var18).field_o = param3.d((byte) -116);
                 ((kl) var18).field_C = param3.i(7553);
                 ((kl) var18).field_q = new int[((kl) var18).field_o];
@@ -647,10 +647,6 @@ final class qn extends t {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_pb = "This game has started.";
         field_rb = "Log in / Create account";
     }

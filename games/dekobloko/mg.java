@@ -813,7 +813,7 @@ final class mg extends w {
     final static void b(int param0, boolean param1) {
         je.field_f = param1 ? new ak(ue.field_c, cl.field_n) : new ak(eg.field_b, in.field_o);
         ee.field_i = new w(0L, (w) null);
-        ee.field_i.a((w) (Object) je.field_f.field_h, -16834);
+        ee.field_i.a(je.field_f.field_h, -16834);
         ee.field_i.a(ma.field_G, -16834);
         mn.field_e = new w(0L, ui.field_x);
         cl.field_C = new w(0L, (w) null);
@@ -996,7 +996,7 @@ final class mg extends w {
                 break L3;
               }
               ((mg) this).field_Qb = new ha(stackIn_8_3, stackIn_8_4, stackIn_8_5);
-              ((mg) this).field_Pb.a((w) (Object) ((mg) this).field_Qb, -16834);
+              ((mg) this).field_Pb.a(((mg) this).field_Qb, -16834);
               break L1;
             }
             var28 = new w[3];
@@ -1234,10 +1234,6 @@ final class mg extends w {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Nb = false;
     }
 }

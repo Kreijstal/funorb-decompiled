@@ -96,7 +96,7 @@ final class h {
         int stackOut_10_3 = 0;
         int stackOut_10_4 = 0;
         L0: {
-          fl.a(130, 256, 16694016, bj.field_c, param0 + 82, (mm) (Object) w.field_kb);
+          fl.a(130, 256, 16694016, bj.field_c, param0 + 82, w.field_kb);
           if (1 != kd.field_p) {
             stackOut_2_0 = 145;
             stackIn_3_0 = stackOut_2_0;
@@ -128,7 +128,7 @@ final class h {
           }
         }
         L2: {
-          var2 = stackIn_6_0 + (stackIn_6_1 + 16 * ga.a(198, 0, var2, rf.field_i, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -125, 0, 110 - -param0));
+          var2 = stackIn_6_0 + (stackIn_6_1 + 16 * ga.a(198, 0, var2, rf.field_i, 16, 64, 16777215, se.field_S, (byte) -125, 0, 110 - -param0));
           fb.field_c[0][2].c(param0 + 108, var2, 18, 18);
           fb.field_c[0][2].c(param0 + 108, var2 + 18, 18, 18);
           fb.field_c[0][2].c(108 - -param0, var2 - -36, 18, 18);
@@ -165,7 +165,7 @@ final class h {
         L3: {
           var2 = stackIn_9_0 + (stackIn_9_1 - -stackIn_9_2);
           fb.field_c[3][1].c(82 + param0, var2, 18, 18);
-          var2 = var2 + ga.a(140, 0, var2, rk.field_N, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -127, 0, 110 - -param0) * 16;
+          var2 = var2 + ga.a(140, 0, var2, rk.field_N, 16, 64, 16777215, se.field_S, (byte) -127, 0, 110 - -param0) * 16;
           stackOut_9_0 = gi.field_c;
           stackOut_9_1 = nf.field_e;
           stackOut_9_2 = var2;
@@ -207,11 +207,11 @@ final class h {
         wa.a(stackIn_12_0, stackIn_12_1, stackIn_12_2 - (stackIn_12_3 + stackIn_12_4), param0 + 242, -1, 0, kk.field_n);
         hk.g(309 - -param0, 117, 242, 263172);
         hk.g(param0 + 310, 117, 242, 6316128);
-        fl.a(130, 256, 16694016, kc.field_q, 322 + param0, (mm) (Object) w.field_kb);
-        int discarded$2 = ga.a(120, 0, 145, di.field_D, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -127, 0, param0 + 320);
+        fl.a(130, 256, 16694016, kc.field_q, 322 + param0, w.field_kb);
+        int discarded$2 = ga.a(120, 0, 145, di.field_D, 16, 64, 16777215, se.field_S, (byte) -127, 0, param0 + 320);
         aj.field_c.c(455 + param0, 123);
-        fl.a(240, 256, 16694016, fm.field_c, 322 - -param0, (mm) (Object) w.field_kb);
-        int discarded$3 = ga.a(120, 0, 255, ah.field_g, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -127, 0, 320 + param0);
+        fl.a(240, 256, 16694016, fm.field_c, 322 - -param0, w.field_kb);
+        int discarded$3 = ga.a(120, 0, 255, ah.field_g, 16, 64, 16777215, se.field_S, (byte) -127, 0, 320 + param0);
         li.field_i.c(465 + param0, 235);
     }
 
@@ -580,10 +580,6 @@ final class h {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Please send me news and updates (I can unsubscribe at any time)";
         field_g = "Enter name of friend to add to list";
         field_e = "Waiting for <%0> to start the game...";

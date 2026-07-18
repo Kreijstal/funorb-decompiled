@@ -32,10 +32,6 @@ final class lb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = true;
         field_a = "You must play <%1> more rated games before playing with the current options.";
         field_c = "Show chat (1 unread message)";

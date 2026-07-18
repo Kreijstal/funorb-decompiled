@@ -241,6 +241,7 @@ final class wa {
         RuntimeException var2 = null;
         int var3 = 0;
         ff var4 = null;
+        sb var5 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = client.field_A ? 1 : 0;
         try {
@@ -248,7 +249,16 @@ final class wa {
             var4 = (ff) (Object) cd.field_c.c((byte) 119);
             L1: while (true) {
               if (var4 == null) {
-                break L0;
+                var5 = (sb) (Object) ef.field_S.c((byte) 80);
+                L2: while (true) {
+                  if (var5 == null) {
+                    break L0;
+                  } else {
+                    oi.a(-86, 5, var5);
+                    var5 = (sb) (Object) ef.field_S.d(true);
+                    continue L2;
+                  }
+                }
               } else {
                 mc.a(true, var4, 5);
                 var4 = (ff) (Object) cd.field_c.d(true);
@@ -412,10 +422,6 @@ final class wa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Invalid password.";
         field_f = "You can join this game";
         field_e = "Send private Quick Chat to <%0>";

@@ -550,10 +550,6 @@ abstract class ba implements nb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Players";
         field_f = new um();
     }

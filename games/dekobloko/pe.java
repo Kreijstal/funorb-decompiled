@@ -276,10 +276,6 @@ final class pe {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Passwords must be between 5 and 20 characters long";
         field_a = "Please remove <%0> from your ignore list first.";
     }

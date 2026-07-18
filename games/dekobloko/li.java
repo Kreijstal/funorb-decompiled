@@ -107,10 +107,6 @@ final class li {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Email is valid";
         field_f = "Report <%0> for abuse";
         field_c = "Status";

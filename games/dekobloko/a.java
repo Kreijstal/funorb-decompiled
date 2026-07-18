@@ -1472,7 +1472,7 @@ class a implements gl, nl {
                     }
                     case 6: {
                         try {
-                            if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
+                            if (!var5[var6].substring(0, var7).trim().equals(var3)) {
                                 statePc = 9;
                             } else {
                                 statePc = 7;
@@ -1841,10 +1841,6 @@ class a implements gl, nl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var1 = 0;
         int var0_int = 0;
         int var2 = 0;

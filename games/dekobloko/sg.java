@@ -74,7 +74,7 @@ final class sg {
                 } else {
                   var7 = g.a(-3805, param1);
                   if (var7 == null) {
-                    stackOut_12_0 = cm.a((byte) 97, ii.field_r, new String[1]);
+                    stackOut_12_0 = cm.a((byte) 97, ii.field_r, new String[]{param1});
                     stackIn_13_0 = stackOut_12_0;
                     return stackIn_13_0;
                   } else {
@@ -214,7 +214,7 @@ final class sg {
               var7.field_g = var9;
               java.awt.Component discarded$5 = var7.field_g.add((java.awt.Component) (Object) var7);
               var7.setBounds(0, 0, param0, param5);
-              var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
+              var7.addFocusListener(var7);
               var7.requestFocus();
               stackOut_5_0 = (ql) var7;
               stackIn_6_0 = stackOut_5_0;
@@ -935,10 +935,6 @@ final class sg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
         field_h = new String[]{"Before playing a multiplayer game, please learn the ropes by completing the first 3 stages of Stamina Mode. It will only take a few minutes.", "Congratulations! The multiplayer game is now unlocked.<br><br>If you wish, you can continue playing Stamina Mode, or you can end this game any time and enter the multiplayer lobby. Press 'ESC' for the Options Menu."};
         field_a = new String[3];
