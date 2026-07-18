@@ -402,26 +402,6 @@ verification, full source recompilation, and representative runtime A/B tests.
   assembler/disassembler, and the decompiler under `src/decompiler` that
   actually generated the Java source here.
 
-### Regeneration provenance
-
-The generated game update is commit
-`84b67f68d4a5eab88c7f5a5b68af4660e14ace81`. The corresponding published
-generator revisions for this line of work are:
-
-- `dekobloko-work`: `7333e0d156cc14ec785c59d7c6378b9bfcd3f5a0`
-- `java-tools`: `58aa181f3b79d2c5dbdba5d4cf357008f0a69749`
-
-This batch was started while both generator repositories still contained the
-changes as uncommitted work, before those published revisions existed. The SHAs
-above therefore identify the reviewed, published implementations, but are not
-claimed as a bit-for-bit provenance guarantee for this particular snapshot.
-
-Starting with the next all-game regeneration, the generator worktrees must be
-clean before the job starts. Its commit or pull-request description must record
-the full `dekobloko-work` and `java-tools` commit SHAs, the regeneration command,
-and every experimental gate. That makes the inputs immutable and permits an
-exact rerun instead of relying on branch names or later commits.
-
 ## Compilation stubs
 
 The games reference native/platform classes that are **not** part of the
